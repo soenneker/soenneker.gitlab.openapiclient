@@ -28,6 +28,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>The expires_at property</summary>
         public DateTimeOffset? ExpiresAt { get; set; }
+        /// <summary>The granular property</summary>
+        public bool? Granular { get; set; }
         /// <summary>The id property</summary>
         public int? Id { get; set; }
         /// <summary>The impersonation property</summary>
@@ -89,6 +91,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "expires_at", n => { ExpiresAt = n.GetDateTimeOffsetValue(); } },
+                { "granular", n => { Granular = n.GetBoolValue(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "impersonation", n => { Impersonation = n.GetStringValue(); } },
                 { "last_used_at", n => { LastUsedAt = n.GetDateTimeOffsetValue(); } },
@@ -109,6 +112,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
             writer.WriteStringValue("description", Description);
             writer.WriteDateTimeOffsetValue("expires_at", ExpiresAt);
+            writer.WriteBoolValue("granular", Granular);
             writer.WriteIntValue("id", Id);
             writer.WriteStringValue("impersonation", Impersonation);
             writer.WriteDateTimeOffsetValue("last_used_at", LastUsedAt);
