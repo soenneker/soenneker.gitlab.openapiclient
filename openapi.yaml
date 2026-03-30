@@ -26614,7 +26614,7 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/RequestBody_85deefe82a07"
+              "$ref": "#/components/schemas/RequestBody_46316be4f67f"
   "/api/v4/projects/{id}/remote_mirrors/{mirror_id}":
     get:
       operationId: getApiV4ProjectsIdRemoteMirrorsMirrorId
@@ -26689,7 +26689,7 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/RequestBody_90db9da168fd"
+              "$ref": "#/components/schemas/RequestBody_dbc6cb89995c"
     delete:
       operationId: deleteApiV4ProjectsIdRemoteMirrorsMirrorId
       summary: Delete a single remote mirror
@@ -61143,6 +61143,7 @@ paths:
           - container_registry_push
           - duo_workflow
           - pipeline_execution_policy_schedule
+          - dependency_management_security_update
           nullable: true
         in: query
         example: push
@@ -73002,6 +73003,8 @@ components:
           type: string
         allow_runner_registration_token:
           type: string
+        valid_runner_registrars:
+          type: string
         user_defaults_to_private_profile:
           type: string
         deactivation_email_additional_text:
@@ -73385,8 +73388,6 @@ components:
         security_scan_stale_after_days:
           type: string
         enable_member_promotion_management:
-          type: string
-        valid_runner_registrars:
           type: string
         external_auth_client_cert:
           type: string
@@ -82668,6 +82669,8 @@ components:
         prevent_forking_outside_group:
           type: string
         service_access_tokens_expiration_enforced:
+          type: string
+        experiment_features_enabled:
           type: string
         membership_lock:
           type: string
@@ -94047,7 +94050,7 @@ components:
           description: The commit message to use when committing the changelog
           example: Initial commit
           nullable: true
-    RequestBody_85deefe82a07:
+    RequestBody_46316be4f67f:
       type: object
       properties:
         url:
@@ -94078,9 +94081,17 @@ components:
           type: string
           description: Determines if only matched branches are mirrored
           nullable: true
+        host_keys:
+          type: array
+          items:
+            type: string
+          description: SSH host keys in bare format (ssh-ed25519 AAAA...) or full
+            known_hosts format (hostname ssh-ed25519 AAAA...). Bare keys use the hostname
+            from the mirror URL.
+          nullable: true
       required:
       - url
-    RequestBody_90db9da168fd:
+    RequestBody_dbc6cb89995c:
       type: object
       properties:
         enabled:
@@ -94103,6 +94114,14 @@ components:
         mirror_branch_regex:
           type: string
           description: Determines if only matched branches are mirrored
+          nullable: true
+        host_keys:
+          type: array
+          items:
+            type: string
+          description: SSH host keys in bare format (ssh-ed25519 AAAA...) or full
+            known_hosts format (hostname ssh-ed25519 AAAA...). Bare keys use the hostname
+            from the mirror URL.
           nullable: true
     RequestBody_45207d2f64a8:
       type: object

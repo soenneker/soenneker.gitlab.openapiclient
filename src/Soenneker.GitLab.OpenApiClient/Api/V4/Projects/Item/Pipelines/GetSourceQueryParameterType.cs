@@ -84,5 +84,9 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines
         #pragma warning disable CS1591
         Pipeline_execution_policy_schedule,
         #pragma warning restore CS1591
+        [EnumMember(Value = "dependency_management_security_update")]
+        #pragma warning disable CS1591
+        Dependency_management_security_update,
+        #pragma warning restore CS1591
     }
 }

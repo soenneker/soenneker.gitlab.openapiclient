@@ -5,7 +5,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>Determines the mirror authentication method</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBody_85deefe82a07_auth_method
+    public enum RequestBody_46316be4f67f_auth_method
     {
         [EnumMember(Value = "ssh_public_key")]
         #pragma warning disable CS1591

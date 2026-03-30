@@ -150,6 +150,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string EnabledGitAccessProtocol { get; set; }
 #endif
+        /// <summary>The experiment_features_enabled property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ExperimentFeaturesEnabled { get; set; }
+#nullable restore
+#else
+        public string ExperimentFeaturesEnabled { get; set; }
+#endif
         /// <summary>The extra_shared_runners_minutes_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -587,6 +595,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "emails_disabled", n => { EmailsDisabled = n.GetBoolValue(); } },
                 { "emails_enabled", n => { EmailsEnabled = n.GetBoolValue(); } },
                 { "enabled_git_access_protocol", n => { EnabledGitAccessProtocol = n.GetStringValue(); } },
+                { "experiment_features_enabled", n => { ExperimentFeaturesEnabled = n.GetStringValue(); } },
                 { "extra_shared_runners_minutes_limit", n => { ExtraSharedRunnersMinutesLimit = n.GetStringValue(); } },
                 { "file_template_project_id", n => { FileTemplateProjectId = n.GetStringValue(); } },
                 { "full_name", n => { FullName = n.GetStringValue(); } },
@@ -668,6 +677,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("emails_disabled", EmailsDisabled);
             writer.WriteBoolValue("emails_enabled", EmailsEnabled);
             writer.WriteStringValue("enabled_git_access_protocol", EnabledGitAccessProtocol);
+            writer.WriteStringValue("experiment_features_enabled", ExperimentFeaturesEnabled);
             writer.WriteStringValue("extra_shared_runners_minutes_limit", ExtraSharedRunnersMinutesLimit);
             writer.WriteStringValue("file_template_project_id", FileTemplateProjectId);
             writer.WriteStringValue("full_name", FullName);
