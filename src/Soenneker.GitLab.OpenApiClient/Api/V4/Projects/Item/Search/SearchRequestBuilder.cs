@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Search.Semantic;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -16,6 +17,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Search
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SearchRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The semantic property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Search.Semantic.SemanticRequestBuilder Semantic
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Search.Semantic.SemanticRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Search.SearchRequestBuilder"/> and sets the default values.
         /// </summary>

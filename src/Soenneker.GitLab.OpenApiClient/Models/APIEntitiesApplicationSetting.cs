@@ -814,6 +814,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string DenyAllRequestsExceptAllowed { get; set; }
 #endif
+        /// <summary>The dependency_firewall_policies_per_configuration_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DependencyFirewallPoliciesPerConfigurationLimit { get; set; }
+#nullable restore
+#else
+        public string DependencyFirewallPoliciesPerConfigurationLimit { get; set; }
+#endif
         /// <summary>The dependency_scanning_sbom_scan_api_download_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -4915,6 +4923,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "delete_unconfirmed_users", n => { DeleteUnconfirmedUsers = n.GetStringValue(); } },
                 { "deletion_adjourned_period", n => { DeletionAdjournedPeriod = n.GetStringValue(); } },
                 { "deny_all_requests_except_allowed", n => { DenyAllRequestsExceptAllowed = n.GetStringValue(); } },
+                { "dependency_firewall_policies_per_configuration_limit", n => { DependencyFirewallPoliciesPerConfigurationLimit = n.GetStringValue(); } },
                 { "dependency_scanning_sbom_scan_api_download_limit", n => { DependencyScanningSbomScanApiDownloadLimit = n.GetStringValue(); } },
                 { "dependency_scanning_sbom_scan_api_upload_limit", n => { DependencyScanningSbomScanApiUploadLimit = n.GetStringValue(); } },
                 { "diagramsnet_enabled", n => { DiagramsnetEnabled = n.GetStringValue(); } },
@@ -5521,6 +5530,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("delete_unconfirmed_users", DeleteUnconfirmedUsers);
             writer.WriteStringValue("deletion_adjourned_period", DeletionAdjournedPeriod);
             writer.WriteStringValue("deny_all_requests_except_allowed", DenyAllRequestsExceptAllowed);
+            writer.WriteStringValue("dependency_firewall_policies_per_configuration_limit", DependencyFirewallPoliciesPerConfigurationLimit);
             writer.WriteStringValue("dependency_scanning_sbom_scan_api_download_limit", DependencyScanningSbomScanApiDownloadLimit);
             writer.WriteStringValue("dependency_scanning_sbom_scan_api_upload_limit", DependencyScanningSbomScanApiUploadLimit);
             writer.WriteStringValue("diagramsnet_enabled", DiagramsnetEnabled);
