@@ -108,6 +108,102 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string AbuseReportUploadsVerifiedInPercentage { get; set; }
 #endif
+        /// <summary>The achievement_uploads_checksum_failed_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AchievementUploadsChecksumFailedCount { get; set; }
+#nullable restore
+#else
+        public string AchievementUploadsChecksumFailedCount { get; set; }
+#endif
+        /// <summary>The achievement_uploads_checksummed_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AchievementUploadsChecksummedCount { get; set; }
+#nullable restore
+#else
+        public string AchievementUploadsChecksummedCount { get; set; }
+#endif
+        /// <summary>The achievement_uploads_checksum_total_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AchievementUploadsChecksumTotalCount { get; set; }
+#nullable restore
+#else
+        public string AchievementUploadsChecksumTotalCount { get; set; }
+#endif
+        /// <summary>The achievement_uploads_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AchievementUploadsCount { get; set; }
+#nullable restore
+#else
+        public string AchievementUploadsCount { get; set; }
+#endif
+        /// <summary>The achievement_uploads_failed_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AchievementUploadsFailedCount { get; set; }
+#nullable restore
+#else
+        public string AchievementUploadsFailedCount { get; set; }
+#endif
+        /// <summary>The achievement_uploads_registry_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AchievementUploadsRegistryCount { get; set; }
+#nullable restore
+#else
+        public string AchievementUploadsRegistryCount { get; set; }
+#endif
+        /// <summary>The achievement_uploads_synced_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AchievementUploadsSyncedCount { get; set; }
+#nullable restore
+#else
+        public string AchievementUploadsSyncedCount { get; set; }
+#endif
+        /// <summary>The achievement_uploads_synced_in_percentage property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AchievementUploadsSyncedInPercentage { get; set; }
+#nullable restore
+#else
+        public string AchievementUploadsSyncedInPercentage { get; set; }
+#endif
+        /// <summary>The achievement_uploads_verification_failed_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AchievementUploadsVerificationFailedCount { get; set; }
+#nullable restore
+#else
+        public string AchievementUploadsVerificationFailedCount { get; set; }
+#endif
+        /// <summary>The achievement_uploads_verification_total_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AchievementUploadsVerificationTotalCount { get; set; }
+#nullable restore
+#else
+        public string AchievementUploadsVerificationTotalCount { get; set; }
+#endif
+        /// <summary>The achievement_uploads_verified_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AchievementUploadsVerifiedCount { get; set; }
+#nullable restore
+#else
+        public string AchievementUploadsVerifiedCount { get; set; }
+#endif
+        /// <summary>The achievement_uploads_verified_in_percentage property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AchievementUploadsVerifiedInPercentage { get; set; }
+#nullable restore
+#else
+        public string AchievementUploadsVerifiedInPercentage { get; set; }
+#endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ci_secure_files_checksum_failed_count property</summary>
@@ -2715,6 +2811,18 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "abuse_report_uploads_verification_total_count", n => { AbuseReportUploadsVerificationTotalCount = n.GetStringValue(); } },
                 { "abuse_report_uploads_verified_count", n => { AbuseReportUploadsVerifiedCount = n.GetStringValue(); } },
                 { "abuse_report_uploads_verified_in_percentage", n => { AbuseReportUploadsVerifiedInPercentage = n.GetStringValue(); } },
+                { "achievement_uploads_checksum_failed_count", n => { AchievementUploadsChecksumFailedCount = n.GetStringValue(); } },
+                { "achievement_uploads_checksum_total_count", n => { AchievementUploadsChecksumTotalCount = n.GetStringValue(); } },
+                { "achievement_uploads_checksummed_count", n => { AchievementUploadsChecksummedCount = n.GetStringValue(); } },
+                { "achievement_uploads_count", n => { AchievementUploadsCount = n.GetStringValue(); } },
+                { "achievement_uploads_failed_count", n => { AchievementUploadsFailedCount = n.GetStringValue(); } },
+                { "achievement_uploads_registry_count", n => { AchievementUploadsRegistryCount = n.GetStringValue(); } },
+                { "achievement_uploads_synced_count", n => { AchievementUploadsSyncedCount = n.GetStringValue(); } },
+                { "achievement_uploads_synced_in_percentage", n => { AchievementUploadsSyncedInPercentage = n.GetStringValue(); } },
+                { "achievement_uploads_verification_failed_count", n => { AchievementUploadsVerificationFailedCount = n.GetStringValue(); } },
+                { "achievement_uploads_verification_total_count", n => { AchievementUploadsVerificationTotalCount = n.GetStringValue(); } },
+                { "achievement_uploads_verified_count", n => { AchievementUploadsVerifiedCount = n.GetStringValue(); } },
+                { "achievement_uploads_verified_in_percentage", n => { AchievementUploadsVerifiedInPercentage = n.GetStringValue(); } },
                 { "ci_secure_files_checksum_failed_count", n => { CiSecureFilesChecksumFailedCount = n.GetStringValue(); } },
                 { "ci_secure_files_checksum_total_count", n => { CiSecureFilesChecksumTotalCount = n.GetStringValue(); } },
                 { "ci_secure_files_checksummed_count", n => { CiSecureFilesChecksummedCount = n.GetStringValue(); } },
@@ -3057,6 +3165,18 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("abuse_report_uploads_verification_total_count", AbuseReportUploadsVerificationTotalCount);
             writer.WriteStringValue("abuse_report_uploads_verified_count", AbuseReportUploadsVerifiedCount);
             writer.WriteStringValue("abuse_report_uploads_verified_in_percentage", AbuseReportUploadsVerifiedInPercentage);
+            writer.WriteStringValue("achievement_uploads_checksum_failed_count", AchievementUploadsChecksumFailedCount);
+            writer.WriteStringValue("achievement_uploads_checksummed_count", AchievementUploadsChecksummedCount);
+            writer.WriteStringValue("achievement_uploads_checksum_total_count", AchievementUploadsChecksumTotalCount);
+            writer.WriteStringValue("achievement_uploads_count", AchievementUploadsCount);
+            writer.WriteStringValue("achievement_uploads_failed_count", AchievementUploadsFailedCount);
+            writer.WriteStringValue("achievement_uploads_registry_count", AchievementUploadsRegistryCount);
+            writer.WriteStringValue("achievement_uploads_synced_count", AchievementUploadsSyncedCount);
+            writer.WriteStringValue("achievement_uploads_synced_in_percentage", AchievementUploadsSyncedInPercentage);
+            writer.WriteStringValue("achievement_uploads_verification_failed_count", AchievementUploadsVerificationFailedCount);
+            writer.WriteStringValue("achievement_uploads_verification_total_count", AchievementUploadsVerificationTotalCount);
+            writer.WriteStringValue("achievement_uploads_verified_count", AchievementUploadsVerifiedCount);
+            writer.WriteStringValue("achievement_uploads_verified_in_percentage", AchievementUploadsVerifiedInPercentage);
             writer.WriteStringValue("ci_secure_files_checksum_failed_count", CiSecureFilesChecksumFailedCount);
             writer.WriteStringValue("ci_secure_files_checksummed_count", CiSecureFilesChecksummedCount);
             writer.WriteStringValue("ci_secure_files_checksum_total_count", CiSecureFilesChecksumTotalCount);
