@@ -23,13 +23,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Description { get; set; }
 #endif
         /// <summary>The email_header_and_footer_enabled property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? EmailHeaderAndFooterEnabled { get; set; }
-#nullable restore
-#else
-        public string EmailHeaderAndFooterEnabled { get; set; }
-#endif
+        public bool? EmailHeaderAndFooterEnabled { get; set; }
         /// <summary>The favicon property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -176,7 +170,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "email_header_and_footer_enabled", n => { EmailHeaderAndFooterEnabled = n.GetStringValue(); } },
+                { "email_header_and_footer_enabled", n => { EmailHeaderAndFooterEnabled = n.GetBoolValue(); } },
                 { "favicon", n => { Favicon = n.GetStringValue(); } },
                 { "footer_message", n => { FooterMessage = n.GetStringValue(); } },
                 { "header_logo", n => { HeaderLogo = n.GetStringValue(); } },
@@ -202,7 +196,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("description", Description);
-            writer.WriteStringValue("email_header_and_footer_enabled", EmailHeaderAndFooterEnabled);
+            writer.WriteBoolValue("email_header_and_footer_enabled", EmailHeaderAndFooterEnabled);
             writer.WriteStringValue("favicon", Favicon);
             writer.WriteStringValue("footer_message", FooterMessage);
             writer.WriteStringValue("header_logo", HeaderLogo);

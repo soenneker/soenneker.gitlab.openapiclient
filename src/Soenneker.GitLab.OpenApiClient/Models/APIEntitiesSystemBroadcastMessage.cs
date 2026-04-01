@@ -13,13 +13,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning restore CS1591
     {
         /// <summary>The active property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Active { get; set; }
-#nullable restore
-#else
-        public string Active { get; set; }
-#endif
+        public bool? Active { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The broadcast_type property</summary>
@@ -39,13 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Color { get; set; }
 #endif
         /// <summary>The dismissable property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Dismissable { get; set; }
-#nullable restore
-#else
-        public string Dismissable { get; set; }
-#endif
+        public bool? Dismissable { get; set; }
         /// <summary>The ends_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -63,13 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Font { get; set; }
 #endif
         /// <summary>The id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get; set; }
-#nullable restore
-#else
-        public string Id { get; set; }
-#endif
+        public int? Id { get; set; }
         /// <summary>The message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -135,13 +117,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "active", n => { Active = n.GetStringValue(); } },
+                { "active", n => { Active = n.GetBoolValue(); } },
                 { "broadcast_type", n => { BroadcastType = n.GetStringValue(); } },
                 { "color", n => { Color = n.GetStringValue(); } },
-                { "dismissable", n => { Dismissable = n.GetStringValue(); } },
+                { "dismissable", n => { Dismissable = n.GetBoolValue(); } },
                 { "ends_at", n => { EndsAt = n.GetStringValue(); } },
                 { "font", n => { Font = n.GetStringValue(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
+                { "id", n => { Id = n.GetIntValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "starts_at", n => { StartsAt = n.GetStringValue(); } },
                 { "target_access_levels", n => { TargetAccessLevels = n.GetStringValue(); } },
@@ -156,13 +138,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("active", Active);
+            writer.WriteBoolValue("active", Active);
             writer.WriteStringValue("broadcast_type", BroadcastType);
             writer.WriteStringValue("color", Color);
-            writer.WriteStringValue("dismissable", Dismissable);
+            writer.WriteBoolValue("dismissable", Dismissable);
             writer.WriteStringValue("ends_at", EndsAt);
             writer.WriteStringValue("font", Font);
-            writer.WriteStringValue("id", Id);
+            writer.WriteIntValue("id", Id);
             writer.WriteStringValue("message", Message);
             writer.WriteStringValue("starts_at", StartsAt);
             writer.WriteStringValue("target_access_levels", TargetAccessLevels);

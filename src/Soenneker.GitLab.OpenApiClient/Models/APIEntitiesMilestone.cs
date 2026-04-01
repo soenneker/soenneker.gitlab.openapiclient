@@ -39,13 +39,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string DueDate { get; set; }
 #endif
         /// <summary>The expired property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Expired { get; set; }
-#nullable restore
-#else
-        public string Expired { get; set; }
-#endif
+        public bool? Expired { get; set; }
         /// <summary>The group_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -55,29 +49,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string GroupId { get; set; }
 #endif
         /// <summary>The id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get; set; }
-#nullable restore
-#else
-        public string Id { get; set; }
-#endif
+        public int? Id { get; set; }
         /// <summary>The iid property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Iid { get; set; }
-#nullable restore
-#else
-        public string Iid { get; set; }
-#endif
+        public int? Iid { get; set; }
         /// <summary>The project_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ProjectId { get; set; }
-#nullable restore
-#else
-        public string ProjectId { get; set; }
-#endif
+        public int? ProjectId { get; set; }
         /// <summary>The start_date property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -146,11 +122,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "created_at", n => { CreatedAt = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "due_date", n => { DueDate = n.GetStringValue(); } },
-                { "expired", n => { Expired = n.GetStringValue(); } },
+                { "expired", n => { Expired = n.GetBoolValue(); } },
                 { "group_id", n => { GroupId = n.GetStringValue(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
-                { "iid", n => { Iid = n.GetStringValue(); } },
-                { "project_id", n => { ProjectId = n.GetStringValue(); } },
+                { "id", n => { Id = n.GetIntValue(); } },
+                { "iid", n => { Iid = n.GetIntValue(); } },
+                { "project_id", n => { ProjectId = n.GetIntValue(); } },
                 { "start_date", n => { StartDate = n.GetStringValue(); } },
                 { "state", n => { State = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
@@ -168,11 +144,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("created_at", CreatedAt);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("due_date", DueDate);
-            writer.WriteStringValue("expired", Expired);
+            writer.WriteBoolValue("expired", Expired);
             writer.WriteStringValue("group_id", GroupId);
-            writer.WriteStringValue("id", Id);
-            writer.WriteStringValue("iid", Iid);
-            writer.WriteStringValue("project_id", ProjectId);
+            writer.WriteIntValue("id", Id);
+            writer.WriteIntValue("iid", Iid);
+            writer.WriteIntValue("project_id", ProjectId);
             writer.WriteStringValue("start_date", StartDate);
             writer.WriteStringValue("state", State);
             writer.WriteStringValue("title", Title);

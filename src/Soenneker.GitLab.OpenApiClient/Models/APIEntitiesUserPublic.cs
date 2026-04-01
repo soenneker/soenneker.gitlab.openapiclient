@@ -39,13 +39,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Bio { get; set; }
 #endif
         /// <summary>The bot property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Bot { get; set; }
-#nullable restore
-#else
-        public string Bot { get; set; }
-#endif
+        public bool? Bot { get; set; }
         /// <summary>The can_create_group property</summary>
         public bool? CanCreateGroup { get; set; }
         /// <summary>The can_create_project property</summary>
@@ -97,13 +91,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Email { get; set; }
 #endif
         /// <summary>The external property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? External { get; set; }
-#nullable restore
-#else
-        public string External { get; set; }
-#endif
+        public bool? External { get; set; }
         /// <summary>The extra_shared_runners_minutes_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -332,7 +320,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "avatar_path", n => { AvatarPath = n.GetStringValue(); } },
                 { "avatar_url", n => { AvatarUrl = n.GetStringValue(); } },
                 { "bio", n => { Bio = n.GetStringValue(); } },
-                { "bot", n => { Bot = n.GetStringValue(); } },
+                { "bot", n => { Bot = n.GetBoolValue(); } },
                 { "can_create_group", n => { CanCreateGroup = n.GetBoolValue(); } },
                 { "can_create_project", n => { CanCreateProject = n.GetBoolValue(); } },
                 { "color_scheme_id", n => { ColorSchemeId = n.GetIntValue(); } },
@@ -343,7 +331,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "custom_attributes", n => { CustomAttributes = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCustomAttribute>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCustomAttribute.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "discord", n => { Discord = n.GetStringValue(); } },
                 { "email", n => { Email = n.GetStringValue(); } },
-                { "external", n => { External = n.GetStringValue(); } },
+                { "external", n => { External = n.GetBoolValue(); } },
                 { "extra_shared_runners_minutes_limit", n => { ExtraSharedRunnersMinutesLimit = n.GetStringValue(); } },
                 { "followers", n => { Followers = n.GetStringValue(); } },
                 { "following", n => { Following = n.GetStringValue(); } },
@@ -387,7 +375,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("avatar_path", AvatarPath);
             writer.WriteStringValue("avatar_url", AvatarUrl);
             writer.WriteStringValue("bio", Bio);
-            writer.WriteStringValue("bot", Bot);
+            writer.WriteBoolValue("bot", Bot);
             writer.WriteBoolValue("can_create_group", CanCreateGroup);
             writer.WriteBoolValue("can_create_project", CanCreateProject);
             writer.WriteIntValue("color_scheme_id", ColorSchemeId);
@@ -398,7 +386,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCustomAttribute>("custom_attributes", CustomAttributes);
             writer.WriteStringValue("discord", Discord);
             writer.WriteStringValue("email", Email);
-            writer.WriteStringValue("external", External);
+            writer.WriteBoolValue("external", External);
             writer.WriteStringValue("extra_shared_runners_minutes_limit", ExtraSharedRunnersMinutesLimit);
             writer.WriteStringValue("followers", Followers);
             writer.WriteStringValue("following", Following);

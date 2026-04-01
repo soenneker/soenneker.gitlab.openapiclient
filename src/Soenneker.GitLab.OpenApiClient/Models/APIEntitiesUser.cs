@@ -39,13 +39,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Bio { get; set; }
 #endif
         /// <summary>The bot property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Bot { get; set; }
-#nullable restore
-#else
-        public string Bot { get; set; }
-#endif
+        public bool? Bot { get; set; }
         /// <summary>The created_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -246,7 +240,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "avatar_path", n => { AvatarPath = n.GetStringValue(); } },
                 { "avatar_url", n => { AvatarUrl = n.GetStringValue(); } },
                 { "bio", n => { Bio = n.GetStringValue(); } },
-                { "bot", n => { Bot = n.GetStringValue(); } },
+                { "bot", n => { Bot = n.GetBoolValue(); } },
                 { "created_at", n => { CreatedAt = n.GetStringValue(); } },
                 { "custom_attributes", n => { CustomAttributes = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCustomAttribute>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCustomAttribute.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "discord", n => { Discord = n.GetStringValue(); } },
@@ -282,7 +276,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("avatar_path", AvatarPath);
             writer.WriteStringValue("avatar_url", AvatarUrl);
             writer.WriteStringValue("bio", Bio);
-            writer.WriteStringValue("bot", Bot);
+            writer.WriteBoolValue("bot", Bot);
             writer.WriteStringValue("created_at", CreatedAt);
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCustomAttribute>("custom_attributes", CustomAttributes);
             writer.WriteStringValue("discord", Discord);

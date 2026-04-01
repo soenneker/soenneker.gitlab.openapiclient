@@ -39,13 +39,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string FullPath { get; set; }
 #endif
         /// <summary>The id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get; set; }
-#nullable restore
-#else
-        public string Id { get; set; }
-#endif
+        public int? Id { get; set; }
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -90,7 +84,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "avatar_url", n => { AvatarUrl = n.GetStringValue(); } },
                 { "full_name", n => { FullName = n.GetStringValue(); } },
                 { "full_path", n => { FullPath = n.GetStringValue(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
+                { "id", n => { Id = n.GetIntValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "web_url", n => { WebUrl = n.GetStringValue(); } },
             };
@@ -105,7 +99,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("avatar_url", AvatarUrl);
             writer.WriteStringValue("full_name", FullName);
             writer.WriteStringValue("full_path", FullPath);
-            writer.WriteStringValue("id", Id);
+            writer.WriteIntValue("id", Id);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("web_url", WebUrl);
             writer.WriteAdditionalData(AdditionalData);

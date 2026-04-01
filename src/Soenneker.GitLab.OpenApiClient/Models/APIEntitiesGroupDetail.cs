@@ -97,13 +97,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string DefaultBranch { get; set; }
 #endif
         /// <summary>The default_branch_protection property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? DefaultBranchProtection { get; set; }
-#nullable restore
-#else
-        public string DefaultBranchProtection { get; set; }
-#endif
+        public int? DefaultBranchProtection { get; set; }
         /// <summary>The default_branch_protection_defaults property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -191,13 +185,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string FullPath { get; set; }
 #endif
         /// <summary>The id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get; set; }
-#nullable restore
-#else
-        public string Id { get; set; }
-#endif
+        public int? Id { get; set; }
         /// <summary>The ip_restriction_ranges property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -231,13 +219,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesLdapGroupLink LdapGroupLinks { get; set; }
 #endif
         /// <summary>The lfs_enabled property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? LfsEnabled { get; set; }
-#nullable restore
-#else
-        public string LfsEnabled { get; set; }
-#endif
+        public bool? LfsEnabled { get; set; }
         /// <summary>The lock_duo_features_enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -301,13 +283,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string OnlyAllowMergeIfPipelineSucceeds { get; set; }
 #endif
         /// <summary>The organization_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? OrganizationId { get; set; }
-#nullable restore
-#else
-        public string OrganizationId { get; set; }
-#endif
+        public int? OrganizationId { get; set; }
         /// <summary>The parent_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -365,21 +341,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string RepositoryStorage { get; set; }
 #endif
         /// <summary>The request_access_enabled property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? RequestAccessEnabled { get; set; }
-#nullable restore
-#else
-        public string RequestAccessEnabled { get; set; }
-#endif
+        public bool? RequestAccessEnabled { get; set; }
         /// <summary>The require_two_factor_authentication property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? RequireTwoFactorAuthentication { get; set; }
-#nullable restore
-#else
-        public string RequireTwoFactorAuthentication { get; set; }
-#endif
+        public bool? RequireTwoFactorAuthentication { get; set; }
         /// <summary>The root_storage_statistics property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -445,13 +409,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string SharedWithGroups { get; set; }
 #endif
         /// <summary>The share_with_group_lock property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ShareWithGroupLock { get; set; }
-#nullable restore
-#else
-        public string ShareWithGroupLock { get; set; }
-#endif
+        public bool? ShareWithGroupLock { get; set; }
         /// <summary>The show_diff_preview_in_email property</summary>
         public bool? ShowDiffPreviewInEmail { get; set; }
         /// <summary>The statistics property</summary>
@@ -479,13 +437,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string SubgroupCreationLevel { get; set; }
 #endif
         /// <summary>The two_factor_grace_period property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? TwoFactorGracePeriod { get; set; }
-#nullable restore
-#else
-        public string TwoFactorGracePeriod { get; set; }
-#endif
+        public int? TwoFactorGracePeriod { get; set; }
         /// <summary>The unique_project_download_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -586,7 +538,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "created_at", n => { CreatedAt = n.GetStringValue(); } },
                 { "custom_attributes", n => { CustomAttributes = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCustomAttribute>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCustomAttribute.CreateFromDiscriminatorValue); } },
                 { "default_branch", n => { DefaultBranch = n.GetStringValue(); } },
-                { "default_branch_protection", n => { DefaultBranchProtection = n.GetStringValue(); } },
+                { "default_branch_protection", n => { DefaultBranchProtection = n.GetIntValue(); } },
                 { "default_branch_protection_defaults", n => { DefaultBranchProtectionDefaults = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "duo_core_features_enabled", n => { DuoCoreFeaturesEnabled = n.GetBoolValue(); } },
@@ -600,12 +552,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "file_template_project_id", n => { FileTemplateProjectId = n.GetStringValue(); } },
                 { "full_name", n => { FullName = n.GetStringValue(); } },
                 { "full_path", n => { FullPath = n.GetStringValue(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
+                { "id", n => { Id = n.GetIntValue(); } },
                 { "ip_restriction_ranges", n => { IpRestrictionRanges = n.GetStringValue(); } },
                 { "ldap_access", n => { LdapAccess = n.GetStringValue(); } },
                 { "ldap_cn", n => { LdapCn = n.GetStringValue(); } },
                 { "ldap_group_links", n => { LdapGroupLinks = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesLdapGroupLink>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesLdapGroupLink.CreateFromDiscriminatorValue); } },
-                { "lfs_enabled", n => { LfsEnabled = n.GetStringValue(); } },
+                { "lfs_enabled", n => { LfsEnabled = n.GetBoolValue(); } },
                 { "lock_duo_features_enabled", n => { LockDuoFeaturesEnabled = n.GetStringValue(); } },
                 { "lock_math_rendering_limits_enabled", n => { LockMathRenderingLimitsEnabled = n.GetBoolValue(); } },
                 { "marked_for_deletion_on", n => { MarkedForDeletionOn = n.GetStringValue(); } },
@@ -616,7 +568,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "only_allow_merge_if_all_discussions_are_resolved", n => { OnlyAllowMergeIfAllDiscussionsAreResolved = n.GetStringValue(); } },
                 { "only_allow_merge_if_pipeline_succeeds", n => { OnlyAllowMergeIfPipelineSucceeds = n.GetStringValue(); } },
-                { "organization_id", n => { OrganizationId = n.GetStringValue(); } },
+                { "organization_id", n => { OrganizationId = n.GetIntValue(); } },
                 { "parent_id", n => { ParentId = n.GetStringValue(); } },
                 { "path", n => { Path = n.GetStringValue(); } },
                 { "prevent_forking_outside_group", n => { PreventForkingOutsideGroup = n.GetStringValue(); } },
@@ -624,13 +576,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "project_creation_level", n => { ProjectCreationLevel = n.GetStringValue(); } },
                 { "projects", n => { Projects = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProject>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProject.CreateFromDiscriminatorValue); } },
                 { "repository_storage", n => { RepositoryStorage = n.GetStringValue(); } },
-                { "request_access_enabled", n => { RequestAccessEnabled = n.GetStringValue(); } },
-                { "require_two_factor_authentication", n => { RequireTwoFactorAuthentication = n.GetStringValue(); } },
+                { "request_access_enabled", n => { RequestAccessEnabled = n.GetBoolValue(); } },
+                { "require_two_factor_authentication", n => { RequireTwoFactorAuthentication = n.GetBoolValue(); } },
                 { "root_storage_statistics", n => { RootStorageStatistics = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesNamespaceRootStorageStatistics>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesNamespaceRootStorageStatistics.CreateFromDiscriminatorValue); } },
                 { "runners_token", n => { RunnersToken = n.GetStringValue(); } },
                 { "saml_group_links", n => { SamlGroupLinks = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesSamlGroupLink>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesSamlGroupLink.CreateFromDiscriminatorValue); } },
                 { "service_access_tokens_expiration_enforced", n => { ServiceAccessTokensExpirationEnforced = n.GetStringValue(); } },
-                { "share_with_group_lock", n => { ShareWithGroupLock = n.GetStringValue(); } },
+                { "share_with_group_lock", n => { ShareWithGroupLock = n.GetBoolValue(); } },
                 { "shared_projects", n => { SharedProjects = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProject>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProject.CreateFromDiscriminatorValue); } },
                 { "shared_runners_minutes_limit", n => { SharedRunnersMinutesLimit = n.GetStringValue(); } },
                 { "shared_runners_setting", n => { SharedRunnersSetting = n.GetStringValue(); } },
@@ -639,7 +591,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "statistics", n => { Statistics = n.GetStringValue(); } },
                 { "step_up_auth_required_oauth_provider", n => { StepUpAuthRequiredOauthProvider = n.GetStringValue(); } },
                 { "subgroup_creation_level", n => { SubgroupCreationLevel = n.GetStringValue(); } },
-                { "two_factor_grace_period", n => { TwoFactorGracePeriod = n.GetStringValue(); } },
+                { "two_factor_grace_period", n => { TwoFactorGracePeriod = n.GetIntValue(); } },
                 { "unique_project_download_limit", n => { UniqueProjectDownloadLimit = n.GetStringValue(); } },
                 { "unique_project_download_limit_alertlist", n => { UniqueProjectDownloadLimitAlertlist = n.GetStringValue(); } },
                 { "unique_project_download_limit_allowlist", n => { UniqueProjectDownloadLimitAllowlist = n.GetStringValue(); } },
@@ -668,7 +620,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("created_at", CreatedAt);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCustomAttribute>("custom_attributes", CustomAttributes);
             writer.WriteStringValue("default_branch", DefaultBranch);
-            writer.WriteStringValue("default_branch_protection", DefaultBranchProtection);
+            writer.WriteIntValue("default_branch_protection", DefaultBranchProtection);
             writer.WriteStringValue("default_branch_protection_defaults", DefaultBranchProtectionDefaults);
             writer.WriteStringValue("description", Description);
             writer.WriteBoolValue("duo_core_features_enabled", DuoCoreFeaturesEnabled);
@@ -682,12 +634,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("file_template_project_id", FileTemplateProjectId);
             writer.WriteStringValue("full_name", FullName);
             writer.WriteStringValue("full_path", FullPath);
-            writer.WriteStringValue("id", Id);
+            writer.WriteIntValue("id", Id);
             writer.WriteStringValue("ip_restriction_ranges", IpRestrictionRanges);
             writer.WriteStringValue("ldap_access", LdapAccess);
             writer.WriteStringValue("ldap_cn", LdapCn);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesLdapGroupLink>("ldap_group_links", LdapGroupLinks);
-            writer.WriteStringValue("lfs_enabled", LfsEnabled);
+            writer.WriteBoolValue("lfs_enabled", LfsEnabled);
             writer.WriteStringValue("lock_duo_features_enabled", LockDuoFeaturesEnabled);
             writer.WriteBoolValue("lock_math_rendering_limits_enabled", LockMathRenderingLimitsEnabled);
             writer.WriteStringValue("marked_for_deletion_on", MarkedForDeletionOn);
@@ -698,7 +650,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("only_allow_merge_if_all_discussions_are_resolved", OnlyAllowMergeIfAllDiscussionsAreResolved);
             writer.WriteStringValue("only_allow_merge_if_pipeline_succeeds", OnlyAllowMergeIfPipelineSucceeds);
-            writer.WriteStringValue("organization_id", OrganizationId);
+            writer.WriteIntValue("organization_id", OrganizationId);
             writer.WriteStringValue("parent_id", ParentId);
             writer.WriteStringValue("path", Path);
             writer.WriteStringValue("prevent_forking_outside_group", PreventForkingOutsideGroup);
@@ -706,8 +658,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("project_creation_level", ProjectCreationLevel);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProject>("projects", Projects);
             writer.WriteStringValue("repository_storage", RepositoryStorage);
-            writer.WriteStringValue("request_access_enabled", RequestAccessEnabled);
-            writer.WriteStringValue("require_two_factor_authentication", RequireTwoFactorAuthentication);
+            writer.WriteBoolValue("request_access_enabled", RequestAccessEnabled);
+            writer.WriteBoolValue("require_two_factor_authentication", RequireTwoFactorAuthentication);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesNamespaceRootStorageStatistics>("root_storage_statistics", RootStorageStatistics);
             writer.WriteStringValue("runners_token", RunnersToken);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesSamlGroupLink>("saml_group_links", SamlGroupLinks);
@@ -716,12 +668,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("shared_runners_minutes_limit", SharedRunnersMinutesLimit);
             writer.WriteStringValue("shared_runners_setting", SharedRunnersSetting);
             writer.WriteStringValue("shared_with_groups", SharedWithGroups);
-            writer.WriteStringValue("share_with_group_lock", ShareWithGroupLock);
+            writer.WriteBoolValue("share_with_group_lock", ShareWithGroupLock);
             writer.WriteBoolValue("show_diff_preview_in_email", ShowDiffPreviewInEmail);
             writer.WriteStringValue("statistics", Statistics);
             writer.WriteStringValue("step_up_auth_required_oauth_provider", StepUpAuthRequiredOauthProvider);
             writer.WriteStringValue("subgroup_creation_level", SubgroupCreationLevel);
-            writer.WriteStringValue("two_factor_grace_period", TwoFactorGracePeriod);
+            writer.WriteIntValue("two_factor_grace_period", TwoFactorGracePeriod);
             writer.WriteStringValue("unique_project_download_limit", UniqueProjectDownloadLimit);
             writer.WriteStringValue("unique_project_download_limit_alertlist", UniqueProjectDownloadLimitAlertlist);
             writer.WriteStringValue("unique_project_download_limit_allowlist", UniqueProjectDownloadLimitAllowlist);

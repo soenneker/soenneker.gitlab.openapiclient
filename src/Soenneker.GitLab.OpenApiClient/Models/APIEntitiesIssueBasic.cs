@@ -72,13 +72,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The discussion_locked property</summary>
         public bool? DiscussionLocked { get; set; }
         /// <summary>The downvotes property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Downvotes { get; set; }
-#nullable restore
-#else
-        public string Downvotes { get; set; }
-#endif
+        public int? Downvotes { get; set; }
         /// <summary>The due_date property</summary>
         public Date? DueDate { get; set; }
         /// <summary>The id property</summary>
@@ -102,13 +96,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public List<string> Labels { get; set; }
 #endif
         /// <summary>The merge_requests_count property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? MergeRequestsCount { get; set; }
-#nullable restore
-#else
-        public string MergeRequestsCount { get; set; }
-#endif
+        public int? MergeRequestsCount { get; set; }
         /// <summary>The milestone property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -164,21 +152,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The updated_at property</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>The upvotes property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Upvotes { get; set; }
-#nullable restore
-#else
-        public string Upvotes { get; set; }
-#endif
+        public int? Upvotes { get; set; }
         /// <summary>The user_notes_count property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? UserNotesCount { get; set; }
-#nullable restore
-#else
-        public string UserNotesCount { get; set; }
-#endif
+        public int? UserNotesCount { get; set; }
         /// <summary>The web_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -230,13 +206,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "discussion_locked", n => { DiscussionLocked = n.GetBoolValue(); } },
-                { "downvotes", n => { Downvotes = n.GetStringValue(); } },
+                { "downvotes", n => { Downvotes = n.GetIntValue(); } },
                 { "due_date", n => { DueDate = n.GetDateValue(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "iid", n => { Iid = n.GetIntValue(); } },
                 { "issue_type", n => { IssueType = n.GetStringValue(); } },
                 { "labels", n => { Labels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "merge_requests_count", n => { MergeRequestsCount = n.GetStringValue(); } },
+                { "merge_requests_count", n => { MergeRequestsCount = n.GetIntValue(); } },
                 { "milestone", n => { Milestone = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMilestone>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMilestone.CreateFromDiscriminatorValue); } },
                 { "project_id", n => { ProjectId = n.GetIntValue(); } },
                 { "start_date", n => { StartDate = n.GetDateValue(); } },
@@ -246,8 +222,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "title", n => { Title = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
                 { "updated_at", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
-                { "upvotes", n => { Upvotes = n.GetStringValue(); } },
-                { "user_notes_count", n => { UserNotesCount = n.GetStringValue(); } },
+                { "upvotes", n => { Upvotes = n.GetIntValue(); } },
+                { "user_notes_count", n => { UserNotesCount = n.GetIntValue(); } },
                 { "web_url", n => { WebUrl = n.GetStringValue(); } },
                 { "weight", n => { Weight = n.GetStringValue(); } },
             };
@@ -269,13 +245,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
             writer.WriteStringValue("description", Description);
             writer.WriteBoolValue("discussion_locked", DiscussionLocked);
-            writer.WriteStringValue("downvotes", Downvotes);
+            writer.WriteIntValue("downvotes", Downvotes);
             writer.WriteDateValue("due_date", DueDate);
             writer.WriteIntValue("id", Id);
             writer.WriteIntValue("iid", Iid);
             writer.WriteStringValue("issue_type", IssueType);
             writer.WriteCollectionOfPrimitiveValues<string>("labels", Labels);
-            writer.WriteStringValue("merge_requests_count", MergeRequestsCount);
+            writer.WriteIntValue("merge_requests_count", MergeRequestsCount);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMilestone>("milestone", Milestone);
             writer.WriteIntValue("project_id", ProjectId);
             writer.WriteDateValue("start_date", StartDate);
@@ -285,8 +261,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("title", Title);
             writer.WriteStringValue("type", Type);
             writer.WriteDateTimeOffsetValue("updated_at", UpdatedAt);
-            writer.WriteStringValue("upvotes", Upvotes);
-            writer.WriteStringValue("user_notes_count", UserNotesCount);
+            writer.WriteIntValue("upvotes", Upvotes);
+            writer.WriteIntValue("user_notes_count", UserNotesCount);
             writer.WriteStringValue("web_url", WebUrl);
             writer.WriteStringValue("weight", Weight);
             writer.WriteAdditionalData(AdditionalData);

@@ -55,13 +55,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesNamespaceBasic Group { get; set; }
 #endif
         /// <summary>The id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get; set; }
-#nullable restore
-#else
-        public string Id { get; set; }
-#endif
+        public int? Id { get; set; }
         /// <summary>The project property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -140,7 +134,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "body", n => { Body = n.GetStringValue(); } },
                 { "created_at", n => { CreatedAt = n.GetStringValue(); } },
                 { "group", n => { Group = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesNamespaceBasic>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesNamespaceBasic.CreateFromDiscriminatorValue); } },
-                { "id", n => { Id = n.GetStringValue(); } },
+                { "id", n => { Id = n.GetIntValue(); } },
                 { "project", n => { Project = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProjectIdentity>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProjectIdentity.CreateFromDiscriminatorValue); } },
                 { "state", n => { State = n.GetStringValue(); } },
                 { "target", n => { Target = n.GetStringValue(); } },
@@ -161,7 +155,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("body", Body);
             writer.WriteStringValue("created_at", CreatedAt);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesNamespaceBasic>("group", Group);
-            writer.WriteStringValue("id", Id);
+            writer.WriteIntValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProjectIdentity>("project", Project);
             writer.WriteStringValue("state", State);
             writer.WriteStringValue("target", Target);
