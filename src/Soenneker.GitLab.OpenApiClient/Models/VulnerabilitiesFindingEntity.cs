@@ -238,6 +238,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesStateTransitionEntity StateTransitions { get; set; }
 #endif
+        /// <summary>The unverified property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Unverified { get; set; }
+#nullable restore
+#else
+        public string Unverified { get; set; }
+#endif
         /// <summary>The uuid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -299,6 +307,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "severity", n => { Severity = n.GetStringValue(); } },
                 { "state", n => { State = n.GetStringValue(); } },
                 { "state_transitions", n => { StateTransitions = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesStateTransitionEntity>(global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesStateTransitionEntity.CreateFromDiscriminatorValue); } },
+                { "unverified", n => { Unverified = n.GetStringValue(); } },
                 { "uuid", n => { Uuid = n.GetStringValue(); } },
             };
         }
@@ -337,6 +346,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("severity", Severity);
             writer.WriteStringValue("state", State);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesStateTransitionEntity>("state_transitions", StateTransitions);
+            writer.WriteStringValue("unverified", Unverified);
             writer.WriteStringValue("uuid", Uuid);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -774,6 +774,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string SecurityAndComplianceEnabled { get; set; }
 #endif
+        /// <summary>Require all security policy pipelines to succeed before merge requests can be merged.</summary>
+        public bool? SecurityPolicyPipelineMustSucceed { get; set; }
         /// <summary>The service_desk_address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -1060,6 +1062,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "secret_push_protection_enabled", n => { SecretPushProtectionEnabled = n.GetBoolValue(); } },
                 { "security_and_compliance_access_level", n => { SecurityAndComplianceAccessLevel = n.GetStringValue(); } },
                 { "security_and_compliance_enabled", n => { SecurityAndComplianceEnabled = n.GetStringValue(); } },
+                { "security_policy_pipeline_must_succeed", n => { SecurityPolicyPipelineMustSucceed = n.GetBoolValue(); } },
                 { "service_desk_address", n => { ServiceDeskAddress = n.GetStringValue(); } },
                 { "service_desk_enabled", n => { ServiceDeskEnabled = n.GetBoolValue(); } },
                 { "shared_runners_enabled", n => { SharedRunnersEnabled = n.GetBoolValue(); } },
@@ -1223,6 +1226,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("secret_push_protection_enabled", SecretPushProtectionEnabled);
             writer.WriteStringValue("security_and_compliance_access_level", SecurityAndComplianceAccessLevel);
             writer.WriteStringValue("security_and_compliance_enabled", SecurityAndComplianceEnabled);
+            writer.WriteBoolValue("security_policy_pipeline_must_succeed", SecurityPolicyPipelineMustSucceed);
             writer.WriteStringValue("service_desk_address", ServiceDeskAddress);
             writer.WriteBoolValue("service_desk_enabled", ServiceDeskEnabled);
             writer.WriteBoolValue("shared_runners_enabled", SharedRunnersEnabled);

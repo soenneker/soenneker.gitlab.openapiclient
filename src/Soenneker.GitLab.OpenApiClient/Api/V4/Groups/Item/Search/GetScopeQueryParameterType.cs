@@ -32,6 +32,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Search
         #pragma warning disable CS1591
         Issues,
         #pragma warning restore CS1591
+        [EnumMember(Value = "work_items")]
+        #pragma warning disable CS1591
+        Work_items,
+        #pragma warning restore CS1591
         [EnumMember(Value = "merge_requests")]
         #pragma warning disable CS1591
         Merge_requests,

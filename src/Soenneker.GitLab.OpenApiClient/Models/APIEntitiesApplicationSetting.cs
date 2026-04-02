@@ -4334,6 +4334,22 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string TimeTrackingLimitToHours { get; set; }
 #endif
+        /// <summary>The tool_approval_for_session_availability property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ToolApprovalForSessionAvailability { get; set; }
+#nullable restore
+#else
+        public string ToolApprovalForSessionAvailability { get; set; }
+#endif
+        /// <summary>The tool_approval_for_session_enabled property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ToolApprovalForSessionEnabled { get; set; }
+#nullable restore
+#else
+        public string ToolApprovalForSessionEnabled { get; set; }
+#endif
         /// <summary>The top_level_group_creation_enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -5363,6 +5379,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "throttle_unauthenticated_web_period_in_seconds", n => { ThrottleUnauthenticatedWebPeriodInSeconds = n.GetStringValue(); } },
                 { "throttle_unauthenticated_web_requests_per_period", n => { ThrottleUnauthenticatedWebRequestsPerPeriod = n.GetStringValue(); } },
                 { "time_tracking_limit_to_hours", n => { TimeTrackingLimitToHours = n.GetStringValue(); } },
+                { "tool_approval_for_session_availability", n => { ToolApprovalForSessionAvailability = n.GetStringValue(); } },
+                { "tool_approval_for_session_enabled", n => { ToolApprovalForSessionEnabled = n.GetStringValue(); } },
                 { "top_level_group_creation_enabled", n => { TopLevelGroupCreationEnabled = n.GetStringValue(); } },
                 { "two_factor_grace_period", n => { TwoFactorGracePeriod = n.GetStringValue(); } },
                 { "unconfirmed_users_delete_after_days", n => { UnconfirmedUsersDeleteAfterDays = n.GetStringValue(); } },
@@ -5970,6 +5988,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("throttle_unauthenticated_web_period_in_seconds", ThrottleUnauthenticatedWebPeriodInSeconds);
             writer.WriteStringValue("throttle_unauthenticated_web_requests_per_period", ThrottleUnauthenticatedWebRequestsPerPeriod);
             writer.WriteStringValue("time_tracking_limit_to_hours", TimeTrackingLimitToHours);
+            writer.WriteStringValue("tool_approval_for_session_availability", ToolApprovalForSessionAvailability);
+            writer.WriteStringValue("tool_approval_for_session_enabled", ToolApprovalForSessionEnabled);
             writer.WriteStringValue("top_level_group_creation_enabled", TopLevelGroupCreationEnabled);
             writer.WriteStringValue("two_factor_grace_period", TwoFactorGracePeriod);
             writer.WriteStringValue("unconfirmed_users_delete_after_days", UnconfirmedUsersDeleteAfterDays);

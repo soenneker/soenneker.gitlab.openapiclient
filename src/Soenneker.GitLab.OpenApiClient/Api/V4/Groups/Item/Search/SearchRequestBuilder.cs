@@ -21,7 +21,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Search
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SearchRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/groups/{id}/search?scope={scope}&search={search}{&confidential*,exclude_forks*,fields,include_archived*,num_context_lines*,page*,per_page*,regex*,state*}", pathParameters)
+        public SearchRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/groups/{id}/search?scope={scope}&search={search}{&confidential*,exclude_forks*,fields,include_archived*,num_context_lines*,page*,per_page*,regex*,state*,type}", pathParameters)
         {
         }
         /// <summary>
@@ -29,7 +29,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Search
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SearchRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/groups/{id}/search?scope={scope}&search={search}{&confidential*,exclude_forks*,fields,include_archived*,num_context_lines*,page*,per_page*,regex*,state*}", rawUrl)
+        public SearchRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/groups/{id}/search?scope={scope}&search={search}{&confidential*,exclude_forks*,fields,include_archived*,num_context_lines*,page*,per_page*,regex*,state*,type}", rawUrl)
         {
         }
         /// <summary>
@@ -172,6 +172,16 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Search
             /// <summary>Filter results by state</summary>
             [QueryParameter("state")]
             public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Search.GetStateQueryParameterType? StateAsGetStateQueryParameterType { get; set; }
+            /// <summary>&quot;Filter work items by type. Only applies to work_items scope. Available types: issue, task, epic, incident, test_case, requirement, objective, key_result, ticket.&quot;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("type")]
+            public string[]? Type { get; set; }
+#nullable restore
+#else
+            [QueryParameter("type")]
+            public string[] Type { get; set; }
+#endif
         }
         /// <summary>
         /// Configuration for the request such as headers, query parameters, and middleware options.
