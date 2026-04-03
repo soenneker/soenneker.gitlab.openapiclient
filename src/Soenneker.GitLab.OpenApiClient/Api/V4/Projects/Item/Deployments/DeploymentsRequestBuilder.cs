@@ -30,19 +30,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments
                 return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments.Item.WithDeployment_ItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
-        /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.deployments.item collection</summary>
-        /// <param name="position">The ID of the deployment</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments.Item.WithDeployment_ItemRequestBuilder"/></returns>
-        [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments.Item.WithDeployment_ItemRequestBuilder this[string position]
-        {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("deployment_id", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments.Item.WithDeployment_ItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
-        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments.DeploymentsRequestBuilder"/> and sets the default values.
         /// </summary>
@@ -170,19 +157,8 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments
             [QueryParameter("finished_before")]
             public DateTimeOffset? FinishedBefore { get; set; }
             /// <summary>Return deployments ordered by either one of `id`, `iid`, `created_at`, `updated_at` or `ref` fields. Default is `id`</summary>
-            [Obsolete("This property is deprecated, use OrderByAsGetOrderByQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("order_by")]
-            public string? OrderBy { get; set; }
-#nullable restore
-#else
-            [QueryParameter("order_by")]
-            public string OrderBy { get; set; }
-#endif
-            /// <summary>Return deployments ordered by either one of `id`, `iid`, `created_at`, `updated_at` or `ref` fields. Default is `id`</summary>
-            [QueryParameter("order_by")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments.GetOrder_byQueryParameterType? OrderByAsGetOrderByQueryParameterType { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments.GetOrder_byQueryParameterType? OrderBy { get; set; }
             /// <summary>Current page number</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
@@ -190,55 +166,17 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
             /// <summary>Return deployments sorted in `asc` or `desc` order. Default is `asc`</summary>
-            [Obsolete("This property is deprecated, use SortAsGetSortQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("sort")]
-            public string? Sort { get; set; }
-#nullable restore
-#else
-            [QueryParameter("sort")]
-            public string Sort { get; set; }
-#endif
-            /// <summary>Return deployments sorted in `asc` or `desc` order. Default is `asc`</summary>
-            [QueryParameter("sort")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments.GetSortQueryParameterType? SortAsGetSortQueryParameterType { get; set; }
-            /// <summary>The status to filter deployments by. One of `created`, `running`, `success`, `failed`, `canceled`, or `blocked`</summary>
-            [Obsolete("This property is deprecated, use StatusAsGetStatusQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            [QueryParameter("status")]
-            public string? Status { get; set; }
-#nullable restore
-#else
-            [QueryParameter("status")]
-            public string Status { get; set; }
-#endif
+            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments.GetSortQueryParameterType? Sort { get; set; }
             /// <summary>The status to filter deployments by. One of `created`, `running`, `success`, `failed`, `canceled`, or `blocked`</summary>
             [QueryParameter("status")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments.GetStatusQueryParameterType? StatusAsGetStatusQueryParameterType { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments.GetStatusQueryParameterType? Status { get; set; }
             /// <summary>Return deployments updated after the specified date. Expected in ISO 8601 format (`2019-03-15T08:00:00Z`)</summary>
             [QueryParameter("updated_after")]
             public DateTimeOffset? UpdatedAfter { get; set; }
             /// <summary>Return deployments updated before the specified date. Expected in ISO 8601 format (`2019-03-15T08:00:00Z`)</summary>
             [QueryParameter("updated_before")]
             public DateTimeOffset? UpdatedBefore { get; set; }
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class DeploymentsRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments.DeploymentsRequestBuilder.DeploymentsRequestBuilderGetQueryParameters>
-        {
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class DeploymentsRequestBuilderPostRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
-        {
         }
     }
 }

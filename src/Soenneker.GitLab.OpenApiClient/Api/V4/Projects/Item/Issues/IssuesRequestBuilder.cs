@@ -30,19 +30,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues
                 return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Eventable_ItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
-        /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.issues.item collection</summary>
-        /// <param name="position">The internal ID of a project issue</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Eventable_ItemRequestBuilder"/></returns>
-        [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Eventable_ItemRequestBuilder this[string position]
-        {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("eventable_%2Did", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Eventable_ItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
-        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.IssuesRequestBuilder"/> and sets the default values.
         /// </summary>
@@ -209,19 +196,8 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues
             public string Cursor { get; set; }
 #endif
             /// <summary>&quot;Return issues that have no due date (`0`), or whose due date is this week, this month, between two weeks ago and next month, or which are overdue. Accepts: `overdue`, `week`, `month`, `next_month_and_previous_two_weeks`, `0`&quot;</summary>
-            [Obsolete("This property is deprecated, use DueDateAsGetDueDateQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("due_date")]
-            public string? DueDate { get; set; }
-#nullable restore
-#else
-            [QueryParameter("due_date")]
-            public string DueDate { get; set; }
-#endif
-            /// <summary>&quot;Return issues that have no due date (`0`), or whose due date is this week, this month, between two weeks ago and next month, or which are overdue. Accepts: `overdue`, `week`, `month`, `next_month_and_previous_two_weeks`, `0`&quot;</summary>
-            [QueryParameter("due_date")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.GetDue_dateQueryParameterType? DueDateAsGetDueDateQueryParameterType { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.GetDue_dateQueryParameterType? DueDate { get; set; }
             /// <summary>The ID of an epic associated with the issues</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -233,19 +209,8 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues
             public string EpicId { get; set; }
 #endif
             /// <summary>&quot;The health status of the issue. Must be one of: on_track, needs_attention, at_risk, none, any&quot;</summary>
-            [Obsolete("This property is deprecated, use HealthStatusAsGetHealthStatusQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("health_status")]
-            public string? HealthStatus { get; set; }
-#nullable restore
-#else
-            [QueryParameter("health_status")]
-            public string HealthStatus { get; set; }
-#endif
-            /// <summary>&quot;The health status of the issue. Must be one of: on_track, needs_attention, at_risk, none, any&quot;</summary>
-            [QueryParameter("health_status")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.GetHealth_statusQueryParameterType? HealthStatusAsGetHealthStatusQueryParameterType { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.GetHealth_statusQueryParameterType? HealthStatus { get; set; }
             /// <summary>The IID array of issues</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -267,19 +232,8 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues
             public string In { get; set; }
 #endif
             /// <summary>&quot;The type of the issue. Accepts: issue, incident, test_case, requirement, task, ticket&quot;</summary>
-            [Obsolete("This property is deprecated, use IssueTypeAsGetIssueTypeQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("issue_type")]
-            public string? IssueType { get; set; }
-#nullable restore
-#else
-            [QueryParameter("issue_type")]
-            public string IssueType { get; set; }
-#endif
-            /// <summary>&quot;The type of the issue. Accepts: issue, incident, test_case, requirement, task, ticket&quot;</summary>
-            [QueryParameter("issue_type")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.GetIssue_typeQueryParameterType? IssueTypeAsGetIssueTypeQueryParameterType { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.GetIssue_typeQueryParameterType? IssueType { get; set; }
             /// <summary>Return issues which are assigned to the iteration with the given ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -321,19 +275,8 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues
             public string Milestone { get; set; }
 #endif
             /// <summary>Return issues assigned to milestones with the specified timebox value (&quot;Any&quot;, &quot;None&quot;, &quot;Upcoming&quot; or &quot;Started&quot;)</summary>
-            [Obsolete("This property is deprecated, use MilestoneIdAsGetMilestoneIdQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("milestone_id")]
-            public string? MilestoneId { get; set; }
-#nullable restore
-#else
-            [QueryParameter("milestone_id")]
-            public string MilestoneId { get; set; }
-#endif
-            /// <summary>Return issues assigned to milestones with the specified timebox value (&quot;Any&quot;, &quot;None&quot;, &quot;Upcoming&quot; or &quot;Started&quot;)</summary>
-            [QueryParameter("milestone_id")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.GetMilestone_idQueryParameterType? MilestoneIdAsGetMilestoneIdQueryParameterType { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.GetMilestone_idQueryParameterType? MilestoneId { get; set; }
             /// <summary>Return issues reacted by the authenticated user by the given emoji</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -431,36 +374,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues
             public string Notmilestone { get; set; }
 #endif
             /// <summary>Return issues assigned to milestones without the specified timebox value (&quot;Any&quot;, &quot;None&quot;, &quot;Upcoming&quot; or &quot;Started&quot;)</summary>
-            [Obsolete("This property is deprecated, use NotmilestoneIdAsGetNotMilestoneIdQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("not%5Bmilestone_id%5D")]
-            public string? NotmilestoneId { get; set; }
-#nullable restore
-#else
-            [QueryParameter("not%5Bmilestone_id%5D")]
-            public string NotmilestoneId { get; set; }
-#endif
-            /// <summary>Return issues assigned to milestones without the specified timebox value (&quot;Any&quot;, &quot;None&quot;, &quot;Upcoming&quot; or &quot;Started&quot;)</summary>
-            [QueryParameter("not%5Bmilestone_id%5D")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.GetNotMilestone_idQueryParameterType? NotmilestoneIdAsGetNotMilestoneIdQueryParameterType { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.GetNotMilestone_idQueryParameterType? NotmilestoneId { get; set; }
             /// <summary>Return issues without the specified weight</summary>
             [QueryParameter("not%5Bweight%5D")]
             public int? Notweight { get; set; }
             /// <summary>Return issues ordered by `created_at`, `due_date`, `label_priority`, `milestone_due`, `popularity`, `priority`, `relative_position`, `title`, or `updated_at` fields.</summary>
-            [Obsolete("This property is deprecated, use OrderByAsGetOrderByQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("order_by")]
-            public string? OrderBy { get; set; }
-#nullable restore
-#else
-            [QueryParameter("order_by")]
-            public string OrderBy { get; set; }
-#endif
-            /// <summary>Return issues ordered by `created_at`, `due_date`, `label_priority`, `milestone_due`, `popularity`, `priority`, `relative_position`, `title`, or `updated_at` fields.</summary>
-            [QueryParameter("order_by")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.GetOrder_byQueryParameterType? OrderByAsGetOrderByQueryParameterType { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.GetOrder_byQueryParameterType? OrderBy { get; set; }
             /// <summary>Current page number</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
@@ -468,19 +389,8 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
             /// <summary>&quot;Return issues for the given scope: `created_by_me`, `assigned_to_me` or `all`&quot;</summary>
-            [Obsolete("This property is deprecated, use ScopeAsGetScopeQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("scope")]
-            public string? Scope { get; set; }
-#nullable restore
-#else
-            [QueryParameter("scope")]
-            public string Scope { get; set; }
-#endif
-            /// <summary>&quot;Return issues for the given scope: `created_by_me`, `assigned_to_me` or `all`&quot;</summary>
-            [QueryParameter("scope")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.GetScopeQueryParameterType? ScopeAsGetScopeQueryParameterType { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.GetScopeQueryParameterType? Scope { get; set; }
             /// <summary>Search issues for text present in the title, description, or any combination of these</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -492,33 +402,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues
             public string Search { get; set; }
 #endif
             /// <summary>Return issues sorted in `asc` or `desc` order.</summary>
-            [Obsolete("This property is deprecated, use SortAsGetSortQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("sort")]
-            public string? Sort { get; set; }
-#nullable restore
-#else
-            [QueryParameter("sort")]
-            public string Sort { get; set; }
-#endif
-            /// <summary>Return issues sorted in `asc` or `desc` order.</summary>
-            [QueryParameter("sort")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.GetSortQueryParameterType? SortAsGetSortQueryParameterType { get; set; }
-            /// <summary>Return opened, closed, or all issues</summary>
-            [Obsolete("This property is deprecated, use StateAsGetStateQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            [QueryParameter("state")]
-            public string? State { get; set; }
-#nullable restore
-#else
-            [QueryParameter("state")]
-            public string State { get; set; }
-#endif
+            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.GetSortQueryParameterType? Sort { get; set; }
             /// <summary>Return opened, closed, or all issues</summary>
             [QueryParameter("state")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.GetStateQueryParameterType? StateAsGetStateQueryParameterType { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.GetStateQueryParameterType? State { get; set; }
             /// <summary>Return issues updated after the specified time</summary>
             [QueryParameter("updated_after")]
             public DateTimeOffset? UpdatedAfter { get; set; }
@@ -538,22 +426,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues
             /// <summary>Return titles of labels and other details</summary>
             [QueryParameter("with_labels_details")]
             public bool? WithLabelsDetails { get; set; }
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class IssuesRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.IssuesRequestBuilder.IssuesRequestBuilderGetQueryParameters>
-        {
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class IssuesRequestBuilderPostRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
-        {
         }
     }
 }

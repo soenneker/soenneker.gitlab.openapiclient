@@ -30,19 +30,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Project_repository_storage_moves
                 return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Project_repository_storage_moves.Item.WithRepository_storage_move_ItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
-        /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.project_repository_storage_moves.item collection</summary>
-        /// <param name="position">The ID of a project repository storage move</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Project_repository_storage_moves.Item.WithRepository_storage_move_ItemRequestBuilder"/></returns>
-        [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Project_repository_storage_moves.Item.WithRepository_storage_move_ItemRequestBuilder this[string position]
-        {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("repository_storage_move_id", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Project_repository_storage_moves.Item.WithRepository_storage_move_ItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
-        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Project_repository_storage_moves.Project_repository_storage_movesRequestBuilder"/> and sets the default values.
         /// </summary>
@@ -86,37 +73,16 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Project_repository_storage_moves
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Project_repository_storage_moves.Project_repository_storage_movesPostResponse?> PostAsProject_repository_storage_movesPostResponseAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_c5f939561e3c body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Project_repository_storage_moves.Project_repository_storage_movesPostResponse?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_c5f939561e3c body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Project_repository_storage_moves.Project_repository_storage_movesPostResponse> PostAsProject_repository_storage_movesPostResponseAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_c5f939561e3c body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Project_repository_storage_moves.Project_repository_storage_movesPostResponse> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_c5f939561e3c body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Project_repository_storage_moves.Project_repository_storage_movesPostResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Project_repository_storage_moves.Project_repository_storage_movesPostResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// This feature was introduced in GitLab 13.7.
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Project_repository_storage_moves.Project_repository_storage_movesResponse"/></returns>
-        /// <param name="body">The request body</param>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        [Obsolete("This method is obsolete. Use PostAsProject_repository_storage_movesPostResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Project_repository_storage_moves.Project_repository_storage_movesResponse?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_c5f939561e3c body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#nullable restore
-#else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Project_repository_storage_moves.Project_repository_storage_movesResponse> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_c5f939561e3c body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#endif
-            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Project_repository_storage_moves.Project_repository_storage_movesResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Project_repository_storage_moves.Project_repository_storage_movesResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// This feature was introduced in GitLab 13.0.
@@ -180,22 +146,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Project_repository_storage_moves
             /// <summary>Number of items per page</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class Project_repository_storage_movesRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Project_repository_storage_moves.Project_repository_storage_movesRequestBuilder.Project_repository_storage_movesRequestBuilderGetQueryParameters>
-        {
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class Project_repository_storage_movesRequestBuilderPostRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
-        {
         }
     }
 }

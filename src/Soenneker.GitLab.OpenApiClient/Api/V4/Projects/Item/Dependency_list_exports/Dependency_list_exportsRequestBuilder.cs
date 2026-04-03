@@ -42,37 +42,16 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Dependency_list_ex
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Dependency_list_exports.Dependency_list_exportsPostResponse?> PostAsDependency_list_exportsPostResponseAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_5a2db215793f body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Dependency_list_exports.Dependency_list_exportsPostResponse?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_5a2db215793f body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Dependency_list_exports.Dependency_list_exportsPostResponse> PostAsDependency_list_exportsPostResponseAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_5a2db215793f body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Dependency_list_exports.Dependency_list_exportsPostResponse> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_5a2db215793f body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Dependency_list_exports.Dependency_list_exportsPostResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Dependency_list_exports.Dependency_list_exportsPostResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// Generates a dependency list export for a project
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Dependency_list_exports.Dependency_list_exportsResponse"/></returns>
-        /// <param name="body">The request body</param>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        [Obsolete("This method is obsolete. Use PostAsDependency_list_exportsPostResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Dependency_list_exports.Dependency_list_exportsResponse?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_5a2db215793f body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#nullable restore
-#else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Dependency_list_exports.Dependency_list_exportsResponse> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_5a2db215793f body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#endif
-            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Dependency_list_exports.Dependency_list_exportsResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Dependency_list_exports.Dependency_list_exportsResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Generates a dependency list export for a project
@@ -104,14 +83,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Dependency_list_ex
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Dependency_list_exports.Dependency_list_exportsRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Dependency_list_exports.Dependency_list_exportsRequestBuilder(rawUrl, RequestAdapter);
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class Dependency_list_exportsRequestBuilderPostRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
-        {
         }
     }
 }

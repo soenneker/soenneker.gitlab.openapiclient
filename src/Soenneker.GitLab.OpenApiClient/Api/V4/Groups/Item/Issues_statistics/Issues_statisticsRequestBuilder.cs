@@ -40,34 +40,15 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics.Issues_statisticsGetResponse?> GetAsIssues_statisticsGetResponseAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics.Issues_statisticsRequestBuilder.Issues_statisticsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics.Issues_statisticsGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics.Issues_statisticsRequestBuilder.Issues_statisticsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics.Issues_statisticsGetResponse> GetAsIssues_statisticsGetResponseAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics.Issues_statisticsRequestBuilder.Issues_statisticsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics.Issues_statisticsGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics.Issues_statisticsRequestBuilder.Issues_statisticsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics.Issues_statisticsGetResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics.Issues_statisticsGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// Get statistics for the list of group issues
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics.Issues_statisticsResponse"/></returns>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        [Obsolete("This method is obsolete. Use GetAsIssues_statisticsGetResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics.Issues_statisticsResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics.Issues_statisticsRequestBuilder.Issues_statisticsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#nullable restore
-#else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics.Issues_statisticsResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics.Issues_statisticsRequestBuilder.Issues_statisticsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#endif
-            var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics.Issues_statisticsResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics.Issues_statisticsResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get statistics for the list of group issues
@@ -156,19 +137,8 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics
             public string EpicId { get; set; }
 #endif
             /// <summary>&quot;The health status of the issue. Must be one of: on_track, needs_attention, at_risk, none, any&quot;</summary>
-            [Obsolete("This property is deprecated, use HealthStatusAsGetHealthStatusQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("health_status")]
-            public string? HealthStatus { get; set; }
-#nullable restore
-#else
-            [QueryParameter("health_status")]
-            public string HealthStatus { get; set; }
-#endif
-            /// <summary>&quot;The health status of the issue. Must be one of: on_track, needs_attention, at_risk, none, any&quot;</summary>
-            [QueryParameter("health_status")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics.GetHealth_statusQueryParameterType? HealthStatusAsGetHealthStatusQueryParameterType { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics.GetHealth_statusQueryParameterType? HealthStatus { get; set; }
             /// <summary>The IID array of issues</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -230,19 +200,8 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics
             public string Milestone { get; set; }
 #endif
             /// <summary>Return issues assigned to milestones with the specified timebox value (&quot;Any&quot;, &quot;None&quot;, &quot;Upcoming&quot; or &quot;Started&quot;)</summary>
-            [Obsolete("This property is deprecated, use MilestoneIdAsGetMilestoneIdQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("milestone_id")]
-            public string? MilestoneId { get; set; }
-#nullable restore
-#else
-            [QueryParameter("milestone_id")]
-            public string MilestoneId { get; set; }
-#endif
-            /// <summary>Return issues assigned to milestones with the specified timebox value (&quot;Any&quot;, &quot;None&quot;, &quot;Upcoming&quot; or &quot;Started&quot;)</summary>
-            [QueryParameter("milestone_id")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics.GetMilestone_idQueryParameterType? MilestoneIdAsGetMilestoneIdQueryParameterType { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics.GetMilestone_idQueryParameterType? MilestoneId { get; set; }
             /// <summary>Return issues reacted by the authenticated user by the given emoji</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -340,36 +299,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics
             public string Notmilestone { get; set; }
 #endif
             /// <summary>Return issues assigned to milestones without the specified timebox value (&quot;Any&quot;, &quot;None&quot;, &quot;Upcoming&quot; or &quot;Started&quot;)</summary>
-            [Obsolete("This property is deprecated, use NotmilestoneIdAsGetNotMilestoneIdQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("not%5Bmilestone_id%5D")]
-            public string? NotmilestoneId { get; set; }
-#nullable restore
-#else
-            [QueryParameter("not%5Bmilestone_id%5D")]
-            public string NotmilestoneId { get; set; }
-#endif
-            /// <summary>Return issues assigned to milestones without the specified timebox value (&quot;Any&quot;, &quot;None&quot;, &quot;Upcoming&quot; or &quot;Started&quot;)</summary>
-            [QueryParameter("not%5Bmilestone_id%5D")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics.GetNotMilestone_idQueryParameterType? NotmilestoneIdAsGetNotMilestoneIdQueryParameterType { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics.GetNotMilestone_idQueryParameterType? NotmilestoneId { get; set; }
             /// <summary>Return issues without the specified weight</summary>
             [QueryParameter("not%5Bweight%5D")]
             public int? Notweight { get; set; }
             /// <summary>&quot;Return issues for the given scope: `created_by_me`, `assigned_to_me` or `all`&quot;</summary>
-            [Obsolete("This property is deprecated, use ScopeAsGetScopeQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("scope")]
-            public string? Scope { get; set; }
-#nullable restore
-#else
-            [QueryParameter("scope")]
-            public string Scope { get; set; }
-#endif
-            /// <summary>&quot;Return issues for the given scope: `created_by_me`, `assigned_to_me` or `all`&quot;</summary>
-            [QueryParameter("scope")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics.GetScopeQueryParameterType? ScopeAsGetScopeQueryParameterType { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics.GetScopeQueryParameterType? Scope { get; set; }
             /// <summary>Search issues for text present in the title, description, or any combination of these</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -396,14 +333,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics
             [QueryParameter("weight")]
             public string Weight { get; set; }
 #endif
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class Issues_statisticsRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics.Issues_statisticsRequestBuilder.Issues_statisticsRequestBuilderGetQueryParameters>
-        {
         }
     }
 }

@@ -40,34 +40,15 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup.IntegrationsSh.ShGetResponse?> GetAsShGetResponseAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup.IntegrationsSh.IntegrationsShRequestBuilder.IntegrationsShRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup.IntegrationsSh.ShGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup.IntegrationsSh.IntegrationsShRequestBuilder.IntegrationsShRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup.IntegrationsSh.ShGetResponse> GetAsShGetResponseAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup.IntegrationsSh.IntegrationsShRequestBuilder.IntegrationsShRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup.IntegrationsSh.ShGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup.IntegrationsSh.IntegrationsShRequestBuilder.IntegrationsShRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup.IntegrationsSh.ShGetResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup.IntegrationsSh.ShGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// This feature is experimental.
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup.IntegrationsSh.ShResponse"/></returns>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        [Obsolete("This method is obsolete. Use GetAsShGetResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup.IntegrationsSh.ShResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup.IntegrationsSh.IntegrationsShRequestBuilder.IntegrationsShRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#nullable restore
-#else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup.IntegrationsSh.ShResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup.IntegrationsSh.IntegrationsShRequestBuilder.IntegrationsShRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#endif
-            var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup.IntegrationsSh.ShResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup.IntegrationsSh.ShResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// This feature is experimental.
@@ -116,14 +97,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup
             [QueryParameter("google_cloud_artifact_registry_project_id")]
             public string GoogleCloudArtifactRegistryProjectId { get; set; }
 #endif
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class IntegrationsShRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup.IntegrationsSh.IntegrationsShRequestBuilder.IntegrationsShRequestBuilderGetQueryParameters>
-        {
         }
     }
 }

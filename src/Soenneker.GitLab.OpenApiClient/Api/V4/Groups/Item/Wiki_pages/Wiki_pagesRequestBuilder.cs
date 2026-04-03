@@ -27,19 +27,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Wiki_pages
                 return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Wiki_pages.Item.WithNoteable_ItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
-        /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.wiki_pages.item collection</summary>
-        /// <param name="position">The ID of the noteable</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Wiki_pages.Item.WithNoteable_ItemRequestBuilder"/></returns>
-        [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Wiki_pages.Item.WithNoteable_ItemRequestBuilder this[string position]
-        {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("noteable_id", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Wiki_pages.Item.WithNoteable_ItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
-        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Wiki_pages.Wiki_pagesRequestBuilder"/> and sets the default values.
         /// </summary>

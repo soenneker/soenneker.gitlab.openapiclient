@@ -27,19 +27,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Retrieve.Item
                 return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Retrieve.Item.Item.WithReplicable_ItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
-        /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.geo.retrieve.item.item collection</summary>
-        /// <param name="position">The replicable ID of a replicable instance</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Retrieve.Item.Item.WithReplicable_ItemRequestBuilder"/></returns>
-        [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Retrieve.Item.Item.WithReplicable_ItemRequestBuilder this[string position]
-        {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("replicable_id", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Retrieve.Item.Item.WithReplicable_ItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
-        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Retrieve.Item.WithReplicable_nameItemRequestBuilder"/> and sets the default values.
         /// </summary>

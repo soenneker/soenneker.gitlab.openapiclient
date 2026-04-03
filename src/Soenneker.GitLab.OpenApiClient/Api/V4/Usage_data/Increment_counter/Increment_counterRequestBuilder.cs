@@ -42,37 +42,16 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Usage_data.Increment_counter
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Usage_data.Increment_counter.Increment_counterPostResponse?> PostAsIncrement_counterPostResponseAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_2eb3f076a74e body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Usage_data.Increment_counter.Increment_counterPostResponse?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_2eb3f076a74e body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Usage_data.Increment_counter.Increment_counterPostResponse> PostAsIncrement_counterPostResponseAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_2eb3f076a74e body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Usage_data.Increment_counter.Increment_counterPostResponse> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_2eb3f076a74e body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Usage_data.Increment_counter.Increment_counterPostResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Usage_data.Increment_counter.Increment_counterPostResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// This feature was introduced in GitLab 13.4.
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Usage_data.Increment_counter.Increment_counterResponse"/></returns>
-        /// <param name="body">The request body</param>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        [Obsolete("This method is obsolete. Use PostAsIncrement_counterPostResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Usage_data.Increment_counter.Increment_counterResponse?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_2eb3f076a74e body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#nullable restore
-#else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Usage_data.Increment_counter.Increment_counterResponse> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_2eb3f076a74e body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#endif
-            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Usage_data.Increment_counter.Increment_counterResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Usage_data.Increment_counter.Increment_counterResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// This feature was introduced in GitLab 13.4.
@@ -104,14 +83,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Usage_data.Increment_counter
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Usage_data.Increment_counter.Increment_counterRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Usage_data.Increment_counter.Increment_counterRequestBuilder(rawUrl, RequestAdapter);
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class Increment_counterRequestBuilderPostRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
-        {
         }
     }
 }

@@ -27,19 +27,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Terraform.State.It
                 return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Terraform.State.Item.Versions.Item.WithSerialItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
-        /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.terraform.state.item.versions.item collection</summary>
-        /// <param name="position">The version number of the state</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Terraform.State.Item.Versions.Item.WithSerialItemRequestBuilder"/></returns>
-        [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Terraform.State.Item.Versions.Item.WithSerialItemRequestBuilder this[string position]
-        {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("serial", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Terraform.State.Item.Versions.Item.WithSerialItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
-        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Terraform.State.Item.Versions.VersionsRequestBuilder"/> and sets the default values.
         /// </summary>

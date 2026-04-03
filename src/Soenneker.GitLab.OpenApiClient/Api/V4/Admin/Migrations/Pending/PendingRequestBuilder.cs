@@ -40,34 +40,15 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Migrations.Pending
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Migrations.Pending.PendingGetResponse?> GetAsPendingGetResponseAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Migrations.Pending.PendingRequestBuilder.PendingRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Migrations.Pending.PendingGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Migrations.Pending.PendingRequestBuilder.PendingRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Migrations.Pending.PendingGetResponse> GetAsPendingGetResponseAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Migrations.Pending.PendingRequestBuilder.PendingRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Migrations.Pending.PendingGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Migrations.Pending.PendingRequestBuilder.PendingRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Migrations.Pending.PendingGetResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Migrations.Pending.PendingGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// List pending database migrations
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Migrations.Pending.PendingResponse"/></returns>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        [Obsolete("This method is obsolete. Use GetAsPendingGetResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Migrations.Pending.PendingResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Migrations.Pending.PendingRequestBuilder.PendingRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#nullable restore
-#else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Migrations.Pending.PendingResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Migrations.Pending.PendingRequestBuilder.PendingRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#endif
-            var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Migrations.Pending.PendingResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Migrations.Pending.PendingResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// List pending database migrations
@@ -104,27 +85,8 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Migrations.Pending
         public partial class PendingRequestBuilderGetQueryParameters 
         {
             /// <summary>The name of the database</summary>
-            [Obsolete("This property is deprecated, use DatabaseAsGetDatabaseQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("database")]
-            public string? Database { get; set; }
-#nullable restore
-#else
-            [QueryParameter("database")]
-            public string Database { get; set; }
-#endif
-            /// <summary>The name of the database</summary>
-            [QueryParameter("database")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Migrations.Pending.GetDatabaseQueryParameterType? DatabaseAsGetDatabaseQueryParameterType { get; set; }
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class PendingRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Migrations.Pending.PendingRequestBuilder.PendingRequestBuilderGetQueryParameters>
-        {
+            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Migrations.Pending.GetDatabaseQueryParameterType? Database { get; set; }
         }
     }
 }

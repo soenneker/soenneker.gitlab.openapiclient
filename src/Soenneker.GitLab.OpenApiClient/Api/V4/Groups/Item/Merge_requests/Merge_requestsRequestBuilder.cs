@@ -86,19 +86,8 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests
         public partial class Merge_requestsRequestBuilderGetQueryParameters 
         {
             /// <summary>Filters merge requests by their `approved` status. `yes` returns only approved merge requests. `no` returns only non-approved merge requests.</summary>
-            [Obsolete("This property is deprecated, use ApprovedAsGetApprovedQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("approved")]
-            public string? Approved { get; set; }
-#nullable restore
-#else
-            [QueryParameter("approved")]
-            public string Approved { get; set; }
-#endif
-            /// <summary>Filters merge requests by their `approved` status. `yes` returns only approved merge requests. `no` returns only non-approved merge requests.</summary>
-            [QueryParameter("approved")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests.GetApprovedQueryParameterType? ApprovedAsGetApprovedQueryParameterType { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests.GetApprovedQueryParameterType? Approved { get; set; }
             /// <summary>Return merge requests which have been approved by the specified users with the given IDs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -341,19 +330,8 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests
             public string NotreviewerUsername { get; set; }
 #endif
             /// <summary>Returns merge requests ordered by `created_at`, `label_priority`, `milestone_due`, `popularity`, `priority`, `title`, `updated_at` or `merged_at` fields. Introduced in GitLab 14.8.</summary>
-            [Obsolete("This property is deprecated, use OrderByAsGetOrderByQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("order_by")]
-            public string? OrderBy { get; set; }
-#nullable restore
-#else
-            [QueryParameter("order_by")]
-            public string OrderBy { get; set; }
-#endif
-            /// <summary>Returns merge requests ordered by `created_at`, `label_priority`, `milestone_due`, `popularity`, `priority`, `title`, `updated_at` or `merged_at` fields. Introduced in GitLab 14.8.</summary>
-            [QueryParameter("order_by")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests.GetOrder_byQueryParameterType? OrderByAsGetOrderByQueryParameterType { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests.GetOrder_byQueryParameterType? OrderBy { get; set; }
             /// <summary>Current page number</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
@@ -381,19 +359,8 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests
             public string ReviewerUsername { get; set; }
 #endif
             /// <summary>&quot;Returns merge requests for the given scope: `created_by_me`, `assigned_to_me`, `reviews_for_me` or `all`&quot;</summary>
-            [Obsolete("This property is deprecated, use ScopeAsGetScopeQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("scope")]
-            public string? Scope { get; set; }
-#nullable restore
-#else
-            [QueryParameter("scope")]
-            public string Scope { get; set; }
-#endif
-            /// <summary>&quot;Returns merge requests for the given scope: `created_by_me`, `assigned_to_me`, `reviews_for_me` or `all`&quot;</summary>
-            [QueryParameter("scope")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests.GetScopeQueryParameterType? ScopeAsGetScopeQueryParameterType { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests.GetScopeQueryParameterType? Scope { get; set; }
             /// <summary>Search merge requests against their `title` and `description`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -405,19 +372,8 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests
             public string Search { get; set; }
 #endif
             /// <summary>Returns merge requests sorted in `asc` or `desc` order.</summary>
-            [Obsolete("This property is deprecated, use SortAsGetSortQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("sort")]
-            public string? Sort { get; set; }
-#nullable restore
-#else
-            [QueryParameter("sort")]
-            public string Sort { get; set; }
-#endif
-            /// <summary>Returns merge requests sorted in `asc` or `desc` order.</summary>
-            [QueryParameter("sort")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests.GetSortQueryParameterType? SortAsGetSortQueryParameterType { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests.GetSortQueryParameterType? Sort { get; set; }
             /// <summary>Returns merge requests with the given source branch</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -432,19 +388,8 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests
             [QueryParameter("source_project_id")]
             public int? SourceProjectId { get; set; }
             /// <summary>Returns `all` merge requests or just those that are `opened`, `closed`, `locked`, or `merged`.</summary>
-            [Obsolete("This property is deprecated, use StateAsGetStateQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("state")]
-            public string? State { get; set; }
-#nullable restore
-#else
-            [QueryParameter("state")]
-            public string State { get; set; }
-#endif
-            /// <summary>Returns `all` merge requests or just those that are `opened`, `closed`, `locked`, or `merged`.</summary>
-            [QueryParameter("state")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests.GetStateQueryParameterType? StateAsGetStateQueryParameterType { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests.GetStateQueryParameterType? State { get; set; }
             /// <summary>Returns merge requests with the given target branch</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -462,47 +407,17 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests
             [QueryParameter("updated_before")]
             public DateTimeOffset? UpdatedBefore { get; set; }
             /// <summary>If simple, returns the `iid`, URL, title, description, and basic state of merge request</summary>
-            [Obsolete("This property is deprecated, use ViewAsGetViewQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("view")]
-            public string? View { get; set; }
-#nullable restore
-#else
-            [QueryParameter("view")]
-            public string View { get; set; }
-#endif
-            /// <summary>If simple, returns the `iid`, URL, title, description, and basic state of merge request</summary>
-            [QueryParameter("view")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests.GetViewQueryParameterType? ViewAsGetViewQueryParameterType { get; set; }
-            /// <summary>Filter merge requests against their `wip` status. `yes` to return only draft merge requests, `no` to return non-draft merge requests.</summary>
-            [Obsolete("This property is deprecated, use WipAsGetWipQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            [QueryParameter("wip")]
-            public string? Wip { get; set; }
-#nullable restore
-#else
-            [QueryParameter("wip")]
-            public string Wip { get; set; }
-#endif
+            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests.GetViewQueryParameterType? View { get; set; }
             /// <summary>Filter merge requests against their `wip` status. `yes` to return only draft merge requests, `no` to return non-draft merge requests.</summary>
             [QueryParameter("wip")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests.GetWipQueryParameterType? WipAsGetWipQueryParameterType { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests.GetWipQueryParameterType? Wip { get; set; }
             /// <summary>&quot;If `true`, response returns more details for each label in labels field: `:name`,`:color`, `:description`, `:description_html`, `:text_color`&quot;</summary>
             [QueryParameter("with_labels_details")]
             public bool? WithLabelsDetails { get; set; }
             /// <summary>If `true`, this projection requests (but does not guarantee) that the `merge_status` field be recalculated asynchronously. Introduced in GitLab 13.0.</summary>
             [QueryParameter("with_merge_status_recheck")]
             public bool? WithMergeStatusRecheck { get; set; }
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class Merge_requestsRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests.Merge_requestsRequestBuilder.Merge_requestsRequestBuilderGetQueryParameters>
-        {
         }
     }
 }

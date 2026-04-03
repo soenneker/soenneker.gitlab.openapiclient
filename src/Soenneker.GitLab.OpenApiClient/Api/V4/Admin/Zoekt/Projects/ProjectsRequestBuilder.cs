@@ -27,19 +27,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Projects
                 return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Projects.Item.WithProject_ItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
-        /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.admin.zoekt.projects.item collection</summary>
-        /// <param name="position">The id of the project you want to index</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Projects.Item.WithProject_ItemRequestBuilder"/></returns>
-        [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Projects.Item.WithProject_ItemRequestBuilder this[string position]
-        {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("project_id", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Projects.Item.WithProject_ItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
-        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Projects.ProjectsRequestBuilder"/> and sets the default values.
         /// </summary>

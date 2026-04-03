@@ -30,19 +30,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics
                 return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics.Item.Epic_iItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
-        /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.epics.item collection</summary>
-        /// <param name="position">The internal ID of an epic</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics.Item.Epic_iItemRequestBuilder"/></returns>
-        [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics.Item.Epic_iItemRequestBuilder this[string position]
-        {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("epic_i%2Did", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics.Item.Epic_iItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
-        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics.EpicsRequestBuilder"/> and sets the default values.
         /// </summary>
@@ -235,19 +222,8 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics
             public string[] Notlabels { get; set; }
 #endif
             /// <summary>Return epics ordered by `created_at`, `updated_at` or `title` fields.</summary>
-            [Obsolete("This property is deprecated, use OrderByAsGetOrderByQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("order_by")]
-            public string? OrderBy { get; set; }
-#nullable restore
-#else
-            [QueryParameter("order_by")]
-            public string OrderBy { get; set; }
-#endif
-            /// <summary>Return epics ordered by `created_at`, `updated_at` or `title` fields.</summary>
-            [QueryParameter("order_by")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics.GetOrder_byQueryParameterType? OrderByAsGetOrderByQueryParameterType { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics.GetOrder_byQueryParameterType? OrderBy { get; set; }
             /// <summary>Current page number</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
@@ -265,33 +241,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics
             public string Search { get; set; }
 #endif
             /// <summary>Return epics sorted in `asc` or `desc` order.</summary>
-            [Obsolete("This property is deprecated, use SortAsGetSortQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("sort")]
-            public string? Sort { get; set; }
-#nullable restore
-#else
-            [QueryParameter("sort")]
-            public string Sort { get; set; }
-#endif
-            /// <summary>Return epics sorted in `asc` or `desc` order.</summary>
-            [QueryParameter("sort")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics.GetSortQueryParameterType? SortAsGetSortQueryParameterType { get; set; }
-            /// <summary>Return opened, closed, or all epics</summary>
-            [Obsolete("This property is deprecated, use StateAsGetStateQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            [QueryParameter("state")]
-            public string? State { get; set; }
-#nullable restore
-#else
-            [QueryParameter("state")]
-            public string State { get; set; }
-#endif
+            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics.GetSortQueryParameterType? Sort { get; set; }
             /// <summary>Return opened, closed, or all epics</summary>
             [QueryParameter("state")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics.GetStateQueryParameterType? StateAsGetStateQueryParameterType { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics.GetStateQueryParameterType? State { get; set; }
             /// <summary>Return epics updated after the specified time</summary>
             [QueryParameter("updated_after")]
             public DateTimeOffset? UpdatedAfter { get; set; }
@@ -301,22 +255,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics
             /// <summary>Return titles of labels and other details</summary>
             [QueryParameter("with_labels_details")]
             public bool? WithLabelsDetails { get; set; }
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class EpicsRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics.EpicsRequestBuilder.EpicsRequestBuilderGetQueryParameters>
-        {
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class EpicsRequestBuilderPostRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
-        {
         }
     }
 }

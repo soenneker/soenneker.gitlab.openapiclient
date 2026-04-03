@@ -27,19 +27,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Import_project_mem
                 return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Import_project_members.Item.WithProject_ItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
-        /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.import_project_members.item collection</summary>
-        /// <param name="position">The ID of the source project to import the members from.</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Import_project_members.Item.WithProject_ItemRequestBuilder"/></returns>
-        [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Import_project_members.Item.WithProject_ItemRequestBuilder this[string position]
-        {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("project_id", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Import_project_members.Item.WithProject_ItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
-        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Import_project_members.Import_project_membersRequestBuilder"/> and sets the default values.
         /// </summary>

@@ -33,19 +33,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Jobs
                 return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.JobsItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
-        /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.jobs.item collection</summary>
-        /// <param name="position">Job&apos;s ID</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.JobsItemRequestBuilder"/></returns>
-        [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.JobsItemRequestBuilder this[string position]
-        {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("id", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.JobsItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
-        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.JobsRequestBuilder"/> and sets the default values.
         /// </summary>

@@ -40,34 +40,15 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Agents.Agentw.Authorize
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Agents.Agentw.Authorize_user_access.Authorize_user_accessGetResponse?> GetAsAuthorize_user_accessGetResponseAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Agents.Agentw.Authorize_user_access.Authorize_user_accessRequestBuilder.Authorize_user_accessRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Agents.Agentw.Authorize_user_access.Authorize_user_accessGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Agents.Agentw.Authorize_user_access.Authorize_user_accessRequestBuilder.Authorize_user_accessRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Agents.Agentw.Authorize_user_access.Authorize_user_accessGetResponse> GetAsAuthorize_user_accessGetResponseAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Agents.Agentw.Authorize_user_access.Authorize_user_accessRequestBuilder.Authorize_user_accessRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Agents.Agentw.Authorize_user_access.Authorize_user_accessGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Agents.Agentw.Authorize_user_access.Authorize_user_accessRequestBuilder.Authorize_user_accessRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Agents.Agentw.Authorize_user_access.Authorize_user_accessGetResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Agents.Agentw.Authorize_user_access.Authorize_user_accessGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// Returns whether the user is authorized to access the workspace.
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Agents.Agentw.Authorize_user_access.Authorize_user_accessResponse"/></returns>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        [Obsolete("This method is obsolete. Use GetAsAuthorize_user_accessGetResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Agents.Agentw.Authorize_user_access.Authorize_user_accessResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Agents.Agentw.Authorize_user_access.Authorize_user_accessRequestBuilder.Authorize_user_accessRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#nullable restore
-#else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Agents.Agentw.Authorize_user_access.Authorize_user_accessResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Agents.Agentw.Authorize_user_access.Authorize_user_accessRequestBuilder.Authorize_user_accessRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#endif
-            var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Agents.Agentw.Authorize_user_access.Authorize_user_accessResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Agents.Agentw.Authorize_user_access.Authorize_user_accessResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns whether the user is authorized to access the workspace.
@@ -116,14 +97,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Agents.Agentw.Authorize
             [QueryParameter("workspace_host")]
             public string WorkspaceHost { get; set; }
 #endif
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class Authorize_user_accessRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Agents.Agentw.Authorize_user_access.Authorize_user_accessRequestBuilder.Authorize_user_accessRequestBuilderGetQueryParameters>
-        {
         }
     }
 }

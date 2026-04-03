@@ -53,34 +53,15 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_acce
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.Personal_access_tokensGetResponse?> GetAsPersonal_access_tokensGetResponseAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.Personal_access_tokensRequestBuilder.Personal_access_tokensRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.Personal_access_tokensGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.Personal_access_tokensRequestBuilder.Personal_access_tokensRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.Personal_access_tokensGetResponse> GetAsPersonal_access_tokensGetResponseAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.Personal_access_tokensRequestBuilder.Personal_access_tokensRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.Personal_access_tokensGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.Personal_access_tokensRequestBuilder.Personal_access_tokensRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.Personal_access_tokensGetResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.Personal_access_tokensGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// This feature was introduced in GitLab 17.8.
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.Personal_access_tokensResponse"/></returns>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        [Obsolete("This method is obsolete. Use GetAsPersonal_access_tokensGetResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.Personal_access_tokensResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.Personal_access_tokensRequestBuilder.Personal_access_tokensRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#nullable restore
-#else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.Personal_access_tokensResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.Personal_access_tokensRequestBuilder.Personal_access_tokensRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#endif
-            var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.Personal_access_tokensResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.Personal_access_tokensResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// This feature was introduced in GitLab 17.8.
@@ -164,27 +145,8 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_acce
             public string Sort { get; set; }
 #endif
             /// <summary>Filter tokens which are either active or not</summary>
-            [Obsolete("This property is deprecated, use StateAsGetStateQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("state")]
-            public string? State { get; set; }
-#nullable restore
-#else
-            [QueryParameter("state")]
-            public string State { get; set; }
-#endif
-            /// <summary>Filter tokens which are either active or not</summary>
-            [QueryParameter("state")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.GetStateQueryParameterType? StateAsGetStateQueryParameterType { get; set; }
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class Personal_access_tokensRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.Personal_access_tokensRequestBuilder.Personal_access_tokensRequestBuilderGetQueryParameters>
-        {
+            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.GetStateQueryParameterType? State { get; set; }
         }
     }
 }

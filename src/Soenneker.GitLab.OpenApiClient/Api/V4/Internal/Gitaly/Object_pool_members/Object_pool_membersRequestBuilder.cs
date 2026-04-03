@@ -37,31 +37,15 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitaly.Object_pool_memb
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitaly.Object_pool_members.Object_pool_membersGetResponse?> GetAsObject_pool_membersGetResponseAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitaly.Object_pool_members.Object_pool_membersRequestBuilder.Object_pool_membersRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitaly.Object_pool_members.Object_pool_membersGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitaly.Object_pool_members.Object_pool_membersRequestBuilder.Object_pool_membersRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitaly.Object_pool_members.Object_pool_membersGetResponse> GetAsObject_pool_membersGetResponseAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitaly.Object_pool_members.Object_pool_membersRequestBuilder.Object_pool_membersRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitaly.Object_pool_members.Object_pool_membersGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitaly.Object_pool_members.Object_pool_membersRequestBuilder.Object_pool_membersRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitaly.Object_pool_members.Object_pool_membersGetResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitaly.Object_pool_members.Object_pool_membersGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
-        }
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitaly.Object_pool_members.Object_pool_membersResponse"/></returns>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        [Obsolete("This method is obsolete. Use GetAsObject_pool_membersGetResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitaly.Object_pool_members.Object_pool_membersResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitaly.Object_pool_members.Object_pool_membersRequestBuilder.Object_pool_membersRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#nullable restore
-#else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitaly.Object_pool_members.Object_pool_membersResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitaly.Object_pool_members.Object_pool_membersRequestBuilder.Object_pool_membersRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#endif
-            var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitaly.Object_pool_members.Object_pool_membersResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitaly.Object_pool_members.Object_pool_membersResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -116,14 +100,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitaly.Object_pool_memb
             /// <summary>Return only the upstream repository</summary>
             [QueryParameter("upstream_only")]
             public bool? UpstreamOnly { get; set; }
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class Object_pool_membersRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitaly.Object_pool_members.Object_pool_membersRequestBuilder.Object_pool_membersRequestBuilderGetQueryParameters>
-        {
         }
     }
 }

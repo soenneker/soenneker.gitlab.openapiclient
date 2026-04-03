@@ -33,19 +33,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Migrations
                 return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Migrations.Item.WithTimestampItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
-        /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.admin.migrations.item collection</summary>
-        /// <param name="position">The migration version timestamp</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Migrations.Item.WithTimestampItemRequestBuilder"/></returns>
-        [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Migrations.Item.WithTimestampItemRequestBuilder this[string position]
-        {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("timestamp", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Migrations.Item.WithTimestampItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
-        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Migrations.MigrationsRequestBuilder"/> and sets the default values.
         /// </summary>

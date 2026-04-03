@@ -27,19 +27,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Alert_management_a
                 return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Alert_management_alerts.Item.WithAlert_iItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
-        /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.alert_management_alerts.item collection</summary>
-        /// <param name="position">The IID of the Alert</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Alert_management_alerts.Item.WithAlert_iItemRequestBuilder"/></returns>
-        [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Alert_management_alerts.Item.WithAlert_iItemRequestBuilder this[string position]
-        {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("alert_iid", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Alert_management_alerts.Item.WithAlert_iItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
-        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Alert_management_alerts.Alert_management_alertsRequestBuilder"/> and sets the default values.
         /// </summary>

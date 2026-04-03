@@ -59,37 +59,16 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Hooks.Item.Url_var
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Hooks.Item.Url_variables.Item.WithKeyPutResponse?> PutAsWithKeyPutResponseAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_351ef4743250 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Hooks.Item.Url_variables.Item.WithKeyPutResponse?> PutAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_351ef4743250 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Hooks.Item.Url_variables.Item.WithKeyPutResponse> PutAsWithKeyPutResponseAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_351ef4743250 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Hooks.Item.Url_variables.Item.WithKeyPutResponse> PutAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_351ef4743250 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Hooks.Item.Url_variables.Item.WithKeyPutResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Hooks.Item.Url_variables.Item.WithKeyPutResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// Sets a URL variable for a webhook
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Hooks.Item.Url_variables.Item.WithKeyResponse"/></returns>
-        /// <param name="body">The request body</param>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        [Obsolete("This method is obsolete. Use PutAsWithKeyPutResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Hooks.Item.Url_variables.Item.WithKeyResponse?> PutAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_351ef4743250 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#nullable restore
-#else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Hooks.Item.Url_variables.Item.WithKeyResponse> PutAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_351ef4743250 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#endif
-            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = ToPutRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Hooks.Item.Url_variables.Item.WithKeyResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Hooks.Item.Url_variables.Item.WithKeyResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Removes a URL variable from a webhook
@@ -140,22 +119,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Hooks.Item.Url_var
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Hooks.Item.Url_variables.Item.WithKeyItemRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Hooks.Item.Url_variables.Item.WithKeyItemRequestBuilder(rawUrl, RequestAdapter);
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class WithKeyItemRequestBuilderDeleteRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
-        {
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class WithKeyItemRequestBuilderPutRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
-        {
         }
     }
 }

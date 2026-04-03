@@ -36,19 +36,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines
                 return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.Item.WithPipeline_ItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
-        /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.pipelines.item collection</summary>
-        /// <param name="position">The pipeline ID</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.Item.WithPipeline_ItemRequestBuilder"/></returns>
-        [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.Item.WithPipeline_ItemRequestBuilder this[string position]
-        {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("pipeline_id", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.Item.WithPipeline_ItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
-        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.PipelinesRequestBuilder"/> and sets the default values.
         /// </summary>
@@ -134,19 +121,8 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines
             public string Name { get; set; }
 #endif
             /// <summary>Order pipelines</summary>
-            [Obsolete("This property is deprecated, use OrderByAsGetOrderByQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("order_by")]
-            public string? OrderBy { get; set; }
-#nullable restore
-#else
-            [QueryParameter("order_by")]
-            public string OrderBy { get; set; }
-#endif
-            /// <summary>Order pipelines</summary>
-            [QueryParameter("order_by")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.GetOrder_byQueryParameterType? OrderByAsGetOrderByQueryParameterType { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.GetOrder_byQueryParameterType? OrderBy { get; set; }
             /// <summary>Current page number</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
@@ -164,19 +140,8 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines
             public string Ref { get; set; }
 #endif
             /// <summary>The scope of pipelines</summary>
-            [Obsolete("This property is deprecated, use ScopeAsGetScopeQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("scope")]
-            public string? Scope { get; set; }
-#nullable restore
-#else
-            [QueryParameter("scope")]
-            public string Scope { get; set; }
-#endif
-            /// <summary>The scope of pipelines</summary>
-            [QueryParameter("scope")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.GetScopeQueryParameterType? ScopeAsGetScopeQueryParameterType { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.GetScopeQueryParameterType? Scope { get; set; }
             /// <summary>The sha of pipelines</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -188,47 +153,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines
             public string Sha { get; set; }
 #endif
             /// <summary>Sort pipelines</summary>
-            [Obsolete("This property is deprecated, use SortAsGetSortQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("sort")]
-            public string? Sort { get; set; }
-#nullable restore
-#else
-            [QueryParameter("sort")]
-            public string Sort { get; set; }
-#endif
-            /// <summary>Sort pipelines</summary>
-            [QueryParameter("sort")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.GetSortQueryParameterType? SortAsGetSortQueryParameterType { get; set; }
-            /// <summary>The source of pipelines</summary>
-            [Obsolete("This property is deprecated, use SourceAsGetSourceQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            [QueryParameter("source")]
-            public string? Source { get; set; }
-#nullable restore
-#else
-            [QueryParameter("source")]
-            public string Source { get; set; }
-#endif
+            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.GetSortQueryParameterType? Sort { get; set; }
             /// <summary>The source of pipelines</summary>
             [QueryParameter("source")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.GetSourceQueryParameterType? SourceAsGetSourceQueryParameterType { get; set; }
-            /// <summary>The status of pipelines</summary>
-            [Obsolete("This property is deprecated, use StatusAsGetStatusQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            [QueryParameter("status")]
-            public string? Status { get; set; }
-#nullable restore
-#else
-            [QueryParameter("status")]
-            public string Status { get; set; }
-#endif
+            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.GetSourceQueryParameterType? Source { get; set; }
             /// <summary>The status of pipelines</summary>
             [QueryParameter("status")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.GetStatusQueryParameterType? StatusAsGetStatusQueryParameterType { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.GetStatusQueryParameterType? Status { get; set; }
             /// <summary>&quot;Return pipelines updated after the specified datetime. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ&quot;</summary>
             [QueryParameter("updated_after")]
             public DateTimeOffset? UpdatedAfter { get; set; }
@@ -248,14 +180,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines
             /// <summary>Returns pipelines with invalid configurations</summary>
             [QueryParameter("yaml_errors")]
             public bool? YamlErrors { get; set; }
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class PipelinesRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.PipelinesRequestBuilder.PipelinesRequestBuilderGetQueryParameters>
-        {
         }
     }
 }

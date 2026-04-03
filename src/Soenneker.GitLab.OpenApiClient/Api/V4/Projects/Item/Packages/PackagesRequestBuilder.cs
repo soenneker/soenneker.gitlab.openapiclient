@@ -102,19 +102,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages
                 return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Item.WithPackage_ItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
-        /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.packages.item collection</summary>
-        /// <param name="position">The ID of a package</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Item.WithPackage_ItemRequestBuilder"/></returns>
-        [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Item.WithPackage_ItemRequestBuilder this[string position]
-        {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("package_id", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Item.WithPackage_ItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
-        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.PackagesRequestBuilder"/> and sets the default values.
         /// </summary>
@@ -187,19 +174,8 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages
             [QueryParameter("include_versionless")]
             public bool? IncludeVersionless { get; set; }
             /// <summary>Return packages ordered by `created_at`, `name`, `version` or `type` fields.</summary>
-            [Obsolete("This property is deprecated, use OrderByAsGetOrderByQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("order_by")]
-            public string? OrderBy { get; set; }
-#nullable restore
-#else
-            [QueryParameter("order_by")]
-            public string OrderBy { get; set; }
-#endif
-            /// <summary>Return packages ordered by `created_at`, `name`, `version` or `type` fields.</summary>
-            [QueryParameter("order_by")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.GetOrder_byQueryParameterType? OrderByAsGetOrderByQueryParameterType { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.GetOrder_byQueryParameterType? OrderBy { get; set; }
             /// <summary>Return packages with this name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -211,19 +187,8 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages
             public string PackageName { get; set; }
 #endif
             /// <summary>Return packages of a certain type</summary>
-            [Obsolete("This property is deprecated, use PackageTypeAsGetPackageTypeQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("package_type")]
-            public string? PackageType { get; set; }
-#nullable restore
-#else
-            [QueryParameter("package_type")]
-            public string PackageType { get; set; }
-#endif
-            /// <summary>Return packages of a certain type</summary>
-            [QueryParameter("package_type")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.GetPackage_typeQueryParameterType? PackageTypeAsGetPackageTypeQueryParameterType { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.GetPackage_typeQueryParameterType? PackageType { get; set; }
             /// <summary>Return packages with this version</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -241,41 +206,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
             /// <summary>Return packages sorted in `asc` or `desc` order.</summary>
-            [Obsolete("This property is deprecated, use SortAsGetSortQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("sort")]
-            public string? Sort { get; set; }
-#nullable restore
-#else
-            [QueryParameter("sort")]
-            public string Sort { get; set; }
-#endif
-            /// <summary>Return packages sorted in `asc` or `desc` order.</summary>
-            [QueryParameter("sort")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.GetSortQueryParameterType? SortAsGetSortQueryParameterType { get; set; }
-            /// <summary>Return packages with specified status</summary>
-            [Obsolete("This property is deprecated, use StatusAsGetStatusQueryParameterType instead")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            [QueryParameter("status")]
-            public string? Status { get; set; }
-#nullable restore
-#else
-            [QueryParameter("status")]
-            public string Status { get; set; }
-#endif
+            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.GetSortQueryParameterType? Sort { get; set; }
             /// <summary>Return packages with specified status</summary>
             [QueryParameter("status")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.GetStatusQueryParameterType? StatusAsGetStatusQueryParameterType { get; set; }
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class PackagesRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.PackagesRequestBuilder.PackagesRequestBuilderGetQueryParameters>
-        {
+            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.GetStatusQueryParameterType? Status { get; set; }
         }
     }
 }
