@@ -85,8 +85,15 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Terraform
         public partial class WithModule_systemItemRequestBuilderGetQueryParameters 
         {
             /// <summary>Terraform get redirection flag</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
             [QueryParameter("terraform%2Dget")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Terraform.Modules.Item.Item.GetTerraformGetQueryParameterType? TerraformGet { get; set; }
+            public string? TerraformGet { get; set; }
+#nullable restore
+#else
+            [QueryParameter("terraform%2Dget")]
+            public string TerraformGet { get; set; }
+#endif
         }
     }
 }

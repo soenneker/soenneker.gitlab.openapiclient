@@ -23,7 +23,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>JSON-RPC protocol version identifier. Must be `2.0`.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_fb3b23c01c35_jsonrpc? Jsonrpc { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Jsonrpc { get; set; }
+#nullable restore
+#else
+        public string Jsonrpc { get; set; }
+#endif
         /// <summary>Name of the JSON-RPC method invoked on the MCP server.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -66,7 +72,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "jsonrpc", n => { Jsonrpc = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_fb3b23c01c35_jsonrpc>(); } },
+                { "jsonrpc", n => { Jsonrpc = n.GetStringValue(); } },
                 { "method", n => { Method = n.GetStringValue(); } },
                 { "params", n => { Params = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch>(global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
             };
@@ -79,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("id", Id);
-            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_fb3b23c01c35_jsonrpc>("jsonrpc", Jsonrpc);
+            writer.WriteStringValue("jsonrpc", Jsonrpc);
             writer.WriteStringValue("method", Method);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch>("params", Params);
             writer.WriteAdditionalData(AdditionalData);
