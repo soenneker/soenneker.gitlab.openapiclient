@@ -5,7 +5,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>Package type protected by the rule. For example npm.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBody_bba365003b11_package_type
+    public enum RequestBody_1445074d64a2_package_type
     {
         [EnumMember(Value = "cargo")]
         #pragma warning disable CS1591
@@ -38,6 +38,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         [EnumMember(Value = "pypi")]
         #pragma warning disable CS1591
         Pypi,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "terraform_module")]
+        #pragma warning disable CS1591
+        Terraform_module,
         #pragma warning restore CS1591
     }
 }

@@ -9,16 +9,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class RequestBody_bba365003b11 : IAdditionalDataHolder, IParsable
+    public partial class RequestBody_a70447d56bab : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Minimum GitLab access level required to delete a package. Valid values include `null`, `owner` or `admin`. If the value is `null`, the default minimum access level is `maintainer`. Must be provided when `minimum_access_level_for_push` is not set. Behind a feature flag named `packages_protected_packages_delete`. Disabled by default.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_bba365003b11_minimum_access_level_for_delete? MinimumAccessLevelForDelete { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_a70447d56bab_minimum_access_level_for_delete? MinimumAccessLevelForDelete { get; set; }
         /// <summary>Minimum GitLab access level required to push a package. Valid values include `null`, `maintainer`, `owner` or `admin`. If the value is `null`, the default minimum access level is `developer`. Must be provided when `minimum_access_level_for_delete` is not set.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_bba365003b11_minimum_access_level_for_push? MinimumAccessLevelForPush { get; set; }
-        /// <summary>Package name protected by the rule. For example @my-scope/my-package-*.              Wildcard character * allowed.</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_a70447d56bab_minimum_access_level_for_push? MinimumAccessLevelForPush { get; set; }
+        /// <summary>Package name protected by the rule. For example @my-scope/my-package-*.            Wildcard character * allowed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PackageNamePattern { get; set; }
@@ -27,23 +27,23 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string PackageNamePattern { get; set; }
 #endif
         /// <summary>Package type protected by the rule. For example npm.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_bba365003b11_package_type? PackageType { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_a70447d56bab_package_type? PackageType { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_bba365003b11"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_a70447d56bab"/> and sets the default values.
         /// </summary>
-        public RequestBody_bba365003b11()
+        public RequestBody_a70447d56bab()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_bba365003b11"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_a70447d56bab"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_bba365003b11 CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_a70447d56bab CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_bba365003b11();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_a70447d56bab();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -53,10 +53,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "minimum_access_level_for_delete", n => { MinimumAccessLevelForDelete = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_bba365003b11_minimum_access_level_for_delete>(); } },
-                { "minimum_access_level_for_push", n => { MinimumAccessLevelForPush = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_bba365003b11_minimum_access_level_for_push>(); } },
+                { "minimum_access_level_for_delete", n => { MinimumAccessLevelForDelete = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_a70447d56bab_minimum_access_level_for_delete>(); } },
+                { "minimum_access_level_for_push", n => { MinimumAccessLevelForPush = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_a70447d56bab_minimum_access_level_for_push>(); } },
                 { "package_name_pattern", n => { PackageNamePattern = n.GetStringValue(); } },
-                { "package_type", n => { PackageType = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_bba365003b11_package_type>(); } },
+                { "package_type", n => { PackageType = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_a70447d56bab_package_type>(); } },
             };
         }
         /// <summary>
@@ -66,10 +66,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_bba365003b11_minimum_access_level_for_delete>("minimum_access_level_for_delete", MinimumAccessLevelForDelete);
-            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_bba365003b11_minimum_access_level_for_push>("minimum_access_level_for_push", MinimumAccessLevelForPush);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_a70447d56bab_minimum_access_level_for_delete>("minimum_access_level_for_delete", MinimumAccessLevelForDelete);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_a70447d56bab_minimum_access_level_for_push>("minimum_access_level_for_push", MinimumAccessLevelForPush);
             writer.WriteStringValue("package_name_pattern", PackageNamePattern);
-            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_bba365003b11_package_type>("package_type", PackageType);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody_a70447d56bab_package_type>("package_type", PackageType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -1526,6 +1526,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string EnforceEmailSubaddressRestrictions { get; set; }
 #endif
+        /// <summary>The enforce_granular_tokens property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? EnforceGranularTokens { get; set; }
+#nullable restore
+#else
+        public string EnforceGranularTokens { get; set; }
+#endif
         /// <summary>The enforce_namespace_storage_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -1941,6 +1949,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #nullable restore
 #else
         public string GrafanaUrl { get; set; }
+#endif
+        /// <summary>The granular_tokens_enforced_after property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? GranularTokensEnforcedAfter { get; set; }
+#nullable restore
+#else
+        public string GranularTokensEnforcedAfter { get; set; }
 #endif
         /// <summary>The gravatar_enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -5028,6 +5044,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "enabled_git_access_protocol", n => { EnabledGitAccessProtocol = n.GetStringValue(); } },
                 { "enforce_ci_inbound_job_token_scope_enabled", n => { EnforceCiInboundJobTokenScopeEnabled = n.GetStringValue(); } },
                 { "enforce_email_subaddress_restrictions", n => { EnforceEmailSubaddressRestrictions = n.GetStringValue(); } },
+                { "enforce_granular_tokens", n => { EnforceGranularTokens = n.GetStringValue(); } },
                 { "enforce_namespace_storage_limit", n => { EnforceNamespaceStorageLimit = n.GetStringValue(); } },
                 { "enforce_pipl_compliance", n => { EnforcePiplCompliance = n.GetStringValue(); } },
                 { "enforce_terms", n => { EnforceTerms = n.GetStringValue(); } },
@@ -5080,6 +5097,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "global_search_work_items_enabled", n => { GlobalSearchWorkItemsEnabled = n.GetStringValue(); } },
                 { "grafana_enabled", n => { GrafanaEnabled = n.GetStringValue(); } },
                 { "grafana_url", n => { GrafanaUrl = n.GetStringValue(); } },
+                { "granular_tokens_enforced_after", n => { GranularTokensEnforcedAfter = n.GetStringValue(); } },
                 { "gravatar_enabled", n => { GravatarEnabled = n.GetStringValue(); } },
                 { "group_api_limit", n => { GroupApiLimit = n.GetStringValue(); } },
                 { "group_archive_unarchive_api_limit", n => { GroupArchiveUnarchiveApiLimit = n.GetStringValue(); } },
@@ -5637,6 +5655,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("enable_member_promotion_management", EnableMemberPromotionManagement);
             writer.WriteStringValue("enforce_ci_inbound_job_token_scope_enabled", EnforceCiInboundJobTokenScopeEnabled);
             writer.WriteStringValue("enforce_email_subaddress_restrictions", EnforceEmailSubaddressRestrictions);
+            writer.WriteStringValue("enforce_granular_tokens", EnforceGranularTokens);
             writer.WriteStringValue("enforce_namespace_storage_limit", EnforceNamespaceStorageLimit);
             writer.WriteStringValue("enforce_pipl_compliance", EnforcePiplCompliance);
             writer.WriteStringValue("enforce_terms", EnforceTerms);
@@ -5689,6 +5708,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("global_search_work_items_enabled", GlobalSearchWorkItemsEnabled);
             writer.WriteStringValue("grafana_enabled", GrafanaEnabled);
             writer.WriteStringValue("grafana_url", GrafanaUrl);
+            writer.WriteStringValue("granular_tokens_enforced_after", GranularTokensEnforcedAfter);
             writer.WriteStringValue("gravatar_enabled", GravatarEnabled);
             writer.WriteStringValue("group_api_limit", GroupApiLimit);
             writer.WriteStringValue("group_archive_unarchive_api_limit", GroupArchiveUnarchiveApiLimit);

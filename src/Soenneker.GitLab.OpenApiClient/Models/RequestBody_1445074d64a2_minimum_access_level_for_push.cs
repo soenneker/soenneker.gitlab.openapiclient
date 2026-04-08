@@ -5,7 +5,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>Minimum GitLab access level required to push a package. Valid values include `null`, `maintainer`, `owner` or `admin`. If the value is `null`, the default minimum access level is `developer`. Must be provided when `minimum_access_level_for_delete` is not set.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBody_bba365003b11_minimum_access_level_for_push
+    public enum RequestBody_1445074d64a2_minimum_access_level_for_push
     {
         [EnumMember(Value = "maintainer")]
         #pragma warning disable CS1591
