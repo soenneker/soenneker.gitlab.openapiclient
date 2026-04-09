@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Third_party_agents.Direct_acc
         {
         }
         /// <summary>
-        /// This feature is experimental.
+        /// Returns connection details including tokens for accessing third-party agents.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Third_party_agents.Direct_access.Direct_accessPostResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Third_party_agents.Direct_acc
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Third_party_agents.Direct_access.Direct_accessPostResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Third_party_agents.Direct_access.Direct_accessPostResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature is experimental.
+        /// Returns connection details including tokens for accessing third-party agents.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

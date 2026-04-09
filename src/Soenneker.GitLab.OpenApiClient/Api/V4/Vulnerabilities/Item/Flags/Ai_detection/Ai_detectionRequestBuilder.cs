@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Vulnerabilities.Item.Flags.Ai_de
         {
         }
         /// <summary>
-        /// This feature is currently in an experimental state. Updates the confidence score and explanation for AI-based False Positive Detection flows.
+        /// Updates the confidence score and explanation for AI-based False Positive Detection flows.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Vulnerabilities.Item.Flags.Ai_detection.Ai_detectionPostResponse"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Vulnerabilities.Item.Flags.Ai_de
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Vulnerabilities.Item.Flags.Ai_detection.Ai_detectionPostResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Vulnerabilities.Item.Flags.Ai_detection.Ai_detectionPostResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature is currently in an experimental state. Updates the confidence score and explanation for AI-based False Positive Detection flows.
+        /// Updates the confidence score and explanation for AI-based False Positive Detection flows.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

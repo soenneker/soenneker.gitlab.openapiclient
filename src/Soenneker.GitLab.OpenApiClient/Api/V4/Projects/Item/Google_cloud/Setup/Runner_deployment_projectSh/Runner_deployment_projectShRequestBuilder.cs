@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup
         {
         }
         /// <summary>
-        /// This feature is experimental.
+        /// Returns a shell script for setting up a Google Cloud project for runner deployment.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup.Runner_deployment_projectSh.ShGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup.Runner_deployment_projectSh.ShGetResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup.Runner_deployment_projectSh.ShGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature is experimental.
+        /// Returns a shell script for setting up a Google Cloud project for runner deployment.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -79,7 +79,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup.Runner_deployment_projectSh.Runner_deployment_projectShRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// This feature is experimental.
+        /// Returns a shell script for setting up a Google Cloud project for runner deployment.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Runner_deployment_projectShRequestBuilderGetQueryParameters 

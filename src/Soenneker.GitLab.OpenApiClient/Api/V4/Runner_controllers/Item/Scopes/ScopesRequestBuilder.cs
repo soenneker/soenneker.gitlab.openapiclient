@@ -45,7 +45,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runner_controllers.Item.Scopes
         {
         }
         /// <summary>
-        /// Get all scopes for a specific runner controller. This feature is experimental.
+        /// Get all scopes for a specific runner controller.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Runner_controllers.Item.Scopes.ScopesGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -63,7 +63,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runner_controllers.Item.Scopes
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Runner_controllers.Item.Scopes.ScopesGetResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Runner_controllers.Item.Scopes.ScopesGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get all scopes for a specific runner controller. This feature is experimental.
+        /// Get all scopes for a specific runner controller.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Organizations
         {
         }
         /// <summary>
-        /// This feature was introduced in GitLab 17.5. \                    This feature is currently in an experimental state. \                    This feature is behind the `allow_organization_creation` feature flag. \                    In GitLab 18.3, feature flag changed to `organization_switching`.
+        /// This feature was introduced in GitLab 17.5. \                    This feature is behind the `allow_organization_creation` feature flag. \                    In GitLab 18.3, feature flag changed to `organization_switching`.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesOrganizationsOrganization"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Organizations
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesOrganizationsOrganization>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesOrganizationsOrganization.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 17.5. \                    This feature is currently in an experimental state. \                    This feature is behind the `allow_organization_creation` feature flag. \                    In GitLab 18.3, feature flag changed to `organization_switching`.
+        /// This feature was introduced in GitLab 17.5. \                    This feature is behind the `allow_organization_creation` feature flag. \                    In GitLab 18.3, feature flag changed to `organization_switching`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

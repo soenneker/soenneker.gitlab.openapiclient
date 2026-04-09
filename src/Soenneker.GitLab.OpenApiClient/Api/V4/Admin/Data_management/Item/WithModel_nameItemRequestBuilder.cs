@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Data_management.Item
         {
         }
         /// <summary>
-        /// This feature is experimental.
+        /// Requires administrator access. Only available when Geo is enabled.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAdminModel"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -71,7 +71,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Data_management.Item
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAdminModel>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAdminModel.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature is experimental.
+        /// Requires administrator access. Only available when Geo is enabled.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -99,7 +99,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Data_management.Item
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Data_management.Item.WithModel_nameItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// This feature is experimental.
+        /// Requires administrator access. Only available when Geo is enabled.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithModel_nameItemRequestBuilderGetQueryParameters 
