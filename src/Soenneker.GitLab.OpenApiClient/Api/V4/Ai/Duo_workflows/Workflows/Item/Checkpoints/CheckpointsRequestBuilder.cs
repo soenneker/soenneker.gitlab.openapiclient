@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.Checkpoints
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\ai\duo_workflows\workflows\{id}\checkpoints
+    /// Builds and executes requests for operations under \api\v4\ai\duo_workflows\workflows\{-id}\checkpoints
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CheckpointsRequestBuilder : BaseRequestBuilder
@@ -35,7 +35,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CheckpointsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/ai/duo_workflows/workflows/{id}/checkpoints{?accept_compressed*}", pathParameters)
+        public CheckpointsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/ai/duo_workflows/workflows/{%2Did}/checkpoints{?accept_compressed*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CheckpointsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/ai/duo_workflows/workflows/{id}/checkpoints{?accept_compressed*}", rawUrl)
+        public CheckpointsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/ai/duo_workflows/workflows/{%2Did}/checkpoints{?accept_compressed*}", rawUrl)
         {
         }
         /// <summary>

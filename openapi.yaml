@@ -1392,6 +1392,40 @@ paths:
           description: OK
         '401':
           description: Unauthorized
+  "/api/v4/ai/duo_workflows/workflows/{workflow_id}/resume":
+    post:
+      operationId: postApiV4AiDuoWorkflowsWorkflowsWorkflowIdResume
+      summary: Resume a paused workflow
+      tags:
+      - GitLab Duo workflows
+      responses:
+        '201':
+          description: Created
+        '400':
+          description: Validation failed
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+        '422':
+          description: Unprocessable entity
+      parameters:
+      - name: workflow_id
+        required: true
+        description: The ID of the workflow to resume
+        schema:
+          type: string
+          nullable: true
+        in: path
+        example: '1'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              "$ref": "#/components/schemas/RequestBody_7139042d9372"
   "/api/v4/ai/llm/git_command":
     post:
       operationId: postApiV4AiLlmGitCommand
@@ -17301,7 +17335,7 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/RequestBody_5efd4463bcc7"
+              "$ref": "#/components/schemas/RequestBody_a4128e1af416"
   "/api/v4/projects/{id}/issues/{eventable_id}/resource_state_events":
     get:
       operationId: getApiV4ProjectsIdIssuesEventableIdResourceStateEvents
@@ -72679,6 +72713,41 @@ components:
           type: integer
           description: Number of issues. Limited to 1000
           example: 3
+    SecurityPolicyDismissalEntity:
+      type: object
+      properties:
+        id:
+          type: string
+        created_at:
+          type: string
+        updated_at:
+          type: string
+        project_id:
+          type: string
+        project_name:
+          type: string
+        project_path:
+          type: string
+        merge_request_id:
+          type: string
+        security_policy_id:
+          type: string
+        user_id:
+          type: string
+        security_findings_uuids:
+          type: string
+        comment:
+          type: string
+        dismissal_types:
+          type: string
+        user_name:
+          type: string
+        user_path:
+          type: string
+        merge_request_path:
+          type: string
+        merge_request_reference:
+          type: string
     DependencyEntityLicenseEntity:
       type: object
       properties:
@@ -72734,6 +72803,8 @@ components:
           "$ref": "#/components/schemas/DependencyEntityVulnerabilityEntity"
         licenses:
           "$ref": "#/components/schemas/DependencyEntityLicenseEntity"
+        policy_dismissals:
+          "$ref": "#/components/schemas/SecurityPolicyDismissalEntity"
         occurrence_count:
           type: string
         project_count:
@@ -75860,8 +75931,6 @@ components:
           type: string
         global_search_users_enabled:
           type: string
-        global_search_issues_enabled:
-          type: string
         global_search_work_items_enabled:
           type: string
         global_search_merge_requests_enabled:
@@ -76145,8 +76214,6 @@ components:
         global_search_commits_enabled:
           type: string
         global_search_wiki_enabled:
-          type: string
-        global_search_epics_enabled:
           type: string
         global_search_limited_indexing_enabled:
           type: string
@@ -81519,6 +81586,11 @@ components:
         confidential:
           type: boolean
           example: true
+        scopes:
+          type: array
+          example:
+          - api
+          - read_user
     APIEntitiesAppearance:
       type: object
       properties:
@@ -86192,6 +86264,11 @@ components:
         confidential:
           type: boolean
           example: true
+        scopes:
+          type: array
+          example:
+          - api
+          - read_user
         secret:
           type: string
           example: ee1dd64b6adc89cf7e2c23099301ccc2c61b441064e9324d963c46902a85ec34
@@ -89055,6 +89132,22 @@ components:
             with.
           example: 123
           nullable: true
+    RequestBody_7139042d9372:
+      type: object
+      properties:
+        human_approval:
+          type: boolean
+          description: Whether the human approves resuming the workflow
+          example: true
+          nullable: true
+        human_message:
+          type: string
+          description: Optional message accompanying the human decision
+          example: Looks good, please proceed
+          nullable: true
+          maxLength: 2000
+      required:
+      - human_approval
     RequestBody_ef2061658f9e:
       type: object
       properties:
@@ -93054,7 +93147,7 @@ components:
           nullable: true
       required:
       - avatar
-    RequestBody_5efd4463bcc7:
+    RequestBody_a4128e1af416:
       type: object
       properties:
         admin_mode:
@@ -94919,9 +95012,6 @@ components:
         global_search_users_enabled:
           type: string
           nullable: true
-        global_search_issues_enabled:
-          type: string
-          nullable: true
         global_search_work_items_enabled:
           type: string
           nullable: true
@@ -95262,9 +95352,6 @@ components:
           type: string
           nullable: true
         global_search_wiki_enabled:
-          type: string
-          nullable: true
-        global_search_epics_enabled:
           type: string
           nullable: true
         global_search_limited_indexing_enabled:

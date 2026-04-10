@@ -48,6 +48,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
+        /// <summary>The scopes property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesApplication_scopes>? Scopes { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesApplication_scopes> Scopes { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesApplication"/> and sets the default values.
         /// </summary>
@@ -78,6 +86,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "callback_url", n => { CallbackUrl = n.GetStringValue(); } },
                 { "confidential", n => { Confidential = n.GetBoolValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
+                { "scopes", n => { Scopes = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesApplication_scopes>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesApplication_scopes.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -92,6 +101,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("callback_url", CallbackUrl);
             writer.WriteBoolValue("confidential", Confidential);
             writer.WriteStringValue("id", Id);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesApplication_scopes>("scopes", Scopes);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
