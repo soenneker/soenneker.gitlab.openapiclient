@@ -37,10 +37,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The record_identifier property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAdminModel_record_identifier? RecordIdentifier { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch? RecordIdentifier { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAdminModel_record_identifier RecordIdentifier { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch RecordIdentifier { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAdminModel"/> and sets the default values.
@@ -71,7 +71,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "file_size", n => { FileSize = n.GetIntValue(); } },
                 { "model_class", n => { ModelClass = n.GetStringValue(); } },
-                { "record_identifier", n => { RecordIdentifier = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAdminModel_record_identifier>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAdminModel_record_identifier.CreateFromDiscriminatorValue); } },
+                { "record_identifier", n => { RecordIdentifier = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch>(global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
             writer.WriteIntValue("file_size", FileSize);
             writer.WriteStringValue("model_class", ModelClass);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAdminModel_record_identifier>("record_identifier", RecordIdentifier);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch>("record_identifier", RecordIdentifier);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
