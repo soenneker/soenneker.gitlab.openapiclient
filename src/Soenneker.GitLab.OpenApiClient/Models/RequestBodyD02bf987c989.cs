@@ -17,10 +17,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Object that contains status information              and replication metrics for the Geo node</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD02bf987c989Data? Data { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD02bf987c989_data? Data { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD02bf987c989Data Data { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD02bf987c989_data Data { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD02bf987c989"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD02bf987c989Data>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD02bf987c989Data.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD02bf987c989_data>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD02bf987c989_data.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD02bf987c989Data>("data", Data);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD02bf987c989_data>("data", Data);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

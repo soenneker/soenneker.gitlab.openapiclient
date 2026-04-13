@@ -41,10 +41,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Position when creating a note</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyFc19ecc6ec0aPosition? Position { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyFc19ecc6ec0a_position? Position { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyFc19ecc6ec0aPosition Position { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyFc19ecc6ec0a_position Position { get; set; }
 #endif
         /// <summary>The associated discussion should be resolved.</summary>
         public bool? ResolveDiscussion { get; set; }
@@ -76,7 +76,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "commit_id", n => { CommitId = n.GetStringValue(); } },
                 { "in_reply_to_discussion_id", n => { InReplyToDiscussionId = n.GetStringValue(); } },
                 { "note", n => { Note = n.GetStringValue(); } },
-                { "position", n => { Position = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyFc19ecc6ec0aPosition>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyFc19ecc6ec0aPosition.CreateFromDiscriminatorValue); } },
+                { "position", n => { Position = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyFc19ecc6ec0a_position>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyFc19ecc6ec0a_position.CreateFromDiscriminatorValue); } },
                 { "resolve_discussion", n => { ResolveDiscussion = n.GetBoolValue(); } },
             };
         }
@@ -90,7 +90,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("commit_id", CommitId);
             writer.WriteStringValue("in_reply_to_discussion_id", InReplyToDiscussionId);
             writer.WriteStringValue("note", Note);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyFc19ecc6ec0aPosition>("position", Position);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyFc19ecc6ec0a_position>("position", Position);
             writer.WriteBoolValue("resolve_discussion", ResolveDiscussion);
             writer.WriteAdditionalData(AdditionalData);
         }

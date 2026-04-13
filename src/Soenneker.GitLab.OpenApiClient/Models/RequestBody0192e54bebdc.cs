@@ -19,18 +19,18 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The target_issue_iid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0192e54bebdcTargetIssueIid? TargetIssueIid { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch? TargetIssueIid { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0192e54bebdcTargetIssueIid TargetIssueIid { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch TargetIssueIid { get; set; }
 #endif
         /// <summary>The target_project_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0192e54bebdcTargetProjectId? TargetProjectId { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch? TargetProjectId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0192e54bebdcTargetProjectId TargetProjectId { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch TargetProjectId { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0192e54bebdc"/> and sets the default values.
@@ -58,8 +58,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "link_type", n => { LinkType = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0192e54bebdc_link_type>(); } },
-                { "target_issue_iid", n => { TargetIssueIid = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0192e54bebdcTargetIssueIid>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0192e54bebdcTargetIssueIid.CreateFromDiscriminatorValue); } },
-                { "target_project_id", n => { TargetProjectId = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0192e54bebdcTargetProjectId>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0192e54bebdcTargetProjectId.CreateFromDiscriminatorValue); } },
+                { "target_issue_iid", n => { TargetIssueIid = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch>(global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "target_project_id", n => { TargetProjectId = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch>(global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -70,8 +70,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0192e54bebdc_link_type>("link_type", LinkType);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0192e54bebdcTargetIssueIid>("target_issue_iid", TargetIssueIid);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0192e54bebdcTargetProjectId>("target_project_id", TargetProjectId);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch>("target_issue_iid", TargetIssueIid);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch>("target_project_id", TargetProjectId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

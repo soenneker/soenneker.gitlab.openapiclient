@@ -25,10 +25,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Position when creating a note</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody34cb045a5673Position? Position { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody34cb045a5673_position? Position { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody34cb045a5673Position Position { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody34cb045a5673_position Position { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody34cb045a5673"/> and sets the default values.
@@ -56,7 +56,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "note", n => { Note = n.GetStringValue(); } },
-                { "position", n => { Position = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody34cb045a5673Position>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody34cb045a5673Position.CreateFromDiscriminatorValue); } },
+                { "position", n => { Position = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody34cb045a5673_position>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody34cb045a5673_position.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("note", Note);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody34cb045a5673Position>("position", Position);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody34cb045a5673_position>("position", Position);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

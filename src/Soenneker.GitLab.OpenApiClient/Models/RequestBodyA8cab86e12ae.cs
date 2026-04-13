@@ -21,10 +21,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The blocking_project_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA8cab86e12aeBlockingProjectId? BlockingProjectId { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch? BlockingProjectId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA8cab86e12aeBlockingProjectId BlockingProjectId { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch BlockingProjectId { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA8cab86e12ae"/> and sets the default values.
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             {
                 { "blocking_merge_request_id", n => { BlockingMergeRequestId = n.GetIntValue(); } },
                 { "blocking_merge_request_iid", n => { BlockingMergeRequestIid = n.GetIntValue(); } },
-                { "blocking_project_id", n => { BlockingProjectId = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA8cab86e12aeBlockingProjectId>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA8cab86e12aeBlockingProjectId.CreateFromDiscriminatorValue); } },
+                { "blocking_project_id", n => { BlockingProjectId = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch>(global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -65,7 +65,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("blocking_merge_request_id", BlockingMergeRequestId);
             writer.WriteIntValue("blocking_merge_request_iid", BlockingMergeRequestIid);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA8cab86e12aeBlockingProjectId>("blocking_project_id", BlockingProjectId);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch>("blocking_project_id", BlockingProjectId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -35,10 +35,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Build log state</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3cd3f0e4af27Output? Output { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3cd3f0e4af27_output? Output { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3cd3f0e4af27Output Output { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3cd3f0e4af27_output Output { get; set; }
 #endif
         /// <summary>&quot;Job&apos;s status: running, success, failed&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -84,7 +84,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "checksum", n => { Checksum = n.GetStringValue(); } },
                 { "exit_code", n => { ExitCode = n.GetIntValue(); } },
                 { "failure_reason", n => { FailureReason = n.GetStringValue(); } },
-                { "output", n => { Output = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3cd3f0e4af27Output>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3cd3f0e4af27Output.CreateFromDiscriminatorValue); } },
+                { "output", n => { Output = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3cd3f0e4af27_output>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3cd3f0e4af27_output.CreateFromDiscriminatorValue); } },
                 { "state", n => { State = n.GetStringValue(); } },
                 { "token", n => { Token = n.GetStringValue(); } },
             };
@@ -99,7 +99,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("checksum", Checksum);
             writer.WriteIntValue("exit_code", ExitCode);
             writer.WriteStringValue("failure_reason", FailureReason);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3cd3f0e4af27Output>("output", Output);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3cd3f0e4af27_output>("output", Output);
             writer.WriteStringValue("state", State);
             writer.WriteStringValue("token", Token);
             writer.WriteAdditionalData(AdditionalData);

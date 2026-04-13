@@ -17,10 +17,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Runner&apos;s metadata</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37b666c4842Info? Info { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37b666c4842_info? Info { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37b666c4842Info Info { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37b666c4842_info Info { get; set; }
 #endif
         /// <summary>Runner&apos;s queue last_update token</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -33,10 +33,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Runner&apos;s session data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37b666c4842Session? Session { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37b666c4842_session? Session { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37b666c4842Session Session { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37b666c4842_session Session { get; set; }
 #endif
         /// <summary>Runner&apos;s system identifier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -79,9 +79,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "info", n => { Info = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37b666c4842Info>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37b666c4842Info.CreateFromDiscriminatorValue); } },
+                { "info", n => { Info = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37b666c4842_info>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37b666c4842_info.CreateFromDiscriminatorValue); } },
                 { "last_update", n => { LastUpdate = n.GetStringValue(); } },
-                { "session", n => { Session = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37b666c4842Session>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37b666c4842Session.CreateFromDiscriminatorValue); } },
+                { "session", n => { Session = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37b666c4842_session>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37b666c4842_session.CreateFromDiscriminatorValue); } },
                 { "system_id", n => { SystemId = n.GetStringValue(); } },
                 { "token", n => { Token = n.GetStringValue(); } },
             };
@@ -93,9 +93,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37b666c4842Info>("info", Info);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37b666c4842_info>("info", Info);
             writer.WriteStringValue("last_update", LastUpdate);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37b666c4842Session>("session", Session);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37b666c4842_session>("session", Session);
             writer.WriteStringValue("system_id", SystemId);
             writer.WriteStringValue("token", Token);
             writer.WriteAdditionalData(AdditionalData);

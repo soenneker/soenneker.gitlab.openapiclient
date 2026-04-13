@@ -17,18 +17,18 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The move_after_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody90d3d48f5a75MoveAfterId? MoveAfterId { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch? MoveAfterId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody90d3d48f5a75MoveAfterId MoveAfterId { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch MoveAfterId { get; set; }
 #endif
         /// <summary>The move_before_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody90d3d48f5a75MoveBeforeId? MoveBeforeId { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch? MoveBeforeId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody90d3d48f5a75MoveBeforeId MoveBeforeId { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch MoveBeforeId { get; set; }
 #endif
         /// <summary>Current page number</summary>
         public int? Page { get; set; }
@@ -59,8 +59,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "move_after_id", n => { MoveAfterId = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody90d3d48f5a75MoveAfterId>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody90d3d48f5a75MoveAfterId.CreateFromDiscriminatorValue); } },
-                { "move_before_id", n => { MoveBeforeId = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody90d3d48f5a75MoveBeforeId>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody90d3d48f5a75MoveBeforeId.CreateFromDiscriminatorValue); } },
+                { "move_after_id", n => { MoveAfterId = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch>(global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "move_before_id", n => { MoveBeforeId = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch>(global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
                 { "page", n => { Page = n.GetIntValue(); } },
                 { "per_page", n => { PerPage = n.GetIntValue(); } },
             };
@@ -72,8 +72,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody90d3d48f5a75MoveAfterId>("move_after_id", MoveAfterId);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody90d3d48f5a75MoveBeforeId>("move_before_id", MoveBeforeId);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch>("move_after_id", MoveAfterId);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch>("move_before_id", MoveBeforeId);
             writer.WriteIntValue("page", Page);
             writer.WriteIntValue("per_page", PerPage);
             writer.WriteAdditionalData(AdditionalData);

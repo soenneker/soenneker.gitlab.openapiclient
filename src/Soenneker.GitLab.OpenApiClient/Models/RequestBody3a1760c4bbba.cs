@@ -17,10 +17,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The source GitLab instance configuration</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3a1760c4bbbaConfiguration? Configuration { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3a1760c4bbba_configuration? Configuration { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3a1760c4bbbaConfiguration Configuration { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3a1760c4bbba_configuration Configuration { get; set; }
 #endif
         /// <summary>List of entities to import</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "configuration", n => { Configuration = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3a1760c4bbbaConfiguration>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3a1760c4bbbaConfiguration.CreateFromDiscriminatorValue); } },
+                { "configuration", n => { Configuration = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3a1760c4bbba_configuration>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3a1760c4bbba_configuration.CreateFromDiscriminatorValue); } },
                 { "entities", n => { Entities = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3a1760c4bbba_entities>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3a1760c4bbba_entities.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3a1760c4bbbaConfiguration>("configuration", Configuration);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3a1760c4bbba_configuration>("configuration", Configuration);
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3a1760c4bbba_entities>("entities", Entities);
             writer.WriteAdditionalData(AdditionalData);
         }

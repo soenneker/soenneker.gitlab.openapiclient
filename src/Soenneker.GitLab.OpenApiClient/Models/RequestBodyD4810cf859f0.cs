@@ -19,10 +19,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The identifiers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD4810cf859f0Identifiers? Identifiers { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch? Identifiers { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD4810cf859f0Identifiers Identifiers { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch Identifiers { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD4810cf859f0"/> and sets the default values.
@@ -50,7 +50,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "checksum_state", n => { ChecksumState = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD4810cf859f0_checksum_state>(); } },
-                { "identifiers", n => { Identifiers = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD4810cf859f0Identifiers>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD4810cf859f0Identifiers.CreateFromDiscriminatorValue); } },
+                { "identifiers", n => { Identifiers = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch>(global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD4810cf859f0_checksum_state>("checksum_state", ChecksumState);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD4810cf859f0Identifiers>("identifiers", Identifiers);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch>("identifiers", Identifiers);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

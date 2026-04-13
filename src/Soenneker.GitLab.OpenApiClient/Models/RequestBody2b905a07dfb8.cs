@@ -25,10 +25,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The milestone_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2b905a07dfb8MilestoneIds? MilestoneIds { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch? MilestoneIds { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2b905a07dfb8MilestoneIds MilestoneIds { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch MilestoneIds { get; set; }
 #endif
         /// <summary>The title of each milestone to associate with the release. GitLab Premium customers can specify group milestones. Cannot be combined with `milestone_ids` parameter. To remove all milestones from the release, specify `[]`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -74,7 +74,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "milestone_ids", n => { MilestoneIds = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2b905a07dfb8MilestoneIds>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2b905a07dfb8MilestoneIds.CreateFromDiscriminatorValue); } },
+                { "milestone_ids", n => { MilestoneIds = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch>(global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
                 { "milestones", n => { Milestones = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "released_at", n => { ReleasedAt = n.GetDateTimeOffsetValue(); } },
@@ -88,7 +88,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("description", Description);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2b905a07dfb8MilestoneIds>("milestone_ids", MilestoneIds);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch>("milestone_ids", MilestoneIds);
             writer.WriteCollectionOfPrimitiveValues<string>("milestones", Milestones);
             writer.WriteStringValue("name", Name);
             writer.WriteDateTimeOffsetValue("released_at", ReleasedAt);

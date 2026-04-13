@@ -24,10 +24,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Object that contains information on the GitLab subscription</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody6b7a2e61a22cGitlabSubscriptionAttributes? GitlabSubscriptionAttributes { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody6b7a2e61a22c_gitlab_subscription_attributes? GitlabSubscriptionAttributes { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody6b7a2e61a22cGitlabSubscriptionAttributes GitlabSubscriptionAttributes { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody6b7a2e61a22c_gitlab_subscription_attributes GitlabSubscriptionAttributes { get; set; }
 #endif
         /// <summary>Compute minutes quota for this namespace</summary>
         public int? SharedRunnersMinutesLimit { get; set; }
@@ -59,7 +59,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "additional_purchased_storage_ends_on", n => { AdditionalPurchasedStorageEndsOn = n.GetDateValue(); } },
                 { "additional_purchased_storage_size", n => { AdditionalPurchasedStorageSize = n.GetIntValue(); } },
                 { "extra_shared_runners_minutes_limit", n => { ExtraSharedRunnersMinutesLimit = n.GetIntValue(); } },
-                { "gitlab_subscription_attributes", n => { GitlabSubscriptionAttributes = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody6b7a2e61a22cGitlabSubscriptionAttributes>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody6b7a2e61a22cGitlabSubscriptionAttributes.CreateFromDiscriminatorValue); } },
+                { "gitlab_subscription_attributes", n => { GitlabSubscriptionAttributes = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody6b7a2e61a22c_gitlab_subscription_attributes>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody6b7a2e61a22c_gitlab_subscription_attributes.CreateFromDiscriminatorValue); } },
                 { "shared_runners_minutes_limit", n => { SharedRunnersMinutesLimit = n.GetIntValue(); } },
             };
         }
@@ -73,7 +73,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteDateValue("additional_purchased_storage_ends_on", AdditionalPurchasedStorageEndsOn);
             writer.WriteIntValue("additional_purchased_storage_size", AdditionalPurchasedStorageSize);
             writer.WriteIntValue("extra_shared_runners_minutes_limit", ExtraSharedRunnersMinutesLimit);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody6b7a2e61a22cGitlabSubscriptionAttributes>("gitlab_subscription_attributes", GitlabSubscriptionAttributes);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody6b7a2e61a22c_gitlab_subscription_attributes>("gitlab_subscription_attributes", GitlabSubscriptionAttributes);
             writer.WriteIntValue("shared_runners_minutes_limit", SharedRunnersMinutesLimit);
             writer.WriteAdditionalData(AdditionalData);
         }

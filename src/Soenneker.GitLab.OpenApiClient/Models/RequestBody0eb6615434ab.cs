@@ -33,10 +33,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>&quot;Available filters: [environment_scope]. Example: filter[environment_scope]=production&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0eb6615434abFilter? Filter { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0eb6615434ab_filter? Filter { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0eb6615434abFilter Filter { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0eb6615434ab_filter Filter { get; set; }
 #endif
         /// <summary>Whether the variable is masked</summary>
         public bool? Masked { get; set; }
@@ -81,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             {
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "environment_scope", n => { EnvironmentScope = n.GetStringValue(); } },
-                { "filter", n => { Filter = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0eb6615434abFilter>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0eb6615434abFilter.CreateFromDiscriminatorValue); } },
+                { "filter", n => { Filter = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0eb6615434ab_filter>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0eb6615434ab_filter.CreateFromDiscriminatorValue); } },
                 { "masked", n => { Masked = n.GetBoolValue(); } },
                 { "protected", n => { Protected = n.GetBoolValue(); } },
                 { "raw", n => { Raw = n.GetBoolValue(); } },
@@ -98,7 +98,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("environment_scope", EnvironmentScope);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0eb6615434abFilter>("filter", Filter);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0eb6615434ab_filter>("filter", Filter);
             writer.WriteBoolValue("masked", Masked);
             writer.WriteBoolValue("protected", Protected);
             writer.WriteBoolValue("raw", Raw);

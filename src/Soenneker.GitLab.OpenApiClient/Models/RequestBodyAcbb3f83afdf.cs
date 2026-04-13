@@ -19,10 +19,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The certificate property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAcbb3f83afdfCertificate? Certificate { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch? Certificate { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAcbb3f83afdfCertificate Certificate { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch Certificate { get; set; }
 #endif
         /// <summary>The domain</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -35,10 +35,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The key property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAcbb3f83afdfKey? Key { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch? Key { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAcbb3f83afdfKey Key { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch Key { get; set; }
 #endif
         /// <summary>The user_provided_certificate property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -82,9 +82,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "auto_ssl_enabled", n => { AutoSslEnabled = n.GetBoolValue(); } },
-                { "certificate", n => { Certificate = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAcbb3f83afdfCertificate>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAcbb3f83afdfCertificate.CreateFromDiscriminatorValue); } },
+                { "certificate", n => { Certificate = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch>(global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
                 { "domain", n => { Domain = n.GetStringValue(); } },
-                { "key", n => { Key = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAcbb3f83afdfKey>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAcbb3f83afdfKey.CreateFromDiscriminatorValue); } },
+                { "key", n => { Key = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch>(global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
                 { "user_provided_certificate", n => { UserProvidedCertificate = n.GetStringValue(); } },
                 { "user_provided_key", n => { UserProvidedKey = n.GetStringValue(); } },
             };
@@ -97,9 +97,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("auto_ssl_enabled", AutoSslEnabled);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAcbb3f83afdfCertificate>("certificate", Certificate);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch>("certificate", Certificate);
             writer.WriteStringValue("domain", Domain);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAcbb3f83afdfKey>("key", Key);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch>("key", Key);
             writer.WriteStringValue("user_provided_certificate", UserProvidedCertificate);
             writer.WriteStringValue("user_provided_key", UserProvidedKey);
             writer.WriteAdditionalData(AdditionalData);

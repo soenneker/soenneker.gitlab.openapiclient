@@ -33,10 +33,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Object that contains information on the upload</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9485b92e2fc8Upload? Upload { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9485b92e2fc8_upload? Upload { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9485b92e2fc8Upload Upload { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9485b92e2fc8_upload Upload { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9485b92e2fc8"/> and sets the default values.
@@ -65,7 +65,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             {
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "excluded_relations", n => { ExcludedRelations = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "upload", n => { Upload = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9485b92e2fc8Upload>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9485b92e2fc8Upload.CreateFromDiscriminatorValue); } },
+                { "upload", n => { Upload = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9485b92e2fc8_upload>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9485b92e2fc8_upload.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -77,7 +77,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("description", Description);
             writer.WriteCollectionOfPrimitiveValues<string>("excluded_relations", ExcludedRelations);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9485b92e2fc8Upload>("upload", Upload);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9485b92e2fc8_upload>("upload", Upload);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

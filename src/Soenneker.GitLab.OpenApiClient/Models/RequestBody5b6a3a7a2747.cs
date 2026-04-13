@@ -17,10 +17,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Object that contains the payload data for the Geo operation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5b6a3a7a2747Data? Data { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5b6a3a7a2747_data? Data { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5b6a3a7a2747Data Data { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5b6a3a7a2747_data Data { get; set; }
 #endif
         /// <summary>Output from git-receive-pack</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -63,7 +63,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5b6a3a7a2747Data>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5b6a3a7a2747Data.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5b6a3a7a2747_data>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5b6a3a7a2747_data.CreateFromDiscriminatorValue); } },
                 { "output", n => { Output = n.GetStringValue(); } },
                 { "secret_token", n => { SecretToken = n.GetStringValue(); } },
             };
@@ -75,7 +75,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5b6a3a7a2747Data>("data", Data);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5b6a3a7a2747_data>("data", Data);
             writer.WriteStringValue("output", Output);
             writer.WriteStringValue("secret_token", SecretToken);
             writer.WriteAdditionalData(AdditionalData);

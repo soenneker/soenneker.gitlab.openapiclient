@@ -41,10 +41,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The params property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyFb3b23c01c35Params? Params { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch? Params { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyFb3b23c01c35Params Params { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch Params { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyFb3b23c01c35"/> and sets the default values.
@@ -74,7 +74,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "jsonrpc", n => { Jsonrpc = n.GetStringValue(); } },
                 { "method", n => { Method = n.GetStringValue(); } },
-                { "params", n => { Params = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyFb3b23c01c35Params>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyFb3b23c01c35Params.CreateFromDiscriminatorValue); } },
+                { "params", n => { Params = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch>(global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -87,7 +87,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("jsonrpc", Jsonrpc);
             writer.WriteStringValue("method", Method);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyFb3b23c01c35Params>("params", Params);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch>("params", Params);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

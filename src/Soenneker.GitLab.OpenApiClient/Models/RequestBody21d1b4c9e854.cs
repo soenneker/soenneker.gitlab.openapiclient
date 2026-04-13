@@ -83,10 +83,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The value property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody21d1b4c9e854Value? Value { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch? Value { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody21d1b4c9e854Value Value { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch Value { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody21d1b4c9e854"/> and sets the default values.
@@ -122,7 +122,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "repository", n => { Repository = n.GetStringValue(); } },
                 { "runner", n => { Runner = n.GetStringValue(); } },
                 { "user", n => { User = n.GetStringValue(); } },
-                { "value", n => { Value = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody21d1b4c9e854Value>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody21d1b4c9e854Value.CreateFromDiscriminatorValue); } },
+                { "value", n => { Value = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch>(global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -141,7 +141,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("repository", Repository);
             writer.WriteStringValue("runner", Runner);
             writer.WriteStringValue("user", User);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody21d1b4c9e854Value>("value", Value);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch>("value", Value);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -41,10 +41,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Object that contains information about the current file</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB8e76fe6dc60CurrentFile? CurrentFile { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB8e76fe6dc60_current_file? CurrentFile { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB8e76fe6dc60CurrentFile CurrentFile { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB8e76fe6dc60_current_file CurrentFile { get; set; }
 #endif
         /// <summary>Project ID. Required if resource_type is a commit.</summary>
         public int? ProjectId { get; set; }
@@ -59,10 +59,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The resource_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB8e76fe6dc60ResourceId? ResourceId { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch? ResourceId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB8e76fe6dc60ResourceId ResourceId { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch ResourceId { get; set; }
 #endif
         /// <summary>Resource type</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB8e76fe6dc60_resource_type? ResourceType { get; set; }
@@ -96,10 +96,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "additional_context", n => { AdditionalContext = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB8e76fe6dc60_additional_context>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB8e76fe6dc60_additional_context.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "client_subscription_id", n => { ClientSubscriptionId = n.GetStringValue(); } },
                 { "content", n => { Content = n.GetStringValue(); } },
-                { "current_file", n => { CurrentFile = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB8e76fe6dc60CurrentFile>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB8e76fe6dc60CurrentFile.CreateFromDiscriminatorValue); } },
+                { "current_file", n => { CurrentFile = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB8e76fe6dc60_current_file>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB8e76fe6dc60_current_file.CreateFromDiscriminatorValue); } },
                 { "project_id", n => { ProjectId = n.GetIntValue(); } },
                 { "referer_url", n => { RefererUrl = n.GetStringValue(); } },
-                { "resource_id", n => { ResourceId = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB8e76fe6dc60ResourceId>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB8e76fe6dc60ResourceId.CreateFromDiscriminatorValue); } },
+                { "resource_id", n => { ResourceId = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch>(global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
                 { "resource_type", n => { ResourceType = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB8e76fe6dc60_resource_type>(); } },
                 { "with_clean_history", n => { WithCleanHistory = n.GetBoolValue(); } },
             };
@@ -114,10 +114,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB8e76fe6dc60_additional_context>("additional_context", AdditionalContext);
             writer.WriteStringValue("client_subscription_id", ClientSubscriptionId);
             writer.WriteStringValue("content", Content);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB8e76fe6dc60CurrentFile>("current_file", CurrentFile);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB8e76fe6dc60_current_file>("current_file", CurrentFile);
             writer.WriteIntValue("project_id", ProjectId);
             writer.WriteStringValue("referer_url", RefererUrl);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB8e76fe6dc60ResourceId>("resource_id", ResourceId);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch>("resource_id", ResourceId);
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB8e76fe6dc60_resource_type>("resource_type", ResourceType);
             writer.WriteBoolValue("with_clean_history", WithCleanHistory);
             writer.WriteAdditionalData(AdditionalData);

@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Terraform.State;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Terraform.State_protection_rules;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -19,6 +20,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Terraform
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Terraform.State.StateRequestBuilder State
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Terraform.State.StateRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The state_protection_rules property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Terraform.State_protection_rules.State_protection_rulesRequestBuilder State_protection_rules
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Terraform.State_protection_rules.State_protection_rulesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Terraform.TerraformRequestBuilder"/> and sets the default values.

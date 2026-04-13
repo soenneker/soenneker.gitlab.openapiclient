@@ -17,10 +17,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Object that contains assets for the release</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8f5eec8be912Assets? Assets { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8f5eec8be912_assets? Assets { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8f5eec8be912Assets Assets { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8f5eec8be912_assets Assets { get; set; }
 #endif
         /// <summary>The description of the release. You can use Markdown</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -35,10 +35,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The milestone_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8f5eec8be912MilestoneIds? MilestoneIds { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch? MilestoneIds { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8f5eec8be912MilestoneIds MilestoneIds { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch MilestoneIds { get; set; }
 #endif
         /// <summary>The title of each milestone the release is associated with. GitLab Premium customers can specify group milestones. Cannot be combined with `milestone_ids` parameter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -107,10 +107,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "assets", n => { Assets = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8f5eec8be912Assets>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8f5eec8be912Assets.CreateFromDiscriminatorValue); } },
+                { "assets", n => { Assets = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8f5eec8be912_assets>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8f5eec8be912_assets.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "legacy_catalog_publish", n => { LegacyCatalogPublish = n.GetBoolValue(); } },
-                { "milestone_ids", n => { MilestoneIds = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8f5eec8be912MilestoneIds>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8f5eec8be912MilestoneIds.CreateFromDiscriminatorValue); } },
+                { "milestone_ids", n => { MilestoneIds = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch>(global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
                 { "milestones", n => { Milestones = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "ref", n => { Ref = n.GetStringValue(); } },
@@ -126,10 +126,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8f5eec8be912Assets>("assets", Assets);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8f5eec8be912_assets>("assets", Assets);
             writer.WriteStringValue("description", Description);
             writer.WriteBoolValue("legacy_catalog_publish", LegacyCatalogPublish);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8f5eec8be912MilestoneIds>("milestone_ids", MilestoneIds);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch>("milestone_ids", MilestoneIds);
             writer.WriteCollectionOfPrimitiveValues<string>("milestones", Milestones);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("ref", Ref);

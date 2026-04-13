@@ -17,10 +17,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>AWS S3 object storage configuration</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody520f96986f1eAwsS3Configuration? AwsS3Configuration { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody520f96986f1e_aws_s3_configuration? AwsS3Configuration { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody520f96986f1eAwsS3Configuration AwsS3Configuration { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody520f96986f1e_aws_s3_configuration AwsS3Configuration { get; set; }
 #endif
         /// <summary>Name of the object storage bucket where export data is stored</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -41,10 +41,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>MinIO or other S3-compatible object storage configuration</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody520f96986f1eS3CompatibleConfiguration? S3CompatibleConfiguration { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody520f96986f1e_s3_compatible_configuration? S3CompatibleConfiguration { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody520f96986f1eS3CompatibleConfiguration S3CompatibleConfiguration { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody520f96986f1e_s3_compatible_configuration S3CompatibleConfiguration { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody520f96986f1e"/> and sets the default values.
@@ -71,10 +71,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "aws_s3_configuration", n => { AwsS3Configuration = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody520f96986f1eAwsS3Configuration>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody520f96986f1eAwsS3Configuration.CreateFromDiscriminatorValue); } },
+                { "aws_s3_configuration", n => { AwsS3Configuration = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody520f96986f1e_aws_s3_configuration>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody520f96986f1e_aws_s3_configuration.CreateFromDiscriminatorValue); } },
                 { "bucket", n => { Bucket = n.GetStringValue(); } },
                 { "entities", n => { Entities = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody520f96986f1e_entities>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody520f96986f1e_entities.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "s3_compatible_configuration", n => { S3CompatibleConfiguration = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody520f96986f1eS3CompatibleConfiguration>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody520f96986f1eS3CompatibleConfiguration.CreateFromDiscriminatorValue); } },
+                { "s3_compatible_configuration", n => { S3CompatibleConfiguration = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody520f96986f1e_s3_compatible_configuration>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody520f96986f1e_s3_compatible_configuration.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -84,10 +84,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody520f96986f1eAwsS3Configuration>("aws_s3_configuration", AwsS3Configuration);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody520f96986f1e_aws_s3_configuration>("aws_s3_configuration", AwsS3Configuration);
             writer.WriteStringValue("bucket", Bucket);
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody520f96986f1e_entities>("entities", Entities);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody520f96986f1eS3CompatibleConfiguration>("s3_compatible_configuration", S3CompatibleConfiguration);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody520f96986f1e_s3_compatible_configuration>("s3_compatible_configuration", S3CompatibleConfiguration);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

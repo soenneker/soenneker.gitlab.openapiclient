@@ -489,10 +489,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Determine if developers can push to default branch</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA4128e1af416DefaultBranchProtectionDefaults? DefaultBranchProtectionDefaults { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA4128e1af416_default_branch_protection_defaults? DefaultBranchProtectionDefaults { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA4128e1af416DefaultBranchProtectionDefaults DefaultBranchProtectionDefaults { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA4128e1af416_default_branch_protection_defaults DefaultBranchProtectionDefaults { get; set; }
 #endif
         /// <summary>The instance default CI/CD configuration file and path for new projects</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -3641,10 +3641,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Settings for VS Code Extension Marketplace</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA4128e1af416VscodeExtensionMarketplace? VscodeExtensionMarketplace { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA4128e1af416_vscode_extension_marketplace? VscodeExtensionMarketplace { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA4128e1af416VscodeExtensionMarketplace VscodeExtensionMarketplace { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA4128e1af416_vscode_extension_marketplace VscodeExtensionMarketplace { get; set; }
 #endif
         /// <summary>The vscode_extension_marketplace_enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -3922,7 +3922,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "default_artifacts_expire_in", n => { DefaultArtifactsExpireIn = n.GetStringValue(); } },
                 { "default_branch_name", n => { DefaultBranchName = n.GetStringValue(); } },
                 { "default_branch_protection", n => { DefaultBranchProtection = n.GetIntValue(); } },
-                { "default_branch_protection_defaults", n => { DefaultBranchProtectionDefaults = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA4128e1af416DefaultBranchProtectionDefaults>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA4128e1af416DefaultBranchProtectionDefaults.CreateFromDiscriminatorValue); } },
+                { "default_branch_protection_defaults", n => { DefaultBranchProtectionDefaults = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA4128e1af416_default_branch_protection_defaults>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA4128e1af416_default_branch_protection_defaults.CreateFromDiscriminatorValue); } },
                 { "default_ci_config_path", n => { DefaultCiConfigPath = n.GetStringValue(); } },
                 { "default_dark_syntax_highlighting_theme", n => { DefaultDarkSyntaxHighlightingTheme = n.GetStringValue(); } },
                 { "default_group_visibility", n => { DefaultGroupVisibility = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA4128e1af416_default_group_visibility>(); } },
@@ -4415,7 +4415,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "valid_runner_registrars", n => { ValidRunnerRegistrars = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "version_check_enabled", n => { VersionCheckEnabled = n.GetStringValue(); } },
                 { "virtual_registries_endpoints_api_limit", n => { VirtualRegistriesEndpointsApiLimit = n.GetIntValue(); } },
-                { "vscode_extension_marketplace", n => { VscodeExtensionMarketplace = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA4128e1af416VscodeExtensionMarketplace>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA4128e1af416VscodeExtensionMarketplace.CreateFromDiscriminatorValue); } },
+                { "vscode_extension_marketplace", n => { VscodeExtensionMarketplace = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA4128e1af416_vscode_extension_marketplace>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA4128e1af416_vscode_extension_marketplace.CreateFromDiscriminatorValue); } },
                 { "vscode_extension_marketplace_enabled", n => { VscodeExtensionMarketplaceEnabled = n.GetStringValue(); } },
                 { "vscode_extension_marketplace_extension_host_domain", n => { VscodeExtensionMarketplaceExtensionHostDomain = n.GetStringValue(); } },
                 { "vscode_extension_marketplace_single_origin_fallback_enabled", n => { VscodeExtensionMarketplaceSingleOriginFallbackEnabled = n.GetStringValue(); } },
@@ -4526,7 +4526,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("default_artifacts_expire_in", DefaultArtifactsExpireIn);
             writer.WriteStringValue("default_branch_name", DefaultBranchName);
             writer.WriteIntValue("default_branch_protection", DefaultBranchProtection);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA4128e1af416DefaultBranchProtectionDefaults>("default_branch_protection_defaults", DefaultBranchProtectionDefaults);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA4128e1af416_default_branch_protection_defaults>("default_branch_protection_defaults", DefaultBranchProtectionDefaults);
             writer.WriteStringValue("default_ci_config_path", DefaultCiConfigPath);
             writer.WriteStringValue("default_dark_syntax_highlighting_theme", DefaultDarkSyntaxHighlightingTheme);
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA4128e1af416_default_group_visibility>("default_group_visibility", DefaultGroupVisibility);
@@ -5019,7 +5019,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("valid_runner_registrars", ValidRunnerRegistrars);
             writer.WriteStringValue("version_check_enabled", VersionCheckEnabled);
             writer.WriteIntValue("virtual_registries_endpoints_api_limit", VirtualRegistriesEndpointsApiLimit);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA4128e1af416VscodeExtensionMarketplace>("vscode_extension_marketplace", VscodeExtensionMarketplace);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA4128e1af416_vscode_extension_marketplace>("vscode_extension_marketplace", VscodeExtensionMarketplace);
             writer.WriteStringValue("vscode_extension_marketplace_enabled", VscodeExtensionMarketplaceEnabled);
             writer.WriteStringValue("vscode_extension_marketplace_extension_host_domain", VscodeExtensionMarketplaceExtensionHostDomain);
             writer.WriteStringValue("vscode_extension_marketplace_single_origin_fallback_enabled", VscodeExtensionMarketplaceSingleOriginFallbackEnabled);

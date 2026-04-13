@@ -49,10 +49,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Platform Kubernetes data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1feb0eb198f0PlatformKubernetesAttributes? PlatformKubernetesAttributes { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1feb0eb198f0_platform_kubernetes_attributes? PlatformKubernetesAttributes { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1feb0eb198f0PlatformKubernetesAttributes PlatformKubernetesAttributes { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1feb0eb198f0_platform_kubernetes_attributes PlatformKubernetesAttributes { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1feb0eb198f0"/> and sets the default values.
@@ -86,7 +86,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "management_project_id", n => { ManagementProjectId = n.GetIntValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "namespace_per_environment", n => { NamespacePerEnvironment = n.GetBoolValue(); } },
-                { "platform_kubernetes_attributes", n => { PlatformKubernetesAttributes = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1feb0eb198f0PlatformKubernetesAttributes>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1feb0eb198f0PlatformKubernetesAttributes.CreateFromDiscriminatorValue); } },
+                { "platform_kubernetes_attributes", n => { PlatformKubernetesAttributes = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1feb0eb198f0_platform_kubernetes_attributes>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1feb0eb198f0_platform_kubernetes_attributes.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -103,7 +103,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("management_project_id", ManagementProjectId);
             writer.WriteStringValue("name", Name);
             writer.WriteBoolValue("namespace_per_environment", NamespacePerEnvironment);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1feb0eb198f0PlatformKubernetesAttributes>("platform_kubernetes_attributes", PlatformKubernetesAttributes);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1feb0eb198f0_platform_kubernetes_attributes>("platform_kubernetes_attributes", PlatformKubernetesAttributes);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

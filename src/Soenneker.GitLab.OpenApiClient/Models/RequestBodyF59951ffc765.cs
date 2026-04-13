@@ -19,10 +19,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The namespace_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyF59951ffc765NamespaceId? NamespaceId { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch? NamespaceId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyF59951ffc765NamespaceId NamespaceId { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch NamespaceId { get; set; }
 #endif
         /// <summary>State (pending or ready)</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyF59951ffc765_state? State { get; set; }
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "connection_id", n => { ConnectionId = n.GetIntValue(); } },
-                { "namespace_id", n => { NamespaceId = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyF59951ffc765NamespaceId>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyF59951ffc765NamespaceId.CreateFromDiscriminatorValue); } },
+                { "namespace_id", n => { NamespaceId = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch>(global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
                 { "state", n => { State = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyF59951ffc765_state>(); } },
             };
         }
@@ -64,7 +64,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("connection_id", ConnectionId);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyF59951ffc765NamespaceId>("namespace_id", NamespaceId);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch>("namespace_id", NamespaceId);
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyF59951ffc765_state>("state", State);
             writer.WriteAdditionalData(AdditionalData);
         }

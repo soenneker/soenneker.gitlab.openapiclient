@@ -17,10 +17,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Object that contains the payload data for the Geo operation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody55bce0db6f5bData? Data { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody55bce0db6f5b_data? Data { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody55bce0db6f5bData Data { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody55bce0db6f5b_data Data { get; set; }
 #endif
         /// <summary>Secret token used to authenticate requests from gitlab-shell                to Geo proxy endpoints</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody55bce0db6f5bData>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody55bce0db6f5bData.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody55bce0db6f5b_data>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody55bce0db6f5b_data.CreateFromDiscriminatorValue); } },
                 { "secret_token", n => { SecretToken = n.GetStringValue(); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody55bce0db6f5bData>("data", Data);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody55bce0db6f5b_data>("data", Data);
             writer.WriteStringValue("secret_token", SecretToken);
             writer.WriteAdditionalData(AdditionalData);
         }

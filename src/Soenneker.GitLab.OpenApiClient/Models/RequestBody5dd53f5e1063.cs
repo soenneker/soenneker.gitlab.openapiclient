@@ -25,10 +25,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Object that contains information about the current file</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5dd53f5e1063CurrentFile? CurrentFile { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5dd53f5e1063_current_file? CurrentFile { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5dd53f5e1063CurrentFile CurrentFile { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5dd53f5e1063_current_file CurrentFile { get; set; }
 #endif
         /// <summary>The type of generation request</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5dd53f5e1063_generation_type? GenerationType { get; set; }
@@ -78,7 +78,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "context", n => { Context = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5dd53f5e1063_context>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5dd53f5e1063_context.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "current_file", n => { CurrentFile = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5dd53f5e1063CurrentFile>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5dd53f5e1063CurrentFile.CreateFromDiscriminatorValue); } },
+                { "current_file", n => { CurrentFile = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5dd53f5e1063_current_file>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5dd53f5e1063_current_file.CreateFromDiscriminatorValue); } },
                 { "generation_type", n => { GenerationType = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5dd53f5e1063_generation_type>(); } },
                 { "intent", n => { Intent = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5dd53f5e1063_intent>(); } },
                 { "project_path", n => { ProjectPath = n.GetStringValue(); } },
@@ -94,7 +94,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5dd53f5e1063_context>("context", Context);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5dd53f5e1063CurrentFile>("current_file", CurrentFile);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5dd53f5e1063_current_file>("current_file", CurrentFile);
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5dd53f5e1063_generation_type>("generation_type", GenerationType);
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5dd53f5e1063_intent>("intent", Intent);
             writer.WriteStringValue("project_path", ProjectPath);

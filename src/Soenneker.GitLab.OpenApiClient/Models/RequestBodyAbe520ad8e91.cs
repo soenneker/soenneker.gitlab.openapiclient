@@ -29,10 +29,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The user_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAbe520ad8e91UserId? UserId { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch? UserId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAbe520ad8e91UserId UserId { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch UserId { get; set; }
 #endif
         /// <summary>The username of the new member or multiple usernames separated by commas.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -71,7 +71,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "access_level", n => { AccessLevel = n.GetIntValue(); } },
                 { "expires_at", n => { ExpiresAt = n.GetDateTimeOffsetValue(); } },
                 { "invite_source", n => { InviteSource = n.GetStringValue(); } },
-                { "user_id", n => { UserId = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAbe520ad8e91UserId>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAbe520ad8e91UserId.CreateFromDiscriminatorValue); } },
+                { "user_id", n => { UserId = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch>(global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
                 { "username", n => { Username = n.GetStringValue(); } },
             };
         }
@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("access_level", AccessLevel);
             writer.WriteDateTimeOffsetValue("expires_at", ExpiresAt);
             writer.WriteStringValue("invite_source", InviteSource);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAbe520ad8e91UserId>("user_id", UserId);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch>("user_id", UserId);
             writer.WriteStringValue("username", Username);
             writer.WriteAdditionalData(AdditionalData);
         }

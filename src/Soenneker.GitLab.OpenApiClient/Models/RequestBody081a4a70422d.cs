@@ -27,10 +27,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Object that contains YAML frontmatter</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody081a4a70422dFrontMatter? FrontMatter { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody081a4a70422d_front_matter? FrontMatter { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody081a4a70422dFrontMatter FrontMatter { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody081a4a70422d_front_matter FrontMatter { get; set; }
 #endif
         /// <summary>Title of a wiki page</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -68,7 +68,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             {
                 { "content", n => { Content = n.GetStringValue(); } },
                 { "format", n => { Format = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody081a4a70422d_format>(); } },
-                { "front_matter", n => { FrontMatter = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody081a4a70422dFrontMatter>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody081a4a70422dFrontMatter.CreateFromDiscriminatorValue); } },
+                { "front_matter", n => { FrontMatter = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody081a4a70422d_front_matter>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody081a4a70422d_front_matter.CreateFromDiscriminatorValue); } },
                 { "title", n => { Title = n.GetStringValue(); } },
             };
         }
@@ -81,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("content", Content);
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody081a4a70422d_format>("format", Format);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody081a4a70422dFrontMatter>("front_matter", FrontMatter);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody081a4a70422d_front_matter>("front_matter", FrontMatter);
             writer.WriteStringValue("title", Title);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -19,10 +19,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>An object that contains report components mapped to frontend data assets.Some report formats support embedding UI components from theUI. For example, users can apply certain filters in the web UI, andexport the component to a PDF. The SVG is provided fromthe frontend in the report data field.Unsupported keys are discarded. If the datadoesn&apos;t fit the component it is keyed to, thecomponent is ignored and an error is logged.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3c400bb4e6e3ReportData? ReportData { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3c400bb4e6e3_report_data? ReportData { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3c400bb4e6e3ReportData ReportData { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3c400bb4e6e3_report_data ReportData { get; set; }
 #endif
         /// <summary>The send_email property</summary>
         public bool? SendEmail { get; set; }
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "export_format", n => { ExportFormat = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3c400bb4e6e3_export_format>(); } },
-                { "report_data", n => { ReportData = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3c400bb4e6e3ReportData>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3c400bb4e6e3ReportData.CreateFromDiscriminatorValue); } },
+                { "report_data", n => { ReportData = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3c400bb4e6e3_report_data>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3c400bb4e6e3_report_data.CreateFromDiscriminatorValue); } },
                 { "send_email", n => { SendEmail = n.GetBoolValue(); } },
             };
         }
@@ -65,7 +65,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3c400bb4e6e3_export_format>("export_format", ExportFormat);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3c400bb4e6e3ReportData>("report_data", ReportData);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3c400bb4e6e3_report_data>("report_data", ReportData);
             writer.WriteBoolValue("send_email", SendEmail);
             writer.WriteAdditionalData(AdditionalData);
         }

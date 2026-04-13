@@ -29,10 +29,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Runner&apos;s metadata</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc606fdec830Info? Info { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc606fdec830_info? Info { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc606fdec830Info Info { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc606fdec830_info Info { get; set; }
 #endif
         /// <summary>Specifies if the runner should be locked for the current project</summary>
         public bool? Locked { get; set; }
@@ -102,7 +102,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "access_level", n => { AccessLevel = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc606fdec830_access_level>(); } },
                 { "active", n => { Active = n.GetBoolValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "info", n => { Info = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc606fdec830Info>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc606fdec830Info.CreateFromDiscriminatorValue); } },
+                { "info", n => { Info = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc606fdec830_info>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc606fdec830_info.CreateFromDiscriminatorValue); } },
                 { "locked", n => { Locked = n.GetBoolValue(); } },
                 { "maintainer_note", n => { MaintainerNote = n.GetStringValue(); } },
                 { "maintenance_note", n => { MaintenanceNote = n.GetStringValue(); } },
@@ -123,7 +123,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc606fdec830_access_level>("access_level", AccessLevel);
             writer.WriteBoolValue("active", Active);
             writer.WriteStringValue("description", Description);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc606fdec830Info>("info", Info);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc606fdec830_info>("info", Info);
             writer.WriteBoolValue("locked", Locked);
             writer.WriteStringValue("maintainer_note", MaintainerNote);
             writer.WriteStringValue("maintenance_note", MaintenanceNote);
