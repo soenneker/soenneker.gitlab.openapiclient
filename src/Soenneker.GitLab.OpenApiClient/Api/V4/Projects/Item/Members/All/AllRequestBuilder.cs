@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Members.All
         {
         }
         /// <summary>
-        /// Gets a list of group or project members viewable by the authenticated user, including those who gained membership through ancestor group.
+        /// Gets a list of group or project members viewable by the authenticated user,          including those with inherited membership from ancestor groups.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMember"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Members.All
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMember>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMember.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Gets a list of group or project members viewable by the authenticated user, including those who gained membership through ancestor group.
+        /// Gets a list of group or project members viewable by the authenticated user,          including those with inherited membership from ancestor groups.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -93,7 +93,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Members.All
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Members.All.AllRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Gets a list of group or project members viewable by the authenticated user, including those who gained membership through ancestor group.
+        /// Gets a list of group or project members viewable by the authenticated user,          including those with inherited membership from ancestor groups.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class AllRequestBuilderGetQueryParameters 

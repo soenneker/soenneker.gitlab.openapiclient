@@ -23,7 +23,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Description { get; set; }
 #endif
         /// <summary>The email_header_and_footer_enabled property</summary>
-        public bool? EmailHeaderAndFooterEnabled { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? EmailHeaderAndFooterEnabled { get; set; }
+#nullable restore
+#else
+        public string EmailHeaderAndFooterEnabled { get; set; }
+#endif
         /// <summary>The favicon property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -136,6 +142,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string PwaShortName { get; set; }
 #endif
+        /// <summary>The site_name property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? SiteName { get; set; }
+#nullable restore
+#else
+        public string SiteName { get; set; }
+#endif
         /// <summary>The title property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -170,7 +184,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "email_header_and_footer_enabled", n => { EmailHeaderAndFooterEnabled = n.GetBoolValue(); } },
+                { "email_header_and_footer_enabled", n => { EmailHeaderAndFooterEnabled = n.GetStringValue(); } },
                 { "favicon", n => { Favicon = n.GetStringValue(); } },
                 { "footer_message", n => { FooterMessage = n.GetStringValue(); } },
                 { "header_logo", n => { HeaderLogo = n.GetStringValue(); } },
@@ -185,6 +199,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "pwa_icon", n => { PwaIcon = n.GetStringValue(); } },
                 { "pwa_name", n => { PwaName = n.GetStringValue(); } },
                 { "pwa_short_name", n => { PwaShortName = n.GetStringValue(); } },
+                { "site_name", n => { SiteName = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
             };
         }
@@ -196,7 +211,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("description", Description);
-            writer.WriteBoolValue("email_header_and_footer_enabled", EmailHeaderAndFooterEnabled);
+            writer.WriteStringValue("email_header_and_footer_enabled", EmailHeaderAndFooterEnabled);
             writer.WriteStringValue("favicon", Favicon);
             writer.WriteStringValue("footer_message", FooterMessage);
             writer.WriteStringValue("header_logo", HeaderLogo);
@@ -211,6 +226,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("pwa_icon", PwaIcon);
             writer.WriteStringValue("pwa_name", PwaName);
             writer.WriteStringValue("pwa_short_name", PwaShortName);
+            writer.WriteStringValue("site_name", SiteName);
             writer.WriteStringValue("title", Title);
             writer.WriteAdditionalData(AdditionalData);
         }

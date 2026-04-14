@@ -422,6 +422,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string CiMaxTotalYamlSizeBytes { get; set; }
 #endif
+        /// <summary>The ci_telemetry_otel_endpoint property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CiTelemetryOtelEndpoint { get; set; }
+#nullable restore
+#else
+        public string CiTelemetryOtelEndpoint { get; set; }
+#endif
         /// <summary>The code_suggestions_api_rate_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -4890,6 +4898,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "ci_job_live_trace_enabled", n => { CiJobLiveTraceEnabled = n.GetStringValue(); } },
                 { "ci_max_includes", n => { CiMaxIncludes = n.GetStringValue(); } },
                 { "ci_max_total_yaml_size_bytes", n => { CiMaxTotalYamlSizeBytes = n.GetStringValue(); } },
+                { "ci_telemetry_otel_endpoint", n => { CiTelemetryOtelEndpoint = n.GetStringValue(); } },
                 { "code_suggestions_api_rate_limit", n => { CodeSuggestionsApiRateLimit = n.GetStringValue(); } },
                 { "commit_email_hostname", n => { CommitEmailHostname = n.GetStringValue(); } },
                 { "concurrent_bitbucket_import_jobs_limit", n => { ConcurrentBitbucketImportJobsLimit = n.GetStringValue(); } },
@@ -5499,6 +5508,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("ci_job_live_trace_enabled", CiJobLiveTraceEnabled);
             writer.WriteStringValue("ci_max_includes", CiMaxIncludes);
             writer.WriteStringValue("ci_max_total_yaml_size_bytes", CiMaxTotalYamlSizeBytes);
+            writer.WriteStringValue("ci_telemetry_otel_endpoint", CiTelemetryOtelEndpoint);
             writer.WriteStringValue("code_suggestions_api_rate_limit", CodeSuggestionsApiRateLimit);
             writer.WriteStringValue("commit_email_hostname", CommitEmailHostname);
             writer.WriteStringValue("concurrent_bitbucket_import_jobs_limit", ConcurrentBitbucketImportJobsLimit);

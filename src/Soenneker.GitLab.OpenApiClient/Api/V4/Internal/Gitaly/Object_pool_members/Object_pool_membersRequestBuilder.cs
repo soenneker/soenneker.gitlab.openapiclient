@@ -21,7 +21,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitaly.Object_pool_memb
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Object_pool_membersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/internal/gitaly/object_pool_members?disk_path={disk_path}&storage={storage}{&upstream_only*}", pathParameters)
+        public Object_pool_membersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/internal/gitaly/object_pool_members?disk_paths={disk_paths}&storage={storage}{&upstream_only*}", pathParameters)
         {
         }
         /// <summary>
@@ -29,9 +29,12 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitaly.Object_pool_memb
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Object_pool_membersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/internal/gitaly/object_pool_members?disk_path={disk_path}&storage={storage}{&upstream_only*}", rawUrl)
+        public Object_pool_membersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/internal/gitaly/object_pool_members?disk_paths={disk_paths}&storage={storage}{&upstream_only*}", rawUrl)
         {
         }
+        /// <summary>
+        /// List Gitaly object pool members
+        /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitaly.Object_pool_members.Object_pool_membersGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -47,6 +50,9 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitaly.Object_pool_memb
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitaly.Object_pool_members.Object_pool_membersGetResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitaly.Object_pool_members.Object_pool_membersGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
+        /// <summary>
+        /// List Gitaly object pool members
+        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -72,20 +78,21 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitaly.Object_pool_memb
         {
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitaly.Object_pool_members.Object_pool_membersRequestBuilder(rawUrl, RequestAdapter);
         }
+        /// <summary>
+        /// List Gitaly object pool members
+        /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        #pragma warning disable CS1591
         public partial class Object_pool_membersRequestBuilderGetQueryParameters 
-        #pragma warning restore CS1591
         {
-            /// <summary>The on-disk path of the pool repository</summary>
+            /// <summary>The on-disk paths of the pool repositories. Limited to 500</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            [QueryParameter("disk_path")]
-            public string? DiskPath { get; set; }
+            [QueryParameter("disk_paths")]
+            public string[]? DiskPaths { get; set; }
 #nullable restore
 #else
-            [QueryParameter("disk_path")]
-            public string DiskPath { get; set; }
+            [QueryParameter("disk_paths")]
+            public string[] DiskPaths { get; set; }
 #endif
             /// <summary>The storage shard name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
