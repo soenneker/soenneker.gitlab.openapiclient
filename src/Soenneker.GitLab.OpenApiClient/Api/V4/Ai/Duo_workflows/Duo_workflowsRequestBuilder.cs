@@ -2,6 +2,7 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Agent_workflows;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Code_review;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Direct_access;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.List_tools;
@@ -20,6 +21,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Duo_workflowsRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The agent_workflows property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Agent_workflows.Agent_workflowsRequestBuilder Agent_workflows
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Agent_workflows.Agent_workflowsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The code_review property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Code_review.Code_reviewRequestBuilder Code_review
         {

@@ -119,15 +119,8 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests
             public string ApproverIds { get; set; }
 #endif
             /// <summary>Returns merge requests assigned to the given user `id`. `None` returns unassigned merge requests. `Any` returns merge requests with an assignee.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("assignee_id")]
-            public string? AssigneeId { get; set; }
-#nullable restore
-#else
-            [QueryParameter("assignee_id")]
-            public string AssigneeId { get; set; }
-#endif
+            public int? AssigneeId { get; set; }
             /// <summary>Returns merge requests created by the given `username`. Mutually exclusive with `author_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -254,15 +247,8 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests
             public string Not { get; set; }
 #endif
             /// <summary>`&lt;Negated&gt;` Returns merge requests assigned to the given user `id`. `None` returns unassigned merge requests. `Any` returns merge requests with an assignee.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("not%5Bassignee_id%5D")]
-            public string? NotassigneeId { get; set; }
-#nullable restore
-#else
-            [QueryParameter("not%5Bassignee_id%5D")]
-            public string NotassigneeId { get; set; }
-#endif
+            public int? NotassigneeId { get; set; }
             /// <summary>`&lt;Negated&gt;` Returns merge requests created by the given `username`. Mutually exclusive with `author_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -339,15 +325,8 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
             /// <summary>Returns merge requests which have the user as a reviewer with the given user `id`. `None` returns merge requests with no reviewers. `Any` returns merge requests with any reviewer. Mutually exclusive with `reviewer_username`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("reviewer_id")]
-            public string? ReviewerId { get; set; }
-#nullable restore
-#else
-            [QueryParameter("reviewer_id")]
-            public string ReviewerId { get; set; }
-#endif
+            public int? ReviewerId { get; set; }
             /// <summary>Returns merge requests which have the user as a reviewer with the given `username`. `None` returns merge requests with no reviewers. `Any` returns merge requests with any reviewer. Mutually exclusive with `reviewer_id`. Introduced in GitLab 13.8.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

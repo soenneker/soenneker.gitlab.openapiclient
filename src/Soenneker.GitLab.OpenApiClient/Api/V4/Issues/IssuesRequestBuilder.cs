@@ -99,15 +99,8 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Issues
         public partial class IssuesRequestBuilderGetQueryParameters 
         {
             /// <summary>Return issues which are assigned to the user with the given ID</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("assignee_id")]
-            public string? AssigneeId { get; set; }
-#nullable restore
-#else
-            [QueryParameter("assignee_id")]
-            public string AssigneeId { get; set; }
-#endif
+            public int? AssigneeId { get; set; }
             /// <summary>Return issues which are assigned to the user with the given username</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -147,15 +140,8 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Issues
             [QueryParameter("due_date")]
             public global::Soenneker.GitLab.OpenApiClient.Api.V4.Issues.GetDue_dateQueryParameterType? DueDate { get; set; }
             /// <summary>The ID of an epic associated with the issues</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("epic_id")]
-            public string? EpicId { get; set; }
-#nullable restore
-#else
-            [QueryParameter("epic_id")]
-            public string EpicId { get; set; }
-#endif
+            public int? EpicId { get; set; }
             /// <summary>&quot;The health status of the issue. Must be one of: on_track, needs_attention, at_risk, none, any&quot;</summary>
             [QueryParameter("health_status")]
             public global::Soenneker.GitLab.OpenApiClient.Api.V4.Issues.GetHealth_statusQueryParameterType? HealthStatus { get; set; }
@@ -183,15 +169,8 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Issues
             [QueryParameter("issue_type")]
             public global::Soenneker.GitLab.OpenApiClient.Api.V4.Issues.GetIssue_typeQueryParameterType? IssueType { get; set; }
             /// <summary>Return issues which are assigned to the iteration with the given ID</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("iteration_id")]
-            public string? IterationId { get; set; }
-#nullable restore
-#else
-            [QueryParameter("iteration_id")]
-            public string IterationId { get; set; }
-#endif
+            public int? IterationId { get; set; }
             /// <summary>Return issues which are assigned to the iteration with the given title</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -285,15 +264,8 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Issues
             public int?[] Notiids { get; set; }
 #endif
             /// <summary>Return issues which are not assigned to the iteration with the given ID</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("not%5Biteration_id%5D")]
-            public string? NotiterationId { get; set; }
-#nullable restore
-#else
-            [QueryParameter("not%5Biteration_id%5D")]
-            public string NotiterationId { get; set; }
-#endif
+            public int? NotiterationId { get; set; }
             /// <summary>Return issues which are not assigned to the iteration with the given title</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -365,15 +337,8 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Issues
             [QueryParameter("updated_before")]
             public DateTimeOffset? UpdatedBefore { get; set; }
             /// <summary>The weight of the issue</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("weight")]
-            public string? Weight { get; set; }
-#nullable restore
-#else
-            [QueryParameter("weight")]
-            public string Weight { get; set; }
-#endif
+            public int? Weight { get; set; }
             /// <summary>Return titles of labels and other details</summary>
             [QueryParameter("with_labels_details")]
             public bool? WithLabelsDetails { get; set; }
