@@ -1054,6 +1054,102 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Healthy { get; set; }
 #endif
+        /// <summary>The import_export_upload_uploads_checksum_failed_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ImportExportUploadUploadsChecksumFailedCount { get; set; }
+#nullable restore
+#else
+        public string ImportExportUploadUploadsChecksumFailedCount { get; set; }
+#endif
+        /// <summary>The import_export_upload_uploads_checksummed_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ImportExportUploadUploadsChecksummedCount { get; set; }
+#nullable restore
+#else
+        public string ImportExportUploadUploadsChecksummedCount { get; set; }
+#endif
+        /// <summary>The import_export_upload_uploads_checksum_total_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ImportExportUploadUploadsChecksumTotalCount { get; set; }
+#nullable restore
+#else
+        public string ImportExportUploadUploadsChecksumTotalCount { get; set; }
+#endif
+        /// <summary>The import_export_upload_uploads_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ImportExportUploadUploadsCount { get; set; }
+#nullable restore
+#else
+        public string ImportExportUploadUploadsCount { get; set; }
+#endif
+        /// <summary>The import_export_upload_uploads_failed_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ImportExportUploadUploadsFailedCount { get; set; }
+#nullable restore
+#else
+        public string ImportExportUploadUploadsFailedCount { get; set; }
+#endif
+        /// <summary>The import_export_upload_uploads_registry_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ImportExportUploadUploadsRegistryCount { get; set; }
+#nullable restore
+#else
+        public string ImportExportUploadUploadsRegistryCount { get; set; }
+#endif
+        /// <summary>The import_export_upload_uploads_synced_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ImportExportUploadUploadsSyncedCount { get; set; }
+#nullable restore
+#else
+        public string ImportExportUploadUploadsSyncedCount { get; set; }
+#endif
+        /// <summary>The import_export_upload_uploads_synced_in_percentage property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ImportExportUploadUploadsSyncedInPercentage { get; set; }
+#nullable restore
+#else
+        public string ImportExportUploadUploadsSyncedInPercentage { get; set; }
+#endif
+        /// <summary>The import_export_upload_uploads_verification_failed_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ImportExportUploadUploadsVerificationFailedCount { get; set; }
+#nullable restore
+#else
+        public string ImportExportUploadUploadsVerificationFailedCount { get; set; }
+#endif
+        /// <summary>The import_export_upload_uploads_verification_total_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ImportExportUploadUploadsVerificationTotalCount { get; set; }
+#nullable restore
+#else
+        public string ImportExportUploadUploadsVerificationTotalCount { get; set; }
+#endif
+        /// <summary>The import_export_upload_uploads_verified_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ImportExportUploadUploadsVerifiedCount { get; set; }
+#nullable restore
+#else
+        public string ImportExportUploadUploadsVerifiedCount { get; set; }
+#endif
+        /// <summary>The import_export_upload_uploads_verified_in_percentage property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ImportExportUploadUploadsVerifiedInPercentage { get; set; }
+#nullable restore
+#else
+        public string ImportExportUploadUploadsVerifiedInPercentage { get; set; }
+#endif
         /// <summary>The job_artifacts_checksum_failed_count property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -2929,6 +3025,18 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "health", n => { Health = n.GetStringValue(); } },
                 { "health_status", n => { HealthStatus = n.GetStringValue(); } },
                 { "healthy", n => { Healthy = n.GetStringValue(); } },
+                { "import_export_upload_uploads_checksum_failed_count", n => { ImportExportUploadUploadsChecksumFailedCount = n.GetStringValue(); } },
+                { "import_export_upload_uploads_checksum_total_count", n => { ImportExportUploadUploadsChecksumTotalCount = n.GetStringValue(); } },
+                { "import_export_upload_uploads_checksummed_count", n => { ImportExportUploadUploadsChecksummedCount = n.GetStringValue(); } },
+                { "import_export_upload_uploads_count", n => { ImportExportUploadUploadsCount = n.GetStringValue(); } },
+                { "import_export_upload_uploads_failed_count", n => { ImportExportUploadUploadsFailedCount = n.GetStringValue(); } },
+                { "import_export_upload_uploads_registry_count", n => { ImportExportUploadUploadsRegistryCount = n.GetStringValue(); } },
+                { "import_export_upload_uploads_synced_count", n => { ImportExportUploadUploadsSyncedCount = n.GetStringValue(); } },
+                { "import_export_upload_uploads_synced_in_percentage", n => { ImportExportUploadUploadsSyncedInPercentage = n.GetStringValue(); } },
+                { "import_export_upload_uploads_verification_failed_count", n => { ImportExportUploadUploadsVerificationFailedCount = n.GetStringValue(); } },
+                { "import_export_upload_uploads_verification_total_count", n => { ImportExportUploadUploadsVerificationTotalCount = n.GetStringValue(); } },
+                { "import_export_upload_uploads_verified_count", n => { ImportExportUploadUploadsVerifiedCount = n.GetStringValue(); } },
+                { "import_export_upload_uploads_verified_in_percentage", n => { ImportExportUploadUploadsVerifiedInPercentage = n.GetStringValue(); } },
                 { "job_artifacts_checksum_failed_count", n => { JobArtifactsChecksumFailedCount = n.GetStringValue(); } },
                 { "job_artifacts_checksum_total_count", n => { JobArtifactsChecksumTotalCount = n.GetStringValue(); } },
                 { "job_artifacts_checksummed_count", n => { JobArtifactsChecksummedCount = n.GetStringValue(); } },
@@ -3283,6 +3391,18 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("health", Health);
             writer.WriteStringValue("health_status", HealthStatus);
             writer.WriteStringValue("healthy", Healthy);
+            writer.WriteStringValue("import_export_upload_uploads_checksum_failed_count", ImportExportUploadUploadsChecksumFailedCount);
+            writer.WriteStringValue("import_export_upload_uploads_checksummed_count", ImportExportUploadUploadsChecksummedCount);
+            writer.WriteStringValue("import_export_upload_uploads_checksum_total_count", ImportExportUploadUploadsChecksumTotalCount);
+            writer.WriteStringValue("import_export_upload_uploads_count", ImportExportUploadUploadsCount);
+            writer.WriteStringValue("import_export_upload_uploads_failed_count", ImportExportUploadUploadsFailedCount);
+            writer.WriteStringValue("import_export_upload_uploads_registry_count", ImportExportUploadUploadsRegistryCount);
+            writer.WriteStringValue("import_export_upload_uploads_synced_count", ImportExportUploadUploadsSyncedCount);
+            writer.WriteStringValue("import_export_upload_uploads_synced_in_percentage", ImportExportUploadUploadsSyncedInPercentage);
+            writer.WriteStringValue("import_export_upload_uploads_verification_failed_count", ImportExportUploadUploadsVerificationFailedCount);
+            writer.WriteStringValue("import_export_upload_uploads_verification_total_count", ImportExportUploadUploadsVerificationTotalCount);
+            writer.WriteStringValue("import_export_upload_uploads_verified_count", ImportExportUploadUploadsVerifiedCount);
+            writer.WriteStringValue("import_export_upload_uploads_verified_in_percentage", ImportExportUploadUploadsVerifiedInPercentage);
             writer.WriteStringValue("job_artifacts_checksum_failed_count", JobArtifactsChecksumFailedCount);
             writer.WriteStringValue("job_artifacts_checksummed_count", JobArtifactsChecksummedCount);
             writer.WriteStringValue("job_artifacts_checksum_total_count", JobArtifactsChecksumTotalCount);
