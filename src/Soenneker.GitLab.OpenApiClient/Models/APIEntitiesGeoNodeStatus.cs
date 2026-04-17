@@ -52,6 +52,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string AbuseReportUploadsFailedCount { get; set; }
 #endif
+        /// <summary>The abuse_report_uploads_oldest_unsynced_time property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AbuseReportUploadsOldestUnsyncedTime { get; set; }
+#nullable restore
+#else
+        public string AbuseReportUploadsOldestUnsyncedTime { get; set; }
+#endif
         /// <summary>The abuse_report_uploads_registry_count property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -148,6 +156,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string AchievementUploadsFailedCount { get; set; }
 #endif
+        /// <summary>The achievement_uploads_oldest_unsynced_time property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AchievementUploadsOldestUnsyncedTime { get; set; }
+#nullable restore
+#else
+        public string AchievementUploadsOldestUnsyncedTime { get; set; }
+#endif
         /// <summary>The achievement_uploads_registry_count property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -206,6 +222,110 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The ai_vectorizable_file_uploads_checksum_failed_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AiVectorizableFileUploadsChecksumFailedCount { get; set; }
+#nullable restore
+#else
+        public string AiVectorizableFileUploadsChecksumFailedCount { get; set; }
+#endif
+        /// <summary>The ai_vectorizable_file_uploads_checksummed_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AiVectorizableFileUploadsChecksummedCount { get; set; }
+#nullable restore
+#else
+        public string AiVectorizableFileUploadsChecksummedCount { get; set; }
+#endif
+        /// <summary>The ai_vectorizable_file_uploads_checksum_total_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AiVectorizableFileUploadsChecksumTotalCount { get; set; }
+#nullable restore
+#else
+        public string AiVectorizableFileUploadsChecksumTotalCount { get; set; }
+#endif
+        /// <summary>The ai_vectorizable_file_uploads_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AiVectorizableFileUploadsCount { get; set; }
+#nullable restore
+#else
+        public string AiVectorizableFileUploadsCount { get; set; }
+#endif
+        /// <summary>The ai_vectorizable_file_uploads_failed_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AiVectorizableFileUploadsFailedCount { get; set; }
+#nullable restore
+#else
+        public string AiVectorizableFileUploadsFailedCount { get; set; }
+#endif
+        /// <summary>The ai_vectorizable_file_uploads_oldest_unsynced_time property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AiVectorizableFileUploadsOldestUnsyncedTime { get; set; }
+#nullable restore
+#else
+        public string AiVectorizableFileUploadsOldestUnsyncedTime { get; set; }
+#endif
+        /// <summary>The ai_vectorizable_file_uploads_registry_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AiVectorizableFileUploadsRegistryCount { get; set; }
+#nullable restore
+#else
+        public string AiVectorizableFileUploadsRegistryCount { get; set; }
+#endif
+        /// <summary>The ai_vectorizable_file_uploads_synced_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AiVectorizableFileUploadsSyncedCount { get; set; }
+#nullable restore
+#else
+        public string AiVectorizableFileUploadsSyncedCount { get; set; }
+#endif
+        /// <summary>The ai_vectorizable_file_uploads_synced_in_percentage property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AiVectorizableFileUploadsSyncedInPercentage { get; set; }
+#nullable restore
+#else
+        public string AiVectorizableFileUploadsSyncedInPercentage { get; set; }
+#endif
+        /// <summary>The ai_vectorizable_file_uploads_verification_failed_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AiVectorizableFileUploadsVerificationFailedCount { get; set; }
+#nullable restore
+#else
+        public string AiVectorizableFileUploadsVerificationFailedCount { get; set; }
+#endif
+        /// <summary>The ai_vectorizable_file_uploads_verification_total_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AiVectorizableFileUploadsVerificationTotalCount { get; set; }
+#nullable restore
+#else
+        public string AiVectorizableFileUploadsVerificationTotalCount { get; set; }
+#endif
+        /// <summary>The ai_vectorizable_file_uploads_verified_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AiVectorizableFileUploadsVerifiedCount { get; set; }
+#nullable restore
+#else
+        public string AiVectorizableFileUploadsVerifiedCount { get; set; }
+#endif
+        /// <summary>The ai_vectorizable_file_uploads_verified_in_percentage property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AiVectorizableFileUploadsVerifiedInPercentage { get; set; }
+#nullable restore
+#else
+        public string AiVectorizableFileUploadsVerifiedInPercentage { get; set; }
+#endif
         /// <summary>The ci_secure_files_checksum_failed_count property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -245,6 +365,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #nullable restore
 #else
         public string CiSecureFilesFailedCount { get; set; }
+#endif
+        /// <summary>The ci_secure_files_oldest_unsynced_time property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CiSecureFilesOldestUnsyncedTime { get; set; }
+#nullable restore
+#else
+        public string CiSecureFilesOldestUnsyncedTime { get; set; }
 #endif
         /// <summary>The ci_secure_files_registry_count property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -341,6 +469,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #nullable restore
 #else
         public string ContainerRepositoriesFailedCount { get; set; }
+#endif
+        /// <summary>The container_repositories_oldest_unsynced_time property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ContainerRepositoriesOldestUnsyncedTime { get; set; }
+#nullable restore
+#else
+        public string ContainerRepositoriesOldestUnsyncedTime { get; set; }
 #endif
         /// <summary>The container_repositories_registry_count property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -470,6 +606,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string DependencyProxyBlobsFailedCount { get; set; }
 #endif
+        /// <summary>The dependency_proxy_blobs_oldest_unsynced_time property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DependencyProxyBlobsOldestUnsyncedTime { get; set; }
+#nullable restore
+#else
+        public string DependencyProxyBlobsOldestUnsyncedTime { get; set; }
+#endif
         /// <summary>The dependency_proxy_blobs_registry_count property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -565,6 +709,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #nullable restore
 #else
         public string DependencyProxyManifestsFailedCount { get; set; }
+#endif
+        /// <summary>The dependency_proxy_manifests_oldest_unsynced_time property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DependencyProxyManifestsOldestUnsyncedTime { get; set; }
+#nullable restore
+#else
+        public string DependencyProxyManifestsOldestUnsyncedTime { get; set; }
 #endif
         /// <summary>The dependency_proxy_manifests_registry_count property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -662,6 +814,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string DesignManagementActionUploadsFailedCount { get; set; }
 #endif
+        /// <summary>The design_management_action_uploads_oldest_unsynced_time property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DesignManagementActionUploadsOldestUnsyncedTime { get; set; }
+#nullable restore
+#else
+        public string DesignManagementActionUploadsOldestUnsyncedTime { get; set; }
+#endif
         /// <summary>The design_management_action_uploads_registry_count property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -757,6 +917,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #nullable restore
 #else
         public string DesignManagementRepositoriesFailedCount { get; set; }
+#endif
+        /// <summary>The design_management_repositories_oldest_unsynced_time property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DesignManagementRepositoriesOldestUnsyncedTime { get; set; }
+#nullable restore
+#else
+        public string DesignManagementRepositoriesOldestUnsyncedTime { get; set; }
 #endif
         /// <summary>The design_management_repositories_registry_count property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -878,6 +1046,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string GroupUploadsFailedCount { get; set; }
 #endif
+        /// <summary>The group_uploads_oldest_unsynced_time property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? GroupUploadsOldestUnsyncedTime { get; set; }
+#nullable restore
+#else
+        public string GroupUploadsOldestUnsyncedTime { get; set; }
+#endif
         /// <summary>The group_uploads_registry_count property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -973,6 +1149,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #nullable restore
 #else
         public string GroupWikiRepositoriesFailedCount { get; set; }
+#endif
+        /// <summary>The group_wiki_repositories_oldest_unsynced_time property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? GroupWikiRepositoriesOldestUnsyncedTime { get; set; }
+#nullable restore
+#else
+        public string GroupWikiRepositoriesOldestUnsyncedTime { get; set; }
 #endif
         /// <summary>The group_wiki_repositories_registry_count property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -1094,6 +1278,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ImportExportUploadUploadsFailedCount { get; set; }
 #endif
+        /// <summary>The import_export_upload_uploads_oldest_unsynced_time property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ImportExportUploadUploadsOldestUnsyncedTime { get; set; }
+#nullable restore
+#else
+        public string ImportExportUploadUploadsOldestUnsyncedTime { get; set; }
+#endif
         /// <summary>The import_export_upload_uploads_registry_count property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -1189,6 +1381,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #nullable restore
 #else
         public string JobArtifactsFailedCount { get; set; }
+#endif
+        /// <summary>The job_artifacts_oldest_unsynced_time property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? JobArtifactsOldestUnsyncedTime { get; set; }
+#nullable restore
+#else
+        public string JobArtifactsOldestUnsyncedTime { get; set; }
 #endif
         /// <summary>The job_artifacts_registry_count property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -1310,6 +1510,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string LfsObjectsFailedCount { get; set; }
 #endif
+        /// <summary>The lfs_objects_oldest_unsynced_time property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? LfsObjectsOldestUnsyncedTime { get; set; }
+#nullable restore
+#else
+        public string LfsObjectsOldestUnsyncedTime { get; set; }
+#endif
         /// <summary>The lfs_objects_registry_count property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -1413,6 +1621,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #nullable restore
 #else
         public string MergeRequestDiffsFailedCount { get; set; }
+#endif
+        /// <summary>The merge_request_diffs_oldest_unsynced_time property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? MergeRequestDiffsOldestUnsyncedTime { get; set; }
+#nullable restore
+#else
+        public string MergeRequestDiffsOldestUnsyncedTime { get; set; }
 #endif
         /// <summary>The merge_request_diffs_registry_count property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -1526,6 +1742,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string PackageFilesFailedCount { get; set; }
 #endif
+        /// <summary>The package_files_oldest_unsynced_time property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PackageFilesOldestUnsyncedTime { get; set; }
+#nullable restore
+#else
+        public string PackageFilesOldestUnsyncedTime { get; set; }
+#endif
         /// <summary>The package_files_registry_count property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -1621,6 +1845,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #nullable restore
 #else
         public string PackagesHelmMetadataCachesFailedCount { get; set; }
+#endif
+        /// <summary>The packages_helm_metadata_caches_oldest_unsynced_time property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PackagesHelmMetadataCachesOldestUnsyncedTime { get; set; }
+#nullable restore
+#else
+        public string PackagesHelmMetadataCachesOldestUnsyncedTime { get; set; }
 #endif
         /// <summary>The packages_helm_metadata_caches_registry_count property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -1718,6 +1950,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string PackagesNugetSymbolsFailedCount { get; set; }
 #endif
+        /// <summary>The packages_nuget_symbols_oldest_unsynced_time property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PackagesNugetSymbolsOldestUnsyncedTime { get; set; }
+#nullable restore
+#else
+        public string PackagesNugetSymbolsOldestUnsyncedTime { get; set; }
+#endif
         /// <summary>The packages_nuget_symbols_registry_count property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -1813,6 +2053,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #nullable restore
 #else
         public string PagesDeploymentsFailedCount { get; set; }
+#endif
+        /// <summary>The pages_deployments_oldest_unsynced_time property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PagesDeploymentsOldestUnsyncedTime { get; set; }
+#nullable restore
+#else
+        public string PagesDeploymentsOldestUnsyncedTime { get; set; }
 #endif
         /// <summary>The pages_deployments_registry_count property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -1910,6 +2158,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string PipelineArtifactsFailedCount { get; set; }
 #endif
+        /// <summary>The pipeline_artifacts_oldest_unsynced_time property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PipelineArtifactsOldestUnsyncedTime { get; set; }
+#nullable restore
+#else
+        public string PipelineArtifactsOldestUnsyncedTime { get; set; }
+#endif
         /// <summary>The pipeline_artifacts_registry_count property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -2005,6 +2261,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #nullable restore
 #else
         public string ProjectRepositoriesFailedCount { get; set; }
+#endif
+        /// <summary>The project_repositories_oldest_unsynced_time property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ProjectRepositoriesOldestUnsyncedTime { get; set; }
+#nullable restore
+#else
+        public string ProjectRepositoriesOldestUnsyncedTime { get; set; }
 #endif
         /// <summary>The project_repositories_registry_count property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -2110,6 +2374,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ProjectUploadsFailedCount { get; set; }
 #endif
+        /// <summary>The project_uploads_oldest_unsynced_time property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ProjectUploadsOldestUnsyncedTime { get; set; }
+#nullable restore
+#else
+        public string ProjectUploadsOldestUnsyncedTime { get; set; }
+#endif
         /// <summary>The project_uploads_registry_count property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -2205,6 +2477,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #nullable restore
 #else
         public string ProjectWikiRepositoriesFailedCount { get; set; }
+#endif
+        /// <summary>The project_wiki_repositories_oldest_unsynced_time property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ProjectWikiRepositoriesOldestUnsyncedTime { get; set; }
+#nullable restore
+#else
+        public string ProjectWikiRepositoriesOldestUnsyncedTime { get; set; }
 #endif
         /// <summary>The project_wiki_repositories_registry_count property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -2398,6 +2678,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string SnippetRepositoriesFailedCount { get; set; }
 #endif
+        /// <summary>The snippet_repositories_oldest_unsynced_time property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? SnippetRepositoriesOldestUnsyncedTime { get; set; }
+#nullable restore
+#else
+        public string SnippetRepositoriesOldestUnsyncedTime { get; set; }
+#endif
         /// <summary>The snippet_repositories_registry_count property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -2510,6 +2798,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string SupplyChainAttestationsFailedCount { get; set; }
 #endif
+        /// <summary>The supply_chain_attestations_oldest_unsynced_time property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? SupplyChainAttestationsOldestUnsyncedTime { get; set; }
+#nullable restore
+#else
+        public string SupplyChainAttestationsOldestUnsyncedTime { get; set; }
+#endif
         /// <summary>The supply_chain_attestations_registry_count property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -2605,6 +2901,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #nullable restore
 #else
         public string TerraformStateVersionsFailedCount { get; set; }
+#endif
+        /// <summary>The terraform_state_versions_oldest_unsynced_time property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? TerraformStateVersionsOldestUnsyncedTime { get; set; }
+#nullable restore
+#else
+        public string TerraformStateVersionsOldestUnsyncedTime { get; set; }
 #endif
         /// <summary>The terraform_state_versions_registry_count property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -2710,6 +3014,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string UploadsFailedCount { get; set; }
 #endif
+        /// <summary>The uploads_oldest_unsynced_time property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? UploadsOldestUnsyncedTime { get; set; }
+#nullable restore
+#else
+        public string UploadsOldestUnsyncedTime { get; set; }
+#endif
         /// <summary>The uploads_registry_count property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -2806,6 +3118,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string UserUploadsFailedCount { get; set; }
 #endif
+        /// <summary>The user_uploads_oldest_unsynced_time property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? UserUploadsOldestUnsyncedTime { get; set; }
+#nullable restore
+#else
+        public string UserUploadsOldestUnsyncedTime { get; set; }
+#endif
         /// <summary>The user_uploads_registry_count property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -2900,6 +3220,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "abuse_report_uploads_checksummed_count", n => { AbuseReportUploadsChecksummedCount = n.GetStringValue(); } },
                 { "abuse_report_uploads_count", n => { AbuseReportUploadsCount = n.GetStringValue(); } },
                 { "abuse_report_uploads_failed_count", n => { AbuseReportUploadsFailedCount = n.GetStringValue(); } },
+                { "abuse_report_uploads_oldest_unsynced_time", n => { AbuseReportUploadsOldestUnsyncedTime = n.GetStringValue(); } },
                 { "abuse_report_uploads_registry_count", n => { AbuseReportUploadsRegistryCount = n.GetStringValue(); } },
                 { "abuse_report_uploads_synced_count", n => { AbuseReportUploadsSyncedCount = n.GetStringValue(); } },
                 { "abuse_report_uploads_synced_in_percentage", n => { AbuseReportUploadsSyncedInPercentage = n.GetStringValue(); } },
@@ -2912,6 +3233,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "achievement_uploads_checksummed_count", n => { AchievementUploadsChecksummedCount = n.GetStringValue(); } },
                 { "achievement_uploads_count", n => { AchievementUploadsCount = n.GetStringValue(); } },
                 { "achievement_uploads_failed_count", n => { AchievementUploadsFailedCount = n.GetStringValue(); } },
+                { "achievement_uploads_oldest_unsynced_time", n => { AchievementUploadsOldestUnsyncedTime = n.GetStringValue(); } },
                 { "achievement_uploads_registry_count", n => { AchievementUploadsRegistryCount = n.GetStringValue(); } },
                 { "achievement_uploads_synced_count", n => { AchievementUploadsSyncedCount = n.GetStringValue(); } },
                 { "achievement_uploads_synced_in_percentage", n => { AchievementUploadsSyncedInPercentage = n.GetStringValue(); } },
@@ -2919,11 +3241,25 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "achievement_uploads_verification_total_count", n => { AchievementUploadsVerificationTotalCount = n.GetStringValue(); } },
                 { "achievement_uploads_verified_count", n => { AchievementUploadsVerifiedCount = n.GetStringValue(); } },
                 { "achievement_uploads_verified_in_percentage", n => { AchievementUploadsVerifiedInPercentage = n.GetStringValue(); } },
+                { "ai_vectorizable_file_uploads_checksum_failed_count", n => { AiVectorizableFileUploadsChecksumFailedCount = n.GetStringValue(); } },
+                { "ai_vectorizable_file_uploads_checksum_total_count", n => { AiVectorizableFileUploadsChecksumTotalCount = n.GetStringValue(); } },
+                { "ai_vectorizable_file_uploads_checksummed_count", n => { AiVectorizableFileUploadsChecksummedCount = n.GetStringValue(); } },
+                { "ai_vectorizable_file_uploads_count", n => { AiVectorizableFileUploadsCount = n.GetStringValue(); } },
+                { "ai_vectorizable_file_uploads_failed_count", n => { AiVectorizableFileUploadsFailedCount = n.GetStringValue(); } },
+                { "ai_vectorizable_file_uploads_oldest_unsynced_time", n => { AiVectorizableFileUploadsOldestUnsyncedTime = n.GetStringValue(); } },
+                { "ai_vectorizable_file_uploads_registry_count", n => { AiVectorizableFileUploadsRegistryCount = n.GetStringValue(); } },
+                { "ai_vectorizable_file_uploads_synced_count", n => { AiVectorizableFileUploadsSyncedCount = n.GetStringValue(); } },
+                { "ai_vectorizable_file_uploads_synced_in_percentage", n => { AiVectorizableFileUploadsSyncedInPercentage = n.GetStringValue(); } },
+                { "ai_vectorizable_file_uploads_verification_failed_count", n => { AiVectorizableFileUploadsVerificationFailedCount = n.GetStringValue(); } },
+                { "ai_vectorizable_file_uploads_verification_total_count", n => { AiVectorizableFileUploadsVerificationTotalCount = n.GetStringValue(); } },
+                { "ai_vectorizable_file_uploads_verified_count", n => { AiVectorizableFileUploadsVerifiedCount = n.GetStringValue(); } },
+                { "ai_vectorizable_file_uploads_verified_in_percentage", n => { AiVectorizableFileUploadsVerifiedInPercentage = n.GetStringValue(); } },
                 { "ci_secure_files_checksum_failed_count", n => { CiSecureFilesChecksumFailedCount = n.GetStringValue(); } },
                 { "ci_secure_files_checksum_total_count", n => { CiSecureFilesChecksumTotalCount = n.GetStringValue(); } },
                 { "ci_secure_files_checksummed_count", n => { CiSecureFilesChecksummedCount = n.GetStringValue(); } },
                 { "ci_secure_files_count", n => { CiSecureFilesCount = n.GetStringValue(); } },
                 { "ci_secure_files_failed_count", n => { CiSecureFilesFailedCount = n.GetStringValue(); } },
+                { "ci_secure_files_oldest_unsynced_time", n => { CiSecureFilesOldestUnsyncedTime = n.GetStringValue(); } },
                 { "ci_secure_files_registry_count", n => { CiSecureFilesRegistryCount = n.GetStringValue(); } },
                 { "ci_secure_files_synced_count", n => { CiSecureFilesSyncedCount = n.GetStringValue(); } },
                 { "ci_secure_files_synced_in_percentage", n => { CiSecureFilesSyncedInPercentage = n.GetStringValue(); } },
@@ -2936,6 +3272,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "container_repositories_checksummed_count", n => { ContainerRepositoriesChecksummedCount = n.GetStringValue(); } },
                 { "container_repositories_count", n => { ContainerRepositoriesCount = n.GetStringValue(); } },
                 { "container_repositories_failed_count", n => { ContainerRepositoriesFailedCount = n.GetStringValue(); } },
+                { "container_repositories_oldest_unsynced_time", n => { ContainerRepositoriesOldestUnsyncedTime = n.GetStringValue(); } },
                 { "container_repositories_registry_count", n => { ContainerRepositoriesRegistryCount = n.GetStringValue(); } },
                 { "container_repositories_replication_enabled", n => { ContainerRepositoriesReplicationEnabled = n.GetStringValue(); } },
                 { "container_repositories_synced_count", n => { ContainerRepositoriesSyncedCount = n.GetStringValue(); } },
@@ -2952,6 +3289,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "dependency_proxy_blobs_checksummed_count", n => { DependencyProxyBlobsChecksummedCount = n.GetStringValue(); } },
                 { "dependency_proxy_blobs_count", n => { DependencyProxyBlobsCount = n.GetStringValue(); } },
                 { "dependency_proxy_blobs_failed_count", n => { DependencyProxyBlobsFailedCount = n.GetStringValue(); } },
+                { "dependency_proxy_blobs_oldest_unsynced_time", n => { DependencyProxyBlobsOldestUnsyncedTime = n.GetStringValue(); } },
                 { "dependency_proxy_blobs_registry_count", n => { DependencyProxyBlobsRegistryCount = n.GetStringValue(); } },
                 { "dependency_proxy_blobs_synced_count", n => { DependencyProxyBlobsSyncedCount = n.GetStringValue(); } },
                 { "dependency_proxy_blobs_synced_in_percentage", n => { DependencyProxyBlobsSyncedInPercentage = n.GetStringValue(); } },
@@ -2964,6 +3302,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "dependency_proxy_manifests_checksummed_count", n => { DependencyProxyManifestsChecksummedCount = n.GetStringValue(); } },
                 { "dependency_proxy_manifests_count", n => { DependencyProxyManifestsCount = n.GetStringValue(); } },
                 { "dependency_proxy_manifests_failed_count", n => { DependencyProxyManifestsFailedCount = n.GetStringValue(); } },
+                { "dependency_proxy_manifests_oldest_unsynced_time", n => { DependencyProxyManifestsOldestUnsyncedTime = n.GetStringValue(); } },
                 { "dependency_proxy_manifests_registry_count", n => { DependencyProxyManifestsRegistryCount = n.GetStringValue(); } },
                 { "dependency_proxy_manifests_synced_count", n => { DependencyProxyManifestsSyncedCount = n.GetStringValue(); } },
                 { "dependency_proxy_manifests_synced_in_percentage", n => { DependencyProxyManifestsSyncedInPercentage = n.GetStringValue(); } },
@@ -2976,6 +3315,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "design_management_action_uploads_checksummed_count", n => { DesignManagementActionUploadsChecksummedCount = n.GetStringValue(); } },
                 { "design_management_action_uploads_count", n => { DesignManagementActionUploadsCount = n.GetStringValue(); } },
                 { "design_management_action_uploads_failed_count", n => { DesignManagementActionUploadsFailedCount = n.GetStringValue(); } },
+                { "design_management_action_uploads_oldest_unsynced_time", n => { DesignManagementActionUploadsOldestUnsyncedTime = n.GetStringValue(); } },
                 { "design_management_action_uploads_registry_count", n => { DesignManagementActionUploadsRegistryCount = n.GetStringValue(); } },
                 { "design_management_action_uploads_synced_count", n => { DesignManagementActionUploadsSyncedCount = n.GetStringValue(); } },
                 { "design_management_action_uploads_synced_in_percentage", n => { DesignManagementActionUploadsSyncedInPercentage = n.GetStringValue(); } },
@@ -2988,6 +3328,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "design_management_repositories_checksummed_count", n => { DesignManagementRepositoriesChecksummedCount = n.GetStringValue(); } },
                 { "design_management_repositories_count", n => { DesignManagementRepositoriesCount = n.GetStringValue(); } },
                 { "design_management_repositories_failed_count", n => { DesignManagementRepositoriesFailedCount = n.GetStringValue(); } },
+                { "design_management_repositories_oldest_unsynced_time", n => { DesignManagementRepositoriesOldestUnsyncedTime = n.GetStringValue(); } },
                 { "design_management_repositories_registry_count", n => { DesignManagementRepositoriesRegistryCount = n.GetStringValue(); } },
                 { "design_management_repositories_synced_count", n => { DesignManagementRepositoriesSyncedCount = n.GetStringValue(); } },
                 { "design_management_repositories_synced_in_percentage", n => { DesignManagementRepositoriesSyncedInPercentage = n.GetStringValue(); } },
@@ -3003,6 +3344,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "group_uploads_checksummed_count", n => { GroupUploadsChecksummedCount = n.GetStringValue(); } },
                 { "group_uploads_count", n => { GroupUploadsCount = n.GetStringValue(); } },
                 { "group_uploads_failed_count", n => { GroupUploadsFailedCount = n.GetStringValue(); } },
+                { "group_uploads_oldest_unsynced_time", n => { GroupUploadsOldestUnsyncedTime = n.GetStringValue(); } },
                 { "group_uploads_registry_count", n => { GroupUploadsRegistryCount = n.GetStringValue(); } },
                 { "group_uploads_synced_count", n => { GroupUploadsSyncedCount = n.GetStringValue(); } },
                 { "group_uploads_synced_in_percentage", n => { GroupUploadsSyncedInPercentage = n.GetStringValue(); } },
@@ -3015,6 +3357,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "group_wiki_repositories_checksummed_count", n => { GroupWikiRepositoriesChecksummedCount = n.GetStringValue(); } },
                 { "group_wiki_repositories_count", n => { GroupWikiRepositoriesCount = n.GetStringValue(); } },
                 { "group_wiki_repositories_failed_count", n => { GroupWikiRepositoriesFailedCount = n.GetStringValue(); } },
+                { "group_wiki_repositories_oldest_unsynced_time", n => { GroupWikiRepositoriesOldestUnsyncedTime = n.GetStringValue(); } },
                 { "group_wiki_repositories_registry_count", n => { GroupWikiRepositoriesRegistryCount = n.GetStringValue(); } },
                 { "group_wiki_repositories_synced_count", n => { GroupWikiRepositoriesSyncedCount = n.GetStringValue(); } },
                 { "group_wiki_repositories_synced_in_percentage", n => { GroupWikiRepositoriesSyncedInPercentage = n.GetStringValue(); } },
@@ -3030,6 +3373,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "import_export_upload_uploads_checksummed_count", n => { ImportExportUploadUploadsChecksummedCount = n.GetStringValue(); } },
                 { "import_export_upload_uploads_count", n => { ImportExportUploadUploadsCount = n.GetStringValue(); } },
                 { "import_export_upload_uploads_failed_count", n => { ImportExportUploadUploadsFailedCount = n.GetStringValue(); } },
+                { "import_export_upload_uploads_oldest_unsynced_time", n => { ImportExportUploadUploadsOldestUnsyncedTime = n.GetStringValue(); } },
                 { "import_export_upload_uploads_registry_count", n => { ImportExportUploadUploadsRegistryCount = n.GetStringValue(); } },
                 { "import_export_upload_uploads_synced_count", n => { ImportExportUploadUploadsSyncedCount = n.GetStringValue(); } },
                 { "import_export_upload_uploads_synced_in_percentage", n => { ImportExportUploadUploadsSyncedInPercentage = n.GetStringValue(); } },
@@ -3042,6 +3386,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "job_artifacts_checksummed_count", n => { JobArtifactsChecksummedCount = n.GetStringValue(); } },
                 { "job_artifacts_count", n => { JobArtifactsCount = n.GetStringValue(); } },
                 { "job_artifacts_failed_count", n => { JobArtifactsFailedCount = n.GetStringValue(); } },
+                { "job_artifacts_oldest_unsynced_time", n => { JobArtifactsOldestUnsyncedTime = n.GetStringValue(); } },
                 { "job_artifacts_registry_count", n => { JobArtifactsRegistryCount = n.GetStringValue(); } },
                 { "job_artifacts_synced_count", n => { JobArtifactsSyncedCount = n.GetStringValue(); } },
                 { "job_artifacts_synced_in_percentage", n => { JobArtifactsSyncedInPercentage = n.GetStringValue(); } },
@@ -3057,6 +3402,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "lfs_objects_checksummed_count", n => { LfsObjectsChecksummedCount = n.GetStringValue(); } },
                 { "lfs_objects_count", n => { LfsObjectsCount = n.GetStringValue(); } },
                 { "lfs_objects_failed_count", n => { LfsObjectsFailedCount = n.GetStringValue(); } },
+                { "lfs_objects_oldest_unsynced_time", n => { LfsObjectsOldestUnsyncedTime = n.GetStringValue(); } },
                 { "lfs_objects_registry_count", n => { LfsObjectsRegistryCount = n.GetStringValue(); } },
                 { "lfs_objects_synced_count", n => { LfsObjectsSyncedCount = n.GetStringValue(); } },
                 { "lfs_objects_synced_in_percentage", n => { LfsObjectsSyncedInPercentage = n.GetStringValue(); } },
@@ -3070,6 +3416,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "merge_request_diffs_checksummed_count", n => { MergeRequestDiffsChecksummedCount = n.GetStringValue(); } },
                 { "merge_request_diffs_count", n => { MergeRequestDiffsCount = n.GetStringValue(); } },
                 { "merge_request_diffs_failed_count", n => { MergeRequestDiffsFailedCount = n.GetStringValue(); } },
+                { "merge_request_diffs_oldest_unsynced_time", n => { MergeRequestDiffsOldestUnsyncedTime = n.GetStringValue(); } },
                 { "merge_request_diffs_registry_count", n => { MergeRequestDiffsRegistryCount = n.GetStringValue(); } },
                 { "merge_request_diffs_synced_count", n => { MergeRequestDiffsSyncedCount = n.GetStringValue(); } },
                 { "merge_request_diffs_synced_in_percentage", n => { MergeRequestDiffsSyncedInPercentage = n.GetStringValue(); } },
@@ -3084,6 +3431,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "package_files_checksummed_count", n => { PackageFilesChecksummedCount = n.GetStringValue(); } },
                 { "package_files_count", n => { PackageFilesCount = n.GetStringValue(); } },
                 { "package_files_failed_count", n => { PackageFilesFailedCount = n.GetStringValue(); } },
+                { "package_files_oldest_unsynced_time", n => { PackageFilesOldestUnsyncedTime = n.GetStringValue(); } },
                 { "package_files_registry_count", n => { PackageFilesRegistryCount = n.GetStringValue(); } },
                 { "package_files_synced_count", n => { PackageFilesSyncedCount = n.GetStringValue(); } },
                 { "package_files_synced_in_percentage", n => { PackageFilesSyncedInPercentage = n.GetStringValue(); } },
@@ -3096,6 +3444,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "packages_helm_metadata_caches_checksummed_count", n => { PackagesHelmMetadataCachesChecksummedCount = n.GetStringValue(); } },
                 { "packages_helm_metadata_caches_count", n => { PackagesHelmMetadataCachesCount = n.GetStringValue(); } },
                 { "packages_helm_metadata_caches_failed_count", n => { PackagesHelmMetadataCachesFailedCount = n.GetStringValue(); } },
+                { "packages_helm_metadata_caches_oldest_unsynced_time", n => { PackagesHelmMetadataCachesOldestUnsyncedTime = n.GetStringValue(); } },
                 { "packages_helm_metadata_caches_registry_count", n => { PackagesHelmMetadataCachesRegistryCount = n.GetStringValue(); } },
                 { "packages_helm_metadata_caches_synced_count", n => { PackagesHelmMetadataCachesSyncedCount = n.GetStringValue(); } },
                 { "packages_helm_metadata_caches_synced_in_percentage", n => { PackagesHelmMetadataCachesSyncedInPercentage = n.GetStringValue(); } },
@@ -3108,6 +3457,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "packages_nuget_symbols_checksummed_count", n => { PackagesNugetSymbolsChecksummedCount = n.GetStringValue(); } },
                 { "packages_nuget_symbols_count", n => { PackagesNugetSymbolsCount = n.GetStringValue(); } },
                 { "packages_nuget_symbols_failed_count", n => { PackagesNugetSymbolsFailedCount = n.GetStringValue(); } },
+                { "packages_nuget_symbols_oldest_unsynced_time", n => { PackagesNugetSymbolsOldestUnsyncedTime = n.GetStringValue(); } },
                 { "packages_nuget_symbols_registry_count", n => { PackagesNugetSymbolsRegistryCount = n.GetStringValue(); } },
                 { "packages_nuget_symbols_synced_count", n => { PackagesNugetSymbolsSyncedCount = n.GetStringValue(); } },
                 { "packages_nuget_symbols_synced_in_percentage", n => { PackagesNugetSymbolsSyncedInPercentage = n.GetStringValue(); } },
@@ -3120,6 +3470,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "pages_deployments_checksummed_count", n => { PagesDeploymentsChecksummedCount = n.GetStringValue(); } },
                 { "pages_deployments_count", n => { PagesDeploymentsCount = n.GetStringValue(); } },
                 { "pages_deployments_failed_count", n => { PagesDeploymentsFailedCount = n.GetStringValue(); } },
+                { "pages_deployments_oldest_unsynced_time", n => { PagesDeploymentsOldestUnsyncedTime = n.GetStringValue(); } },
                 { "pages_deployments_registry_count", n => { PagesDeploymentsRegistryCount = n.GetStringValue(); } },
                 { "pages_deployments_synced_count", n => { PagesDeploymentsSyncedCount = n.GetStringValue(); } },
                 { "pages_deployments_synced_in_percentage", n => { PagesDeploymentsSyncedInPercentage = n.GetStringValue(); } },
@@ -3132,6 +3483,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "pipeline_artifacts_checksummed_count", n => { PipelineArtifactsChecksummedCount = n.GetStringValue(); } },
                 { "pipeline_artifacts_count", n => { PipelineArtifactsCount = n.GetStringValue(); } },
                 { "pipeline_artifacts_failed_count", n => { PipelineArtifactsFailedCount = n.GetStringValue(); } },
+                { "pipeline_artifacts_oldest_unsynced_time", n => { PipelineArtifactsOldestUnsyncedTime = n.GetStringValue(); } },
                 { "pipeline_artifacts_registry_count", n => { PipelineArtifactsRegistryCount = n.GetStringValue(); } },
                 { "pipeline_artifacts_synced_count", n => { PipelineArtifactsSyncedCount = n.GetStringValue(); } },
                 { "pipeline_artifacts_synced_in_percentage", n => { PipelineArtifactsSyncedInPercentage = n.GetStringValue(); } },
@@ -3144,6 +3496,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "project_repositories_checksummed_count", n => { ProjectRepositoriesChecksummedCount = n.GetStringValue(); } },
                 { "project_repositories_count", n => { ProjectRepositoriesCount = n.GetStringValue(); } },
                 { "project_repositories_failed_count", n => { ProjectRepositoriesFailedCount = n.GetStringValue(); } },
+                { "project_repositories_oldest_unsynced_time", n => { ProjectRepositoriesOldestUnsyncedTime = n.GetStringValue(); } },
                 { "project_repositories_registry_count", n => { ProjectRepositoriesRegistryCount = n.GetStringValue(); } },
                 { "project_repositories_synced_count", n => { ProjectRepositoriesSyncedCount = n.GetStringValue(); } },
                 { "project_repositories_synced_in_percentage", n => { ProjectRepositoriesSyncedInPercentage = n.GetStringValue(); } },
@@ -3156,6 +3509,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "project_uploads_checksummed_count", n => { ProjectUploadsChecksummedCount = n.GetStringValue(); } },
                 { "project_uploads_count", n => { ProjectUploadsCount = n.GetStringValue(); } },
                 { "project_uploads_failed_count", n => { ProjectUploadsFailedCount = n.GetStringValue(); } },
+                { "project_uploads_oldest_unsynced_time", n => { ProjectUploadsOldestUnsyncedTime = n.GetStringValue(); } },
                 { "project_uploads_registry_count", n => { ProjectUploadsRegistryCount = n.GetStringValue(); } },
                 { "project_uploads_synced_count", n => { ProjectUploadsSyncedCount = n.GetStringValue(); } },
                 { "project_uploads_synced_in_percentage", n => { ProjectUploadsSyncedInPercentage = n.GetStringValue(); } },
@@ -3168,6 +3522,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "project_wiki_repositories_checksummed_count", n => { ProjectWikiRepositoriesChecksummedCount = n.GetStringValue(); } },
                 { "project_wiki_repositories_count", n => { ProjectWikiRepositoriesCount = n.GetStringValue(); } },
                 { "project_wiki_repositories_failed_count", n => { ProjectWikiRepositoriesFailedCount = n.GetStringValue(); } },
+                { "project_wiki_repositories_oldest_unsynced_time", n => { ProjectWikiRepositoriesOldestUnsyncedTime = n.GetStringValue(); } },
                 { "project_wiki_repositories_registry_count", n => { ProjectWikiRepositoriesRegistryCount = n.GetStringValue(); } },
                 { "project_wiki_repositories_synced_count", n => { ProjectWikiRepositoriesSyncedCount = n.GetStringValue(); } },
                 { "project_wiki_repositories_synced_in_percentage", n => { ProjectWikiRepositoriesSyncedInPercentage = n.GetStringValue(); } },
@@ -3193,6 +3548,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "snippet_repositories_checksummed_count", n => { SnippetRepositoriesChecksummedCount = n.GetStringValue(); } },
                 { "snippet_repositories_count", n => { SnippetRepositoriesCount = n.GetStringValue(); } },
                 { "snippet_repositories_failed_count", n => { SnippetRepositoriesFailedCount = n.GetStringValue(); } },
+                { "snippet_repositories_oldest_unsynced_time", n => { SnippetRepositoriesOldestUnsyncedTime = n.GetStringValue(); } },
                 { "snippet_repositories_registry_count", n => { SnippetRepositoriesRegistryCount = n.GetStringValue(); } },
                 { "snippet_repositories_synced_count", n => { SnippetRepositoriesSyncedCount = n.GetStringValue(); } },
                 { "snippet_repositories_synced_in_percentage", n => { SnippetRepositoriesSyncedInPercentage = n.GetStringValue(); } },
@@ -3207,6 +3563,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "supply_chain_attestations_checksummed_count", n => { SupplyChainAttestationsChecksummedCount = n.GetStringValue(); } },
                 { "supply_chain_attestations_count", n => { SupplyChainAttestationsCount = n.GetStringValue(); } },
                 { "supply_chain_attestations_failed_count", n => { SupplyChainAttestationsFailedCount = n.GetStringValue(); } },
+                { "supply_chain_attestations_oldest_unsynced_time", n => { SupplyChainAttestationsOldestUnsyncedTime = n.GetStringValue(); } },
                 { "supply_chain_attestations_registry_count", n => { SupplyChainAttestationsRegistryCount = n.GetStringValue(); } },
                 { "supply_chain_attestations_synced_count", n => { SupplyChainAttestationsSyncedCount = n.GetStringValue(); } },
                 { "supply_chain_attestations_synced_in_percentage", n => { SupplyChainAttestationsSyncedInPercentage = n.GetStringValue(); } },
@@ -3219,6 +3576,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "terraform_state_versions_checksummed_count", n => { TerraformStateVersionsChecksummedCount = n.GetStringValue(); } },
                 { "terraform_state_versions_count", n => { TerraformStateVersionsCount = n.GetStringValue(); } },
                 { "terraform_state_versions_failed_count", n => { TerraformStateVersionsFailedCount = n.GetStringValue(); } },
+                { "terraform_state_versions_oldest_unsynced_time", n => { TerraformStateVersionsOldestUnsyncedTime = n.GetStringValue(); } },
                 { "terraform_state_versions_registry_count", n => { TerraformStateVersionsRegistryCount = n.GetStringValue(); } },
                 { "terraform_state_versions_synced_count", n => { TerraformStateVersionsSyncedCount = n.GetStringValue(); } },
                 { "terraform_state_versions_synced_in_percentage", n => { TerraformStateVersionsSyncedInPercentage = n.GetStringValue(); } },
@@ -3232,6 +3590,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "uploads_checksummed_count", n => { UploadsChecksummedCount = n.GetStringValue(); } },
                 { "uploads_count", n => { UploadsCount = n.GetStringValue(); } },
                 { "uploads_failed_count", n => { UploadsFailedCount = n.GetStringValue(); } },
+                { "uploads_oldest_unsynced_time", n => { UploadsOldestUnsyncedTime = n.GetStringValue(); } },
                 { "uploads_registry_count", n => { UploadsRegistryCount = n.GetStringValue(); } },
                 { "uploads_synced_count", n => { UploadsSyncedCount = n.GetStringValue(); } },
                 { "uploads_synced_in_percentage", n => { UploadsSyncedInPercentage = n.GetStringValue(); } },
@@ -3244,6 +3603,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "user_uploads_checksummed_count", n => { UserUploadsChecksummedCount = n.GetStringValue(); } },
                 { "user_uploads_count", n => { UserUploadsCount = n.GetStringValue(); } },
                 { "user_uploads_failed_count", n => { UserUploadsFailedCount = n.GetStringValue(); } },
+                { "user_uploads_oldest_unsynced_time", n => { UserUploadsOldestUnsyncedTime = n.GetStringValue(); } },
                 { "user_uploads_registry_count", n => { UserUploadsRegistryCount = n.GetStringValue(); } },
                 { "user_uploads_synced_count", n => { UserUploadsSyncedCount = n.GetStringValue(); } },
                 { "user_uploads_synced_in_percentage", n => { UserUploadsSyncedInPercentage = n.GetStringValue(); } },
@@ -3266,6 +3626,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("abuse_report_uploads_checksum_total_count", AbuseReportUploadsChecksumTotalCount);
             writer.WriteStringValue("abuse_report_uploads_count", AbuseReportUploadsCount);
             writer.WriteStringValue("abuse_report_uploads_failed_count", AbuseReportUploadsFailedCount);
+            writer.WriteStringValue("abuse_report_uploads_oldest_unsynced_time", AbuseReportUploadsOldestUnsyncedTime);
             writer.WriteStringValue("abuse_report_uploads_registry_count", AbuseReportUploadsRegistryCount);
             writer.WriteStringValue("abuse_report_uploads_synced_count", AbuseReportUploadsSyncedCount);
             writer.WriteStringValue("abuse_report_uploads_synced_in_percentage", AbuseReportUploadsSyncedInPercentage);
@@ -3278,6 +3639,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("achievement_uploads_checksum_total_count", AchievementUploadsChecksumTotalCount);
             writer.WriteStringValue("achievement_uploads_count", AchievementUploadsCount);
             writer.WriteStringValue("achievement_uploads_failed_count", AchievementUploadsFailedCount);
+            writer.WriteStringValue("achievement_uploads_oldest_unsynced_time", AchievementUploadsOldestUnsyncedTime);
             writer.WriteStringValue("achievement_uploads_registry_count", AchievementUploadsRegistryCount);
             writer.WriteStringValue("achievement_uploads_synced_count", AchievementUploadsSyncedCount);
             writer.WriteStringValue("achievement_uploads_synced_in_percentage", AchievementUploadsSyncedInPercentage);
@@ -3285,11 +3647,25 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("achievement_uploads_verification_total_count", AchievementUploadsVerificationTotalCount);
             writer.WriteStringValue("achievement_uploads_verified_count", AchievementUploadsVerifiedCount);
             writer.WriteStringValue("achievement_uploads_verified_in_percentage", AchievementUploadsVerifiedInPercentage);
+            writer.WriteStringValue("ai_vectorizable_file_uploads_checksum_failed_count", AiVectorizableFileUploadsChecksumFailedCount);
+            writer.WriteStringValue("ai_vectorizable_file_uploads_checksummed_count", AiVectorizableFileUploadsChecksummedCount);
+            writer.WriteStringValue("ai_vectorizable_file_uploads_checksum_total_count", AiVectorizableFileUploadsChecksumTotalCount);
+            writer.WriteStringValue("ai_vectorizable_file_uploads_count", AiVectorizableFileUploadsCount);
+            writer.WriteStringValue("ai_vectorizable_file_uploads_failed_count", AiVectorizableFileUploadsFailedCount);
+            writer.WriteStringValue("ai_vectorizable_file_uploads_oldest_unsynced_time", AiVectorizableFileUploadsOldestUnsyncedTime);
+            writer.WriteStringValue("ai_vectorizable_file_uploads_registry_count", AiVectorizableFileUploadsRegistryCount);
+            writer.WriteStringValue("ai_vectorizable_file_uploads_synced_count", AiVectorizableFileUploadsSyncedCount);
+            writer.WriteStringValue("ai_vectorizable_file_uploads_synced_in_percentage", AiVectorizableFileUploadsSyncedInPercentage);
+            writer.WriteStringValue("ai_vectorizable_file_uploads_verification_failed_count", AiVectorizableFileUploadsVerificationFailedCount);
+            writer.WriteStringValue("ai_vectorizable_file_uploads_verification_total_count", AiVectorizableFileUploadsVerificationTotalCount);
+            writer.WriteStringValue("ai_vectorizable_file_uploads_verified_count", AiVectorizableFileUploadsVerifiedCount);
+            writer.WriteStringValue("ai_vectorizable_file_uploads_verified_in_percentage", AiVectorizableFileUploadsVerifiedInPercentage);
             writer.WriteStringValue("ci_secure_files_checksum_failed_count", CiSecureFilesChecksumFailedCount);
             writer.WriteStringValue("ci_secure_files_checksummed_count", CiSecureFilesChecksummedCount);
             writer.WriteStringValue("ci_secure_files_checksum_total_count", CiSecureFilesChecksumTotalCount);
             writer.WriteStringValue("ci_secure_files_count", CiSecureFilesCount);
             writer.WriteStringValue("ci_secure_files_failed_count", CiSecureFilesFailedCount);
+            writer.WriteStringValue("ci_secure_files_oldest_unsynced_time", CiSecureFilesOldestUnsyncedTime);
             writer.WriteStringValue("ci_secure_files_registry_count", CiSecureFilesRegistryCount);
             writer.WriteStringValue("ci_secure_files_synced_count", CiSecureFilesSyncedCount);
             writer.WriteStringValue("ci_secure_files_synced_in_percentage", CiSecureFilesSyncedInPercentage);
@@ -3302,6 +3678,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("container_repositories_checksum_total_count", ContainerRepositoriesChecksumTotalCount);
             writer.WriteStringValue("container_repositories_count", ContainerRepositoriesCount);
             writer.WriteStringValue("container_repositories_failed_count", ContainerRepositoriesFailedCount);
+            writer.WriteStringValue("container_repositories_oldest_unsynced_time", ContainerRepositoriesOldestUnsyncedTime);
             writer.WriteStringValue("container_repositories_registry_count", ContainerRepositoriesRegistryCount);
             writer.WriteStringValue("container_repositories_replication_enabled", ContainerRepositoriesReplicationEnabled);
             writer.WriteStringValue("container_repositories_synced_count", ContainerRepositoriesSyncedCount);
@@ -3318,6 +3695,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("dependency_proxy_blobs_checksum_total_count", DependencyProxyBlobsChecksumTotalCount);
             writer.WriteStringValue("dependency_proxy_blobs_count", DependencyProxyBlobsCount);
             writer.WriteStringValue("dependency_proxy_blobs_failed_count", DependencyProxyBlobsFailedCount);
+            writer.WriteStringValue("dependency_proxy_blobs_oldest_unsynced_time", DependencyProxyBlobsOldestUnsyncedTime);
             writer.WriteStringValue("dependency_proxy_blobs_registry_count", DependencyProxyBlobsRegistryCount);
             writer.WriteStringValue("dependency_proxy_blobs_synced_count", DependencyProxyBlobsSyncedCount);
             writer.WriteStringValue("dependency_proxy_blobs_synced_in_percentage", DependencyProxyBlobsSyncedInPercentage);
@@ -3330,6 +3708,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("dependency_proxy_manifests_checksum_total_count", DependencyProxyManifestsChecksumTotalCount);
             writer.WriteStringValue("dependency_proxy_manifests_count", DependencyProxyManifestsCount);
             writer.WriteStringValue("dependency_proxy_manifests_failed_count", DependencyProxyManifestsFailedCount);
+            writer.WriteStringValue("dependency_proxy_manifests_oldest_unsynced_time", DependencyProxyManifestsOldestUnsyncedTime);
             writer.WriteStringValue("dependency_proxy_manifests_registry_count", DependencyProxyManifestsRegistryCount);
             writer.WriteStringValue("dependency_proxy_manifests_synced_count", DependencyProxyManifestsSyncedCount);
             writer.WriteStringValue("dependency_proxy_manifests_synced_in_percentage", DependencyProxyManifestsSyncedInPercentage);
@@ -3342,6 +3721,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("design_management_action_uploads_checksum_total_count", DesignManagementActionUploadsChecksumTotalCount);
             writer.WriteStringValue("design_management_action_uploads_count", DesignManagementActionUploadsCount);
             writer.WriteStringValue("design_management_action_uploads_failed_count", DesignManagementActionUploadsFailedCount);
+            writer.WriteStringValue("design_management_action_uploads_oldest_unsynced_time", DesignManagementActionUploadsOldestUnsyncedTime);
             writer.WriteStringValue("design_management_action_uploads_registry_count", DesignManagementActionUploadsRegistryCount);
             writer.WriteStringValue("design_management_action_uploads_synced_count", DesignManagementActionUploadsSyncedCount);
             writer.WriteStringValue("design_management_action_uploads_synced_in_percentage", DesignManagementActionUploadsSyncedInPercentage);
@@ -3354,6 +3734,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("design_management_repositories_checksum_total_count", DesignManagementRepositoriesChecksumTotalCount);
             writer.WriteStringValue("design_management_repositories_count", DesignManagementRepositoriesCount);
             writer.WriteStringValue("design_management_repositories_failed_count", DesignManagementRepositoriesFailedCount);
+            writer.WriteStringValue("design_management_repositories_oldest_unsynced_time", DesignManagementRepositoriesOldestUnsyncedTime);
             writer.WriteStringValue("design_management_repositories_registry_count", DesignManagementRepositoriesRegistryCount);
             writer.WriteStringValue("design_management_repositories_synced_count", DesignManagementRepositoriesSyncedCount);
             writer.WriteStringValue("design_management_repositories_synced_in_percentage", DesignManagementRepositoriesSyncedInPercentage);
@@ -3369,6 +3750,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("group_uploads_checksum_total_count", GroupUploadsChecksumTotalCount);
             writer.WriteStringValue("group_uploads_count", GroupUploadsCount);
             writer.WriteStringValue("group_uploads_failed_count", GroupUploadsFailedCount);
+            writer.WriteStringValue("group_uploads_oldest_unsynced_time", GroupUploadsOldestUnsyncedTime);
             writer.WriteStringValue("group_uploads_registry_count", GroupUploadsRegistryCount);
             writer.WriteStringValue("group_uploads_synced_count", GroupUploadsSyncedCount);
             writer.WriteStringValue("group_uploads_synced_in_percentage", GroupUploadsSyncedInPercentage);
@@ -3381,6 +3763,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("group_wiki_repositories_checksum_total_count", GroupWikiRepositoriesChecksumTotalCount);
             writer.WriteStringValue("group_wiki_repositories_count", GroupWikiRepositoriesCount);
             writer.WriteStringValue("group_wiki_repositories_failed_count", GroupWikiRepositoriesFailedCount);
+            writer.WriteStringValue("group_wiki_repositories_oldest_unsynced_time", GroupWikiRepositoriesOldestUnsyncedTime);
             writer.WriteStringValue("group_wiki_repositories_registry_count", GroupWikiRepositoriesRegistryCount);
             writer.WriteStringValue("group_wiki_repositories_synced_count", GroupWikiRepositoriesSyncedCount);
             writer.WriteStringValue("group_wiki_repositories_synced_in_percentage", GroupWikiRepositoriesSyncedInPercentage);
@@ -3396,6 +3779,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("import_export_upload_uploads_checksum_total_count", ImportExportUploadUploadsChecksumTotalCount);
             writer.WriteStringValue("import_export_upload_uploads_count", ImportExportUploadUploadsCount);
             writer.WriteStringValue("import_export_upload_uploads_failed_count", ImportExportUploadUploadsFailedCount);
+            writer.WriteStringValue("import_export_upload_uploads_oldest_unsynced_time", ImportExportUploadUploadsOldestUnsyncedTime);
             writer.WriteStringValue("import_export_upload_uploads_registry_count", ImportExportUploadUploadsRegistryCount);
             writer.WriteStringValue("import_export_upload_uploads_synced_count", ImportExportUploadUploadsSyncedCount);
             writer.WriteStringValue("import_export_upload_uploads_synced_in_percentage", ImportExportUploadUploadsSyncedInPercentage);
@@ -3408,6 +3792,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("job_artifacts_checksum_total_count", JobArtifactsChecksumTotalCount);
             writer.WriteStringValue("job_artifacts_count", JobArtifactsCount);
             writer.WriteStringValue("job_artifacts_failed_count", JobArtifactsFailedCount);
+            writer.WriteStringValue("job_artifacts_oldest_unsynced_time", JobArtifactsOldestUnsyncedTime);
             writer.WriteStringValue("job_artifacts_registry_count", JobArtifactsRegistryCount);
             writer.WriteStringValue("job_artifacts_synced_count", JobArtifactsSyncedCount);
             writer.WriteStringValue("job_artifacts_synced_in_percentage", JobArtifactsSyncedInPercentage);
@@ -3423,6 +3808,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("lfs_objects_checksum_total_count", LfsObjectsChecksumTotalCount);
             writer.WriteStringValue("lfs_objects_count", LfsObjectsCount);
             writer.WriteStringValue("lfs_objects_failed_count", LfsObjectsFailedCount);
+            writer.WriteStringValue("lfs_objects_oldest_unsynced_time", LfsObjectsOldestUnsyncedTime);
             writer.WriteStringValue("lfs_objects_registry_count", LfsObjectsRegistryCount);
             writer.WriteStringValue("lfs_objects_synced_count", LfsObjectsSyncedCount);
             writer.WriteStringValue("lfs_objects_synced_in_percentage", LfsObjectsSyncedInPercentage);
@@ -3436,6 +3822,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("merge_request_diffs_checksum_total_count", MergeRequestDiffsChecksumTotalCount);
             writer.WriteStringValue("merge_request_diffs_count", MergeRequestDiffsCount);
             writer.WriteStringValue("merge_request_diffs_failed_count", MergeRequestDiffsFailedCount);
+            writer.WriteStringValue("merge_request_diffs_oldest_unsynced_time", MergeRequestDiffsOldestUnsyncedTime);
             writer.WriteStringValue("merge_request_diffs_registry_count", MergeRequestDiffsRegistryCount);
             writer.WriteStringValue("merge_request_diffs_synced_count", MergeRequestDiffsSyncedCount);
             writer.WriteStringValue("merge_request_diffs_synced_in_percentage", MergeRequestDiffsSyncedInPercentage);
@@ -3450,6 +3837,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("package_files_checksum_total_count", PackageFilesChecksumTotalCount);
             writer.WriteStringValue("package_files_count", PackageFilesCount);
             writer.WriteStringValue("package_files_failed_count", PackageFilesFailedCount);
+            writer.WriteStringValue("package_files_oldest_unsynced_time", PackageFilesOldestUnsyncedTime);
             writer.WriteStringValue("package_files_registry_count", PackageFilesRegistryCount);
             writer.WriteStringValue("package_files_synced_count", PackageFilesSyncedCount);
             writer.WriteStringValue("package_files_synced_in_percentage", PackageFilesSyncedInPercentage);
@@ -3462,6 +3850,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("packages_helm_metadata_caches_checksum_total_count", PackagesHelmMetadataCachesChecksumTotalCount);
             writer.WriteStringValue("packages_helm_metadata_caches_count", PackagesHelmMetadataCachesCount);
             writer.WriteStringValue("packages_helm_metadata_caches_failed_count", PackagesHelmMetadataCachesFailedCount);
+            writer.WriteStringValue("packages_helm_metadata_caches_oldest_unsynced_time", PackagesHelmMetadataCachesOldestUnsyncedTime);
             writer.WriteStringValue("packages_helm_metadata_caches_registry_count", PackagesHelmMetadataCachesRegistryCount);
             writer.WriteStringValue("packages_helm_metadata_caches_synced_count", PackagesHelmMetadataCachesSyncedCount);
             writer.WriteStringValue("packages_helm_metadata_caches_synced_in_percentage", PackagesHelmMetadataCachesSyncedInPercentage);
@@ -3474,6 +3863,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("packages_nuget_symbols_checksum_total_count", PackagesNugetSymbolsChecksumTotalCount);
             writer.WriteStringValue("packages_nuget_symbols_count", PackagesNugetSymbolsCount);
             writer.WriteStringValue("packages_nuget_symbols_failed_count", PackagesNugetSymbolsFailedCount);
+            writer.WriteStringValue("packages_nuget_symbols_oldest_unsynced_time", PackagesNugetSymbolsOldestUnsyncedTime);
             writer.WriteStringValue("packages_nuget_symbols_registry_count", PackagesNugetSymbolsRegistryCount);
             writer.WriteStringValue("packages_nuget_symbols_synced_count", PackagesNugetSymbolsSyncedCount);
             writer.WriteStringValue("packages_nuget_symbols_synced_in_percentage", PackagesNugetSymbolsSyncedInPercentage);
@@ -3486,6 +3876,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("pages_deployments_checksum_total_count", PagesDeploymentsChecksumTotalCount);
             writer.WriteStringValue("pages_deployments_count", PagesDeploymentsCount);
             writer.WriteStringValue("pages_deployments_failed_count", PagesDeploymentsFailedCount);
+            writer.WriteStringValue("pages_deployments_oldest_unsynced_time", PagesDeploymentsOldestUnsyncedTime);
             writer.WriteStringValue("pages_deployments_registry_count", PagesDeploymentsRegistryCount);
             writer.WriteStringValue("pages_deployments_synced_count", PagesDeploymentsSyncedCount);
             writer.WriteStringValue("pages_deployments_synced_in_percentage", PagesDeploymentsSyncedInPercentage);
@@ -3498,6 +3889,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("pipeline_artifacts_checksum_total_count", PipelineArtifactsChecksumTotalCount);
             writer.WriteStringValue("pipeline_artifacts_count", PipelineArtifactsCount);
             writer.WriteStringValue("pipeline_artifacts_failed_count", PipelineArtifactsFailedCount);
+            writer.WriteStringValue("pipeline_artifacts_oldest_unsynced_time", PipelineArtifactsOldestUnsyncedTime);
             writer.WriteStringValue("pipeline_artifacts_registry_count", PipelineArtifactsRegistryCount);
             writer.WriteStringValue("pipeline_artifacts_synced_count", PipelineArtifactsSyncedCount);
             writer.WriteStringValue("pipeline_artifacts_synced_in_percentage", PipelineArtifactsSyncedInPercentage);
@@ -3510,6 +3902,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("project_repositories_checksum_total_count", ProjectRepositoriesChecksumTotalCount);
             writer.WriteStringValue("project_repositories_count", ProjectRepositoriesCount);
             writer.WriteStringValue("project_repositories_failed_count", ProjectRepositoriesFailedCount);
+            writer.WriteStringValue("project_repositories_oldest_unsynced_time", ProjectRepositoriesOldestUnsyncedTime);
             writer.WriteStringValue("project_repositories_registry_count", ProjectRepositoriesRegistryCount);
             writer.WriteStringValue("project_repositories_synced_count", ProjectRepositoriesSyncedCount);
             writer.WriteStringValue("project_repositories_synced_in_percentage", ProjectRepositoriesSyncedInPercentage);
@@ -3523,6 +3916,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("project_uploads_checksum_total_count", ProjectUploadsChecksumTotalCount);
             writer.WriteStringValue("project_uploads_count", ProjectUploadsCount);
             writer.WriteStringValue("project_uploads_failed_count", ProjectUploadsFailedCount);
+            writer.WriteStringValue("project_uploads_oldest_unsynced_time", ProjectUploadsOldestUnsyncedTime);
             writer.WriteStringValue("project_uploads_registry_count", ProjectUploadsRegistryCount);
             writer.WriteStringValue("project_uploads_synced_count", ProjectUploadsSyncedCount);
             writer.WriteStringValue("project_uploads_synced_in_percentage", ProjectUploadsSyncedInPercentage);
@@ -3535,6 +3929,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("project_wiki_repositories_checksum_total_count", ProjectWikiRepositoriesChecksumTotalCount);
             writer.WriteStringValue("project_wiki_repositories_count", ProjectWikiRepositoriesCount);
             writer.WriteStringValue("project_wiki_repositories_failed_count", ProjectWikiRepositoriesFailedCount);
+            writer.WriteStringValue("project_wiki_repositories_oldest_unsynced_time", ProjectWikiRepositoriesOldestUnsyncedTime);
             writer.WriteStringValue("project_wiki_repositories_registry_count", ProjectWikiRepositoriesRegistryCount);
             writer.WriteStringValue("project_wiki_repositories_synced_count", ProjectWikiRepositoriesSyncedCount);
             writer.WriteStringValue("project_wiki_repositories_synced_in_percentage", ProjectWikiRepositoriesSyncedInPercentage);
@@ -3559,6 +3954,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("snippet_repositories_checksum_total_count", SnippetRepositoriesChecksumTotalCount);
             writer.WriteStringValue("snippet_repositories_count", SnippetRepositoriesCount);
             writer.WriteStringValue("snippet_repositories_failed_count", SnippetRepositoriesFailedCount);
+            writer.WriteStringValue("snippet_repositories_oldest_unsynced_time", SnippetRepositoriesOldestUnsyncedTime);
             writer.WriteStringValue("snippet_repositories_registry_count", SnippetRepositoriesRegistryCount);
             writer.WriteStringValue("snippet_repositories_synced_count", SnippetRepositoriesSyncedCount);
             writer.WriteStringValue("snippet_repositories_synced_in_percentage", SnippetRepositoriesSyncedInPercentage);
@@ -3573,6 +3969,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("supply_chain_attestations_checksum_total_count", SupplyChainAttestationsChecksumTotalCount);
             writer.WriteStringValue("supply_chain_attestations_count", SupplyChainAttestationsCount);
             writer.WriteStringValue("supply_chain_attestations_failed_count", SupplyChainAttestationsFailedCount);
+            writer.WriteStringValue("supply_chain_attestations_oldest_unsynced_time", SupplyChainAttestationsOldestUnsyncedTime);
             writer.WriteStringValue("supply_chain_attestations_registry_count", SupplyChainAttestationsRegistryCount);
             writer.WriteStringValue("supply_chain_attestations_synced_count", SupplyChainAttestationsSyncedCount);
             writer.WriteStringValue("supply_chain_attestations_synced_in_percentage", SupplyChainAttestationsSyncedInPercentage);
@@ -3585,6 +3982,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("terraform_state_versions_checksum_total_count", TerraformStateVersionsChecksumTotalCount);
             writer.WriteStringValue("terraform_state_versions_count", TerraformStateVersionsCount);
             writer.WriteStringValue("terraform_state_versions_failed_count", TerraformStateVersionsFailedCount);
+            writer.WriteStringValue("terraform_state_versions_oldest_unsynced_time", TerraformStateVersionsOldestUnsyncedTime);
             writer.WriteStringValue("terraform_state_versions_registry_count", TerraformStateVersionsRegistryCount);
             writer.WriteStringValue("terraform_state_versions_synced_count", TerraformStateVersionsSyncedCount);
             writer.WriteStringValue("terraform_state_versions_synced_in_percentage", TerraformStateVersionsSyncedInPercentage);
@@ -3598,6 +3996,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("uploads_checksum_total_count", UploadsChecksumTotalCount);
             writer.WriteStringValue("uploads_count", UploadsCount);
             writer.WriteStringValue("uploads_failed_count", UploadsFailedCount);
+            writer.WriteStringValue("uploads_oldest_unsynced_time", UploadsOldestUnsyncedTime);
             writer.WriteStringValue("uploads_registry_count", UploadsRegistryCount);
             writer.WriteStringValue("uploads_synced_count", UploadsSyncedCount);
             writer.WriteStringValue("uploads_synced_in_percentage", UploadsSyncedInPercentage);
@@ -3610,6 +4009,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("user_uploads_checksum_total_count", UserUploadsChecksumTotalCount);
             writer.WriteStringValue("user_uploads_count", UserUploadsCount);
             writer.WriteStringValue("user_uploads_failed_count", UserUploadsFailedCount);
+            writer.WriteStringValue("user_uploads_oldest_unsynced_time", UserUploadsOldestUnsyncedTime);
             writer.WriteStringValue("user_uploads_registry_count", UserUploadsRegistryCount);
             writer.WriteStringValue("user_uploads_synced_count", UserUploadsSyncedCount);
             writer.WriteStringValue("user_uploads_synced_in_percentage", UserUploadsSyncedInPercentage);

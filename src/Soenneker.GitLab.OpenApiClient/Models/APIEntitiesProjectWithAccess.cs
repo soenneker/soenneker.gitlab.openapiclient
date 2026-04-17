@@ -562,6 +562,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>The mr_default_target_self property</summary>
         public bool? MrDefaultTargetSelf { get; set; }
+        /// <summary>The mr_default_title_template property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? MrDefaultTitleTemplate { get; set; }
+#nullable restore
+#else
+        public string MrDefaultTitleTemplate { get; set; }
+#endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -1025,6 +1033,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "model_registry_access_level", n => { ModelRegistryAccessLevel = n.GetStringValue(); } },
                 { "monitor_access_level", n => { MonitorAccessLevel = n.GetStringValue(); } },
                 { "mr_default_target_self", n => { MrDefaultTargetSelf = n.GetBoolValue(); } },
+                { "mr_default_title_template", n => { MrDefaultTitleTemplate = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "name_with_namespace", n => { NameWithNamespace = n.GetStringValue(); } },
                 { "namespace", n => { Namespace = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesNamespaceBasic>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesNamespaceBasic.CreateFromDiscriminatorValue); } },
@@ -1189,6 +1198,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("model_registry_access_level", ModelRegistryAccessLevel);
             writer.WriteStringValue("monitor_access_level", MonitorAccessLevel);
             writer.WriteBoolValue("mr_default_target_self", MrDefaultTargetSelf);
+            writer.WriteStringValue("mr_default_title_template", MrDefaultTitleTemplate);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesNamespaceBasic>("namespace", Namespace);
             writer.WriteStringValue("name_with_namespace", NameWithNamespace);
