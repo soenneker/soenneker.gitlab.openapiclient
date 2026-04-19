@@ -16,6 +16,7 @@ using Soenneker.GitLab.OpenApiClient.Api.V4.Chaos;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Chat;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Code_suggestions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Container_registry_event;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Databases;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Dependency_list_exports;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Deploy_keys;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Deploy_tokens;
@@ -166,6 +167,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Container_registry_event.Container_registry_eventRequestBuilder Container_registry_event
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Container_registry_event.Container_registry_eventRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The databases property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Databases.DatabasesRequestBuilder Databases
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Databases.DatabasesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The dependency_list_exports property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Dependency_list_exports.Dependency_list_exportsRequestBuilder Dependency_list_exports

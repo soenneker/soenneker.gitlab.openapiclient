@@ -30,6 +30,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string TableName { get; set; }
 #endif
+        /// <summary>The table_size property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? TableSize { get; set; }
+#nullable restore
+#else
+        public string TableSize { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDictionaryTable"/> and sets the default values.
         /// </summary>
@@ -57,6 +65,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             {
                 { "feature_categories", n => { FeatureCategories = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "table_name", n => { TableName = n.GetStringValue(); } },
+                { "table_size", n => { TableSize = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -68,6 +77,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("feature_categories", FeatureCategories);
             writer.WriteStringValue("table_name", TableName);
+            writer.WriteStringValue("table_size", TableSize);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
