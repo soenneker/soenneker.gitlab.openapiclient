@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Code_review.Add_comments;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Code_review.Custom_instructions;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -19,6 +20,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Code_review
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Code_review.Add_comments.Add_commentsRequestBuilder Add_comments
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Code_review.Add_comments.Add_commentsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The custom_instructions property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Code_review.Custom_instructions.Custom_instructionsRequestBuilder Custom_instructions
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Code_review.Custom_instructions.Custom_instructionsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Code_review.Code_reviewRequestBuilder"/> and sets the default values.
