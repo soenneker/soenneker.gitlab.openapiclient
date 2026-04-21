@@ -16942,7 +16942,7 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/RequestBody_54e484e969cd"
+              "$ref": "#/components/schemas/RequestBody_3a63558ded9a"
   "/api/v4/projects/{id}/issues/{eventable_id}/resource_state_events":
     get:
       operationId: getApiV4ProjectsIdIssuesEventableIdResourceStateEvents
@@ -30221,7 +30221,7 @@ paths:
         content:
           multipart/form-data:
             schema:
-              "$ref": "#/components/schemas/RequestBody_70b14d38e7ca"
+              "$ref": "#/components/schemas/RequestBody_b64aa173db03"
     delete:
       operationId: deleteApiV4ProjectsId
       summary: Delete a project
@@ -69182,7 +69182,7 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/RequestBody_015e8b695790"
+              "$ref": "#/components/schemas/RequestBody_a9e6fb278ceb"
   "/api/v4/admin/migrations/pending":
     get:
       operationId: getApiV4AdminMigrationsPending
@@ -72099,6 +72099,28 @@ components:
           type: string
         packages_helm_metadata_caches_oldest_unsynced_time:
           type: string
+        bulk_import_export_upload_uploads_count:
+          type: string
+        bulk_import_export_upload_uploads_checksum_total_count:
+          type: string
+        bulk_import_export_upload_uploads_checksummed_count:
+          type: string
+        bulk_import_export_upload_uploads_checksum_failed_count:
+          type: string
+        bulk_import_export_upload_uploads_synced_count:
+          type: string
+        bulk_import_export_upload_uploads_failed_count:
+          type: string
+        bulk_import_export_upload_uploads_registry_count:
+          type: string
+        bulk_import_export_upload_uploads_verification_total_count:
+          type: string
+        bulk_import_export_upload_uploads_verified_count:
+          type: string
+        bulk_import_export_upload_uploads_verification_failed_count:
+          type: string
+        bulk_import_export_upload_uploads_oldest_unsynced_time:
+          type: string
         ai_vectorizable_file_uploads_count:
           type: string
         ai_vectorizable_file_uploads_checksum_total_count:
@@ -72366,6 +72388,10 @@ components:
         packages_helm_metadata_caches_synced_in_percentage:
           type: string
         packages_helm_metadata_caches_verified_in_percentage:
+          type: string
+        bulk_import_export_upload_uploads_synced_in_percentage:
+          type: string
+        bulk_import_export_upload_uploads_verified_in_percentage:
           type: string
         ai_vectorizable_file_uploads_synced_in_percentage:
           type: string
@@ -74188,6 +74214,8 @@ components:
           type: string
         helm_max_packages_count:
           type: string
+        active_context_pause_indexing:
+          type: string
         allow_all_integrations:
           type: string
         allowed_integrations:
@@ -74243,6 +74271,8 @@ components:
         elasticsearch_namespace_ids:
           type: string
         elasticsearch_pause_indexing:
+          type: string
+        elasticsearch_advanced_search_pause_indexing:
           type: string
         elasticsearch_project_ids:
           type: string
@@ -77543,6 +77573,28 @@ components:
           type: string
         packages_helm_metadata_caches_oldest_unsynced_time:
           type: string
+        bulk_import_export_upload_uploads_count:
+          type: string
+        bulk_import_export_upload_uploads_checksum_total_count:
+          type: string
+        bulk_import_export_upload_uploads_checksummed_count:
+          type: string
+        bulk_import_export_upload_uploads_checksum_failed_count:
+          type: string
+        bulk_import_export_upload_uploads_synced_count:
+          type: string
+        bulk_import_export_upload_uploads_failed_count:
+          type: string
+        bulk_import_export_upload_uploads_registry_count:
+          type: string
+        bulk_import_export_upload_uploads_verification_total_count:
+          type: string
+        bulk_import_export_upload_uploads_verified_count:
+          type: string
+        bulk_import_export_upload_uploads_verification_failed_count:
+          type: string
+        bulk_import_export_upload_uploads_oldest_unsynced_time:
+          type: string
         ai_vectorizable_file_uploads_count:
           type: string
         ai_vectorizable_file_uploads_checksum_total_count:
@@ -77810,6 +77862,10 @@ components:
         packages_helm_metadata_caches_synced_in_percentage:
           type: string
         packages_helm_metadata_caches_verified_in_percentage:
+          type: string
+        bulk_import_export_upload_uploads_synced_in_percentage:
+          type: string
+        bulk_import_export_upload_uploads_verified_in_percentage:
           type: string
         ai_vectorizable_file_uploads_synced_in_percentage:
           type: string
@@ -79292,6 +79348,8 @@ components:
           type: string
         stage:
           type: string
+        pipeline_id:
+          type: string
         project_id:
           type: string
         project_name:
@@ -80175,6 +80233,9 @@ components:
         web_hook_calls_mid:
           type: integer
           example: 500
+        max_pipelines_per_merge_train:
+          type: integer
+          example: 20
     APIEntitiesProjectIdentity:
       type: object
       properties:
@@ -85311,6 +85372,8 @@ components:
           type: string
         merge_trains_skip_train_allowed:
           type: string
+        max_pipelines_per_merge_train:
+          type: string
         only_allow_merge_if_all_status_checks_passed:
           type: string
         allow_pipeline_trigger_approve_deployment:
@@ -85707,6 +85770,8 @@ components:
         merge_trains_enabled:
           type: string
         merge_trains_skip_train_allowed:
+          type: string
+        max_pipelines_per_merge_train:
           type: string
         only_allow_merge_if_all_status_checks_passed:
           type: string
@@ -91718,7 +91783,7 @@ components:
           nullable: true
       required:
       - avatar
-    RequestBody_54e484e969cd:
+    RequestBody_3a63558ded9a:
       type: object
       properties:
         admin_mode:
@@ -92704,7 +92769,12 @@ components:
           nullable: true
         elasticsearch_pause_indexing:
           type: boolean
-          description: Pause Elasticsearch indexing
+          description: Pause Elasticsearch indexing (global control for both Advanced
+            Search and ActiveContext)
+          nullable: true
+        elasticsearch_advanced_search_pause_indexing:
+          type: boolean
+          description: Pause advanced search indexing
           nullable: true
         elasticsearch_url:
           type: string
@@ -92722,6 +92792,10 @@ components:
         elasticsearch_limit_indexing:
           type: boolean
           description: Limit Elasticsearch to index certain namespaces and projects
+          nullable: true
+        active_context_pause_indexing:
+          type: boolean
+          description: Pause ActiveContext indexing
           nullable: true
         elasticsearch_namespace_ids:
           type: array
@@ -97258,7 +97332,7 @@ components:
           nullable: true
       required:
       - name
-    RequestBody_70b14d38e7ca:
+    RequestBody_b64aa173db03:
       type: object
       properties:
         name:
@@ -97899,6 +97973,11 @@ components:
           type: boolean
           description: Allow merge train merge requests to be merged without waiting
             for pipelines to finish.
+          nullable: true
+        max_pipelines_per_merge_train:
+          type: integer
+          description: Maximum number of parallel pipelines per merge train for this
+            project.
           nullable: true
         ci_restrict_pipeline_cancellation_role:
           type: string
@@ -108304,7 +108383,7 @@ components:
           nullable: true
       required:
       - token
-    RequestBody_015e8b695790:
+    RequestBody_a9e6fb278ceb:
       type: object
       properties:
         plan_name:
@@ -108431,6 +108510,10 @@ components:
           type: integer
           description: Maximum number of times a webhook can be called per minute,
             per top-level namespace. 0 for unlimited (GitLab.com only).
+          nullable: true
+        max_pipelines_per_merge_train:
+          type: integer
+          description: Maximum number of parallel pipelines per merge train
           nullable: true
       required:
       - plan_name

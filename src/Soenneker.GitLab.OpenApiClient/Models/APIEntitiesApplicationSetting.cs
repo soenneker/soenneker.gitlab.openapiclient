@@ -20,6 +20,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string AbuseNotificationEmail { get; set; }
 #endif
+        /// <summary>The active_context_pause_indexing property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ActiveContextPauseIndexing { get; set; }
+#nullable restore
+#else
+        public string ActiveContextPauseIndexing { get; set; }
+#endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The admin_mode property</summary>
@@ -1173,6 +1181,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #nullable restore
 #else
         public string ElasticMigrationWorkerEnabled { get; set; }
+#endif
+        /// <summary>The elasticsearch_advanced_search_pause_indexing property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ElasticsearchAdvancedSearchPauseIndexing { get; set; }
+#nullable restore
+#else
+        public string ElasticsearchAdvancedSearchPauseIndexing { get; set; }
 #endif
         /// <summary>The elasticsearch_analyzers_kuromoji_enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -4848,6 +4864,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "abuse_notification_email", n => { AbuseNotificationEmail = n.GetStringValue(); } },
+                { "active_context_pause_indexing", n => { ActiveContextPauseIndexing = n.GetStringValue(); } },
                 { "admin_mode", n => { AdminMode = n.GetStringValue(); } },
                 { "after_sign_out_path", n => { AfterSignOutPath = n.GetStringValue(); } },
                 { "after_sign_up_text", n => { AfterSignUpText = n.GetStringValue(); } },
@@ -4992,6 +5009,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "eks_account_id", n => { EksAccountId = n.GetStringValue(); } },
                 { "eks_integration_enabled", n => { EksIntegrationEnabled = n.GetStringValue(); } },
                 { "elastic_migration_worker_enabled", n => { ElasticMigrationWorkerEnabled = n.GetStringValue(); } },
+                { "elasticsearch_advanced_search_pause_indexing", n => { ElasticsearchAdvancedSearchPauseIndexing = n.GetStringValue(); } },
                 { "elasticsearch_analyzers_kuromoji_enabled", n => { ElasticsearchAnalyzersKuromojiEnabled = n.GetStringValue(); } },
                 { "elasticsearch_analyzers_kuromoji_search", n => { ElasticsearchAnalyzersKuromojiSearch = n.GetStringValue(); } },
                 { "elasticsearch_analyzers_smartcn_enabled", n => { ElasticsearchAnalyzersSmartcnEnabled = n.GetStringValue(); } },
@@ -5458,6 +5476,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("abuse_notification_email", AbuseNotificationEmail);
+            writer.WriteStringValue("active_context_pause_indexing", ActiveContextPauseIndexing);
             writer.WriteStringValue("admin_mode", AdminMode);
             writer.WriteStringValue("after_sign_out_path", AfterSignOutPath);
             writer.WriteStringValue("after_sign_up_text", AfterSignUpText);
@@ -5602,6 +5621,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("eks_account_id", EksAccountId);
             writer.WriteStringValue("eks_integration_enabled", EksIntegrationEnabled);
             writer.WriteStringValue("elastic_migration_worker_enabled", ElasticMigrationWorkerEnabled);
+            writer.WriteStringValue("elasticsearch_advanced_search_pause_indexing", ElasticsearchAdvancedSearchPauseIndexing);
             writer.WriteStringValue("elasticsearch_analyzers_kuromoji_enabled", ElasticsearchAnalyzersKuromojiEnabled);
             writer.WriteStringValue("elasticsearch_analyzers_kuromoji_search", ElasticsearchAnalyzersKuromojiSearch);
             writer.WriteStringValue("elasticsearch_analyzers_smartcn_enabled", ElasticsearchAnalyzersSmartcnEnabled);

@@ -5,7 +5,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item
 {
     /// <summary>The Git strategy. Defaults to `fetch`</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBody70b14d38e7caPutRequestBody
+    public enum RequestBodyB64aa173db03PutRequestBody
     {
         [EnumMember(Value = "fetch")]
         #pragma warning disable CS1591

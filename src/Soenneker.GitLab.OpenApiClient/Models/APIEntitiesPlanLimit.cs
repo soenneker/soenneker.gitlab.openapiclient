@@ -52,6 +52,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>The maven_max_file_size property</summary>
         public int? MavenMaxFileSize { get; set; }
+        /// <summary>The max_pipelines_per_merge_train property</summary>
+        public int? MaxPipelinesPerMergeTrain { get; set; }
         /// <summary>The notification_limit property</summary>
         public int? NotificationLimit { get; set; }
         /// <summary>The npm_max_file_size property</summary>
@@ -113,6 +115,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "helm_max_file_size", n => { HelmMaxFileSize = n.GetIntValue(); } },
                 { "limits_history", n => { LimitsHistory = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesPlanLimit_limits_history>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesPlanLimit_limits_history.CreateFromDiscriminatorValue); } },
                 { "maven_max_file_size", n => { MavenMaxFileSize = n.GetIntValue(); } },
+                { "max_pipelines_per_merge_train", n => { MaxPipelinesPerMergeTrain = n.GetIntValue(); } },
                 { "notification_limit", n => { NotificationLimit = n.GetIntValue(); } },
                 { "npm_max_file_size", n => { NpmMaxFileSize = n.GetIntValue(); } },
                 { "nuget_max_file_size", n => { NugetMaxFileSize = n.GetIntValue(); } },
@@ -148,6 +151,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("helm_max_file_size", HelmMaxFileSize);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesPlanLimit_limits_history>("limits_history", LimitsHistory);
             writer.WriteIntValue("maven_max_file_size", MavenMaxFileSize);
+            writer.WriteIntValue("max_pipelines_per_merge_train", MaxPipelinesPerMergeTrain);
             writer.WriteIntValue("notification_limit", NotificationLimit);
             writer.WriteIntValue("npm_max_file_size", NpmMaxFileSize);
             writer.WriteIntValue("nuget_max_file_size", NugetMaxFileSize);

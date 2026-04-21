@@ -430,6 +430,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>The max_artifacts_size property</summary>
         public int? MaxArtifactsSize { get; set; }
+        /// <summary>The max_pipelines_per_merge_train property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? MaxPipelinesPerMergeTrain { get; set; }
+#nullable restore
+#else
+        public string MaxPipelinesPerMergeTrain { get; set; }
+#endif
         /// <summary>The merge_commit_template property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -1015,6 +1023,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "marked_for_deletion_at", n => { MarkedForDeletionAt = n.GetStringValue(); } },
                 { "marked_for_deletion_on", n => { MarkedForDeletionOn = n.GetStringValue(); } },
                 { "max_artifacts_size", n => { MaxArtifactsSize = n.GetIntValue(); } },
+                { "max_pipelines_per_merge_train", n => { MaxPipelinesPerMergeTrain = n.GetStringValue(); } },
                 { "merge_commit_template", n => { MergeCommitTemplate = n.GetStringValue(); } },
                 { "merge_method", n => { MergeMethod = n.GetStringValue(); } },
                 { "merge_pipelines_enabled", n => { MergePipelinesEnabled = n.GetStringValue(); } },
@@ -1180,6 +1189,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("marked_for_deletion_at", MarkedForDeletionAt);
             writer.WriteStringValue("marked_for_deletion_on", MarkedForDeletionOn);
             writer.WriteIntValue("max_artifacts_size", MaxArtifactsSize);
+            writer.WriteStringValue("max_pipelines_per_merge_train", MaxPipelinesPerMergeTrain);
             writer.WriteStringValue("merge_commit_template", MergeCommitTemplate);
             writer.WriteStringValue("merge_method", MergeMethod);
             writer.WriteStringValue("merge_pipelines_enabled", MergePipelinesEnabled);

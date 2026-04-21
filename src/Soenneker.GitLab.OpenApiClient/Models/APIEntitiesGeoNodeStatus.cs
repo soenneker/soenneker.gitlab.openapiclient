@@ -326,6 +326,110 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string AiVectorizableFileUploadsVerifiedInPercentage { get; set; }
 #endif
+        /// <summary>The bulk_import_export_upload_uploads_checksum_failed_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? BulkImportExportUploadUploadsChecksumFailedCount { get; set; }
+#nullable restore
+#else
+        public string BulkImportExportUploadUploadsChecksumFailedCount { get; set; }
+#endif
+        /// <summary>The bulk_import_export_upload_uploads_checksummed_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? BulkImportExportUploadUploadsChecksummedCount { get; set; }
+#nullable restore
+#else
+        public string BulkImportExportUploadUploadsChecksummedCount { get; set; }
+#endif
+        /// <summary>The bulk_import_export_upload_uploads_checksum_total_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? BulkImportExportUploadUploadsChecksumTotalCount { get; set; }
+#nullable restore
+#else
+        public string BulkImportExportUploadUploadsChecksumTotalCount { get; set; }
+#endif
+        /// <summary>The bulk_import_export_upload_uploads_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? BulkImportExportUploadUploadsCount { get; set; }
+#nullable restore
+#else
+        public string BulkImportExportUploadUploadsCount { get; set; }
+#endif
+        /// <summary>The bulk_import_export_upload_uploads_failed_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? BulkImportExportUploadUploadsFailedCount { get; set; }
+#nullable restore
+#else
+        public string BulkImportExportUploadUploadsFailedCount { get; set; }
+#endif
+        /// <summary>The bulk_import_export_upload_uploads_oldest_unsynced_time property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? BulkImportExportUploadUploadsOldestUnsyncedTime { get; set; }
+#nullable restore
+#else
+        public string BulkImportExportUploadUploadsOldestUnsyncedTime { get; set; }
+#endif
+        /// <summary>The bulk_import_export_upload_uploads_registry_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? BulkImportExportUploadUploadsRegistryCount { get; set; }
+#nullable restore
+#else
+        public string BulkImportExportUploadUploadsRegistryCount { get; set; }
+#endif
+        /// <summary>The bulk_import_export_upload_uploads_synced_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? BulkImportExportUploadUploadsSyncedCount { get; set; }
+#nullable restore
+#else
+        public string BulkImportExportUploadUploadsSyncedCount { get; set; }
+#endif
+        /// <summary>The bulk_import_export_upload_uploads_synced_in_percentage property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? BulkImportExportUploadUploadsSyncedInPercentage { get; set; }
+#nullable restore
+#else
+        public string BulkImportExportUploadUploadsSyncedInPercentage { get; set; }
+#endif
+        /// <summary>The bulk_import_export_upload_uploads_verification_failed_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? BulkImportExportUploadUploadsVerificationFailedCount { get; set; }
+#nullable restore
+#else
+        public string BulkImportExportUploadUploadsVerificationFailedCount { get; set; }
+#endif
+        /// <summary>The bulk_import_export_upload_uploads_verification_total_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? BulkImportExportUploadUploadsVerificationTotalCount { get; set; }
+#nullable restore
+#else
+        public string BulkImportExportUploadUploadsVerificationTotalCount { get; set; }
+#endif
+        /// <summary>The bulk_import_export_upload_uploads_verified_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? BulkImportExportUploadUploadsVerifiedCount { get; set; }
+#nullable restore
+#else
+        public string BulkImportExportUploadUploadsVerifiedCount { get; set; }
+#endif
+        /// <summary>The bulk_import_export_upload_uploads_verified_in_percentage property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? BulkImportExportUploadUploadsVerifiedInPercentage { get; set; }
+#nullable restore
+#else
+        public string BulkImportExportUploadUploadsVerifiedInPercentage { get; set; }
+#endif
         /// <summary>The ci_secure_files_checksum_failed_count property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -3254,6 +3358,19 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "ai_vectorizable_file_uploads_verification_total_count", n => { AiVectorizableFileUploadsVerificationTotalCount = n.GetStringValue(); } },
                 { "ai_vectorizable_file_uploads_verified_count", n => { AiVectorizableFileUploadsVerifiedCount = n.GetStringValue(); } },
                 { "ai_vectorizable_file_uploads_verified_in_percentage", n => { AiVectorizableFileUploadsVerifiedInPercentage = n.GetStringValue(); } },
+                { "bulk_import_export_upload_uploads_checksum_failed_count", n => { BulkImportExportUploadUploadsChecksumFailedCount = n.GetStringValue(); } },
+                { "bulk_import_export_upload_uploads_checksum_total_count", n => { BulkImportExportUploadUploadsChecksumTotalCount = n.GetStringValue(); } },
+                { "bulk_import_export_upload_uploads_checksummed_count", n => { BulkImportExportUploadUploadsChecksummedCount = n.GetStringValue(); } },
+                { "bulk_import_export_upload_uploads_count", n => { BulkImportExportUploadUploadsCount = n.GetStringValue(); } },
+                { "bulk_import_export_upload_uploads_failed_count", n => { BulkImportExportUploadUploadsFailedCount = n.GetStringValue(); } },
+                { "bulk_import_export_upload_uploads_oldest_unsynced_time", n => { BulkImportExportUploadUploadsOldestUnsyncedTime = n.GetStringValue(); } },
+                { "bulk_import_export_upload_uploads_registry_count", n => { BulkImportExportUploadUploadsRegistryCount = n.GetStringValue(); } },
+                { "bulk_import_export_upload_uploads_synced_count", n => { BulkImportExportUploadUploadsSyncedCount = n.GetStringValue(); } },
+                { "bulk_import_export_upload_uploads_synced_in_percentage", n => { BulkImportExportUploadUploadsSyncedInPercentage = n.GetStringValue(); } },
+                { "bulk_import_export_upload_uploads_verification_failed_count", n => { BulkImportExportUploadUploadsVerificationFailedCount = n.GetStringValue(); } },
+                { "bulk_import_export_upload_uploads_verification_total_count", n => { BulkImportExportUploadUploadsVerificationTotalCount = n.GetStringValue(); } },
+                { "bulk_import_export_upload_uploads_verified_count", n => { BulkImportExportUploadUploadsVerifiedCount = n.GetStringValue(); } },
+                { "bulk_import_export_upload_uploads_verified_in_percentage", n => { BulkImportExportUploadUploadsVerifiedInPercentage = n.GetStringValue(); } },
                 { "ci_secure_files_checksum_failed_count", n => { CiSecureFilesChecksumFailedCount = n.GetStringValue(); } },
                 { "ci_secure_files_checksum_total_count", n => { CiSecureFilesChecksumTotalCount = n.GetStringValue(); } },
                 { "ci_secure_files_checksummed_count", n => { CiSecureFilesChecksummedCount = n.GetStringValue(); } },
@@ -3660,6 +3777,19 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("ai_vectorizable_file_uploads_verification_total_count", AiVectorizableFileUploadsVerificationTotalCount);
             writer.WriteStringValue("ai_vectorizable_file_uploads_verified_count", AiVectorizableFileUploadsVerifiedCount);
             writer.WriteStringValue("ai_vectorizable_file_uploads_verified_in_percentage", AiVectorizableFileUploadsVerifiedInPercentage);
+            writer.WriteStringValue("bulk_import_export_upload_uploads_checksum_failed_count", BulkImportExportUploadUploadsChecksumFailedCount);
+            writer.WriteStringValue("bulk_import_export_upload_uploads_checksummed_count", BulkImportExportUploadUploadsChecksummedCount);
+            writer.WriteStringValue("bulk_import_export_upload_uploads_checksum_total_count", BulkImportExportUploadUploadsChecksumTotalCount);
+            writer.WriteStringValue("bulk_import_export_upload_uploads_count", BulkImportExportUploadUploadsCount);
+            writer.WriteStringValue("bulk_import_export_upload_uploads_failed_count", BulkImportExportUploadUploadsFailedCount);
+            writer.WriteStringValue("bulk_import_export_upload_uploads_oldest_unsynced_time", BulkImportExportUploadUploadsOldestUnsyncedTime);
+            writer.WriteStringValue("bulk_import_export_upload_uploads_registry_count", BulkImportExportUploadUploadsRegistryCount);
+            writer.WriteStringValue("bulk_import_export_upload_uploads_synced_count", BulkImportExportUploadUploadsSyncedCount);
+            writer.WriteStringValue("bulk_import_export_upload_uploads_synced_in_percentage", BulkImportExportUploadUploadsSyncedInPercentage);
+            writer.WriteStringValue("bulk_import_export_upload_uploads_verification_failed_count", BulkImportExportUploadUploadsVerificationFailedCount);
+            writer.WriteStringValue("bulk_import_export_upload_uploads_verification_total_count", BulkImportExportUploadUploadsVerificationTotalCount);
+            writer.WriteStringValue("bulk_import_export_upload_uploads_verified_count", BulkImportExportUploadUploadsVerifiedCount);
+            writer.WriteStringValue("bulk_import_export_upload_uploads_verified_in_percentage", BulkImportExportUploadUploadsVerifiedInPercentage);
             writer.WriteStringValue("ci_secure_files_checksum_failed_count", CiSecureFilesChecksumFailedCount);
             writer.WriteStringValue("ci_secure_files_checksummed_count", CiSecureFilesChecksummedCount);
             writer.WriteStringValue("ci_secure_files_checksum_total_count", CiSecureFilesChecksumTotalCount);

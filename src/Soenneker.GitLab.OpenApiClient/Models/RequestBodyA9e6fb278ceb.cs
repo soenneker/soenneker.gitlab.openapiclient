@@ -9,7 +9,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class RequestBody015e8b695790 : IAdditionalDataHolder, IParsable
+    public partial class RequestBodyA9e6fb278ceb : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -44,6 +44,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public int? HelmMaxFileSize { get; set; }
         /// <summary>Maximum Maven package file size in bytes</summary>
         public int? MavenMaxFileSize { get; set; }
+        /// <summary>Maximum number of parallel pipelines per merge train</summary>
+        public int? MaxPipelinesPerMergeTrain { get; set; }
         /// <summary>Maximum storage size for the root namespace notifications in MiB</summary>
         public int? NotificationLimit { get; set; }
         /// <summary>Maximum NPM package file size in bytes</summary>
@@ -53,7 +55,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Maximum number of downstream pipelines in a pipeline&apos;s hierarchy tree</summary>
         public int? PipelineHierarchySize { get; set; }
         /// <summary>Name of the plan to update</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody015e8b695790_plan_name? PlanName { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA9e6fb278ceb_plan_name? PlanName { get; set; }
         /// <summary>Maximum PyPI package file size in bytes</summary>
         public int? PypiMaxFileSize { get; set; }
         /// <summary>Maximum storage size for the root namespace in MiB</summary>
@@ -67,21 +69,21 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Maximum number of times a webhook can be called per minute, per top-level namespace. 0 for unlimited (GitLab.com only).</summary>
         public int? WebHookCallsMid { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody015e8b695790"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA9e6fb278ceb"/> and sets the default values.
         /// </summary>
-        public RequestBody015e8b695790()
+        public RequestBodyA9e6fb278ceb()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody015e8b695790"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA9e6fb278ceb"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody015e8b695790 CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA9e6fb278ceb CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody015e8b695790();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA9e6fb278ceb();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -106,11 +108,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "generic_packages_max_file_size", n => { GenericPackagesMaxFileSize = n.GetIntValue(); } },
                 { "helm_max_file_size", n => { HelmMaxFileSize = n.GetIntValue(); } },
                 { "maven_max_file_size", n => { MavenMaxFileSize = n.GetIntValue(); } },
+                { "max_pipelines_per_merge_train", n => { MaxPipelinesPerMergeTrain = n.GetIntValue(); } },
                 { "notification_limit", n => { NotificationLimit = n.GetIntValue(); } },
                 { "npm_max_file_size", n => { NpmMaxFileSize = n.GetIntValue(); } },
                 { "nuget_max_file_size", n => { NugetMaxFileSize = n.GetIntValue(); } },
                 { "pipeline_hierarchy_size", n => { PipelineHierarchySize = n.GetIntValue(); } },
-                { "plan_name", n => { PlanName = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody015e8b695790_plan_name>(); } },
+                { "plan_name", n => { PlanName = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA9e6fb278ceb_plan_name>(); } },
                 { "pypi_max_file_size", n => { PypiMaxFileSize = n.GetIntValue(); } },
                 { "storage_size_limit", n => { StorageSizeLimit = n.GetIntValue(); } },
                 { "terraform_module_max_file_size", n => { TerraformModuleMaxFileSize = n.GetIntValue(); } },
@@ -141,11 +144,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("generic_packages_max_file_size", GenericPackagesMaxFileSize);
             writer.WriteIntValue("helm_max_file_size", HelmMaxFileSize);
             writer.WriteIntValue("maven_max_file_size", MavenMaxFileSize);
+            writer.WriteIntValue("max_pipelines_per_merge_train", MaxPipelinesPerMergeTrain);
             writer.WriteIntValue("notification_limit", NotificationLimit);
             writer.WriteIntValue("npm_max_file_size", NpmMaxFileSize);
             writer.WriteIntValue("nuget_max_file_size", NugetMaxFileSize);
             writer.WriteIntValue("pipeline_hierarchy_size", PipelineHierarchySize);
-            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody015e8b695790_plan_name>("plan_name", PlanName);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA9e6fb278ceb_plan_name>("plan_name", PlanName);
             writer.WriteIntValue("pypi_max_file_size", PypiMaxFileSize);
             writer.WriteIntValue("storage_size_limit", StorageSizeLimit);
             writer.WriteIntValue("terraform_module_max_file_size", TerraformModuleMaxFileSize);
