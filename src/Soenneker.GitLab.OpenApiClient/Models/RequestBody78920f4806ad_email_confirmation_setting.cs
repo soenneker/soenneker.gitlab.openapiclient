@@ -5,7 +5,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>&quot;Email confirmation setting, possible values: `off`, `soft`, and `hard`&quot;</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBody3a63558ded9a_email_confirmation_setting
+    public enum RequestBody78920f4806ad_email_confirmation_setting
     {
         [EnumMember(Value = "off")]
         #pragma warning disable CS1591

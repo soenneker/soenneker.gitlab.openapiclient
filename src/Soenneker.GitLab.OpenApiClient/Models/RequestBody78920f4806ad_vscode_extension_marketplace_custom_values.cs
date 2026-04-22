@@ -8,29 +8,29 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// Storage paths for new projects with a weighted value ranging from 0 to 100
+    /// VS Code Extension Marketplace URL&apos;s when preset is &apos;custom&apos;
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RequestBody3a63558ded9a_repository_storages_weighted : IAdditionalDataHolder, IParsable
+    public partial class RequestBody78920f4806ad_vscode_extension_marketplace_custom_values : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3a63558ded9a_repository_storages_weighted"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody78920f4806ad_vscode_extension_marketplace_custom_values"/> and sets the default values.
         /// </summary>
-        public RequestBody3a63558ded9a_repository_storages_weighted()
+        public RequestBody78920f4806ad_vscode_extension_marketplace_custom_values()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3a63558ded9a_repository_storages_weighted"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody78920f4806ad_vscode_extension_marketplace_custom_values"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3a63558ded9a_repository_storages_weighted CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody78920f4806ad_vscode_extension_marketplace_custom_values CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3a63558ded9a_repository_storages_weighted();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody78920f4806ad_vscode_extension_marketplace_custom_values();
         }
         /// <summary>
         /// The deserialization information for the current model
