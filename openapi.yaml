@@ -13280,7 +13280,7 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/RequestBody_bb57c4a7c4c6"
+              "$ref": "#/components/schemas/RequestBody_2e164c8419ab"
   "/api/v4/projects/{id}/ml/mlflow/api/2.0/mlflow/runs/delete":
     post:
       operationId: postApiV4ProjectsIdMlMlflowApi20MlflowRunsDelete
@@ -16942,7 +16942,7 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/RequestBody_78920f4806ad"
+              "$ref": "#/components/schemas/RequestBody_15bf551affa8"
   "/api/v4/projects/{id}/issues/{eventable_id}/resource_state_events":
     get:
       operationId: getApiV4ProjectsIdIssuesEventableIdResourceStateEvents
@@ -25098,7 +25098,7 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/RequestBody_28b2297afa19"
+              "$ref": "#/components/schemas/RequestBody_ab27a6a69ff0"
   "/api/v4/hooks/{hook_id}":
     get:
       operationId: getApiV4HooksHookId
@@ -25153,7 +25153,7 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/RequestBody_730da3991927"
+              "$ref": "#/components/schemas/RequestBody_12cf9f027a41"
     post:
       operationId: postApiV4HooksHookId
       summary: Test a hook
@@ -35590,7 +35590,7 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/RequestBody_520f96986f1e"
+              "$ref": "#/components/schemas/RequestBody_83e523ac558b"
     get:
       operationId: getApiV4OfflineExports
       summary: List all offline transfer exports
@@ -35666,6 +35666,36 @@ paths:
         schema:
           type: integer
         in: path
+  "/api/v4/offline_imports":
+    post:
+      operationId: postApiV4OfflineImports
+      summary: Start a new offline transfer import
+      description: Initiates a new offline transfer import from object storage
+      tags:
+      - Offline transfers
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/APIEntitiesBulkImport"
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '404':
+          description: Not found
+        '422':
+          description: Unprocessable entity
+        '429':
+          description: Too many requests
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              "$ref": "#/components/schemas/RequestBody_76cbe3ae52d7"
   "/api/v4/projects/{id}/packages/nuget/index":
     get:
       operationId: getApiV4ProjectsIdPackagesNugetIndex
@@ -36225,7 +36255,7 @@ paths:
     put:
       operationId: putApiV4ProjectsIdPackagesNpmPackageName
       summary: Create or deprecate NPM package
-      description: Create was introduced in GitLab 11.8 & deprecate suppport was added
+      description: Create was introduced in GitLab 11.8 & deprecate support was added
         in 16.0
       tags:
       - Packages
@@ -64123,6 +64153,25 @@ paths:
           type: integer
         in: path
         example: 88
+      - name: byte_offset
+        required: false
+        description: Byte offset to start reading from
+        schema:
+          type: integer
+          minimum: 0
+          nullable: true
+        in: query
+        example: 0
+      - name: byte_limit
+        required: false
+        description: Maximum number of bytes to return
+        schema:
+          type: integer
+          minimum: 1
+          maximum: 512000
+          nullable: true
+        in: query
+        example: 51200
       - name: id
         required: true
         schema: {}
@@ -64609,7 +64658,7 @@ paths:
         content:
           multipart/form-data:
             schema:
-              "$ref": "#/components/schemas/RequestBody_1db5667b70bf"
+              "$ref": "#/components/schemas/RequestBody_9281812d7f1d"
   "/api/v4/groups/{id}":
     put:
       operationId: putApiV4GroupsId
@@ -64639,7 +64688,7 @@ paths:
         content:
           multipart/form-data:
             schema:
-              "$ref": "#/components/schemas/RequestBody_b82f7488262a"
+              "$ref": "#/components/schemas/RequestBody_ca7f1922beea"
     get:
       operationId: getApiV4GroupsId
       summary: Get a single group, with containing projects.
@@ -74382,6 +74431,14 @@ components:
           type: string
         duo_foundational_flows_availability:
           type: string
+        duo_custom_agents_enabled:
+          type: boolean
+        duo_custom_agents_availability:
+          type: string
+        duo_custom_flows_enabled:
+          type: boolean
+        duo_custom_flows_availability:
+          type: string
         tool_approval_for_session_enabled:
           type: string
         tool_approval_for_session_availability:
@@ -74596,9 +74653,15 @@ components:
           type: string
         make_profile_private:
           type: string
+        lock_duo_custom_agents_enabled:
+          type: boolean
+        lock_duo_custom_flows_enabled:
+          type: boolean
         duo_workflows_default_image_registry:
           type: string
         ci_telemetry_otel_endpoint:
+          type: string
+        ci_job_telemetry_sampling_rate:
           type: string
         disabled_direct_code_suggestions:
           type: string
@@ -91136,7 +91199,7 @@ components:
       - run_id
       - key
       - value
-    RequestBody_bb57c4a7c4c6:
+    RequestBody_2e164c8419ab:
       type: object
       properties:
         run_id:
@@ -91172,7 +91235,7 @@ components:
           nullable: true
         params:
           type: array
-          description: Array that contains paramater information
+          description: Array that contains parameter information
           items:
             type: object
             properties:
@@ -91785,7 +91848,7 @@ components:
           nullable: true
       required:
       - avatar
-    RequestBody_78920f4806ad:
+    RequestBody_15bf551affa8:
       type: object
       properties:
         admin_mode:
@@ -92967,6 +93030,24 @@ components:
           description: Number of days before security scan data is considered stale
             (7-90)
           nullable: true
+        duo_custom_agents_enabled:
+          type: boolean
+          description: Indicates whether custom agents are allowed for this instance
+          nullable: true
+        lock_duo_custom_agents_enabled:
+          type: boolean
+          description: Indicates if the custom agents enabled setting is enforced
+            for all groups
+          nullable: true
+        duo_custom_flows_enabled:
+          type: boolean
+          description: Indicates whether custom flows are allowed for this instance
+          nullable: true
+        lock_duo_custom_flows_enabled:
+          type: boolean
+          description: Indicates if the custom flows enabled setting is enforced for
+            all groups
+          nullable: true
         duo_remote_flows_enabled:
           type: boolean
           description: Indicates whether GitLab Duo remote flows are enabled for the
@@ -92985,6 +93066,10 @@ components:
         ci_telemetry_otel_endpoint:
           type: string
           description: OTEL Collector endpoint URL for CI job telemetry
+          nullable: true
+        ci_job_telemetry_sampling_rate:
+          type: number
+          description: Sampling rate for CI job telemetry (0.0 to 1.0)
           nullable: true
         duo_namespace_access_rules:
           type: array
@@ -93903,6 +93988,12 @@ components:
           type: string
           nullable: true
         duo_foundational_flows_availability:
+          type: string
+          nullable: true
+        duo_custom_agents_availability:
+          type: string
+          nullable: true
+        duo_custom_flows_availability:
           type: string
           nullable: true
         tool_approval_for_session_enabled:
@@ -95393,7 +95484,7 @@ components:
       required:
       - tag_name
       - ref
-    RequestBody_28b2297afa19:
+    RequestBody_ab27a6a69ff0:
       type: object
       properties:
         url:
@@ -95447,6 +95538,10 @@ components:
           description: Filter push events by branch. Possible values are `wildcard`
             (default), `regex`, and `all_branches`
           nullable: true
+        custom_webhook_template:
+          type: string
+          description: Custom template for the request payload
+          nullable: true
         url_variables:
           type: array
           description: URL variables for interpolation
@@ -95489,7 +95584,7 @@ components:
           nullable: true
       required:
       - url
-    RequestBody_730da3991927:
+    RequestBody_12cf9f027a41:
       type: object
       properties:
         url:
@@ -95541,6 +95636,10 @@ components:
           - all_branches
           description: Filter push events by branch. Possible values are `wildcard`
             (default), `regex`, and `all_branches`
+          nullable: true
+        custom_webhook_template:
+          type: string
+          description: Custom template for the request payload
           nullable: true
         url_variables:
           type: array
@@ -100932,7 +101031,7 @@ components:
       required:
       - name
       - path
-    RequestBody_520f96986f1e:
+    RequestBody_83e523ac558b:
       type: object
       properties:
         bucket:
@@ -100957,7 +101056,7 @@ components:
               nullable: true
             path_style:
               type: boolean
-              description: Use path-style URLs instead of virtual hosted-style URLs
+              description: Use path-style URLs instead of virtual-hosted-style URLs
               nullable: true
           required:
           - aws_access_key_id
@@ -100987,7 +101086,7 @@ components:
             path_style:
               type: boolean
               default: true
-              description: Use path-style URLs instead of virtual hosted-style URLs
+              description: Use path-style URLs instead of virtual-hosted-style URLs
               nullable: true
           required:
           - aws_access_key_id
@@ -101011,6 +101110,107 @@ components:
           nullable: true
       required:
       - bucket
+      - entities
+    RequestBody_76cbe3ae52d7:
+      type: object
+      properties:
+        bucket:
+          type: string
+          description: Name of the object storage bucket where export data is stored
+          nullable: true
+        aws_s3_configuration:
+          type: object
+          description: AWS S3 object storage configuration
+          properties:
+            aws_access_key_id:
+              type: string
+              description: AWS S3 access key ID
+              nullable: true
+            aws_secret_access_key:
+              type: string
+              description: AWS S3 secret access key
+              nullable: true
+            region:
+              type: string
+              description: AWS S3 object storage region
+              nullable: true
+            path_style:
+              type: boolean
+              description: Use path-style URLs instead of virtual-hosted-style URLs
+              nullable: true
+          required:
+          - aws_access_key_id
+          - aws_secret_access_key
+          - region
+          nullable: true
+        s3_compatible_configuration:
+          type: object
+          description: MinIO or other S3-compatible object storage configuration
+          properties:
+            aws_access_key_id:
+              type: string
+              description: S3-compatible access key ID
+              nullable: true
+            aws_secret_access_key:
+              type: string
+              description: S3-compatible secret access key
+              nullable: true
+            region:
+              type: string
+              description: S3-compatible object storage region
+              nullable: true
+            endpoint:
+              type: string
+              description: Object storage location endpoint
+              nullable: true
+            path_style:
+              type: boolean
+              default: true
+              description: Use path-style URLs instead of virtual-hosted-style URLs
+              nullable: true
+          required:
+          - aws_access_key_id
+          - aws_secret_access_key
+          - region
+          - endpoint
+          nullable: true
+        export_prefix:
+          type: string
+          description: Prefix of the export within the bucket
+          nullable: true
+        entities:
+          type: array
+          description: List of entities to import
+          items:
+            type: object
+            properties:
+              source_type:
+                type: string
+                enum:
+                - group_entity
+                - project_entity
+                description: Type of the entity to import
+                minLength: 1
+              source_full_path:
+                type: string
+                description: Full path of the entity on the source instance
+                nullable: true
+              destination_namespace:
+                type: string
+                description: Full path of the destination namespace
+                nullable: true
+              destination_slug:
+                type: string
+                description: Destination slug for the imported entity
+                nullable: true
+            required:
+            - source_type
+            - source_full_path
+            - destination_namespace
+          nullable: true
+      required:
+      - bucket
+      - export_prefix
       - entities
     RequestBody_2ce27e3485fd:
       type: object
@@ -107238,7 +107438,7 @@ components:
           example:
             environment: production
           nullable: true
-    RequestBody_1db5667b70bf:
+    RequestBody_9281812d7f1d:
       type: object
       properties:
         name:
@@ -107451,6 +107651,14 @@ components:
           type: boolean
           description: Enable GitLab foundational Duo flows for this group
           nullable: true
+        duo_custom_agents_availability:
+          type: boolean
+          description: Enable GitLab Duo custom agents for this group
+          nullable: true
+        duo_custom_flows_availability:
+          type: boolean
+          description: Enable GitLab Duo custom flows for this group
+          nullable: true
         tool_approval_for_session_availability:
           type: string
           enum:
@@ -107562,7 +107770,7 @@ components:
       required:
       - name
       - path
-    RequestBody_b82f7488262a:
+    RequestBody_ca7f1922beea:
       type: object
       properties:
         name:
@@ -107775,6 +107983,14 @@ components:
         duo_foundational_flows_availability:
           type: boolean
           description: Enable GitLab foundational Duo flows for this group
+          nullable: true
+        duo_custom_agents_availability:
+          type: boolean
+          description: Enable GitLab Duo custom agents for this group
+          nullable: true
+        duo_custom_flows_availability:
+          type: boolean
+          description: Enable GitLab Duo custom flows for this group
           nullable: true
         tool_approval_for_session_availability:
           type: string

@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Npm.Item
         {
         }
         /// <summary>
-        /// Create was introduced in GitLab 11.8 &amp; deprecate suppport was added in 16.0
+        /// Create was introduced in GitLab 11.8 &amp; deprecate support was added in 16.0
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Npm.Item.WithPackage_namePutResponse"/></returns>
         /// <param name="body">The request body</param>
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Npm.Item
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Npm.Item.WithPackage_namePutResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Npm.Item.WithPackage_namePutResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Create was introduced in GitLab 11.8 &amp; deprecate suppport was added in 16.0
+        /// Create was introduced in GitLab 11.8 &amp; deprecate support was added in 16.0
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

@@ -414,6 +414,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string CiJobLiveTraceEnabled { get; set; }
 #endif
+        /// <summary>The ci_job_telemetry_sampling_rate property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CiJobTelemetrySamplingRate { get; set; }
+#nullable restore
+#else
+        public string CiJobTelemetrySamplingRate { get; set; }
+#endif
         /// <summary>The ci_max_includes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -1062,6 +1070,26 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string DuoChatExpirationDays { get; set; }
 #endif
+        /// <summary>The duo_custom_agents_availability property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DuoCustomAgentsAvailability { get; set; }
+#nullable restore
+#else
+        public string DuoCustomAgentsAvailability { get; set; }
+#endif
+        /// <summary>The duo_custom_agents_enabled property</summary>
+        public bool? DuoCustomAgentsEnabled { get; set; }
+        /// <summary>The duo_custom_flows_availability property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DuoCustomFlowsAvailability { get; set; }
+#nullable restore
+#else
+        public string DuoCustomFlowsAvailability { get; set; }
+#endif
+        /// <summary>The duo_custom_flows_enabled property</summary>
+        public bool? DuoCustomFlowsEnabled { get; set; }
         /// <summary>The duo_features_enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -2398,6 +2426,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string LocalMarkdownVersion { get; set; }
 #endif
+        /// <summary>The lock_duo_custom_agents_enabled property</summary>
+        public bool? LockDuoCustomAgentsEnabled { get; set; }
+        /// <summary>The lock_duo_custom_flows_enabled property</summary>
+        public bool? LockDuoCustomFlowsEnabled { get; set; }
         /// <summary>The lock_duo_features_enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -4921,6 +4953,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "ci_cd_catalog_projects_allowlist_raw", n => { CiCdCatalogProjectsAllowlistRaw = n.GetStringValue(); } },
                 { "ci_delete_pipelines_in_seconds_limit_human_readable", n => { CiDeletePipelinesInSecondsLimitHumanReadable = n.GetStringValue(); } },
                 { "ci_job_live_trace_enabled", n => { CiJobLiveTraceEnabled = n.GetStringValue(); } },
+                { "ci_job_telemetry_sampling_rate", n => { CiJobTelemetrySamplingRate = n.GetStringValue(); } },
                 { "ci_max_includes", n => { CiMaxIncludes = n.GetStringValue(); } },
                 { "ci_max_total_yaml_size_bytes", n => { CiMaxTotalYamlSizeBytes = n.GetStringValue(); } },
                 { "ci_telemetry_otel_endpoint", n => { CiTelemetryOtelEndpoint = n.GetStringValue(); } },
@@ -5002,6 +5035,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "duo_availability", n => { DuoAvailability = n.GetStringValue(); } },
                 { "duo_chat_expiration_column", n => { DuoChatExpirationColumn = n.GetStringValue(); } },
                 { "duo_chat_expiration_days", n => { DuoChatExpirationDays = n.GetStringValue(); } },
+                { "duo_custom_agents_availability", n => { DuoCustomAgentsAvailability = n.GetStringValue(); } },
+                { "duo_custom_agents_enabled", n => { DuoCustomAgentsEnabled = n.GetBoolValue(); } },
+                { "duo_custom_flows_availability", n => { DuoCustomFlowsAvailability = n.GetStringValue(); } },
+                { "duo_custom_flows_enabled", n => { DuoCustomFlowsEnabled = n.GetBoolValue(); } },
                 { "duo_features_enabled", n => { DuoFeaturesEnabled = n.GetStringValue(); } },
                 { "duo_foundational_flows_availability", n => { DuoFoundationalFlowsAvailability = n.GetStringValue(); } },
                 { "duo_foundational_flows_enabled", n => { DuoFoundationalFlowsEnabled = n.GetStringValue(); } },
@@ -5169,6 +5206,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "kroki_formats", n => { KrokiFormats = n.GetStringValue(); } },
                 { "kroki_url", n => { KrokiUrl = n.GetStringValue(); } },
                 { "local_markdown_version", n => { LocalMarkdownVersion = n.GetStringValue(); } },
+                { "lock_duo_custom_agents_enabled", n => { LockDuoCustomAgentsEnabled = n.GetBoolValue(); } },
+                { "lock_duo_custom_flows_enabled", n => { LockDuoCustomFlowsEnabled = n.GetBoolValue(); } },
                 { "lock_duo_features_enabled", n => { LockDuoFeaturesEnabled = n.GetStringValue(); } },
                 { "lock_memberships_to_ldap", n => { LockMembershipsToLdap = n.GetStringValue(); } },
                 { "lock_memberships_to_saml", n => { LockMembershipsToSaml = n.GetStringValue(); } },
@@ -5534,6 +5573,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("ci_cd_catalog_projects_allowlist_raw", CiCdCatalogProjectsAllowlistRaw);
             writer.WriteStringValue("ci_delete_pipelines_in_seconds_limit_human_readable", CiDeletePipelinesInSecondsLimitHumanReadable);
             writer.WriteStringValue("ci_job_live_trace_enabled", CiJobLiveTraceEnabled);
+            writer.WriteStringValue("ci_job_telemetry_sampling_rate", CiJobTelemetrySamplingRate);
             writer.WriteStringValue("ci_max_includes", CiMaxIncludes);
             writer.WriteStringValue("ci_max_total_yaml_size_bytes", CiMaxTotalYamlSizeBytes);
             writer.WriteStringValue("ci_telemetry_otel_endpoint", CiTelemetryOtelEndpoint);
@@ -5615,6 +5655,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("duo_availability", DuoAvailability);
             writer.WriteStringValue("duo_chat_expiration_column", DuoChatExpirationColumn);
             writer.WriteStringValue("duo_chat_expiration_days", DuoChatExpirationDays);
+            writer.WriteStringValue("duo_custom_agents_availability", DuoCustomAgentsAvailability);
+            writer.WriteBoolValue("duo_custom_agents_enabled", DuoCustomAgentsEnabled);
+            writer.WriteStringValue("duo_custom_flows_availability", DuoCustomFlowsAvailability);
+            writer.WriteBoolValue("duo_custom_flows_enabled", DuoCustomFlowsEnabled);
             writer.WriteStringValue("duo_features_enabled", DuoFeaturesEnabled);
             writer.WriteStringValue("duo_foundational_flows_availability", DuoFoundationalFlowsAvailability);
             writer.WriteStringValue("duo_foundational_flows_enabled", DuoFoundationalFlowsEnabled);
@@ -5782,6 +5826,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("kroki_formats", KrokiFormats);
             writer.WriteStringValue("kroki_url", KrokiUrl);
             writer.WriteStringValue("local_markdown_version", LocalMarkdownVersion);
+            writer.WriteBoolValue("lock_duo_custom_agents_enabled", LockDuoCustomAgentsEnabled);
+            writer.WriteBoolValue("lock_duo_custom_flows_enabled", LockDuoCustomFlowsEnabled);
             writer.WriteStringValue("lock_duo_features_enabled", LockDuoFeaturesEnabled);
             writer.WriteStringValue("lock_memberships_to_ldap", LockMembershipsToLdap);
             writer.WriteStringValue("lock_memberships_to_saml", LockMembershipsToSaml);

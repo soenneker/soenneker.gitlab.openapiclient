@@ -55,6 +55,7 @@ using Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Notification_settings;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Occurrences;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Offline_exports;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Offline_imports;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Organizations;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Packages;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Pages;
@@ -362,6 +363,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Offline_exports.Offline_exportsRequestBuilder Offline_exports
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Offline_exports.Offline_exportsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The offline_imports property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Offline_imports.Offline_importsRequestBuilder Offline_imports
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Offline_imports.Offline_importsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The organizations property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Organizations.OrganizationsRequestBuilder Organizations
