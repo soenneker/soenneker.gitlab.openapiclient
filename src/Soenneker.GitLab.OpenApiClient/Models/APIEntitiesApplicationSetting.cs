@@ -854,6 +854,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string DependencyScanningSbomScanApiUploadLimit { get; set; }
 #endif
+        /// <summary>The description_and_note_max_size property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DescriptionAndNoteMaxSize { get; set; }
+#nullable restore
+#else
+        public string DescriptionAndNoteMaxSize { get; set; }
+#endif
         /// <summary>The diagramsnet_enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -4968,6 +4976,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "dependency_firewall_policies_per_configuration_limit", n => { DependencyFirewallPoliciesPerConfigurationLimit = n.GetStringValue(); } },
                 { "dependency_scanning_sbom_scan_api_download_limit", n => { DependencyScanningSbomScanApiDownloadLimit = n.GetStringValue(); } },
                 { "dependency_scanning_sbom_scan_api_upload_limit", n => { DependencyScanningSbomScanApiUploadLimit = n.GetStringValue(); } },
+                { "description_and_note_max_size", n => { DescriptionAndNoteMaxSize = n.GetStringValue(); } },
                 { "diagramsnet_enabled", n => { DiagramsnetEnabled = n.GetStringValue(); } },
                 { "diagramsnet_url", n => { DiagramsnetUrl = n.GetStringValue(); } },
                 { "diff_max_files", n => { DiffMaxFiles = n.GetStringValue(); } },
@@ -5580,6 +5589,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("dependency_firewall_policies_per_configuration_limit", DependencyFirewallPoliciesPerConfigurationLimit);
             writer.WriteStringValue("dependency_scanning_sbom_scan_api_download_limit", DependencyScanningSbomScanApiDownloadLimit);
             writer.WriteStringValue("dependency_scanning_sbom_scan_api_upload_limit", DependencyScanningSbomScanApiUploadLimit);
+            writer.WriteStringValue("description_and_note_max_size", DescriptionAndNoteMaxSize);
             writer.WriteStringValue("diagramsnet_enabled", DiagramsnetEnabled);
             writer.WriteStringValue("diagramsnet_url", DiagramsnetUrl);
             writer.WriteStringValue("diff_max_files", DiffMaxFiles);

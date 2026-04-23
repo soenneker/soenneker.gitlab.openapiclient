@@ -3,21 +3,21 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>&quot;What&apos;s new variant, possible values: `all_tiers`, `current_tier`, and `disabled`.&quot;</summary>
+    /// <summary>Allow only the selected protocols to be used for Git access.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBody3a63558ded9a_whats_new_variant
+    public enum RequestBody78920f4806ad_enabled_git_access_protocol
     {
-        [EnumMember(Value = "all_tiers")]
+        [EnumMember(Value = "ssh")]
         #pragma warning disable CS1591
-        All_tiers,
+        Ssh,
         #pragma warning restore CS1591
-        [EnumMember(Value = "current_tier")]
+        [EnumMember(Value = "http")]
         #pragma warning disable CS1591
-        Current_tier,
+        Http,
         #pragma warning restore CS1591
-        [EnumMember(Value = "disabled")]
+        [EnumMember(Value = "all")]
         #pragma warning disable CS1591
-        Disabled,
+        All,
         #pragma warning restore CS1591
     }
 }
