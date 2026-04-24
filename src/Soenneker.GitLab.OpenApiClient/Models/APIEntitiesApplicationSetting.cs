@@ -3446,14 +3446,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string RootMovedPermanentlyRedirection { get; set; }
 #endif
-        /// <summary>The ropc_without_client_credentials property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? RopcWithoutClientCredentials { get; set; }
-#nullable restore
-#else
-        public string RopcWithoutClientCredentials { get; set; }
-#endif
         /// <summary>The rsa_key_restriction property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -5335,7 +5327,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "resource_usage_limits", n => { ResourceUsageLimits = n.GetStringValue(); } },
                 { "restricted_visibility_levels", n => { RestrictedVisibilityLevels = n.GetStringValue(); } },
                 { "root_moved_permanently_redirection", n => { RootMovedPermanentlyRedirection = n.GetStringValue(); } },
-                { "ropc_without_client_credentials", n => { RopcWithoutClientCredentials = n.GetStringValue(); } },
                 { "rsa_key_restriction", n => { RsaKeyRestriction = n.GetStringValue(); } },
                 { "runner_jobs_endpoints_api_limit", n => { RunnerJobsEndpointsApiLimit = n.GetStringValue(); } },
                 { "runner_jobs_patch_trace_api_limit", n => { RunnerJobsPatchTraceApiLimit = n.GetStringValue(); } },
@@ -5955,7 +5946,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("resource_usage_limits", ResourceUsageLimits);
             writer.WriteStringValue("restricted_visibility_levels", RestrictedVisibilityLevels);
             writer.WriteStringValue("root_moved_permanently_redirection", RootMovedPermanentlyRedirection);
-            writer.WriteStringValue("ropc_without_client_credentials", RopcWithoutClientCredentials);
             writer.WriteStringValue("rsa_key_restriction", RsaKeyRestriction);
             writer.WriteStringValue("runner_jobs_endpoints_api_limit", RunnerJobsEndpointsApiLimit);
             writer.WriteStringValue("runner_jobs_patch_trace_api_limit", RunnerJobsPatchTraceApiLimit);

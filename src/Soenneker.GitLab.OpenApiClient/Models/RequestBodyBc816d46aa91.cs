@@ -9,7 +9,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class RequestBody15bf551affa8 : IAdditionalDataHolder, IParsable
+    public partial class RequestBodyBc816d46aa91 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Abuse reports will be sent to this address if it is set. Abuse reports are always available in the admin area.</summary>
@@ -501,10 +501,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Determine if developers can push to default branch</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_default_branch_protection_defaults? DefaultBranchProtectionDefaults { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_default_branch_protection_defaults? DefaultBranchProtectionDefaults { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_default_branch_protection_defaults DefaultBranchProtectionDefaults { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_default_branch_protection_defaults DefaultBranchProtectionDefaults { get; set; }
 #endif
         /// <summary>The instance default CI/CD configuration file and path for new projects</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -523,7 +523,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string DefaultDarkSyntaxHighlightingTheme { get; set; }
 #endif
         /// <summary>The default group visibility</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_default_group_visibility? DefaultGroupVisibility { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_default_group_visibility? DefaultGroupVisibility { get; set; }
         /// <summary>The default_preferred_language property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -539,7 +539,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The maximum number of personal projects</summary>
         public int? DefaultProjectsLimit { get; set; }
         /// <summary>The default project visibility</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_default_project_visibility? DefaultProjectVisibility { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_default_project_visibility? DefaultProjectVisibility { get; set; }
         /// <summary>The default_search_scope property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -549,7 +549,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string DefaultSearchScope { get; set; }
 #endif
         /// <summary>The default snippet visibility</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_default_snippet_visibility? DefaultSnippetVisibility { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_default_snippet_visibility? DefaultSnippetVisibility { get; set; }
         /// <summary>The default_syntax_highlighting_theme property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -819,10 +819,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>AI entity access rules for controlling Duo feature access</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_duo_namespace_access_rules>? DuoNamespaceAccessRules { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_duo_namespace_access_rules>? DuoNamespaceAccessRules { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_duo_namespace_access_rules> DuoNamespaceAccessRules { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_duo_namespace_access_rules> DuoNamespaceAccessRules { get; set; }
 #endif
         /// <summary>The duo_remote_flows_availability property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -1131,7 +1131,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Some email servers do not support overriding the email sender name. Enable this option to include the name of the author of the issue, merge request or comment in the email body instead.</summary>
         public bool? EmailAuthorInBody { get; set; }
         /// <summary>&quot;Email confirmation setting, possible values: `off`, `soft`, and `hard`&quot;</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_email_confirmation_setting? EmailConfirmationSetting { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_email_confirmation_setting? EmailConfirmationSetting { get; set; }
         /// <summary>The email_restrictions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -1159,7 +1159,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string EnabledExpandedLogging { get; set; }
 #endif
         /// <summary>Allow only the selected protocols to be used for Git access.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_enabled_git_access_protocol? EnabledGitAccessProtocol { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_enabled_git_access_protocol? EnabledGitAccessProtocol { get; set; }
         /// <summary>Enables enforcing language server restrictions</summary>
         public bool? EnableLanguageServerRestrictions { get; set; }
         /// <summary>The enable_member_promotion_management property</summary>
@@ -2549,10 +2549,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Storage paths for new projects with a weighted value ranging from 0 to 100</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_repository_storages_weighted? RepositoryStoragesWeighted { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_repository_storages_weighted? RepositoryStoragesWeighted { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_repository_storages_weighted RepositoryStoragesWeighted { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_repository_storages_weighted RepositoryStoragesWeighted { get; set; }
 #endif
         /// <summary>Require explicit admin approval for new signups</summary>
         public bool? RequireAdminApprovalAfterUserSignup { get; set; }
@@ -2587,10 +2587,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Definition for resource usage limits enforced in Sidekiq workers</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_resource_usage_limits? ResourceUsageLimits { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_resource_usage_limits? ResourceUsageLimits { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_resource_usage_limits ResourceUsageLimits { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_resource_usage_limits ResourceUsageLimits { get; set; }
 #endif
         /// <summary>Selected levels cannot be used by non-admin users for groups, projects or snippets. If the public level is restricted, user profiles are only visible to logged in users.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -2608,8 +2608,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string RootMovedPermanentlyRedirection { get; set; }
 #endif
-        /// <summary>Allows the use of Oauth ROPC flow without client credentials</summary>
-        public bool? RopcWithoutClientCredentials { get; set; }
         /// <summary>Restrictions on the complexity of uploaded RSA keys. A value of -1 disables all RSA keys.</summary>
         public int? RsaKeyRestriction { get; set; }
         /// <summary>The runner_jobs_endpoints_api_limit property</summary>
@@ -3681,10 +3679,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Settings for VS Code Extension Marketplace</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_vscode_extension_marketplace? VscodeExtensionMarketplace { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_vscode_extension_marketplace? VscodeExtensionMarketplace { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_vscode_extension_marketplace VscodeExtensionMarketplace { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_vscode_extension_marketplace VscodeExtensionMarketplace { get; set; }
 #endif
         /// <summary>The vscode_extension_marketplace_enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -3719,7 +3717,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string VulnerabilityManagementPoliciesPerConfigurationLimit { get; set; }
 #endif
         /// <summary>&quot;What&apos;s new variant, possible values: `all_tiers`, `current_tier`, and `disabled`.&quot;</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_whats_new_variant? WhatsNewVariant { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_whats_new_variant? WhatsNewVariant { get; set; }
         /// <summary>Allow URI includes for AsciiDoc wiki pages</summary>
         public bool? WikiAsciidocAllowUriIncludes { get; set; }
         /// <summary>Maximum wiki page content size in bytes</summary>
@@ -3861,21 +3859,21 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ZoektTrigramMax { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91"/> and sets the default values.
         /// </summary>
-        public RequestBody15bf551affa8()
+        public RequestBodyBc816d46aa91()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8 CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -3965,17 +3963,17 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "default_artifacts_expire_in", n => { DefaultArtifactsExpireIn = n.GetStringValue(); } },
                 { "default_branch_name", n => { DefaultBranchName = n.GetStringValue(); } },
                 { "default_branch_protection", n => { DefaultBranchProtection = n.GetIntValue(); } },
-                { "default_branch_protection_defaults", n => { DefaultBranchProtectionDefaults = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_default_branch_protection_defaults>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_default_branch_protection_defaults.CreateFromDiscriminatorValue); } },
+                { "default_branch_protection_defaults", n => { DefaultBranchProtectionDefaults = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_default_branch_protection_defaults>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_default_branch_protection_defaults.CreateFromDiscriminatorValue); } },
                 { "default_ci_config_path", n => { DefaultCiConfigPath = n.GetStringValue(); } },
                 { "default_dark_syntax_highlighting_theme", n => { DefaultDarkSyntaxHighlightingTheme = n.GetStringValue(); } },
-                { "default_group_visibility", n => { DefaultGroupVisibility = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_default_group_visibility>(); } },
+                { "default_group_visibility", n => { DefaultGroupVisibility = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_default_group_visibility>(); } },
                 { "default_preferred_language", n => { DefaultPreferredLanguage = n.GetStringValue(); } },
                 { "default_project_creation", n => { DefaultProjectCreation = n.GetIntValue(); } },
                 { "default_project_deletion_protection", n => { DefaultProjectDeletionProtection = n.GetBoolValue(); } },
-                { "default_project_visibility", n => { DefaultProjectVisibility = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_default_project_visibility>(); } },
+                { "default_project_visibility", n => { DefaultProjectVisibility = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_default_project_visibility>(); } },
                 { "default_projects_limit", n => { DefaultProjectsLimit = n.GetIntValue(); } },
                 { "default_search_scope", n => { DefaultSearchScope = n.GetStringValue(); } },
-                { "default_snippet_visibility", n => { DefaultSnippetVisibility = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_default_snippet_visibility>(); } },
+                { "default_snippet_visibility", n => { DefaultSnippetVisibility = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_default_snippet_visibility>(); } },
                 { "default_syntax_highlighting_theme", n => { DefaultSyntaxHighlightingTheme = n.GetStringValue(); } },
                 { "delay_user_account_self_deletion", n => { DelayUserAccountSelfDeletion = n.GetStringValue(); } },
                 { "delete_inactive_projects", n => { DeleteInactiveProjects = n.GetStringValue(); } },
@@ -4019,7 +4017,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "duo_features_enabled", n => { DuoFeaturesEnabled = n.GetBoolValue(); } },
                 { "duo_foundational_flows_availability", n => { DuoFoundationalFlowsAvailability = n.GetStringValue(); } },
                 { "duo_foundational_flows_enabled", n => { DuoFoundationalFlowsEnabled = n.GetStringValue(); } },
-                { "duo_namespace_access_rules", n => { DuoNamespaceAccessRules = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_duo_namespace_access_rules>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_duo_namespace_access_rules.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "duo_namespace_access_rules", n => { DuoNamespaceAccessRules = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_duo_namespace_access_rules>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_duo_namespace_access_rules.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "duo_remote_flows_availability", n => { DuoRemoteFlowsAvailability = n.GetStringValue(); } },
                 { "duo_remote_flows_enabled", n => { DuoRemoteFlowsEnabled = n.GetBoolValue(); } },
                 { "duo_workflow_oauth_application_id", n => { DuoWorkflowOauthApplicationId = n.GetStringValue(); } },
@@ -4068,14 +4066,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "elasticsearch_worker_number_of_shards", n => { ElasticsearchWorkerNumberOfShards = n.GetStringValue(); } },
                 { "email_additional_text", n => { EmailAdditionalText = n.GetStringValue(); } },
                 { "email_author_in_body", n => { EmailAuthorInBody = n.GetBoolValue(); } },
-                { "email_confirmation_setting", n => { EmailConfirmationSetting = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_email_confirmation_setting>(); } },
+                { "email_confirmation_setting", n => { EmailConfirmationSetting = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_email_confirmation_setting>(); } },
                 { "email_restrictions", n => { EmailRestrictions = n.GetStringValue(); } },
                 { "email_restrictions_enabled", n => { EmailRestrictionsEnabled = n.GetStringValue(); } },
                 { "enable_artifact_external_redirect_warning_page", n => { EnableArtifactExternalRedirectWarningPage = n.GetBoolValue(); } },
                 { "enable_language_server_restrictions", n => { EnableLanguageServerRestrictions = n.GetBoolValue(); } },
                 { "enable_member_promotion_management", n => { EnableMemberPromotionManagement = n.GetStringValue(); } },
                 { "enabled_expanded_logging", n => { EnabledExpandedLogging = n.GetStringValue(); } },
-                { "enabled_git_access_protocol", n => { EnabledGitAccessProtocol = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_enabled_git_access_protocol>(); } },
+                { "enabled_git_access_protocol", n => { EnabledGitAccessProtocol = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_enabled_git_access_protocol>(); } },
                 { "enforce_ci_inbound_job_token_scope_enabled", n => { EnforceCiInboundJobTokenScopeEnabled = n.GetStringValue(); } },
                 { "enforce_email_subaddress_restrictions", n => { EnforceEmailSubaddressRestrictions = n.GetStringValue(); } },
                 { "enforce_granular_tokens", n => { EnforceGranularTokens = n.GetStringValue(); } },
@@ -4302,17 +4300,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "remember_me_enabled", n => { RememberMeEnabled = n.GetStringValue(); } },
                 { "repository_checks_enabled", n => { RepositoryChecksEnabled = n.GetBoolValue(); } },
                 { "repository_size_limit", n => { RepositorySizeLimit = n.GetIntValue(); } },
-                { "repository_storages_weighted", n => { RepositoryStoragesWeighted = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_repository_storages_weighted>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_repository_storages_weighted.CreateFromDiscriminatorValue); } },
+                { "repository_storages_weighted", n => { RepositoryStoragesWeighted = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_repository_storages_weighted>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_repository_storages_weighted.CreateFromDiscriminatorValue); } },
                 { "require_admin_approval_after_user_signup", n => { RequireAdminApprovalAfterUserSignup = n.GetBoolValue(); } },
                 { "require_admin_two_factor_authentication", n => { RequireAdminTwoFactorAuthentication = n.GetStringValue(); } },
                 { "require_email_verification_on_account_locked", n => { RequireEmailVerificationOnAccountLocked = n.GetStringValue(); } },
                 { "require_personal_access_token_expiry", n => { RequirePersonalAccessTokenExpiry = n.GetBoolValue(); } },
                 { "require_two_factor_authentication", n => { RequireTwoFactorAuthentication = n.GetBoolValue(); } },
                 { "resource_access_token_notify_inherited", n => { ResourceAccessTokenNotifyInherited = n.GetStringValue(); } },
-                { "resource_usage_limits", n => { ResourceUsageLimits = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_resource_usage_limits>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_resource_usage_limits.CreateFromDiscriminatorValue); } },
+                { "resource_usage_limits", n => { ResourceUsageLimits = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_resource_usage_limits>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_resource_usage_limits.CreateFromDiscriminatorValue); } },
                 { "restricted_visibility_levels", n => { RestrictedVisibilityLevels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "root_moved_permanently_redirection", n => { RootMovedPermanentlyRedirection = n.GetStringValue(); } },
-                { "ropc_without_client_credentials", n => { RopcWithoutClientCredentials = n.GetBoolValue(); } },
                 { "rsa_key_restriction", n => { RsaKeyRestriction = n.GetIntValue(); } },
                 { "runner_jobs_endpoints_api_limit", n => { RunnerJobsEndpointsApiLimit = n.GetStringValue(); } },
                 { "runner_jobs_patch_trace_api_limit", n => { RunnerJobsPatchTraceApiLimit = n.GetStringValue(); } },
@@ -4466,12 +4463,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "valid_runner_registrars", n => { ValidRunnerRegistrars = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "version_check_enabled", n => { VersionCheckEnabled = n.GetStringValue(); } },
                 { "virtual_registries_endpoints_api_limit", n => { VirtualRegistriesEndpointsApiLimit = n.GetIntValue(); } },
-                { "vscode_extension_marketplace", n => { VscodeExtensionMarketplace = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_vscode_extension_marketplace>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_vscode_extension_marketplace.CreateFromDiscriminatorValue); } },
+                { "vscode_extension_marketplace", n => { VscodeExtensionMarketplace = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_vscode_extension_marketplace>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_vscode_extension_marketplace.CreateFromDiscriminatorValue); } },
                 { "vscode_extension_marketplace_enabled", n => { VscodeExtensionMarketplaceEnabled = n.GetStringValue(); } },
                 { "vscode_extension_marketplace_extension_host_domain", n => { VscodeExtensionMarketplaceExtensionHostDomain = n.GetStringValue(); } },
                 { "vscode_extension_marketplace_single_origin_fallback_enabled", n => { VscodeExtensionMarketplaceSingleOriginFallbackEnabled = n.GetStringValue(); } },
                 { "vulnerability_management_policies_per_configuration_limit", n => { VulnerabilityManagementPoliciesPerConfigurationLimit = n.GetStringValue(); } },
-                { "whats_new_variant", n => { WhatsNewVariant = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_whats_new_variant>(); } },
+                { "whats_new_variant", n => { WhatsNewVariant = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_whats_new_variant>(); } },
                 { "wiki_asciidoc_allow_uri_includes", n => { WikiAsciidocAllowUriIncludes = n.GetBoolValue(); } },
                 { "wiki_page_max_content_bytes", n => { WikiPageMaxContentBytes = n.GetIntValue(); } },
                 { "zoekt_auto_index_root_namespace", n => { ZoektAutoIndexRootNamespace = n.GetStringValue(); } },
@@ -4580,17 +4577,17 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("default_artifacts_expire_in", DefaultArtifactsExpireIn);
             writer.WriteStringValue("default_branch_name", DefaultBranchName);
             writer.WriteIntValue("default_branch_protection", DefaultBranchProtection);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_default_branch_protection_defaults>("default_branch_protection_defaults", DefaultBranchProtectionDefaults);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_default_branch_protection_defaults>("default_branch_protection_defaults", DefaultBranchProtectionDefaults);
             writer.WriteStringValue("default_ci_config_path", DefaultCiConfigPath);
             writer.WriteStringValue("default_dark_syntax_highlighting_theme", DefaultDarkSyntaxHighlightingTheme);
-            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_default_group_visibility>("default_group_visibility", DefaultGroupVisibility);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_default_group_visibility>("default_group_visibility", DefaultGroupVisibility);
             writer.WriteStringValue("default_preferred_language", DefaultPreferredLanguage);
             writer.WriteIntValue("default_project_creation", DefaultProjectCreation);
             writer.WriteBoolValue("default_project_deletion_protection", DefaultProjectDeletionProtection);
             writer.WriteIntValue("default_projects_limit", DefaultProjectsLimit);
-            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_default_project_visibility>("default_project_visibility", DefaultProjectVisibility);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_default_project_visibility>("default_project_visibility", DefaultProjectVisibility);
             writer.WriteStringValue("default_search_scope", DefaultSearchScope);
-            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_default_snippet_visibility>("default_snippet_visibility", DefaultSnippetVisibility);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_default_snippet_visibility>("default_snippet_visibility", DefaultSnippetVisibility);
             writer.WriteStringValue("default_syntax_highlighting_theme", DefaultSyntaxHighlightingTheme);
             writer.WriteStringValue("delay_user_account_self_deletion", DelayUserAccountSelfDeletion);
             writer.WriteStringValue("delete_inactive_projects", DeleteInactiveProjects);
@@ -4634,7 +4631,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("duo_features_enabled", DuoFeaturesEnabled);
             writer.WriteStringValue("duo_foundational_flows_availability", DuoFoundationalFlowsAvailability);
             writer.WriteStringValue("duo_foundational_flows_enabled", DuoFoundationalFlowsEnabled);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_duo_namespace_access_rules>("duo_namespace_access_rules", DuoNamespaceAccessRules);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_duo_namespace_access_rules>("duo_namespace_access_rules", DuoNamespaceAccessRules);
             writer.WriteStringValue("duo_remote_flows_availability", DuoRemoteFlowsAvailability);
             writer.WriteBoolValue("duo_remote_flows_enabled", DuoRemoteFlowsEnabled);
             writer.WriteStringValue("duo_workflow_oauth_application_id", DuoWorkflowOauthApplicationId);
@@ -4683,12 +4680,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("elasticsearch_worker_number_of_shards", ElasticsearchWorkerNumberOfShards);
             writer.WriteStringValue("email_additional_text", EmailAdditionalText);
             writer.WriteBoolValue("email_author_in_body", EmailAuthorInBody);
-            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_email_confirmation_setting>("email_confirmation_setting", EmailConfirmationSetting);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_email_confirmation_setting>("email_confirmation_setting", EmailConfirmationSetting);
             writer.WriteStringValue("email_restrictions", EmailRestrictions);
             writer.WriteStringValue("email_restrictions_enabled", EmailRestrictionsEnabled);
             writer.WriteBoolValue("enable_artifact_external_redirect_warning_page", EnableArtifactExternalRedirectWarningPage);
             writer.WriteStringValue("enabled_expanded_logging", EnabledExpandedLogging);
-            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_enabled_git_access_protocol>("enabled_git_access_protocol", EnabledGitAccessProtocol);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_enabled_git_access_protocol>("enabled_git_access_protocol", EnabledGitAccessProtocol);
             writer.WriteBoolValue("enable_language_server_restrictions", EnableLanguageServerRestrictions);
             writer.WriteStringValue("enable_member_promotion_management", EnableMemberPromotionManagement);
             writer.WriteStringValue("enforce_ci_inbound_job_token_scope_enabled", EnforceCiInboundJobTokenScopeEnabled);
@@ -4917,17 +4914,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("remember_me_enabled", RememberMeEnabled);
             writer.WriteBoolValue("repository_checks_enabled", RepositoryChecksEnabled);
             writer.WriteIntValue("repository_size_limit", RepositorySizeLimit);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_repository_storages_weighted>("repository_storages_weighted", RepositoryStoragesWeighted);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_repository_storages_weighted>("repository_storages_weighted", RepositoryStoragesWeighted);
             writer.WriteBoolValue("require_admin_approval_after_user_signup", RequireAdminApprovalAfterUserSignup);
             writer.WriteStringValue("require_admin_two_factor_authentication", RequireAdminTwoFactorAuthentication);
             writer.WriteStringValue("require_email_verification_on_account_locked", RequireEmailVerificationOnAccountLocked);
             writer.WriteBoolValue("require_personal_access_token_expiry", RequirePersonalAccessTokenExpiry);
             writer.WriteBoolValue("require_two_factor_authentication", RequireTwoFactorAuthentication);
             writer.WriteStringValue("resource_access_token_notify_inherited", ResourceAccessTokenNotifyInherited);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_resource_usage_limits>("resource_usage_limits", ResourceUsageLimits);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_resource_usage_limits>("resource_usage_limits", ResourceUsageLimits);
             writer.WriteCollectionOfPrimitiveValues<string>("restricted_visibility_levels", RestrictedVisibilityLevels);
             writer.WriteStringValue("root_moved_permanently_redirection", RootMovedPermanentlyRedirection);
-            writer.WriteBoolValue("ropc_without_client_credentials", RopcWithoutClientCredentials);
             writer.WriteIntValue("rsa_key_restriction", RsaKeyRestriction);
             writer.WriteStringValue("runner_jobs_endpoints_api_limit", RunnerJobsEndpointsApiLimit);
             writer.WriteStringValue("runner_jobs_patch_trace_api_limit", RunnerJobsPatchTraceApiLimit);
@@ -5081,12 +5077,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("valid_runner_registrars", ValidRunnerRegistrars);
             writer.WriteStringValue("version_check_enabled", VersionCheckEnabled);
             writer.WriteIntValue("virtual_registries_endpoints_api_limit", VirtualRegistriesEndpointsApiLimit);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_vscode_extension_marketplace>("vscode_extension_marketplace", VscodeExtensionMarketplace);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_vscode_extension_marketplace>("vscode_extension_marketplace", VscodeExtensionMarketplace);
             writer.WriteStringValue("vscode_extension_marketplace_enabled", VscodeExtensionMarketplaceEnabled);
             writer.WriteStringValue("vscode_extension_marketplace_extension_host_domain", VscodeExtensionMarketplaceExtensionHostDomain);
             writer.WriteStringValue("vscode_extension_marketplace_single_origin_fallback_enabled", VscodeExtensionMarketplaceSingleOriginFallbackEnabled);
             writer.WriteStringValue("vulnerability_management_policies_per_configuration_limit", VulnerabilityManagementPoliciesPerConfigurationLimit);
-            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15bf551affa8_whats_new_variant>("whats_new_variant", WhatsNewVariant);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_whats_new_variant>("whats_new_variant", WhatsNewVariant);
             writer.WriteBoolValue("wiki_asciidoc_allow_uri_includes", WikiAsciidocAllowUriIncludes);
             writer.WriteIntValue("wiki_page_max_content_bytes", WikiPageMaxContentBytes);
             writer.WriteStringValue("zoekt_auto_index_root_namespace", ZoektAutoIndexRootNamespace);

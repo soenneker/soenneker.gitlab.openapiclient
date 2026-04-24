@@ -3,9 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>The default group visibility</summary>
+    /// <summary>The default snippet visibility</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBody15bf551affa8_default_group_visibility
+    public enum RequestBodyBc816d46aa91_default_snippet_visibility
     {
         [EnumMember(Value = "private")]
         #pragma warning disable CS1591
