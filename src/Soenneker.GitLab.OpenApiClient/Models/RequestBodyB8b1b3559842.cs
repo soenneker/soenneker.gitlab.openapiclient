@@ -9,7 +9,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class RequestBody0234de4577e7 : IAdditionalDataHolder, IParsable
+    public partial class RequestBodyB8b1b3559842 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -100,6 +100,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public bool? ReadSecurityAttribute { get; set; }
         /// <summary>Read security scan profiles.</summary>
         public bool? ReadSecurityScanProfiles { get; set; }
+        /// <summary>Allows read access to virtual registries at the group level. Enables users to resolve packages through the virtual registry without requiring broader group membership permissions. Only works on top level groups.</summary>
+        public bool? ReadVirtualRegistry { get; set; }
         /// <summary>Read vulnerability reports and security dashboards.</summary>
         public bool? ReadVulnerability { get; set; }
         /// <summary>Ability to delete or restore a subgroup. This ability does not allow deleting top-level groups. Review the retention period settings to prevent accidental deletion.</summary>
@@ -107,21 +109,21 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Allows deletion of projects.</summary>
         public bool? RemoveProject { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0234de4577e7"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB8b1b3559842"/> and sets the default values.
         /// </summary>
-        public RequestBody0234de4577e7()
+        public RequestBodyB8b1b3559842()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0234de4577e7"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB8b1b3559842"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0234de4577e7 CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB8b1b3559842 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0234de4577e7();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB8b1b3559842();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -168,6 +170,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "read_runners", n => { ReadRunners = n.GetBoolValue(); } },
                 { "read_security_attribute", n => { ReadSecurityAttribute = n.GetBoolValue(); } },
                 { "read_security_scan_profiles", n => { ReadSecurityScanProfiles = n.GetBoolValue(); } },
+                { "read_virtual_registry", n => { ReadVirtualRegistry = n.GetBoolValue(); } },
                 { "read_vulnerability", n => { ReadVulnerability = n.GetBoolValue(); } },
                 { "remove_group", n => { RemoveGroup = n.GetBoolValue(); } },
                 { "remove_project", n => { RemoveProject = n.GetBoolValue(); } },
@@ -217,6 +220,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("read_runners", ReadRunners);
             writer.WriteBoolValue("read_security_attribute", ReadSecurityAttribute);
             writer.WriteBoolValue("read_security_scan_profiles", ReadSecurityScanProfiles);
+            writer.WriteBoolValue("read_virtual_registry", ReadVirtualRegistry);
             writer.WriteBoolValue("read_vulnerability", ReadVulnerability);
             writer.WriteBoolValue("remove_group", RemoveGroup);
             writer.WriteBoolValue("remove_project", RemoveProject);

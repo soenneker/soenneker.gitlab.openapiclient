@@ -104,6 +104,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public bool? ReadSecurityAttribute { get; set; }
         /// <summary>The read_security_scan_profiles property</summary>
         public bool? ReadSecurityScanProfiles { get; set; }
+        /// <summary>The read_virtual_registry property</summary>
+        public bool? ReadVirtualRegistry { get; set; }
         /// <summary>The read_vulnerability property</summary>
         public bool? ReadVulnerability { get; set; }
         /// <summary>The remove_group property</summary>
@@ -174,6 +176,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "read_runners", n => { ReadRunners = n.GetBoolValue(); } },
                 { "read_security_attribute", n => { ReadSecurityAttribute = n.GetBoolValue(); } },
                 { "read_security_scan_profiles", n => { ReadSecurityScanProfiles = n.GetBoolValue(); } },
+                { "read_virtual_registry", n => { ReadVirtualRegistry = n.GetBoolValue(); } },
                 { "read_vulnerability", n => { ReadVulnerability = n.GetBoolValue(); } },
                 { "remove_group", n => { RemoveGroup = n.GetBoolValue(); } },
                 { "remove_project", n => { RemoveProject = n.GetBoolValue(); } },
@@ -225,6 +228,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("read_runners", ReadRunners);
             writer.WriteBoolValue("read_security_attribute", ReadSecurityAttribute);
             writer.WriteBoolValue("read_security_scan_profiles", ReadSecurityScanProfiles);
+            writer.WriteBoolValue("read_virtual_registry", ReadVirtualRegistry);
             writer.WriteBoolValue("read_vulnerability", ReadVulnerability);
             writer.WriteBoolValue("remove_group", RemoveGroup);
             writer.WriteBoolValue("remove_project", RemoveProject);
