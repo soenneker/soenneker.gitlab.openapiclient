@@ -3,21 +3,21 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>&quot;What&apos;s new variant, possible values: `all_tiers`, `current_tier`, and `disabled`.&quot;</summary>
+    /// <summary>The default snippet visibility</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBodyBc816d46aa91_whats_new_variant
+    public enum RequestBodyD06b27b59ee0_default_snippet_visibility
     {
-        [EnumMember(Value = "all_tiers")]
+        [EnumMember(Value = "private")]
         #pragma warning disable CS1591
-        All_tiers,
+        Private,
         #pragma warning restore CS1591
-        [EnumMember(Value = "current_tier")]
+        [EnumMember(Value = "internal")]
         #pragma warning disable CS1591
-        Current_tier,
+        Internal,
         #pragma warning restore CS1591
-        [EnumMember(Value = "disabled")]
+        [EnumMember(Value = "public")]
         #pragma warning disable CS1591
-        Disabled,
+        Public,
         #pragma warning restore CS1591
     }
 }

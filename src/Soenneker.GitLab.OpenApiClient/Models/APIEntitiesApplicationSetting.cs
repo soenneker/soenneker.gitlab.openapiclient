@@ -886,6 +886,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string DiagramsnetUrl { get; set; }
 #endif
+        /// <summary>The diff_max_commits property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DiffMaxCommits { get; set; }
+#nullable restore
+#else
+        public string DiffMaxCommits { get; set; }
+#endif
         /// <summary>The diff_max_files property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -909,6 +917,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #nullable restore
 #else
         public string DiffMaxPatchBytes { get; set; }
+#endif
+        /// <summary>The diff_max_versions property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DiffMaxVersions { get; set; }
+#nullable restore
+#else
+        public string DiffMaxVersions { get; set; }
 #endif
         /// <summary>The disable_admin_oauth_scopes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -5004,9 +5020,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "description_and_note_max_size", n => { DescriptionAndNoteMaxSize = n.GetStringValue(); } },
                 { "diagramsnet_enabled", n => { DiagramsnetEnabled = n.GetStringValue(); } },
                 { "diagramsnet_url", n => { DiagramsnetUrl = n.GetStringValue(); } },
+                { "diff_max_commits", n => { DiffMaxCommits = n.GetStringValue(); } },
                 { "diff_max_files", n => { DiffMaxFiles = n.GetStringValue(); } },
                 { "diff_max_lines", n => { DiffMaxLines = n.GetStringValue(); } },
                 { "diff_max_patch_bytes", n => { DiffMaxPatchBytes = n.GetStringValue(); } },
+                { "diff_max_versions", n => { DiffMaxVersions = n.GetStringValue(); } },
                 { "disable_admin_oauth_scopes", n => { DisableAdminOauthScopes = n.GetStringValue(); } },
                 { "disable_feed_token", n => { DisableFeedToken = n.GetStringValue(); } },
                 { "disable_overriding_approvers_per_merge_request", n => { DisableOverridingApproversPerMergeRequest = n.GetStringValue(); } },
@@ -5623,9 +5641,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("description_and_note_max_size", DescriptionAndNoteMaxSize);
             writer.WriteStringValue("diagramsnet_enabled", DiagramsnetEnabled);
             writer.WriteStringValue("diagramsnet_url", DiagramsnetUrl);
+            writer.WriteStringValue("diff_max_commits", DiffMaxCommits);
             writer.WriteStringValue("diff_max_files", DiffMaxFiles);
             writer.WriteStringValue("diff_max_lines", DiffMaxLines);
             writer.WriteStringValue("diff_max_patch_bytes", DiffMaxPatchBytes);
+            writer.WriteStringValue("diff_max_versions", DiffMaxVersions);
             writer.WriteStringValue("disable_admin_oauth_scopes", DisableAdminOauthScopes);
             writer.WriteStringValue("disabled_direct_code_suggestions", DisabledDirectCodeSuggestions);
             writer.WriteStringValue("disabled_oauth_sign_in_sources", DisabledOauthSignInSources);

@@ -8,29 +8,29 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// Definition for resource usage limits enforced in Sidekiq workers
+    /// VS Code Extension Marketplace URL&apos;s when preset is &apos;custom&apos;
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RequestBodyBc816d46aa91_resource_usage_limits : IAdditionalDataHolder, IParsable
+    public partial class RequestBodyD06b27b59ee0_vscode_extension_marketplace_custom_values : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_resource_usage_limits"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD06b27b59ee0_vscode_extension_marketplace_custom_values"/> and sets the default values.
         /// </summary>
-        public RequestBodyBc816d46aa91_resource_usage_limits()
+        public RequestBodyD06b27b59ee0_vscode_extension_marketplace_custom_values()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_resource_usage_limits"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD06b27b59ee0_vscode_extension_marketplace_custom_values"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_resource_usage_limits CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD06b27b59ee0_vscode_extension_marketplace_custom_values CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_resource_usage_limits();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD06b27b59ee0_vscode_extension_marketplace_custom_values();
         }
         /// <summary>
         /// The deserialization information for the current model

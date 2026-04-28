@@ -9,7 +9,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class RequestBodyBc816d46aa91_duo_namespace_access_rules : IAdditionalDataHolder, IParsable
+    public partial class RequestBodyD06b27b59ee0_duo_namespace_access_rules : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,27 +25,27 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Object containing through namespace information</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_duo_namespace_access_rules_through_namespace? ThroughNamespace { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD06b27b59ee0_duo_namespace_access_rules_through_namespace? ThroughNamespace { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_duo_namespace_access_rules_through_namespace ThroughNamespace { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD06b27b59ee0_duo_namespace_access_rules_through_namespace ThroughNamespace { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_duo_namespace_access_rules"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD06b27b59ee0_duo_namespace_access_rules"/> and sets the default values.
         /// </summary>
-        public RequestBodyBc816d46aa91_duo_namespace_access_rules()
+        public RequestBodyD06b27b59ee0_duo_namespace_access_rules()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_duo_namespace_access_rules"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD06b27b59ee0_duo_namespace_access_rules"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_duo_namespace_access_rules CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD06b27b59ee0_duo_namespace_access_rules CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_duo_namespace_access_rules();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD06b27b59ee0_duo_namespace_access_rules();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -56,7 +56,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "features", n => { Features = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "through_namespace", n => { ThroughNamespace = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_duo_namespace_access_rules_through_namespace>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_duo_namespace_access_rules_through_namespace.CreateFromDiscriminatorValue); } },
+                { "through_namespace", n => { ThroughNamespace = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD06b27b59ee0_duo_namespace_access_rules_through_namespace>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD06b27b59ee0_duo_namespace_access_rules_through_namespace.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("features", Features);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_duo_namespace_access_rules_through_namespace>("through_namespace", ThroughNamespace);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD06b27b59ee0_duo_namespace_access_rules_through_namespace>("through_namespace", ThroughNamespace);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

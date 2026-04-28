@@ -7,31 +7,30 @@ using System.IO;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
+    /// <summary>
+    /// Definition for resource usage limits enforced in Sidekiq workers
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class RequestBodyBc816d46aa91_default_branch_protection_defaults_allowed_to_merge : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class RequestBodyD06b27b59ee0_resource_usage_limits : IAdditionalDataHolder, IParsable
     {
-        /// <summary>A valid access level</summary>
-        public int? AccessLevel { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_default_branch_protection_defaults_allowed_to_merge"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD06b27b59ee0_resource_usage_limits"/> and sets the default values.
         /// </summary>
-        public RequestBodyBc816d46aa91_default_branch_protection_defaults_allowed_to_merge()
+        public RequestBodyD06b27b59ee0_resource_usage_limits()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_default_branch_protection_defaults_allowed_to_merge"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD06b27b59ee0_resource_usage_limits"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_default_branch_protection_defaults_allowed_to_merge CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD06b27b59ee0_resource_usage_limits CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc816d46aa91_default_branch_protection_defaults_allowed_to_merge();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD06b27b59ee0_resource_usage_limits();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -41,7 +40,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "access_level", n => { AccessLevel = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -51,7 +49,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("access_level", AccessLevel);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
