@@ -37,7 +37,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The keep_divergent_refs property</summary>
         public bool? KeepDivergentRefs { get; set; }
         /// <summary>The last_error property</summary>
-        public int? LastError { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? LastError { get; set; }
+#nullable restore
+#else
+        public string LastError { get; set; }
+#endif
         /// <summary>The last_successful_update_at property</summary>
         public DateTimeOffset? LastSuccessfulUpdateAt { get; set; }
         /// <summary>The last_update_at property</summary>
@@ -100,7 +106,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "host_keys", n => { HostKeys = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMirrorHostKey>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMirrorHostKey.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "keep_divergent_refs", n => { KeepDivergentRefs = n.GetBoolValue(); } },
-                { "last_error", n => { LastError = n.GetIntValue(); } },
+                { "last_error", n => { LastError = n.GetStringValue(); } },
                 { "last_successful_update_at", n => { LastSuccessfulUpdateAt = n.GetDateTimeOffsetValue(); } },
                 { "last_update_at", n => { LastUpdateAt = n.GetDateTimeOffsetValue(); } },
                 { "last_update_started_at", n => { LastUpdateStartedAt = n.GetDateTimeOffsetValue(); } },
@@ -122,7 +128,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMirrorHostKey>("host_keys", HostKeys);
             writer.WriteIntValue("id", Id);
             writer.WriteBoolValue("keep_divergent_refs", KeepDivergentRefs);
-            writer.WriteIntValue("last_error", LastError);
+            writer.WriteStringValue("last_error", LastError);
             writer.WriteDateTimeOffsetValue("last_successful_update_at", LastSuccessfulUpdateAt);
             writer.WriteDateTimeOffsetValue("last_update_at", LastUpdateAt);
             writer.WriteDateTimeOffsetValue("last_update_started_at", LastUpdateStartedAt);

@@ -9,11 +9,19 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class RequestBody85aa94c04f69 : IAdditionalDataHolder, IParsable
+    public partial class RequestBody364c1989dcd7 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>A caller_id identifying a code path, for example `GET /api/v4/projects/:id` or `ProjectsController#show`. Use comma to separate multiple endpoint paths</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Endpoint { get; set; }
+#nullable restore
+#else
+        public string Endpoint { get; set; }
+#endif
         /// <summary>A Feature group name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -83,27 +91,27 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The value property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody85aa94c04f69.RequestBody85aa94c04f69_value? Value { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody364c1989dcd7.RequestBody364c1989dcd7_value? Value { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody85aa94c04f69.RequestBody85aa94c04f69_value Value { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody364c1989dcd7.RequestBody364c1989dcd7_value Value { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody85aa94c04f69"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody364c1989dcd7"/> and sets the default values.
         /// </summary>
-        public RequestBody85aa94c04f69()
+        public RequestBody364c1989dcd7()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody85aa94c04f69"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody364c1989dcd7"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody85aa94c04f69 CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody364c1989dcd7 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody85aa94c04f69();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody364c1989dcd7();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -113,6 +121,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "endpoint", n => { Endpoint = n.GetStringValue(); } },
                 { "feature_group", n => { FeatureGroup = n.GetStringValue(); } },
                 { "force", n => { Force = n.GetBoolValue(); } },
                 { "group", n => { Group = n.GetStringValue(); } },
@@ -122,7 +131,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "repository", n => { Repository = n.GetStringValue(); } },
                 { "runner", n => { Runner = n.GetStringValue(); } },
                 { "user", n => { User = n.GetStringValue(); } },
-                { "value", n => { Value = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody85aa94c04f69.RequestBody85aa94c04f69_value>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody85aa94c04f69.RequestBody85aa94c04f69_value.CreateFromDiscriminatorValue); } },
+                { "value", n => { Value = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody364c1989dcd7.RequestBody364c1989dcd7_value>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody364c1989dcd7.RequestBody364c1989dcd7_value.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -132,6 +141,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("endpoint", Endpoint);
             writer.WriteStringValue("feature_group", FeatureGroup);
             writer.WriteBoolValue("force", Force);
             writer.WriteStringValue("group", Group);
@@ -141,14 +151,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("repository", Repository);
             writer.WriteStringValue("runner", Runner);
             writer.WriteStringValue("user", User);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody85aa94c04f69.RequestBody85aa94c04f69_value>("value", Value);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody364c1989dcd7.RequestBody364c1989dcd7_value>("value", Value);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
         /// Composed type wrapper for classes <see cref="int"/>, <see cref="string"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class RequestBody85aa94c04f69_value : IComposedTypeWrapper, IParsable
+        public partial class RequestBody364c1989dcd7_value : IComposedTypeWrapper, IParsable
         {
             /// <summary>Composed type representation for type <see cref="int"/></summary>
             public int? Integer { get; set; }
@@ -163,13 +173,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
             /// </summary>
-            /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody85aa94c04f69.RequestBody85aa94c04f69_value"/></returns>
+            /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody364c1989dcd7.RequestBody364c1989dcd7_value"/></returns>
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody85aa94c04f69.RequestBody85aa94c04f69_value CreateFromDiscriminatorValue(IParseNode parseNode)
+            public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody364c1989dcd7.RequestBody364c1989dcd7_value CreateFromDiscriminatorValue(IParseNode parseNode)
             {
                 if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody85aa94c04f69.RequestBody85aa94c04f69_value();
+                var result = new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody364c1989dcd7.RequestBody364c1989dcd7_value();
                 if(parseNode.GetIntValue() is int integerValue)
                 {
                     result.Integer = integerValue;

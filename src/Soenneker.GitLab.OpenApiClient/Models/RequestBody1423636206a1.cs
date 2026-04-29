@@ -9,13 +9,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class RequestBody7635263b8976 : IAdditionalDataHolder, IParsable
+    public partial class RequestBody1423636206a1 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Filter push events by branch. Possible values are `wildcard` (default), `regex`, and `all_branches`</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody7635263b8976_branch_filter_strategy? BranchFilterStrategy { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1423636206a1_branch_filter_strategy? BranchFilterStrategy { get; set; }
         /// <summary>Trigger hook on confidential issues events</summary>
         public bool? ConfidentialIssuesEvents { get; set; }
         /// <summary>Trigger hook on confidential note (comment) events</summary>
@@ -23,10 +23,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Custom headers</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody7635263b8976_custom_headers>? CustomHeaders { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1423636206a1_custom_headers>? CustomHeaders { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody7635263b8976_custom_headers> CustomHeaders { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1423636206a1_custom_headers> CustomHeaders { get; set; }
 #endif
         /// <summary>Custom template for the request payload</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -88,6 +88,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public bool? ResourceAccessTokenEvents { get; set; }
         /// <summary>Trigger hook on deploy token expiry events</summary>
         public bool? ResourceDeployTokenEvents { get; set; }
+        /// <summary>HMAC signing token used to compute the webhook-signature header. Must be in whsec_&lt;base64&gt; format encoding a 32-byte key. Not returned in the response</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? SigningToken { get; set; }
+#nullable restore
+#else
+        public string SigningToken { get; set; }
+#endif
         /// <summary>Trigger hook on tag push events</summary>
         public bool? TagPushEvents { get; set; }
         /// <summary>Secret token to validate received payloads; this will not be returned in the response</summary>
@@ -109,31 +117,31 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>URL variables for interpolation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody7635263b8976_url_variables>? UrlVariables { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1423636206a1_url_variables>? UrlVariables { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody7635263b8976_url_variables> UrlVariables { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1423636206a1_url_variables> UrlVariables { get; set; }
 #endif
         /// <summary>Trigger hook on vulnerability events</summary>
         public bool? VulnerabilityEvents { get; set; }
         /// <summary>Trigger hook on wiki events</summary>
         public bool? WikiPageEvents { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody7635263b8976"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1423636206a1"/> and sets the default values.
         /// </summary>
-        public RequestBody7635263b8976()
+        public RequestBody1423636206a1()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody7635263b8976"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1423636206a1"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody7635263b8976 CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1423636206a1 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody7635263b8976();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1423636206a1();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -143,10 +151,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "branch_filter_strategy", n => { BranchFilterStrategy = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody7635263b8976_branch_filter_strategy>(); } },
+                { "branch_filter_strategy", n => { BranchFilterStrategy = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1423636206a1_branch_filter_strategy>(); } },
                 { "confidential_issues_events", n => { ConfidentialIssuesEvents = n.GetBoolValue(); } },
                 { "confidential_note_events", n => { ConfidentialNoteEvents = n.GetBoolValue(); } },
-                { "custom_headers", n => { CustomHeaders = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody7635263b8976_custom_headers>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody7635263b8976_custom_headers.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "custom_headers", n => { CustomHeaders = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1423636206a1_custom_headers>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1423636206a1_custom_headers.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "custom_webhook_template", n => { CustomWebhookTemplate = n.GetStringValue(); } },
                 { "deployment_events", n => { DeploymentEvents = n.GetBoolValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
@@ -165,10 +173,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "releases_events", n => { ReleasesEvents = n.GetBoolValue(); } },
                 { "resource_access_token_events", n => { ResourceAccessTokenEvents = n.GetBoolValue(); } },
                 { "resource_deploy_token_events", n => { ResourceDeployTokenEvents = n.GetBoolValue(); } },
+                { "signing_token", n => { SigningToken = n.GetStringValue(); } },
                 { "tag_push_events", n => { TagPushEvents = n.GetBoolValue(); } },
                 { "token", n => { Token = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
-                { "url_variables", n => { UrlVariables = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody7635263b8976_url_variables>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody7635263b8976_url_variables.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "url_variables", n => { UrlVariables = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1423636206a1_url_variables>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1423636206a1_url_variables.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "vulnerability_events", n => { VulnerabilityEvents = n.GetBoolValue(); } },
                 { "wiki_page_events", n => { WikiPageEvents = n.GetBoolValue(); } },
             };
@@ -180,10 +189,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody7635263b8976_branch_filter_strategy>("branch_filter_strategy", BranchFilterStrategy);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1423636206a1_branch_filter_strategy>("branch_filter_strategy", BranchFilterStrategy);
             writer.WriteBoolValue("confidential_issues_events", ConfidentialIssuesEvents);
             writer.WriteBoolValue("confidential_note_events", ConfidentialNoteEvents);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody7635263b8976_custom_headers>("custom_headers", CustomHeaders);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1423636206a1_custom_headers>("custom_headers", CustomHeaders);
             writer.WriteStringValue("custom_webhook_template", CustomWebhookTemplate);
             writer.WriteBoolValue("deployment_events", DeploymentEvents);
             writer.WriteStringValue("description", Description);
@@ -202,10 +211,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("releases_events", ReleasesEvents);
             writer.WriteBoolValue("resource_access_token_events", ResourceAccessTokenEvents);
             writer.WriteBoolValue("resource_deploy_token_events", ResourceDeployTokenEvents);
+            writer.WriteStringValue("signing_token", SigningToken);
             writer.WriteBoolValue("tag_push_events", TagPushEvents);
             writer.WriteStringValue("token", Token);
             writer.WriteStringValue("url", Url);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody7635263b8976_url_variables>("url_variables", UrlVariables);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1423636206a1_url_variables>("url_variables", UrlVariables);
             writer.WriteBoolValue("vulnerability_events", VulnerabilityEvents);
             writer.WriteBoolValue("wiki_page_events", WikiPageEvents);
             writer.WriteAdditionalData(AdditionalData);

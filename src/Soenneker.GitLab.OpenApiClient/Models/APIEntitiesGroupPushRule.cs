@@ -63,13 +63,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string FileNameRegex { get; set; }
 #endif
         /// <summary>The id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get; set; }
-#nullable restore
-#else
-        public string Id { get; set; }
-#endif
+        public int? Id { get; set; }
         /// <summary>The max_file_size property</summary>
         public int? MaxFileSize { get; set; }
         /// <summary>The member_check property</summary>
@@ -114,7 +108,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "deny_delete_tag", n => { DenyDeleteTag = n.GetBoolValue(); } },
                 { "file_name_regex", n => { FileNameRegex = n.GetStringValue(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
+                { "id", n => { Id = n.GetIntValue(); } },
                 { "max_file_size", n => { MaxFileSize = n.GetIntValue(); } },
                 { "member_check", n => { MemberCheck = n.GetBoolValue(); } },
                 { "prevent_secrets", n => { PreventSecrets = n.GetBoolValue(); } },
@@ -138,7 +132,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
             writer.WriteBoolValue("deny_delete_tag", DenyDeleteTag);
             writer.WriteStringValue("file_name_regex", FileNameRegex);
-            writer.WriteStringValue("id", Id);
+            writer.WriteIntValue("id", Id);
             writer.WriteIntValue("max_file_size", MaxFileSize);
             writer.WriteBoolValue("member_check", MemberCheck);
             writer.WriteBoolValue("prevent_secrets", PreventSecrets);

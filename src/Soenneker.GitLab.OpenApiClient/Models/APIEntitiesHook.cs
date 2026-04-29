@@ -61,13 +61,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The enable_ssl_verification property</summary>
         public bool? EnableSslVerification { get; set; }
         /// <summary>The id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get; set; }
-#nullable restore
-#else
-        public string Id { get; set; }
-#endif
+        public int? Id { get; set; }
         /// <summary>The merge_requests_events property</summary>
         public bool? MergeRequestsEvents { get; set; }
         /// <summary>The name property</summary>
@@ -92,8 +86,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>The repository_update_events property</summary>
         public bool? RepositoryUpdateEvents { get; set; }
+        /// <summary>Whether an HMAC signing token is configured</summary>
+        public bool? SigningTokenPresent { get; set; }
         /// <summary>The tag_push_events property</summary>
         public bool? TagPushEvents { get; set; }
+        /// <summary>Whether a secret token is configured</summary>
+        public bool? TokenPresent { get; set; }
         /// <summary>The url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -143,14 +141,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "disabled_until", n => { DisabledUntil = n.GetDateTimeOffsetValue(); } },
                 { "enable_ssl_verification", n => { EnableSslVerification = n.GetBoolValue(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
+                { "id", n => { Id = n.GetIntValue(); } },
                 { "merge_requests_events", n => { MergeRequestsEvents = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "organization_id", n => { OrganizationId = n.GetIntValue(); } },
                 { "push_events", n => { PushEvents = n.GetBoolValue(); } },
                 { "push_events_branch_filter", n => { PushEventsBranchFilter = n.GetStringValue(); } },
                 { "repository_update_events", n => { RepositoryUpdateEvents = n.GetBoolValue(); } },
+                { "signing_token_present", n => { SigningTokenPresent = n.GetBoolValue(); } },
                 { "tag_push_events", n => { TagPushEvents = n.GetBoolValue(); } },
+                { "token_present", n => { TokenPresent = n.GetBoolValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
                 { "url_variables", n => { UrlVariables = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesHook_url_variables>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesHook_url_variables.CreateFromDiscriminatorValue)?.AsList(); } },
             };
@@ -170,14 +170,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteDateTimeOffsetValue("disabled_until", DisabledUntil);
             writer.WriteBoolValue("enable_ssl_verification", EnableSslVerification);
-            writer.WriteStringValue("id", Id);
+            writer.WriteIntValue("id", Id);
             writer.WriteBoolValue("merge_requests_events", MergeRequestsEvents);
             writer.WriteStringValue("name", Name);
             writer.WriteIntValue("organization_id", OrganizationId);
             writer.WriteBoolValue("push_events", PushEvents);
             writer.WriteStringValue("push_events_branch_filter", PushEventsBranchFilter);
             writer.WriteBoolValue("repository_update_events", RepositoryUpdateEvents);
+            writer.WriteBoolValue("signing_token_present", SigningTokenPresent);
             writer.WriteBoolValue("tag_push_events", TagPushEvents);
+            writer.WriteBoolValue("token_present", TokenPresent);
             writer.WriteStringValue("url", Url);
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesHook_url_variables>("url_variables", UrlVariables);
             writer.WriteAdditionalData(AdditionalData);

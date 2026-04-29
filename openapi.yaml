@@ -6612,7 +6612,7 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/RequestBody_f31eb0c6dc1a"
+              "$ref": "#/components/schemas/RequestBody_a746ddee6a88"
   "/api/v4/groups/{id}/hooks/{hook_id}":
     get:
       operationId: getApiV4GroupsIdHooksHookId
@@ -6683,7 +6683,7 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/RequestBody_dc55cfcafa2c"
+              "$ref": "#/components/schemas/RequestBody_8d712278f973"
     delete:
       operationId: deleteApiV4GroupsIdHooksHookId
       summary: Delete group hook
@@ -16066,6 +16066,7 @@ paths:
           - duo_pro_access_granted
           - duo_enterprise_access_granted
           - duo_core_access_granted
+          - duo_workflow_input_required
           nullable: true
         in: query
       - name: author_id
@@ -16119,6 +16120,7 @@ paths:
           - Vulnerability
           - User
           - ComplianceManagement::Projects::ComplianceViolation
+          - Ai::DuoWorkflows::Workflow
           nullable: true
         in: query
   "/api/v4/todos/{id}/mark_as_done":
@@ -25098,7 +25100,7 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/RequestBody_ab27a6a69ff0"
+              "$ref": "#/components/schemas/RequestBody_dbe04ff1d37d"
   "/api/v4/hooks/{hook_id}":
     get:
       operationId: getApiV4HooksHookId
@@ -25153,7 +25155,7 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/RequestBody_12cf9f027a41"
+              "$ref": "#/components/schemas/RequestBody_894e3528a83b"
     post:
       operationId: postApiV4HooksHookId
       summary: Test a hook
@@ -33012,7 +33014,7 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/RequestBody_7635263b8976"
+              "$ref": "#/components/schemas/RequestBody_924ec35a96aa"
   "/api/v4/projects/{id}/hooks/{hook_id}":
     get:
       operationId: getApiV4ProjectsIdHooksHookId
@@ -33083,7 +33085,7 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/RequestBody_d1660b73a20c"
+              "$ref": "#/components/schemas/RequestBody_1423636206a1"
     delete:
       operationId: deleteApiV4ProjectsIdHooksHookId
       summary: Delete a project hook
@@ -52762,7 +52764,7 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/RequestBody_85aa94c04f69"
+              "$ref": "#/components/schemas/RequestBody_364c1989dcd7"
     delete:
       operationId: deleteApiV4FeaturesName
       summary: Delete a feature
@@ -70263,7 +70265,7 @@ components:
       type: object
       properties:
         namespace_id:
-          type: string
+          type: integer
           example: 123
         expires_at:
           type: string
@@ -70303,7 +70305,7 @@ components:
           example: A-S00000001
         trial:
           type: boolean
-          example: 'false'
+          example: false
     GitlabSubscriptionsAPIEntitiesInternalNamespacesUserPermissions:
       type: object
       properties:
@@ -70783,7 +70785,7 @@ components:
       type: object
       properties:
         id:
-          type: string
+          type: integer
           example: 142
         user:
           "$ref": "#/components/schemas/APIEntitiesUserBasic"
@@ -70795,7 +70797,7 @@ components:
           type: string
           example: Issue
         resource_id:
-          type: string
+          type: integer
           example: 253
         iteration:
           "$ref": "#/components/schemas/APIEntitiesIteration"
@@ -70806,7 +70808,7 @@ components:
       type: object
       properties:
         id:
-          type: string
+          type: integer
           example: 142
         user:
           "$ref": "#/components/schemas/APIEntitiesUserBasic"
@@ -70815,10 +70817,10 @@ components:
           format: date-time
           example: '2012-05-28T04:42:42-07:00'
         issue_id:
-          type: string
+          type: integer
           example: 253
         weight:
-          type: string
+          type: integer
           example: 3
     APIEntitiesProtectedEnvironment:
       type: object
@@ -71517,7 +71519,7 @@ components:
       type: object
       properties:
         id:
-          type: string
+          type: integer
           example: 2
         created_at:
           type: string
@@ -71653,7 +71655,7 @@ components:
       type: object
       properties:
         id:
-          type: string
+          type: integer
           example: 1
         plan:
           type: string
@@ -72885,7 +72887,7 @@ components:
             "$ref": "#/components/schemas/APIEntitiesProtectedBranch"
         hmac:
           type: boolean
-          example: 'true'
+          example: true
     APIEntitiesClustersAgentUrlConfiguration:
       type: object
       properties:
@@ -75691,7 +75693,7 @@ components:
           format: date-time
           example: '2020-01-06T17:31:55.864Z'
         last_error:
-          type: integer
+          type: string
           example: The remote mirror URL is invalid.
         only_protected_branches:
           type: boolean
@@ -76010,7 +76012,7 @@ components:
       type: object
       properties:
         id:
-          type: string
+          type: integer
           example: 1
         created_at:
           type: string
@@ -76034,7 +76036,7 @@ components:
       type: object
       properties:
         id:
-          type: string
+          type: integer
           example: 1
         url:
           type: string
@@ -76072,7 +76074,7 @@ components:
         url_variables:
           type: array
           example:
-            token: secr3t
+          - token: secr3t
           items:
             type: object
         push_events_branch_filter:
@@ -76087,9 +76089,17 @@ components:
         custom_headers:
           type: array
           example:
-            X-Custom-Header: value
+          - X-Custom-Header: value
           items:
             type: object
+        token_present:
+          type: boolean
+          description: Whether a secret token is configured
+          example: false
+        signing_token_present:
+          type: boolean
+          description: Whether an HMAC signing token is configured
+          example: false
     APIEntitiesProjectsContainerRegistryProtectionTagRule:
       type: object
       properties:
@@ -76280,7 +76290,8 @@ components:
       properties:
         versions:
           type: array
-          example: 1.3.0.17
+          example:
+          - 1.3.0.17
           items:
             type: string
     APIEntitiesNugetSearchResultVersion:
@@ -76498,7 +76509,8 @@ components:
           type: boolean
         suggests:
           type: array
-          example: my-group1
+          example:
+          - my-group1
           items:
             type: string
     APIEntitiesNamespacesStorageLimitExclusion:
@@ -76898,7 +76910,7 @@ components:
           type: string
           example: Jenkins CI
         slug:
-          type: integer
+          type: string
           example: jenkins
         created_at:
           type: string
@@ -77169,12 +77181,14 @@ components:
           example: 604800
         components:
           type: array
-          example: main
+          example:
+          - main
           items:
             type: string
         architectures:
           type: array
-          example: amd64
+          example:
+          - amd64
           items:
             type: string
     APIEntitiesGoModuleVersion:
@@ -78226,8 +78240,7 @@ components:
           example: deploy
         wiki_page_meta_id:
           type: integer
-          example:
-            wiki_page_meta_id: 123
+          example: 123
     APIEntitiesNoteCommands:
       type: object
       properties:
@@ -80397,7 +80410,8 @@ components:
           example: users
         feature_categories:
           type: array
-          example: database
+          example:
+          - database
           items:
             type: string
         table_size:
@@ -80696,7 +80710,7 @@ components:
       type: object
       properties:
         id:
-          type: string
+          type: integer
           example: 1
         plan:
           type: string
@@ -81207,17 +81221,20 @@ components:
           example: A simple license
         conditions:
           type: array
-          example: include-copyright
+          example:
+          - include-copyright
           items:
             type: string
         permissions:
           type: array
-          example: commercial-use
+          example:
+          - commercial-use
           items:
             type: string
         limitations:
           type: array
-          example: liability
+          example:
+          - liability
           items:
             type: string
         content:
@@ -81395,7 +81412,7 @@ components:
       type: object
       properties:
         id:
-          type: string
+          type: integer
           example: 1
         url:
           type: string
@@ -81433,7 +81450,7 @@ components:
         url_variables:
           type: array
           example:
-            token: secr3t
+          - token: secr3t
           items:
             type: object
         push_events_branch_filter:
@@ -81448,11 +81465,19 @@ components:
         custom_headers:
           type: array
           example:
-            X-Custom-Header: value
+          - X-Custom-Header: value
           items:
             type: object
+        token_present:
+          type: boolean
+          description: Whether a secret token is configured
+          example: false
+        signing_token_present:
+          type: boolean
+          description: Whether an HMAC signing token is configured
+          example: false
         group_id:
-          type: string
+          type: integer
           example: 1
         issues_events:
           type: boolean
@@ -81492,7 +81517,7 @@ components:
       type: object
       properties:
         id:
-          type: string
+          type: integer
           example: 1
         url:
           type: string
@@ -81530,7 +81555,7 @@ components:
         url_variables:
           type: array
           example:
-            token: secr3t
+          - token: secr3t
           items:
             type: object
         push_events_branch_filter:
@@ -81545,9 +81570,17 @@ components:
         custom_headers:
           type: array
           example:
-            X-Custom-Header: value
+          - X-Custom-Header: value
           items:
             type: object
+        token_present:
+          type: boolean
+          description: Whether a secret token is configured
+          example: false
+        signing_token_present:
+          type: boolean
+          description: Whether an HMAC signing token is configured
+          example: false
         project_id:
           type: string
           example: 1
@@ -82145,7 +82178,7 @@ components:
           type: string
           example: Jenkins CI
         slug:
-          type: integer
+          type: string
           example: jenkins
         created_at:
           type: string
@@ -82277,8 +82310,7 @@ components:
           example: deploy
         wiki_page_meta_id:
           type: integer
-          example:
-            wiki_page_meta_id: 123
+          example: 123
         content:
           type: string
           example: Here is an instruction how to deploy this project.
@@ -82620,7 +82652,8 @@ components:
           "$ref": "#/components/schemas/APIEntitiesUserBasic"
         labels:
           type: array
-          example: bug
+          example:
+          - bug
           items:
             type: string
         milestone:
@@ -82878,7 +82911,8 @@ components:
           "$ref": "#/components/schemas/APIEntitiesUserBasic"
         labels:
           type: array
-          example: bug
+          example:
+          - bug
           items:
             type: string
         milestone:
@@ -82969,7 +83003,8 @@ components:
           "$ref": "#/components/schemas/APIEntitiesUserBasic"
         labels:
           type: array
-          example: bug
+          example:
+          - bug
           items:
             type: string
         milestone:
@@ -83086,7 +83121,8 @@ components:
           "$ref": "#/components/schemas/APIEntitiesUserBasic"
         labels:
           type: array
-          example: bug
+          example:
+          - bug
           items:
             type: string
         milestone:
@@ -83211,7 +83247,8 @@ components:
           "$ref": "#/components/schemas/APIEntitiesUserBasic"
         labels:
           type: array
-          example: bug
+          example:
+          - bug
           items:
             type: string
         milestone:
@@ -83328,7 +83365,8 @@ components:
           "$ref": "#/components/schemas/APIEntitiesUserBasic"
         labels:
           type: array
-          example: bug
+          example:
+          - bug
           items:
             type: string
         milestone:
@@ -84951,12 +84989,14 @@ components:
           example: main
         tag_list:
           type: array
-          example: tag
+          example:
+          - tag
           items:
             type: string
         topics:
           type: array
-          example: topic
+          example:
+          - topic
           items:
             type: string
         ssh_url_to_repo:
@@ -85029,12 +85069,14 @@ components:
           example: main
         tag_list:
           type: array
-          example: tag
+          example:
+          - tag
           items:
             type: string
         topics:
           type: array
-          example: topic
+          example:
+          - topic
           items:
             type: string
         ssh_url_to_repo:
@@ -85109,12 +85151,14 @@ components:
           example: main
         tag_list:
           type: array
-          example: tag
+          example:
+          - tag
           items:
             type: string
         topics:
           type: array
-          example: topic
+          example:
+          - topic
           items:
             type: string
         ssh_url_to_repo:
@@ -85508,12 +85552,14 @@ components:
           example: main
         tag_list:
           type: array
-          example: tag
+          example:
+          - tag
           items:
             type: string
         topics:
           type: array
-          example: topic
+          example:
+          - topic
           items:
             type: string
         ssh_url_to_repo:
@@ -86328,7 +86374,7 @@ components:
           type: boolean
         private_profile:
           type: boolean
-          example: :null
+          example: false
         commit_email:
           type: string
         preferred_language:
@@ -86450,7 +86496,7 @@ components:
           type: boolean
         private_profile:
           type: boolean
-          example: :null
+          example: false
         commit_email:
           type: string
         preferred_language:
@@ -89021,7 +89067,7 @@ components:
           type: boolean
           description: Require approver to authenticate before approving
           nullable: true
-    RequestBody_f31eb0c6dc1a:
+    RequestBody_a746ddee6a88:
       type: object
       properties:
         url:
@@ -89130,6 +89176,12 @@ components:
           description: Secret token to validate received payloads; this will not be
             returned in the response
           nullable: true
+        signing_token:
+          type: string
+          description: HMAC signing token used to compute the webhook-signature header.
+            Must be in whsec_<base64> format encoding a 32-byte key. Not returned
+            in the response
+          nullable: true
         custom_webhook_template:
           type: string
           description: Custom template for the request payload
@@ -89185,7 +89237,7 @@ components:
           nullable: true
       required:
       - url
-    RequestBody_dc55cfcafa2c:
+    RequestBody_8d712278f973:
       type: object
       properties:
         url:
@@ -89292,6 +89344,12 @@ components:
           type: string
           description: Secret token to validate received payloads; this will not be
             returned in the response
+          nullable: true
+        signing_token:
+          type: string
+          description: HMAC signing token used to compute the webhook-signature header.
+            Must be in whsec_<base64> format encoding a 32-byte key. Not returned
+            in the response
           nullable: true
         custom_webhook_template:
           type: string
@@ -95586,7 +95644,7 @@ components:
       required:
       - tag_name
       - ref
-    RequestBody_ab27a6a69ff0:
+    RequestBody_dbe04ff1d37d:
       type: object
       properties:
         url:
@@ -95605,6 +95663,12 @@ components:
         token:
           type: string
           description: Secret token to validate received payloads; this isn't returned
+            in the response
+          nullable: true
+        signing_token:
+          type: string
+          description: HMAC signing token used to compute the webhook-signature header.
+            Must be in whsec_<base64> format encoding a 32-byte key. Not returned
             in the response
           nullable: true
         push_events:
@@ -95686,7 +95750,7 @@ components:
           nullable: true
       required:
       - url
-    RequestBody_12cf9f027a41:
+    RequestBody_894e3528a83b:
       type: object
       properties:
         url:
@@ -95704,6 +95768,12 @@ components:
         token:
           type: string
           description: Secret token to validate received payloads; this isn't returned
+            in the response
+          nullable: true
+        signing_token:
+          type: string
+          description: HMAC signing token used to compute the webhook-signature header.
+            Must be in whsec_<base64> format encoding a 32-byte key. Not returned
             in the response
           nullable: true
         push_events:
@@ -100350,7 +100420,7 @@ components:
       - access_key_id
       - secret_access_key
       - path
-    RequestBody_7635263b8976:
+    RequestBody_924ec35a96aa:
       type: object
       properties:
         url:
@@ -100443,6 +100513,12 @@ components:
           description: Secret token to validate received payloads; this will not be
             returned in the response
           nullable: true
+        signing_token:
+          type: string
+          description: HMAC signing token used to compute the webhook-signature header.
+            Must be in whsec_<base64> format encoding a 32-byte key. Not returned
+            in the response
+          nullable: true
         push_events_branch_filter:
           type: string
           description: Trigger hook on specified branch only
@@ -100506,7 +100582,7 @@ components:
           nullable: true
       required:
       - url
-    RequestBody_d1660b73a20c:
+    RequestBody_1423636206a1:
       type: object
       properties:
         url:
@@ -100597,6 +100673,12 @@ components:
           type: string
           description: Secret token to validate received payloads; this will not be
             returned in the response
+          nullable: true
+        signing_token:
+          type: string
+          description: HMAC signing token used to compute the webhook-signature header.
+            Must be in whsec_<base64> format encoding a 32-byte key. Not returned
+            in the response
           nullable: true
         push_events_branch_filter:
           type: string
@@ -105747,7 +105829,7 @@ components:
           nullable: true
       required:
       - file
-    RequestBody_85aa94c04f69:
+    RequestBody_364c1989dcd7:
       type: object
       properties:
         value:
@@ -105792,6 +105874,12 @@ components:
         runner:
           type: string
           description: A runner ID, or comma-separated list of runner IDs
+          nullable: true
+        endpoint:
+          type: string
+          description: A caller_id identifying a code path, for example `GET /api/v4/projects/:id`
+            or `ProjectsController#show`. Use comma to separate multiple endpoint
+            paths
           nullable: true
         force:
           type: boolean

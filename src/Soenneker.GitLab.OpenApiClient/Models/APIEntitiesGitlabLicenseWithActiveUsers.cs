@@ -40,13 +40,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The historical_max property</summary>
         public int? HistoricalMax { get; set; }
         /// <summary>The id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get; set; }
-#nullable restore
-#else
-        public string Id { get; set; }
-#endif
+        public int? Id { get; set; }
         /// <summary>The licensee property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -102,7 +96,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "expired", n => { Expired = n.GetBoolValue(); } },
                 { "expires_at", n => { ExpiresAt = n.GetDateValue(); } },
                 { "historical_max", n => { HistoricalMax = n.GetIntValue(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
+                { "id", n => { Id = n.GetIntValue(); } },
                 { "licensee", n => { Licensee = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGitlabLicenseWithActiveUsers_licensee>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGitlabLicenseWithActiveUsers_licensee.CreateFromDiscriminatorValue); } },
                 { "maximum_user_count", n => { MaximumUserCount = n.GetIntValue(); } },
                 { "overage", n => { Overage = n.GetIntValue(); } },
@@ -124,7 +118,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("expired", Expired);
             writer.WriteDateValue("expires_at", ExpiresAt);
             writer.WriteIntValue("historical_max", HistoricalMax);
-            writer.WriteStringValue("id", Id);
+            writer.WriteIntValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGitlabLicenseWithActiveUsers_licensee>("licensee", Licensee);
             writer.WriteIntValue("maximum_user_count", MaximumUserCount);
             writer.WriteIntValue("overage", Overage);

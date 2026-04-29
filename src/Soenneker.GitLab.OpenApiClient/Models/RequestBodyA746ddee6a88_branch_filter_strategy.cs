@@ -5,7 +5,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>Filter push events by branch. Possible values are `wildcard` (default), `regex`, and `all_branches`</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBodyD1660b73a20c_branch_filter_strategy
+    public enum RequestBodyA746ddee6a88_branch_filter_strategy
     {
         [EnumMember(Value = "wildcard")]
         #pragma warning disable CS1591

@@ -33,13 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ExceptionMessage { get; set; }
 #endif
         /// <summary>The id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get; set; }
-#nullable restore
-#else
-        public string Id { get; set; }
-#endif
+        public int? Id { get; set; }
         /// <summary>The line_number property</summary>
         public int? LineNumber { get; set; }
         /// <summary>The relation_name property</summary>
@@ -86,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "exception_class", n => { ExceptionClass = n.GetStringValue(); } },
                 { "exception_message", n => { ExceptionMessage = n.GetStringValue(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
+                { "id", n => { Id = n.GetIntValue(); } },
                 { "line_number", n => { LineNumber = n.GetIntValue(); } },
                 { "relation_name", n => { RelationName = n.GetStringValue(); } },
                 { "source", n => { Source = n.GetStringValue(); } },
@@ -102,7 +96,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
             writer.WriteStringValue("exception_class", ExceptionClass);
             writer.WriteStringValue("exception_message", ExceptionMessage);
-            writer.WriteStringValue("id", Id);
+            writer.WriteIntValue("id", Id);
             writer.WriteIntValue("line_number", LineNumber);
             writer.WriteStringValue("relation_name", RelationName);
             writer.WriteStringValue("source", Source);

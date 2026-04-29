@@ -17,21 +17,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The created_at property</summary>
         public DateTimeOffset? CreatedAt { get; set; }
         /// <summary>The id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get; set; }
-#nullable restore
-#else
-        public string Id { get; set; }
-#endif
+        public int? Id { get; set; }
         /// <summary>The issue_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? IssueId { get; set; }
-#nullable restore
-#else
-        public string IssueId { get; set; }
-#endif
+        public int? IssueId { get; set; }
         /// <summary>The user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -41,13 +29,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic User { get; set; }
 #endif
         /// <summary>The weight property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Weight { get; set; }
-#nullable restore
-#else
-        public string Weight { get; set; }
-#endif
+        public int? Weight { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesResourceWeightEvent"/> and sets the default values.
         /// </summary>
@@ -74,10 +56,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
-                { "issue_id", n => { IssueId = n.GetStringValue(); } },
+                { "id", n => { Id = n.GetIntValue(); } },
+                { "issue_id", n => { IssueId = n.GetIntValue(); } },
                 { "user", n => { User = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic.CreateFromDiscriminatorValue); } },
-                { "weight", n => { Weight = n.GetStringValue(); } },
+                { "weight", n => { Weight = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -88,10 +70,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
-            writer.WriteStringValue("id", Id);
-            writer.WriteStringValue("issue_id", IssueId);
+            writer.WriteIntValue("id", Id);
+            writer.WriteIntValue("issue_id", IssueId);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>("user", User);
-            writer.WriteStringValue("weight", Weight);
+            writer.WriteIntValue("weight", Weight);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

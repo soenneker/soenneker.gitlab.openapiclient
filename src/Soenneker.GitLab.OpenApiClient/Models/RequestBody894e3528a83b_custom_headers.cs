@@ -9,7 +9,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class RequestBodyF31eb0c6dc1a_custom_headers : IAdditionalDataHolder, IParsable
+    public partial class RequestBody894e3528a83b_custom_headers : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -31,21 +31,21 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Value { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyF31eb0c6dc1a_custom_headers"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody894e3528a83b_custom_headers"/> and sets the default values.
         /// </summary>
-        public RequestBodyF31eb0c6dc1a_custom_headers()
+        public RequestBody894e3528a83b_custom_headers()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyF31eb0c6dc1a_custom_headers"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody894e3528a83b_custom_headers"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyF31eb0c6dc1a_custom_headers CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody894e3528a83b_custom_headers CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyF31eb0c6dc1a_custom_headers();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody894e3528a83b_custom_headers();
         }
         /// <summary>
         /// The deserialization information for the current model

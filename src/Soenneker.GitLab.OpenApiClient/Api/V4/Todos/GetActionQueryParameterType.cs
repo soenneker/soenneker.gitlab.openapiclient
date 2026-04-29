@@ -80,5 +80,9 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Todos
         #pragma warning disable CS1591
         Duo_core_access_granted,
         #pragma warning restore CS1591
+        [EnumMember(Value = "duo_workflow_input_required")]
+        #pragma warning disable CS1591
+        Duo_workflow_input_required,
+        #pragma warning restore CS1591
     }
 }

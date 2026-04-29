@@ -71,21 +71,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The feature_flag_events property</summary>
         public bool? FeatureFlagEvents { get; set; }
         /// <summary>The group_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? GroupId { get; set; }
-#nullable restore
-#else
-        public string GroupId { get; set; }
-#endif
+        public int? GroupId { get; set; }
         /// <summary>The id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get; set; }
-#nullable restore
-#else
-        public string Id { get; set; }
-#endif
+        public int? Id { get; set; }
         /// <summary>The issues_events property</summary>
         public bool? IssuesEvents { get; set; }
         /// <summary>The job_events property</summary>
@@ -128,10 +116,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public bool? RepositoryUpdateEvents { get; set; }
         /// <summary>The resource_access_token_events property</summary>
         public bool? ResourceAccessTokenEvents { get; set; }
+        /// <summary>Whether an HMAC signing token is configured</summary>
+        public bool? SigningTokenPresent { get; set; }
         /// <summary>The subgroup_events property</summary>
         public bool? SubgroupEvents { get; set; }
         /// <summary>The tag_push_events property</summary>
         public bool? TagPushEvents { get; set; }
+        /// <summary>Whether a secret token is configured</summary>
+        public bool? TokenPresent { get; set; }
         /// <summary>The url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -190,8 +182,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "emoji_events", n => { EmojiEvents = n.GetBoolValue(); } },
                 { "enable_ssl_verification", n => { EnableSslVerification = n.GetBoolValue(); } },
                 { "feature_flag_events", n => { FeatureFlagEvents = n.GetBoolValue(); } },
-                { "group_id", n => { GroupId = n.GetStringValue(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
+                { "group_id", n => { GroupId = n.GetIntValue(); } },
+                { "id", n => { Id = n.GetIntValue(); } },
                 { "issues_events", n => { IssuesEvents = n.GetBoolValue(); } },
                 { "job_events", n => { JobEvents = n.GetBoolValue(); } },
                 { "member_events", n => { MemberEvents = n.GetBoolValue(); } },
@@ -207,8 +199,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "releases_events", n => { ReleasesEvents = n.GetBoolValue(); } },
                 { "repository_update_events", n => { RepositoryUpdateEvents = n.GetBoolValue(); } },
                 { "resource_access_token_events", n => { ResourceAccessTokenEvents = n.GetBoolValue(); } },
+                { "signing_token_present", n => { SigningTokenPresent = n.GetBoolValue(); } },
                 { "subgroup_events", n => { SubgroupEvents = n.GetBoolValue(); } },
                 { "tag_push_events", n => { TagPushEvents = n.GetBoolValue(); } },
+                { "token_present", n => { TokenPresent = n.GetBoolValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
                 { "url_variables", n => { UrlVariables = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroupHook_url_variables>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroupHook_url_variables.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "vulnerability_events", n => { VulnerabilityEvents = n.GetBoolValue(); } },
@@ -235,8 +229,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("emoji_events", EmojiEvents);
             writer.WriteBoolValue("enable_ssl_verification", EnableSslVerification);
             writer.WriteBoolValue("feature_flag_events", FeatureFlagEvents);
-            writer.WriteStringValue("group_id", GroupId);
-            writer.WriteStringValue("id", Id);
+            writer.WriteIntValue("group_id", GroupId);
+            writer.WriteIntValue("id", Id);
             writer.WriteBoolValue("issues_events", IssuesEvents);
             writer.WriteBoolValue("job_events", JobEvents);
             writer.WriteBoolValue("member_events", MemberEvents);
@@ -252,8 +246,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("releases_events", ReleasesEvents);
             writer.WriteBoolValue("repository_update_events", RepositoryUpdateEvents);
             writer.WriteBoolValue("resource_access_token_events", ResourceAccessTokenEvents);
+            writer.WriteBoolValue("signing_token_present", SigningTokenPresent);
             writer.WriteBoolValue("subgroup_events", SubgroupEvents);
             writer.WriteBoolValue("tag_push_events", TagPushEvents);
+            writer.WriteBoolValue("token_present", TokenPresent);
             writer.WriteStringValue("url", Url);
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroupHook_url_variables>("url_variables", UrlVariables);
             writer.WriteBoolValue("vulnerability_events", VulnerabilityEvents);

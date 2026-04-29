@@ -64,5 +64,9 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Todos
         #pragma warning disable CS1591
         ComplianceManagementProjectsComplianceViolation,
         #pragma warning restore CS1591
+        [EnumMember(Value = "Ai::DuoWorkflows::Workflow")]
+        #pragma warning disable CS1591
+        AiDuoWorkflowsWorkflow,
+        #pragma warning restore CS1591
     }
 }

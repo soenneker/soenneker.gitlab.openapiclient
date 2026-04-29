@@ -57,7 +57,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The push_events property</summary>
         public bool? PushEvents { get; set; }
         /// <summary>The slug property</summary>
-        public int? Slug { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Slug { get; set; }
+#nullable restore
+#else
+        public string Slug { get; set; }
+#endif
         /// <summary>The tag_push_events property</summary>
         public bool? TagPushEvents { get; set; }
         /// <summary>The title property</summary>
@@ -117,7 +123,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "pipeline_events", n => { PipelineEvents = n.GetBoolValue(); } },
                 { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesIntegration_properties>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesIntegration_properties.CreateFromDiscriminatorValue); } },
                 { "push_events", n => { PushEvents = n.GetBoolValue(); } },
-                { "slug", n => { Slug = n.GetIntValue(); } },
+                { "slug", n => { Slug = n.GetStringValue(); } },
                 { "tag_push_events", n => { TagPushEvents = n.GetBoolValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
                 { "updated_at", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
@@ -150,7 +156,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("pipeline_events", PipelineEvents);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesIntegration_properties>("properties", Properties);
             writer.WriteBoolValue("push_events", PushEvents);
-            writer.WriteIntValue("slug", Slug);
+            writer.WriteStringValue("slug", Slug);
             writer.WriteBoolValue("tag_push_events", TagPushEvents);
             writer.WriteStringValue("title", Title);
             writer.WriteDateTimeOffsetValue("updated_at", UpdatedAt);
