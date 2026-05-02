@@ -50,7 +50,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Uploads.Item.Item
             await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Download a single project upload by secret and filename
+        /// Download a single group upload by secret and filename
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Uploads.Item.Item.WithFilenameGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -87,7 +87,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Uploads.Item.Item
             return requestInfo;
         }
         /// <summary>
-        /// Download a single project upload by secret and filename
+        /// Download a single group upload by secret and filename
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

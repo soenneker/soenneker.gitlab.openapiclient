@@ -2326,110 +2326,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string PipelineArtifactsVerifiedInPercentage { get; set; }
 #endif
-        /// <summary>The project_import_export_relation_export_upload_uploads_checksum_failed_count property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ProjectImportExportRelationExportUploadUploadsChecksumFailedCount { get; set; }
-#nullable restore
-#else
-        public string ProjectImportExportRelationExportUploadUploadsChecksumFailedCount { get; set; }
-#endif
-        /// <summary>The project_import_export_relation_export_upload_uploads_checksummed_count property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ProjectImportExportRelationExportUploadUploadsChecksummedCount { get; set; }
-#nullable restore
-#else
-        public string ProjectImportExportRelationExportUploadUploadsChecksummedCount { get; set; }
-#endif
-        /// <summary>The project_import_export_relation_export_upload_uploads_checksum_total_count property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ProjectImportExportRelationExportUploadUploadsChecksumTotalCount { get; set; }
-#nullable restore
-#else
-        public string ProjectImportExportRelationExportUploadUploadsChecksumTotalCount { get; set; }
-#endif
-        /// <summary>The project_import_export_relation_export_upload_uploads_count property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ProjectImportExportRelationExportUploadUploadsCount { get; set; }
-#nullable restore
-#else
-        public string ProjectImportExportRelationExportUploadUploadsCount { get; set; }
-#endif
-        /// <summary>The project_import_export_relation_export_upload_uploads_failed_count property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ProjectImportExportRelationExportUploadUploadsFailedCount { get; set; }
-#nullable restore
-#else
-        public string ProjectImportExportRelationExportUploadUploadsFailedCount { get; set; }
-#endif
-        /// <summary>The project_import_export_relation_export_upload_uploads_oldest_unsynced_time property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ProjectImportExportRelationExportUploadUploadsOldestUnsyncedTime { get; set; }
-#nullable restore
-#else
-        public string ProjectImportExportRelationExportUploadUploadsOldestUnsyncedTime { get; set; }
-#endif
-        /// <summary>The project_import_export_relation_export_upload_uploads_registry_count property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ProjectImportExportRelationExportUploadUploadsRegistryCount { get; set; }
-#nullable restore
-#else
-        public string ProjectImportExportRelationExportUploadUploadsRegistryCount { get; set; }
-#endif
-        /// <summary>The project_import_export_relation_export_upload_uploads_synced_count property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ProjectImportExportRelationExportUploadUploadsSyncedCount { get; set; }
-#nullable restore
-#else
-        public string ProjectImportExportRelationExportUploadUploadsSyncedCount { get; set; }
-#endif
-        /// <summary>The project_import_export_relation_export_upload_uploads_synced_in_percentage property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ProjectImportExportRelationExportUploadUploadsSyncedInPercentage { get; set; }
-#nullable restore
-#else
-        public string ProjectImportExportRelationExportUploadUploadsSyncedInPercentage { get; set; }
-#endif
-        /// <summary>The project_import_export_relation_export_upload_uploads_verification_failed_count property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ProjectImportExportRelationExportUploadUploadsVerificationFailedCount { get; set; }
-#nullable restore
-#else
-        public string ProjectImportExportRelationExportUploadUploadsVerificationFailedCount { get; set; }
-#endif
-        /// <summary>The project_import_export_relation_export_upload_uploads_verification_total_count property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ProjectImportExportRelationExportUploadUploadsVerificationTotalCount { get; set; }
-#nullable restore
-#else
-        public string ProjectImportExportRelationExportUploadUploadsVerificationTotalCount { get; set; }
-#endif
-        /// <summary>The project_import_export_relation_export_upload_uploads_verified_count property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ProjectImportExportRelationExportUploadUploadsVerifiedCount { get; set; }
-#nullable restore
-#else
-        public string ProjectImportExportRelationExportUploadUploadsVerifiedCount { get; set; }
-#endif
-        /// <summary>The project_import_export_relation_export_upload_uploads_verified_in_percentage property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ProjectImportExportRelationExportUploadUploadsVerifiedInPercentage { get; set; }
-#nullable restore
-#else
-        public string ProjectImportExportRelationExportUploadUploadsVerifiedInPercentage { get; set; }
-#endif
         /// <summary>The project_repositories_checksum_failed_count property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -3712,19 +3608,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "pipeline_artifacts_verification_total_count", n => { PipelineArtifactsVerificationTotalCount = n.GetStringValue(); } },
                 { "pipeline_artifacts_verified_count", n => { PipelineArtifactsVerifiedCount = n.GetStringValue(); } },
                 { "pipeline_artifacts_verified_in_percentage", n => { PipelineArtifactsVerifiedInPercentage = n.GetStringValue(); } },
-                { "project_import_export_relation_export_upload_uploads_checksum_failed_count", n => { ProjectImportExportRelationExportUploadUploadsChecksumFailedCount = n.GetStringValue(); } },
-                { "project_import_export_relation_export_upload_uploads_checksum_total_count", n => { ProjectImportExportRelationExportUploadUploadsChecksumTotalCount = n.GetStringValue(); } },
-                { "project_import_export_relation_export_upload_uploads_checksummed_count", n => { ProjectImportExportRelationExportUploadUploadsChecksummedCount = n.GetStringValue(); } },
-                { "project_import_export_relation_export_upload_uploads_count", n => { ProjectImportExportRelationExportUploadUploadsCount = n.GetStringValue(); } },
-                { "project_import_export_relation_export_upload_uploads_failed_count", n => { ProjectImportExportRelationExportUploadUploadsFailedCount = n.GetStringValue(); } },
-                { "project_import_export_relation_export_upload_uploads_oldest_unsynced_time", n => { ProjectImportExportRelationExportUploadUploadsOldestUnsyncedTime = n.GetStringValue(); } },
-                { "project_import_export_relation_export_upload_uploads_registry_count", n => { ProjectImportExportRelationExportUploadUploadsRegistryCount = n.GetStringValue(); } },
-                { "project_import_export_relation_export_upload_uploads_synced_count", n => { ProjectImportExportRelationExportUploadUploadsSyncedCount = n.GetStringValue(); } },
-                { "project_import_export_relation_export_upload_uploads_synced_in_percentage", n => { ProjectImportExportRelationExportUploadUploadsSyncedInPercentage = n.GetStringValue(); } },
-                { "project_import_export_relation_export_upload_uploads_verification_failed_count", n => { ProjectImportExportRelationExportUploadUploadsVerificationFailedCount = n.GetStringValue(); } },
-                { "project_import_export_relation_export_upload_uploads_verification_total_count", n => { ProjectImportExportRelationExportUploadUploadsVerificationTotalCount = n.GetStringValue(); } },
-                { "project_import_export_relation_export_upload_uploads_verified_count", n => { ProjectImportExportRelationExportUploadUploadsVerifiedCount = n.GetStringValue(); } },
-                { "project_import_export_relation_export_upload_uploads_verified_in_percentage", n => { ProjectImportExportRelationExportUploadUploadsVerifiedInPercentage = n.GetStringValue(); } },
                 { "project_repositories_checksum_failed_count", n => { ProjectRepositoriesChecksumFailedCount = n.GetStringValue(); } },
                 { "project_repositories_checksum_total_count", n => { ProjectRepositoriesChecksumTotalCount = n.GetStringValue(); } },
                 { "project_repositories_checksummed_count", n => { ProjectRepositoriesChecksummedCount = n.GetStringValue(); } },
@@ -4144,19 +4027,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("pipeline_artifacts_verification_total_count", PipelineArtifactsVerificationTotalCount);
             writer.WriteStringValue("pipeline_artifacts_verified_count", PipelineArtifactsVerifiedCount);
             writer.WriteStringValue("pipeline_artifacts_verified_in_percentage", PipelineArtifactsVerifiedInPercentage);
-            writer.WriteStringValue("project_import_export_relation_export_upload_uploads_checksum_failed_count", ProjectImportExportRelationExportUploadUploadsChecksumFailedCount);
-            writer.WriteStringValue("project_import_export_relation_export_upload_uploads_checksummed_count", ProjectImportExportRelationExportUploadUploadsChecksummedCount);
-            writer.WriteStringValue("project_import_export_relation_export_upload_uploads_checksum_total_count", ProjectImportExportRelationExportUploadUploadsChecksumTotalCount);
-            writer.WriteStringValue("project_import_export_relation_export_upload_uploads_count", ProjectImportExportRelationExportUploadUploadsCount);
-            writer.WriteStringValue("project_import_export_relation_export_upload_uploads_failed_count", ProjectImportExportRelationExportUploadUploadsFailedCount);
-            writer.WriteStringValue("project_import_export_relation_export_upload_uploads_oldest_unsynced_time", ProjectImportExportRelationExportUploadUploadsOldestUnsyncedTime);
-            writer.WriteStringValue("project_import_export_relation_export_upload_uploads_registry_count", ProjectImportExportRelationExportUploadUploadsRegistryCount);
-            writer.WriteStringValue("project_import_export_relation_export_upload_uploads_synced_count", ProjectImportExportRelationExportUploadUploadsSyncedCount);
-            writer.WriteStringValue("project_import_export_relation_export_upload_uploads_synced_in_percentage", ProjectImportExportRelationExportUploadUploadsSyncedInPercentage);
-            writer.WriteStringValue("project_import_export_relation_export_upload_uploads_verification_failed_count", ProjectImportExportRelationExportUploadUploadsVerificationFailedCount);
-            writer.WriteStringValue("project_import_export_relation_export_upload_uploads_verification_total_count", ProjectImportExportRelationExportUploadUploadsVerificationTotalCount);
-            writer.WriteStringValue("project_import_export_relation_export_upload_uploads_verified_count", ProjectImportExportRelationExportUploadUploadsVerifiedCount);
-            writer.WriteStringValue("project_import_export_relation_export_upload_uploads_verified_in_percentage", ProjectImportExportRelationExportUploadUploadsVerifiedInPercentage);
             writer.WriteStringValue("project_repositories_checksum_failed_count", ProjectRepositoriesChecksumFailedCount);
             writer.WriteStringValue("project_repositories_checksummed_count", ProjectRepositoriesChecksummedCount);
             writer.WriteStringValue("project_repositories_checksum_total_count", ProjectRepositoriesChecksumTotalCount);
