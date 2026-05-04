@@ -1106,6 +1106,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>The duo_custom_flows_enabled property</summary>
         public bool? DuoCustomFlowsEnabled { get; set; }
+        /// <summary>The duo_external_agents_availability property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DuoExternalAgentsAvailability { get; set; }
+#nullable restore
+#else
+        public string DuoExternalAgentsAvailability { get; set; }
+#endif
+        /// <summary>The duo_external_agents_enabled property</summary>
+        public bool? DuoExternalAgentsEnabled { get; set; }
         /// <summary>The duo_features_enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -2446,6 +2456,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public bool? LockDuoCustomAgentsEnabled { get; set; }
         /// <summary>The lock_duo_custom_flows_enabled property</summary>
         public bool? LockDuoCustomFlowsEnabled { get; set; }
+        /// <summary>The lock_duo_external_agents_enabled property</summary>
+        public bool? LockDuoExternalAgentsEnabled { get; set; }
         /// <summary>The lock_duo_features_enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -5049,6 +5061,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "duo_custom_agents_enabled", n => { DuoCustomAgentsEnabled = n.GetBoolValue(); } },
                 { "duo_custom_flows_availability", n => { DuoCustomFlowsAvailability = n.GetStringValue(); } },
                 { "duo_custom_flows_enabled", n => { DuoCustomFlowsEnabled = n.GetBoolValue(); } },
+                { "duo_external_agents_availability", n => { DuoExternalAgentsAvailability = n.GetStringValue(); } },
+                { "duo_external_agents_enabled", n => { DuoExternalAgentsEnabled = n.GetBoolValue(); } },
                 { "duo_features_enabled", n => { DuoFeaturesEnabled = n.GetStringValue(); } },
                 { "duo_foundational_flows_availability", n => { DuoFoundationalFlowsAvailability = n.GetStringValue(); } },
                 { "duo_foundational_flows_enabled", n => { DuoFoundationalFlowsEnabled = n.GetStringValue(); } },
@@ -5218,6 +5232,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "local_markdown_version", n => { LocalMarkdownVersion = n.GetStringValue(); } },
                 { "lock_duo_custom_agents_enabled", n => { LockDuoCustomAgentsEnabled = n.GetBoolValue(); } },
                 { "lock_duo_custom_flows_enabled", n => { LockDuoCustomFlowsEnabled = n.GetBoolValue(); } },
+                { "lock_duo_external_agents_enabled", n => { LockDuoExternalAgentsEnabled = n.GetBoolValue(); } },
                 { "lock_duo_features_enabled", n => { LockDuoFeaturesEnabled = n.GetStringValue(); } },
                 { "lock_memberships_to_ldap", n => { LockMembershipsToLdap = n.GetStringValue(); } },
                 { "lock_memberships_to_saml", n => { LockMembershipsToSaml = n.GetStringValue(); } },
@@ -5670,6 +5685,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("duo_custom_agents_enabled", DuoCustomAgentsEnabled);
             writer.WriteStringValue("duo_custom_flows_availability", DuoCustomFlowsAvailability);
             writer.WriteBoolValue("duo_custom_flows_enabled", DuoCustomFlowsEnabled);
+            writer.WriteStringValue("duo_external_agents_availability", DuoExternalAgentsAvailability);
+            writer.WriteBoolValue("duo_external_agents_enabled", DuoExternalAgentsEnabled);
             writer.WriteStringValue("duo_features_enabled", DuoFeaturesEnabled);
             writer.WriteStringValue("duo_foundational_flows_availability", DuoFoundationalFlowsAvailability);
             writer.WriteStringValue("duo_foundational_flows_enabled", DuoFoundationalFlowsEnabled);
@@ -5839,6 +5856,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("local_markdown_version", LocalMarkdownVersion);
             writer.WriteBoolValue("lock_duo_custom_agents_enabled", LockDuoCustomAgentsEnabled);
             writer.WriteBoolValue("lock_duo_custom_flows_enabled", LockDuoCustomFlowsEnabled);
+            writer.WriteBoolValue("lock_duo_external_agents_enabled", LockDuoExternalAgentsEnabled);
             writer.WriteStringValue("lock_duo_features_enabled", LockDuoFeaturesEnabled);
             writer.WriteStringValue("lock_memberships_to_ldap", LockMembershipsToLdap);
             writer.WriteStringValue("lock_memberships_to_saml", LockMembershipsToSaml);

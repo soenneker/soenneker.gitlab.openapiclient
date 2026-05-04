@@ -22661,7 +22661,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyD06b27b59ee0"
+                "$ref": "#/components/schemas/RequestBody02a2c6e64d09"
               }
             }
           }
@@ -88362,7 +88362,7 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody9281812d7f1d"
+                "$ref": "#/components/schemas/RequestBody59635af79df9"
               }
             }
           }
@@ -88403,7 +88403,7 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyCa7f1922beea"
+                "$ref": "#/components/schemas/RequestBodyF009da6ade92"
               }
             }
           }
@@ -102319,6 +102319,12 @@
           "duo_custom_flows_availability": {
             "type": "string"
           },
+          "duo_external_agents_enabled": {
+            "type": "boolean"
+          },
+          "duo_external_agents_availability": {
+            "type": "string"
+          },
           "tool_approval_for_session_enabled": {
             "type": "string"
           },
@@ -102644,6 +102650,9 @@
             "type": "boolean"
           },
           "lock_duo_custom_flows_enabled": {
+            "type": "boolean"
+          },
+          "lock_duo_external_agents_enabled": {
             "type": "boolean"
           },
           "duo_workflows_default_image_registry": {
@@ -126203,7 +126212,7 @@
           }
         }
       },
-      "RequestBodyD06b27b59ee0": {
+      "RequestBody02a2c6e64d09": {
         "type": "object",
         "properties": {
           "admin_mode": {
@@ -127590,6 +127599,16 @@
             "description": "Indicates if the custom flows enabled setting is enforced for all groups",
             "nullable": true
           },
+          "duo_external_agents_enabled": {
+            "type": "boolean",
+            "description": "Indicates whether external agents are allowed for this instance",
+            "nullable": true
+          },
+          "lock_duo_external_agents_enabled": {
+            "type": "boolean",
+            "description": "Indicates if the external agents enabled setting is enforced for all groups",
+            "nullable": true
+          },
           "duo_remote_flows_enabled": {
             "type": "boolean",
             "description": "Indicates whether GitLab Duo remote flows are enabled for the instance",
@@ -128854,6 +128873,10 @@
             "nullable": true
           },
           "duo_custom_flows_availability": {
+            "type": "string",
+            "nullable": true
+          },
+          "duo_external_agents_availability": {
             "type": "string",
             "nullable": true
           },
@@ -145783,7 +145806,7 @@
           }
         }
       },
-      "RequestBody9281812d7f1d": {
+      "RequestBody59635af79df9": {
         "required": [
           "name",
           "path"
@@ -146072,6 +146095,11 @@
             "description": "Enable GitLab Duo custom flows for this group",
             "nullable": true
           },
+          "duo_external_agents_availability": {
+            "type": "boolean",
+            "description": "Enable GitLab Duo external agents for this group",
+            "nullable": true
+          },
           "tool_approval_for_session_availability": {
             "enum": [
               "default_on",
@@ -146209,7 +146237,7 @@
           }
         }
       },
-      "RequestBodyCa7f1922beea": {
+      "RequestBodyF009da6ade92": {
         "type": "object",
         "properties": {
           "name": {
@@ -146493,6 +146521,11 @@
           "duo_custom_flows_availability": {
             "type": "boolean",
             "description": "Enable GitLab Duo custom flows for this group",
+            "nullable": true
+          },
+          "duo_external_agents_availability": {
+            "type": "boolean",
+            "description": "Enable GitLab Duo external agents for this group",
             "nullable": true
           },
           "tool_approval_for_session_availability": {

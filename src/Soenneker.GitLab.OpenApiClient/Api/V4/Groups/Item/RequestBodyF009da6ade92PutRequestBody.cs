@@ -5,7 +5,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item
 {
     /// <summary>Enable/disable shared runners for the group and its subgroups and projects</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBodyCa7f1922beeaPutRequestBody
+    public enum RequestBodyF009da6ade92PutRequestBody
     {
         [EnumMember(Value = "disabled_and_unoverridable")]
         #pragma warning disable CS1591

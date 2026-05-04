@@ -11,26 +11,26 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     /// Definition for resource usage limits enforced in Sidekiq workers
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RequestBodyD06b27b59ee0_resource_usage_limits : IAdditionalDataHolder, IParsable
+    public partial class RequestBody02a2c6e64d09_resource_usage_limits : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD06b27b59ee0_resource_usage_limits"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody02a2c6e64d09_resource_usage_limits"/> and sets the default values.
         /// </summary>
-        public RequestBodyD06b27b59ee0_resource_usage_limits()
+        public RequestBody02a2c6e64d09_resource_usage_limits()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD06b27b59ee0_resource_usage_limits"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody02a2c6e64d09_resource_usage_limits"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD06b27b59ee0_resource_usage_limits CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody02a2c6e64d09_resource_usage_limits CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD06b27b59ee0_resource_usage_limits();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody02a2c6e64d09_resource_usage_limits();
         }
         /// <summary>
         /// The deserialization information for the current model
