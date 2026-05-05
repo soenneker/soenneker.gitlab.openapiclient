@@ -85,10 +85,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Links { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesEpic_links? Links { get; set; }
 #nullable restore
 #else
-        public string Links { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesEpic_links Links { get; set; }
 #endif
         /// <summary>The parent_id property</summary>
         public int? ParentId { get; set; }
@@ -105,10 +105,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The references property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? References { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesEpic_references>? References { get; set; }
 #nullable restore
 #else
-        public List<string> References { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesEpic_references> References { get; set; }
 #endif
         /// <summary>The start_date property</summary>
         public DateTimeOffset? StartDate { get; set; }
@@ -212,11 +212,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "imported", n => { Imported = n.GetBoolValue(); } },
                 { "imported_from", n => { ImportedFrom = n.GetStringValue(); } },
                 { "labels", n => { Labels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "_links", n => { Links = n.GetStringValue(); } },
+                { "_links", n => { Links = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesEpic_links>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesEpic_links.CreateFromDiscriminatorValue); } },
                 { "parent_id", n => { ParentId = n.GetIntValue(); } },
                 { "parent_iid", n => { ParentIid = n.GetIntValue(); } },
                 { "reference", n => { Reference = n.GetStringValue(); } },
-                { "references", n => { References = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "references", n => { References = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesEpic_references>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesEpic_references.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "start_date", n => { StartDate = n.GetDateTimeOffsetValue(); } },
                 { "start_date_fixed", n => { StartDateFixed = n.GetDateTimeOffsetValue(); } },
                 { "start_date_from_inherited_source", n => { StartDateFromInheritedSource = n.GetDateTimeOffsetValue(); } },
@@ -259,11 +259,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("imported", Imported);
             writer.WriteStringValue("imported_from", ImportedFrom);
             writer.WriteCollectionOfPrimitiveValues<string>("labels", Labels);
-            writer.WriteStringValue("_links", Links);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesEpic_links>("_links", Links);
             writer.WriteIntValue("parent_id", ParentId);
             writer.WriteIntValue("parent_iid", ParentIid);
             writer.WriteStringValue("reference", Reference);
-            writer.WriteCollectionOfPrimitiveValues<string>("references", References);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesEpic_references>("references", References);
             writer.WriteDateTimeOffsetValue("start_date", StartDate);
             writer.WriteDateTimeOffsetValue("start_date_fixed", StartDateFixed);
             writer.WriteDateTimeOffsetValue("start_date_from_inherited_source", StartDateFromInheritedSource);

@@ -15,93 +15,27 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The commit_count property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? CommitCount { get; set; }
-#nullable restore
-#else
-        public string CommitCount { get; set; }
-#endif
+        public int? CommitCount { get; set; }
         /// <summary>The container_registry_size property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ContainerRegistrySize { get; set; }
-#nullable restore
-#else
-        public string ContainerRegistrySize { get; set; }
-#endif
+        public int? ContainerRegistrySize { get; set; }
         /// <summary>The job_artifacts_size property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? JobArtifactsSize { get; set; }
-#nullable restore
-#else
-        public string JobArtifactsSize { get; set; }
-#endif
+        public int? JobArtifactsSize { get; set; }
         /// <summary>The lfs_objects_size property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? LfsObjectsSize { get; set; }
-#nullable restore
-#else
-        public string LfsObjectsSize { get; set; }
-#endif
+        public int? LfsObjectsSize { get; set; }
         /// <summary>The packages_size property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? PackagesSize { get; set; }
-#nullable restore
-#else
-        public string PackagesSize { get; set; }
-#endif
+        public int? PackagesSize { get; set; }
         /// <summary>The pipeline_artifacts_size property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? PipelineArtifactsSize { get; set; }
-#nullable restore
-#else
-        public string PipelineArtifactsSize { get; set; }
-#endif
+        public int? PipelineArtifactsSize { get; set; }
         /// <summary>The repository_size property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? RepositorySize { get; set; }
-#nullable restore
-#else
-        public string RepositorySize { get; set; }
-#endif
+        public int? RepositorySize { get; set; }
         /// <summary>The snippets_size property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? SnippetsSize { get; set; }
-#nullable restore
-#else
-        public string SnippetsSize { get; set; }
-#endif
+        public int? SnippetsSize { get; set; }
         /// <summary>The storage_size property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? StorageSize { get; set; }
-#nullable restore
-#else
-        public string StorageSize { get; set; }
-#endif
+        public int? StorageSize { get; set; }
         /// <summary>The uploads_size property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? UploadsSize { get; set; }
-#nullable restore
-#else
-        public string UploadsSize { get; set; }
-#endif
+        public int? UploadsSize { get; set; }
         /// <summary>The wiki_size property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? WikiSize { get; set; }
-#nullable restore
-#else
-        public string WikiSize { get; set; }
-#endif
+        public int? WikiSize { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProjectStatistics"/> and sets the default values.
         /// </summary>
@@ -127,17 +61,17 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "commit_count", n => { CommitCount = n.GetStringValue(); } },
-                { "container_registry_size", n => { ContainerRegistrySize = n.GetStringValue(); } },
-                { "job_artifacts_size", n => { JobArtifactsSize = n.GetStringValue(); } },
-                { "lfs_objects_size", n => { LfsObjectsSize = n.GetStringValue(); } },
-                { "packages_size", n => { PackagesSize = n.GetStringValue(); } },
-                { "pipeline_artifacts_size", n => { PipelineArtifactsSize = n.GetStringValue(); } },
-                { "repository_size", n => { RepositorySize = n.GetStringValue(); } },
-                { "snippets_size", n => { SnippetsSize = n.GetStringValue(); } },
-                { "storage_size", n => { StorageSize = n.GetStringValue(); } },
-                { "uploads_size", n => { UploadsSize = n.GetStringValue(); } },
-                { "wiki_size", n => { WikiSize = n.GetStringValue(); } },
+                { "commit_count", n => { CommitCount = n.GetIntValue(); } },
+                { "container_registry_size", n => { ContainerRegistrySize = n.GetIntValue(); } },
+                { "job_artifacts_size", n => { JobArtifactsSize = n.GetIntValue(); } },
+                { "lfs_objects_size", n => { LfsObjectsSize = n.GetIntValue(); } },
+                { "packages_size", n => { PackagesSize = n.GetIntValue(); } },
+                { "pipeline_artifacts_size", n => { PipelineArtifactsSize = n.GetIntValue(); } },
+                { "repository_size", n => { RepositorySize = n.GetIntValue(); } },
+                { "snippets_size", n => { SnippetsSize = n.GetIntValue(); } },
+                { "storage_size", n => { StorageSize = n.GetIntValue(); } },
+                { "uploads_size", n => { UploadsSize = n.GetIntValue(); } },
+                { "wiki_size", n => { WikiSize = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -147,17 +81,17 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("commit_count", CommitCount);
-            writer.WriteStringValue("container_registry_size", ContainerRegistrySize);
-            writer.WriteStringValue("job_artifacts_size", JobArtifactsSize);
-            writer.WriteStringValue("lfs_objects_size", LfsObjectsSize);
-            writer.WriteStringValue("packages_size", PackagesSize);
-            writer.WriteStringValue("pipeline_artifacts_size", PipelineArtifactsSize);
-            writer.WriteStringValue("repository_size", RepositorySize);
-            writer.WriteStringValue("snippets_size", SnippetsSize);
-            writer.WriteStringValue("storage_size", StorageSize);
-            writer.WriteStringValue("uploads_size", UploadsSize);
-            writer.WriteStringValue("wiki_size", WikiSize);
+            writer.WriteIntValue("commit_count", CommitCount);
+            writer.WriteIntValue("container_registry_size", ContainerRegistrySize);
+            writer.WriteIntValue("job_artifacts_size", JobArtifactsSize);
+            writer.WriteIntValue("lfs_objects_size", LfsObjectsSize);
+            writer.WriteIntValue("packages_size", PackagesSize);
+            writer.WriteIntValue("pipeline_artifacts_size", PipelineArtifactsSize);
+            writer.WriteIntValue("repository_size", RepositorySize);
+            writer.WriteIntValue("snippets_size", SnippetsSize);
+            writer.WriteIntValue("storage_size", StorageSize);
+            writer.WriteIntValue("uploads_size", UploadsSize);
+            writer.WriteIntValue("wiki_size", WikiSize);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

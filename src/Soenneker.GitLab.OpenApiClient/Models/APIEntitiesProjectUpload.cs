@@ -31,13 +31,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string FullPath { get; set; }
 #endif
         /// <summary>The id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get; set; }
-#nullable restore
-#else
-        public string Id { get; set; }
-#endif
+        public int? Id { get; set; }
         /// <summary>The markdown property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -81,7 +75,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             {
                 { "alt", n => { Alt = n.GetStringValue(); } },
                 { "full_path", n => { FullPath = n.GetStringValue(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
+                { "id", n => { Id = n.GetIntValue(); } },
                 { "markdown", n => { Markdown = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
@@ -95,7 +89,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("alt", Alt);
             writer.WriteStringValue("full_path", FullPath);
-            writer.WriteStringValue("id", Id);
+            writer.WriteIntValue("id", Id);
             writer.WriteStringValue("markdown", Markdown);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);

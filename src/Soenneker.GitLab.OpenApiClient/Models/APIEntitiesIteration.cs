@@ -2,6 +2,7 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
+using Microsoft.Kiota.Abstractions;
 using System.Collections.Generic;
 using System.IO;
 using System;
@@ -15,13 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The created_at property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? CreatedAt { get; set; }
-#nullable restore
-#else
-        public string CreatedAt { get; set; }
-#endif
+        public DateTimeOffset? CreatedAt { get; set; }
         /// <summary>The description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -31,61 +26,19 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Description { get; set; }
 #endif
         /// <summary>The due_date property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? DueDate { get; set; }
-#nullable restore
-#else
-        public string DueDate { get; set; }
-#endif
+        public Date? DueDate { get; set; }
         /// <summary>The group_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? GroupId { get; set; }
-#nullable restore
-#else
-        public string GroupId { get; set; }
-#endif
+        public int? GroupId { get; set; }
         /// <summary>The id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get; set; }
-#nullable restore
-#else
-        public string Id { get; set; }
-#endif
+        public int? Id { get; set; }
         /// <summary>The iid property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Iid { get; set; }
-#nullable restore
-#else
-        public string Iid { get; set; }
-#endif
+        public int? Iid { get; set; }
         /// <summary>The sequence property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Sequence { get; set; }
-#nullable restore
-#else
-        public string Sequence { get; set; }
-#endif
+        public int? Sequence { get; set; }
         /// <summary>The start_date property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? StartDate { get; set; }
-#nullable restore
-#else
-        public string StartDate { get; set; }
-#endif
+        public Date? StartDate { get; set; }
         /// <summary>The state property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? State { get; set; }
-#nullable restore
-#else
-        public string State { get; set; }
-#endif
+        public int? State { get; set; }
         /// <summary>The title property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -95,13 +48,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Title { get; set; }
 #endif
         /// <summary>The updated_at property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? UpdatedAt { get; set; }
-#nullable restore
-#else
-        public string UpdatedAt { get; set; }
-#endif
+        public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>The web_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -135,17 +82,17 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "created_at", n => { CreatedAt = n.GetStringValue(); } },
+                { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "due_date", n => { DueDate = n.GetStringValue(); } },
-                { "group_id", n => { GroupId = n.GetStringValue(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
-                { "iid", n => { Iid = n.GetStringValue(); } },
-                { "sequence", n => { Sequence = n.GetStringValue(); } },
-                { "start_date", n => { StartDate = n.GetStringValue(); } },
-                { "state", n => { State = n.GetStringValue(); } },
+                { "due_date", n => { DueDate = n.GetDateValue(); } },
+                { "group_id", n => { GroupId = n.GetIntValue(); } },
+                { "id", n => { Id = n.GetIntValue(); } },
+                { "iid", n => { Iid = n.GetIntValue(); } },
+                { "sequence", n => { Sequence = n.GetIntValue(); } },
+                { "start_date", n => { StartDate = n.GetDateValue(); } },
+                { "state", n => { State = n.GetIntValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
-                { "updated_at", n => { UpdatedAt = n.GetStringValue(); } },
+                { "updated_at", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
                 { "web_url", n => { WebUrl = n.GetStringValue(); } },
             };
         }
@@ -156,17 +103,17 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("created_at", CreatedAt);
+            writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
             writer.WriteStringValue("description", Description);
-            writer.WriteStringValue("due_date", DueDate);
-            writer.WriteStringValue("group_id", GroupId);
-            writer.WriteStringValue("id", Id);
-            writer.WriteStringValue("iid", Iid);
-            writer.WriteStringValue("sequence", Sequence);
-            writer.WriteStringValue("start_date", StartDate);
-            writer.WriteStringValue("state", State);
+            writer.WriteDateValue("due_date", DueDate);
+            writer.WriteIntValue("group_id", GroupId);
+            writer.WriteIntValue("id", Id);
+            writer.WriteIntValue("iid", Iid);
+            writer.WriteIntValue("sequence", Sequence);
+            writer.WriteDateValue("start_date", StartDate);
+            writer.WriteIntValue("state", State);
             writer.WriteStringValue("title", Title);
-            writer.WriteStringValue("updated_at", UpdatedAt);
+            writer.WriteDateTimeOffsetValue("updated_at", UpdatedAt);
             writer.WriteStringValue("web_url", WebUrl);
             writer.WriteAdditionalData(AdditionalData);
         }

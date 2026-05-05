@@ -40,13 +40,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic Author { get; set; }
 #endif
         /// <summary>The blocking_issues_count property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? BlockingIssuesCount { get; set; }
-#nullable restore
-#else
-        public string BlockingIssuesCount { get; set; }
-#endif
+        public int? BlockingIssuesCount { get; set; }
         /// <summary>The closed_at property</summary>
         public DateTimeOffset? ClosedAt { get; set; }
         /// <summary>The closed_by property</summary>
@@ -276,13 +270,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string WebUrl { get; set; }
 #endif
         /// <summary>The weight property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Weight { get; set; }
-#nullable restore
-#else
-        public string Weight { get; set; }
-#endif
+        public int? Weight { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesIssue"/> and sets the default values.
         /// </summary>
@@ -311,7 +299,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "assignee", n => { Assignee = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic.CreateFromDiscriminatorValue); } },
                 { "assignees", n => { Assignees = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic.CreateFromDiscriminatorValue); } },
                 { "author", n => { Author = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic.CreateFromDiscriminatorValue); } },
-                { "blocking_issues_count", n => { BlockingIssuesCount = n.GetStringValue(); } },
+                { "blocking_issues_count", n => { BlockingIssuesCount = n.GetIntValue(); } },
                 { "closed_at", n => { ClosedAt = n.GetDateTimeOffsetValue(); } },
                 { "closed_by", n => { ClosedBy = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic.CreateFromDiscriminatorValue); } },
                 { "confidential", n => { Confidential = n.GetBoolValue(); } },
@@ -351,7 +339,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "upvotes", n => { Upvotes = n.GetIntValue(); } },
                 { "user_notes_count", n => { UserNotesCount = n.GetIntValue(); } },
                 { "web_url", n => { WebUrl = n.GetStringValue(); } },
-                { "weight", n => { Weight = n.GetStringValue(); } },
+                { "weight", n => { Weight = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -364,7 +352,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>("assignee", Assignee);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>("assignees", Assignees);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>("author", Author);
-            writer.WriteStringValue("blocking_issues_count", BlockingIssuesCount);
+            writer.WriteIntValue("blocking_issues_count", BlockingIssuesCount);
             writer.WriteDateTimeOffsetValue("closed_at", ClosedAt);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>("closed_by", ClosedBy);
             writer.WriteBoolValue("confidential", Confidential);
@@ -404,7 +392,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("upvotes", Upvotes);
             writer.WriteIntValue("user_notes_count", UserNotesCount);
             writer.WriteStringValue("web_url", WebUrl);
-            writer.WriteStringValue("weight", Weight);
+            writer.WriteIntValue("weight", Weight);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

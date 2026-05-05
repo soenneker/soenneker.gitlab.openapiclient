@@ -63,13 +63,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>The is_project_label property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? IsProjectLabel { get; set; }
-#nullable restore
-#else
-        public string IsProjectLabel { get; set; }
-#endif
+        public bool? IsProjectLabel { get; set; }
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -95,13 +89,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string OpenMergeRequestsCount { get; set; }
 #endif
         /// <summary>The priority property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Priority { get; set; }
-#nullable restore
-#else
-        public string Priority { get; set; }
-#endif
+        public int? Priority { get; set; }
         /// <summary>The subscribed property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -149,11 +137,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "description_html", n => { DescriptionHtml = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "is_project_label", n => { IsProjectLabel = n.GetStringValue(); } },
+                { "is_project_label", n => { IsProjectLabel = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "open_issues_count", n => { OpenIssuesCount = n.GetStringValue(); } },
                 { "open_merge_requests_count", n => { OpenMergeRequestsCount = n.GetStringValue(); } },
-                { "priority", n => { Priority = n.GetStringValue(); } },
+                { "priority", n => { Priority = n.GetIntValue(); } },
                 { "subscribed", n => { Subscribed = n.GetStringValue(); } },
                 { "text_color", n => { TextColor = n.GetStringValue(); } },
             };
@@ -171,11 +159,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("description_html", DescriptionHtml);
             writer.WriteStringValue("id", Id);
-            writer.WriteStringValue("is_project_label", IsProjectLabel);
+            writer.WriteBoolValue("is_project_label", IsProjectLabel);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("open_issues_count", OpenIssuesCount);
             writer.WriteStringValue("open_merge_requests_count", OpenMergeRequestsCount);
-            writer.WriteStringValue("priority", Priority);
+            writer.WriteIntValue("priority", Priority);
             writer.WriteStringValue("subscribed", Subscribed);
             writer.WriteStringValue("text_color", TextColor);
             writer.WriteAdditionalData(AdditionalData);

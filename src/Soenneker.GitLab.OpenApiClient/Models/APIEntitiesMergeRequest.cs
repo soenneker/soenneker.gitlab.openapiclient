@@ -15,29 +15,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The allow_collaboration property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? AllowCollaboration { get; set; }
-#nullable restore
-#else
-        public string AllowCollaboration { get; set; }
-#endif
+        public bool? AllowCollaboration { get; set; }
         /// <summary>The allow_maintainer_to_push property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? AllowMaintainerToPush { get; set; }
-#nullable restore
-#else
-        public string AllowMaintainerToPush { get; set; }
-#endif
+        public bool? AllowMaintainerToPush { get; set; }
         /// <summary>The approvals_before_merge property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ApprovalsBeforeMerge { get; set; }
-#nullable restore
-#else
-        public string ApprovalsBeforeMerge { get; set; }
-#endif
+        public int? ApprovalsBeforeMerge { get; set; }
         /// <summary>The assignee property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -63,13 +45,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic Author { get; set; }
 #endif
         /// <summary>The blocking_discussions_resolved property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? BlockingDiscussionsResolved { get; set; }
-#nullable restore
-#else
-        public string BlockingDiscussionsResolved { get; set; }
-#endif
+        public bool? BlockingDiscussionsResolved { get; set; }
         /// <summary>The changes_count property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -79,13 +55,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ChangesCount { get; set; }
 #endif
         /// <summary>The closed_at property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ClosedAt { get; set; }
-#nullable restore
-#else
-        public string ClosedAt { get; set; }
-#endif
+        public DateTimeOffset? ClosedAt { get; set; }
         /// <summary>The closed_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -129,57 +99,21 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDiffRefs DiffRefs { get; set; }
 #endif
         /// <summary>The discussion_locked property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? DiscussionLocked { get; set; }
-#nullable restore
-#else
-        public string DiscussionLocked { get; set; }
-#endif
+        public bool? DiscussionLocked { get; set; }
         /// <summary>The diverged_commits_count property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? DivergedCommitsCount { get; set; }
-#nullable restore
-#else
-        public string DivergedCommitsCount { get; set; }
-#endif
+        public int? DivergedCommitsCount { get; set; }
         /// <summary>The downvotes property</summary>
         public int? Downvotes { get; set; }
         /// <summary>The draft property</summary>
         public bool? Draft { get; set; }
         /// <summary>The first_contribution property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? FirstContribution { get; set; }
-#nullable restore
-#else
-        public string FirstContribution { get; set; }
-#endif
+        public bool? FirstContribution { get; set; }
         /// <summary>The first_deployed_to_production_at property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? FirstDeployedToProductionAt { get; set; }
-#nullable restore
-#else
-        public string FirstDeployedToProductionAt { get; set; }
-#endif
+        public DateTimeOffset? FirstDeployedToProductionAt { get; set; }
         /// <summary>The force_remove_source_branch property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ForceRemoveSourceBranch { get; set; }
-#nullable restore
-#else
-        public string ForceRemoveSourceBranch { get; set; }
-#endif
+        public bool? ForceRemoveSourceBranch { get; set; }
         /// <summary>The has_conflicts property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? HasConflicts { get; set; }
-#nullable restore
-#else
-        public string HasConflicts { get; set; }
-#endif
+        public bool? HasConflicts { get; set; }
         /// <summary>The head_pipeline property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -205,35 +139,17 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The labels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Labels { get; set; }
+        public List<string>? Labels { get; set; }
 #nullable restore
 #else
-        public string Labels { get; set; }
+        public List<string> Labels { get; set; }
 #endif
         /// <summary>The latest_build_finished_at property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? LatestBuildFinishedAt { get; set; }
-#nullable restore
-#else
-        public string LatestBuildFinishedAt { get; set; }
-#endif
+        public DateTimeOffset? LatestBuildFinishedAt { get; set; }
         /// <summary>The latest_build_started_at property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? LatestBuildStartedAt { get; set; }
-#nullable restore
-#else
-        public string LatestBuildStartedAt { get; set; }
-#endif
+        public DateTimeOffset? LatestBuildStartedAt { get; set; }
         /// <summary>The merge_after property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? MergeAfter { get; set; }
-#nullable restore
-#else
-        public string MergeAfter { get; set; }
-#endif
+        public DateTimeOffset? MergeAfter { get; set; }
         /// <summary>The merge_commit_sha property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -243,13 +159,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string MergeCommitSha { get; set; }
 #endif
         /// <summary>The merged_at property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? MergedAt { get; set; }
-#nullable restore
-#else
-        public string MergedAt { get; set; }
-#endif
+        public DateTimeOffset? MergedAt { get; set; }
         /// <summary>The merged_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -301,23 +211,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiPipelineBasic Pipeline { get; set; }
 #endif
         /// <summary>The prepared_at property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? PreparedAt { get; set; }
-#nullable restore
-#else
-        public string PreparedAt { get; set; }
-#endif
+        public DateTimeOffset? PreparedAt { get; set; }
         /// <summary>The project_id property</summary>
         public int? ProjectId { get; set; }
         /// <summary>The rebase_in_progress property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? RebaseInProgress { get; set; }
-#nullable restore
-#else
-        public string RebaseInProgress { get; set; }
-#endif
+        public bool? RebaseInProgress { get; set; }
         /// <summary>The reference property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -351,13 +249,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Sha { get; set; }
 #endif
         /// <summary>The should_remove_source_branch property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ShouldRemoveSourceBranch { get; set; }
-#nullable restore
-#else
-        public string ShouldRemoveSourceBranch { get; set; }
-#endif
+        public bool? ShouldRemoveSourceBranch { get; set; }
         /// <summary>The source_branch property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -369,13 +261,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The source_project_id property</summary>
         public int? SourceProjectId { get; set; }
         /// <summary>The squash property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Squash { get; set; }
-#nullable restore
-#else
-        public string Squash { get; set; }
-#endif
+        public bool? Squash { get; set; }
         /// <summary>The squash_commit_sha property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -385,13 +271,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string SquashCommitSha { get; set; }
 #endif
         /// <summary>The squash_on_merge property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? SquashOnMerge { get; set; }
-#nullable restore
-#else
-        public string SquashOnMerge { get; set; }
-#endif
+        public bool? SquashOnMerge { get; set; }
         /// <summary>The state property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -401,13 +281,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string State { get; set; }
 #endif
         /// <summary>The subscribed property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Subscribed { get; set; }
-#nullable restore
-#else
-        public string Subscribed { get; set; }
-#endif
+        public bool? Subscribed { get; set; }
         /// <summary>The target_branch property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -457,10 +331,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? User { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMergeRequest_user? User { get; set; }
 #nullable restore
 #else
-        public string User { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMergeRequest_user User { get; set; }
 #endif
         /// <summary>The user_notes_count property</summary>
         public int? UserNotesCount { get; set; }
@@ -499,62 +373,62 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "allow_collaboration", n => { AllowCollaboration = n.GetStringValue(); } },
-                { "allow_maintainer_to_push", n => { AllowMaintainerToPush = n.GetStringValue(); } },
-                { "approvals_before_merge", n => { ApprovalsBeforeMerge = n.GetStringValue(); } },
+                { "allow_collaboration", n => { AllowCollaboration = n.GetBoolValue(); } },
+                { "allow_maintainer_to_push", n => { AllowMaintainerToPush = n.GetBoolValue(); } },
+                { "approvals_before_merge", n => { ApprovalsBeforeMerge = n.GetIntValue(); } },
                 { "assignee", n => { Assignee = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic.CreateFromDiscriminatorValue); } },
                 { "assignees", n => { Assignees = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic.CreateFromDiscriminatorValue); } },
                 { "author", n => { Author = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic.CreateFromDiscriminatorValue); } },
-                { "blocking_discussions_resolved", n => { BlockingDiscussionsResolved = n.GetStringValue(); } },
+                { "blocking_discussions_resolved", n => { BlockingDiscussionsResolved = n.GetBoolValue(); } },
                 { "changes_count", n => { ChangesCount = n.GetStringValue(); } },
-                { "closed_at", n => { ClosedAt = n.GetStringValue(); } },
+                { "closed_at", n => { ClosedAt = n.GetDateTimeOffsetValue(); } },
                 { "closed_by", n => { ClosedBy = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic.CreateFromDiscriminatorValue); } },
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "description_html", n => { DescriptionHtml = n.GetStringValue(); } },
                 { "detailed_merge_status", n => { DetailedMergeStatus = n.GetStringValue(); } },
                 { "diff_refs", n => { DiffRefs = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDiffRefs>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDiffRefs.CreateFromDiscriminatorValue); } },
-                { "discussion_locked", n => { DiscussionLocked = n.GetStringValue(); } },
-                { "diverged_commits_count", n => { DivergedCommitsCount = n.GetStringValue(); } },
+                { "discussion_locked", n => { DiscussionLocked = n.GetBoolValue(); } },
+                { "diverged_commits_count", n => { DivergedCommitsCount = n.GetIntValue(); } },
                 { "downvotes", n => { Downvotes = n.GetIntValue(); } },
                 { "draft", n => { Draft = n.GetBoolValue(); } },
-                { "first_contribution", n => { FirstContribution = n.GetStringValue(); } },
-                { "first_deployed_to_production_at", n => { FirstDeployedToProductionAt = n.GetStringValue(); } },
-                { "force_remove_source_branch", n => { ForceRemoveSourceBranch = n.GetStringValue(); } },
-                { "has_conflicts", n => { HasConflicts = n.GetStringValue(); } },
+                { "first_contribution", n => { FirstContribution = n.GetBoolValue(); } },
+                { "first_deployed_to_production_at", n => { FirstDeployedToProductionAt = n.GetDateTimeOffsetValue(); } },
+                { "force_remove_source_branch", n => { ForceRemoveSourceBranch = n.GetBoolValue(); } },
+                { "has_conflicts", n => { HasConflicts = n.GetBoolValue(); } },
                 { "head_pipeline", n => { HeadPipeline = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiPipeline>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiPipeline.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "iid", n => { Iid = n.GetIntValue(); } },
                 { "imported", n => { Imported = n.GetBoolValue(); } },
                 { "imported_from", n => { ImportedFrom = n.GetStringValue(); } },
-                { "labels", n => { Labels = n.GetStringValue(); } },
-                { "latest_build_finished_at", n => { LatestBuildFinishedAt = n.GetStringValue(); } },
-                { "latest_build_started_at", n => { LatestBuildStartedAt = n.GetStringValue(); } },
-                { "merge_after", n => { MergeAfter = n.GetStringValue(); } },
+                { "labels", n => { Labels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "latest_build_finished_at", n => { LatestBuildFinishedAt = n.GetDateTimeOffsetValue(); } },
+                { "latest_build_started_at", n => { LatestBuildStartedAt = n.GetDateTimeOffsetValue(); } },
+                { "merge_after", n => { MergeAfter = n.GetDateTimeOffsetValue(); } },
                 { "merge_commit_sha", n => { MergeCommitSha = n.GetStringValue(); } },
                 { "merge_error", n => { MergeError = n.GetStringValue(); } },
                 { "merge_status", n => { MergeStatus = n.GetStringValue(); } },
                 { "merge_user", n => { MergeUser = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic.CreateFromDiscriminatorValue); } },
                 { "merge_when_pipeline_succeeds", n => { MergeWhenPipelineSucceeds = n.GetBoolValue(); } },
-                { "merged_at", n => { MergedAt = n.GetStringValue(); } },
+                { "merged_at", n => { MergedAt = n.GetDateTimeOffsetValue(); } },
                 { "merged_by", n => { MergedBy = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic.CreateFromDiscriminatorValue); } },
                 { "milestone", n => { Milestone = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMilestone>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMilestone.CreateFromDiscriminatorValue); } },
                 { "pipeline", n => { Pipeline = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiPipelineBasic>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiPipelineBasic.CreateFromDiscriminatorValue); } },
-                { "prepared_at", n => { PreparedAt = n.GetStringValue(); } },
+                { "prepared_at", n => { PreparedAt = n.GetDateTimeOffsetValue(); } },
                 { "project_id", n => { ProjectId = n.GetIntValue(); } },
-                { "rebase_in_progress", n => { RebaseInProgress = n.GetStringValue(); } },
+                { "rebase_in_progress", n => { RebaseInProgress = n.GetBoolValue(); } },
                 { "reference", n => { Reference = n.GetStringValue(); } },
                 { "references", n => { References = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesIssuableReferences>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesIssuableReferences.CreateFromDiscriminatorValue); } },
                 { "reviewers", n => { Reviewers = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic.CreateFromDiscriminatorValue); } },
                 { "sha", n => { Sha = n.GetStringValue(); } },
-                { "should_remove_source_branch", n => { ShouldRemoveSourceBranch = n.GetStringValue(); } },
+                { "should_remove_source_branch", n => { ShouldRemoveSourceBranch = n.GetBoolValue(); } },
                 { "source_branch", n => { SourceBranch = n.GetStringValue(); } },
                 { "source_project_id", n => { SourceProjectId = n.GetIntValue(); } },
-                { "squash", n => { Squash = n.GetStringValue(); } },
+                { "squash", n => { Squash = n.GetBoolValue(); } },
                 { "squash_commit_sha", n => { SquashCommitSha = n.GetStringValue(); } },
-                { "squash_on_merge", n => { SquashOnMerge = n.GetStringValue(); } },
+                { "squash_on_merge", n => { SquashOnMerge = n.GetBoolValue(); } },
                 { "state", n => { State = n.GetStringValue(); } },
-                { "subscribed", n => { Subscribed = n.GetStringValue(); } },
+                { "subscribed", n => { Subscribed = n.GetBoolValue(); } },
                 { "target_branch", n => { TargetBranch = n.GetStringValue(); } },
                 { "target_project_id", n => { TargetProjectId = n.GetIntValue(); } },
                 { "task_completion_status", n => { TaskCompletionStatus = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesTaskCompletionStatus>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesTaskCompletionStatus.CreateFromDiscriminatorValue); } },
@@ -563,7 +437,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "title_html", n => { TitleHtml = n.GetStringValue(); } },
                 { "updated_at", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
                 { "upvotes", n => { Upvotes = n.GetIntValue(); } },
-                { "user", n => { User = n.GetStringValue(); } },
+                { "user", n => { User = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMergeRequest_user>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMergeRequest_user.CreateFromDiscriminatorValue); } },
                 { "user_notes_count", n => { UserNotesCount = n.GetIntValue(); } },
                 { "web_url", n => { WebUrl = n.GetStringValue(); } },
                 { "work_in_progress", n => { WorkInProgress = n.GetBoolValue(); } },
@@ -576,40 +450,40 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("allow_collaboration", AllowCollaboration);
-            writer.WriteStringValue("allow_maintainer_to_push", AllowMaintainerToPush);
-            writer.WriteStringValue("approvals_before_merge", ApprovalsBeforeMerge);
+            writer.WriteBoolValue("allow_collaboration", AllowCollaboration);
+            writer.WriteBoolValue("allow_maintainer_to_push", AllowMaintainerToPush);
+            writer.WriteIntValue("approvals_before_merge", ApprovalsBeforeMerge);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>("assignee", Assignee);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>("assignees", Assignees);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>("author", Author);
-            writer.WriteStringValue("blocking_discussions_resolved", BlockingDiscussionsResolved);
+            writer.WriteBoolValue("blocking_discussions_resolved", BlockingDiscussionsResolved);
             writer.WriteStringValue("changes_count", ChangesCount);
-            writer.WriteStringValue("closed_at", ClosedAt);
+            writer.WriteDateTimeOffsetValue("closed_at", ClosedAt);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>("closed_by", ClosedBy);
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("description_html", DescriptionHtml);
             writer.WriteStringValue("detailed_merge_status", DetailedMergeStatus);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDiffRefs>("diff_refs", DiffRefs);
-            writer.WriteStringValue("discussion_locked", DiscussionLocked);
-            writer.WriteStringValue("diverged_commits_count", DivergedCommitsCount);
+            writer.WriteBoolValue("discussion_locked", DiscussionLocked);
+            writer.WriteIntValue("diverged_commits_count", DivergedCommitsCount);
             writer.WriteIntValue("downvotes", Downvotes);
             writer.WriteBoolValue("draft", Draft);
-            writer.WriteStringValue("first_contribution", FirstContribution);
-            writer.WriteStringValue("first_deployed_to_production_at", FirstDeployedToProductionAt);
-            writer.WriteStringValue("force_remove_source_branch", ForceRemoveSourceBranch);
-            writer.WriteStringValue("has_conflicts", HasConflicts);
+            writer.WriteBoolValue("first_contribution", FirstContribution);
+            writer.WriteDateTimeOffsetValue("first_deployed_to_production_at", FirstDeployedToProductionAt);
+            writer.WriteBoolValue("force_remove_source_branch", ForceRemoveSourceBranch);
+            writer.WriteBoolValue("has_conflicts", HasConflicts);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiPipeline>("head_pipeline", HeadPipeline);
             writer.WriteIntValue("id", Id);
             writer.WriteIntValue("iid", Iid);
             writer.WriteBoolValue("imported", Imported);
             writer.WriteStringValue("imported_from", ImportedFrom);
-            writer.WriteStringValue("labels", Labels);
-            writer.WriteStringValue("latest_build_finished_at", LatestBuildFinishedAt);
-            writer.WriteStringValue("latest_build_started_at", LatestBuildStartedAt);
-            writer.WriteStringValue("merge_after", MergeAfter);
+            writer.WriteCollectionOfPrimitiveValues<string>("labels", Labels);
+            writer.WriteDateTimeOffsetValue("latest_build_finished_at", LatestBuildFinishedAt);
+            writer.WriteDateTimeOffsetValue("latest_build_started_at", LatestBuildStartedAt);
+            writer.WriteDateTimeOffsetValue("merge_after", MergeAfter);
             writer.WriteStringValue("merge_commit_sha", MergeCommitSha);
-            writer.WriteStringValue("merged_at", MergedAt);
+            writer.WriteDateTimeOffsetValue("merged_at", MergedAt);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>("merged_by", MergedBy);
             writer.WriteStringValue("merge_error", MergeError);
             writer.WriteStringValue("merge_status", MergeStatus);
@@ -617,21 +491,21 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("merge_when_pipeline_succeeds", MergeWhenPipelineSucceeds);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMilestone>("milestone", Milestone);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiPipelineBasic>("pipeline", Pipeline);
-            writer.WriteStringValue("prepared_at", PreparedAt);
+            writer.WriteDateTimeOffsetValue("prepared_at", PreparedAt);
             writer.WriteIntValue("project_id", ProjectId);
-            writer.WriteStringValue("rebase_in_progress", RebaseInProgress);
+            writer.WriteBoolValue("rebase_in_progress", RebaseInProgress);
             writer.WriteStringValue("reference", Reference);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesIssuableReferences>("references", References);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>("reviewers", Reviewers);
             writer.WriteStringValue("sha", Sha);
-            writer.WriteStringValue("should_remove_source_branch", ShouldRemoveSourceBranch);
+            writer.WriteBoolValue("should_remove_source_branch", ShouldRemoveSourceBranch);
             writer.WriteStringValue("source_branch", SourceBranch);
             writer.WriteIntValue("source_project_id", SourceProjectId);
-            writer.WriteStringValue("squash", Squash);
+            writer.WriteBoolValue("squash", Squash);
             writer.WriteStringValue("squash_commit_sha", SquashCommitSha);
-            writer.WriteStringValue("squash_on_merge", SquashOnMerge);
+            writer.WriteBoolValue("squash_on_merge", SquashOnMerge);
             writer.WriteStringValue("state", State);
-            writer.WriteStringValue("subscribed", Subscribed);
+            writer.WriteBoolValue("subscribed", Subscribed);
             writer.WriteStringValue("target_branch", TargetBranch);
             writer.WriteIntValue("target_project_id", TargetProjectId);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesTaskCompletionStatus>("task_completion_status", TaskCompletionStatus);
@@ -640,7 +514,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("title_html", TitleHtml);
             writer.WriteDateTimeOffsetValue("updated_at", UpdatedAt);
             writer.WriteIntValue("upvotes", Upvotes);
-            writer.WriteStringValue("user", User);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMergeRequest_user>("user", User);
             writer.WriteIntValue("user_notes_count", UserNotesCount);
             writer.WriteStringValue("web_url", WebUrl);
             writer.WriteBoolValue("work_in_progress", WorkInProgress);

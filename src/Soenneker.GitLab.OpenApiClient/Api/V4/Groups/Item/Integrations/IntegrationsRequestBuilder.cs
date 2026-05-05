@@ -48,7 +48,6 @@ using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Integrations.Pumble;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Integrations.Pushover;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Integrations.Redmine;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Integrations.Slack;
-using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Integrations.SlackSlashCommands;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Integrations.SquashTm;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Integrations.Teamcity;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Integrations.Telegram;
@@ -289,11 +288,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Integrations
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Integrations.Slack.SlackRequestBuilder Slack
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Integrations.Slack.SlackRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The slackSlashCommands property</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Integrations.SlackSlashCommands.SlackSlashCommandsRequestBuilder SlackSlashCommands
-        {
-            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Integrations.SlackSlashCommands.SlackSlashCommandsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The squashTm property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Integrations.SquashTm.SquashTmRequestBuilder SquashTm

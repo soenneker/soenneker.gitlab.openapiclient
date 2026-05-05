@@ -55,10 +55,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The issue_stats property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IssueStats { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMilestoneWithStats_issue_stats? IssueStats { get; set; }
 #nullable restore
 #else
-        public string IssueStats { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMilestoneWithStats_issue_stats IssueStats { get; set; }
 #endif
         /// <summary>The project_id property</summary>
         public int? ProjectId { get; set; }
@@ -134,7 +134,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "group_id", n => { GroupId = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "iid", n => { Iid = n.GetIntValue(); } },
-                { "issue_stats", n => { IssueStats = n.GetStringValue(); } },
+                { "issue_stats", n => { IssueStats = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMilestoneWithStats_issue_stats>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMilestoneWithStats_issue_stats.CreateFromDiscriminatorValue); } },
                 { "project_id", n => { ProjectId = n.GetIntValue(); } },
                 { "start_date", n => { StartDate = n.GetStringValue(); } },
                 { "state", n => { State = n.GetStringValue(); } },
@@ -157,7 +157,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("group_id", GroupId);
             writer.WriteIntValue("id", Id);
             writer.WriteIntValue("iid", Iid);
-            writer.WriteStringValue("issue_stats", IssueStats);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMilestoneWithStats_issue_stats>("issue_stats", IssueStats);
             writer.WriteIntValue("project_id", ProjectId);
             writer.WriteStringValue("start_date", StartDate);
             writer.WriteStringValue("state", State);

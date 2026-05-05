@@ -1730,1258 +1730,6 @@
         }
       }
     },
-    "/api/v4/projects/{id}/service_accounts": {
-      "post": {
-        "tags": [
-          "Service accounts"
-        ],
-        "summary": "Create a project service account",
-        "description": "Creates a service account in the specified project",
-        "operationId": "postApiV4ProjectsIdServiceAccounts",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The ID or URL-encoded path of the project",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "string"
-                }
-              ]
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RequestBody4d6a710f0d2d"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/APIEntitiesServiceAccount"
-                }
-              }
-            }
-          }
-        }
-      },
-      "get": {
-        "tags": [
-          "Service accounts"
-        ],
-        "summary": "List all project service accounts",
-        "description": "Lists all service accounts for a specified project",
-        "operationId": "getApiV4ProjectsIdServiceAccounts",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The ID or URL-encoded path of the project",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "string"
-                }
-              ]
-            }
-          },
-          {
-            "name": "page",
-            "in": "query",
-            "description": "Current page number",
-            "schema": {
-              "type": "integer",
-              "default": 1,
-              "nullable": true
-            },
-            "example": 1
-          },
-          {
-            "name": "per_page",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "default": 20,
-              "nullable": true
-            },
-            "example": 20
-          },
-          {
-            "name": "order_by",
-            "in": "query",
-            "description": "Attribute to sort by",
-            "schema": {
-              "enum": [
-                "id",
-                "username"
-              ],
-              "type": "string",
-              "additionalProperties": false,
-              "default": "id",
-              "nullable": true
-            }
-          },
-          {
-            "name": "sort",
-            "in": "query",
-            "description": "Order of sorting",
-            "schema": {
-              "enum": [
-                "asc",
-                "desc"
-              ],
-              "type": "string",
-              "additionalProperties": false,
-              "default": "desc",
-              "nullable": true
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/APIEntitiesServiceAccount"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/v4/projects/{id}/service_accounts/{user_id}": {
-      "delete": {
-        "tags": [
-          "Service accounts"
-        ],
-        "summary": "Delete a project service account",
-        "description": "Deletes a service account from a specified project.\n            Available only for project Owners or Maintainers, and administrators.",
-        "operationId": "deleteApiV4ProjectsIdServiceAccountsUserId",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The ID or URL-encoded path of the project",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "string"
-                }
-              ]
-            }
-          },
-          {
-            "name": "user_id",
-            "in": "path",
-            "description": "The ID of the service account",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          },
-          {
-            "name": "hard_delete",
-            "in": "query",
-            "description": "Whether to remove a user's contributions",
-            "schema": {
-              "type": "boolean",
-              "nullable": true
-            }
-          }
-        ],
-        "responses": {
-          "204": {
-            "description": "Default",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "title": "DefaultResponse",
-                  "type": "object",
-                  "description": "Default response schema"
-                }
-              }
-            }
-          }
-        }
-      },
-      "patch": {
-        "tags": [
-          "Service accounts"
-        ],
-        "summary": "Update a project service account",
-        "description": "Update a specified project service account.",
-        "operationId": "patchApiV4ProjectsIdServiceAccountsUserId",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The ID or URL-encoded path of the project",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "string"
-                }
-              ]
-            }
-          },
-          {
-            "name": "user_id",
-            "in": "path",
-            "description": "The ID of the service account",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RequestBody4d6a710f0d2d"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/APIEntitiesServiceAccount"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/v4/projects/{id}/service_accounts/{user_id}/personal_access_tokens": {
-      "get": {
-        "tags": [
-          "Access tokens",
-          "Service accounts"
-        ],
-        "summary": "List all personal access tokens for a project service account",
-        "description": "Lists all personal access tokens for a specified project service account",
-        "operationId": "getApiV4ProjectsIdServiceAccountsUserIdPersonalAccessTokens",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The ID or URL-encoded path of the project",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "string"
-                }
-              ]
-            }
-          },
-          {
-            "name": "revoked",
-            "in": "query",
-            "description": "Filter tokens where revoked state matches parameter",
-            "schema": {
-              "type": "boolean",
-              "nullable": true
-            },
-            "example": false
-          },
-          {
-            "name": "state",
-            "in": "query",
-            "description": "Filter tokens which are either active or not",
-            "schema": {
-              "enum": [
-                "active",
-                "inactive"
-              ],
-              "type": "string",
-              "additionalProperties": false,
-              "nullable": true
-            },
-            "example": "active"
-          },
-          {
-            "name": "created_before",
-            "in": "query",
-            "description": "Filter tokens which were created before given datetime",
-            "schema": {
-              "type": "string",
-              "format": "date-time",
-              "nullable": true
-            },
-            "example": "2022-01-01"
-          },
-          {
-            "name": "created_after",
-            "in": "query",
-            "description": "Filter tokens which were created after given datetime",
-            "schema": {
-              "type": "string",
-              "format": "date-time",
-              "nullable": true
-            },
-            "example": "2021-01-01"
-          },
-          {
-            "name": "last_used_before",
-            "in": "query",
-            "description": "Filter tokens which were used before given datetime",
-            "schema": {
-              "type": "string",
-              "format": "date-time",
-              "nullable": true
-            },
-            "example": "2021-01-01"
-          },
-          {
-            "name": "last_used_after",
-            "in": "query",
-            "description": "Filter tokens which were used after given datetime",
-            "schema": {
-              "type": "string",
-              "format": "date-time",
-              "nullable": true
-            },
-            "example": "2022-01-01"
-          },
-          {
-            "name": "expires_before",
-            "in": "query",
-            "description": "Filter tokens which expire before given datetime",
-            "schema": {
-              "type": "string",
-              "format": "date",
-              "nullable": true
-            },
-            "example": "2022-01-01"
-          },
-          {
-            "name": "expires_after",
-            "in": "query",
-            "description": "Filter tokens which expire after given datetime",
-            "schema": {
-              "type": "string",
-              "format": "date",
-              "nullable": true
-            },
-            "example": "2021-01-01"
-          },
-          {
-            "name": "search",
-            "in": "query",
-            "description": "Filters tokens by name",
-            "schema": {
-              "type": "string",
-              "nullable": true
-            },
-            "example": "token"
-          },
-          {
-            "name": "sort",
-            "in": "query",
-            "description": "Sort tokens",
-            "schema": {
-              "type": "string",
-              "nullable": true
-            },
-            "example": "created_at_desc"
-          },
-          {
-            "name": "page",
-            "in": "query",
-            "description": "Current page number",
-            "schema": {
-              "type": "integer",
-              "default": 1,
-              "nullable": true
-            },
-            "example": 1
-          },
-          {
-            "name": "per_page",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "default": 20,
-              "nullable": true
-            },
-            "example": 20
-          },
-          {
-            "name": "user_id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/APIEntitiesPersonalAccessToken"
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "Access tokens",
-          "Service accounts"
-        ],
-        "summary": "Create a personal access token for a project service account.",
-        "description": "Creates a personal access token for a specified project service account.\n              Available only for project Owners or Maintainers.",
-        "operationId": "postApiV4ProjectsIdServiceAccountsUserIdPersonalAccessTokens",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The ID or URL-encoded path of the project",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "string"
-                }
-              ]
-            }
-          },
-          {
-            "name": "user_id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RequestBodyEe836c0c3c1a"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/APIEntitiesPersonalAccessTokenWithToken"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/v4/projects/{id}/service_accounts/{user_id}/personal_access_tokens/{token_id}": {
-      "delete": {
-        "tags": [
-          "Access tokens",
-          "Service accounts"
-        ],
-        "summary": "Revoke a personal access token for a project service account",
-        "description": "Revokes a specified personal access token for a project service account.",
-        "operationId": "deleteApiV4ProjectsIdServiceAccountsUserIdPersonalAccessTokensTokenId",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The ID or URL-encoded path of the project",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "string"
-                }
-              ]
-            }
-          },
-          {
-            "name": "user_id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "object"
-            }
-          },
-          {
-            "name": "token_id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
-        "responses": {
-          "204": {
-            "description": "Default",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "title": "DefaultResponse",
-                  "type": "object",
-                  "description": "Default response schema"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/v4/projects/{id}/service_accounts/{user_id}/personal_access_tokens/{token_id}/rotate": {
-      "post": {
-        "tags": [
-          "Access tokens",
-          "Service accounts"
-        ],
-        "summary": "Rotate a personal access token for a project service account",
-        "description": "Rotates a specified personal access token for a project service account.",
-        "operationId": "postApiV4ProjectsIdServiceAccountsUserIdPersonalAccessTokensTokenIdRotate",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The ID or URL-encoded path of the project",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "string"
-                }
-              ]
-            }
-          },
-          {
-            "name": "user_id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "object"
-            }
-          },
-          {
-            "name": "token_id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RequestBody8c8c40f4e9bd"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/APIEntitiesPersonalAccessTokenWithToken"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/v4/groups/{id}/service_accounts": {
-      "post": {
-        "tags": [
-          "Service accounts"
-        ],
-        "summary": "Create a group service account",
-        "description": "Creates a service account in the specified group",
-        "operationId": "postApiV4GroupsIdServiceAccounts",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The ID or URL-encoded path of the group",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "string"
-                }
-              ]
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RequestBody4d6a710f0d2d"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/APIEntitiesServiceAccount"
-                }
-              }
-            }
-          }
-        }
-      },
-      "get": {
-        "tags": [
-          "Service accounts"
-        ],
-        "summary": "List all group service accounts",
-        "description": "Lists all service accounts for a specified group",
-        "operationId": "getApiV4GroupsIdServiceAccounts",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The ID or URL-encoded path of the group",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "string"
-                }
-              ]
-            }
-          },
-          {
-            "name": "page",
-            "in": "query",
-            "description": "Current page number",
-            "schema": {
-              "type": "integer",
-              "default": 1,
-              "nullable": true
-            },
-            "example": 1
-          },
-          {
-            "name": "per_page",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "default": 20,
-              "nullable": true
-            },
-            "example": 20
-          },
-          {
-            "name": "order_by",
-            "in": "query",
-            "description": "Attribute to sort by",
-            "schema": {
-              "enum": [
-                "id",
-                "username"
-              ],
-              "type": "string",
-              "additionalProperties": false,
-              "default": "id",
-              "nullable": true
-            }
-          },
-          {
-            "name": "sort",
-            "in": "query",
-            "description": "Order of sorting",
-            "schema": {
-              "enum": [
-                "asc",
-                "desc"
-              ],
-              "type": "string",
-              "additionalProperties": false,
-              "default": "desc",
-              "nullable": true
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/APIEntitiesServiceAccount"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/v4/groups/{id}/service_accounts/{user_id}": {
-      "delete": {
-        "tags": [
-          "Service accounts"
-        ],
-        "summary": "Delete a group service account.",
-        "description": "Deletes a service account from a specified group. Available only for group owners and admins.",
-        "operationId": "deleteApiV4GroupsIdServiceAccountsUserId",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The ID or URL-encoded path of the group",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "string"
-                }
-              ]
-            }
-          },
-          {
-            "name": "user_id",
-            "in": "path",
-            "description": "The ID of the service account",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          },
-          {
-            "name": "hard_delete",
-            "in": "query",
-            "description": "Whether to remove a user's contributions",
-            "schema": {
-              "type": "boolean",
-              "nullable": true
-            }
-          }
-        ],
-        "responses": {
-          "204": {
-            "description": "Default",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "title": "DefaultResponse",
-                  "type": "object",
-                  "description": "Default response schema"
-                }
-              }
-            }
-          }
-        }
-      },
-      "patch": {
-        "tags": [
-          "Service accounts"
-        ],
-        "summary": "Update a group service account",
-        "description": "Update a specified group service account.",
-        "operationId": "patchApiV4GroupsIdServiceAccountsUserId",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The ID or URL-encoded path of the group",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "string"
-                }
-              ]
-            }
-          },
-          {
-            "name": "user_id",
-            "in": "path",
-            "description": "The ID of the service account",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RequestBody4d6a710f0d2d"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/APIEntitiesServiceAccount"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/v4/groups/{id}/service_accounts/{user_id}/personal_access_tokens": {
-      "get": {
-        "tags": [
-          "Access tokens",
-          "Service accounts"
-        ],
-        "summary": "List all personal access tokens for a group service account",
-        "description": "Lists all personal access tokens for a specified group service account",
-        "operationId": "getApiV4GroupsIdServiceAccountsUserIdPersonalAccessTokens",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The ID or URL-encoded path of the group",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "string"
-                }
-              ]
-            }
-          },
-          {
-            "name": "revoked",
-            "in": "query",
-            "description": "Filter tokens where revoked state matches parameter",
-            "schema": {
-              "type": "boolean",
-              "nullable": true
-            },
-            "example": false
-          },
-          {
-            "name": "state",
-            "in": "query",
-            "description": "Filter tokens which are either active or not",
-            "schema": {
-              "enum": [
-                "active",
-                "inactive"
-              ],
-              "type": "string",
-              "additionalProperties": false,
-              "nullable": true
-            },
-            "example": "active"
-          },
-          {
-            "name": "created_before",
-            "in": "query",
-            "description": "Filter tokens which were created before given datetime",
-            "schema": {
-              "type": "string",
-              "format": "date-time",
-              "nullable": true
-            },
-            "example": "2022-01-01"
-          },
-          {
-            "name": "created_after",
-            "in": "query",
-            "description": "Filter tokens which were created after given datetime",
-            "schema": {
-              "type": "string",
-              "format": "date-time",
-              "nullable": true
-            },
-            "example": "2021-01-01"
-          },
-          {
-            "name": "last_used_before",
-            "in": "query",
-            "description": "Filter tokens which were used before given datetime",
-            "schema": {
-              "type": "string",
-              "format": "date-time",
-              "nullable": true
-            },
-            "example": "2021-01-01"
-          },
-          {
-            "name": "last_used_after",
-            "in": "query",
-            "description": "Filter tokens which were used after given datetime",
-            "schema": {
-              "type": "string",
-              "format": "date-time",
-              "nullable": true
-            },
-            "example": "2022-01-01"
-          },
-          {
-            "name": "expires_before",
-            "in": "query",
-            "description": "Filter tokens which expire before given datetime",
-            "schema": {
-              "type": "string",
-              "format": "date",
-              "nullable": true
-            },
-            "example": "2022-01-01"
-          },
-          {
-            "name": "expires_after",
-            "in": "query",
-            "description": "Filter tokens which expire after given datetime",
-            "schema": {
-              "type": "string",
-              "format": "date",
-              "nullable": true
-            },
-            "example": "2021-01-01"
-          },
-          {
-            "name": "search",
-            "in": "query",
-            "description": "Filters tokens by name",
-            "schema": {
-              "type": "string",
-              "nullable": true
-            },
-            "example": "token"
-          },
-          {
-            "name": "sort",
-            "in": "query",
-            "description": "Sort tokens",
-            "schema": {
-              "type": "string",
-              "nullable": true
-            },
-            "example": "created_at_desc"
-          },
-          {
-            "name": "page",
-            "in": "query",
-            "description": "Current page number",
-            "schema": {
-              "type": "integer",
-              "default": 1,
-              "nullable": true
-            },
-            "example": 1
-          },
-          {
-            "name": "per_page",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "default": 20,
-              "nullable": true
-            },
-            "example": 20
-          },
-          {
-            "name": "user_id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/APIEntitiesPersonalAccessToken"
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "Access tokens",
-          "Service accounts"
-        ],
-        "summary": "Create a personal access token for a group service account.",
-        "description": "Creates a personal access token for a specified group service account.\n              Requires the group Owner role. This feature was introduced in GitLab 16.1.",
-        "operationId": "postApiV4GroupsIdServiceAccountsUserIdPersonalAccessTokens",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The ID or URL-encoded path of the group",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "string"
-                }
-              ]
-            }
-          },
-          {
-            "name": "user_id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RequestBodyEe836c0c3c1a"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/APIEntitiesPersonalAccessTokenWithToken"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/v4/groups/{id}/service_accounts/{user_id}/personal_access_tokens/{token_id}": {
-      "delete": {
-        "tags": [
-          "Access tokens",
-          "Service accounts"
-        ],
-        "summary": "Revoke a personal access token for a group service account",
-        "description": "Revokes a specified personal access token for a group service account.",
-        "operationId": "deleteApiV4GroupsIdServiceAccountsUserIdPersonalAccessTokensTokenId",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The ID or URL-encoded path of the group",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "string"
-                }
-              ]
-            }
-          },
-          {
-            "name": "user_id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "object"
-            }
-          },
-          {
-            "name": "token_id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
-        "responses": {
-          "204": {
-            "description": "Default",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "title": "DefaultResponse",
-                  "type": "object",
-                  "description": "Default response schema"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/v4/groups/{id}/service_accounts/{user_id}/personal_access_tokens/{token_id}/rotate": {
-      "post": {
-        "tags": [
-          "Access tokens",
-          "Service accounts"
-        ],
-        "summary": "Rotate personal access token for group service account",
-        "description": "Rotates a specified personal access token for a group service account.",
-        "operationId": "postApiV4GroupsIdServiceAccountsUserIdPersonalAccessTokensTokenIdRotate",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The ID or URL-encoded path of the group",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "string"
-                }
-              ]
-            }
-          },
-          {
-            "name": "user_id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "object"
-            }
-          },
-          {
-            "name": "token_id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RequestBody8c8c40f4e9bd"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/APIEntitiesPersonalAccessTokenWithToken"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/api/v4/projects/{id}/dependency_list_exports": {
       "post": {
         "tags": [
@@ -7336,152 +6084,6 @@
                   "title": "DefaultResponse",
                   "type": "object",
                   "description": "Default response schema"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/v4/service_accounts": {
-      "post": {
-        "tags": [
-          "Service accounts"
-        ],
-        "summary": "Create a service account user. Available only for instance admins.",
-        "operationId": "postApiV4ServiceAccounts",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RequestBody4d6a710f0d2d"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/APIEntitiesServiceAccount"
-                }
-              }
-            }
-          }
-        }
-      },
-      "get": {
-        "tags": [
-          "Service accounts"
-        ],
-        "summary": "Get list of service account users. Available only for instance admins",
-        "description": "Get list of service account users",
-        "operationId": "getApiV4ServiceAccounts",
-        "parameters": [
-          {
-            "name": "page",
-            "in": "query",
-            "description": "Current page number",
-            "schema": {
-              "type": "integer",
-              "default": 1,
-              "nullable": true
-            },
-            "example": 1
-          },
-          {
-            "name": "per_page",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "default": 20,
-              "nullable": true
-            },
-            "example": 20
-          },
-          {
-            "name": "order_by",
-            "in": "query",
-            "description": "Attribute to sort by",
-            "schema": {
-              "enum": [
-                "id",
-                "username"
-              ],
-              "type": "string",
-              "additionalProperties": false,
-              "default": "id",
-              "nullable": true
-            }
-          },
-          {
-            "name": "sort",
-            "in": "query",
-            "description": "Order of sorting",
-            "schema": {
-              "enum": [
-                "asc",
-                "desc"
-              ],
-              "type": "string",
-              "additionalProperties": false,
-              "default": "desc",
-              "nullable": true
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/APIEntitiesServiceAccount"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/v4/service_accounts/{user_id}": {
-      "patch": {
-        "tags": [
-          "Service accounts"
-        ],
-        "summary": "Update a service account user. Available only for instance admins.",
-        "description": "Update a service account user",
-        "operationId": "patchApiV4ServiceAccountsUserId",
-        "parameters": [
-          {
-            "name": "user_id",
-            "in": "path",
-            "description": "The ID of the service account user",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RequestBody4d6a710f0d2d"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/APIEntitiesServiceAccount"
                 }
               }
             }
@@ -22680,6 +21282,152 @@
         }
       }
     },
+    "/api/v4/service_accounts": {
+      "post": {
+        "tags": [
+          "Service accounts"
+        ],
+        "summary": "Create a service account user. Available only for instance admins.",
+        "operationId": "postApiV4ServiceAccounts",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestBody4d6a710f0d2d"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIEntitiesServiceAccount"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Service accounts"
+        ],
+        "summary": "Get list of service account users. Available only for instance admins",
+        "description": "Get list of service account users",
+        "operationId": "getApiV4ServiceAccounts",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Current page number",
+            "schema": {
+              "type": "integer",
+              "default": 1,
+              "nullable": true
+            },
+            "example": 1
+          },
+          {
+            "name": "per_page",
+            "in": "query",
+            "description": "Number of items per page",
+            "schema": {
+              "type": "integer",
+              "default": 20,
+              "nullable": true
+            },
+            "example": 20
+          },
+          {
+            "name": "order_by",
+            "in": "query",
+            "description": "Attribute to sort by",
+            "schema": {
+              "enum": [
+                "id",
+                "username"
+              ],
+              "type": "string",
+              "additionalProperties": false,
+              "default": "id",
+              "nullable": true
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Order of sorting",
+            "schema": {
+              "enum": [
+                "asc",
+                "desc"
+              ],
+              "type": "string",
+              "additionalProperties": false,
+              "default": "desc",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIEntitiesServiceAccount"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v4/service_accounts/{user_id}": {
+      "patch": {
+        "tags": [
+          "Service accounts"
+        ],
+        "summary": "Update a service account user. Available only for instance admins.",
+        "description": "Update a service account user",
+        "operationId": "patchApiV4ServiceAccountsUserId",
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "path",
+            "description": "The ID of the service account user",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestBody4d6a710f0d2d"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIEntitiesServiceAccount"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/v4/projects/{id}/issues/{eventable_id}/resource_state_events": {
       "get": {
         "tags": [
@@ -23405,6 +22153,632 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/APIEntitiesResourceLabelEvent"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v4/projects/{id}/service_accounts": {
+      "post": {
+        "tags": [
+          "Service accounts"
+        ],
+        "summary": "Create a project service account",
+        "description": "Creates a service account in the specified project",
+        "operationId": "postApiV4ProjectsIdServiceAccounts",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the project",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestBody4d6a710f0d2d"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIEntitiesServiceAccount"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Service accounts"
+        ],
+        "summary": "List all project service accounts",
+        "description": "Lists all service accounts for a specified project",
+        "operationId": "getApiV4ProjectsIdServiceAccounts",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the project",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Current page number",
+            "schema": {
+              "type": "integer",
+              "default": 1,
+              "nullable": true
+            },
+            "example": 1
+          },
+          {
+            "name": "per_page",
+            "in": "query",
+            "description": "Number of items per page",
+            "schema": {
+              "type": "integer",
+              "default": 20,
+              "nullable": true
+            },
+            "example": 20
+          },
+          {
+            "name": "order_by",
+            "in": "query",
+            "description": "Attribute to sort by",
+            "schema": {
+              "enum": [
+                "id",
+                "username"
+              ],
+              "type": "string",
+              "additionalProperties": false,
+              "default": "id",
+              "nullable": true
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Order of sorting",
+            "schema": {
+              "enum": [
+                "asc",
+                "desc"
+              ],
+              "type": "string",
+              "additionalProperties": false,
+              "default": "desc",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIEntitiesServiceAccount"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v4/projects/{id}/service_accounts/{user_id}": {
+      "delete": {
+        "tags": [
+          "Service accounts"
+        ],
+        "summary": "Delete a project service account",
+        "description": "Deletes a service account from a specified project.\n            Available only for project Owners or Maintainers, and administrators.",
+        "operationId": "deleteApiV4ProjectsIdServiceAccountsUserId",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the project",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "user_id",
+            "in": "path",
+            "description": "The ID of the service account",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "hard_delete",
+            "in": "query",
+            "description": "Whether to remove a user's contributions",
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Service accounts"
+        ],
+        "summary": "Update a project service account",
+        "description": "Update a specified project service account.",
+        "operationId": "patchApiV4ProjectsIdServiceAccountsUserId",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the project",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "user_id",
+            "in": "path",
+            "description": "The ID of the service account",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestBody4d6a710f0d2d"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIEntitiesServiceAccount"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v4/projects/{id}/service_accounts/{user_id}/personal_access_tokens": {
+      "get": {
+        "tags": [
+          "Access tokens",
+          "Service accounts"
+        ],
+        "summary": "List all personal access tokens for a project service account",
+        "description": "Lists all personal access tokens for a specified project service account",
+        "operationId": "getApiV4ProjectsIdServiceAccountsUserIdPersonalAccessTokens",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the project",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "revoked",
+            "in": "query",
+            "description": "Filter tokens where revoked state matches parameter",
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            },
+            "example": false
+          },
+          {
+            "name": "state",
+            "in": "query",
+            "description": "Filter tokens which are either active or not",
+            "schema": {
+              "enum": [
+                "active",
+                "inactive"
+              ],
+              "type": "string",
+              "additionalProperties": false,
+              "nullable": true
+            },
+            "example": "active"
+          },
+          {
+            "name": "created_before",
+            "in": "query",
+            "description": "Filter tokens which were created before given datetime",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            },
+            "example": "2022-01-01"
+          },
+          {
+            "name": "created_after",
+            "in": "query",
+            "description": "Filter tokens which were created after given datetime",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            },
+            "example": "2021-01-01"
+          },
+          {
+            "name": "last_used_before",
+            "in": "query",
+            "description": "Filter tokens which were used before given datetime",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            },
+            "example": "2021-01-01"
+          },
+          {
+            "name": "last_used_after",
+            "in": "query",
+            "description": "Filter tokens which were used after given datetime",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            },
+            "example": "2022-01-01"
+          },
+          {
+            "name": "expires_before",
+            "in": "query",
+            "description": "Filter tokens which expire before given datetime",
+            "schema": {
+              "type": "string",
+              "format": "date",
+              "nullable": true
+            },
+            "example": "2022-01-01"
+          },
+          {
+            "name": "expires_after",
+            "in": "query",
+            "description": "Filter tokens which expire after given datetime",
+            "schema": {
+              "type": "string",
+              "format": "date",
+              "nullable": true
+            },
+            "example": "2021-01-01"
+          },
+          {
+            "name": "search",
+            "in": "query",
+            "description": "Filters tokens by name",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "example": "token"
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sort tokens",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "example": "created_at_desc"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Current page number",
+            "schema": {
+              "type": "integer",
+              "default": 1,
+              "nullable": true
+            },
+            "example": 1
+          },
+          {
+            "name": "per_page",
+            "in": "query",
+            "description": "Number of items per page",
+            "schema": {
+              "type": "integer",
+              "default": 20,
+              "nullable": true
+            },
+            "example": 20
+          },
+          {
+            "name": "user_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIEntitiesPersonalAccessToken"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Access tokens",
+          "Service accounts"
+        ],
+        "summary": "Create a personal access token for a project service account.",
+        "description": "Creates a personal access token for a specified project service account.\n              Available only for project Owners or Maintainers.",
+        "operationId": "postApiV4ProjectsIdServiceAccountsUserIdPersonalAccessTokens",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the project",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "user_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestBodyEe836c0c3c1a"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIEntitiesPersonalAccessTokenWithToken"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v4/projects/{id}/service_accounts/{user_id}/personal_access_tokens/{token_id}": {
+      "delete": {
+        "tags": [
+          "Access tokens",
+          "Service accounts"
+        ],
+        "summary": "Revoke a personal access token for a project service account",
+        "description": "Revokes a specified personal access token for a project service account.",
+        "operationId": "deleteApiV4ProjectsIdServiceAccountsUserIdPersonalAccessTokensTokenId",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the project",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "user_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "object"
+            }
+          },
+          {
+            "name": "token_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v4/projects/{id}/service_accounts/{user_id}/personal_access_tokens/{token_id}/rotate": {
+      "post": {
+        "tags": [
+          "Access tokens",
+          "Service accounts"
+        ],
+        "summary": "Rotate a personal access token for a project service account",
+        "description": "Rotates a specified personal access token for a project service account.",
+        "operationId": "postApiV4ProjectsIdServiceAccountsUserIdPersonalAccessTokensTokenIdRotate",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the project",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "user_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "object"
+            }
+          },
+          {
+            "name": "token_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestBody8c8c40f4e9bd"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIEntitiesPersonalAccessTokenWithToken"
                 }
               }
             }
@@ -26704,6 +26078,632 @@
                   "title": "DefaultResponse",
                   "type": "object",
                   "description": "Default response schema"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v4/groups/{id}/service_accounts": {
+      "post": {
+        "tags": [
+          "Service accounts"
+        ],
+        "summary": "Create a group service account",
+        "description": "Creates a service account in the specified group",
+        "operationId": "postApiV4GroupsIdServiceAccounts",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the group",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestBody4d6a710f0d2d"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIEntitiesServiceAccount"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Service accounts"
+        ],
+        "summary": "List all group service accounts",
+        "description": "Lists all service accounts for a specified group",
+        "operationId": "getApiV4GroupsIdServiceAccounts",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the group",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Current page number",
+            "schema": {
+              "type": "integer",
+              "default": 1,
+              "nullable": true
+            },
+            "example": 1
+          },
+          {
+            "name": "per_page",
+            "in": "query",
+            "description": "Number of items per page",
+            "schema": {
+              "type": "integer",
+              "default": 20,
+              "nullable": true
+            },
+            "example": 20
+          },
+          {
+            "name": "order_by",
+            "in": "query",
+            "description": "Attribute to sort by",
+            "schema": {
+              "enum": [
+                "id",
+                "username"
+              ],
+              "type": "string",
+              "additionalProperties": false,
+              "default": "id",
+              "nullable": true
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Order of sorting",
+            "schema": {
+              "enum": [
+                "asc",
+                "desc"
+              ],
+              "type": "string",
+              "additionalProperties": false,
+              "default": "desc",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIEntitiesServiceAccount"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v4/groups/{id}/service_accounts/{user_id}": {
+      "delete": {
+        "tags": [
+          "Service accounts"
+        ],
+        "summary": "Delete a group service account.",
+        "description": "Deletes a service account from a specified group. Available only for group owners and admins.",
+        "operationId": "deleteApiV4GroupsIdServiceAccountsUserId",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the group",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "user_id",
+            "in": "path",
+            "description": "The ID of the service account",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "hard_delete",
+            "in": "query",
+            "description": "Whether to remove a user's contributions",
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Service accounts"
+        ],
+        "summary": "Update a group service account",
+        "description": "Update a specified group service account.",
+        "operationId": "patchApiV4GroupsIdServiceAccountsUserId",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the group",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "user_id",
+            "in": "path",
+            "description": "The ID of the service account",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestBody4d6a710f0d2d"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIEntitiesServiceAccount"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v4/groups/{id}/service_accounts/{user_id}/personal_access_tokens": {
+      "get": {
+        "tags": [
+          "Access tokens",
+          "Service accounts"
+        ],
+        "summary": "List all personal access tokens for a group service account",
+        "description": "Lists all personal access tokens for a specified group service account",
+        "operationId": "getApiV4GroupsIdServiceAccountsUserIdPersonalAccessTokens",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the group",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "revoked",
+            "in": "query",
+            "description": "Filter tokens where revoked state matches parameter",
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            },
+            "example": false
+          },
+          {
+            "name": "state",
+            "in": "query",
+            "description": "Filter tokens which are either active or not",
+            "schema": {
+              "enum": [
+                "active",
+                "inactive"
+              ],
+              "type": "string",
+              "additionalProperties": false,
+              "nullable": true
+            },
+            "example": "active"
+          },
+          {
+            "name": "created_before",
+            "in": "query",
+            "description": "Filter tokens which were created before given datetime",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            },
+            "example": "2022-01-01"
+          },
+          {
+            "name": "created_after",
+            "in": "query",
+            "description": "Filter tokens which were created after given datetime",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            },
+            "example": "2021-01-01"
+          },
+          {
+            "name": "last_used_before",
+            "in": "query",
+            "description": "Filter tokens which were used before given datetime",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            },
+            "example": "2021-01-01"
+          },
+          {
+            "name": "last_used_after",
+            "in": "query",
+            "description": "Filter tokens which were used after given datetime",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            },
+            "example": "2022-01-01"
+          },
+          {
+            "name": "expires_before",
+            "in": "query",
+            "description": "Filter tokens which expire before given datetime",
+            "schema": {
+              "type": "string",
+              "format": "date",
+              "nullable": true
+            },
+            "example": "2022-01-01"
+          },
+          {
+            "name": "expires_after",
+            "in": "query",
+            "description": "Filter tokens which expire after given datetime",
+            "schema": {
+              "type": "string",
+              "format": "date",
+              "nullable": true
+            },
+            "example": "2021-01-01"
+          },
+          {
+            "name": "search",
+            "in": "query",
+            "description": "Filters tokens by name",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "example": "token"
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sort tokens",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "example": "created_at_desc"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Current page number",
+            "schema": {
+              "type": "integer",
+              "default": 1,
+              "nullable": true
+            },
+            "example": 1
+          },
+          {
+            "name": "per_page",
+            "in": "query",
+            "description": "Number of items per page",
+            "schema": {
+              "type": "integer",
+              "default": 20,
+              "nullable": true
+            },
+            "example": 20
+          },
+          {
+            "name": "user_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIEntitiesPersonalAccessToken"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Access tokens",
+          "Service accounts"
+        ],
+        "summary": "Create a personal access token for a group service account.",
+        "description": "Creates a personal access token for a specified group service account.\n              Requires the group Owner role. This feature was introduced in GitLab 16.1.",
+        "operationId": "postApiV4GroupsIdServiceAccountsUserIdPersonalAccessTokens",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the group",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "user_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestBodyEe836c0c3c1a"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIEntitiesPersonalAccessTokenWithToken"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v4/groups/{id}/service_accounts/{user_id}/personal_access_tokens/{token_id}": {
+      "delete": {
+        "tags": [
+          "Access tokens",
+          "Service accounts"
+        ],
+        "summary": "Revoke a personal access token for a group service account",
+        "description": "Revokes a specified personal access token for a group service account.",
+        "operationId": "deleteApiV4GroupsIdServiceAccountsUserIdPersonalAccessTokensTokenId",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the group",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "user_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "object"
+            }
+          },
+          {
+            "name": "token_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v4/groups/{id}/service_accounts/{user_id}/personal_access_tokens/{token_id}/rotate": {
+      "post": {
+        "tags": [
+          "Access tokens",
+          "Service accounts"
+        ],
+        "summary": "Rotate personal access token for group service account",
+        "description": "Rotates a specified personal access token for a group service account.",
+        "operationId": "postApiV4GroupsIdServiceAccountsUserIdPersonalAccessTokensTokenIdRotate",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the group",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "user_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "object"
+            }
+          },
+          {
+            "name": "token_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestBody8c8c40f4e9bd"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIEntitiesPersonalAccessTokenWithToken"
                 }
               }
             }
@@ -62457,47 +62457,6 @@
         }
       }
     },
-    "/api/v4/projects/{id}/services/slack-slash-commands": {
-      "put": {
-        "tags": [
-          "Integrations"
-        ],
-        "summary": "Create/Edit Slack Slash Commands integration",
-        "description": "Set Slack Slash Commands integration.",
-        "operationId": "putApiV4ProjectsIdServicesSlackSlashCommands",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RequestBody5d04a12a1f40"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/APIEntitiesIntegrationBasic"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/api/v4/projects/{id}/services/packagist": {
       "put": {
         "tags": [
@@ -63566,7 +63525,6 @@
                 "linear",
                 "matrix",
                 "mattermost-slash-commands",
-                "slack-slash-commands",
                 "packagist",
                 "phorge",
                 "pipelines-email",
@@ -63663,7 +63621,6 @@
                 "linear",
                 "matrix",
                 "mattermost-slash-commands",
-                "slack-slash-commands",
                 "packagist",
                 "phorge",
                 "pipelines-email",
@@ -63749,58 +63706,6 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/RequestBodyBb037c8929f5"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Default",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "title": "DefaultResponse",
-                  "type": "object",
-                  "description": "Default response schema"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/v4/projects/{id}/services/slack_slash_commands/trigger": {
-      "post": {
-        "tags": [
-          "Integrations"
-        ],
-        "summary": "Trigger a slash command for slack-slash-commands",
-        "description": "Added in GitLab 8.13",
-        "operationId": "postApiV4ProjectsIdServicesSlackSlashCommandsTrigger",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The ID or URL-encoded path of the project",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "string"
-                }
-              ]
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RequestBody5d263ca42b06"
               }
             }
           }
@@ -64919,47 +64824,6 @@
         }
       }
     },
-    "/api/v4/projects/{id}/integrations/slack-slash-commands": {
-      "put": {
-        "tags": [
-          "Integrations"
-        ],
-        "summary": "Create/Edit Slack Slash Commands integration",
-        "description": "Set Slack Slash Commands integration.",
-        "operationId": "putApiV4ProjectsIdIntegrationsSlackSlashCommands",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RequestBody5d04a12a1f40"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/APIEntitiesIntegrationBasic"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/api/v4/projects/{id}/integrations/packagist": {
       "put": {
         "tags": [
@@ -66028,7 +65892,6 @@
                 "linear",
                 "matrix",
                 "mattermost-slash-commands",
-                "slack-slash-commands",
                 "packagist",
                 "phorge",
                 "pipelines-email",
@@ -66125,7 +65988,6 @@
                 "linear",
                 "matrix",
                 "mattermost-slash-commands",
-                "slack-slash-commands",
                 "packagist",
                 "phorge",
                 "pipelines-email",
@@ -66211,58 +66073,6 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/RequestBodyBb037c8929f5"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Default",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "title": "DefaultResponse",
-                  "type": "object",
-                  "description": "Default response schema"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/v4/projects/{id}/integrations/slack_slash_commands/trigger": {
-      "post": {
-        "tags": [
-          "Integrations"
-        ],
-        "summary": "Trigger a slash command for slack-slash-commands",
-        "description": "Added in GitLab 8.13",
-        "operationId": "postApiV4ProjectsIdIntegrationsSlackSlashCommandsTrigger",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The ID or URL-encoded path of the project",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "string"
-                }
-              ]
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RequestBody5d263ca42b06"
               }
             }
           }
@@ -67381,47 +67191,6 @@
         }
       }
     },
-    "/api/v4/groups/{id}/integrations/slack-slash-commands": {
-      "put": {
-        "tags": [
-          "Integrations"
-        ],
-        "summary": "Create/Edit Slack Slash Commands integration",
-        "description": "Set Slack Slash Commands integration.",
-        "operationId": "putApiV4GroupsIdIntegrationsSlackSlashCommands",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "object"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RequestBody5d04a12a1f40"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/APIEntitiesIntegrationBasic"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/api/v4/groups/{id}/integrations/packagist": {
       "put": {
         "tags": [
@@ -68490,7 +68259,6 @@
                 "linear",
                 "matrix",
                 "mattermost-slash-commands",
-                "slack-slash-commands",
                 "packagist",
                 "phorge",
                 "pipelines-email",
@@ -68587,7 +68355,6 @@
                 "linear",
                 "matrix",
                 "mattermost-slash-commands",
-                "slack-slash-commands",
                 "packagist",
                 "phorge",
                 "pipelines-email",
@@ -88403,7 +88170,7 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyF009da6ade92"
+                "$ref": "#/components/schemas/RequestBody15565b325eb1"
               }
             }
           }
@@ -91013,8 +90780,8 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "201": {
+            "description": "Created",
             "content": {
               "application/json": {
                 "schema": {
@@ -99864,11 +99631,12 @@
           "references": {
             "type": "array",
             "items": {
-              "type": "string"
+              "type": "object"
             }
           },
           "reference": {
-            "type": "string"
+            "type": "string",
+            "example": "&1"
           },
           "created_at": {
             "type": "string",
@@ -99904,7 +99672,7 @@
             "example": true
           },
           "_links": {
-            "type": "string"
+            "type": "object"
           }
         }
       },
@@ -99922,7 +99690,7 @@
             "example": 0
           },
           "epic": {
-            "type": "string"
+            "type": "object"
           },
           "issue": {
             "$ref": "#/components/schemas/APIEntitiesIssueBasic"
@@ -102802,28 +102570,35 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "name": {
-            "type": "string"
+            "type": "string",
+            "example": "Development"
           },
           "hide_backlog_list": {
-            "type": "string"
+            "type": "boolean",
+            "example": false
           },
           "hide_closed_list": {
-            "type": "string"
+            "type": "boolean",
+            "example": false
           },
           "project": {
             "$ref": "#/components/schemas/APIEntitiesBasicProjectDetails"
           },
           "lists": {
-            "$ref": "#/components/schemas/APIEntitiesList"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/APIEntitiesList"
+            }
           },
           "group": {
             "$ref": "#/components/schemas/APIEntitiesBasicGroupDetails"
           },
           "milestone": {
-            "type": "string"
+            "type": "object"
           },
           "assignee": {
             "$ref": "#/components/schemas/APIEntitiesUserBasic"
@@ -102832,7 +102607,8 @@
             "$ref": "#/components/schemas/APIEntitiesLabelBasic"
           },
           "weight": {
-            "type": "string"
+            "type": "integer",
+            "example": 0
           }
         }
       },
@@ -102840,13 +102616,15 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "label": {
             "$ref": "#/components/schemas/APIEntitiesLabelBasic"
           },
           "position": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "milestone": {
             "$ref": "#/components/schemas/APIEntitiesMilestone"
@@ -102858,13 +102636,16 @@
             "$ref": "#/components/schemas/APIEntitiesUserSafe"
           },
           "max_issue_count": {
-            "type": "string"
+            "type": "integer",
+            "example": 0
           },
           "max_issue_weight": {
-            "type": "string"
+            "type": "integer",
+            "example": 0
           },
           "limit_metric": {
-            "type": "string"
+            "type": "string",
+            "example": "issue_count"
           }
         }
       },
@@ -103533,25 +103314,32 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "name": {
-            "type": "string"
+            "type": "string",
+            "example": "topic1"
           },
           "title": {
-            "type": "string"
+            "type": "string",
+            "example": "Topic 1"
           },
           "description": {
-            "type": "string"
+            "type": "string",
+            "example": "A description"
           },
           "total_projects_count": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "organization_id": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "avatar_url": {
-            "type": "string"
+            "type": "string",
+            "example": "http://gitlab.example.com/uploads/topic/avatar/1/avatar.png"
           }
         }
       },
@@ -104402,30 +104190,6 @@
           }
         }
       },
-      "APIEntitiesLicenseBasic": {
-        "type": "object",
-        "properties": {
-          "key": {
-            "type": "string",
-            "example": "gpl-3.0"
-          },
-          "name": {
-            "type": "string",
-            "example": "GNU General Public License v3.0"
-          },
-          "nickname": {
-            "type": "string",
-            "example": "GNU GPLv3"
-          },
-          "html_url": {
-            "type": "string",
-            "example": "http://choosealicense.com/licenses/gpl-3.0"
-          },
-          "source_url": {
-            "type": "string"
-          }
-        }
-      },
       "APIEntitiesTemplatesList": {
         "type": "object",
         "properties": {
@@ -104457,7 +104221,7 @@
         "type": "object",
         "properties": {
           "fetches": {
-            "type": "string"
+            "type": "object"
           }
         }
       },
@@ -105338,31 +105102,41 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "head_commit_sha": {
-            "type": "string"
+            "type": "string",
+            "example": "1234abcd"
           },
           "base_commit_sha": {
-            "type": "string"
+            "type": "string",
+            "example": "1234abcd"
           },
           "start_commit_sha": {
-            "type": "string"
+            "type": "string",
+            "example": "1234abcd"
           },
           "created_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-01-31T15:10:45.080Z"
           },
           "merge_request_id": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "state": {
-            "type": "string"
+            "type": "string",
+            "example": "collected"
           },
           "real_size": {
-            "type": "string"
+            "type": "string",
+            "example": 1
           },
           "patch_id_sha": {
-            "type": "string"
+            "type": "string",
+            "example": "1234abcd"
           }
         }
       },
@@ -105525,10 +105299,13 @@
             "$ref": "#/components/schemas/APIEntitiesUserBasic"
           },
           "state": {
-            "type": "string"
+            "type": "string",
+            "example": "unreviewed"
           },
           "created_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-01-31T15:10:45.080Z"
           }
         }
       },
@@ -105621,19 +105398,24 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "alt": {
-            "type": "string"
+            "type": "string",
+            "example": "filename"
           },
           "url": {
-            "type": "string"
+            "type": "string",
+            "example": "/uploads/secret/filename"
           },
           "full_path": {
-            "type": "string"
+            "type": "string",
+            "example": "/-/project/1/uploads/secret/filename"
           },
           "markdown": {
-            "type": "string"
+            "type": "string",
+            "example": "[filename](/uploads/secret/filename)"
           }
         }
       },
@@ -105723,22 +105505,29 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "created_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-01-31T15:10:45.080Z"
           },
           "filename": {
-            "type": "string"
+            "type": "string",
+            "example": "image.png"
           },
           "file_path": {
-            "type": "string"
+            "type": "string",
+            "example": "/uploads/-/system/issuable_metric_image/file/1/image.png"
           },
           "url": {
-            "type": "string"
+            "type": "string",
+            "example": "https://gitlab.example.com/example"
           },
           "url_text": {
-            "type": "string"
+            "type": "string",
+            "example": "Example URL"
           }
         }
       },
@@ -105781,40 +105570,56 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "iid": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "sequence": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "group_id": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "title": {
-            "type": "string"
+            "type": "string",
+            "example": "Iteration I"
           },
           "description": {
-            "type": "string"
+            "type": "string",
+            "example": "Iteration description"
           },
           "state": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "created_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-01-31T15:10:45.080Z"
           },
           "updated_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-01-31T15:10:45.080Z"
           },
           "start_date": {
-            "type": "string"
+            "type": "string",
+            "format": "date",
+            "example": "2022-01-01"
           },
           "due_date": {
-            "type": "string"
+            "type": "string",
+            "format": "date",
+            "example": "2022-01-31"
           },
           "web_url": {
-            "type": "string"
+            "type": "string",
+            "example": "https://gitlab.example.com/groups/gitlab-org/-/iterations/1"
           }
         }
       },
@@ -109673,37 +109478,48 @@
         "type": "object",
         "properties": {
           "commit_count": {
-            "type": "string"
+            "type": "integer",
+            "example": 37
           },
           "storage_size": {
-            "type": "string"
+            "type": "integer",
+            "example": 1038090
           },
           "repository_size": {
-            "type": "string"
+            "type": "integer",
+            "example": 1038090
           },
           "wiki_size": {
-            "type": "string"
+            "type": "integer",
+            "example": 0
           },
           "lfs_objects_size": {
-            "type": "string"
+            "type": "integer",
+            "example": 0
           },
           "job_artifacts_size": {
-            "type": "string"
+            "type": "integer",
+            "example": 0
           },
           "pipeline_artifacts_size": {
-            "type": "string"
+            "type": "integer",
+            "example": 0
           },
           "packages_size": {
-            "type": "string"
+            "type": "integer",
+            "example": 0
           },
           "snippets_size": {
-            "type": "string"
+            "type": "integer",
+            "example": 0
           },
           "uploads_size": {
-            "type": "string"
+            "type": "integer",
+            "example": 0
           },
           "container_registry_size": {
-            "type": "string"
+            "type": "integer",
+            "example": 0
           }
         }
       },
@@ -109729,6 +109545,30 @@
             "type": "string"
           },
           "next_run_at": {
+            "type": "string"
+          }
+        }
+      },
+      "APIEntitiesLicenseBasic": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "example": "gpl-3.0"
+          },
+          "name": {
+            "type": "string",
+            "example": "GNU General Public License v3.0"
+          },
+          "nickname": {
+            "type": "string",
+            "example": "GNU GPLv3"
+          },
+          "html_url": {
+            "type": "string",
+            "example": "http://choosealicense.com/licenses/gpl-3.0"
+          },
+          "source_url": {
             "type": "string"
           }
         }
@@ -109876,10 +109716,12 @@
             "type": "integer"
           },
           "web_url": {
-            "type": "string"
+            "type": "string",
+            "example": "http://gitlab.example.com/groups/diaspora"
           },
           "name": {
-            "type": "string"
+            "type": "string",
+            "example": "Diaspora"
           }
         }
       },
@@ -110454,19 +110296,24 @@
         "type": "object",
         "properties": {
           "name": {
-            "type": "string"
+            "type": "string",
+            "example": "Pipeline Status"
           },
           "link_url": {
-            "type": "string"
+            "type": "string",
+            "example": "https://example.gitlab.com"
           },
           "image_url": {
-            "type": "string"
+            "type": "string",
+            "example": "https://example.gitlab.com"
           },
           "rendered_link_url": {
-            "type": "string"
+            "type": "string",
+            "example": "https://example.gitlab.com"
           },
           "rendered_image_url": {
-            "type": "string"
+            "type": "string",
+            "example": "https://example.gitlab.com"
           }
         }
       },
@@ -111491,11 +111338,12 @@
           "references": {
             "type": "array",
             "items": {
-              "type": "string"
+              "type": "object"
             }
           },
           "reference": {
-            "type": "string"
+            "type": "string",
+            "example": "&1"
           },
           "created_at": {
             "type": "string",
@@ -111531,19 +111379,25 @@
             "example": true
           },
           "_links": {
-            "type": "string"
+            "type": "object"
           },
           "related_epic_link_id": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "link_type": {
-            "type": "string"
+            "type": "string",
+            "example": "relates_to"
           },
           "link_created_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-01-31T15:10:45.080Z"
           },
           "link_updated_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-01-31T15:10:45.080Z"
           }
         }
       },
@@ -111834,10 +111688,11 @@
             "type": "string"
           },
           "priority": {
-            "type": "string"
+            "type": "integer",
+            "example": 10
           },
           "is_project_label": {
-            "type": "string"
+            "type": "boolean"
           }
         }
       },
@@ -111989,59 +111844,6 @@
           },
           "notification_level": {
             "type": "string"
-          }
-        }
-      },
-      "APIEntitiesLicense": {
-        "type": "object",
-        "properties": {
-          "key": {
-            "type": "string",
-            "example": "gpl-3.0"
-          },
-          "name": {
-            "type": "string",
-            "example": "GNU General Public License v3.0"
-          },
-          "nickname": {
-            "type": "string",
-            "example": "GNU GPLv3"
-          },
-          "html_url": {
-            "type": "string",
-            "example": "http://choosealicense.com/licenses/gpl-3.0"
-          },
-          "source_url": {
-            "type": "string"
-          },
-          "popular": {
-            "type": "boolean"
-          },
-          "description": {
-            "type": "string",
-            "example": "A simple license"
-          },
-          "conditions": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "permissions": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "limitations": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "content": {
-            "type": "string",
-            "example": "GNU GENERAL PUBLIC LICENSE"
           }
         }
       },
@@ -112909,37 +112711,53 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "head_commit_sha": {
-            "type": "string"
+            "type": "string",
+            "example": "1234abcd"
           },
           "base_commit_sha": {
-            "type": "string"
+            "type": "string",
+            "example": "1234abcd"
           },
           "start_commit_sha": {
-            "type": "string"
+            "type": "string",
+            "example": "1234abcd"
           },
           "created_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-01-31T15:10:45.080Z"
           },
           "merge_request_id": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "state": {
-            "type": "string"
+            "type": "string",
+            "example": "collected"
           },
           "real_size": {
-            "type": "string"
+            "type": "string",
+            "example": 1
           },
           "patch_id_sha": {
-            "type": "string"
+            "type": "string",
+            "example": "1234abcd"
           },
           "commits": {
-            "$ref": "#/components/schemas/APIEntitiesCommit"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/APIEntitiesCommit"
+            }
           },
           "diffs": {
-            "$ref": "#/components/schemas/APIEntitiesDiff"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/APIEntitiesDiff"
+            }
           }
         }
       },
@@ -113925,7 +113743,7 @@
             "type": "string"
           },
           "issue_stats": {
-            "type": "string"
+            "type": "object"
           }
         }
       },
@@ -114083,10 +113901,12 @@
             "$ref": "#/components/schemas/APIEntitiesTaskCompletionStatus"
           },
           "weight": {
-            "type": "string"
+            "type": "integer",
+            "example": 5
           },
           "blocking_issues_count": {
-            "type": "string"
+            "type": "integer",
+            "example": 2
           }
         }
       },
@@ -114134,13 +113954,17 @@
             "$ref": "#/components/schemas/APIEntitiesUserBasic"
           },
           "merged_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-01-31T15:10:45.080Z"
           },
           "closed_by": {
             "$ref": "#/components/schemas/APIEntitiesUserBasic"
           },
           "closed_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-01-31T15:10:45.080Z"
           },
           "title_html": {
             "type": "string"
@@ -114182,7 +114006,10 @@
             "type": "integer"
           },
           "labels": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "draft": {
             "type": "boolean"
@@ -114204,70 +114031,82 @@
             "type": "boolean"
           },
           "merge_status": {
-            "type": "string"
+            "type": "string",
+            "example": "unchecked"
           },
           "detailed_merge_status": {
-            "type": "string"
+            "type": "string",
+            "example": "mergeable"
           },
           "merge_after": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-01-31T15:10:45.080Z"
           },
           "sha": {
-            "type": "string"
+            "type": "string",
+            "example": "1234abcd"
           },
           "merge_commit_sha": {
-            "type": "string"
+            "type": "string",
+            "example": "1234abcd"
           },
           "squash_commit_sha": {
-            "type": "string"
+            "type": "string",
+            "example": "1234abcd"
           },
           "discussion_locked": {
-            "type": "string"
+            "type": "boolean"
           },
           "should_remove_source_branch": {
-            "type": "string"
+            "type": "boolean"
           },
           "force_remove_source_branch": {
-            "type": "string"
+            "type": "boolean"
           },
           "prepared_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-01-31T15:10:45.080Z"
           },
           "allow_collaboration": {
-            "type": "string"
+            "type": "boolean"
           },
           "allow_maintainer_to_push": {
-            "type": "string"
+            "type": "boolean"
           },
           "reference": {
-            "type": "string"
+            "type": "string",
+            "example": "!1"
           },
           "references": {
             "$ref": "#/components/schemas/APIEntitiesIssuableReferences"
           },
           "web_url": {
-            "type": "string"
+            "type": "string",
+            "example": "https://gitlab.example.com/my-group/my-project/-/merge_requests/1"
           },
           "time_stats": {
             "$ref": "#/components/schemas/APIEntitiesIssuableTimeStats"
           },
           "squash": {
-            "type": "string"
+            "type": "boolean"
           },
           "squash_on_merge": {
-            "type": "string"
+            "type": "boolean"
           },
           "task_completion_status": {
             "$ref": "#/components/schemas/APIEntitiesTaskCompletionStatus"
           },
           "has_conflicts": {
-            "type": "string"
+            "type": "boolean"
           },
           "blocking_discussions_resolved": {
-            "type": "string"
+            "type": "boolean"
           },
           "approvals_before_merge": {
-            "type": "string"
+            "type": "integer",
+            "example": 2
           }
         }
       },
@@ -114446,10 +114285,12 @@
             "$ref": "#/components/schemas/APIEntitiesTaskCompletionStatus"
           },
           "weight": {
-            "type": "string"
+            "type": "integer",
+            "example": 5
           },
           "blocking_issues_count": {
-            "type": "string"
+            "type": "integer",
+            "example": 2
           },
           "vulnerability_link_id": {
             "type": "string"
@@ -114570,10 +114411,12 @@
             "$ref": "#/components/schemas/APIEntitiesTaskCompletionStatus"
           },
           "weight": {
-            "type": "string"
+            "type": "integer",
+            "example": 5
           },
           "blocking_issues_count": {
-            "type": "string"
+            "type": "integer",
+            "example": 2
           },
           "has_tasks": {
             "type": "string"
@@ -114732,10 +114575,12 @@
             "$ref": "#/components/schemas/APIEntitiesTaskCompletionStatus"
           },
           "weight": {
-            "type": "string"
+            "type": "integer",
+            "example": 5
           },
           "blocking_issues_count": {
-            "type": "string"
+            "type": "integer",
+            "example": 2
           },
           "has_tasks": {
             "type": "string"
@@ -114904,10 +114749,12 @@
             "$ref": "#/components/schemas/APIEntitiesTaskCompletionStatus"
           },
           "weight": {
-            "type": "string"
+            "type": "integer",
+            "example": 5
           },
           "blocking_issues_count": {
-            "type": "string"
+            "type": "integer",
+            "example": 2
           },
           "has_tasks": {
             "type": "string"
@@ -115066,10 +114913,12 @@
             "$ref": "#/components/schemas/APIEntitiesTaskCompletionStatus"
           },
           "weight": {
-            "type": "string"
+            "type": "integer",
+            "example": 5
           },
           "blocking_issues_count": {
-            "type": "string"
+            "type": "integer",
+            "example": 2
           },
           "has_tasks": {
             "type": "string"
@@ -115173,13 +115022,17 @@
             "$ref": "#/components/schemas/APIEntitiesUserBasic"
           },
           "merged_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-01-31T15:10:45.080Z"
           },
           "closed_by": {
             "$ref": "#/components/schemas/APIEntitiesUserBasic"
           },
           "closed_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-01-31T15:10:45.080Z"
           },
           "title_html": {
             "type": "string"
@@ -115221,7 +115074,10 @@
             "type": "integer"
           },
           "labels": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "draft": {
             "type": "boolean"
@@ -115243,85 +115099,104 @@
             "type": "boolean"
           },
           "merge_status": {
-            "type": "string"
+            "type": "string",
+            "example": "unchecked"
           },
           "detailed_merge_status": {
-            "type": "string"
+            "type": "string",
+            "example": "mergeable"
           },
           "merge_after": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-01-31T15:10:45.080Z"
           },
           "sha": {
-            "type": "string"
+            "type": "string",
+            "example": "1234abcd"
           },
           "merge_commit_sha": {
-            "type": "string"
+            "type": "string",
+            "example": "1234abcd"
           },
           "squash_commit_sha": {
-            "type": "string"
+            "type": "string",
+            "example": "1234abcd"
           },
           "discussion_locked": {
-            "type": "string"
+            "type": "boolean"
           },
           "should_remove_source_branch": {
-            "type": "string"
+            "type": "boolean"
           },
           "force_remove_source_branch": {
-            "type": "string"
+            "type": "boolean"
           },
           "prepared_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-01-31T15:10:45.080Z"
           },
           "allow_collaboration": {
-            "type": "string"
+            "type": "boolean"
           },
           "allow_maintainer_to_push": {
-            "type": "string"
+            "type": "boolean"
           },
           "reference": {
-            "type": "string"
+            "type": "string",
+            "example": "!1"
           },
           "references": {
             "$ref": "#/components/schemas/APIEntitiesIssuableReferences"
           },
           "web_url": {
-            "type": "string"
+            "type": "string",
+            "example": "https://gitlab.example.com/my-group/my-project/-/merge_requests/1"
           },
           "time_stats": {
             "$ref": "#/components/schemas/APIEntitiesIssuableTimeStats"
           },
           "squash": {
-            "type": "string"
+            "type": "boolean"
           },
           "squash_on_merge": {
-            "type": "string"
+            "type": "boolean"
           },
           "task_completion_status": {
             "$ref": "#/components/schemas/APIEntitiesTaskCompletionStatus"
           },
           "has_conflicts": {
-            "type": "string"
+            "type": "boolean"
           },
           "blocking_discussions_resolved": {
-            "type": "string"
+            "type": "boolean"
           },
           "approvals_before_merge": {
-            "type": "string"
+            "type": "integer",
+            "example": 2
           },
           "subscribed": {
-            "type": "string"
+            "type": "boolean"
           },
           "changes_count": {
-            "type": "string"
+            "type": "string",
+            "example": 1
           },
           "latest_build_started_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-01-31T15:10:45.080Z"
           },
           "latest_build_finished_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-01-31T15:10:45.080Z"
           },
           "first_deployed_to_production_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-01-31T15:10:45.080Z"
           },
           "pipeline": {
             "$ref": "#/components/schemas/APIEntitiesCiPipelineBasic"
@@ -115333,19 +115208,21 @@
             "$ref": "#/components/schemas/APIEntitiesDiffRefs"
           },
           "merge_error": {
-            "type": "string"
+            "type": "string",
+            "example": "Merge error"
           },
           "rebase_in_progress": {
-            "type": "string"
+            "type": "boolean"
           },
           "diverged_commits_count": {
-            "type": "string"
+            "type": "integer",
+            "example": 0
           },
           "first_contribution": {
-            "type": "string"
+            "type": "boolean"
           },
           "user": {
-            "type": "string"
+            "type": "object"
           }
         }
       },
@@ -115393,13 +115270,17 @@
             "$ref": "#/components/schemas/APIEntitiesUserBasic"
           },
           "merged_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-01-31T15:10:45.080Z"
           },
           "closed_by": {
             "$ref": "#/components/schemas/APIEntitiesUserBasic"
           },
           "closed_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-01-31T15:10:45.080Z"
           },
           "title_html": {
             "type": "string"
@@ -115441,7 +115322,10 @@
             "type": "integer"
           },
           "labels": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "draft": {
             "type": "boolean"
@@ -115463,85 +115347,104 @@
             "type": "boolean"
           },
           "merge_status": {
-            "type": "string"
+            "type": "string",
+            "example": "unchecked"
           },
           "detailed_merge_status": {
-            "type": "string"
+            "type": "string",
+            "example": "mergeable"
           },
           "merge_after": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-01-31T15:10:45.080Z"
           },
           "sha": {
-            "type": "string"
+            "type": "string",
+            "example": "1234abcd"
           },
           "merge_commit_sha": {
-            "type": "string"
+            "type": "string",
+            "example": "1234abcd"
           },
           "squash_commit_sha": {
-            "type": "string"
+            "type": "string",
+            "example": "1234abcd"
           },
           "discussion_locked": {
-            "type": "string"
+            "type": "boolean"
           },
           "should_remove_source_branch": {
-            "type": "string"
+            "type": "boolean"
           },
           "force_remove_source_branch": {
-            "type": "string"
+            "type": "boolean"
           },
           "prepared_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-01-31T15:10:45.080Z"
           },
           "allow_collaboration": {
-            "type": "string"
+            "type": "boolean"
           },
           "allow_maintainer_to_push": {
-            "type": "string"
+            "type": "boolean"
           },
           "reference": {
-            "type": "string"
+            "type": "string",
+            "example": "!1"
           },
           "references": {
             "$ref": "#/components/schemas/APIEntitiesIssuableReferences"
           },
           "web_url": {
-            "type": "string"
+            "type": "string",
+            "example": "https://gitlab.example.com/my-group/my-project/-/merge_requests/1"
           },
           "time_stats": {
             "$ref": "#/components/schemas/APIEntitiesIssuableTimeStats"
           },
           "squash": {
-            "type": "string"
+            "type": "boolean"
           },
           "squash_on_merge": {
-            "type": "string"
+            "type": "boolean"
           },
           "task_completion_status": {
             "$ref": "#/components/schemas/APIEntitiesTaskCompletionStatus"
           },
           "has_conflicts": {
-            "type": "string"
+            "type": "boolean"
           },
           "blocking_discussions_resolved": {
-            "type": "string"
+            "type": "boolean"
           },
           "approvals_before_merge": {
-            "type": "string"
+            "type": "integer",
+            "example": 2
           },
           "subscribed": {
-            "type": "string"
+            "type": "boolean"
           },
           "changes_count": {
-            "type": "string"
+            "type": "string",
+            "example": 1
           },
           "latest_build_started_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-01-31T15:10:45.080Z"
           },
           "latest_build_finished_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-01-31T15:10:45.080Z"
           },
           "first_deployed_to_production_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-01-31T15:10:45.080Z"
           },
           "pipeline": {
             "$ref": "#/components/schemas/APIEntitiesCiPipelineBasic"
@@ -115553,25 +115456,30 @@
             "$ref": "#/components/schemas/APIEntitiesDiffRefs"
           },
           "merge_error": {
-            "type": "string"
+            "type": "string",
+            "example": "Merge error"
           },
           "rebase_in_progress": {
-            "type": "string"
+            "type": "boolean"
           },
           "diverged_commits_count": {
-            "type": "string"
+            "type": "integer",
+            "example": 0
           },
           "first_contribution": {
-            "type": "string"
+            "type": "boolean"
           },
           "user": {
-            "type": "string"
+            "type": "object"
           },
           "changes": {
-            "$ref": "#/components/schemas/APIEntitiesDiff"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/APIEntitiesDiff"
+            }
           },
           "overflow": {
-            "type": "string"
+            "type": "boolean"
           }
         }
       },
@@ -115738,6 +115646,59 @@
             "items": {
               "type": "integer"
             }
+          }
+        }
+      },
+      "APIEntitiesLicense": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "example": "gpl-3.0"
+          },
+          "name": {
+            "type": "string",
+            "example": "GNU General Public License v3.0"
+          },
+          "nickname": {
+            "type": "string",
+            "example": "GNU GPLv3"
+          },
+          "html_url": {
+            "type": "string",
+            "example": "http://choosealicense.com/licenses/gpl-3.0"
+          },
+          "source_url": {
+            "type": "string"
+          },
+          "popular": {
+            "type": "boolean"
+          },
+          "description": {
+            "type": "string",
+            "example": "A simple license"
+          },
+          "conditions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "permissions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "limitations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "content": {
+            "type": "string",
+            "example": "GNU GENERAL PUBLIC LICENSE"
           }
         }
       },
@@ -115948,19 +115909,24 @@
             "type": "integer"
           },
           "web_url": {
-            "type": "string"
+            "type": "string",
+            "example": "http://gitlab.example.com/groups/diaspora"
           },
           "name": {
-            "type": "string"
+            "type": "string",
+            "example": "Diaspora"
           },
           "avatar_url": {
-            "type": "string"
+            "type": "string",
+            "example": "http://gitlab.example.com/uploads/group/avatar/1/avatar.png"
           },
           "full_name": {
-            "type": "string"
+            "type": "string",
+            "example": "Foobar Group"
           },
           "full_path": {
-            "type": "string"
+            "type": "string",
+            "example": "foo-bar"
           }
         }
       },
@@ -115971,10 +115937,12 @@
             "type": "integer"
           },
           "web_url": {
-            "type": "string"
+            "type": "string",
+            "example": "http://gitlab.example.com/groups/diaspora"
           },
           "name": {
-            "type": "string"
+            "type": "string",
+            "example": "Diaspora"
           },
           "path": {
             "type": "string"
@@ -116127,10 +116095,12 @@
             "type": "integer"
           },
           "web_url": {
-            "type": "string"
+            "type": "string",
+            "example": "http://gitlab.example.com/groups/diaspora"
           },
           "name": {
-            "type": "string"
+            "type": "string",
+            "example": "Diaspora"
           },
           "path": {
             "type": "string"
@@ -116275,16 +116245,21 @@
             "type": "string"
           },
           "shared_with_groups": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
           },
           "runners_token": {
-            "type": "string"
+            "type": "string",
+            "example": "b8bc4a7a29eb76ea83cf79e4908c2b"
           },
           "enabled_git_access_protocol": {
-            "type": "string"
+            "type": "string",
+            "example": "ssh"
           },
           "prevent_sharing_groups_outside_hierarchy": {
-            "type": "string"
+            "type": "boolean"
           },
           "step_up_auth_required_oauth_provider": {
             "type": "string",
@@ -117080,25 +117055,32 @@
         "type": "object",
         "properties": {
           "name": {
-            "type": "string"
+            "type": "string",
+            "example": "Pipeline Status"
           },
           "link_url": {
-            "type": "string"
+            "type": "string",
+            "example": "https://example.gitlab.com"
           },
           "image_url": {
-            "type": "string"
+            "type": "string",
+            "example": "https://example.gitlab.com"
           },
           "rendered_link_url": {
-            "type": "string"
+            "type": "string",
+            "example": "https://example.gitlab.com"
           },
           "rendered_image_url": {
-            "type": "string"
+            "type": "string",
+            "example": "https://example.gitlab.com"
           },
           "id": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "kind": {
-            "type": "string"
+            "type": "string",
+            "example": "project"
           }
         }
       },
@@ -117233,7 +117215,7 @@
             "example": "finished"
           },
           "_links": {
-            "type": "string"
+            "type": "object"
           }
         }
       },
@@ -117558,13 +117540,17 @@
             "example": "registry.gitlab.example.com/gitlab/gitlab-client"
           },
           "_links": {
-            "type": "string"
+            "type": "object"
           },
           "marked_for_deletion_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2020-05-07T04:27:17.016Z"
           },
           "marked_for_deletion_on": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2020-05-07T04:27:17.016Z"
           },
           "packages_enabled": {
             "type": "boolean"
@@ -117832,7 +117818,7 @@
           "shared_with_groups": {
             "type": "array",
             "items": {
-              "type": "string"
+              "type": "object"
             }
           },
           "only_allow_merge_if_pipeline_succeeds": {
@@ -118114,13 +118100,17 @@
             "example": "registry.gitlab.example.com/gitlab/gitlab-client"
           },
           "_links": {
-            "type": "string"
+            "type": "object"
           },
           "marked_for_deletion_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2020-05-07T04:27:17.016Z"
           },
           "marked_for_deletion_on": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2020-05-07T04:27:17.016Z"
           },
           "packages_enabled": {
             "type": "boolean"
@@ -118388,7 +118378,7 @@
           "shared_with_groups": {
             "type": "array",
             "items": {
-              "type": "string"
+              "type": "object"
             }
           },
           "only_allow_merge_if_pipeline_succeeds": {
@@ -118559,7 +118549,7 @@
             "example": "This requires the title to include a Jira label"
           },
           "permissions": {
-            "type": "string"
+            "type": "object"
           }
         }
       },
@@ -121212,73 +121202,6 @@
           }
         }
       },
-      "RequestBody4d6a710f0d2d": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "Name of the user",
-            "nullable": true
-          },
-          "username": {
-            "type": "string",
-            "description": "Username of the user",
-            "nullable": true
-          },
-          "email": {
-            "type": "string",
-            "description": "Custom email address for the user",
-            "nullable": true
-          }
-        }
-      },
-      "RequestBodyEe836c0c3c1a": {
-        "required": [
-          "name",
-          "scopes"
-        ],
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "The name of the access token",
-            "nullable": true,
-            "example": "My token"
-          },
-          "description": {
-            "type": "string",
-            "description": "The description of the access token",
-            "nullable": true,
-            "example": "A token used for k8s"
-          },
-          "expires_at": {
-            "type": "string",
-            "description": "Expiration date of the access token in ISO format (YYYY-MM-DD). If undefined, the date is set to the maximum allowable lifetime limit.",
-            "format": "date",
-            "nullable": true,
-            "example": "2021-01-31"
-          },
-          "scopes": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "The array of scopes of the personal access token"
-          }
-        }
-      },
-      "RequestBody8c8c40f4e9bd": {
-        "type": "object",
-        "properties": {
-          "expires_at": {
-            "type": "string",
-            "description": "The expiration date of the token",
-            "format": "date",
-            "nullable": true,
-            "example": "2021-01-31"
-          }
-        }
-      },
       "RequestBody5a2db215793f": {
         "type": "object",
         "properties": {
@@ -122587,6 +122510,18 @@
             "additionalProperties": false,
             "description": "The approval status of the license.",
             "nullable": true
+          }
+        }
+      },
+      "RequestBody8c8c40f4e9bd": {
+        "type": "object",
+        "properties": {
+          "expires_at": {
+            "type": "string",
+            "description": "The expiration date of the token",
+            "format": "date",
+            "nullable": true,
+            "example": "2021-01-31"
           }
         }
       },
@@ -126061,6 +125996,41 @@
           }
         }
       },
+      "RequestBodyEe836c0c3c1a": {
+        "required": [
+          "name",
+          "scopes"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the access token",
+            "nullable": true,
+            "example": "My token"
+          },
+          "description": {
+            "type": "string",
+            "description": "The description of the access token",
+            "nullable": true,
+            "example": "A token used for k8s"
+          },
+          "expires_at": {
+            "type": "string",
+            "description": "Expiration date of the access token in ISO format (YYYY-MM-DD). If undefined, the date is set to the maximum allowable lifetime limit.",
+            "format": "date",
+            "nullable": true,
+            "example": "2021-01-31"
+          },
+          "scopes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The array of scopes of the personal access token"
+          }
+        }
+      },
       "RequestBody3f61b706b2ad": {
         "required": [
           "email"
@@ -129154,6 +129124,26 @@
           },
           "disable_invite_members": {
             "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "RequestBody4d6a710f0d2d": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the user",
+            "nullable": true
+          },
+          "username": {
+            "type": "string",
+            "description": "Username of the user",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "description": "Custom email address for the user",
             "nullable": true
           }
         }
@@ -140593,24 +140583,6 @@
           }
         }
       },
-      "RequestBody5d04a12a1f40": {
-        "required": [
-          "token"
-        ],
-        "type": "object",
-        "properties": {
-          "token": {
-            "type": "string",
-            "description": "The Slack token.",
-            "nullable": true
-          },
-          "use_inherited_settings": {
-            "type": "boolean",
-            "description": "Indicates whether to inherit the default settings. Defaults to `false`.",
-            "nullable": true
-          }
-        }
-      },
       "RequestBodyCc64378f9d87": {
         "required": [
           "username",
@@ -141917,19 +141889,6 @@
           "token": {
             "type": "string",
             "description": "The Mattermost token.",
-            "nullable": true
-          }
-        }
-      },
-      "RequestBody5d263ca42b06": {
-        "required": [
-          "token"
-        ],
-        "type": "object",
-        "properties": {
-          "token": {
-            "type": "string",
-            "description": "The Slack token.",
             "nullable": true
           }
         }
@@ -146237,7 +146196,7 @@
           }
         }
       },
-      "RequestBodyF009da6ade92": {
+      "RequestBody15565b325eb1": {
         "type": "object",
         "properties": {
           "name": {
@@ -146790,6 +146749,11 @@
               "type": "string"
             },
             "description": "References of enabled foundational flows",
+            "nullable": true
+          },
+          "duo_template_project_id": {
+            "type": "integer",
+            "description": "The ID of a project to use as the Duo Code Review custom instructions template for this group",
             "nullable": true
           },
           "allow_personal_snippets": {

@@ -49,8 +49,6 @@ using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Services.Pumble;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Services.Pushover;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Services.Redmine;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Services.Slack;
-using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Services.SlackSlashCommands;
-using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Services.Slack_slash_commands;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Services.SquashTm;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Services.Teamcity;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Services.Telegram;
@@ -296,16 +294,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Services
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Services.Slack.SlackRequestBuilder Slack
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Services.Slack.SlackRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The slack_slash_commands property</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Services.Slack_slash_commands.Slack_slash_commandsRequestBuilder Slack_slash_commands
-        {
-            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Services.Slack_slash_commands.Slack_slash_commandsRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The slackSlashCommands property</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Services.SlackSlashCommands.SlackSlashCommandsRequestBuilder SlackSlashCommands
-        {
-            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Services.SlackSlashCommands.SlackSlashCommandsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The squashTm property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Services.SquashTm.SquashTmRequestBuilder SquashTm

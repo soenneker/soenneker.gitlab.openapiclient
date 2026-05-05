@@ -31,29 +31,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBasicGroupDetails Group { get; set; }
 #endif
         /// <summary>The hide_backlog_list property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? HideBacklogList { get; set; }
-#nullable restore
-#else
-        public string HideBacklogList { get; set; }
-#endif
+        public bool? HideBacklogList { get; set; }
         /// <summary>The hide_closed_list property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? HideClosedList { get; set; }
-#nullable restore
-#else
-        public string HideClosedList { get; set; }
-#endif
+        public bool? HideClosedList { get; set; }
         /// <summary>The id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get; set; }
-#nullable restore
-#else
-        public string Id { get; set; }
-#endif
+        public int? Id { get; set; }
         /// <summary>The labels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -65,18 +47,18 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The lists property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesList? Lists { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesList>? Lists { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesList Lists { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesList> Lists { get; set; }
 #endif
         /// <summary>The milestone property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Milestone { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBoard_milestone? Milestone { get; set; }
 #nullable restore
 #else
-        public string Milestone { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBoard_milestone Milestone { get; set; }
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -95,13 +77,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBasicProjectDetails Project { get; set; }
 #endif
         /// <summary>The weight property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Weight { get; set; }
-#nullable restore
-#else
-        public string Weight { get; set; }
-#endif
+        public int? Weight { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBoard"/> and sets the default values.
         /// </summary>
@@ -129,15 +105,15 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             {
                 { "assignee", n => { Assignee = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic.CreateFromDiscriminatorValue); } },
                 { "group", n => { Group = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBasicGroupDetails>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBasicGroupDetails.CreateFromDiscriminatorValue); } },
-                { "hide_backlog_list", n => { HideBacklogList = n.GetStringValue(); } },
-                { "hide_closed_list", n => { HideClosedList = n.GetStringValue(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
+                { "hide_backlog_list", n => { HideBacklogList = n.GetBoolValue(); } },
+                { "hide_closed_list", n => { HideClosedList = n.GetBoolValue(); } },
+                { "id", n => { Id = n.GetIntValue(); } },
                 { "labels", n => { Labels = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesLabelBasic>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesLabelBasic.CreateFromDiscriminatorValue); } },
-                { "lists", n => { Lists = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesList>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesList.CreateFromDiscriminatorValue); } },
-                { "milestone", n => { Milestone = n.GetStringValue(); } },
+                { "lists", n => { Lists = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesList>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesList.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "milestone", n => { Milestone = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBoard_milestone>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBoard_milestone.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "project", n => { Project = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBasicProjectDetails>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBasicProjectDetails.CreateFromDiscriminatorValue); } },
-                { "weight", n => { Weight = n.GetStringValue(); } },
+                { "weight", n => { Weight = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -149,15 +125,15 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>("assignee", Assignee);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBasicGroupDetails>("group", Group);
-            writer.WriteStringValue("hide_backlog_list", HideBacklogList);
-            writer.WriteStringValue("hide_closed_list", HideClosedList);
-            writer.WriteStringValue("id", Id);
+            writer.WriteBoolValue("hide_backlog_list", HideBacklogList);
+            writer.WriteBoolValue("hide_closed_list", HideClosedList);
+            writer.WriteIntValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesLabelBasic>("labels", Labels);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesList>("lists", Lists);
-            writer.WriteStringValue("milestone", Milestone);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesList>("lists", Lists);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBoard_milestone>("milestone", Milestone);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBasicProjectDetails>("project", Project);
-            writer.WriteStringValue("weight", Weight);
+            writer.WriteIntValue("weight", Weight);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

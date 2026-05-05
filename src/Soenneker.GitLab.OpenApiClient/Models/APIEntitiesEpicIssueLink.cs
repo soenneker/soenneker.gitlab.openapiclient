@@ -17,10 +17,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The epic property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Epic { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesEpicIssueLink_epic? Epic { get; set; }
 #nullable restore
 #else
-        public string Epic { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesEpicIssueLink_epic Epic { get; set; }
 #endif
         /// <summary>ID of the epic-issue relation</summary>
         public int? Id { get; set; }
@@ -59,7 +59,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "epic", n => { Epic = n.GetStringValue(); } },
+                { "epic", n => { Epic = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesEpicIssueLink_epic>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesEpicIssueLink_epic.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "issue", n => { Issue = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesIssueBasic>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesIssueBasic.CreateFromDiscriminatorValue); } },
                 { "relative_position", n => { RelativePosition = n.GetIntValue(); } },
@@ -72,7 +72,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("epic", Epic);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesEpicIssueLink_epic>("epic", Epic);
             writer.WriteIntValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesIssueBasic>("issue", Issue);
             writer.WriteIntValue("relative_position", RelativePosition);

@@ -309,13 +309,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string PreventForkingOutsideGroup { get; set; }
 #endif
         /// <summary>The prevent_sharing_groups_outside_hierarchy property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? PreventSharingGroupsOutsideHierarchy { get; set; }
-#nullable restore
-#else
-        public string PreventSharingGroupsOutsideHierarchy { get; set; }
-#endif
+        public bool? PreventSharingGroupsOutsideHierarchy { get; set; }
         /// <summary>The project_creation_level property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -403,10 +397,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The shared_with_groups property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SharedWithGroups { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroupDetail_shared_with_groups>? SharedWithGroups { get; set; }
 #nullable restore
 #else
-        public string SharedWithGroups { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroupDetail_shared_with_groups> SharedWithGroups { get; set; }
 #endif
         /// <summary>The share_with_group_lock property</summary>
         public bool? ShareWithGroupLock { get; set; }
@@ -572,7 +566,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "parent_id", n => { ParentId = n.GetStringValue(); } },
                 { "path", n => { Path = n.GetStringValue(); } },
                 { "prevent_forking_outside_group", n => { PreventForkingOutsideGroup = n.GetStringValue(); } },
-                { "prevent_sharing_groups_outside_hierarchy", n => { PreventSharingGroupsOutsideHierarchy = n.GetStringValue(); } },
+                { "prevent_sharing_groups_outside_hierarchy", n => { PreventSharingGroupsOutsideHierarchy = n.GetBoolValue(); } },
                 { "project_creation_level", n => { ProjectCreationLevel = n.GetStringValue(); } },
                 { "projects", n => { Projects = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProject>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProject.CreateFromDiscriminatorValue); } },
                 { "repository_storage", n => { RepositoryStorage = n.GetStringValue(); } },
@@ -586,7 +580,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "shared_projects", n => { SharedProjects = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProject>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProject.CreateFromDiscriminatorValue); } },
                 { "shared_runners_minutes_limit", n => { SharedRunnersMinutesLimit = n.GetStringValue(); } },
                 { "shared_runners_setting", n => { SharedRunnersSetting = n.GetStringValue(); } },
-                { "shared_with_groups", n => { SharedWithGroups = n.GetStringValue(); } },
+                { "shared_with_groups", n => { SharedWithGroups = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroupDetail_shared_with_groups>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroupDetail_shared_with_groups.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "show_diff_preview_in_email", n => { ShowDiffPreviewInEmail = n.GetBoolValue(); } },
                 { "statistics", n => { Statistics = n.GetStringValue(); } },
                 { "step_up_auth_required_oauth_provider", n => { StepUpAuthRequiredOauthProvider = n.GetStringValue(); } },
@@ -654,7 +648,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("parent_id", ParentId);
             writer.WriteStringValue("path", Path);
             writer.WriteStringValue("prevent_forking_outside_group", PreventForkingOutsideGroup);
-            writer.WriteStringValue("prevent_sharing_groups_outside_hierarchy", PreventSharingGroupsOutsideHierarchy);
+            writer.WriteBoolValue("prevent_sharing_groups_outside_hierarchy", PreventSharingGroupsOutsideHierarchy);
             writer.WriteStringValue("project_creation_level", ProjectCreationLevel);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProject>("projects", Projects);
             writer.WriteStringValue("repository_storage", RepositoryStorage);
@@ -667,7 +661,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProject>("shared_projects", SharedProjects);
             writer.WriteStringValue("shared_runners_minutes_limit", SharedRunnersMinutesLimit);
             writer.WriteStringValue("shared_runners_setting", SharedRunnersSetting);
-            writer.WriteStringValue("shared_with_groups", SharedWithGroups);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroupDetail_shared_with_groups>("shared_with_groups", SharedWithGroups);
             writer.WriteBoolValue("share_with_group_lock", ShareWithGroupLock);
             writer.WriteBoolValue("show_diff_preview_in_email", ShowDiffPreviewInEmail);
             writer.WriteStringValue("statistics", Statistics);

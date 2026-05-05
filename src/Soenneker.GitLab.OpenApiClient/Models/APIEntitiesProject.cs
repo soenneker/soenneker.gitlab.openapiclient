@@ -407,27 +407,15 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Links { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProject_links? Links { get; set; }
 #nullable restore
 #else
-        public string Links { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProject_links Links { get; set; }
 #endif
         /// <summary>The marked_for_deletion_at property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? MarkedForDeletionAt { get; set; }
-#nullable restore
-#else
-        public string MarkedForDeletionAt { get; set; }
-#endif
+        public DateTimeOffset? MarkedForDeletionAt { get; set; }
         /// <summary>The marked_for_deletion_on property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? MarkedForDeletionOn { get; set; }
-#nullable restore
-#else
-        public string MarkedForDeletionOn { get; set; }
-#endif
+        public DateTimeOffset? MarkedForDeletionOn { get; set; }
         /// <summary>The max_artifacts_size property</summary>
         public int? MaxArtifactsSize { get; set; }
         /// <summary>The max_pipelines_per_merge_train property</summary>
@@ -799,10 +787,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The shared_with_groups property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? SharedWithGroups { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProject_shared_with_groups>? SharedWithGroups { get; set; }
 #nullable restore
 #else
-        public List<string> SharedWithGroups { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProject_shared_with_groups> SharedWithGroups { get; set; }
 #endif
         /// <summary>The show_diff_preview_in_email property</summary>
         public bool? ShowDiffPreviewInEmail { get; set; }
@@ -1011,9 +999,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "lfs_enabled", n => { LfsEnabled = n.GetBoolValue(); } },
                 { "license", n => { License = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesLicenseBasic>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesLicenseBasic.CreateFromDiscriminatorValue); } },
                 { "license_url", n => { LicenseUrl = n.GetStringValue(); } },
-                { "_links", n => { Links = n.GetStringValue(); } },
-                { "marked_for_deletion_at", n => { MarkedForDeletionAt = n.GetStringValue(); } },
-                { "marked_for_deletion_on", n => { MarkedForDeletionOn = n.GetStringValue(); } },
+                { "_links", n => { Links = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProject_links>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProject_links.CreateFromDiscriminatorValue); } },
+                { "marked_for_deletion_at", n => { MarkedForDeletionAt = n.GetDateTimeOffsetValue(); } },
+                { "marked_for_deletion_on", n => { MarkedForDeletionOn = n.GetDateTimeOffsetValue(); } },
                 { "max_artifacts_size", n => { MaxArtifactsSize = n.GetIntValue(); } },
                 { "max_pipelines_per_merge_train", n => { MaxPipelinesPerMergeTrain = n.GetStringValue(); } },
                 { "merge_commit_template", n => { MergeCommitTemplate = n.GetStringValue(); } },
@@ -1075,7 +1063,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "service_desk_address", n => { ServiceDeskAddress = n.GetStringValue(); } },
                 { "service_desk_enabled", n => { ServiceDeskEnabled = n.GetBoolValue(); } },
                 { "shared_runners_enabled", n => { SharedRunnersEnabled = n.GetBoolValue(); } },
-                { "shared_with_groups", n => { SharedWithGroups = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "shared_with_groups", n => { SharedWithGroups = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProject_shared_with_groups>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProject_shared_with_groups.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "show_diff_preview_in_email", n => { ShowDiffPreviewInEmail = n.GetBoolValue(); } },
                 { "snippets_access_level", n => { SnippetsAccessLevel = n.GetStringValue(); } },
                 { "snippets_enabled", n => { SnippetsEnabled = n.GetBoolValue(); } },
@@ -1176,9 +1164,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("lfs_enabled", LfsEnabled);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesLicenseBasic>("license", License);
             writer.WriteStringValue("license_url", LicenseUrl);
-            writer.WriteStringValue("_links", Links);
-            writer.WriteStringValue("marked_for_deletion_at", MarkedForDeletionAt);
-            writer.WriteStringValue("marked_for_deletion_on", MarkedForDeletionOn);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProject_links>("_links", Links);
+            writer.WriteDateTimeOffsetValue("marked_for_deletion_at", MarkedForDeletionAt);
+            writer.WriteDateTimeOffsetValue("marked_for_deletion_on", MarkedForDeletionOn);
             writer.WriteIntValue("max_artifacts_size", MaxArtifactsSize);
             writer.WriteStringValue("max_pipelines_per_merge_train", MaxPipelinesPerMergeTrain);
             writer.WriteStringValue("merge_commit_template", MergeCommitTemplate);
@@ -1240,7 +1228,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("service_desk_address", ServiceDeskAddress);
             writer.WriteBoolValue("service_desk_enabled", ServiceDeskEnabled);
             writer.WriteBoolValue("shared_runners_enabled", SharedRunnersEnabled);
-            writer.WriteCollectionOfPrimitiveValues<string>("shared_with_groups", SharedWithGroups);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProject_shared_with_groups>("shared_with_groups", SharedWithGroups);
             writer.WriteBoolValue("show_diff_preview_in_email", ShowDiffPreviewInEmail);
             writer.WriteStringValue("snippets_access_level", SnippetsAccessLevel);
             writer.WriteBoolValue("snippets_enabled", SnippetsEnabled);

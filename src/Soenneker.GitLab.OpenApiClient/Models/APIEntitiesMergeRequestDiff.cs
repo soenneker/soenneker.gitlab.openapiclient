@@ -23,13 +23,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string BaseCommitSha { get; set; }
 #endif
         /// <summary>The created_at property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? CreatedAt { get; set; }
-#nullable restore
-#else
-        public string CreatedAt { get; set; }
-#endif
+        public DateTimeOffset? CreatedAt { get; set; }
         /// <summary>The head_commit_sha property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -39,21 +33,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string HeadCommitSha { get; set; }
 #endif
         /// <summary>The id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get; set; }
-#nullable restore
-#else
-        public string Id { get; set; }
-#endif
+        public int? Id { get; set; }
         /// <summary>The merge_request_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? MergeRequestId { get; set; }
-#nullable restore
-#else
-        public string MergeRequestId { get; set; }
-#endif
+        public int? MergeRequestId { get; set; }
         /// <summary>The patch_id_sha property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -112,10 +94,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "base_commit_sha", n => { BaseCommitSha = n.GetStringValue(); } },
-                { "created_at", n => { CreatedAt = n.GetStringValue(); } },
+                { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "head_commit_sha", n => { HeadCommitSha = n.GetStringValue(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
-                { "merge_request_id", n => { MergeRequestId = n.GetStringValue(); } },
+                { "id", n => { Id = n.GetIntValue(); } },
+                { "merge_request_id", n => { MergeRequestId = n.GetIntValue(); } },
                 { "patch_id_sha", n => { PatchIdSha = n.GetStringValue(); } },
                 { "real_size", n => { RealSize = n.GetStringValue(); } },
                 { "start_commit_sha", n => { StartCommitSha = n.GetStringValue(); } },
@@ -130,10 +112,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("base_commit_sha", BaseCommitSha);
-            writer.WriteStringValue("created_at", CreatedAt);
+            writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
             writer.WriteStringValue("head_commit_sha", HeadCommitSha);
-            writer.WriteStringValue("id", Id);
-            writer.WriteStringValue("merge_request_id", MergeRequestId);
+            writer.WriteIntValue("id", Id);
+            writer.WriteIntValue("merge_request_id", MergeRequestId);
             writer.WriteStringValue("patch_id_sha", PatchIdSha);
             writer.WriteStringValue("real_size", RealSize);
             writer.WriteStringValue("start_commit_sha", StartCommitSha);

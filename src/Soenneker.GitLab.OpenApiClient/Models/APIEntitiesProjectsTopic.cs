@@ -31,13 +31,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Description { get; set; }
 #endif
         /// <summary>The id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get; set; }
-#nullable restore
-#else
-        public string Id { get; set; }
-#endif
+        public int? Id { get; set; }
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -47,13 +41,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>The organization_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? OrganizationId { get; set; }
-#nullable restore
-#else
-        public string OrganizationId { get; set; }
-#endif
+        public int? OrganizationId { get; set; }
         /// <summary>The title property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -63,13 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Title { get; set; }
 #endif
         /// <summary>The total_projects_count property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? TotalProjectsCount { get; set; }
-#nullable restore
-#else
-        public string TotalProjectsCount { get; set; }
-#endif
+        public int? TotalProjectsCount { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProjectsTopic"/> and sets the default values.
         /// </summary>
@@ -97,11 +79,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             {
                 { "avatar_url", n => { AvatarUrl = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
+                { "id", n => { Id = n.GetIntValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "organization_id", n => { OrganizationId = n.GetStringValue(); } },
+                { "organization_id", n => { OrganizationId = n.GetIntValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
-                { "total_projects_count", n => { TotalProjectsCount = n.GetStringValue(); } },
+                { "total_projects_count", n => { TotalProjectsCount = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -113,11 +95,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("avatar_url", AvatarUrl);
             writer.WriteStringValue("description", Description);
-            writer.WriteStringValue("id", Id);
+            writer.WriteIntValue("id", Id);
             writer.WriteStringValue("name", Name);
-            writer.WriteStringValue("organization_id", OrganizationId);
+            writer.WriteIntValue("organization_id", OrganizationId);
             writer.WriteStringValue("title", Title);
-            writer.WriteStringValue("total_projects_count", TotalProjectsCount);
+            writer.WriteIntValue("total_projects_count", TotalProjectsCount);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

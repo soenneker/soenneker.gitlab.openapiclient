@@ -83,20 +83,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public List<string> Labels { get; set; }
 #endif
         /// <summary>The link_created_at property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? LinkCreatedAt { get; set; }
-#nullable restore
-#else
-        public string LinkCreatedAt { get; set; }
-#endif
+        public DateTimeOffset? LinkCreatedAt { get; set; }
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Links { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesRelatedEpic_links? Links { get; set; }
 #nullable restore
 #else
-        public string Links { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesRelatedEpic_links Links { get; set; }
 #endif
         /// <summary>The link_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -107,13 +101,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string LinkType { get; set; }
 #endif
         /// <summary>The link_updated_at property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? LinkUpdatedAt { get; set; }
-#nullable restore
-#else
-        public string LinkUpdatedAt { get; set; }
-#endif
+        public DateTimeOffset? LinkUpdatedAt { get; set; }
         /// <summary>The parent_id property</summary>
         public int? ParentId { get; set; }
         /// <summary>The parent_iid property</summary>
@@ -129,19 +117,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The references property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? References { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesRelatedEpic_references>? References { get; set; }
 #nullable restore
 #else
-        public List<string> References { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesRelatedEpic_references> References { get; set; }
 #endif
         /// <summary>The related_epic_link_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? RelatedEpicLinkId { get; set; }
-#nullable restore
-#else
-        public string RelatedEpicLinkId { get; set; }
-#endif
+        public int? RelatedEpicLinkId { get; set; }
         /// <summary>The start_date property</summary>
         public DateTimeOffset? StartDate { get; set; }
         /// <summary>The start_date_fixed property</summary>
@@ -244,15 +226,15 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "imported", n => { Imported = n.GetBoolValue(); } },
                 { "imported_from", n => { ImportedFrom = n.GetStringValue(); } },
                 { "labels", n => { Labels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "link_created_at", n => { LinkCreatedAt = n.GetStringValue(); } },
+                { "link_created_at", n => { LinkCreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "link_type", n => { LinkType = n.GetStringValue(); } },
-                { "link_updated_at", n => { LinkUpdatedAt = n.GetStringValue(); } },
-                { "_links", n => { Links = n.GetStringValue(); } },
+                { "link_updated_at", n => { LinkUpdatedAt = n.GetDateTimeOffsetValue(); } },
+                { "_links", n => { Links = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesRelatedEpic_links>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesRelatedEpic_links.CreateFromDiscriminatorValue); } },
                 { "parent_id", n => { ParentId = n.GetIntValue(); } },
                 { "parent_iid", n => { ParentIid = n.GetIntValue(); } },
                 { "reference", n => { Reference = n.GetStringValue(); } },
-                { "references", n => { References = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "related_epic_link_id", n => { RelatedEpicLinkId = n.GetStringValue(); } },
+                { "references", n => { References = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesRelatedEpic_references>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesRelatedEpic_references.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "related_epic_link_id", n => { RelatedEpicLinkId = n.GetIntValue(); } },
                 { "start_date", n => { StartDate = n.GetDateTimeOffsetValue(); } },
                 { "start_date_fixed", n => { StartDateFixed = n.GetDateTimeOffsetValue(); } },
                 { "start_date_from_inherited_source", n => { StartDateFromInheritedSource = n.GetDateTimeOffsetValue(); } },
@@ -295,15 +277,15 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("imported", Imported);
             writer.WriteStringValue("imported_from", ImportedFrom);
             writer.WriteCollectionOfPrimitiveValues<string>("labels", Labels);
-            writer.WriteStringValue("link_created_at", LinkCreatedAt);
-            writer.WriteStringValue("_links", Links);
+            writer.WriteDateTimeOffsetValue("link_created_at", LinkCreatedAt);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesRelatedEpic_links>("_links", Links);
             writer.WriteStringValue("link_type", LinkType);
-            writer.WriteStringValue("link_updated_at", LinkUpdatedAt);
+            writer.WriteDateTimeOffsetValue("link_updated_at", LinkUpdatedAt);
             writer.WriteIntValue("parent_id", ParentId);
             writer.WriteIntValue("parent_iid", ParentIid);
             writer.WriteStringValue("reference", Reference);
-            writer.WriteCollectionOfPrimitiveValues<string>("references", References);
-            writer.WriteStringValue("related_epic_link_id", RelatedEpicLinkId);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesRelatedEpic_references>("references", References);
+            writer.WriteIntValue("related_epic_link_id", RelatedEpicLinkId);
             writer.WriteDateTimeOffsetValue("start_date", StartDate);
             writer.WriteDateTimeOffsetValue("start_date_fixed", StartDateFixed);
             writer.WriteDateTimeOffsetValue("start_date_from_inherited_source", StartDateFromInheritedSource);

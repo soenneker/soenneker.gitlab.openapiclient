@@ -37,10 +37,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Links { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProjectExportStatus_links? Links { get; set; }
 #nullable restore
 #else
-        public string Links { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProjectExportStatus_links Links { get; set; }
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -103,7 +103,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "export_status", n => { ExportStatus = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
-                { "_links", n => { Links = n.GetStringValue(); } },
+                { "_links", n => { Links = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProjectExportStatus_links>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProjectExportStatus_links.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "name_with_namespace", n => { NameWithNamespace = n.GetStringValue(); } },
                 { "path", n => { Path = n.GetStringValue(); } },
@@ -121,7 +121,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("export_status", ExportStatus);
             writer.WriteIntValue("id", Id);
-            writer.WriteStringValue("_links", Links);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProjectExportStatus_links>("_links", Links);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("name_with_namespace", NameWithNamespace);
             writer.WriteStringValue("path", Path);

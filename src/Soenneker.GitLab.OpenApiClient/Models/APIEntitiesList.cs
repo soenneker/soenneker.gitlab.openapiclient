@@ -23,13 +23,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserSafe Assignee { get; set; }
 #endif
         /// <summary>The id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get; set; }
-#nullable restore
-#else
-        public string Id { get; set; }
-#endif
+        public int? Id { get; set; }
         /// <summary>The iteration property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -55,21 +49,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string LimitMetric { get; set; }
 #endif
         /// <summary>The max_issue_count property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? MaxIssueCount { get; set; }
-#nullable restore
-#else
-        public string MaxIssueCount { get; set; }
-#endif
+        public int? MaxIssueCount { get; set; }
         /// <summary>The max_issue_weight property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? MaxIssueWeight { get; set; }
-#nullable restore
-#else
-        public string MaxIssueWeight { get; set; }
-#endif
+        public int? MaxIssueWeight { get; set; }
         /// <summary>The milestone property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -79,13 +61,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMilestone Milestone { get; set; }
 #endif
         /// <summary>The position property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Position { get; set; }
-#nullable restore
-#else
-        public string Position { get; set; }
-#endif
+        public int? Position { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesList"/> and sets the default values.
         /// </summary>
@@ -112,14 +88,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "assignee", n => { Assignee = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserSafe>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserSafe.CreateFromDiscriminatorValue); } },
-                { "id", n => { Id = n.GetStringValue(); } },
+                { "id", n => { Id = n.GetIntValue(); } },
                 { "iteration", n => { Iteration = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesIteration>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesIteration.CreateFromDiscriminatorValue); } },
                 { "label", n => { Label = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesLabelBasic>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesLabelBasic.CreateFromDiscriminatorValue); } },
                 { "limit_metric", n => { LimitMetric = n.GetStringValue(); } },
-                { "max_issue_count", n => { MaxIssueCount = n.GetStringValue(); } },
-                { "max_issue_weight", n => { MaxIssueWeight = n.GetStringValue(); } },
+                { "max_issue_count", n => { MaxIssueCount = n.GetIntValue(); } },
+                { "max_issue_weight", n => { MaxIssueWeight = n.GetIntValue(); } },
                 { "milestone", n => { Milestone = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMilestone>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMilestone.CreateFromDiscriminatorValue); } },
-                { "position", n => { Position = n.GetStringValue(); } },
+                { "position", n => { Position = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -130,14 +106,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserSafe>("assignee", Assignee);
-            writer.WriteStringValue("id", Id);
+            writer.WriteIntValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesIteration>("iteration", Iteration);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesLabelBasic>("label", Label);
             writer.WriteStringValue("limit_metric", LimitMetric);
-            writer.WriteStringValue("max_issue_count", MaxIssueCount);
-            writer.WriteStringValue("max_issue_weight", MaxIssueWeight);
+            writer.WriteIntValue("max_issue_count", MaxIssueCount);
+            writer.WriteIntValue("max_issue_weight", MaxIssueWeight);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMilestone>("milestone", Milestone);
-            writer.WriteStringValue("position", Position);
+            writer.WriteIntValue("position", Position);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
