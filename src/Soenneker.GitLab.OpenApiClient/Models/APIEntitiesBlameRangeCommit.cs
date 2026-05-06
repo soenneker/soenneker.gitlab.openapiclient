@@ -15,13 +15,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The authored_date property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? AuthoredDate { get; set; }
-#nullable restore
-#else
-        public string AuthoredDate { get; set; }
-#endif
+        public DateTimeOffset? AuthoredDate { get; set; }
         /// <summary>The author_email property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -39,13 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string AuthorName { get; set; }
 #endif
         /// <summary>The committed_date property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? CommittedDate { get; set; }
-#nullable restore
-#else
-        public string CommittedDate { get; set; }
-#endif
+        public DateTimeOffset? CommittedDate { get; set; }
         /// <summary>The committer_email property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -81,10 +69,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The parent_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ParentIds { get; set; }
+        public List<string>? ParentIds { get; set; }
 #nullable restore
 #else
-        public string ParentIds { get; set; }
+        public List<string> ParentIds { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBlameRangeCommit"/> and sets the default values.
@@ -113,13 +101,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             {
                 { "author_email", n => { AuthorEmail = n.GetStringValue(); } },
                 { "author_name", n => { AuthorName = n.GetStringValue(); } },
-                { "authored_date", n => { AuthoredDate = n.GetStringValue(); } },
-                { "committed_date", n => { CommittedDate = n.GetStringValue(); } },
+                { "authored_date", n => { AuthoredDate = n.GetDateTimeOffsetValue(); } },
+                { "committed_date", n => { CommittedDate = n.GetDateTimeOffsetValue(); } },
                 { "committer_email", n => { CommitterEmail = n.GetStringValue(); } },
                 { "committer_name", n => { CommitterName = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
-                { "parent_ids", n => { ParentIds = n.GetStringValue(); } },
+                { "parent_ids", n => { ParentIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -129,15 +117,15 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("authored_date", AuthoredDate);
+            writer.WriteDateTimeOffsetValue("authored_date", AuthoredDate);
             writer.WriteStringValue("author_email", AuthorEmail);
             writer.WriteStringValue("author_name", AuthorName);
-            writer.WriteStringValue("committed_date", CommittedDate);
+            writer.WriteDateTimeOffsetValue("committed_date", CommittedDate);
             writer.WriteStringValue("committer_email", CommitterEmail);
             writer.WriteStringValue("committer_name", CommitterName);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("message", Message);
-            writer.WriteStringValue("parent_ids", ParentIds);
+            writer.WriteCollectionOfPrimitiveValues<string>("parent_ids", ParentIds);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

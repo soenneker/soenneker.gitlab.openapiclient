@@ -22,14 +22,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ArtifactUri { get; set; }
 #endif
-        /// <summary>The end_time property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? EndTime { get; set; }
-#nullable restore
-#else
-        public string EndTime { get; set; }
-#endif
+        /// <summary>Unix timestamp in milliseconds</summary>
+        public int? EndTime { get; set; }
         /// <summary>The experiment_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -70,14 +64,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string RunUuid { get; set; }
 #endif
-        /// <summary>The start_time property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? StartTime { get; set; }
-#nullable restore
-#else
-        public string StartTime { get; set; }
-#endif
+        /// <summary>Unix timestamp in milliseconds</summary>
+        public int? StartTime { get; set; }
         /// <summary>The status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -120,13 +108,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "artifact_uri", n => { ArtifactUri = n.GetStringValue(); } },
-                { "end_time", n => { EndTime = n.GetStringValue(); } },
+                { "end_time", n => { EndTime = n.GetIntValue(); } },
                 { "experiment_id", n => { ExperimentId = n.GetStringValue(); } },
                 { "lifecycle_stage", n => { LifecycleStage = n.GetStringValue(); } },
                 { "run_id", n => { RunId = n.GetStringValue(); } },
                 { "run_name", n => { RunName = n.GetStringValue(); } },
                 { "run_uuid", n => { RunUuid = n.GetStringValue(); } },
-                { "start_time", n => { StartTime = n.GetStringValue(); } },
+                { "start_time", n => { StartTime = n.GetIntValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
                 { "user_id", n => { UserId = n.GetStringValue(); } },
             };
@@ -139,13 +127,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("artifact_uri", ArtifactUri);
-            writer.WriteStringValue("end_time", EndTime);
+            writer.WriteIntValue("end_time", EndTime);
             writer.WriteStringValue("experiment_id", ExperimentId);
             writer.WriteStringValue("lifecycle_stage", LifecycleStage);
             writer.WriteStringValue("run_id", RunId);
             writer.WriteStringValue("run_name", RunName);
             writer.WriteStringValue("run_uuid", RunUuid);
-            writer.WriteStringValue("start_time", StartTime);
+            writer.WriteIntValue("start_time", StartTime);
             writer.WriteStringValue("status", Status);
             writer.WriteStringValue("user_id", UserId);
             writer.WriteAdditionalData(AdditionalData);

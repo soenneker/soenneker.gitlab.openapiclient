@@ -43,10 +43,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The files property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Files { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesPersonalSnippet_files>? Files { get; set; }
 #nullable restore
 #else
-        public List<string> Files { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesPersonalSnippet_files> Files { get; set; }
 #endif
         /// <summary>The http_url_to_repo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -149,7 +149,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "file_name", n => { FileName = n.GetStringValue(); } },
-                { "files", n => { Files = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "files", n => { Files = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesPersonalSnippet_files>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesPersonalSnippet_files.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "http_url_to_repo", n => { HttpUrlToRepo = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "imported", n => { Imported = n.GetBoolValue(); } },
@@ -175,7 +175,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("file_name", FileName);
-            writer.WriteCollectionOfPrimitiveValues<string>("files", Files);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesPersonalSnippet_files>("files", Files);
             writer.WriteStringValue("http_url_to_repo", HttpUrlToRepo);
             writer.WriteIntValue("id", Id);
             writer.WriteBoolValue("imported", Imported);

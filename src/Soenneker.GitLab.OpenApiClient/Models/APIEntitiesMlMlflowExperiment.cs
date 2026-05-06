@@ -49,10 +49,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The tags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowKeyValue? Tags { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowKeyValue>? Tags { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowKeyValue Tags { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowKeyValue> Tags { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowExperiment"/> and sets the default values.
@@ -83,7 +83,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "experiment_id", n => { ExperimentId = n.GetStringValue(); } },
                 { "lifecycle_stage", n => { LifecycleStage = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "tags", n => { Tags = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowKeyValue>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowKeyValue.CreateFromDiscriminatorValue); } },
+                { "tags", n => { Tags = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowKeyValue>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowKeyValue.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -97,7 +97,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("experiment_id", ExperimentId);
             writer.WriteStringValue("lifecycle_stage", LifecycleStage);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowKeyValue>("tags", Tags);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowKeyValue>("tags", Tags);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -25,10 +25,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The lines property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Lines { get; set; }
+        public List<string>? Lines { get; set; }
 #nullable restore
 #else
-        public string Lines { get; set; }
+        public List<string> Lines { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBlameRange"/> and sets the default values.
@@ -56,7 +56,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "commit", n => { Commit = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBlameRangeCommit>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBlameRangeCommit.CreateFromDiscriminatorValue); } },
-                { "lines", n => { Lines = n.GetStringValue(); } },
+                { "lines", n => { Lines = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBlameRangeCommit>("commit", Commit);
-            writer.WriteStringValue("lines", Lines);
+            writer.WriteCollectionOfPrimitiveValues<string>("lines", Lines);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

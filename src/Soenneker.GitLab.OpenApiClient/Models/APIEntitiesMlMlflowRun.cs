@@ -17,10 +17,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Data { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowRun_data? Data { get; set; }
 #nullable restore
 #else
-        public string Data { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowRun_data Data { get; set; }
 #endif
         /// <summary>The info property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetStringValue(); } },
+                { "data", n => { Data = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowRun_data>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowRun_data.CreateFromDiscriminatorValue); } },
                 { "info", n => { Info = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowRunInfo>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowRunInfo.CreateFromDiscriminatorValue); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("data", Data);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowRun_data>("data", Data);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowRunInfo>("info", Info);
             writer.WriteAdditionalData(AdditionalData);
         }

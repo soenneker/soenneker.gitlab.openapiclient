@@ -25,10 +25,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The signature property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Signature { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCommitSignature_signature? Signature { get; set; }
 #nullable restore
 #else
-        public string Signature { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCommitSignature_signature Signature { get; set; }
 #endif
         /// <summary>The signature_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -64,7 +64,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "commit_source", n => { CommitSource = n.GetStringValue(); } },
-                { "signature", n => { Signature = n.GetStringValue(); } },
+                { "signature", n => { Signature = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCommitSignature_signature>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCommitSignature_signature.CreateFromDiscriminatorValue); } },
                 { "signature_type", n => { SignatureType = n.GetStringValue(); } },
             };
         }
@@ -76,7 +76,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("commit_source", CommitSource);
-            writer.WriteStringValue("signature", Signature);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCommitSignature_signature>("signature", Signature);
             writer.WriteStringValue("signature_type", SignatureType);
             writer.WriteAdditionalData(AdditionalData);
         }

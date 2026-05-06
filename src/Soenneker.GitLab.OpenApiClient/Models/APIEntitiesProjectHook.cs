@@ -95,13 +95,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The pipeline_events property</summary>
         public bool? PipelineEvents { get; set; }
         /// <summary>The project_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ProjectId { get; set; }
-#nullable restore
-#else
-        public string ProjectId { get; set; }
-#endif
+        public int? ProjectId { get; set; }
         /// <summary>The push_events property</summary>
         public bool? PushEvents { get; set; }
         /// <summary>The push_events_branch_filter property</summary>
@@ -193,7 +187,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "note_events", n => { NoteEvents = n.GetBoolValue(); } },
                 { "organization_id", n => { OrganizationId = n.GetIntValue(); } },
                 { "pipeline_events", n => { PipelineEvents = n.GetBoolValue(); } },
-                { "project_id", n => { ProjectId = n.GetStringValue(); } },
+                { "project_id", n => { ProjectId = n.GetIntValue(); } },
                 { "push_events", n => { PushEvents = n.GetBoolValue(); } },
                 { "push_events_branch_filter", n => { PushEventsBranchFilter = n.GetStringValue(); } },
                 { "releases_events", n => { ReleasesEvents = n.GetBoolValue(); } },
@@ -238,7 +232,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("note_events", NoteEvents);
             writer.WriteIntValue("organization_id", OrganizationId);
             writer.WriteBoolValue("pipeline_events", PipelineEvents);
-            writer.WriteStringValue("project_id", ProjectId);
+            writer.WriteIntValue("project_id", ProjectId);
             writer.WriteBoolValue("push_events", PushEvents);
             writer.WriteStringValue("push_events_branch_filter", PushEventsBranchFilter);
             writer.WriteBoolValue("releases_events", ReleasesEvents);

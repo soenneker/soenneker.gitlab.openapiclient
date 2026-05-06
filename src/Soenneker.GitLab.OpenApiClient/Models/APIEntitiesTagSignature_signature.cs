@@ -9,41 +9,27 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class APIEntitiesMlMlflowMetric : IAdditionalDataHolder, IParsable
+    public partial class APIEntitiesTagSignature_signature : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The key property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Key { get; set; }
-#nullable restore
-#else
-        public string Key { get; set; }
-#endif
-        /// <summary>The step property</summary>
-        public int? Step { get; set; }
-        /// <summary>Unix timestamp in milliseconds</summary>
-        public int? Timestamp { get; set; }
-        /// <summary>The value property</summary>
-        public double? Value { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowMetric"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesTagSignature_signature"/> and sets the default values.
         /// </summary>
-        public APIEntitiesMlMlflowMetric()
+        public APIEntitiesTagSignature_signature()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowMetric"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesTagSignature_signature"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowMetric CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesTagSignature_signature CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowMetric();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesTagSignature_signature();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -53,10 +39,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "key", n => { Key = n.GetStringValue(); } },
-                { "step", n => { Step = n.GetIntValue(); } },
-                { "timestamp", n => { Timestamp = n.GetIntValue(); } },
-                { "value", n => { Value = n.GetDoubleValue(); } },
             };
         }
         /// <summary>
@@ -66,10 +48,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("key", Key);
-            writer.WriteIntValue("step", Step);
-            writer.WriteIntValue("timestamp", Timestamp);
-            writer.WriteDoubleValue("value", Value);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

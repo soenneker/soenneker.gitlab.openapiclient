@@ -9,7 +9,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class RequestBodyA98aaa3a441e : IAdditionalDataHolder, IParsable
+    public partial class RequestBodyF0e6af1da635 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -22,29 +22,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string BitbucketApiToken { get; set; }
 #endif
-        /// <summary>BitBucket app password</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? BitbucketAppPassword { get; set; }
-#nullable restore
-#else
-        public string BitbucketAppPassword { get; set; }
-#endif
-        /// <summary>BitBucket email (for API tokens)</summary>
+        /// <summary>BitBucket email</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? BitbucketEmail { get; set; }
 #nullable restore
 #else
         public string BitbucketEmail { get; set; }
-#endif
-        /// <summary>BitBucket username (for app passwords)</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? BitbucketUsername { get; set; }
-#nullable restore
-#else
-        public string BitbucketUsername { get; set; }
 #endif
         /// <summary>New repository name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -71,21 +55,21 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string TargetNamespace { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA98aaa3a441e"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyF0e6af1da635"/> and sets the default values.
         /// </summary>
-        public RequestBodyA98aaa3a441e()
+        public RequestBodyF0e6af1da635()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA98aaa3a441e"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyF0e6af1da635"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA98aaa3a441e CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyF0e6af1da635 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA98aaa3a441e();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyF0e6af1da635();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -96,9 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "bitbucket_api_token", n => { BitbucketApiToken = n.GetStringValue(); } },
-                { "bitbucket_app_password", n => { BitbucketAppPassword = n.GetStringValue(); } },
                 { "bitbucket_email", n => { BitbucketEmail = n.GetStringValue(); } },
-                { "bitbucket_username", n => { BitbucketUsername = n.GetStringValue(); } },
                 { "new_name", n => { NewName = n.GetStringValue(); } },
                 { "repo_path", n => { RepoPath = n.GetStringValue(); } },
                 { "target_namespace", n => { TargetNamespace = n.GetStringValue(); } },
@@ -112,9 +94,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("bitbucket_api_token", BitbucketApiToken);
-            writer.WriteStringValue("bitbucket_app_password", BitbucketAppPassword);
             writer.WriteStringValue("bitbucket_email", BitbucketEmail);
-            writer.WriteStringValue("bitbucket_username", BitbucketUsername);
             writer.WriteStringValue("new_name", NewName);
             writer.WriteStringValue("repo_path", RepoPath);
             writer.WriteStringValue("target_namespace", TargetNamespace);

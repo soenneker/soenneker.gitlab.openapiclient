@@ -41,10 +41,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The link property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Link { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesWikiAttachment_link? Link { get; set; }
 #nullable restore
 #else
-        public string Link { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesWikiAttachment_link Link { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesWikiAttachment"/> and sets the default values.
@@ -74,7 +74,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "branch", n => { Branch = n.GetStringValue(); } },
                 { "file_name", n => { FileName = n.GetStringValue(); } },
                 { "file_path", n => { FilePath = n.GetStringValue(); } },
-                { "link", n => { Link = n.GetStringValue(); } },
+                { "link", n => { Link = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesWikiAttachment_link>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesWikiAttachment_link.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -87,7 +87,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("branch", Branch);
             writer.WriteStringValue("file_name", FileName);
             writer.WriteStringValue("file_path", FilePath);
-            writer.WriteStringValue("link", Link);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesWikiAttachment_link>("link", Link);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

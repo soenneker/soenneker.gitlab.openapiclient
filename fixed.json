@@ -68579,7 +68579,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyA98aaa3a441e"
+                "$ref": "#/components/schemas/RequestBodyF0e6af1da635"
               }
             }
           }
@@ -100165,10 +100165,16 @@
             "type": "string"
           },
           "tags": {
-            "$ref": "#/components/schemas/APIEntitiesMlMlflowKeyValue"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/APIEntitiesMlMlflowKeyValue"
+            }
           },
           "latest_versions": {
-            "$ref": "#/components/schemas/APIEntitiesMlMlflowModelVersion"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/APIEntitiesMlMlflowModelVersion"
+            }
           }
         }
       },
@@ -100193,22 +100199,26 @@
             "type": "string"
           },
           "start_time": {
-            "type": "string"
+            "type": "integer",
+            "description": "Unix timestamp in milliseconds"
           },
           "end_time": {
-            "type": "string"
+            "type": "integer",
+            "description": "Unix timestamp in milliseconds"
           },
           "run_name": {
             "type": "string"
           },
           "status": {
-            "type": "string"
+            "type": "string",
+            "example": "FINISHED"
           },
           "artifact_uri": {
             "type": "string"
           },
           "lifecycle_stage": {
-            "type": "string"
+            "type": "string",
+            "example": "active"
           },
           "user_id": {
             "type": "string"
@@ -100222,7 +100232,7 @@
             "$ref": "#/components/schemas/APIEntitiesMlMlflowRunInfo"
           },
           "data": {
-            "type": "string"
+            "type": "object"
           }
         }
       },
@@ -100254,7 +100264,8 @@
             "type": "string"
           },
           "current_stage": {
-            "type": "string"
+            "type": "string",
+            "example": "development"
           },
           "description": {
             "type": "string"
@@ -100266,13 +100277,17 @@
             "type": "string"
           },
           "status": {
-            "type": "string"
+            "type": "string",
+            "example": "READY"
           },
           "status_message": {
             "type": "string"
           },
           "tags": {
-            "$ref": "#/components/schemas/APIEntitiesMlMlflowKeyValue"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/APIEntitiesMlMlflowKeyValue"
+            }
           },
           "run_link": {
             "type": "string"
@@ -100292,13 +100307,14 @@
             "type": "string"
           },
           "value": {
-            "type": "string"
+            "type": "number"
           },
           "timestamp": {
-            "type": "string"
+            "type": "integer",
+            "description": "Unix timestamp in milliseconds"
           },
           "step": {
-            "type": "string"
+            "type": "integer"
           }
         }
       },
@@ -100320,7 +100336,8 @@
         "type": "object",
         "properties": {
           "experiment_id": {
-            "type": "string"
+            "type": "string",
+            "example": 1
           }
         }
       },
@@ -100328,7 +100345,10 @@
         "type": "object",
         "properties": {
           "experiments": {
-            "$ref": "#/components/schemas/APIEntitiesMlMlflowExperiment"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/APIEntitiesMlMlflowExperiment"
+            }
           }
         }
       },
@@ -100347,19 +100367,25 @@
         "type": "object",
         "properties": {
           "experiment_id": {
-            "type": "string"
+            "type": "string",
+            "example": 1
           },
           "name": {
-            "type": "string"
+            "type": "string",
+            "example": "my_experiment"
           },
           "lifecycle_stage": {
-            "type": "string"
+            "type": "string",
+            "example": "active"
           },
           "artifact_location": {
             "type": "string"
           },
           "tags": {
-            "$ref": "#/components/schemas/APIEntitiesMlMlflowKeyValue"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/APIEntitiesMlMlflowKeyValue"
+            }
           }
         }
       },
@@ -100480,13 +100506,17 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "key": {
-            "type": "string"
+            "type": "string",
+            "example": "-----BEGIN PGP PUBLIC KEY BLOCK-----"
           },
           "created_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-09-05T09:17:46.264Z"
           }
         }
       },
@@ -100569,10 +100599,12 @@
         "type": "object",
         "properties": {
           "name": {
-            "type": "string"
+            "type": "string",
+            "example": "Ruby"
           },
           "content": {
-            "type": "string"
+            "type": "string",
+            "example": "# Ruby gitignore template"
           }
         }
       },
@@ -102691,7 +102723,7 @@
             "example": "main"
           },
           "link": {
-            "type": "string"
+            "type": "object"
           }
         }
       },
@@ -103413,7 +103445,7 @@
             "example": "PGP"
           },
           "signature": {
-            "type": "string"
+            "type": "object"
           }
         }
       },
@@ -103579,31 +103611,40 @@
         "type": "object",
         "properties": {
           "basename": {
-            "type": "string"
+            "type": "string",
+            "example": "README"
           },
           "data": {
-            "type": "string"
+            "type": "string",
+            "example": "---\ntitle: Page\n---"
           },
           "path": {
-            "type": "string"
+            "type": "string",
+            "example": "README.md"
           },
           "filename": {
-            "type": "string"
+            "type": "string",
+            "example": "README.md"
           },
           "id": {
-            "type": "string"
+            "type": "string",
+            "example": "2695effb5807a22ff3d138d593fd856244e155e7"
           },
           "ref": {
-            "type": "string"
+            "type": "string",
+            "example": "main"
           },
           "startline": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "project_id": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "group_id": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           }
         }
       },
@@ -103647,7 +103688,8 @@
         "type": "object",
         "properties": {
           "notes": {
-            "type": "string"
+            "type": "string",
+            "example": "## 1.0.0 (2023-01-01)"
           }
         }
       },
@@ -103948,7 +103990,8 @@
             }
           },
           "mirror_branch_regex": {
-            "type": "string"
+            "type": "string",
+            "example": "feature-.*"
           }
         }
       },
@@ -103956,7 +103999,8 @@
         "type": "object",
         "properties": {
           "fingerprint_sha256": {
-            "type": "string"
+            "type": "string",
+            "example": "SHA256:abcd1234"
           }
         }
       },
@@ -104054,7 +104098,10 @@
             "example": "release-1-0"
           },
           "create_access_levels": {
-            "$ref": "#/components/schemas/APIEntitiesProtectedRefAccess"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/APIEntitiesProtectedRefAccess"
+            }
           }
         }
       },
@@ -104999,8 +105046,7 @@
             "type": "array",
             "items": {
               "type": "object"
-            },
-            "example": "{ \"@id\": \"https://gitlab.com/api/v4/projects/1/packages/nuget/query\", \"@type\": \"SearchQueryService\", \"comment\": \"Filter and search for packages by keyword.\"}"
+            }
           }
         }
       },
@@ -105013,11 +105059,22 @@
           },
           "versions": {
             "type": "object",
-            "example": "{\n                 \"1.0.0\": {\n                   \"name\": \"my_package\",\n                   \"version\": \"1.0.0\",\n                   \"dist\": { \"shasum\": \"12345\", \"tarball\": \"https://...\" }\n                 }\n               }"
+            "example": {
+              "1.0.0": {
+                "name": "my_package",
+                "version": "1.0.0",
+                "dist": {
+                  "shasum": 12345,
+                  "tarball": "https://..."
+                }
+              }
+            }
           },
           "dist-tags": {
             "type": "object",
-            "example": "{ \"latest\":\"1.0.1\" }"
+            "example": {
+              "latest": "1.0.1"
+            }
           }
         }
       },
@@ -105026,7 +105083,9 @@
         "properties": {
           "dist_tags": {
             "type": "object",
-            "example": "{ \"latest\":\"1.0.1\" }"
+            "example": {
+              "latest": "1.0.1"
+            }
           }
         }
       },
@@ -105313,13 +105372,16 @@
         "type": "object",
         "properties": {
           "base_sha": {
-            "type": "string"
+            "type": "string",
+            "example": "b83d6e391c22777fca1ed3012fce84f633d7fed0"
           },
           "head_sha": {
-            "type": "string"
+            "type": "string",
+            "example": "b83d6e391c22777fca1ed3012fce84f633d7fed0"
           },
           "start_sha": {
-            "type": "string"
+            "type": "string",
+            "example": "b83d6e391c22777fca1ed3012fce84f633d7fed0"
           }
         }
       },
@@ -105378,16 +105440,21 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "size": {
-            "type": "string"
+            "type": "integer",
+            "example": 1024
           },
           "filename": {
-            "type": "string"
+            "type": "string",
+            "example": "image.png"
           },
           "created_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2012-06-28T10:52:04Z"
           },
           "uploaded_by": {
             "$ref": "#/components/schemas/APIEntitiesUserSafe"
@@ -105449,7 +105516,11 @@
           },
           "extra": {
             "type": "object",
-            "example": "{ \"job_name\": \"test\", \"project\": \"gitlab-org/gitlab\", \"ref\": \"master\" }"
+            "example": {
+              "job_name": "test",
+              "project": "gitlab-org/gitlab",
+              "ref": "master"
+            }
           },
           "context_project": {
             "type": "string",
@@ -105471,15 +105542,13 @@
             "type": "array",
             "items": {
               "type": "string"
-            },
-            "example": "variables config should be a hash of key value pairs"
+            }
           },
           "warnings": {
             "type": "array",
             "items": {
               "type": "string"
-            },
-            "example": "jobs:job may allow multiple pipelines ..."
+            }
           },
           "merged_yaml": {
             "type": "string",
@@ -105489,15 +105558,13 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/APIEntitiesCiLintResultInclude"
-            },
-            "example": "{ \"blob\": \"https://gitlab.com/root/example-project/-/blob/..."
+            }
           },
           "jobs": {
             "type": "array",
             "items": {
               "type": "object"
-            },
-            "example": "{ \"name\": \"test: .... }"
+            }
           }
         }
       },
@@ -107385,31 +107452,45 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "string",
+            "example": "2695effb5807a22ff3d138d593fd856244e155e7"
           },
           "parent_ids": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "example": "2a4b78934375d7f53875269ffd4f45fd83a84ebe"
           },
           "message": {
-            "type": "string"
+            "type": "string",
+            "example": "Initial commit"
           },
           "authored_date": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2012-05-28T04:42:42-07:00"
           },
           "author_name": {
-            "type": "string"
+            "type": "string",
+            "example": "John Smith"
           },
           "author_email": {
-            "type": "string"
+            "type": "string",
+            "example": "john@example.com"
           },
           "committed_date": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2012-05-28T04:42:42-07:00"
           },
           "committer_name": {
-            "type": "string"
+            "type": "string",
+            "example": "Jack Smith"
           },
           "committer_email": {
-            "type": "string"
+            "type": "string",
+            "example": "jack@example.com"
           }
         }
       },
@@ -107420,7 +107501,11 @@
             "$ref": "#/components/schemas/APIEntitiesBlameRangeCommit"
           },
           "lines": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "example": "lorem ipsum"
           }
         }
       },
@@ -108231,7 +108316,11 @@
         "properties": {
           "files": {
             "type": "object",
-            "example": "{ \"files\" : { \"conan_sources.tgz\" : { }, \"conanmanifest.txt\" : { }, \"conanfile.py\" : { } } }"
+            "example": {
+              "conan_sources.tgz": { },
+              "conanmanifest.txt": { },
+              "conanfile.py": { }
+            }
           }
         }
       },
@@ -108272,7 +108361,9 @@
         "properties": {
           "upload_urls": {
             "type": "object",
-            "example": "{ \"conan_package.tgz\": \"https://gitlab.example.com/api/v4/packages/conan/v1/files/my-package/1.0/my-group+my-project/stable/0/package/103f6067a947f366ef91fc1b7da351c588d1827f/0/conan_package.tgz\" }"
+            "example": {
+              "conan_package.tgz": "https://gitlab.example.com/api/v4/packages/conan/v1/files/my-package/1.0/my-group+my-project/stable/0/package/103f6067a947f366ef91fc1b7da351c588d1827f/0/conan_package.tgz"
+            }
           }
         }
       },
@@ -108281,7 +108372,9 @@
         "properties": {
           "recipe_urls": {
             "type": "object",
-            "example": "{ \"conan_sources.tgz\": \"https://gitlab.example.com/api/v4/packages/conan/v1/files/my-package/1.0/my-group+my-project/stable/0/export/conan_sources.tgz\" }"
+            "example": {
+              "conan_sources.tgz": "https://gitlab.example.com/api/v4/packages/conan/v1/files/my-package/1.0/my-group+my-project/stable/0/export/conan_sources.tgz"
+            }
           }
         }
       },
@@ -108290,7 +108383,9 @@
         "properties": {
           "package_urls": {
             "type": "object",
-            "example": "{ \"conan_package.tgz\": \"https://gitlab.example.com/api/v4/packages/conan/v1/files/my-package/1.0/my-group+my-project/stable/packages/103f6067a947f366ef91fc1b7da351c588d1827f/0/conan_package.tgz\""
+            "example": {
+              "conan_package.tgz": "https://gitlab.example.com/api/v4/packages/conan/v1/files/my-package/1.0/my-group+my-project/stable/packages/103f6067a947f366ef91fc1b7da351c588d1827f/0/conan_package.tgz"
+            }
           }
         }
       },
@@ -108299,7 +108394,9 @@
         "properties": {
           "recipe_snapshot": {
             "type": "object",
-            "example": "{ \"conan_sources.tgz\": \"eadf19b33f4c3c7e113faabf26e76277\" }"
+            "example": {
+              "conan_sources.tgz": "eadf19b33f4c3c7e113faabf26e76277"
+            }
           }
         }
       },
@@ -108308,7 +108405,9 @@
         "properties": {
           "package_snapshot": {
             "type": "object",
-            "example": "{ \"conan_package.tgz\": \"749b29bdf72587081ca03ec033ee59dc\" }"
+            "example": {
+              "conan_package.tgz": "749b29bdf72587081ca03ec033ee59dc"
+            }
           }
         }
       },
@@ -108383,7 +108482,7 @@
             "example": "PGP"
           },
           "signature": {
-            "type": "string"
+            "type": "object"
           },
           "commit_source": {
             "type": "string",
@@ -108861,7 +108960,7 @@
             "example": "Failure/Error: is_expected.to eq(3)"
           },
           "recent_failures": {
-            "type": "string",
+            "type": "object",
             "example": {
               "count": 3,
               "base_branch": "develop"
@@ -108984,7 +109083,12 @@
           },
           "illustration": {
             "type": "object",
-            "example": "{\n  \"image\": \"illustrations/empty-state/empty-job-not-triggered-md.svg\",\n  \"size\": \"\",\n  \"title\": \"This job has not been triggered yet\",\n  \"content\": \"This job depends on upstream jobs that need to succeed in order for this job to be triggered\"\n}\n"
+            "example": {
+              "image": "illustrations/empty-state/empty-job-not-triggered-md.svg",
+              "size": "",
+              "title": "This job has not been triggered yet",
+              "content": "This job depends on upstream jobs that need to succeed in order for this job to be triggered"
+            }
           },
           "favicon": {
             "type": "string",
@@ -110201,8 +110305,7 @@
             "type": "array",
             "items": {
               "type": "string"
-            },
-            "example": "2a4b78934375d7f53875269ffd4f45fd83a84ebe"
+            }
           },
           "title": {
             "type": "string",
@@ -110240,11 +110343,18 @@
           },
           "trailers": {
             "type": "object",
-            "example": "{ \"Merged-By\": \"Jane Doe janedoe@gitlab.com\" }"
+            "example": {
+              "Merged-By": "Jane Doe janedoe@gitlab.com"
+            }
           },
           "extended_trailers": {
             "type": "object",
-            "example": "{ \"Signed-off-by\": [\"John Doe <johndoe@gitlab.com>\", \"Jane Doe <janedoe@gitlab.com>\"] }"
+            "example": {
+              "Signed-off-by": [
+                "John Doe <johndoe@gitlab.com>",
+                "Jane Doe <janedoe@gitlab.com>"
+              ]
+            }
           },
           "web_url": {
             "type": "string",
@@ -110544,7 +110654,24 @@
           },
           "limits_history": {
             "type": "object",
-            "example": "{\"enforcement_limit\"=>[{\"timestamp\"=>1686909124, \"user_id\"=>1, \"username\"=>\"x\", \"value\"=>5}],\n                   \"notification_limit\"=>[{\"timestamp\"=>1686909124, \"user_id\"=>2, \"username\"=>\"y\", \"value\"=>7}]}"
+            "example": {
+              "enforcement_limit": [
+                {
+                  "timestamp": 1686909124,
+                  "user_id": 1,
+                  "username": "x",
+                  "value": 5
+                }
+              ],
+              "notification_limit": [
+                {
+                  "timestamp": 1686909124,
+                  "user_id": 2,
+                  "username": "y",
+                  "value": 7
+                }
+              ]
+            }
           },
           "maven_max_file_size": {
             "type": "integer",
@@ -111906,9 +112033,8 @@
           "files": {
             "type": "array",
             "items": {
-              "type": "string"
-            },
-            "example": "e0d123e5f316bef78bfdf5a008837577"
+              "type": "object"
+            }
           },
           "imported": {
             "type": "boolean",
@@ -111919,7 +112045,8 @@
             "example": "none"
           },
           "repository_storage": {
-            "type": "string"
+            "type": "string",
+            "example": "default"
           }
         }
       },
@@ -111982,9 +112109,8 @@
           "files": {
             "type": "array",
             "items": {
-              "type": "string"
-            },
-            "example": "e0d123e5f316bef78bfdf5a008837577"
+              "type": "object"
+            }
           },
           "imported": {
             "type": "boolean",
@@ -111995,7 +112121,8 @@
             "example": "none"
           },
           "repository_storage": {
-            "type": "string"
+            "type": "string",
+            "example": "default"
           }
         }
       },
@@ -112058,9 +112185,8 @@
           "files": {
             "type": "array",
             "items": {
-              "type": "string"
-            },
-            "example": "e0d123e5f316bef78bfdf5a008837577"
+              "type": "object"
+            }
           },
           "imported": {
             "type": "boolean",
@@ -112071,7 +112197,8 @@
             "example": "none"
           },
           "repository_storage": {
-            "type": "string"
+            "type": "string",
+            "example": "default"
           }
         }
       },
@@ -112305,7 +112432,7 @@
             "example": false
           },
           "project_id": {
-            "type": "string",
+            "type": "integer",
             "example": 1
           },
           "issues_events": {
@@ -116986,8 +117113,7 @@
             "type": "array",
             "items": {
               "type": "string"
-            },
-            "example": "2a4b78934375d7f53875269ffd4f45fd83a84ebe"
+            }
           },
           "title": {
             "type": "string",
@@ -117025,11 +117151,18 @@
           },
           "trailers": {
             "type": "object",
-            "example": "{ \"Merged-By\": \"Jane Doe janedoe@gitlab.com\" }"
+            "example": {
+              "Merged-By": "Jane Doe janedoe@gitlab.com"
+            }
           },
           "extended_trailers": {
             "type": "object",
-            "example": "{ \"Signed-off-by\": [\"John Doe <johndoe@gitlab.com>\", \"Jane Doe <janedoe@gitlab.com>\"] }"
+            "example": {
+              "Signed-off-by": [
+                "John Doe <johndoe@gitlab.com>",
+                "Jane Doe <janedoe@gitlab.com>"
+              ]
+            }
           },
           "web_url": {
             "type": "string",
@@ -142046,26 +142179,18 @@
           }
         }
       },
-      "RequestBodyA98aaa3a441e": {
+      "RequestBodyF0e6af1da635": {
         "required": [
+          "bitbucket_email",
+          "bitbucket_api_token",
           "repo_path",
           "target_namespace"
         ],
         "type": "object",
         "properties": {
-          "bitbucket_username": {
-            "type": "string",
-            "description": "BitBucket username (for app passwords)",
-            "nullable": true
-          },
-          "bitbucket_app_password": {
-            "type": "string",
-            "description": "BitBucket app password",
-            "nullable": true
-          },
           "bitbucket_email": {
             "type": "string",
-            "description": "BitBucket email (for API tokens)",
+            "description": "BitBucket email",
             "nullable": true
           },
           "bitbucket_api_token": {

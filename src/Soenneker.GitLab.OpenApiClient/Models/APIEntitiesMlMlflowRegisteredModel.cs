@@ -29,10 +29,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The latest_versions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowModelVersion? LatestVersions { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowModelVersion>? LatestVersions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowModelVersion LatestVersions { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowModelVersion> LatestVersions { get; set; }
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -45,10 +45,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The tags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowKeyValue? Tags { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowKeyValue>? Tags { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowKeyValue Tags { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowKeyValue> Tags { get; set; }
 #endif
         /// <summary>The user_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -86,9 +86,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "creation_timestamp", n => { CreationTimestamp = n.GetIntValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "last_updated_timestamp", n => { LastUpdatedTimestamp = n.GetIntValue(); } },
-                { "latest_versions", n => { LatestVersions = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowModelVersion>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowModelVersion.CreateFromDiscriminatorValue); } },
+                { "latest_versions", n => { LatestVersions = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowModelVersion>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowModelVersion.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "tags", n => { Tags = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowKeyValue>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowKeyValue.CreateFromDiscriminatorValue); } },
+                { "tags", n => { Tags = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowKeyValue>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowKeyValue.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "user_id", n => { UserId = n.GetStringValue(); } },
             };
         }
@@ -102,9 +102,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("creation_timestamp", CreationTimestamp);
             writer.WriteStringValue("description", Description);
             writer.WriteIntValue("last_updated_timestamp", LastUpdatedTimestamp);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowModelVersion>("latest_versions", LatestVersions);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowModelVersion>("latest_versions", LatestVersions);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowKeyValue>("tags", Tags);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowKeyValue>("tags", Tags);
             writer.WriteStringValue("user_id", UserId);
             writer.WriteAdditionalData(AdditionalData);
         }

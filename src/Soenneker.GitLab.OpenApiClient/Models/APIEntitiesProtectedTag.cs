@@ -17,10 +17,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The create_access_levels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProtectedRefAccess? CreateAccessLevels { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProtectedRefAccess>? CreateAccessLevels { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProtectedRefAccess CreateAccessLevels { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProtectedRefAccess> CreateAccessLevels { get; set; }
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "create_access_levels", n => { CreateAccessLevels = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProtectedRefAccess>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProtectedRefAccess.CreateFromDiscriminatorValue); } },
+                { "create_access_levels", n => { CreateAccessLevels = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProtectedRefAccess>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProtectedRefAccess.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProtectedRefAccess>("create_access_levels", CreateAccessLevels);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProtectedRefAccess>("create_access_levels", CreateAccessLevels);
             writer.WriteStringValue("name", Name);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -17,10 +17,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The experiments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowExperiment? Experiments { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowExperiment>? Experiments { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowExperiment Experiments { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowExperiment> Experiments { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowListExperiment"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "experiments", n => { Experiments = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowExperiment>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowExperiment.CreateFromDiscriminatorValue); } },
+                { "experiments", n => { Experiments = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowExperiment>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowExperiment.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowExperiment>("experiments", Experiments);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowExperiment>("experiments", Experiments);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
