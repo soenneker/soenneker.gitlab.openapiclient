@@ -35,7 +35,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Merge_requestsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/merge_requests{?approved*,approved_by_ids*,approved_by_usernames*,approver_ids*,assignee_id*,assignee_username*,author_id*,author_username*,created_after*,created_before*,deployed_after*,deployed_before*,environment*,iids,in*,labels,merge_user_id*,merge_user_username*,milestone*,my_reaction_emoji*,not*,not%5Bassignee_id%5D*,not%5Bassignee_username%5D*,not%5Bauthor_id%5D*,not%5Bauthor_username%5D*,not%5Blabels%5D*,not%5Bmilestone%5D*,not%5Bmy_reaction_emoji%5D*,not%5Breviewer_id%5D*,not%5Breviewer_username%5D*,order_by*,page*,per_page*,reviewer_id*,reviewer_username*,scope*,search*,sort*,source_branch*,source_project_id*,state*,target_branch*,updated_after*,updated_before*,view*,wip*,with_labels_details*,with_merge_status_recheck*}", pathParameters)
+        public Merge_requestsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/merge_requests{?approved*,approved_by_ids*,approved_by_usernames*,approver_ids*,assignee_id*,assignee_username*,author_id*,author_username*,created_after*,created_before*,deployed_after*,deployed_before*,draft*,environment*,iids,in*,labels,merge_user_id*,merge_user_username*,milestone*,my_reaction_emoji*,not*,not%5Bassignee_id%5D*,not%5Bassignee_username%5D*,not%5Bauthor_id%5D*,not%5Bauthor_username%5D*,not%5Blabels%5D*,not%5Bmilestone%5D*,not%5Bmy_reaction_emoji%5D*,not%5Breviewer_id%5D*,not%5Breviewer_username%5D*,order_by*,page*,per_page*,reviewer_id*,reviewer_username*,scope*,search*,sort*,source_branch*,source_project_id*,state*,target_branch*,updated_after*,updated_before*,view*,wip*,with_labels_details*,with_merge_status_recheck*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Merge_requestsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/merge_requests{?approved*,approved_by_ids*,approved_by_usernames*,approver_ids*,assignee_id*,assignee_username*,author_id*,author_username*,created_after*,created_before*,deployed_after*,deployed_before*,environment*,iids,in*,labels,merge_user_id*,merge_user_username*,milestone*,my_reaction_emoji*,not*,not%5Bassignee_id%5D*,not%5Bassignee_username%5D*,not%5Bauthor_id%5D*,not%5Bauthor_username%5D*,not%5Blabels%5D*,not%5Bmilestone%5D*,not%5Bmy_reaction_emoji%5D*,not%5Breviewer_id%5D*,not%5Breviewer_username%5D*,order_by*,page*,per_page*,reviewer_id*,reviewer_username*,scope*,search*,sort*,source_branch*,source_project_id*,state*,target_branch*,updated_after*,updated_before*,view*,wip*,with_labels_details*,with_merge_status_recheck*}", rawUrl)
+        public Merge_requestsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/merge_requests{?approved*,approved_by_ids*,approved_by_usernames*,approver_ids*,assignee_id*,assignee_username*,author_id*,author_username*,created_after*,created_before*,deployed_after*,deployed_before*,draft*,environment*,iids,in*,labels,merge_user_id*,merge_user_username*,milestone*,my_reaction_emoji*,not*,not%5Bassignee_id%5D*,not%5Bassignee_username%5D*,not%5Bauthor_id%5D*,not%5Bauthor_username%5D*,not%5Blabels%5D*,not%5Bmilestone%5D*,not%5Bmy_reaction_emoji%5D*,not%5Breviewer_id%5D*,not%5Breviewer_username%5D*,order_by*,page*,per_page*,reviewer_id*,reviewer_username*,scope*,search*,sort*,source_branch*,source_project_id*,state*,target_branch*,updated_after*,updated_before*,view*,wip*,with_labels_details*,with_merge_status_recheck*}", rawUrl)
         {
         }
         /// <summary>
@@ -225,6 +225,9 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests
             [QueryParameter("deployed_before")]
             public string DeployedBefore { get; set; }
 #endif
+            /// <summary>Filter merge requests against their `draft` status. `true` to return only draft merge requests, `false` to return non-draft merge requests.</summary>
+            [QueryParameter("draft")]
+            public bool? Draft { get; set; }
             /// <summary>Returns merge requests deployed to the given environment</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -450,7 +453,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests
             /// <summary>If simple, returns the `iid`, URL, title, description, and basic state of merge request</summary>
             [QueryParameter("view")]
             public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.GetViewQueryParameterType? View { get; set; }
-            /// <summary>Filter merge requests against their `wip` status. `yes` to return only draft merge requests, `no` to return non-draft merge requests.</summary>
+            /// <summary>Deprecated. Use `draft` instead. Filter merge requests against their `wip` status. `yes` to return only draft merge requests, `no` to return non-draft merge requests.</summary>
             [QueryParameter("wip")]
             public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.GetWipQueryParameterType? Wip { get; set; }
             /// <summary>&quot;If `true`, response returns more details for each label in labels field: `:name`,`:color`, `:description`, `:description_html`, `:text_color`&quot;</summary>

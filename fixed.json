@@ -51201,7 +51201,7 @@
           {
             "name": "wip",
             "in": "query",
-            "description": "Filter merge requests against their `wip` status. `yes` to return only draft merge requests, `no` to return non-draft merge requests.",
+            "description": "Deprecated. Use `draft` instead. Filter merge requests against their `wip` status. `yes` to return only draft merge requests, `no` to return non-draft merge requests.",
             "schema": {
               "enum": [
                 "yes",
@@ -51209,6 +51209,15 @@
               ],
               "type": "string",
               "additionalProperties": false,
+              "nullable": true
+            }
+          },
+          {
+            "name": "draft",
+            "in": "query",
+            "description": "Filter merge requests against their `draft` status. `true` to return only draft merge requests, `false` to return non-draft merge requests.",
+            "schema": {
+              "type": "boolean",
               "nullable": true
             }
           },
@@ -51799,7 +51808,7 @@
           {
             "name": "wip",
             "in": "query",
-            "description": "Filter merge requests against their `wip` status. `yes` to return only draft merge requests, `no` to return non-draft merge requests.",
+            "description": "Deprecated. Use `draft` instead. Filter merge requests against their `wip` status. `yes` to return only draft merge requests, `no` to return non-draft merge requests.",
             "schema": {
               "enum": [
                 "yes",
@@ -51807,6 +51816,15 @@
               ],
               "type": "string",
               "additionalProperties": false,
+              "nullable": true
+            }
+          },
+          {
+            "name": "draft",
+            "in": "query",
+            "description": "Filter merge requests against their `draft` status. `true` to return only draft merge requests, `false` to return non-draft merge requests.",
+            "schema": {
+              "type": "boolean",
               "nullable": true
             }
           },
@@ -52674,7 +52692,7 @@
           {
             "name": "wip",
             "in": "query",
-            "description": "Filter merge requests against their `wip` status. `yes` to return only draft merge requests, `no` to return non-draft merge requests.",
+            "description": "Deprecated. Use `draft` instead. Filter merge requests against their `wip` status. `yes` to return only draft merge requests, `no` to return non-draft merge requests.",
             "schema": {
               "enum": [
                 "yes",
@@ -52682,6 +52700,15 @@
               ],
               "type": "string",
               "additionalProperties": false,
+              "nullable": true
+            }
+          },
+          {
+            "name": "draft",
+            "in": "query",
+            "description": "Filter merge requests against their `draft` status. `true` to return only draft merge requests, `false` to return non-draft merge requests.",
+            "schema": {
+              "type": "boolean",
               "nullable": true
             }
           },
@@ -74321,7 +74348,7 @@
           {
             "name": "wip",
             "in": "query",
-            "description": "Filter merge requests against their `wip` status. `yes` to return only draft merge requests, `no` to return non-draft merge requests.",
+            "description": "Deprecated. Use `draft` instead. Filter merge requests against their `wip` status. `yes` to return only draft merge requests, `no` to return non-draft merge requests.",
             "schema": {
               "enum": [
                 "yes",
@@ -74329,6 +74356,15 @@
               ],
               "type": "string",
               "additionalProperties": false,
+              "nullable": true
+            }
+          },
+          {
+            "name": "draft",
+            "in": "query",
+            "description": "Filter merge requests against their `draft` status. `true` to return only draft merge requests, `false` to return non-draft merge requests.",
+            "schema": {
+              "type": "boolean",
               "nullable": true
             }
           },
@@ -86909,7 +86945,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyB91d36b0df89"
+                "$ref": "#/components/schemas/RequestBody44dc3f6e1cef"
               }
             }
           }
@@ -86952,7 +86988,7 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody785e5579e292"
+                "$ref": "#/components/schemas/RequestBodyCb43113efc39"
               }
             }
           }
@@ -109197,6 +109233,9 @@
           "run": {
             "type": "string"
           },
+          "suspend_options": {
+            "type": "string"
+          },
           "secrets": {
             "type": "string"
           },
@@ -119776,646 +119815,6 @@
           }
         }
       },
-      "RequestBodyFb6bb57793d6": {
-        "required": [
-          "resources"
-        ],
-        "type": "object",
-        "properties": {
-          "resources": {
-            "type": "array",
-            "items": {
-              "required": [
-                "resource_type",
-                "resource_ids",
-                "ability"
-              ],
-              "type": "object",
-              "properties": {
-                "resource_type": {
-                  "type": "string",
-                  "description": "Resource type (e.g. project, merge_request)",
-                  "nullable": true
-                },
-                "resource_ids": {
-                  "type": "array",
-                  "items": {
-                    "type": "integer"
-                  },
-                  "description": "Resource IDs",
-                  "nullable": true
-                },
-                "ability": {
-                  "type": "string",
-                  "description": "Ability to check (e.g. read_project)",
-                  "nullable": true
-                }
-              }
-            },
-            "description": "Resources to check",
-            "nullable": true
-          }
-        }
-      },
-      "RequestBody2f48b32bde07": {
-        "required": [
-          "revisions"
-        ],
-        "type": "object",
-        "properties": {
-          "revisions": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "Git revisions to list blobs for",
-            "nullable": true
-          },
-          "bytes_limit": {
-            "maximum": 1048576,
-            "minimum": 1,
-            "type": "integer",
-            "description": "Maximum blob size in bytes (1 to 1048576)",
-            "default": 1048576,
-            "nullable": true
-          }
-        }
-      },
-      "RequestBodyF8df00b9df82": {
-        "required": [
-          "jsonrpc",
-          "method"
-        ],
-        "type": "object",
-        "properties": {
-          "jsonrpc": {
-            "minLength": 1,
-            "enum": [
-              2
-            ],
-            "type": "string",
-            "additionalProperties": false,
-            "description": "JSON-RPC protocol version identifier. Must be `2.0`."
-          },
-          "method": {
-            "type": "string",
-            "description": "Name of the JSON-RPC method invoked on the MCP server.",
-            "nullable": true
-          },
-          "id": {
-            "type": "string",
-            "description": "ID of the JSON-RPC request returned in the response.",
-            "nullable": true
-          },
-          "params": {
-            "type": "object",
-            "oneOf": [
-              {
-                "type": "object",
-                "nullable": true
-              },
-              {
-                "type": "array",
-                "nullable": true
-              }
-            ]
-          }
-        }
-      },
-      "RequestBody72c0f4a0fb49": {
-        "required": [
-          "query"
-        ],
-        "type": "object",
-        "properties": {
-          "query": {
-            "type": "object",
-            "description": "Query DSL object",
-            "nullable": true
-          },
-          "response_format": {
-            "enum": [
-              "raw",
-              "llm"
-            ],
-            "type": "string",
-            "additionalProperties": false,
-            "description": "\"Response format: raw or llm\"",
-            "default": "raw",
-            "nullable": true
-          }
-        }
-      },
-      "RequestBody8ce6269fe724": {
-        "required": [
-          "registry_id",
-          "upstream_id"
-        ],
-        "type": "object",
-        "properties": {
-          "registry_id": {
-            "type": "integer",
-            "description": "The ID of the npm registry",
-            "nullable": true
-          },
-          "upstream_id": {
-            "type": "integer",
-            "description": "The ID of the npm upstream",
-            "nullable": true
-          }
-        }
-      },
-      "RequestBodyBdc1fb756724": {
-        "required": [
-          "position"
-        ],
-        "type": "object",
-        "properties": {
-          "position": {
-            "maximum": 20,
-            "minimum": 1,
-            "type": "integer",
-            "description": "The priority order of an upstream within a npm virtual registry"
-          }
-        }
-      },
-      "RequestBody6dc2221f7cfe": {
-        "required": [
-          "name"
-        ],
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "The name of the npm virtual registry",
-            "nullable": true
-          },
-          "description": {
-            "type": "string",
-            "description": "The description of the npm virtual registry",
-            "nullable": true
-          }
-        }
-      },
-      "RequestBody7160856d5fbe": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "The name of the npm virtual registry",
-            "nullable": true
-          },
-          "description": {
-            "type": "string",
-            "description": "The description of the npm virtual registry",
-            "nullable": true
-          }
-        }
-      },
-      "RequestBody61903923fede": {
-        "required": [
-          "registry_id",
-          "upstream_id"
-        ],
-        "type": "object",
-        "properties": {
-          "registry_id": {
-            "type": "integer",
-            "description": "The ID of the maven registry",
-            "nullable": true
-          },
-          "upstream_id": {
-            "type": "integer",
-            "description": "The ID of the maven upstream",
-            "nullable": true
-          }
-        }
-      },
-      "RequestBody4fdffd418afa": {
-        "required": [
-          "position"
-        ],
-        "type": "object",
-        "properties": {
-          "position": {
-            "maximum": 20,
-            "minimum": 1,
-            "type": "integer",
-            "description": "The priority order of an upstream within a maven virtual registry"
-          }
-        }
-      },
-      "RequestBodyAd94dc985cc6": {
-        "required": [
-          "url"
-        ],
-        "type": "object",
-        "properties": {
-          "page": {
-            "type": "integer",
-            "description": "Current page number",
-            "default": 1,
-            "nullable": true,
-            "example": 1
-          },
-          "per_page": {
-            "type": "integer",
-            "description": "Number of items per page",
-            "default": 20,
-            "nullable": true,
-            "example": 20
-          },
-          "url": {
-            "type": "string",
-            "description": "The URL of the maven virtual registry upstream",
-            "nullable": true
-          },
-          "username": {
-            "type": "string",
-            "description": "The username of the maven virtual registry upstream",
-            "nullable": true
-          },
-          "password": {
-            "type": "string",
-            "description": "The password of the maven virtual registry upstream",
-            "nullable": true
-          }
-        }
-      },
-      "RequestBodyD607c8670bc8": {
-        "required": [
-          "url",
-          "name"
-        ],
-        "type": "object",
-        "properties": {
-          "url": {
-            "type": "string",
-            "description": "The URL of the maven virtual registry upstream",
-            "nullable": true
-          },
-          "name": {
-            "type": "string",
-            "description": "The name of the maven virtual registry upstream",
-            "nullable": true
-          },
-          "description": {
-            "type": "string",
-            "description": "The description of the maven virtual registry upstream",
-            "nullable": true
-          },
-          "username": {
-            "type": "string",
-            "description": "The username of the maven virtual registry upstream",
-            "nullable": true
-          },
-          "password": {
-            "type": "string",
-            "description": "The password of the maven virtual registry upstream",
-            "nullable": true
-          },
-          "cache_validity_hours": {
-            "type": "integer",
-            "description": "The cache validity in hours. Defaults to 24",
-            "nullable": true
-          },
-          "metadata_cache_validity_hours": {
-            "type": "integer",
-            "description": "The metadata cache validity period in hours. Defaults to 24",
-            "nullable": true
-          }
-        }
-      },
-      "RequestBody8d39a735dfd7": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "The name of the maven virtual registry upstream",
-            "nullable": true
-          },
-          "description": {
-            "type": "string",
-            "description": "The description of the maven virtual registry upstream",
-            "nullable": true
-          },
-          "url": {
-            "type": "string",
-            "description": "The URL of the maven virtual registry upstream",
-            "nullable": true
-          },
-          "username": {
-            "type": "string",
-            "description": "The username of the maven virtual registry upstream",
-            "nullable": true
-          },
-          "password": {
-            "type": "string",
-            "description": "The password of the maven virtual registry upstream",
-            "nullable": true
-          },
-          "cache_validity_hours": {
-            "type": "integer",
-            "description": "The validity of the cache in hours",
-            "nullable": true
-          },
-          "metadata_cache_validity_hours": {
-            "type": "integer",
-            "description": "The metadata cache validity period in hours.",
-            "nullable": true
-          }
-        }
-      },
-      "RequestBody36c4857e7797": {
-        "type": "object",
-        "properties": {
-          "url": {
-            "type": "string",
-            "description": "The URL of the Maven virtual registry upstream",
-            "nullable": true
-          },
-          "username": {
-            "type": "string",
-            "description": "The username of the Maven virtual registry upstream",
-            "nullable": true
-          },
-          "password": {
-            "type": "string",
-            "description": "The password of the Maven virtual registry upstream",
-            "nullable": true
-          }
-        }
-      },
-      "RequestBody7f269c4b92ef": {
-        "required": [
-          "name"
-        ],
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "The name of the maven virtual registry",
-            "nullable": true
-          },
-          "description": {
-            "type": "string",
-            "description": "The description of the maven virtual registry",
-            "nullable": true
-          }
-        }
-      },
-      "RequestBodyCb9a5d412e4e": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "The name of the maven virtual registry",
-            "nullable": true
-          },
-          "description": {
-            "type": "string",
-            "description": "The description of the maven virtual registry",
-            "nullable": true
-          }
-        }
-      },
-      "RequestBodyCbd73384d307": {
-        "required": [
-          "url"
-        ],
-        "type": "object",
-        "properties": {
-          "page": {
-            "type": "integer",
-            "description": "Current page number",
-            "default": 1,
-            "nullable": true,
-            "example": 1
-          },
-          "per_page": {
-            "type": "integer",
-            "description": "Number of items per page",
-            "default": 20,
-            "nullable": true,
-            "example": 20
-          },
-          "url": {
-            "type": "string",
-            "description": "The URL of the container virtual registry upstream",
-            "nullable": true
-          },
-          "username": {
-            "type": "string",
-            "description": "The username of the container virtual registry upstream",
-            "nullable": true
-          },
-          "password": {
-            "type": "string",
-            "description": "The password of the container virtual registry upstream",
-            "nullable": true
-          }
-        }
-      },
-      "RequestBodyBc3e92a2928b": {
-        "required": [
-          "url",
-          "name"
-        ],
-        "type": "object",
-        "properties": {
-          "url": {
-            "type": "string",
-            "description": "The URL of the container virtual registry upstream",
-            "nullable": true
-          },
-          "name": {
-            "type": "string",
-            "description": "The name of the container virtual registry upstream",
-            "nullable": true
-          },
-          "description": {
-            "type": "string",
-            "description": "The description of the container virtual registry upstream",
-            "nullable": true
-          },
-          "username": {
-            "type": "string",
-            "description": "The username of the container virtual registry upstream",
-            "nullable": true
-          },
-          "password": {
-            "type": "string",
-            "description": "The password of the container virtual registry upstream",
-            "nullable": true
-          },
-          "cache_validity_hours": {
-            "type": "integer",
-            "description": "The cache validity in hours. Defaults to 24",
-            "nullable": true
-          }
-        }
-      },
-      "RequestBody32784b8a0306": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "The name of the container virtual registry upstream",
-            "nullable": true
-          },
-          "description": {
-            "type": "string",
-            "description": "The description of the container virtual registry upstream",
-            "nullable": true
-          },
-          "url": {
-            "type": "string",
-            "description": "The URL of the container virtual registry upstream",
-            "nullable": true
-          },
-          "username": {
-            "type": "string",
-            "description": "The username of the container virtual registry upstream",
-            "nullable": true
-          },
-          "password": {
-            "type": "string",
-            "description": "The password of the container virtual registry upstream",
-            "nullable": true
-          },
-          "cache_validity_hours": {
-            "type": "integer",
-            "description": "The validity of the cache in hours",
-            "nullable": true
-          }
-        }
-      },
-      "RequestBody47ae995b7a21": {
-        "type": "object",
-        "properties": {
-          "url": {
-            "type": "string",
-            "description": "The URL of the container virtual registry upstream",
-            "nullable": true
-          },
-          "username": {
-            "type": "string",
-            "description": "The username of the container virtual registry upstream",
-            "nullable": true
-          },
-          "password": {
-            "type": "string",
-            "description": "The password of the container virtual registry upstream",
-            "nullable": true
-          }
-        }
-      },
-      "RequestBody7daa34a3ff16": {
-        "required": [
-          "registry_id",
-          "upstream_id"
-        ],
-        "type": "object",
-        "properties": {
-          "registry_id": {
-            "type": "integer",
-            "description": "The ID of the registry",
-            "nullable": true
-          },
-          "upstream_id": {
-            "type": "integer",
-            "description": "The ID of the upstream",
-            "nullable": true
-          }
-        }
-      },
-      "RequestBodyE601cf48e140": {
-        "required": [
-          "position"
-        ],
-        "type": "object",
-        "properties": {
-          "position": {
-            "maximum": 20,
-            "minimum": 1,
-            "type": "integer",
-            "description": "The priority order of an upstream within a container virtual registry"
-          }
-        }
-      },
-      "RequestBodyFfad75e35906": {
-        "required": [
-          "name"
-        ],
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "The name of the container virtual registry",
-            "nullable": true
-          },
-          "description": {
-            "type": "string",
-            "description": "The description of the container virtual registry",
-            "nullable": true
-          }
-        }
-      },
-      "RequestBodyEf1b678c1c88": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "The name of the container virtual registry",
-            "nullable": true
-          },
-          "description": {
-            "type": "string",
-            "description": "The description of the container virtual registry",
-            "nullable": true
-          }
-        }
-      },
-      "RequestBody2be5ef61357b": {
-        "type": "object",
-        "properties": {
-          "enabled": {
-            "type": "boolean",
-            "description": "Boolean to enable/disable the policy",
-            "nullable": true
-          },
-          "keep_n_days_after_download": {
-            "maximum": 365,
-            "minimum": 1,
-            "type": "integer",
-            "description": "Number of days after which unused cache entries should be cleaned up",
-            "nullable": true
-          },
-          "cadence": {
-            "enum": [
-              1,
-              7,
-              14,
-              30,
-              90
-            ],
-            "type": "integer",
-            "additionalProperties": false,
-            "description": "How often the cleanup policy should run (daily, weekly, monthly, etc.)",
-            "nullable": true
-          },
-          "notify_on_success": {
-            "type": "boolean",
-            "description": "Boolean to notify group owners on successful cleanup runs",
-            "nullable": true
-          },
-          "notify_on_failure": {
-            "type": "boolean",
-            "description": "Boolean to notify group owners on failed cleanup runs",
-            "nullable": true
-          }
-        }
-      },
       "RequestBodyC172efdc6039": {
         "type": "object",
         "properties": {
@@ -129777,6 +129176,47 @@
           }
         }
       },
+      "RequestBodyF8df00b9df82": {
+        "required": [
+          "jsonrpc",
+          "method"
+        ],
+        "type": "object",
+        "properties": {
+          "jsonrpc": {
+            "minLength": 1,
+            "enum": [
+              2
+            ],
+            "type": "string",
+            "additionalProperties": false,
+            "description": "JSON-RPC protocol version identifier. Must be `2.0`."
+          },
+          "method": {
+            "type": "string",
+            "description": "Name of the JSON-RPC method invoked on the MCP server.",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "description": "ID of the JSON-RPC request returned in the response.",
+            "nullable": true
+          },
+          "params": {
+            "type": "object",
+            "oneOf": [
+              {
+                "type": "object",
+                "nullable": true
+              },
+              {
+                "type": "array",
+                "nullable": true
+              }
+            ]
+          }
+        }
+      },
       "RequestBody5d7c35d55ff7": {
         "required": [
           "name",
@@ -130421,312 +129861,6 @@
           "branch": {
             "type": "string",
             "description": "The name of the branch",
-            "nullable": true
-          }
-        }
-      },
-      "RequestBody0dba1df65718": {
-        "required": [
-          "title"
-        ],
-        "type": "object",
-        "properties": {
-          "title": {
-            "type": "string",
-            "description": "Title of the work item.",
-            "nullable": true
-          },
-          "work_item_type_name": {
-            "enum": [
-              "issue",
-              "incident",
-              "test_case",
-              "requirement",
-              "task",
-              "objective",
-              "key_result",
-              "epic",
-              "ticket"
-            ],
-            "type": "string",
-            "additionalProperties": false,
-            "description": "Name of the work item type (for example, \"task\", \"issue\", \"epic\").",
-            "nullable": true
-          },
-          "work_item_type_id": {
-            "type": "integer",
-            "description": "Numeric ID of the work item type.",
-            "nullable": true
-          },
-          "confidential": {
-            "type": "boolean",
-            "description": "Whether the work item is confidential.",
-            "nullable": true
-          },
-          "created_at": {
-            "type": "string",
-            "description": "Timestamp for the creation. Available only for admins and project owners.",
-            "format": "date-time",
-            "nullable": true
-          },
-          "features": {
-            "type": "object",
-            "properties": {
-              "description": {
-                "required": [
-                  "description"
-                ],
-                "type": "object",
-                "properties": {
-                  "description": {
-                    "type": "string",
-                    "description": "Description text for the work item.",
-                    "nullable": true
-                  }
-                },
-                "description": "Input for description feature.",
-                "nullable": true
-              },
-              "assignees": {
-                "required": [
-                  "assignee_ids"
-                ],
-                "type": "object",
-                "properties": {
-                  "assignee_ids": {
-                    "type": "array",
-                    "items": {
-                      "type": "integer"
-                    },
-                    "description": "IDs of users to assign to the work item. Maximum 30.",
-                    "nullable": true
-                  }
-                },
-                "description": "Input for assignees feature.",
-                "nullable": true
-              },
-              "labels": {
-                "required": [
-                  "label_ids"
-                ],
-                "type": "object",
-                "properties": {
-                  "label_ids": {
-                    "type": "array",
-                    "items": {
-                      "type": "integer"
-                    },
-                    "description": "IDs of labels to add to the work item. Maximum 30.",
-                    "nullable": true
-                  }
-                },
-                "description": "Input for labels feature.",
-                "nullable": true
-              },
-              "milestone": {
-                "type": "object",
-                "properties": {
-                  "milestone_id": {
-                    "type": "integer",
-                    "description": "ID of the milestone to assign. Null to unset.",
-                    "nullable": true
-                  }
-                },
-                "description": "Input for milestone feature.",
-                "nullable": true
-              },
-              "hierarchy": {
-                "type": "object",
-                "properties": {
-                  "parent_id": {
-                    "type": "integer",
-                    "description": "ID of the parent work item.",
-                    "nullable": true
-                  }
-                },
-                "description": "Input for hierarchy feature.",
-                "nullable": true
-              },
-              "start_and_due_date": {
-                "type": "object",
-                "properties": {
-                  "start_date": {
-                    "type": "string",
-                    "description": "Start date for the work item.",
-                    "format": "date",
-                    "nullable": true
-                  },
-                  "due_date": {
-                    "type": "string",
-                    "description": "Due date for the work item.",
-                    "format": "date",
-                    "nullable": true
-                  }
-                },
-                "description": "Input for start and due date feature.",
-                "nullable": true
-              },
-              "linked_items": {
-                "required": [
-                  "work_items_ids"
-                ],
-                "type": "object",
-                "properties": {
-                  "work_items_ids": {
-                    "type": "array",
-                    "items": {
-                      "type": "integer"
-                    },
-                    "description": "IDs of work items to link. Maximum 30.",
-                    "nullable": true
-                  },
-                  "link_type": {
-                    "enum": [
-                      "relates_to"
-                    ],
-                    "type": "string",
-                    "additionalProperties": false,
-                    "description": "\"Type of link. Supported values: relates_to.\"",
-                    "default": "relates_to",
-                    "nullable": true
-                  }
-                },
-                "description": "Input for linked items feature.",
-                "nullable": true
-              },
-              "crm_contacts": {
-                "required": [
-                  "contact_ids"
-                ],
-                "type": "object",
-                "properties": {
-                  "contact_ids": {
-                    "type": "array",
-                    "items": {
-                      "type": "integer"
-                    },
-                    "description": "IDs of CRM contacts to set on the work item.",
-                    "nullable": true
-                  }
-                },
-                "description": "Input for CRM contacts widget.",
-                "nullable": true
-              },
-              "color": {
-                "required": [
-                  "color"
-                ],
-                "type": "object",
-                "properties": {
-                  "color": {
-                    "type": "string",
-                    "description": "Color of the work item as a hex code (for example, \"#e24329\").",
-                    "nullable": true
-                  }
-                },
-                "description": "Input for color feature.",
-                "nullable": true
-              },
-              "health_status": {
-                "type": "object",
-                "properties": {
-                  "health_status": {
-                    "enum": [
-                      "on_track",
-                      "needs_attention",
-                      "at_risk"
-                    ],
-                    "type": "string",
-                    "additionalProperties": false,
-                    "description": "\"Health status. Values: on_track, needs_attention, or at_risk.\"",
-                    "nullable": true
-                  }
-                },
-                "description": "Input for health status widget.",
-                "nullable": true
-              },
-              "iteration": {
-                "type": "object",
-                "properties": {
-                  "iteration_id": {
-                    "type": "integer",
-                    "description": "ID of the iteration to assign to the work item. Null to unset.",
-                    "nullable": true
-                  }
-                },
-                "description": "Input for iteration widget.",
-                "nullable": true
-              },
-              "weight": {
-                "type": "object",
-                "properties": {
-                  "weight": {
-                    "type": "integer",
-                    "description": "Weight of the work item. Null to unset.",
-                    "nullable": true
-                  }
-                },
-                "description": "Input for weight widget.",
-                "nullable": true
-              },
-              "status": {
-                "type": "object",
-                "properties": {
-                  "status_id": {
-                    "type": "integer",
-                    "description": "ID of the status to assign to the work item. The namespace determines whether this resolves to a custom status or a system-defined status, as the two are mutually exclusive per namespace.",
-                    "nullable": true
-                  }
-                },
-                "description": "Input for status widget.",
-                "nullable": true
-              },
-              "custom_fields": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "custom_field_id": {
-                      "type": "integer",
-                      "description": "Numeric ID of the custom field.",
-                      "nullable": true
-                    },
-                    "text_value": {
-                      "type": "string",
-                      "description": "Value for custom fields with text type.",
-                      "nullable": true
-                    },
-                    "number_value": {
-                      "type": "number",
-                      "description": "Value for custom fields with number type.",
-                      "nullable": true
-                    },
-                    "date_value": {
-                      "type": "string",
-                      "description": "Value for custom fields with date type.",
-                      "format": "date",
-                      "nullable": true
-                    },
-                    "selected_option_ids": {
-                      "type": "array",
-                      "items": {
-                        "type": "integer"
-                      },
-                      "description": "Numeric IDs of the selected options for custom fields with select type.",
-                      "nullable": true
-                    }
-                  }
-                },
-                "description": "Input for custom fields widget.",
-                "nullable": true
-              }
-            },
-            "description": "Input for work item features (widgets).",
-            "nullable": true
-          },
-          "fields": {
-            "type": "string",
-            "description": "Comma-separated list of base fields to include. Defaults to id, iid, global_id, title.",
             "nullable": true
           }
         }
@@ -145662,7 +144796,7 @@
           }
         }
       },
-      "RequestBodyB91d36b0df89": {
+      "RequestBody44dc3f6e1cef": {
         "type": "object",
         "properties": {
           "token": {
@@ -145710,7 +144844,8 @@
               "repository_xray",
               "jacoco",
               "scip",
-              "sarif"
+              "sarif",
+              "environment_key"
             ],
             "type": "string",
             "additionalProperties": false,
@@ -145720,7 +144855,7 @@
           }
         }
       },
-      "RequestBody785e5579e292": {
+      "RequestBodyCb43113efc39": {
         "required": [
           "file"
         ],
@@ -145777,7 +144912,8 @@
               "repository_xray",
               "jacoco",
               "scip",
-              "sarif"
+              "sarif",
+              "environment_key"
             ],
             "type": "string",
             "additionalProperties": false,
@@ -147381,19 +146517,6 @@
             "description": "A description of the image or URL",
             "nullable": true,
             "example": "An example metric"
-          }
-        }
-      },
-      "RequestBodyEf9b2b644ec8": {
-        "required": [
-          "token"
-        ],
-        "type": "object",
-        "properties": {
-          "token": {
-            "type": "string",
-            "description": "The token that information is requested about.",
-            "nullable": true
           }
         }
       },

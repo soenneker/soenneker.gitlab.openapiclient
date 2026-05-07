@@ -5,7 +5,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Artifacts
 {
     /// <summary>The type of artifact</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBody785e5579e292PostRequestBody
+    public enum RequestBodyCb43113efc39PostRequestBody
     {
         [EnumMember(Value = "archive")]
         #pragma warning disable CS1591
@@ -142,6 +142,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Artifacts
         [EnumMember(Value = "sarif")]
         #pragma warning disable CS1591
         Sarif,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "environment_key")]
+        #pragma warning disable CS1591
+        Environment_key,
         #pragma warning restore CS1591
     }
 }
