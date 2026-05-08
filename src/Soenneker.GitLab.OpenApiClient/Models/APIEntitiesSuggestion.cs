@@ -15,21 +15,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The appliable property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Appliable { get; set; }
-#nullable restore
-#else
-        public string Appliable { get; set; }
-#endif
+        public bool? Appliable { get; set; }
         /// <summary>The applied property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Applied { get; set; }
-#nullable restore
-#else
-        public string Applied { get; set; }
-#endif
+        public bool? Applied { get; set; }
         /// <summary>The from_content property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -39,21 +27,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string FromContent { get; set; }
 #endif
         /// <summary>The from_line property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? FromLine { get; set; }
-#nullable restore
-#else
-        public string FromLine { get; set; }
-#endif
+        public int? FromLine { get; set; }
         /// <summary>The id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get; set; }
-#nullable restore
-#else
-        public string Id { get; set; }
-#endif
+        public int? Id { get; set; }
         /// <summary>The to_content property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -63,13 +39,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ToContent { get; set; }
 #endif
         /// <summary>The to_line property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ToLine { get; set; }
-#nullable restore
-#else
-        public string ToLine { get; set; }
-#endif
+        public int? ToLine { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesSuggestion"/> and sets the default values.
         /// </summary>
@@ -95,13 +65,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "appliable", n => { Appliable = n.GetStringValue(); } },
-                { "applied", n => { Applied = n.GetStringValue(); } },
+                { "appliable", n => { Appliable = n.GetBoolValue(); } },
+                { "applied", n => { Applied = n.GetBoolValue(); } },
                 { "from_content", n => { FromContent = n.GetStringValue(); } },
-                { "from_line", n => { FromLine = n.GetStringValue(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
+                { "from_line", n => { FromLine = n.GetIntValue(); } },
+                { "id", n => { Id = n.GetIntValue(); } },
                 { "to_content", n => { ToContent = n.GetStringValue(); } },
-                { "to_line", n => { ToLine = n.GetStringValue(); } },
+                { "to_line", n => { ToLine = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -111,13 +81,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("appliable", Appliable);
-            writer.WriteStringValue("applied", Applied);
+            writer.WriteBoolValue("appliable", Appliable);
+            writer.WriteBoolValue("applied", Applied);
             writer.WriteStringValue("from_content", FromContent);
-            writer.WriteStringValue("from_line", FromLine);
-            writer.WriteStringValue("id", Id);
+            writer.WriteIntValue("from_line", FromLine);
+            writer.WriteIntValue("id", Id);
             writer.WriteStringValue("to_content", ToContent);
-            writer.WriteStringValue("to_line", ToLine);
+            writer.WriteIntValue("to_line", ToLine);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

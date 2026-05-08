@@ -39,13 +39,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Body { get; set; }
 #endif
         /// <summary>The created_at property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? CreatedAt { get; set; }
-#nullable restore
-#else
-        public string CreatedAt { get; set; }
-#endif
+        public DateTimeOffset? CreatedAt { get; set; }
         /// <summary>The group property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -75,10 +69,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The target property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Target { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesTodo_target? Target { get; set; }
 #nullable restore
 #else
-        public string Target { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesTodo_target Target { get; set; }
 #endif
         /// <summary>The target_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -97,13 +91,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string TargetUrl { get; set; }
 #endif
         /// <summary>The updated_at property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? UpdatedAt { get; set; }
-#nullable restore
-#else
-        public string UpdatedAt { get; set; }
-#endif
+        public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesTodo"/> and sets the default values.
         /// </summary>
@@ -132,15 +120,15 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "action_name", n => { ActionName = n.GetStringValue(); } },
                 { "author", n => { Author = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic.CreateFromDiscriminatorValue); } },
                 { "body", n => { Body = n.GetStringValue(); } },
-                { "created_at", n => { CreatedAt = n.GetStringValue(); } },
+                { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "group", n => { Group = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesNamespaceBasic>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesNamespaceBasic.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "project", n => { Project = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProjectIdentity>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProjectIdentity.CreateFromDiscriminatorValue); } },
                 { "state", n => { State = n.GetStringValue(); } },
-                { "target", n => { Target = n.GetStringValue(); } },
+                { "target", n => { Target = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesTodo_target>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesTodo_target.CreateFromDiscriminatorValue); } },
                 { "target_type", n => { TargetType = n.GetStringValue(); } },
                 { "target_url", n => { TargetUrl = n.GetStringValue(); } },
-                { "updated_at", n => { UpdatedAt = n.GetStringValue(); } },
+                { "updated_at", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
             };
         }
         /// <summary>
@@ -153,15 +141,15 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("action_name", ActionName);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>("author", Author);
             writer.WriteStringValue("body", Body);
-            writer.WriteStringValue("created_at", CreatedAt);
+            writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesNamespaceBasic>("group", Group);
             writer.WriteIntValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProjectIdentity>("project", Project);
             writer.WriteStringValue("state", State);
-            writer.WriteStringValue("target", Target);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesTodo_target>("target", Target);
             writer.WriteStringValue("target_type", TargetType);
             writer.WriteStringValue("target_url", TargetUrl);
-            writer.WriteStringValue("updated_at", UpdatedAt);
+            writer.WriteDateTimeOffsetValue("updated_at", UpdatedAt);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

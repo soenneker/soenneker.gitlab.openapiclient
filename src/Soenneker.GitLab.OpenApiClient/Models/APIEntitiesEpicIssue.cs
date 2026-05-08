@@ -88,13 +88,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>ID of the epic-issue relation</summary>
         public int? EpicIssueId { get; set; }
         /// <summary>The has_tasks property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? HasTasks { get; set; }
-#nullable restore
-#else
-        public string HasTasks { get; set; }
-#endif
+        public bool? HasTasks { get; set; }
         /// <summary>The health_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -108,13 +102,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The iid property</summary>
         public int? Iid { get; set; }
         /// <summary>The imported property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Imported { get; set; }
-#nullable restore
-#else
-        public string Imported { get; set; }
-#endif
+        public bool? Imported { get; set; }
         /// <summary>The imported_from property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -150,10 +138,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Links { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesEpicIssue_links? Links { get; set; }
 #nullable restore
 #else
-        public string Links { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesEpicIssue_links Links { get; set; }
 #endif
         /// <summary>The merge_requests_count property</summary>
         public int? MergeRequestsCount { get; set; }
@@ -166,13 +154,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMilestone Milestone { get; set; }
 #endif
         /// <summary>The moved_to_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? MovedToId { get; set; }
-#nullable restore
-#else
-        public string MovedToId { get; set; }
-#endif
+        public int? MovedToId { get; set; }
         /// <summary>The project_id property</summary>
         public int? ProjectId { get; set; }
         /// <summary>The references property</summary>
@@ -212,13 +194,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string State { get; set; }
 #endif
         /// <summary>The subscribed property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Subscribed { get; set; }
-#nullable restore
-#else
-        public string Subscribed { get; set; }
-#endif
+        public bool? Subscribed { get; set; }
         /// <summary>The task_completion_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -315,19 +291,19 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "epic", n => { Epic = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.EpicBaseEntity>(global::Soenneker.GitLab.OpenApiClient.Models.EpicBaseEntity.CreateFromDiscriminatorValue); } },
                 { "epic_iid", n => { EpicIid = n.GetStringValue(); } },
                 { "epic_issue_id", n => { EpicIssueId = n.GetIntValue(); } },
-                { "has_tasks", n => { HasTasks = n.GetStringValue(); } },
+                { "has_tasks", n => { HasTasks = n.GetBoolValue(); } },
                 { "health_status", n => { HealthStatus = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "iid", n => { Iid = n.GetIntValue(); } },
-                { "imported", n => { Imported = n.GetStringValue(); } },
+                { "imported", n => { Imported = n.GetBoolValue(); } },
                 { "imported_from", n => { ImportedFrom = n.GetStringValue(); } },
                 { "issue_type", n => { IssueType = n.GetStringValue(); } },
                 { "iteration", n => { Iteration = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesIteration>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesIteration.CreateFromDiscriminatorValue); } },
                 { "labels", n => { Labels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "_links", n => { Links = n.GetStringValue(); } },
+                { "_links", n => { Links = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesEpicIssue_links>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesEpicIssue_links.CreateFromDiscriminatorValue); } },
                 { "merge_requests_count", n => { MergeRequestsCount = n.GetIntValue(); } },
                 { "milestone", n => { Milestone = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMilestone>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMilestone.CreateFromDiscriminatorValue); } },
-                { "moved_to_id", n => { MovedToId = n.GetStringValue(); } },
+                { "moved_to_id", n => { MovedToId = n.GetIntValue(); } },
                 { "project_id", n => { ProjectId = n.GetIntValue(); } },
                 { "references", n => { References = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesIssuableReferences>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesIssuableReferences.CreateFromDiscriminatorValue); } },
                 { "relative_position", n => { RelativePosition = n.GetIntValue(); } },
@@ -335,7 +311,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "severity", n => { Severity = n.GetStringValue(); } },
                 { "start_date", n => { StartDate = n.GetDateValue(); } },
                 { "state", n => { State = n.GetStringValue(); } },
-                { "subscribed", n => { Subscribed = n.GetStringValue(); } },
+                { "subscribed", n => { Subscribed = n.GetBoolValue(); } },
                 { "task_completion_status", n => { TaskCompletionStatus = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesTaskCompletionStatus>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesTaskCompletionStatus.CreateFromDiscriminatorValue); } },
                 { "task_status", n => { TaskStatus = n.GetStringValue(); } },
                 { "time_stats", n => { TimeStats = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesIssuableTimeStats>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesIssuableTimeStats.CreateFromDiscriminatorValue); } },
@@ -370,19 +346,19 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.EpicBaseEntity>("epic", Epic);
             writer.WriteStringValue("epic_iid", EpicIid);
             writer.WriteIntValue("epic_issue_id", EpicIssueId);
-            writer.WriteStringValue("has_tasks", HasTasks);
+            writer.WriteBoolValue("has_tasks", HasTasks);
             writer.WriteStringValue("health_status", HealthStatus);
             writer.WriteIntValue("id", Id);
             writer.WriteIntValue("iid", Iid);
-            writer.WriteStringValue("imported", Imported);
+            writer.WriteBoolValue("imported", Imported);
             writer.WriteStringValue("imported_from", ImportedFrom);
             writer.WriteStringValue("issue_type", IssueType);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesIteration>("iteration", Iteration);
             writer.WriteCollectionOfPrimitiveValues<string>("labels", Labels);
-            writer.WriteStringValue("_links", Links);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesEpicIssue_links>("_links", Links);
             writer.WriteIntValue("merge_requests_count", MergeRequestsCount);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMilestone>("milestone", Milestone);
-            writer.WriteStringValue("moved_to_id", MovedToId);
+            writer.WriteIntValue("moved_to_id", MovedToId);
             writer.WriteIntValue("project_id", ProjectId);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesIssuableReferences>("references", References);
             writer.WriteIntValue("relative_position", RelativePosition);
@@ -390,7 +366,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("severity", Severity);
             writer.WriteDateValue("start_date", StartDate);
             writer.WriteStringValue("state", State);
-            writer.WriteStringValue("subscribed", Subscribed);
+            writer.WriteBoolValue("subscribed", Subscribed);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesTaskCompletionStatus>("task_completion_status", TaskCompletionStatus);
             writer.WriteStringValue("task_status", TaskStatus);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesIssuableTimeStats>("time_stats", TimeStats);

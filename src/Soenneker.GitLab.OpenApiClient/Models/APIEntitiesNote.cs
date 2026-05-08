@@ -33,10 +33,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The commands_changes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CommandsChanges { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesNote_commands_changes? CommandsChanges { get; set; }
 #nullable restore
 #else
-        public string CommandsChanges { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesNote_commands_changes CommandsChanges { get; set; }
 #endif
         /// <summary>The commit_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -47,37 +47,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string CommitId { get; set; }
 #endif
         /// <summary>The confidential property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Confidential { get; set; }
-#nullable restore
-#else
-        public string Confidential { get; set; }
-#endif
+        public bool? Confidential { get; set; }
         /// <summary>The created_at property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? CreatedAt { get; set; }
-#nullable restore
-#else
-        public string CreatedAt { get; set; }
-#endif
+        public DateTimeOffset? CreatedAt { get; set; }
         /// <summary>The id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get; set; }
-#nullable restore
-#else
-        public string Id { get; set; }
-#endif
+        public int? Id { get; set; }
         /// <summary>The imported property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Imported { get; set; }
-#nullable restore
-#else
-        public string Imported { get; set; }
-#endif
+        public bool? Imported { get; set; }
         /// <summary>The imported_from property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -87,29 +63,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ImportedFrom { get; set; }
 #endif
         /// <summary>The internal property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Internal { get; set; }
-#nullable restore
-#else
-        public string Internal { get; set; }
-#endif
+        public bool? Internal { get; set; }
         /// <summary>The noteable_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? NoteableId { get; set; }
-#nullable restore
-#else
-        public string NoteableId { get; set; }
-#endif
+        public int? NoteableId { get; set; }
         /// <summary>The noteable_iid property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? NoteableIid { get; set; }
-#nullable restore
-#else
-        public string NoteableIid { get; set; }
-#endif
+        public int? NoteableIid { get; set; }
         /// <summary>The noteable_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -121,43 +79,19 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The position property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Position { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesNote_position? Position { get; set; }
 #nullable restore
 #else
-        public string Position { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesNote_position Position { get; set; }
 #endif
         /// <summary>The project_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ProjectId { get; set; }
-#nullable restore
-#else
-        public string ProjectId { get; set; }
-#endif
+        public int? ProjectId { get; set; }
         /// <summary>The resolvable property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Resolvable { get; set; }
-#nullable restore
-#else
-        public string Resolvable { get; set; }
-#endif
+        public bool? Resolvable { get; set; }
         /// <summary>The resolved property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Resolved { get; set; }
-#nullable restore
-#else
-        public string Resolved { get; set; }
-#endif
+        public bool? Resolved { get; set; }
         /// <summary>The resolved_at property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ResolvedAt { get; set; }
-#nullable restore
-#else
-        public string ResolvedAt { get; set; }
-#endif
+        public DateTimeOffset? ResolvedAt { get; set; }
         /// <summary>The resolved_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -175,13 +109,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesSuggestion Suggestions { get; set; }
 #endif
         /// <summary>The system property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? System { get; set; }
-#nullable restore
-#else
-        public string System { get; set; }
-#endif
+        public bool? System { get; set; }
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -191,13 +119,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Type { get; set; }
 #endif
         /// <summary>The updated_at property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? UpdatedAt { get; set; }
-#nullable restore
-#else
-        public string UpdatedAt { get; set; }
-#endif
+        public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesNote"/> and sets the default values.
         /// </summary>
@@ -225,27 +147,27 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             {
                 { "author", n => { Author = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic.CreateFromDiscriminatorValue); } },
                 { "body", n => { Body = n.GetStringValue(); } },
-                { "commands_changes", n => { CommandsChanges = n.GetStringValue(); } },
+                { "commands_changes", n => { CommandsChanges = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesNote_commands_changes>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesNote_commands_changes.CreateFromDiscriminatorValue); } },
                 { "commit_id", n => { CommitId = n.GetStringValue(); } },
-                { "confidential", n => { Confidential = n.GetStringValue(); } },
-                { "created_at", n => { CreatedAt = n.GetStringValue(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
-                { "imported", n => { Imported = n.GetStringValue(); } },
+                { "confidential", n => { Confidential = n.GetBoolValue(); } },
+                { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
+                { "id", n => { Id = n.GetIntValue(); } },
+                { "imported", n => { Imported = n.GetBoolValue(); } },
                 { "imported_from", n => { ImportedFrom = n.GetStringValue(); } },
-                { "internal", n => { Internal = n.GetStringValue(); } },
-                { "noteable_id", n => { NoteableId = n.GetStringValue(); } },
-                { "noteable_iid", n => { NoteableIid = n.GetStringValue(); } },
+                { "internal", n => { Internal = n.GetBoolValue(); } },
+                { "noteable_id", n => { NoteableId = n.GetIntValue(); } },
+                { "noteable_iid", n => { NoteableIid = n.GetIntValue(); } },
                 { "noteable_type", n => { NoteableType = n.GetStringValue(); } },
-                { "position", n => { Position = n.GetStringValue(); } },
-                { "project_id", n => { ProjectId = n.GetStringValue(); } },
-                { "resolvable", n => { Resolvable = n.GetStringValue(); } },
-                { "resolved", n => { Resolved = n.GetStringValue(); } },
-                { "resolved_at", n => { ResolvedAt = n.GetStringValue(); } },
+                { "position", n => { Position = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesNote_position>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesNote_position.CreateFromDiscriminatorValue); } },
+                { "project_id", n => { ProjectId = n.GetIntValue(); } },
+                { "resolvable", n => { Resolvable = n.GetBoolValue(); } },
+                { "resolved", n => { Resolved = n.GetBoolValue(); } },
+                { "resolved_at", n => { ResolvedAt = n.GetDateTimeOffsetValue(); } },
                 { "resolved_by", n => { ResolvedBy = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic.CreateFromDiscriminatorValue); } },
                 { "suggestions", n => { Suggestions = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesSuggestion>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesSuggestion.CreateFromDiscriminatorValue); } },
-                { "system", n => { System = n.GetStringValue(); } },
+                { "system", n => { System = n.GetBoolValue(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
-                { "updated_at", n => { UpdatedAt = n.GetStringValue(); } },
+                { "updated_at", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
             };
         }
         /// <summary>
@@ -257,27 +179,27 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>("author", Author);
             writer.WriteStringValue("body", Body);
-            writer.WriteStringValue("commands_changes", CommandsChanges);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesNote_commands_changes>("commands_changes", CommandsChanges);
             writer.WriteStringValue("commit_id", CommitId);
-            writer.WriteStringValue("confidential", Confidential);
-            writer.WriteStringValue("created_at", CreatedAt);
-            writer.WriteStringValue("id", Id);
-            writer.WriteStringValue("imported", Imported);
+            writer.WriteBoolValue("confidential", Confidential);
+            writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
+            writer.WriteIntValue("id", Id);
+            writer.WriteBoolValue("imported", Imported);
             writer.WriteStringValue("imported_from", ImportedFrom);
-            writer.WriteStringValue("internal", Internal);
-            writer.WriteStringValue("noteable_id", NoteableId);
-            writer.WriteStringValue("noteable_iid", NoteableIid);
+            writer.WriteBoolValue("internal", Internal);
+            writer.WriteIntValue("noteable_id", NoteableId);
+            writer.WriteIntValue("noteable_iid", NoteableIid);
             writer.WriteStringValue("noteable_type", NoteableType);
-            writer.WriteStringValue("position", Position);
-            writer.WriteStringValue("project_id", ProjectId);
-            writer.WriteStringValue("resolvable", Resolvable);
-            writer.WriteStringValue("resolved", Resolved);
-            writer.WriteStringValue("resolved_at", ResolvedAt);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesNote_position>("position", Position);
+            writer.WriteIntValue("project_id", ProjectId);
+            writer.WriteBoolValue("resolvable", Resolvable);
+            writer.WriteBoolValue("resolved", Resolved);
+            writer.WriteDateTimeOffsetValue("resolved_at", ResolvedAt);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>("resolved_by", ResolvedBy);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesSuggestion>("suggestions", Suggestions);
-            writer.WriteStringValue("system", System);
+            writer.WriteBoolValue("system", System);
             writer.WriteStringValue("type", Type);
-            writer.WriteStringValue("updated_at", UpdatedAt);
+            writer.WriteDateTimeOffsetValue("updated_at", UpdatedAt);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

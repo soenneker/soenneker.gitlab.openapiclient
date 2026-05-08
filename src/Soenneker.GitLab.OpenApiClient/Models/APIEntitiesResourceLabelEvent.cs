@@ -23,21 +23,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The created_at property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? CreatedAt { get; set; }
-#nullable restore
-#else
-        public string CreatedAt { get; set; }
-#endif
+        public DateTimeOffset? CreatedAt { get; set; }
         /// <summary>The id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get; set; }
-#nullable restore
-#else
-        public string Id { get; set; }
-#endif
+        public int? Id { get; set; }
         /// <summary>The label property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -47,13 +35,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesLabelBasic Label { get; set; }
 #endif
         /// <summary>The resource_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ResourceId { get; set; }
-#nullable restore
-#else
-        public string ResourceId { get; set; }
-#endif
+        public int? ResourceId { get; set; }
         /// <summary>The resource_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -96,10 +78,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "action", n => { Action = n.GetStringValue(); } },
-                { "created_at", n => { CreatedAt = n.GetStringValue(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
+                { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
+                { "id", n => { Id = n.GetIntValue(); } },
                 { "label", n => { Label = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesLabelBasic>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesLabelBasic.CreateFromDiscriminatorValue); } },
-                { "resource_id", n => { ResourceId = n.GetStringValue(); } },
+                { "resource_id", n => { ResourceId = n.GetIntValue(); } },
                 { "resource_type", n => { ResourceType = n.GetStringValue(); } },
                 { "user", n => { User = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic.CreateFromDiscriminatorValue); } },
             };
@@ -112,10 +94,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("action", Action);
-            writer.WriteStringValue("created_at", CreatedAt);
-            writer.WriteStringValue("id", Id);
+            writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
+            writer.WriteIntValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesLabelBasic>("label", Label);
-            writer.WriteStringValue("resource_id", ResourceId);
+            writer.WriteIntValue("resource_id", ResourceId);
             writer.WriteStringValue("resource_type", ResourceType);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>("user", User);
             writer.WriteAdditionalData(AdditionalData);

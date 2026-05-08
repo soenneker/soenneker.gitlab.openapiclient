@@ -23,13 +23,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>The individual_note property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? IndividualNote { get; set; }
-#nullable restore
-#else
-        public string IndividualNote { get; set; }
-#endif
+        public bool? IndividualNote { get; set; }
         /// <summary>The notes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -68,7 +62,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "individual_note", n => { IndividualNote = n.GetStringValue(); } },
+                { "individual_note", n => { IndividualNote = n.GetBoolValue(); } },
                 { "notes", n => { Notes = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesNote>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesNote.CreateFromDiscriminatorValue); } },
                 { "resolvable", n => { Resolvable = n.GetBoolValue(); } },
                 { "resolved", n => { Resolved = n.GetBoolValue(); } },
@@ -82,7 +76,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("id", Id);
-            writer.WriteStringValue("individual_note", IndividualNote);
+            writer.WriteBoolValue("individual_note", IndividualNote);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesNote>("notes", Notes);
             writer.WriteBoolValue("resolvable", Resolvable);
             writer.WriteBoolValue("resolved", Resolved);

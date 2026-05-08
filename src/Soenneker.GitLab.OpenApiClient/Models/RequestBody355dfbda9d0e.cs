@@ -9,7 +9,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class RequestBody629ab9562708 : IAdditionalDataHolder, IParsable
+    public partial class RequestBody355dfbda9d0e : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -46,7 +46,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>Verify the committer is the assignee of the Jira issues referenced in commit messages.</summary>
         public bool? JiraAssigneeCheckEnabled { get; set; }
-        /// <summary>The authentication method to use with Jira. Use `0` for Basic Authentication, and `1` for Jira personal access token. Defaults to `0`.</summary>
+        /// <summary>The authentication method to use with Jira. Use `0` for basic authentication, `1` for Jira personal access token, and `2` for Jira Cloud service accounts. Defaults to `0`.</summary>
         public int? JiraAuthType { get; set; }
         /// <summary>Verify Jira issues referenced in commit messages exist before allowing the push.</summary>
         public bool? JiraCheckEnabled { get; set; }
@@ -114,7 +114,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>Indicates whether to inherit the default settings. Defaults to `false`.</summary>
         public bool? UseInheritedSettings { get; set; }
-        /// <summary>The email or username to use with Jira. Use an email for Jira Cloud, and a username for Jira Data Center and Jira Server. Required when using Basic Authentication (`jira_auth_type` is `0`).</summary>
+        /// <summary>The email or username to use with Jira. Use an email for Jira Cloud, and a username for Jira Data Center and Jira Server. Required when using basic authentication (`jira_auth_type` is `0`).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Username { get; set; }
@@ -133,21 +133,21 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string VulnerabilitiesIssuetype { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody629ab9562708"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody355dfbda9d0e"/> and sets the default values.
         /// </summary>
-        public RequestBody629ab9562708()
+        public RequestBody355dfbda9d0e()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody629ab9562708"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody355dfbda9d0e"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody629ab9562708 CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody355dfbda9d0e CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody629ab9562708();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody355dfbda9d0e();
         }
         /// <summary>
         /// The deserialization information for the current model

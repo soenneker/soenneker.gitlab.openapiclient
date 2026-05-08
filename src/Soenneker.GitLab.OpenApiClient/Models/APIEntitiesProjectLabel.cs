@@ -15,21 +15,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The archived property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Archived { get; set; }
-#nullable restore
-#else
-        public string Archived { get; set; }
-#endif
+        public bool? Archived { get; set; }
         /// <summary>The closed_issues_count property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ClosedIssuesCount { get; set; }
-#nullable restore
-#else
-        public string ClosedIssuesCount { get; set; }
-#endif
+        public int? ClosedIssuesCount { get; set; }
         /// <summary>The color property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -55,13 +43,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string DescriptionHtml { get; set; }
 #endif
         /// <summary>The id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get; set; }
-#nullable restore
-#else
-        public string Id { get; set; }
-#endif
+        public int? Id { get; set; }
         /// <summary>The is_project_label property</summary>
         public bool? IsProjectLabel { get; set; }
         /// <summary>The name property</summary>
@@ -73,31 +55,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>The open_issues_count property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? OpenIssuesCount { get; set; }
-#nullable restore
-#else
-        public string OpenIssuesCount { get; set; }
-#endif
+        public int? OpenIssuesCount { get; set; }
         /// <summary>The open_merge_requests_count property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? OpenMergeRequestsCount { get; set; }
-#nullable restore
-#else
-        public string OpenMergeRequestsCount { get; set; }
-#endif
+        public int? OpenMergeRequestsCount { get; set; }
         /// <summary>The priority property</summary>
         public int? Priority { get; set; }
         /// <summary>The subscribed property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Subscribed { get; set; }
-#nullable restore
-#else
-        public string Subscribed { get; set; }
-#endif
+        public bool? Subscribed { get; set; }
         /// <summary>The text_color property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -131,18 +95,18 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "archived", n => { Archived = n.GetStringValue(); } },
-                { "closed_issues_count", n => { ClosedIssuesCount = n.GetStringValue(); } },
+                { "archived", n => { Archived = n.GetBoolValue(); } },
+                { "closed_issues_count", n => { ClosedIssuesCount = n.GetIntValue(); } },
                 { "color", n => { Color = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "description_html", n => { DescriptionHtml = n.GetStringValue(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
+                { "id", n => { Id = n.GetIntValue(); } },
                 { "is_project_label", n => { IsProjectLabel = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "open_issues_count", n => { OpenIssuesCount = n.GetStringValue(); } },
-                { "open_merge_requests_count", n => { OpenMergeRequestsCount = n.GetStringValue(); } },
+                { "open_issues_count", n => { OpenIssuesCount = n.GetIntValue(); } },
+                { "open_merge_requests_count", n => { OpenMergeRequestsCount = n.GetIntValue(); } },
                 { "priority", n => { Priority = n.GetIntValue(); } },
-                { "subscribed", n => { Subscribed = n.GetStringValue(); } },
+                { "subscribed", n => { Subscribed = n.GetBoolValue(); } },
                 { "text_color", n => { TextColor = n.GetStringValue(); } },
             };
         }
@@ -153,18 +117,18 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("archived", Archived);
-            writer.WriteStringValue("closed_issues_count", ClosedIssuesCount);
+            writer.WriteBoolValue("archived", Archived);
+            writer.WriteIntValue("closed_issues_count", ClosedIssuesCount);
             writer.WriteStringValue("color", Color);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("description_html", DescriptionHtml);
-            writer.WriteStringValue("id", Id);
+            writer.WriteIntValue("id", Id);
             writer.WriteBoolValue("is_project_label", IsProjectLabel);
             writer.WriteStringValue("name", Name);
-            writer.WriteStringValue("open_issues_count", OpenIssuesCount);
-            writer.WriteStringValue("open_merge_requests_count", OpenMergeRequestsCount);
+            writer.WriteIntValue("open_issues_count", OpenIssuesCount);
+            writer.WriteIntValue("open_merge_requests_count", OpenMergeRequestsCount);
             writer.WriteIntValue("priority", Priority);
-            writer.WriteStringValue("subscribed", Subscribed);
+            writer.WriteBoolValue("subscribed", Subscribed);
             writer.WriteStringValue("text_color", TextColor);
             writer.WriteAdditionalData(AdditionalData);
         }

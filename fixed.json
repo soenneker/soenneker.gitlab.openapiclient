@@ -9097,7 +9097,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyE494c8a76005"
+                "$ref": "#/components/schemas/RequestBody9df7b2e0dd43"
               }
             }
           }
@@ -9144,7 +9144,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyE494c8a76005"
+                "$ref": "#/components/schemas/RequestBody9df7b2e0dd43"
               }
             }
           }
@@ -36505,7 +36505,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyCe22a9667f5a"
+                "$ref": "#/components/schemas/RequestBodyBecaee9a250d"
               }
             }
           }
@@ -36841,7 +36841,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody8e01843bb896"
+                "$ref": "#/components/schemas/RequestBody6e7faa13bb50"
               }
             }
           }
@@ -62301,7 +62301,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody629ab9562708"
+                "$ref": "#/components/schemas/RequestBody355dfbda9d0e"
               }
             }
           }
@@ -64668,7 +64668,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody629ab9562708"
+                "$ref": "#/components/schemas/RequestBody355dfbda9d0e"
               }
             }
           }
@@ -67035,7 +67035,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody629ab9562708"
+                "$ref": "#/components/schemas/RequestBody355dfbda9d0e"
               }
             }
           }
@@ -83371,7 +83371,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyEafd63dde372"
+                "$ref": "#/components/schemas/RequestBodyC9945380a188"
               }
             }
           }
@@ -99929,7 +99929,8 @@
               {
                 "$ref": "#/components/schemas/UnionBranch"
               }
-            ]
+            ],
+            "example": "abc123"
           },
           "model_class": {
             "type": "string",
@@ -100606,28 +100607,37 @@
             "$ref": "#/components/schemas/APIEntitiesUserBasic"
           },
           "action_name": {
-            "type": "string"
+            "type": "string",
+            "example": "assigned"
           },
           "target_type": {
-            "type": "string"
+            "type": "string",
+            "example": "Issue"
           },
           "target": {
-            "type": "string"
+            "type": "object"
           },
           "target_url": {
-            "type": "string"
+            "type": "string",
+            "example": "http://example.com/foo/bar/-/issues/1"
           },
           "body": {
-            "type": "string"
+            "type": "string",
+            "example": "Task description"
           },
           "state": {
-            "type": "string"
+            "type": "string",
+            "example": "pending"
           },
           "created_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2016-06-17T07:52:35.225Z"
           },
           "updated_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2016-06-17T07:52:35.225Z"
           }
         }
       },
@@ -102522,28 +102532,36 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer",
+            "example": 142
           },
           "user": {
             "$ref": "#/components/schemas/APIEntitiesUserBasic"
           },
           "created_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2018-08-20T13:38:20.077Z"
           },
           "resource_type": {
-            "type": "string"
+            "type": "string",
+            "example": "Issue"
           },
           "resource_id": {
-            "type": "string"
+            "type": "integer",
+            "example": 253
           },
           "source_commit": {
-            "type": "string"
+            "type": "string",
+            "example": "7b09ce7e6f80347baf0316c8c94cdba9a0a7e91d"
           },
           "source_merge_request_id": {
-            "type": "string"
+            "type": "integer",
+            "example": 45
           },
           "state": {
-            "type": "string"
+            "type": "string",
+            "example": "opened"
           }
         }
       },
@@ -102551,25 +102569,31 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer",
+            "example": 142
           },
           "user": {
             "$ref": "#/components/schemas/APIEntitiesUserBasic"
           },
           "created_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2018-08-20T13:38:20.077Z"
           },
           "resource_type": {
-            "type": "string"
+            "type": "string",
+            "example": "Issue"
           },
           "resource_id": {
-            "type": "string"
+            "type": "integer",
+            "example": 253
           },
           "label": {
             "$ref": "#/components/schemas/APIEntitiesLabelBasic"
           },
           "action": {
-            "type": "string"
+            "type": "string",
+            "example": "add"
           }
         }
       },
@@ -102618,10 +102642,12 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "string",
+            "example": "6a9c1750b37d513a43987b574953fceb50b03ce7"
           },
           "individual_note": {
-            "type": "string"
+            "type": "boolean",
+            "example": false
           },
           "resolvable": {
             "type": "boolean"
@@ -102721,25 +102747,32 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "name": {
-            "type": "string"
+            "type": "string",
+            "example": "bug"
           },
           "description": {
-            "type": "string"
+            "type": "string",
+            "example": "Bug reported by user"
           },
           "text_color": {
-            "type": "string"
+            "type": "string",
+            "example": "#FFFFFF"
           },
           "description_html": {
-            "type": "string"
+            "type": "string",
+            "example": "<p>Bug reported by user</p>"
           },
           "color": {
-            "type": "string"
+            "type": "string",
+            "example": "#FF0000"
           },
           "archived": {
-            "type": "string"
+            "type": "boolean",
+            "example": false
           }
         }
       },
@@ -105380,7 +105413,8 @@
         "type": "object",
         "properties": {
           "note": {
-            "type": "string"
+            "type": "string",
+            "example": "LGTM!"
           },
           "author": {
             "$ref": "#/components/schemas/APIEntitiesUserBasic"
@@ -105665,7 +105699,8 @@
             "$ref": "#/components/schemas/APIEntitiesIssueBasic"
           },
           "link_type": {
-            "type": "string"
+            "type": "string",
+            "example": "relates_to"
           }
         }
       },
@@ -107495,8 +107530,7 @@
             "type": "array",
             "items": {
               "type": "string"
-            },
-            "example": "2a4b78934375d7f53875269ffd4f45fd83a84ebe"
+            }
           },
           "message": {
             "type": "string",
@@ -107540,8 +107574,7 @@
             "type": "array",
             "items": {
               "type": "string"
-            },
-            "example": "lorem ipsum"
+            }
           }
         }
       },
@@ -107767,10 +107800,13 @@
         "type": "object",
         "properties": {
           "commands_changes": {
-            "type": "string"
+            "type": "object"
           },
           "summary": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       },
@@ -107778,25 +107814,32 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "from_line": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "to_line": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "appliable": {
-            "type": "string"
+            "type": "boolean",
+            "example": true
           },
           "applied": {
-            "type": "string"
+            "type": "boolean",
+            "example": false
           },
           "from_content": {
-            "type": "string"
+            "type": "string",
+            "example": "Original content\n"
           },
           "to_content": {
-            "type": "string"
+            "type": "string",
+            "example": "New content\n"
           }
         }
       },
@@ -107804,74 +107847,94 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "type": {
-            "type": "string"
+            "type": "string",
+            "example": "DiscussionNote"
           },
           "body": {
-            "type": "string"
+            "type": "string",
+            "example": "Note body."
           },
           "author": {
             "$ref": "#/components/schemas/APIEntitiesUserBasic"
           },
           "created_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-01-31T15:10:44.988Z"
           },
           "updated_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-01-31T15:10:44.988Z"
           },
           "system": {
-            "type": "string"
+            "type": "boolean",
+            "example": false
           },
           "noteable_id": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "noteable_type": {
-            "type": "string"
+            "type": "string",
+            "example": "Issue"
           },
           "project_id": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "commit_id": {
-            "type": "string"
+            "type": "string",
+            "example": "7b09ce7e6f80347baf0316c8c94cdba9a0a7e91d"
           },
           "position": {
-            "type": "string"
+            "type": "object"
           },
           "resolvable": {
-            "type": "string"
+            "type": "boolean",
+            "example": false
           },
           "resolved": {
-            "type": "string"
+            "type": "boolean",
+            "example": false
           },
           "resolved_by": {
             "$ref": "#/components/schemas/APIEntitiesUserBasic"
           },
           "resolved_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-01-31T15:10:44.988Z"
           },
           "suggestions": {
             "$ref": "#/components/schemas/APIEntitiesSuggestion"
           },
           "confidential": {
-            "type": "string"
+            "type": "boolean",
+            "example": false
           },
           "internal": {
-            "type": "string"
+            "type": "boolean",
+            "example": false
           },
           "imported": {
-            "type": "string"
+            "type": "boolean",
+            "example": false
           },
           "imported_from": {
             "type": "string",
             "example": "github"
           },
           "noteable_iid": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "commands_changes": {
-            "type": "string"
+            "type": "object"
           }
         }
       },
@@ -111745,37 +111808,48 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "name": {
-            "type": "string"
+            "type": "string",
+            "example": "bug"
           },
           "description": {
-            "type": "string"
+            "type": "string",
+            "example": "Bug reported by user"
           },
           "text_color": {
-            "type": "string"
+            "type": "string",
+            "example": "#FFFFFF"
           },
           "description_html": {
-            "type": "string"
+            "type": "string",
+            "example": "<p>Bug reported by user</p>"
           },
           "color": {
-            "type": "string"
+            "type": "string",
+            "example": "#FF0000"
           },
           "archived": {
-            "type": "string"
+            "type": "boolean",
+            "example": false
           },
           "open_issues_count": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "closed_issues_count": {
-            "type": "string"
+            "type": "integer",
+            "example": 0
           },
           "open_merge_requests_count": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "subscribed": {
-            "type": "string"
+            "type": "boolean",
+            "example": false
           }
         }
       },
@@ -111783,37 +111857,48 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "name": {
-            "type": "string"
+            "type": "string",
+            "example": "bug"
           },
           "description": {
-            "type": "string"
+            "type": "string",
+            "example": "Bug reported by user"
           },
           "text_color": {
-            "type": "string"
+            "type": "string",
+            "example": "#FFFFFF"
           },
           "description_html": {
-            "type": "string"
+            "type": "string",
+            "example": "<p>Bug reported by user</p>"
           },
           "color": {
-            "type": "string"
+            "type": "string",
+            "example": "#FF0000"
           },
           "archived": {
-            "type": "string"
+            "type": "boolean",
+            "example": false
           },
           "open_issues_count": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "closed_issues_count": {
-            "type": "string"
+            "type": "integer",
+            "example": 0
           },
           "open_merge_requests_count": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "subscribed": {
-            "type": "string"
+            "type": "boolean",
+            "example": false
           }
         }
       },
@@ -111821,37 +111906,48 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "name": {
-            "type": "string"
+            "type": "string",
+            "example": "bug"
           },
           "description": {
-            "type": "string"
+            "type": "string",
+            "example": "Bug reported by user"
           },
           "text_color": {
-            "type": "string"
+            "type": "string",
+            "example": "#FFFFFF"
           },
           "description_html": {
-            "type": "string"
+            "type": "string",
+            "example": "<p>Bug reported by user</p>"
           },
           "color": {
-            "type": "string"
+            "type": "string",
+            "example": "#FF0000"
           },
           "archived": {
-            "type": "string"
+            "type": "boolean",
+            "example": false
           },
           "open_issues_count": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "closed_issues_count": {
-            "type": "string"
+            "type": "integer",
+            "example": 0
           },
           "open_merge_requests_count": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "subscribed": {
-            "type": "string"
+            "type": "boolean",
+            "example": false
           },
           "priority": {
             "type": "integer",
@@ -114585,13 +114681,15 @@
             "example": 2
           },
           "has_tasks": {
-            "type": "string"
+            "type": "boolean",
+            "example": true
           },
           "task_status": {
-            "type": "string"
+            "type": "string",
+            "example": "2 of 4 tasks completed"
           },
           "_links": {
-            "type": "string"
+            "type": "object"
           },
           "references": {
             "$ref": "#/components/schemas/APIEntitiesIssuableReferences"
@@ -114601,20 +114699,24 @@
             "description": "One of [\"UNKNOWN\", \"LOW\", \"MEDIUM\", \"HIGH\", \"CRITICAL\"]"
           },
           "subscribed": {
-            "type": "string"
+            "type": "boolean",
+            "example": false
           },
           "moved_to_id": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "imported": {
-            "type": "string"
+            "type": "boolean",
+            "example": false
           },
           "imported_from": {
             "type": "string",
             "example": "github"
           },
           "service_desk_reply_to": {
-            "type": "string"
+            "type": "string",
+            "example": "user@example.com"
           },
           "epic_iid": {
             "type": "string"
@@ -114749,13 +114851,15 @@
             "example": 2
           },
           "has_tasks": {
-            "type": "string"
+            "type": "boolean",
+            "example": true
           },
           "task_status": {
-            "type": "string"
+            "type": "string",
+            "example": "2 of 4 tasks completed"
           },
           "_links": {
-            "type": "string"
+            "type": "object"
           },
           "references": {
             "$ref": "#/components/schemas/APIEntitiesIssuableReferences"
@@ -114765,20 +114869,24 @@
             "description": "One of [\"UNKNOWN\", \"LOW\", \"MEDIUM\", \"HIGH\", \"CRITICAL\"]"
           },
           "subscribed": {
-            "type": "string"
+            "type": "boolean",
+            "example": false
           },
           "moved_to_id": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "imported": {
-            "type": "string"
+            "type": "boolean",
+            "example": false
           },
           "imported_from": {
             "type": "string",
             "example": "github"
           },
           "service_desk_reply_to": {
-            "type": "string"
+            "type": "string",
+            "example": "user@example.com"
           },
           "epic_iid": {
             "type": "string"
@@ -114923,13 +115031,15 @@
             "example": 2
           },
           "has_tasks": {
-            "type": "string"
+            "type": "boolean",
+            "example": true
           },
           "task_status": {
-            "type": "string"
+            "type": "string",
+            "example": "2 of 4 tasks completed"
           },
           "_links": {
-            "type": "string"
+            "type": "object"
           },
           "references": {
             "$ref": "#/components/schemas/APIEntitiesIssuableReferences"
@@ -114939,20 +115049,24 @@
             "description": "One of [\"UNKNOWN\", \"LOW\", \"MEDIUM\", \"HIGH\", \"CRITICAL\"]"
           },
           "subscribed": {
-            "type": "string"
+            "type": "boolean",
+            "example": false
           },
           "moved_to_id": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "imported": {
-            "type": "string"
+            "type": "boolean",
+            "example": false
           },
           "imported_from": {
             "type": "string",
             "example": "github"
           },
           "service_desk_reply_to": {
-            "type": "string"
+            "type": "string",
+            "example": "user@example.com"
           },
           "epic_iid": {
             "type": "string"
@@ -115087,13 +115201,15 @@
             "example": 2
           },
           "has_tasks": {
-            "type": "string"
+            "type": "boolean",
+            "example": true
           },
           "task_status": {
-            "type": "string"
+            "type": "string",
+            "example": "2 of 4 tasks completed"
           },
           "_links": {
-            "type": "string"
+            "type": "object"
           },
           "references": {
             "$ref": "#/components/schemas/APIEntitiesIssuableReferences"
@@ -115103,20 +115219,24 @@
             "description": "One of [\"UNKNOWN\", \"LOW\", \"MEDIUM\", \"HIGH\", \"CRITICAL\"]"
           },
           "subscribed": {
-            "type": "string"
+            "type": "boolean",
+            "example": false
           },
           "moved_to_id": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "imported": {
-            "type": "string"
+            "type": "boolean",
+            "example": false
           },
           "imported_from": {
             "type": "string",
             "example": "github"
           },
           "service_desk_reply_to": {
-            "type": "string"
+            "type": "string",
+            "example": "user@example.com"
           },
           "epic_iid": {
             "type": "string"
@@ -115131,16 +115251,22 @@
             "type": "string"
           },
           "issue_link_id": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "link_type": {
-            "type": "string"
+            "type": "string",
+            "example": "relates_to"
           },
           "link_created_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-01-31T15:10:44.988Z"
           },
           "link_updated_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-01-31T15:10:44.988Z"
           }
         }
       },
@@ -122910,7 +123036,7 @@
           }
         }
       },
-      "RequestBodyE494c8a76005": {
+      "RequestBody9df7b2e0dd43": {
         "type": "object",
         "properties": {
           "deny_delete_tag": {
@@ -130633,7 +130759,7 @@
           }
         }
       },
-      "RequestBodyCe22a9667f5a": {
+      "RequestBodyBecaee9a250d": {
         "required": [
           "name",
           "scopes"
@@ -130657,7 +130783,7 @@
             "description": "The expiration date of the token. If 'Require personal access token expiry' is enabled, you must provide a valid value, if not, the token will never expire.",
             "format": "date",
             "nullable": true,
-            "example": "2026-02-14T17:26:19.810Z"
+            "example": "2026-02-14"
           },
           "scopes": {
             "type": "array",
@@ -130683,7 +130809,7 @@
           }
         }
       },
-      "RequestBody8e01843bb896": {
+      "RequestBody6e7faa13bb50": {
         "required": [
           "name",
           "scopes"
@@ -130707,7 +130833,7 @@
             "description": "The expiration date of the token. If 'Require personal access token expiry' is enabled, you must provide a valid value, if not, the token will never expire.",
             "format": "date",
             "nullable": true,
-            "example": "2026-02-14T17:26:19.810Z"
+            "example": "2026-02-14"
           },
           "scopes": {
             "type": "array",
@@ -139551,7 +139677,7 @@
           }
         }
       },
-      "RequestBody629ab9562708": {
+      "RequestBody355dfbda9d0e": {
         "required": [
           "url",
           "password"
@@ -139570,12 +139696,12 @@
           },
           "jira_auth_type": {
             "type": "integer",
-            "description": "The authentication method to use with Jira. Use `0` for Basic Authentication, and `1` for Jira personal access token. Defaults to `0`.",
+            "description": "The authentication method to use with Jira. Use `0` for basic authentication, `1` for Jira personal access token, and `2` for Jira Cloud service accounts. Defaults to `0`.",
             "nullable": true
           },
           "username": {
             "type": "string",
-            "description": "The email or username to use with Jira. Use an email for Jira Cloud, and a username for Jira Data Center and Jira Server. Required when using Basic Authentication (`jira_auth_type` is `0`).",
+            "description": "The email or username to use with Jira. Use an email for Jira Cloud, and a username for Jira Data Center and Jira Server. Required when using basic authentication (`jira_auth_type` is `0`).",
             "nullable": true
           },
           "password": {
@@ -144081,7 +144207,7 @@
           }
         }
       },
-      "RequestBodyEafd63dde372": {
+      "RequestBodyC9945380a188": {
         "required": [
           "description"
         ],
@@ -144098,7 +144224,7 @@
             "description": "Timestamp of when the pipeline trigger token expires.",
             "format": "date-time",
             "nullable": true,
-            "example": "2024-07-01"
+            "example": "2024-07-01T00:00:00.000Z"
           }
         }
       },
