@@ -14,6 +14,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The admin_ai_catalog_item property</summary>
+        public bool? AdminAiCatalogItem { get; set; }
+        /// <summary>The admin_ai_catalog_item_consumer property</summary>
+        public bool? AdminAiCatalogItemConsumer { get; set; }
         /// <summary>The admin_cicd_variables property</summary>
         public bool? AdminCicdVariables { get; set; }
         /// <summary>The admin_compliance_framework property</summary>
@@ -66,8 +70,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public bool? ManageMergeRequestSettings { get; set; }
         /// <summary>The manage_project_access_tokens property</summary>
         public bool? ManageProjectAccessTokens { get; set; }
-        /// <summary>The manage_protected_tags property</summary>
-        public bool? ManageProtectedTags { get; set; }
         /// <summary>The manage_security_policy_link property</summary>
         public bool? ManageSecurityPolicyLink { get; set; }
         /// <summary>The name property</summary>
@@ -137,6 +139,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "admin_ai_catalog_item", n => { AdminAiCatalogItem = n.GetBoolValue(); } },
+                { "admin_ai_catalog_item_consumer", n => { AdminAiCatalogItemConsumer = n.GetBoolValue(); } },
                 { "admin_cicd_variables", n => { AdminCicdVariables = n.GetBoolValue(); } },
                 { "admin_compliance_framework", n => { AdminComplianceFramework = n.GetBoolValue(); } },
                 { "admin_group_member", n => { AdminGroupMember = n.GetBoolValue(); } },
@@ -160,7 +164,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "manage_group_access_tokens", n => { ManageGroupAccessTokens = n.GetBoolValue(); } },
                 { "manage_merge_request_settings", n => { ManageMergeRequestSettings = n.GetBoolValue(); } },
                 { "manage_project_access_tokens", n => { ManageProjectAccessTokens = n.GetBoolValue(); } },
-                { "manage_protected_tags", n => { ManageProtectedTags = n.GetBoolValue(); } },
                 { "manage_security_policy_link", n => { ManageSecurityPolicyLink = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "read_admin_cicd", n => { ReadAdminCicd = n.GetBoolValue(); } },
@@ -189,6 +192,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteBoolValue("admin_ai_catalog_item", AdminAiCatalogItem);
+            writer.WriteBoolValue("admin_ai_catalog_item_consumer", AdminAiCatalogItemConsumer);
             writer.WriteBoolValue("admin_cicd_variables", AdminCicdVariables);
             writer.WriteBoolValue("admin_compliance_framework", AdminComplianceFramework);
             writer.WriteBoolValue("admin_group_member", AdminGroupMember);
@@ -212,7 +217,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("manage_group_access_tokens", ManageGroupAccessTokens);
             writer.WriteBoolValue("manage_merge_request_settings", ManageMergeRequestSettings);
             writer.WriteBoolValue("manage_project_access_tokens", ManageProjectAccessTokens);
-            writer.WriteBoolValue("manage_protected_tags", ManageProtectedTags);
             writer.WriteBoolValue("manage_security_policy_link", ManageSecurityPolicyLink);
             writer.WriteStringValue("name", Name);
             writer.WriteBoolValue("read_admin_cicd", ReadAdminCicd);

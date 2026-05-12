@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Merge_requestsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/groups/{id}/merge_requests{?approved*,approved_by_ids*,approved_by_usernames*,approver_ids*,assignee_id*,assignee_username*,author_id*,author_username*,created_after*,created_before*,deployed_after*,deployed_before*,draft*,environment*,in*,labels,merge_user_id*,merge_user_username*,milestone*,my_reaction_emoji*,non_archived*,not*,not%5Bassignee_id%5D*,not%5Bassignee_username%5D*,not%5Bauthor_id%5D*,not%5Bauthor_username%5D*,not%5Blabels%5D*,not%5Bmilestone%5D*,not%5Bmy_reaction_emoji%5D*,not%5Breviewer_id%5D*,not%5Breviewer_username%5D*,order_by*,page*,per_page*,reviewer_id*,reviewer_username*,scope*,search*,sort*,source_branch*,source_project_id*,state*,target_branch*,updated_after*,updated_before*,view*,wip*,with_labels_details*,with_merge_status_recheck*}", pathParameters)
+        public Merge_requestsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/groups/{id}/merge_requests{?approved_by_ids*,approved_by_usernames*,approver_ids*,assignee_id*,assignee_username*,author_id*,author_username*,created_after*,created_before*,deployed_after*,deployed_before*,draft*,environment*,in*,labels,merge_user_id*,merge_user_username*,milestone*,my_reaction_emoji*,non_archived*,not*,not%5Bassignee_id%5D*,not%5Bassignee_username%5D*,not%5Bauthor_id%5D*,not%5Bauthor_username%5D*,not%5Blabels%5D*,not%5Bmilestone%5D*,not%5Bmy_reaction_emoji%5D*,not%5Breviewer_id%5D*,not%5Breviewer_username%5D*,order_by*,page*,per_page*,reviewer_id*,reviewer_username*,scope*,search*,sort*,source_branch*,source_project_id*,state*,target_branch*,updated_after*,updated_before*,view*,wip*,with_labels_details*,with_merge_status_recheck*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Merge_requestsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/groups/{id}/merge_requests{?approved*,approved_by_ids*,approved_by_usernames*,approver_ids*,assignee_id*,assignee_username*,author_id*,author_username*,created_after*,created_before*,deployed_after*,deployed_before*,draft*,environment*,in*,labels,merge_user_id*,merge_user_username*,milestone*,my_reaction_emoji*,non_archived*,not*,not%5Bassignee_id%5D*,not%5Bassignee_username%5D*,not%5Bauthor_id%5D*,not%5Bauthor_username%5D*,not%5Blabels%5D*,not%5Bmilestone%5D*,not%5Bmy_reaction_emoji%5D*,not%5Breviewer_id%5D*,not%5Breviewer_username%5D*,order_by*,page*,per_page*,reviewer_id*,reviewer_username*,scope*,search*,sort*,source_branch*,source_project_id*,state*,target_branch*,updated_after*,updated_before*,view*,wip*,with_labels_details*,with_merge_status_recheck*}", rawUrl)
+        public Merge_requestsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/groups/{id}/merge_requests{?approved_by_ids*,approved_by_usernames*,approver_ids*,assignee_id*,assignee_username*,author_id*,author_username*,created_after*,created_before*,deployed_after*,deployed_before*,draft*,environment*,in*,labels,merge_user_id*,merge_user_username*,milestone*,my_reaction_emoji*,non_archived*,not*,not%5Bassignee_id%5D*,not%5Bassignee_username%5D*,not%5Bauthor_id%5D*,not%5Bauthor_username%5D*,not%5Blabels%5D*,not%5Bmilestone%5D*,not%5Bmy_reaction_emoji%5D*,not%5Breviewer_id%5D*,not%5Breviewer_username%5D*,order_by*,page*,per_page*,reviewer_id*,reviewer_username*,scope*,search*,sort*,source_branch*,source_project_id*,state*,target_branch*,updated_after*,updated_before*,view*,wip*,with_labels_details*,with_merge_status_recheck*}", rawUrl)
         {
         }
         /// <summary>
@@ -85,9 +85,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Merge_requestsRequestBuilderGetQueryParameters 
         {
-            /// <summary>Filters merge requests by their `approved` status. `yes` returns only approved merge requests. `no` returns only non-approved merge requests.</summary>
-            [QueryParameter("approved")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests.GetApprovedQueryParameterType? Approved { get; set; }
             /// <summary>Return merge requests which have been approved by the specified users with the given IDs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

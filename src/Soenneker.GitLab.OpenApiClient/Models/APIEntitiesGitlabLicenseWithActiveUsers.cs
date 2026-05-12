@@ -14,13 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning restore CS1591
     {
         /// <summary>The active_users property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ActiveUsers { get; set; }
-#nullable restore
-#else
-        public string ActiveUsers { get; set; }
-#endif
+        public int? ActiveUsers { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The add_ons property</summary>
@@ -90,7 +84,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "active_users", n => { ActiveUsers = n.GetStringValue(); } },
+                { "active_users", n => { ActiveUsers = n.GetIntValue(); } },
                 { "add_ons", n => { AddOns = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGitlabLicenseWithActiveUsers_add_ons>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGitlabLicenseWithActiveUsers_add_ons.CreateFromDiscriminatorValue); } },
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "expired", n => { Expired = n.GetBoolValue(); } },
@@ -112,7 +106,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("active_users", ActiveUsers);
+            writer.WriteIntValue("active_users", ActiveUsers);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGitlabLicenseWithActiveUsers_add_ons>("add_ons", AddOns);
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
             writer.WriteBoolValue("expired", Expired);

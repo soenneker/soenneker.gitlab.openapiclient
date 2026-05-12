@@ -17,26 +17,26 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The billing property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Billing { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGitlabSubscription_billing? Billing { get; set; }
 #nullable restore
 #else
-        public string Billing { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGitlabSubscription_billing Billing { get; set; }
 #endif
         /// <summary>The plan property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Plan { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGitlabSubscription_plan? Plan { get; set; }
 #nullable restore
 #else
-        public string Plan { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGitlabSubscription_plan Plan { get; set; }
 #endif
         /// <summary>The usage property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Usage { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGitlabSubscription_usage? Usage { get; set; }
 #nullable restore
 #else
-        public string Usage { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGitlabSubscription_usage Usage { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGitlabSubscription"/> and sets the default values.
@@ -63,9 +63,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "billing", n => { Billing = n.GetStringValue(); } },
-                { "plan", n => { Plan = n.GetStringValue(); } },
-                { "usage", n => { Usage = n.GetStringValue(); } },
+                { "billing", n => { Billing = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGitlabSubscription_billing>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGitlabSubscription_billing.CreateFromDiscriminatorValue); } },
+                { "plan", n => { Plan = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGitlabSubscription_plan>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGitlabSubscription_plan.CreateFromDiscriminatorValue); } },
+                { "usage", n => { Usage = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGitlabSubscription_usage>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGitlabSubscription_usage.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -75,9 +75,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("billing", Billing);
-            writer.WriteStringValue("plan", Plan);
-            writer.WriteStringValue("usage", Usage);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGitlabSubscription_billing>("billing", Billing);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGitlabSubscription_plan>("plan", Plan);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGitlabSubscription_usage>("usage", Usage);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

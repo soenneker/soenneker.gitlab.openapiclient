@@ -9,11 +9,15 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class RequestBodyB8b1b3559842 : IAdditionalDataHolder, IParsable
+    public partial class RequestBody2def9177cd1c : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Create, edit, and delete custom agents and flows in the AI catalog.</summary>
+        public bool? AdminAiCatalogItem { get; set; }
+        /// <summary>Enable, disable, and configure custom agents and flows from the AI catalog for a project.</summary>
+        public bool? AdminAiCatalogItemConsumer { get; set; }
         /// <summary>Create, read, update, and delete CI/CD variables.</summary>
         public bool? AdminCicdVariables { get; set; }
         /// <summary>Create, read, update, and delete compliance frameworks. Users with this permission can also assign a compliance framework label to a project, and set the default framework of a group.</summary>
@@ -62,8 +66,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public bool? ManageMergeRequestSettings { get; set; }
         /// <summary>Create, read, update, and delete project access tokens. When creating a token, users with this custom permission must select a role for that token that has the same or fewer permissions as the default role used as the base for the custom role.</summary>
         public bool? ManageProjectAccessTokens { get; set; }
-        /// <summary>Create, read, update, and delete protected tags.</summary>
-        public bool? ManageProtectedTags { get; set; }
         /// <summary>Allows linking security policy projects.</summary>
         public bool? ManageSecurityPolicyLink { get; set; }
         /// <summary>&quot;Name for role (default: &apos;Custom&apos;)&quot;</summary>
@@ -109,21 +111,21 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Allows deletion of projects.</summary>
         public bool? RemoveProject { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB8b1b3559842"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2def9177cd1c"/> and sets the default values.
         /// </summary>
-        public RequestBodyB8b1b3559842()
+        public RequestBody2def9177cd1c()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB8b1b3559842"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2def9177cd1c"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB8b1b3559842 CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2def9177cd1c CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB8b1b3559842();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2def9177cd1c();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -133,6 +135,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "admin_ai_catalog_item", n => { AdminAiCatalogItem = n.GetBoolValue(); } },
+                { "admin_ai_catalog_item_consumer", n => { AdminAiCatalogItemConsumer = n.GetBoolValue(); } },
                 { "admin_cicd_variables", n => { AdminCicdVariables = n.GetBoolValue(); } },
                 { "admin_compliance_framework", n => { AdminComplianceFramework = n.GetBoolValue(); } },
                 { "admin_group_member", n => { AdminGroupMember = n.GetBoolValue(); } },
@@ -154,7 +158,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "manage_group_access_tokens", n => { ManageGroupAccessTokens = n.GetBoolValue(); } },
                 { "manage_merge_request_settings", n => { ManageMergeRequestSettings = n.GetBoolValue(); } },
                 { "manage_project_access_tokens", n => { ManageProjectAccessTokens = n.GetBoolValue(); } },
-                { "manage_protected_tags", n => { ManageProtectedTags = n.GetBoolValue(); } },
                 { "manage_security_policy_link", n => { ManageSecurityPolicyLink = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "read_admin_cicd", n => { ReadAdminCicd = n.GetBoolValue(); } },
@@ -183,6 +186,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteBoolValue("admin_ai_catalog_item", AdminAiCatalogItem);
+            writer.WriteBoolValue("admin_ai_catalog_item_consumer", AdminAiCatalogItemConsumer);
             writer.WriteBoolValue("admin_cicd_variables", AdminCicdVariables);
             writer.WriteBoolValue("admin_compliance_framework", AdminComplianceFramework);
             writer.WriteBoolValue("admin_group_member", AdminGroupMember);
@@ -204,7 +209,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("manage_group_access_tokens", ManageGroupAccessTokens);
             writer.WriteBoolValue("manage_merge_request_settings", ManageMergeRequestSettings);
             writer.WriteBoolValue("manage_project_access_tokens", ManageProjectAccessTokens);
-            writer.WriteBoolValue("manage_protected_tags", ManageProtectedTags);
             writer.WriteBoolValue("manage_security_policy_link", ManageSecurityPolicyLink);
             writer.WriteStringValue("name", Name);
             writer.WriteBoolValue("read_admin_cicd", ReadAdminCicd);

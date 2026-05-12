@@ -15,53 +15,17 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The blob_download_timeout property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? BlobDownloadTimeout { get; set; }
-#nullable restore
-#else
-        public string BlobDownloadTimeout { get; set; }
-#endif
+        public int? BlobDownloadTimeout { get; set; }
         /// <summary>The container_repositories_max_capacity property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ContainerRepositoriesMaxCapacity { get; set; }
-#nullable restore
-#else
-        public string ContainerRepositoriesMaxCapacity { get; set; }
-#endif
+        public int? ContainerRepositoriesMaxCapacity { get; set; }
         /// <summary>The current property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Current { get; set; }
-#nullable restore
-#else
-        public string Current { get; set; }
-#endif
+        public bool? Current { get; set; }
         /// <summary>The enabled property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Enabled { get; set; }
-#nullable restore
-#else
-        public string Enabled { get; set; }
-#endif
+        public bool? Enabled { get; set; }
         /// <summary>The files_max_capacity property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? FilesMaxCapacity { get; set; }
-#nullable restore
-#else
-        public string FilesMaxCapacity { get; set; }
-#endif
+        public int? FilesMaxCapacity { get; set; }
         /// <summary>The id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get; set; }
-#nullable restore
-#else
-        public string Id { get; set; }
-#endif
+        public int? Id { get; set; }
         /// <summary>The internal_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -73,19 +37,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Links { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGeoSite_links? Links { get; set; }
 #nullable restore
 #else
-        public string Links { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGeoSite_links Links { get; set; }
 #endif
         /// <summary>The minimum_reverification_interval property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? MinimumReverificationInterval { get; set; }
-#nullable restore
-#else
-        public string MinimumReverificationInterval { get; set; }
-#endif
+        public int? MinimumReverificationInterval { get; set; }
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -95,44 +53,32 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>The primary property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Primary { get; set; }
-#nullable restore
-#else
-        public string Primary { get; set; }
-#endif
+        public bool? Primary { get; set; }
         /// <summary>The repos_max_capacity property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ReposMaxCapacity { get; set; }
-#nullable restore
-#else
-        public string ReposMaxCapacity { get; set; }
-#endif
+        public int? ReposMaxCapacity { get; set; }
         /// <summary>The selective_sync_namespace_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SelectiveSyncNamespaceIds { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGeoSite_selective_sync_namespace_ids>? SelectiveSyncNamespaceIds { get; set; }
 #nullable restore
 #else
-        public string SelectiveSyncNamespaceIds { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGeoSite_selective_sync_namespace_ids> SelectiveSyncNamespaceIds { get; set; }
 #endif
         /// <summary>The selective_sync_organization_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SelectiveSyncOrganizationIds { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGeoSite_selective_sync_organization_ids>? SelectiveSyncOrganizationIds { get; set; }
 #nullable restore
 #else
-        public string SelectiveSyncOrganizationIds { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGeoSite_selective_sync_organization_ids> SelectiveSyncOrganizationIds { get; set; }
 #endif
         /// <summary>The selective_sync_shards property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SelectiveSyncShards { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGeoSite_selective_sync_shards>? SelectiveSyncShards { get; set; }
 #nullable restore
 #else
-        public string SelectiveSyncShards { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGeoSite_selective_sync_shards> SelectiveSyncShards { get; set; }
 #endif
         /// <summary>The selective_sync_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -143,13 +89,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string SelectiveSyncType { get; set; }
 #endif
         /// <summary>The sync_object_storage property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? SyncObjectStorage { get; set; }
-#nullable restore
-#else
-        public string SyncObjectStorage { get; set; }
-#endif
+        public bool? SyncObjectStorage { get; set; }
         /// <summary>The url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -159,13 +99,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Url { get; set; }
 #endif
         /// <summary>The verification_max_capacity property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? VerificationMaxCapacity { get; set; }
-#nullable restore
-#else
-        public string VerificationMaxCapacity { get; set; }
-#endif
+        public int? VerificationMaxCapacity { get; set; }
         /// <summary>The web_edit_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -207,25 +141,25 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "blob_download_timeout", n => { BlobDownloadTimeout = n.GetStringValue(); } },
-                { "container_repositories_max_capacity", n => { ContainerRepositoriesMaxCapacity = n.GetStringValue(); } },
-                { "current", n => { Current = n.GetStringValue(); } },
-                { "enabled", n => { Enabled = n.GetStringValue(); } },
-                { "files_max_capacity", n => { FilesMaxCapacity = n.GetStringValue(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
+                { "blob_download_timeout", n => { BlobDownloadTimeout = n.GetIntValue(); } },
+                { "container_repositories_max_capacity", n => { ContainerRepositoriesMaxCapacity = n.GetIntValue(); } },
+                { "current", n => { Current = n.GetBoolValue(); } },
+                { "enabled", n => { Enabled = n.GetBoolValue(); } },
+                { "files_max_capacity", n => { FilesMaxCapacity = n.GetIntValue(); } },
+                { "id", n => { Id = n.GetIntValue(); } },
                 { "internal_url", n => { InternalUrl = n.GetStringValue(); } },
-                { "_links", n => { Links = n.GetStringValue(); } },
-                { "minimum_reverification_interval", n => { MinimumReverificationInterval = n.GetStringValue(); } },
+                { "_links", n => { Links = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGeoSite_links>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGeoSite_links.CreateFromDiscriminatorValue); } },
+                { "minimum_reverification_interval", n => { MinimumReverificationInterval = n.GetIntValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "primary", n => { Primary = n.GetStringValue(); } },
-                { "repos_max_capacity", n => { ReposMaxCapacity = n.GetStringValue(); } },
-                { "selective_sync_namespace_ids", n => { SelectiveSyncNamespaceIds = n.GetStringValue(); } },
-                { "selective_sync_organization_ids", n => { SelectiveSyncOrganizationIds = n.GetStringValue(); } },
-                { "selective_sync_shards", n => { SelectiveSyncShards = n.GetStringValue(); } },
+                { "primary", n => { Primary = n.GetBoolValue(); } },
+                { "repos_max_capacity", n => { ReposMaxCapacity = n.GetIntValue(); } },
+                { "selective_sync_namespace_ids", n => { SelectiveSyncNamespaceIds = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGeoSite_selective_sync_namespace_ids>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGeoSite_selective_sync_namespace_ids.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "selective_sync_organization_ids", n => { SelectiveSyncOrganizationIds = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGeoSite_selective_sync_organization_ids>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGeoSite_selective_sync_organization_ids.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "selective_sync_shards", n => { SelectiveSyncShards = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGeoSite_selective_sync_shards>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGeoSite_selective_sync_shards.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "selective_sync_type", n => { SelectiveSyncType = n.GetStringValue(); } },
-                { "sync_object_storage", n => { SyncObjectStorage = n.GetStringValue(); } },
+                { "sync_object_storage", n => { SyncObjectStorage = n.GetBoolValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
-                { "verification_max_capacity", n => { VerificationMaxCapacity = n.GetStringValue(); } },
+                { "verification_max_capacity", n => { VerificationMaxCapacity = n.GetIntValue(); } },
                 { "web_edit_url", n => { WebEditUrl = n.GetStringValue(); } },
                 { "web_geo_replication_details_url", n => { WebGeoReplicationDetailsUrl = n.GetStringValue(); } },
             };
@@ -237,25 +171,25 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("blob_download_timeout", BlobDownloadTimeout);
-            writer.WriteStringValue("container_repositories_max_capacity", ContainerRepositoriesMaxCapacity);
-            writer.WriteStringValue("current", Current);
-            writer.WriteStringValue("enabled", Enabled);
-            writer.WriteStringValue("files_max_capacity", FilesMaxCapacity);
-            writer.WriteStringValue("id", Id);
+            writer.WriteIntValue("blob_download_timeout", BlobDownloadTimeout);
+            writer.WriteIntValue("container_repositories_max_capacity", ContainerRepositoriesMaxCapacity);
+            writer.WriteBoolValue("current", Current);
+            writer.WriteBoolValue("enabled", Enabled);
+            writer.WriteIntValue("files_max_capacity", FilesMaxCapacity);
+            writer.WriteIntValue("id", Id);
             writer.WriteStringValue("internal_url", InternalUrl);
-            writer.WriteStringValue("_links", Links);
-            writer.WriteStringValue("minimum_reverification_interval", MinimumReverificationInterval);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGeoSite_links>("_links", Links);
+            writer.WriteIntValue("minimum_reverification_interval", MinimumReverificationInterval);
             writer.WriteStringValue("name", Name);
-            writer.WriteStringValue("primary", Primary);
-            writer.WriteStringValue("repos_max_capacity", ReposMaxCapacity);
-            writer.WriteStringValue("selective_sync_namespace_ids", SelectiveSyncNamespaceIds);
-            writer.WriteStringValue("selective_sync_organization_ids", SelectiveSyncOrganizationIds);
-            writer.WriteStringValue("selective_sync_shards", SelectiveSyncShards);
+            writer.WriteBoolValue("primary", Primary);
+            writer.WriteIntValue("repos_max_capacity", ReposMaxCapacity);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGeoSite_selective_sync_namespace_ids>("selective_sync_namespace_ids", SelectiveSyncNamespaceIds);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGeoSite_selective_sync_organization_ids>("selective_sync_organization_ids", SelectiveSyncOrganizationIds);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGeoSite_selective_sync_shards>("selective_sync_shards", SelectiveSyncShards);
             writer.WriteStringValue("selective_sync_type", SelectiveSyncType);
-            writer.WriteStringValue("sync_object_storage", SyncObjectStorage);
+            writer.WriteBoolValue("sync_object_storage", SyncObjectStorage);
             writer.WriteStringValue("url", Url);
-            writer.WriteStringValue("verification_max_capacity", VerificationMaxCapacity);
+            writer.WriteIntValue("verification_max_capacity", VerificationMaxCapacity);
             writer.WriteStringValue("web_edit_url", WebEditUrl);
             writer.WriteStringValue("web_geo_replication_details_url", WebGeoReplicationDetailsUrl);
             writer.WriteAdditionalData(AdditionalData);

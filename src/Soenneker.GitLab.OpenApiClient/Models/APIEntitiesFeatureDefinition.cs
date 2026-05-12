@@ -15,13 +15,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The default_enabled property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? DefaultEnabled { get; set; }
-#nullable restore
-#else
-        public string DefaultEnabled { get; set; }
-#endif
+        public bool? DefaultEnabled { get; set; }
         /// <summary>The feature_issue_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -55,13 +49,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string IntroducedByUrl { get; set; }
 #endif
         /// <summary>The log_state_changes property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? LogStateChanges { get; set; }
-#nullable restore
-#else
-        public string LogStateChanges { get; set; }
-#endif
+        public bool? LogStateChanges { get; set; }
         /// <summary>The milestone property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -119,12 +107,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "default_enabled", n => { DefaultEnabled = n.GetStringValue(); } },
+                { "default_enabled", n => { DefaultEnabled = n.GetBoolValue(); } },
                 { "feature_issue_url", n => { FeatureIssueUrl = n.GetStringValue(); } },
                 { "group", n => { Group = n.GetStringValue(); } },
                 { "intended_to_rollout_by", n => { IntendedToRolloutBy = n.GetStringValue(); } },
                 { "introduced_by_url", n => { IntroducedByUrl = n.GetStringValue(); } },
-                { "log_state_changes", n => { LogStateChanges = n.GetStringValue(); } },
+                { "log_state_changes", n => { LogStateChanges = n.GetBoolValue(); } },
                 { "milestone", n => { Milestone = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "rollout_issue_url", n => { RolloutIssueUrl = n.GetStringValue(); } },
@@ -138,12 +126,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("default_enabled", DefaultEnabled);
+            writer.WriteBoolValue("default_enabled", DefaultEnabled);
             writer.WriteStringValue("feature_issue_url", FeatureIssueUrl);
             writer.WriteStringValue("group", Group);
             writer.WriteStringValue("intended_to_rollout_by", IntendedToRolloutBy);
             writer.WriteStringValue("introduced_by_url", IntroducedByUrl);
-            writer.WriteStringValue("log_state_changes", LogStateChanges);
+            writer.WriteBoolValue("log_state_changes", LogStateChanges);
             writer.WriteStringValue("milestone", Milestone);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("rollout_issue_url", RolloutIssueUrl);

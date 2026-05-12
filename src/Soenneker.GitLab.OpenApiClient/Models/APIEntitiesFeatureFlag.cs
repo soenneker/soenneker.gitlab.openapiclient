@@ -37,10 +37,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The scopes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Scopes { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesFeatureFlag_scopes>? Scopes { get; set; }
 #nullable restore
 #else
-        public string Scopes { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesFeatureFlag_scopes> Scopes { get; set; }
 #endif
         /// <summary>The strategies property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -89,7 +89,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "scopes", n => { Scopes = n.GetStringValue(); } },
+                { "scopes", n => { Scopes = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesFeatureFlag_scopes>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesFeatureFlag_scopes.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "strategies", n => { Strategies = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesFeatureFlagStrategy>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesFeatureFlagStrategy.CreateFromDiscriminatorValue); } },
                 { "updated_at", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
                 { "version", n => { Version = n.GetStringValue(); } },
@@ -106,7 +106,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("name", Name);
-            writer.WriteStringValue("scopes", Scopes);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesFeatureFlag_scopes>("scopes", Scopes);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesFeatureFlagStrategy>("strategies", Strategies);
             writer.WriteDateTimeOffsetValue("updated_at", UpdatedAt);
             writer.WriteStringValue("version", Version);
