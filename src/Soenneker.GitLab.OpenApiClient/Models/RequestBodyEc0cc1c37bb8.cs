@@ -9,45 +9,45 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class RequestBody518c68f555bc : IAdditionalDataHolder, IParsable
+    public partial class RequestBodyEc0cc1c37bb8 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The IID of the merge request</summary>
-        public int? MergeRequestIid { get; set; }
-        /// <summary>The ID or path of the project</summary>
+        /// <summary>Correlation ID for tracking events</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProjectId { get; set; }
+        public string? CorrelationId { get; set; }
 #nullable restore
 #else
-        public string ProjectId { get; set; }
+        public string CorrelationId { get; set; }
 #endif
-        /// <summary>The review output from LLM</summary>
+        /// <summary>The type of event</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyEc0cc1c37bb8_event_type? EventType { get; set; }
+        /// <summary>Message from the human</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReviewOutput { get; set; }
+        public string? Message { get; set; }
 #nullable restore
 #else
-        public string ReviewOutput { get; set; }
+        public string Message { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody518c68f555bc"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyEc0cc1c37bb8"/> and sets the default values.
         /// </summary>
-        public RequestBody518c68f555bc()
+        public RequestBodyEc0cc1c37bb8()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody518c68f555bc"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyEc0cc1c37bb8"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody518c68f555bc CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyEc0cc1c37bb8 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody518c68f555bc();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyEc0cc1c37bb8();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -57,9 +57,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "merge_request_iid", n => { MergeRequestIid = n.GetIntValue(); } },
-                { "project_id", n => { ProjectId = n.GetStringValue(); } },
-                { "review_output", n => { ReviewOutput = n.GetStringValue(); } },
+                { "correlation_id", n => { CorrelationId = n.GetStringValue(); } },
+                { "event_type", n => { EventType = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyEc0cc1c37bb8_event_type>(); } },
+                { "message", n => { Message = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -69,9 +69,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("merge_request_iid", MergeRequestIid);
-            writer.WriteStringValue("project_id", ProjectId);
-            writer.WriteStringValue("review_output", ReviewOutput);
+            writer.WriteStringValue("correlation_id", CorrelationId);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyEc0cc1c37bb8_event_type>("event_type", EventType);
+            writer.WriteStringValue("message", Message);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

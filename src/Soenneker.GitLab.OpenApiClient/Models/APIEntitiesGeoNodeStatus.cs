@@ -3294,6 +3294,110 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Version { get; set; }
 #endif
+        /// <summary>The vulnerability_archive_export_uploads_checksum_failed_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? VulnerabilityArchiveExportUploadsChecksumFailedCount { get; set; }
+#nullable restore
+#else
+        public string VulnerabilityArchiveExportUploadsChecksumFailedCount { get; set; }
+#endif
+        /// <summary>The vulnerability_archive_export_uploads_checksummed_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? VulnerabilityArchiveExportUploadsChecksummedCount { get; set; }
+#nullable restore
+#else
+        public string VulnerabilityArchiveExportUploadsChecksummedCount { get; set; }
+#endif
+        /// <summary>The vulnerability_archive_export_uploads_checksum_total_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? VulnerabilityArchiveExportUploadsChecksumTotalCount { get; set; }
+#nullable restore
+#else
+        public string VulnerabilityArchiveExportUploadsChecksumTotalCount { get; set; }
+#endif
+        /// <summary>The vulnerability_archive_export_uploads_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? VulnerabilityArchiveExportUploadsCount { get; set; }
+#nullable restore
+#else
+        public string VulnerabilityArchiveExportUploadsCount { get; set; }
+#endif
+        /// <summary>The vulnerability_archive_export_uploads_failed_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? VulnerabilityArchiveExportUploadsFailedCount { get; set; }
+#nullable restore
+#else
+        public string VulnerabilityArchiveExportUploadsFailedCount { get; set; }
+#endif
+        /// <summary>The vulnerability_archive_export_uploads_oldest_unsynced_time property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? VulnerabilityArchiveExportUploadsOldestUnsyncedTime { get; set; }
+#nullable restore
+#else
+        public string VulnerabilityArchiveExportUploadsOldestUnsyncedTime { get; set; }
+#endif
+        /// <summary>The vulnerability_archive_export_uploads_registry_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? VulnerabilityArchiveExportUploadsRegistryCount { get; set; }
+#nullable restore
+#else
+        public string VulnerabilityArchiveExportUploadsRegistryCount { get; set; }
+#endif
+        /// <summary>The vulnerability_archive_export_uploads_synced_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? VulnerabilityArchiveExportUploadsSyncedCount { get; set; }
+#nullable restore
+#else
+        public string VulnerabilityArchiveExportUploadsSyncedCount { get; set; }
+#endif
+        /// <summary>The vulnerability_archive_export_uploads_synced_in_percentage property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? VulnerabilityArchiveExportUploadsSyncedInPercentage { get; set; }
+#nullable restore
+#else
+        public string VulnerabilityArchiveExportUploadsSyncedInPercentage { get; set; }
+#endif
+        /// <summary>The vulnerability_archive_export_uploads_verification_failed_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? VulnerabilityArchiveExportUploadsVerificationFailedCount { get; set; }
+#nullable restore
+#else
+        public string VulnerabilityArchiveExportUploadsVerificationFailedCount { get; set; }
+#endif
+        /// <summary>The vulnerability_archive_export_uploads_verification_total_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? VulnerabilityArchiveExportUploadsVerificationTotalCount { get; set; }
+#nullable restore
+#else
+        public string VulnerabilityArchiveExportUploadsVerificationTotalCount { get; set; }
+#endif
+        /// <summary>The vulnerability_archive_export_uploads_verified_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? VulnerabilityArchiveExportUploadsVerifiedCount { get; set; }
+#nullable restore
+#else
+        public string VulnerabilityArchiveExportUploadsVerifiedCount { get; set; }
+#endif
+        /// <summary>The vulnerability_archive_export_uploads_verified_in_percentage property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? VulnerabilityArchiveExportUploadsVerifiedInPercentage { get; set; }
+#nullable restore
+#else
+        public string VulnerabilityArchiveExportUploadsVerifiedInPercentage { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGeoNodeStatus"/> and sets the default values.
         /// </summary>
@@ -3729,6 +3833,19 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "user_uploads_verified_count", n => { UserUploadsVerifiedCount = n.GetStringValue(); } },
                 { "user_uploads_verified_in_percentage", n => { UserUploadsVerifiedInPercentage = n.GetStringValue(); } },
                 { "version", n => { Version = n.GetStringValue(); } },
+                { "vulnerability_archive_export_uploads_checksum_failed_count", n => { VulnerabilityArchiveExportUploadsChecksumFailedCount = n.GetStringValue(); } },
+                { "vulnerability_archive_export_uploads_checksum_total_count", n => { VulnerabilityArchiveExportUploadsChecksumTotalCount = n.GetStringValue(); } },
+                { "vulnerability_archive_export_uploads_checksummed_count", n => { VulnerabilityArchiveExportUploadsChecksummedCount = n.GetStringValue(); } },
+                { "vulnerability_archive_export_uploads_count", n => { VulnerabilityArchiveExportUploadsCount = n.GetStringValue(); } },
+                { "vulnerability_archive_export_uploads_failed_count", n => { VulnerabilityArchiveExportUploadsFailedCount = n.GetStringValue(); } },
+                { "vulnerability_archive_export_uploads_oldest_unsynced_time", n => { VulnerabilityArchiveExportUploadsOldestUnsyncedTime = n.GetStringValue(); } },
+                { "vulnerability_archive_export_uploads_registry_count", n => { VulnerabilityArchiveExportUploadsRegistryCount = n.GetStringValue(); } },
+                { "vulnerability_archive_export_uploads_synced_count", n => { VulnerabilityArchiveExportUploadsSyncedCount = n.GetStringValue(); } },
+                { "vulnerability_archive_export_uploads_synced_in_percentage", n => { VulnerabilityArchiveExportUploadsSyncedInPercentage = n.GetStringValue(); } },
+                { "vulnerability_archive_export_uploads_verification_failed_count", n => { VulnerabilityArchiveExportUploadsVerificationFailedCount = n.GetStringValue(); } },
+                { "vulnerability_archive_export_uploads_verification_total_count", n => { VulnerabilityArchiveExportUploadsVerificationTotalCount = n.GetStringValue(); } },
+                { "vulnerability_archive_export_uploads_verified_count", n => { VulnerabilityArchiveExportUploadsVerifiedCount = n.GetStringValue(); } },
+                { "vulnerability_archive_export_uploads_verified_in_percentage", n => { VulnerabilityArchiveExportUploadsVerifiedInPercentage = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -4148,6 +4265,19 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("user_uploads_verified_count", UserUploadsVerifiedCount);
             writer.WriteStringValue("user_uploads_verified_in_percentage", UserUploadsVerifiedInPercentage);
             writer.WriteStringValue("version", Version);
+            writer.WriteStringValue("vulnerability_archive_export_uploads_checksum_failed_count", VulnerabilityArchiveExportUploadsChecksumFailedCount);
+            writer.WriteStringValue("vulnerability_archive_export_uploads_checksummed_count", VulnerabilityArchiveExportUploadsChecksummedCount);
+            writer.WriteStringValue("vulnerability_archive_export_uploads_checksum_total_count", VulnerabilityArchiveExportUploadsChecksumTotalCount);
+            writer.WriteStringValue("vulnerability_archive_export_uploads_count", VulnerabilityArchiveExportUploadsCount);
+            writer.WriteStringValue("vulnerability_archive_export_uploads_failed_count", VulnerabilityArchiveExportUploadsFailedCount);
+            writer.WriteStringValue("vulnerability_archive_export_uploads_oldest_unsynced_time", VulnerabilityArchiveExportUploadsOldestUnsyncedTime);
+            writer.WriteStringValue("vulnerability_archive_export_uploads_registry_count", VulnerabilityArchiveExportUploadsRegistryCount);
+            writer.WriteStringValue("vulnerability_archive_export_uploads_synced_count", VulnerabilityArchiveExportUploadsSyncedCount);
+            writer.WriteStringValue("vulnerability_archive_export_uploads_synced_in_percentage", VulnerabilityArchiveExportUploadsSyncedInPercentage);
+            writer.WriteStringValue("vulnerability_archive_export_uploads_verification_failed_count", VulnerabilityArchiveExportUploadsVerificationFailedCount);
+            writer.WriteStringValue("vulnerability_archive_export_uploads_verification_total_count", VulnerabilityArchiveExportUploadsVerificationTotalCount);
+            writer.WriteStringValue("vulnerability_archive_export_uploads_verified_count", VulnerabilityArchiveExportUploadsVerifiedCount);
+            writer.WriteStringValue("vulnerability_archive_export_uploads_verified_in_percentage", VulnerabilityArchiveExportUploadsVerifiedInPercentage);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

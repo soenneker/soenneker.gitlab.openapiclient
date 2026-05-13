@@ -5,7 +5,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups
 {
     /// <summary>The visibility of the group</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBody59635af79df9PostRequestBody
+    public enum RequestBody3cadcd8792c9PostRequestBody
     {
         [EnumMember(Value = "private")]
         #pragma warning disable CS1591

@@ -5,7 +5,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>The type of event</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBody3a17126b07bd_event_type
+    public enum RequestBodyEc0cc1c37bb8_event_type
     {
         [EnumMember(Value = "pause")]
         #pragma warning disable CS1591

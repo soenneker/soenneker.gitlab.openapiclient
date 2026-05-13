@@ -9,7 +9,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class RequestBodyB40b053c714d : IAdditionalDataHolder, IParsable
+    public partial class RequestBodyC66551e2db22 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -21,14 +21,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #nullable restore
 #else
         public List<string> Architectures { get; set; }
-#endif
-        /// <summary>The Debian Codename</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Codename { get; set; }
-#nullable restore
-#else
-        public string Codename { get; set; }
 #endif
         /// <summary>The list of Components</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -73,21 +65,21 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The duration before the Release file should be considered expired by the client</summary>
         public int? ValidTimeDurationSeconds { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB40b053c714d"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC66551e2db22"/> and sets the default values.
         /// </summary>
-        public RequestBodyB40b053c714d()
+        public RequestBodyC66551e2db22()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB40b053c714d"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC66551e2db22"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB40b053c714d CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC66551e2db22 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB40b053c714d();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC66551e2db22();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -98,7 +90,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "architectures", n => { Architectures = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "codename", n => { Codename = n.GetStringValue(); } },
                 { "components", n => { Components = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
@@ -115,7 +106,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("architectures", Architectures);
-            writer.WriteStringValue("codename", Codename);
             writer.WriteCollectionOfPrimitiveValues<string>("components", Components);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("label", Label);

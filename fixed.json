@@ -688,7 +688,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody518c68f555bc"
+                "$ref": "#/components/schemas/RequestBody9983fc9d3604"
               }
             }
           }
@@ -1105,7 +1105,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody3a17126b07bd"
+                "$ref": "#/components/schemas/RequestBodyEc0cc1c37bb8"
               }
             }
           }
@@ -5353,7 +5353,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyD2d687755fa0"
+                "$ref": "#/components/schemas/RequestBody3a7cdcc6078e"
               }
             }
           }
@@ -5710,7 +5710,7 @@
             "in": "query",
             "description": "Google Cloud Project ID for the Artifact Registry",
             "schema": {
-              "pattern": "\\A[a-z][a-z0-9-]{5,28}[a-z0-9]\\z",
+              "pattern": "^[a-z][a-z0-9\\-]{5,28}[a-z0-9]$",
               "type": "string",
               "nullable": true
             }
@@ -5764,7 +5764,7 @@
             "description": "ID of the Google Cloud project",
             "required": true,
             "schema": {
-              "pattern": "\\A[a-z][a-z0-9-]{5,28}[a-z0-9]\\z",
+              "pattern": "^[a-z][a-z0-9\\-]{5,28}[a-z0-9]$",
               "type": "string",
               "nullable": true
             }
@@ -37701,7 +37701,7 @@
             "description": "The version of the release, using the semantic versioning format",
             "required": true,
             "schema": {
-              "pattern": "          (?x-mi:\n          (?x-mi:\n          (?<major>0|[1-9]\\d*)\n        )\\.(?x-mi:\n          (?<minor>0|[1-9]\\d*)\n        )\\.(?x-mi:\n          (?<patch>0|[1-9]\\d*)\n        )\n        )(?x-mi:\n          (?:-(?<prerelease>(?:\\d*[a-zA-Z-][0-9a-zA-Z-]*|[1-9]\\d*|0)(?:\\.(?:\\d*[a-zA-Z-][0-9a-zA-Z-]*|[1-9]\\d*|0))*))?\n          (?:\\+(?<build>[0-9a-zA-Z-]+(?:\\.[0-9a-zA-Z-]+)*))?\n        )\n        x",
+              "pattern": "(?:(?:(0|[1-9]\\d*))\\.(?:(0|[1-9]\\d*))\\.(?:(0|[1-9]\\d*)))(?:(?:-((?:\\d*[a-zA-Z\\-][0-9a-zA-Z\\-]*|[1-9]\\d*|0)(?:\\.(?:\\d*[a-zA-Z\\-][0-9a-zA-Z\\-]*|[1-9]\\d*|0))*))?(?:\\+([0-9a-zA-Z\\-]+(?:\\.[0-9a-zA-Z\\-]+)*))?)",
               "type": "string",
               "nullable": true
             },
@@ -39091,7 +39091,7 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyF7e232007bcb"
+                "$ref": "#/components/schemas/RequestBody3f47974b9e0f"
               }
             }
           }
@@ -46115,7 +46115,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyB40b053c714d"
+                "$ref": "#/components/schemas/RequestBody240ff1bbe3f5"
               }
             }
           }
@@ -46185,7 +46185,7 @@
             "in": "query",
             "description": "The Debian Codename",
             "schema": {
-              "pattern": "\\A(?i-mx:[a-z0-9][a-z0-9.-]*)\\zi",
+              "pattern": "(?:^(?:[0-9A-Za-z\\u017F\\u212A][\\x2D.0-9A-Za-z\\u017F\\u212A]*)$)",
               "type": "string",
               "nullable": true
             },
@@ -46196,7 +46196,7 @@
             "in": "query",
             "description": "The Debian Suite",
             "schema": {
-              "pattern": "\\A(?i-mx:[a-z0-9][a-z0-9.-]*)\\zi",
+              "pattern": "(?:^(?:[0-9A-Za-z\\u017F\\u212A][\\x2D.0-9A-Za-z\\u017F\\u212A]*)$)",
               "type": "string",
               "nullable": true
             },
@@ -46207,7 +46207,7 @@
             "in": "query",
             "description": "The Debian Origin",
             "schema": {
-              "pattern": "\\A(?i-mx:[a-z0-9][a-z0-9.-]*)\\zi",
+              "pattern": "(?:^(?:[0-9A-Za-z\\u017F\\u212A][\\x2D.0-9A-Za-z\\u017F\\u212A]*)$)",
               "type": "string",
               "nullable": true
             },
@@ -46218,7 +46218,7 @@
             "in": "query",
             "description": "The Debian Label",
             "schema": {
-              "pattern": "\\A(?i-mx:[a-z0-9][a-z0-9.-]*)\\zi",
+              "pattern": "(?:^(?:[0-9A-Za-z\\u017F\\u212A][\\x2D.0-9A-Za-z\\u017F\\u212A]*)$)",
               "type": "string",
               "nullable": true
             },
@@ -46229,7 +46229,7 @@
             "in": "query",
             "description": "The Debian Version",
             "schema": {
-              "pattern": "          \\A(?:\n            (?:([0-9]{1,9}):)?            (?# epoch)\n            ([0-9][0-9a-z\\.+~]*)          (?# version)\n            (-[0-9a-z\\.+~]+){0,14}        (?# -revision)\n            (?<!-)\n            )\\zix",
+              "pattern": "(?:^(?:(?:([0-9]{1,9}):)?([0-9][+.0-9A-Za-z~\\u017F\\u212A]*)(-[+.0-9A-Za-z~\\u017F\\u212A]+){0,14}(?<!-))$)",
               "type": "string",
               "nullable": true
             },
@@ -46330,7 +46330,7 @@
             "description": "The Debian Codename",
             "required": true,
             "schema": {
-              "pattern": "\\A(?i-mx:[a-z0-9][a-z0-9.-]*)\\zi",
+              "pattern": "(?:^(?:[0-9A-Za-z\\u017F\\u212A][\\x2D.0-9A-Za-z\\u017F\\u212A]*)$)",
               "type": "string"
             },
             "example": "sid"
@@ -46380,7 +46380,7 @@
             "description": "The Debian Codename",
             "required": true,
             "schema": {
-              "pattern": "\\A(?i-mx:[a-z0-9][a-z0-9.-]*)\\zi",
+              "pattern": "(?:^(?:[0-9A-Za-z\\u017F\\u212A][\\x2D.0-9A-Za-z\\u017F\\u212A]*)$)",
               "type": "string"
             },
             "example": "sid"
@@ -46390,7 +46390,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyB278d0d4eddc"
+                "$ref": "#/components/schemas/RequestBodyC66551e2db22"
               }
             }
           }
@@ -46439,7 +46439,7 @@
             "description": "The Debian Codename",
             "required": true,
             "schema": {
-              "pattern": "\\A(?i-mx:[a-z0-9][a-z0-9.-]*)\\zi",
+              "pattern": "(?:^(?:[0-9A-Za-z\\u017F\\u212A][\\x2D.0-9A-Za-z\\u017F\\u212A]*)$)",
               "type": "string"
             },
             "example": "sid"
@@ -46449,7 +46449,7 @@
             "in": "query",
             "description": "The Debian Suite",
             "schema": {
-              "pattern": "\\A(?i-mx:[a-z0-9][a-z0-9.-]*)\\zi",
+              "pattern": "(?:^(?:[0-9A-Za-z\\u017F\\u212A][\\x2D.0-9A-Za-z\\u017F\\u212A]*)$)",
               "type": "string",
               "nullable": true
             },
@@ -46460,7 +46460,7 @@
             "in": "query",
             "description": "The Debian Origin",
             "schema": {
-              "pattern": "\\A(?i-mx:[a-z0-9][a-z0-9.-]*)\\zi",
+              "pattern": "(?:^(?:[0-9A-Za-z\\u017F\\u212A][\\x2D.0-9A-Za-z\\u017F\\u212A]*)$)",
               "type": "string",
               "nullable": true
             },
@@ -46471,7 +46471,7 @@
             "in": "query",
             "description": "The Debian Label",
             "schema": {
-              "pattern": "\\A(?i-mx:[a-z0-9][a-z0-9.-]*)\\zi",
+              "pattern": "(?:^(?:[0-9A-Za-z\\u017F\\u212A][\\x2D.0-9A-Za-z\\u017F\\u212A]*)$)",
               "type": "string",
               "nullable": true
             },
@@ -46482,7 +46482,7 @@
             "in": "query",
             "description": "The Debian Version",
             "schema": {
-              "pattern": "          \\A(?:\n            (?:([0-9]{1,9}):)?            (?# epoch)\n            ([0-9][0-9a-z\\.+~]*)          (?# version)\n            (-[0-9a-z\\.+~]+){0,14}        (?# -revision)\n            (?<!-)\n            )\\zix",
+              "pattern": "(?:^(?:(?:([0-9]{1,9}):)?([0-9][+.0-9A-Za-z~\\u017F\\u212A]*)(-[+.0-9A-Za-z~\\u017F\\u212A]+){0,14}(?<!-))$)",
               "type": "string",
               "nullable": true
             },
@@ -46585,7 +46585,7 @@
             "description": "The Debian Codename",
             "required": true,
             "schema": {
-              "pattern": "\\A(?i-mx:[a-z0-9][a-z0-9.-]*)\\zi",
+              "pattern": "(?:^(?:[0-9A-Za-z\\u017F\\u212A][\\x2D.0-9A-Za-z\\u017F\\u212A]*)$)",
               "type": "string"
             },
             "example": "sid"
@@ -49596,7 +49596,7 @@
             "description": "The NuGet package name",
             "required": true,
             "schema": {
-              "pattern": "\\A[-+\\.\\_a-zA-Z0-9]+\\z",
+              "pattern": "^[\\-+._a-zA-Z0-9]+$",
               "type": "string",
               "nullable": true
             },
@@ -49651,7 +49651,7 @@
             "description": "The NuGet package name",
             "required": true,
             "schema": {
-              "pattern": "\\A[-+\\.\\_a-zA-Z0-9]+\\z",
+              "pattern": "^[\\-+._a-zA-Z0-9]+$",
               "type": "string",
               "nullable": true
             },
@@ -68659,7 +68659,7 @@
             "description": "Helm channel",
             "required": true,
             "schema": {
-              "pattern": "\\A([a-zA-Z0-9](\\.|-|_)?){1,255}(?<!\\.|-|_)\\z",
+              "pattern": "^([a-zA-Z0-9](\\.|-|_)?){1,255}(?<!\\.|-|_)$",
               "type": "string"
             },
             "example": "stable"
@@ -68713,7 +68713,7 @@
             "description": "Helm channel",
             "required": true,
             "schema": {
-              "pattern": "\\A([a-zA-Z0-9](\\.|-|_)?){1,255}(?<!\\.|-|_)\\z",
+              "pattern": "^([a-zA-Z0-9](\\.|-|_)?){1,255}(?<!\\.|-|_)$",
               "type": "string"
             },
             "example": "stable"
@@ -68777,7 +68777,7 @@
             "description": "Helm channel",
             "required": true,
             "schema": {
-              "pattern": "\\A([a-zA-Z0-9](\\.|-|_)?){1,255}(?<!\\.|-|_)\\z",
+              "pattern": "^([a-zA-Z0-9](\\.|-|_)?){1,255}(?<!\\.|-|_)$",
               "type": "string"
             },
             "example": "stable"
@@ -68831,7 +68831,7 @@
             "description": "Helm channel",
             "required": true,
             "schema": {
-              "pattern": "\\A([a-zA-Z0-9](\\.|-|_)?){1,255}(?<!\\.|-|_)\\z",
+              "pattern": "^([a-zA-Z0-9](\\.|-|_)?){1,255}(?<!\\.|-|_)$",
               "type": "string"
             },
             "example": "stable"
@@ -69710,7 +69710,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyB40b053c714d"
+                "$ref": "#/components/schemas/RequestBody240ff1bbe3f5"
               }
             }
           }
@@ -69780,7 +69780,7 @@
             "in": "query",
             "description": "The Debian Codename",
             "schema": {
-              "pattern": "\\A(?i-mx:[a-z0-9][a-z0-9.-]*)\\zi",
+              "pattern": "(?:^(?:[0-9A-Za-z\\u017F\\u212A][\\x2D.0-9A-Za-z\\u017F\\u212A]*)$)",
               "type": "string",
               "nullable": true
             },
@@ -69791,7 +69791,7 @@
             "in": "query",
             "description": "The Debian Suite",
             "schema": {
-              "pattern": "\\A(?i-mx:[a-z0-9][a-z0-9.-]*)\\zi",
+              "pattern": "(?:^(?:[0-9A-Za-z\\u017F\\u212A][\\x2D.0-9A-Za-z\\u017F\\u212A]*)$)",
               "type": "string",
               "nullable": true
             },
@@ -69802,7 +69802,7 @@
             "in": "query",
             "description": "The Debian Origin",
             "schema": {
-              "pattern": "\\A(?i-mx:[a-z0-9][a-z0-9.-]*)\\zi",
+              "pattern": "(?:^(?:[0-9A-Za-z\\u017F\\u212A][\\x2D.0-9A-Za-z\\u017F\\u212A]*)$)",
               "type": "string",
               "nullable": true
             },
@@ -69813,7 +69813,7 @@
             "in": "query",
             "description": "The Debian Label",
             "schema": {
-              "pattern": "\\A(?i-mx:[a-z0-9][a-z0-9.-]*)\\zi",
+              "pattern": "(?:^(?:[0-9A-Za-z\\u017F\\u212A][\\x2D.0-9A-Za-z\\u017F\\u212A]*)$)",
               "type": "string",
               "nullable": true
             },
@@ -69824,7 +69824,7 @@
             "in": "query",
             "description": "The Debian Version",
             "schema": {
-              "pattern": "          \\A(?:\n            (?:([0-9]{1,9}):)?            (?# epoch)\n            ([0-9][0-9a-z\\.+~]*)          (?# version)\n            (-[0-9a-z\\.+~]+){0,14}        (?# -revision)\n            (?<!-)\n            )\\zix",
+              "pattern": "(?:^(?:(?:([0-9]{1,9}):)?([0-9][+.0-9A-Za-z~\\u017F\\u212A]*)(-[+.0-9A-Za-z~\\u017F\\u212A]+){0,14}(?<!-))$)",
               "type": "string",
               "nullable": true
             },
@@ -69925,7 +69925,7 @@
             "description": "The Debian Codename",
             "required": true,
             "schema": {
-              "pattern": "\\A(?i-mx:[a-z0-9][a-z0-9.-]*)\\zi",
+              "pattern": "(?:^(?:[0-9A-Za-z\\u017F\\u212A][\\x2D.0-9A-Za-z\\u017F\\u212A]*)$)",
               "type": "string"
             },
             "example": "sid"
@@ -69975,7 +69975,7 @@
             "description": "The Debian Codename",
             "required": true,
             "schema": {
-              "pattern": "\\A(?i-mx:[a-z0-9][a-z0-9.-]*)\\zi",
+              "pattern": "(?:^(?:[0-9A-Za-z\\u017F\\u212A][\\x2D.0-9A-Za-z\\u017F\\u212A]*)$)",
               "type": "string"
             },
             "example": "sid"
@@ -69985,7 +69985,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyB278d0d4eddc"
+                "$ref": "#/components/schemas/RequestBodyC66551e2db22"
               }
             }
           }
@@ -70034,7 +70034,7 @@
             "description": "The Debian Codename",
             "required": true,
             "schema": {
-              "pattern": "\\A(?i-mx:[a-z0-9][a-z0-9.-]*)\\zi",
+              "pattern": "(?:^(?:[0-9A-Za-z\\u017F\\u212A][\\x2D.0-9A-Za-z\\u017F\\u212A]*)$)",
               "type": "string"
             },
             "example": "sid"
@@ -70044,7 +70044,7 @@
             "in": "query",
             "description": "The Debian Suite",
             "schema": {
-              "pattern": "\\A(?i-mx:[a-z0-9][a-z0-9.-]*)\\zi",
+              "pattern": "(?:^(?:[0-9A-Za-z\\u017F\\u212A][\\x2D.0-9A-Za-z\\u017F\\u212A]*)$)",
               "type": "string",
               "nullable": true
             },
@@ -70055,7 +70055,7 @@
             "in": "query",
             "description": "The Debian Origin",
             "schema": {
-              "pattern": "\\A(?i-mx:[a-z0-9][a-z0-9.-]*)\\zi",
+              "pattern": "(?:^(?:[0-9A-Za-z\\u017F\\u212A][\\x2D.0-9A-Za-z\\u017F\\u212A]*)$)",
               "type": "string",
               "nullable": true
             },
@@ -70066,7 +70066,7 @@
             "in": "query",
             "description": "The Debian Label",
             "schema": {
-              "pattern": "\\A(?i-mx:[a-z0-9][a-z0-9.-]*)\\zi",
+              "pattern": "(?:^(?:[0-9A-Za-z\\u017F\\u212A][\\x2D.0-9A-Za-z\\u017F\\u212A]*)$)",
               "type": "string",
               "nullable": true
             },
@@ -70077,7 +70077,7 @@
             "in": "query",
             "description": "The Debian Version",
             "schema": {
-              "pattern": "          \\A(?:\n            (?:([0-9]{1,9}):)?            (?# epoch)\n            ([0-9][0-9a-z\\.+~]*)          (?# version)\n            (-[0-9a-z\\.+~]+){0,14}        (?# -revision)\n            (?<!-)\n            )\\zix",
+              "pattern": "(?:^(?:(?:([0-9]{1,9}):)?([0-9][+.0-9A-Za-z~\\u017F\\u212A]*)(-[+.0-9A-Za-z~\\u017F\\u212A]+){0,14}(?<!-))$)",
               "type": "string",
               "nullable": true
             },
@@ -70180,7 +70180,7 @@
             "description": "The Debian Codename",
             "required": true,
             "schema": {
-              "pattern": "\\A(?i-mx:[a-z0-9][a-z0-9.-]*)\\zi",
+              "pattern": "(?:^(?:[0-9A-Za-z\\u017F\\u212A][\\x2D.0-9A-Za-z\\u017F\\u212A]*)$)",
               "type": "string"
             },
             "example": "sid"
@@ -75578,7 +75578,7 @@
             "description": "The Debian Codename or Suite",
             "required": true,
             "schema": {
-              "pattern": "\\A(?i-mx:[a-z0-9][a-z0-9.-]*)\\zi",
+              "pattern": "(?:^(?:[0-9A-Za-z\\u017F\\u212A][\\x2D.0-9A-Za-z\\u017F\\u212A]*)$)",
               "type": "string"
             },
             "example": "my-distro"
@@ -75599,7 +75599,7 @@
             "description": "The Debian Source Package Name",
             "required": true,
             "schema": {
-              "pattern": "\\A[a-z0-9][-+\\.a-z0-9]+\\z",
+              "pattern": "^[a-z0-9][\\-+.a-z0-9]+$",
               "type": "string"
             },
             "example": "my-pkg"
@@ -75610,7 +75610,7 @@
             "description": "The Debian Source Package Version",
             "required": true,
             "schema": {
-              "pattern": "          \\A(?:\n            (?:([0-9]{1,9}):)?            (?# epoch)\n            ([0-9][0-9a-z\\.+~]*)          (?# version)\n            (-[0-9a-z\\.+~]+){0,14}        (?# -revision)\n            (?<!-)\n            )\\zix",
+              "pattern": "(?:^(?:(?:([0-9]{1,9}):)?([0-9][+.0-9A-Za-z~\\u017F\\u212A]*)(-[+.0-9A-Za-z~\\u017F\\u212A]+){0,14}(?<!-))$)",
               "type": "string"
             },
             "example": "1.0.0"
@@ -75674,7 +75674,7 @@
             "description": "The Debian Codename or Suite",
             "required": true,
             "schema": {
-              "pattern": "\\A(?i-mx:[a-z0-9][a-z0-9.-]*)\\zi",
+              "pattern": "(?:^(?:[0-9A-Za-z\\u017F\\u212A][\\x2D.0-9A-Za-z\\u017F\\u212A]*)$)",
               "type": "string"
             },
             "example": "my-distro"
@@ -75695,7 +75695,7 @@
             "description": "The Debian Source Package Name",
             "required": true,
             "schema": {
-              "pattern": "\\A[a-z0-9][-+\\.a-z0-9]+\\z",
+              "pattern": "^[a-z0-9][\\-+.a-z0-9]+$",
               "type": "string"
             },
             "example": "my-pkg"
@@ -75706,7 +75706,7 @@
             "description": "The Debian Source Package Version",
             "required": true,
             "schema": {
-              "pattern": "          \\A(?:\n            (?:([0-9]{1,9}):)?            (?# epoch)\n            ([0-9][0-9a-z\\.+~]*)          (?# version)\n            (-[0-9a-z\\.+~]+){0,14}        (?# -revision)\n            (?<!-)\n            )\\zix",
+              "pattern": "(?:^(?:(?:([0-9]{1,9}):)?([0-9][+.0-9A-Za-z~\\u017F\\u212A]*)(-[+.0-9A-Za-z~\\u017F\\u212A]+){0,14}(?<!-))$)",
               "type": "string"
             },
             "example": "1.0.0"
@@ -75770,7 +75770,7 @@
             "description": "The filename",
             "required": true,
             "schema": {
-              "pattern": "{:value=>\\A.*\\.(deb|udeb|ddeb)\\z, :message=>\"Only debs, udebs and ddebs can be directly added to a distribution\"}",
+              "pattern": "^(?:[\\uD800-\\uDBFF][\\uDC00-\\uDFFF]|[^\\n\\uD800-\\uDFFF])*\\.(deb|udeb|ddeb)$",
               "type": "string"
             },
             "example": "example_1.0.0~alpha2_amd64.deb"
@@ -75780,7 +75780,7 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody8c6460519010"
+                "$ref": "#/components/schemas/RequestBodyBf3c60bc1c2e"
               }
             }
           }
@@ -75833,7 +75833,7 @@
             "description": "The filename",
             "required": true,
             "schema": {
-              "pattern": "{:value=>\\A.*\\.(deb|udeb|ddeb)\\z, :message=>\"Only debs, udebs and ddebs can be directly added to a distribution\"}",
+              "pattern": "^(?:[\\uD800-\\uDBFF][\\uDC00-\\uDFFF]|[^\\n\\uD800-\\uDFFF])*\\.(deb|udeb|ddeb)$",
               "type": "string"
             },
             "example": "example_1.0.0~alpha2_amd64.deb"
@@ -75843,7 +75843,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody878426eec0dc"
+                "$ref": "#/components/schemas/RequestBody3fe82b5b04f3"
               }
             }
           }
@@ -84835,8 +84835,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string",
-                  "nullable": true
+                  "type": "string"
                 },
                 {
                   "type": "array",
@@ -84925,8 +84924,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string",
-                  "nullable": true
+                  "type": "string"
                 },
                 {
                   "type": "array",
@@ -85601,7 +85599,7 @@
             "in": "query",
             "description": "The version prefix of runners to return",
             "schema": {
-              "pattern": "^[\\d+.]+",
+              "pattern": "(?<=^|\\n(?!$))[\\d+.]+",
               "type": "string",
               "nullable": true
             },
@@ -85799,7 +85797,7 @@
             "in": "query",
             "description": "The version prefix of runners to return",
             "schema": {
-              "pattern": "^[\\d+.]+",
+              "pattern": "(?<=^|\\n(?!$))[\\d+.]+",
               "type": "string",
               "nullable": true
             },
@@ -86312,7 +86310,7 @@
             "in": "query",
             "description": "The version prefix of runners to return",
             "schema": {
-              "pattern": "^[\\d+.]+",
+              "pattern": "(?<=^|\\n(?!$))[\\d+.]+",
               "type": "string",
               "nullable": true
             },
@@ -86535,7 +86533,7 @@
             "in": "query",
             "description": "The version prefix of runners to return",
             "schema": {
-              "pattern": "^[\\d+.]+",
+              "pattern": "(?<=^|\\n(?!$))[\\d+.]+",
               "type": "string",
               "nullable": true
             },
@@ -88149,7 +88147,7 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody59635af79df9"
+                "$ref": "#/components/schemas/RequestBody3cadcd8792c9"
               }
             }
           }
@@ -88190,7 +88188,7 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody15565b325eb1"
+                "$ref": "#/components/schemas/RequestBody9daa0539fd8e"
               }
             }
           }
@@ -100149,6 +100147,39 @@
           "packages_helm_metadata_caches_oldest_unsynced_time": {
             "type": "string"
           },
+          "vulnerability_archive_export_uploads_count": {
+            "type": "string"
+          },
+          "vulnerability_archive_export_uploads_checksum_total_count": {
+            "type": "string"
+          },
+          "vulnerability_archive_export_uploads_checksummed_count": {
+            "type": "string"
+          },
+          "vulnerability_archive_export_uploads_checksum_failed_count": {
+            "type": "string"
+          },
+          "vulnerability_archive_export_uploads_synced_count": {
+            "type": "string"
+          },
+          "vulnerability_archive_export_uploads_failed_count": {
+            "type": "string"
+          },
+          "vulnerability_archive_export_uploads_registry_count": {
+            "type": "string"
+          },
+          "vulnerability_archive_export_uploads_verification_total_count": {
+            "type": "string"
+          },
+          "vulnerability_archive_export_uploads_verified_count": {
+            "type": "string"
+          },
+          "vulnerability_archive_export_uploads_verification_failed_count": {
+            "type": "string"
+          },
+          "vulnerability_archive_export_uploads_oldest_unsynced_time": {
+            "type": "string"
+          },
           "bulk_import_export_upload_uploads_count": {
             "type": "string"
           },
@@ -100582,6 +100613,12 @@
             "type": "string"
           },
           "packages_helm_metadata_caches_verified_in_percentage": {
+            "type": "string"
+          },
+          "vulnerability_archive_export_uploads_synced_in_percentage": {
+            "type": "string"
+          },
+          "vulnerability_archive_export_uploads_verified_in_percentage": {
             "type": "string"
           },
           "bulk_import_export_upload_uploads_synced_in_percentage": {
@@ -101464,6 +101501,39 @@
           "packages_helm_metadata_caches_oldest_unsynced_time": {
             "type": "string"
           },
+          "vulnerability_archive_export_uploads_count": {
+            "type": "string"
+          },
+          "vulnerability_archive_export_uploads_checksum_total_count": {
+            "type": "string"
+          },
+          "vulnerability_archive_export_uploads_checksummed_count": {
+            "type": "string"
+          },
+          "vulnerability_archive_export_uploads_checksum_failed_count": {
+            "type": "string"
+          },
+          "vulnerability_archive_export_uploads_synced_count": {
+            "type": "string"
+          },
+          "vulnerability_archive_export_uploads_failed_count": {
+            "type": "string"
+          },
+          "vulnerability_archive_export_uploads_registry_count": {
+            "type": "string"
+          },
+          "vulnerability_archive_export_uploads_verification_total_count": {
+            "type": "string"
+          },
+          "vulnerability_archive_export_uploads_verified_count": {
+            "type": "string"
+          },
+          "vulnerability_archive_export_uploads_verification_failed_count": {
+            "type": "string"
+          },
+          "vulnerability_archive_export_uploads_oldest_unsynced_time": {
+            "type": "string"
+          },
           "bulk_import_export_upload_uploads_count": {
             "type": "string"
           },
@@ -101897,6 +101967,12 @@
             "type": "string"
           },
           "packages_helm_metadata_caches_verified_in_percentage": {
+            "type": "string"
+          },
+          "vulnerability_archive_export_uploads_synced_in_percentage": {
+            "type": "string"
+          },
+          "vulnerability_archive_export_uploads_verified_in_percentage": {
             "type": "string"
           },
           "bulk_import_export_upload_uploads_synced_in_percentage": {
@@ -117910,7 +117986,7 @@
           }
         }
       },
-      "RequestBody518c68f555bc": {
+      "RequestBody9983fc9d3604": {
         "required": [
           "project_id",
           "merge_request_iid",
@@ -117931,6 +118007,11 @@
           "review_output": {
             "type": "string",
             "description": "The review output from LLM",
+            "nullable": true
+          },
+          "workflow_id": {
+            "type": "integer",
+            "description": "The ID of the Duo Workflow session",
             "nullable": true
           }
         }
@@ -118173,7 +118254,7 @@
           }
         }
       },
-      "RequestBody3a17126b07bd": {
+      "RequestBodyEc0cc1c37bb8": {
         "required": [
           "event_type",
           "message"
@@ -118200,7 +118281,7 @@
             "nullable": true
           },
           "correlation_id": {
-            "pattern": "\\A[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\\zi",
+            "pattern": "(?:^[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}$)",
             "type": "string",
             "description": "Correlation ID for tracking events",
             "nullable": true
@@ -119595,7 +119676,7 @@
           }
         }
       },
-      "RequestBodyD2d687755fa0": {
+      "RequestBody3a7cdcc6078e": {
         "required": [
           "confidence_score",
           "description"
@@ -119614,7 +119695,7 @@
             "nullable": true
           },
           "origin": {
-            "pattern": "\\A.{1,255}\\z",
+            "pattern": "^(?:[\\uD800-\\uDBFF][\\uDC00-\\uDFFF]|[^\\n\\uD800-\\uDFFF]){1,255}$",
             "type": "string",
             "description": "Origin of the AI detection",
             "nullable": true
@@ -128824,7 +128905,7 @@
           }
         }
       },
-      "RequestBodyF7e232007bcb": {
+      "RequestBody3f47974b9e0f": {
         "required": [
           "content",
           "name"
@@ -128856,7 +128937,7 @@
             "example": "900150983cd24fb0d6963f7d28e17f72"
           },
           "sha256_digest": {
-            "pattern": "\\A[0-9a-f]{64}\\zi",
+            "pattern": "(?:^[0-9A-Fa-f]{64}$)",
             "type": "string",
             "description": "SHA256 checksum of the package",
             "nullable": true,
@@ -134166,35 +134247,35 @@
           }
         }
       },
-      "RequestBodyB40b053c714d": {
+      "RequestBody240ff1bbe3f5": {
         "required": [
           "codename"
         ],
         "type": "object",
         "properties": {
           "codename": {
-            "pattern": "\\A(?i-mx:[a-z0-9][a-z0-9.-]*)\\zi",
+            "pattern": "(?:^(?:[0-9A-Za-z\\u017F\\u212A][\\x2D.0-9A-Za-z\\u017F\\u212A]*)$)",
             "type": "string",
             "description": "The Debian Codename",
             "nullable": true,
             "example": "sid"
           },
           "suite": {
-            "pattern": "\\A(?i-mx:[a-z0-9][a-z0-9.-]*)\\zi",
+            "pattern": "(?:^(?:[0-9A-Za-z\\u017F\\u212A][\\x2D.0-9A-Za-z\\u017F\\u212A]*)$)",
             "type": "string",
             "description": "The Debian Suite",
             "nullable": true,
             "example": "unstable"
           },
           "origin": {
-            "pattern": "\\A(?i-mx:[a-z0-9][a-z0-9.-]*)\\zi",
+            "pattern": "(?:^(?:[0-9A-Za-z\\u017F\\u212A][\\x2D.0-9A-Za-z\\u017F\\u212A]*)$)",
             "type": "string",
             "description": "The Debian Origin",
             "nullable": true,
             "example": "Grep"
           },
           "label": {
-            "pattern": "\\A(?i-mx:[a-z0-9][a-z0-9.-]*)\\zi",
+            "pattern": "(?:^(?:[0-9A-Za-z\\u017F\\u212A][\\x2D.0-9A-Za-z\\u017F\\u212A]*)$)",
             "type": "string",
             "description": "The Debian Label",
             "nullable": true,
@@ -134230,25 +134311,25 @@
           }
         }
       },
-      "RequestBodyB278d0d4eddc": {
+      "RequestBodyC66551e2db22": {
         "type": "object",
         "properties": {
           "suite": {
-            "pattern": "\\A(?i-mx:[a-z0-9][a-z0-9.-]*)\\zi",
+            "pattern": "(?:^(?:[0-9A-Za-z\\u017F\\u212A][\\x2D.0-9A-Za-z\\u017F\\u212A]*)$)",
             "type": "string",
             "description": "The Debian Suite",
             "nullable": true,
             "example": "unstable"
           },
           "origin": {
-            "pattern": "\\A(?i-mx:[a-z0-9][a-z0-9.-]*)\\zi",
+            "pattern": "(?:^(?:[0-9A-Za-z\\u017F\\u212A][\\x2D.0-9A-Za-z\\u017F\\u212A]*)$)",
             "type": "string",
             "description": "The Debian Origin",
             "nullable": true,
             "example": "Grep"
           },
           "label": {
-            "pattern": "\\A(?i-mx:[a-z0-9][a-z0-9.-]*)\\zi",
+            "pattern": "(?:^(?:[0-9A-Za-z\\u017F\\u212A][\\x2D.0-9A-Za-z\\u017F\\u212A]*)$)",
             "type": "string",
             "description": "The Debian Label",
             "nullable": true,
@@ -141388,7 +141469,7 @@
           }
         }
       },
-      "RequestBody8c6460519010": {
+      "RequestBodyBf3c60bc1c2e": {
         "required": [
           "file",
           "component"
@@ -141402,33 +141483,33 @@
             "nullable": true
           },
           "distribution": {
-            "pattern": "\\A(?i-mx:[a-z0-9][a-z0-9.-]*)\\zi",
+            "pattern": "(?:^(?:[0-9A-Za-z\\u017F\\u212A][\\x2D.0-9A-Za-z\\u017F\\u212A]*)$)",
             "type": "string",
             "description": "The Debian Codename or Suite",
             "nullable": true
           },
           "component": {
-            "pattern": "\\A(?i-mx:[a-z0-9][a-z0-9.-]*)\\z",
+            "pattern": "^(?:[0-9A-Za-z\\u017F\\u212A][\\x2D.0-9A-Za-z\\u017F\\u212A]*)$",
             "type": "string",
             "description": "The Debian Component",
             "nullable": true
           }
         }
       },
-      "RequestBody878426eec0dc": {
+      "RequestBody3fe82b5b04f3": {
         "required": [
           "component"
         ],
         "type": "object",
         "properties": {
           "distribution": {
-            "pattern": "\\A(?i-mx:[a-z0-9][a-z0-9.-]*)\\zi",
+            "pattern": "(?:^(?:[0-9A-Za-z\\u017F\\u212A][\\x2D.0-9A-Za-z\\u017F\\u212A]*)$)",
             "type": "string",
             "description": "The Debian Codename or Suite",
             "nullable": true
           },
           "component": {
-            "pattern": "\\A(?i-mx:[a-z0-9][a-z0-9.-]*)\\z",
+            "pattern": "^(?:[0-9A-Za-z\\u017F\\u212A][\\x2D.0-9A-Za-z\\u017F\\u212A]*)$",
             "type": "string",
             "description": "The Debian Component",
             "nullable": true
@@ -142731,7 +142812,7 @@
           }
         }
       },
-      "RequestBody59635af79df9": {
+      "RequestBody3cadcd8792c9": {
         "required": [
           "name",
           "path"
@@ -143109,6 +143190,21 @@
                 "description": "Prompt injection protection level. One of `no_checks`, `log_only` or `interrupt`",
                 "nullable": true
               },
+              "include_recommended_allowed": {
+                "type": "boolean",
+                "description": "Whether to include recommended domains in the network access allowlist",
+                "nullable": true
+              },
+              "allow_all_unix_sockets": {
+                "type": "boolean",
+                "description": "Whether to allow all Unix sockets for network access",
+                "nullable": true
+              },
+              "allow_project_extension": {
+                "type": "boolean",
+                "description": "Whether to allow projects to extend the network access domain allowlist",
+                "nullable": true
+              },
               "minimum_access_level_execute": {
                 "enum": [
                   10,
@@ -143162,7 +143258,7 @@
           }
         }
       },
-      "RequestBody15565b325eb1": {
+      "RequestBody9daa0539fd8e": {
         "type": "object",
         "properties": {
           "name": {
@@ -143535,6 +143631,21 @@
                 "type": "string",
                 "additionalProperties": false,
                 "description": "Prompt injection protection level. One of `no_checks`, `log_only` or `interrupt`",
+                "nullable": true
+              },
+              "include_recommended_allowed": {
+                "type": "boolean",
+                "description": "Whether to include recommended domains in the network access allowlist",
+                "nullable": true
+              },
+              "allow_all_unix_sockets": {
+                "type": "boolean",
+                "description": "Whether to allow all Unix sockets for network access",
+                "nullable": true
+              },
+              "allow_project_extension": {
+                "type": "boolean",
+                "description": "Whether to allow projects to extend the network access domain allowlist",
                 "nullable": true
               },
               "minimum_access_level_execute": {
