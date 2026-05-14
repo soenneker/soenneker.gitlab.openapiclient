@@ -21307,7 +21307,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody02a2c6e64d09"
+                "$ref": "#/components/schemas/RequestBodyE58b9549fa19"
               }
             }
           }
@@ -62303,7 +62303,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody355dfbda9d0e"
+                "$ref": "#/components/schemas/RequestBody1978107ed956"
               }
             }
           }
@@ -64670,7 +64670,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody355dfbda9d0e"
+                "$ref": "#/components/schemas/RequestBody1978107ed956"
               }
             }
           }
@@ -67037,7 +67037,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody355dfbda9d0e"
+                "$ref": "#/components/schemas/RequestBody1978107ed956"
               }
             }
           }
@@ -88147,7 +88147,7 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody3cadcd8792c9"
+                "$ref": "#/components/schemas/RequestBody5f076d7d8e3f"
               }
             }
           }
@@ -88188,7 +88188,7 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody9daa0539fd8e"
+                "$ref": "#/components/schemas/RequestBodyA9a057b49e5d"
               }
             }
           }
@@ -100213,6 +100213,39 @@
           "bulk_import_export_upload_uploads_oldest_unsynced_time": {
             "type": "string"
           },
+          "project_import_export_relation_export_upload_uploads_count": {
+            "type": "string"
+          },
+          "project_import_export_relation_export_upload_uploads_checksum_total_count": {
+            "type": "string"
+          },
+          "project_import_export_relation_export_upload_uploads_checksummed_count": {
+            "type": "string"
+          },
+          "project_import_export_relation_export_upload_uploads_checksum_failed_count": {
+            "type": "string"
+          },
+          "project_import_export_relation_export_upload_uploads_synced_count": {
+            "type": "string"
+          },
+          "project_import_export_relation_export_upload_uploads_failed_count": {
+            "type": "string"
+          },
+          "project_import_export_relation_export_upload_uploads_registry_count": {
+            "type": "string"
+          },
+          "project_import_export_relation_export_upload_uploads_verification_total_count": {
+            "type": "string"
+          },
+          "project_import_export_relation_export_upload_uploads_verified_count": {
+            "type": "string"
+          },
+          "project_import_export_relation_export_upload_uploads_verification_failed_count": {
+            "type": "string"
+          },
+          "project_import_export_relation_export_upload_uploads_oldest_unsynced_time": {
+            "type": "string"
+          },
           "ai_vectorizable_file_uploads_count": {
             "type": "string"
           },
@@ -100625,6 +100658,12 @@
             "type": "string"
           },
           "bulk_import_export_upload_uploads_verified_in_percentage": {
+            "type": "string"
+          },
+          "project_import_export_relation_export_upload_uploads_synced_in_percentage": {
+            "type": "string"
+          },
+          "project_import_export_relation_export_upload_uploads_verified_in_percentage": {
             "type": "string"
           },
           "ai_vectorizable_file_uploads_synced_in_percentage": {
@@ -101567,6 +101606,39 @@
           "bulk_import_export_upload_uploads_oldest_unsynced_time": {
             "type": "string"
           },
+          "project_import_export_relation_export_upload_uploads_count": {
+            "type": "string"
+          },
+          "project_import_export_relation_export_upload_uploads_checksum_total_count": {
+            "type": "string"
+          },
+          "project_import_export_relation_export_upload_uploads_checksummed_count": {
+            "type": "string"
+          },
+          "project_import_export_relation_export_upload_uploads_checksum_failed_count": {
+            "type": "string"
+          },
+          "project_import_export_relation_export_upload_uploads_synced_count": {
+            "type": "string"
+          },
+          "project_import_export_relation_export_upload_uploads_failed_count": {
+            "type": "string"
+          },
+          "project_import_export_relation_export_upload_uploads_registry_count": {
+            "type": "string"
+          },
+          "project_import_export_relation_export_upload_uploads_verification_total_count": {
+            "type": "string"
+          },
+          "project_import_export_relation_export_upload_uploads_verified_count": {
+            "type": "string"
+          },
+          "project_import_export_relation_export_upload_uploads_verification_failed_count": {
+            "type": "string"
+          },
+          "project_import_export_relation_export_upload_uploads_oldest_unsynced_time": {
+            "type": "string"
+          },
           "ai_vectorizable_file_uploads_count": {
             "type": "string"
           },
@@ -101979,6 +102051,12 @@
             "type": "string"
           },
           "bulk_import_export_upload_uploads_verified_in_percentage": {
+            "type": "string"
+          },
+          "project_import_export_relation_export_upload_uploads_synced_in_percentage": {
+            "type": "string"
+          },
+          "project_import_export_relation_export_upload_uploads_verified_in_percentage": {
             "type": "string"
           },
           "ai_vectorizable_file_uploads_synced_in_percentage": {
@@ -107536,6 +107614,12 @@
               "$ref": "#/components/schemas/APIEntitiesElasticIndexSetting"
             },
             "description": "Elasticsearch index settings."
+          },
+          "built_in_project_templates_enabled": {
+            "type": "boolean"
+          },
+          "lock_built_in_project_templates_enabled": {
+            "type": "boolean"
           }
         }
       },
@@ -123500,7 +123584,7 @@
           }
         }
       },
-      "RequestBody02a2c6e64d09": {
+      "RequestBodyE58b9549fa19": {
         "type": "object",
         "properties": {
           "admin_mode": {
@@ -124966,6 +125050,16 @@
               }
             },
             "description": "AI entity access rules for controlling Duo feature access",
+            "nullable": true
+          },
+          "built_in_project_templates_enabled": {
+            "type": "boolean",
+            "description": "Enable built-in project templates for project creation",
+            "nullable": true
+          },
+          "lock_built_in_project_templates_enabled": {
+            "type": "boolean",
+            "description": "Enforce the built-in project templates setting for all groups",
             "nullable": true
           },
           "allow_local_requests_from_web_hooks_and_services": {
@@ -137337,7 +137431,7 @@
           }
         }
       },
-      "RequestBody355dfbda9d0e": {
+      "RequestBody1978107ed956": {
         "required": [
           "url",
           "password"
@@ -137394,7 +137488,7 @@
             "items": {
               "type": "string"
             },
-            "description": "Keys of Jira projects. When `issues_enabled` is `true`, this setting specifies which Jira projects to view issues from in GitLab.",
+            "description": "Keys of Jira projects to display. When `issues_enabled` is `true`, this setting filters which Jira projects are shown in GitLab. It does not restrict the API token's access.",
             "nullable": true
           },
           "vulnerabilities_enabled": {
@@ -142812,7 +142906,7 @@
           }
         }
       },
-      "RequestBody3cadcd8792c9": {
+      "RequestBody5f076d7d8e3f": {
         "required": [
           "name",
           "path"
@@ -143174,6 +143268,11 @@
                 "description": "Enable AI usage data collection for this namespace",
                 "nullable": true
               },
+              "ai_catalog_restricted_to_group_hierarchy": {
+                "type": "boolean",
+                "description": "Restrict the AI Catalog to items within this top-level group hierarchy",
+                "nullable": true
+              },
               "foundational_agents_default_enabled": {
                 "type": "boolean",
                 "description": "Whether new foundational agents are enabled by default",
@@ -143258,7 +143357,7 @@
           }
         }
       },
-      "RequestBody9daa0539fd8e": {
+      "RequestBodyA9a057b49e5d": {
         "type": "object",
         "properties": {
           "name": {
@@ -143615,6 +143714,11 @@
               "ai_usage_data_collection_enabled": {
                 "type": "boolean",
                 "description": "Enable AI usage data collection for this namespace",
+                "nullable": true
+              },
+              "ai_catalog_restricted_to_group_hierarchy": {
+                "type": "boolean",
+                "description": "Restrict the AI Catalog to items within this top-level group hierarchy",
                 "nullable": true
               },
               "foundational_agents_default_enabled": {

@@ -334,6 +334,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string BackgroundOperationsMaxJobs { get; set; }
 #endif
+        /// <summary>The built_in_project_templates_enabled property</summary>
+        public bool? BuiltInProjectTemplatesEnabled { get; set; }
         /// <summary>The bulk_import_concurrent_pipeline_batch_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -2452,6 +2454,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string LocalMarkdownVersion { get; set; }
 #endif
+        /// <summary>The lock_built_in_project_templates_enabled property</summary>
+        public bool? LockBuiltInProjectTemplatesEnabled { get; set; }
         /// <summary>The lock_duo_custom_agents_enabled property</summary>
         public bool? LockDuoCustomAgentsEnabled { get; set; }
         /// <summary>The lock_duo_custom_flows_enabled property</summary>
@@ -4963,6 +4967,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "autocomplete_users_unauthenticated_limit", n => { AutocompleteUsersUnauthenticatedLimit = n.GetStringValue(); } },
                 { "automatic_purchased_storage_allocation", n => { AutomaticPurchasedStorageAllocation = n.GetStringValue(); } },
                 { "background_operations_max_jobs", n => { BackgroundOperationsMaxJobs = n.GetStringValue(); } },
+                { "built_in_project_templates_enabled", n => { BuiltInProjectTemplatesEnabled = n.GetBoolValue(); } },
                 { "bulk_import_concurrent_pipeline_batch_limit", n => { BulkImportConcurrentPipelineBatchLimit = n.GetStringValue(); } },
                 { "bulk_import_enabled", n => { BulkImportEnabled = n.GetStringValue(); } },
                 { "bulk_import_max_download_file_size", n => { BulkImportMaxDownloadFileSize = n.GetStringValue(); } },
@@ -5230,6 +5235,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "kroki_formats", n => { KrokiFormats = n.GetStringValue(); } },
                 { "kroki_url", n => { KrokiUrl = n.GetStringValue(); } },
                 { "local_markdown_version", n => { LocalMarkdownVersion = n.GetStringValue(); } },
+                { "lock_built_in_project_templates_enabled", n => { LockBuiltInProjectTemplatesEnabled = n.GetBoolValue(); } },
                 { "lock_duo_custom_agents_enabled", n => { LockDuoCustomAgentsEnabled = n.GetBoolValue(); } },
                 { "lock_duo_custom_flows_enabled", n => { LockDuoCustomFlowsEnabled = n.GetBoolValue(); } },
                 { "lock_duo_external_agents_enabled", n => { LockDuoExternalAgentsEnabled = n.GetBoolValue(); } },
@@ -5587,6 +5593,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("auto_duo_code_review_enabled", AutoDuoCodeReviewEnabled);
             writer.WriteStringValue("automatic_purchased_storage_allocation", AutomaticPurchasedStorageAllocation);
             writer.WriteStringValue("background_operations_max_jobs", BackgroundOperationsMaxJobs);
+            writer.WriteBoolValue("built_in_project_templates_enabled", BuiltInProjectTemplatesEnabled);
             writer.WriteStringValue("bulk_import_concurrent_pipeline_batch_limit", BulkImportConcurrentPipelineBatchLimit);
             writer.WriteStringValue("bulk_import_enabled", BulkImportEnabled);
             writer.WriteStringValue("bulk_import_max_download_file_size", BulkImportMaxDownloadFileSize);
@@ -5854,6 +5861,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("kroki_formats", KrokiFormats);
             writer.WriteStringValue("kroki_url", KrokiUrl);
             writer.WriteStringValue("local_markdown_version", LocalMarkdownVersion);
+            writer.WriteBoolValue("lock_built_in_project_templates_enabled", LockBuiltInProjectTemplatesEnabled);
             writer.WriteBoolValue("lock_duo_custom_agents_enabled", LockDuoCustomAgentsEnabled);
             writer.WriteBoolValue("lock_duo_custom_flows_enabled", LockDuoCustomFlowsEnabled);
             writer.WriteBoolValue("lock_duo_external_agents_enabled", LockDuoExternalAgentsEnabled);
