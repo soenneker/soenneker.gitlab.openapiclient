@@ -46,7 +46,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item
         {
         }
         /// <summary>
-        /// Delete a release. Deleting a release doesn&apos;t delete the associated tag. Maintainer level access to the project is required to delete a release. This feature was introduced in GitLab 11.7.
+        /// Delete a release. Deleting a release doesn&apos;t delete the associated tag. Requires at least the Developer role for the project. This feature was introduced in GitLab 11.7.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -101,7 +101,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesRelease>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesRelease.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Delete a release. Deleting a release doesn&apos;t delete the associated tag. Maintainer level access to the project is required to delete a release. This feature was introduced in GitLab 11.7.
+        /// Delete a release. Deleting a release doesn&apos;t delete the associated tag. Requires at least the Developer role for the project. This feature was introduced in GitLab 11.7.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

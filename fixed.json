@@ -1312,7 +1312,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody39c987677cfb"
+                "$ref": "#/components/schemas/RequestBodyCe398b1ce62b"
               }
             }
           }
@@ -21307,7 +21307,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyE58b9549fa19"
+                "$ref": "#/components/schemas/RequestBodyA1ab34e8cb8e"
               }
             }
           }
@@ -38889,7 +38889,7 @@
           "Releases"
         ],
         "summary": "Delete a release",
-        "description": "Delete a release. Deleting a release doesn't delete the associated tag. Maintainer level access to the project is required to delete a release. This feature was introduced in GitLab 11.7.",
+        "description": "Delete a release. Deleting a release doesn't delete the associated tag. Requires at least the Developer role for the project. This feature was introduced in GitLab 11.7.",
         "operationId": "deleteApiV4ProjectsIdReleasesTagName",
         "parameters": [
           {
@@ -88188,7 +88188,7 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyA9a057b49e5d"
+                "$ref": "#/components/schemas/RequestBodyA035b1aeb571"
               }
             }
           }
@@ -97155,6 +97155,12 @@
           },
           "duo_namespace_access_rules": {
             "type": "string"
+          },
+          "built_in_project_templates_enabled": {
+            "type": "boolean"
+          },
+          "lock_built_in_project_templates_enabled": {
+            "type": "boolean"
           }
         }
       },
@@ -106993,6 +106999,9 @@
           "helm_max_packages_count": {
             "type": "string"
           },
+          "mcp_server_enabled": {
+            "type": "string"
+          },
           "active_context_pause_indexing": {
             "type": "string"
           },
@@ -107227,6 +107236,9 @@
           "duo_agent_platform_enabled": {
             "type": "string"
           },
+          "duo_cli_enabled": {
+            "type": "string"
+          },
           "duo_namespace_access_rules": {
             "type": "string"
           },
@@ -107387,6 +107399,9 @@
             "type": "string"
           },
           "security_scan_stale_after_days": {
+            "type": "string"
+          },
+          "vac_project_ids_raw": {
             "type": "string"
           },
           "enable_member_promotion_management": {
@@ -116636,6 +116651,12 @@
           "duo_namespace_access_rules": {
             "type": "string"
           },
+          "built_in_project_templates_enabled": {
+            "type": "boolean"
+          },
+          "lock_built_in_project_templates_enabled": {
+            "type": "boolean"
+          },
           "shared_with_groups": {
             "type": "array",
             "items": {
@@ -118413,9 +118434,15 @@
           }
         }
       },
-      "RequestBody39c987677cfb": {
+      "RequestBodyCe398b1ce62b": {
         "type": "object",
         "properties": {
+          "requires_duo_cli_enabled": {
+            "type": "boolean",
+            "description": "Whether this workflow requires Duo CLI to be enabled",
+            "nullable": true,
+            "example": true
+          },
           "project_id": {
             "type": "string",
             "description": "The ID or path of the workflow project",
@@ -123584,7 +123611,7 @@
           }
         }
       },
-      "RequestBodyE58b9549fa19": {
+      "RequestBodyA1ab34e8cb8e": {
         "type": "object",
         "properties": {
           "admin_mode": {
@@ -126018,6 +126045,10 @@
             "type": "string",
             "nullable": true
           },
+          "mcp_server_enabled": {
+            "type": "string",
+            "nullable": true
+          },
           "allow_all_integrations": {
             "type": "string",
             "nullable": true
@@ -126238,6 +126269,10 @@
             "type": "string",
             "nullable": true
           },
+          "duo_cli_enabled": {
+            "type": "string",
+            "nullable": true
+          },
           "duo_remote_flows_availability": {
             "type": "string",
             "nullable": true
@@ -126427,6 +126462,10 @@
             "nullable": true
           },
           "security_mr_report_cache_lifetime_minutes": {
+            "type": "string",
+            "nullable": true
+          },
+          "vac_project_ids_raw": {
             "type": "string",
             "nullable": true
           },
@@ -143357,7 +143396,7 @@
           }
         }
       },
-      "RequestBodyA9a057b49e5d": {
+      "RequestBodyA035b1aeb571": {
         "type": "object",
         "properties": {
           "name": {
@@ -143986,6 +144025,16 @@
               }
             },
             "description": "AI entity access rules for controlling Duo feature access",
+            "nullable": true
+          },
+          "built_in_project_templates_enabled": {
+            "type": "boolean",
+            "description": "Enable built-in project templates for project creation",
+            "nullable": true
+          },
+          "lock_built_in_project_templates_enabled": {
+            "type": "boolean",
+            "description": "Enforce the built-in project templates setting for all subgroups",
             "nullable": true
           }
         }

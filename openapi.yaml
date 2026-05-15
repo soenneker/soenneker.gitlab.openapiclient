@@ -1451,7 +1451,7 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/RequestBody_39c987677cfb"
+              "$ref": "#/components/schemas/RequestBody_ce398b1ce62b"
       x-gitlab-lifecycle: experiment
   "/api/v4/ai/duo_workflows/workflows/agent_privileges":
     get:
@@ -15951,7 +15951,7 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/RequestBody_e58b9549fa19"
+              "$ref": "#/components/schemas/RequestBody_a1ab34e8cb8e"
   "/api/v4/service_accounts":
     post:
       operationId: postApiV4ServiceAccounts
@@ -28411,8 +28411,8 @@ paths:
       operationId: deleteApiV4ProjectsIdReleasesTagName
       summary: Delete a release
       description: Delete a release. Deleting a release doesn't delete the associated
-        tag. Maintainer level access to the project is required to delete a release.
-        This feature was introduced in GitLab 11.7.
+        tag. Requires at least the Developer role for the project. This feature was
+        introduced in GitLab 11.7.
       tags:
       - Releases
       responses:
@@ -64575,7 +64575,7 @@ paths:
         content:
           multipart/form-data:
             schema:
-              "$ref": "#/components/schemas/RequestBody_a9a057b49e5d"
+              "$ref": "#/components/schemas/RequestBody_a035b1aeb571"
     get:
       operationId: getApiV4GroupsId
       summary: Get a single group, with containing projects.
@@ -70994,6 +70994,10 @@ components:
           type: string
         duo_namespace_access_rules:
           type: string
+        built_in_project_templates_enabled:
+          type: boolean
+        lock_built_in_project_templates_enabled:
+          type: boolean
     APIEntitiesMergeRequestApprovalRuleSourceRule:
       type: object
       properties:
@@ -77811,6 +77815,8 @@ components:
           type: string
         helm_max_packages_count:
           type: string
+        mcp_server_enabled:
+          type: string
         active_context_pause_indexing:
           type: string
         allow_all_integrations:
@@ -77967,6 +77973,8 @@ components:
           type: string
         duo_agent_platform_enabled:
           type: string
+        duo_cli_enabled:
+          type: string
         duo_namespace_access_rules:
           type: string
         duo_remote_flows_enabled:
@@ -78074,6 +78082,8 @@ components:
         security_mr_report_cache_lifetime_minutes:
           type: string
         security_scan_stale_after_days:
+          type: string
+        vac_project_ids_raw:
           type: string
         enable_member_promotion_management:
           type: string
@@ -84709,6 +84719,10 @@ components:
           type: string
         duo_namespace_access_rules:
           type: string
+        built_in_project_templates_enabled:
+          type: boolean
+        lock_built_in_project_templates_enabled:
+          type: boolean
         shared_with_groups:
           type: array
           items:
@@ -86040,9 +86054,14 @@ components:
           description: The ID or path of the project
           example: '1'
           nullable: true
-    RequestBody_39c987677cfb:
+    RequestBody_ce398b1ce62b:
       type: object
       properties:
+        requires_duo_cli_enabled:
+          type: boolean
+          description: Whether this workflow requires Duo CLI to be enabled
+          example: true
+          nullable: true
         project_id:
           type: string
           description: The ID or path of the workflow project
@@ -90190,7 +90209,7 @@ components:
           nullable: true
       required:
       - avatar
-    RequestBody_e58b9549fa19:
+    RequestBody_a1ab34e8cb8e:
       type: object
       properties:
         admin_mode:
@@ -92177,6 +92196,9 @@ components:
         helm_max_packages_count:
           type: string
           nullable: true
+        mcp_server_enabled:
+          type: string
+          nullable: true
         allow_all_integrations:
           type: string
           nullable: true
@@ -92342,6 +92364,9 @@ components:
         duo_agent_platform_enabled:
           type: string
           nullable: true
+        duo_cli_enabled:
+          type: string
+          nullable: true
         duo_remote_flows_availability:
           type: string
           nullable: true
@@ -92484,6 +92509,9 @@ components:
           type: string
           nullable: true
         security_mr_report_cache_lifetime_minutes:
+          type: string
+          nullable: true
+        vac_project_ids_raw:
           type: string
           nullable: true
         enable_member_promotion_management:
@@ -106064,7 +106092,7 @@ components:
       required:
       - name
       - path
-    RequestBody_a9a057b49e5d:
+    RequestBody_a035b1aeb571:
       type: object
       properties:
         name:
@@ -106573,6 +106601,14 @@ components:
                 nullable: true
             required:
             - features
+          nullable: true
+        built_in_project_templates_enabled:
+          type: boolean
+          description: Enable built-in project templates for project creation
+          nullable: true
+        lock_built_in_project_templates_enabled:
+          type: boolean
+          description: Enforce the built-in project templates setting for all subgroups
           nullable: true
     RequestBody_885d0044fcba:
       type: object

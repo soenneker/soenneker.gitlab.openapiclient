@@ -48,6 +48,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string AvatarUrl { get; set; }
 #endif
+        /// <summary>The built_in_project_templates_enabled property</summary>
+        public bool? BuiltInProjectTemplatesEnabled { get; set; }
         /// <summary>The created_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -164,6 +166,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>The lfs_enabled property</summary>
         public bool? LfsEnabled { get; set; }
+        /// <summary>The lock_built_in_project_templates_enabled property</summary>
+        public bool? LockBuiltInProjectTemplatesEnabled { get; set; }
         /// <summary>The lock_duo_features_enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -348,6 +352,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "auto_devops_enabled", n => { AutoDevopsEnabled = n.GetStringValue(); } },
                 { "auto_duo_code_review_enabled", n => { AutoDuoCodeReviewEnabled = n.GetStringValue(); } },
                 { "avatar_url", n => { AvatarUrl = n.GetStringValue(); } },
+                { "built_in_project_templates_enabled", n => { BuiltInProjectTemplatesEnabled = n.GetBoolValue(); } },
                 { "created_at", n => { CreatedAt = n.GetStringValue(); } },
                 { "custom_attributes", n => { CustomAttributes = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCustomAttribute>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCustomAttribute.CreateFromDiscriminatorValue); } },
                 { "default_branch", n => { DefaultBranch = n.GetStringValue(); } },
@@ -367,6 +372,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "ldap_cn", n => { LdapCn = n.GetStringValue(); } },
                 { "ldap_group_links", n => { LdapGroupLinks = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesLdapGroupLink>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesLdapGroupLink.CreateFromDiscriminatorValue); } },
                 { "lfs_enabled", n => { LfsEnabled = n.GetBoolValue(); } },
+                { "lock_built_in_project_templates_enabled", n => { LockBuiltInProjectTemplatesEnabled = n.GetBoolValue(); } },
                 { "lock_duo_features_enabled", n => { LockDuoFeaturesEnabled = n.GetStringValue(); } },
                 { "lock_math_rendering_limits_enabled", n => { LockMathRenderingLimitsEnabled = n.GetBoolValue(); } },
                 { "marked_for_deletion_on", n => { MarkedForDeletionOn = n.GetStringValue(); } },
@@ -407,6 +413,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("auto_devops_enabled", AutoDevopsEnabled);
             writer.WriteStringValue("auto_duo_code_review_enabled", AutoDuoCodeReviewEnabled);
             writer.WriteStringValue("avatar_url", AvatarUrl);
+            writer.WriteBoolValue("built_in_project_templates_enabled", BuiltInProjectTemplatesEnabled);
             writer.WriteStringValue("created_at", CreatedAt);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCustomAttribute>("custom_attributes", CustomAttributes);
             writer.WriteStringValue("default_branch", DefaultBranch);
@@ -426,6 +433,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("ldap_cn", LdapCn);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesLdapGroupLink>("ldap_group_links", LdapGroupLinks);
             writer.WriteBoolValue("lfs_enabled", LfsEnabled);
+            writer.WriteBoolValue("lock_built_in_project_templates_enabled", LockBuiltInProjectTemplatesEnabled);
             writer.WriteStringValue("lock_duo_features_enabled", LockDuoFeaturesEnabled);
             writer.WriteBoolValue("lock_math_rendering_limits_enabled", LockMathRenderingLimitsEnabled);
             writer.WriteStringValue("marked_for_deletion_on", MarkedForDeletionOn);

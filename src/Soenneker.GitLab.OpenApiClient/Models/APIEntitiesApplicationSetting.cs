@@ -1088,6 +1088,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string DuoChatExpirationDays { get; set; }
 #endif
+        /// <summary>The duo_cli_enabled property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DuoCliEnabled { get; set; }
+#nullable restore
+#else
+        public string DuoCliEnabled { get; set; }
+#endif
         /// <summary>The duo_custom_agents_availability property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -2765,6 +2773,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #nullable restore
 #else
         public string MaxYamlSizeBytes { get; set; }
+#endif
+        /// <summary>The mcp_server_enabled property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? McpServerEnabled { get; set; }
+#nullable restore
+#else
+        public string McpServerEnabled { get; set; }
 #endif
         /// <summary>The members_delete_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -4678,6 +4694,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string UserStarredProjectsApiLimit { get; set; }
 #endif
+        /// <summary>The vac_project_ids_raw property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? VacProjectIdsRaw { get; set; }
+#nullable restore
+#else
+        public string VacProjectIdsRaw { get; set; }
+#endif
         /// <summary>The valid_runner_registrars property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -5062,6 +5086,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "duo_availability", n => { DuoAvailability = n.GetStringValue(); } },
                 { "duo_chat_expiration_column", n => { DuoChatExpirationColumn = n.GetStringValue(); } },
                 { "duo_chat_expiration_days", n => { DuoChatExpirationDays = n.GetStringValue(); } },
+                { "duo_cli_enabled", n => { DuoCliEnabled = n.GetStringValue(); } },
                 { "duo_custom_agents_availability", n => { DuoCustomAgentsAvailability = n.GetStringValue(); } },
                 { "duo_custom_agents_enabled", n => { DuoCustomAgentsEnabled = n.GetBoolValue(); } },
                 { "duo_custom_flows_availability", n => { DuoCustomFlowsAvailability = n.GetStringValue(); } },
@@ -5277,6 +5302,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "max_terraform_state_size_bytes", n => { MaxTerraformStateSizeBytes = n.GetStringValue(); } },
                 { "max_yaml_depth", n => { MaxYamlDepth = n.GetStringValue(); } },
                 { "max_yaml_size_bytes", n => { MaxYamlSizeBytes = n.GetStringValue(); } },
+                { "mcp_server_enabled", n => { McpServerEnabled = n.GetStringValue(); } },
                 { "members_delete_limit", n => { MembersDeleteLimit = n.GetStringValue(); } },
                 { "metrics_method_call_threshold", n => { MetricsMethodCallThreshold = n.GetStringValue(); } },
                 { "minimum_language_server_version", n => { MinimumLanguageServerVersion = n.GetStringValue(); } },
@@ -5516,6 +5542,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "users_api_limit_status", n => { UsersApiLimitStatus = n.GetStringValue(); } },
                 { "users_get_by_id_limit", n => { UsersGetByIdLimit = n.GetStringValue(); } },
                 { "users_get_by_id_limit_allowlist_raw", n => { UsersGetByIdLimitAllowlistRaw = n.GetStringValue(); } },
+                { "vac_project_ids_raw", n => { VacProjectIdsRaw = n.GetStringValue(); } },
                 { "valid_runner_registrars", n => { ValidRunnerRegistrars = n.GetStringValue(); } },
                 { "version_check_enabled", n => { VersionCheckEnabled = n.GetStringValue(); } },
                 { "virtual_registries_endpoints_api_limit", n => { VirtualRegistriesEndpointsApiLimit = n.GetStringValue(); } },
@@ -5688,6 +5715,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("duo_availability", DuoAvailability);
             writer.WriteStringValue("duo_chat_expiration_column", DuoChatExpirationColumn);
             writer.WriteStringValue("duo_chat_expiration_days", DuoChatExpirationDays);
+            writer.WriteStringValue("duo_cli_enabled", DuoCliEnabled);
             writer.WriteStringValue("duo_custom_agents_availability", DuoCustomAgentsAvailability);
             writer.WriteBoolValue("duo_custom_agents_enabled", DuoCustomAgentsEnabled);
             writer.WriteStringValue("duo_custom_flows_availability", DuoCustomFlowsAvailability);
@@ -5903,6 +5931,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("max_terraform_state_size_bytes", MaxTerraformStateSizeBytes);
             writer.WriteStringValue("max_yaml_depth", MaxYamlDepth);
             writer.WriteStringValue("max_yaml_size_bytes", MaxYamlSizeBytes);
+            writer.WriteStringValue("mcp_server_enabled", McpServerEnabled);
             writer.WriteStringValue("members_delete_limit", MembersDeleteLimit);
             writer.WriteStringValue("metrics_method_call_threshold", MetricsMethodCallThreshold);
             writer.WriteStringValue("minimum_language_server_version", MinimumLanguageServerVersion);
@@ -6142,6 +6171,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("users_get_by_id_limit_allowlist_raw", UsersGetByIdLimitAllowlistRaw);
             writer.WriteStringValue("user_show_add_ssh_key_message", UserShowAddSshKeyMessage);
             writer.WriteStringValue("user_starred_projects_api_limit", UserStarredProjectsApiLimit);
+            writer.WriteStringValue("vac_project_ids_raw", VacProjectIdsRaw);
             writer.WriteStringValue("valid_runner_registrars", ValidRunnerRegistrars);
             writer.WriteStringValue("version_check_enabled", VersionCheckEnabled);
             writer.WriteStringValue("virtual_registries_endpoints_api_limit", VirtualRegistriesEndpointsApiLimit);
