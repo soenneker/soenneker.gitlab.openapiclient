@@ -14706,7 +14706,8 @@
         "tags": [
           "Search"
         ],
-        "summary": "Lists all advanced search migrations",
+        "summary": "List all advanced search migrations",
+        "description": "Lists all advanced search migrations for the GitLab instance.",
         "operationId": "getApiV4AdminSearchMigrations",
         "responses": {
           "200": {
@@ -14729,7 +14730,8 @@
         "tags": [
           "Search"
         ],
-        "summary": "Get a migration by version or name",
+        "summary": "Retrieve an advanced search migration",
+        "description": "Retrieves a specified advanced search migration by migration version or name.",
         "operationId": "getApiV4AdminSearchMigrationsMigrationId",
         "parameters": [
           {
@@ -35073,8 +35075,8 @@
         "tags": [
           "Search"
         ],
-        "summary": "Search on GitLab",
-        "description": "This feature was introduced in GitLab 10.5.",
+        "summary": "Search an instance",
+        "description": "Searches for a term across the entire GitLab instance. The response depends on the requested scope.",
         "operationId": "getApiV4Search",
         "parameters": [
           {
@@ -96034,16 +96036,16 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer"
           },
           "download_url": {
             "type": "string"
           },
           "throttled": {
-            "type": "string"
+            "type": "boolean"
           },
           "project_throttling_resets_in": {
-            "type": "string"
+            "type": "integer"
           },
           "advisory_db_state": {
             "type": "string"
@@ -96658,25 +96660,25 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer"
           },
           "user_id": {
-            "type": "string"
+            "type": "integer"
           },
           "group_id": {
-            "type": "string"
+            "type": "integer"
           },
           "access_level": {
-            "type": "string"
+            "type": "integer"
           },
           "access_level_description": {
             "type": "string"
           },
           "required_approvals": {
-            "type": "string"
+            "type": "integer"
           },
           "group_inheritance_type": {
-            "type": "string"
+            "type": "integer"
           }
         }
       },
@@ -97232,16 +97234,17 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer"
           },
           "created_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           "project_id": {
-            "type": "string"
+            "type": "integer"
           },
           "group_id": {
-            "type": "string"
+            "type": "integer"
           },
           "format": {
             "type": "string"
@@ -97250,19 +97253,22 @@
             "type": "string"
           },
           "started_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           "finished_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           "send_email": {
-            "type": "string"
+            "type": "boolean"
           },
           "expires_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           "_links": {
-            "type": "string"
+            "type": "object"
           }
         }
       },
@@ -97270,13 +97276,14 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer"
           },
           "created_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           "project_id": {
-            "type": "string"
+            "type": "integer"
           },
           "format": {
             "type": "string"
@@ -97285,13 +97292,15 @@
             "type": "string"
           },
           "started_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           "finished_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           "_links": {
-            "type": "string"
+            "type": "object"
           }
         }
       },
@@ -97448,7 +97457,7 @@
             "example": 2
           },
           "vulnerability_link_id": {
-            "type": "string"
+            "type": "integer"
           },
           "vulnerability_link_type": {
             "type": "string"
@@ -97493,7 +97502,7 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer"
           },
           "title": {
             "type": "string"
@@ -97514,55 +97523,63 @@
             "$ref": "#/components/schemas/APIEntitiesProjectIdentity"
           },
           "finding": {
-            "type": "string"
+            "type": "object"
           },
           "resolved_on_default_branch": {
-            "type": "string"
+            "type": "boolean"
           },
           "project_default_branch": {
             "type": "string"
           },
           "author_id": {
-            "type": "string"
+            "type": "integer"
           },
           "resolved_by_id": {
-            "type": "string"
+            "type": "integer"
           },
           "dismissed_by_id": {
-            "type": "string"
+            "type": "integer"
           },
           "confirmed_by_id": {
-            "type": "string"
+            "type": "integer"
           },
           "created_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           "updated_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           "resolved_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           "dismissed_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           "confirmed_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           "last_edited_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           "start_date": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           "updated_by_id": {
-            "type": "string"
+            "type": "integer"
           },
           "last_edited_by_id": {
-            "type": "string"
+            "type": "integer"
           },
           "due_date": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           }
         }
       },
@@ -97690,7 +97707,7 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer"
           },
           "vulnerability": {
             "$ref": "#/components/schemas/APIEntitiesVulnerability"
@@ -98159,28 +98176,28 @@
             "$ref": "#/components/schemas/APIEntitiesApproverGroup"
           },
           "approvals_before_merge": {
-            "type": "string"
+            "type": "integer"
           },
           "reset_approvals_on_push": {
-            "type": "string"
+            "type": "boolean"
           },
           "selective_code_owner_removals": {
-            "type": "string"
+            "type": "boolean"
           },
           "disable_overriding_approvers_per_merge_request": {
-            "type": "string"
+            "type": "boolean"
           },
           "merge_requests_author_approval": {
-            "type": "string"
+            "type": "boolean"
           },
           "merge_requests_disable_committers_approval": {
-            "type": "string"
+            "type": "boolean"
           },
           "require_password_to_approve": {
-            "type": "string"
+            "type": "boolean"
           },
           "require_reauthentication_to_approve": {
-            "type": "string"
+            "type": "boolean"
           }
         }
       },
@@ -98188,7 +98205,7 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer"
           },
           "name": {
             "type": "string"
@@ -103125,22 +103142,31 @@
             "$ref": "#/components/schemas/APIEntitiesProtectedBranch"
           },
           "applies_to_all_protected_branches": {
-            "type": "string"
+            "type": "boolean"
           },
           "approvers": {
             "$ref": "#/components/schemas/APIEntitiesUserBasic"
           },
           "scanners": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "vulnerabilities_allowed": {
-            "type": "string"
+            "type": "integer"
           },
           "severity_levels": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "vulnerability_states": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       },
@@ -103151,7 +103177,7 @@
             "$ref": "#/components/schemas/APIEntitiesProjectApprovalSettingRule"
           },
           "fallback_approvals_required": {
-            "type": "string"
+            "type": "integer"
           }
         }
       },
@@ -103682,7 +103708,7 @@
             "$ref": "#/components/schemas/APIEntitiesProtectedBranch"
           },
           "applies_to_all_protected_branches": {
-            "type": "string"
+            "type": "boolean"
           }
         }
       },
@@ -103733,7 +103759,7 @@
             "$ref": "#/components/schemas/APIEntitiesProtectedBranch"
           },
           "applies_to_all_protected_branches": {
-            "type": "string"
+            "type": "boolean"
           }
         }
       },
@@ -103911,13 +103937,13 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer"
           },
           "author_id": {
-            "type": "string"
+            "type": "integer"
           },
           "entity_id": {
-            "type": "string"
+            "type": "integer"
           },
           "entity_type": {
             "type": "string"
@@ -103926,10 +103952,11 @@
             "type": "string"
           },
           "details": {
-            "type": "string"
+            "type": "object"
           },
           "created_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           }
         }
       },
@@ -112738,10 +112765,16 @@
             }
           },
           "approvers": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
           },
           "approver_groups": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
           },
           "user_has_approved": {
             "type": "boolean"
@@ -114801,25 +114834,25 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer"
           },
           "user_id": {
-            "type": "string"
+            "type": "integer"
           },
           "group_id": {
-            "type": "string"
+            "type": "integer"
           },
           "access_level": {
-            "type": "string"
+            "type": "integer"
           },
           "access_level_description": {
             "type": "string"
           },
           "required_approvals": {
-            "type": "string"
+            "type": "integer"
           },
           "group_inheritance_type": {
-            "type": "string"
+            "type": "integer"
           },
           "deployment_approvals": {
             "$ref": "#/components/schemas/APIEntitiesDeploymentsApproval"

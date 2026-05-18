@@ -15,13 +15,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The approvals_before_merge property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ApprovalsBeforeMerge { get; set; }
-#nullable restore
-#else
-        public string ApprovalsBeforeMerge { get; set; }
-#endif
+        public int? ApprovalsBeforeMerge { get; set; }
         /// <summary>The approver_groups property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -39,61 +33,19 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesApprover Approvers { get; set; }
 #endif
         /// <summary>The disable_overriding_approvers_per_merge_request property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? DisableOverridingApproversPerMergeRequest { get; set; }
-#nullable restore
-#else
-        public string DisableOverridingApproversPerMergeRequest { get; set; }
-#endif
+        public bool? DisableOverridingApproversPerMergeRequest { get; set; }
         /// <summary>The merge_requests_author_approval property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? MergeRequestsAuthorApproval { get; set; }
-#nullable restore
-#else
-        public string MergeRequestsAuthorApproval { get; set; }
-#endif
+        public bool? MergeRequestsAuthorApproval { get; set; }
         /// <summary>The merge_requests_disable_committers_approval property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? MergeRequestsDisableCommittersApproval { get; set; }
-#nullable restore
-#else
-        public string MergeRequestsDisableCommittersApproval { get; set; }
-#endif
+        public bool? MergeRequestsDisableCommittersApproval { get; set; }
         /// <summary>The require_password_to_approve property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? RequirePasswordToApprove { get; set; }
-#nullable restore
-#else
-        public string RequirePasswordToApprove { get; set; }
-#endif
+        public bool? RequirePasswordToApprove { get; set; }
         /// <summary>The require_reauthentication_to_approve property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? RequireReauthenticationToApprove { get; set; }
-#nullable restore
-#else
-        public string RequireReauthenticationToApprove { get; set; }
-#endif
+        public bool? RequireReauthenticationToApprove { get; set; }
         /// <summary>The reset_approvals_on_push property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ResetApprovalsOnPush { get; set; }
-#nullable restore
-#else
-        public string ResetApprovalsOnPush { get; set; }
-#endif
+        public bool? ResetApprovalsOnPush { get; set; }
         /// <summary>The selective_code_owner_removals property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? SelectiveCodeOwnerRemovals { get; set; }
-#nullable restore
-#else
-        public string SelectiveCodeOwnerRemovals { get; set; }
-#endif
+        public bool? SelectiveCodeOwnerRemovals { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesApprovalSettings"/> and sets the default values.
         /// </summary>
@@ -119,16 +71,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "approvals_before_merge", n => { ApprovalsBeforeMerge = n.GetStringValue(); } },
+                { "approvals_before_merge", n => { ApprovalsBeforeMerge = n.GetIntValue(); } },
                 { "approver_groups", n => { ApproverGroups = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesApproverGroup>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesApproverGroup.CreateFromDiscriminatorValue); } },
                 { "approvers", n => { Approvers = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesApprover>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesApprover.CreateFromDiscriminatorValue); } },
-                { "disable_overriding_approvers_per_merge_request", n => { DisableOverridingApproversPerMergeRequest = n.GetStringValue(); } },
-                { "merge_requests_author_approval", n => { MergeRequestsAuthorApproval = n.GetStringValue(); } },
-                { "merge_requests_disable_committers_approval", n => { MergeRequestsDisableCommittersApproval = n.GetStringValue(); } },
-                { "require_password_to_approve", n => { RequirePasswordToApprove = n.GetStringValue(); } },
-                { "require_reauthentication_to_approve", n => { RequireReauthenticationToApprove = n.GetStringValue(); } },
-                { "reset_approvals_on_push", n => { ResetApprovalsOnPush = n.GetStringValue(); } },
-                { "selective_code_owner_removals", n => { SelectiveCodeOwnerRemovals = n.GetStringValue(); } },
+                { "disable_overriding_approvers_per_merge_request", n => { DisableOverridingApproversPerMergeRequest = n.GetBoolValue(); } },
+                { "merge_requests_author_approval", n => { MergeRequestsAuthorApproval = n.GetBoolValue(); } },
+                { "merge_requests_disable_committers_approval", n => { MergeRequestsDisableCommittersApproval = n.GetBoolValue(); } },
+                { "require_password_to_approve", n => { RequirePasswordToApprove = n.GetBoolValue(); } },
+                { "require_reauthentication_to_approve", n => { RequireReauthenticationToApprove = n.GetBoolValue(); } },
+                { "reset_approvals_on_push", n => { ResetApprovalsOnPush = n.GetBoolValue(); } },
+                { "selective_code_owner_removals", n => { SelectiveCodeOwnerRemovals = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -138,16 +90,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("approvals_before_merge", ApprovalsBeforeMerge);
+            writer.WriteIntValue("approvals_before_merge", ApprovalsBeforeMerge);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesApproverGroup>("approver_groups", ApproverGroups);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesApprover>("approvers", Approvers);
-            writer.WriteStringValue("disable_overriding_approvers_per_merge_request", DisableOverridingApproversPerMergeRequest);
-            writer.WriteStringValue("merge_requests_author_approval", MergeRequestsAuthorApproval);
-            writer.WriteStringValue("merge_requests_disable_committers_approval", MergeRequestsDisableCommittersApproval);
-            writer.WriteStringValue("require_password_to_approve", RequirePasswordToApprove);
-            writer.WriteStringValue("require_reauthentication_to_approve", RequireReauthenticationToApprove);
-            writer.WriteStringValue("reset_approvals_on_push", ResetApprovalsOnPush);
-            writer.WriteStringValue("selective_code_owner_removals", SelectiveCodeOwnerRemovals);
+            writer.WriteBoolValue("disable_overriding_approvers_per_merge_request", DisableOverridingApproversPerMergeRequest);
+            writer.WriteBoolValue("merge_requests_author_approval", MergeRequestsAuthorApproval);
+            writer.WriteBoolValue("merge_requests_disable_committers_approval", MergeRequestsDisableCommittersApproval);
+            writer.WriteBoolValue("require_password_to_approve", RequirePasswordToApprove);
+            writer.WriteBoolValue("require_reauthentication_to_approve", RequireReauthenticationToApprove);
+            writer.WriteBoolValue("reset_approvals_on_push", ResetApprovalsOnPush);
+            writer.WriteBoolValue("selective_code_owner_removals", SelectiveCodeOwnerRemovals);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

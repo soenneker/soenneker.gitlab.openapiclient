@@ -15,13 +15,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The fallback_approvals_required property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? FallbackApprovalsRequired { get; set; }
-#nullable restore
-#else
-        public string FallbackApprovalsRequired { get; set; }
-#endif
+        public int? FallbackApprovalsRequired { get; set; }
         /// <summary>The rules property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -55,7 +49,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "fallback_approvals_required", n => { FallbackApprovalsRequired = n.GetStringValue(); } },
+                { "fallback_approvals_required", n => { FallbackApprovalsRequired = n.GetIntValue(); } },
                 { "rules", n => { Rules = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProjectApprovalSettingRule>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProjectApprovalSettingRule.CreateFromDiscriminatorValue); } },
             };
         }
@@ -66,7 +60,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("fallback_approvals_required", FallbackApprovalsRequired);
+            writer.WriteIntValue("fallback_approvals_required", FallbackApprovalsRequired);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProjectApprovalSettingRule>("rules", Rules);
             writer.WriteAdditionalData(AdditionalData);
         }

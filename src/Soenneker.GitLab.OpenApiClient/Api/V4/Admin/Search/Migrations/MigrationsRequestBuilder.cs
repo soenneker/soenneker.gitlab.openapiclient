@@ -46,7 +46,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Search.Migrations
         {
         }
         /// <summary>
-        /// Lists all advanced search migrations
+        /// Lists all advanced search migrations for the GitLab instance.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Search.Migrations.MigrationsGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -64,7 +64,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Search.Migrations
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Search.Migrations.MigrationsGetResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Search.Migrations.MigrationsGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Lists all advanced search migrations
+        /// Lists all advanced search migrations for the GitLab instance.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

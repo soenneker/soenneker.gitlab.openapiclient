@@ -15,13 +15,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The applies_to_all_protected_branches property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? AppliesToAllProtectedBranches { get; set; }
-#nullable restore
-#else
-        public string AppliesToAllProtectedBranches { get; set; }
-#endif
+        public bool? AppliesToAllProtectedBranches { get; set; }
         /// <summary>The approvals_required property</summary>
         public int? ApprovalsRequired { get; set; }
         /// <summary>The approvers property</summary>
@@ -79,18 +73,18 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The scanners property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Scanners { get; set; }
+        public List<string>? Scanners { get; set; }
 #nullable restore
 #else
-        public string Scanners { get; set; }
+        public List<string> Scanners { get; set; }
 #endif
         /// <summary>The severity_levels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SeverityLevels { get; set; }
+        public List<string>? SeverityLevels { get; set; }
 #nullable restore
 #else
-        public string SeverityLevels { get; set; }
+        public List<string> SeverityLevels { get; set; }
 #endif
         /// <summary>The users property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -101,20 +95,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public List<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic> Users { get; set; }
 #endif
         /// <summary>The vulnerabilities_allowed property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? VulnerabilitiesAllowed { get; set; }
-#nullable restore
-#else
-        public string VulnerabilitiesAllowed { get; set; }
-#endif
+        public int? VulnerabilitiesAllowed { get; set; }
         /// <summary>The vulnerability_states property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VulnerabilityStates { get; set; }
+        public List<string>? VulnerabilityStates { get; set; }
 #nullable restore
 #else
-        public string VulnerabilityStates { get; set; }
+        public List<string> VulnerabilityStates { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProjectApprovalSettingRule"/> and sets the default values.
@@ -141,7 +129,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "applies_to_all_protected_branches", n => { AppliesToAllProtectedBranches = n.GetStringValue(); } },
+                { "applies_to_all_protected_branches", n => { AppliesToAllProtectedBranches = n.GetBoolValue(); } },
                 { "approvals_required", n => { ApprovalsRequired = n.GetIntValue(); } },
                 { "approvers", n => { Approvers = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic.CreateFromDiscriminatorValue); } },
                 { "contains_hidden_groups", n => { ContainsHiddenGroups = n.GetBoolValue(); } },
@@ -151,11 +139,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "protected_branches", n => { ProtectedBranches = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProtectedBranch>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProtectedBranch.CreateFromDiscriminatorValue); } },
                 { "report_type", n => { ReportType = n.GetStringValue(); } },
                 { "rule_type", n => { RuleType = n.GetStringValue(); } },
-                { "scanners", n => { Scanners = n.GetStringValue(); } },
-                { "severity_levels", n => { SeverityLevels = n.GetStringValue(); } },
+                { "scanners", n => { Scanners = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "severity_levels", n => { SeverityLevels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "users", n => { Users = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "vulnerabilities_allowed", n => { VulnerabilitiesAllowed = n.GetStringValue(); } },
-                { "vulnerability_states", n => { VulnerabilityStates = n.GetStringValue(); } },
+                { "vulnerabilities_allowed", n => { VulnerabilitiesAllowed = n.GetIntValue(); } },
+                { "vulnerability_states", n => { VulnerabilityStates = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -165,7 +153,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("applies_to_all_protected_branches", AppliesToAllProtectedBranches);
+            writer.WriteBoolValue("applies_to_all_protected_branches", AppliesToAllProtectedBranches);
             writer.WriteIntValue("approvals_required", ApprovalsRequired);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>("approvers", Approvers);
             writer.WriteBoolValue("contains_hidden_groups", ContainsHiddenGroups);
@@ -175,11 +163,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProtectedBranch>("protected_branches", ProtectedBranches);
             writer.WriteStringValue("report_type", ReportType);
             writer.WriteStringValue("rule_type", RuleType);
-            writer.WriteStringValue("scanners", Scanners);
-            writer.WriteStringValue("severity_levels", SeverityLevels);
+            writer.WriteCollectionOfPrimitiveValues<string>("scanners", Scanners);
+            writer.WriteCollectionOfPrimitiveValues<string>("severity_levels", SeverityLevels);
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>("users", Users);
-            writer.WriteStringValue("vulnerabilities_allowed", VulnerabilitiesAllowed);
-            writer.WriteStringValue("vulnerability_states", VulnerabilityStates);
+            writer.WriteIntValue("vulnerabilities_allowed", VulnerabilitiesAllowed);
+            writer.WriteCollectionOfPrimitiveValues<string>("vulnerability_states", VulnerabilityStates);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

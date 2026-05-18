@@ -15,37 +15,19 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The author_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? AuthorId { get; set; }
-#nullable restore
-#else
-        public string AuthorId { get; set; }
-#endif
+        public int? AuthorId { get; set; }
         /// <summary>The created_at property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? CreatedAt { get; set; }
-#nullable restore
-#else
-        public string CreatedAt { get; set; }
-#endif
+        public DateTimeOffset? CreatedAt { get; set; }
         /// <summary>The details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Details { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAuditEvent_details? Details { get; set; }
 #nullable restore
 #else
-        public string Details { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAuditEvent_details Details { get; set; }
 #endif
         /// <summary>The entity_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? EntityId { get; set; }
-#nullable restore
-#else
-        public string EntityId { get; set; }
-#endif
+        public int? EntityId { get; set; }
         /// <summary>The entity_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -63,13 +45,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string EventName { get; set; }
 #endif
         /// <summary>The id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get; set; }
-#nullable restore
-#else
-        public string Id { get; set; }
-#endif
+        public int? Id { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAuditEvent"/> and sets the default values.
         /// </summary>
@@ -95,13 +71,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "author_id", n => { AuthorId = n.GetStringValue(); } },
-                { "created_at", n => { CreatedAt = n.GetStringValue(); } },
-                { "details", n => { Details = n.GetStringValue(); } },
-                { "entity_id", n => { EntityId = n.GetStringValue(); } },
+                { "author_id", n => { AuthorId = n.GetIntValue(); } },
+                { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
+                { "details", n => { Details = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAuditEvent_details>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAuditEvent_details.CreateFromDiscriminatorValue); } },
+                { "entity_id", n => { EntityId = n.GetIntValue(); } },
                 { "entity_type", n => { EntityType = n.GetStringValue(); } },
                 { "event_name", n => { EventName = n.GetStringValue(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
+                { "id", n => { Id = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -111,13 +87,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("author_id", AuthorId);
-            writer.WriteStringValue("created_at", CreatedAt);
-            writer.WriteStringValue("details", Details);
-            writer.WriteStringValue("entity_id", EntityId);
+            writer.WriteIntValue("author_id", AuthorId);
+            writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAuditEvent_details>("details", Details);
+            writer.WriteIntValue("entity_id", EntityId);
             writer.WriteStringValue("entity_type", EntityType);
             writer.WriteStringValue("event_name", EventName);
-            writer.WriteStringValue("id", Id);
+            writer.WriteIntValue("id", Id);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

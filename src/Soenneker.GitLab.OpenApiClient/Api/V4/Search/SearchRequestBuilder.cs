@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Search
         {
         }
         /// <summary>
-        /// This feature was introduced in GitLab 10.5.
+        /// Searches for a term across the entire GitLab instance. The response depends on the requested scope.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Search.SearchGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Search
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Search.SearchGetResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Search.SearchGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 10.5.
+        /// Searches for a term across the entire GitLab instance. The response depends on the requested scope.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -79,7 +79,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Search
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Search.SearchRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 10.5.
+        /// Searches for a term across the entire GitLab instance. The response depends on the requested scope.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class SearchRequestBuilderGetQueryParameters 

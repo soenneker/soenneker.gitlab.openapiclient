@@ -13,13 +13,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning restore CS1591
     {
         /// <summary>The access_level property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? AccessLevel { get; set; }
-#nullable restore
-#else
-        public string AccessLevel { get; set; }
-#endif
+        public int? AccessLevel { get; set; }
         /// <summary>The access_level_description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -39,45 +33,15 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDeploymentsApproval DeploymentApprovals { get; set; }
 #endif
         /// <summary>The group_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? GroupId { get; set; }
-#nullable restore
-#else
-        public string GroupId { get; set; }
-#endif
+        public int? GroupId { get; set; }
         /// <summary>The group_inheritance_type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? GroupInheritanceType { get; set; }
-#nullable restore
-#else
-        public string GroupInheritanceType { get; set; }
-#endif
+        public int? GroupInheritanceType { get; set; }
         /// <summary>The id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get; set; }
-#nullable restore
-#else
-        public string Id { get; set; }
-#endif
+        public int? Id { get; set; }
         /// <summary>The required_approvals property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? RequiredApprovals { get; set; }
-#nullable restore
-#else
-        public string RequiredApprovals { get; set; }
-#endif
+        public int? RequiredApprovals { get; set; }
         /// <summary>The user_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? UserId { get; set; }
-#nullable restore
-#else
-        public string UserId { get; set; }
-#endif
+        public int? UserId { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProtectedEnvironmentsApprovalRuleForSummary"/> and sets the default values.
         /// </summary>
@@ -103,14 +67,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "access_level", n => { AccessLevel = n.GetStringValue(); } },
+                { "access_level", n => { AccessLevel = n.GetIntValue(); } },
                 { "access_level_description", n => { AccessLevelDescription = n.GetStringValue(); } },
                 { "deployment_approvals", n => { DeploymentApprovals = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDeploymentsApproval>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDeploymentsApproval.CreateFromDiscriminatorValue); } },
-                { "group_id", n => { GroupId = n.GetStringValue(); } },
-                { "group_inheritance_type", n => { GroupInheritanceType = n.GetStringValue(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
-                { "required_approvals", n => { RequiredApprovals = n.GetStringValue(); } },
-                { "user_id", n => { UserId = n.GetStringValue(); } },
+                { "group_id", n => { GroupId = n.GetIntValue(); } },
+                { "group_inheritance_type", n => { GroupInheritanceType = n.GetIntValue(); } },
+                { "id", n => { Id = n.GetIntValue(); } },
+                { "required_approvals", n => { RequiredApprovals = n.GetIntValue(); } },
+                { "user_id", n => { UserId = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -120,14 +84,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("access_level", AccessLevel);
+            writer.WriteIntValue("access_level", AccessLevel);
             writer.WriteStringValue("access_level_description", AccessLevelDescription);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDeploymentsApproval>("deployment_approvals", DeploymentApprovals);
-            writer.WriteStringValue("group_id", GroupId);
-            writer.WriteStringValue("group_inheritance_type", GroupInheritanceType);
-            writer.WriteStringValue("id", Id);
-            writer.WriteStringValue("required_approvals", RequiredApprovals);
-            writer.WriteStringValue("user_id", UserId);
+            writer.WriteIntValue("group_id", GroupId);
+            writer.WriteIntValue("group_inheritance_type", GroupInheritanceType);
+            writer.WriteIntValue("id", Id);
+            writer.WriteIntValue("required_approvals", RequiredApprovals);
+            writer.WriteIntValue("user_id", UserId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

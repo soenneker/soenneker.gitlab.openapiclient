@@ -15,13 +15,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The applies_to_all_protected_branches property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? AppliesToAllProtectedBranches { get; set; }
-#nullable restore
-#else
-        public string AppliesToAllProtectedBranches { get; set; }
-#endif
+        public bool? AppliesToAllProtectedBranches { get; set; }
         /// <summary>The approvals_required property</summary>
         public int? ApprovalsRequired { get; set; }
         /// <summary>The contains_hidden_groups property</summary>
@@ -109,7 +103,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "applies_to_all_protected_branches", n => { AppliesToAllProtectedBranches = n.GetStringValue(); } },
+                { "applies_to_all_protected_branches", n => { AppliesToAllProtectedBranches = n.GetBoolValue(); } },
                 { "approvals_required", n => { ApprovalsRequired = n.GetIntValue(); } },
                 { "contains_hidden_groups", n => { ContainsHiddenGroups = n.GetBoolValue(); } },
                 { "eligible_approvers", n => { EligibleApprovers = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -129,7 +123,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("applies_to_all_protected_branches", AppliesToAllProtectedBranches);
+            writer.WriteBoolValue("applies_to_all_protected_branches", AppliesToAllProtectedBranches);
             writer.WriteIntValue("approvals_required", ApprovalsRequired);
             writer.WriteBoolValue("contains_hidden_groups", ContainsHiddenGroups);
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>("eligible_approvers", EligibleApprovers);
