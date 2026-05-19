@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Code_suggestions.Direct_access
         {
         }
         /// <summary>
-        /// Get connection details to access AI gateway directly to generate code suggestions
+        /// Retrieves user-specific connection details which can be used by IDEs or clients to send `completion` requests to Code Suggestions directly through the AI Gateway.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Code_suggestions.Direct_access.Direct_accessPostResponse"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Code_suggestions.Direct_access
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Code_suggestions.Direct_access.Direct_accessPostResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Code_suggestions.Direct_access.Direct_accessPostResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get connection details to access AI gateway directly to generate code suggestions
+        /// Retrieves user-specific connection details which can be used by IDEs or clients to send `completion` requests to Code Suggestions directly through the AI Gateway.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

@@ -387,8 +387,8 @@
         "tags": [
           "GitLab Duo"
         ],
-        "summary": "Get chat completions",
-        "description": "Generates chat completions using GitLab Duo",
+        "summary": "Generate a Chat response",
+        "description": "Generates a response for a GitLab Duo Chat question.",
         "operationId": "postApiV4ChatCompletions",
         "requestBody": {
           "content": {
@@ -417,7 +417,8 @@
     },
     "/api/v4/code_suggestions/completions": {
       "post": {
-        "summary": "Generate code completion suggestions",
+        "summary": "Generate code completions",
+        "description": "Generates code completions. Uses the AI abstraction layer to generate code completions. Requests to this endpoint are proxied to the AI Gateway.",
         "operationId": "postApiV4CodeSuggestionsCompletions",
         "requestBody": {
           "content": {
@@ -446,7 +447,8 @@
     },
     "/api/v4/code_suggestions/direct_access": {
       "post": {
-        "summary": "Get connection details to access AI gateway directly to generate code suggestions",
+        "summary": "Retrieve direct connection details for the AI Gateway",
+        "description": "Retrieves user-specific connection details which can be used by IDEs or clients to send `completion` requests to Code Suggestions directly through the AI Gateway.",
         "operationId": "postApiV4CodeSuggestionsDirectAccess",
         "requestBody": {
           "content": {
@@ -475,7 +477,8 @@
     },
     "/api/v4/code_suggestions/enabled": {
       "post": {
-        "summary": "Code suggestions enabled for a project",
+        "summary": "Validate status of Code Suggestions",
+        "description": "Validates the status Code Suggestions for a specified project. This checks if the project has `code_suggestions` enabled or if an ancestor group has the Code Suggestions add-on enabled.",
         "operationId": "postApiV4CodeSuggestionsEnabled",
         "requestBody": {
           "content": {
@@ -504,7 +507,8 @@
     },
     "/api/v4/code_suggestions/connection_details": {
       "post": {
-        "summary": "Get details of the GitLab instance the user is connected to",
+        "summary": "Retrieve connection details",
+        "description": "Retrieves user-specific connection details which can be used by IDEs or clients for telemetry, including an instance-specific application ID, application access token, and clickhouse data plane URL.",
         "operationId": "postApiV4CodeSuggestionsConnectionDetails",
         "responses": {
           "201": {
@@ -1306,7 +1310,8 @@
         "tags": [
           "GitLab Duo workflows"
         ],
-        "summary": "Create workflow persistence",
+        "summary": "Create a flow",
+        "description": "Creates and starts a flow.",
         "operationId": "postApiV4AiDuoWorkflowsWorkflows",
         "requestBody": {
           "content": {
@@ -1338,7 +1343,8 @@
         "tags": [
           "GitLab Duo workflows"
         ],
-        "summary": "List all agent privileges and descriptions",
+        "summary": "List all agent privileges",
+        "description": "Lists all available agent privileges with their IDs, names, descriptions, and whether each is enabled by default. This endpoint has no supported attributes.",
         "operationId": "getApiV4AiDuoWorkflowsWorkflowsAgentPrivileges",
         "responses": {
           "200": {
@@ -21309,7 +21315,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyA1ab34e8cb8e"
+                "$ref": "#/components/schemas/RequestBodyBc3c2d755ba2"
               }
             }
           }
@@ -53016,7 +53022,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody6dfbbd1de69a"
+                "$ref": "#/components/schemas/RequestBodyB3701b73191b"
               }
             }
           }
@@ -53199,7 +53205,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody745a46e17871"
+                "$ref": "#/components/schemas/RequestBodyC7d3e0984a3f"
               }
             }
           }
@@ -59384,7 +59390,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody826ae92cf3be"
+                "$ref": "#/components/schemas/RequestBody9b0ee174f73a"
               }
             }
           }
@@ -59936,7 +59942,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody0d4da68f991a"
+                "$ref": "#/components/schemas/RequestBody96918c611839"
               }
             }
           }
@@ -100236,6 +100242,39 @@
           "vulnerability_export_uploads_oldest_unsynced_time": {
             "type": "string"
           },
+          "user_permission_export_upload_uploads_count": {
+            "type": "string"
+          },
+          "user_permission_export_upload_uploads_checksum_total_count": {
+            "type": "string"
+          },
+          "user_permission_export_upload_uploads_checksummed_count": {
+            "type": "string"
+          },
+          "user_permission_export_upload_uploads_checksum_failed_count": {
+            "type": "string"
+          },
+          "user_permission_export_upload_uploads_synced_count": {
+            "type": "string"
+          },
+          "user_permission_export_upload_uploads_failed_count": {
+            "type": "string"
+          },
+          "user_permission_export_upload_uploads_registry_count": {
+            "type": "string"
+          },
+          "user_permission_export_upload_uploads_verification_total_count": {
+            "type": "string"
+          },
+          "user_permission_export_upload_uploads_verified_count": {
+            "type": "string"
+          },
+          "user_permission_export_upload_uploads_verification_failed_count": {
+            "type": "string"
+          },
+          "user_permission_export_upload_uploads_oldest_unsynced_time": {
+            "type": "string"
+          },
           "bulk_import_export_upload_uploads_count": {
             "type": "string"
           },
@@ -100714,6 +100753,12 @@
             "type": "string"
           },
           "vulnerability_export_uploads_verified_in_percentage": {
+            "type": "string"
+          },
+          "user_permission_export_upload_uploads_synced_in_percentage": {
+            "type": "string"
+          },
+          "user_permission_export_upload_uploads_verified_in_percentage": {
             "type": "string"
           },
           "bulk_import_export_upload_uploads_synced_in_percentage": {
@@ -101668,6 +101713,39 @@
           "vulnerability_export_uploads_oldest_unsynced_time": {
             "type": "string"
           },
+          "user_permission_export_upload_uploads_count": {
+            "type": "string"
+          },
+          "user_permission_export_upload_uploads_checksum_total_count": {
+            "type": "string"
+          },
+          "user_permission_export_upload_uploads_checksummed_count": {
+            "type": "string"
+          },
+          "user_permission_export_upload_uploads_checksum_failed_count": {
+            "type": "string"
+          },
+          "user_permission_export_upload_uploads_synced_count": {
+            "type": "string"
+          },
+          "user_permission_export_upload_uploads_failed_count": {
+            "type": "string"
+          },
+          "user_permission_export_upload_uploads_registry_count": {
+            "type": "string"
+          },
+          "user_permission_export_upload_uploads_verification_total_count": {
+            "type": "string"
+          },
+          "user_permission_export_upload_uploads_verified_count": {
+            "type": "string"
+          },
+          "user_permission_export_upload_uploads_verification_failed_count": {
+            "type": "string"
+          },
+          "user_permission_export_upload_uploads_oldest_unsynced_time": {
+            "type": "string"
+          },
           "bulk_import_export_upload_uploads_count": {
             "type": "string"
           },
@@ -102146,6 +102224,12 @@
             "type": "string"
           },
           "vulnerability_export_uploads_verified_in_percentage": {
+            "type": "string"
+          },
+          "user_permission_export_upload_uploads_synced_in_percentage": {
+            "type": "string"
+          },
+          "user_permission_export_upload_uploads_verified_in_percentage": {
             "type": "string"
           },
           "bulk_import_export_upload_uploads_synced_in_percentage": {
@@ -107343,6 +107427,9 @@
           },
           "duo_cli_enabled": {
             "type": "string"
+          },
+          "ai_audit_events_streaming_enabled": {
+            "type": "boolean"
           },
           "duo_namespace_access_rules": {
             "type": "string"
@@ -123722,7 +123809,7 @@
           }
         }
       },
-      "RequestBodyA1ab34e8cb8e": {
+      "RequestBodyBc3c2d755ba2": {
         "type": "object",
         "properties": {
           "admin_mode": {
@@ -126381,6 +126468,10 @@
             "nullable": true
           },
           "duo_cli_enabled": {
+            "type": "string",
+            "nullable": true
+          },
+          "ai_audit_events_streaming_enabled": {
             "type": "string",
             "nullable": true
           },
@@ -135453,7 +135544,7 @@
           }
         }
       },
-      "RequestBody6dfbbd1de69a": {
+      "RequestBodyB3701b73191b": {
         "required": [
           "title",
           "source_branch",
@@ -135536,6 +135627,12 @@
             "description": "The global ID of a milestone to assign the merge request to.",
             "nullable": true
           },
+          "milestone": {
+            "maxLength": 255,
+            "type": "string",
+            "description": "The title of a project or ancestor-group milestone to assign the merge request to. Mutually exclusive with `milestone_id`.",
+            "nullable": true
+          },
           "remove_source_branch": {
             "type": "boolean",
             "description": "Flag indicating if a merge request should remove the source branch when merging.",
@@ -135587,7 +135684,7 @@
           }
         }
       },
-      "RequestBody745a46e17871": {
+      "RequestBodyC7d3e0984a3f": {
         "type": "object",
         "properties": {
           "title": {
@@ -135668,6 +135765,12 @@
           "milestone_id": {
             "type": "integer",
             "description": "The global ID of a milestone to assign the merge request to.",
+            "nullable": true
+          },
+          "milestone": {
+            "maxLength": 255,
+            "type": "string",
+            "description": "The title of a project or ancestor-group milestone to assign the merge request to. Mutually exclusive with `milestone_id`.",
             "nullable": true
           },
           "remove_source_branch": {
@@ -135966,7 +136069,7 @@
           }
         }
       },
-      "RequestBody826ae92cf3be": {
+      "RequestBody9b0ee174f73a": {
         "required": [
           "title"
         ],
@@ -136019,6 +136122,12 @@
           "milestone_id": {
             "type": "integer",
             "description": "The ID of a milestone to assign issue",
+            "nullable": true
+          },
+          "milestone": {
+            "maxLength": 255,
+            "type": "string",
+            "description": "The title of a project or ancestor-group milestone to assign the issue to. Mutually exclusive with `milestone_id`.",
             "nullable": true
           },
           "labels": {
@@ -136091,7 +136200,7 @@
           }
         }
       },
-      "RequestBody0d4da68f991a": {
+      "RequestBody96918c611839": {
         "type": "object",
         "properties": {
           "title": {
@@ -136136,6 +136245,12 @@
           "milestone_id": {
             "type": "integer",
             "description": "The ID of a milestone to assign issue",
+            "nullable": true
+          },
+          "milestone": {
+            "maxLength": 255,
+            "type": "string",
+            "description": "The title of a project or ancestor-group milestone to assign the issue to. Mutually exclusive with `milestone_id`.",
             "nullable": true
           },
           "labels": {

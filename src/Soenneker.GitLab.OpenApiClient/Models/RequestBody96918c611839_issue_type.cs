@@ -5,7 +5,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>&quot;The type of the issue. Accepts: issue, incident, test_case, requirement, task, ticket&quot;</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBody0d4da68f991a_issue_type
+    public enum RequestBody96918c611839_issue_type
     {
         [EnumMember(Value = "issue")]
         #pragma warning disable CS1591

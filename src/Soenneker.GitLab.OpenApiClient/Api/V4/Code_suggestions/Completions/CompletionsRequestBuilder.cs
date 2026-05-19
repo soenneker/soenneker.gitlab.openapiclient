@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Code_suggestions.Completions
         {
         }
         /// <summary>
-        /// Generate code completion suggestions
+        /// Generates code completions. Uses the AI abstraction layer to generate code completions. Requests to this endpoint are proxied to the AI Gateway.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Code_suggestions.Completions.CompletionsPostResponse"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Code_suggestions.Completions
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Code_suggestions.Completions.CompletionsPostResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Code_suggestions.Completions.CompletionsPostResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Generate code completion suggestions
+        /// Generates code completions. Uses the AI abstraction layer to generate code completions. Requests to this endpoint are proxied to the AI Gateway.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

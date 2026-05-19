@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Code_suggestions.Connection_deta
         {
         }
         /// <summary>
-        /// Get details of the GitLab instance the user is connected to
+        /// Retrieves user-specific connection details which can be used by IDEs or clients for telemetry, including an instance-specific application ID, application access token, and clickhouse data plane URL.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Code_suggestions.Connection_details.Connection_detailsPostResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Code_suggestions.Connection_deta
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Code_suggestions.Connection_details.Connection_detailsPostResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Code_suggestions.Connection_details.Connection_detailsPostResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get details of the GitLab instance the user is connected to
+        /// Retrieves user-specific connection details which can be used by IDEs or clients for telemetry, including an instance-specific application ID, application access token, and clickhouse data plane URL.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

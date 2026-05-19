@@ -3286,6 +3286,110 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string UploadsVerifiedInPercentage { get; set; }
 #endif
+        /// <summary>The user_permission_export_upload_uploads_checksum_failed_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? UserPermissionExportUploadUploadsChecksumFailedCount { get; set; }
+#nullable restore
+#else
+        public string UserPermissionExportUploadUploadsChecksumFailedCount { get; set; }
+#endif
+        /// <summary>The user_permission_export_upload_uploads_checksummed_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? UserPermissionExportUploadUploadsChecksummedCount { get; set; }
+#nullable restore
+#else
+        public string UserPermissionExportUploadUploadsChecksummedCount { get; set; }
+#endif
+        /// <summary>The user_permission_export_upload_uploads_checksum_total_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? UserPermissionExportUploadUploadsChecksumTotalCount { get; set; }
+#nullable restore
+#else
+        public string UserPermissionExportUploadUploadsChecksumTotalCount { get; set; }
+#endif
+        /// <summary>The user_permission_export_upload_uploads_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? UserPermissionExportUploadUploadsCount { get; set; }
+#nullable restore
+#else
+        public string UserPermissionExportUploadUploadsCount { get; set; }
+#endif
+        /// <summary>The user_permission_export_upload_uploads_failed_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? UserPermissionExportUploadUploadsFailedCount { get; set; }
+#nullable restore
+#else
+        public string UserPermissionExportUploadUploadsFailedCount { get; set; }
+#endif
+        /// <summary>The user_permission_export_upload_uploads_oldest_unsynced_time property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? UserPermissionExportUploadUploadsOldestUnsyncedTime { get; set; }
+#nullable restore
+#else
+        public string UserPermissionExportUploadUploadsOldestUnsyncedTime { get; set; }
+#endif
+        /// <summary>The user_permission_export_upload_uploads_registry_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? UserPermissionExportUploadUploadsRegistryCount { get; set; }
+#nullable restore
+#else
+        public string UserPermissionExportUploadUploadsRegistryCount { get; set; }
+#endif
+        /// <summary>The user_permission_export_upload_uploads_synced_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? UserPermissionExportUploadUploadsSyncedCount { get; set; }
+#nullable restore
+#else
+        public string UserPermissionExportUploadUploadsSyncedCount { get; set; }
+#endif
+        /// <summary>The user_permission_export_upload_uploads_synced_in_percentage property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? UserPermissionExportUploadUploadsSyncedInPercentage { get; set; }
+#nullable restore
+#else
+        public string UserPermissionExportUploadUploadsSyncedInPercentage { get; set; }
+#endif
+        /// <summary>The user_permission_export_upload_uploads_verification_failed_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? UserPermissionExportUploadUploadsVerificationFailedCount { get; set; }
+#nullable restore
+#else
+        public string UserPermissionExportUploadUploadsVerificationFailedCount { get; set; }
+#endif
+        /// <summary>The user_permission_export_upload_uploads_verification_total_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? UserPermissionExportUploadUploadsVerificationTotalCount { get; set; }
+#nullable restore
+#else
+        public string UserPermissionExportUploadUploadsVerificationTotalCount { get; set; }
+#endif
+        /// <summary>The user_permission_export_upload_uploads_verified_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? UserPermissionExportUploadUploadsVerifiedCount { get; set; }
+#nullable restore
+#else
+        public string UserPermissionExportUploadUploadsVerifiedCount { get; set; }
+#endif
+        /// <summary>The user_permission_export_upload_uploads_verified_in_percentage property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? UserPermissionExportUploadUploadsVerifiedInPercentage { get; set; }
+#nullable restore
+#else
+        public string UserPermissionExportUploadUploadsVerifiedInPercentage { get; set; }
+#endif
         /// <summary>The user_uploads_checksum_failed_count property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -4040,6 +4144,19 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "uploads_verification_total_count", n => { UploadsVerificationTotalCount = n.GetStringValue(); } },
                 { "uploads_verified_count", n => { UploadsVerifiedCount = n.GetStringValue(); } },
                 { "uploads_verified_in_percentage", n => { UploadsVerifiedInPercentage = n.GetStringValue(); } },
+                { "user_permission_export_upload_uploads_checksum_failed_count", n => { UserPermissionExportUploadUploadsChecksumFailedCount = n.GetStringValue(); } },
+                { "user_permission_export_upload_uploads_checksum_total_count", n => { UserPermissionExportUploadUploadsChecksumTotalCount = n.GetStringValue(); } },
+                { "user_permission_export_upload_uploads_checksummed_count", n => { UserPermissionExportUploadUploadsChecksummedCount = n.GetStringValue(); } },
+                { "user_permission_export_upload_uploads_count", n => { UserPermissionExportUploadUploadsCount = n.GetStringValue(); } },
+                { "user_permission_export_upload_uploads_failed_count", n => { UserPermissionExportUploadUploadsFailedCount = n.GetStringValue(); } },
+                { "user_permission_export_upload_uploads_oldest_unsynced_time", n => { UserPermissionExportUploadUploadsOldestUnsyncedTime = n.GetStringValue(); } },
+                { "user_permission_export_upload_uploads_registry_count", n => { UserPermissionExportUploadUploadsRegistryCount = n.GetStringValue(); } },
+                { "user_permission_export_upload_uploads_synced_count", n => { UserPermissionExportUploadUploadsSyncedCount = n.GetStringValue(); } },
+                { "user_permission_export_upload_uploads_synced_in_percentage", n => { UserPermissionExportUploadUploadsSyncedInPercentage = n.GetStringValue(); } },
+                { "user_permission_export_upload_uploads_verification_failed_count", n => { UserPermissionExportUploadUploadsVerificationFailedCount = n.GetStringValue(); } },
+                { "user_permission_export_upload_uploads_verification_total_count", n => { UserPermissionExportUploadUploadsVerificationTotalCount = n.GetStringValue(); } },
+                { "user_permission_export_upload_uploads_verified_count", n => { UserPermissionExportUploadUploadsVerifiedCount = n.GetStringValue(); } },
+                { "user_permission_export_upload_uploads_verified_in_percentage", n => { UserPermissionExportUploadUploadsVerifiedInPercentage = n.GetStringValue(); } },
                 { "user_uploads_checksum_failed_count", n => { UserUploadsChecksumFailedCount = n.GetStringValue(); } },
                 { "user_uploads_checksum_total_count", n => { UserUploadsChecksumTotalCount = n.GetStringValue(); } },
                 { "user_uploads_checksummed_count", n => { UserUploadsChecksummedCount = n.GetStringValue(); } },
@@ -4498,6 +4615,19 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("uploads_verification_total_count", UploadsVerificationTotalCount);
             writer.WriteStringValue("uploads_verified_count", UploadsVerifiedCount);
             writer.WriteStringValue("uploads_verified_in_percentage", UploadsVerifiedInPercentage);
+            writer.WriteStringValue("user_permission_export_upload_uploads_checksum_failed_count", UserPermissionExportUploadUploadsChecksumFailedCount);
+            writer.WriteStringValue("user_permission_export_upload_uploads_checksummed_count", UserPermissionExportUploadUploadsChecksummedCount);
+            writer.WriteStringValue("user_permission_export_upload_uploads_checksum_total_count", UserPermissionExportUploadUploadsChecksumTotalCount);
+            writer.WriteStringValue("user_permission_export_upload_uploads_count", UserPermissionExportUploadUploadsCount);
+            writer.WriteStringValue("user_permission_export_upload_uploads_failed_count", UserPermissionExportUploadUploadsFailedCount);
+            writer.WriteStringValue("user_permission_export_upload_uploads_oldest_unsynced_time", UserPermissionExportUploadUploadsOldestUnsyncedTime);
+            writer.WriteStringValue("user_permission_export_upload_uploads_registry_count", UserPermissionExportUploadUploadsRegistryCount);
+            writer.WriteStringValue("user_permission_export_upload_uploads_synced_count", UserPermissionExportUploadUploadsSyncedCount);
+            writer.WriteStringValue("user_permission_export_upload_uploads_synced_in_percentage", UserPermissionExportUploadUploadsSyncedInPercentage);
+            writer.WriteStringValue("user_permission_export_upload_uploads_verification_failed_count", UserPermissionExportUploadUploadsVerificationFailedCount);
+            writer.WriteStringValue("user_permission_export_upload_uploads_verification_total_count", UserPermissionExportUploadUploadsVerificationTotalCount);
+            writer.WriteStringValue("user_permission_export_upload_uploads_verified_count", UserPermissionExportUploadUploadsVerifiedCount);
+            writer.WriteStringValue("user_permission_export_upload_uploads_verified_in_percentage", UserPermissionExportUploadUploadsVerifiedInPercentage);
             writer.WriteStringValue("user_uploads_checksum_failed_count", UserUploadsChecksumFailedCount);
             writer.WriteStringValue("user_uploads_checksummed_count", UserUploadsChecksummedCount);
             writer.WriteStringValue("user_uploads_checksum_total_count", UserUploadsChecksumTotalCount);

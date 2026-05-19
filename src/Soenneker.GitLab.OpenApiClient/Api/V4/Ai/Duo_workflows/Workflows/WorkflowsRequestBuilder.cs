@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows
         {
         }
         /// <summary>
-        /// Create workflow persistence
+        /// Creates and starts a flow.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.WorkflowsPostResponse"/></returns>
         /// <param name="body">The request body</param>
@@ -73,7 +73,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.WorkflowsPostResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.WorkflowsPostResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Create workflow persistence
+        /// Creates and starts a flow.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

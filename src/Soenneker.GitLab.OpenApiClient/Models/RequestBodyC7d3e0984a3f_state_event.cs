@@ -5,7 +5,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>New state (close/reopen).</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBody745a46e17871_state_event
+    public enum RequestBodyC7d3e0984a3f_state_event
     {
         [EnumMember(Value = "close")]
         #pragma warning disable CS1591

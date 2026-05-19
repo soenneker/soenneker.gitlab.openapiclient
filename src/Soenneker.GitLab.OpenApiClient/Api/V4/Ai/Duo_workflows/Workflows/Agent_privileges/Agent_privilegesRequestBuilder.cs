@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Agent
         {
         }
         /// <summary>
-        /// List all agent privileges and descriptions
+        /// Lists all available agent privileges with their IDs, names, descriptions, and whether each is enabled by default. This endpoint has no supported attributes.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Agent_privileges.Agent_privilegesGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Agent
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Agent_privileges.Agent_privilegesGetResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Agent_privileges.Agent_privilegesGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// List all agent privileges and descriptions
+        /// Lists all available agent privileges with their IDs, names, descriptions, and whether each is enabled by default. This endpoint has no supported attributes.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

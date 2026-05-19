@@ -9,7 +9,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class RequestBody745a46e17871_approval_rules_attributes : IAdditionalDataHolder, IParsable
+    public partial class RequestBodyB3701b73191b_approval_rules_attributes : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -19,21 +19,21 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The ID of a rule</summary>
         public int? Id { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody745a46e17871_approval_rules_attributes"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB3701b73191b_approval_rules_attributes"/> and sets the default values.
         /// </summary>
-        public RequestBody745a46e17871_approval_rules_attributes()
+        public RequestBodyB3701b73191b_approval_rules_attributes()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody745a46e17871_approval_rules_attributes"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB3701b73191b_approval_rules_attributes"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody745a46e17871_approval_rules_attributes CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB3701b73191b_approval_rules_attributes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody745a46e17871_approval_rules_attributes();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB3701b73191b_approval_rules_attributes();
         }
         /// <summary>
         /// The deserialization information for the current model

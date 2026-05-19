@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Code_suggestions.Enabled
         {
         }
         /// <summary>
-        /// Code suggestions enabled for a project
+        /// Validates the status Code Suggestions for a specified project. This checks if the project has `code_suggestions` enabled or if an ancestor group has the Code Suggestions add-on enabled.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Code_suggestions.Enabled.EnabledPostResponse"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Code_suggestions.Enabled
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Code_suggestions.Enabled.EnabledPostResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Code_suggestions.Enabled.EnabledPostResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Code suggestions enabled for a project
+        /// Validates the status Code Suggestions for a specified project. This checks if the project has `code_suggestions` enabled or if an ancestor group has the Code Suggestions add-on enabled.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

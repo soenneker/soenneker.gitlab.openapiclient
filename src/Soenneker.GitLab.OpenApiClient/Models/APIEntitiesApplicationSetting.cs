@@ -62,6 +62,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string AiActionApiRateLimit { get; set; }
 #endif
+        /// <summary>The ai_audit_events_streaming_enabled property</summary>
+        public bool? AiAuditEventsStreamingEnabled { get; set; }
         /// <summary>The akismet_api_key property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -4957,6 +4959,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "after_sign_out_path", n => { AfterSignOutPath = n.GetStringValue(); } },
                 { "after_sign_up_text", n => { AfterSignUpText = n.GetStringValue(); } },
                 { "ai_action_api_rate_limit", n => { AiActionApiRateLimit = n.GetStringValue(); } },
+                { "ai_audit_events_streaming_enabled", n => { AiAuditEventsStreamingEnabled = n.GetBoolValue(); } },
                 { "akismet_api_key", n => { AkismetApiKey = n.GetStringValue(); } },
                 { "akismet_enabled", n => { AkismetEnabled = n.GetStringValue(); } },
                 { "allow_account_deletion", n => { AllowAccountDeletion = n.GetStringValue(); } },
@@ -5586,6 +5589,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("after_sign_out_path", AfterSignOutPath);
             writer.WriteStringValue("after_sign_up_text", AfterSignUpText);
             writer.WriteStringValue("ai_action_api_rate_limit", AiActionApiRateLimit);
+            writer.WriteBoolValue("ai_audit_events_streaming_enabled", AiAuditEventsStreamingEnabled);
             writer.WriteStringValue("akismet_api_key", AkismetApiKey);
             writer.WriteStringValue("akismet_enabled", AkismetEnabled);
             writer.WriteStringValue("allow_account_deletion", AllowAccountDeletion);

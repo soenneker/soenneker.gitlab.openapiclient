@@ -9,7 +9,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class RequestBody745a46e17871 : IAdditionalDataHolder, IParsable
+    public partial class RequestBodyC7d3e0984a3f : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,10 +29,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The approval_rules_attributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody745a46e17871_approval_rules_attributes>? ApprovalRulesAttributes { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC7d3e0984a3f_approval_rules_attributes>? ApprovalRulesAttributes { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody745a46e17871_approval_rules_attributes> ApprovalRulesAttributes { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC7d3e0984a3f_approval_rules_attributes> ApprovalRulesAttributes { get; set; }
 #endif
         /// <summary>Number of approvals required before this can be merged</summary>
         public int? ApprovalsBeforeMerge { get; set; }
@@ -72,6 +72,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string MergeAfter { get; set; }
 #endif
+        /// <summary>The title of a project or ancestor-group milestone to assign the merge request to. Mutually exclusive with `milestone_id`.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Milestone { get; set; }
+#nullable restore
+#else
+        public string Milestone { get; set; }
+#endif
         /// <summary>The global ID of a milestone to assign the merge request to.</summary>
         public int? MilestoneId { get; set; }
         /// <summary>Comma-separated label names to remove from a merge request.</summary>
@@ -95,7 +103,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Squash commits into a single commit when merging.</summary>
         public bool? Squash { get; set; }
         /// <summary>New state (close/reopen).</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody745a46e17871_state_event? StateEvent { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC7d3e0984a3f_state_event? StateEvent { get; set; }
         /// <summary>The target branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -113,21 +121,21 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Title { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody745a46e17871"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC7d3e0984a3f"/> and sets the default values.
         /// </summary>
-        public RequestBody745a46e17871()
+        public RequestBodyC7d3e0984a3f()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody745a46e17871"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC7d3e0984a3f"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody745a46e17871 CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC7d3e0984a3f CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody745a46e17871();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC7d3e0984a3f();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -140,7 +148,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "add_labels", n => { AddLabels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "allow_collaboration", n => { AllowCollaboration = n.GetBoolValue(); } },
                 { "allow_maintainer_to_push", n => { AllowMaintainerToPush = n.GetBoolValue(); } },
-                { "approval_rules_attributes", n => { ApprovalRulesAttributes = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody745a46e17871_approval_rules_attributes>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody745a46e17871_approval_rules_attributes.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "approval_rules_attributes", n => { ApprovalRulesAttributes = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC7d3e0984a3f_approval_rules_attributes>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC7d3e0984a3f_approval_rules_attributes.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "approvals_before_merge", n => { ApprovalsBeforeMerge = n.GetIntValue(); } },
                 { "assignee_id", n => { AssigneeId = n.GetIntValue(); } },
                 { "assignee_ids", n => { AssigneeIds = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
@@ -148,12 +156,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "discussion_locked", n => { DiscussionLocked = n.GetBoolValue(); } },
                 { "labels", n => { Labels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "merge_after", n => { MergeAfter = n.GetStringValue(); } },
+                { "milestone", n => { Milestone = n.GetStringValue(); } },
                 { "milestone_id", n => { MilestoneId = n.GetIntValue(); } },
                 { "remove_labels", n => { RemoveLabels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "remove_source_branch", n => { RemoveSourceBranch = n.GetBoolValue(); } },
                 { "reviewer_ids", n => { ReviewerIds = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
                 { "squash", n => { Squash = n.GetBoolValue(); } },
-                { "state_event", n => { StateEvent = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody745a46e17871_state_event>(); } },
+                { "state_event", n => { StateEvent = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC7d3e0984a3f_state_event>(); } },
                 { "target_branch", n => { TargetBranch = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
             };
@@ -168,7 +177,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("add_labels", AddLabels);
             writer.WriteBoolValue("allow_collaboration", AllowCollaboration);
             writer.WriteBoolValue("allow_maintainer_to_push", AllowMaintainerToPush);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody745a46e17871_approval_rules_attributes>("approval_rules_attributes", ApprovalRulesAttributes);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC7d3e0984a3f_approval_rules_attributes>("approval_rules_attributes", ApprovalRulesAttributes);
             writer.WriteIntValue("approvals_before_merge", ApprovalsBeforeMerge);
             writer.WriteIntValue("assignee_id", AssigneeId);
             writer.WriteCollectionOfPrimitiveValues<int?>("assignee_ids", AssigneeIds);
@@ -176,12 +185,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("discussion_locked", DiscussionLocked);
             writer.WriteCollectionOfPrimitiveValues<string>("labels", Labels);
             writer.WriteStringValue("merge_after", MergeAfter);
+            writer.WriteStringValue("milestone", Milestone);
             writer.WriteIntValue("milestone_id", MilestoneId);
             writer.WriteCollectionOfPrimitiveValues<string>("remove_labels", RemoveLabels);
             writer.WriteBoolValue("remove_source_branch", RemoveSourceBranch);
             writer.WriteCollectionOfPrimitiveValues<int?>("reviewer_ids", ReviewerIds);
             writer.WriteBoolValue("squash", Squash);
-            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody745a46e17871_state_event>("state_event", StateEvent);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC7d3e0984a3f_state_event>("state_event", StateEvent);
             writer.WriteStringValue("target_branch", TargetBranch);
             writer.WriteStringValue("title", Title);
             writer.WriteAdditionalData(AdditionalData);

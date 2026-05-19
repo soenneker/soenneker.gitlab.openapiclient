@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Chat.Completions
         {
         }
         /// <summary>
-        /// Generates chat completions using GitLab Duo
+        /// Generates a response for a GitLab Duo Chat question.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Chat.Completions.CompletionsPostResponse"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Chat.Completions
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Chat.Completions.CompletionsPostResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Chat.Completions.CompletionsPostResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Generates chat completions using GitLab Duo
+        /// Generates a response for a GitLab Duo Chat question.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

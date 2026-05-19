@@ -9,7 +9,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class RequestBody0d4da68f991a : IAdditionalDataHolder, IParsable
+    public partial class RequestBody9b0ee174f73a : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -34,14 +34,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>Boolean parameter if the issue should be confidential</summary>
         public bool? Confidential { get; set; }
-        /// <summary>The created_at property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? CreatedAt { get; set; }
-#nullable restore
-#else
-        public string CreatedAt { get; set; }
-#endif
+        /// <summary>Date time when the issue was created. Available only for admins and project owners.</summary>
+        public DateTimeOffset? CreatedAt { get; set; }
         /// <summary>The description of an issue</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -52,6 +46,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary> Boolean parameter indicating if the issue&apos;s discussion is locked</summary>
         public bool? DiscussionLocked { get; set; }
+        /// <summary>The ID of a discussion to resolve, also pass `merge_request_to_resolve_discussions_of`</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DiscussionToResolve { get; set; }
+#nullable restore
+#else
+        public string DiscussionToResolve { get; set; }
+#endif
         /// <summary>Date string in the format YEAR-MONTH-DAY</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -64,8 +66,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public int? EpicId { get; set; }
         /// <summary>The IID of an epic to associate the issue with (deprecated)</summary>
         public int? EpicIid { get; set; }
+        /// <summary>The internal ID of a project issue. Available only for admins and project owners.</summary>
+        public int? Iid { get; set; }
         /// <summary>&quot;The type of the issue. Accepts: issue, incident, test_case, requirement, task, ticket&quot;</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0d4da68f991a_issue_type? IssueType { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9b0ee174f73a_issue_type? IssueType { get; set; }
         /// <summary>Comma-separated list of label names</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -73,6 +77,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #nullable restore
 #else
         public List<string> Labels { get; set; }
+#endif
+        /// <summary>The IID of a merge request for which to resolve discussions</summary>
+        public int? MergeRequestToResolveDiscussionsOf { get; set; }
+        /// <summary>The title of a project or ancestor-group milestone to assign the issue to. Mutually exclusive with `milestone_id`.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Milestone { get; set; }
+#nullable restore
+#else
+        public string Milestone { get; set; }
 #endif
         /// <summary>The ID of a milestone to assign issue</summary>
         public int? MilestoneId { get; set; }
@@ -84,8 +98,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<string> RemoveLabels { get; set; }
 #endif
-        /// <summary>State of the issue</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0d4da68f991a_state_event? StateEvent { get; set; }
         /// <summary>The title of an issue</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -94,26 +106,24 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Title { get; set; }
 #endif
-        /// <summary>Date time when the issue was updated. Available only for admins and project owners.</summary>
-        public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>The weight of the issue</summary>
         public int? Weight { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0d4da68f991a"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9b0ee174f73a"/> and sets the default values.
         /// </summary>
-        public RequestBody0d4da68f991a()
+        public RequestBody9b0ee174f73a()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0d4da68f991a"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9b0ee174f73a"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0d4da68f991a CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9b0ee174f73a CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0d4da68f991a();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9b0ee174f73a();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -127,19 +137,21 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "assignee_id", n => { AssigneeId = n.GetIntValue(); } },
                 { "assignee_ids", n => { AssigneeIds = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
                 { "confidential", n => { Confidential = n.GetBoolValue(); } },
-                { "created_at", n => { CreatedAt = n.GetStringValue(); } },
+                { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "discussion_locked", n => { DiscussionLocked = n.GetBoolValue(); } },
+                { "discussion_to_resolve", n => { DiscussionToResolve = n.GetStringValue(); } },
                 { "due_date", n => { DueDate = n.GetStringValue(); } },
                 { "epic_id", n => { EpicId = n.GetIntValue(); } },
                 { "epic_iid", n => { EpicIid = n.GetIntValue(); } },
-                { "issue_type", n => { IssueType = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0d4da68f991a_issue_type>(); } },
+                { "iid", n => { Iid = n.GetIntValue(); } },
+                { "issue_type", n => { IssueType = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9b0ee174f73a_issue_type>(); } },
                 { "labels", n => { Labels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "merge_request_to_resolve_discussions_of", n => { MergeRequestToResolveDiscussionsOf = n.GetIntValue(); } },
+                { "milestone", n => { Milestone = n.GetStringValue(); } },
                 { "milestone_id", n => { MilestoneId = n.GetIntValue(); } },
                 { "remove_labels", n => { RemoveLabels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "state_event", n => { StateEvent = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0d4da68f991a_state_event>(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
-                { "updated_at", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
                 { "weight", n => { Weight = n.GetIntValue(); } },
             };
         }
@@ -154,19 +166,21 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("assignee_id", AssigneeId);
             writer.WriteCollectionOfPrimitiveValues<int?>("assignee_ids", AssigneeIds);
             writer.WriteBoolValue("confidential", Confidential);
-            writer.WriteStringValue("created_at", CreatedAt);
+            writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
             writer.WriteStringValue("description", Description);
             writer.WriteBoolValue("discussion_locked", DiscussionLocked);
+            writer.WriteStringValue("discussion_to_resolve", DiscussionToResolve);
             writer.WriteStringValue("due_date", DueDate);
             writer.WriteIntValue("epic_id", EpicId);
             writer.WriteIntValue("epic_iid", EpicIid);
-            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0d4da68f991a_issue_type>("issue_type", IssueType);
+            writer.WriteIntValue("iid", Iid);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9b0ee174f73a_issue_type>("issue_type", IssueType);
             writer.WriteCollectionOfPrimitiveValues<string>("labels", Labels);
+            writer.WriteIntValue("merge_request_to_resolve_discussions_of", MergeRequestToResolveDiscussionsOf);
+            writer.WriteStringValue("milestone", Milestone);
             writer.WriteIntValue("milestone_id", MilestoneId);
             writer.WriteCollectionOfPrimitiveValues<string>("remove_labels", RemoveLabels);
-            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0d4da68f991a_state_event>("state_event", StateEvent);
             writer.WriteStringValue("title", Title);
-            writer.WriteDateTimeOffsetValue("updated_at", UpdatedAt);
             writer.WriteIntValue("weight", Weight);
             writer.WriteAdditionalData(AdditionalData);
         }
