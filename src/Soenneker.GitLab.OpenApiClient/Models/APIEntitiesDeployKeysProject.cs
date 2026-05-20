@@ -16,13 +16,69 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The can_push property</summary>
         public bool? CanPush { get; set; }
-        /// <summary>The deploy_key property</summary>
+        /// <summary>The created_at property</summary>
+        public DateTimeOffset? CreatedAt { get; set; }
+        /// <summary>The expires_at property</summary>
+        public DateTimeOffset? ExpiresAt { get; set; }
+        /// <summary>The fingerprint property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDeployKey? DeployKey { get; set; }
+        public string? Fingerprint { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDeployKey DeployKey { get; set; }
+        public string Fingerprint { get; set; }
+#endif
+        /// <summary>The fingerprint_sha256 property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? FingerprintSha256 { get; set; }
+#nullable restore
+#else
+        public string FingerprintSha256 { get; set; }
+#endif
+        /// <summary>The id property</summary>
+        public int? Id { get; set; }
+        /// <summary>The key property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Key { get; set; }
+#nullable restore
+#else
+        public string Key { get; set; }
+#endif
+        /// <summary>The last_used_at property</summary>
+        public DateTimeOffset? LastUsedAt { get; set; }
+        /// <summary>The projects_with_readonly_access property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProjectIdentity? ProjectsWithReadonlyAccess { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProjectIdentity ProjectsWithReadonlyAccess { get; set; }
+#endif
+        /// <summary>The projects_with_write_access property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProjectIdentity? ProjectsWithWriteAccess { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProjectIdentity ProjectsWithWriteAccess { get; set; }
+#endif
+        /// <summary>The title property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Title { get; set; }
+#nullable restore
+#else
+        public string Title { get; set; }
+#endif
+        /// <summary>The usage_type property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? UsageType { get; set; }
+#nullable restore
+#else
+        public string UsageType { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDeployKeysProject"/> and sets the default values.
@@ -50,7 +106,17 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "can_push", n => { CanPush = n.GetBoolValue(); } },
-                { "deploy_key", n => { DeployKey = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDeployKey>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDeployKey.CreateFromDiscriminatorValue); } },
+                { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
+                { "expires_at", n => { ExpiresAt = n.GetDateTimeOffsetValue(); } },
+                { "fingerprint", n => { Fingerprint = n.GetStringValue(); } },
+                { "fingerprint_sha256", n => { FingerprintSha256 = n.GetStringValue(); } },
+                { "id", n => { Id = n.GetIntValue(); } },
+                { "key", n => { Key = n.GetStringValue(); } },
+                { "last_used_at", n => { LastUsedAt = n.GetDateTimeOffsetValue(); } },
+                { "projects_with_readonly_access", n => { ProjectsWithReadonlyAccess = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProjectIdentity>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProjectIdentity.CreateFromDiscriminatorValue); } },
+                { "projects_with_write_access", n => { ProjectsWithWriteAccess = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProjectIdentity>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProjectIdentity.CreateFromDiscriminatorValue); } },
+                { "title", n => { Title = n.GetStringValue(); } },
+                { "usage_type", n => { UsageType = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -61,7 +127,17 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("can_push", CanPush);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDeployKey>("deploy_key", DeployKey);
+            writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
+            writer.WriteDateTimeOffsetValue("expires_at", ExpiresAt);
+            writer.WriteStringValue("fingerprint", Fingerprint);
+            writer.WriteStringValue("fingerprint_sha256", FingerprintSha256);
+            writer.WriteIntValue("id", Id);
+            writer.WriteStringValue("key", Key);
+            writer.WriteDateTimeOffsetValue("last_used_at", LastUsedAt);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProjectIdentity>("projects_with_readonly_access", ProjectsWithReadonlyAccess);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProjectIdentity>("projects_with_write_access", ProjectsWithWriteAccess);
+            writer.WriteStringValue("title", Title);
+            writer.WriteStringValue("usage_type", UsageType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

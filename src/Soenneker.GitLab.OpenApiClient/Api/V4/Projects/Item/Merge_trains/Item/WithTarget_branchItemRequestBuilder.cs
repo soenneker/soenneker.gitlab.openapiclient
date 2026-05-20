@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_trains.Item
         {
         }
         /// <summary>
-        /// This feature was introduced in Gitlab 15.6
+        /// Lists all merge requests in a merge train for a target branch.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMergeTrainsCar"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_trains.Item
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMergeTrainsCar>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMergeTrainsCar.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was introduced in Gitlab 15.6
+        /// Lists all merge requests in a merge train for a target branch.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_trains.Item
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_trains.Item.WithTarget_branchItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// This feature was introduced in Gitlab 15.6
+        /// Lists all merge requests in a merge train for a target branch.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithTarget_branchItemRequestBuilderGetQueryParameters 

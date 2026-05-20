@@ -22,6 +22,22 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The avatar_path property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AvatarPath { get; set; }
+#nullable restore
+#else
+        public string AvatarPath { get; set; }
+#endif
+        /// <summary>The avatar_url property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AvatarUrl { get; set; }
+#nullable restore
+#else
+        public string AvatarUrl { get; set; }
+#endif
         /// <summary>The created_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -37,6 +53,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic CreatedBy { get; set; }
+#endif
+        /// <summary>The custom_attributes property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCustomAttribute>? CustomAttributes { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCustomAttribute> CustomAttributes { get; set; }
 #endif
         /// <summary>The email property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -70,6 +94,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesScimIdentity GroupScimIdentity { get; set; }
 #endif
+        /// <summary>The id property</summary>
+        public int? Id { get; set; }
         /// <summary>The is_using_seat property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -78,6 +104,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string IsUsingSeat { get; set; }
 #endif
+        /// <summary>The locked property</summary>
+        public bool? Locked { get; set; }
         /// <summary>The member_role property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -94,6 +122,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string MembershipState { get; set; }
 #endif
+        /// <summary>The name property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Name { get; set; }
+#nullable restore
+#else
+        public string Name { get; set; }
+#endif
         /// <summary>The override property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -102,13 +138,37 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Override { get; set; }
 #endif
-        /// <summary>The user property</summary>
+        /// <summary>The public_email property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic? User { get; set; }
+        public string? PublicEmail { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic User { get; set; }
+        public string PublicEmail { get; set; }
+#endif
+        /// <summary>The state property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? State { get; set; }
+#nullable restore
+#else
+        public string State { get; set; }
+#endif
+        /// <summary>The username property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Username { get; set; }
+#nullable restore
+#else
+        public string Username { get; set; }
+#endif
+        /// <summary>The web_url property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? WebUrl { get; set; }
+#nullable restore
+#else
+        public string WebUrl { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMember"/> and sets the default values.
@@ -136,17 +196,26 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "access_level", n => { AccessLevel = n.GetStringValue(); } },
+                { "avatar_path", n => { AvatarPath = n.GetStringValue(); } },
+                { "avatar_url", n => { AvatarUrl = n.GetStringValue(); } },
                 { "created_at", n => { CreatedAt = n.GetStringValue(); } },
                 { "created_by", n => { CreatedBy = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic.CreateFromDiscriminatorValue); } },
+                { "custom_attributes", n => { CustomAttributes = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCustomAttribute>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCustomAttribute.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "expires_at", n => { ExpiresAt = n.GetStringValue(); } },
                 { "group_saml_identity", n => { GroupSamlIdentity = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesIdentity>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesIdentity.CreateFromDiscriminatorValue); } },
                 { "group_scim_identity", n => { GroupScimIdentity = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesScimIdentity>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesScimIdentity.CreateFromDiscriminatorValue); } },
+                { "id", n => { Id = n.GetIntValue(); } },
                 { "is_using_seat", n => { IsUsingSeat = n.GetStringValue(); } },
+                { "locked", n => { Locked = n.GetBoolValue(); } },
                 { "member_role", n => { MemberRole = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMemberRole>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMemberRole.CreateFromDiscriminatorValue); } },
                 { "membership_state", n => { MembershipState = n.GetStringValue(); } },
+                { "name", n => { Name = n.GetStringValue(); } },
                 { "override", n => { Override = n.GetStringValue(); } },
-                { "user", n => { User = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic.CreateFromDiscriminatorValue); } },
+                { "public_email", n => { PublicEmail = n.GetStringValue(); } },
+                { "state", n => { State = n.GetStringValue(); } },
+                { "username", n => { Username = n.GetStringValue(); } },
+                { "web_url", n => { WebUrl = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -157,17 +226,26 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("access_level", AccessLevel);
+            writer.WriteStringValue("avatar_path", AvatarPath);
+            writer.WriteStringValue("avatar_url", AvatarUrl);
             writer.WriteStringValue("created_at", CreatedAt);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>("created_by", CreatedBy);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCustomAttribute>("custom_attributes", CustomAttributes);
             writer.WriteStringValue("email", Email);
             writer.WriteStringValue("expires_at", ExpiresAt);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesIdentity>("group_saml_identity", GroupSamlIdentity);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesScimIdentity>("group_scim_identity", GroupScimIdentity);
+            writer.WriteIntValue("id", Id);
             writer.WriteStringValue("is_using_seat", IsUsingSeat);
+            writer.WriteBoolValue("locked", Locked);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMemberRole>("member_role", MemberRole);
             writer.WriteStringValue("membership_state", MembershipState);
+            writer.WriteStringValue("name", Name);
             writer.WriteStringValue("override", Override);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>("user", User);
+            writer.WriteStringValue("public_email", PublicEmail);
+            writer.WriteStringValue("state", State);
+            writer.WriteStringValue("username", Username);
+            writer.WriteStringValue("web_url", WebUrl);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

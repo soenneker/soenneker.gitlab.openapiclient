@@ -576,24 +576,24 @@
           {
             "name": "knn",
             "in": "query",
-            "description": "Number of nearest neighbours to retrieve internally. Higher values improve recall at the cost of latency.",
+            "description": "\"Number of nearest neighbours to retrieve internally (default: 64). Higher values improve recall at the cost of latency.\"",
             "schema": {
               "maximum": 100,
               "minimum": 1,
               "type": "integer",
-              "default": 10,
+              "default": 64,
               "nullable": true
             }
           },
           {
             "name": "limit",
             "in": "query",
-            "description": "Maximum number of results to return",
+            "description": "\"Maximum number of results to return (default: 20).\"",
             "schema": {
               "maximum": 100,
               "minimum": 1,
               "type": "integer",
-              "default": 10,
+              "default": 20,
               "nullable": true
             }
           }
@@ -8368,7 +8368,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody2def9177cd1c"
+                "$ref": "#/components/schemas/RequestBodyD75fa79afa6e"
               }
             }
           }
@@ -8468,7 +8468,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody2def9177cd1c"
+                "$ref": "#/components/schemas/RequestBodyD75fa79afa6e"
               }
             }
           }
@@ -8526,8 +8526,8 @@
         "tags": [
           "Merge trains"
         ],
-        "summary": "Get all merge trains of a project",
-        "description": "This feature was introduced in GitLab 12.9",
+        "summary": "List all merge trains for a project",
+        "description": "Lists all merge trains for a specified project.",
         "operationId": "getApiV4ProjectsIdMergeTrains",
         "parameters": [
           {
@@ -8620,8 +8620,8 @@
         "tags": [
           "Merge trains"
         ],
-        "summary": "Get the merge train for a project target branch",
-        "description": "This feature was introduced in Gitlab 15.6",
+        "summary": "List all merge requests in a merge train",
+        "description": "Lists all merge requests in a merge train for a target branch.",
         "operationId": "getApiV4ProjectsIdMergeTrainsTargetBranch",
         "parameters": [
           {
@@ -8724,8 +8724,8 @@
         "tags": [
           "Merge trains"
         ],
-        "summary": "Get the status of a merge request on a merge train",
-        "description": "This feature was introduced in Gitlab 15.6",
+        "summary": "Retrieve merge train status",
+        "description": "Retrieves the merge train status of a specified merge request.",
         "operationId": "getApiV4ProjectsIdMergeTrainsMergeRequestsMergeRequestIid",
         "parameters": [
           {
@@ -8773,7 +8773,7 @@
           "Merge trains"
         ],
         "summary": "Add a merge request to a merge train",
-        "description": "This feature was introduced in GitLab 15.6",
+        "description": "Adds a specified merge request to a merge train.",
         "operationId": "postApiV4ProjectsIdMergeTrainsMergeRequestsMergeRequestIid",
         "parameters": [
           {
@@ -19942,6 +19942,163 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/APIEntitiesPersonalAccessTokenWithToken"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v4/user/applications": {
+      "post": {
+        "tags": [
+          "Applications"
+        ],
+        "summary": "Create an application",
+        "description": "Creates a new OAuth application for the authenticated user. This feature was introduced in GitLab 19.0",
+        "operationId": "postApiV4UserApplications",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestBody39542344a153"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIEntitiesApplicationWithSecret"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Applications"
+        ],
+        "summary": "List all applications",
+        "description": "Lists all applications owned by the authenticated user.",
+        "operationId": "getApiV4UserApplications",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIEntitiesApplication"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v4/user/applications/{id}": {
+      "get": {
+        "tags": [
+          "Applications"
+        ],
+        "summary": "Retrieve an application",
+        "description": "Retrieves details of a specific application owned by the authenticated user.",
+        "operationId": "getApiV4UserApplicationsId",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of the application. Differs from the `application_id`.",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIEntitiesApplication"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Applications"
+        ],
+        "summary": "Delete an application",
+        "description": "Deletes a specified application owned by the authenticated user.",
+        "operationId": "deleteApiV4UserApplicationsId",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of the application. Differs from the `application_id`.",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Applications"
+        ],
+        "summary": "Update an application",
+        "description": "Updates an existing application owned by the authenticated user.",
+        "operationId": "putApiV4UserApplicationsId",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of the application. Differs from the `application_id`.",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestBody71d09f790ff1"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIEntitiesApplication"
                 }
               }
             }
@@ -83550,7 +83707,8 @@
         "tags": [
           "Pipeline schedules"
         ],
-        "summary": "Get all pipeline schedules",
+        "summary": "List all pipeline schedules",
+        "description": "Lists all pipeline schedules for a project.",
         "operationId": "getApiV4ProjectsIdPipelineSchedules",
         "parameters": [
           {
@@ -83626,7 +83784,8 @@
         "tags": [
           "Pipeline schedules"
         ],
-        "summary": "Create a new pipeline schedule",
+        "summary": "Create a pipeline schedule",
+        "description": "Creates a pipeline schedule.",
         "operationId": "postApiV4ProjectsIdPipelineSchedules",
         "parameters": [
           {
@@ -83676,7 +83835,8 @@
         "tags": [
           "Pipeline schedules"
         ],
-        "summary": "Get a single pipeline schedule",
+        "summary": "Retrieve a pipeline schedule",
+        "description": "Retrieves a pipeline schedule for a project.",
         "operationId": "getApiV4ProjectsIdPipelineSchedulesPipelineScheduleId",
         "parameters": [
           {
@@ -83725,7 +83885,8 @@
         "tags": [
           "Pipeline schedules"
         ],
-        "summary": "Edit a pipeline schedule",
+        "summary": "Update a pipeline schedule",
+        "description": "Updates a pipeline schedule for a project. After the update is done, it is rescheduled automatically.",
         "operationId": "putApiV4ProjectsIdPipelineSchedulesPipelineScheduleId",
         "parameters": [
           {
@@ -83784,6 +83945,7 @@
           "Pipeline schedules"
         ],
         "summary": "Delete a pipeline schedule",
+        "description": "Deletes a pipeline schedule for a project.",
         "operationId": "deleteApiV4ProjectsIdPipelineSchedulesPipelineScheduleId",
         "parameters": [
           {
@@ -83836,7 +83998,8 @@
         "tags": [
           "Pipeline schedules"
         ],
-        "summary": "Get all pipelines triggered from a pipeline schedule",
+        "summary": "List all pipelines triggered by a pipeline schedule",
+        "description": "Lists all pipelines triggered by a pipeline schedule in a project.",
         "operationId": "getApiV4ProjectsIdPipelineSchedulesPipelineScheduleIdPipelines",
         "parameters": [
           {
@@ -84013,7 +84176,8 @@
         "tags": [
           "Pipeline schedules"
         ],
-        "summary": "Take ownership of a pipeline schedule",
+        "summary": "Create or update ownership of a pipeline schedule",
+        "description": "Creates or updates the owner of a pipeline schedule for a project.",
         "operationId": "postApiV4ProjectsIdPipelineSchedulesPipelineScheduleIdTakeOwnership",
         "parameters": [
           {
@@ -84064,8 +84228,8 @@
         "tags": [
           "Pipeline schedules"
         ],
-        "summary": "Play a scheduled pipeline immediately",
-        "description": "This feature was added in GitLab 12.8",
+        "summary": "Run a pipeline schedule",
+        "description": "Runs a pipeline schedule immediately. The next scheduled run of this pipeline is not affected.",
         "operationId": "postApiV4ProjectsIdPipelineSchedulesPipelineScheduleIdPlay",
         "parameters": [
           {
@@ -84118,7 +84282,8 @@
         "tags": [
           "Pipeline schedules"
         ],
-        "summary": "Create a new pipeline schedule variable",
+        "summary": "Create a variable for a pipeline schedule",
+        "description": "Creates a variable for a pipeline schedule.",
         "operationId": "postApiV4ProjectsIdPipelineSchedulesPipelineScheduleIdVariables",
         "parameters": [
           {
@@ -84178,7 +84343,8 @@
         "tags": [
           "Pipeline schedules"
         ],
-        "summary": "Get a single pipeline schedule variable",
+        "summary": "Retrieve a variable for a pipeline schedule",
+        "description": "Retrieves a specified variable for a pipeline schedule.",
         "operationId": "getApiV4ProjectsIdPipelineSchedulesPipelineScheduleIdVariablesKey",
         "parameters": [
           {
@@ -84237,7 +84403,8 @@
         "tags": [
           "Pipeline schedules"
         ],
-        "summary": "Edit a pipeline schedule variable",
+        "summary": "Update a variable for a pipeline schedule",
+        "description": "Updates a variable for a pipeline schedule.",
         "operationId": "putApiV4ProjectsIdPipelineSchedulesPipelineScheduleIdVariablesKey",
         "parameters": [
           {
@@ -84305,7 +84472,8 @@
         "tags": [
           "Pipeline schedules"
         ],
-        "summary": "Delete a pipeline schedule variable",
+        "summary": "Delete a variable for a pipeline schedule",
+        "description": "Deletes a specified variable for a pipeline schedule.",
         "operationId": "deleteApiV4ProjectsIdPipelineSchedulesPipelineScheduleIdVariablesKey",
         "parameters": [
           {
@@ -85219,8 +85387,8 @@
         "tags": [
           "Pipelines"
         ],
-        "summary": "Cancel all builds in the pipeline",
-        "description": "This feature was introduced in GitLab 8.11.",
+        "summary": "Cancel all jobs for a pipeline",
+        "description": "Cancels all jobs in a specified pipeline.",
         "operationId": "postApiV4ProjectsIdPipelinesPipelineIdCancel",
         "parameters": [
           {
@@ -95534,8 +95702,7 @@
                   "username": "raymond_smith",
                   "name": "Raymond Smith",
                   "state": "active",
-                  "created_at": "2012-10-22T14:13:35Z",
-                  "access_level": 20
+                  "requested_at": "2012-10-22T14:13:35Z"
                 }
               }
             }
@@ -95731,8 +95898,7 @@
                   "username": "raymond_smith",
                   "name": "Raymond Smith",
                   "state": "active",
-                  "created_at": "2012-10-22T14:13:35Z",
-                  "access_level": 20
+                  "requested_at": "2012-10-22T14:13:35Z"
                 }
               }
             }
@@ -96910,6 +97076,10 @@
           },
           "licenses": {
             "$ref": "#/components/schemas/DependencyEntityLicenseEntity"
+          },
+          "malware": {
+            "type": "boolean",
+            "description": "\"Malware status: true if a GLAM identifier is present, false if the SSCS add-on is active but none found, null if the SSCS add-on is inactive.\""
           }
         }
       },
@@ -98865,6 +99035,10 @@
             "default": false
           },
           "read_virtual_registry": {
+            "type": "boolean",
+            "default": false
+          },
+          "update_sast_vulnerability_resolution_setting": {
             "type": "boolean",
             "default": false
           },
@@ -105444,6 +105618,72 @@
         "properties": {
           "avatar_url": {
             "type": "string"
+          }
+        }
+      },
+      "APIEntitiesApplicationWithSecret": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "application_id": {
+            "type": "string",
+            "example": "5832fc6e14300a0d962240a8144466eef4ee93ef0d218477e55f11cf12fc3737"
+          },
+          "application_name": {
+            "type": "string",
+            "example": "MyApplication"
+          },
+          "callback_url": {
+            "type": "string",
+            "example": "https://redirect.uri"
+          },
+          "confidential": {
+            "type": "boolean",
+            "example": true
+          },
+          "scopes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "description": "Fallback array item schema"
+            }
+          },
+          "secret": {
+            "type": "string",
+            "example": "ee1dd64b6adc89cf7e2c23099301ccc2c61b441064e9324d963c46902a85ec34"
+          }
+        }
+      },
+      "APIEntitiesApplication": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "application_id": {
+            "type": "string",
+            "example": "5832fc6e14300a0d962240a8144466eef4ee93ef0d218477e55f11cf12fc3737"
+          },
+          "application_name": {
+            "type": "string",
+            "example": "MyApplication"
+          },
+          "callback_url": {
+            "type": "string",
+            "example": "https://redirect.uri"
+          },
+          "confidential": {
+            "type": "boolean",
+            "example": true
+          },
+          "scopes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "description": "Fallback array item schema"
+            }
           }
         }
       },
@@ -112330,35 +112570,6 @@
           }
         }
       },
-      "APIEntitiesNugetMetadatum": {
-        "type": "object",
-        "properties": {
-          "authors": {
-            "type": "string",
-            "example": "Authors"
-          },
-          "description": {
-            "type": "string",
-            "example": "Description"
-          },
-          "summary": {
-            "type": "string",
-            "example": "Description"
-          },
-          "projectUrl": {
-            "type": "string",
-            "example": "http://sandbox.com/project"
-          },
-          "licenseUrl": {
-            "type": "string",
-            "example": "http://sandbox.com/license"
-          },
-          "iconUrl": {
-            "type": "string",
-            "example": "http://sandbox.com/icon"
-          }
-        }
-      },
       "APIEntitiesNugetSearchResult": {
         "type": "object",
         "properties": {
@@ -112392,11 +112603,29 @@
             "type": "string",
             "example": "tag#1 tag#2"
           },
-          "metadatum": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/APIEntitiesNugetMetadatum"
-            }
+          "authors": {
+            "type": "string",
+            "example": "Authors"
+          },
+          "description": {
+            "type": "string",
+            "example": "Description"
+          },
+          "summary": {
+            "type": "string",
+            "example": "Description"
+          },
+          "projectUrl": {
+            "type": "string",
+            "example": "http://sandbox.com/project"
+          },
+          "licenseUrl": {
+            "type": "string",
+            "example": "http://sandbox.com/license"
+          },
+          "iconUrl": {
+            "type": "string",
+            "example": "http://sandbox.com/icon"
           }
         }
       },
@@ -112776,7 +113005,7 @@
           }
         }
       },
-      "APIEntitiesIssuableEntity": {
+      "APIEntitiesApprovalState": {
         "type": "object",
         "properties": {
           "id": {
@@ -112812,14 +113041,6 @@
             "type": "string",
             "format": "date-time",
             "example": "2022-11-14T17:22:01.470Z"
-          }
-        }
-      },
-      "APIEntitiesApprovalState": {
-        "type": "object",
-        "properties": {
-          "merge_request": {
-            "$ref": "#/components/schemas/APIEntitiesIssuableEntity"
           },
           "merge_status": {
             "type": "string",
@@ -113181,8 +113402,46 @@
       "APIEntitiesMember": {
         "type": "object",
         "properties": {
-          "user": {
-            "$ref": "#/components/schemas/APIEntitiesUserBasic"
+          "id": {
+            "type": "integer",
+            "example": 1
+          },
+          "username": {
+            "type": "string",
+            "example": "admin"
+          },
+          "public_email": {
+            "type": "string",
+            "example": "john@example.com"
+          },
+          "name": {
+            "type": "string",
+            "example": "Administrator"
+          },
+          "state": {
+            "type": "string",
+            "example": "active"
+          },
+          "locked": {
+            "type": "boolean"
+          },
+          "avatar_url": {
+            "type": "string",
+            "example": "https://gravatar.com/avatar/1"
+          },
+          "avatar_path": {
+            "type": "string",
+            "example": "/user/avatar/28/The-Big-Lebowski-400-400.png"
+          },
+          "custom_attributes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/APIEntitiesCustomAttribute"
+            }
+          },
+          "web_url": {
+            "type": "string",
+            "example": "https://gitlab.example.com/root"
           },
           "access_level": {
             "type": "string"
@@ -115085,8 +115344,50 @@
       "APIEntitiesDeployKeysProject": {
         "type": "object",
         "properties": {
-          "deploy_key": {
-            "$ref": "#/components/schemas/APIEntitiesDeployKey"
+          "id": {
+            "type": "integer",
+            "example": 1
+          },
+          "title": {
+            "type": "string",
+            "example": "Sample key 25"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2015-09-03T07:24:44.627Z"
+          },
+          "expires_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2020-09-03T07:24:44.627Z"
+          },
+          "last_used_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2020-09-03T07:24:44.627Z"
+          },
+          "key": {
+            "type": "string",
+            "example": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAAgQDNJAkI3Wdf0r13c8a5pEExB2YowPWCSVzfZV22pNBc1CuEbyYLHpUyaD0GwpGvFdx2aP7lMEk35k6Rz3ccBF6jRaVJyhsn5VNnW92PMpBJ/P1UebhXwsFHdQf5rTt082cSxWuk61kGWRQtk4ozt/J2DF/dIUVaLvc+z4HomT41fQ=="
+          },
+          "usage_type": {
+            "type": "string",
+            "example": "auth"
+          },
+          "fingerprint": {
+            "type": "string",
+            "example": "4a:9d:64:15:ed:3a:e6:07:6e:89:36:b3:3b:03:05:d9"
+          },
+          "fingerprint_sha256": {
+            "type": "string",
+            "example": "SHA256:Jrs3LD1Ji30xNLtTVf9NDCj7kkBgPBb2pjvTZ3HfIgU"
+          },
+          "projects_with_write_access": {
+            "$ref": "#/components/schemas/APIEntitiesProjectIdentity"
+          },
+          "projects_with_readonly_access": {
+            "$ref": "#/components/schemas/APIEntitiesProjectIdentity"
           },
           "can_push": {
             "type": "boolean"
@@ -117235,72 +117536,6 @@
           }
         }
       },
-      "APIEntitiesApplicationWithSecret": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "application_id": {
-            "type": "string",
-            "example": "5832fc6e14300a0d962240a8144466eef4ee93ef0d218477e55f11cf12fc3737"
-          },
-          "application_name": {
-            "type": "string",
-            "example": "MyApplication"
-          },
-          "callback_url": {
-            "type": "string",
-            "example": "https://redirect.uri"
-          },
-          "confidential": {
-            "type": "boolean",
-            "example": true
-          },
-          "scopes": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "description": "Fallback array item schema"
-            }
-          },
-          "secret": {
-            "type": "string",
-            "example": "ee1dd64b6adc89cf7e2c23099301ccc2c61b441064e9324d963c46902a85ec34"
-          }
-        }
-      },
-      "APIEntitiesApplication": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "application_id": {
-            "type": "string",
-            "example": "5832fc6e14300a0d962240a8144466eef4ee93ef0d218477e55f11cf12fc3737"
-          },
-          "application_name": {
-            "type": "string",
-            "example": "MyApplication"
-          },
-          "callback_url": {
-            "type": "string",
-            "example": "https://redirect.uri"
-          },
-          "confidential": {
-            "type": "boolean",
-            "example": true
-          },
-          "scopes": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "description": "Fallback array item schema"
-            }
-          }
-        }
-      },
       "APIEntitiesAppearance": {
         "type": "object",
         "properties": {
@@ -117602,8 +117837,46 @@
       "APIEntitiesAccessRequester": {
         "type": "object",
         "properties": {
-          "user": {
-            "$ref": "#/components/schemas/APIEntitiesUserBasic"
+          "id": {
+            "type": "integer",
+            "example": 1
+          },
+          "username": {
+            "type": "string",
+            "example": "admin"
+          },
+          "public_email": {
+            "type": "string",
+            "example": "john@example.com"
+          },
+          "name": {
+            "type": "string",
+            "example": "Administrator"
+          },
+          "state": {
+            "type": "string",
+            "example": "active"
+          },
+          "locked": {
+            "type": "boolean"
+          },
+          "avatar_url": {
+            "type": "string",
+            "example": "https://gravatar.com/avatar/1"
+          },
+          "avatar_path": {
+            "type": "string",
+            "example": "/user/avatar/28/The-Big-Lebowski-400-400.png"
+          },
+          "custom_attributes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/APIEntitiesCustomAttribute"
+            }
+          },
+          "web_url": {
+            "type": "string",
+            "example": "https://gitlab.example.com/root"
           },
           "requested_at": {
             "type": "string"
@@ -120674,7 +120947,7 @@
           }
         }
       },
-      "RequestBody2def9177cd1c": {
+      "RequestBodyD75fa79afa6e": {
         "required": [
           "base_access_level"
         ],
@@ -120836,6 +121109,11 @@
           "read_virtual_registry": {
             "type": "boolean",
             "description": "Allows read access to virtual registries at the group level. Enables users to resolve packages through the virtual registry without requiring broader group membership permissions. Only works on top level groups.",
+            "nullable": true
+          },
+          "update_sast_vulnerability_resolution_setting": {
+            "type": "boolean",
+            "description": "Turn SAST Vulnerability Resolution on or off for a project. Also requires the `read_vulnerability` permission.",
             "nullable": true
           },
           "read_admin_cicd": {
@@ -123805,6 +124083,54 @@
             "type": "string",
             "description": "The avatar file (generated by Multipart middleware)",
             "format": "binary",
+            "nullable": true
+          }
+        }
+      },
+      "RequestBody39542344a153": {
+        "required": [
+          "name",
+          "redirect_uri",
+          "scopes"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the application.",
+            "nullable": true,
+            "example": "MyApplication"
+          },
+          "redirect_uri": {
+            "type": "string",
+            "description": "Redirect URI of the application.",
+            "nullable": true,
+            "example": "https://redirect.uri"
+          },
+          "scopes": {
+            "type": "string",
+            "description": "Scopes available to the application. Separate multiple scopes with a space.",
+            "nullable": true
+          },
+          "confidential": {
+            "type": "boolean",
+            "description": "If `true`, the application can securely store client credentials, such as the client secret. Non-confidential applications, such as native mobile apps and Single Page Apps might expose client credentials. If unset, defaults to `true`.",
+            "default": true,
+            "nullable": true
+          }
+        }
+      },
+      "RequestBody71d09f790ff1": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the application.",
+            "nullable": true
+          },
+          "scopes": {
+            "type": "string",
+            "description": "Scopes available to the application. Separate multiple scopes with a space.",
             "nullable": true
           }
         }

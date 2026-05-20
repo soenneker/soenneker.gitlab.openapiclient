@@ -4,6 +4,7 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.User.Activities;
+using Soenneker.GitLab.OpenApiClient.Api.V4.User.Applications;
 using Soenneker.GitLab.OpenApiClient.Api.V4.User.Avatar;
 using Soenneker.GitLab.OpenApiClient.Api.V4.User.Emails;
 using Soenneker.GitLab.OpenApiClient.Api.V4.User.Gpg_keys;
@@ -31,6 +32,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.User.Activities.ActivitiesRequestBuilder Activities
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.User.Activities.ActivitiesRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The applications property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.User.Applications.ApplicationsRequestBuilder Applications
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.User.Applications.ApplicationsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The avatar property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.User.Avatar.AvatarRequestBuilder Avatar

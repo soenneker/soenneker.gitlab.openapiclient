@@ -114,6 +114,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public bool? RemoveGroup { get; set; }
         /// <summary>The remove_project property</summary>
         public bool? RemoveProject { get; set; }
+        /// <summary>The update_sast_vulnerability_resolution_setting property</summary>
+        public bool? UpdateSastVulnerabilityResolutionSetting { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMemberRole"/> and sets the default values.
         /// </summary>
@@ -183,6 +185,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "read_vulnerability", n => { ReadVulnerability = n.GetBoolValue(); } },
                 { "remove_group", n => { RemoveGroup = n.GetBoolValue(); } },
                 { "remove_project", n => { RemoveProject = n.GetBoolValue(); } },
+                { "update_sast_vulnerability_resolution_setting", n => { UpdateSastVulnerabilityResolutionSetting = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -236,6 +239,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("read_vulnerability", ReadVulnerability);
             writer.WriteBoolValue("remove_group", RemoveGroup);
             writer.WriteBoolValue("remove_project", RemoveProject);
+            writer.WriteBoolValue("update_sast_vulnerability_resolution_setting", UpdateSastVulnerabilityResolutionSetting);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

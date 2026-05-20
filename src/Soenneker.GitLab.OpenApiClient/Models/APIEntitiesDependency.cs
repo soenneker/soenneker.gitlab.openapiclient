@@ -30,6 +30,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityLicenseEntity Licenses { get; set; }
 #endif
+        /// <summary>&quot;Malware status: true if a GLAM identifier is present, false if the SSCS add-on is active but none found, null if the SSCS add-on is inactive.&quot;</summary>
+        public bool? Malware { get; set; }
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -89,6 +91,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             {
                 { "dependency_file_path", n => { DependencyFilePath = n.GetStringValue(); } },
                 { "licenses", n => { Licenses = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityLicenseEntity>(global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityLicenseEntity.CreateFromDiscriminatorValue); } },
+                { "malware", n => { Malware = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "package_manager", n => { PackageManager = n.GetStringValue(); } },
                 { "version", n => { Version = n.GetStringValue(); } },
@@ -104,6 +107,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("dependency_file_path", DependencyFilePath);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityLicenseEntity>("licenses", Licenses);
+            writer.WriteBoolValue("malware", Malware);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("package_manager", PackageManager);
             writer.WriteStringValue("version", Version);

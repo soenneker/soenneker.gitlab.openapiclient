@@ -14,6 +14,30 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The authors property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Authors { get; set; }
+#nullable restore
+#else
+        public string Authors { get; set; }
+#endif
+        /// <summary>The description property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Description { get; set; }
+#nullable restore
+#else
+        public string Description { get; set; }
+#endif
+        /// <summary>The iconUrl property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? IconUrl { get; set; }
+#nullable restore
+#else
+        public string IconUrl { get; set; }
+#endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -22,13 +46,29 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>The metadatum property</summary>
+        /// <summary>The licenseUrl property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesNugetMetadatum>? Metadatum { get; set; }
+        public string? LicenseUrl { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesNugetMetadatum> Metadatum { get; set; }
+        public string LicenseUrl { get; set; }
+#endif
+        /// <summary>The projectUrl property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ProjectUrl { get; set; }
+#nullable restore
+#else
+        public string ProjectUrl { get; set; }
+#endif
+        /// <summary>The summary property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Summary { get; set; }
+#nullable restore
+#else
+        public string Summary { get; set; }
 #endif
         /// <summary>The tags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -99,8 +139,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "authors", n => { Authors = n.GetStringValue(); } },
+                { "description", n => { Description = n.GetStringValue(); } },
+                { "iconUrl", n => { IconUrl = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "metadatum", n => { Metadatum = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesNugetMetadatum>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesNugetMetadatum.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "licenseUrl", n => { LicenseUrl = n.GetStringValue(); } },
+                { "projectUrl", n => { ProjectUrl = n.GetStringValue(); } },
+                { "summary", n => { Summary = n.GetStringValue(); } },
                 { "tags", n => { Tags = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
                 { "totalDownloads", n => { TotalDownloads = n.GetIntValue(); } },
@@ -117,8 +162,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("authors", Authors);
+            writer.WriteStringValue("description", Description);
+            writer.WriteStringValue("iconUrl", IconUrl);
             writer.WriteStringValue("id", Id);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesNugetMetadatum>("metadatum", Metadatum);
+            writer.WriteStringValue("licenseUrl", LicenseUrl);
+            writer.WriteStringValue("projectUrl", ProjectUrl);
+            writer.WriteStringValue("summary", Summary);
             writer.WriteStringValue("tags", Tags);
             writer.WriteStringValue("title", Title);
             writer.WriteIntValue("totalDownloads", TotalDownloads);
