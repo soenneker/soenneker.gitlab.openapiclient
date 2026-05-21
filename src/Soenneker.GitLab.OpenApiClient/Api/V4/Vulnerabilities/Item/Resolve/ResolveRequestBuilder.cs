@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Vulnerabilities.Item.Resolve
         {
         }
         /// <summary>
-        /// Resolve a vulnerability
+        /// Resolves a specified vulnerability. Returns status code `304` if the vulnerability is already resolved. Returns status code `403` if the authenticated user does not have permission to change the vulnerability status.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesVulnerability"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Vulnerabilities.Item.Resolve
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesVulnerability>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesVulnerability.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Resolve a vulnerability
+        /// Resolves a specified vulnerability. Returns status code `304` if the vulnerability is already resolved. Returns status code `403` if the authenticated user does not have permission to change the vulnerability status.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

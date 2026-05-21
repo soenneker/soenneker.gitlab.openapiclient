@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Project_deploy_keys
         {
         }
         /// <summary>
-        /// Get the project-level Deploy keys that a specified user can access to.
+        /// Lists all project-level deploy keys that a user can access.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDeployKey"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Project_deploy_keys
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDeployKey>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDeployKey.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get the project-level Deploy keys that a specified user can access to.
+        /// Lists all project-level deploy keys that a user can access.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Project_deploy_keys
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Project_deploy_keys.Project_deploy_keysRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get the project-level Deploy keys that a specified user can access to.
+        /// Lists all project-level deploy keys that a user can access.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Project_deploy_keysRequestBuilderGetQueryParameters 

@@ -5,32 +5,32 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Create_ci_config
+namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// Default response schema
+    /// Definition for resource usage limits enforced in Sidekiq workers
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class Create_ci_configPostResponse : IAdditionalDataHolder, IParsable
+    public partial class RequestBodyA677006fd27b_resource_usage_limits : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Create_ci_config.Create_ci_configPostResponse"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA677006fd27b_resource_usage_limits"/> and sets the default values.
         /// </summary>
-        public Create_ci_configPostResponse()
+        public RequestBodyA677006fd27b_resource_usage_limits()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Create_ci_config.Create_ci_configPostResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA677006fd27b_resource_usage_limits"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Create_ci_config.Create_ci_configPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA677006fd27b_resource_usage_limits CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Create_ci_config.Create_ci_configPostResponse();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA677006fd27b_resource_usage_limits();
         }
         /// <summary>
         /// The deserialization information for the current model

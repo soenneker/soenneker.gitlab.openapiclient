@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Dependencies
         {
         }
         /// <summary>
-        /// Get a list of project dependencies
+        /// Lists all dependencies for a specified project. This operation partially mirrors the dependency list feature, which is available only for languages and package managers supported by Gemnasium. Responses are paginated and return 20 results by default.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDependency"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Dependencies
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDependency>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDependency.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get a list of project dependencies
+        /// Lists all dependencies for a specified project. This operation partially mirrors the dependency list feature, which is available only for languages and package managers supported by Gemnasium. Responses are paginated and return 20 results by default.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Dependencies
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Dependencies.DependenciesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get a list of project dependencies
+        /// Lists all dependencies for a specified project. This operation partially mirrors the dependency list feature, which is available only for languages and package managers supported by Gemnasium. Responses are paginated and return 20 results by default.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class DependenciesRequestBuilderGetQueryParameters 

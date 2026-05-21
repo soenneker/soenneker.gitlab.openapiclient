@@ -1446,6 +1446,110 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ImportExportUploadUploadsVerifiedInPercentage { get; set; }
 #endif
+        /// <summary>The issuable_metric_image_uploads_checksum_failed_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? IssuableMetricImageUploadsChecksumFailedCount { get; set; }
+#nullable restore
+#else
+        public string IssuableMetricImageUploadsChecksumFailedCount { get; set; }
+#endif
+        /// <summary>The issuable_metric_image_uploads_checksummed_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? IssuableMetricImageUploadsChecksummedCount { get; set; }
+#nullable restore
+#else
+        public string IssuableMetricImageUploadsChecksummedCount { get; set; }
+#endif
+        /// <summary>The issuable_metric_image_uploads_checksum_total_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? IssuableMetricImageUploadsChecksumTotalCount { get; set; }
+#nullable restore
+#else
+        public string IssuableMetricImageUploadsChecksumTotalCount { get; set; }
+#endif
+        /// <summary>The issuable_metric_image_uploads_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? IssuableMetricImageUploadsCount { get; set; }
+#nullable restore
+#else
+        public string IssuableMetricImageUploadsCount { get; set; }
+#endif
+        /// <summary>The issuable_metric_image_uploads_failed_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? IssuableMetricImageUploadsFailedCount { get; set; }
+#nullable restore
+#else
+        public string IssuableMetricImageUploadsFailedCount { get; set; }
+#endif
+        /// <summary>The issuable_metric_image_uploads_oldest_unsynced_time property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? IssuableMetricImageUploadsOldestUnsyncedTime { get; set; }
+#nullable restore
+#else
+        public string IssuableMetricImageUploadsOldestUnsyncedTime { get; set; }
+#endif
+        /// <summary>The issuable_metric_image_uploads_registry_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? IssuableMetricImageUploadsRegistryCount { get; set; }
+#nullable restore
+#else
+        public string IssuableMetricImageUploadsRegistryCount { get; set; }
+#endif
+        /// <summary>The issuable_metric_image_uploads_synced_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? IssuableMetricImageUploadsSyncedCount { get; set; }
+#nullable restore
+#else
+        public string IssuableMetricImageUploadsSyncedCount { get; set; }
+#endif
+        /// <summary>The issuable_metric_image_uploads_synced_in_percentage property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? IssuableMetricImageUploadsSyncedInPercentage { get; set; }
+#nullable restore
+#else
+        public string IssuableMetricImageUploadsSyncedInPercentage { get; set; }
+#endif
+        /// <summary>The issuable_metric_image_uploads_verification_failed_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? IssuableMetricImageUploadsVerificationFailedCount { get; set; }
+#nullable restore
+#else
+        public string IssuableMetricImageUploadsVerificationFailedCount { get; set; }
+#endif
+        /// <summary>The issuable_metric_image_uploads_verification_total_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? IssuableMetricImageUploadsVerificationTotalCount { get; set; }
+#nullable restore
+#else
+        public string IssuableMetricImageUploadsVerificationTotalCount { get; set; }
+#endif
+        /// <summary>The issuable_metric_image_uploads_verified_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? IssuableMetricImageUploadsVerifiedCount { get; set; }
+#nullable restore
+#else
+        public string IssuableMetricImageUploadsVerifiedCount { get; set; }
+#endif
+        /// <summary>The issuable_metric_image_uploads_verified_in_percentage property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? IssuableMetricImageUploadsVerifiedInPercentage { get; set; }
+#nullable restore
+#else
+        public string IssuableMetricImageUploadsVerifiedInPercentage { get; set; }
+#endif
         /// <summary>The job_artifacts_checksum_failed_count property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -3914,6 +4018,19 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "import_export_upload_uploads_verification_total_count", n => { ImportExportUploadUploadsVerificationTotalCount = n.GetStringValue(); } },
                 { "import_export_upload_uploads_verified_count", n => { ImportExportUploadUploadsVerifiedCount = n.GetStringValue(); } },
                 { "import_export_upload_uploads_verified_in_percentage", n => { ImportExportUploadUploadsVerifiedInPercentage = n.GetStringValue(); } },
+                { "issuable_metric_image_uploads_checksum_failed_count", n => { IssuableMetricImageUploadsChecksumFailedCount = n.GetStringValue(); } },
+                { "issuable_metric_image_uploads_checksum_total_count", n => { IssuableMetricImageUploadsChecksumTotalCount = n.GetStringValue(); } },
+                { "issuable_metric_image_uploads_checksummed_count", n => { IssuableMetricImageUploadsChecksummedCount = n.GetStringValue(); } },
+                { "issuable_metric_image_uploads_count", n => { IssuableMetricImageUploadsCount = n.GetStringValue(); } },
+                { "issuable_metric_image_uploads_failed_count", n => { IssuableMetricImageUploadsFailedCount = n.GetStringValue(); } },
+                { "issuable_metric_image_uploads_oldest_unsynced_time", n => { IssuableMetricImageUploadsOldestUnsyncedTime = n.GetStringValue(); } },
+                { "issuable_metric_image_uploads_registry_count", n => { IssuableMetricImageUploadsRegistryCount = n.GetStringValue(); } },
+                { "issuable_metric_image_uploads_synced_count", n => { IssuableMetricImageUploadsSyncedCount = n.GetStringValue(); } },
+                { "issuable_metric_image_uploads_synced_in_percentage", n => { IssuableMetricImageUploadsSyncedInPercentage = n.GetStringValue(); } },
+                { "issuable_metric_image_uploads_verification_failed_count", n => { IssuableMetricImageUploadsVerificationFailedCount = n.GetStringValue(); } },
+                { "issuable_metric_image_uploads_verification_total_count", n => { IssuableMetricImageUploadsVerificationTotalCount = n.GetStringValue(); } },
+                { "issuable_metric_image_uploads_verified_count", n => { IssuableMetricImageUploadsVerifiedCount = n.GetStringValue(); } },
+                { "issuable_metric_image_uploads_verified_in_percentage", n => { IssuableMetricImageUploadsVerifiedInPercentage = n.GetStringValue(); } },
                 { "job_artifacts_checksum_failed_count", n => { JobArtifactsChecksumFailedCount = n.GetStringValue(); } },
                 { "job_artifacts_checksum_total_count", n => { JobArtifactsChecksumTotalCount = n.GetStringValue(); } },
                 { "job_artifacts_checksummed_count", n => { JobArtifactsChecksummedCount = n.GetStringValue(); } },
@@ -4385,6 +4502,19 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("import_export_upload_uploads_verification_total_count", ImportExportUploadUploadsVerificationTotalCount);
             writer.WriteStringValue("import_export_upload_uploads_verified_count", ImportExportUploadUploadsVerifiedCount);
             writer.WriteStringValue("import_export_upload_uploads_verified_in_percentage", ImportExportUploadUploadsVerifiedInPercentage);
+            writer.WriteStringValue("issuable_metric_image_uploads_checksum_failed_count", IssuableMetricImageUploadsChecksumFailedCount);
+            writer.WriteStringValue("issuable_metric_image_uploads_checksummed_count", IssuableMetricImageUploadsChecksummedCount);
+            writer.WriteStringValue("issuable_metric_image_uploads_checksum_total_count", IssuableMetricImageUploadsChecksumTotalCount);
+            writer.WriteStringValue("issuable_metric_image_uploads_count", IssuableMetricImageUploadsCount);
+            writer.WriteStringValue("issuable_metric_image_uploads_failed_count", IssuableMetricImageUploadsFailedCount);
+            writer.WriteStringValue("issuable_metric_image_uploads_oldest_unsynced_time", IssuableMetricImageUploadsOldestUnsyncedTime);
+            writer.WriteStringValue("issuable_metric_image_uploads_registry_count", IssuableMetricImageUploadsRegistryCount);
+            writer.WriteStringValue("issuable_metric_image_uploads_synced_count", IssuableMetricImageUploadsSyncedCount);
+            writer.WriteStringValue("issuable_metric_image_uploads_synced_in_percentage", IssuableMetricImageUploadsSyncedInPercentage);
+            writer.WriteStringValue("issuable_metric_image_uploads_verification_failed_count", IssuableMetricImageUploadsVerificationFailedCount);
+            writer.WriteStringValue("issuable_metric_image_uploads_verification_total_count", IssuableMetricImageUploadsVerificationTotalCount);
+            writer.WriteStringValue("issuable_metric_image_uploads_verified_count", IssuableMetricImageUploadsVerifiedCount);
+            writer.WriteStringValue("issuable_metric_image_uploads_verified_in_percentage", IssuableMetricImageUploadsVerifiedInPercentage);
             writer.WriteStringValue("job_artifacts_checksum_failed_count", JobArtifactsChecksumFailedCount);
             writer.WriteStringValue("job_artifacts_checksummed_count", JobArtifactsChecksummedCount);
             writer.WriteStringValue("job_artifacts_checksum_total_count", JobArtifactsChecksumTotalCount);

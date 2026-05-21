@@ -81,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Hooks.Item
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesHook>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesHook.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Tests a webhook by triggering a test event
+        /// Creates a test run for a webhook. Executes the webhook with mock data.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Hooks.Item.WithHook_PostResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -157,7 +157,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Hooks.Item
             return requestInfo;
         }
         /// <summary>
-        /// Tests a webhook by triggering a test event
+        /// Creates a test run for a webhook. Executes the webhook with mock data.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

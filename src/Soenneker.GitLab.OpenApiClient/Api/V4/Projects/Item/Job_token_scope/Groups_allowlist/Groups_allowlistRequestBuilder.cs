@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Job_token_scope.Gr
         {
         }
         /// <summary>
-        /// Fetch project groups allowlist for CI_JOB_TOKEN access settings.
+        /// Lists all groups in the CI/CD job token allowlist of a specified project.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBasicProjectDetails"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Job_token_scope.Gr
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBasicProjectDetails>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBasicProjectDetails.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Add target group to allowlist.
+        /// Adds a group to the CI/CD job token allowlist of a specified project.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBasicGroupDetails"/></returns>
         /// <param name="body">The request body</param>
@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Job_token_scope.Gr
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBasicGroupDetails>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBasicGroupDetails.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Fetch project groups allowlist for CI_JOB_TOKEN access settings.
+        /// Lists all groups in the CI/CD job token allowlist of a specified project.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -104,7 +104,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Job_token_scope.Gr
             return requestInfo;
         }
         /// <summary>
-        /// Add target group to allowlist.
+        /// Adds a group to the CI/CD job token allowlist of a specified project.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -135,7 +135,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Job_token_scope.Gr
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Job_token_scope.Groups_allowlist.Groups_allowlistRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Fetch project groups allowlist for CI_JOB_TOKEN access settings.
+        /// Lists all groups in the CI/CD job token allowlist of a specified project.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Groups_allowlistRequestBuilderGetQueryParameters 

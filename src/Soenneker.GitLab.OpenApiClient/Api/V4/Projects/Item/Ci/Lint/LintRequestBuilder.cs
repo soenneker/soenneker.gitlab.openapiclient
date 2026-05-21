@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ci.Lint
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiLintResult>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiLintResult.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Checks if CI/CD YAML configuration is valid. This endpoint has namespace specific context
+        /// Validates a provided CI/CD configuration in the context of a specified project.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiLintResult"/></returns>
         /// <param name="body">The request body</param>
@@ -91,7 +91,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ci.Lint
             return requestInfo;
         }
         /// <summary>
-        /// Checks if CI/CD YAML configuration is valid. This endpoint has namespace specific context
+        /// Validates a provided CI/CD configuration in the context of a specified project.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

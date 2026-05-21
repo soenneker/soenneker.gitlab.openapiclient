@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Security_settings
         {
         }
         /// <summary>
-        /// Updates secret_push_protection_enabled for all projects to the new value
+        /// Updates group security settings for a specified group. You must have the Security Manager, Maintainer, or Owner role for the group.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Security_settings.Security_settingsPutResponse"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Security_settings
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Security_settings.Security_settingsPutResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Security_settings.Security_settingsPutResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Updates secret_push_protection_enabled for all projects to the new value
+        /// Updates group security settings for a specified group. You must have the Security Manager, Maintainer, or Owner role for the group.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

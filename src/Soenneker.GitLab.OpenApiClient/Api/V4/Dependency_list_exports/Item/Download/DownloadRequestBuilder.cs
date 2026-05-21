@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Dependency_list_exports.Item.Dow
         {
         }
         /// <summary>
-        /// Downloads a dependency list export file
+        /// Downloads a dependency list export.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Dependency_list_exports.Item.Download.DownloadGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Dependency_list_exports.Item.Dow
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Dependency_list_exports.Item.Download.DownloadGetResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Dependency_list_exports.Item.Download.DownloadGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Downloads a dependency list export file
+        /// Downloads a dependency list export.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

@@ -9,29 +9,51 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class RequestBodyBc3c2d755ba2_default_branch_protection_defaults_allowed_to_merge : IAdditionalDataHolder, IParsable
+    public partial class APIEntitiesUserActivity : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>A valid access level</summary>
-        public int? AccessLevel { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The last_activity_at property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? LastActivityAt { get; set; }
+#nullable restore
+#else
+        public string LastActivityAt { get; set; }
+#endif
+        /// <summary>The last_activity_on property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? LastActivityOn { get; set; }
+#nullable restore
+#else
+        public string LastActivityOn { get; set; }
+#endif
+        /// <summary>The username property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Username { get; set; }
+#nullable restore
+#else
+        public string Username { get; set; }
+#endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc3c2d755ba2_default_branch_protection_defaults_allowed_to_merge"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserActivity"/> and sets the default values.
         /// </summary>
-        public RequestBodyBc3c2d755ba2_default_branch_protection_defaults_allowed_to_merge()
+        public APIEntitiesUserActivity()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc3c2d755ba2_default_branch_protection_defaults_allowed_to_merge"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserActivity"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc3c2d755ba2_default_branch_protection_defaults_allowed_to_merge CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserActivity CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc3c2d755ba2_default_branch_protection_defaults_allowed_to_merge();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserActivity();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -41,7 +63,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "access_level", n => { AccessLevel = n.GetIntValue(); } },
+                { "last_activity_at", n => { LastActivityAt = n.GetStringValue(); } },
+                { "last_activity_on", n => { LastActivityOn = n.GetStringValue(); } },
+                { "username", n => { Username = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -51,7 +75,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("access_level", AccessLevel);
+            writer.WriteStringValue("last_activity_at", LastActivityAt);
+            writer.WriteStringValue("last_activity_on", LastActivityOn);
+            writer.WriteStringValue("username", Username);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

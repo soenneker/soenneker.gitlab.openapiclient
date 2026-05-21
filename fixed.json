@@ -1785,8 +1785,8 @@
         "tags": [
           "Dependency management"
         ],
-        "summary": "Generate a dependency list export on a project-level",
-        "description": "Generates a dependency list export for a project",
+        "summary": "Create a dependency list export",
+        "description": "Creates a CycloneDX JSON export for all the project dependencies detected in a pipeline. If an authenticated user does not have the read_dependency permission, this request returns a `403 Forbidden` status code.",
         "operationId": "postApiV4ProjectsIdDependencyListExports",
         "parameters": [
           {
@@ -1837,8 +1837,8 @@
         "tags": [
           "Dependency management"
         ],
-        "summary": "Generate a dependency list export on a group-level",
-        "description": "Generates a dependency list export for a group",
+        "summary": "Create a dependency list export",
+        "description": "Creates a CycloneDX JSON export for all the project dependencies detected in a pipeline. If an authenticated user does not have the read_dependency permission, this request returns a `403 Forbidden` status code.",
         "operationId": "postApiV4GroupsIdDependencyListExports",
         "parameters": [
           {
@@ -1889,8 +1889,8 @@
         "tags": [
           "Dependency management"
         ],
-        "summary": "Generate a dependency list export on a pipeline-level",
-        "description": "Generates a dependency list export for a pipeline",
+        "summary": "Create a dependency list export",
+        "description": "Creates a CycloneDX JSON export for all the project dependencies detected in a pipeline. If an authenticated user does not have the read_dependency permission, this request returns a `403 Forbidden` status code.",
         "operationId": "postApiV4PipelinesIdDependencyListExports",
         "parameters": [
           {
@@ -1941,8 +1941,8 @@
         "tags": [
           "Dependency management"
         ],
-        "summary": "Get a dependency list export",
-        "description": "Retrieves a dependency list export",
+        "summary": "Retrieve a single dependency list export",
+        "description": "Retrieves a dependency list export.",
         "operationId": "getApiV4DependencyListExportsExportId",
         "parameters": [
           {
@@ -1984,8 +1984,8 @@
         "tags": [
           "Dependency management"
         ],
-        "summary": "Download a dependency list export",
-        "description": "Downloads a dependency list export file",
+        "summary": "Download dependency list export",
+        "description": "Downloads a dependency list export.",
         "operationId": "getApiV4DependencyListExportsExportIdDownload",
         "parameters": [
           {
@@ -4076,8 +4076,8 @@
         "tags": [
           "Analytics"
         ],
-        "summary": "Get count of recently created issues for the group",
-        "description": "This feature was introduced in GitLab 12.9.",
+        "summary": "Retrieve count of recently created issues for a group",
+        "description": "Retrieves the count of recently created issues for a specified group.",
         "operationId": "getApiV4AnalyticsGroupActivityIssuesCount",
         "parameters": [
           {
@@ -4110,8 +4110,8 @@
         "tags": [
           "Analytics"
         ],
-        "summary": "Get count of recently created merge requests for the group",
-        "description": "This feature was introduced in GitLab 12.9.",
+        "summary": "Retrieve count of recently created merge requests for a group",
+        "description": "Retrieves the count of recently created merge requests for a specified group.",
         "operationId": "getApiV4AnalyticsGroupActivityMergeRequestsCount",
         "parameters": [
           {
@@ -4144,8 +4144,8 @@
         "tags": [
           "Analytics"
         ],
-        "summary": "Get count of recently created group members",
-        "description": "This feature was introduced in GitLab 12.9.",
+        "summary": "Retrieve count of members recently added to a group",
+        "description": "Retrieves the count of members recently added to a specified group.",
         "operationId": "getApiV4AnalyticsGroupActivityNewMembersCount",
         "parameters": [
           {
@@ -4301,7 +4301,8 @@
         "tags": [
           "Dependency management"
         ],
-        "summary": "Get a list of project dependencies",
+        "summary": "List all project dependencies",
+        "description": "Lists all dependencies for a specified project. This operation partially mirrors the dependency list feature, which is available only for languages and package managers supported by Gemnasium. Responses are paginated and return 20 results by default.",
         "operationId": "getApiV4ProjectsIdDependencies",
         "parameters": [
           {
@@ -4820,7 +4821,8 @@
         "tags": [
           "Vulnerabilities"
         ],
-        "summary": "Generate a project-level export",
+        "summary": "Create a project-level vulnerability export",
+        "description": "Creates a vulnerability export for a project. Returns status code `403` if the authenticated user does not have permission to create a vulnerability.",
         "operationId": "postApiV4SecurityProjectsIdVulnerabilityExports",
         "parameters": [
           {
@@ -4869,7 +4871,8 @@
         "tags": [
           "Vulnerabilities"
         ],
-        "summary": "Generate a group-level export",
+        "summary": "Create a group-level vulnerability export",
+        "description": "Creates a vulnerability export for a group. Returns status code `403` if the authenticated user does not have permission to create a vulnerability.",
         "operationId": "postApiV4SecurityGroupsIdVulnerabilityExports",
         "parameters": [
           {
@@ -4910,7 +4913,8 @@
         "tags": [
           "Vulnerabilities"
         ],
-        "summary": "Generate an instance-level export",
+        "summary": "Create an instance-level vulnerability export",
+        "description": "Creates a vulnerability export for the projects of the user selected in the Security Dashboard. The created vulnerability export is automatically deleted at the time specified in the `expires_at` field.",
         "operationId": "postApiV4SecurityVulnerabilityExports",
         "requestBody": {
           "content": {
@@ -4940,7 +4944,8 @@
         "tags": [
           "Vulnerabilities"
         ],
-        "summary": "Get a single vulnerability export",
+        "summary": "Retrieve a vulnerability export",
+        "description": "Retrieves a specified vulnerability export.",
         "operationId": "getApiV4SecurityVulnerabilityExportsId",
         "parameters": [
           {
@@ -4971,7 +4976,8 @@
         "tags": [
           "Vulnerabilities"
         ],
-        "summary": "Download a single vulnerability export",
+        "summary": "Download a vulnerability export",
+        "description": "Downloads a specified vulnerability export.",
         "operationId": "getApiV4SecurityVulnerabilityExportsIdDownload",
         "parameters": [
           {
@@ -5229,7 +5235,8 @@
         "tags": [
           "Vulnerabilities"
         ],
-        "summary": "Get a list of project vulnerability findings",
+        "summary": "List all project vulnerability findings",
+        "description": "Lists all vulnerability findings for a specified project. Responses are paginated and return 20 results by default.",
         "operationId": "getApiV4ProjectsIdVulnerabilityFindings",
         "parameters": [
           {
@@ -5385,7 +5392,8 @@
         "tags": [
           "Vulnerabilities"
         ],
-        "summary": "Get a vulnerability",
+        "summary": "Retrieve a vulnerability",
+        "description": "Retrieves a specified vulnerability.",
         "operationId": "getApiV4VulnerabilitiesId",
         "parameters": [
           {
@@ -5418,6 +5426,7 @@
           "Vulnerabilities"
         ],
         "summary": "Resolve a vulnerability",
+        "description": "Resolves a specified vulnerability. Returns status code `304` if the vulnerability is already resolved. Returns status code `403` if the authenticated user does not have permission to change the vulnerability status.",
         "operationId": "postApiV4VulnerabilitiesIdResolve",
         "parameters": [
           {
@@ -5459,6 +5468,7 @@
           "Vulnerabilities"
         ],
         "summary": "Dismiss a vulnerability",
+        "description": "Dismisses a specified vulnerability. Returns status code `304` if the vulnerability is already dismissed. Returns status code `403` if the authenticated user does not have permission to change the vulnerability status.",
         "operationId": "postApiV4VulnerabilitiesIdDismiss",
         "parameters": [
           {
@@ -5491,6 +5501,7 @@
           "Vulnerabilities"
         ],
         "summary": "Confirm a vulnerability",
+        "description": "Confirms a specified vulnerability, marking it as genuine and requiring action. Returns status code `304` if the vulnerability is already confirmed. Returns status code `403` if the authenticated user does not have permission to change the vulnerability status.",
         "operationId": "postApiV4VulnerabilitiesIdConfirm",
         "parameters": [
           {
@@ -5531,7 +5542,8 @@
         "tags": [
           "Vulnerabilities"
         ],
-        "summary": "Revert a vulnerability to a detected state",
+        "summary": "Revert a vulnerability to detected state",
+        "description": "Reverts a specified vulnerability to detected state. Returns status code `304` if the vulnerability is already in detected state. Returns status code `403` if the authenticated user does not have permission to change vulnerability status.",
         "operationId": "postApiV4VulnerabilitiesIdRevert",
         "parameters": [
           {
@@ -5572,7 +5584,8 @@
         "tags": [
           "Vulnerabilities"
         ],
-        "summary": "Get a list of project vulnerabilities",
+        "summary": "List all project vulnerabilities",
+        "description": "Lists all vulnerabilities for a specified project.",
         "operationId": "getApiV4ProjectsIdVulnerabilities",
         "parameters": [
           {
@@ -5632,7 +5645,8 @@
         "tags": [
           "Vulnerabilities"
         ],
-        "summary": "Create a new Vulnerability (from a confirmed Finding)",
+        "summary": "Create a new vulnerability",
+        "description": "Creates a new vulnerability from a confirmed finding.",
         "operationId": "postApiV4ProjectsIdVulnerabilities",
         "parameters": [
           {
@@ -7294,8 +7308,8 @@
         "tags": [
           "Hooks"
         ],
-        "summary": "List group hooks",
-        "description": "Get a list of group hooks",
+        "summary": "List all group hooks",
+        "description": "Lists all group hooks.",
         "operationId": "getApiV4GroupsIdHooks",
         "parameters": [
           {
@@ -7355,8 +7369,8 @@
         "tags": [
           "Hooks"
         ],
-        "summary": "Add group hook",
-        "description": "Adds a hook to a specified group",
+        "summary": "Create a group hook",
+        "description": "Creates a hook for a specified group.",
         "operationId": "postApiV4GroupsIdHooks",
         "parameters": [
           {
@@ -7405,8 +7419,8 @@
         "tags": [
           "Hooks"
         ],
-        "summary": "Get group hook",
-        "description": "Get a specific hook for a group",
+        "summary": "Retrieve a group hook",
+        "description": "Retrieves a specified group hook.",
         "operationId": "getApiV4GroupsIdHooksHookId",
         "parameters": [
           {
@@ -7453,8 +7467,8 @@
         "tags": [
           "Hooks"
         ],
-        "summary": "Edit group hook",
-        "description": "Edits a hook for a specified group",
+        "summary": "Update a group hook",
+        "description": "Updates a hook for a specified group.",
         "operationId": "putApiV4GroupsIdHooksHookId",
         "parameters": [
           {
@@ -7510,8 +7524,8 @@
         "tags": [
           "Hooks"
         ],
-        "summary": "Delete group hook",
-        "description": "Removes a hook from a group. This is an idempotent method and can be called multiple times. Either the hook is available or not.",
+        "summary": "Delete a group hook",
+        "description": "Deletes a hook from a group. This is an idempotent method and can be called multiple times. Either the hook is available or not.",
         "operationId": "deleteApiV4GroupsIdHooksHookId",
         "parameters": [
           {
@@ -7560,8 +7574,8 @@
         "tags": [
           "Hooks"
         ],
-        "summary": "Get events for a given hook id",
-        "description": "List web hook logs by hook id",
+        "summary": "List all events",
+        "description": "Lists all events for a specified webhook.",
         "operationId": "getApiV4GroupsIdHooksHookIdEvents",
         "parameters": [
           {
@@ -7639,8 +7653,8 @@
         "tags": [
           "Hooks"
         ],
-        "summary": "Set a url variable",
-        "description": "Sets a URL variable for a webhook",
+        "summary": "Update a URL variable",
+        "description": "Updates a URL variable for a specified webhook.",
         "operationId": "putApiV4GroupsIdHooksHookIdUrlVariablesKey",
         "parameters": [
           {
@@ -7698,8 +7712,8 @@
         "tags": [
           "Hooks"
         ],
-        "summary": "Un-Set a url variable",
-        "description": "Removes a URL variable from a webhook",
+        "summary": "Delete a URL variable",
+        "description": "Deletes a URL variable from a specified webhook.",
         "operationId": "deleteApiV4GroupsIdHooksHookIdUrlVariablesKey",
         "parameters": [
           {
@@ -7750,8 +7764,8 @@
         "tags": [
           "Hooks"
         ],
-        "summary": "Set a custom header",
-        "description": "Sets a custom header for a webhook",
+        "summary": "Update a custom header",
+        "description": "Updates a custom header for a specified webhook.",
         "operationId": "putApiV4GroupsIdHooksHookIdCustomHeadersKey",
         "parameters": [
           {
@@ -7809,8 +7823,8 @@
         "tags": [
           "Hooks"
         ],
-        "summary": "Un-Set a custom header",
-        "description": "Removes a custom header from a webhook",
+        "summary": "Delete a custom header",
+        "description": "Deletes a custom header from a specified webhook.",
         "operationId": "deleteApiV4GroupsIdHooksHookIdCustomHeadersKey",
         "parameters": [
           {
@@ -7861,8 +7875,8 @@
         "tags": [
           "Hooks"
         ],
-        "summary": "Triggers a hook test",
-        "description": "Triggers a hook test",
+        "summary": "Trigger a test webhook",
+        "description": "Triggers a test webhook. This endpoint has a rate limit of five requests per minute for each webhook and authenticated user. To disable this limit on GitLab Self-Managed and GitLab Dedicated, an administrator can disable the feature flag named web_hook_test_api_endpoint_rate_limit.",
         "operationId": "postApiV4GroupsIdHooksHookIdTestTrigger",
         "parameters": [
           {
@@ -7936,7 +7950,7 @@
           "Hooks"
         ],
         "summary": "Resend a webhook event",
-        "description": "Resend a webhook event",
+        "description": "Resends a webhook event. This endpoint has a rate limit of five requests per minute for each webhook and authenticated user. To disable this limit on GitLab Self-Managed and GitLab Dedicated, an administrator can disable the feature flag named web_hook_event_resend_api_endpoint_rate_limit.",
         "operationId": "postApiV4GroupsIdHooksHookIdEventsHookLogIdResend",
         "parameters": [
           {
@@ -7985,7 +7999,8 @@
         "tags": [
           "Provider identities"
         ],
-        "summary": "Get user identities for the provider",
+        "summary": "Retrieve SAML identities for a group",
+        "description": "Retrieves SAML identities for a group.",
         "operationId": "getApiV4GroupsIdSamlIdentities",
         "parameters": [
           {
@@ -8017,7 +8032,8 @@
         "tags": [
           "Provider identities"
         ],
-        "summary": "Get a single identity for a user",
+        "summary": "Retrieve a SAML identity",
+        "description": "Retrieves a specified SAML identity.",
         "operationId": "getApiV4GroupsIdSamlUid",
         "parameters": [
           {
@@ -8056,7 +8072,8 @@
         "tags": [
           "Provider identities"
         ],
-        "summary": "Update extern_uid for the user",
+        "summary": "Update `extern_uid` field for a SAML identity",
+        "description": "Updates the `extern_uid` field for a specified SAML identity.",
         "operationId": "patchApiV4GroupsIdSamlUid",
         "parameters": [
           {
@@ -8104,7 +8121,8 @@
         "tags": [
           "Provider identities"
         ],
-        "summary": "Delete the Provider identity",
+        "summary": "Delete a SAML identity",
+        "description": "Deletes a specified SAML identity.",
         "operationId": "deleteApiV4GroupsIdSamlUid",
         "parameters": [
           {
@@ -8145,7 +8163,8 @@
         "tags": [
           "Provider identities"
         ],
-        "summary": "Get user identities for the provider",
+        "summary": "Retrieve SCIM identities for a group",
+        "description": "Retrieves SCIM identities for a group.",
         "operationId": "getApiV4GroupsIdScimIdentities",
         "parameters": [
           {
@@ -8177,7 +8196,8 @@
         "tags": [
           "Provider identities"
         ],
-        "summary": "Get a single identity for a user",
+        "summary": "Retrieve a SCIM identity",
+        "description": "Retrieves a specified SCIM identity.",
         "operationId": "getApiV4GroupsIdScimUid",
         "parameters": [
           {
@@ -8216,7 +8236,8 @@
         "tags": [
           "Provider identities"
         ],
-        "summary": "Update extern_uid for the user",
+        "summary": "Update `extern_uid` field for a SCIM identity",
+        "description": "Updates the `extern_uid` field for a specified SCIM identity.",
         "operationId": "patchApiV4GroupsIdScimUid",
         "parameters": [
           {
@@ -8264,7 +8285,8 @@
         "tags": [
           "Provider identities"
         ],
-        "summary": "Delete the Provider identity",
+        "summary": "Delete a SCIM identity",
+        "description": "Deletes a specified SCIM identity.",
         "operationId": "deleteApiV4GroupsIdScimUid",
         "parameters": [
           {
@@ -8841,8 +8863,8 @@
         "tags": [
           "Push rules"
         ],
-        "summary": "Get group push rule",
-        "description": "This feature was introduced in GitLab 13.4.",
+        "summary": "Retrieve the push rules of a group",
+        "description": "Retrieves the push rules of a specified group.",
         "operationId": "getApiV4GroupsIdPushRule",
         "parameters": [
           {
@@ -8872,8 +8894,8 @@
         "tags": [
           "Push rules"
         ],
-        "summary": "Add a push rule to a group",
-        "description": "This feature was introduced in GitLab 13.4.",
+        "summary": "Add push rules to a group",
+        "description": "Adds push rules to a specified group. Use only if you have not defined any push rules so far.",
         "operationId": "postApiV4GroupsIdPushRule",
         "parameters": [
           {
@@ -8912,8 +8934,8 @@
         "tags": [
           "Push rules"
         ],
-        "summary": "Edit push rule of a group",
-        "description": "This feature was introduced in GitLab 13.4.",
+        "summary": "Update push rules of a group",
+        "description": "Updates the push rules for a specified group.",
         "operationId": "putApiV4GroupsIdPushRule",
         "parameters": [
           {
@@ -8952,8 +8974,8 @@
         "tags": [
           "Push rules"
         ],
-        "summary": "Deletes group push rule",
-        "description": "This feature was introduced in GitLab 13.4.",
+        "summary": "Delete the push rules of a group",
+        "description": "Deletes all the push rules of a specified group.",
         "operationId": "deleteApiV4GroupsIdPushRule",
         "parameters": [
           {
@@ -9084,7 +9106,8 @@
         "tags": [
           "Push rules"
         ],
-        "summary": "Get project push rule",
+        "summary": "Retrieve the push rules of a project",
+        "description": "Retrieves the push rules of a specified project.",
         "operationId": "getApiV4ProjectsIdPushRule",
         "parameters": [
           {
@@ -9122,7 +9145,8 @@
         "tags": [
           "Push rules"
         ],
-        "summary": "Add a push rule to a project",
+        "summary": "Add push rules to a project",
+        "description": "Adds push rules to a specified project.",
         "operationId": "postApiV4ProjectsIdPushRule",
         "parameters": [
           {
@@ -9216,7 +9240,8 @@
         "tags": [
           "Push rules"
         ],
-        "summary": "Deletes project push rule",
+        "summary": "Delete the push rules of a project",
+        "description": "Deletes all the push rules of a specified project.",
         "operationId": "deleteApiV4ProjectsIdPushRule",
         "parameters": [
           {
@@ -9395,8 +9420,8 @@
         "tags": [
           "Licenses"
         ],
-        "summary": "Retrieve information about the current license",
-        "description": "Get information on the currently active license",
+        "summary": "Retrieve license information",
+        "description": "Retrieves information about the current license.",
         "operationId": "getApiV4License",
         "responses": {
           "200": {
@@ -9415,8 +9440,8 @@
         "tags": [
           "Licenses"
         ],
-        "summary": "Add a new license",
-        "description": "Adds a new licence",
+        "summary": "Create a license",
+        "description": "Creates a license.",
         "operationId": "postApiV4License",
         "requestBody": {
           "content": {
@@ -9470,8 +9495,8 @@
         "tags": [
           "Licenses"
         ],
-        "summary": "Get a license",
-        "description": "Gets a license",
+        "summary": "Retrieve a license",
+        "description": "Retrieves information about a specified license.",
         "operationId": "getApiV4LicenseId",
         "parameters": [
           {
@@ -9502,7 +9527,7 @@
           "Licenses"
         ],
         "summary": "Delete a license",
-        "description": "Deletes a license",
+        "description": "Deletes a specified license.",
         "operationId": "deleteApiV4LicenseId",
         "parameters": [
           {
@@ -9536,8 +9561,8 @@
         "tags": [
           "Licenses"
         ],
-        "summary": "Refresh licence billable users",
-        "description": "Triggers refresh of billable users count for licence",
+        "summary": "Trigger recalculation of billable users",
+        "description": "Triggers recalculation of billable users for a specified license.",
         "operationId": "putApiV4LicenseIdRefreshBillableUsers",
         "parameters": [
           {
@@ -9569,8 +9594,8 @@
         "tags": [
           "Licenses"
         ],
-        "summary": "Retrieve information about all licenses",
-        "description": "Get a list of licenses",
+        "summary": "List all licenses",
+        "description": "Lists all information about all licenses.",
         "operationId": "getApiV4Licenses",
         "responses": {
           "200": {
@@ -9591,8 +9616,8 @@
         "tags": [
           "LDAP"
         ],
-        "summary": "List LDAP group links",
-        "description": "Get LDAP group links for a group",
+        "summary": "List all LDAP group links",
+        "description": "Lists all LDAP group links.",
         "operationId": "getApiV4GroupsIdLdapGroupLinks",
         "parameters": [
           {
@@ -9630,7 +9655,7 @@
         "tags": [
           "LDAP"
         ],
-        "summary": "Add LDAP group link with CN or filter",
+        "summary": "Add an LDAP group link with CN or filter",
         "description": "Adds an LDAP group link using a CN or filter.Adding a group link by filter is only supported in the Premium tier and above.",
         "operationId": "postApiV4GroupsIdLdapGroupLinks",
         "parameters": [
@@ -9678,7 +9703,7 @@
         "tags": [
           "LDAP"
         ],
-        "summary": "Delete LDAP group link with CN or filter",
+        "summary": "Delete an LDAP group link with CN or filter",
         "description": "Deletes an LDAP group link using a CN or filter.Deleting by filter is only supported in the Premium tier and above.",
         "operationId": "deleteApiV4GroupsIdLdapGroupLinks",
         "parameters": [
@@ -12098,7 +12123,8 @@
         "tags": [
           "DORA metrics"
         ],
-        "summary": "Get project-level DORA metrics",
+        "summary": "Retrieve project-level DORA metrics",
+        "description": "Retrieves DORA metrics for a specified project.",
         "operationId": "getApiV4ProjectsIdDoraMetrics",
         "parameters": [
           {
@@ -12191,7 +12217,8 @@
         "tags": [
           "DORA metrics"
         ],
-        "summary": "Get group-level DORA metrics",
+        "summary": "Retrieve group-level DORA metrics",
+        "description": "Retrieves DORA metrics for a specified group.",
         "operationId": "getApiV4GroupsIdDoraMetrics",
         "parameters": [
           {
@@ -12485,7 +12512,8 @@
         "tags": [
           "External status checks"
         ],
-        "summary": "Create external status check",
+        "summary": "Create external status check service",
+        "description": "Creates an external status check service for a specified project.",
         "operationId": "postApiV4ProjectsIdExternalStatusChecks",
         "parameters": [
           {
@@ -12523,7 +12551,8 @@
         "tags": [
           "External status checks"
         ],
-        "summary": "Get project external status checks",
+        "summary": "Retrieve project external status check services",
+        "description": "Retrieves information on external status check services for a project.",
         "operationId": "getApiV4ProjectsIdExternalStatusChecks",
         "parameters": [
           {
@@ -12576,7 +12605,8 @@
         "tags": [
           "External status checks"
         ],
-        "summary": "Update external status check",
+        "summary": "Update external status check service",
+        "description": "Updates an existing external status check for a project.",
         "operationId": "putApiV4ProjectsIdExternalStatusChecksCheckId",
         "parameters": [
           {
@@ -12624,7 +12654,8 @@
         "tags": [
           "External status checks"
         ],
-        "summary": "Delete external status check",
+        "summary": "Delete external status check service",
+        "description": "Deletes a specified external status check service for a project.",
         "operationId": "deleteApiV4ProjectsIdExternalStatusChecksCheckId",
         "parameters": [
           {
@@ -12666,7 +12697,8 @@
         "tags": [
           "External status checks"
         ],
-        "summary": "Set status of an external status check",
+        "summary": "Update status of an external status check",
+        "description": "Updates the status of an external status check for a specified merge request, informing GitLab that a merge request has passed a check by an external service. To set the status of an external check, the personal access token used must belong to a user with the Developer, Maintainer, or Owner role on the target project of the merge request. Any user with permission to approve the merge request can use this operation.",
         "operationId": "postApiV4ProjectsIdMergeRequestsMergeRequestIidStatusCheckResponses",
         "parameters": [
           {
@@ -12718,7 +12750,8 @@
         "tags": [
           "External status checks"
         ],
-        "summary": "List status checks for a merge request",
+        "summary": "List all status checks for a merge request",
+        "description": "Lists all external status check services for a specified merge request and their status.",
         "operationId": "getApiV4ProjectsIdMergeRequestsMergeRequestIidStatusChecks",
         "parameters": [
           {
@@ -12757,7 +12790,8 @@
         "tags": [
           "External status checks"
         ],
-        "summary": "Retry failed external status check",
+        "summary": "Retry failed status check for a merge request",
+        "description": "Retries a specified failed external status check for a merge request. Even though the merge request has not changed, this endpoint resends the current state of merge request to the defined external service.",
         "operationId": "postApiV4ProjectsIdMergeRequestsMergeRequestIidStatusChecksExternalStatusCheckIdRetry",
         "parameters": [
           {
@@ -12954,7 +12988,7 @@
           "Groups"
         ],
         "summary": "Update group security settings",
-        "description": "Updates secret_push_protection_enabled for all projects to the new value",
+        "description": "Updates group security settings for a specified group. You must have the Security Manager, Maintainer, or Owner role for the group.",
         "operationId": "putApiV4GroupsIdSecuritySettings",
         "parameters": [
           {
@@ -14557,8 +14591,8 @@
         "tags": [
           "Compliance policy settings"
         ],
-        "summary": "Get security policy settings",
-        "description": "Retrieve the current security policy settings",
+        "summary": "Retrieve security policy settings",
+        "description": "Retrieves the current security policy settings for this GitLab instance.",
         "operationId": "getApiV4AdminSecurityCompliancePolicySettings",
         "responses": {
           "200": {
@@ -14578,7 +14612,7 @@
           "Compliance policy settings"
         ],
         "summary": "Update security policy settings",
-        "description": "Update the security policy settings",
+        "description": "Updates the security policy settings for this GitLab instance.",
         "operationId": "putApiV4AdminSecurityCompliancePolicySettings",
         "requestBody": {
           "content": {
@@ -17278,7 +17312,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Get the list of users",
+        "summary": "List all users",
+        "description": "Lists all users.",
         "operationId": "getApiV4Users",
         "parameters": [
           {
@@ -17561,7 +17596,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Create a user. Available only for admins.",
+        "summary": "Create a user",
+        "description": "Creates a new user account. Available only for administrators.",
         "operationId": "postApiV4Users",
         "requestBody": {
           "content": {
@@ -17591,7 +17627,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Get a single user",
+        "summary": "Retrieve a user",
+        "description": "Retrieves a single user by ID.",
         "operationId": "getApiV4UsersId",
         "parameters": [
           {
@@ -17639,7 +17676,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Update a user. Available only for admins.",
+        "summary": "Update a user",
+        "description": "Updates a user account. Available only for administrators.",
         "operationId": "putApiV4UsersId",
         "parameters": [
           {
@@ -17678,7 +17716,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Delete a user. Available only for admins.",
+        "summary": "Delete a user",
+        "description": "Deletes a user account. Available only for administrators.",
         "operationId": "deleteApiV4UsersId",
         "parameters": [
           {
@@ -17719,7 +17758,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Get the status of a user",
+        "summary": "Retrieve the status of a user",
+        "description": "Retrieves the public profile status of a user.",
         "operationId": "getApiV4UsersUserIdStatus",
         "parameters": [
           {
@@ -17752,6 +17792,7 @@
           "Users"
         ],
         "summary": "Follow a user",
+        "description": "Follows a user as the authenticated user.",
         "operationId": "postApiV4UsersIdFollow",
         "parameters": [
           {
@@ -17784,6 +17825,7 @@
           "Users"
         ],
         "summary": "Unfollow a user",
+        "description": "Unfollows a user as the authenticated user.",
         "operationId": "postApiV4UsersIdUnfollow",
         "parameters": [
           {
@@ -17815,7 +17857,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Get the users who follow a user",
+        "summary": "List all users a user follows",
+        "description": "Lists all users that the specified user follows.",
         "operationId": "getApiV4UsersIdFollowing",
         "parameters": [
           {
@@ -17869,7 +17912,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Get the followers of a user",
+        "summary": "List all followers of a user",
+        "description": "Lists all followers of a user.",
         "operationId": "getApiV4UsersIdFollowers",
         "parameters": [
           {
@@ -17956,7 +18000,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Delete a user's identity. Available only for admins",
+        "summary": "Delete a user identity",
+        "description": "Deletes an identity that links a user to an external authentication provider. Available only for administrators.",
         "operationId": "deleteApiV4UsersIdIdentitiesProvider",
         "parameters": [
           {
@@ -17997,7 +18042,8 @@
         "tags": [
           "Deploy resources"
         ],
-        "summary": "Get the project-level Deploy keys that a specified user can access to.",
+        "summary": "List all project deploy keys accessible to a user",
+        "description": "Lists all project-level deploy keys that a user can access.",
         "operationId": "getApiV4UsersUserIdProjectDeployKeys",
         "parameters": [
           {
@@ -18051,7 +18097,8 @@
         "tags": [
           "Keys"
         ],
-        "summary": "Add an SSH key to a specified user. Available only for admins.",
+        "summary": "Add an SSH key for a user",
+        "description": "Adds an SSH key to a specified user. Available only for administrators.",
         "operationId": "postApiV4UsersUserIdKeys",
         "parameters": [
           {
@@ -18090,7 +18137,8 @@
         "tags": [
           "Keys"
         ],
-        "summary": "Get the SSH keys of a specified user.",
+        "summary": "List all SSH keys for a user",
+        "description": "Lists all SSH keys for a specified user.",
         "operationId": "getApiV4UsersUserIdKeys",
         "parameters": [
           {
@@ -18144,7 +18192,8 @@
         "tags": [
           "Keys"
         ],
-        "summary": "Get a SSH key of a specified user.",
+        "summary": "Retrieve an SSH key for a user",
+        "description": "Retrieves a single SSH key for a specified user.",
         "operationId": "getApiV4UsersIdKeysKeyId",
         "parameters": [
           {
@@ -18183,7 +18232,8 @@
         "tags": [
           "Keys"
         ],
-        "summary": "Delete an existing SSH key from a specified user. Available only for admins.",
+        "summary": "Delete an SSH key for a user",
+        "description": "Deletes an SSH key from a specified user. Available only for administrators.",
         "operationId": "deleteApiV4UsersIdKeysKeyId",
         "parameters": [
           {
@@ -18447,7 +18497,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Add an email address to a specified user. Available only for admins.",
+        "summary": "Add an email address for a user",
+        "description": "Adds an email address to a specified user. Available only for administrators.",
         "operationId": "postApiV4UsersIdEmails",
         "parameters": [
           {
@@ -18486,7 +18537,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Get the emails addresses of a specified user. Available only for admins.",
+        "summary": "List all email addresses for a user",
+        "description": "Lists all email addresses for a specified user. Available only for administrators.",
         "operationId": "getApiV4UsersIdEmails",
         "parameters": [
           {
@@ -18540,7 +18592,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Delete an email address of a specified user. Available only for admins.",
+        "summary": "Delete an email address for a user",
+        "description": "Deletes an email address from a specified user. Available only for administrators.",
         "operationId": "deleteApiV4UsersIdEmailsEmailId",
         "parameters": [
           {
@@ -18581,7 +18634,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Activate a deactivated user. Available only for admins.",
+        "summary": "Activate a user",
+        "description": "Activates a deactivated user. Available only for administrators.",
         "operationId": "postApiV4UsersIdActivate",
         "parameters": [
           {
@@ -18615,7 +18669,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Approve a pending user. Available only for admins.",
+        "summary": "Approve a user",
+        "description": "Approves a user whose account is pending administrator approval. Available only for administrators.",
         "operationId": "postApiV4UsersIdApprove",
         "parameters": [
           {
@@ -18649,7 +18704,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Reject a pending user. Available only for admins.",
+        "summary": "Reject a user",
+        "description": "Rejects a user whose account is pending administrator approval. Available only for administrators.",
         "operationId": "postApiV4UsersIdReject",
         "parameters": [
           {
@@ -18683,7 +18739,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Deactivate an active user. Available only for admins.",
+        "summary": "Deactivate a user",
+        "description": "Deactivates an active user. Available only for administrators.",
         "operationId": "postApiV4UsersIdDeactivate",
         "parameters": [
           {
@@ -18717,7 +18774,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Block a user. Available only for admins.",
+        "summary": "Block a user",
+        "description": "Blocks a user from signing in. Available only for administrators.",
         "operationId": "postApiV4UsersIdBlock",
         "parameters": [
           {
@@ -18751,7 +18809,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Unblock a user. Available only for admins.",
+        "summary": "Unblock a user",
+        "description": "Unblocks a previously blocked user. Available only for administrators.",
         "operationId": "postApiV4UsersIdUnblock",
         "parameters": [
           {
@@ -18785,7 +18844,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Ban a user. Available only for admins.",
+        "summary": "Ban a user",
+        "description": "Bans a user. Available only for administrators.",
         "operationId": "postApiV4UsersIdBan",
         "parameters": [
           {
@@ -18819,7 +18879,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Unban a user. Available only for admins.",
+        "summary": "Unban a user",
+        "description": "Unbans a previously banned user. Available only for administrators.",
         "operationId": "postApiV4UsersIdUnban",
         "parameters": [
           {
@@ -18853,7 +18914,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Get memberships",
+        "summary": "List all memberships for a user",
+        "description": "Lists all project and group memberships for a user. Available only for administrators.",
         "operationId": "getApiV4UsersUserIdMemberships",
         "parameters": [
           {
@@ -18921,7 +18983,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Returns a list of a specified user's count of projects, groups, issues and merge requests.",
+        "summary": "Retrieve user associations count",
+        "description": "Retrieves counts of the projects, groups, issues, and merge requests associated with a user.",
         "operationId": "getApiV4UsersIdAssociationsCount",
         "parameters": [
           {
@@ -18936,13 +18999,11 @@
         ],
         "responses": {
           "200": {
-            "description": "Default",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "DefaultResponse",
-                  "type": "object",
-                  "description": "Default response schema"
+                  "$ref": "#/components/schemas/APIEntitiesUserAssociationsCount"
                 }
               }
             }
@@ -19192,7 +19253,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Get the currently authenticated user",
+        "summary": "Retrieve the authenticated user",
+        "description": "Retrieves the user record for the currently authenticated user.",
         "operationId": "getApiV4User",
         "responses": {
           "200": {
@@ -19213,7 +19275,8 @@
         "tags": [
           "Keys"
         ],
-        "summary": "Get the currently authenticated user's SSH keys",
+        "summary": "List all SSH keys for the authenticated user",
+        "description": "Lists all SSH keys for the currently authenticated user.",
         "operationId": "getApiV4UserKeys",
         "parameters": [
           {
@@ -19256,7 +19319,8 @@
         "tags": [
           "Keys"
         ],
-        "summary": "Add a new SSH key to the currently authenticated user",
+        "summary": "Add an SSH key for the authenticated user",
+        "description": "Adds an SSH key to the currently authenticated user.",
         "operationId": "postApiV4UserKeys",
         "requestBody": {
           "content": {
@@ -19286,7 +19350,8 @@
         "tags": [
           "Keys"
         ],
-        "summary": "Get a single key owned by currently authenticated user",
+        "summary": "Retrieve an SSH key for the authenticated user",
+        "description": "Retrieves a single SSH key for the currently authenticated user.",
         "operationId": "getApiV4UserKeysKeyId",
         "parameters": [
           {
@@ -19316,7 +19381,8 @@
         "tags": [
           "Keys"
         ],
-        "summary": "Delete an SSH key from the currently authenticated user",
+        "summary": "Delete an SSH key for the authenticated user",
+        "description": "Deletes an SSH key from the currently authenticated user.",
         "operationId": "deleteApiV4UserKeysKeyId",
         "parameters": [
           {
@@ -19524,7 +19590,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Get the currently authenticated user's email addresses",
+        "summary": "List all email addresses for the authenticated user",
+        "description": "Lists all email addresses for the currently authenticated user.",
         "operationId": "getApiV4UserEmails",
         "parameters": [
           {
@@ -19567,7 +19634,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Add new email address to the currently authenticated user",
+        "summary": "Add an email address for the authenticated user",
+        "description": "Adds an email address to the currently authenticated user.",
         "operationId": "postApiV4UserEmails",
         "requestBody": {
           "content": {
@@ -19690,7 +19758,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Get a single email address owned by the currently authenticated user",
+        "summary": "Retrieve an email address for the authenticated user",
+        "description": "Retrieves a single email address for the currently authenticated user.",
         "operationId": "getApiV4UserEmailsEmailId",
         "parameters": [
           {
@@ -19720,7 +19789,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Delete an email address from the currently authenticated user",
+        "summary": "Delete an email address for the authenticated user",
+        "description": "Deletes an email address from the currently authenticated user.",
         "operationId": "deleteApiV4UserEmailsEmailId",
         "parameters": [
           {
@@ -19754,7 +19824,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Get a list of user activities",
+        "summary": "List all user activities",
+        "description": "Lists all user activity entries since the given date.",
         "operationId": "getApiV4UserActivities",
         "parameters": [
           {
@@ -19794,13 +19865,11 @@
         ],
         "responses": {
           "200": {
-            "description": "Default",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "DefaultResponse",
-                  "type": "object",
-                  "description": "Default response schema"
+                  "$ref": "#/components/schemas/APIEntitiesUserActivity"
                 }
               }
             }
@@ -19871,7 +19940,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "get the status of the current user",
+        "summary": "Retrieve the status of the authenticated user",
+        "description": "Retrieves the status of the currently authenticated user.",
         "operationId": "getApiV4UserStatus",
         "responses": {
           "200": {
@@ -21472,7 +21542,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyBc3c2d755ba2"
+                "$ref": "#/components/schemas/RequestBodyA677006fd27b"
               }
             }
           }
@@ -23000,8 +23070,8 @@
         "tags": [
           "Storage moves"
         ],
-        "summary": "Get a list of all project repository storage moves",
-        "description": "This feature was introduced in GitLab 13.0.",
+        "summary": "List all project repository storage moves",
+        "description": "Lists all project repository storage moves.",
         "operationId": "getApiV4ProjectRepositoryStorageMoves",
         "parameters": [
           {
@@ -23044,8 +23114,8 @@
         "tags": [
           "Storage moves"
         ],
-        "summary": "Schedule bulk project repository storage moves",
-        "description": "This feature was introduced in GitLab 13.7.",
+        "summary": "Create repository storage moves for all projects on a storage shard",
+        "description": "Creates repository storage moves for each project repository stored on the source storage shard. This endpoint migrates all projects at once.",
         "operationId": "postApiV4ProjectRepositoryStorageMoves",
         "requestBody": {
           "content": {
@@ -23077,8 +23147,8 @@
         "tags": [
           "Storage moves"
         ],
-        "summary": "Get a project repository storage move",
-        "description": "This feature was introduced in GitLab 13.0.",
+        "summary": "Retrieve a project repository storage move",
+        "description": "Retrieves a specified project repository storage move.",
         "operationId": "getApiV4ProjectRepositoryStorageMovesRepositoryStorageMoveId",
         "parameters": [
           {
@@ -23110,8 +23180,8 @@
         "tags": [
           "Storage moves"
         ],
-        "summary": "Get a list of all project repository storage moves",
-        "description": "This feature was introduced in GitLab 13.1.",
+        "summary": "List all repository storage moves for a project",
+        "description": "Lists all repository storage moves for a project.",
         "operationId": "getApiV4ProjectsIdRepositoryStorageMoves",
         "parameters": [
           {
@@ -23171,8 +23241,8 @@
         "tags": [
           "Storage moves"
         ],
-        "summary": "Schedule a project repository storage move",
-        "description": "This feature was introduced in GitLab 13.1.",
+        "summary": "Create a repository storage move for a project",
+        "description": "Creates a repository storage move for a specified project.",
         "operationId": "postApiV4ProjectsIdRepositoryStorageMoves",
         "parameters": [
           {
@@ -23221,8 +23291,8 @@
         "tags": [
           "Storage moves"
         ],
-        "summary": "Get a project repository storage move",
-        "description": "This feature was introduced in GitLab 13.1.",
+        "summary": "Retrieve a repository storage move for a project",
+        "description": "Retrieves a specified repository storage move for a project.",
         "operationId": "getApiV4ProjectsIdRepositoryStorageMovesRepositoryStorageMoveId",
         "parameters": [
           {
@@ -34124,8 +34194,8 @@
         "tags": [
           "Hooks"
         ],
-        "summary": "Set a url variable",
-        "description": "Sets a URL variable for a webhook",
+        "summary": "Update a URL variable",
+        "description": "Updates a URL variable for a specified webhook.",
         "operationId": "putApiV4HooksHookIdUrlVariablesKey",
         "parameters": [
           {
@@ -34175,8 +34245,8 @@
         "tags": [
           "Hooks"
         ],
-        "summary": "Un-Set a url variable",
-        "description": "Removes a URL variable from a webhook",
+        "summary": "Delete a URL variable",
+        "description": "Deletes a URL variable from a specified webhook.",
         "operationId": "deleteApiV4HooksHookIdUrlVariablesKey",
         "parameters": [
           {
@@ -34219,8 +34289,8 @@
         "tags": [
           "Hooks"
         ],
-        "summary": "Set a custom header",
-        "description": "Sets a custom header for a webhook",
+        "summary": "Update a custom header",
+        "description": "Updates a custom header for a specified webhook.",
         "operationId": "putApiV4HooksHookIdCustomHeadersKey",
         "parameters": [
           {
@@ -34270,8 +34340,8 @@
         "tags": [
           "Hooks"
         ],
-        "summary": "Un-Set a custom header",
-        "description": "Removes a custom header from a webhook",
+        "summary": "Delete a custom header",
+        "description": "Deletes a custom header from a specified webhook.",
         "operationId": "deleteApiV4HooksHookIdCustomHeadersKey",
         "parameters": [
           {
@@ -34460,8 +34530,8 @@
         "tags": [
           "Hooks"
         ],
-        "summary": "Test a hook",
-        "description": "Tests a webhook by triggering a test event",
+        "summary": "Create a test run",
+        "description": "Creates a test run for a webhook. Executes the webhook with mock data.",
         "operationId": "postApiV4HooksHookId",
         "parameters": [
           {
@@ -34526,8 +34596,8 @@
         "tags": [
           "Attestations"
         ],
-        "summary": "Fetch the list of all attestations for a specific project and artifact hash",
-        "description": "This feature was introduced in GitLab 18.7",
+        "summary": "List all attestations for a project",
+        "description": "Lists all attestations for a specified project and artifact hash. This feature was introduced in GitLab 18.7.",
         "operationId": "getApiV4ProjectsIdAttestationsSubjectDigest",
         "parameters": [
           {
@@ -34576,7 +34646,7 @@
         "tags": [
           "Attestations"
         ],
-        "summary": "Fetch a specific bundle by iid",
+        "summary": "Retrieve an attestation bundle",
         "description": "This feature was introduced in GitLab 18.7",
         "operationId": "getApiV4ProjectsIdAttestationsAttestationIidDownload",
         "parameters": [
@@ -44478,7 +44548,8 @@
         "tags": [
           "Projects job token scope"
         ],
-        "summary": "Fetch CI_JOB_TOKEN access settings.",
+        "summary": "Retrieve the CI/CD job token access settings for a project",
+        "description": "Retrieves the CI/CD job token access settings (job token scope) of a specified project.",
         "operationId": "getApiV4ProjectsIdJobTokenScope",
         "parameters": [
           {
@@ -44507,7 +44578,8 @@
         "tags": [
           "Projects job token scope"
         ],
-        "summary": "Patch CI_JOB_TOKEN access settings.",
+        "summary": "Update the CI/CD job token access settings for a project",
+        "description": "Updates the **Authorized groups and projects** setting (job token scope) of a specified project.",
         "operationId": "patchApiV4ProjectsIdJobTokenScope",
         "parameters": [
           {
@@ -44549,7 +44621,8 @@
         "tags": [
           "Projects job token scope"
         ],
-        "summary": "Fetch project inbound allowlist for CI_JOB_TOKEN access settings.",
+        "summary": "List all projects in a CI/CD job token allowlist",
+        "description": "Lists all projects in the CI/CD job token allowlist of a specified project.",
         "operationId": "getApiV4ProjectsIdJobTokenScopeAllowlist",
         "parameters": [
           {
@@ -44600,7 +44673,8 @@
         "tags": [
           "Projects job token scope"
         ],
-        "summary": "Add target project to allowlist.",
+        "summary": "Add a project to a CI/CD job token allowlist",
+        "description": "Adds a project to the CI/CD job token allowlist of a specified project.",
         "operationId": "postApiV4ProjectsIdJobTokenScopeAllowlist",
         "parameters": [
           {
@@ -44642,7 +44716,8 @@
         "tags": [
           "Projects job token scope"
         ],
-        "summary": "Fetch project groups allowlist for CI_JOB_TOKEN access settings.",
+        "summary": "List all groups in a CI/CD job token allowlist",
+        "description": "Lists all groups in the CI/CD job token allowlist of a specified project.",
         "operationId": "getApiV4ProjectsIdJobTokenScopeGroupsAllowlist",
         "parameters": [
           {
@@ -44693,7 +44768,8 @@
         "tags": [
           "Projects job token scope"
         ],
-        "summary": "Add target group to allowlist.",
+        "summary": "Add a group to a CI/CD job token allowlist",
+        "description": "Adds a group to the CI/CD job token allowlist of a specified project.",
         "operationId": "postApiV4ProjectsIdJobTokenScopeGroupsAllowlist",
         "parameters": [
           {
@@ -44735,7 +44811,8 @@
         "tags": [
           "Projects job token scope"
         ],
-        "summary": "Delete target group from allowlist.",
+        "summary": "Delete a group from a CI/CD job token allowlist",
+        "description": "Deletes a group from the CI/CD job token allowlist of a specified project.",
         "operationId": "deleteApiV4ProjectsIdJobTokenScopeGroupsAllowlistTargetGroupId",
         "parameters": [
           {
@@ -44780,7 +44857,8 @@
         "tags": [
           "Projects job token scope"
         ],
-        "summary": "Delete project from allowlist.",
+        "summary": "Delete a project from a CI/CD job token allowlist",
+        "description": "Deletes a project from the CI/CD job token allowlist of a specified project.",
         "operationId": "deleteApiV4ProjectsIdJobTokenScopeAllowlistTargetProjectId",
         "parameters": [
           {
@@ -45129,8 +45207,8 @@
         "tags": [
           "Hooks"
         ],
-        "summary": "Set a url variable",
-        "description": "Sets a URL variable for a webhook",
+        "summary": "Update a URL variable",
+        "description": "Updates a URL variable for a specified webhook.",
         "operationId": "putApiV4ProjectsIdHooksHookIdUrlVariablesKey",
         "parameters": [
           {
@@ -45188,8 +45266,8 @@
         "tags": [
           "Hooks"
         ],
-        "summary": "Un-Set a url variable",
-        "description": "Removes a URL variable from a webhook",
+        "summary": "Delete a URL variable",
+        "description": "Deletes a URL variable from a specified webhook.",
         "operationId": "deleteApiV4ProjectsIdHooksHookIdUrlVariablesKey",
         "parameters": [
           {
@@ -45240,8 +45318,8 @@
         "tags": [
           "Hooks"
         ],
-        "summary": "Set a custom header",
-        "description": "Sets a custom header for a webhook",
+        "summary": "Update a custom header",
+        "description": "Updates a custom header for a specified webhook.",
         "operationId": "putApiV4ProjectsIdHooksHookIdCustomHeadersKey",
         "parameters": [
           {
@@ -45299,8 +45377,8 @@
         "tags": [
           "Hooks"
         ],
-        "summary": "Un-Set a custom header",
-        "description": "Removes a custom header from a webhook",
+        "summary": "Delete a custom header",
+        "description": "Deletes a custom header from a specified webhook.",
         "operationId": "deleteApiV4ProjectsIdHooksHookIdCustomHeadersKey",
         "parameters": [
           {
@@ -45617,8 +45695,8 @@
         "tags": [
           "Hooks"
         ],
-        "summary": "Get events for a given hook id",
-        "description": "List web hook logs by hook id",
+        "summary": "List all events",
+        "description": "Lists all events for a specified webhook.",
         "operationId": "getApiV4ProjectsIdHooksHookIdEvents",
         "parameters": [
           {
@@ -45696,8 +45774,8 @@
         "tags": [
           "Hooks"
         ],
-        "summary": "Triggers a hook test",
-        "description": "Triggers a hook test",
+        "summary": "Trigger a test webhook",
+        "description": "Triggers a test webhook. This endpoint has a rate limit of five requests per minute for each webhook and authenticated user. To disable this limit on GitLab Self-Managed and GitLab Dedicated, an administrator can disable the feature flag named web_hook_test_api_endpoint_rate_limit.",
         "operationId": "postApiV4ProjectsIdHooksHookIdTestTrigger",
         "parameters": [
           {
@@ -45771,7 +45849,7 @@
           "Hooks"
         ],
         "summary": "Resend a webhook event",
-        "description": "Resend a webhook event",
+        "description": "Resends a webhook event. This endpoint has a rate limit of five requests per minute for each webhook and authenticated user. To disable this limit on GitLab Self-Managed and GitLab Dedicated, an administrator can disable the feature flag named web_hook_event_resend_api_endpoint_rate_limit.",
         "operationId": "postApiV4ProjectsIdHooksHookIdEventsHookLogIdResend",
         "parameters": [
           {
@@ -51084,13 +51162,11 @@
         ],
         "responses": {
           "201": {
-            "description": "Default",
+            "description": "Created",
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "DefaultResponse",
-                  "type": "object",
-                  "description": "Default response schema"
+                  "$ref": "#/components/schemas/APIEntitiesMergeRequest"
                 }
               }
             }
@@ -56499,8 +56575,8 @@
         "tags": [
           "CI lint"
         ],
-        "summary": "Validate a CI YAML configuration with a namespace",
-        "description": "Checks if CI/CD YAML configuration is valid. This endpoint has namespace specific context",
+        "summary": "Validate a CI/CD configuration",
+        "description": "Validates a provided CI/CD configuration in the context of a specified project.",
         "operationId": "postApiV4ProjectsIdCiLint",
         "parameters": [
           {
@@ -68735,8 +68811,8 @@
         "tags": [
           "Project import"
         ],
-        "summary": "Import a BitBucket Server repository",
-        "description": "This feature was introduced in GitLab 13.2.",
+        "summary": "Import repository from Bitbucket Server",
+        "description": "Imports a repository from Bitbucket Server to GitLab. The Bitbucket Project Key is only used for finding the repository in Bitbucket. You must specify a `target_namespace` if you want to import the repository to a GitLab group.",
         "operationId": "postApiV4ImportBitbucketServer",
         "requestBody": {
           "content": {
@@ -68766,8 +68842,8 @@
         "tags": [
           "Project import"
         ],
-        "summary": "Import a BitBucket Cloud repository",
-        "description": "This feature was introduced in GitLab 17.0.",
+        "summary": "Import repository from Bitbucket Cloud",
+        "description": "\"Imports a repository from Bitbucket Cloud to GitLab. Prerequisites: - The prerequisites for Bitbucket Cloud importer. This feature was introduced in GitLab 17.0.\"",
         "operationId": "postApiV4ImportBitbucket",
         "requestBody": {
           "content": {
@@ -69063,7 +69139,8 @@
         "tags": [
           "CI variables"
         ],
-        "summary": "Get a list of group-level variables",
+        "summary": "List all group variables",
+        "description": "Lists all variables for a specified group. Use the `page` and `per_page` pagination parameters to control the pagination of results.",
         "operationId": "getApiV4GroupsIdVariables",
         "parameters": [
           {
@@ -69115,7 +69192,8 @@
         "tags": [
           "CI variables"
         ],
-        "summary": "Create a new variable in a group",
+        "summary": "Create a group variable",
+        "description": "Creates a group variable.",
         "operationId": "postApiV4GroupsIdVariables",
         "parameters": [
           {
@@ -69156,7 +69234,8 @@
         "tags": [
           "CI variables"
         ],
-        "summary": "Get the details of a group’s specific variable",
+        "summary": "Retrieve details of a group variable",
+        "description": "Retrieves details of a specified group variable. If there are multiple variables with the same key, use `filter` to select the correct `environment_scope`.",
         "operationId": "getApiV4GroupsIdVariablesKey",
         "parameters": [
           {
@@ -69195,7 +69274,8 @@
         "tags": [
           "CI variables"
         ],
-        "summary": "Update an existing variable from a group",
+        "summary": "Update a group variable",
+        "description": "Updates a specified group variable. If there are multiple variables with the same key, use `filter` to select the correct `environment_scope`.",
         "operationId": "putApiV4GroupsIdVariablesKey",
         "parameters": [
           {
@@ -69243,7 +69323,8 @@
         "tags": [
           "CI variables"
         ],
-        "summary": "Delete an existing variable from a group",
+        "summary": "Delete a group variable",
+        "description": "Deletes a specified group variable. If there are multiple variables with the same key, use `filter` to select the correct `environment_scope`.",
         "operationId": "deleteApiV4GroupsIdVariablesKey",
         "parameters": [
           {
@@ -81639,7 +81720,8 @@
         "tags": [
           "Commits"
         ],
-        "summary": "Get a project repository commits",
+        "summary": "List all repository commits",
+        "description": "Lists all commits for a specified project repository.",
         "operationId": "getApiV4ProjectsIdRepositoryCommits",
         "parameters": [
           {
@@ -81811,7 +81893,7 @@
         "tags": [
           "Commits"
         ],
-        "summary": "Create a new commit",
+        "summary": "Create a commit",
         "description": "This feature was introduced in GitLab 8.13",
         "operationId": "postApiV4ProjectsIdRepositoryCommits",
         "parameters": [
@@ -81861,7 +81943,8 @@
         "tags": [
           "Commits"
         ],
-        "summary": "Get a specific commit of a project",
+        "summary": "Retrieve a commit",
+        "description": "Retrieves a specified commit identified by the commit hash or name of a branch or tag.",
         "operationId": "getApiV4ProjectsIdRepositoryCommitsSha",
         "parameters": [
           {
@@ -81920,7 +82003,8 @@
         "tags": [
           "Commits"
         ],
-        "summary": "Get the diff for a specific commit of a project",
+        "summary": "Retrieve a commit diff",
+        "description": "Retrieves the diff of a commit in a project.",
         "operationId": "getApiV4ProjectsIdRepositoryCommitsShaDiff",
         "parameters": [
           {
@@ -82000,7 +82084,8 @@
         "tags": [
           "Commits"
         ],
-        "summary": "Get a commit's comments",
+        "summary": "List all commit comments",
+        "description": "Lists all the comments of a commit in a project.",
         "operationId": "getApiV4ProjectsIdRepositoryCommitsShaComments",
         "parameters": [
           {
@@ -82069,7 +82154,8 @@
         "tags": [
           "Commits"
         ],
-        "summary": "Post comment to commit",
+        "summary": "Create a comment on a commit",
+        "description": "Creates a comment on a commit. To comment on a specific line in a file, specify the full commit SHA, `path`, `line`, and set `line_type` to `new`.",
         "operationId": "postApiV4ProjectsIdRepositoryCommitsShaComments",
         "parameters": [
           {
@@ -82127,7 +82213,8 @@
         "tags": [
           "Commits"
         ],
-        "summary": "Get the sequence count of a commit SHA",
+        "summary": "Retrieve a commit sequence",
+        "description": "Retrieves the commit sequence for a specified commit.",
         "operationId": "getApiV4ProjectsIdRepositoryCommitsShaSequence",
         "parameters": [
           {
@@ -82185,8 +82272,8 @@
         "tags": [
           "Commits"
         ],
-        "summary": "Cherry pick commit into a branch",
-        "description": "This feature was introduced in GitLab 8.15",
+        "summary": "Cherry-pick a commit",
+        "description": "Cherry-picks a commit to a specified branch.",
         "operationId": "postApiV4ProjectsIdRepositoryCommitsShaCherryPick",
         "parameters": [
           {
@@ -82244,8 +82331,8 @@
         "tags": [
           "Commits"
         ],
-        "summary": "Revert a commit in a branch",
-        "description": "This feature was introduced in GitLab 11.5",
+        "summary": "Revert a commit",
+        "description": "Reverts a commit in a specified branch.",
         "operationId": "postApiV4ProjectsIdRepositoryCommitsShaRevert",
         "parameters": [
           {
@@ -82303,8 +82390,8 @@
         "tags": [
           "Commits"
         ],
-        "summary": "Get all references a commit is pushed to",
-        "description": "This feature was introduced in GitLab 10.6",
+        "summary": "List all references a commit is pushed to",
+        "description": "Lists all references (from branches or tags) a commit is pushed to. The pagination parameters `page` and `per_page` can be used to restrict the list of references.",
         "operationId": "getApiV4ProjectsIdRepositoryCommitsShaRefs",
         "parameters": [
           {
@@ -82391,7 +82478,8 @@
         "tags": [
           "Commits"
         ],
-        "summary": "Get Merge Requests associated with a commit",
+        "summary": "List all merge requests for a commit",
+        "description": "Lists all merge requests associated with a specified commit.",
         "operationId": "getApiV4ProjectsIdRepositoryCommitsShaMergeRequests",
         "parameters": [
           {
@@ -82472,7 +82560,8 @@
         "tags": [
           "Commits"
         ],
-        "summary": "Get a commit's signature",
+        "summary": "Retrieve a commit signature",
+        "description": "Retrieves the signature from a commit, if it is signed. For unsigned commits, it results in a 404 response.",
         "operationId": "getApiV4ProjectsIdRepositoryCommitsShaSignature",
         "parameters": [
           {
@@ -83080,7 +83169,8 @@
         "tags": [
           "CI variables"
         ],
-        "summary": "Get project variables",
+        "summary": "List all project variables",
+        "description": "Lists all variables for a project. Use the `page` and `per_page` pagination parameters to control the pagination of results.",
         "operationId": "getApiV4ProjectsIdVariables",
         "parameters": [
           {
@@ -83140,7 +83230,8 @@
         "tags": [
           "CI variables"
         ],
-        "summary": "Create a new variable in a project",
+        "summary": "Create a variable",
+        "description": "\"Creates a variable. If a variable with the same `key` already exists, the variable must have a different `environment_scope`. Otherwise, GitLab returns a message similar to: `VARIABLE_NAME has already been taken`.\"",
         "operationId": "postApiV4ProjectsIdVariables",
         "parameters": [
           {
@@ -83189,7 +83280,8 @@
         "tags": [
           "CI variables"
         ],
-        "summary": "Get the details of a single variable from a project",
+        "summary": "Retrieve a single variable",
+        "description": "Retrieves details of a specified variable. If there are multiple variables with the same key, use `filter` to select the correct `environment_scope`.",
         "operationId": "getApiV4ProjectsIdVariablesKey",
         "parameters": [
           {
@@ -83254,7 +83346,8 @@
         "tags": [
           "CI variables"
         ],
-        "summary": "Update an existing variable from a project",
+        "summary": "Update a variable",
+        "description": "Updates a project variable. If there are multiple variables with the same key, use `filter` to select the correct `environment_scope`.",
         "operationId": "putApiV4ProjectsIdVariablesKey",
         "parameters": [
           {
@@ -83310,7 +83403,8 @@
         "tags": [
           "CI variables"
         ],
-        "summary": "Delete an existing variable from a project",
+        "summary": "Delete a variable",
+        "description": "Deletes a project variable. If there are multiple variables with the same key, use `filter` to select the correct `environment_scope`.",
         "operationId": "deleteApiV4ProjectsIdVariablesKey",
         "parameters": [
           {
@@ -85431,7 +85525,8 @@
         "tags": [
           "Secure files"
         ],
-        "summary": "Get list of secure files in a project",
+        "summary": "List all secure files for a project",
+        "description": "Lists all secure files for a specified project.",
         "operationId": "getApiV4ProjectsIdSecureFiles",
         "parameters": [
           {
@@ -85492,6 +85587,7 @@
           "Secure files"
         ],
         "summary": "Create a secure file",
+        "description": "Creates a secure file in a specified project.",
         "operationId": "postApiV4ProjectsIdSecureFiles",
         "parameters": [
           {
@@ -85540,7 +85636,8 @@
         "tags": [
           "Secure files"
         ],
-        "summary": "Get the details of a specific secure file in a project",
+        "summary": "Retrieve details of a secure file",
+        "description": "Retrieves details of a specified secure file in a project.",
         "operationId": "getApiV4ProjectsIdSecureFilesSecureFileId",
         "parameters": [
           {
@@ -85587,7 +85684,8 @@
         "tags": [
           "Secure files"
         ],
-        "summary": "Remove a secure file",
+        "summary": "Delete a secure file",
+        "description": "Deletes a specified secure file from a project.",
         "operationId": "deleteApiV4ProjectsIdSecureFilesSecureFileId",
         "parameters": [
           {
@@ -85637,7 +85735,8 @@
         "tags": [
           "Secure files"
         ],
-        "summary": "Download secure file",
+        "summary": "Download a secure file",
+        "description": "Downloads the contents of a specified secure file in a project.",
         "operationId": "getApiV4ProjectsIdSecureFilesSecureFileIdDownload",
         "parameters": [
           {
@@ -91069,8 +91168,8 @@
         "tags": [
           "Imports"
         ],
-        "summary": "List all GitLab Migrations' entities",
-        "description": "This feature was introduced in GitLab 14.1.",
+        "summary": "List all group or project migration entities",
+        "description": "Lists all group or project migration entities.",
         "operationId": "getApiV4BulkImportsEntities",
         "parameters": [
           {
@@ -91148,8 +91247,8 @@
         "tags": [
           "Imports"
         ],
-        "summary": "Get GitLab Migration details",
-        "description": "This feature was introduced in GitLab 14.1.",
+        "summary": "Retrieve a group or project migration",
+        "description": "Retrieves details of a group or project migration.",
         "operationId": "getApiV4BulkImportsImportId",
         "parameters": [
           {
@@ -91181,8 +91280,8 @@
         "tags": [
           "Imports"
         ],
-        "summary": "List GitLab Migration entities",
-        "description": "This feature was introduced in GitLab 14.1.",
+        "summary": "List all group or project migration entities",
+        "description": "Lists all group or project migration entities for a specified migration.",
         "operationId": "getApiV4BulkImportsImportIdEntities",
         "parameters": [
           {
@@ -91254,8 +91353,8 @@
         "tags": [
           "Imports"
         ],
-        "summary": "Get GitLab Migration entity details",
-        "description": "This feature was introduced in GitLab 14.1.",
+        "summary": "Retrieve a group or project migration entity",
+        "description": "Retrieves details of a group or project migration entity.",
         "operationId": "getApiV4BulkImportsImportIdEntitiesEntityId",
         "parameters": [
           {
@@ -91296,8 +91395,8 @@
         "tags": [
           "Imports"
         ],
-        "summary": "Get GitLab Migration entity failures",
-        "description": "This feature was introduced in GitLab 16.6",
+        "summary": "List all failed import records for a migration entity",
+        "description": "Lists all failed import records for a group or project migration entity. This feature was introduced in GitLab 16.6.",
         "operationId": "getApiV4BulkImportsImportIdEntitiesEntityIdFailures",
         "parameters": [
           {
@@ -91371,7 +91470,8 @@
         "tags": [
           "Branches"
         ],
-        "summary": "Get a project repository branches",
+        "summary": "List all repository branches",
+        "description": "Lists all repository branches from a specified project, sorted alphabetically by name. Search by name, or use regular expressions to find specific branch patterns. Returns detailed information about the branch, including its protection status, merge status, and commit details.",
         "operationId": "getApiV4ProjectsIdRepositoryBranches",
         "parameters": [
           {
@@ -91473,7 +91573,8 @@
         "tags": [
           "Branches"
         ],
-        "summary": "Create branch",
+        "summary": "Create a repository branch",
+        "description": "Creates a branch in the repository.",
         "operationId": "postApiV4ProjectsIdRepositoryBranches",
         "parameters": [
           {
@@ -91571,7 +91672,8 @@
         "tags": [
           "Branches"
         ],
-        "summary": "Get a single repository branch",
+        "summary": "Retrieve a repository branch",
+        "description": "Retrieves a specified project repository branch.",
         "operationId": "getApiV4ProjectsIdRepositoryBranchesBranch",
         "parameters": [
           {
@@ -91617,7 +91719,8 @@
         "tags": [
           "Branches"
         ],
-        "summary": "Delete a branch",
+        "summary": "Delete a repository branch",
+        "description": "Deletes a specified branch from the repository.",
         "operationId": "deleteApiV4ProjectsIdRepositoryBranchesBranch",
         "parameters": [
           {
@@ -91776,6 +91879,7 @@
           "Branches"
         ],
         "summary": "Delete all merged branches",
+        "description": "Deletes all branches that are merged into the default branch for a project.",
         "operationId": "deleteApiV4ProjectsIdRepositoryMergedBranches",
         "parameters": [
           {
@@ -95087,7 +95191,8 @@
         "tags": [
           "CI variables"
         ],
-        "summary": "List all instance-level variables",
+        "summary": "List all instance variables",
+        "description": "Lists all instance-level variables. Use the `page` and `per_page` pagination parameters to control the pagination of results.",
         "operationId": "getApiV4AdminCiVariables",
         "parameters": [
           {
@@ -95130,7 +95235,8 @@
         "tags": [
           "CI variables"
         ],
-        "summary": "Create a new instance-level variable",
+        "summary": "Create instance variable",
+        "description": "Creates a instance-level variable. The maximum number of instance-level variables can be changed.",
         "operationId": "postApiV4AdminCiVariables",
         "requestBody": {
           "content": {
@@ -95160,7 +95266,8 @@
         "tags": [
           "CI variables"
         ],
-        "summary": "Get the details of a specific instance-level variable",
+        "summary": "Retrieve instance variable details",
+        "description": "Retrieves details of a specified instance-level variable.",
         "operationId": "getApiV4AdminCiVariablesKey",
         "parameters": [
           {
@@ -95190,7 +95297,8 @@
         "tags": [
           "CI variables"
         ],
-        "summary": "Update an instance-level variable",
+        "summary": "Update an instance variable",
+        "description": "Updates a specified instance variable.",
         "operationId": "putApiV4AdminCiVariablesKey",
         "parameters": [
           {
@@ -95229,7 +95337,8 @@
         "tags": [
           "CI variables"
         ],
-        "summary": "Delete an existing instance-level variable",
+        "summary": "Delete instance variable",
+        "description": "Deletes a specified instance variable.",
         "operationId": "deleteApiV4AdminCiVariablesKey",
         "parameters": [
           {
@@ -99465,6 +99574,7 @@
           },
           "overage": {
             "type": "integer",
+            "description": "Difference between the number of billable users and the number of licensed users. Calculated differently depending on whether the license has expired or not.",
             "example": 200
           },
           "user_limit": {
@@ -99536,6 +99646,7 @@
           },
           "overage": {
             "type": "integer",
+            "description": "Difference between the number of billable users and the number of licensed users. Calculated differently depending on whether the license has expired or not.",
             "example": 200
           },
           "user_limit": {
@@ -100350,6 +100461,39 @@
           "packages_helm_metadata_caches_oldest_unsynced_time": {
             "type": "string"
           },
+          "issuable_metric_image_uploads_count": {
+            "type": "string"
+          },
+          "issuable_metric_image_uploads_checksum_total_count": {
+            "type": "string"
+          },
+          "issuable_metric_image_uploads_checksummed_count": {
+            "type": "string"
+          },
+          "issuable_metric_image_uploads_checksum_failed_count": {
+            "type": "string"
+          },
+          "issuable_metric_image_uploads_synced_count": {
+            "type": "string"
+          },
+          "issuable_metric_image_uploads_failed_count": {
+            "type": "string"
+          },
+          "issuable_metric_image_uploads_registry_count": {
+            "type": "string"
+          },
+          "issuable_metric_image_uploads_verification_total_count": {
+            "type": "string"
+          },
+          "issuable_metric_image_uploads_verified_count": {
+            "type": "string"
+          },
+          "issuable_metric_image_uploads_verification_failed_count": {
+            "type": "string"
+          },
+          "issuable_metric_image_uploads_oldest_unsynced_time": {
+            "type": "string"
+          },
           "vulnerability_archive_export_uploads_count": {
             "type": "string"
           },
@@ -100915,6 +101059,12 @@
             "type": "string"
           },
           "packages_helm_metadata_caches_verified_in_percentage": {
+            "type": "string"
+          },
+          "issuable_metric_image_uploads_synced_in_percentage": {
+            "type": "string"
+          },
+          "issuable_metric_image_uploads_verified_in_percentage": {
             "type": "string"
           },
           "vulnerability_archive_export_uploads_synced_in_percentage": {
@@ -101821,6 +101971,39 @@
           "packages_helm_metadata_caches_oldest_unsynced_time": {
             "type": "string"
           },
+          "issuable_metric_image_uploads_count": {
+            "type": "string"
+          },
+          "issuable_metric_image_uploads_checksum_total_count": {
+            "type": "string"
+          },
+          "issuable_metric_image_uploads_checksummed_count": {
+            "type": "string"
+          },
+          "issuable_metric_image_uploads_checksum_failed_count": {
+            "type": "string"
+          },
+          "issuable_metric_image_uploads_synced_count": {
+            "type": "string"
+          },
+          "issuable_metric_image_uploads_failed_count": {
+            "type": "string"
+          },
+          "issuable_metric_image_uploads_registry_count": {
+            "type": "string"
+          },
+          "issuable_metric_image_uploads_verification_total_count": {
+            "type": "string"
+          },
+          "issuable_metric_image_uploads_verified_count": {
+            "type": "string"
+          },
+          "issuable_metric_image_uploads_verification_failed_count": {
+            "type": "string"
+          },
+          "issuable_metric_image_uploads_oldest_unsynced_time": {
+            "type": "string"
+          },
           "vulnerability_archive_export_uploads_count": {
             "type": "string"
           },
@@ -102386,6 +102569,12 @@
             "type": "string"
           },
           "packages_helm_metadata_caches_verified_in_percentage": {
+            "type": "string"
+          },
+          "issuable_metric_image_uploads_synced_in_percentage": {
+            "type": "string"
+          },
+          "issuable_metric_image_uploads_verified_in_percentage": {
             "type": "string"
           },
           "vulnerability_archive_export_uploads_synced_in_percentage": {
@@ -105468,6 +105657,23 @@
           }
         }
       },
+      "APIEntitiesUserAssociationsCount": {
+        "type": "object",
+        "properties": {
+          "groups_count": {
+            "type": "string"
+          },
+          "projects_count": {
+            "type": "string"
+          },
+          "issues_count": {
+            "type": "string"
+          },
+          "merge_requests_count": {
+            "type": "string"
+          }
+        }
+      },
       "APIEntitiesImpersonationToken": {
         "type": "object",
         "properties": {
@@ -105609,6 +105815,20 @@
             "type": "string"
           },
           "policy_advanced_editor": {
+            "type": "string"
+          }
+        }
+      },
+      "APIEntitiesUserActivity": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string"
+          },
+          "last_activity_on": {
+            "type": "string"
+          },
+          "last_activity_at": {
             "type": "string"
           }
         }
@@ -106412,6 +106632,9 @@
             "type": "string"
           },
           "email_confirmation_setting": {
+            "type": "string"
+          },
+          "email_otp_enabled": {
             "type": "string"
           },
           "enabled_git_access_protocol": {
@@ -124135,7 +124358,7 @@
           }
         }
       },
-      "RequestBodyBc3c2d755ba2": {
+      "RequestBodyA677006fd27b": {
         "type": "object",
         "properties": {
           "admin_mode": {
@@ -124400,6 +124623,11 @@
               "type": "string"
             },
             "description": "\"ONLY users with e-mail addresses that match these domain(s) will be able to sign-up. Wildcards allowed. Enter multiple entries on separate lines. Ex: domain.com, *.domain.com\"",
+            "nullable": true
+          },
+          "email_otp_enabled": {
+            "type": "boolean",
+            "description": "Enable Email-based one-time passwords (OTP) as a multi-factor authentication method.",
             "nullable": true
           },
           "iframe_rendering_enabled": {

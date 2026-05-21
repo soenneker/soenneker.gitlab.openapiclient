@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Analytics.Group_activity.Merge_r
         {
         }
         /// <summary>
-        /// This feature was introduced in GitLab 12.9.
+        /// Retrieves the count of recently created merge requests for a specified group.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAnalyticsGroupActivityMergeRequestsCount"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Analytics.Group_activity.Merge_r
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAnalyticsGroupActivityMergeRequestsCount>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAnalyticsGroupActivityMergeRequestsCount.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 12.9.
+        /// Retrieves the count of recently created merge requests for a specified group.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Analytics.Group_activity.Merge_r
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Analytics.Group_activity.Merge_requests_count.Merge_requests_countRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 12.9.
+        /// Retrieves the count of recently created merge requests for a specified group.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Merge_requests_countRequestBuilderGetQueryParameters 

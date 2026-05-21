@@ -43,7 +43,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>The maximum_user_count property</summary>
         public int? MaximumUserCount { get; set; }
-        /// <summary>The overage property</summary>
+        /// <summary>Difference between the number of billable users and the number of licensed users. Calculated differently depending on whether the license has expired or not.</summary>
         public int? Overage { get; set; }
         /// <summary>The plan property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.External_status_ch
         {
         }
         /// <summary>
-        /// Get project external status checks
+        /// Retrieves information on external status check services for a project.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesExternalStatusCheck"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.External_status_ch
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesExternalStatusCheck>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesExternalStatusCheck.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Create external status check
+        /// Creates an external status check service for a specified project.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesExternalStatusCheck"/></returns>
         /// <param name="body">The request body</param>
@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.External_status_ch
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesExternalStatusCheck>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesExternalStatusCheck.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get project external status checks
+        /// Retrieves information on external status check services for a project.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -104,7 +104,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.External_status_ch
             return requestInfo;
         }
         /// <summary>
-        /// Create external status check
+        /// Creates an external status check service for a specified project.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -135,7 +135,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.External_status_ch
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.External_status_checks.External_status_checksRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get project external status checks
+        /// Retrieves information on external status check services for a project.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class External_status_checksRequestBuilderGetQueryParameters 

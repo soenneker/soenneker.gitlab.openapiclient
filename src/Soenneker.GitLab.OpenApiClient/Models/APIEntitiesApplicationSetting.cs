@@ -1552,6 +1552,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string EmailConfirmationSetting { get; set; }
 #endif
+        /// <summary>The email_otp_enabled property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? EmailOtpEnabled { get; set; }
+#nullable restore
+#else
+        public string EmailOtpEnabled { get; set; }
+#endif
         /// <summary>The email_restrictions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -5149,6 +5157,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "email_additional_text", n => { EmailAdditionalText = n.GetStringValue(); } },
                 { "email_author_in_body", n => { EmailAuthorInBody = n.GetStringValue(); } },
                 { "email_confirmation_setting", n => { EmailConfirmationSetting = n.GetStringValue(); } },
+                { "email_otp_enabled", n => { EmailOtpEnabled = n.GetStringValue(); } },
                 { "email_restrictions", n => { EmailRestrictions = n.GetStringValue(); } },
                 { "email_restrictions_enabled", n => { EmailRestrictionsEnabled = n.GetStringValue(); } },
                 { "enable_artifact_external_redirect_warning_page", n => { EnableArtifactExternalRedirectWarningPage = n.GetStringValue(); } },
@@ -5779,6 +5788,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("email_additional_text", EmailAdditionalText);
             writer.WriteStringValue("email_author_in_body", EmailAuthorInBody);
             writer.WriteStringValue("email_confirmation_setting", EmailConfirmationSetting);
+            writer.WriteStringValue("email_otp_enabled", EmailOtpEnabled);
             writer.WriteStringValue("email_restrictions", EmailRestrictions);
             writer.WriteStringValue("email_restrictions_enabled", EmailRestrictionsEnabled);
             writer.WriteStringValue("enable_artifact_external_redirect_warning_page", EnableArtifactExternalRedirectWarningPage);

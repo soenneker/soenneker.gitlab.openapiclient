@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Bulk_imports.Item.Entities.Item.
         {
         }
         /// <summary>
-        /// This feature was introduced in GitLab 16.6
+        /// Lists all failed import records for a group or project migration entity. This feature was introduced in GitLab 16.6.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBulkImportsEntityFailure"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Bulk_imports.Item.Entities.Item.
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBulkImportsEntityFailure>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBulkImportsEntityFailure.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 16.6
+        /// Lists all failed import records for a group or project migration entity. This feature was introduced in GitLab 16.6.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

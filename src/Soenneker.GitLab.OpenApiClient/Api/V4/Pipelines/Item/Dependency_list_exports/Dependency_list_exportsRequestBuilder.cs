@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Pipelines.Item.Dependency_list_e
         {
         }
         /// <summary>
-        /// Generates a dependency list export for a pipeline
+        /// Creates a CycloneDX JSON export for all the project dependencies detected in a pipeline. If an authenticated user does not have the read_dependency permission, this request returns a `403 Forbidden` status code.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Pipelines.Item.Dependency_list_exports.Dependency_list_exportsPostResponse"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Pipelines.Item.Dependency_list_e
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Pipelines.Item.Dependency_list_exports.Dependency_list_exportsPostResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Pipelines.Item.Dependency_list_exports.Dependency_list_exportsPostResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Generates a dependency list export for a pipeline
+        /// Creates a CycloneDX JSON export for all the project dependencies detected in a pipeline. If an authenticated user does not have the read_dependency permission, this request returns a `403 Forbidden` status code.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

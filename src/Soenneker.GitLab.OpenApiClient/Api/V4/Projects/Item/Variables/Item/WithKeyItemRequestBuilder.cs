@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Variables.Item
         {
         }
         /// <summary>
-        /// Delete an existing variable from a project
+        /// Deletes a project variable. If there are multiple variables with the same key, use `filter` to select the correct `environment_scope`.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Variables.Item
             await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get the details of a single variable from a project
+        /// Retrieves details of a specified variable. If there are multiple variables with the same key, use `filter` to select the correct `environment_scope`.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiVariable"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -69,7 +69,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Variables.Item
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiVariable>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiVariable.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Update an existing variable from a project
+        /// Updates a project variable. If there are multiple variables with the same key, use `filter` to select the correct `environment_scope`.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiVariable"/></returns>
         /// <param name="body">The request body</param>
@@ -89,7 +89,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Variables.Item
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiVariable>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiVariable.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Delete an existing variable from a project
+        /// Deletes a project variable. If there are multiple variables with the same key, use `filter` to select the correct `environment_scope`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -108,7 +108,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Variables.Item
             return requestInfo;
         }
         /// <summary>
-        /// Get the details of a single variable from a project
+        /// Retrieves details of a specified variable. If there are multiple variables with the same key, use `filter` to select the correct `environment_scope`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -127,7 +127,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Variables.Item
             return requestInfo;
         }
         /// <summary>
-        /// Update an existing variable from a project
+        /// Updates a project variable. If there are multiple variables with the same key, use `filter` to select the correct `environment_scope`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -158,7 +158,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Variables.Item
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Variables.Item.WithKeyItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Delete an existing variable from a project
+        /// Deletes a project variable. If there are multiple variables with the same key, use `filter` to select the correct `environment_scope`.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithKeyItemRequestBuilderDeleteQueryParameters 
@@ -185,7 +185,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Variables.Item
 #endif
         }
         /// <summary>
-        /// Get the details of a single variable from a project
+        /// Retrieves details of a specified variable. If there are multiple variables with the same key, use `filter` to select the correct `environment_scope`.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithKeyItemRequestBuilderGetQueryParameters 

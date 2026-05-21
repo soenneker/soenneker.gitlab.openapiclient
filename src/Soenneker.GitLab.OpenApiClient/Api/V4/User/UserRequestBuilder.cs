@@ -100,7 +100,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User
         {
         }
         /// <summary>
-        /// Get the currently authenticated user
+        /// Retrieves the user record for the currently authenticated user.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserPublic"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -118,7 +118,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserPublic>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserPublic.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get the currently authenticated user
+        /// Retrieves the user record for the currently authenticated user.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

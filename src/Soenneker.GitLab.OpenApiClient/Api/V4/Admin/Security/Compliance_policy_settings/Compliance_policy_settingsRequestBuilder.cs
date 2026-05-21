@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Security.Compliance_policy
         {
         }
         /// <summary>
-        /// Retrieve the current security policy settings
+        /// Retrieves the current security policy settings for this GitLab instance.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAdminSecurityPolicySetting"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Security.Compliance_policy
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAdminSecurityPolicySetting>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAdminSecurityPolicySetting.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Update the security policy settings
+        /// Updates the security policy settings for this GitLab instance.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAdminSecurityPolicySetting"/></returns>
         /// <param name="body">The request body</param>
@@ -72,7 +72,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Security.Compliance_policy
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAdminSecurityPolicySetting>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAdminSecurityPolicySetting.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieve the current security policy settings
+        /// Retrieves the current security policy settings for this GitLab instance.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -91,7 +91,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Security.Compliance_policy
             return requestInfo;
         }
         /// <summary>
-        /// Update the security policy settings
+        /// Updates the security policy settings for this GitLab instance.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

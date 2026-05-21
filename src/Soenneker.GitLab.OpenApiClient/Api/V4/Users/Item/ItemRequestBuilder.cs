@@ -208,7 +208,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item
         {
         }
         /// <summary>
-        /// Delete a user. Available only for admins.
+        /// Deletes a user account. Available only for administrators.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -225,7 +225,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item
             await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get a single user
+        /// Retrieves a single user by ID.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUser"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -243,7 +243,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUser>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUser.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Update a user. Available only for admins.
+        /// Updates a user account. Available only for administrators.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserWithAdmin"/></returns>
         /// <param name="body">The request body</param>
@@ -263,7 +263,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserWithAdmin>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserWithAdmin.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Delete a user. Available only for admins.
+        /// Deletes a user account. Available only for administrators.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -282,7 +282,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item
             return requestInfo;
         }
         /// <summary>
-        /// Get a single user
+        /// Retrieves a single user by ID.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -301,7 +301,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item
             return requestInfo;
         }
         /// <summary>
-        /// Update a user. Available only for admins.
+        /// Updates a user account. Available only for administrators.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -332,7 +332,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.ItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Delete a user. Available only for admins.
+        /// Deletes a user account. Available only for administrators.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ItemRequestBuilderDeleteQueryParameters 
@@ -342,7 +342,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item
             public bool? HardDelete { get; set; }
         }
         /// <summary>
-        /// Get a single user
+        /// Retrieves a single user by ID.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ItemRequestBuilderGetQueryParameters 

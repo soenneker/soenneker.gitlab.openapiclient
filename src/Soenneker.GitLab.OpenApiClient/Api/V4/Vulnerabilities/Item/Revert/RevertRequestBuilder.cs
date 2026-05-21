@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Vulnerabilities.Item.Revert
         {
         }
         /// <summary>
-        /// Revert a vulnerability to a detected state
+        /// Reverts a specified vulnerability to detected state. Returns status code `304` if the vulnerability is already in detected state. Returns status code `403` if the authenticated user does not have permission to change vulnerability status.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesVulnerability"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Vulnerabilities.Item.Revert
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesVulnerability>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesVulnerability.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Revert a vulnerability to a detected state
+        /// Reverts a specified vulnerability to detected state. Returns status code `304` if the vulnerability is already in detected state. Returns status code `403` if the authenticated user does not have permission to change vulnerability status.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
