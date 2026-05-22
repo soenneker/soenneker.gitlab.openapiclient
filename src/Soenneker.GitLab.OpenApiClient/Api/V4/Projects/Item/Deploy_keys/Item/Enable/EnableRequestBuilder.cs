@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deploy_keys.Item.E
         {
         }
         /// <summary>
-        /// Enables a deploy key for a project so this can be used. Returns the enabled key, with a status code 201 when successful. This feature was added in GitLab 8.11.
+        /// Enables a deploy key for a project so this can be used. Returns the enabled key, with a status code 201 when successful.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDeployKey"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deploy_keys.Item.E
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDeployKey>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDeployKey.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Enables a deploy key for a project so this can be used. Returns the enabled key, with a status code 201 when successful. This feature was added in GitLab 8.11.
+        /// Enables a deploy key for a project so this can be used. Returns the enabled key, with a status code 201 when successful.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Deploy_keys
         {
         }
         /// <summary>
-        /// Get a list of all deploy keys across all projects of the GitLab instance. This endpoint requires administrator access and is not available on GitLab.com.
+        /// Lists all deploy keys for the instance.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDeployKey"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Deploy_keys
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDeployKey>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDeployKey.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Create a deploy key for the GitLab instance. This endpoint requires administrator access.
+        /// Creates a deploy key for the GitLab instance. Requires administrator access.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDeployKey"/></returns>
         /// <param name="body">The request body</param>
@@ -72,7 +72,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Deploy_keys
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDeployKey>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDeployKey.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get a list of all deploy keys across all projects of the GitLab instance. This endpoint requires administrator access and is not available on GitLab.com.
+        /// Lists all deploy keys for the instance.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -91,7 +91,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Deploy_keys
             return requestInfo;
         }
         /// <summary>
-        /// Create a deploy key for the GitLab instance. This endpoint requires administrator access.
+        /// Creates a deploy key for the GitLab instance. Requires administrator access.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -122,7 +122,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Deploy_keys
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Deploy_keys.Deploy_keysRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get a list of all deploy keys across all projects of the GitLab instance. This endpoint requires administrator access and is not available on GitLab.com.
+        /// Lists all deploy keys for the instance.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Deploy_keysRequestBuilderGetQueryParameters 

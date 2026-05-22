@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item.Asse
         {
         }
         /// <summary>
-        /// Deletes an asset as a link from a release. This feature was introduced in GitLab 11.7.
+        /// Deletes a specified asset link from a release.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item.Asse
             await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get an asset as a link from a release. This feature was introduced in GitLab 11.7.
+        /// Retrieves a specified asset as a link from a release.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesReleasesLink"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -69,7 +69,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item.Asse
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesReleasesLink>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesReleasesLink.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Update an asset as a link from a release. This feature was introduced in GitLab 11.7.
+        /// Updates a specified asset link for a release.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesReleasesLink"/></returns>
         /// <param name="body">The request body</param>
@@ -89,7 +89,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item.Asse
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesReleasesLink>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesReleasesLink.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Deletes an asset as a link from a release. This feature was introduced in GitLab 11.7.
+        /// Deletes a specified asset link from a release.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -108,7 +108,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item.Asse
             return requestInfo;
         }
         /// <summary>
-        /// Get an asset as a link from a release. This feature was introduced in GitLab 11.7.
+        /// Retrieves a specified asset as a link from a release.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -127,7 +127,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item.Asse
             return requestInfo;
         }
         /// <summary>
-        /// Update an asset as a link from a release. This feature was introduced in GitLab 11.7.
+        /// Updates a specified asset link for a release.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

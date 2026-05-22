@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Deploy_tokens
         {
         }
         /// <summary>
-        /// Get a list of all deploy tokens across the GitLab instance. This endpoint requires administrator access. This feature was introduced in GitLab 12.9.
+        /// Lists all deploy tokens for the instance.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDeployToken"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Deploy_tokens
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDeployToken>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDeployToken.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get a list of all deploy tokens across the GitLab instance. This endpoint requires administrator access. This feature was introduced in GitLab 12.9.
+        /// Lists all deploy tokens for the instance.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Deploy_tokens
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Deploy_tokens.Deploy_tokensRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get a list of all deploy tokens across the GitLab instance. This endpoint requires administrator access. This feature was introduced in GitLab 12.9.
+        /// Lists all deploy tokens for the instance.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Deploy_tokensRequestBuilderGetQueryParameters 

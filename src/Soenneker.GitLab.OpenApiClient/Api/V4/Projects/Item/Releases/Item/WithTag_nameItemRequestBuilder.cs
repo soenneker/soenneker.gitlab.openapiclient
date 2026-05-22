@@ -63,7 +63,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item
             await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Gets a release for the given tag. This feature was introduced in GitLab 11.7.
+        /// Retrieves a release with a specified tag name.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesRelease"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -81,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesRelease>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesRelease.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Updates a release. Developer level access to the project is required to update a release. This feature was introduced in GitLab 11.7.
+        /// Updates a release. Developer level access to the project is required to update a release.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesRelease"/></returns>
         /// <param name="body">The request body</param>
@@ -120,7 +120,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item
             return requestInfo;
         }
         /// <summary>
-        /// Gets a release for the given tag. This feature was introduced in GitLab 11.7.
+        /// Retrieves a release with a specified tag name.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -139,7 +139,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item
             return requestInfo;
         }
         /// <summary>
-        /// Updates a release. Developer level access to the project is required to update a release. This feature was introduced in GitLab 11.7.
+        /// Updates a release. Developer level access to the project is required to update a release.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -170,7 +170,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item.WithTag_nameItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Gets a release for the given tag. This feature was introduced in GitLab 11.7.
+        /// Retrieves a release with a specified tag name.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithTag_nameItemRequestBuilderGetQueryParameters 

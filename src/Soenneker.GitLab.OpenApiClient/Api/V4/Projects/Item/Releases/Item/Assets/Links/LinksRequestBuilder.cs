@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item.Asse
         {
         }
         /// <summary>
-        /// Get assets as links from a release. This feature was introduced in GitLab 11.7.
+        /// Lists all assets as links from a release.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesReleasesLink"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item.Asse
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesReleasesLink>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesReleasesLink.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Create an asset as a link from a release. This feature was introduced in GitLab 11.7.
+        /// Creates an asset link for a specified release.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesReleasesLink"/></returns>
         /// <param name="body">The request body</param>
@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item.Asse
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesReleasesLink>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesReleasesLink.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get assets as links from a release. This feature was introduced in GitLab 11.7.
+        /// Lists all assets as links from a release.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -104,7 +104,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item.Asse
             return requestInfo;
         }
         /// <summary>
-        /// Create an asset as a link from a release. This feature was introduced in GitLab 11.7.
+        /// Creates an asset link for a specified release.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -135,7 +135,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item.Asse
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item.Assets.Links.LinksRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get assets as links from a release. This feature was introduced in GitLab 11.7.
+        /// Lists all assets as links from a release.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class LinksRequestBuilderGetQueryParameters 

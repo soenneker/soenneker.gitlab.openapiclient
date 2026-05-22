@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deploy_keys
         {
         }
         /// <summary>
-        /// Get a list of a project&apos;s deploy keys.
+        /// Lists all deploy keys for a specified project.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDeployKeysProject"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deploy_keys
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDeployKeysProject>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDeployKeysProject.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Creates a new deploy key for a project. If the deploy key already exists in another project, it&apos;s joined to the current project only if the original one is accessible by the same user.
+        /// Adds a deploy key for a specified project. If the deploy key already exists in another project, it is joined to the current project only if the original one is accessible by the same user.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDeployKeysProject"/></returns>
         /// <param name="body">The request body</param>
@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deploy_keys
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDeployKeysProject>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDeployKeysProject.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get a list of a project&apos;s deploy keys.
+        /// Lists all deploy keys for a specified project.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -104,7 +104,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deploy_keys
             return requestInfo;
         }
         /// <summary>
-        /// Creates a new deploy key for a project. If the deploy key already exists in another project, it&apos;s joined to the current project only if the original one is accessible by the same user.
+        /// Adds a deploy key for a specified project. If the deploy key already exists in another project, it is joined to the current project only if the original one is accessible by the same user.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -135,7 +135,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deploy_keys
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deploy_keys.Deploy_keysRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get a list of a project&apos;s deploy keys.
+        /// Lists all deploy keys for a specified project.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Deploy_keysRequestBuilderGetQueryParameters 

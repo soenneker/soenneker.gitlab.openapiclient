@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deploy_tokens
         {
         }
         /// <summary>
-        /// Get a list of a project&apos;s deploy tokens. This feature was introduced in GitLab 12.9.
+        /// Lists all project deploy tokens.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDeployToken"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deploy_tokens
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDeployToken>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDeployToken.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Creates a new deploy token for a project. This feature was introduced in GitLab 12.9.
+        /// Creates a project deploy token.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDeployTokenWithToken"/></returns>
         /// <param name="body">The request body</param>
@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deploy_tokens
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDeployTokenWithToken>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDeployTokenWithToken.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get a list of a project&apos;s deploy tokens. This feature was introduced in GitLab 12.9.
+        /// Lists all project deploy tokens.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -104,7 +104,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deploy_tokens
             return requestInfo;
         }
         /// <summary>
-        /// Creates a new deploy token for a project. This feature was introduced in GitLab 12.9.
+        /// Creates a project deploy token.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -135,7 +135,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deploy_tokens
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deploy_tokens.Deploy_tokensRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get a list of a project&apos;s deploy tokens. This feature was introduced in GitLab 12.9.
+        /// Lists all project deploy tokens.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Deploy_tokensRequestBuilderGetQueryParameters 

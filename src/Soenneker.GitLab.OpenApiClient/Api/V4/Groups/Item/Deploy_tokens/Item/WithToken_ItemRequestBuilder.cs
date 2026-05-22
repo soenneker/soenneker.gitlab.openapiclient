@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Deploy_tokens.Item
         {
         }
         /// <summary>
-        /// Removes a deploy token from the group. This feature was introduced in GitLab 12.9.
+        /// Deletes a group deploy token.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -69,7 +69,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Deploy_tokens.Item
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDeployToken>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDeployToken.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Removes a deploy token from the group. This feature was introduced in GitLab 12.9.
+        /// Deletes a group deploy token.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

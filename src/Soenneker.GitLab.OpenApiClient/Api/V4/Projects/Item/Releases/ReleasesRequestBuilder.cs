@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases
         {
         }
         /// <summary>
-        /// Returns a paginated list of releases. This feature was introduced in GitLab 11.7.
+        /// Lists all releases for a specified project. Sorted by `released_at`.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesRelease"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesRelease>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesRelease.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Creates a release. Developer level access to the project is required to create a release. This feature was introduced in GitLab 11.7.
+        /// Creates a release. Developer level access to the project is required to create a release.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesRelease"/></returns>
         /// <param name="body">The request body</param>
@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesRelease>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesRelease.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Returns a paginated list of releases. This feature was introduced in GitLab 11.7.
+        /// Lists all releases for a specified project. Sorted by `released_at`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -104,7 +104,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases
             return requestInfo;
         }
         /// <summary>
-        /// Creates a release. Developer level access to the project is required to create a release. This feature was introduced in GitLab 11.7.
+        /// Creates a release. Developer level access to the project is required to create a release.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -135,7 +135,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.ReleasesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Returns a paginated list of releases. This feature was introduced in GitLab 11.7.
+        /// Lists all releases for a specified project. Sorted by `released_at`.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ReleasesRequestBuilderGetQueryParameters 

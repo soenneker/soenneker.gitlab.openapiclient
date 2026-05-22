@@ -5,6 +5,7 @@ using Microsoft.Kiota.Abstractions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Active_context.Code;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Active_context.Collections;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Active_context.Connections;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Active_context.Dead_queue;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -31,6 +32,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Active_context
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Active_context.Connections.ConnectionsRequestBuilder Connections
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Active_context.Connections.ConnectionsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The dead_queue property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Active_context.Dead_queue.Dead_queueRequestBuilder Dead_queue
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Active_context.Dead_queue.Dead_queueRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Active_context.Active_contextRequestBuilder"/> and sets the default values.

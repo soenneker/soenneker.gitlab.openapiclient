@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Releases
         {
         }
         /// <summary>
-        /// Returns a list of group releases.
+        /// Lists all releases for projects in a specified group.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesRelease"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Releases
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesRelease>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesRelease.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Returns a list of group releases.
+        /// Lists all releases for projects in a specified group.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Releases
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Releases.ReleasesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Returns a list of group releases.
+        /// Lists all releases for projects in a specified group.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ReleasesRequestBuilderGetQueryParameters 
