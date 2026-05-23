@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
         {
         }
         /// <summary>
-        /// Removes jobs from the Sidekiq queue based on metadata criteria
+        /// Deletes jobs from a Sidekiq queue that match the specified metadata.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -50,7 +50,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Removes jobs from the Sidekiq queue based on metadata criteria
+        /// Deletes jobs from a Sidekiq queue that match the specified metadata.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -78,7 +78,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item.WithQueue_nameItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Removes jobs from the Sidekiq queue based on metadata criteria
+        /// Deletes jobs from a Sidekiq queue that match the specified metadata.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithQueue_nameItemRequestBuilderDeleteQueryParameters 

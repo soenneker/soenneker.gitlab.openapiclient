@@ -4,6 +4,7 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Active_context;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Batched_background_migrations;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Batched_background_operations;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Ci;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Clusters;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Data_management;
@@ -35,6 +36,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Batched_background_migrations.Batched_background_migrationsRequestBuilder Batched_background_migrations
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Batched_background_migrations.Batched_background_migrationsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The batched_background_operations property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Batched_background_operations.Batched_background_operationsRequestBuilder Batched_background_operations
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Batched_background_operations.Batched_background_operationsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The ci property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Ci.CiRequestBuilder Ci

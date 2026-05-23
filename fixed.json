@@ -9972,7 +9972,8 @@
         "tags": [
           "Geo"
         ],
-        "summary": "Create a new Geo site",
+        "summary": "Create a Geo site",
+        "description": "Creates a Geo site.",
         "operationId": "postApiV4GeoSites",
         "requestBody": {
           "content": {
@@ -10000,7 +10001,8 @@
         "tags": [
           "Geo"
         ],
-        "summary": "Retrieves the available Geo sites",
+        "summary": "List all Geo sites",
+        "description": "Lists all Geo sites for the instance.",
         "operationId": "getApiV4GeoSites",
         "parameters": [
           {
@@ -10045,7 +10047,8 @@
         "tags": [
           "Geo"
         ],
-        "summary": "Get status for all Geo sites",
+        "summary": "List all Geo site statuses",
+        "description": "Lists all Geo site statuses.",
         "operationId": "getApiV4GeoSitesStatus",
         "parameters": [
           {
@@ -10090,7 +10093,8 @@
         "tags": [
           "Geo"
         ],
-        "summary": "Get a single GeoSite",
+        "summary": "Retrieve a Geo site",
+        "description": "Retrieves a specified Geo site.",
         "operationId": "getApiV4GeoSitesId",
         "parameters": [
           {
@@ -10119,7 +10123,8 @@
         "tags": [
           "Geo"
         ],
-        "summary": "Updates an existing Geo site",
+        "summary": "Update a Geo site",
+        "description": "Updates a specified Geo site.",
         "operationId": "putApiV4GeoSitesId",
         "parameters": [
           {
@@ -10157,7 +10162,8 @@
         "tags": [
           "Geo"
         ],
-        "summary": "Remove the Geo site",
+        "summary": "Delete a Geo site",
+        "description": "Deletes a specified Geo site.",
         "operationId": "deleteApiV4GeoSitesId",
         "parameters": [
           {
@@ -10190,7 +10196,8 @@
         "tags": [
           "Geo"
         ],
-        "summary": "Get metrics for a single Geo site",
+        "summary": "Retrieve a Geo site status",
+        "description": "Retrieves the status for a specified Geo site.",
         "operationId": "getApiV4GeoSitesIdStatus",
         "parameters": [
           {
@@ -10230,7 +10237,8 @@
         "tags": [
           "Geo"
         ],
-        "summary": "Repair authentication of the Geo site",
+        "summary": "Repair a Geo site",
+        "description": "Repairs the OAuth authentication of a Geo site if there is an OAuth synchronization problem between the primary or secondary Geo sites.",
         "operationId": "postApiV4GeoSitesIdRepair",
         "parameters": [
           {
@@ -10261,7 +10269,8 @@
         "tags": [
           "Geo"
         ],
-        "summary": "Create a new Geo node",
+        "summary": "Create a Geo node",
+        "description": "Creates a Geo node.",
         "operationId": "postApiV4GeoNodes",
         "requestBody": {
           "content": {
@@ -10289,7 +10298,8 @@
         "tags": [
           "Geo"
         ],
-        "summary": "Retrieves the available Geo nodes",
+        "summary": "List all Geo nodes",
+        "description": "Lists all Geo nodes for the instance.",
         "operationId": "getApiV4GeoNodes",
         "parameters": [
           {
@@ -10334,7 +10344,8 @@
         "tags": [
           "Geo"
         ],
-        "summary": "Get status for all Geo nodes",
+        "summary": "List all Geo node statuses",
+        "description": "Lists all Geo node statuses.",
         "operationId": "getApiV4GeoNodesStatus",
         "parameters": [
           {
@@ -10379,7 +10390,8 @@
         "tags": [
           "Geo"
         ],
-        "summary": "Get a single GeoNode",
+        "summary": "Retrieve a single Geo node",
+        "description": "Retrieves a single Geo Node.",
         "operationId": "getApiV4GeoNodesId",
         "parameters": [
           {
@@ -10408,7 +10420,8 @@
         "tags": [
           "Geo"
         ],
-        "summary": "Updates an existing Geo node",
+        "summary": "Update a Geo node",
+        "description": "Updates a specified Geo node.",
         "operationId": "putApiV4GeoNodesId",
         "parameters": [
           {
@@ -10446,7 +10459,8 @@
         "tags": [
           "Geo"
         ],
-        "summary": "Remove the Geo node",
+        "summary": "Delete a Geo node",
+        "description": "Deletes a specified Geo node.",
         "operationId": "deleteApiV4GeoNodesId",
         "parameters": [
           {
@@ -10479,7 +10493,8 @@
         "tags": [
           "Geo"
         ],
-        "summary": "Get metrics for a single Geo node",
+        "summary": "Retrieve metrics for a Geo node",
+        "description": "Retrieves metrics for a specified Geo node.",
         "operationId": "getApiV4GeoNodesIdStatus",
         "parameters": [
           {
@@ -10520,6 +10535,7 @@
           "Geo"
         ],
         "summary": "Repair authentication of the Geo node",
+        "description": "Repairs the OAuth authentication of a primary Geo node.",
         "operationId": "postApiV4GeoNodesIdRepair",
         "parameters": [
           {
@@ -14338,8 +14354,8 @@
         "tags": [
           "Data management"
         ],
-        "summary": "Get data about a specific model",
-        "description": "Requires administrator access. Only available when Geo is enabled.",
+        "summary": "Retrieve information about a model record",
+        "description": "Retrieves information about a specified model record. Only available to administrators.",
         "operationId": "getApiV4AdminDataManagementModelNameRecordIdentifier",
         "parameters": [
           {
@@ -14390,8 +14406,8 @@
         "tags": [
           "Data management"
         ],
-        "summary": "Recalculate the checksum of a specific model",
-        "description": "Requires administrator access. Only available on primary Geo sites.",
+        "summary": "Recalculate the checksum of a model record",
+        "description": "Recalculates the checksum of a specified model record. The checksum value is a representation of the queried model hashed with the md5 or sha256 algorithm. Only available to administrators on primary Geo sites.",
         "operationId": "putApiV4AdminDataManagementModelNameRecordIdentifierChecksum",
         "parameters": [
           {
@@ -14434,8 +14450,8 @@
         "tags": [
           "Data management"
         ],
-        "summary": "Get a list of model data",
-        "description": "Requires administrator access. Only available when Geo is enabled.",
+        "summary": "Retrieve model information",
+        "description": "Retrieves information about a data model in an instance. Only available to administrators.",
         "operationId": "getApiV4AdminDataManagementModelName",
         "parameters": [
           {
@@ -14556,8 +14572,8 @@
         "tags": [
           "Data management"
         ],
-        "summary": "Recalculate the checksum of a all records for a model",
-        "description": "Requires administrator access. Only available on primary Geo sites.",
+        "summary": "Recalculate checksums for model records",
+        "description": "Recalculates checksums for selected records of a specified model, filtered by `checksum_state` and `identifiers` parameters if provided. The request enqueues a background job to perform the recalculation. Only available to administrators on primary Geo sites.",
         "operationId": "putApiV4AdminDataManagementModelNameChecksum",
         "parameters": [
           {
@@ -21485,8 +21501,8 @@
         "tags": [
           "Sidekiq"
         ],
-        "summary": "Get the Sidekiq queue metrics",
-        "description": "Retrieves metrics for Sidekiq queues",
+        "summary": "List all job queue metrics",
+        "description": "Lists all details about all Sidekiq job queues, including backlog size and latency.",
         "operationId": "getApiV4SidekiqQueueMetrics",
         "responses": {
           "200": {
@@ -21509,8 +21525,8 @@
         "tags": [
           "Sidekiq"
         ],
-        "summary": "Get the Sidekiq process metrics",
-        "description": "Retrieves metrics for Sidekiq processes",
+        "summary": "List all Sidekiq processes",
+        "description": "Lists all details about all registered Sidekiq worker processes, including hostname, process ID, queues, and concurrency settings.",
         "operationId": "getApiV4SidekiqProcessMetrics",
         "responses": {
           "200": {
@@ -21533,8 +21549,8 @@
         "tags": [
           "Sidekiq"
         ],
-        "summary": "Get the Sidekiq job statistics",
-        "description": "Retrieves statistics for Sidekiq jobs",
+        "summary": "Retrieve job completion metrics",
+        "description": "Retrieves statistics on the completion status of all Sidekiq jobs.",
         "operationId": "getApiV4SidekiqJobStats",
         "responses": {
           "200": {
@@ -21557,8 +21573,8 @@
         "tags": [
           "Sidekiq"
         ],
-        "summary": "Get the Sidekiq Compound metrics. Includes queue, process, and job statistics",
-        "description": "Retrieves compound metrics including queue, process, and job statistics",
+        "summary": "List all Sidekiq metrics",
+        "description": "Lists all Sidekiq metrics. Includes queue, process, and job completion metrics.",
         "operationId": "getApiV4SidekiqCompoundMetrics",
         "responses": {
           "200": {
@@ -31717,8 +31733,8 @@
         "tags": [
           "Sidekiq"
         ],
-        "summary": "Drop jobs matching the given metadata from the Sidekiq queue",
-        "description": "Removes jobs from the Sidekiq queue based on metadata criteria",
+        "summary": "Delete jobs from a Sidekiq queue",
+        "description": "Deletes jobs from a Sidekiq queue that match the specified metadata.",
         "operationId": "deleteApiV4AdminSidekiqQueuesQueueName",
         "parameters": [
           {
@@ -87065,8 +87081,8 @@
           }
         },
         "responses": {
-          "201": {
-            "description": "Created",
+          "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -87318,11 +87334,13 @@
         },
         "responses": {
           "201": {
-            "description": "Artifact uploaded",
+            "description": "Default",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/APIEntitiesCiJobRequestResponse"
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
                 }
               }
             }
@@ -95601,6 +95619,57 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/APIEntitiesSystemBroadcastMessage"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v4/admin/batched_background_operations": {
+      "get": {
+        "tags": [
+          "Batched background operations"
+        ],
+        "summary": "Get the list of batched background operations",
+        "description": "This feature was introduced in GitLab 19.1.",
+        "operationId": "getApiV4AdminBatchedBackgroundOperations",
+        "parameters": [
+          {
+            "name": "database",
+            "in": "query",
+            "description": "The name of the database, the default `main`",
+            "schema": {
+              "enum": [
+                "main",
+                "ci",
+                "sec",
+                "embedding",
+                "geo"
+              ],
+              "type": "string",
+              "additionalProperties": false,
+              "default": "main",
+              "nullable": true
+            }
+          },
+          {
+            "name": "job_class_name",
+            "in": "query",
+            "description": "Filter operations by job class name.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIEntitiesBatchedBackgroundOperation"
                 }
               }
             }
@@ -118080,6 +118149,55 @@
           },
           "active": {
             "type": "boolean"
+          }
+        }
+      },
+      "APIEntitiesBatchedBackgroundOperation": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "<cluster>:<partition_id>:<id/uuid>"
+          },
+          "partition": {
+            "type": "integer",
+            "example": 1
+          },
+          "job_class_name": {
+            "type": "string",
+            "example": "UsersDeleteUnconfirmedSecondaryEmails"
+          },
+          "table_name": {
+            "type": "string",
+            "example": "users"
+          },
+          "column_name": {
+            "type": "string",
+            "example": "id"
+          },
+          "status": {
+            "type": "string",
+            "example": "active"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2025-05-15T10:00:00Z"
+          },
+          "started_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2025-05-15T10:05:00Z"
+          },
+          "finished_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2025-05-15T11:00:00Z"
+          },
+          "on_hold_until": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2025-05-15T10:15:00Z"
           }
         }
       },
@@ -146023,6 +146141,10 @@
     {
       "name": "Batched background migrations",
       "description": "Operations related to batched background migrations."
+    },
+    {
+      "name": "Batched background operations",
+      "description": "Operations related to batched background operations."
     },
     {
       "name": "Boards",

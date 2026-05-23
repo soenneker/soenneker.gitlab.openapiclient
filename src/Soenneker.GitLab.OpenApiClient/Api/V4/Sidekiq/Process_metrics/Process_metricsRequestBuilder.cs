@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Sidekiq.Process_metrics
         {
         }
         /// <summary>
-        /// Retrieves metrics for Sidekiq processes
+        /// Lists all details about all registered Sidekiq worker processes, including hostname, process ID, queues, and concurrency settings.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Sidekiq.Process_metrics.Process_metricsGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Sidekiq.Process_metrics
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Sidekiq.Process_metrics.Process_metricsGetResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Sidekiq.Process_metrics.Process_metricsGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves metrics for Sidekiq processes
+        /// Lists all details about all registered Sidekiq worker processes, including hostname, process ID, queues, and concurrency settings.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

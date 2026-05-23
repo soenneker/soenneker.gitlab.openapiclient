@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Sidekiq.Queue_metrics
         {
         }
         /// <summary>
-        /// Retrieves metrics for Sidekiq queues
+        /// Lists all details about all Sidekiq job queues, including backlog size and latency.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Sidekiq.Queue_metrics.Queue_metricsGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Sidekiq.Queue_metrics
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Sidekiq.Queue_metrics.Queue_metricsGetResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Sidekiq.Queue_metrics.Queue_metricsGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves metrics for Sidekiq queues
+        /// Lists all details about all Sidekiq job queues, including backlog size and latency.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Geo_sites.Item.Repair
         {
         }
         /// <summary>
-        /// Repair authentication of the Geo site
+        /// Repairs the OAuth authentication of a Geo site if there is an OAuth synchronization problem between the primary or secondary Geo sites.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGeoSiteStatus"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Geo_sites.Item.Repair
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGeoSiteStatus>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGeoSiteStatus.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Repair authentication of the Geo site
+        /// Repairs the OAuth authentication of a Geo site if there is an OAuth synchronization problem between the primary or secondary Geo sites.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

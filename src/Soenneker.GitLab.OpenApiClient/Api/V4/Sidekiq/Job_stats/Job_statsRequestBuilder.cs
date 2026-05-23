@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Sidekiq.Job_stats
         {
         }
         /// <summary>
-        /// Retrieves statistics for Sidekiq jobs
+        /// Retrieves statistics on the completion status of all Sidekiq jobs.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Sidekiq.Job_stats.Job_statsGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Sidekiq.Job_stats
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Sidekiq.Job_stats.Job_statsGetResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Sidekiq.Job_stats.Job_statsGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves statistics for Sidekiq jobs
+        /// Retrieves statistics on the completion status of all Sidekiq jobs.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

@@ -54,6 +54,8 @@ tags:
   description: Operations related to badges.
 - name: Batched background migrations
   description: Operations related to batched background migrations.
+- name: Batched background operations
+  description: Operations related to batched background operations.
 - name: Boards
   description: Operations related to boards.
 - name: Branches
@@ -7400,7 +7402,8 @@ paths:
   "/api/v4/geo_sites":
     post:
       operationId: postApiV4GeoSites
-      summary: Create a new Geo site
+      summary: Create a Geo site
+      description: Creates a Geo site.
       tags:
       - Geo
       responses:
@@ -7424,7 +7427,8 @@ paths:
               "$ref": "#/components/schemas/RequestBody_0547387828a9"
     get:
       operationId: getApiV4GeoSites
-      summary: Retrieves the available Geo sites
+      summary: List all Geo sites
+      description: Lists all Geo sites for the instance.
       tags:
       - Geo
       responses:
@@ -7462,7 +7466,8 @@ paths:
   "/api/v4/geo_sites/status":
     get:
       operationId: getApiV4GeoSitesStatus
-      summary: Get status for all Geo sites
+      summary: List all Geo site statuses
+      description: Lists all Geo site statuses.
       tags:
       - Geo
       responses:
@@ -7500,7 +7505,8 @@ paths:
   "/api/v4/geo_sites/{id}":
     get:
       operationId: getApiV4GeoSitesId
-      summary: Get a single GeoSite
+      summary: Retrieve a Geo site
+      description: Retrieves a specified Geo site.
       tags:
       - Geo
       responses:
@@ -7526,7 +7532,8 @@ paths:
         in: path
     put:
       operationId: putApiV4GeoSitesId
-      summary: Updates an existing Geo site
+      summary: Update a Geo site
+      description: Updates a specified Geo site.
       tags:
       - Geo
       responses:
@@ -7558,7 +7565,8 @@ paths:
               "$ref": "#/components/schemas/RequestBody_8420106513ed"
     delete:
       operationId: deleteApiV4GeoSitesId
-      summary: Remove the Geo site
+      summary: Delete a Geo site
+      description: Deletes a specified Geo site.
       tags:
       - Geo
       responses:
@@ -7581,7 +7589,8 @@ paths:
   "/api/v4/geo_sites/{id}/status":
     get:
       operationId: getApiV4GeoSitesIdStatus
-      summary: Get metrics for a single Geo site
+      summary: Retrieve a Geo site status
+      description: Retrieves the status for a specified Geo site.
       tags:
       - Geo
       responses:
@@ -7616,7 +7625,9 @@ paths:
   "/api/v4/geo_sites/{id}/repair":
     post:
       operationId: postApiV4GeoSitesIdRepair
-      summary: Repair authentication of the Geo site
+      summary: Repair a Geo site
+      description: Repairs the OAuth authentication of a Geo site if there is an OAuth
+        synchronization problem between the primary or secondary Geo sites.
       tags:
       - Geo
       responses:
@@ -7643,7 +7654,8 @@ paths:
   "/api/v4/geo_nodes":
     post:
       operationId: postApiV4GeoNodes
-      summary: Create a new Geo node
+      summary: Create a Geo node
+      description: Creates a Geo node.
       tags:
       - Geo
       responses:
@@ -7667,7 +7679,8 @@ paths:
               "$ref": "#/components/schemas/RequestBody_5acd407be8fe"
     get:
       operationId: getApiV4GeoNodes
-      summary: Retrieves the available Geo nodes
+      summary: List all Geo nodes
+      description: Lists all Geo nodes for the instance.
       tags:
       - Geo
       responses:
@@ -7705,7 +7718,8 @@ paths:
   "/api/v4/geo_nodes/status":
     get:
       operationId: getApiV4GeoNodesStatus
-      summary: Get status for all Geo nodes
+      summary: List all Geo node statuses
+      description: Lists all Geo node statuses.
       tags:
       - Geo
       responses:
@@ -7743,7 +7757,8 @@ paths:
   "/api/v4/geo_nodes/{id}":
     get:
       operationId: getApiV4GeoNodesId
-      summary: Get a single GeoNode
+      summary: Retrieve a single Geo node
+      description: Retrieves a single Geo Node.
       tags:
       - Geo
       responses:
@@ -7769,7 +7784,8 @@ paths:
         in: path
     put:
       operationId: putApiV4GeoNodesId
-      summary: Updates an existing Geo node
+      summary: Update a Geo node
+      description: Updates a specified Geo node.
       tags:
       - Geo
       responses:
@@ -7801,7 +7817,8 @@ paths:
               "$ref": "#/components/schemas/RequestBody_ed161d2436c1"
     delete:
       operationId: deleteApiV4GeoNodesId
-      summary: Remove the Geo node
+      summary: Delete a Geo node
+      description: Deletes a specified Geo node.
       tags:
       - Geo
       responses:
@@ -7824,7 +7841,8 @@ paths:
   "/api/v4/geo_nodes/{id}/status":
     get:
       operationId: getApiV4GeoNodesIdStatus
-      summary: Get metrics for a single Geo node
+      summary: Retrieve metrics for a Geo node
+      description: Retrieves metrics for a specified Geo node.
       tags:
       - Geo
       responses:
@@ -7860,6 +7878,7 @@ paths:
     post:
       operationId: postApiV4GeoNodesIdRepair
       summary: Repair authentication of the Geo node
+      description: Repairs the OAuth authentication of a primary Geo node.
       tags:
       - Geo
       responses:
@@ -10956,8 +10975,9 @@ paths:
   "/api/v4/admin/data_management/{model_name}/{record_identifier}":
     get:
       operationId: getApiV4AdminDataManagementModelNameRecordIdentifier
-      summary: Get data about a specific model
-      description: Requires administrator access. Only available when Geo is enabled.
+      summary: Retrieve information about a model record
+      description: Retrieves information about a specified model record. Only available
+        to administrators.
       tags:
       - Data management
       responses:
@@ -10997,8 +11017,10 @@ paths:
   "/api/v4/admin/data_management/{model_name}/{record_identifier}/checksum":
     put:
       operationId: putApiV4AdminDataManagementModelNameRecordIdentifierChecksum
-      summary: Recalculate the checksum of a specific model
-      description: Requires administrator access. Only available on primary Geo sites.
+      summary: Recalculate the checksum of a model record
+      description: Recalculates the checksum of a specified model record. The checksum
+        value is a representation of the queried model hashed with the md5 or sha256
+        algorithm. Only available to administrators on primary Geo sites.
       tags:
       - Data management
       responses:
@@ -11036,8 +11058,9 @@ paths:
   "/api/v4/admin/data_management/{model_name}":
     get:
       operationId: getApiV4AdminDataManagementModelName
-      summary: Get a list of model data
-      description: Requires administrator access. Only available when Geo is enabled.
+      summary: Retrieve model information
+      description: Retrieves information about a data model in an instance. Only available
+        to administrators.
       tags:
       - Data management
       responses:
@@ -11132,8 +11155,11 @@ paths:
   "/api/v4/admin/data_management/{model_name}/checksum":
     put:
       operationId: putApiV4AdminDataManagementModelNameChecksum
-      summary: Recalculate the checksum of a all records for a model
-      description: Requires administrator access. Only available on primary Geo sites.
+      summary: Recalculate checksums for model records
+      description: Recalculates checksums for selected records of a specified model,
+        filtered by `checksum_state` and `identifiers` parameters if provided. The
+        request enqueues a background job to perform the recalculation. Only available
+        to administrators on primary Geo sites.
       tags:
       - Data management
       responses:
@@ -16180,8 +16206,9 @@ paths:
   "/api/v4/sidekiq/queue_metrics":
     get:
       operationId: getApiV4SidekiqQueueMetrics
-      summary: Get the Sidekiq queue metrics
-      description: Retrieves metrics for Sidekiq queues
+      summary: List all job queue metrics
+      description: Lists all details about all Sidekiq job queues, including backlog
+        size and latency.
       tags:
       - Sidekiq
       responses:
@@ -16190,8 +16217,9 @@ paths:
   "/api/v4/sidekiq/process_metrics":
     get:
       operationId: getApiV4SidekiqProcessMetrics
-      summary: Get the Sidekiq process metrics
-      description: Retrieves metrics for Sidekiq processes
+      summary: List all Sidekiq processes
+      description: Lists all details about all registered Sidekiq worker processes,
+        including hostname, process ID, queues, and concurrency settings.
       tags:
       - Sidekiq
       responses:
@@ -16200,8 +16228,8 @@ paths:
   "/api/v4/sidekiq/job_stats":
     get:
       operationId: getApiV4SidekiqJobStats
-      summary: Get the Sidekiq job statistics
-      description: Retrieves statistics for Sidekiq jobs
+      summary: Retrieve job completion metrics
+      description: Retrieves statistics on the completion status of all Sidekiq jobs.
       tags:
       - Sidekiq
       responses:
@@ -16210,9 +16238,9 @@ paths:
   "/api/v4/sidekiq/compound_metrics":
     get:
       operationId: getApiV4SidekiqCompoundMetrics
-      summary: Get the Sidekiq Compound metrics. Includes queue, process, and job
-        statistics
-      description: Retrieves compound metrics including queue, process, and job statistics
+      summary: List all Sidekiq metrics
+      description: Lists all Sidekiq metrics. Includes queue, process, and job completion
+        metrics.
       tags:
       - Sidekiq
       responses:
@@ -23506,8 +23534,8 @@ paths:
   "/api/v4/admin/sidekiq/queues/{queue_name}":
     delete:
       operationId: deleteApiV4AdminSidekiqQueuesQueueName
-      summary: Drop jobs matching the given metadata from the Sidekiq queue
-      description: Removes jobs from the Sidekiq queue based on metadata criteria
+      summary: Delete jobs from a Sidekiq queue
+      description: Deletes jobs from a Sidekiq queue that match the specified metadata.
       tags:
       - Sidekiq
       responses:
@@ -54621,7 +54649,7 @@ paths:
       - Deploy resources
       responses:
         '204':
-          description: Deployment destroyed
+          description: No Content
         '403':
           description: Forbidden
         '400':
@@ -62286,7 +62314,7 @@ paths:
       - Pipelines
       responses:
         '204':
-          description: Pipeline was deleted
+          description: No Content
         '403':
           description: Forbidden
       parameters:
@@ -63797,7 +63825,7 @@ paths:
       - CI runners
       responses:
         '204':
-          description: Runner manager was deleted
+          description: No Content
         '400':
           description: Bad Request
         '403':
@@ -63826,14 +63854,12 @@ paths:
       tags:
       - CI runners
       responses:
-        '201':
-          description: Created
+        '200':
+          description: OK
           content:
             application/json:
               schema:
                 "$ref": "#/components/schemas/APIEntitiesCiRunnerRegistrationDetails"
-        '200':
-          description: Credentials are valid
         '403':
           description: Forbidden
         '422':
@@ -63954,10 +63980,8 @@ paths:
       tags:
       - Jobs
       responses:
-        '200':
-          description: OK
         '202':
-          description: Trace was patched
+          description: Accepted
         '400':
           description: Missing Content-Range header
         '403':
@@ -63986,10 +64010,8 @@ paths:
       tags:
       - Jobs
       responses:
-        '201':
-          description: Created
         '200':
-          description: Upload allowed
+          description: OK
         '403':
           description: Forbidden
         '405':
@@ -64019,11 +64041,7 @@ paths:
       - Jobs
       responses:
         '201':
-          description: Artifact uploaded
-          content:
-            application/json:
-              schema:
-                "$ref": "#/components/schemas/APIEntitiesCiJobRequestResponse"
+          description: Created
         '400':
           description: Bad request
         '403':
@@ -69992,6 +70010,46 @@ paths:
         schema:
           type: integer
         in: path
+  "/api/v4/admin/batched_background_operations":
+    get:
+      operationId: getApiV4AdminBatchedBackgroundOperations
+      summary: Get the list of batched background operations
+      description: This feature was introduced in GitLab 19.1.
+      tags:
+      - Batched background operations
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/APIEntitiesBatchedBackgroundOperation"
+        '401':
+          description: 401 Unauthorized
+        '403':
+          description: 403 Forbidden
+      parameters:
+      - name: database
+        required: false
+        description: The name of the database, the default `main`
+        schema:
+          type: string
+          enum:
+          - main
+          - ci
+          - sec
+          - embedding
+          - geo
+          default: main
+          nullable: true
+        in: query
+      - name: job_class_name
+        required: false
+        description: Filter operations by job class name.
+        schema:
+          type: string
+          nullable: true
+        in: query
   "/api/v4/admin/batched_background_migrations/{id}":
     get:
       operationId: getApiV4AdminBatchedBackgroundMigrationsId
@@ -85880,6 +85938,43 @@ components:
           type: boolean
         active:
           type: boolean
+    APIEntitiesBatchedBackgroundOperation:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "<cluster>:<partition_id>:<id/uuid>"
+        partition:
+          type: integer
+          example: 1
+        job_class_name:
+          type: string
+          example: UsersDeleteUnconfirmedSecondaryEmails
+        table_name:
+          type: string
+          example: users
+        column_name:
+          type: string
+          example: id
+        status:
+          type: string
+          example: active
+        created_at:
+          type: string
+          format: date-time
+          example: '2025-05-15T10:00:00Z'
+        started_at:
+          type: string
+          format: date-time
+          example: '2025-05-15T10:05:00Z'
+        finished_at:
+          type: string
+          format: date-time
+          example: '2025-05-15T11:00:00Z'
+        on_hold_until:
+          type: string
+          format: date-time
+          example: '2025-05-15T10:15:00Z'
     APIEntitiesBatchedBackgroundMigration:
       type: object
       properties:

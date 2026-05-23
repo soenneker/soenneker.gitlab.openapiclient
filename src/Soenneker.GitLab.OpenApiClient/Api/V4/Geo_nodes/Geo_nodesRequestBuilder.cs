@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Geo_nodes
         {
         }
         /// <summary>
-        /// Retrieves the available Geo nodes
+        /// Lists all Geo nodes for the instance.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGeoNode"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -71,7 +71,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Geo_nodes
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGeoNode>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGeoNode.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Create a new Geo node
+        /// Creates a Geo node.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGeoNode"/></returns>
         /// <param name="body">The request body</param>
@@ -91,7 +91,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Geo_nodes
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGeoNode>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGeoNode.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves the available Geo nodes
+        /// Lists all Geo nodes for the instance.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -110,7 +110,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Geo_nodes
             return requestInfo;
         }
         /// <summary>
-        /// Create a new Geo node
+        /// Creates a Geo node.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -141,7 +141,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Geo_nodes
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Geo_nodes.Geo_nodesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Retrieves the available Geo nodes
+        /// Lists all Geo nodes for the instance.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Geo_nodesRequestBuilderGetQueryParameters 
