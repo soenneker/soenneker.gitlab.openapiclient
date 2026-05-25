@@ -17357,8 +17357,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Revoke support PIN for a user. Available only for admins.",
-        "description": "This feature allows administrators to revoke the support PIN for a specified user before its natural expiration",
+        "summary": "Revoke a Support PIN for a user",
+        "description": "Revokes a Support PIN for a specified user. This immediately expires and removes the PIN. Administrators only.",
         "operationId": "postApiV4UsersIdSupportPinRevoke",
         "parameters": [
           {
@@ -17797,7 +17797,7 @@
           "Users"
         ],
         "summary": "Delete a user",
-        "description": "Deletes a user account. Available only for administrators.",
+        "description": "Deletes a user. Administrators only.",
         "operationId": "deleteApiV4UsersId",
         "parameters": [
           {
@@ -17839,7 +17839,7 @@
           "Users"
         ],
         "summary": "Retrieve the status of a user",
-        "description": "Retrieves the public profile status of a user.",
+        "description": "Retrieves the status of a user. You can access this endpoint without authentication.",
         "operationId": "getApiV4UsersUserIdStatus",
         "parameters": [
           {
@@ -17872,7 +17872,7 @@
           "Users"
         ],
         "summary": "Follow a user",
-        "description": "Follows a user as the authenticated user.",
+        "description": "Follows a specified user account.",
         "operationId": "postApiV4UsersIdFollow",
         "parameters": [
           {
@@ -18047,8 +18047,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Disable two factor authentication for a user. Available only for admins",
-        "description": "This feature was added in GitLab 15.2",
+        "summary": "Disable two-factor authentication for a user",
+        "description": "Disables two-factor authentication for a specified user account. Administrators only.",
         "operationId": "patchApiV4UsersIdDisableTwoFactor",
         "parameters": [
           {
@@ -18080,8 +18080,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Delete a user identity",
-        "description": "Deletes an identity that links a user to an external authentication provider. Available only for administrators.",
+        "summary": "Delete authentication identity from a user",
+        "description": "Deletes a user authentication identity using the provider name associated with that identity. Administrators only.",
         "operationId": "deleteApiV4UsersIdIdentitiesProvider",
         "parameters": [
           {
@@ -18178,7 +18178,7 @@
           "Keys"
         ],
         "summary": "Add an SSH key for a user",
-        "description": "Adds an SSH key to a specified user. Available only for administrators.",
+        "description": "Adds an SSH key for a specified user account. Administrators only.",
         "operationId": "postApiV4UsersUserIdKeys",
         "parameters": [
           {
@@ -18273,7 +18273,7 @@
           "Keys"
         ],
         "summary": "Retrieve an SSH key for a user",
-        "description": "Retrieves a single SSH key for a specified user.",
+        "description": "Retrieves an SSH key for a specified user account. This endpoint does not require authentication.",
         "operationId": "getApiV4UsersIdKeysKeyId",
         "parameters": [
           {
@@ -18313,7 +18313,7 @@
           "Keys"
         ],
         "summary": "Delete an SSH key for a user",
-        "description": "Deletes an SSH key from a specified user. Available only for administrators.",
+        "description": "Deletes an SSH key from a specified user account. Administrators only.",
         "operationId": "deleteApiV4UsersIdKeysKeyId",
         "parameters": [
           {
@@ -18354,8 +18354,8 @@
         "tags": [
           "Keys"
         ],
-        "summary": "Add a GPG key to a specified user. Available only for admins.",
-        "description": "This feature was added in GitLab 10.0",
+        "summary": "Add a GPG key for a user",
+        "description": "Adds a GPG key for a specified user account. Administrators only.",
         "operationId": "postApiV4UsersIdGpgKeys",
         "parameters": [
           {
@@ -18394,8 +18394,8 @@
         "tags": [
           "Keys"
         ],
-        "summary": "Get the GPG keys of a specified user.",
-        "description": "This feature was added in GitLab 10.0",
+        "summary": "List all GPG keys for a user",
+        "description": "Lists all GPG keys for a specified user account. This endpoint does not require authentication.",
         "operationId": "getApiV4UsersIdGpgKeys",
         "parameters": [
           {
@@ -18449,8 +18449,8 @@
         "tags": [
           "Keys"
         ],
-        "summary": "Get a specific GPG key for a given user.",
-        "description": "This feature was added in GitLab 13.5",
+        "summary": "Retrieve a GPG key for a user",
+        "description": "Retrieves a GPG key for a specified user account. This endpoint does not require authentication.",
         "operationId": "getApiV4UsersIdGpgKeysKeyId",
         "parameters": [
           {
@@ -18489,8 +18489,8 @@
         "tags": [
           "Keys"
         ],
-        "summary": "Delete an existing GPG key from a specified user. Available only for admins.",
-        "description": "This feature was added in GitLab 10.0",
+        "summary": "Delete a GPG key for a user",
+        "description": "Deletes a GPG key from a specified user account. Administrators only.",
         "operationId": "deleteApiV4UsersIdGpgKeysKeyId",
         "parameters": [
           {
@@ -18533,8 +18533,8 @@
         "tags": [
           "Keys"
         ],
-        "summary": "Revokes an existing GPG key from a specified user. Available only for admins.",
-        "description": "This feature was added in GitLab 10.0",
+        "summary": "Revoke a GPG key for a user.",
+        "description": "Deletes a GPG key from a specified user account. Administrators only.",
         "operationId": "postApiV4UsersIdGpgKeysKeyIdRevoke",
         "parameters": [
           {
@@ -18578,7 +18578,7 @@
           "Users"
         ],
         "summary": "Add an email address for a user",
-        "description": "Adds an email address to a specified user. Available only for administrators.",
+        "description": "Adds an email address for a specified user account. Administrators only.",
         "operationId": "postApiV4UsersIdEmails",
         "parameters": [
           {
@@ -18673,7 +18673,7 @@
           "Users"
         ],
         "summary": "Delete an email address for a user",
-        "description": "Deletes an email address from a specified user. Available only for administrators.",
+        "description": "Deletes a specified email address for a user account. You cannot delete a primary email address. Administrators only.",
         "operationId": "deleteApiV4UsersIdEmailsEmailId",
         "parameters": [
           {
@@ -18714,8 +18714,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Activate a user",
-        "description": "Activates a deactivated user. Available only for administrators.",
+        "summary": "Reactivate a user",
+        "description": "Reactivates a specified user account that was previously deactivated. Administrators only.",
         "operationId": "postApiV4UsersIdActivate",
         "parameters": [
           {
@@ -18749,8 +18749,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Approve a user",
-        "description": "Approves a user whose account is pending administrator approval. Available only for administrators.",
+        "summary": "Approve access to a user",
+        "description": "Approves access to a specified user account that is pending approval. Administrators only.",
         "operationId": "postApiV4UsersIdApprove",
         "parameters": [
           {
@@ -18785,7 +18785,7 @@
           "Users"
         ],
         "summary": "Reject a user",
-        "description": "Rejects a user whose account is pending administrator approval. Available only for administrators.",
+        "description": "Rejects a user whose account is pending administrator approval. Administrators only.",
         "operationId": "postApiV4UsersIdReject",
         "parameters": [
           {
@@ -18820,7 +18820,7 @@
           "Users"
         ],
         "summary": "Deactivate a user",
-        "description": "Deactivates an active user. Available only for administrators.",
+        "description": "Deactivates a specified user account. Administrators only.",
         "operationId": "postApiV4UsersIdDeactivate",
         "parameters": [
           {
@@ -18854,8 +18854,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Block a user",
-        "description": "Blocks a user from signing in. Available only for administrators.",
+        "summary": "Block access to a user",
+        "description": "Blocks a specified user account. Administrators only.",
         "operationId": "postApiV4UsersIdBlock",
         "parameters": [
           {
@@ -18890,7 +18890,7 @@
           "Users"
         ],
         "summary": "Unblock a user",
-        "description": "Unblocks a previously blocked user. Available only for administrators.",
+        "description": "Unblocks a previously blocked user. Administrators only.",
         "operationId": "postApiV4UsersIdUnblock",
         "parameters": [
           {
@@ -18925,7 +18925,7 @@
           "Users"
         ],
         "summary": "Ban a user",
-        "description": "Bans a user. Available only for administrators.",
+        "description": "Bans a specified user account. Administrators only.",
         "operationId": "postApiV4UsersIdBan",
         "parameters": [
           {
@@ -18960,7 +18960,7 @@
           "Users"
         ],
         "summary": "Unban a user",
-        "description": "Unbans a previously banned user. Available only for administrators.",
+        "description": "Unbans a previously banned user. Administrators only.",
         "operationId": "postApiV4UsersIdUnban",
         "parameters": [
           {
@@ -18995,7 +18995,7 @@
           "Users"
         ],
         "summary": "List all memberships for a user",
-        "description": "Lists all project and group memberships for a user. Available only for administrators.",
+        "description": "Lists all project and group memberships for a user. Administrators only.",
         "operationId": "getApiV4UsersUserIdMemberships",
         "parameters": [
           {
@@ -19207,8 +19207,8 @@
         "tags": [
           "Access tokens"
         ],
-        "summary": "Retrieve impersonation token. Available only for admins.",
-        "description": "This feature was introduced in GitLab 9.0",
+        "summary": "Retrieve an impersonation token for a user",
+        "description": "Retrieves an impersonation token for a specified user. Administrators only.",
         "operationId": "getApiV4UsersUserIdImpersonationTokensImpersonationTokenId",
         "parameters": [
           {
@@ -19247,8 +19247,8 @@
         "tags": [
           "Access tokens"
         ],
-        "summary": "Revoke a impersonation token. Available only for admins.",
-        "description": "This feature was introduced in GitLab 9.0",
+        "summary": "Revoke an impersonation token",
+        "description": "Revokes an impersonation token for a specified user. Administrators only.",
         "operationId": "deleteApiV4UsersUserIdImpersonationTokensImpersonationTokenId",
         "parameters": [
           {
@@ -19355,7 +19355,7 @@
         "tags": [
           "Keys"
         ],
-        "summary": "List all SSH keys for the authenticated user",
+        "summary": "List all SSH keys",
         "description": "Lists all SSH keys for the currently authenticated user.",
         "operationId": "getApiV4UserKeys",
         "parameters": [
@@ -19399,8 +19399,8 @@
         "tags": [
           "Keys"
         ],
-        "summary": "Add an SSH key for the authenticated user",
-        "description": "Adds an SSH key to the currently authenticated user.",
+        "summary": "Add an SSH key",
+        "description": "Adds an SSH key for the currently authenticated user.",
         "operationId": "postApiV4UserKeys",
         "requestBody": {
           "content": {
@@ -19430,8 +19430,8 @@
         "tags": [
           "Keys"
         ],
-        "summary": "Retrieve an SSH key for the authenticated user",
-        "description": "Retrieves a single SSH key for the currently authenticated user.",
+        "summary": "Retrieve an SSH key",
+        "description": "Retrieves a specified SSH key for the currently authenticated user.",
         "operationId": "getApiV4UserKeysKeyId",
         "parameters": [
           {
@@ -19461,8 +19461,8 @@
         "tags": [
           "Keys"
         ],
-        "summary": "Delete an SSH key for the authenticated user",
-        "description": "Deletes an SSH key from the currently authenticated user.",
+        "summary": "Delete an SSH key",
+        "description": "Deletes a specified SSH key from the currently authenticated user.",
         "operationId": "deleteApiV4UserKeysKeyId",
         "parameters": [
           {
@@ -19494,8 +19494,8 @@
         "tags": [
           "Keys"
         ],
-        "summary": "Get the currently authenticated user's GPG keys",
-        "description": "This feature was added in GitLab 10.0",
+        "summary": "List all GPG keys",
+        "description": "Lists all GPG keys for the currently authenticated user.",
         "operationId": "getApiV4UserGpgKeys",
         "parameters": [
           {
@@ -19538,8 +19538,8 @@
         "tags": [
           "Keys"
         ],
-        "summary": "Add a new GPG key to the currently authenticated user",
-        "description": "This feature was added in GitLab 10.0",
+        "summary": "Add a GPG key",
+        "description": "Adds a GPG key for the currently authenticated user.",
         "operationId": "postApiV4UserGpgKeys",
         "requestBody": {
           "content": {
@@ -19569,8 +19569,8 @@
         "tags": [
           "Keys"
         ],
-        "summary": "Get a single GPG key owned by currently authenticated user",
-        "description": "This feature was added in GitLab 10.0",
+        "summary": "Retrieve a GPG key",
+        "description": "Retrieves a GPG key for the currently authenticated user.",
         "operationId": "getApiV4UserGpgKeysKeyId",
         "parameters": [
           {
@@ -19635,7 +19635,7 @@
         "tags": [
           "Keys"
         ],
-        "summary": "Revoke a GPG key owned by currently authenticated user",
+        "summary": "Revoke a GPG key",
         "description": "This feature was added in GitLab 10.0",
         "operationId": "postApiV4UserGpgKeysKeyIdRevoke",
         "parameters": [
@@ -19670,7 +19670,7 @@
         "tags": [
           "Users"
         ],
-        "summary": "List all email addresses for the authenticated user",
+        "summary": "List all email addresses for a user",
         "description": "Lists all email addresses for the currently authenticated user.",
         "operationId": "getApiV4UserEmails",
         "parameters": [
@@ -19714,8 +19714,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Add an email address for the authenticated user",
-        "description": "Adds an email address to the currently authenticated user.",
+        "summary": "Add an email address",
+        "description": "Adds an email address for the currently authenticated user.",
         "operationId": "postApiV4UserEmails",
         "requestBody": {
           "content": {
@@ -19745,8 +19745,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Create a new Support PIN for the authenticated user",
-        "description": "This feature creates a temporary Support PIN for the authenticated user",
+        "summary": "Create a new Support PIN",
+        "description": "Creates a Support PIN for the currently authenticated user. GitLab Support may ask for this PIN to validate your identity.",
         "operationId": "postApiV4UserSupportPin",
         "responses": {
           "201": {
@@ -19765,8 +19765,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Get the current Support PIN for the authenticated user",
-        "description": "This feature retrieves the temporary Support PIN for the authenticated user",
+        "summary": "Retrieve Support PIN",
+        "description": "Retrieves a Support PIN for the currently authenticated user. GitLab Support may ask for this PIN to validate your identity.",
         "operationId": "getApiV4UserSupportPin",
         "responses": {
           "200": {
@@ -19838,8 +19838,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Retrieve an email address for the authenticated user",
-        "description": "Retrieves a single email address for the currently authenticated user.",
+        "summary": "Retrieve details on an email address",
+        "description": "Retrieves details on a specified email address for the currently authenticated user.",
         "operationId": "getApiV4UserEmailsEmailId",
         "parameters": [
           {
@@ -19869,7 +19869,7 @@
         "tags": [
           "Users"
         ],
-        "summary": "Delete an email address for the authenticated user",
+        "summary": "Delete an email address",
         "description": "Deletes an email address from the currently authenticated user.",
         "operationId": "deleteApiV4UserEmailsEmailId",
         "parameters": [
@@ -19904,8 +19904,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "List all user activities",
-        "description": "Lists all user activity entries since the given date.",
+        "summary": "List all activity for a user",
+        "description": "Lists all activity for a specified user.",
         "operationId": "getApiV4UserActivities",
         "parameters": [
           {
@@ -19962,8 +19962,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Set the status of the current user",
-        "description": "Any parameters that are not passed will be nullified.",
+        "summary": "Update a user status",
+        "description": "Updates the user status for the currently authenticated user.",
         "operationId": "putApiV4UserStatus",
         "requestBody": {
           "content": {
@@ -20042,8 +20042,8 @@
         "tags": [
           "Avatars"
         ],
-        "summary": "Set the avatar of the current user",
-        "description": "This feature was introduced in GitLab 17.0.",
+        "summary": "Upload an avatar",
+        "description": "Uploads an avatar for the currently authenticated user. This feature was introduced in GitLab 17.0.",
         "operationId": "putApiV4UserAvatar",
         "requestBody": {
           "content": {
@@ -20073,8 +20073,8 @@
         "tags": [
           "Access tokens"
         ],
-        "summary": "Create a personal access token with limited scopes for the currently authenticated user",
-        "description": "This feature was introduced in GitLab 16.5",
+        "summary": "Create a personal access token",
+        "description": "Creates a personal access token for the currently authenticated user. For security purposes, the token is limited to the `k8s_proxy` and `self_rotate` scope. Token values are included with the response, but cannot be retrieved later. This feature was introduced in GitLab 16.5.",
         "operationId": "postApiV4UserPersonalAccessTokens",
         "requestBody": {
           "content": {
@@ -95957,8 +95957,8 @@
         "tags": [
           "Access requests"
         ],
-        "summary": "Approves an access request for the given user.",
-        "description": "This feature was introduced in GitLab 8.11.",
+        "summary": "Approve an access request",
+        "description": "Approves an access request for a specified user in a specified group or project.",
         "operationId": "putApiV4GroupsIdAccessRequestsUserIdApprove",
         "parameters": [
           {
@@ -96153,8 +96153,8 @@
         "tags": [
           "Access requests"
         ],
-        "summary": "Approves an access request for the given user.",
-        "description": "This feature was introduced in GitLab 8.11.",
+        "summary": "Approve an access request",
+        "description": "Approves an access request for a specified user in a specified group or project.",
         "operationId": "putApiV4ProjectsIdAccessRequestsUserIdApprove",
         "parameters": [
           {
@@ -100792,6 +100792,39 @@
           "project_import_export_relation_export_upload_uploads_oldest_unsynced_time": {
             "type": "string"
           },
+          "packages_debian_project_component_files_count": {
+            "type": "string"
+          },
+          "packages_debian_project_component_files_checksum_total_count": {
+            "type": "string"
+          },
+          "packages_debian_project_component_files_checksummed_count": {
+            "type": "string"
+          },
+          "packages_debian_project_component_files_checksum_failed_count": {
+            "type": "string"
+          },
+          "packages_debian_project_component_files_synced_count": {
+            "type": "string"
+          },
+          "packages_debian_project_component_files_failed_count": {
+            "type": "string"
+          },
+          "packages_debian_project_component_files_registry_count": {
+            "type": "string"
+          },
+          "packages_debian_project_component_files_verification_total_count": {
+            "type": "string"
+          },
+          "packages_debian_project_component_files_verified_count": {
+            "type": "string"
+          },
+          "packages_debian_project_component_files_verification_failed_count": {
+            "type": "string"
+          },
+          "packages_debian_project_component_files_oldest_unsynced_time": {
+            "type": "string"
+          },
           "ai_vectorizable_file_uploads_count": {
             "type": "string"
           },
@@ -101228,6 +101261,12 @@
             "type": "string"
           },
           "project_import_export_relation_export_upload_uploads_verified_in_percentage": {
+            "type": "string"
+          },
+          "packages_debian_project_component_files_synced_in_percentage": {
+            "type": "string"
+          },
+          "packages_debian_project_component_files_verified_in_percentage": {
             "type": "string"
           },
           "ai_vectorizable_file_uploads_synced_in_percentage": {
@@ -102302,6 +102341,39 @@
           "project_import_export_relation_export_upload_uploads_oldest_unsynced_time": {
             "type": "string"
           },
+          "packages_debian_project_component_files_count": {
+            "type": "string"
+          },
+          "packages_debian_project_component_files_checksum_total_count": {
+            "type": "string"
+          },
+          "packages_debian_project_component_files_checksummed_count": {
+            "type": "string"
+          },
+          "packages_debian_project_component_files_checksum_failed_count": {
+            "type": "string"
+          },
+          "packages_debian_project_component_files_synced_count": {
+            "type": "string"
+          },
+          "packages_debian_project_component_files_failed_count": {
+            "type": "string"
+          },
+          "packages_debian_project_component_files_registry_count": {
+            "type": "string"
+          },
+          "packages_debian_project_component_files_verification_total_count": {
+            "type": "string"
+          },
+          "packages_debian_project_component_files_verified_count": {
+            "type": "string"
+          },
+          "packages_debian_project_component_files_verification_failed_count": {
+            "type": "string"
+          },
+          "packages_debian_project_component_files_oldest_unsynced_time": {
+            "type": "string"
+          },
           "ai_vectorizable_file_uploads_count": {
             "type": "string"
           },
@@ -102738,6 +102810,12 @@
             "type": "string"
           },
           "project_import_export_relation_export_upload_uploads_verified_in_percentage": {
+            "type": "string"
+          },
+          "packages_debian_project_component_files_synced_in_percentage": {
+            "type": "string"
+          },
+          "packages_debian_project_component_files_verified_in_percentage": {
             "type": "string"
           },
           "ai_vectorizable_file_uploads_synced_in_percentage": {

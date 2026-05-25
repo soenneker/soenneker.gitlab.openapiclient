@@ -2014,6 +2014,110 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string PackageFilesVerifiedInPercentage { get; set; }
 #endif
+        /// <summary>The packages_debian_project_component_files_checksum_failed_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PackagesDebianProjectComponentFilesChecksumFailedCount { get; set; }
+#nullable restore
+#else
+        public string PackagesDebianProjectComponentFilesChecksumFailedCount { get; set; }
+#endif
+        /// <summary>The packages_debian_project_component_files_checksummed_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PackagesDebianProjectComponentFilesChecksummedCount { get; set; }
+#nullable restore
+#else
+        public string PackagesDebianProjectComponentFilesChecksummedCount { get; set; }
+#endif
+        /// <summary>The packages_debian_project_component_files_checksum_total_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PackagesDebianProjectComponentFilesChecksumTotalCount { get; set; }
+#nullable restore
+#else
+        public string PackagesDebianProjectComponentFilesChecksumTotalCount { get; set; }
+#endif
+        /// <summary>The packages_debian_project_component_files_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PackagesDebianProjectComponentFilesCount { get; set; }
+#nullable restore
+#else
+        public string PackagesDebianProjectComponentFilesCount { get; set; }
+#endif
+        /// <summary>The packages_debian_project_component_files_failed_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PackagesDebianProjectComponentFilesFailedCount { get; set; }
+#nullable restore
+#else
+        public string PackagesDebianProjectComponentFilesFailedCount { get; set; }
+#endif
+        /// <summary>The packages_debian_project_component_files_oldest_unsynced_time property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PackagesDebianProjectComponentFilesOldestUnsyncedTime { get; set; }
+#nullable restore
+#else
+        public string PackagesDebianProjectComponentFilesOldestUnsyncedTime { get; set; }
+#endif
+        /// <summary>The packages_debian_project_component_files_registry_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PackagesDebianProjectComponentFilesRegistryCount { get; set; }
+#nullable restore
+#else
+        public string PackagesDebianProjectComponentFilesRegistryCount { get; set; }
+#endif
+        /// <summary>The packages_debian_project_component_files_synced_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PackagesDebianProjectComponentFilesSyncedCount { get; set; }
+#nullable restore
+#else
+        public string PackagesDebianProjectComponentFilesSyncedCount { get; set; }
+#endif
+        /// <summary>The packages_debian_project_component_files_synced_in_percentage property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PackagesDebianProjectComponentFilesSyncedInPercentage { get; set; }
+#nullable restore
+#else
+        public string PackagesDebianProjectComponentFilesSyncedInPercentage { get; set; }
+#endif
+        /// <summary>The packages_debian_project_component_files_verification_failed_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PackagesDebianProjectComponentFilesVerificationFailedCount { get; set; }
+#nullable restore
+#else
+        public string PackagesDebianProjectComponentFilesVerificationFailedCount { get; set; }
+#endif
+        /// <summary>The packages_debian_project_component_files_verification_total_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PackagesDebianProjectComponentFilesVerificationTotalCount { get; set; }
+#nullable restore
+#else
+        public string PackagesDebianProjectComponentFilesVerificationTotalCount { get; set; }
+#endif
+        /// <summary>The packages_debian_project_component_files_verified_count property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PackagesDebianProjectComponentFilesVerifiedCount { get; set; }
+#nullable restore
+#else
+        public string PackagesDebianProjectComponentFilesVerifiedCount { get; set; }
+#endif
+        /// <summary>The packages_debian_project_component_files_verified_in_percentage property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PackagesDebianProjectComponentFilesVerifiedInPercentage { get; set; }
+#nullable restore
+#else
+        public string PackagesDebianProjectComponentFilesVerifiedInPercentage { get; set; }
+#endif
         /// <summary>The packages_helm_metadata_caches_checksum_failed_count property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -4089,6 +4193,19 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "package_files_verification_total_count", n => { PackageFilesVerificationTotalCount = n.GetStringValue(); } },
                 { "package_files_verified_count", n => { PackageFilesVerifiedCount = n.GetStringValue(); } },
                 { "package_files_verified_in_percentage", n => { PackageFilesVerifiedInPercentage = n.GetStringValue(); } },
+                { "packages_debian_project_component_files_checksum_failed_count", n => { PackagesDebianProjectComponentFilesChecksumFailedCount = n.GetStringValue(); } },
+                { "packages_debian_project_component_files_checksum_total_count", n => { PackagesDebianProjectComponentFilesChecksumTotalCount = n.GetStringValue(); } },
+                { "packages_debian_project_component_files_checksummed_count", n => { PackagesDebianProjectComponentFilesChecksummedCount = n.GetStringValue(); } },
+                { "packages_debian_project_component_files_count", n => { PackagesDebianProjectComponentFilesCount = n.GetStringValue(); } },
+                { "packages_debian_project_component_files_failed_count", n => { PackagesDebianProjectComponentFilesFailedCount = n.GetStringValue(); } },
+                { "packages_debian_project_component_files_oldest_unsynced_time", n => { PackagesDebianProjectComponentFilesOldestUnsyncedTime = n.GetStringValue(); } },
+                { "packages_debian_project_component_files_registry_count", n => { PackagesDebianProjectComponentFilesRegistryCount = n.GetStringValue(); } },
+                { "packages_debian_project_component_files_synced_count", n => { PackagesDebianProjectComponentFilesSyncedCount = n.GetStringValue(); } },
+                { "packages_debian_project_component_files_synced_in_percentage", n => { PackagesDebianProjectComponentFilesSyncedInPercentage = n.GetStringValue(); } },
+                { "packages_debian_project_component_files_verification_failed_count", n => { PackagesDebianProjectComponentFilesVerificationFailedCount = n.GetStringValue(); } },
+                { "packages_debian_project_component_files_verification_total_count", n => { PackagesDebianProjectComponentFilesVerificationTotalCount = n.GetStringValue(); } },
+                { "packages_debian_project_component_files_verified_count", n => { PackagesDebianProjectComponentFilesVerifiedCount = n.GetStringValue(); } },
+                { "packages_debian_project_component_files_verified_in_percentage", n => { PackagesDebianProjectComponentFilesVerifiedInPercentage = n.GetStringValue(); } },
                 { "packages_helm_metadata_caches_checksum_failed_count", n => { PackagesHelmMetadataCachesChecksumFailedCount = n.GetStringValue(); } },
                 { "packages_helm_metadata_caches_checksum_total_count", n => { PackagesHelmMetadataCachesChecksumTotalCount = n.GetStringValue(); } },
                 { "packages_helm_metadata_caches_checksummed_count", n => { PackagesHelmMetadataCachesChecksummedCount = n.GetStringValue(); } },
@@ -4573,6 +4690,19 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("package_files_verification_total_count", PackageFilesVerificationTotalCount);
             writer.WriteStringValue("package_files_verified_count", PackageFilesVerifiedCount);
             writer.WriteStringValue("package_files_verified_in_percentage", PackageFilesVerifiedInPercentage);
+            writer.WriteStringValue("packages_debian_project_component_files_checksum_failed_count", PackagesDebianProjectComponentFilesChecksumFailedCount);
+            writer.WriteStringValue("packages_debian_project_component_files_checksummed_count", PackagesDebianProjectComponentFilesChecksummedCount);
+            writer.WriteStringValue("packages_debian_project_component_files_checksum_total_count", PackagesDebianProjectComponentFilesChecksumTotalCount);
+            writer.WriteStringValue("packages_debian_project_component_files_count", PackagesDebianProjectComponentFilesCount);
+            writer.WriteStringValue("packages_debian_project_component_files_failed_count", PackagesDebianProjectComponentFilesFailedCount);
+            writer.WriteStringValue("packages_debian_project_component_files_oldest_unsynced_time", PackagesDebianProjectComponentFilesOldestUnsyncedTime);
+            writer.WriteStringValue("packages_debian_project_component_files_registry_count", PackagesDebianProjectComponentFilesRegistryCount);
+            writer.WriteStringValue("packages_debian_project_component_files_synced_count", PackagesDebianProjectComponentFilesSyncedCount);
+            writer.WriteStringValue("packages_debian_project_component_files_synced_in_percentage", PackagesDebianProjectComponentFilesSyncedInPercentage);
+            writer.WriteStringValue("packages_debian_project_component_files_verification_failed_count", PackagesDebianProjectComponentFilesVerificationFailedCount);
+            writer.WriteStringValue("packages_debian_project_component_files_verification_total_count", PackagesDebianProjectComponentFilesVerificationTotalCount);
+            writer.WriteStringValue("packages_debian_project_component_files_verified_count", PackagesDebianProjectComponentFilesVerifiedCount);
+            writer.WriteStringValue("packages_debian_project_component_files_verified_in_percentage", PackagesDebianProjectComponentFilesVerifiedInPercentage);
             writer.WriteStringValue("packages_helm_metadata_caches_checksum_failed_count", PackagesHelmMetadataCachesChecksumFailedCount);
             writer.WriteStringValue("packages_helm_metadata_caches_checksummed_count", PackagesHelmMetadataCachesChecksummedCount);
             writer.WriteStringValue("packages_helm_metadata_caches_checksum_total_count", PackagesHelmMetadataCachesChecksumTotalCount);

@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User.Avatar
         {
         }
         /// <summary>
-        /// This feature was introduced in GitLab 17.0.
+        /// Uploads an avatar for the currently authenticated user. This feature was introduced in GitLab 17.0.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAvatar"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User.Avatar
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAvatar>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAvatar.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 17.0.
+        /// Uploads an avatar for the currently authenticated user. This feature was introduced in GitLab 17.0.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

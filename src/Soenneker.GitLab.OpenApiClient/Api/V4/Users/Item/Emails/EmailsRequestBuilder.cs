@@ -65,7 +65,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Emails
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesEmail>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesEmail.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Adds an email address to a specified user. Available only for administrators.
+        /// Adds an email address for a specified user account. Administrators only.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesEmail"/></returns>
         /// <param name="body">The request body</param>
@@ -104,7 +104,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Emails
             return requestInfo;
         }
         /// <summary>
-        /// Adds an email address to a specified user. Available only for administrators.
+        /// Adds an email address for a specified user account. Administrators only.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

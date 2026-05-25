@@ -40,7 +40,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Gpg_keys.Item
         {
         }
         /// <summary>
-        /// This feature was added in GitLab 10.0
+        /// Deletes a GPG key from a specified user account. Administrators only.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -57,7 +57,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Gpg_keys.Item
             await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was added in GitLab 13.5
+        /// Retrieves a GPG key for a specified user account. This endpoint does not require authentication.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGpgKey"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -75,7 +75,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Gpg_keys.Item
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGpgKey>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGpgKey.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was added in GitLab 10.0
+        /// Deletes a GPG key from a specified user account. Administrators only.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -94,7 +94,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Gpg_keys.Item
             return requestInfo;
         }
         /// <summary>
-        /// This feature was added in GitLab 13.5
+        /// Retrieves a GPG key for a specified user account. This endpoint does not require authentication.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

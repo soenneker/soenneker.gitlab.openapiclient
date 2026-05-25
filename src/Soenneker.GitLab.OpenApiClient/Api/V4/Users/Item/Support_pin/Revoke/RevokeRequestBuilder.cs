@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Support_pin.Revoke
         {
         }
         /// <summary>
-        /// This feature allows administrators to revoke the support PIN for a specified user before its natural expiration
+        /// Revokes a Support PIN for a specified user. This immediately expires and removes the PIN. Administrators only.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Support_pin.Revoke.RevokePostResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Support_pin.Revoke
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Support_pin.Revoke.RevokePostResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Support_pin.Revoke.RevokePostResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature allows administrators to revoke the support PIN for a specified user before its natural expiration
+        /// Revokes a Support PIN for a specified user. This immediately expires and removes the PIN. Administrators only.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

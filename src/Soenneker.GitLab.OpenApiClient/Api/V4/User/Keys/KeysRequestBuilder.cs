@@ -65,7 +65,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User.Keys
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesSSHKey>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesSSHKey.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Adds an SSH key to the currently authenticated user.
+        /// Adds an SSH key for the currently authenticated user.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesSSHKey"/></returns>
         /// <param name="body">The request body</param>
@@ -104,7 +104,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User.Keys
             return requestInfo;
         }
         /// <summary>
-        /// Adds an SSH key to the currently authenticated user.
+        /// Adds an SSH key for the currently authenticated user.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

@@ -57,7 +57,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User.Gpg_keys.Item
             await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was added in GitLab 10.0
+        /// Retrieves a GPG key for the currently authenticated user.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGpgKey"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -94,7 +94,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User.Gpg_keys.Item
             return requestInfo;
         }
         /// <summary>
-        /// This feature was added in GitLab 10.0
+        /// Retrieves a GPG key for the currently authenticated user.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

@@ -72,7 +72,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User.Status
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserStatus>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserStatus.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Any parameters that are not passed will be nullified.
+        /// Updates the user status for the currently authenticated user.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserStatus"/></returns>
         /// <param name="body">The request body</param>
@@ -133,7 +133,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User.Status
             return requestInfo;
         }
         /// <summary>
-        /// Any parameters that are not passed will be nullified.
+        /// Updates the user status for the currently authenticated user.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

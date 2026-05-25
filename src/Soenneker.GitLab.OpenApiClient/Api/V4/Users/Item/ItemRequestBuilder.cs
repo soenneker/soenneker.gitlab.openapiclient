@@ -208,7 +208,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item
         {
         }
         /// <summary>
-        /// Deletes a user account. Available only for administrators.
+        /// Deletes a user. Administrators only.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -263,7 +263,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserWithAdmin>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserWithAdmin.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Deletes a user account. Available only for administrators.
+        /// Deletes a user. Administrators only.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -332,7 +332,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.ItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Deletes a user account. Available only for administrators.
+        /// Deletes a user. Administrators only.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ItemRequestBuilderDeleteQueryParameters 

@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Activate
         {
         }
         /// <summary>
-        /// Activates a deactivated user. Available only for administrators.
+        /// Reactivates a specified user account that was previously deactivated. Administrators only.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Activate.ActivatePostResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Activate
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Activate.ActivatePostResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Activate.ActivatePostResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Activates a deactivated user. Available only for administrators.
+        /// Reactivates a specified user account that was previously deactivated. Administrators only.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

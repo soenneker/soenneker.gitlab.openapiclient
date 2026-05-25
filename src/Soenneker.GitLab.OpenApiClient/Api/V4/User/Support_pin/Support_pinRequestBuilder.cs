@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User.Support_pin
         {
         }
         /// <summary>
-        /// This feature retrieves the temporary Support PIN for the authenticated user
+        /// Retrieves a Support PIN for the currently authenticated user. GitLab Support may ask for this PIN to validate your identity.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserSupportPin"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User.Support_pin
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserSupportPin>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserSupportPin.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature creates a temporary Support PIN for the authenticated user
+        /// Creates a Support PIN for the currently authenticated user. GitLab Support may ask for this PIN to validate your identity.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserSupportPin"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -70,7 +70,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User.Support_pin
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserSupportPin>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserSupportPin.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature retrieves the temporary Support PIN for the authenticated user
+        /// Retrieves a Support PIN for the currently authenticated user. GitLab Support may ask for this PIN to validate your identity.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -89,7 +89,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User.Support_pin
             return requestInfo;
         }
         /// <summary>
-        /// This feature creates a temporary Support PIN for the authenticated user
+        /// Creates a Support PIN for the currently authenticated user. GitLab Support may ask for this PIN to validate your identity.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
