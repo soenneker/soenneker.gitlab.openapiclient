@@ -4222,10 +4222,7 @@
               "type": "string",
               "nullable": true
             },
-            "example": [
-              1.6,
-              1.7
-            ]
+            "example": 1.6
           },
           {
             "name": "page",
@@ -4282,10 +4279,7 @@
               "type": "string",
               "nullable": true
             },
-            "example": [
-              1.6,
-              1.7
-            ]
+            "example": 1.6
           }
         ],
         "responses": {
@@ -17324,8 +17318,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Get support PIN for a user. Available only for admins.",
-        "description": "This feature allows administrators to retrieve the support PIN for a specified user",
+        "summary": "Retrieve a Support PIN for a user",
+        "description": "Retrieves a Support PIN for a specified user. GitLab Support may ask for this PIN to validate your identity. Administrators only.",
         "operationId": "getApiV4UsersIdSupportPin",
         "parameters": [
           {
@@ -17393,7 +17387,7 @@
           "Users"
         ],
         "summary": "List all users",
-        "description": "Lists all users.",
+        "description": "Lists all users on the instance. This endpoint supports keyset pagination. In GitLab 17.0 and later, keyset pagination is used by default.",
         "operationId": "getApiV4Users",
         "parameters": [
           {
@@ -17677,7 +17671,7 @@
           "Users"
         ],
         "summary": "Create a user",
-        "description": "Creates a new user account. Available only for administrators.",
+        "description": "Creates a user. Administrators only.",
         "operationId": "postApiV4Users",
         "requestBody": {
           "content": {
@@ -17707,8 +17701,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Retrieve a user",
-        "description": "Retrieves a single user by ID.",
+        "summary": "Retrieve a user as a regular user",
+        "description": "Retrieves a specified user as a regular user.",
         "operationId": "getApiV4UsersId",
         "parameters": [
           {
@@ -17757,7 +17751,7 @@
           "Users"
         ],
         "summary": "Update a user",
-        "description": "Updates a user account. Available only for administrators.",
+        "description": "Updates the details of a specified user.",
         "operationId": "putApiV4UsersId",
         "parameters": [
           {
@@ -17905,7 +17899,7 @@
           "Users"
         ],
         "summary": "Unfollow a user",
-        "description": "Unfollows a user as the authenticated user.",
+        "description": "Unfollows a specified user account.",
         "operationId": "postApiV4UsersIdUnfollow",
         "parameters": [
           {
@@ -17937,8 +17931,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "List all users a user follows",
-        "description": "Lists all users that the specified user follows.",
+        "summary": "List all accounts followed by a user",
+        "description": "Lists all user accounts being followed by a specified user.",
         "operationId": "getApiV4UsersIdFollowing",
         "parameters": [
           {
@@ -17992,8 +17986,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "List all followers of a user",
-        "description": "Lists all followers of a user.",
+        "summary": "List all accounts that follow a user",
+        "description": "Lists all user accounts that follow a specified user.",
         "operationId": "getApiV4UsersIdFollowers",
         "parameters": [
           {
@@ -18218,7 +18212,7 @@
           "Keys"
         ],
         "summary": "List all SSH keys for a user",
-        "description": "Lists all SSH keys for a specified user.",
+        "description": "Lists all SSH keys for a specified user account.",
         "operationId": "getApiV4UsersUserIdKeys",
         "parameters": [
           {
@@ -18618,7 +18612,7 @@
           "Users"
         ],
         "summary": "List all email addresses for a user",
-        "description": "Lists all email addresses for a specified user. Available only for administrators.",
+        "description": "Lists all email addresses for a specified user account. Administrators only.",
         "operationId": "getApiV4UsersIdEmails",
         "parameters": [
           {
@@ -18784,8 +18778,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Reject a user",
-        "description": "Rejects a user whose account is pending administrator approval. Administrators only.",
+        "summary": "Reject access to a user",
+        "description": "Rejects access to a specified user account that is pending approval. Administrators only.",
         "operationId": "postApiV4UsersIdReject",
         "parameters": [
           {
@@ -18889,8 +18883,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Unblock a user",
-        "description": "Unblocks a previously blocked user. Administrators only.",
+        "summary": "Unblock access to a user",
+        "description": "Unblocks a specified user account that was previously blocked. Administrators only.",
         "operationId": "postApiV4UsersIdUnblock",
         "parameters": [
           {
@@ -18960,7 +18954,7 @@
           "Users"
         ],
         "summary": "Unban a user",
-        "description": "Unbans a previously banned user. Administrators only.",
+        "description": "Unbans a specified user account that was previously banned. Administrators only.",
         "operationId": "postApiV4UsersIdUnban",
         "parameters": [
           {
@@ -18994,8 +18988,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "List all memberships for a user",
-        "description": "Lists all project and group memberships for a user. Administrators only.",
+        "summary": "List all project and group memberships for a user",
+        "description": "Lists all project and group memberships for a specified user. Administrators only.",
         "operationId": "getApiV4UsersUserIdMemberships",
         "parameters": [
           {
@@ -19063,8 +19057,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Retrieve user associations count",
-        "description": "Retrieves counts of the projects, groups, issues, and merge requests associated with a user.",
+        "summary": "Retrieve association counts for a user",
+        "description": "Retrieves the number of groups, projects, issues, and merge requests associated with a specified user.",
         "operationId": "getApiV4UsersIdAssociationsCount",
         "parameters": [
           {
@@ -19096,8 +19090,8 @@
         "tags": [
           "Access tokens"
         ],
-        "summary": "Retrieve impersonation tokens. Available only for admins.",
-        "description": "This feature was introduced in GitLab 9.0",
+        "summary": "List all impersonation tokens for a user",
+        "description": "Lists all impersonation tokens for a specified user. Administrators only.",
         "operationId": "getApiV4UsersUserIdImpersonationTokens",
         "parameters": [
           {
@@ -19165,8 +19159,8 @@
         "tags": [
           "Access tokens"
         ],
-        "summary": "Create a impersonation token. Available only for admins.",
-        "description": "This feature was introduced in GitLab 9.0",
+        "summary": "Create an impersonation token",
+        "description": "Creates an impersonation token. These tokens are used to act on behalf of a user and can perform API calls as well as Git read and write actions. These tokens are not visible to the associated user on their profile settings page. Token values are included with the response, but cannot be retrieved later. Administrators only.",
         "operationId": "postApiV4UsersUserIdImpersonationTokens",
         "parameters": [
           {
@@ -19291,8 +19285,8 @@
         "tags": [
           "Access tokens"
         ],
-        "summary": "Create a personal access token. Available only for admins.",
-        "description": "This feature was introduced in GitLab 13.6",
+        "summary": "Create a personal access token for a user",
+        "description": "Creates a personal access token for a user. Token values are included with the response, but cannot be retrieved later. Administrators only.",
         "operationId": "postApiV4UsersUserIdPersonalAccessTokens",
         "parameters": [
           {
@@ -19333,8 +19327,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Retrieve the authenticated user",
-        "description": "Retrieves the user record for the currently authenticated user.",
+        "summary": "Retrieve current user details",
+        "description": "Retrieves details about your user account.",
         "operationId": "getApiV4User",
         "responses": {
           "200": {
@@ -19600,8 +19594,8 @@
         "tags": [
           "Keys"
         ],
-        "summary": "Delete a GPG key from the currently authenticated user",
-        "description": "This feature was added in GitLab 10.0",
+        "summary": "Delete a GPG key",
+        "description": "Deletes a GPG key from your user account.",
         "operationId": "deleteApiV4UserGpgKeysKeyId",
         "parameters": [
           {
@@ -19745,8 +19739,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Create a new Support PIN",
-        "description": "Creates a Support PIN for the currently authenticated user. GitLab Support may ask for this PIN to validate your identity.",
+        "summary": "Create a Support PIN",
+        "description": "Creates a Support PIN. The PIN expires seven days after creation. GitLab Support may ask for this PIN to validate your identity.",
         "operationId": "postApiV4UserSupportPin",
         "responses": {
           "201": {
@@ -19787,8 +19781,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Update the current user's preferences",
-        "description": "This feature was introduced in GitLab 13.10.",
+        "summary": "Update your user preferences",
+        "description": "Updates your user preferences.",
         "operationId": "putApiV4UserPreferences",
         "requestBody": {
           "content": {
@@ -19816,8 +19810,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Get the current user's preferences",
-        "description": "This feature was introduced in GitLab 14.0.",
+        "summary": "Retrieve your user preferences",
+        "description": "Retrieves your user preferences.",
         "operationId": "getApiV4UserPreferences",
         "responses": {
           "200": {
@@ -19870,7 +19864,7 @@
           "Users"
         ],
         "summary": "Delete an email address",
-        "description": "Deletes an email address from the currently authenticated user.",
+        "description": "Deletes the specified email address. You cannot delete a primary email address. Any future emails sent to the deleted email address are sent to the primary email address instead.",
         "operationId": "deleteApiV4UserEmailsEmailId",
         "parameters": [
           {
@@ -19962,8 +19956,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Update a user status",
-        "description": "Updates the user status for the currently authenticated user.",
+        "summary": "Set a user status",
+        "description": "Sets the status of the currently authenticated user. Any parameters that are not passed are nullified. This operation is similar but distinct from the Update a user status operation.",
         "operationId": "putApiV4UserStatus",
         "requestBody": {
           "content": {
@@ -19991,8 +19985,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Set the status of the current user",
-        "description": "Any parameters that are not passed will be ignored.",
+        "summary": "Update a user status",
+        "description": "Sets the status of the currently authenticated user. Any parameters that are not passed are ignored. This operation is similar but distinct from the Set a user status operation.",
         "operationId": "patchApiV4UserStatus",
         "requestBody": {
           "content": {
@@ -20020,8 +20014,8 @@
         "tags": [
           "Users"
         ],
-        "summary": "Retrieve the status of the authenticated user",
-        "description": "Retrieves the status of the currently authenticated user.",
+        "summary": "Retrieve your user status",
+        "description": "Retrieves your user status.",
         "operationId": "getApiV4UserStatus",
         "responses": {
           "200": {
@@ -46590,7 +46584,9 @@
               },
               "nullable": true
             },
-            "example": "main"
+            "example": [
+              "main"
+            ]
           },
           {
             "name": "architectures",
@@ -46604,7 +46600,9 @@
               },
               "nullable": true
             },
-            "example": "amd64"
+            "example": [
+              "amd64"
+            ]
           }
         ],
         "responses": {
@@ -46843,7 +46841,9 @@
               },
               "nullable": true
             },
-            "example": "main"
+            "example": [
+              "main"
+            ]
           },
           {
             "name": "architectures",
@@ -46857,7 +46857,9 @@
               },
               "nullable": true
             },
-            "example": "amd64"
+            "example": [
+              "amd64"
+            ]
           }
         ],
         "responses": {
@@ -70188,7 +70190,9 @@
               },
               "nullable": true
             },
-            "example": "main"
+            "example": [
+              "main"
+            ]
           },
           {
             "name": "architectures",
@@ -70202,7 +70206,9 @@
               },
               "nullable": true
             },
-            "example": "amd64"
+            "example": [
+              "amd64"
+            ]
           }
         ],
         "responses": {
@@ -70441,7 +70447,9 @@
               },
               "nullable": true
             },
-            "example": "main"
+            "example": [
+              "main"
+            ]
           },
           {
             "name": "architectures",
@@ -70455,7 +70463,9 @@
               },
               "nullable": true
             },
-            "example": "amd64"
+            "example": [
+              "amd64"
+            ]
           }
         ],
         "responses": {
@@ -85947,7 +85957,10 @@
               },
               "nullable": true
             },
-            "example": "['macos', 'shell']"
+            "example": [
+              "macos",
+              "shell"
+            ]
           },
           {
             "name": "version_prefix",
@@ -85958,7 +85971,7 @@
               "type": "string",
               "nullable": true
             },
-            "example": "'15.1.' or '16.'"
+            "example": "15.1."
           },
           {
             "name": "page",
@@ -86145,7 +86158,10 @@
               },
               "nullable": true
             },
-            "example": "['macos', 'shell']"
+            "example": [
+              "macos",
+              "shell"
+            ]
           },
           {
             "name": "version_prefix",
@@ -86156,7 +86172,7 @@
               "type": "string",
               "nullable": true
             },
-            "example": "'15.1.' or '16.'"
+            "example": "15.1."
           },
           {
             "name": "page",
@@ -86658,7 +86674,10 @@
               },
               "nullable": true
             },
-            "example": "['macos', 'shell']"
+            "example": [
+              "macos",
+              "shell"
+            ]
           },
           {
             "name": "version_prefix",
@@ -86669,7 +86688,7 @@
               "type": "string",
               "nullable": true
             },
-            "example": "'15.1.' or '16.'"
+            "example": "15.1."
           },
           {
             "name": "page",
@@ -86881,7 +86900,10 @@
               },
               "nullable": true
             },
-            "example": "['macos', 'shell']"
+            "example": [
+              "macos",
+              "shell"
+            ]
           },
           {
             "name": "version_prefix",
@@ -86892,7 +86914,7 @@
               "type": "string",
               "nullable": true
             },
-            "example": "'15.1.' or '16.'"
+            "example": "15.1."
           },
           {
             "name": "page",

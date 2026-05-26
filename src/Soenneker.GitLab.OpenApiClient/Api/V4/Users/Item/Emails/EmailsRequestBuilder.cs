@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Emails
         {
         }
         /// <summary>
-        /// Lists all email addresses for a specified user. Available only for administrators.
+        /// Lists all email addresses for a specified user account. Administrators only.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesEmail"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Emails
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesEmail>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesEmail.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Lists all email addresses for a specified user. Available only for administrators.
+        /// Lists all email addresses for a specified user account. Administrators only.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -135,7 +135,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Emails
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Emails.EmailsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all email addresses for a specified user. Available only for administrators.
+        /// Lists all email addresses for a specified user account. Administrators only.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class EmailsRequestBuilderGetQueryParameters 

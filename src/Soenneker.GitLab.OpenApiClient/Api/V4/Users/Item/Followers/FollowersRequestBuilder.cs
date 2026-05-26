@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Followers
         {
         }
         /// <summary>
-        /// Lists all followers of a user.
+        /// Lists all user accounts that follow a specified user.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Followers
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserBasic.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Lists all followers of a user.
+        /// Lists all user accounts that follow a specified user.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Followers
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Followers.FollowersRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all followers of a user.
+        /// Lists all user accounts that follow a specified user.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class FollowersRequestBuilderGetQueryParameters 

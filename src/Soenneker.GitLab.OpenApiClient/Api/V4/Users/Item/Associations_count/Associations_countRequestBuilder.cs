@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Associations_count
         {
         }
         /// <summary>
-        /// Retrieves counts of the projects, groups, issues, and merge requests associated with a user.
+        /// Retrieves the number of groups, projects, issues, and merge requests associated with a specified user.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserAssociationsCount"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Associations_count
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserAssociationsCount>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserAssociationsCount.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves counts of the projects, groups, issues, and merge requests associated with a user.
+        /// Retrieves the number of groups, projects, issues, and merge requests associated with a specified user.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User.Support_pin
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserSupportPin>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserSupportPin.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Creates a Support PIN for the currently authenticated user. GitLab Support may ask for this PIN to validate your identity.
+        /// Creates a Support PIN. The PIN expires seven days after creation. GitLab Support may ask for this PIN to validate your identity.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserSupportPin"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -89,7 +89,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User.Support_pin
             return requestInfo;
         }
         /// <summary>
-        /// Creates a Support PIN for the currently authenticated user. GitLab Support may ask for this PIN to validate your identity.
+        /// Creates a Support PIN. The PIN expires seven days after creation. GitLab Support may ask for this PIN to validate your identity.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
