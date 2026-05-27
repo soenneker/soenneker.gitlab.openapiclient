@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Resource_acce
         {
         }
         /// <summary>
-        /// Rotate a resource access token by using the ID of the resource access token.
+        /// Rotates a specified group or project access token associated with a top-level group. This revokes the previous token and creates a new token.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Resource_access_tokens.Item.Rotate.RotatePostResponse"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Resource_acce
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Resource_access_tokens.Item.Rotate.RotatePostResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Resource_access_tokens.Item.Rotate.RotatePostResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Rotate a resource access token by using the ID of the resource access token.
+        /// Rotates a specified group or project access token associated with a top-level group. This revokes the previous token and creates a new token.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

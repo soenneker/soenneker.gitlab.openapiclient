@@ -46,7 +46,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_acce
         {
         }
         /// <summary>
-        /// This feature was introduced in GitLab 17.8.
+        /// Lists all personal access tokens associated with enterprise users in a top-level group. This feature was introduced in GitLab 17.8.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.Personal_access_tokensGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -64,7 +64,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_acce
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.Personal_access_tokensGetResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.Personal_access_tokensGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 17.8.
+        /// Lists all personal access tokens associated with enterprise users in a top-level group. This feature was introduced in GitLab 17.8.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -92,7 +92,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_acce
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.Personal_access_tokensRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 17.8.
+        /// Lists all personal access tokens associated with enterprise users in a top-level group. This feature was introduced in GitLab 17.8.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Personal_access_tokensRequestBuilderGetQueryParameters 

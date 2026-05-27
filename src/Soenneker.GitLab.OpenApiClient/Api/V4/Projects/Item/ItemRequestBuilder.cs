@@ -759,7 +759,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProjectWithAccess>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProjectWithAccess.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Update an existing project
+        /// Updates an existing project. If your HTTP repository is not publicly accessible, add authentication information to the URL `https://username:password@gitlab.company.com/group/project.git`, where `password` is a public access key with the `api` scope.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProject"/></returns>
         /// <param name="body">The request body</param>
@@ -817,7 +817,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item
             return requestInfo;
         }
         /// <summary>
-        /// Update an existing project
+        /// Updates an existing project. If your HTTP repository is not publicly accessible, add authentication information to the URL `https://username:password@gitlab.company.com/group/project.git`, where `password` is a public access key with the `api` scope.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

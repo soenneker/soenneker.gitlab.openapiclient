@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Transfer_locations
         {
         }
         /// <summary>
-        /// Get the namespaces to where the project can be transferred
+        /// Lists all namespaces where a specified project can be transferred.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesPublicGroupDetails"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Transfer_locations
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesPublicGroupDetails>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesPublicGroupDetails.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get the namespaces to where the project can be transferred
+        /// Lists all namespaces where a specified project can be transferred.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Transfer_locations
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Transfer_locations.Transfer_locationsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get the namespaces to where the project can be transferred
+        /// Lists all namespaces where a specified project can be transferred.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Transfer_locationsRequestBuilderGetQueryParameters 

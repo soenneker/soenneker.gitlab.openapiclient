@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Enterprise_users
         {
         }
         /// <summary>
-        /// Get a list of enterprise users of the group
+        /// Lists all enterprise users for a specified top-level group. Use the `page` and `per_page` pagination parameters to filter the results.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserPublic"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Enterprise_users
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserPublic>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserPublic.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get a list of enterprise users of the group
+        /// Lists all enterprise users for a specified top-level group. Use the `page` and `per_page` pagination parameters to filter the results.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -93,7 +93,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Enterprise_users
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Enterprise_users.Enterprise_usersRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get a list of enterprise users of the group
+        /// Lists all enterprise users for a specified top-level group. Use the `page` and `per_page` pagination parameters to filter the results.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Enterprise_usersRequestBuilderGetQueryParameters 

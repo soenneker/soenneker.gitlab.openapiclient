@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Artifact
         {
         }
         /// <summary>
-        /// Lists all files and directories in the artifacts archive without extracting them
+        /// Lists all files in a specified artifacts archive without extracting them.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiJobArtifactEntry"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Artifact
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiJobArtifactEntry>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiJobArtifactEntry.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Lists all files and directories in the artifacts archive without extracting them
+        /// Lists all files in a specified artifacts archive without extracting them.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Artifact
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Artifacts.Tree.TreeRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all files and directories in the artifacts archive without extracting them
+        /// Lists all files in a specified artifacts archive without extracting them.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class TreeRequestBuilderGetQueryParameters 

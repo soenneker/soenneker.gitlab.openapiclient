@@ -1444,7 +1444,8 @@
         "tags": [
           "Enterprise users"
         ],
-        "summary": "Get a list of enterprise users of the group",
+        "summary": "List all enterprise users",
+        "description": "Lists all enterprise users for a specified top-level group. Use the `page` and `per_page` pagination parameters to filter the results.",
         "operationId": "getApiV4GroupsIdEnterpriseUsers",
         "parameters": [
           {
@@ -1571,7 +1572,8 @@
         "tags": [
           "Enterprise users"
         ],
-        "summary": "Get a single enterprise user of the group",
+        "summary": "Retrieve an enterprise user",
+        "description": "Retrieves a specified enterprise user.",
         "operationId": "getApiV4GroupsIdEnterpriseUsersUserId",
         "parameters": [
           {
@@ -1618,7 +1620,8 @@
         "tags": [
           "Enterprise users"
         ],
-        "summary": "Modify an enterprise user",
+        "summary": "Update an enterprise user",
+        "description": "Updates a specified enterprise user.",
         "operationId": "patchApiV4GroupsIdEnterpriseUsersUserId",
         "parameters": [
           {
@@ -1675,6 +1678,7 @@
           "Enterprise users"
         ],
         "summary": "Delete an enterprise user",
+        "description": "Deletes a specified enterprise user.",
         "operationId": "deleteApiV4GroupsIdEnterpriseUsersUserId",
         "parameters": [
           {
@@ -1734,7 +1738,8 @@
         "tags": [
           "Enterprise users"
         ],
-        "summary": "Disable two factor authentication for an enterprise user",
+        "summary": "Disable two-factor authentication for an enterprise user",
+        "description": "Disables two-factor authentication (2FA) for a specified enterprise user.",
         "operationId": "patchApiV4GroupsIdEnterpriseUsersUserIdDisableTwoFactor",
         "parameters": [
           {
@@ -5698,8 +5703,8 @@
         "tags": [
           "Project Google Cloud integration"
         ],
-        "summary": "Get shell script to setup an integration in Google Cloud",
-        "description": "Returns a shell script for configuring Google Cloud integrations with the project.",
+        "summary": "Retrieve setup script for Google Cloud integration",
+        "description": "Retrieves the setup script for Google Cloud integration.",
         "operationId": "getApiV4ProjectsIdGoogleCloudSetupIntegrationsSh",
         "parameters": [
           {
@@ -5760,8 +5765,8 @@
         "tags": [
           "Project Google Cloud integration"
         ],
-        "summary": "Get shell script to set up Google Cloud project for runner deployment",
-        "description": "Returns a shell script for setting up a Google Cloud project for runner deployment.",
+        "summary": "Retrieve configuration script for Google Cloud runner provisioning",
+        "description": "Retrieves the configuration script for Google Cloud runner provisioning.",
         "operationId": "getApiV4ProjectsIdGoogleCloudSetupRunnerDeploymentProjectSh",
         "parameters": [
           {
@@ -5814,8 +5819,8 @@
         "tags": [
           "Project approvals"
         ],
-        "summary": "Get all project approvers and related configuration",
-        "description": "This feature was introduced in 10.6",
+        "summary": "Retrieve approval configuration for a project",
+        "description": "Retrieves the approval configuration for a project.",
         "operationId": "getApiV4ProjectsIdApprovals",
         "parameters": [
           {
@@ -5853,8 +5858,8 @@
         "tags": [
           "Project approvals"
         ],
-        "summary": "Change approval-related configuration",
-        "description": "This feature was introduced in 10.6",
+        "summary": "Create or update approval configuration for a project",
+        "description": "Creates or updates the approval configuration for a project. The currently authenticated user must be an eligible approver.",
         "operationId": "postApiV4ProjectsIdApprovals",
         "parameters": [
           {
@@ -6163,8 +6168,8 @@
         "tags": [
           "Group credentials inventory"
         ],
-        "summary": "Get Personal access tokens",
-        "description": "This feature was introduced in GitLab 17.8.",
+        "summary": "List all personal access tokens for a group",
+        "description": "Lists all personal access tokens associated with enterprise users in a top-level group. This feature was introduced in GitLab 17.8.",
         "operationId": "getApiV4GroupsIdManagePersonalAccessTokens",
         "parameters": [
           {
@@ -6210,7 +6215,7 @@
               "format": "date-time",
               "nullable": true
             },
-            "example": "2022-01-01"
+            "example": "2022-01-01T00:00:00Z"
           },
           {
             "name": "created_after",
@@ -6221,7 +6226,7 @@
               "format": "date-time",
               "nullable": true
             },
-            "example": "2021-01-01"
+            "example": "2021-01-01T00:00:00Z"
           },
           {
             "name": "last_used_before",
@@ -6232,7 +6237,7 @@
               "format": "date-time",
               "nullable": true
             },
-            "example": "2021-01-01"
+            "example": "2021-01-01T00:00:00Z"
           },
           {
             "name": "last_used_after",
@@ -6243,7 +6248,7 @@
               "format": "date-time",
               "nullable": true
             },
-            "example": "2022-01-01"
+            "example": "2022-01-01T00:00:00Z"
           },
           {
             "name": "expires_before",
@@ -6331,8 +6336,8 @@
         "tags": [
           "Group credentials inventory"
         ],
-        "summary": "Revoke a personal access token for the group",
-        "description": "Revoke a personal access token by using the ID of the personal access token.",
+        "summary": "Revoke a personal access token for an enterprise user",
+        "description": "Revokes a specified personal access token for an enterprise user.",
         "operationId": "deleteApiV4GroupsIdManagePersonalAccessTokensPatId",
         "parameters": [
           {
@@ -6374,8 +6379,8 @@
         "tags": [
           "Group credentials inventory"
         ],
-        "summary": "Rotate personal access token",
-        "description": "Rotates a personal access token.",
+        "summary": "Rotate a personal access token for an enterprise user",
+        "description": "Rotates a specified personal access token for an enterprise user associated with the top-level group. This revokes the previous token and creates a token that expires after one week.",
         "operationId": "postApiV4GroupsIdManagePersonalAccessTokensPatIdRotate",
         "parameters": [
           {
@@ -6424,8 +6429,8 @@
         "tags": [
           "Group credentials inventory"
         ],
-        "summary": "Get resource access tokens",
-        "description": "This feature was introduced in GitLab 17.10.",
+        "summary": "List all group and project access tokens for a group",
+        "description": "Lists all group and project access tokens associated with a top-level-group. This feature was introduced in GitLab 17.10.",
         "operationId": "getApiV4GroupsIdManageResourceAccessTokens",
         "parameters": [
           {
@@ -6462,7 +6467,7 @@
               "format": "date-time",
               "nullable": true
             },
-            "example": "2022-01-01"
+            "example": "2022-01-01T00:00:00Z"
           },
           {
             "name": "created_after",
@@ -6473,7 +6478,7 @@
               "format": "date-time",
               "nullable": true
             },
-            "example": "2021-01-01"
+            "example": "2021-01-01T00:00:00Z"
           },
           {
             "name": "last_used_before",
@@ -6484,7 +6489,7 @@
               "format": "date-time",
               "nullable": true
             },
-            "example": "2021-01-01"
+            "example": "2021-01-01T00:00:00Z"
           },
           {
             "name": "last_used_after",
@@ -6495,7 +6500,7 @@
               "format": "date-time",
               "nullable": true
             },
-            "example": "2022-01-01"
+            "example": "2022-01-01T00:00:00Z"
           },
           {
             "name": "expires_before",
@@ -6591,8 +6596,8 @@
         "tags": [
           "Group credentials inventory"
         ],
-        "summary": "Revoke a resource access token for the group",
-        "description": "Revoke a resource access token by using the ID of the resource access token.",
+        "summary": "Revoke a group or project access token for a group",
+        "description": "Revokes a specified group or project access token associated with a top-level group.",
         "operationId": "deleteApiV4GroupsIdManageResourceAccessTokensPratId",
         "parameters": [
           {
@@ -6644,8 +6649,8 @@
         "tags": [
           "Group credentials inventory"
         ],
-        "summary": "Rotate a resource access token for the group",
-        "description": "Rotate a resource access token by using the ID of the resource access token.",
+        "summary": "Rotate a group or project access token for a group",
+        "description": "Rotates a specified group or project access token associated with a top-level group. This revokes the previous token and creates a new token.",
         "operationId": "postApiV4GroupsIdManageResourceAccessTokensPratIdRotate",
         "parameters": [
           {
@@ -6695,8 +6700,8 @@
         "tags": [
           "Group credentials inventory"
         ],
-        "summary": "Get the ssh_keys for the user belonging to group",
-        "description": "This feature was introduced in GitLab 17.9.",
+        "summary": "List all SSH keys for a group",
+        "description": "Lists all SSH public keys associated with enterprise users in a top-level-group. This feature was introduced in GitLab 17.9.",
         "operationId": "getApiV4GroupsIdManageSshKeys",
         "parameters": [
           {
@@ -6793,8 +6798,8 @@
         "tags": [
           "Group credentials inventory"
         ],
-        "summary": "Delete an existing SSH key",
-        "description": "Delete an existing SSH key by using the ID of the key.",
+        "summary": "Delete an SSH key for an enterprise user",
+        "description": "Deletes a specified SSH public key for an enterprise user associated with the top-level group.",
         "operationId": "deleteApiV4GroupsIdManageSshKeysKeyId",
         "parameters": [
           {
@@ -6964,7 +6969,8 @@
         "tags": [
           "Merge requests"
         ],
-        "summary": "Get a merge request dependency",
+        "summary": "Retrieve a merge request dependency",
+        "description": "Retrieves a specified merge request dependency.",
         "operationId": "getApiV4ProjectsIdMergeRequestsMergeRequestIidBlocksBlockId",
         "parameters": [
           {
@@ -7153,7 +7159,8 @@
         "tags": [
           "Merge request approvals"
         ],
-        "summary": "Get project-level MR approval settings",
+        "summary": "Retrieve MR approval settings for a project",
+        "description": "Retrieves the merge request approval settings for a specified project.",
         "operationId": "getApiV4ProjectsIdMergeRequestApprovalSetting",
         "parameters": [
           {
@@ -7191,7 +7198,8 @@
         "tags": [
           "Merge request approvals"
         ],
-        "summary": "Update existing merge request approval setting",
+        "summary": "Update MR approval settings for a project",
+        "description": "Updates the merge request approval settings for a specified project.",
         "operationId": "putApiV4ProjectsIdMergeRequestApprovalSetting",
         "parameters": [
           {
@@ -7240,7 +7248,8 @@
         "tags": [
           "Merge request approvals"
         ],
-        "summary": "Get group merge request approval setting",
+        "summary": "Retrieve MR approval settings for a group",
+        "description": "Retrieves the merge request approval settings for a specified group.",
         "operationId": "getApiV4GroupsIdMergeRequestApprovalSetting",
         "parameters": [
           {
@@ -7270,7 +7279,8 @@
         "tags": [
           "Merge request approvals"
         ],
-        "summary": "Update existing merge request approval setting",
+        "summary": "Update MR approval settings for a group",
+        "description": "Updates the merge request approval settings for a specified group.",
         "operationId": "putApiV4GroupsIdMergeRequestApprovalSetting",
         "parameters": [
           {
@@ -8330,7 +8340,8 @@
         "tags": [
           "Member roles"
         ],
-        "summary": "Get Member Roles for a group",
+        "summary": "List all group member roles",
+        "description": "Lists all member roles in a specified group.",
         "operationId": "getApiV4GroupsIdMemberRoles",
         "parameters": [
           {
@@ -8368,7 +8379,8 @@
         "tags": [
           "Member roles"
         ],
-        "summary": "Create Member Role for a group",
+        "summary": "Add a member role to a group",
+        "description": "Adds a member role to a group. You can only add member roles at the root level of the group.",
         "operationId": "postApiV4GroupsIdMemberRoles",
         "parameters": [
           {
@@ -8417,7 +8429,8 @@
         "tags": [
           "Member roles"
         ],
-        "summary": "Delete Member Role for a group",
+        "summary": "Remove member role of a group",
+        "description": "Removes a specified member role from a group.",
         "operationId": "deleteApiV4GroupsIdMemberRolesMemberRoleId",
         "parameters": [
           {
@@ -8468,7 +8481,8 @@
         "tags": [
           "Member roles"
         ],
-        "summary": "Get Member Roles for this GitLab instance",
+        "summary": "List all instance member roles",
+        "description": "Lists all member roles for this GitLab instance.",
         "operationId": "getApiV4MemberRoles",
         "responses": {
           "200": {
@@ -8487,7 +8501,8 @@
         "tags": [
           "Member roles"
         ],
-        "summary": "Create Member Role on the GitLab instance",
+        "summary": "Create an instance member role",
+        "description": "Creates an instance member role.",
         "operationId": "postApiV4MemberRoles",
         "requestBody": {
           "content": {
@@ -8517,7 +8532,8 @@
         "tags": [
           "Member roles"
         ],
-        "summary": "Delete Member Role",
+        "summary": "Delete an instance member role",
+        "description": "Deletes an instance member role.",
         "operationId": "deleteApiV4MemberRolesMemberRoleId",
         "parameters": [
           {
@@ -9286,7 +9302,8 @@
         "tags": [
           "Project mirrors"
         ],
-        "summary": "Triggers a pull mirror operation",
+        "summary": "Start the pull mirroring process for a project",
+        "description": "Starts the pull mirroring process for a specified project.",
         "operationId": "postApiV4ProjectsIdMirrorPull",
         "parameters": [
           {
@@ -9335,8 +9352,8 @@
         "tags": [
           "Project mirrors"
         ],
-        "summary": "Update a pull mirror",
-        "description": "This feature was introduced in GitLab 17.5.",
+        "summary": "Update project pull mirroring settings",
+        "description": "Updates pull mirroring settings for a specified project. This feature was introduced in GitLab 17.5.",
         "operationId": "putApiV4ProjectsIdMirrorPull",
         "parameters": [
           {
@@ -9383,7 +9400,8 @@
         "tags": [
           "Project mirrors"
         ],
-        "summary": "Get a pull mirror",
+        "summary": "Retrieve project pull mirror details",
+        "description": "Retrieves pull mirror details for a specified project.",
         "operationId": "getApiV4ProjectsIdMirrorPull",
         "parameters": [
           {
@@ -9890,8 +9908,8 @@
         "tags": [
           "LDAP"
         ],
-        "summary": "List LDAP groups",
-        "description": "Limit size to 20 of them.",
+        "summary": "List all LDAP groups",
+        "description": "Lists all LDAP groups on the GitLab instance. Limited to 20 results.",
         "operationId": "getApiV4LdapGroups",
         "parameters": [
           {
@@ -9924,8 +9942,8 @@
         "tags": [
           "LDAP"
         ],
-        "summary": "List LDAP groups by the requested provider",
-        "description": "Limit size to 20 of them.",
+        "summary": "List all LDAP groups by provider",
+        "description": "Lists all LDAP groups for the specified provider. Limited to 20 results.",
         "operationId": "getApiV4LdapProviderGroups",
         "parameters": [
           {
@@ -13151,7 +13169,8 @@
         "tags": [
           "Approval rules"
         ],
-        "summary": "Get all project approval rules",
+        "summary": "List all approval rules for a project",
+        "description": "Lists all approval rules and any associated details for a specified project. To restrict the list of approval rules, use the `page` and `per_page` pagination parameters.",
         "operationId": "getApiV4ProjectsIdApprovalRules",
         "parameters": [
           {
@@ -13211,7 +13230,8 @@
         "tags": [
           "Approval rules"
         ],
-        "summary": "Create new project approval rule",
+        "summary": "Create an approval rule for a project",
+        "description": "Creates an approval rule for a specified project.",
         "operationId": "postApiV4ProjectsIdApprovalRules",
         "parameters": [
           {
@@ -13260,7 +13280,8 @@
         "tags": [
           "Approval rules"
         ],
-        "summary": "Get a single approval rule",
+        "summary": "Retrieve an approval rule for a project",
+        "description": "Retrieves information about a specified approval rule for a project.",
         "operationId": "getApiV4ProjectsIdApprovalRulesApprovalRuleId",
         "parameters": [
           {
@@ -13306,7 +13327,8 @@
         "tags": [
           "Approval rules"
         ],
-        "summary": "Update project approval rule",
+        "summary": "Update an approval rule for a project",
+        "description": "Updates a specified approval rule for a project. This endpoint removes any approvers and groups not defined in the `group_ids`, `user_ids`, or `usernames` attributes. Hidden groups (private groups the user does not have permission to view) that are not in the `users` or `groups` parameters are preserved by default. To remove them, set `remove_hidden_groups` to `true`. This ensures hidden groups are not removed unintentionally when a user updates an approval rule.",
         "operationId": "putApiV4ProjectsIdApprovalRulesApprovalRuleId",
         "parameters": [
           {
@@ -13362,7 +13384,8 @@
         "tags": [
           "Approval rules"
         ],
-        "summary": "Destroy project approval rule",
+        "summary": "Delete an approval rule for a project",
+        "description": "Deletes an approval rule for a specified project.",
         "operationId": "deleteApiV4ProjectsIdApprovalRulesApprovalRuleId",
         "parameters": [
           {
@@ -21591,7 +21614,8 @@
         "tags": [
           "Instance"
         ],
-        "summary": "Get the current application settings",
+        "summary": "Retrieve application settings",
+        "description": "Retrieves the current application settings for this GitLab instance.",
         "operationId": "getApiV4ApplicationSettings",
         "responses": {
           "200": {
@@ -21610,7 +21634,8 @@
         "tags": [
           "Instance"
         ],
-        "summary": "Modify application settings",
+        "summary": "Update application settings",
+        "description": "Updates the current application settings for this GitLab instance.",
         "operationId": "putApiV4ApplicationSettings",
         "requestBody": {
           "content": {
@@ -22833,7 +22858,7 @@
               "format": "date-time",
               "nullable": true
             },
-            "example": "2022-01-01"
+            "example": "2022-01-01T00:00:00Z"
           },
           {
             "name": "created_after",
@@ -22844,7 +22869,7 @@
               "format": "date-time",
               "nullable": true
             },
-            "example": "2021-01-01"
+            "example": "2021-01-01T00:00:00Z"
           },
           {
             "name": "last_used_before",
@@ -22855,7 +22880,7 @@
               "format": "date-time",
               "nullable": true
             },
-            "example": "2021-01-01"
+            "example": "2021-01-01T00:00:00Z"
           },
           {
             "name": "last_used_after",
@@ -22866,7 +22891,7 @@
               "format": "date-time",
               "nullable": true
             },
-            "example": "2022-01-01"
+            "example": "2022-01-01T00:00:00Z"
           },
           {
             "name": "expires_before",
@@ -26758,7 +26783,7 @@
               "format": "date-time",
               "nullable": true
             },
-            "example": "2022-01-01"
+            "example": "2022-01-01T00:00:00Z"
           },
           {
             "name": "created_after",
@@ -26769,7 +26794,7 @@
               "format": "date-time",
               "nullable": true
             },
-            "example": "2021-01-01"
+            "example": "2021-01-01T00:00:00Z"
           },
           {
             "name": "last_used_before",
@@ -26780,7 +26805,7 @@
               "format": "date-time",
               "nullable": true
             },
-            "example": "2021-01-01"
+            "example": "2021-01-01T00:00:00Z"
           },
           {
             "name": "last_used_after",
@@ -26791,7 +26816,7 @@
               "format": "date-time",
               "nullable": true
             },
-            "example": "2022-01-01"
+            "example": "2022-01-01T00:00:00Z"
           },
           {
             "name": "expires_before",
@@ -34903,7 +34928,8 @@
         "tags": [
           "Instance"
         ],
-        "summary": "Get the current application statistics",
+        "summary": "Retrieve application statistics",
+        "description": "Retrieves the current application statistics for this GitLab instance.",
         "operationId": "getApiV4ApplicationStatistics",
         "responses": {
           "200": {
@@ -35970,8 +35996,8 @@
         "tags": [
           "Packages"
         ],
-        "summary": "Download the gemspec file",
-        "description": "This feature was introduced in GitLab 13.9",
+        "summary": "Download a gemspec file",
+        "description": "Downloads a gemspec file in Marshal format for a specified gem version.",
         "operationId": "getApiV4ProjectsIdPackagesRubygemsQuickMarshal48FileName",
         "parameters": [
           {
@@ -36022,8 +36048,8 @@
         "tags": [
           "Packages"
         ],
-        "summary": "Download the .gem package",
-        "description": "This feature was introduced in GitLab 13.9",
+        "summary": "Download a gem file",
+        "description": "Downloads a specified gem file for a project.",
         "operationId": "getApiV4ProjectsIdPackagesRubygemsGemsFileName",
         "parameters": [
           {
@@ -36118,7 +36144,7 @@
           "Packages"
         ],
         "summary": "Upload a gem",
-        "description": "This feature was introduced in GitLab 13.9",
+        "description": "Uploads a gem for a specified project.",
         "operationId": "postApiV4ProjectsIdPackagesRubygemsApiV1Gems",
         "parameters": [
           {
@@ -36169,8 +36195,8 @@
         "tags": [
           "Packages"
         ],
-        "summary": "Fetch a list of dependencies",
-        "description": "This feature was introduced in GitLab 13.9",
+        "summary": "Retrieve dependencies",
+        "description": "Retrieves a list of dependencies for specified gems. The response is a marshalled array of hashes for all versions of the requested gems. Because the response is marshalled, you can store it in a file.",
         "operationId": "getApiV4ProjectsIdPackagesRubygemsApiV1Dependencies",
         "parameters": [
           {
@@ -36605,8 +36631,8 @@
         "tags": [
           "Access tokens"
         ],
-        "summary": "Rotate a resource access token",
-        "description": "Rotates a resource access token by passing it to the API in a header",
+        "summary": "Rotate a project access token",
+        "description": "Rotates a project access token by passing it to the API in a header.",
         "operationId": "postApiV4ProjectsIdAccessTokensSelfRotate",
         "parameters": [
           {
@@ -36647,8 +36673,8 @@
         "tags": [
           "Access tokens"
         ],
-        "summary": "Rotate a resource access token",
-        "description": "Rotates a resource access token by passing it to the API in a header",
+        "summary": "Rotate a group access token",
+        "description": "Rotates a group access token by passing it to the API in a header.",
         "operationId": "postApiV4GroupsIdAccessTokensSelfRotate",
         "parameters": [
           {
@@ -36689,8 +36715,8 @@
         "tags": [
           "Access tokens"
         ],
-        "summary": "Get list of all access tokens for the specified resource",
-        "description": "This feature was introduced in GitLab 13.9.",
+        "summary": "List all project access tokens",
+        "description": "Lists all project access tokens for a specified project.",
         "operationId": "getApiV4ProjectsIdAccessTokens",
         "parameters": [
           {
@@ -36744,7 +36770,7 @@
               "format": "date-time",
               "nullable": true
             },
-            "example": "2022-01-01"
+            "example": "2022-01-01T00:00:00Z"
           },
           {
             "name": "created_after",
@@ -36755,7 +36781,7 @@
               "format": "date-time",
               "nullable": true
             },
-            "example": "2021-01-01"
+            "example": "2021-01-01T00:00:00Z"
           },
           {
             "name": "last_used_before",
@@ -36766,7 +36792,7 @@
               "format": "date-time",
               "nullable": true
             },
-            "example": "2021-01-01"
+            "example": "2021-01-01T00:00:00Z"
           },
           {
             "name": "last_used_after",
@@ -36777,7 +36803,7 @@
               "format": "date-time",
               "nullable": true
             },
-            "example": "2022-01-01"
+            "example": "2022-01-01T00:00:00Z"
           },
           {
             "name": "expires_before",
@@ -36839,8 +36865,8 @@
         "tags": [
           "Access tokens"
         ],
-        "summary": "Create a resource access token",
-        "description": "This feature was introduced in GitLab 13.9.",
+        "summary": "Create a project access token",
+        "description": "Creates a project access token for a specified project. You cannot create a token with an access level greater than your account. For example, a user with the Maintainer role cannot create a project access token with the Owner role. You must use a personal access token with this endpoint. You cannot authenticate with a project access token.",
         "operationId": "postApiV4ProjectsIdAccessTokens",
         "parameters": [
           {
@@ -36882,8 +36908,8 @@
         "tags": [
           "Access tokens"
         ],
-        "summary": "Get an access token for the specified resource by ID",
-        "description": "This feature was introduced in GitLab 14.10.",
+        "summary": "Retrieve details on a project access token",
+        "description": "Retrieves details on a specified project access token.",
         "operationId": "getApiV4ProjectsIdAccessTokensTokenId",
         "parameters": [
           {
@@ -36930,8 +36956,8 @@
         "tags": [
           "Access tokens"
         ],
-        "summary": "Revoke a resource access token",
-        "description": "This feature was introduced in GitLab 13.9.",
+        "summary": "Revoke a project access token",
+        "description": "Revokes a specified project access token.",
         "operationId": "deleteApiV4ProjectsIdAccessTokensTokenId",
         "parameters": [
           {
@@ -36974,8 +37000,8 @@
         "tags": [
           "Access tokens"
         ],
-        "summary": "Rotate a resource access token",
-        "description": "This feature was introduced in GitLab 16.0.",
+        "summary": "Rotate a project access token",
+        "description": "Rotates a project access token. This immediately revokes the previous token and creates a token. Generally, this endpoint rotates a specific project access token by authenticating with a personal access token. You can also use a project access token to rotate itself. If you attempt to use this endpoint to rotate a token that was previously revoked, any active tokens from the same token family are revoked. This feature was introduced in GitLab 16.0.",
         "operationId": "postApiV4ProjectsIdAccessTokensTokenIdRotate",
         "parameters": [
           {
@@ -37007,8 +37033,8 @@
           }
         },
         "responses": {
-          "201": {
-            "description": "Created",
+          "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -37025,8 +37051,8 @@
         "tags": [
           "Access tokens"
         ],
-        "summary": "Get list of all access tokens for the specified resource",
-        "description": "This feature was introduced in GitLab 13.9.",
+        "summary": "List all group access tokens",
+        "description": "Lists all group access tokens for a specified group.",
         "operationId": "getApiV4GroupsIdAccessTokens",
         "parameters": [
           {
@@ -37080,7 +37106,7 @@
               "format": "date-time",
               "nullable": true
             },
-            "example": "2022-01-01"
+            "example": "2022-01-01T00:00:00Z"
           },
           {
             "name": "created_after",
@@ -37091,7 +37117,7 @@
               "format": "date-time",
               "nullable": true
             },
-            "example": "2021-01-01"
+            "example": "2021-01-01T00:00:00Z"
           },
           {
             "name": "last_used_before",
@@ -37102,7 +37128,7 @@
               "format": "date-time",
               "nullable": true
             },
-            "example": "2021-01-01"
+            "example": "2021-01-01T00:00:00Z"
           },
           {
             "name": "last_used_after",
@@ -37113,7 +37139,7 @@
               "format": "date-time",
               "nullable": true
             },
-            "example": "2022-01-01"
+            "example": "2022-01-01T00:00:00Z"
           },
           {
             "name": "expires_before",
@@ -37175,8 +37201,8 @@
         "tags": [
           "Access tokens"
         ],
-        "summary": "Create a resource access token",
-        "description": "This feature was introduced in GitLab 13.9.",
+        "summary": "Create a group access token",
+        "description": "Creates a group access token for a specified group. You cannot create a token with an access level greater than your account. For example, a user with the Maintainer role cannot create a group access token with the Owner role. You must use a personal access token with this endpoint. You cannot authenticate with a group access token.",
         "operationId": "postApiV4GroupsIdAccessTokens",
         "parameters": [
           {
@@ -37218,8 +37244,8 @@
         "tags": [
           "Access tokens"
         ],
-        "summary": "Get an access token for the specified resource by ID",
-        "description": "This feature was introduced in GitLab 14.10.",
+        "summary": "Retrieve details on a group access token",
+        "description": "Retrieves details on a specified group access token.",
         "operationId": "getApiV4GroupsIdAccessTokensTokenId",
         "parameters": [
           {
@@ -37266,8 +37292,8 @@
         "tags": [
           "Access tokens"
         ],
-        "summary": "Revoke a resource access token",
-        "description": "This feature was introduced in GitLab 13.9.",
+        "summary": "Revoke a group access token",
+        "description": "Revokes a specified group access token.",
         "operationId": "deleteApiV4GroupsIdAccessTokensTokenId",
         "parameters": [
           {
@@ -37310,8 +37336,8 @@
         "tags": [
           "Access tokens"
         ],
-        "summary": "Rotate a resource access token",
-        "description": "This feature was introduced in GitLab 16.0.",
+        "summary": "Rotate a group access token",
+        "description": "Rotates a group access token. This immediately revokes the previous token and creates a token. Generally, this endpoint rotates a specific group access token by authenticating with a personal access token. You can also use a group access token to rotate itself. If you attempt to use this endpoint to rotate a token that was previously revoked, any active tokens from the same token family are revoked. This feature was introduced in GitLab 16.0.",
         "operationId": "postApiV4GroupsIdAccessTokensTokenIdRotate",
         "parameters": [
           {
@@ -37343,8 +37369,8 @@
           }
         },
         "responses": {
-          "201": {
-            "description": "Created",
+          "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -39288,8 +39314,8 @@
         "tags": [
           "Packages"
         ],
-        "summary": "The PyPi Simple Group Index Endpoint",
-        "description": "This feature was introduced in GitLab 15.1",
+        "summary": "List all packages for a group",
+        "description": "Lists all packages for a specified group in an HTML file.",
         "operationId": "getApiV4GroupsIdDashPackagesPypiSimple",
         "parameters": [
           {
@@ -39331,8 +39357,8 @@
         "tags": [
           "Packages"
         ],
-        "summary": "The PyPi Simple Project Index Endpoint",
-        "description": "This feature was introduced in GitLab 15.1",
+        "summary": "List all packages for a project",
+        "description": "Lists all packages for a specified project in an HTML file.",
         "operationId": "getApiV4ProjectsIdPackagesPypiSimple",
         "parameters": [
           {
@@ -39374,8 +39400,8 @@
         "tags": [
           "Packages"
         ],
-        "summary": "The PyPi Package upload endpoint",
-        "description": "This feature was introduced in GitLab 12.10",
+        "summary": "Upload a package",
+        "description": "Uploads a PyPI package for a specified project.",
         "operationId": "postApiV4ProjectsIdPackagesPypi",
         "parameters": [
           {
@@ -40360,7 +40386,8 @@
         "tags": [
           "Projects"
         ],
-        "summary": "Get projects that a user has contributed to",
+        "summary": "List all projects contributions for a user",
+        "description": "Lists all contributions to visible projects for a specified user. Returns only contributions in the past year.",
         "operationId": "getApiV4UsersUserIdContributedProjects",
         "parameters": [
           {
@@ -40463,7 +40490,8 @@
         "tags": [
           "Projects"
         ],
-        "summary": "Get projects starred by a user",
+        "summary": "List all projects starred by a user",
+        "description": "Lists all visible projects starred by a specified user. Unauthenticated requests return only public projects.",
         "operationId": "getApiV4UsersUserIdStarredProjects",
         "parameters": [
           {
@@ -41000,7 +41028,8 @@
         "tags": [
           "Projects"
         ],
-        "summary": "Restore a project",
+        "summary": "Restore a project marked for deletion",
+        "description": "Restores a specified project that was marked for deletion.",
         "operationId": "postApiV4ProjectsIdRestore",
         "parameters": [
           {
@@ -41031,7 +41060,8 @@
         "tags": [
           "Projects"
         ],
-        "summary": "Get a list of visible projects for authenticated user",
+        "summary": "List all projects",
+        "description": "Lists all projects. Unauthenticated requests return only public projects with a limited subset of attributes. You can filter responses by custom attributes.",
         "operationId": "getApiV4Projects",
         "parameters": [
           {
@@ -41605,7 +41635,8 @@
         "tags": [
           "Projects"
         ],
-        "summary": "Update an existing project",
+        "summary": "Update a project",
+        "description": "Updates an existing project. If your HTTP repository is not publicly accessible, add authentication information to the URL `https://username:password@gitlab.company.com/group/project.git`, where `password` is a public access key with the `api` scope.",
         "operationId": "putApiV4ProjectsId",
         "parameters": [
           {
@@ -41741,7 +41772,8 @@
         "tags": [
           "Projects"
         ],
-        "summary": "Remove a forked_from relationship",
+        "summary": "Delete a fork relationship",
+        "description": "Deletes a fork relationship between projects.",
         "operationId": "deleteApiV4ProjectsIdFork",
         "parameters": [
           {
@@ -41783,7 +41815,8 @@
         "tags": [
           "Projects"
         ],
-        "summary": "List forks of this project",
+        "summary": "List all forks of a project",
+        "description": "Lists all forks of a project.",
         "operationId": "getApiV4ProjectsIdForks",
         "parameters": [
           {
@@ -42262,6 +42295,7 @@
           "Projects"
         ],
         "summary": "Unarchive a project",
+        "description": "Unarchives a specified project. You must be an administrator or have the Owner role on the project.",
         "operationId": "postApiV4ProjectsIdUnarchive",
         "parameters": [
           {
@@ -42302,6 +42336,7 @@
           "Projects"
         ],
         "summary": "Star a project",
+        "description": "Stars a specified project.",
         "operationId": "postApiV4ProjectsIdStar",
         "parameters": [
           {
@@ -42342,6 +42377,7 @@
           "Projects"
         ],
         "summary": "Unstar a project",
+        "description": "Unstars a specified project.",
         "operationId": "postApiV4ProjectsIdUnstar",
         "parameters": [
           {
@@ -42381,7 +42417,8 @@
         "tags": [
           "Projects"
         ],
-        "summary": "Get the users who starred a project",
+        "summary": "List all users who starred a project",
+        "description": "Lists all users who starred a specified project.",
         "operationId": "getApiV4ProjectsIdStarrers",
         "parameters": [
           {
@@ -42495,7 +42532,8 @@
         "tags": [
           "Projects"
         ],
-        "summary": "Mark this project as forked from another",
+        "summary": "Create a fork relationship",
+        "description": "Creates a fork relationship between a project and an upstream project.",
         "operationId": "postApiV4ProjectsIdForkForkedFromId",
         "parameters": [
           {
@@ -42545,7 +42583,8 @@
         "tags": [
           "Projects"
         ],
-        "summary": "Share the project with a group",
+        "summary": "Share a project with a group",
+        "description": "Shares a specified project with a group.",
         "operationId": "postApiV4ProjectsIdShare",
         "parameters": [
           {
@@ -42594,7 +42633,8 @@
         "tags": [
           "Projects"
         ],
-        "summary": "Remove a group share",
+        "summary": "Delete a shared project link in a group",
+        "description": "Deletes a shared project link in a group.",
         "operationId": "deleteApiV4ProjectsIdShareGroupId",
         "parameters": [
           {
@@ -42645,8 +42685,8 @@
         "tags": [
           "Projects"
         ],
-        "summary": "Import members from another project",
-        "description": "This feature was introduced in GitLab 14.2",
+        "summary": "Import members",
+        "description": "Imports members from another project. If the role of the importing member for the target project is a Maintainer, then members with the Owner role for the source project are imported with the Maintainer role. If the importing member is an Owner, then members with the Owner role for the source project are imported with the Owner role.",
         "operationId": "postApiV4ProjectsIdImportProjectMembersProjectId",
         "parameters": [
           {
@@ -42697,7 +42737,8 @@
         "tags": [
           "Projects"
         ],
-        "summary": "Get the users list of a project",
+        "summary": "List all members of a project",
+        "description": "Lists all members with access to a specified project.",
         "operationId": "getApiV4ProjectsIdUsers",
         "parameters": [
           {
@@ -43024,7 +43065,7 @@
           "Projects"
         ],
         "summary": "Start the housekeeping task for a project",
-        "description": "This feature was introduced in GitLab 9.0.",
+        "description": "Starts the housekeeping task for a project.",
         "operationId": "postApiV4ProjectsIdHousekeeping",
         "parameters": [
           {
@@ -43118,7 +43159,8 @@
         "tags": [
           "Projects"
         ],
-        "summary": "Transfer a project to a new namespace",
+        "summary": "Transfer a project to another namespace",
+        "description": "Transfers a project to another namespace.",
         "operationId": "putApiV4ProjectsIdTransfer",
         "parameters": [
           {
@@ -43167,7 +43209,8 @@
         "tags": [
           "Projects"
         ],
-        "summary": "Get the namespaces to where the project can be transferred",
+        "summary": "List all transferable namespaces for a project",
+        "description": "Lists all namespaces where a specified project can be transferred.",
         "operationId": "getApiV4ProjectsIdTransferLocations",
         "parameters": [
           {
@@ -43239,7 +43282,8 @@
         "tags": [
           "Projects"
         ],
-        "summary": "Show the storage information",
+        "summary": "Retrieve the path to repository storage",
+        "description": "Retrieves the path to repository storage for a specified project. If you are using Gitaly Cluster (Praefect), see Praefect-generated replica paths instead. Administrators only.",
         "operationId": "getApiV4ProjectsIdStorage",
         "parameters": [
           {
@@ -46935,8 +46979,8 @@
         "tags": [
           "Projects"
         ],
-        "summary": "Gets a list of container protection tag rules for a project.",
-        "description": "This feature was introduced in GitLab 18.7.",
+        "summary": "List all container registry protection tag rules",
+        "description": "Lists all container registry protection tag rules for a project. This feature was introduced in GitLab 18.7.",
         "operationId": "getApiV4ProjectsIdRegistryProtectionTagRules",
         "parameters": [
           {
@@ -46974,8 +47018,8 @@
         "tags": [
           "Projects"
         ],
-        "summary": "Create a container protection tag rule for a project. 5 rule limit per project.",
-        "description": "This feature was introduced in GitLab 18.8.",
+        "summary": "Create a container registry protection tag rule",
+        "description": "Creates a container registry protection tag rule for a project to control who can push or delete container tags. This feature was introduced in GitLab 18.8.",
         "operationId": "postApiV4ProjectsIdRegistryProtectionTagRules",
         "parameters": [
           {
@@ -47024,8 +47068,8 @@
         "tags": [
           "Projects"
         ],
-        "summary": "Update a container protection tag rule for a project.",
-        "description": "This feature was introduced in GitLab 18.9.",
+        "summary": "Update a container registry protection tag rule",
+        "description": "Updates a container registry protection tag rule for a project. This feature was introduced in GitLab 18.9.",
         "operationId": "patchApiV4ProjectsIdRegistryProtectionTagRulesProtectionRuleId",
         "parameters": [
           {
@@ -47081,8 +47125,8 @@
         "tags": [
           "Projects"
         ],
-        "summary": "Delete container protection tag rule",
-        "description": "This feature was introduced in GitLab 18.9.",
+        "summary": "Delete a container registry protection tag rule",
+        "description": "Deletes a container registry protection tag rule from a project. This feature was introduced in GitLab 18.9.",
         "operationId": "deleteApiV4ProjectsIdRegistryProtectionTagRulesProtectionRuleId",
         "parameters": [
           {
@@ -47133,7 +47177,8 @@
         "tags": [
           "Projects"
         ],
-        "summary": "Get list of container registry protection rules for a project",
+        "summary": "List all container repository protection rules",
+        "description": "Lists all container repository protection rules for a specified project.",
         "operationId": "getApiV4ProjectsIdRegistryProtectionRepositoryRules",
         "parameters": [
           {
@@ -47171,7 +47216,8 @@
         "tags": [
           "Projects"
         ],
-        "summary": "Create a container protection rule for a project",
+        "summary": "Create a container repository protection rule",
+        "description": "Creates a container repository protection rule for a specified project to control who can push or delete container images.",
         "operationId": "postApiV4ProjectsIdRegistryProtectionRepositoryRules",
         "parameters": [
           {
@@ -47220,7 +47266,8 @@
         "tags": [
           "Projects"
         ],
-        "summary": "Update a container protection rule for a project",
+        "summary": "Update a container repository protection rule",
+        "description": "Updates a container repository protection rule for a specified project.",
         "operationId": "patchApiV4ProjectsIdRegistryProtectionRepositoryRulesProtectionRuleId",
         "parameters": [
           {
@@ -47276,7 +47323,8 @@
         "tags": [
           "Projects"
         ],
-        "summary": "Delete container protection rule",
+        "summary": "Delete a container repository protection rule",
+        "description": "Deletes a specified container repository protection rule.",
         "operationId": "deleteApiV4ProjectsIdRegistryProtectionRepositoryRulesProtectionRuleId",
         "parameters": [
           {
@@ -48087,8 +48135,8 @@
         "tags": [
           "Access tokens"
         ],
-        "summary": "Get single personal access token",
-        "description": "Get the details of a personal access token by passing it to the API in a header",
+        "summary": "Retrieve a personal access token",
+        "description": "Retrieves a specified personal access token by passing it to the API in a header.",
         "operationId": "getApiV4PersonalAccessTokensSelf",
         "responses": {
           "200": {
@@ -48108,7 +48156,7 @@
           "Access tokens"
         ],
         "summary": "Revoke a personal access token",
-        "description": "Revoke a personal access token by passing it to the API in a header",
+        "description": "Revokes a personal access token by passing it to the API in a header.",
         "operationId": "deleteApiV4PersonalAccessTokensSelf",
         "responses": {
           "204": {
@@ -48131,8 +48179,8 @@
         "tags": [
           "Access tokens"
         ],
-        "summary": "Return personal access token associations",
-        "description": "Get groups and projects this personal access token can access by passing it to the API in a header",
+        "summary": "List all token associations",
+        "description": "Lists all groups and projects accessible by the personal access token used to authenticate the request. Generally, this includes any groups or projects that the user is a member of.",
         "operationId": "getApiV4PersonalAccessTokensSelfAssociations",
         "parameters": [
           {
@@ -48195,8 +48243,8 @@
         "tags": [
           "Access tokens"
         ],
-        "summary": "List personal access tokens",
-        "description": "Get all personal access tokens the authenticated user has access to.",
+        "summary": "List all personal access tokens",
+        "description": "Lists all personal access tokens accessible by the authenticated user. For administrators, returns all personal access tokens in the instance. For non-administrators, returns all of their personal access tokens.",
         "operationId": "getApiV4PersonalAccessTokens",
         "parameters": [
           {
@@ -48243,7 +48291,7 @@
               "format": "date-time",
               "nullable": true
             },
-            "example": "2022-01-01"
+            "example": "2022-01-01T00:00:00Z"
           },
           {
             "name": "created_after",
@@ -48254,7 +48302,7 @@
               "format": "date-time",
               "nullable": true
             },
-            "example": "2021-01-01"
+            "example": "2021-01-01T00:00:00Z"
           },
           {
             "name": "last_used_before",
@@ -48265,7 +48313,7 @@
               "format": "date-time",
               "nullable": true
             },
-            "example": "2021-01-01"
+            "example": "2021-01-01T00:00:00Z"
           },
           {
             "name": "last_used_after",
@@ -48276,7 +48324,7 @@
               "format": "date-time",
               "nullable": true
             },
-            "example": "2022-01-01"
+            "example": "2022-01-01T00:00:00Z"
           },
           {
             "name": "expires_before",
@@ -48362,8 +48410,8 @@
         "tags": [
           "Access tokens"
         ],
-        "summary": "Get single personal access token",
-        "description": "Get a personal access token by using the ID of the personal access token.",
+        "summary": "Retrieve a personal access token",
+        "description": "Retrieves details for a specified personal access token. Administrators can retrieve details on any token. Non-administrators can only retrieve details on their own tokens.",
         "operationId": "getApiV4PersonalAccessTokensId",
         "parameters": [
           {
@@ -48393,7 +48441,7 @@
           "Access tokens"
         ],
         "summary": "Revoke a personal access token",
-        "description": "Revoke a personal access token by using the ID of the personal access token.",
+        "description": "Revokes a specified personal access token. Administrators can revoke tokens for any user. Non-administrators can only revoke their own tokens.",
         "operationId": "deleteApiV4PersonalAccessTokensId",
         "parameters": [
           {
@@ -48426,8 +48474,8 @@
         "tags": [
           "Access tokens"
         ],
-        "summary": "Rotate personal access token",
-        "description": "Rotates a personal access token.",
+        "summary": "Rotate a personal access token",
+        "description": "Rotates a specified personal access token. This revokes the previous token and creates a token that expires after one week. Administrators can revoke tokens for any user. Non-administrators can only revoke their own tokens.",
         "operationId": "postApiV4PersonalAccessTokensIdRotate",
         "parameters": [
           {
@@ -50300,8 +50348,8 @@
         "tags": [
           "Packages"
         ],
-        "summary": "Create or deprecate NPM package",
-        "description": "Create was introduced in GitLab 11.8 & deprecate support was added in 16.0",
+        "summary": "Create or deprecate an NPM package",
+        "description": "Creates or deprecates an NPM package for a specified project. Deprecate support was added in GitLab 16.0.",
         "operationId": "putApiV4ProjectsIdPackagesNpmPackageName",
         "parameters": [
           {
@@ -50534,8 +50582,8 @@
         "tags": [
           "Namespaces"
         ],
-        "summary": "Get namespace by ID",
-        "description": "Get a namespace by ID",
+        "summary": "Retrieve namespace details",
+        "description": "Retrieves a specified namespace.",
         "operationId": "getApiV4NamespacesId",
         "parameters": [
           {
@@ -50694,8 +50742,8 @@
         "tags": [
           "Namespaces"
         ],
-        "summary": "List namespaces",
-        "description": "Get a list of the namespaces of the authenticated user. If the user is an administrator, a list of all namespaces in the GitLab instance is shown.",
+        "summary": "List all namespaces",
+        "description": "Lists all namespaces available to the current user. If the user is an administrator, this endpoint returns all namespaces in the instance.",
         "operationId": "getApiV4Namespaces",
         "parameters": [
           {
@@ -50785,8 +50833,8 @@
         "tags": [
           "Namespaces"
         ],
-        "summary": "Get existence of a namespace",
-        "description": "Get existence of a namespace by path. Suggests a new namespace path that does not already exist.",
+        "summary": "Verify namespace availability",
+        "description": "Verifies that a namespace is available for use.",
         "operationId": "getApiV4NamespacesIdExists",
         "parameters": [
           {
@@ -54287,8 +54335,8 @@
         "tags": [
           "Merge requests"
         ],
-        "summary": "Cancel Merge When Pipeline Succeeds",
-        "description": "Cancel merge if \"Merge When Pipeline Succeeds\" is enabled",
+        "summary": "Cancel merge when pipeline succeeds",
+        "description": "Cancels an automatic merge for a merge request that has been set to merge when the pipeline succeeds.",
         "operationId": "postApiV4ProjectsIdMergeRequestsMergeRequestIidCancelMergeWhenPipelineSucceeds",
         "parameters": [
           {
@@ -73625,7 +73673,8 @@
         "tags": [
           "Draft notes"
         ],
-        "summary": "Get a list of merge request draft notes",
+        "summary": "List all merge request draft notes",
+        "description": "Lists all merge request draft notes.",
         "operationId": "getApiV4ProjectsIdMergeRequestsMergeRequestIidDraftNotes",
         "parameters": [
           {
@@ -73664,7 +73713,8 @@
         "tags": [
           "Draft notes"
         ],
-        "summary": "Create a new draft note",
+        "summary": "Create a draft note",
+        "description": "Creates a draft note for a specified merge request.",
         "operationId": "postApiV4ProjectsIdMergeRequestsMergeRequestIidDraftNotes",
         "parameters": [
           {
@@ -73714,7 +73764,8 @@
         "tags": [
           "Draft notes"
         ],
-        "summary": "Get a single draft note",
+        "summary": "Retrieve a draft note",
+        "description": "Retrieves a draft note for a specified merge request.",
         "operationId": "getApiV4ProjectsIdMergeRequestsMergeRequestIidDraftNotesDraftNoteId",
         "parameters": [
           {
@@ -73762,7 +73813,8 @@
         "tags": [
           "Draft notes"
         ],
-        "summary": "Modify an existing draft note",
+        "summary": "Update a draft note",
+        "description": "Updates a draft note for a specified merge request.",
         "operationId": "putApiV4ProjectsIdMergeRequestsMergeRequestIidDraftNotesDraftNoteId",
         "parameters": [
           {
@@ -73820,6 +73872,7 @@
           "Draft notes"
         ],
         "summary": "Delete a draft note",
+        "description": "Deletes a draft note for a specified merge request.",
         "operationId": "deleteApiV4ProjectsIdMergeRequestsMergeRequestIidDraftNotesDraftNoteId",
         "parameters": [
           {
@@ -73869,7 +73922,8 @@
         "tags": [
           "Draft notes"
         ],
-        "summary": "Publish a pending draft note",
+        "summary": "Publish a draft note",
+        "description": "Publishes a draft note for a specified merge request.",
         "operationId": "putApiV4ProjectsIdMergeRequestsMergeRequestIidDraftNotesDraftNoteIdPublish",
         "parameters": [
           {
@@ -73921,7 +73975,8 @@
         "tags": [
           "Draft notes"
         ],
-        "summary": "Bulk publish all pending draft notes",
+        "summary": "Publish all pending draft notes",
+        "description": "Publishes all pending draft notes for a specified merge request that belong to the currently authenticated user.",
         "operationId": "postApiV4ProjectsIdMergeRequestsMergeRequestIidDraftNotesBulkPublish",
         "parameters": [
           {
@@ -82695,30 +82750,6 @@
         }
       }
     },
-    "/api/v4/chaos/test": {
-      "get": {
-        "tags": [
-          "Chaos"
-        ],
-        "summary": "Chaos test endpoint for feature flag observability",
-        "description": "Picks a project by random ID and checks the `ebonet_chaos_tests` feature flag.\nWhen enabled, introduces a 20% chance of a 500 error and a 20% chance of\na 300ms delay. Returns 200 OK otherwise.\n",
-        "operationId": "getApiV4ChaosTest",
-        "responses": {
-          "200": {
-            "description": "Default",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "title": "DefaultResponse",
-                  "type": "object",
-                  "description": "Default response schema"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/api/v4/projects/{id}/packages/cargo/config.json": {
       "get": {
         "tags": [
@@ -82743,6 +82774,67 @@
                   "type": "string"
                 }
               ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v4/projects/{id}/packages/cargo/{package_name}/{package_version}/download": {
+      "get": {
+        "tags": [
+          "Packages"
+        ],
+        "summary": "Download a Cargo crate",
+        "description": "This endpoint serves the .crate file for a given package name and version",
+        "operationId": "getApiV4ProjectsIdPackagesCargoPackageNamePackageVersionDownload",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the project",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "package_name",
+            "in": "path",
+            "description": "The cargo package name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "package_version",
+            "in": "path",
+            "description": "The cargo package version",
+            "required": true,
+            "schema": {
+              "type": "string"
             }
           }
         ],
@@ -83781,7 +83873,8 @@
         "tags": [
           "CI triggers"
         ],
-        "summary": "Update a trigger token",
+        "summary": "Update a pipeline trigger token",
+        "description": "Updates a pipeline trigger token for a project.",
         "operationId": "putApiV4ProjectsIdTriggersTriggerId",
         "parameters": [
           {
@@ -87713,7 +87806,8 @@
         "tags": [
           "CI jobs"
         ],
-        "summary": "Get a projects jobs",
+        "summary": "List all jobs for a project",
+        "description": "Lists all jobs for a specified project. By default, this request returns 20 results at a time because the API results are paginated.",
         "operationId": "getApiV4ProjectsIdJobs",
         "parameters": [
           {
@@ -87801,7 +87895,8 @@
         "tags": [
           "CI jobs"
         ],
-        "summary": "Get a specific job of a project",
+        "summary": "Retrieve a job",
+        "description": "Retrieves a job with the specified job ID.",
         "operationId": "getApiV4ProjectsIdJobsJobId",
         "parameters": [
           {
@@ -87842,7 +87937,8 @@
         "tags": [
           "CI jobs"
         ],
-        "summary": "Get a trace of a specific job of a project",
+        "summary": "Retrieve a log file for a job",
+        "description": "Retrieves a log file for a job.",
         "operationId": "getApiV4ProjectsIdJobsJobIdTrace",
         "parameters": [
           {
@@ -87906,7 +88002,8 @@
         "tags": [
           "CI jobs"
         ],
-        "summary": "Cancel a specific job of a project",
+        "summary": "Cancel a job",
+        "description": "Cancels a specified job in a project.",
         "operationId": "postApiV4ProjectsIdJobsJobIdCancel",
         "parameters": [
           {
@@ -87956,7 +88053,8 @@
         "tags": [
           "CI jobs"
         ],
-        "summary": "Retry a specific job of a project",
+        "summary": "Retry a job",
+        "description": "Retries a specified job in a project.",
         "operationId": "postApiV4ProjectsIdJobsJobIdRetry",
         "parameters": [
           {
@@ -88006,7 +88104,8 @@
         "tags": [
           "CI jobs"
         ],
-        "summary": "Erase job (remove artifacts and the trace)",
+        "summary": "Erase a job",
+        "description": "Erases a specified job in a project. This removes job artifacts and the job log.",
         "operationId": "postApiV4ProjectsIdJobsJobIdErase",
         "parameters": [
           {
@@ -88047,8 +88146,8 @@
         "tags": [
           "CI jobs"
         ],
-        "summary": "Trigger an actionable job (manual, delayed, etc)",
-        "description": "This feature was added in GitLab 8.11",
+        "summary": "Run a job",
+        "description": "Runs a specified job. For a job in manual status, triggers an action to start the job.",
         "operationId": "postApiV4ProjectsIdJobsJobIdPlay",
         "parameters": [
           {
@@ -88098,7 +88197,8 @@
         "tags": [
           "CI jobs"
         ],
-        "summary": "Get current job using job token",
+        "summary": "Retrieve a job by job token",
+        "description": "Retrieves a job that was generated by a specified job token.",
         "operationId": "getApiV4Job",
         "responses": {
           "200": {
@@ -88119,8 +88219,8 @@
         "tags": [
           "Agents"
         ],
-        "summary": "Get current agents",
-        "description": "Retrieves a list of agents for the given job token",
+        "summary": "List all GitLab agents for Kubernetes by job token",
+        "description": "Lists all GitLab agents for Kubernetes with a specified `CI_JOB_TOKEN`.",
         "operationId": "getApiV4JobAllowedAgents",
         "responses": {
           "200": {
@@ -88299,7 +88399,8 @@
         "tags": [
           "Groups"
         ],
-        "summary": "Get a groups list",
+        "summary": "List all groups",
+        "description": "Lists all visible groups for the authenticated user. Unauthenticated requests return only public groups.",
         "operationId": "getApiV4Groups",
         "parameters": [
           {
@@ -88520,7 +88621,8 @@
         "tags": [
           "Groups"
         ],
-        "summary": "Create a group. Available only for users who can create groups.",
+        "summary": "Create a group",
+        "description": "Creates a project group. Available only for users who can create groups.",
         "operationId": "postApiV4Groups",
         "requestBody": {
           "content": {
@@ -88682,6 +88784,7 @@
           "Groups"
         ],
         "summary": "Archive a group",
+        "description": "Archives a specified group. You must be an administrator or have the Owner role for the group.",
         "operationId": "postApiV4GroupsIdArchive",
         "parameters": [
           {
@@ -90729,8 +90832,8 @@
         "tags": [
           "Job artifacts"
         ],
-        "summary": "Download the artifacts archive from a job",
-        "description": "This feature was introduced in GitLab 8.10",
+        "summary": "Retrieve job artifacts",
+        "description": "Retrieves the artifacts archive for the latest successful job on a specified branch or tag.",
         "operationId": "getApiV4ProjectsIdJobsArtifactsRefNameDownload",
         "parameters": [
           {
@@ -90868,8 +90971,8 @@
         "tags": [
           "Job artifacts"
         ],
-        "summary": "Delete the artifacts files from a job",
-        "description": "This feature was introduced in GitLab 11.9",
+        "summary": "Delete job artifacts",
+        "description": "Deletes job artifacts from a specified job in a project.",
         "operationId": "deleteApiV4ProjectsIdJobsJobIdArtifacts",
         "parameters": [
           {
@@ -90920,8 +91023,8 @@
         "tags": [
           "Job artifacts"
         ],
-        "summary": "List all files in the artifacts archive",
-        "description": "Lists all files and directories in the artifacts archive without extracting them",
+        "summary": "List all files in an artifacts archive",
+        "description": "Lists all files in a specified artifacts archive without extracting them.",
         "operationId": "getApiV4ProjectsIdJobsJobIdArtifactsTree",
         "parameters": [
           {
@@ -91023,7 +91126,8 @@
         "tags": [
           "Job artifacts"
         ],
-        "summary": "Keep the artifacts to prevent them from being deleted",
+        "summary": "Retain job artifacts",
+        "description": "Retains job artifacts. Prevents artifacts for a job from being automatically deleted when they reach their expiration date.",
         "operationId": "postApiV4ProjectsIdJobsJobIdArtifactsKeep",
         "parameters": [
           {
@@ -91072,7 +91176,8 @@
         "tags": [
           "Job artifacts"
         ],
-        "summary": "Expire the artifacts files from a project",
+        "summary": "Delete all job artifacts in a project",
+        "description": "Deletes job artifacts from all jobs in a specified project.",
         "operationId": "deleteApiV4ProjectsIdArtifacts",
         "parameters": [
           {
@@ -100649,6 +100754,39 @@
           "issuable_metric_image_uploads_oldest_unsynced_time": {
             "type": "string"
           },
+          "vulnerability_export_part_uploads_count": {
+            "type": "string"
+          },
+          "vulnerability_export_part_uploads_checksum_total_count": {
+            "type": "string"
+          },
+          "vulnerability_export_part_uploads_checksummed_count": {
+            "type": "string"
+          },
+          "vulnerability_export_part_uploads_checksum_failed_count": {
+            "type": "string"
+          },
+          "vulnerability_export_part_uploads_synced_count": {
+            "type": "string"
+          },
+          "vulnerability_export_part_uploads_failed_count": {
+            "type": "string"
+          },
+          "vulnerability_export_part_uploads_registry_count": {
+            "type": "string"
+          },
+          "vulnerability_export_part_uploads_verification_total_count": {
+            "type": "string"
+          },
+          "vulnerability_export_part_uploads_verified_count": {
+            "type": "string"
+          },
+          "vulnerability_export_part_uploads_verification_failed_count": {
+            "type": "string"
+          },
+          "vulnerability_export_part_uploads_oldest_unsynced_time": {
+            "type": "string"
+          },
           "vulnerability_archive_export_uploads_count": {
             "type": "string"
           },
@@ -101253,6 +101391,12 @@
             "type": "string"
           },
           "issuable_metric_image_uploads_verified_in_percentage": {
+            "type": "string"
+          },
+          "vulnerability_export_part_uploads_synced_in_percentage": {
+            "type": "string"
+          },
+          "vulnerability_export_part_uploads_verified_in_percentage": {
             "type": "string"
           },
           "vulnerability_archive_export_uploads_synced_in_percentage": {
@@ -102198,6 +102342,39 @@
           "issuable_metric_image_uploads_oldest_unsynced_time": {
             "type": "string"
           },
+          "vulnerability_export_part_uploads_count": {
+            "type": "string"
+          },
+          "vulnerability_export_part_uploads_checksum_total_count": {
+            "type": "string"
+          },
+          "vulnerability_export_part_uploads_checksummed_count": {
+            "type": "string"
+          },
+          "vulnerability_export_part_uploads_checksum_failed_count": {
+            "type": "string"
+          },
+          "vulnerability_export_part_uploads_synced_count": {
+            "type": "string"
+          },
+          "vulnerability_export_part_uploads_failed_count": {
+            "type": "string"
+          },
+          "vulnerability_export_part_uploads_registry_count": {
+            "type": "string"
+          },
+          "vulnerability_export_part_uploads_verification_total_count": {
+            "type": "string"
+          },
+          "vulnerability_export_part_uploads_verified_count": {
+            "type": "string"
+          },
+          "vulnerability_export_part_uploads_verification_failed_count": {
+            "type": "string"
+          },
+          "vulnerability_export_part_uploads_oldest_unsynced_time": {
+            "type": "string"
+          },
           "vulnerability_archive_export_uploads_count": {
             "type": "string"
           },
@@ -102802,6 +102979,12 @@
             "type": "string"
           },
           "issuable_metric_image_uploads_verified_in_percentage": {
+            "type": "string"
+          },
+          "vulnerability_export_part_uploads_synced_in_percentage": {
+            "type": "string"
+          },
+          "vulnerability_export_part_uploads_verified_in_percentage": {
             "type": "string"
           },
           "vulnerability_archive_export_uploads_synced_in_percentage": {
@@ -146289,10 +146472,6 @@
     {
       "name": "CI variables",
       "description": "Operations related to CI variables."
-    },
-    {
-      "name": "Chaos",
-      "description": "Operations related to chaos."
     },
     {
       "name": "Cluster agents",

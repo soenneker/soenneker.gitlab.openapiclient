@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Starred_projects
         {
         }
         /// <summary>
-        /// Get projects starred by a user
+        /// Lists all visible projects starred by a specified user. Unauthenticated requests return only public projects.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBasicProjectDetails"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Starred_projects
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBasicProjectDetails>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBasicProjectDetails.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get projects starred by a user
+        /// Lists all visible projects starred by a specified user. Unauthenticated requests return only public projects.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Starred_projects
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Starred_projects.Starred_projectsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get projects starred by a user
+        /// Lists all visible projects starred by a specified user. Unauthenticated requests return only public projects.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Starred_projectsRequestBuilderGetQueryParameters 

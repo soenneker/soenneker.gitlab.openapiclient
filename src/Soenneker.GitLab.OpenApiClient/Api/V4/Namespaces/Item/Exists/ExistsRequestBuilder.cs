@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.Item.Exists
         {
         }
         /// <summary>
-        /// Get existence of a namespace by path. Suggests a new namespace path that does not already exist.
+        /// Verifies that a namespace is available for use.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesNamespaceExistence"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.Item.Exists
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesNamespaceExistence>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesNamespaceExistence.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get existence of a namespace by path. Suggests a new namespace path that does not already exist.
+        /// Verifies that a namespace is available for use.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.Item.Exists
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.Item.Exists.ExistsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get existence of a namespace by path. Suggests a new namespace path that does not already exist.
+        /// Verifies that a namespace is available for use.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ExistsRequestBuilderGetQueryParameters 

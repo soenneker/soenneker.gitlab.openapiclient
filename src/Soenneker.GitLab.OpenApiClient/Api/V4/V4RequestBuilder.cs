@@ -12,7 +12,6 @@ using Soenneker.GitLab.OpenApiClient.Api.V4.Audit_events;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Avatar;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Broadcast_messages;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Bulk_imports;
-using Soenneker.GitLab.OpenApiClient.Api.V4.Chaos;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Chat;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Code_suggestions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Container_registry_event;
@@ -148,11 +147,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Bulk_imports.Bulk_importsRequestBuilder Bulk_imports
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Bulk_imports.Bulk_importsRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The chaos property</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Chaos.ChaosRequestBuilder Chaos
-        {
-            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Chaos.ChaosRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The chat property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Chat.ChatRequestBuilder Chat

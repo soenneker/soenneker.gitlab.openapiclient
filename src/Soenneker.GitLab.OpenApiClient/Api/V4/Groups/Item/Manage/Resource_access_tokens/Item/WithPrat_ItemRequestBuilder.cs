@@ -39,7 +39,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Resource_acce
         {
         }
         /// <summary>
-        /// Revoke a resource access token by using the ID of the resource access token.
+        /// Revokes a specified group or project access token associated with a top-level group.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -56,7 +56,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Resource_acce
             await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Revoke a resource access token by using the ID of the resource access token.
+        /// Revokes a specified group or project access token associated with a top-level group.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -84,7 +84,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Resource_acce
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Resource_access_tokens.Item.WithPrat_ItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Revoke a resource access token by using the ID of the resource access token.
+        /// Revokes a specified group or project access token associated with a top-level group.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithPrat_ItemRequestBuilderDeleteQueryParameters 

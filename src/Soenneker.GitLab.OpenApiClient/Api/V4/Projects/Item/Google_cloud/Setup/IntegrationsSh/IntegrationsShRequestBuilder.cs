@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup
         {
         }
         /// <summary>
-        /// Returns a shell script for configuring Google Cloud integrations with the project.
+        /// Retrieves the setup script for Google Cloud integration.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup.IntegrationsSh.ShGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup.IntegrationsSh.ShGetResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup.IntegrationsSh.ShGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Returns a shell script for configuring Google Cloud integrations with the project.
+        /// Retrieves the setup script for Google Cloud integration.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -79,7 +79,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup.IntegrationsSh.IntegrationsShRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Returns a shell script for configuring Google Cloud integrations with the project.
+        /// Retrieves the setup script for Google Cloud integration.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class IntegrationsShRequestBuilderGetQueryParameters 
