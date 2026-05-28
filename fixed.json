@@ -4521,7 +4521,8 @@
         "tags": [
           "Merge request approvals"
         ],
-        "summary": "Get all merge request approval rules",
+        "summary": "List all approval rules for a merge request",
+        "description": "Lists all approval rules and any associated details for a specified merge request. Use the `page` and `per_page` pagination parameters to restrict the list of approval rules.",
         "operationId": "getApiV4ProjectsIdMergeRequestsMergeRequestIidApprovalRules",
         "parameters": [
           {
@@ -4590,7 +4591,8 @@
         "tags": [
           "Merge request approvals"
         ],
-        "summary": "Create new merge request approval rules",
+        "summary": "Create an approval rule for a merge request",
+        "description": "Creates an approval rule for a specified merge request. If `approval_project_rule_id` is set with the ID of an existing approval rule from the project, this endpoint copies the values for `name`, `users`, and `groups` from the project rule.",
         "operationId": "postApiV4ProjectsIdMergeRequestsMergeRequestIidApprovalRules",
         "parameters": [
           {
@@ -4648,7 +4650,8 @@
         "tags": [
           "Merge request approvals"
         ],
-        "summary": "Get merge request approval rule",
+        "summary": "Retrieve an approval rule for a specific merge request",
+        "description": "Retrieves information about an approval rule for a specified merge request.",
         "operationId": "getApiV4ProjectsIdMergeRequestsMergeRequestIidApprovalRulesApprovalRuleId",
         "parameters": [
           {
@@ -4704,7 +4707,8 @@
         "tags": [
           "Merge request approvals"
         ],
-        "summary": "Update merge request approval rule",
+        "summary": "Update an approval rule for a merge request",
+        "description": "Updates a specified approval rule for a merge request. This endpoint removes any approvers and groups not included in the `group_ids`, `user_ids`, or `usernames` attributes. The `report_approver` or `code_owner` rules are system-generated, and you cannot edit them.",
         "operationId": "putApiV4ProjectsIdMergeRequestsMergeRequestIidApprovalRulesApprovalRuleId",
         "parameters": [
           {
@@ -4769,7 +4773,8 @@
         "tags": [
           "Merge request approvals"
         ],
-        "summary": "Destroy merge request approval rule",
+        "summary": "Delete an approval rule for a merge request",
+        "description": "Deletes a specified approval rule for a merge request. The `report_approver` or `code_owner` rules are system-generated, and you cannot edit them.",
         "operationId": "deleteApiV4ProjectsIdMergeRequestsMergeRequestIidApprovalRulesApprovalRuleId",
         "parameters": [
           {
@@ -6713,7 +6718,7 @@
               "format": "date-time",
               "nullable": true
             },
-            "example": "2022-01-01"
+            "example": "2022-01-01T00:00:00Z"
           },
           {
             "name": "created_after",
@@ -6724,7 +6729,7 @@
               "format": "date-time",
               "nullable": true
             },
-            "example": "2021-01-01"
+            "example": "2021-01-01T00:00:00Z"
           },
           {
             "name": "expires_before",
@@ -6735,7 +6740,7 @@
               "format": "date-time",
               "nullable": true
             },
-            "example": "2022-01-01"
+            "example": "2022-01-01T00:00:00Z"
           },
           {
             "name": "expires_after",
@@ -6746,7 +6751,7 @@
               "format": "date-time",
               "nullable": true
             },
-            "example": "2021-01-01"
+            "example": "2021-01-01T00:00:00Z"
           },
           {
             "name": "page",
@@ -6840,7 +6845,8 @@
         "tags": [
           "Merge requests"
         ],
-        "summary": "Get all merge request dependencies",
+        "summary": "List all dependencies for a merge request",
+        "description": "List all merge request dependencies for a specified merge request.",
         "operationId": "getApiV4ProjectsIdMergeRequestsMergeRequestIidBlocks",
         "parameters": [
           {
@@ -6910,6 +6916,7 @@
           "Merge requests"
         ],
         "summary": "Create a merge request dependency",
+        "description": "Creates a merge request dependency between two merge requests. The merge request is blocked until the dependency merges.",
         "operationId": "postApiV4ProjectsIdMergeRequestsMergeRequestIidBlocks",
         "parameters": [
           {
@@ -7028,7 +7035,8 @@
         "tags": [
           "Merge requests"
         ],
-        "summary": "Delete a merge request dependency",
+        "summary": "Remove a merge request dependency",
+        "description": "Removes a merge request dependency.",
         "operationId": "deleteApiV4ProjectsIdMergeRequestsMergeRequestIidBlocksBlockId",
         "parameters": [
           {
@@ -7088,7 +7096,8 @@
         "tags": [
           "Merge requests"
         ],
-        "summary": "Get all merge requests are blockees for this merge request",
+        "summary": "Retrieve blocked merge requests",
+        "description": "Retrieves merge requests blocked by a specified merge request.",
         "operationId": "getApiV4ProjectsIdMergeRequestsMergeRequestIidBlockees",
         "parameters": [
           {
@@ -21271,8 +21280,8 @@
         "tags": [
           "Storage moves"
         ],
-        "summary": "Get a list of all snippet repository storage moves",
-        "description": "This feature was introduced in GitLab 13.8.",
+        "summary": "List all snippet repository storage moves",
+        "description": "Lists all snippet repository storage moves. By default, `GET` requests return 20 results at a time because the API results are paginated.",
         "operationId": "getApiV4SnippetRepositoryStorageMoves",
         "parameters": [
           {
@@ -21315,8 +21324,8 @@
         "tags": [
           "Storage moves"
         ],
-        "summary": "Schedule bulk snippet repository storage moves",
-        "description": "This feature was introduced in GitLab 13.8.",
+        "summary": "Schedule repository storage moves for all snippets on a storage shard",
+        "description": "Schedules repository storage moves for each snippet repository stored on the source storage shard. This endpoint migrates all snippets at once.",
         "operationId": "postApiV4SnippetRepositoryStorageMoves",
         "requestBody": {
           "content": {
@@ -21348,8 +21357,8 @@
         "tags": [
           "Storage moves"
         ],
-        "summary": "Get a snippet repository storage move",
-        "description": "This feature was introduced in GitLab 13.8.",
+        "summary": "Retrieve a snippet repository storage move",
+        "description": "Retrieves a specified snippet repository storage move.",
         "operationId": "getApiV4SnippetRepositoryStorageMovesRepositoryStorageMoveId",
         "parameters": [
           {
@@ -21381,8 +21390,8 @@
         "tags": [
           "Storage moves"
         ],
-        "summary": "Get a list of all snippets repository storage moves",
-        "description": "This feature was introduced in GitLab 13.8.",
+        "summary": "List all repository storage moves for a snippet",
+        "description": "Lists all repository storage moves for a specified snippet. By default, `GET` requests return 20 results at a time because the API results are paginated.",
         "operationId": "getApiV4SnippetsIdRepositoryStorageMoves",
         "parameters": [
           {
@@ -21434,8 +21443,8 @@
         "tags": [
           "Storage moves"
         ],
-        "summary": "Schedule a snippet repository storage move",
-        "description": "This feature was introduced in GitLab 13.8.",
+        "summary": "Schedule a repository storage move for a snippet",
+        "description": "Schedules a repository storage move for a specified snippet.",
         "operationId": "postApiV4SnippetsIdRepositoryStorageMoves",
         "parameters": [
           {
@@ -21476,8 +21485,8 @@
         "tags": [
           "Storage moves"
         ],
-        "summary": "Get a snippet repository storage move",
-        "description": "This feature was introduced in GitLab 13.8.",
+        "summary": "Retrieve a repository storage move for a snippet",
+        "description": "Retrieves a repository storage move for a specified snippet.",
         "operationId": "getApiV4SnippetsIdRepositoryStorageMovesRepositoryStorageMoveId",
         "parameters": [
           {
@@ -71470,7 +71479,8 @@
         "tags": [
           "Files"
         ],
-        "summary": "Get blame file metadata from repository",
+        "summary": "Retrieve file blame metadata",
+        "description": "Retrieves blame metadata for lines in a specified file.",
         "operationId": "headApiV4ProjectsIdRepositoryFilesFilePathBlame",
         "parameters": [
           {
@@ -71522,7 +71532,8 @@
         "tags": [
           "Files"
         ],
-        "summary": "Get blame file from the repository",
+        "summary": "Retrieve file blame history from a repository",
+        "description": "Retrieves blame history for a specified file in a repository. Each blame range contains lines and their corresponding commit information.",
         "operationId": "getApiV4ProjectsIdRepositoryFilesFilePathBlame",
         "parameters": [
           {
@@ -71605,7 +71616,8 @@
         "tags": [
           "Files"
         ],
-        "summary": "Get raw file contents from the repository",
+        "summary": "Retrieve a raw file from a repository",
+        "description": "Retrieves the raw file contents for a specified file in a repository.",
         "operationId": "getApiV4ProjectsIdRepositoryFilesFilePathRaw",
         "parameters": [
           {
@@ -71669,7 +71681,8 @@
         "tags": [
           "Files"
         ],
-        "summary": "Get file metadata from repository",
+        "summary": "Retrieve file metadata",
+        "description": "Retrieves metadata for a specified file in a repository.",
         "operationId": "headApiV4ProjectsIdRepositoryFilesFilePath",
         "parameters": [
           {
@@ -71721,7 +71734,8 @@
         "tags": [
           "Files"
         ],
-        "summary": "Get a file from the repository",
+        "summary": "Retrieve a file from a repository",
+        "description": "Retrieves information about a specified file in a repository. This includes information like the name, size, and the file contents. File content is Base64 encoded.",
         "operationId": "getApiV4ProjectsIdRepositoryFilesFilePath",
         "parameters": [
           {
@@ -71775,7 +71789,8 @@
         "tags": [
           "Files"
         ],
-        "summary": "Create new file in repository",
+        "summary": "Create a file in a repository",
+        "description": "Creates a file in a specified repository. Use the Commits API to create multiple files with a single request.",
         "operationId": "postApiV4ProjectsIdRepositoryFilesFilePath",
         "parameters": [
           {
@@ -71827,7 +71842,8 @@
         "tags": [
           "Files"
         ],
-        "summary": "Update existing file in repository",
+        "summary": "Update a file in a repository",
+        "description": "Updates a specified file in a repository. Use the Commits API to update multiple files with a single request.",
         "operationId": "putApiV4ProjectsIdRepositoryFilesFilePath",
         "parameters": [
           {
@@ -71879,7 +71895,8 @@
         "tags": [
           "Files"
         ],
-        "summary": "Delete an existing file in repository",
+        "summary": "Delete a file in a repository",
+        "description": "Deletes a specified file in a repository. Use the Commits API to delete multiple files with a single request.",
         "operationId": "deleteApiV4ProjectsIdRepositoryFilesFilePath",
         "parameters": [
           {

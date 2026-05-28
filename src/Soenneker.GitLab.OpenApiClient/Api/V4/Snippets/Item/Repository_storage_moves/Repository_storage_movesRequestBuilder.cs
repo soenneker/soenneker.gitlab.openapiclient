@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Snippets.Item.Repository_storage
         {
         }
         /// <summary>
-        /// This feature was introduced in GitLab 13.8.
+        /// Lists all repository storage moves for a specified snippet. By default, `GET` requests return 20 results at a time because the API results are paginated.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesSnippetsRepositoryStorageMove"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Snippets.Item.Repository_storage
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesSnippetsRepositoryStorageMove>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesSnippetsRepositoryStorageMove.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 13.8.
+        /// Schedules a repository storage move for a specified snippet.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesSnippetsRepositoryStorageMove"/></returns>
         /// <param name="body">The request body</param>
@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Snippets.Item.Repository_storage
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesSnippetsRepositoryStorageMove>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesSnippetsRepositoryStorageMove.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 13.8.
+        /// Lists all repository storage moves for a specified snippet. By default, `GET` requests return 20 results at a time because the API results are paginated.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -104,7 +104,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Snippets.Item.Repository_storage
             return requestInfo;
         }
         /// <summary>
-        /// This feature was introduced in GitLab 13.8.
+        /// Schedules a repository storage move for a specified snippet.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -135,7 +135,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Snippets.Item.Repository_storage
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Snippets.Item.Repository_storage_moves.Repository_storage_movesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 13.8.
+        /// Lists all repository storage moves for a specified snippet. By default, `GET` requests return 20 results at a time because the API results are paginated.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Repository_storage_movesRequestBuilderGetQueryParameters 

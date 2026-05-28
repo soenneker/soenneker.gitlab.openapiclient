@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
         {
         }
         /// <summary>
-        /// Get all merge request approval rules
+        /// Lists all approval rules and any associated details for a specified merge request. Use the `page` and `per_page` pagination parameters to restrict the list of approval rules.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMergeRequestApprovalRule"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMergeRequestApprovalRule>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMergeRequestApprovalRule.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Create new merge request approval rules
+        /// Creates an approval rule for a specified merge request. If `approval_project_rule_id` is set with the ID of an existing approval rule from the project, this endpoint copies the values for `name`, `users`, and `groups` from the project rule.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMergeRequestApprovalRule"/></returns>
         /// <param name="body">The request body</param>
@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMergeRequestApprovalRule>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMergeRequestApprovalRule.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get all merge request approval rules
+        /// Lists all approval rules and any associated details for a specified merge request. Use the `page` and `per_page` pagination parameters to restrict the list of approval rules.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -104,7 +104,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
             return requestInfo;
         }
         /// <summary>
-        /// Create new merge request approval rules
+        /// Creates an approval rule for a specified merge request. If `approval_project_rule_id` is set with the ID of an existing approval rule from the project, this endpoint copies the values for `name`, `users`, and `groups` from the project rule.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -135,7 +135,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Approval_rules.Approval_rulesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get all merge request approval rules
+        /// Lists all approval rules and any associated details for a specified merge request. Use the `page` and `per_page` pagination parameters to restrict the list of approval rules.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Approval_rulesRequestBuilderGetQueryParameters 
