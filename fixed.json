@@ -249,7 +249,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -310,7 +310,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -547,7 +547,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -1460,7 +1460,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -1588,7 +1588,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -1636,7 +1636,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -1693,7 +1693,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -1754,7 +1754,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -1806,7 +1806,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -1858,7 +1858,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -1910,7 +1910,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -1959,7 +1959,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -2522,7 +2522,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -2856,7 +2856,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -2895,7 +2895,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -2945,7 +2945,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -3002,7 +3002,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -3061,7 +3061,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -3075,7 +3075,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -3141,7 +3141,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -3164,7 +3164,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -3208,7 +3208,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -3222,7 +3222,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -3288,7 +3288,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -3311,7 +3311,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -3355,7 +3355,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -3416,7 +3416,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -3466,7 +3466,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -3514,7 +3514,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -3571,7 +3571,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -3623,7 +3623,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -3684,7 +3684,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -3734,7 +3734,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -3782,7 +3782,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -3839,7 +3839,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -3890,7 +3890,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -4322,7 +4322,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -4537,7 +4537,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -4607,7 +4607,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -4666,7 +4666,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -4723,7 +4723,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -4789,7 +4789,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -4850,7 +4850,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -5038,7 +5038,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -5264,7 +5264,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -5613,7 +5613,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -5674,7 +5674,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -5724,7 +5724,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -5786,7 +5786,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -5840,7 +5840,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -5879,7 +5879,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -5928,7 +5928,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -5988,7 +5988,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -6037,7 +6037,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -6083,7 +6083,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -6138,7 +6138,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -6861,7 +6861,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -6931,7 +6931,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -6992,7 +6992,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -7051,7 +7051,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -7112,7 +7112,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -7184,7 +7184,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -7223,7 +7223,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -7346,7 +7346,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -7407,7 +7407,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -7457,7 +7457,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -7505,7 +7505,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -7562,7 +7562,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -8365,7 +8365,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -8404,7 +8404,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -8454,7 +8454,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -8592,7 +8592,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -8686,7 +8686,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -8790,7 +8790,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -8838,7 +8838,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -9150,7 +9150,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -9189,7 +9189,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -9236,7 +9236,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -9284,7 +9284,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -9327,7 +9327,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -9377,7 +9377,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -9425,7 +9425,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -9662,7 +9662,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -9701,7 +9701,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -9749,7 +9749,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -9820,7 +9820,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -9872,7 +9872,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -11861,7 +11861,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -11879,7 +11879,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -11897,7 +11897,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -11946,7 +11946,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -11964,7 +11964,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -11982,7 +11982,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -12022,7 +12022,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -12040,7 +12040,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -12058,7 +12058,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -12100,7 +12100,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -12118,7 +12118,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -12185,7 +12185,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -12365,7 +12365,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -12415,7 +12415,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -12465,7 +12465,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -12522,7 +12522,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -13049,7 +13049,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -13101,7 +13101,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -13142,7 +13142,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -13194,7 +13194,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -13255,7 +13255,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -13305,7 +13305,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -13352,7 +13352,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -13409,7 +13409,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -13461,7 +13461,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -13509,7 +13509,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -13568,7 +13568,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -13625,7 +13625,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -14404,7 +14404,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -14731,7 +14731,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -14770,7 +14770,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -14834,7 +14834,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -14909,7 +14909,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -15183,7 +15183,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -22181,7 +22181,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -22262,7 +22262,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -22312,7 +22312,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -22393,7 +22393,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -22443,7 +22443,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -22524,7 +22524,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -22568,7 +22568,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -22616,7 +22616,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -22709,7 +22709,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -22768,7 +22768,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -22828,7 +22828,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -23009,7 +23009,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -23068,7 +23068,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -23128,7 +23128,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -23304,7 +23304,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -23365,7 +23365,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -23415,7 +23415,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -23464,7 +23464,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -23609,7 +23609,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -23658,7 +23658,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -23705,7 +23705,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -23761,7 +23761,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -23811,7 +23811,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -23883,7 +23883,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -23955,7 +23955,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -24006,7 +24006,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -26493,7 +26493,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -26541,7 +26541,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -26634,7 +26634,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -26693,7 +26693,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -26753,7 +26753,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -26934,7 +26934,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -26993,7 +26993,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -27053,7 +27053,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -27604,7 +27604,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -27701,7 +27701,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -27749,7 +27749,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -27797,7 +27797,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -27856,7 +27856,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -27913,7 +27913,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -27970,7 +27970,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -28020,7 +28020,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -28070,7 +28070,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -31203,7 +31203,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -31264,7 +31264,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -31314,7 +31314,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -31361,7 +31361,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -31417,7 +31417,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -31466,7 +31466,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -31536,7 +31536,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -31595,7 +31595,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -31652,7 +31652,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -31718,7 +31718,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -33279,7 +33279,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -33338,7 +33338,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -33397,7 +33397,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -33438,7 +33438,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -33498,7 +33498,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -33557,7 +33557,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -33609,7 +33609,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -33661,7 +33661,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -33720,7 +33720,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -33782,7 +33782,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -34012,7 +34012,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -34121,7 +34121,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -34170,7 +34170,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -34217,7 +34217,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -34268,7 +34268,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -34720,7 +34720,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -34770,7 +34770,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -34787,7 +34787,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -35604,7 +35604,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -35792,7 +35792,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -35966,7 +35966,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -36018,7 +36018,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -36070,7 +36070,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -36122,7 +36122,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -36165,7 +36165,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -36217,7 +36217,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -36276,7 +36276,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -36319,7 +36319,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -36362,7 +36362,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -36376,7 +36376,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -36442,7 +36442,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -36465,7 +36465,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -36509,7 +36509,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -36523,7 +36523,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -36589,7 +36589,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -36612,7 +36612,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -36740,7 +36740,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -36933,7 +36933,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -37076,7 +37076,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -37269,7 +37269,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -37411,7 +37411,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -37529,7 +37529,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -37582,7 +37582,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -37635,7 +37635,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -37731,7 +37731,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -37822,7 +37822,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -37872,7 +37872,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -37976,7 +37976,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -38033,7 +38033,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -38147,7 +38147,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -38199,7 +38199,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -38259,7 +38259,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -38308,7 +38308,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -38355,7 +38355,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -38412,7 +38412,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -38463,7 +38463,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -38514,7 +38514,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -38566,7 +38566,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -38636,7 +38636,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -38695,7 +38695,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -38752,7 +38752,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -38818,7 +38818,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -38877,7 +38877,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -38964,7 +38964,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -39084,7 +39084,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -39134,7 +39134,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -39191,7 +39191,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -39248,7 +39248,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -39336,7 +39336,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -39382,7 +39382,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -39425,7 +39425,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -39477,7 +39477,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -39520,7 +39520,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -39581,7 +39581,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -39631,7 +39631,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -39680,7 +39680,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -39732,7 +39732,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -39803,7 +39803,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -39853,7 +39853,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -39902,7 +39902,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -39960,7 +39960,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -41585,7 +41585,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -41660,7 +41660,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -41707,7 +41707,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -41749,7 +41749,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -41797,7 +41797,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -41840,7 +41840,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -42236,7 +42236,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -42278,7 +42278,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -42319,7 +42319,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -42360,7 +42360,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -42401,7 +42401,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -42442,7 +42442,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -42514,7 +42514,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -42557,7 +42557,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -42608,7 +42608,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -42658,7 +42658,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -42710,7 +42710,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -42762,7 +42762,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -42847,7 +42847,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -42968,7 +42968,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -43089,7 +43089,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -43141,7 +43141,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -43184,7 +43184,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -43234,7 +43234,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -43455,7 +43455,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -43537,7 +43537,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -43636,7 +43636,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -43676,7 +43676,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -43736,7 +43736,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -43785,7 +43785,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -43832,7 +43832,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -43888,7 +43888,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -43939,7 +43939,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -43988,7 +43988,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -44054,7 +44054,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -44146,7 +44146,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -44184,7 +44184,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -44233,7 +44233,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -44289,7 +44289,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -44341,7 +44341,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -44508,7 +44508,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -44556,7 +44556,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -44608,7 +44608,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -45101,7 +45101,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -45142,7 +45142,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -45278,7 +45278,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -45572,7 +45572,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -45633,7 +45633,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -45683,7 +45683,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -45731,7 +45731,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -45788,7 +45788,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -46041,7 +46041,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -46080,7 +46080,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -46132,7 +46132,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -46175,7 +46175,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -46227,7 +46227,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -46298,7 +46298,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -46347,7 +46347,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -46475,7 +46475,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -46523,7 +46523,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -46693,7 +46693,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -46743,7 +46743,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -46802,7 +46802,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -46952,7 +46952,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -47004,7 +47004,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -47043,7 +47043,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -47093,7 +47093,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -47150,7 +47150,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -47202,7 +47202,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -47241,7 +47241,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -47291,7 +47291,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -47348,7 +47348,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -47400,7 +47400,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -47481,7 +47481,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -47533,7 +47533,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -47603,7 +47603,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -47700,7 +47700,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -47757,7 +47757,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -47818,7 +47818,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -47881,7 +47881,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -47929,7 +47929,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -47986,7 +47986,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -48036,7 +48036,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -48086,7 +48086,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -48593,7 +48593,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -48653,7 +48653,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -48702,7 +48702,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -48749,7 +48749,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -48807,7 +48807,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -48858,7 +48858,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -48908,7 +48908,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -48949,7 +48949,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -48999,7 +48999,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -49042,7 +49042,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -49145,7 +49145,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -49206,7 +49206,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -49474,7 +49474,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -49515,7 +49515,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -49556,7 +49556,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -49608,7 +49608,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -49651,7 +49651,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -49734,7 +49734,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -49786,7 +49786,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -49829,7 +49829,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -49881,7 +49881,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -49924,7 +49924,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -49967,7 +49967,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -50022,7 +50022,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -50074,7 +50074,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -50115,7 +50115,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -50158,7 +50158,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -50201,7 +50201,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -50287,7 +50287,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -50330,7 +50330,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -50373,7 +50373,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -50482,7 +50482,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -50525,7 +50525,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -50607,7 +50607,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -50944,7 +50944,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -51016,7 +51016,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -51251,7 +51251,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -52513,7 +52513,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -52572,7 +52572,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -52622,7 +52622,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -52681,7 +52681,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -52731,7 +52731,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -52781,7 +52781,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -53384,7 +53384,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -53434,7 +53434,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -53484,7 +53484,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -53559,7 +53559,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -53617,7 +53617,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -53666,7 +53666,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -53715,7 +53715,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -53787,7 +53787,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -53834,7 +53834,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -53890,7 +53890,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -53955,7 +53955,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -54013,7 +54013,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -54094,7 +54094,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -54145,7 +54145,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -54193,7 +54193,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -54251,7 +54251,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -54309,7 +54309,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -54360,7 +54360,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -54409,7 +54409,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -54469,7 +54469,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -54540,7 +54540,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -56771,7 +56771,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -58900,7 +58900,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -58959,7 +58959,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -59009,7 +59009,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -59068,7 +59068,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -59118,7 +59118,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -59167,7 +59167,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -59752,7 +59752,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -59801,7 +59801,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -60248,7 +60248,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -60295,7 +60295,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -60351,7 +60351,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -60402,7 +60402,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -60460,7 +60460,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -60518,7 +60518,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -60576,7 +60576,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -60625,7 +60625,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -60674,7 +60674,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -60723,7 +60723,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -60772,7 +60772,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -60822,7 +60822,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -60877,7 +60877,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -60925,7 +60925,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -60989,7 +60989,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -61047,7 +61047,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -61095,7 +61095,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -61154,7 +61154,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -61180,7 +61180,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -61219,7 +61219,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -61245,7 +61245,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -64104,7 +64104,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -66471,7 +66471,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -69025,7 +69025,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -69079,7 +69079,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -69143,7 +69143,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -69197,7 +69197,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -69632,7 +69632,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -70085,7 +70085,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -70133,7 +70133,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -70303,7 +70303,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -70353,7 +70353,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -70412,7 +70412,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -70562,7 +70562,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -70614,7 +70614,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -71230,7 +71230,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -71291,7 +71291,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -71341,7 +71341,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -71389,7 +71389,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -71445,7 +71445,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -72136,7 +72136,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -72206,7 +72206,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -72256,7 +72256,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -72273,7 +72273,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -72312,7 +72312,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -72329,7 +72329,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -72377,7 +72377,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -72394,7 +72394,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -72437,7 +72437,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -72512,7 +72512,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -72562,7 +72562,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -72610,7 +72610,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -72667,7 +72667,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -72958,7 +72958,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -72997,7 +72997,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -73045,7 +73045,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -73095,7 +73095,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -73134,7 +73134,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -73175,7 +73175,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -73224,7 +73224,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -73318,7 +73318,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -73368,7 +73368,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -73425,7 +73425,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -73472,7 +73472,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -73522,7 +73522,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -73595,7 +73595,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -73654,7 +73654,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -74052,7 +74052,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -74214,7 +74214,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -74264,7 +74264,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -74312,7 +74312,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -74368,7 +74368,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -74420,7 +74420,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -74967,7 +74967,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -75081,7 +75081,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -75151,7 +75151,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -75201,7 +75201,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -75249,7 +75249,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -75298,7 +75298,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -75368,7 +75368,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -75418,7 +75418,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -75466,7 +75466,7 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "integer"
                 },
                 {
                   "type": "string"
@@ -75605,7 +75605,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -75666,7 +75666,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -75716,7 +75716,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -75764,7 +75764,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -75821,7 +75821,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -75873,7 +75873,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -75923,7 +75923,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -75966,7 +75966,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -76071,7 +76071,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -76167,7 +76167,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -76230,7 +76230,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -76351,7 +76351,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -76443,7 +76443,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -76486,7 +76486,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -76529,7 +76529,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -76593,7 +76593,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -76676,7 +76676,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -76757,7 +76757,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -76838,7 +76838,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -76931,7 +76931,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -77022,7 +77022,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -77133,7 +77133,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -77255,7 +77255,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -77368,7 +77368,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -77461,7 +77461,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -77562,7 +77562,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -77663,7 +77663,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -77776,7 +77776,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -77887,7 +77887,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -78018,7 +78018,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -78160,7 +78160,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -78293,7 +78293,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -78336,7 +78336,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -78379,7 +78379,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -78443,7 +78443,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -78526,7 +78526,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -78569,7 +78569,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -78660,7 +78660,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -78739,7 +78739,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -78822,7 +78822,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -78913,7 +78913,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -78994,7 +78994,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -79085,7 +79085,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -79166,7 +79166,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -79257,7 +79257,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -79338,7 +79338,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -79449,7 +79449,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -79571,7 +79571,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -79684,7 +79684,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -79815,7 +79815,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -79957,7 +79957,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -81541,7 +81541,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -81584,7 +81584,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -81637,7 +81637,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -81688,7 +81688,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -81838,7 +81838,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -81898,7 +81898,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -82071,7 +82071,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -82121,7 +82121,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -82181,7 +82181,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -82262,7 +82262,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -82332,7 +82332,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -82391,7 +82391,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -82450,7 +82450,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -82509,7 +82509,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -82568,7 +82568,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -82656,7 +82656,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -82738,7 +82738,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -82788,7 +82788,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -82831,7 +82831,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -82892,7 +82892,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -82953,7 +82953,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -83003,7 +83003,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -83051,7 +83051,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -83103,7 +83103,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -83173,7 +83173,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -83232,7 +83232,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -83289,7 +83289,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -83384,7 +83384,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -83445,7 +83445,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -83495,7 +83495,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -83561,7 +83561,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -83618,7 +83618,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -83685,7 +83685,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -83745,7 +83745,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -83806,7 +83806,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -83856,7 +83856,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -83906,7 +83906,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -83963,7 +83963,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -84017,7 +84017,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -84094,7 +84094,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -84145,7 +84145,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -84195,7 +84195,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -84254,7 +84254,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -84308,7 +84308,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -84486,7 +84486,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -84538,7 +84538,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -84592,7 +84592,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -84653,7 +84653,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -84713,7 +84713,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -84782,7 +84782,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -85305,7 +85305,24 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "enum": [
+                    "created",
+                    "waiting_for_resource",
+                    "preparing",
+                    "waiting_for_callback",
+                    "pending",
+                    "running",
+                    "success",
+                    "failed",
+                    "canceling",
+                    "canceled",
+                    "skipped",
+                    "manual",
+                    "scheduled"
+                  ],
+                  "type": "string",
+                  "additionalProperties": false,
+                  "nullable": true
                 },
                 {
                   "type": "array",
@@ -85394,7 +85411,24 @@
               "type": "object",
               "oneOf": [
                 {
-                  "type": "string"
+                  "enum": [
+                    "created",
+                    "waiting_for_resource",
+                    "preparing",
+                    "waiting_for_callback",
+                    "pending",
+                    "running",
+                    "success",
+                    "failed",
+                    "canceling",
+                    "canceled",
+                    "skipped",
+                    "manual",
+                    "scheduled"
+                  ],
+                  "type": "string",
+                  "additionalProperties": false,
+                  "nullable": true
                 },
                 {
                   "type": "array",
@@ -85741,7 +85775,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -85802,7 +85836,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -85852,7 +85886,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -85900,7 +85934,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -85951,7 +85985,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -86702,7 +86736,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -86857,7 +86891,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -86908,7 +86942,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -87550,7 +87584,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -87612,7 +87646,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -87660,7 +87694,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -87718,7 +87752,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -87767,7 +87801,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -87839,7 +87873,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -90865,7 +90899,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -90945,7 +90979,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -91004,7 +91038,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -91056,7 +91090,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -91159,7 +91193,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -91209,7 +91243,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -91252,7 +91286,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -91712,7 +91746,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -91815,7 +91849,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -91864,7 +91898,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -91914,7 +91948,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -91961,7 +91995,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -92012,7 +92046,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -92070,7 +92104,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -92120,7 +92154,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -92741,7 +92775,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -93197,7 +93231,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -93653,7 +93687,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -94109,7 +94143,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             }
@@ -94774,7 +94808,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -94827,7 +94861,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -94885,7 +94919,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -94936,7 +94970,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -95004,7 +95038,7 @@
                   "type": "string"
                 },
                 {
-                  "type": "string"
+                  "type": "integer"
                 }
               ]
             },
@@ -104847,7 +104881,10 @@
             "type": "object",
             "oneOf": [
               {
-                "$ref": "#/components/schemas/UnionBranch"
+                "type": "string"
+              },
+              {
+                "type": "integer"
               }
             ],
             "example": "abc123"
@@ -146318,17 +146355,6 @@
       "ExamplePayload": {
         "type": "object",
         "description": "Placeholder schema for path example refs"
-      },
-      "UnionBranch": {
-        "required": [
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string"
-          }
-        }
       }
     },
     "securitySchemes": {

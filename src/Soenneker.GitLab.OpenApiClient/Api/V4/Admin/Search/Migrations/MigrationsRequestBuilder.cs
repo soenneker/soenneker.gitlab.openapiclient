@@ -20,7 +20,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Search.Migrations
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.admin.search.migrations.item collection</summary>
         /// <param name="position">The version or name of the search migration</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Search.Migrations.Item.WithMigration_ItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Search.Migrations.Item.WithMigration_ItemRequestBuilder this[string position]
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Search.Migrations.Item.WithMigration_ItemRequestBuilder this[int position]
         {
             get
             {

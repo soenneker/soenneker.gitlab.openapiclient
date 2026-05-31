@@ -37,10 +37,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The record_identifier property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch? RecordIdentifier { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAdminModel.APIEntitiesAdminModel_record_identifier? RecordIdentifier { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch RecordIdentifier { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAdminModel.APIEntitiesAdminModel_record_identifier RecordIdentifier { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAdminModel"/> and sets the default values.
@@ -71,7 +71,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "file_size", n => { FileSize = n.GetIntValue(); } },
                 { "model_class", n => { ModelClass = n.GetStringValue(); } },
-                { "record_identifier", n => { RecordIdentifier = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch>(global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "record_identifier", n => { RecordIdentifier = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAdminModel.APIEntitiesAdminModel_record_identifier>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAdminModel.APIEntitiesAdminModel_record_identifier.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -85,8 +85,69 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
             writer.WriteIntValue("file_size", FileSize);
             writer.WriteStringValue("model_class", ModelClass);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.UnionBranch>("record_identifier", RecordIdentifier);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAdminModel.APIEntitiesAdminModel_record_identifier>("record_identifier", RecordIdentifier);
             writer.WriteAdditionalData(AdditionalData);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="int"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class APIEntitiesAdminModel_record_identifier : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="int"/></summary>
+            public int? Integer { get; set; }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAdminModel.APIEntitiesAdminModel_record_identifier"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAdminModel.APIEntitiesAdminModel_record_identifier CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAdminModel.APIEntitiesAdminModel_record_identifier();
+                if(parseNode.GetIntValue() is int integerValue)
+                {
+                    result.Integer = integerValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(Integer != null)
+                {
+                    writer.WriteIntValue(null, Integer);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
         }
     }
 }
