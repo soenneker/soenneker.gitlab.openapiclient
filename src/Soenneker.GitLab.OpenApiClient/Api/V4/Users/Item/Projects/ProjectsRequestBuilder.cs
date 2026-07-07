@@ -34,25 +34,25 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Projects
         {
         }
         /// <summary>
-        /// Get a user projects
+        /// Lists all personal projects for a specified user. Does not return group or subgroup projects. If the user profile is private, returns only an empty list.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBasicProjectDetails"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicProjectDetails"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBasicProjectDetails?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Projects.ProjectsRequestBuilder.ProjectsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicProjectDetails?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Projects.ProjectsRequestBuilder.ProjectsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBasicProjectDetails> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Projects.ProjectsRequestBuilder.ProjectsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicProjectDetails> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Projects.ProjectsRequestBuilder.ProjectsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBasicProjectDetails>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBasicProjectDetails.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicProjectDetails>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicProjectDetails.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get a user projects
+        /// Lists all personal projects for a specified user. Does not return group or subgroup projects. If the user profile is private, returns only an empty list.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Projects
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Projects.ProjectsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get a user projects
+        /// Lists all personal projects for a specified user. Does not return group or subgroup projects. If the user profile is private, returns only an empty list.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ProjectsRequestBuilderGetQueryParameters 
@@ -133,7 +133,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Projects
             public int? MinAccessLevel { get; set; }
             /// <summary>Return projects ordered by field. storage_size, repository_size, wiki_size, packages_size are only available to admins. Similarity is available when searching and is limited to projects the user has access to.</summary>
             [QueryParameter("order_by")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Projects.GetOrder_byQueryParameterType? OrderBy { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4UsersUserIdProjectsOrderByParameter? OrderBy { get; set; }
             /// <summary>Limit by owned by authenticated user</summary>
             [QueryParameter("owned")]
             public bool? Owned { get; set; }
@@ -174,7 +174,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Projects
             public bool? Simple { get; set; }
             /// <summary>Return projects sorted in ascending and descending order</summary>
             [QueryParameter("sort")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Projects.GetSortQueryParameterType? Sort { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4UsersUserIdProjectsSortParameter? Sort { get; set; }
             /// <summary>Limit by starred status</summary>
             [QueryParameter("starred")]
             public bool? Starred { get; set; }
@@ -202,7 +202,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Projects
             public DateTimeOffset? UpdatedBefore { get; set; }
             /// <summary>Limit by visibility</summary>
             [QueryParameter("visibility")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Projects.GetVisibilityQueryParameterType? Visibility { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4UsersUserIdProjectsVisibilityParameter? Visibility { get; set; }
             /// <summary>Limit by projects where wiki checksum is failed</summary>
             [QueryParameter("wiki_checksum_failed")]
             public bool? WikiChecksumFailed { get; set; }

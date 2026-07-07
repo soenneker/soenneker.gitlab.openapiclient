@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Experiments.Item;
 using Soenneker.GitLab.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
@@ -17,6 +18,18 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Experiments
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ExperimentsRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.experiments.item collection</summary>
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Experiments.Item.ExperimentNameItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Experiments.Item.ExperimentNameItemRequestBuilder this[string position]
+        {
+            get
+            {
+                var urlTplParams = new Dictionary<string, object>(PathParameters);
+                urlTplParams.Add("experimentName%2Did", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Experiments.Item.ExperimentNameItemRequestBuilder(urlTplParams, RequestAdapter);
+            }
+        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Experiments.ExperimentsRequestBuilder"/> and sets the default values.
         /// </summary>
@@ -34,25 +47,25 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Experiments
         {
         }
         /// <summary>
-        /// Get a list of all experiments. Each experiment has an enabled status that indicates whetherthe experiment is enabled globally, or only in specific contexts.
+        /// Lists all experiments on the GitLab instance. Each experiment has an `enabled` status that indicates whether the experiment is enabled globally, or only in specific contexts.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesExperiment"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesExperiment"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesExperiment?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesExperiment?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesExperiment> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesExperiment> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesExperiment>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesExperiment.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesExperiment>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesExperiment.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get a list of all experiments. Each experiment has an enabled status that indicates whetherthe experiment is enabled globally, or only in specific contexts.
+        /// Lists all experiments on the GitLab instance. Each experiment has an `enabled` status that indicates whether the experiment is enabled globally, or only in specific contexts.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

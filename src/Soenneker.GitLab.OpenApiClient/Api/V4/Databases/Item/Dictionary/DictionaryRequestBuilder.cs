@@ -10,7 +10,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Databases.Item.Dictionary
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\databases\{database_name}\dictionary
+    /// Builds and executes requests for operations under \api\v4\databases\{databaseName}\dictionary
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DictionaryRequestBuilder : BaseRequestBuilder
@@ -25,7 +25,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Databases.Item.Dictionary
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DictionaryRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/databases/{database_name}/dictionary", pathParameters)
+        public DictionaryRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/databases/{databaseName}/dictionary", pathParameters)
         {
         }
         /// <summary>
@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Databases.Item.Dictionary
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DictionaryRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/databases/{database_name}/dictionary", rawUrl)
+        public DictionaryRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/databases/{databaseName}/dictionary", rawUrl)
         {
         }
     }

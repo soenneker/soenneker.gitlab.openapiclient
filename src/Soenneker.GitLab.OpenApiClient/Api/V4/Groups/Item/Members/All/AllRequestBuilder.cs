@@ -20,14 +20,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Members.All
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.members.all.item collection</summary>
         /// <param name="position">The user ID of the member</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Members.All.Item.WithUser_ItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Members.All.Item.WithUser_ItemRequestBuilder this[int position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Members.All.Item.WithUserItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Members.All.Item.WithUserItemRequestBuilder this[int position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("user_id", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Members.All.Item.WithUser_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("userId", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Members.All.Item.WithUserItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -47,25 +47,25 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Members.All
         {
         }
         /// <summary>
-        /// Gets a list of group or project members viewable by the authenticated user,          including those with inherited membership from ancestor groups.
+        /// Lists all members of a specified group viewable by the authenticated user. Also returns inherited members from ancestor groups or invited groups. If a user is a member of this group and one or more ancestor groups, only returns the highest `access_level`. Members from an invited group are returned if the invited group is public, the requester is a member of an invited group, or the requester is a member of the shared group or project.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMember"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMember"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMember?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Members.All.AllRequestBuilder.AllRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMember?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Members.All.AllRequestBuilder.AllRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMember> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Members.All.AllRequestBuilder.AllRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMember> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Members.All.AllRequestBuilder.AllRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMember>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMember.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMember>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMember.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Gets a list of group or project members viewable by the authenticated user,          including those with inherited membership from ancestor groups.
+        /// Lists all members of a specified group viewable by the authenticated user. Also returns inherited members from ancestor groups or invited groups. If a user is a member of this group and one or more ancestor groups, only returns the highest `access_level`. Members from an invited group are returned if the invited group is public, the requester is a member of an invited group, or the requester is a member of the shared group or project.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -93,7 +93,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Members.All
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Members.All.AllRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Gets a list of group or project members viewable by the authenticated user,          including those with inherited membership from ancestor groups.
+        /// Lists all members of a specified group viewable by the authenticated user. Also returns inherited members from ancestor groups or invited groups. If a user is a member of this group and one or more ancestor groups, only returns the highest `access_level`. Members from an invited group are returned if the invited group is public, the requester is a member of an invited group, or the requester is a member of the shared group or project.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class AllRequestBuilderGetQueryParameters 
@@ -119,7 +119,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Members.All
             public bool? ShowSeatInfo { get; set; }
             /// <summary>Filter results by member state</summary>
             [QueryParameter("state")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Members.All.GetStateQueryParameterType? State { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdMembersAllStateParameter? State { get; set; }
             /// <summary>Array of user ids to look up for membership</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

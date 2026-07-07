@@ -20,14 +20,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Ssh_keys
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.manage.ssh_keys.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Ssh_keys.Item.WithKey_ItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Ssh_keys.Item.WithKey_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Ssh_keys.Item.WithKeyItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Ssh_keys.Item.WithKeyItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("key_id", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Ssh_keys.Item.WithKey_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("keyId", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Ssh_keys.Item.WithKeyItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -49,20 +49,20 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Ssh_keys
         /// <summary>
         /// Lists all SSH public keys associated with enterprise users in a top-level-group. This feature was introduced in GitLab 17.9.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesSshKeyWithUserId"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSshKeyWithUserId"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesSshKeyWithUserId?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Ssh_keys.Ssh_keysRequestBuilder.Ssh_keysRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSshKeyWithUserId?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Ssh_keys.Ssh_keysRequestBuilder.Ssh_keysRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesSshKeyWithUserId> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Ssh_keys.Ssh_keysRequestBuilder.Ssh_keysRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSshKeyWithUserId> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Ssh_keys.Ssh_keysRequestBuilder.Ssh_keysRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesSshKeyWithUserId>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesSshKeyWithUserId.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSshKeyWithUserId>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSshKeyWithUserId.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Lists all SSH public keys associated with enterprise users in a top-level-group. This feature was introduced in GitLab 17.9.

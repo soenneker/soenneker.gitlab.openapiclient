@@ -17,14 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Snippets.Item.Files
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.snippets.item.files.item collection</summary>
         /// <param name="position">The name of branch, tag or commit</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Snippets.Item.Files.Item.WithRefItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Snippets.Item.Files.Item.WithRefItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Snippets.Item.Files.Item.WithRefValueItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Snippets.Item.Files.Item.WithRefValueItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("ref", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Snippets.Item.Files.Item.WithRefItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("refValue", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Snippets.Item.Files.Item.WithRefValueItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

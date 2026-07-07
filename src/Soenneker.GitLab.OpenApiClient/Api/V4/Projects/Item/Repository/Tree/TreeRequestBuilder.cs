@@ -36,20 +36,20 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Tree
         /// <summary>
         /// Get a project repository tree
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesTreeObject"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTreeObject"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesTreeObject?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Tree.TreeRequestBuilder.TreeRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTreeObject?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Tree.TreeRequestBuilder.TreeRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesTreeObject> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Tree.TreeRequestBuilder.TreeRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTreeObject> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Tree.TreeRequestBuilder.TreeRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesTreeObject>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesTreeObject.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTreeObject>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTreeObject.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get a project repository tree
@@ -100,7 +100,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Tree
 #endif
             /// <summary>Specify the pagination method (&quot;none&quot; is only valid if &quot;recursive&quot; is true)</summary>
             [QueryParameter("pagination")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Tree.GetPaginationQueryParameterType? Pagination { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdRepositoryTreePaginationParameter? Pagination { get; set; }
             /// <summary>The path of the tree</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

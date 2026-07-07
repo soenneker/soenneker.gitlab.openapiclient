@@ -49,40 +49,40 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Offline_exports
         /// <summary>
         /// Lists all offline transfer exports
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Offline_exports.Offline_exportsGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson266"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Offline_exports.Offline_exportsGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Offline_exports.Offline_exportsRequestBuilder.Offline_exportsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson266?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Offline_exports.Offline_exportsRequestBuilder.Offline_exportsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Offline_exports.Offline_exportsGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Offline_exports.Offline_exportsRequestBuilder.Offline_exportsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson266> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Offline_exports.Offline_exportsRequestBuilder.Offline_exportsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Offline_exports.Offline_exportsGetResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Offline_exports.Offline_exportsGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson266>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson266.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Initiates a new offline transfer export
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Offline_exports.Offline_exportsPostResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson265"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Offline_exports.Offline_exportsPostResponse?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody83e523ac558b body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson265?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15Be2094Db2F body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Offline_exports.Offline_exportsPostResponse> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody83e523ac558b body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson265> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15Be2094Db2F body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Offline_exports.Offline_exportsPostResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Offline_exports.Offline_exportsPostResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson265>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson265.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Lists all offline transfer exports
@@ -111,11 +111,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Offline_exports
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody83e523ac558b body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15Be2094Db2F body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody83e523ac558b body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15Be2094Db2F body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -148,10 +148,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Offline_exports
             public int? PerPage { get; set; }
             /// <summary>Return offline transfer exports sorted in created by `asc` or `desc` order.</summary>
             [QueryParameter("sort")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Offline_exports.GetSortQueryParameterType? Sort { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4OfflineExportsSortParameter? Sort { get; set; }
             /// <summary>Return offline transfer exports with specified status</summary>
             [QueryParameter("status")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Offline_exports.GetStatusQueryParameterType? Status { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4OfflineExportsStatusParameter? Status { get; set; }
         }
     }
 }

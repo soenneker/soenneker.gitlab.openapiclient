@@ -13,21 +13,21 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Bulk_imports.Item.Entities
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\bulk_imports\{import_id}\entities
+    /// Builds and executes requests for operations under \api\v4\bulk_imports\{importId}\entities
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class EntitiesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.bulk_imports.item.entities.item collection</summary>
         /// <param name="position">The ID of GitLab Migration entity</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Bulk_imports.Item.Entities.Item.WithEntity_ItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Bulk_imports.Item.Entities.Item.WithEntity_ItemRequestBuilder this[int position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Bulk_imports.Item.Entities.Item.WithEntityItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Bulk_imports.Item.Entities.Item.WithEntityItemRequestBuilder this[int position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("entity_id", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Bulk_imports.Item.Entities.Item.WithEntity_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("entityId", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Bulk_imports.Item.Entities.Item.WithEntityItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -35,7 +35,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Bulk_imports.Item.Entities
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public EntitiesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/bulk_imports/{import_id}/entities{?page*,per_page*,status*}", pathParameters)
+        public EntitiesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/bulk_imports/{importId}/entities{?page*,per_page*,status*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,26 +43,26 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Bulk_imports.Item.Entities
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public EntitiesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/bulk_imports/{import_id}/entities{?page*,per_page*,status*}", rawUrl)
+        public EntitiesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/bulk_imports/{importId}/entities{?page*,per_page*,status*}", rawUrl)
         {
         }
         /// <summary>
         /// Lists all group or project migration entities for a specified migration.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBulkImportsEntity"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsEntity"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBulkImportsEntity?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Bulk_imports.Item.Entities.EntitiesRequestBuilder.EntitiesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsEntity?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Bulk_imports.Item.Entities.EntitiesRequestBuilder.EntitiesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBulkImportsEntity> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Bulk_imports.Item.Entities.EntitiesRequestBuilder.EntitiesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsEntity> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Bulk_imports.Item.Entities.EntitiesRequestBuilder.EntitiesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBulkImportsEntity>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBulkImportsEntity.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsEntity>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsEntity.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Lists all group or project migration entities for a specified migration.
@@ -106,7 +106,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Bulk_imports.Item.Entities
             public int? PerPage { get; set; }
             /// <summary>Return import entities with specified status</summary>
             [QueryParameter("status")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Bulk_imports.Item.Entities.GetStatusQueryParameterType? Status { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4BulkImportsImportIdEntitiesStatusParameter? Status { get; set; }
         }
     }
 }

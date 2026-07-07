@@ -36,20 +36,20 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ml.Mlflow.Api.TwoZ
         /// <summary>
         /// Returns version in MLflow format &quot;mlflow-artifacts:&lt;version&gt;&quot; https://mlflow.org/docs/2.19.0/rest-api.html#get-download-uri-for-modelversion-artifacts
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowGetDownload"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowGetDownload"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowGetDownload?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ml.Mlflow.Api.TwoZero.Mlflow.ModelVersions.GetDownloadUri.GetDownloadUriRequestBuilder.GetDownloadUriRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowGetDownload?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ml.Mlflow.Api.TwoZero.Mlflow.ModelVersions.GetDownloadUri.GetDownloadUriRequestBuilder.GetDownloadUriRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowGetDownload> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ml.Mlflow.Api.TwoZero.Mlflow.ModelVersions.GetDownloadUri.GetDownloadUriRequestBuilder.GetDownloadUriRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowGetDownload> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ml.Mlflow.Api.TwoZero.Mlflow.ModelVersions.GetDownloadUri.GetDownloadUriRequestBuilder.GetDownloadUriRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowGetDownload>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMlMlflowGetDownload.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowGetDownload>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowGetDownload.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns version in MLflow format &quot;mlflow-artifacts:&lt;version&gt;&quot; https://mlflow.org/docs/2.19.0/rest-api.html#get-download-uri-for-modelversion-artifacts

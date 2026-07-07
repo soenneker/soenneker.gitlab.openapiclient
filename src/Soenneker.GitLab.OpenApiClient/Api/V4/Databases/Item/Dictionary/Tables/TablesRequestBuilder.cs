@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Databases.Item.Dictionary.Tables
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\databases\{database_name}\dictionary\tables
+    /// Builds and executes requests for operations under \api\v4\databases\{databaseName}\dictionary\tables
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TablesRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Databases.Item.Dictionary.Tables
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TablesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/databases/{database_name}/dictionary/tables{?table_size*}", pathParameters)
+        public TablesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/databases/{databaseName}/dictionary/tables{?table_size*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,26 +30,26 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Databases.Item.Dictionary.Tables
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TablesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/databases/{database_name}/dictionary/tables{?table_size*}", rawUrl)
+        public TablesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/databases/{databaseName}/dictionary/tables{?table_size*}", rawUrl)
         {
         }
         /// <summary>
         /// Returns database dictionary tables filtered by database and optional table size
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDictionaryTable"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDictionaryTable"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDictionaryTable?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Databases.Item.Dictionary.Tables.TablesRequestBuilder.TablesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDictionaryTable?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Databases.Item.Dictionary.Tables.TablesRequestBuilder.TablesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDictionaryTable> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Databases.Item.Dictionary.Tables.TablesRequestBuilder.TablesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDictionaryTable> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Databases.Item.Dictionary.Tables.TablesRequestBuilder.TablesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDictionaryTable>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDictionaryTable.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDictionaryTable>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDictionaryTable.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns database dictionary tables filtered by database and optional table size
@@ -87,7 +87,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Databases.Item.Dictionary.Tables
         {
             /// <summary>Filter by table size classification</summary>
             [QueryParameter("table_size")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Databases.Item.Dictionary.Tables.GetTable_sizeQueryParameterType? TableSize { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4DatabasesDatabaseNameDictionaryTablesTableSizeParameter? TableSize { get; set; }
         }
     }
 }

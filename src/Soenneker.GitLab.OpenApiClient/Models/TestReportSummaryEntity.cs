@@ -25,10 +25,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The total property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.TestReportSummaryEntity_total? Total { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.TestReportSummaryEntityTotalProperty? Total { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.TestReportSummaryEntity_total Total { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.TestReportSummaryEntityTotalProperty Total { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.TestReportSummaryEntity"/> and sets the default values.
@@ -56,7 +56,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "test_suites", n => { TestSuites = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.TestSuiteSummaryEntity>(global::Soenneker.GitLab.OpenApiClient.Models.TestSuiteSummaryEntity.CreateFromDiscriminatorValue); } },
-                { "total", n => { Total = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.TestReportSummaryEntity_total>(global::Soenneker.GitLab.OpenApiClient.Models.TestReportSummaryEntity_total.CreateFromDiscriminatorValue); } },
+                { "total", n => { Total = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.TestReportSummaryEntityTotalProperty>(global::Soenneker.GitLab.OpenApiClient.Models.TestReportSummaryEntityTotalProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.TestSuiteSummaryEntity>("test_suites", TestSuites);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.TestReportSummaryEntity_total>("total", Total);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.TestReportSummaryEntityTotalProperty>("total", Total);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -17,14 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Databases
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.databases.item collection</summary>
         /// <param name="position">The database name</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Databases.Item.WithDatabase_nameItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Databases.Item.WithDatabase_nameItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Databases.Item.WithDatabaseNameItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Databases.Item.WithDatabaseNameItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("database_name", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Databases.Item.WithDatabase_nameItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("databaseName", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Databases.Item.WithDatabaseNameItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

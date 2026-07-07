@@ -20,14 +20,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Freeze_periods
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.freeze_periods.item collection</summary>
         /// <param name="position">The ID of the freeze period</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Freeze_periods.Item.WithFreeze_period_ItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Freeze_periods.Item.WithFreeze_period_ItemRequestBuilder this[int position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Freeze_periods.Item.WithFreezePeriodItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Freeze_periods.Item.WithFreezePeriodItemRequestBuilder this[int position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("freeze_period_id", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Freeze_periods.Item.WithFreeze_period_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("freezePeriodId", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Freeze_periods.Item.WithFreezePeriodItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -47,45 +47,45 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Freeze_periods
         {
         }
         /// <summary>
-        /// Paginated list of Freeze Periods, sorted by created_at in ascending order. This feature was introduced in GitLab 13.0.
+        /// Lists all freeze periods for a specified project.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesFreezePeriod"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFreezePeriod"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesFreezePeriod?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Freeze_periods.Freeze_periodsRequestBuilder.Freeze_periodsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFreezePeriod?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Freeze_periods.Freeze_periodsRequestBuilder.Freeze_periodsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesFreezePeriod> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Freeze_periods.Freeze_periodsRequestBuilder.Freeze_periodsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFreezePeriod> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Freeze_periods.Freeze_periodsRequestBuilder.Freeze_periodsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesFreezePeriod>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesFreezePeriod.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFreezePeriod>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFreezePeriod.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Creates a freeze period. This feature was introduced in GitLab 13.0.
+        /// Creates a freeze period for a specified project. You must have the Maintainer or Owner role for the project.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesFreezePeriod"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFreezePeriod"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesFreezePeriod?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCe92a2241e86 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFreezePeriod?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCe92A2241E86 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesFreezePeriod> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCe92a2241e86 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFreezePeriod> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCe92A2241E86 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesFreezePeriod>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesFreezePeriod.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFreezePeriod>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFreezePeriod.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Paginated list of Freeze Periods, sorted by created_at in ascending order. This feature was introduced in GitLab 13.0.
+        /// Lists all freeze periods for a specified project.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -104,18 +104,18 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Freeze_periods
             return requestInfo;
         }
         /// <summary>
-        /// Creates a freeze period. This feature was introduced in GitLab 13.0.
+        /// Creates a freeze period for a specified project. You must have the Maintainer or Owner role for the project.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCe92a2241e86 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCe92A2241E86 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCe92a2241e86 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCe92A2241E86 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -135,7 +135,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Freeze_periods
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Freeze_periods.Freeze_periodsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Paginated list of Freeze Periods, sorted by created_at in ascending order. This feature was introduced in GitLab 13.0.
+        /// Lists all freeze periods for a specified project.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Freeze_periodsRequestBuilderGetQueryParameters 

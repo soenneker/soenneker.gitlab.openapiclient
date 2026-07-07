@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Labels
     public partial class LabelsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.labels.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The name or id of the label to be updated</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Labels.Item.NameItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Labels.Item.NameItemRequestBuilder this[string position]
         {
@@ -35,7 +35,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Labels
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public LabelsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/groups/{id}/labels?name={name}{&archived*,include_ancestor_groups*,include_descendant_groups*,only_group_labels*,page*,per_page*,search*,with_counts*}", pathParameters)
+        public LabelsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/groups/{id}/labels{?archived*,include_ancestor_groups*,include_descendant_groups*,only_group_labels*,page*,per_page*,search*,with_counts*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,11 +43,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Labels
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public LabelsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/groups/{id}/labels?name={name}{&archived*,include_ancestor_groups*,include_descendant_groups*,only_group_labels*,page*,per_page*,search*,with_counts*}", rawUrl)
+        public LabelsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/groups/{id}/labels{?archived*,include_ancestor_groups*,include_descendant_groups*,only_group_labels*,page*,per_page*,search*,with_counts*}", rawUrl)
         {
         }
         /// <summary>
-        /// This feature was added in GitLab 11.8 and deprecated in GitLab 12.4.
+        /// Deletes a specified group label.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -64,65 +64,65 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Labels
             await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was added in GitLab 11.8
+        /// Lists all group labels for a specified group.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroupLabel"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupLabel"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroupLabel?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Labels.LabelsRequestBuilder.LabelsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupLabel?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Labels.LabelsRequestBuilder.LabelsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroupLabel> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Labels.LabelsRequestBuilder.LabelsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupLabel> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Labels.LabelsRequestBuilder.LabelsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroupLabel>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroupLabel.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupLabel>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupLabel.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was added in GitLab 11.8
+        /// Creates a group label.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroupLabel"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupLabel"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroupLabel?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody02089c8031f0 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupLabel?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody02089C8031F0 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroupLabel> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody02089c8031f0 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupLabel> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody02089C8031F0 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroupLabel>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroupLabel.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupLabel>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupLabel.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was added in GitLab 11.8 and deprecated in GitLab 12.4.
+        /// Updates an existing group label. At least one parameter is required to update the group label.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroupLabel"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupLabel"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroupLabel?> PutAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody433478749095 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupLabel?> PutAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody433478749095 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroupLabel> PutAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody433478749095 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupLabel> PutAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody433478749095 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroupLabel>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroupLabel.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupLabel>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupLabel.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was added in GitLab 11.8 and deprecated in GitLab 12.4.
+        /// Deletes a specified group label.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -141,7 +141,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Labels
             return requestInfo;
         }
         /// <summary>
-        /// This feature was added in GitLab 11.8
+        /// Lists all group labels for a specified group.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -154,35 +154,35 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Labels
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Labels.LabelsRequestBuilder.LabelsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/api/v4/groups/{id}/labels{?archived*,include_ancestor_groups*,include_descendant_groups*,only_group_labels*,page*,per_page*,search*,with_counts*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
         }
         /// <summary>
-        /// This feature was added in GitLab 11.8
+        /// Creates a group label.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody02089c8031f0 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody02089C8031F0 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody02089c8031f0 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody02089C8031F0 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/api/v4/groups/{id}/labels", PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
             return requestInfo;
         }
         /// <summary>
-        /// This feature was added in GitLab 11.8 and deprecated in GitLab 12.4.
+        /// Updates an existing group label. At least one parameter is required to update the group label.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -197,7 +197,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Labels
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.PUT, "{+baseurl}/api/v4/groups/{id}/labels", PathParameters);
+            var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
@@ -213,7 +213,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Labels
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Labels.LabelsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// This feature was added in GitLab 11.8 and deprecated in GitLab 12.4.
+        /// Deletes a specified group label.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class LabelsRequestBuilderDeleteQueryParameters 
@@ -230,7 +230,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Labels
 #endif
         }
         /// <summary>
-        /// This feature was added in GitLab 11.8
+        /// Lists all group labels for a specified group.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class LabelsRequestBuilderGetQueryParameters 

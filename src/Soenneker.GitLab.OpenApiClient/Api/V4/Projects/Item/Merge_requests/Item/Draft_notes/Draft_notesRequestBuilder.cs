@@ -14,7 +14,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Draft_notes
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\merge_requests\{eventable_-id}\draft_notes
+    /// Builds and executes requests for operations under \api\v4\projects\{-id}\merge_requests\{eventable-id}\draft_notes
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Draft_notesRequestBuilder : BaseRequestBuilder
@@ -26,14 +26,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.merge_requests.item.draft_notes.item collection</summary>
         /// <param name="position">The ID of a draft note</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Draft_notes.Item.WithDraft_note_ItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Draft_notes.Item.WithDraft_note_ItemRequestBuilder this[int position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Draft_notes.Item.WithDraftNoteItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Draft_notes.Item.WithDraftNoteItemRequestBuilder this[int position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("draft_note_id", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Draft_notes.Item.WithDraft_note_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("draftNoteId", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Draft_notes.Item.WithDraftNoteItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -41,7 +41,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Draft_notesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/merge_requests/{eventable_%2Did}/draft_notes", pathParameters)
+        public Draft_notesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/merge_requests/{eventable%2Did}/draft_notes", pathParameters)
         {
         }
         /// <summary>
@@ -49,46 +49,46 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Draft_notesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/merge_requests/{eventable_%2Did}/draft_notes", rawUrl)
+        public Draft_notesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/merge_requests/{eventable%2Did}/draft_notes", rawUrl)
         {
         }
         /// <summary>
         /// Lists all merge request draft notes.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDraftNote"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDraftNote"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDraftNote?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDraftNote?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDraftNote> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDraftNote> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDraftNote>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDraftNote.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDraftNote>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDraftNote.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Creates a draft note for a specified merge request.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDraftNote"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDraftNote"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDraftNote?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyFc19ecc6ec0a body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDraftNote?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyFc19Ecc6Ec0A body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDraftNote> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyFc19ecc6ec0a body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDraftNote> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyFc19Ecc6Ec0A body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDraftNote>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDraftNote.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDraftNote>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDraftNote.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Lists all merge request draft notes.
@@ -117,11 +117,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyFc19ecc6ec0a body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyFc19Ecc6Ec0A body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyFc19ecc6ec0a body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyFc19Ecc6Ec0A body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.GitLab.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -11,7 +12,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipeline_schedules.Item.Play
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\pipeline_schedules\{pipeline_schedule_id}\play
+    /// Builds and executes requests for operations under \api\v4\projects\{-id}\pipeline_schedules\{pipelineScheduleId}\play
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PlayRequestBuilder : BaseRequestBuilder
@@ -21,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipeline_schedules
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PlayRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/pipeline_schedules/{pipeline_schedule_id}/play", pathParameters)
+        public PlayRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/pipeline_schedules/{pipelineScheduleId}/play", pathParameters)
         {
         }
         /// <summary>
@@ -29,26 +30,26 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipeline_schedules
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PlayRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/pipeline_schedules/{pipeline_schedule_id}/play", rawUrl)
+        public PlayRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/pipeline_schedules/{pipelineScheduleId}/play", rawUrl)
         {
         }
         /// <summary>
         /// Runs a pipeline schedule immediately. The next scheduled run of this pipeline is not affected.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipeline_schedules.Item.Play.PlayPostResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson423"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipeline_schedules.Item.Play.PlayPostResponse?> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson423?> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipeline_schedules.Item.Play.PlayPostResponse> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson423> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToPostRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipeline_schedules.Item.Play.PlayPostResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipeline_schedules.Item.Play.PlayPostResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson423>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson423.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Runs a pipeline schedule immediately. The next scheduled run of this pipeline is not affected.

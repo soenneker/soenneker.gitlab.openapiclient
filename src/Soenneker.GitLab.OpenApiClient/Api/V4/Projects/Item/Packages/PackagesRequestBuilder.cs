@@ -92,14 +92,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.packages.item collection</summary>
         /// <param name="position">The ID of a package</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Item.WithPackage_ItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Item.WithPackage_ItemRequestBuilder this[int position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Item.WithPackageItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Item.WithPackageItemRequestBuilder this[int position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("package_id", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Item.WithPackage_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("packageId", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Item.WithPackageItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -119,25 +119,25 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages
         {
         }
         /// <summary>
-        /// This feature was introduced in GitLab 11.8
+        /// Lists all packages for a specified project. All package types are included in results. Unauthenticated requests return only packages of public projects. By default, packages with `default`, `deprecated`, and `error` status are returned. Use the `status` parameter to view other packages.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesPackage"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackage"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesPackage?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.PackagesRequestBuilder.PackagesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackage?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.PackagesRequestBuilder.PackagesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesPackage> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.PackagesRequestBuilder.PackagesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackage> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.PackagesRequestBuilder.PackagesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesPackage>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesPackage.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackage>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackage.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 11.8
+        /// Lists all packages for a specified project. All package types are included in results. Unauthenticated requests return only packages of public projects. By default, packages with `default`, `deprecated`, and `error` status are returned. Use the `status` parameter to view other packages.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -165,7 +165,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.PackagesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 11.8
+        /// Lists all packages for a specified project. All package types are included in results. Unauthenticated requests return only packages of public projects. By default, packages with `default`, `deprecated`, and `error` status are returned. Use the `status` parameter to view other packages.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class PackagesRequestBuilderGetQueryParameters 
@@ -175,7 +175,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages
             public bool? IncludeVersionless { get; set; }
             /// <summary>Return packages ordered by `created_at`, `name`, `version` or `type` fields.</summary>
             [QueryParameter("order_by")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.GetOrder_byQueryParameterType? OrderBy { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdPackagesOrderByParameter? OrderBy { get; set; }
             /// <summary>Return packages with this name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -188,7 +188,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages
 #endif
             /// <summary>Return packages of a certain type</summary>
             [QueryParameter("package_type")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.GetPackage_typeQueryParameterType? PackageType { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdPackagesPackageTypeParameter? PackageType { get; set; }
             /// <summary>Return packages with this version</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -207,10 +207,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages
             public int? PerPage { get; set; }
             /// <summary>Return packages sorted in `asc` or `desc` order.</summary>
             [QueryParameter("sort")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.GetSortQueryParameterType? Sort { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdPackagesSortParameter? Sort { get; set; }
             /// <summary>Return packages with specified status</summary>
             [QueryParameter("status")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.GetStatusQueryParameterType? Status { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdPackagesStatusParameter? Status { get; set; }
         }
     }
 }

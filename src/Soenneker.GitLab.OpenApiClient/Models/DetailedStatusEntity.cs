@@ -59,10 +59,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The illustration property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.DetailedStatusEntity_illustration? Illustration { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.DetailedStatusEntityIllustrationProperty? Illustration { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.DetailedStatusEntity_illustration Illustration { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.DetailedStatusEntityIllustrationProperty Illustration { get; set; }
 #endif
         /// <summary>The label property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -119,7 +119,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "group", n => { Group = n.GetStringValue(); } },
                 { "has_details", n => { HasDetails = n.GetBoolValue(); } },
                 { "icon", n => { Icon = n.GetStringValue(); } },
-                { "illustration", n => { Illustration = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.DetailedStatusEntity_illustration>(global::Soenneker.GitLab.OpenApiClient.Models.DetailedStatusEntity_illustration.CreateFromDiscriminatorValue); } },
+                { "illustration", n => { Illustration = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.DetailedStatusEntityIllustrationProperty>(global::Soenneker.GitLab.OpenApiClient.Models.DetailedStatusEntityIllustrationProperty.CreateFromDiscriminatorValue); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "text", n => { Text = n.GetStringValue(); } },
                 { "tooltip", n => { Tooltip = n.GetStringValue(); } },
@@ -138,7 +138,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("group", Group);
             writer.WriteBoolValue("has_details", HasDetails);
             writer.WriteStringValue("icon", Icon);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.DetailedStatusEntity_illustration>("illustration", Illustration);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.DetailedStatusEntityIllustrationProperty>("illustration", Illustration);
             writer.WriteStringValue("label", Label);
             writer.WriteStringValue("text", Text);
             writer.WriteStringValue("tooltip", Tooltip);

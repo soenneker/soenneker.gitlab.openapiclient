@@ -36,20 +36,20 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Forks
         /// <summary>
         /// Lists all forks of a project.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProject"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProject?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Forks.ForksRequestBuilder.ForksRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Forks.ForksRequestBuilder.ForksRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProject> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Forks.ForksRequestBuilder.ForksRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Forks.ForksRequestBuilder.ForksRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProject>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProject.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Lists all forks of a project.
@@ -133,7 +133,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Forks
             public int? MinAccessLevel { get; set; }
             /// <summary>Return projects ordered by field. storage_size, repository_size, wiki_size, packages_size are only available to admins. Similarity is available when searching and is limited to projects the user has access to.</summary>
             [QueryParameter("order_by")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Forks.GetOrder_byQueryParameterType? OrderBy { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdForksOrderByParameter? OrderBy { get; set; }
             /// <summary>Limit by owned by authenticated user</summary>
             [QueryParameter("owned")]
             public bool? Owned { get; set; }
@@ -174,7 +174,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Forks
             public bool? Simple { get; set; }
             /// <summary>Return projects sorted in ascending and descending order</summary>
             [QueryParameter("sort")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Forks.GetSortQueryParameterType? Sort { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdForksSortParameter? Sort { get; set; }
             /// <summary>Limit by starred status</summary>
             [QueryParameter("starred")]
             public bool? Starred { get; set; }
@@ -199,7 +199,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Forks
             public DateTimeOffset? UpdatedBefore { get; set; }
             /// <summary>Limit by visibility</summary>
             [QueryParameter("visibility")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Forks.GetVisibilityQueryParameterType? Visibility { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdForksVisibilityParameter? Visibility { get; set; }
             /// <summary>Limit by projects where wiki checksum is failed</summary>
             [QueryParameter("wiki_checksum_failed")]
             public bool? WikiChecksumFailed { get; set; }

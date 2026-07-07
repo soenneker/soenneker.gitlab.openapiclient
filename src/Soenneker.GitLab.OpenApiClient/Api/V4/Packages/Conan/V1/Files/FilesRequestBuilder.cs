@@ -17,14 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Conan.V1.Files
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.packages.conan.v1.files.item collection</summary>
         /// <param name="position">Package name</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Conan.V1.Files.Item.WithPackage_nameItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Conan.V1.Files.Item.WithPackage_nameItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Conan.V1.Files.Item.WithPackageNameItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Conan.V1.Files.Item.WithPackageNameItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("package_name", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Conan.V1.Files.Item.WithPackage_nameItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("packageName", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Conan.V1.Files.Item.WithPackageNameItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

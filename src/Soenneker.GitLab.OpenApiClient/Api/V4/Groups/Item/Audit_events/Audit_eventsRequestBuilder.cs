@@ -20,14 +20,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Audit_events
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.audit_events.item collection</summary>
         /// <param name="position">The ID of the audit event</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Audit_events.Item.WithAudit_event_ItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Audit_events.Item.WithAudit_event_ItemRequestBuilder this[int position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Audit_events.Item.WithAuditEventItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Audit_events.Item.WithAuditEventItemRequestBuilder this[int position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("audit_event_id", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Audit_events.Item.WithAudit_event_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("auditEventId", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Audit_events.Item.WithAuditEventItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -47,25 +47,25 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Audit_events
         {
         }
         /// <summary>
-        /// Get a list of audit events in this group.
+        /// Lists all audit events for a specified group.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAuditEvent"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAuditEvent"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAuditEvent?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Audit_events.Audit_eventsRequestBuilder.Audit_eventsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAuditEvent?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Audit_events.Audit_eventsRequestBuilder.Audit_eventsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAuditEvent> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Audit_events.Audit_eventsRequestBuilder.Audit_eventsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAuditEvent> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Audit_events.Audit_eventsRequestBuilder.Audit_eventsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAuditEvent>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAuditEvent.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAuditEvent>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAuditEvent.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get a list of audit events in this group.
+        /// Lists all audit events for a specified group.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -93,7 +93,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Audit_events
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Audit_events.Audit_eventsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get a list of audit events in this group.
+        /// Lists all audit events for a specified group.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Audit_eventsRequestBuilderGetQueryParameters 

@@ -47,25 +47,25 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Keys
         {
         }
         /// <summary>
-        /// You can search for a user that owns a specific SSH key. Note only administrators can lookup SSH key\        with the fingerprint of an SSH key
+        /// Retrieves user by SSH key fingerprint. Administrators only.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserWithAdmin"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserWithAdmin"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserWithAdmin?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Keys.KeysRequestBuilder.KeysRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserWithAdmin?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Keys.KeysRequestBuilder.KeysRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserWithAdmin> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Keys.KeysRequestBuilder.KeysRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserWithAdmin> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Keys.KeysRequestBuilder.KeysRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserWithAdmin>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesUserWithAdmin.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserWithAdmin>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserWithAdmin.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// You can search for a user that owns a specific SSH key. Note only administrators can lookup SSH key\        with the fingerprint of an SSH key
+        /// Retrieves user by SSH key fingerprint. Administrators only.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -93,7 +93,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Keys
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Keys.KeysRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// You can search for a user that owns a specific SSH key. Note only administrators can lookup SSH key\        with the fingerprint of an SSH key
+        /// Retrieves user by SSH key fingerprint. Administrators only.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class KeysRequestBuilderGetQueryParameters 

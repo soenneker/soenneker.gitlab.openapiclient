@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Conan.V1.Conans.Item.Item.Item.Item.Upload_urls
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\packages\conan\v1\conans\{package_name}\{package_version}\{package_username}\{package_channel}\upload_urls
+    /// Builds and executes requests for operations under \api\v4\projects\{-id}\packages\conan\v1\conans\{packageName}\{packageVersion}\{packageUsername}\{packageChannel}\upload_urls
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Upload_urlsRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Conan.V1.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Upload_urlsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/packages/conan/v1/conans/{package_name}/{package_version}/{package_username}/{package_channel}/upload_urls", pathParameters)
+        public Upload_urlsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/packages/conan/v1/conans/{packageName}/{packageVersion}/{packageUsername}/{packageChannel}/upload_urls", pathParameters)
         {
         }
         /// <summary>
@@ -30,29 +30,29 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Conan.V1.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Upload_urlsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/packages/conan/v1/conans/{package_name}/{package_version}/{package_username}/{package_channel}/upload_urls", rawUrl)
+        public Upload_urlsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/packages/conan/v1/conans/{packageName}/{packageVersion}/{packageUsername}/{packageChannel}/upload_urls", rawUrl)
         {
         }
         /// <summary>
-        /// This feature was introduced in GitLab 12.4
+        /// Lists all the upload URLs for a specified collection of recipe files. The request must include a JSON object with the name and size of the individual files.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesPackagesConanUploadUrls"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesConanUploadUrls"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesPackagesConanUploadUrls?> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesConanUploadUrls?> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesPackagesConanUploadUrls> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesConanUploadUrls> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToPostRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesPackagesConanUploadUrls>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesPackagesConanUploadUrls.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesConanUploadUrls>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesConanUploadUrls.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 12.4
+        /// Lists all the upload URLs for a specified collection of recipe files. The request must include a JSON object with the name and size of the individual files.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

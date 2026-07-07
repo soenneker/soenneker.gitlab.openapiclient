@@ -32,14 +32,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Environments
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.environments.item collection</summary>
         /// <param name="position">The ID of the environment</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Environments.Item.WithEnvironment_ItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Environments.Item.WithEnvironment_ItemRequestBuilder this[int position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Environments.Item.WithEnvironmentItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Environments.Item.WithEnvironmentItemRequestBuilder this[int position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("environment_id", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Environments.Item.WithEnvironment_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("environmentId", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Environments.Item.WithEnvironmentItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -59,45 +59,45 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Environments
         {
         }
         /// <summary>
-        /// Get all environments for a given project. This feature was introduced in GitLab 8.11.
+        /// Lists all environments for a specified project.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesEnvironment"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEnvironment"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesEnvironment?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Environments.EnvironmentsRequestBuilder.EnvironmentsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEnvironment?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Environments.EnvironmentsRequestBuilder.EnvironmentsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesEnvironment> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Environments.EnvironmentsRequestBuilder.EnvironmentsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEnvironment> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Environments.EnvironmentsRequestBuilder.EnvironmentsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesEnvironment>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesEnvironment.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEnvironment>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEnvironment.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Creates a new environment with the given name and `external_url`. It returns `201` if the environment was successfully created, `400` for wrong parameters. This feature was introduced in GitLab 8.11.
+        /// Creates an environment for a specified project.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesEnvironment"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEnvironment"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesEnvironment?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAacac4671971 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEnvironment?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAacac4671971 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesEnvironment> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAacac4671971 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEnvironment> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAacac4671971 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesEnvironment>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesEnvironment.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEnvironment>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEnvironment.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get all environments for a given project. This feature was introduced in GitLab 8.11.
+        /// Lists all environments for a specified project.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -116,7 +116,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Environments
             return requestInfo;
         }
         /// <summary>
-        /// Creates a new environment with the given name and `external_url`. It returns `201` if the environment was successfully created, `400` for wrong parameters. This feature was introduced in GitLab 8.11.
+        /// Creates an environment for a specified project.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -147,7 +147,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Environments
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Environments.EnvironmentsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get all environments for a given project. This feature was introduced in GitLab 8.11.
+        /// Lists all environments for a specified project.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class EnvironmentsRequestBuilderGetQueryParameters 
@@ -180,7 +180,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Environments
 #endif
             /// <summary>&quot;List all environments that match a specific state. Accepted values: `available`, `stopping`, or `stopped`. If no state value given, returns all environments&quot;</summary>
             [QueryParameter("states")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Environments.GetStatesQueryParameterType? States { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdEnvironmentsStatesParameter? States { get; set; }
         }
     }
 }

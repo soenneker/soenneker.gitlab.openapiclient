@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Feature_flags.Unleash.Item.Client
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\feature_flags\unleash\{project_id}\client
+    /// Builds and executes requests for operations under \api\v4\feature_flags\unleash\{projectId}\client
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ClientRequestBuilder : BaseRequestBuilder
@@ -37,7 +37,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Feature_flags.Unleash.Item.Clien
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ClientRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/feature_flags/unleash/{project_id}/client", pathParameters)
+        public ClientRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/feature_flags/unleash/{projectId}/client", pathParameters)
         {
         }
         /// <summary>
@@ -45,7 +45,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Feature_flags.Unleash.Item.Clien
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ClientRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/feature_flags/unleash/{project_id}/client", rawUrl)
+        public ClientRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/feature_flags/unleash/{projectId}/client", rawUrl)
         {
         }
     }

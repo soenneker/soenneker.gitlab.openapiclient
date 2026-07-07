@@ -17,14 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Security_scans.Sas
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.security_scans.sast.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Security_scans.Sast.Item.WithSast_endpointItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Security_scans.Sast.Item.WithSast_endpointItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Security_scans.Sast.Item.WithSastEndpointItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Security_scans.Sast.Item.WithSastEndpointItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("sast_endpoint", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Security_scans.Sast.Item.WithSast_endpointItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("sastEndpoint", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Security_scans.Sast.Item.WithSastEndpointItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

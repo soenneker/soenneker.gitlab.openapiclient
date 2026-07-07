@@ -36,40 +36,40 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Application.Plan_limits
         /// <summary>
         /// List the current limits of a plan on the GitLab instance.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesPlanLimit"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPlanLimit"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesPlanLimit?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Application.Plan_limits.Plan_limitsRequestBuilder.Plan_limitsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPlanLimit?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Application.Plan_limits.Plan_limitsRequestBuilder.Plan_limitsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesPlanLimit> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Application.Plan_limits.Plan_limitsRequestBuilder.Plan_limitsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPlanLimit> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Application.Plan_limits.Plan_limitsRequestBuilder.Plan_limitsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesPlanLimit>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesPlanLimit.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPlanLimit>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPlanLimit.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Modify the limits of a plan on the GitLab instance.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesPlanLimit"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPlanLimit"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesPlanLimit?> PutAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA9e6fb278ceb body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPlanLimit?> PutAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA9E6Fb278Ceb body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesPlanLimit> PutAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA9e6fb278ceb body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPlanLimit> PutAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA9E6Fb278Ceb body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesPlanLimit>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesPlanLimit.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPlanLimit>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPlanLimit.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// List the current limits of a plan on the GitLab instance.
@@ -98,11 +98,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Application.Plan_limits
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPutRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA9e6fb278ceb body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA9E6Fb278Ceb body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPutRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA9e6fb278ceb body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA9E6Fb278Ceb body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -129,7 +129,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Application.Plan_limits
         {
             /// <summary>&quot;Name of the plan to get the limits from. Default: default.&quot;</summary>
             [QueryParameter("plan_name")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Application.Plan_limits.GetPlan_nameQueryParameterType? PlanName { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ApplicationPlanLimitsPlanNameParameter? PlanName { get; set; }
         }
     }
 }

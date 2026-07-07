@@ -2,7 +2,7 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
-using Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.WithSettings_context_hash;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.WithSettingsContextHash;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -32,12 +32,12 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync
         {
         }
         /// <summary>
-        /// Builds and executes requests for operations under \api\v4\vscode\settings_sync(\{settings_context_hash})
+        /// Builds and executes requests for operations under \api\v4\vscode\settings_sync(\{settingsContextHash})
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.WithSettings_context_hash.WithSettings_context_hashRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.WithSettings_context_hash.WithSettings_context_hashRequestBuilder WithSettings_context_hash()
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.WithSettingsContextHash.WithSettingsContextHashRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.WithSettingsContextHash.WithSettingsContextHashRequestBuilder WithSettingsContextHash()
         {
-            return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.WithSettings_context_hash.WithSettings_context_hashRequestBuilder(PathParameters, RequestAdapter);
+            return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.WithSettingsContextHash.WithSettingsContextHashRequestBuilder(PathParameters, RequestAdapter);
         }
     }
 }

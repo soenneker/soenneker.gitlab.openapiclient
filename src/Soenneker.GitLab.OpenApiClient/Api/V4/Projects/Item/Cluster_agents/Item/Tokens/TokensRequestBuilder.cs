@@ -13,21 +13,21 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Cluster_agents.Item.Tokens
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\cluster_agents\{agent_id}\tokens
+    /// Builds and executes requests for operations under \api\v4\projects\{-id}\cluster_agents\{agentId}\tokens
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TokensRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.cluster_agents.item.tokens.item collection</summary>
         /// <param name="position">The ID of the agent token</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Cluster_agents.Item.Tokens.Item.WithToken_ItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Cluster_agents.Item.Tokens.Item.WithToken_ItemRequestBuilder this[int position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Cluster_agents.Item.Tokens.Item.WithTokenItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Cluster_agents.Item.Tokens.Item.WithTokenItemRequestBuilder this[int position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("token_id", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Cluster_agents.Item.Tokens.Item.WithToken_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("tokenId", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Cluster_agents.Item.Tokens.Item.WithTokenItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -35,7 +35,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Cluster_agents.Ite
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TokensRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/cluster_agents/{agent_id}/tokens{?page*,per_page*}", pathParameters)
+        public TokensRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/cluster_agents/{agentId}/tokens{?page*,per_page*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,49 +43,49 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Cluster_agents.Ite
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TokensRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/cluster_agents/{agent_id}/tokens{?page*,per_page*}", rawUrl)
+        public TokensRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/cluster_agents/{agentId}/tokens{?page*,per_page*}", rawUrl)
         {
         }
         /// <summary>
-        /// This feature was introduced in GitLab 15.0. Returns a list of tokens for an agent.
+        /// Lists all active tokens for an agent. You must have the Developer, Maintainer, or Owner role to use this endpoint.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesClustersAgentTokenBasic"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesClustersAgentTokenBasic"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesClustersAgentTokenBasic?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Cluster_agents.Item.Tokens.TokensRequestBuilder.TokensRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesClustersAgentTokenBasic?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Cluster_agents.Item.Tokens.TokensRequestBuilder.TokensRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesClustersAgentTokenBasic> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Cluster_agents.Item.Tokens.TokensRequestBuilder.TokensRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesClustersAgentTokenBasic> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Cluster_agents.Item.Tokens.TokensRequestBuilder.TokensRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesClustersAgentTokenBasic>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesClustersAgentTokenBasic.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesClustersAgentTokenBasic>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesClustersAgentTokenBasic.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 15.0. Creates a new token for an agent.
+        /// Creates a token for an agent. You must have the Maintainer or Owner role to use this endpoint. An agent can have only two active tokens at one time.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesClustersAgentTokenWithToken"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesClustersAgentTokenWithToken"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesClustersAgentTokenWithToken?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody43bc13bfc297 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesClustersAgentTokenWithToken?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody43Bc13Bfc297 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesClustersAgentTokenWithToken> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody43bc13bfc297 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesClustersAgentTokenWithToken> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody43Bc13Bfc297 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesClustersAgentTokenWithToken>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesClustersAgentTokenWithToken.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesClustersAgentTokenWithToken>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesClustersAgentTokenWithToken.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 15.0. Returns a list of tokens for an agent.
+        /// Lists all active tokens for an agent. You must have the Developer, Maintainer, or Owner role to use this endpoint.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -104,18 +104,18 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Cluster_agents.Ite
             return requestInfo;
         }
         /// <summary>
-        /// This feature was introduced in GitLab 15.0. Creates a new token for an agent.
+        /// Creates a token for an agent. You must have the Maintainer or Owner role to use this endpoint. An agent can have only two active tokens at one time.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody43bc13bfc297 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody43Bc13Bfc297 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody43bc13bfc297 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody43Bc13Bfc297 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -135,7 +135,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Cluster_agents.Ite
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Cluster_agents.Item.Tokens.TokensRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 15.0. Returns a list of tokens for an agent.
+        /// Lists all active tokens for an agent. You must have the Developer, Maintainer, or Owner role to use this endpoint.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class TokensRequestBuilderGetQueryParameters 

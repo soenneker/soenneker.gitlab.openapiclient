@@ -34,25 +34,25 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners.Item.Jobs
         {
         }
         /// <summary>
-        /// List jobs that are being processed or were processed by the specified runner. The list of jobs is limited to projects where the user has at least the Reporter role.
+        /// Lists all jobs that are being processed or were processed by a specified runner. The list of jobs is limited to projects where the user has the Reporter, Developer, Maintainer, or Owner role.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiJobBasicWithProject"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobBasicWithProject"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiJobBasicWithProject?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Runners.Item.Jobs.JobsRequestBuilder.JobsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobBasicWithProject?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Runners.Item.Jobs.JobsRequestBuilder.JobsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiJobBasicWithProject> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Runners.Item.Jobs.JobsRequestBuilder.JobsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobBasicWithProject> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Runners.Item.Jobs.JobsRequestBuilder.JobsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiJobBasicWithProject>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiJobBasicWithProject.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobBasicWithProject>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobBasicWithProject.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// List jobs that are being processed or were processed by the specified runner. The list of jobs is limited to projects where the user has at least the Reporter role.
+        /// Lists all jobs that are being processed or were processed by a specified runner. The list of jobs is limited to projects where the user has the Reporter, Developer, Maintainer, or Owner role.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners.Item.Jobs
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Runners.Item.Jobs.JobsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// List jobs that are being processed or were processed by the specified runner. The list of jobs is limited to projects where the user has at least the Reporter role.
+        /// Lists all jobs that are being processed or were processed by a specified runner. The list of jobs is limited to projects where the user has the Reporter, Developer, Maintainer, or Owner role.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class JobsRequestBuilderGetQueryParameters 
@@ -97,7 +97,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners.Item.Jobs
 #endif
             /// <summary>Order by `id`</summary>
             [QueryParameter("order_by")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Runners.Item.Jobs.GetOrder_byQueryParameterType? OrderBy { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4RunnersIdJobsOrderByParameter? OrderBy { get; set; }
             /// <summary>Current page number</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
@@ -106,10 +106,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners.Item.Jobs
             public int? PerPage { get; set; }
             /// <summary>Sort by `asc` or `desc` order. Specify `order_by` as well, including for `id`</summary>
             [QueryParameter("sort")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Runners.Item.Jobs.GetSortQueryParameterType? Sort { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4RunnersIdJobsSortParameter? Sort { get; set; }
             /// <summary>Status of the job</summary>
             [QueryParameter("status")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Runners.Item.Jobs.GetStatusQueryParameterType? Status { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4RunnersIdJobsStatusParameter? Status { get; set; }
             /// <summary>System ID associated with the runner manager</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

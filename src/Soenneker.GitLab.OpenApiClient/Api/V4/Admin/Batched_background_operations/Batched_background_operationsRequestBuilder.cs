@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Batched_background_operations.Item;
 using Soenneker.GitLab.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
@@ -17,6 +18,18 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Batched_background_operati
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Batched_background_operationsRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.admin.batched_background_operations.item collection</summary>
+        /// <param name="position">The batched background operation id</param>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Batched_background_operations.Item.Batched_background_operationsItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Batched_background_operations.Item.Batched_background_operationsItemRequestBuilder this[int position]
+        {
+            get
+            {
+                var urlTplParams = new Dictionary<string, object>(PathParameters);
+                urlTplParams.Add("id", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Batched_background_operations.Item.Batched_background_operationsItemRequestBuilder(urlTplParams, RequestAdapter);
+            }
+        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Batched_background_operations.Batched_background_operationsRequestBuilder"/> and sets the default values.
         /// </summary>
@@ -36,20 +49,20 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Batched_background_operati
         /// <summary>
         /// This feature was introduced in GitLab 19.1.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBatchedBackgroundOperation"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBatchedBackgroundOperation"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBatchedBackgroundOperation?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Batched_background_operations.Batched_background_operationsRequestBuilder.Batched_background_operationsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBatchedBackgroundOperation?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Batched_background_operations.Batched_background_operationsRequestBuilder.Batched_background_operationsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBatchedBackgroundOperation> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Batched_background_operations.Batched_background_operationsRequestBuilder.Batched_background_operationsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBatchedBackgroundOperation> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Batched_background_operations.Batched_background_operationsRequestBuilder.Batched_background_operationsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBatchedBackgroundOperation>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesBatchedBackgroundOperation.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBatchedBackgroundOperation>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBatchedBackgroundOperation.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// This feature was introduced in GitLab 19.1.
@@ -87,7 +100,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Batched_background_operati
         {
             /// <summary>The name of the database, the default `main`</summary>
             [QueryParameter("database")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Batched_background_operations.GetDatabaseQueryParameterType? Database { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4AdminBatchedBackgroundOperationsDatabaseParameter? Database { get; set; }
             /// <summary>Filter operations by job class name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

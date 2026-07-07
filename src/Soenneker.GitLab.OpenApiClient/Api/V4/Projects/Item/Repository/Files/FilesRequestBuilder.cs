@@ -17,14 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.repository.files.item collection</summary>
         /// <param name="position">The URL-encoded path to the file.</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.Item.WithFile_pathItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.Item.WithFile_pathItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.Item.WithFilePathItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.Item.WithFilePathItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("file_path", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.Item.WithFile_pathItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("filePath", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.Item.WithFilePathItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

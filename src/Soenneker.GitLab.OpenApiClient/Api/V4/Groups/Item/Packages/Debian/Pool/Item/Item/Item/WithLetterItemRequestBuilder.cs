@@ -10,21 +10,21 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Debian.Pool.Item.Item.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\groups\{id}\packages\debian\pool\{distribution}\{project_id}\{letter}
+    /// Builds and executes requests for operations under \api\v4\groups\{id}\packages\debian\pool\{distribution}\{projectId}\{letter}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithLetterItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.packages.debian.pool.item.item.item.item collection</summary>
         /// <param name="position">The Debian Source Package Name</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Debian.Pool.Item.Item.Item.Item.WithPackage_nameItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Debian.Pool.Item.Item.Item.Item.WithPackage_nameItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Debian.Pool.Item.Item.Item.Item.WithPackageNameItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Debian.Pool.Item.Item.Item.Item.WithPackageNameItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("package_name", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Debian.Pool.Item.Item.Item.Item.WithPackage_nameItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("packageName", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Debian.Pool.Item.Item.Item.Item.WithPackageNameItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -32,7 +32,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Debian.Pool
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithLetterItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/groups/{id}/packages/debian/pool/{distribution}/{project_id}/{letter}", pathParameters)
+        public WithLetterItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/groups/{id}/packages/debian/pool/{distribution}/{projectId}/{letter}", pathParameters)
         {
         }
         /// <summary>
@@ -40,7 +40,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Debian.Pool
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithLetterItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/groups/{id}/packages/debian/pool/{distribution}/{project_id}/{letter}", rawUrl)
+        public WithLetterItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/groups/{id}/packages/debian/pool/{distribution}/{projectId}/{letter}", rawUrl)
         {
         }
     }

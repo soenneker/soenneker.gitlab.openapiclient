@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipeline_schedules.Item.Pipelines
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\pipeline_schedules\{pipeline_schedule_id}\pipelines
+    /// Builds and executes requests for operations under \api\v4\projects\{-id}\pipeline_schedules\{pipelineScheduleId}\pipelines
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PipelinesRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipeline_schedules
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PipelinesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/pipeline_schedules/{pipeline_schedule_id}/pipelines{?created_after*,created_before*,page*,per_page*,scope*,sort*,status*,updated_after*,updated_before*}", pathParameters)
+        public PipelinesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/pipeline_schedules/{pipelineScheduleId}/pipelines{?created_after*,created_before*,page*,per_page*,scope*,sort*,status*,updated_after*,updated_before*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,26 +30,26 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipeline_schedules
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PipelinesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/pipeline_schedules/{pipeline_schedule_id}/pipelines{?created_after*,created_before*,page*,per_page*,scope*,sort*,status*,updated_after*,updated_before*}", rawUrl)
+        public PipelinesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/pipeline_schedules/{pipelineScheduleId}/pipelines{?created_after*,created_before*,page*,per_page*,scope*,sort*,status*,updated_after*,updated_before*}", rawUrl)
         {
         }
         /// <summary>
         /// Lists all pipelines triggered by a pipeline schedule in a project.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiPipelineBasic"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiPipelineBasic"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiPipelineBasic?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipeline_schedules.Item.Pipelines.PipelinesRequestBuilder.PipelinesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiPipelineBasic?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipeline_schedules.Item.Pipelines.PipelinesRequestBuilder.PipelinesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiPipelineBasic> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipeline_schedules.Item.Pipelines.PipelinesRequestBuilder.PipelinesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiPipelineBasic> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipeline_schedules.Item.Pipelines.PipelinesRequestBuilder.PipelinesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiPipelineBasic>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiPipelineBasic.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiPipelineBasic>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiPipelineBasic.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Lists all pipelines triggered by a pipeline schedule in a project.
@@ -99,13 +99,13 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipeline_schedules
             public int? PerPage { get; set; }
             /// <summary>The scope of pipelines</summary>
             [QueryParameter("scope")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipeline_schedules.Item.Pipelines.GetScopeQueryParameterType? Scope { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdPipelineSchedulesPipelineScheduleIdPipelinesScopeParameter? Scope { get; set; }
             /// <summary>Sort pipelines</summary>
             [QueryParameter("sort")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipeline_schedules.Item.Pipelines.GetSortQueryParameterType? Sort { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdPipelineSchedulesPipelineScheduleIdPipelinesSortParameter? Sort { get; set; }
             /// <summary>The status of pipelines</summary>
             [QueryParameter("status")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipeline_schedules.Item.Pipelines.GetStatusQueryParameterType? Status { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdPipelineSchedulesPipelineScheduleIdPipelinesStatusParameter? Status { get; set; }
             /// <summary>&quot;Return pipelines updated after the specified datetime. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ&quot;</summary>
             [QueryParameter("updated_after")]
             public DateTimeOffset? UpdatedAfter { get; set; }

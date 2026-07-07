@@ -34,25 +34,25 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners.All
         {
         }
         /// <summary>
-        /// Get a list of all runners in the GitLab instance (shared and project). Access is restricted to users with either administrator access or auditor access.
+        /// Lists all runners in the GitLab instance (project and shared). You must have either administrator access or auditor access.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiRunner"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunner"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiRunner?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Runners.All.AllRequestBuilder.AllRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunner?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Runners.All.AllRequestBuilder.AllRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiRunner> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Runners.All.AllRequestBuilder.AllRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunner> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Runners.All.AllRequestBuilder.AllRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiRunner>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiRunner.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunner>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunner.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get a list of all runners in the GitLab instance (shared and project). Access is restricted to users with either administrator access or auditor access.
+        /// Lists all runners in the GitLab instance (project and shared). You must have either administrator access or auditor access.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners.All
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Runners.All.AllRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get a list of all runners in the GitLab instance (shared and project). Access is restricted to users with either administrator access or auditor access.
+        /// Lists all runners in the GitLab instance (project and shared). You must have either administrator access or auditor access.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class AllRequestBuilderGetQueryParameters 
@@ -96,10 +96,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners.All
             public int? PerPage { get; set; }
             /// <summary>&quot;Deprecated: Use `type` or `status` instead. The scope of runners to return&quot;</summary>
             [QueryParameter("scope")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Runners.All.GetScopeQueryParameterType? Scope { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4RunnersAllScopeParameter? Scope { get; set; }
             /// <summary>The status of runners to return</summary>
             [QueryParameter("status")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Runners.All.GetStatusQueryParameterType? Status { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4RunnersAllStatusParameter? Status { get; set; }
             /// <summary>A list of runner tags</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -112,7 +112,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners.All
 #endif
             /// <summary>The type of runners to return</summary>
             [QueryParameter("type")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Runners.All.GetTypeQueryParameterType? Type { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4RunnersAllTypeParameter? Type { get; set; }
             /// <summary>The version prefix of runners to return</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

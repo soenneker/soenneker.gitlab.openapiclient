@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Integrations.Jira_connect;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Integrations.Jira_forge;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Integrations.Slack;
 using System.Collections.Generic;
 using System.IO;
@@ -20,6 +21,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Integrations
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Integrations.Jira_connect.Jira_connectRequestBuilder Jira_connect
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Integrations.Jira_connect.Jira_connectRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The jira_forge property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Integrations.Jira_forge.Jira_forgeRequestBuilder Jira_forge
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Integrations.Jira_forge.Jira_forgeRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The slack property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Integrations.Slack.SlackRequestBuilder Slack

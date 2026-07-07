@@ -26,14 +26,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Projects
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.projects.item collection</summary>
         /// <param name="position">The ID or path of the project</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Projects.Item.WithProject_ItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Projects.Item.WithProject_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Projects.Item.WithProjectItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Projects.Item.WithProjectItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("project_id", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Projects.Item.WithProject_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("projectId", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Projects.Item.WithProjectItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -53,25 +53,25 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Projects
         {
         }
         /// <summary>
-        /// Get a list of projects in this group.
+        /// Lists all projects in a specified group accessible to the authenticated user. Unauthenticated requests return only public projects with a limited subset of attributes.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProject"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProject?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Projects.ProjectsRequestBuilder.ProjectsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Projects.ProjectsRequestBuilder.ProjectsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProject> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Projects.ProjectsRequestBuilder.ProjectsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Projects.ProjectsRequestBuilder.ProjectsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProject>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesProject.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get a list of projects in this group.
+        /// Lists all projects in a specified group accessible to the authenticated user. Unauthenticated requests return only public projects with a limited subset of attributes.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -99,7 +99,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Projects
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Projects.ProjectsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get a list of projects in this group.
+        /// Lists all projects in a specified group accessible to the authenticated user. Unauthenticated requests return only public projects with a limited subset of attributes.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ProjectsRequestBuilderGetQueryParameters 
@@ -131,7 +131,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Projects
             public int? MinAccessLevel { get; set; }
             /// <summary>Return projects ordered by field</summary>
             [QueryParameter("order_by")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Projects.GetOrder_byQueryParameterType? OrderBy { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdProjectsOrderByParameter? OrderBy { get; set; }
             /// <summary>Limit by owned by authenticated user</summary>
             [QueryParameter("owned")]
             public bool? Owned { get; set; }
@@ -156,13 +156,13 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Projects
             public bool? Simple { get; set; }
             /// <summary>Return projects sorted in ascending and descending order</summary>
             [QueryParameter("sort")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Projects.GetSortQueryParameterType? Sort { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdProjectsSortParameter? Sort { get; set; }
             /// <summary>Limit by starred status</summary>
             [QueryParameter("starred")]
             public bool? Starred { get; set; }
             /// <summary>Limit by visibility</summary>
             [QueryParameter("visibility")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Projects.GetVisibilityQueryParameterType? Visibility { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdProjectsVisibilityParameter? Visibility { get; set; }
             /// <summary>Include custom attributes in the response</summary>
             [QueryParameter("with_custom_attributes")]
             public bool? WithCustomAttributes { get; set; }

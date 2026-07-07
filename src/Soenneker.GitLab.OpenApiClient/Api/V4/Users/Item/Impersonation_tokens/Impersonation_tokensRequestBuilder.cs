@@ -20,14 +20,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Impersonation_tokens
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.users.item.impersonation_tokens.item collection</summary>
         /// <param name="position">The ID of the impersonation token</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Impersonation_tokens.Item.WithImpersonation_token_ItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Impersonation_tokens.Item.WithImpersonation_token_ItemRequestBuilder this[int position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Impersonation_tokens.Item.WithImpersonationTokenItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Impersonation_tokens.Item.WithImpersonationTokenItemRequestBuilder this[int position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("impersonation_token_id", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Impersonation_tokens.Item.WithImpersonation_token_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("impersonationTokenId", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Impersonation_tokens.Item.WithImpersonationTokenItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -49,40 +49,40 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Impersonation_tokens
         /// <summary>
         /// Lists all impersonation tokens for a specified user. Administrators only.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesImpersonationToken"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesImpersonationToken"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesImpersonationToken?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Impersonation_tokens.Impersonation_tokensRequestBuilder.Impersonation_tokensRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesImpersonationToken?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Impersonation_tokens.Impersonation_tokensRequestBuilder.Impersonation_tokensRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesImpersonationToken> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Impersonation_tokens.Impersonation_tokensRequestBuilder.Impersonation_tokensRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesImpersonationToken> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Impersonation_tokens.Impersonation_tokensRequestBuilder.Impersonation_tokensRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesImpersonationToken>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesImpersonationToken.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesImpersonationToken>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesImpersonationToken.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Creates an impersonation token. These tokens are used to act on behalf of a user and can perform API calls as well as Git read and write actions. These tokens are not visible to the associated user on their profile settings page. Token values are included with the response, but cannot be retrieved later. Administrators only.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesImpersonationTokenWithToken"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesImpersonationTokenWithToken"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesImpersonationTokenWithToken?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody23654ddd71d7 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesImpersonationTokenWithToken?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody23654Ddd71D7 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesImpersonationTokenWithToken> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody23654ddd71d7 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesImpersonationTokenWithToken> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody23654Ddd71D7 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesImpersonationTokenWithToken>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesImpersonationTokenWithToken.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesImpersonationTokenWithToken>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesImpersonationTokenWithToken.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Lists all impersonation tokens for a specified user. Administrators only.
@@ -111,11 +111,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Impersonation_tokens
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody23654ddd71d7 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody23654Ddd71D7 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody23654ddd71d7 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody23654Ddd71D7 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -148,7 +148,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Impersonation_tokens
             public int? PerPage { get; set; }
             /// <summary>Filters (all|active|inactive) impersonation_tokens</summary>
             [QueryParameter("state")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Impersonation_tokens.GetStateQueryParameterType? State { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4UsersUserIdImpersonationTokensStateParameter? State { get; set; }
         }
     }
 }

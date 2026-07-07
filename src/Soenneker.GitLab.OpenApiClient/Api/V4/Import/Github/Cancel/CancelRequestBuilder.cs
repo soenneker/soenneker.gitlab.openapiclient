@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Import.Github.Cancel
         {
         }
         /// <summary>
-        /// This feature was introduced in GitLab 15.5
+        /// Cancels an in-progress import of a GitHub project to GitLab.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ProjectImportEntity"/></returns>
         /// <param name="body">The request body</param>
@@ -42,11 +42,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Import.Github.Cancel
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ProjectImportEntity?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyEd776934ed6f body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ProjectImportEntity?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyEd776934Ed6F body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ProjectImportEntity> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyEd776934ed6f body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ProjectImportEntity> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyEd776934Ed6F body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -54,18 +54,18 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Import.Github.Cancel
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ProjectImportEntity>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ProjectImportEntity.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 15.5
+        /// Cancels an in-progress import of a GitHub project to GitLab.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyEd776934ed6f body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyEd776934Ed6F body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyEd776934ed6f body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyEd776934Ed6F body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

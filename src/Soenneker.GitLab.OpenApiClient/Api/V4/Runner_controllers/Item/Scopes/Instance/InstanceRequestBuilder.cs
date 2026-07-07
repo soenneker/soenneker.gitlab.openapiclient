@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runner_controllers.Item.Scopes.I
         {
         }
         /// <summary>
-        /// Remove an instance-level scope from a runner controller.
+        /// Removes an instance scope from a runner controller.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -51,25 +51,25 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runner_controllers.Item.Scopes.I
             await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Add an instance-level scope to a runner controller.
+        /// Adds an instance scope to a runner controller. When added, the runner controller evaluates jobs for all runners in the GitLab instance. A runner controller can have only one instance scope. If an instance scope already exists, this operation returns an error.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiRunnerControllerInstanceLevelScoping"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerControllerInstanceLevelScoping"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiRunnerControllerInstanceLevelScoping?> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerControllerInstanceLevelScoping?> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiRunnerControllerInstanceLevelScoping> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerControllerInstanceLevelScoping> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToPostRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiRunnerControllerInstanceLevelScoping>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiRunnerControllerInstanceLevelScoping.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerControllerInstanceLevelScoping>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerControllerInstanceLevelScoping.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Remove an instance-level scope from a runner controller.
+        /// Removes an instance scope from a runner controller.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -88,7 +88,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runner_controllers.Item.Scopes.I
             return requestInfo;
         }
         /// <summary>
-        /// Add an instance-level scope to a runner controller.
+        /// Adds an instance scope to a runner controller. When added, the runner controller evaluates jobs for all runners in the GitLab instance. A runner controller can have only one instance scope. If an instance scope already exists, this operation returns an error.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

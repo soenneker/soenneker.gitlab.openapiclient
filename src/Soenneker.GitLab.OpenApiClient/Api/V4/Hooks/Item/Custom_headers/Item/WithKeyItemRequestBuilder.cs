@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Hooks.Item.Custom_headers.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\hooks\{hook_id}\custom_headers\{key}
+    /// Builds and executes requests for operations under \api\v4\hooks\{hookId}\custom_headers\{key}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithKeyItemRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Hooks.Item.Custom_headers.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithKeyItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/hooks/{hook_id}/custom_headers/{key}", pathParameters)
+        public WithKeyItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/hooks/{hookId}/custom_headers/{key}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Hooks.Item.Custom_headers.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithKeyItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/hooks/{hook_id}/custom_headers/{key}", rawUrl)
+        public WithKeyItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/hooks/{hookId}/custom_headers/{key}", rawUrl)
         {
         }
         /// <summary>
@@ -53,22 +53,22 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Hooks.Item.Custom_headers.Item
         /// <summary>
         /// Updates a custom header for a specified webhook.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Hooks.Item.Custom_headers.Item.WithKeyPutResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson187"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Hooks.Item.Custom_headers.Item.WithKeyPutResponse?> PutAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5302a191e8a2 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson187?> PutAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5302A191E8A2 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Hooks.Item.Custom_headers.Item.WithKeyPutResponse> PutAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5302a191e8a2 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson187> PutAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5302A191E8A2 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Hooks.Item.Custom_headers.Item.WithKeyPutResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Hooks.Item.Custom_headers.Item.WithKeyPutResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson187>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson187.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Deletes a custom header from a specified webhook.
@@ -97,11 +97,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Hooks.Item.Custom_headers.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPutRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5302a191e8a2 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5302A191E8A2 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPutRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5302a191e8a2 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5302A191E8A2 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

@@ -17,14 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Artifacts
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.jobs.artifacts.item collection</summary>
         /// <param name="position">Branch or tag name in repository. `HEAD` or `SHA` references are not supported.</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Artifacts.Item.WithRef_nameItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Artifacts.Item.WithRef_nameItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Artifacts.Item.WithRefNameItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Artifacts.Item.WithRefNameItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("ref_name", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Artifacts.Item.WithRef_nameItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("refName", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Artifacts.Item.WithRefNameItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

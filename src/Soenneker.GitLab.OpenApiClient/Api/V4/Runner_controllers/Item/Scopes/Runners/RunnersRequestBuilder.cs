@@ -17,14 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runner_controllers.Item.Scopes.R
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.runner_controllers.item.scopes.runners.item collection</summary>
         /// <param name="position">ID of the runner</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Runner_controllers.Item.Scopes.Runners.Item.WithRunner_ItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Runner_controllers.Item.Scopes.Runners.Item.WithRunner_ItemRequestBuilder this[int position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Runner_controllers.Item.Scopes.Runners.Item.WithRunnerItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Runner_controllers.Item.Scopes.Runners.Item.WithRunnerItemRequestBuilder this[int position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("runner_id", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Runner_controllers.Item.Scopes.Runners.Item.WithRunner_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("runnerId", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Runner_controllers.Item.Scopes.Runners.Item.WithRunnerItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

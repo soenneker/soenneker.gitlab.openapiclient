@@ -17,14 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Retrieve
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.geo.retrieve.item collection</summary>
         /// <param name="position">The replicable name of a replicator instance</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Retrieve.Item.WithReplicable_nameItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Retrieve.Item.WithReplicable_nameItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Retrieve.Item.WithReplicableNameItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Retrieve.Item.WithReplicableNameItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("replicable_name", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Retrieve.Item.WithReplicable_nameItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("replicableName", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Retrieve.Item.WithReplicableNameItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

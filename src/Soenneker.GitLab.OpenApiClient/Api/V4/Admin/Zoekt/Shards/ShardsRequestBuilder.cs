@@ -20,14 +20,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Shards
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.admin.zoekt.shards.item collection</summary>
         /// <param name="position">The id of the Search::Zoekt::Node</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Shards.Item.WithNode_ItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Shards.Item.WithNode_ItemRequestBuilder this[int position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Shards.Item.WithNodeItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Shards.Item.WithNodeItemRequestBuilder this[int position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("node_id", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Shards.Item.WithNode_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("nodeId", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Shards.Item.WithNodeItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -49,20 +49,20 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Shards
         /// <summary>
         /// Get all the Zoekt nodes
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesSearchZoektNode"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSearchZoektNode"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesSearchZoektNode?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSearchZoektNode?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesSearchZoektNode> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSearchZoektNode> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesSearchZoektNode>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesSearchZoektNode.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSearchZoektNode>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSearchZoektNode.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get all the Zoekt nodes

@@ -36,22 +36,22 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Catalog.Publish
         /// <summary>
         /// Publishes a release of a catalog resource as version to the CI/CD catalog.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiCatalogResourcesVersion"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiCatalogResourcesVersion"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiCatalogResourcesVersion?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody790567470193 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiCatalogResourcesVersion?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody790567470193 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiCatalogResourcesVersion> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody790567470193 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiCatalogResourcesVersion> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody790567470193 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiCatalogResourcesVersion>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiCatalogResourcesVersion.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiCatalogResourcesVersion>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiCatalogResourcesVersion.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Publishes a release of a catalog resource as version to the CI/CD catalog.

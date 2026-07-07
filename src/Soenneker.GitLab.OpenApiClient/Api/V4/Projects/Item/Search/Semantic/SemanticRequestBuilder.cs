@@ -36,20 +36,20 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Search.Semantic
         /// <summary>
         /// Introduced in GitLab 18.11.Searches indexed project code using semantic (meaning-based) similarity rather thankeyword matching. Use this when you do not know the exact symbol or file name, orto discover how a behavior is implemented across the codebase.Primary use cases:- When you do not know the exact symbol or file path- To see how a behavior or feature is implemented across the codebase- To discover related implementations (clients, jobs, workers)How to use:- Provide a concise, specific query with concrete keywords- Use directory_path to narrow scope (e.g. &quot;app/services/&quot;)- Prefer precise intent over broad termsResults are grouped by file. Each file includes merged line ranges with contentand a relevance score (0.0-1.0). The response includes an overall confidencelevel (high/medium/low/unknown) based on score distribution. Results arefiltered by Duo context exclusion settings.Requires semantic code search to be enabled and indexed for the project namespace.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAiSemanticCodeResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSemanticCodeResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAiSemanticCodeResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Search.Semantic.SemanticRequestBuilder.SemanticRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSemanticCodeResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Search.Semantic.SemanticRequestBuilder.SemanticRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAiSemanticCodeResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Search.Semantic.SemanticRequestBuilder.SemanticRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSemanticCodeResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Search.Semantic.SemanticRequestBuilder.SemanticRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAiSemanticCodeResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesAiSemanticCodeResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSemanticCodeResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSemanticCodeResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Introduced in GitLab 18.11.Searches indexed project code using semantic (meaning-based) similarity rather thankeyword matching. Use this when you do not know the exact symbol or file name, orto discover how a behavior is implemented across the codebase.Primary use cases:- When you do not know the exact symbol or file path- To see how a behavior or feature is implemented across the codebase- To discover related implementations (clients, jobs, workers)How to use:- Provide a concise, specific query with concrete keywords- Use directory_path to narrow scope (e.g. &quot;app/services/&quot;)- Prefer precise intent over broad termsResults are grouped by file. Each file includes merged line ranges with contentand a relevance score (0.0-1.0). The response includes an overall confidencelevel (high/medium/low/unknown) based on score distribution. Results arefiltered by Duo context exclusion settings.Requires semantic code search to be enabled and indexed for the project namespace.

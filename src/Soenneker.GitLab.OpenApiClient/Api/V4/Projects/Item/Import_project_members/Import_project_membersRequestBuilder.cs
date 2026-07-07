@@ -17,14 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Import_project_mem
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.import_project_members.item collection</summary>
         /// <param name="position">The ID of the source project to import the members from.</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Import_project_members.Item.WithProject_ItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Import_project_members.Item.WithProject_ItemRequestBuilder this[int position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Import_project_members.Item.WithProjectItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Import_project_members.Item.WithProjectItemRequestBuilder this[int position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("project_id", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Import_project_members.Item.WithProject_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("projectId", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Import_project_members.Item.WithProjectItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

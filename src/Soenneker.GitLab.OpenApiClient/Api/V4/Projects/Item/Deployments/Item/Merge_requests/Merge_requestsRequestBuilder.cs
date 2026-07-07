@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments.Item.Merge_requests
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\deployments\{deployment_id}\merge_requests
+    /// Builds and executes requests for operations under \api\v4\projects\{-id}\deployments\{deploymentId}\merge_requests
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Merge_requestsRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments.Item.M
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Merge_requestsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/deployments/{deployment_id}/merge_requests{?assignee_id*,assignee_username*,author_id*,author_username*,created_after*,created_before*,deployed_after*,deployed_before*,draft*,environment*,in*,labels,merge_user_id*,merge_user_username*,milestone*,my_reaction_emoji*,not*,not%5Bassignee_id%5D*,not%5Bassignee_username%5D*,not%5Bauthor_id%5D*,not%5Bauthor_username%5D*,not%5Blabels%5D*,not%5Bmilestone%5D*,not%5Bmy_reaction_emoji%5D*,not%5Breviewer_id%5D*,not%5Breviewer_username%5D*,order_by*,page*,per_page*,reviewer_id*,reviewer_username*,scope*,search*,sort*,source_branch*,source_project_id*,state*,target_branch*,updated_after*,updated_before*,view*,wip*,with_labels_details*,with_merge_status_recheck*}", pathParameters)
+        public Merge_requestsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/deployments/{deploymentId}/merge_requests{?assignee_id*,assignee_username*,author_id*,author_username*,created_after*,created_before*,deployed_after*,deployed_before*,draft*,environment*,in*,labels,merge_user_id*,merge_user_username*,milestone*,my_reaction_emoji*,not*,not%5Bassignee_id%5D*,not%5Bassignee_username%5D*,not%5Bauthor_id%5D*,not%5Bauthor_username%5D*,not%5Blabels%5D*,not%5Bmilestone%5D*,not%5Bmy_reaction_emoji%5D*,not%5Breviewer_id%5D*,not%5Breviewer_username%5D*,order_by*,page*,per_page*,reviewer_id*,reviewer_username*,scope*,search*,sort*,source_branch*,source_project_id*,state*,target_branch*,updated_after*,updated_before*,view*,wip*,with_labels_details*,with_merge_status_recheck*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,29 +30,29 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments.Item.M
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Merge_requestsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/deployments/{deployment_id}/merge_requests{?assignee_id*,assignee_username*,author_id*,author_username*,created_after*,created_before*,deployed_after*,deployed_before*,draft*,environment*,in*,labels,merge_user_id*,merge_user_username*,milestone*,my_reaction_emoji*,not*,not%5Bassignee_id%5D*,not%5Bassignee_username%5D*,not%5Bauthor_id%5D*,not%5Bauthor_username%5D*,not%5Blabels%5D*,not%5Bmilestone%5D*,not%5Bmy_reaction_emoji%5D*,not%5Breviewer_id%5D*,not%5Breviewer_username%5D*,order_by*,page*,per_page*,reviewer_id*,reviewer_username*,scope*,search*,sort*,source_branch*,source_project_id*,state*,target_branch*,updated_after*,updated_before*,view*,wip*,with_labels_details*,with_merge_status_recheck*}", rawUrl)
+        public Merge_requestsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/deployments/{deploymentId}/merge_requests{?assignee_id*,assignee_username*,author_id*,author_username*,created_after*,created_before*,deployed_after*,deployed_before*,draft*,environment*,in*,labels,merge_user_id*,merge_user_username*,milestone*,my_reaction_emoji*,not*,not%5Bassignee_id%5D*,not%5Bassignee_username%5D*,not%5Bauthor_id%5D*,not%5Bauthor_username%5D*,not%5Blabels%5D*,not%5Bmilestone%5D*,not%5Bmy_reaction_emoji%5D*,not%5Breviewer_id%5D*,not%5Breviewer_username%5D*,order_by*,page*,per_page*,reviewer_id*,reviewer_username*,scope*,search*,sort*,source_branch*,source_project_id*,state*,target_branch*,updated_after*,updated_before*,view*,wip*,with_labels_details*,with_merge_status_recheck*}", rawUrl)
         {
         }
         /// <summary>
-        /// Retrieves the list of merge requests shipped with a given deployment. This feature was introduced in GitLab 12.7.
+        /// Lists all merge requests shipped with a specified deployment.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMergeRequestBasic"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestBasic"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMergeRequestBasic?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments.Item.Merge_requests.Merge_requestsRequestBuilder.Merge_requestsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestBasic?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments.Item.Merge_requests.Merge_requestsRequestBuilder.Merge_requestsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMergeRequestBasic> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments.Item.Merge_requests.Merge_requestsRequestBuilder.Merge_requestsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestBasic> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments.Item.Merge_requests.Merge_requestsRequestBuilder.Merge_requestsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMergeRequestBasic>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesMergeRequestBasic.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestBasic>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestBasic.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves the list of merge requests shipped with a given deployment. This feature was introduced in GitLab 12.7.
+        /// Lists all merge requests shipped with a specified deployment.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments.Item.M
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments.Item.Merge_requests.Merge_requestsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Retrieves the list of merge requests shipped with a given deployment. This feature was introduced in GitLab 12.7.
+        /// Lists all merge requests shipped with a specified deployment.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Merge_requestsRequestBuilderGetQueryParameters 
@@ -284,7 +284,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments.Item.M
 #endif
             /// <summary>Returns merge requests ordered by `created_at`, `label_priority`, `milestone_due`, `popularity`, `priority`, `title`, `updated_at` or `merged_at` fields. Introduced in GitLab 14.8.</summary>
             [QueryParameter("order_by")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments.Item.Merge_requests.GetOrder_byQueryParameterType? OrderBy { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdDeploymentsDeploymentIdMergeRequestsOrderByParameter? OrderBy { get; set; }
             /// <summary>Current page number</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
@@ -306,7 +306,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments.Item.M
 #endif
             /// <summary>&quot;Returns merge requests for the given scope: `created_by_me`, `assigned_to_me`, `reviews_for_me` or `all`&quot;</summary>
             [QueryParameter("scope")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments.Item.Merge_requests.GetScopeQueryParameterType? Scope { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdDeploymentsDeploymentIdMergeRequestsScopeParameter? Scope { get; set; }
             /// <summary>Search merge requests against their `title` and `description`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -319,7 +319,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments.Item.M
 #endif
             /// <summary>Returns merge requests sorted in `asc` or `desc` order.</summary>
             [QueryParameter("sort")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments.Item.Merge_requests.GetSortQueryParameterType? Sort { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdDeploymentsDeploymentIdMergeRequestsSortParameter? Sort { get; set; }
             /// <summary>Returns merge requests with the given source branch</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -335,7 +335,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments.Item.M
             public int? SourceProjectId { get; set; }
             /// <summary>Returns `all` merge requests or just those that are `opened`, `closed`, `locked`, or `merged`.</summary>
             [QueryParameter("state")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments.Item.Merge_requests.GetStateQueryParameterType? State { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdDeploymentsDeploymentIdMergeRequestsStateParameter? State { get; set; }
             /// <summary>Returns merge requests with the given target branch</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -354,10 +354,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments.Item.M
             public DateTimeOffset? UpdatedBefore { get; set; }
             /// <summary>If simple, returns the `iid`, URL, title, description, and basic state of merge request</summary>
             [QueryParameter("view")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments.Item.Merge_requests.GetViewQueryParameterType? View { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdDeploymentsDeploymentIdMergeRequestsViewParameter? View { get; set; }
             /// <summary>Deprecated. Use `draft` instead. Filter merge requests against their `wip` status. `yes` to return only draft merge requests, `no` to return non-draft merge requests.</summary>
             [QueryParameter("wip")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments.Item.Merge_requests.GetWipQueryParameterType? Wip { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdDeploymentsDeploymentIdMergeRequestsWipParameter? Wip { get; set; }
             /// <summary>&quot;If `true`, response returns more details for each label in labels field: `:name`,`:color`, `:description`, `:description_html`, `:text_color`&quot;</summary>
             [QueryParameter("with_labels_details")]
             public bool? WithLabelsDetails { get; set; }

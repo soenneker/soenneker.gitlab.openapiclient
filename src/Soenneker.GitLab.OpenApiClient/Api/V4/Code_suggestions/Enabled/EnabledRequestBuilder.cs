@@ -36,22 +36,22 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Code_suggestions.Enabled
         /// <summary>
         /// Validates the status Code Suggestions for a specified project. This checks if the project has `code_suggestions` enabled or if an ancestor group has the Code Suggestions add-on enabled.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Code_suggestions.Enabled.EnabledPostResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson8"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Code_suggestions.Enabled.EnabledPostResponse?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2ba2971a1c28 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson8?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2Ba2971A1C28 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Code_suggestions.Enabled.EnabledPostResponse> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2ba2971a1c28 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson8> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2Ba2971A1C28 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Code_suggestions.Enabled.EnabledPostResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Code_suggestions.Enabled.EnabledPostResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson8>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson8.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Validates the status Code Suggestions for a specified project. This checks if the project has `code_suggestions` enabled or if an ancestor group has the Code Suggestions add-on enabled.
@@ -61,11 +61,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Code_suggestions.Enabled
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2ba2971a1c28 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2Ba2971A1C28 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2ba2971a1c28 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2Ba2971A1C28 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

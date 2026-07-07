@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.GitLab.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -35,20 +36,20 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues_statistics
         /// <summary>
         /// Get statistics for the list of project issues
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues_statistics.Issues_statisticsGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson314"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues_statistics.Issues_statisticsGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues_statistics.Issues_statisticsRequestBuilder.Issues_statisticsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson314?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues_statistics.Issues_statisticsRequestBuilder.Issues_statisticsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues_statistics.Issues_statisticsGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues_statistics.Issues_statisticsRequestBuilder.Issues_statisticsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson314> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues_statistics.Issues_statisticsRequestBuilder.Issues_statisticsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues_statistics.Issues_statisticsGetResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues_statistics.Issues_statisticsGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson314>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson314.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get statistics for the list of project issues
@@ -124,7 +125,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues_statistics
             public int? EpicId { get; set; }
             /// <summary>&quot;The health status of the issue. Must be one of: on_track, needs_attention, at_risk, none, any&quot;</summary>
             [QueryParameter("health_status")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues_statistics.GetHealth_statusQueryParameterType? HealthStatus { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdIssuesStatisticsHealthStatusParameter? HealthStatus { get; set; }
             /// <summary>The IID array of issues</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -180,7 +181,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues_statistics
 #endif
             /// <summary>Return issues assigned to milestones with the specified timebox value (&quot;Any&quot;, &quot;None&quot;, &quot;Upcoming&quot; or &quot;Started&quot;)</summary>
             [QueryParameter("milestone_id")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues_statistics.GetMilestone_idQueryParameterType? MilestoneId { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdIssuesStatisticsMilestoneIdParameter? MilestoneId { get; set; }
             /// <summary>Return issues reacted by the authenticated user by the given emoji</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -272,13 +273,13 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues_statistics
 #endif
             /// <summary>Return issues assigned to milestones without the specified timebox value (&quot;Any&quot;, &quot;None&quot;, &quot;Upcoming&quot; or &quot;Started&quot;)</summary>
             [QueryParameter("not%5Bmilestone_id%5D")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues_statistics.GetNotMilestone_idQueryParameterType? NotmilestoneId { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdIssuesStatisticsNotMilestoneIdParameter? NotmilestoneId { get; set; }
             /// <summary>Return issues without the specified weight</summary>
             [QueryParameter("not%5Bweight%5D")]
             public int? Notweight { get; set; }
             /// <summary>&quot;Return issues for the given scope: `created_by_me`, `assigned_to_me` or `all`&quot;</summary>
             [QueryParameter("scope")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues_statistics.GetScopeQueryParameterType? Scope { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdIssuesStatisticsScopeParameter? Scope { get; set; }
             /// <summary>Search issues for text present in the title, description, or any combination of these</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

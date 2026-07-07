@@ -17,14 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.admin.sidekiq.queues.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item.WithQueue_nameItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item.WithQueue_nameItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item.WithQueueNameItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item.WithQueueNameItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("queue_name", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item.WithQueue_nameItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("queueName", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item.WithQueueNameItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

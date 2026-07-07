@@ -34,25 +34,25 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Iterations
         {
         }
         /// <summary>
-        /// This feature was introduced in GitLab 13.5
+        /// Lists all iterations for a specified group. Iterations created by **Enable automatic scheduling** in iteration cadences return `null` for the `title` and `description` fields. This feature was introduced in GitLab 13.5.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesIteration"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIteration"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesIteration?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Iterations.IterationsRequestBuilder.IterationsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIteration?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Iterations.IterationsRequestBuilder.IterationsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesIteration> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Iterations.IterationsRequestBuilder.IterationsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIteration> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Iterations.IterationsRequestBuilder.IterationsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesIteration>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesIteration.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIteration>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIteration.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 13.5
+        /// Lists all iterations for a specified group. Iterations created by **Enable automatic scheduling** in iteration cadences return `null` for the `title` and `description` fields. This feature was introduced in GitLab 13.5.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Iterations
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Iterations.IterationsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 13.5
+        /// Lists all iterations for a specified group. Iterations created by **Enable automatic scheduling** in iteration cadences return `null` for the `title` and `description` fields. This feature was introduced in GitLab 13.5.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class IterationsRequestBuilderGetQueryParameters 
@@ -119,7 +119,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Iterations
 #endif
             /// <summary>Return &quot;opened&quot;, &quot;upcoming&quot;, &quot;current (previously started)&quot;, &quot;closed&quot;, or &quot;all&quot; iterations. Filtering by `started` state is deprecated starting with 14.1, please use `current` instead.</summary>
             [QueryParameter("state")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Iterations.GetStateQueryParameterType? State { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdIterationsStateParameter? State { get; set; }
             /// <summary>&quot;Return milestones updated after the specified datetime. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ&quot;</summary>
             [QueryParameter("updated_after")]
             public DateTimeOffset? UpdatedAfter { get; set; }

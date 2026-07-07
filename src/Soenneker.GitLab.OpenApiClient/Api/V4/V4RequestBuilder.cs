@@ -77,6 +77,7 @@ using Soenneker.GitLab.OpenApiClient.Api.V4.Suggestions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Swagger_doc;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Templates;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Todos;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Token_exchange;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Topics;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Usage_data;
 using Soenneker.GitLab.OpenApiClient.Api.V4.User;
@@ -472,6 +473,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Todos.TodosRequestBuilder Todos
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Todos.TodosRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The token_exchange property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Token_exchange.Token_exchangeRequestBuilder Token_exchange
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Token_exchange.Token_exchangeRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The topics property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Topics.TopicsRequestBuilder Topics

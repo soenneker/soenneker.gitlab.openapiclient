@@ -15,7 +15,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The auto stop setting for the environment. Allowed values are `always` and `with_action`</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAacac4671971_auto_stop_setting? AutoStopSetting { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAacac4671971AutoStopSetting? AutoStopSetting { get; set; }
         /// <summary>The ID of the Cluster Agent to associate with this environment</summary>
         public int? ClusterAgentId { get; set; }
         /// <summary>The description of the environment</summary>
@@ -67,7 +67,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Slug { get; set; }
 #endif
         /// <summary>The tier of the new environment. Allowed values are `production`, `staging`, `testing`, `development`, and `other`</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAacac4671971_tier? Tier { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAacac4671971Tier? Tier { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAacac4671971"/> and sets the default values.
         /// </summary>
@@ -93,7 +93,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "auto_stop_setting", n => { AutoStopSetting = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAacac4671971_auto_stop_setting>(); } },
+                { "auto_stop_setting", n => { AutoStopSetting = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAacac4671971AutoStopSetting>(); } },
                 { "cluster_agent_id", n => { ClusterAgentId = n.GetIntValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "external_url", n => { ExternalUrl = n.GetStringValue(); } },
@@ -101,7 +101,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "kubernetes_namespace", n => { KubernetesNamespace = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "slug", n => { Slug = n.GetStringValue(); } },
-                { "tier", n => { Tier = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAacac4671971_tier>(); } },
+                { "tier", n => { Tier = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAacac4671971Tier>(); } },
             };
         }
         /// <summary>
@@ -111,7 +111,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAacac4671971_auto_stop_setting>("auto_stop_setting", AutoStopSetting);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAacac4671971AutoStopSetting>("auto_stop_setting", AutoStopSetting);
             writer.WriteIntValue("cluster_agent_id", ClusterAgentId);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("external_url", ExternalUrl);
@@ -119,7 +119,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("kubernetes_namespace", KubernetesNamespace);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("slug", Slug);
-            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAacac4671971_tier>("tier", Tier);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAacac4671971Tier>("tier", Tier);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

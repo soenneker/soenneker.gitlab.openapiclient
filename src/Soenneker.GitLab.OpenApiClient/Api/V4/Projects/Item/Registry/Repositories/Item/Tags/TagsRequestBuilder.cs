@@ -13,21 +13,21 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositories.Item.Tags
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\registry\repositories\{repository_id}\tags
+    /// Builds and executes requests for operations under \api\v4\projects\{-id}\registry\repositories\{repositoryId}\tags
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TagsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.registry.repositories.item.tags.item collection</summary>
         /// <param name="position">The name of the tag</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositories.Item.Tags.Item.WithTag_nameItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositories.Item.Tags.Item.WithTag_nameItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositories.Item.Tags.Item.WithTagNameItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositories.Item.Tags.Item.WithTagNameItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("tag_name", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositories.Item.Tags.Item.WithTag_nameItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("tagName", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositories.Item.Tags.Item.WithTagNameItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -35,7 +35,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositor
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TagsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/registry/repositories/{repository_id}/tags{?keep_n*,name_regex*,name_regex_delete*,name_regex_keep*,older_than*,page*,per_page*}", pathParameters)
+        public TagsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/registry/repositories/{repositoryId}/tags{?keep_n*,name_regex*,name_regex_delete*,name_regex_keep*,older_than*,page*,per_page*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,11 +43,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositor
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TagsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/registry/repositories/{repository_id}/tags{?keep_n*,name_regex*,name_regex_delete*,name_regex_keep*,older_than*,page*,per_page*}", rawUrl)
+        public TagsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/registry/repositories/{repositoryId}/tags{?keep_n*,name_regex*,name_regex_delete*,name_regex_keep*,older_than*,page*,per_page*}", rawUrl)
         {
         }
         /// <summary>
-        /// This feature was introduced in GitLab 11.8.
+        /// Deletes multiple registry repository tags based on the specified criteria.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -64,25 +64,25 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositor
             await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 11.8.
+        /// Lists all tags for a specified registry repository. Responses are paginated and return 20 results by default.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesContainerRegistryTag"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesContainerRegistryTag"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesContainerRegistryTag?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositories.Item.Tags.TagsRequestBuilder.TagsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesContainerRegistryTag?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositories.Item.Tags.TagsRequestBuilder.TagsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesContainerRegistryTag> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositories.Item.Tags.TagsRequestBuilder.TagsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesContainerRegistryTag> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositories.Item.Tags.TagsRequestBuilder.TagsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesContainerRegistryTag>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesContainerRegistryTag.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesContainerRegistryTag>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesContainerRegistryTag.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 11.8.
+        /// Deletes multiple registry repository tags based on the specified criteria.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -101,7 +101,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositor
             return requestInfo;
         }
         /// <summary>
-        /// This feature was introduced in GitLab 11.8.
+        /// Lists all tags for a specified registry repository. Responses are paginated and return 20 results by default.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -129,7 +129,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositor
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositories.Item.Tags.TagsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 11.8.
+        /// Deletes multiple registry repository tags based on the specified criteria.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class TagsRequestBuilderDeleteQueryParameters 
@@ -179,7 +179,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositor
 #endif
         }
         /// <summary>
-        /// This feature was introduced in GitLab 11.8.
+        /// Lists all tags for a specified registry repository. Responses are paginated and return 20 results by default.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class TagsRequestBuilderGetQueryParameters 

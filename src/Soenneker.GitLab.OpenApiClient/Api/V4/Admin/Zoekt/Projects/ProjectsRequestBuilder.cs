@@ -17,14 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Projects
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.admin.zoekt.projects.item collection</summary>
         /// <param name="position">The id of the project you want to index</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Projects.Item.WithProject_ItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Projects.Item.WithProject_ItemRequestBuilder this[int position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Projects.Item.WithProjectItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Projects.Item.WithProjectItemRequestBuilder this[int position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("project_id", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Projects.Item.WithProject_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("projectId", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Projects.Item.WithProjectItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

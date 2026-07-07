@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Dependency_proxy.Cac
         {
         }
         /// <summary>
-        /// Schedules for deletion the cached manifests and blobs for a group.This endpoint requires the Owner role for the group.
+        /// Purges the dependency proxy for a specified group and schedules the cached manifests and blobs for deletion. This endpoint requires the Owner role for the group.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -50,7 +50,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Dependency_proxy.Cac
             await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Schedules for deletion the cached manifests and blobs for a group.This endpoint requires the Owner role for the group.
+        /// Purges the dependency proxy for a specified group and schedules the cached manifests and blobs for deletion. This endpoint requires the Owner role for the group.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

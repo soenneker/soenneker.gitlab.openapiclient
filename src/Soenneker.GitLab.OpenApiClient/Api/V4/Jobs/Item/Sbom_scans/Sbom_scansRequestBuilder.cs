@@ -26,14 +26,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Sbom_scans
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.jobs.item.sbom_scans.item collection</summary>
         /// <param name="position">The sbom digest that identifies an sbom scan uniquely</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Sbom_scans.Item.WithSbom_digestItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Sbom_scans.Item.WithSbom_digestItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Sbom_scans.Item.WithSbomDigestItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Sbom_scans.Item.WithSbomDigestItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("sbom_digest", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Sbom_scans.Item.WithSbom_digestItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("sbomDigest", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Sbom_scans.Item.WithSbomDigestItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -55,22 +55,22 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Sbom_scans
         /// <summary>
         /// Upload an SBOM file to be scanned
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesSecurityVulnerabilityScanningSbomScan"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSecurityVulnerabilityScanningSbomScan"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesSecurityVulnerabilityScanningSbomScan?> PostAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSecurityVulnerabilityScanningSbomScan?> PostAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesSecurityVulnerabilityScanningSbomScan> PostAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSecurityVulnerabilityScanningSbomScan> PostAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesSecurityVulnerabilityScanningSbomScan>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesSecurityVulnerabilityScanningSbomScan.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSecurityVulnerabilityScanningSbomScan>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSecurityVulnerabilityScanningSbomScan.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Upload an SBOM file to be scanned

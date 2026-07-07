@@ -36,22 +36,22 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Proxy_git_ssh.Info_refs_uplo
         /// <summary>
         /// Responsible for making HTTP GET /repo.git/info/refs?service=git-upload-pack                  request from secondary gitlab-shell to primary
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Proxy_git_ssh.Info_refs_upload_pack.Info_refs_upload_packPostResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson346"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Proxy_git_ssh.Info_refs_upload_pack.Info_refs_upload_packPostResponse?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4fa5ffbaad65 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson346?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4Fa5Ffbaad65 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Proxy_git_ssh.Info_refs_upload_pack.Info_refs_upload_packPostResponse> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4fa5ffbaad65 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson346> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4Fa5Ffbaad65 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Proxy_git_ssh.Info_refs_upload_pack.Info_refs_upload_packPostResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Proxy_git_ssh.Info_refs_upload_pack.Info_refs_upload_packPostResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson346>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson346.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Responsible for making HTTP GET /repo.git/info/refs?service=git-upload-pack                  request from secondary gitlab-shell to primary
@@ -61,11 +61,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Proxy_git_ssh.Info_refs_uplo
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4fa5ffbaad65 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4Fa5Ffbaad65 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4fa5ffbaad65 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4Fa5Ffbaad65 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

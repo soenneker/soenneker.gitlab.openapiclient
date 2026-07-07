@@ -34,25 +34,25 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Resource_groups.It
         {
         }
         /// <summary>
-        /// List upcoming jobs for a specific resource group
+        /// Lists all upcoming jobs for a specified resource group.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiJobBasic"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobBasic"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiJobBasic?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Resource_groups.Item.Upcoming_jobs.Upcoming_jobsRequestBuilder.Upcoming_jobsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobBasic?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Resource_groups.Item.Upcoming_jobs.Upcoming_jobsRequestBuilder.Upcoming_jobsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiJobBasic> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Resource_groups.Item.Upcoming_jobs.Upcoming_jobsRequestBuilder.Upcoming_jobsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobBasic> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Resource_groups.Item.Upcoming_jobs.Upcoming_jobsRequestBuilder.Upcoming_jobsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiJobBasic>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiJobBasic.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobBasic>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobBasic.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// List upcoming jobs for a specific resource group
+        /// Lists all upcoming jobs for a specified resource group.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Resource_groups.It
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Resource_groups.Item.Upcoming_jobs.Upcoming_jobsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// List upcoming jobs for a specific resource group
+        /// Lists all upcoming jobs for a specified resource group.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Upcoming_jobsRequestBuilderGetQueryParameters 

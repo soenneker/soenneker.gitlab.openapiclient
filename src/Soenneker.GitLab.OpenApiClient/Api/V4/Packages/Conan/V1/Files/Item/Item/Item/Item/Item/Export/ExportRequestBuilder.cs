@@ -10,21 +10,21 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Conan.V1.Files.Item.Item.Item.Item.Item.Export
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\packages\conan\v1\files\{package_name}\{package_version}\{package_username}\{package_channel}\{recipe_revision}\export
+    /// Builds and executes requests for operations under \api\v4\packages\conan\v1\files\{packageName}\{packageVersion}\{packageUsername}\{packageChannel}\{recipeRevision}\export
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ExportRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.packages.conan.v1.files.item.item.item.item.item.export.item collection</summary>
         /// <param name="position">Package file name</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Conan.V1.Files.Item.Item.Item.Item.Item.Export.Item.WithFile_nameItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Conan.V1.Files.Item.Item.Item.Item.Item.Export.Item.WithFile_nameItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Conan.V1.Files.Item.Item.Item.Item.Item.Export.Item.WithFileNameItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Conan.V1.Files.Item.Item.Item.Item.Item.Export.Item.WithFileNameItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("file_name", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Conan.V1.Files.Item.Item.Item.Item.Item.Export.Item.WithFile_nameItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("fileName", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Conan.V1.Files.Item.Item.Item.Item.Item.Export.Item.WithFileNameItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -32,7 +32,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Conan.V1.Files.Item.Ite
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ExportRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/packages/conan/v1/files/{package_name}/{package_version}/{package_username}/{package_channel}/{recipe_revision}/export", pathParameters)
+        public ExportRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/packages/conan/v1/files/{packageName}/{packageVersion}/{packageUsername}/{packageChannel}/{recipeRevision}/export", pathParameters)
         {
         }
         /// <summary>
@@ -40,7 +40,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Conan.V1.Files.Item.Ite
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ExportRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/packages/conan/v1/files/{package_name}/{package_version}/{package_username}/{package_channel}/{recipe_revision}/export", rawUrl)
+        public ExportRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/packages/conan/v1/files/{packageName}/{packageVersion}/{packageUsername}/{packageChannel}/{recipeRevision}/export", rawUrl)
         {
         }
     }

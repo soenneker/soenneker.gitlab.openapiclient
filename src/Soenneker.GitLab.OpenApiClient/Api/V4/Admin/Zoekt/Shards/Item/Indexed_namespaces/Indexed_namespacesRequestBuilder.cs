@@ -13,21 +13,21 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Shards.Item.Indexed_namespaces
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\admin\zoekt\shards\{node_id}\indexed_namespaces
+    /// Builds and executes requests for operations under \api\v4\admin\zoekt\shards\{nodeId}\indexed_namespaces
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Indexed_namespacesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.admin.zoekt.shards.item.indexed_namespaces.item collection</summary>
         /// <param name="position">The id of the namespace you want to index in this node</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Shards.Item.Indexed_namespaces.Item.WithNamespace_ItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Shards.Item.Indexed_namespaces.Item.WithNamespace_ItemRequestBuilder this[int position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Shards.Item.Indexed_namespaces.Item.WithNamespaceItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Shards.Item.Indexed_namespaces.Item.WithNamespaceItemRequestBuilder this[int position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("namespace_id", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Shards.Item.Indexed_namespaces.Item.WithNamespace_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("namespaceId", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Shards.Item.Indexed_namespaces.Item.WithNamespaceItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -35,7 +35,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Shards.Item.Indexed_
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Indexed_namespacesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/admin/zoekt/shards/{node_id}/indexed_namespaces", pathParameters)
+        public Indexed_namespacesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/admin/zoekt/shards/{nodeId}/indexed_namespaces", pathParameters)
         {
         }
         /// <summary>
@@ -43,26 +43,26 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Shards.Item.Indexed_
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Indexed_namespacesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/admin/zoekt/shards/{node_id}/indexed_namespaces", rawUrl)
+        public Indexed_namespacesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/admin/zoekt/shards/{nodeId}/indexed_namespaces", rawUrl)
         {
         }
         /// <summary>
         /// Get all the indexed namespaces for this node
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesSearchZoektIndexedNamespace"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSearchZoektIndexedNamespace"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesSearchZoektIndexedNamespace?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSearchZoektIndexedNamespace?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesSearchZoektIndexedNamespace> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSearchZoektIndexedNamespace> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesSearchZoektIndexedNamespace>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesSearchZoektIndexedNamespace.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSearchZoektIndexedNamespace>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSearchZoektIndexedNamespace.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get all the indexed namespaces for this node

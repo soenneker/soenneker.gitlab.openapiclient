@@ -34,25 +34,25 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Groups.Shared
         {
         }
         /// <summary>
-        /// Get a list of shared groups this group was invited to
+        /// Lists all groups shared with a specified group.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroup"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroup"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroup?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Groups.Shared.SharedRequestBuilder.SharedRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroup?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Groups.Shared.SharedRequestBuilder.SharedRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroup> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Groups.Shared.SharedRequestBuilder.SharedRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroup> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Groups.Shared.SharedRequestBuilder.SharedRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroup>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroup.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroup>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroup.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get a list of shared groups this group was invited to
+        /// Lists all groups shared with a specified group.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Groups.Shared
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Groups.Shared.SharedRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get a list of shared groups this group was invited to
+        /// Lists all groups shared with a specified group.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class SharedRequestBuilderGetQueryParameters 
@@ -100,7 +100,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Groups.Shared
             public int? MinAccessLevel { get; set; }
             /// <summary>Order by name, path, id or similarity if searching</summary>
             [QueryParameter("order_by")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Groups.Shared.GetOrder_byQueryParameterType? OrderBy { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdGroupsSharedOrderByParameter? OrderBy { get; set; }
             /// <summary>Current page number</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
@@ -129,10 +129,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Groups.Shared
 #endif
             /// <summary>Sort by asc (ascending) or desc (descending)</summary>
             [QueryParameter("sort")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Groups.Shared.GetSortQueryParameterType? Sort { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdGroupsSharedSortParameter? Sort { get; set; }
             /// <summary>Limit by visibility</summary>
             [QueryParameter("visibility")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Groups.Shared.GetVisibilityQueryParameterType? Visibility { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdGroupsSharedVisibilityParameter? Visibility { get; set; }
             /// <summary>Include custom attributes in the response</summary>
             [QueryParameter("with_custom_attributes")]
             public bool? WithCustomAttributes { get; set; }

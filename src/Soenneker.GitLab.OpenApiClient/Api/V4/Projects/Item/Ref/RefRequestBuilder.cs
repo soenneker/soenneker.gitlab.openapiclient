@@ -17,14 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ref
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.ref.item collection</summary>
         /// <param name="position">The commit sha or name of a branch or tag</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ref.Item.WithRefItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ref.Item.WithRefItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ref.Item.WithRefValueItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ref.Item.WithRefValueItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("ref", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ref.Item.WithRefItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("refValue", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ref.Item.WithRefValueItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

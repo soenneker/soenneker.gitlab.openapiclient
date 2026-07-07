@@ -13,21 +13,21 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Resource_weight_events
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\issues\{eventable_-id}\resource_weight_events
+    /// Builds and executes requests for operations under \api\v4\projects\{-id}\issues\{eventable-id}\resource_weight_events
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Resource_weight_eventsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.issues.item.resource_weight_events.item collection</summary>
         /// <param name="position">The ID of a resource weight event</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Resource_weight_events.Item.WithEvent_ItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Resource_weight_events.Item.WithEvent_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Resource_weight_events.Item.WithEventItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Resource_weight_events.Item.WithEventItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("event_id", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Resource_weight_events.Item.WithEvent_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("eventId", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Resource_weight_events.Item.WithEventItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -35,7 +35,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Resour
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Resource_weight_eventsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/issues/{eventable_%2Did}/resource_weight_events{?page*,per_page*}", pathParameters)
+        public Resource_weight_eventsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/issues/{eventable%2Did}/resource_weight_events{?page*,per_page*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,29 +43,29 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Resour
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Resource_weight_eventsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/issues/{eventable_%2Did}/resource_weight_events{?page*,per_page*}", rawUrl)
+        public Resource_weight_eventsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/issues/{eventable%2Did}/resource_weight_events{?page*,per_page*}", rawUrl)
         {
         }
         /// <summary>
-        /// Gets a list of all weight events for a single issue
+        /// Lists all weight events for a specified issue.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesResourceWeightEvent"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesResourceWeightEvent"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesResourceWeightEvent?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Resource_weight_events.Resource_weight_eventsRequestBuilder.Resource_weight_eventsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesResourceWeightEvent?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Resource_weight_events.Resource_weight_eventsRequestBuilder.Resource_weight_eventsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesResourceWeightEvent> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Resource_weight_events.Resource_weight_eventsRequestBuilder.Resource_weight_eventsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesResourceWeightEvent> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Resource_weight_events.Resource_weight_eventsRequestBuilder.Resource_weight_eventsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesResourceWeightEvent>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesResourceWeightEvent.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesResourceWeightEvent>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesResourceWeightEvent.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Gets a list of all weight events for a single issue
+        /// Lists all weight events for a specified issue.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -93,7 +93,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Resour
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Resource_weight_events.Resource_weight_eventsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Gets a list of all weight events for a single issue
+        /// Lists all weight events for a specified issue.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Resource_weight_eventsRequestBuilderGetQueryParameters 

@@ -4,6 +4,7 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.Item;
+using Soenneker.GitLab.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -19,14 +20,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_acce
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.manage.personal_access_tokens.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.Item.WithPat_ItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.Item.WithPat_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.Item.WithPatItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.Item.WithPatItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("pat_id", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.Item.WithPat_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("patId", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.Item.WithPatItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -48,20 +49,20 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_acce
         /// <summary>
         /// Lists all personal access tokens associated with enterprise users in a top-level group. This feature was introduced in GitLab 17.8.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.Personal_access_tokensGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson56"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.Personal_access_tokensGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.Personal_access_tokensRequestBuilder.Personal_access_tokensRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson56?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.Personal_access_tokensRequestBuilder.Personal_access_tokensRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.Personal_access_tokensGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.Personal_access_tokensRequestBuilder.Personal_access_tokensRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson56> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.Personal_access_tokensRequestBuilder.Personal_access_tokensRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.Personal_access_tokensGetResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.Personal_access_tokensGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson56>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson56.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Lists all personal access tokens associated with enterprise users in a top-level group. This feature was introduced in GitLab 17.8.
@@ -146,7 +147,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_acce
 #endif
             /// <summary>Filter tokens which are either active or not</summary>
             [QueryParameter("state")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.GetStateQueryParameterType? State { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdManagePersonalAccessTokensStateParameter? State { get; set; }
         }
     }
 }

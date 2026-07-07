@@ -17,10 +17,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The metadata for the release</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody790567470193_metadata? Metadata { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody790567470193Metadata? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody790567470193_metadata Metadata { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody790567470193Metadata Metadata { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody790567470193"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody790567470193_metadata>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody790567470193_metadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody790567470193Metadata>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody790567470193Metadata.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody790567470193_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody790567470193Metadata>("metadata", Metadata);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

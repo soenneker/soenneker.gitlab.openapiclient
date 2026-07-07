@@ -34,25 +34,25 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Invited_groups
         {
         }
         /// <summary>
-        /// Get a list of invited groups in this project
+        /// Lists all invited groups in a project. Unauthenticated requests return only public invited groups. Limited to 60 requests a minute per user account for authenticated requires and per IP address for unauthenticated requests. Supports offset-based pagination (up to 50,000 projects) and keyset-based pagination (greater than 50,000 projects).
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroup"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroup"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroup?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Invited_groups.Invited_groupsRequestBuilder.Invited_groupsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroup?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Invited_groups.Invited_groupsRequestBuilder.Invited_groupsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroup> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Invited_groups.Invited_groupsRequestBuilder.Invited_groupsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroup> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Invited_groups.Invited_groupsRequestBuilder.Invited_groupsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroup>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroup.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroup>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroup.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get a list of invited groups in this project
+        /// Lists all invited groups in a project. Unauthenticated requests return only public invited groups. Limited to 60 requests a minute per user account for authenticated requires and per IP address for unauthenticated requests. Supports offset-based pagination (up to 50,000 projects) and keyset-based pagination (greater than 50,000 projects).
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Invited_groups
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Invited_groups.Invited_groupsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get a list of invited groups in this project
+        /// Lists all invited groups in a project. Unauthenticated requests return only public invited groups. Limited to 60 requests a minute per user account for authenticated requires and per IP address for unauthenticated requests. Supports offset-based pagination (up to 50,000 projects) and keyset-based pagination (greater than 50,000 projects).
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Invited_groupsRequestBuilderGetQueryParameters 

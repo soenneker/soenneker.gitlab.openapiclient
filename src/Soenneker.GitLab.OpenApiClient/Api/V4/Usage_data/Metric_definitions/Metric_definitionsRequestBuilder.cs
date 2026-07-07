@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.GitLab.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -33,25 +34,25 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Usage_data.Metric_definitions
         {
         }
         /// <summary>
-        /// This feature was introduced in GitLab 13.11.
+        /// Downloads all metric definitions as a single YAML file.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Usage_data.Metric_definitions.Metric_definitionsGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson167"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Usage_data.Metric_definitions.Metric_definitionsGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Usage_data.Metric_definitions.Metric_definitionsRequestBuilder.Metric_definitionsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson167?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Usage_data.Metric_definitions.Metric_definitionsRequestBuilder.Metric_definitionsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Api.V4.Usage_data.Metric_definitions.Metric_definitionsGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Usage_data.Metric_definitions.Metric_definitionsRequestBuilder.Metric_definitionsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson167> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Usage_data.Metric_definitions.Metric_definitionsRequestBuilder.Metric_definitionsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Api.V4.Usage_data.Metric_definitions.Metric_definitionsGetResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Api.V4.Usage_data.Metric_definitions.Metric_definitionsGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson167>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson167.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 13.11.
+        /// Downloads all metric definitions as a single YAML file.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -79,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Usage_data.Metric_definitions
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Usage_data.Metric_definitions.Metric_definitionsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 13.11.
+        /// Downloads all metric definitions as a single YAML file.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Metric_definitionsRequestBuilderGetQueryParameters 

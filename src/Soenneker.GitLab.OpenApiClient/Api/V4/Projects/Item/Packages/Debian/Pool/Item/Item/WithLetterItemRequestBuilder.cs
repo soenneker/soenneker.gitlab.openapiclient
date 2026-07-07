@@ -17,14 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Debian.Po
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.packages.debian.pool.item.item.item collection</summary>
         /// <param name="position">The Debian Source Package Name</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Debian.Pool.Item.Item.Item.WithPackage_nameItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Debian.Pool.Item.Item.Item.WithPackage_nameItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Debian.Pool.Item.Item.Item.WithPackageNameItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Debian.Pool.Item.Item.Item.WithPackageNameItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("package_name", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Debian.Pool.Item.Item.Item.WithPackage_nameItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("packageName", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Debian.Pool.Item.Item.Item.WithPackageNameItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

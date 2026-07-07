@@ -26,14 +26,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Clusters
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.admin.clusters.item collection</summary>
         /// <param name="position">The cluster ID</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Clusters.Item.WithCluster_ItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Clusters.Item.WithCluster_ItemRequestBuilder this[int position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Clusters.Item.WithClusterItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Clusters.Item.WithClusterItemRequestBuilder this[int position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("cluster_id", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Clusters.Item.WithCluster_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("clusterId", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Clusters.Item.WithClusterItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -53,25 +53,25 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Clusters
         {
         }
         /// <summary>
-        /// This feature was introduced in GitLab 13.2. Returns a list of instance clusters.
+        /// Lists all instance clusters for the instance.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCluster"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCluster"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCluster?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCluster?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCluster> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCluster> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCluster>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCluster.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCluster>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCluster.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 13.2. Returns a list of instance clusters.
+        /// Lists all instance clusters for the instance.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

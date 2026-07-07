@@ -13,21 +13,21 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Conan.V2.Conans.Item.Item.Item.Item.Revisions
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\packages\conan\v2\conans\{package_name}\{package_version}\{package_username}\{package_channel}\revisions
+    /// Builds and executes requests for operations under \api\v4\projects\{-id}\packages\conan\v2\conans\{packageName}\{packageVersion}\{packageUsername}\{packageChannel}\revisions
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RevisionsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.packages.conan.v2.conans.item.item.item.item.revisions.item collection</summary>
         /// <param name="position">Recipe revision</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Conan.V2.Conans.Item.Item.Item.Item.Revisions.Item.WithRecipe_revisionItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Conan.V2.Conans.Item.Item.Item.Item.Revisions.Item.WithRecipe_revisionItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Conan.V2.Conans.Item.Item.Item.Item.Revisions.Item.WithRecipeRevisionItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Conan.V2.Conans.Item.Item.Item.Item.Revisions.Item.WithRecipeRevisionItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("recipe_revision", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Conan.V2.Conans.Item.Item.Item.Item.Revisions.Item.WithRecipe_revisionItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("recipeRevision", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Conan.V2.Conans.Item.Item.Item.Item.Revisions.Item.WithRecipeRevisionItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -35,7 +35,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Conan.V2.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RevisionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/packages/conan/v2/conans/{package_name}/{package_version}/{package_username}/{package_channel}/revisions", pathParameters)
+        public RevisionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/packages/conan/v2/conans/{packageName}/{packageVersion}/{packageUsername}/{packageChannel}/revisions", pathParameters)
         {
         }
         /// <summary>
@@ -43,29 +43,29 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Conan.V2.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RevisionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/packages/conan/v2/conans/{package_name}/{package_version}/{package_username}/{package_channel}/revisions", rawUrl)
+        public RevisionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/packages/conan/v2/conans/{packageName}/{packageVersion}/{packageUsername}/{packageChannel}/revisions", rawUrl)
         {
         }
         /// <summary>
-        /// This feature was introduced in GitLab 17.11
+        /// Lists all revisions for a package recipe. This feature was introduced in GitLab 17.11.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesPackagesConanRecipeRevisions"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesConanRecipeRevisions"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesPackagesConanRecipeRevisions?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesConanRecipeRevisions?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesPackagesConanRecipeRevisions> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesConanRecipeRevisions> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesPackagesConanRecipeRevisions>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesPackagesConanRecipeRevisions.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesConanRecipeRevisions>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesConanRecipeRevisions.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 17.11
+        /// Lists all revisions for a package recipe. This feature was introduced in GitLab 17.11.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

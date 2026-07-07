@@ -13,21 +13,21 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epic_boards.Item.Lists
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\groups\{id}\epic_boards\{board_id}\lists
+    /// Builds and executes requests for operations under \api\v4\groups\{id}\epic_boards\{boardId}\lists
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ListsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.epic_boards.item.lists.item collection</summary>
         /// <param name="position">The ID of a list</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epic_boards.Item.Lists.Item.WithList_ItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epic_boards.Item.Lists.Item.WithList_ItemRequestBuilder this[int position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epic_boards.Item.Lists.Item.WithListItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epic_boards.Item.Lists.Item.WithListItemRequestBuilder this[int position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("list_id", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epic_boards.Item.Lists.Item.WithList_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("listId", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epic_boards.Item.Lists.Item.WithListItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -35,7 +35,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epic_boards.Item.Lis
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ListsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/groups/{id}/epic_boards/{board_id}/lists{?page*,per_page*}", pathParameters)
+        public ListsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/groups/{id}/epic_boards/{boardId}/lists{?page*,per_page*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,29 +43,29 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epic_boards.Item.Lis
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ListsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/groups/{id}/epic_boards/{board_id}/lists{?page*,per_page*}", rawUrl)
+        public ListsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/groups/{id}/epic_boards/{boardId}/lists{?page*,per_page*}", rawUrl)
         {
         }
         /// <summary>
-        /// Does not include backlog and closed lists. This feature was introduced in 15.9
+        /// Lists all group epic board lists for a specified board. Does not include `open` and `closed` lists. This feature was introduced in GitLab 15.9.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesEpicBoardsList"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEpicBoardsList"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesEpicBoardsList?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epic_boards.Item.Lists.ListsRequestBuilder.ListsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEpicBoardsList?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epic_boards.Item.Lists.ListsRequestBuilder.ListsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesEpicBoardsList> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epic_boards.Item.Lists.ListsRequestBuilder.ListsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEpicBoardsList> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epic_boards.Item.Lists.ListsRequestBuilder.ListsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesEpicBoardsList>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesEpicBoardsList.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEpicBoardsList>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEpicBoardsList.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Does not include backlog and closed lists. This feature was introduced in 15.9
+        /// Lists all group epic board lists for a specified board. Does not include `open` and `closed` lists. This feature was introduced in GitLab 15.9.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -93,7 +93,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epic_boards.Item.Lis
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epic_boards.Item.Lists.ListsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Does not include backlog and closed lists. This feature was introduced in 15.9
+        /// Lists all group epic board lists for a specified board. Does not include `open` and `closed` lists. This feature was introduced in GitLab 15.9.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ListsRequestBuilderGetQueryParameters 

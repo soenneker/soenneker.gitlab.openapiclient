@@ -17,14 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Rubygems.
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.packages.rubygems.quick.Marshal48.item collection</summary>
         /// <param name="position">Gemspec file name</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Rubygems.Quick.Marshal48.Item.WithFile_nameItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Rubygems.Quick.Marshal48.Item.WithFile_nameItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Rubygems.Quick.Marshal48.Item.WithFileNameItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Rubygems.Quick.Marshal48.Item.WithFileNameItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("file_name", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Rubygems.Quick.Marshal48.Item.WithFile_nameItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("fileName", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Rubygems.Quick.Marshal48.Item.WithFileNameItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

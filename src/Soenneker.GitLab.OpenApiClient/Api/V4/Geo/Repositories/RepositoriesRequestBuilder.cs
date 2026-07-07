@@ -17,14 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Repositories
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.geo.repositories.item collection</summary>
         /// <param name="position">The repository to check</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Repositories.Item.WithGl_repositoryItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Repositories.Item.WithGl_repositoryItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Repositories.Item.WithGlRepositoryItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Repositories.Item.WithGlRepositoryItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("gl_repository", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Repositories.Item.WithGl_repositoryItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("glRepository", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Repositories.Item.WithGlRepositoryItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

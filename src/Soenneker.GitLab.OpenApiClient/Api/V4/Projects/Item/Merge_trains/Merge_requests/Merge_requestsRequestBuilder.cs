@@ -17,14 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_trains.Merge
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.merge_trains.merge_requests.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_trains.Merge_requests.Item.WithMerge_request_iItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_trains.Merge_requests.Item.WithMerge_request_iItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_trains.Merge_requests.Item.WithMergeRequestIItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_trains.Merge_requests.Item.WithMergeRequestIItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("merge_request_iid", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_trains.Merge_requests.Item.WithMerge_request_iItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("mergeRequestIid", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_trains.Merge_requests.Item.WithMergeRequestIItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

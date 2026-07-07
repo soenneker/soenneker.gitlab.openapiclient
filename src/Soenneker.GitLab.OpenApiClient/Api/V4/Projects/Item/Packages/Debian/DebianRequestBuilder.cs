@@ -23,14 +23,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Debian
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.packages.debian.item collection</summary>
         /// <param name="position">The filename</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Debian.Item.WithFile_nameItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Debian.Item.WithFile_nameItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Debian.Item.WithFileNameItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Debian.Item.WithFileNameItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("file_name", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Debian.Item.WithFile_nameItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("fileName", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Debian.Item.WithFileNameItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

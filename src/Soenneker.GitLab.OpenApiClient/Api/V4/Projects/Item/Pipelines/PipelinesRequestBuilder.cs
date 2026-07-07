@@ -26,14 +26,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.pipelines.item collection</summary>
         /// <param name="position">The pipeline ID</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.Item.WithPipeline_ItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.Item.WithPipeline_ItemRequestBuilder this[int position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.Item.WithPipelineItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.Item.WithPipelineItemRequestBuilder this[int position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("pipeline_id", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.Item.WithPipeline_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("pipelineId", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.Item.WithPipelineItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -53,25 +53,25 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines
         {
         }
         /// <summary>
-        /// This feature was introduced in GitLab 8.11.
+        /// Lists all pipelines in a project. By default, child pipelines are not included in the results. To return child pipelines, set `source` to `parent_pipeline`.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiPipelineBasic"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiPipelineBasic"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiPipelineBasic?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.PipelinesRequestBuilder.PipelinesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiPipelineBasic?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.PipelinesRequestBuilder.PipelinesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiPipelineBasic> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.PipelinesRequestBuilder.PipelinesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiPipelineBasic> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.PipelinesRequestBuilder.PipelinesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiPipelineBasic>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCiPipelineBasic.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiPipelineBasic>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiPipelineBasic.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 8.11.
+        /// Lists all pipelines in a project. By default, child pipelines are not included in the results. To return child pipelines, set `source` to `parent_pipeline`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -99,7 +99,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.PipelinesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 8.11.
+        /// Lists all pipelines in a project. By default, child pipelines are not included in the results. To return child pipelines, set `source` to `parent_pipeline`.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class PipelinesRequestBuilderGetQueryParameters 
@@ -122,7 +122,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines
 #endif
             /// <summary>Order pipelines</summary>
             [QueryParameter("order_by")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.GetOrder_byQueryParameterType? OrderBy { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdPipelinesOrderByParameter? OrderBy { get; set; }
             /// <summary>Current page number</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
@@ -141,7 +141,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines
 #endif
             /// <summary>The scope of pipelines</summary>
             [QueryParameter("scope")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.GetScopeQueryParameterType? Scope { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdPipelinesScopeParameter? Scope { get; set; }
             /// <summary>The sha of pipelines</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -154,13 +154,13 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines
 #endif
             /// <summary>Sort pipelines</summary>
             [QueryParameter("sort")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.GetSortQueryParameterType? Sort { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdPipelinesSortParameter? Sort { get; set; }
             /// <summary>The source of pipelines</summary>
             [QueryParameter("source")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.GetSourceQueryParameterType? Source { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdPipelinesSourceParameter? Source { get; set; }
             /// <summary>The status of pipelines</summary>
             [QueryParameter("status")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.GetStatusQueryParameterType? Status { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdPipelinesStatusParameter? Status { get; set; }
             /// <summary>&quot;Return pipelines updated after the specified datetime. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ&quot;</summary>
             [QueryParameter("updated_after")]
             public DateTimeOffset? UpdatedAfter { get; set; }

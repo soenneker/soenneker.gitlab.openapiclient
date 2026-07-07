@@ -4,6 +4,9 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Cargo.ConfigJson;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Cargo.Item;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Cargo.One;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Cargo.Three;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Cargo.Two;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -21,16 +24,31 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Cargo
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Cargo.ConfigJson.ConfigJsonRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The One property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Cargo.One.OneRequestBuilder One
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Cargo.One.OneRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The Three property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Cargo.Three.ThreeRequestBuilder Three
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Cargo.Three.ThreeRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The Two property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Cargo.Two.TwoRequestBuilder Two
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Cargo.Two.TwoRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.packages.cargo.item collection</summary>
         /// <param name="position">The cargo package name</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Cargo.Item.WithPackage_nameItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Cargo.Item.WithPackage_nameItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Cargo.Item.PackageNameItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Cargo.Item.PackageNameItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("package_name", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Cargo.Item.WithPackage_nameItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("packageName%2Did", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Cargo.Item.PackageNameItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

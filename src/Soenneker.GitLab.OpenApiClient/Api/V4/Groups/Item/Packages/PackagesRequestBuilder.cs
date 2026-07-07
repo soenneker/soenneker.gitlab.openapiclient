@@ -60,20 +60,20 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages
         /// <summary>
         /// Get a list of project packages at the group level. This feature was introduced in GitLab 12.5
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesPackage"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackage"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesPackage?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.PackagesRequestBuilder.PackagesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackage?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.PackagesRequestBuilder.PackagesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesPackage> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.PackagesRequestBuilder.PackagesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackage> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.PackagesRequestBuilder.PackagesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesPackage>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesPackage.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackage>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackage.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get a list of project packages at the group level. This feature was introduced in GitLab 12.5
@@ -117,7 +117,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages
             public bool? IncludeVersionless { get; set; }
             /// <summary>Return packages ordered by `created_at`, `name`, `version` or `type` fields.</summary>
             [QueryParameter("order_by")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.GetOrder_byQueryParameterType? OrderBy { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdPackagesOrderByParameter? OrderBy { get; set; }
             /// <summary>Return packages with this name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -130,7 +130,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages
 #endif
             /// <summary>Return packages of a certain type</summary>
             [QueryParameter("package_type")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.GetPackage_typeQueryParameterType? PackageType { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdPackagesPackageTypeParameter? PackageType { get; set; }
             /// <summary>Return packages with this version</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -149,10 +149,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages
             public int? PerPage { get; set; }
             /// <summary>Return packages sorted in `asc` or `desc` order.</summary>
             [QueryParameter("sort")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.GetSortQueryParameterType? Sort { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdPackagesSortParameter? Sort { get; set; }
             /// <summary>Return packages with specified status</summary>
             [QueryParameter("status")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.GetStatusQueryParameterType? Status { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdPackagesStatusParameter? Status { get; set; }
         }
     }
 }

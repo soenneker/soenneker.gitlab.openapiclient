@@ -17,14 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Dependency_list_exports
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.dependency_list_exports.item collection</summary>
         /// <param name="position">The ID of the dependency list export</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Dependency_list_exports.Item.WithExport_ItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Dependency_list_exports.Item.WithExport_ItemRequestBuilder this[int position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Dependency_list_exports.Item.WithExportItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Dependency_list_exports.Item.WithExportItemRequestBuilder this[int position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("export_id", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Dependency_list_exports.Item.WithExport_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("exportId", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Dependency_list_exports.Item.WithExportItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

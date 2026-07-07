@@ -10,21 +10,21 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Snippets.Item.Files
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\snippets\{noteable_-id}\files
+    /// Builds and executes requests for operations under \api\v4\projects\{-id}\snippets\{noteable-id}\files
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FilesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.snippets.item.files.item collection</summary>
         /// <param name="position">The name of branch, tag or commit</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Snippets.Item.Files.Item.WithRefItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Snippets.Item.Files.Item.WithRefItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Snippets.Item.Files.Item.WithRefValueItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Snippets.Item.Files.Item.WithRefValueItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("ref", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Snippets.Item.Files.Item.WithRefItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("refValue", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Snippets.Item.Files.Item.WithRefValueItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -32,7 +32,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Snippets.Item.File
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public FilesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/snippets/{noteable_%2Did}/files", pathParameters)
+        public FilesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/snippets/{noteable%2Did}/files", pathParameters)
         {
         }
         /// <summary>
@@ -40,7 +40,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Snippets.Item.File
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public FilesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/snippets/{noteable_%2Did}/files", rawUrl)
+        public FilesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/snippets/{noteable%2Did}/files", rawUrl)
         {
         }
     }

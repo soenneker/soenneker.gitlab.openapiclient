@@ -34,25 +34,25 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.DiscoverCertBasedClusters
         {
         }
         /// <summary>
-        /// This feature was introduced in GitLab 17.9. It will be removed in 18.0.
+        /// Lists all certificate-based clusters associated with a project. This feature was introduced in GitLab 17.9.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDiscoveredClusters"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDiscoveredClusters"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDiscoveredClusters?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.DiscoverCertBasedClusters.DiscoverCertBasedClustersRequestBuilder.DiscoverCertBasedClustersRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDiscoveredClusters?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.DiscoverCertBasedClusters.DiscoverCertBasedClustersRequestBuilder.DiscoverCertBasedClustersRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDiscoveredClusters> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.DiscoverCertBasedClusters.DiscoverCertBasedClustersRequestBuilder.DiscoverCertBasedClustersRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDiscoveredClusters> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.DiscoverCertBasedClusters.DiscoverCertBasedClustersRequestBuilder.DiscoverCertBasedClustersRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDiscoveredClusters>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesDiscoveredClusters.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDiscoveredClusters>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDiscoveredClusters.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 17.9. It will be removed in 18.0.
+        /// Lists all certificate-based clusters associated with a project. This feature was introduced in GitLab 17.9.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.DiscoverCertBasedClusters
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.DiscoverCertBasedClusters.DiscoverCertBasedClustersRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 17.9. It will be removed in 18.0.
+        /// Lists all certificate-based clusters associated with a project. This feature was introduced in GitLab 17.9.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class DiscoverCertBasedClustersRequestBuilderGetQueryParameters 

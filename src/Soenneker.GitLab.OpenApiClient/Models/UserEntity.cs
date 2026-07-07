@@ -17,10 +17,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The applicable_approval_rules property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesApprovalRuleShort? ApplicableApprovalRules { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalRuleShort? ApplicableApprovalRules { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesApprovalRuleShort ApplicableApprovalRules { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalRuleShort ApplicableApprovalRules { get; set; }
 #endif
         /// <summary>The availability property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -49,13 +49,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The custom_attributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCustomAttribute>? CustomAttributes { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCustomAttribute>? CustomAttributes { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCustomAttribute> CustomAttributes { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCustomAttribute> CustomAttributes { get; set; }
 #endif
         /// <summary>The id property</summary>
-        public int? Id { get; set; }
+        public long? Id { get; set; }
         /// <summary>The locked property</summary>
         public bool? Locked { get; set; }
         /// <summary>The name property</summary>
@@ -147,12 +147,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "applicable_approval_rules", n => { ApplicableApprovalRules = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesApprovalRuleShort>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesApprovalRuleShort.CreateFromDiscriminatorValue); } },
+                { "applicable_approval_rules", n => { ApplicableApprovalRules = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalRuleShort>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalRuleShort.CreateFromDiscriminatorValue); } },
                 { "availability", n => { Availability = n.GetStringValue(); } },
                 { "avatar_path", n => { AvatarPath = n.GetStringValue(); } },
                 { "avatar_url", n => { AvatarUrl = n.GetStringValue(); } },
-                { "custom_attributes", n => { CustomAttributes = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCustomAttribute>(global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCustomAttribute.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "id", n => { Id = n.GetIntValue(); } },
+                { "custom_attributes", n => { CustomAttributes = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCustomAttribute>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCustomAttribute.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "id", n => { Id = n.GetLongValue(); } },
                 { "locked", n => { Locked = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "path", n => { Path = n.GetStringValue(); } },
@@ -171,12 +171,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesApprovalRuleShort>("applicable_approval_rules", ApplicableApprovalRules);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalRuleShort>("applicable_approval_rules", ApplicableApprovalRules);
             writer.WriteStringValue("availability", Availability);
             writer.WriteStringValue("avatar_path", AvatarPath);
             writer.WriteStringValue("avatar_url", AvatarUrl);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesCustomAttribute>("custom_attributes", CustomAttributes);
-            writer.WriteIntValue("id", Id);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCustomAttribute>("custom_attributes", CustomAttributes);
+            writer.WriteLongValue("id", Id);
             writer.WriteBoolValue("locked", Locked);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("path", Path);

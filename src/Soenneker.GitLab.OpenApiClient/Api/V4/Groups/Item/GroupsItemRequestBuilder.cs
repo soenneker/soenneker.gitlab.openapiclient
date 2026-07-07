@@ -65,6 +65,7 @@ using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Search;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Security_settings;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Service_accounts;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Share;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Shared_projects;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Ssh_certificates;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Subgroups;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Transfer;
@@ -399,6 +400,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Share.ShareRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The shared_projects property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Shared_projects.Shared_projectsRequestBuilder Shared_projects
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Shared_projects.Shared_projectsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The ssh_certificates property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Ssh_certificates.Ssh_certificatesRequestBuilder Ssh_certificates
         {
@@ -466,7 +472,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item
         {
         }
         /// <summary>
-        /// Remove a group.
+        /// Schedules a group for deletion. Groups are deleted at the end of the retention period (30 days by default). Use the `permanently_remove` param to override the retention period.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -483,45 +489,45 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item
             await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get a single group, with containing projects.
+        /// Retrieves a specified group by ID or path.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroupDetail"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupDetail"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroupDetail?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.GroupsItemRequestBuilder.GroupsItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupDetail?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.GroupsItemRequestBuilder.GroupsItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroupDetail> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.GroupsItemRequestBuilder.GroupsItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupDetail> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.GroupsItemRequestBuilder.GroupsItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroupDetail>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroupDetail.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupDetail>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupDetail.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Update a group. Available only for users who can administrate groups.
+        /// Updates the attributes for a specified group. You must be an administrator or have the Owner role for the group.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroup"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroup"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroup?> PutAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroup?> PutAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroup> PutAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroup> PutAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroup>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesGroup.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroup>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroup.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Remove a group.
+        /// Schedules a group for deletion. Groups are deleted at the end of the retention period (30 days by default). Use the `permanently_remove` param to override the retention period.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -540,7 +546,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item
             return requestInfo;
         }
         /// <summary>
-        /// Get a single group, with containing projects.
+        /// Retrieves a specified group by ID or path.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -559,7 +565,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item
             return requestInfo;
         }
         /// <summary>
-        /// Update a group. Available only for users who can administrate groups.
+        /// Updates the attributes for a specified group. You must be an administrator or have the Owner role for the group.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -590,7 +596,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.GroupsItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get a single group, with containing projects.
+        /// Retrieves a specified group by ID or path.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class GroupsItemRequestBuilderGetQueryParameters 

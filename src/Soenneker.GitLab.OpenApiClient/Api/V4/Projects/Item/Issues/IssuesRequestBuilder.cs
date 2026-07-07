@@ -20,14 +20,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.issues.item collection</summary>
         /// <param name="position">The internal ID of a project issue</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Eventable_ItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Eventable_ItemRequestBuilder this[int position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.EventableItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.EventableItemRequestBuilder this[int position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("eventable_%2Did", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Eventable_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("eventable%2Did", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.EventableItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -49,40 +49,40 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues
         /// <summary>
         /// Get a list of project issues
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesIssue"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssue"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesIssue?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.IssuesRequestBuilder.IssuesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssue?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.IssuesRequestBuilder.IssuesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesIssue> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.IssuesRequestBuilder.IssuesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssue> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.IssuesRequestBuilder.IssuesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesIssue>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesIssue.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssue>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssue.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create a new project issue
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesIssue"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssue"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesIssue?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9b0ee174f73a body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssue?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody782244Cb51Ab body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesIssue> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9b0ee174f73a body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssue> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody782244Cb51Ab body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesIssue>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesIssue.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssue>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssue.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get a list of project issues
@@ -111,11 +111,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9b0ee174f73a body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody782244Cb51Ab body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9b0ee174f73a body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody782244Cb51Ab body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -190,13 +190,13 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues
 #endif
             /// <summary>&quot;Return issues that have no due date (`0`), or whose due date is this week, this month, between two weeks ago and next month, or which are overdue. Accepts: `overdue`, `week`, `month`, `next_month_and_previous_two_weeks`, `0`&quot;</summary>
             [QueryParameter("due_date")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.GetDue_dateQueryParameterType? DueDate { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdIssuesDueDateParameter? DueDate { get; set; }
             /// <summary>The ID of an epic associated with the issues</summary>
             [QueryParameter("epic_id")]
             public int? EpicId { get; set; }
             /// <summary>&quot;The health status of the issue. Must be one of: on_track, needs_attention, at_risk, none, any&quot;</summary>
             [QueryParameter("health_status")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.GetHealth_statusQueryParameterType? HealthStatus { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdIssuesHealthStatusParameter? HealthStatus { get; set; }
             /// <summary>The IID array of issues</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -219,7 +219,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues
 #endif
             /// <summary>&quot;The type of the issue. Accepts: issue, incident, test_case, requirement, task, ticket&quot;</summary>
             [QueryParameter("issue_type")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.GetIssue_typeQueryParameterType? IssueType { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdIssuesIssueTypeParameter? IssueType { get; set; }
             /// <summary>Return issues which are assigned to the iteration with the given ID</summary>
             [QueryParameter("iteration_id")]
             public int? IterationId { get; set; }
@@ -255,7 +255,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues
 #endif
             /// <summary>Return issues assigned to milestones with the specified timebox value (&quot;Any&quot;, &quot;None&quot;, &quot;Upcoming&quot; or &quot;Started&quot;)</summary>
             [QueryParameter("milestone_id")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.GetMilestone_idQueryParameterType? MilestoneId { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdIssuesMilestoneIdParameter? MilestoneId { get; set; }
             /// <summary>Return issues reacted by the authenticated user by the given emoji</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -347,13 +347,13 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues
 #endif
             /// <summary>Return issues assigned to milestones without the specified timebox value (&quot;Any&quot;, &quot;None&quot;, &quot;Upcoming&quot; or &quot;Started&quot;)</summary>
             [QueryParameter("not%5Bmilestone_id%5D")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.GetNotMilestone_idQueryParameterType? NotmilestoneId { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdIssuesNotMilestoneIdParameter? NotmilestoneId { get; set; }
             /// <summary>Return issues without the specified weight</summary>
             [QueryParameter("not%5Bweight%5D")]
             public int? Notweight { get; set; }
             /// <summary>Return issues ordered by `created_at`, `due_date`, `label_priority`, `milestone_due`, `popularity`, `priority`, `relative_position`, `title`, or `updated_at` fields.</summary>
             [QueryParameter("order_by")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.GetOrder_byQueryParameterType? OrderBy { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdIssuesOrderByParameter? OrderBy { get; set; }
             /// <summary>Current page number</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
@@ -362,7 +362,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues
             public int? PerPage { get; set; }
             /// <summary>&quot;Return issues for the given scope: `created_by_me`, `assigned_to_me` or `all`&quot;</summary>
             [QueryParameter("scope")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.GetScopeQueryParameterType? Scope { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdIssuesScopeParameter? Scope { get; set; }
             /// <summary>Search issues for text present in the title, description, or any combination of these</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -375,10 +375,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues
 #endif
             /// <summary>Return issues sorted in `asc` or `desc` order.</summary>
             [QueryParameter("sort")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.GetSortQueryParameterType? Sort { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdIssuesSortParameter? Sort { get; set; }
             /// <summary>Return opened, closed, or all issues</summary>
             [QueryParameter("state")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.GetStateQueryParameterType? State { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdIssuesStateParameter? State { get; set; }
             /// <summary>Return issues updated after the specified time</summary>
             [QueryParameter("updated_after")]
             public DateTimeOffset? UpdatedAfter { get; set; }

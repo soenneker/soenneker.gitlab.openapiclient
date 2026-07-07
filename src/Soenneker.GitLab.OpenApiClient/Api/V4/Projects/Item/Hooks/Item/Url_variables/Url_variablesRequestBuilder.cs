@@ -10,7 +10,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Hooks.Item.Url_variables
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\hooks\{hook_id}\url_variables
+    /// Builds and executes requests for operations under \api\v4\projects\{-id}\hooks\{hookId}\url_variables
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Url_variablesRequestBuilder : BaseRequestBuilder
@@ -32,7 +32,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Hooks.Item.Url_var
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Url_variablesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/hooks/{hook_id}/url_variables", pathParameters)
+        public Url_variablesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/hooks/{hookId}/url_variables", pathParameters)
         {
         }
         /// <summary>
@@ -40,7 +40,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Hooks.Item.Url_var
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Url_variablesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/hooks/{hook_id}/url_variables", rawUrl)
+        public Url_variablesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/hooks/{hookId}/url_variables", rawUrl)
         {
         }
     }

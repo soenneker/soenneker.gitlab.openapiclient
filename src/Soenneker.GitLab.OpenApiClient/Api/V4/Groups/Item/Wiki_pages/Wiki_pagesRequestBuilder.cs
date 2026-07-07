@@ -17,14 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Wiki_pages
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.wiki_pages.item collection</summary>
         /// <param name="position">The ID of the noteable</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Wiki_pages.Item.WithNoteable_ItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Wiki_pages.Item.WithNoteable_ItemRequestBuilder this[int position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Wiki_pages.Item.WithNoteableItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Wiki_pages.Item.WithNoteableItemRequestBuilder this[int position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("noteable_id", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Wiki_pages.Item.WithNoteable_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("noteableId", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Wiki_pages.Item.WithNoteableItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

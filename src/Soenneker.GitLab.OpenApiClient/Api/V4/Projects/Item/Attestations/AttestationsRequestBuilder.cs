@@ -17,14 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Attestations
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.attestations.item collection</summary>
         /// <param name="position">The SHA-256 hash of the artifact</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Attestations.Item.Attestation_iItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Attestations.Item.Attestation_iItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Attestations.Item.AttestationIItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Attestations.Item.AttestationIItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("attestation_i%2Did", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Attestations.Item.Attestation_iItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("attestationI%2Did", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Attestations.Item.AttestationIItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

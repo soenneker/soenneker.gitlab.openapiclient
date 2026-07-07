@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.Item.Test_report_summary
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\pipelines\{pipeline_id}\test_report_summary
+    /// Builds and executes requests for operations under \api\v4\projects\{-id}\pipelines\{pipelineId}\test_report_summary
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Test_report_summaryRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.Item.Tes
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Test_report_summaryRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/pipelines/{pipeline_id}/test_report_summary", pathParameters)
+        public Test_report_summaryRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/pipelines/{pipelineId}/test_report_summary", pathParameters)
         {
         }
         /// <summary>
@@ -30,11 +30,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.Item.Tes
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Test_report_summaryRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/pipelines/{pipeline_id}/test_report_summary", rawUrl)
+        public Test_report_summaryRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/pipelines/{pipelineId}/test_report_summary", rawUrl)
         {
         }
         /// <summary>
-        /// This feature was introduced in GitLab 14.2
+        /// Retrieves a test report summary for a pipeline.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.TestReportSummaryEntity"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.Item.Tes
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.TestReportSummaryEntity>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.TestReportSummaryEntity.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 14.2
+        /// Retrieves a test report summary for a pipeline.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

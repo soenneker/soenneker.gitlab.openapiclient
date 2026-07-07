@@ -2,7 +2,7 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
-using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Helm.Item.Charts.WithFile_nameTgz;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Helm.Item.Charts.WithFileNameTgz;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -32,14 +32,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Helm.Item
         {
         }
         /// <summary>
-        /// Builds and executes requests for operations under \api\v4\projects\{-id}\packages\helm\{channel}\charts\{file_name}.tgz
+        /// Builds and executes requests for operations under \api\v4\projects\{-id}\packages\helm\{channel}\charts\{fileName}.tgz
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Helm.Item.Charts.WithFile_nameTgz.WithFile_nameTgzRequestBuilder"/></returns>
-        /// <param name="file_name">Helm package file name</param>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Helm.Item.Charts.WithFile_nameTgz.WithFile_nameTgzRequestBuilder WithFile_nameTgz(string file_name)
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Helm.Item.Charts.WithFileNameTgz.WithFileNameTgzRequestBuilder"/></returns>
+        /// <param name="fileName">Helm package file name</param>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Helm.Item.Charts.WithFileNameTgz.WithFileNameTgzRequestBuilder WithFileNameTgz(string fileName)
         {
-            if(string.IsNullOrEmpty(file_name)) throw new ArgumentNullException(nameof(file_name));
-            return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Helm.Item.Charts.WithFile_nameTgz.WithFile_nameTgzRequestBuilder(PathParameters, RequestAdapter, file_name);
+            if(string.IsNullOrEmpty(fileName)) throw new ArgumentNullException(nameof(fileName));
+            return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Helm.Item.Charts.WithFileNameTgz.WithFileNameTgzRequestBuilder(PathParameters, RequestAdapter, fileName);
         }
     }
 }

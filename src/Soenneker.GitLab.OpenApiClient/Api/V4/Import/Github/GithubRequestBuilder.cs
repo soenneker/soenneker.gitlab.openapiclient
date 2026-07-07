@@ -46,7 +46,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Import.Github
         {
         }
         /// <summary>
-        /// This feature was introduced in GitLab 11.3.4.
+        /// Imports a repository from GitHub to GitLab.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ProjectEntity"/></returns>
         /// <param name="body">The request body</param>
@@ -54,11 +54,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Import.Github
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ProjectEntity?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAf60e1cb94ad body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ProjectEntity?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAf60E1Cb94Ad body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ProjectEntity> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAf60e1cb94ad body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ProjectEntity> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAf60E1Cb94Ad body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -66,18 +66,18 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Import.Github
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ProjectEntity>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ProjectEntity.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 11.3.4.
+        /// Imports a repository from GitHub to GitLab.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAf60e1cb94ad body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAf60E1Cb94Ad body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAf60e1cb94ad body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAf60E1Cb94Ad body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

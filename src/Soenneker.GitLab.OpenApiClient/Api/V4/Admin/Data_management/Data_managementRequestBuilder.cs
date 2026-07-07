@@ -17,14 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Data_management
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.admin.data_management.item collection</summary>
         /// <param name="position">See https://docs.gitlab.com/administration/admin_area/#data-management for the list of allowed values</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Data_management.Item.WithModel_nameItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Data_management.Item.WithModel_nameItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Data_management.Item.WithModelNameItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Data_management.Item.WithModelNameItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("model_name", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Data_management.Item.WithModel_nameItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("modelName", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Data_management.Item.WithModelNameItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

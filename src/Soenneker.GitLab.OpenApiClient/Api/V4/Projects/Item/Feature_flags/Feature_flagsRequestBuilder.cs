@@ -20,14 +20,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.feature_flags.item collection</summary>
         /// <param name="position">The name of the feature flag</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags.Item.WithFeature_flag_nameItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags.Item.WithFeature_flag_nameItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags.Item.WithFeatureFlagNameItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags.Item.WithFeatureFlagNameItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("feature_flag_name", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags.Item.WithFeature_flag_nameItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("featureFlagName", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags.Item.WithFeatureFlagNameItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -47,45 +47,45 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags
         {
         }
         /// <summary>
-        /// Gets all feature flags of the requested project. This feature was introduced in GitLab 12.5.
+        /// Lists all feature flags of the requested project. Use the `page` and `per_page` pagination parameters to control the pagination of results.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesFeatureFlag"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlag"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesFeatureFlag?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags.Feature_flagsRequestBuilder.Feature_flagsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlag?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags.Feature_flagsRequestBuilder.Feature_flagsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesFeatureFlag> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags.Feature_flagsRequestBuilder.Feature_flagsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlag> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags.Feature_flagsRequestBuilder.Feature_flagsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesFeatureFlag>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesFeatureFlag.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlag>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlag.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Creates a new feature flag. This feature was introduced in GitLab 12.5.
+        /// Creates a feature flag for a specified project.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesFeatureFlag"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlag"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesFeatureFlag?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2014afd4b67c body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlag?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2014Afd4B67C body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesFeatureFlag> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2014afd4b67c body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlag> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2014Afd4B67C body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesFeatureFlag>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.APIEntitiesFeatureFlag.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlag>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlag.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Gets all feature flags of the requested project. This feature was introduced in GitLab 12.5.
+        /// Lists all feature flags of the requested project. Use the `page` and `per_page` pagination parameters to control the pagination of results.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -104,18 +104,18 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags
             return requestInfo;
         }
         /// <summary>
-        /// Creates a new feature flag. This feature was introduced in GitLab 12.5.
+        /// Creates a feature flag for a specified project.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2014afd4b67c body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2014Afd4B67C body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2014afd4b67c body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2014Afd4B67C body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -135,7 +135,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags.Feature_flagsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Gets all feature flags of the requested project. This feature was introduced in GitLab 12.5.
+        /// Lists all feature flags of the requested project. Use the `page` and `per_page` pagination parameters to control the pagination of results.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Feature_flagsRequestBuilderGetQueryParameters 
@@ -148,7 +148,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags
             public int? PerPage { get; set; }
             /// <summary>&quot;The scope of feature flags, one of: `enabled`, `disabled`&quot;</summary>
             [QueryParameter("scope")]
-            public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags.GetScopeQueryParameterType? Scope { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdFeatureFlagsScopeParameter? Scope { get; set; }
         }
     }
 }

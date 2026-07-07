@@ -10,21 +10,21 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Databases.Item.Dictionary.Tables
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\admin\databases\{database_name}\dictionary\tables
+    /// Builds and executes requests for operations under \api\v4\admin\databases\{databaseName}\dictionary\tables
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TablesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.admin.databases.item.dictionary.tables.item collection</summary>
         /// <param name="position">The table name</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Databases.Item.Dictionary.Tables.Item.WithTable_nameItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Databases.Item.Dictionary.Tables.Item.WithTable_nameItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Databases.Item.Dictionary.Tables.Item.WithTableNameItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Databases.Item.Dictionary.Tables.Item.WithTableNameItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("table_name", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Databases.Item.Dictionary.Tables.Item.WithTable_nameItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("tableName", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Databases.Item.Dictionary.Tables.Item.WithTableNameItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -32,7 +32,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Databases.Item.Dictionary.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TablesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/admin/databases/{database_name}/dictionary/tables", pathParameters)
+        public TablesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/admin/databases/{databaseName}/dictionary/tables", pathParameters)
         {
         }
         /// <summary>
@@ -40,7 +40,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Databases.Item.Dictionary.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TablesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/admin/databases/{database_name}/dictionary/tables", rawUrl)
+        public TablesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/admin/databases/{databaseName}/dictionary/tables", rawUrl)
         {
         }
     }

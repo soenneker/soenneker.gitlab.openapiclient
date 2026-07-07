@@ -51,10 +51,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The recent_failures property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.TestCaseEntity_recent_failures? RecentFailures { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.TestCaseEntityRecentFailuresProperty? RecentFailures { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.TestCaseEntity_recent_failures RecentFailures { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.TestCaseEntityRecentFailuresProperty RecentFailures { get; set; }
 #endif
         /// <summary>The stack_trace property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -111,7 +111,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "execution_time", n => { ExecutionTime = n.GetIntValue(); } },
                 { "file", n => { File = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "recent_failures", n => { RecentFailures = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.TestCaseEntity_recent_failures>(global::Soenneker.GitLab.OpenApiClient.Models.TestCaseEntity_recent_failures.CreateFromDiscriminatorValue); } },
+                { "recent_failures", n => { RecentFailures = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.TestCaseEntityRecentFailuresProperty>(global::Soenneker.GitLab.OpenApiClient.Models.TestCaseEntityRecentFailuresProperty.CreateFromDiscriminatorValue); } },
                 { "stack_trace", n => { StackTrace = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
                 { "system_output", n => { SystemOutput = n.GetStringValue(); } },
@@ -129,7 +129,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("execution_time", ExecutionTime);
             writer.WriteStringValue("file", File);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.TestCaseEntity_recent_failures>("recent_failures", RecentFailures);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.TestCaseEntityRecentFailuresProperty>("recent_failures", RecentFailures);
             writer.WriteStringValue("stack_trace", StackTrace);
             writer.WriteStringValue("status", Status);
             writer.WriteStringValue("system_output", SystemOutput);
