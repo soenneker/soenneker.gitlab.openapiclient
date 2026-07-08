@@ -9,16 +9,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class RequestBodyCe398B1Ce62B : IAdditionalDataHolder, IParsable
+    public partial class RequestBody39C987677Cfb : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Additional Context required by the Flow, in JSON format. Contains an array of context details, where each detail is a Hash with a minimum of &quot;Category&quot; and &quot;Content&quot; keys.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCe398B1Ce62BAdditionalContextItem>? AdditionalContext { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody39C987677CfbAdditionalContextItem>? AdditionalContext { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCe398B1Ce62BAdditionalContextItem> AdditionalContext { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody39C987677CfbAdditionalContextItem> AdditionalContext { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -37,7 +37,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>When this is enabled Duo Agent Platform may stop to ask the user questions before proceeding. When it is disabled Duo Agent Platform will always just run through the workflow without ever asking for user input. Defaults to true.</summary>
         public bool? AllowAgentToRequestUser { get; set; }
         /// <summary>Environment for the workflow.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCe398B1Ce62BEnvironment? Environment { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody39C987677CfbEnvironment? Environment { get; set; }
         /// <summary>Goal of the workflow</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -82,8 +82,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ProjectId { get; set; }
 #endif
-        /// <summary>Whether this workflow requires Duo CLI to be enabled</summary>
-        public bool? RequiresDuoCliEnabled { get; set; }
         /// <summary>Whether or not the workflow should use a shallow clone of the repository during its execution.  Defaults to true.</summary>
         public bool? ShallowClone { get; set; }
         /// <summary>Source branch for the CI pipeline. Uses default branch when not specified.</summary>
@@ -105,9 +103,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string WorkflowDefinition { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCe398B1Ce62B"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody39C987677Cfb"/> and sets the default values.
         /// </summary>
-        public RequestBodyCe398B1Ce62B()
+        public RequestBody39C987677Cfb()
         {
             AdditionalData = new Dictionary<string, object>();
             ShallowClone = true;
@@ -115,12 +113,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCe398B1Ce62B"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody39C987677Cfb"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCe398B1Ce62B CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody39C987677Cfb CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCe398B1Ce62B();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody39C987677Cfb();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -130,12 +128,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "additional_context", n => { AdditionalContext = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCe398B1Ce62BAdditionalContextItem>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCe398B1Ce62BAdditionalContextItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "additional_context", n => { AdditionalContext = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody39C987677CfbAdditionalContextItem>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody39C987677CfbAdditionalContextItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "agent_privileges", n => { AgentPrivileges = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
                 { "ai_catalog_item_consumer_id", n => { AiCatalogItemConsumerId = n.GetIntValue(); } },
                 { "ai_catalog_item_version_id", n => { AiCatalogItemVersionId = n.GetIntValue(); } },
                 { "allow_agent_to_request_user", n => { AllowAgentToRequestUser = n.GetBoolValue(); } },
-                { "environment", n => { Environment = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCe398B1Ce62BEnvironment>(); } },
+                { "environment", n => { Environment = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody39C987677CfbEnvironment>(); } },
                 { "goal", n => { Goal = n.GetStringValue(); } },
                 { "image", n => { Image = n.GetStringValue(); } },
                 { "issue_id", n => { IssueId = n.GetIntValue(); } },
@@ -143,7 +141,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "namespace_id", n => { NamespaceId = n.GetStringValue(); } },
                 { "pre_approved_agent_privileges", n => { PreApprovedAgentPrivileges = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
                 { "project_id", n => { ProjectId = n.GetStringValue(); } },
-                { "requires_duo_cli_enabled", n => { RequiresDuoCliEnabled = n.GetBoolValue(); } },
                 { "shallow_clone", n => { ShallowClone = n.GetBoolValue(); } },
                 { "source_branch", n => { SourceBranch = n.GetStringValue(); } },
                 { "start_workflow", n => { StartWorkflow = n.GetBoolValue(); } },
@@ -157,12 +154,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCe398B1Ce62BAdditionalContextItem>("additional_context", AdditionalContext);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody39C987677CfbAdditionalContextItem>("additional_context", AdditionalContext);
             writer.WriteCollectionOfPrimitiveValues<int?>("agent_privileges", AgentPrivileges);
             writer.WriteIntValue("ai_catalog_item_consumer_id", AiCatalogItemConsumerId);
             writer.WriteIntValue("ai_catalog_item_version_id", AiCatalogItemVersionId);
             writer.WriteBoolValue("allow_agent_to_request_user", AllowAgentToRequestUser);
-            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCe398B1Ce62BEnvironment>("environment", Environment);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody39C987677CfbEnvironment>("environment", Environment);
             writer.WriteStringValue("goal", Goal);
             writer.WriteStringValue("image", Image);
             writer.WriteIntValue("issue_id", IssueId);
@@ -170,7 +167,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("namespace_id", NamespaceId);
             writer.WriteCollectionOfPrimitiveValues<int?>("pre_approved_agent_privileges", PreApprovedAgentPrivileges);
             writer.WriteStringValue("project_id", ProjectId);
-            writer.WriteBoolValue("requires_duo_cli_enabled", RequiresDuoCliEnabled);
             writer.WriteBoolValue("shallow_clone", ShallowClone);
             writer.WriteStringValue("source_branch", SourceBranch);
             writer.WriteBoolValue("start_workflow", StartWorkflow);

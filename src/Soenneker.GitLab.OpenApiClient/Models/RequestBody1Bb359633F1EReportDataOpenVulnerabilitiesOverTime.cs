@@ -8,29 +8,29 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// Data for rendering the total risk score in PDF reports
+    /// Data for rendering the open vulnerabilities over time in PDF reports
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RequestBody3C400Bb4E6E3ReportDataTotalRiskScore : IAdditionalDataHolder, IParsable
+    public partial class RequestBody1Bb359633F1EReportDataOpenVulnerabilitiesOverTime : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3C400Bb4E6E3ReportDataTotalRiskScore"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1Bb359633F1EReportDataOpenVulnerabilitiesOverTime"/> and sets the default values.
         /// </summary>
-        public RequestBody3C400Bb4E6E3ReportDataTotalRiskScore()
+        public RequestBody1Bb359633F1EReportDataOpenVulnerabilitiesOverTime()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3C400Bb4E6E3ReportDataTotalRiskScore"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1Bb359633F1EReportDataOpenVulnerabilitiesOverTime"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3C400Bb4E6E3ReportDataTotalRiskScore CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1Bb359633F1EReportDataOpenVulnerabilitiesOverTime CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3C400Bb4E6E3ReportDataTotalRiskScore();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1Bb359633F1EReportDataOpenVulnerabilitiesOverTime();
         }
         /// <summary>
         /// The deserialization information for the current model

@@ -11,26 +11,26 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     /// This object should include an SVG asset to be rendered in PDF reports
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RequestBody3C400Bb4E6E3ReportDataGroupVulnerabilitiesOverTime : IAdditionalDataHolder, IParsable
+    public partial class RequestBody1Bb359633F1EReportDataProjectVulnerabilitiesHistory : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3C400Bb4E6E3ReportDataGroupVulnerabilitiesOverTime"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1Bb359633F1EReportDataProjectVulnerabilitiesHistory"/> and sets the default values.
         /// </summary>
-        public RequestBody3C400Bb4E6E3ReportDataGroupVulnerabilitiesOverTime()
+        public RequestBody1Bb359633F1EReportDataProjectVulnerabilitiesHistory()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3C400Bb4E6E3ReportDataGroupVulnerabilitiesOverTime"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1Bb359633F1EReportDataProjectVulnerabilitiesHistory"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3C400Bb4E6E3ReportDataGroupVulnerabilitiesOverTime CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1Bb359633F1EReportDataProjectVulnerabilitiesHistory CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3C400Bb4E6E3ReportDataGroupVulnerabilitiesOverTime();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1Bb359633F1EReportDataProjectVulnerabilitiesHistory();
         }
         /// <summary>
         /// The deserialization information for the current model

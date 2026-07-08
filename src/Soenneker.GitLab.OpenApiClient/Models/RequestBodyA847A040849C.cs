@@ -7,30 +7,33 @@ using System.IO;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>
-    /// Data for rendering the project grades summary in PDF reports
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RequestBody3C400Bb4E6E3ReportDataProjectSecurityStatus : IAdditionalDataHolder, IParsable
+    #pragma warning disable CS1591
+    public partial class RequestBodyA847A040849C : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Format of the generated report</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA847A040849CExportFormat? ExportFormat { get; set; }
+        /// <summary>If `true`, sends an email notification to the requesting user when the export completes.</summary>
+        public bool? SendEmail { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3C400Bb4E6E3ReportDataProjectSecurityStatus"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA847A040849C"/> and sets the default values.
         /// </summary>
-        public RequestBody3C400Bb4E6E3ReportDataProjectSecurityStatus()
+        public RequestBodyA847A040849C()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3C400Bb4E6E3ReportDataProjectSecurityStatus"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA847A040849C"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3C400Bb4E6E3ReportDataProjectSecurityStatus CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA847A040849C CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3C400Bb4E6E3ReportDataProjectSecurityStatus();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA847A040849C();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -40,6 +43,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "export_format", n => { ExportFormat = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA847A040849CExportFormat>(); } },
+                { "send_email", n => { SendEmail = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -49,6 +54,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA847A040849CExportFormat>("export_format", ExportFormat);
+            writer.WriteBoolValue("send_email", SendEmail);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

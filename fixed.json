@@ -1354,7 +1354,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyCe398B1Ce62B"
+                "$ref": "#/components/schemas/RequestBody39C987677Cfb"
               }
             }
           }
@@ -4844,7 +4844,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody3C400Bb4E6E3"
+                "$ref": "#/components/schemas/RequestBody1Bb359633F1E"
               }
             }
           }
@@ -4886,7 +4886,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody3C400Bb4E6E3"
+                "$ref": "#/components/schemas/RequestBody1Bb359633F1E"
               }
             }
           }
@@ -4917,7 +4917,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody6C51C6A72A61"
+                "$ref": "#/components/schemas/RequestBodyA847A040849C"
               }
             }
           }
@@ -37658,6 +37658,14 @@
               "nullable": true
             },
             "example": "7d70e02340bac451f281cecf0a980907974bd8be"
+          },
+          {
+            "name": "ref_type",
+            "in": "query",
+            "description": "Type of ref in sha, heads (branch) or tags (tag)",
+            "schema": {
+              "$ref": "#/components/schemas/GetApiV4ProjectsIdRepositoryArchiveRefTypeParameter"
+            }
           },
           {
             "name": "format",
@@ -120857,15 +120865,9 @@
           }
         }
       },
-      "RequestBodyCe398B1Ce62B": {
+      "RequestBody39C987677Cfb": {
         "type": "object",
         "properties": {
-          "requires_duo_cli_enabled": {
-            "type": "boolean",
-            "description": "Whether this workflow requires Duo CLI to be enabled",
-            "nullable": true,
-            "example": true
-          },
           "project_id": {
             "type": "string",
             "description": "The ID or path of the workflow project",
@@ -120937,7 +120939,7 @@
             "example": "main"
           },
           "environment": {
-            "$ref": "#/components/schemas/RequestBodyCe398B1Ce62BEnvironment"
+            "$ref": "#/components/schemas/RequestBody39C987677CfbEnvironment"
           },
           "ai_catalog_item_version_id": {
             "type": "integer",
@@ -120948,7 +120950,7 @@
           "additional_context": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBodyCe398B1Ce62BAdditionalContextItem"
+              "$ref": "#/components/schemas/RequestBody39C987677CfbAdditionalContextItem"
             },
             "description": "Additional Context required by the Flow, in JSON format. Contains an array of context details, where each detail is a Hash with a minimum of \u0022Category\u0022 and \u0022Content\u0022 keys.",
             "nullable": true
@@ -121487,29 +121489,31 @@
           }
         }
       },
-      "RequestBody3C400Bb4E6E3": {
+      "RequestBody1Bb359633F1E": {
         "type": "object",
         "properties": {
           "export_format": {
-            "$ref": "#/components/schemas/RequestBody3C400Bb4E6E3ExportFormat"
+            "$ref": "#/components/schemas/RequestBody1Bb359633F1EExportFormat"
           },
           "send_email": {
             "type": "boolean",
+            "description": "If \u0060true\u0060, sends an email notification to the requesting user when the export completes.",
             "nullable": true
           },
           "report_data": {
-            "$ref": "#/components/schemas/RequestBody3C400Bb4E6E3ReportData"
+            "$ref": "#/components/schemas/RequestBody1Bb359633F1EReportData"
           }
         }
       },
-      "RequestBody6C51C6A72A61": {
+      "RequestBodyA847A040849C": {
         "type": "object",
         "properties": {
           "export_format": {
-            "$ref": "#/components/schemas/RequestBody6C51C6A72A61ExportFormat"
+            "$ref": "#/components/schemas/RequestBodyA847A040849CExportFormat"
           },
           "send_email": {
             "type": "boolean",
+            "description": "If \u0060true\u0060, sends an email notification to the requesting user when the export completes.",
             "nullable": true
           }
         }
@@ -141040,7 +141044,7 @@
           }
         }
       },
-      "RequestBodyCe398B1Ce62BAdditionalContextItem": {
+      "RequestBody39C987677CfbAdditionalContextItem": {
         "required": [
           "Category",
           "Content"
@@ -141334,32 +141338,32 @@
         "description": "\u0022A valid Cube query. See reference documentation: https://cube.dev/docs/query-format\u0022",
         "nullable": true
       },
-      "RequestBody3C400Bb4E6E3ReportData": {
+      "RequestBody1Bb359633F1EReportData": {
         "type": "object",
         "properties": {
           "project_vulnerabilities_history": {
-            "$ref": "#/components/schemas/RequestBody3C400Bb4E6E3ReportDataProjectVulnerabilitiesHistory"
+            "$ref": "#/components/schemas/RequestBody1Bb359633F1EReportDataProjectVulnerabilitiesHistory"
           },
           "group_vulnerabilities_over_time": {
-            "$ref": "#/components/schemas/RequestBody3C400Bb4E6E3ReportDataGroupVulnerabilitiesOverTime"
+            "$ref": "#/components/schemas/RequestBody1Bb359633F1EReportDataGroupVulnerabilitiesOverTime"
           },
           "project_security_status": {
-            "$ref": "#/components/schemas/RequestBody3C400Bb4E6E3ReportDataProjectSecurityStatus"
+            "$ref": "#/components/schemas/RequestBody1Bb359633F1EReportDataProjectSecurityStatus"
           },
           "total_risk_score": {
-            "$ref": "#/components/schemas/RequestBody3C400Bb4E6E3ReportDataTotalRiskScore"
+            "$ref": "#/components/schemas/RequestBody1Bb359633F1EReportDataTotalRiskScore"
           },
           "open_vulnerabilities_over_time": {
-            "$ref": "#/components/schemas/RequestBody3C400Bb4E6E3ReportDataOpenVulnerabilitiesOverTime"
+            "$ref": "#/components/schemas/RequestBody1Bb359633F1EReportDataOpenVulnerabilitiesOverTime"
           },
           "vulnerabilities_by_age": {
-            "$ref": "#/components/schemas/RequestBody3C400Bb4E6E3ReportDataVulnerabilitiesByAge"
+            "$ref": "#/components/schemas/RequestBody1Bb359633F1EReportDataVulnerabilitiesByAge"
           },
           "vulnerabilities_by_severity_count": {
-            "$ref": "#/components/schemas/RequestBody3C400Bb4E6E3ReportDataVulnerabilitiesBySeverityCount"
+            "$ref": "#/components/schemas/RequestBody1Bb359633F1EReportDataVulnerabilitiesBySeverityCount"
           },
           "dashboard_type": {
-            "$ref": "#/components/schemas/RequestBody3C400Bb4E6E3ReportDataDashboardType"
+            "$ref": "#/components/schemas/RequestBody1Bb359633F1EReportDataDashboardType"
           },
           "full_path": {
             "type": "string",
@@ -144791,56 +144795,56 @@
         "description": "Event-specific payload",
         "nullable": true
       },
-      "RequestBody3C400Bb4E6E3ReportDataProjectVulnerabilitiesHistory": {
+      "RequestBody1Bb359633F1EReportDataProjectVulnerabilitiesHistory": {
         "type": "object",
         "description": "This object should include an SVG asset to be rendered in PDF reports",
         "nullable": true
       },
-      "RequestBody3C400Bb4E6E3ReportDataGroupVulnerabilitiesOverTime": {
+      "RequestBody1Bb359633F1EReportDataGroupVulnerabilitiesOverTime": {
         "type": "object",
         "description": "This object should include an SVG asset to be rendered in PDF reports",
         "nullable": true
       },
-      "RequestBody3C400Bb4E6E3ReportDataProjectSecurityStatus": {
+      "RequestBody1Bb359633F1EReportDataProjectSecurityStatus": {
         "type": "object",
         "description": "Data for rendering the project grades summary in PDF reports",
         "nullable": true
       },
-      "RequestBody3C400Bb4E6E3ReportDataTotalRiskScore": {
+      "RequestBody1Bb359633F1EReportDataTotalRiskScore": {
         "type": "object",
         "description": "Data for rendering the total risk score in PDF reports",
         "nullable": true
       },
-      "RequestBody3C400Bb4E6E3ReportDataOpenVulnerabilitiesOverTime": {
+      "RequestBody1Bb359633F1EReportDataOpenVulnerabilitiesOverTime": {
         "type": "object",
         "description": "Data for rendering the open vulnerabilities over time in PDF reports",
         "nullable": true
       },
-      "RequestBody3C400Bb4E6E3ReportDataVulnerabilitiesByAge": {
+      "RequestBody1Bb359633F1EReportDataVulnerabilitiesByAge": {
         "type": "object",
         "description": "Data for rendering the vulnerabilities by age in PDF reports",
         "nullable": true
       },
-      "RequestBody3C400Bb4E6E3ReportDataVulnerabilitiesBySeverityCount": {
+      "RequestBody1Bb359633F1EReportDataVulnerabilitiesBySeverityCount": {
         "type": "object",
         "properties": {
           "critical": {
-            "$ref": "#/components/schemas/RequestBody3C400Bb4E6E3ReportDataVulnerabilitiesBySeverityCountCritical"
+            "$ref": "#/components/schemas/RequestBody1Bb359633F1EReportDataVulnerabilitiesBySeverityCountCritical"
           },
           "high": {
-            "$ref": "#/components/schemas/RequestBody3C400Bb4E6E3ReportDataVulnerabilitiesBySeverityCountHigh"
+            "$ref": "#/components/schemas/RequestBody1Bb359633F1EReportDataVulnerabilitiesBySeverityCountHigh"
           },
           "medium": {
-            "$ref": "#/components/schemas/RequestBody3C400Bb4E6E3ReportDataVulnerabilitiesBySeverityCountMedium"
+            "$ref": "#/components/schemas/RequestBody1Bb359633F1EReportDataVulnerabilitiesBySeverityCountMedium"
           },
           "low": {
-            "$ref": "#/components/schemas/RequestBody3C400Bb4E6E3ReportDataVulnerabilitiesBySeverityCountLow"
+            "$ref": "#/components/schemas/RequestBody1Bb359633F1EReportDataVulnerabilitiesBySeverityCountLow"
           },
           "unknown": {
-            "$ref": "#/components/schemas/RequestBody3C400Bb4E6E3ReportDataVulnerabilitiesBySeverityCountUnknown"
+            "$ref": "#/components/schemas/RequestBody1Bb359633F1EReportDataVulnerabilitiesBySeverityCountUnknown"
           },
           "info": {
-            "$ref": "#/components/schemas/RequestBody3C400Bb4E6E3ReportDataVulnerabilitiesBySeverityCountInfo"
+            "$ref": "#/components/schemas/RequestBody1Bb359633F1EReportDataVulnerabilitiesBySeverityCountInfo"
           }
         },
         "description": "Data for rendering the vulnerabilities by severity count in PDF reports",
@@ -145903,7 +145907,7 @@
         "description": "Object containing through namespace information",
         "nullable": true
       },
-      "RequestBody3C400Bb4E6E3ReportDataVulnerabilitiesBySeverityCountCritical": {
+      "RequestBody1Bb359633F1EReportDataVulnerabilitiesBySeverityCountCritical": {
         "type": "object",
         "properties": {
           "count": {
@@ -145924,7 +145928,7 @@
         },
         "nullable": true
       },
-      "RequestBody3C400Bb4E6E3ReportDataVulnerabilitiesBySeverityCountHigh": {
+      "RequestBody1Bb359633F1EReportDataVulnerabilitiesBySeverityCountHigh": {
         "type": "object",
         "properties": {
           "count": {
@@ -145945,7 +145949,7 @@
         },
         "nullable": true
       },
-      "RequestBody3C400Bb4E6E3ReportDataVulnerabilitiesBySeverityCountMedium": {
+      "RequestBody1Bb359633F1EReportDataVulnerabilitiesBySeverityCountMedium": {
         "type": "object",
         "properties": {
           "count": {
@@ -145966,7 +145970,7 @@
         },
         "nullable": true
       },
-      "RequestBody3C400Bb4E6E3ReportDataVulnerabilitiesBySeverityCountLow": {
+      "RequestBody1Bb359633F1EReportDataVulnerabilitiesBySeverityCountLow": {
         "type": "object",
         "properties": {
           "count": {
@@ -145987,7 +145991,7 @@
         },
         "nullable": true
       },
-      "RequestBody3C400Bb4E6E3ReportDataVulnerabilitiesBySeverityCountUnknown": {
+      "RequestBody1Bb359633F1EReportDataVulnerabilitiesBySeverityCountUnknown": {
         "type": "object",
         "properties": {
           "count": {
@@ -146008,7 +146012,7 @@
         },
         "nullable": true
       },
-      "RequestBody3C400Bb4E6E3ReportDataVulnerabilitiesBySeverityCountInfo": {
+      "RequestBody1Bb359633F1EReportDataVulnerabilitiesBySeverityCountInfo": {
         "type": "object",
         "properties": {
           "count": {
@@ -149080,7 +149084,7 @@
           ]
         }
       },
-      "RequestBodyCe398B1Ce62BEnvironment": {
+      "RequestBody39C987677CfbEnvironment": {
         "enum": [
           "ide",
           "web",
@@ -149093,7 +149097,7 @@
         "description": "Environment for the workflow.",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyCe398B1Ce62BEnvironment",
+          "name": "RequestBody39C987677CfbEnvironment",
           "modelAsString": false,
           "values": [
             {
@@ -149252,7 +149256,7 @@
         "additionalProperties": false,
         "description": "Level of permissions for the linked SA group"
       },
-      "RequestBody3C400Bb4E6E3ExportFormat": {
+      "RequestBody1Bb359633F1EExportFormat": {
         "enum": [
           "csv",
           "pdf"
@@ -149262,7 +149266,7 @@
         "description": "Format of the generated report",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody3C400Bb4E6E3ExportFormat",
+          "name": "RequestBody1Bb359633F1EExportFormat",
           "modelAsString": false,
           "values": [
             {
@@ -149276,7 +149280,7 @@
           ]
         }
       },
-      "RequestBody6C51C6A72A61ExportFormat": {
+      "RequestBodyA847A040849CExportFormat": {
         "enum": [
           "csv",
           "pdf"
@@ -149286,7 +149290,7 @@
         "description": "Format of the generated report",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody6C51C6A72A61ExportFormat",
+          "name": "RequestBodyA847A040849CExportFormat",
           "modelAsString": false,
           "values": [
             {
@@ -156241,7 +156245,7 @@
         "description": "The access levels allowed to approve",
         "nullable": true
       },
-      "RequestBody3C400Bb4E6E3ReportDataDashboardType": {
+      "RequestBody1Bb359633F1EReportDataDashboardType": {
         "enum": [
           ":project",
           ":group",
@@ -156252,7 +156256,7 @@
         "description": "The type of vulnerability grouping this report is being created for",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody3C400Bb4E6E3ReportDataDashboardType",
+          "name": "RequestBody1Bb359633F1EReportDataDashboardType",
           "modelAsString": false,
           "values": [
             {
@@ -161397,6 +161401,29 @@
             {
               "value": "none",
               "name": "None"
+            }
+          ]
+        }
+      },
+      "GetApiV4ProjectsIdRepositoryArchiveRefTypeParameter": {
+        "enum": [
+          "heads",
+          "tags"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "nullable": true,
+        "x-ms-enum": {
+          "name": "GetApiV4ProjectsIdRepositoryArchiveRefTypeParameter",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "heads",
+              "name": "Heads"
+            },
+            {
+              "value": "tags",
+              "name": "Tags"
             }
           ]
         }

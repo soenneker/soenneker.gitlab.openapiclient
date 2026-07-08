@@ -5,7 +5,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>Format of the generated report</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBody6C51C6A72A61ExportFormat
+    public enum RequestBody1Bb359633F1EExportFormat
     {
         [EnumMember(Value = "csv")]
         #pragma warning disable CS1591

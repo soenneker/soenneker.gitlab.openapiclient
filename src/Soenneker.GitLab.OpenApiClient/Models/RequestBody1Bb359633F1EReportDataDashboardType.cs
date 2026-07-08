@@ -5,7 +5,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>The type of vulnerability grouping this report is being created for</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBody3C400Bb4E6E3ReportDataDashboardType
+    public enum RequestBody1Bb359633F1EReportDataDashboardType
     {
         [EnumMember(Value = ":project")]
         #pragma warning disable CS1591
