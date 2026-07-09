@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Members.Item
         {
         }
         /// <summary>
-        /// Removes a user from a group or project.
+        /// Removes a specified user from a project. The user must be a direct member.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Members.Item
             await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Gets a member of a group or project.
+        /// Retrieves a specified member of a project. Returns only direct members and not inherited members through ancestor groups.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMember"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -69,7 +69,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Members.Item
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMember>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMember.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Updates a member of a group or project.
+        /// Updates a specified member of a project.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMember"/></returns>
         /// <param name="body">The request body</param>
@@ -89,7 +89,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Members.Item
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMember>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMember.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Removes a user from a group or project.
+        /// Removes a specified user from a project. The user must be a direct member.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -108,7 +108,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Members.Item
             return requestInfo;
         }
         /// <summary>
-        /// Gets a member of a group or project.
+        /// Retrieves a specified member of a project. Returns only direct members and not inherited members through ancestor groups.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -127,7 +127,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Members.Item
             return requestInfo;
         }
         /// <summary>
-        /// Updates a member of a group or project.
+        /// Updates a specified member of a project.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -158,15 +158,15 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Members.Item
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Members.Item.WithUserItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Removes a user from a group or project.
+        /// Removes a specified user from a project. The user must be a direct member.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithUserItemRequestBuilderDeleteQueryParameters 
         {
-            /// <summary>Flag indicating if the deletion of direct memberships of the removed member in subgroups and projects should be skipped</summary>
+            /// <summary>If `true`, the member retains any direct memberships in subgroups or projects.</summary>
             [QueryParameter("skip_subresources")]
             public bool? SkipSubresources { get; set; }
-            /// <summary>Flag indicating if the removed member should be unassigned from any issues or merge requests within given group or project</summary>
+            /// <summary>If `true`, unassigns the member from any issues or merge requests in the project.</summary>
             [QueryParameter("unassign_issuables")]
             public bool? UnassignIssuables { get; set; }
         }

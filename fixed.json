@@ -29,7 +29,8 @@
         "tags": [
           "Namespaces"
         ],
-        "summary": "Returns the subscription for the namespace",
+        "summary": "Retrieve namespace subscription",
+        "description": "Retrieves GitLab subscription details for a specified namespace.",
         "operationId": "GetApiV4NamespacesIdGitlabSubscription",
         "parameters": [
           {
@@ -4314,7 +4315,7 @@
           {
             "name": "package_manager",
             "in": "query",
-            "description": "\u0022Returns dependencies belonging to specified package managers: bundler, yarn, npm, pnpm, maven, composer, pip, conan, go, nuget, sbt, gradle, pipenv, poetry, setuptools, apk, conda, pub, cargo.\u0022",
+            "description": "\u0022Returns dependencies belonging to specified package managers: bundler, yarn, npm, pnpm, bun, maven, composer, pip, conan, go, nuget, sbt, gradle, pipenv, poetry, setuptools, apk, conda, pub, cargo.\u0022",
             "explode": false,
             "schema": {
               "type": "array",
@@ -27501,7 +27502,8 @@
         "tags": [
           "Labels"
         ],
-        "summary": "Get all labels of the project",
+        "summary": "List all project labels",
+        "description": "Lists all labels for a specified project. By default, this request returns 20 results at a time because the API results are paginated.",
         "operationId": "GetApiV4ProjectsIdLabels",
         "parameters": [
           {
@@ -27598,7 +27600,8 @@
         "tags": [
           "Labels"
         ],
-        "summary": "Create a new label",
+        "summary": "Create a project label",
+        "description": "Creates a label for a specified project.",
         "operationId": "PostApiV4ProjectsIdLabels",
         "parameters": [
           {
@@ -27640,111 +27643,6 @@
             }
           }
         }
-      },
-      "put": {
-        "tags": [
-          "Labels"
-        ],
-        "summary": "Update an existing label. At least one optional parameter is required.",
-        "description": "This feature was deprecated in GitLab 12.4.",
-        "operationId": "PutApiV4ProjectsIdLabels",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The ID or URL-encoded path of the project",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "integer"
-                }
-              ]
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RequestBody5A4E5Cc28E59"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesProjectLabel"
-                }
-              }
-            }
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "Labels"
-        ],
-        "summary": "Delete an existing label",
-        "description": "This feature was deprecated in GitLab 12.4.",
-        "operationId": "DeleteApiV4ProjectsIdLabels",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The ID or URL-encoded path of the project",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "integer"
-                }
-              ]
-            }
-          },
-          {
-            "name": "label_id",
-            "in": "query",
-            "description": "The ID of the label to be deleted",
-            "schema": {
-              "type": "integer",
-              "nullable": true
-            }
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "description": "The name of the label to be deleted",
-            "schema": {
-              "type": "string",
-              "nullable": true
-            }
-          }
-        ],
-        "responses": {
-          "204": {
-            "description": "No Content",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesProjectLabel"
-                }
-              }
-            }
-          }
-        }
       }
     },
     "/api/v4/projects/{id}/labels/{name}": {
@@ -27752,8 +27650,8 @@
         "tags": [
           "Labels"
         ],
-        "summary": "Get a single label",
-        "description": "This feature was added in GitLab 12.4.",
+        "summary": "Retrieve a project label",
+        "description": "Retrieves a specified label for a project.",
         "operationId": "GetApiV4ProjectsIdLabelsName",
         "parameters": [
           {
@@ -27810,8 +27708,8 @@
         "tags": [
           "Labels"
         ],
-        "summary": "Update an existing label. At least one optional parameter is required.",
-        "description": "This feature was added in GitLab 12.4.",
+        "summary": "Update a project label",
+        "description": "Updates a specified label for a project with a different name or color. At least one parameter is required to update the label.",
         "operationId": "PutApiV4ProjectsIdLabelsName",
         "parameters": [
           {
@@ -27867,8 +27765,8 @@
         "tags": [
           "Labels"
         ],
-        "summary": "Delete an existing label",
-        "description": "This feature was added in GitLab 12.4.",
+        "summary": "Delete a project label",
+        "description": "Deletes a specified label from a project.",
         "operationId": "DeleteApiV4ProjectsIdLabelsName",
         "parameters": [
           {
@@ -27912,63 +27810,13 @@
         }
       }
     },
-    "/api/v4/projects/{id}/labels/promote": {
-      "put": {
-        "tags": [
-          "Labels"
-        ],
-        "summary": "Promote a label to a group label",
-        "description": "This feature was added in GitLab 12.3 and deprecated in GitLab 12.4.",
-        "operationId": "PutApiV4ProjectsIdLabelsPromote",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The ID or URL-encoded path of the project",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "integer"
-                }
-              ]
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RequestBody0Ca6E4B6Faea"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesGroupLabel"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/api/v4/projects/{id}/labels/{name}/promote": {
       "put": {
         "tags": [
           "Labels"
         ],
-        "summary": "Promote a label to a group label",
-        "description": "This feature was added in GitLab 12.4.",
+        "summary": "Promote a project label to a group label",
+        "description": "Promotes a specified project label to a group label. The label keeps its ID.",
         "operationId": "PutApiV4ProjectsIdLabelsNamePromote",
         "parameters": [
           {
@@ -54342,7 +54190,8 @@
         "tags": [
           "Members"
         ],
-        "summary": "Adds a member to a group or project.",
+        "summary": "Add a member to a group",
+        "description": "Adds a member to a specified group.",
         "operationId": "PostApiV4GroupsIdMembers",
         "parameters": [
           {
@@ -54477,7 +54326,8 @@
         "tags": [
           "Members"
         ],
-        "summary": "Gets a member of a group or project.",
+        "summary": "Retrieve a direct group member",
+        "description": "Retrieves a specified member of a group. Returns only direct members and not inherited members through ancestor groups.",
         "operationId": "GetApiV4GroupsIdMembersUserId",
         "parameters": [
           {
@@ -54516,7 +54366,8 @@
         "tags": [
           "Members"
         ],
-        "summary": "Updates a member of a group or project.",
+        "summary": "Update a group member",
+        "description": "Updates a specified member of a group.",
         "operationId": "PutApiV4GroupsIdMembersUserId",
         "parameters": [
           {
@@ -54564,7 +54415,8 @@
         "tags": [
           "Members"
         ],
-        "summary": "Removes a user from a group or project.",
+        "summary": "Remove a member from a group",
+        "description": "Removes a specified user from a group. The user must be a direct member.",
         "operationId": "DeleteApiV4GroupsIdMembersUserId",
         "parameters": [
           {
@@ -54588,7 +54440,7 @@
           {
             "name": "skip_subresources",
             "in": "query",
-            "description": "Flag indicating if the deletion of direct memberships of the removed member in subgroups and projects should be skipped",
+            "description": "If \u0060true\u0060, the member retains any direct memberships in subgroups or projects.",
             "schema": {
               "type": "boolean",
               "nullable": true
@@ -54597,7 +54449,7 @@
           {
             "name": "unassign_issuables",
             "in": "query",
-            "description": "Flag indicating if the removed member should be unassigned from any issues or merge requests within given group or project",
+            "description": "If \u0060true\u0060, unassigns the member from any issues or merge requests in the group.",
             "schema": {
               "type": "boolean",
               "nullable": true
@@ -54623,7 +54475,8 @@
         "tags": [
           "Members"
         ],
-        "summary": "Gets a member of a group or project, including those who gained membership through ancestor group",
+        "summary": "Retrieve a group member",
+        "description": "Retrieves a specified member of a group. Returns direct members and members inherited or invited through ancestor groups.",
         "operationId": "GetApiV4GroupsIdMembersAllUserId",
         "parameters": [
           {
@@ -54770,7 +54623,8 @@
         "tags": [
           "Members"
         ],
-        "summary": "Adds a member to a group or project.",
+        "summary": "Add a member to a project",
+        "description": "Adds a member to a specified project.",
         "operationId": "PostApiV4ProjectsIdMembers",
         "parameters": [
           {
@@ -54905,7 +54759,8 @@
         "tags": [
           "Members"
         ],
-        "summary": "Gets a member of a group or project.",
+        "summary": "Retrieve a direct project member",
+        "description": "Retrieves a specified member of a project. Returns only direct members and not inherited members through ancestor groups.",
         "operationId": "GetApiV4ProjectsIdMembersUserId",
         "parameters": [
           {
@@ -54944,7 +54799,8 @@
         "tags": [
           "Members"
         ],
-        "summary": "Updates a member of a group or project.",
+        "summary": "Update a project member",
+        "description": "Updates a specified member of a project.",
         "operationId": "PutApiV4ProjectsIdMembersUserId",
         "parameters": [
           {
@@ -54992,7 +54848,8 @@
         "tags": [
           "Members"
         ],
-        "summary": "Removes a user from a group or project.",
+        "summary": "Remove a member from a project",
+        "description": "Removes a specified user from a project. The user must be a direct member.",
         "operationId": "DeleteApiV4ProjectsIdMembersUserId",
         "parameters": [
           {
@@ -55016,7 +54873,7 @@
           {
             "name": "skip_subresources",
             "in": "query",
-            "description": "Flag indicating if the deletion of direct memberships of the removed member in subgroups and projects should be skipped",
+            "description": "If \u0060true\u0060, the member retains any direct memberships in subgroups or projects.",
             "schema": {
               "type": "boolean",
               "nullable": true
@@ -55025,7 +54882,7 @@
           {
             "name": "unassign_issuables",
             "in": "query",
-            "description": "Flag indicating if the removed member should be unassigned from any issues or merge requests within given group or project",
+            "description": "If \u0060true\u0060, unassigns the member from any issues or merge requests in the project.",
             "schema": {
               "type": "boolean",
               "nullable": true
@@ -55051,7 +54908,8 @@
         "tags": [
           "Members"
         ],
-        "summary": "Gets a member of a group or project, including those who gained membership through ancestor group",
+        "summary": "Retrieve a project member",
+        "description": "Retrieves a specified member of a project. Returns direct members and members inherited or invited through ancestor groups.",
         "operationId": "GetApiV4ProjectsIdMembersAllUserId",
         "parameters": [
           {
@@ -55092,7 +54950,8 @@
         "tags": [
           "Members"
         ],
-        "summary": "Overrides the access level of an LDAP group member.",
+        "summary": "Set override flag for a member of a group",
+        "description": "Sets the override flag for a member of a group. By default, the access level of LDAP group members is set to the value specified by LDAP through Group Sync.",
         "operationId": "PostApiV4GroupsIdMembersUserIdOverride",
         "parameters": [
           {
@@ -55131,7 +54990,8 @@
         "tags": [
           "Members"
         ],
-        "summary": "Remove an LDAP group member access level override.",
+        "summary": "Remove an LDAP access level override",
+        "description": "Removes an LDAP access level override for a member of a group.",
         "operationId": "DeleteApiV4GroupsIdMembersUserIdOverride",
         "parameters": [
           {
@@ -55172,7 +55032,8 @@
         "tags": [
           "Members"
         ],
-        "summary": "Approves a pending member",
+        "summary": "Approve a group member",
+        "description": "Approves a specified pending user for a top-level group and any subgroups or projects.",
         "operationId": "PutApiV4GroupsIdMembersMemberIdApprove",
         "parameters": [
           {
@@ -55213,7 +55074,8 @@
         "tags": [
           "Members"
         ],
-        "summary": "Approves all pending members",
+        "summary": "Approve all pending group members",
+        "description": "Approves all pending users for a specified top-level group and any subgroups or projects.",
         "operationId": "PostApiV4GroupsIdMembersApproveAll",
         "parameters": [
           {
@@ -55245,7 +55107,8 @@
         "tags": [
           "Members"
         ],
-        "summary": "Lists all pending members for a group including invited users",
+        "summary": "List all pending group members",
+        "description": "Lists all members in an \u0060awaiting\u0060 state and those who are invited but do not have a GitLab account for a specified group and any subgroups and projects. This operation works on top-level groups only. It does not work on subgroups.",
         "operationId": "GetApiV4GroupsIdPendingMembers",
         "parameters": [
           {
@@ -55299,7 +55162,8 @@
         "tags": [
           "Groups"
         ],
-        "summary": "Gets a list of billable users of top-level group.",
+        "summary": "List all billable group members",
+        "description": "Lists all billable members of a specified top-level group. Includes members in any subgroups or projects. You must have the Owner role for the group.",
         "operationId": "GetApiV4GroupsIdBillableMembers",
         "parameters": [
           {
@@ -55370,7 +55234,8 @@
         "tags": [
           "Members"
         ],
-        "summary": "Changes the state of the memberships of a user in the group",
+        "summary": "Update group membership state for a user",
+        "description": "Updates the membership state for a specified user in a group.",
         "operationId": "PutApiV4GroupsIdMembersUserIdState",
         "parameters": [
           {
@@ -55420,7 +55285,8 @@
         "tags": [
           "Members"
         ],
-        "summary": "Get the direct memberships of a billable user of a top-level group.",
+        "summary": "List all memberships for a billable group member",
+        "description": "Lists all memberships for a specified billable member of a group. The response represents only direct memberships. Inherited memberships are not included.",
         "operationId": "GetApiV4GroupsIdBillableMembersUserIdMemberships",
         "parameters": [
           {
@@ -55483,7 +55349,8 @@
         "tags": [
           "Members"
         ],
-        "summary": "Get the indirect memberships of a billable user of a top-level group.",
+        "summary": "List all indirect memberships for a billable group member",
+        "description": "Lists all indirect memberships for a billable member of a group. This operation works on top-level groups only. It does not work on subgroups.",
         "operationId": "GetApiV4GroupsIdBillableMembersUserIdIndirect",
         "parameters": [
           {
@@ -55546,7 +55413,8 @@
         "tags": [
           "Members"
         ],
-        "summary": "Removes a billable member from a group or project.",
+        "summary": "Remove a billable member from a group",
+        "description": "Removes a specified billable member from a group and its subgroups and projects. The user does not need to be a group member to qualify for removal. For example, if the user was added directly to a project in the group, you can still remove them using this operation.",
         "operationId": "DeleteApiV4GroupsIdBillableMembersUserId",
         "parameters": [
           {
@@ -56579,7 +56447,8 @@
         "tags": [
           "Issues"
         ],
-        "summary": "Get currently authenticated user\u0027s issues statistics",
+        "summary": "Retrieve issues statistics for the currently authenticated user",
+        "description": "Retrieves statistics for issues accessible by the currently authenticated user. By default, returns only issues created by the current user. To get all issues, set the \u0060scope\u0060 attribute to \u0060all\u0060.",
         "operationId": "GetApiV4IssuesStatistics",
         "parameters": [
           {
@@ -56973,7 +56842,8 @@
         "tags": [
           "Issues"
         ],
-        "summary": "Get currently authenticated user\u0027s issues",
+        "summary": "List all issues for the currently authenticated user",
+        "description": "Lists all issues accessible by the currently authenticated user. By default, returns only issues created by the current user. To list all issues, use parameter \u0060scope=all\u0060.",
         "operationId": "GetApiV4Issues",
         "parameters": [
           {
@@ -57457,7 +57327,8 @@
         "tags": [
           "Issues"
         ],
-        "summary": "Get specified issue (admin only)",
+        "summary": "Retrieve an issue",
+        "description": "Retrieves a specified issue. Administrators only.",
         "operationId": "GetApiV4IssuesId",
         "parameters": [
           {
@@ -57489,7 +57360,8 @@
         "tags": [
           "Groups"
         ],
-        "summary": "Get a list of group issues",
+        "summary": "List all issues for a group",
+        "description": "Lists all issues for a specified group. If the group is private, you must provide credentials to authorize. In most cases, you should authenticate with a personal access token.",
         "operationId": "GetApiV4GroupsIdIssues",
         "parameters": [
           {
@@ -57982,7 +57854,8 @@
         "tags": [
           "Groups"
         ],
-        "summary": "Get statistics for the list of group issues",
+        "summary": "Retrieve issues statistics for a group",
+        "description": "Retrieves statistics for issues in a specified group.",
         "operationId": "GetApiV4GroupsIdIssuesStatistics",
         "parameters": [
           {
@@ -58653,7 +58526,8 @@
         "tags": [
           "Projects"
         ],
-        "summary": "Get a list of project issues",
+        "summary": "List all project issues",
+        "description": "Lists all issues for a specified project. If the project is private, you need to provide credentials to authorize. In most cases, you should authenticate with a personal access token.",
         "operationId": "GetApiV4ProjectsIdIssues",
         "parameters": [
           {
@@ -59151,7 +59025,8 @@
         "tags": [
           "Projects"
         ],
-        "summary": "Create a new project issue",
+        "summary": "Create an issue",
+        "description": "Creates an issue for a specified project.",
         "operationId": "PostApiV4ProjectsIdIssues",
         "parameters": [
           {
@@ -59200,7 +59075,8 @@
         "tags": [
           "Projects"
         ],
-        "summary": "Get statistics for the list of project issues",
+        "summary": "Retrieve issues statistics for a project",
+        "description": "Retrieves statistics for issues in a specified project.",
         "operationId": "GetApiV4ProjectsIdIssuesStatistics",
         "parameters": [
           {
@@ -59611,7 +59487,8 @@
         "tags": [
           "Projects"
         ],
-        "summary": "Get a single project issue",
+        "summary": "Retrieve a project issue",
+        "description": "Retrieves a specified issue for a project. If the project is private or the issue is confidential, you need to provide credentials to authorize. In most cases, you should authenticate with a personal access token.",
         "operationId": "GetApiV4ProjectsIdIssuesIssueIid",
         "parameters": [
           {
@@ -59658,7 +59535,8 @@
         "tags": [
           "Projects"
         ],
-        "summary": "Update an existing issue",
+        "summary": "Update an issue",
+        "description": "\u0022Updates a specified issue for a project. This request is also used to close or reopen an issue using the \u0060state_event\u0060 parameter. At least one of the following parameters is required for the request to be successful: \u0060assignee_id\u0060, \u0060assignee_ids\u0060, \u0060confidential\u0060, \u0060created_at\u0060, \u0060description\u0060, \u0060discussion_locked\u0060, \u0060due_date\u0060, \u0060issue_type\u0060, \u0060labels\u0060, \u0060milestone_id\u0060, \u0060state_event\u0060, \u0060title\u0060.\u0022",
         "operationId": "PutApiV4ProjectsIdIssuesIssueIid",
         "parameters": [
           {
@@ -59714,7 +59592,8 @@
         "tags": [
           "Projects"
         ],
-        "summary": "Delete a project issue",
+        "summary": "Delete an issue",
+        "description": "Deletes a specified issue.",
         "operationId": "DeleteApiV4ProjectsIdIssuesIssueIid",
         "parameters": [
           {
@@ -59763,7 +59642,8 @@
         "tags": [
           "Projects"
         ],
-        "summary": "Reorder an existing issue",
+        "summary": "Update the order of an issue",
+        "description": "Updates the order of a specified issue in a project. You can see the results when sorting issues manually.",
         "operationId": "PutApiV4ProjectsIdIssuesIssueIidReorder",
         "parameters": [
           {
@@ -59821,7 +59701,8 @@
         "tags": [
           "Projects"
         ],
-        "summary": "Move an existing issue",
+        "summary": "Move an issue",
+        "description": "Moves a specified issue to a different project. If the target project is the source project or the user has insufficient permissions, an error message with status code \u0060400\u0060 is returned. If a label or milestone with the same name also exists in the target project, it is then assigned to the issue being moved.",
         "operationId": "PostApiV4ProjectsIdIssuesIssueIidMove",
         "parameters": [
           {
@@ -59879,7 +59760,8 @@
         "tags": [
           "Projects"
         ],
-        "summary": "Clone an existing issue",
+        "summary": "Clone an issue",
+        "description": "Clones a specified issue to a project. Copies as much data as possible as long as the target project contains equivalent criteria, such as labels or milestones. If you have insufficient permissions, an error message with status code \u0060400\u0060 is returned.",
         "operationId": "PostApiV4ProjectsIdIssuesIssueIidClone",
         "parameters": [
           {
@@ -59937,7 +59819,8 @@
         "tags": [
           "Issues"
         ],
-        "summary": "List merge requests that are related to the issue",
+        "summary": "List all merge requests related to an issue",
+        "description": "Lists all merge requests that are related to a specified issue. If the project is private or the issue is confidential, you need to provide credentials to authorize. In most cases, you should authenticate with a personal access token.",
         "operationId": "GetApiV4ProjectsIdIssuesIssueIidRelatedMergeRequests",
         "parameters": [
           {
@@ -59986,7 +59869,8 @@
         "tags": [
           "Projects"
         ],
-        "summary": "List merge requests closing issue",
+        "summary": "List all merge requests that close an issue on merge",
+        "description": "Lists all merge requests that close a specified issue when merged. If the project is private or the issue is confidential, you need to provide credentials to authorize. In most cases, you should authenticate with a personal access token.",
         "operationId": "GetApiV4ProjectsIdIssuesIssueIidClosedBy",
         "parameters": [
           {
@@ -60085,7 +59969,8 @@
         "tags": [
           "Issues"
         ],
-        "summary": "Get the user agent details for an issue",
+        "summary": "Retrieve user agent details for an issue",
+        "description": "Retrieves user agent details for an issue.",
         "operationId": "GetApiV4ProjectsIdIssuesIssueIidUserAgentDetail",
         "parameters": [
           {
@@ -60415,8 +60300,8 @@
         "tags": [
           "Issues"
         ],
-        "summary": "List issue relations",
-        "description": "Get a list of a given issue\u2019s linked issues, sorted by the relationship creation datetime (ascending).Issues are filtered according to the user authorizations.",
+        "summary": "List all issue links",
+        "description": "Lists all linked issues for a specified issue, sorted by the relationship creation datetime (ascending). Issues are filtered according to the user authorizations.",
         "operationId": "GetApiV4ProjectsIdIssuesIssueIidLinks",
         "parameters": [
           {
@@ -60522,8 +60407,8 @@
         "tags": [
           "Issues"
         ],
-        "summary": "Get an issue link",
-        "description": "Gets details about an issue link. This feature was introduced in GitLab 15.1.",
+        "summary": "Retrieve an issue link",
+        "description": "Retrieves a specified issue link.",
         "operationId": "GetApiV4ProjectsIdIssuesIssueIidLinksIssueLinkId",
         "parameters": [
           {
@@ -60588,7 +60473,7 @@
           "Issues"
         ],
         "summary": "Delete an issue link",
-        "description": "Deletes an issue link, thus removes the two-way relationship.",
+        "description": "Deletes a specified issue link, removing the two-way relationship.",
         "operationId": "DeleteApiV4ProjectsIdIssuesIssueIidLinksIssueLinkId",
         "parameters": [
           {
@@ -70339,8 +70224,8 @@
         "tags": [
           "Packages"
         ],
-        "summary": "List packages within a group",
-        "description": "Get a list of project packages at the group level. This feature was introduced in GitLab 12.5",
+        "summary": "List all packages for a group",
+        "description": "Lists all packages for a specified group. When accessed without authentication, only packages of public projects are returned. By default, packages with \u0060default\u0060, \u0060deprecated\u0060, and \u0060error\u0060 status are returned. Use the \u0060status\u0060 parameter to view other packages.",
         "operationId": "GetApiV4GroupsIdPackages",
         "parameters": [
           {
@@ -71261,8 +71146,8 @@
         "tags": [
           "Container registry"
         ],
-        "summary": "List registry repositories within a group",
-        "description": "Get a list of registry repositories in a group. This feature was introduced in GitLab 12.2.",
+        "summary": "List all registry repositories for a group",
+        "description": "Lists all registry repositories for a specified group.",
         "operationId": "GetApiV4GroupsIdRegistryRepositories",
         "parameters": [
           {
@@ -71552,8 +71437,8 @@
         "tags": [
           "Avatars"
         ],
-        "summary": "Download the group avatar",
-        "description": "This feature was introduced in GitLab 14.0",
+        "summary": "Download a group avatar",
+        "description": "Downloads a group avatar image.",
         "operationId": "GetApiV4GroupsIdAvatar",
         "parameters": [
           {
@@ -107380,6 +107265,13 @@
             "format": "date-time",
             "example": "2020-08-31T15:53:00.073Z"
           },
+          "last_used_ips": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The five most recent unique IP addresses that have authenticated with this token. When the limit is reached, the oldest IP address is removed. The list updates once per minute per token."
+          },
           "impersonation": {
             "type": "string"
           }
@@ -107436,10 +107328,17 @@
             "format": "date-time",
             "example": "2020-08-31T15:53:00.073Z"
           },
-          "token": {
-            "type": "string"
+          "last_used_ips": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The five most recent unique IP addresses that have authenticated with this token. When the limit is reached, the oldest IP address is removed. The list updates once per minute per token."
           },
           "impersonation": {
+            "type": "string"
+          },
+          "token": {
             "type": "string"
           }
         }

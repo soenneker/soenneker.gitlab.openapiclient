@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Billable_members.Ite
         {
         }
         /// <summary>
-        /// Get the direct memberships of a billable user of a top-level group.
+        /// Lists all memberships for a specified billable member of a group. The response represents only direct memberships. Inherited memberships are not included.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBillableMembership"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Billable_members.Ite
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBillableMembership>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBillableMembership.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get the direct memberships of a billable user of a top-level group.
+        /// Lists all memberships for a specified billable member of a group. The response represents only direct memberships. Inherited memberships are not included.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Billable_members.Ite
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Billable_members.Item.Memberships.MembershipsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get the direct memberships of a billable user of a top-level group.
+        /// Lists all memberships for a specified billable member of a group. The response represents only direct memberships. Inherited memberships are not included.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class MembershipsRequestBuilderGetQueryParameters 

@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.Item.Gitlab_subscript
         {
         }
         /// <summary>
-        /// Returns the subscription for the namespace
+        /// Retrieves GitLab subscription details for a specified namespace.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabSubscription"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.Item.Gitlab_subscript
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabSubscription>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabSubscription.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Returns the subscription for the namespace
+        /// Retrieves GitLab subscription details for a specified namespace.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

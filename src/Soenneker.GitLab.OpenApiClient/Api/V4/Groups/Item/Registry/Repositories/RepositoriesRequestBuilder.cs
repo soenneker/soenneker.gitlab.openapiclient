@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Registry.Repositorie
         {
         }
         /// <summary>
-        /// Get a list of registry repositories in a group. This feature was introduced in GitLab 12.2.
+        /// Lists all registry repositories for a specified group.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesContainerRegistryRepository"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Registry.Repositorie
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesContainerRegistryRepository>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesContainerRegistryRepository.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get a list of registry repositories in a group. This feature was introduced in GitLab 12.2.
+        /// Lists all registry repositories for a specified group.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Registry.Repositorie
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Registry.Repositories.RepositoriesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get a list of registry repositories in a group. This feature was introduced in GitLab 12.2.
+        /// Lists all registry repositories for a specified group.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class RepositoriesRequestBuilderGetQueryParameters 

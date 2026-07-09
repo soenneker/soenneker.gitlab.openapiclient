@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Issues
         {
         }
         /// <summary>
-        /// Get currently authenticated user&apos;s issues
+        /// Lists all issues accessible by the currently authenticated user. By default, returns only issues created by the current user. To list all issues, use parameter `scope=all`.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssue"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Issues
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssue>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssue.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get currently authenticated user&apos;s issues
+        /// Lists all issues accessible by the currently authenticated user. By default, returns only issues created by the current user. To list all issues, use parameter `scope=all`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -93,7 +93,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Issues
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Issues.IssuesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get currently authenticated user&apos;s issues
+        /// Lists all issues accessible by the currently authenticated user. By default, returns only issues created by the current user. To list all issues, use parameter `scope=all`.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class IssuesRequestBuilderGetQueryParameters 

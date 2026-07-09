@@ -42,6 +42,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>The last_used_at property</summary>
         public DateTimeOffset? LastUsedAt { get; set; }
+        /// <summary>The five most recent unique IP addresses that have authenticated with this token. When the limit is reached, the oldest IP address is removed. The list updates once per minute per token.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? LastUsedIps { get; set; }
+#nullable restore
+#else
+        public List<string> LastUsedIps { get; set; }
+#endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -95,6 +103,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "id", n => { Id = n.GetLongValue(); } },
                 { "impersonation", n => { Impersonation = n.GetStringValue(); } },
                 { "last_used_at", n => { LastUsedAt = n.GetDateTimeOffsetValue(); } },
+                { "last_used_ips", n => { LastUsedIps = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "revoked", n => { Revoked = n.GetBoolValue(); } },
                 { "scopes", n => { Scopes = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesImpersonationToken_scopes>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesImpersonationToken_scopes.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -116,6 +125,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteLongValue("id", Id);
             writer.WriteStringValue("impersonation", Impersonation);
             writer.WriteDateTimeOffsetValue("last_used_at", LastUsedAt);
+            writer.WriteCollectionOfPrimitiveValues<string>("last_used_ips", LastUsedIps);
             writer.WriteStringValue("name", Name);
             writer.WriteBoolValue("revoked", Revoked);
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesImpersonationToken_scopes>("scopes", Scopes);

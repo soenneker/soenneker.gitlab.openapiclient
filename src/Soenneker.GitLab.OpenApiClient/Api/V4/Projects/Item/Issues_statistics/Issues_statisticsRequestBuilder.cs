@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues_statistics
         {
         }
         /// <summary>
-        /// Get statistics for the list of project issues
+        /// Retrieves statistics for issues in a specified project.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson314"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues_statistics
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson314>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson314.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get statistics for the list of project issues
+        /// Retrieves statistics for issues in a specified project.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues_statistics
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues_statistics.Issues_statisticsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get statistics for the list of project issues
+        /// Retrieves statistics for issues in a specified project.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Issues_statisticsRequestBuilderGetQueryParameters 

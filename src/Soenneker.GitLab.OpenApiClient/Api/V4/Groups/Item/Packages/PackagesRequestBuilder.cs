@@ -58,7 +58,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages
         {
         }
         /// <summary>
-        /// Get a list of project packages at the group level. This feature was introduced in GitLab 12.5
+        /// Lists all packages for a specified group. When accessed without authentication, only packages of public projects are returned. By default, packages with `default`, `deprecated`, and `error` status are returned. Use the `status` parameter to view other packages.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackage"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -76,7 +76,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackage>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackage.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get a list of project packages at the group level. This feature was introduced in GitLab 12.5
+        /// Lists all packages for a specified group. When accessed without authentication, only packages of public projects are returned. By default, packages with `default`, `deprecated`, and `error` status are returned. Use the `status` parameter to view other packages.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -104,7 +104,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.PackagesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get a list of project packages at the group level. This feature was introduced in GitLab 12.5
+        /// Lists all packages for a specified group. When accessed without authentication, only packages of public projects are returned. By default, packages with `default`, `deprecated`, and `error` status are returned. Use the `status` parameter to view other packages.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class PackagesRequestBuilderGetQueryParameters 

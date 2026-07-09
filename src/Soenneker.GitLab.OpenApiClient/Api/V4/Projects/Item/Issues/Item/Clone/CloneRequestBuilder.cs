@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Clone
         {
         }
         /// <summary>
-        /// Clone an existing issue
+        /// Clones a specified issue to a project. Copies as much data as possible as long as the target project contains equivalent criteria, such as labels or milestones. If you have insufficient permissions, an error message with status code `400` is returned.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssue"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Clone
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssue>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssue.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Clone an existing issue
+        /// Clones a specified issue to a project. Copies as much data as possible as long as the target project contains equivalent criteria, such as labels or milestones. If you have insufficient permissions, an error message with status code `400` is returned.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
