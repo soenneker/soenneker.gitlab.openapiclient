@@ -31,13 +31,37 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The include_recommended_allowed property</summary>
         public bool? IncludeRecommendedAllowed { get; set; }
         /// <summary>The minimum_access_level_enable_on_projects property</summary>
-        public int? MinimumAccessLevelEnableOnProjects { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? MinimumAccessLevelEnableOnProjects { get; set; }
+#nullable restore
+#else
+        public string MinimumAccessLevelEnableOnProjects { get; set; }
+#endif
         /// <summary>The minimum_access_level_execute property</summary>
-        public int? MinimumAccessLevelExecute { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? MinimumAccessLevelExecute { get; set; }
+#nullable restore
+#else
+        public string MinimumAccessLevelExecute { get; set; }
+#endif
         /// <summary>The minimum_access_level_execute_async property</summary>
-        public int? MinimumAccessLevelExecuteAsync { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? MinimumAccessLevelExecuteAsync { get; set; }
+#nullable restore
+#else
+        public string MinimumAccessLevelExecuteAsync { get; set; }
+#endif
         /// <summary>The minimum_access_level_manage property</summary>
-        public int? MinimumAccessLevelManage { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? MinimumAccessLevelManage { get; set; }
+#nullable restore
+#else
+        public string MinimumAccessLevelManage { get; set; }
+#endif
         /// <summary>The prompt_injection_protection_level property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -79,10 +103,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "duo_workflow_mcp_enabled", n => { DuoWorkflowMcpEnabled = n.GetBoolValue(); } },
                 { "foundational_agents_default_enabled", n => { FoundationalAgentsDefaultEnabled = n.GetBoolValue(); } },
                 { "include_recommended_allowed", n => { IncludeRecommendedAllowed = n.GetBoolValue(); } },
-                { "minimum_access_level_enable_on_projects", n => { MinimumAccessLevelEnableOnProjects = n.GetIntValue(); } },
-                { "minimum_access_level_execute", n => { MinimumAccessLevelExecute = n.GetIntValue(); } },
-                { "minimum_access_level_execute_async", n => { MinimumAccessLevelExecuteAsync = n.GetIntValue(); } },
-                { "minimum_access_level_manage", n => { MinimumAccessLevelManage = n.GetIntValue(); } },
+                { "minimum_access_level_enable_on_projects", n => { MinimumAccessLevelEnableOnProjects = n.GetStringValue(); } },
+                { "minimum_access_level_execute", n => { MinimumAccessLevelExecute = n.GetStringValue(); } },
+                { "minimum_access_level_execute_async", n => { MinimumAccessLevelExecuteAsync = n.GetStringValue(); } },
+                { "minimum_access_level_manage", n => { MinimumAccessLevelManage = n.GetStringValue(); } },
                 { "prompt_injection_protection_level", n => { PromptInjectionProtectionLevel = n.GetStringValue(); } },
             };
         }
@@ -101,10 +125,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("duo_workflow_mcp_enabled", DuoWorkflowMcpEnabled);
             writer.WriteBoolValue("foundational_agents_default_enabled", FoundationalAgentsDefaultEnabled);
             writer.WriteBoolValue("include_recommended_allowed", IncludeRecommendedAllowed);
-            writer.WriteIntValue("minimum_access_level_enable_on_projects", MinimumAccessLevelEnableOnProjects);
-            writer.WriteIntValue("minimum_access_level_execute", MinimumAccessLevelExecute);
-            writer.WriteIntValue("minimum_access_level_execute_async", MinimumAccessLevelExecuteAsync);
-            writer.WriteIntValue("minimum_access_level_manage", MinimumAccessLevelManage);
+            writer.WriteStringValue("minimum_access_level_enable_on_projects", MinimumAccessLevelEnableOnProjects);
+            writer.WriteStringValue("minimum_access_level_execute", MinimumAccessLevelExecute);
+            writer.WriteStringValue("minimum_access_level_execute_async", MinimumAccessLevelExecuteAsync);
+            writer.WriteStringValue("minimum_access_level_manage", MinimumAccessLevelManage);
             writer.WriteStringValue("prompt_injection_protection_level", PromptInjectionProtectionLevel);
             writer.WriteAdditionalData(AdditionalData);
         }

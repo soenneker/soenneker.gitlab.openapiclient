@@ -2464,6 +2464,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string JiraConnectPublicKeyStorageEnabled { get; set; }
 #endif
+        /// <summary>The jira_forge_app_id property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? JiraForgeAppId { get; set; }
+#nullable restore
+#else
+        public string JiraForgeAppId { get; set; }
+#endif
         /// <summary>The keep_latest_artifact property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -5355,6 +5363,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "jira_connect_application_key", n => { JiraConnectApplicationKey = n.GetStringValue(); } },
                 { "jira_connect_proxy_url", n => { JiraConnectProxyUrl = n.GetStringValue(); } },
                 { "jira_connect_public_key_storage_enabled", n => { JiraConnectPublicKeyStorageEnabled = n.GetStringValue(); } },
+                { "jira_forge_app_id", n => { JiraForgeAppId = n.GetStringValue(); } },
                 { "keep_latest_artifact", n => { KeepLatestArtifact = n.GetStringValue(); } },
                 { "kroki_diagram_proxy_enabled", n => { KrokiDiagramProxyEnabled = n.GetStringValue(); } },
                 { "kroki_enabled", n => { KrokiEnabled = n.GetStringValue(); } },
@@ -5998,6 +6007,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("jira_connect_application_key", JiraConnectApplicationKey);
             writer.WriteStringValue("jira_connect_proxy_url", JiraConnectProxyUrl);
             writer.WriteStringValue("jira_connect_public_key_storage_enabled", JiraConnectPublicKeyStorageEnabled);
+            writer.WriteStringValue("jira_forge_app_id", JiraForgeAppId);
             writer.WriteStringValue("keep_latest_artifact", KeepLatestArtifact);
             writer.WriteStringValue("kroki_diagram_proxy_enabled", KrokiDiagramProxyEnabled);
             writer.WriteStringValue("kroki_enabled", KrokiEnabled);

@@ -32,6 +32,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public DateTimeOffset? ExpiresAt { get; set; }
         /// <summary>The granular property</summary>
         public bool? Granular { get; set; }
+        /// <summary>The granular_scopes property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalAccessTokenGranularScope>? GranularScopes { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalAccessTokenGranularScope> GranularScopes { get; set; }
+#endif
         /// <summary>The id property</summary>
         public long? Id { get; set; }
         /// <summary>The last_used_at property</summary>
@@ -105,6 +113,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "expires_at", n => { ExpiresAt = n.GetDateTimeOffsetValue(); } },
                 { "granular", n => { Granular = n.GetBoolValue(); } },
+                { "granular_scopes", n => { GranularScopes = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalAccessTokenGranularScope>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalAccessTokenGranularScope.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "id", n => { Id = n.GetLongValue(); } },
                 { "last_used_at", n => { LastUsedAt = n.GetDateTimeOffsetValue(); } },
                 { "last_used_ips", n => { LastUsedIps = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -129,6 +138,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteDateTimeOffsetValue("expires_at", ExpiresAt);
             writer.WriteBoolValue("granular", Granular);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalAccessTokenGranularScope>("granular_scopes", GranularScopes);
             writer.WriteLongValue("id", Id);
             writer.WriteDateTimeOffsetValue("last_used_at", LastUsedAt);
             writer.WriteCollectionOfPrimitiveValues<string>("last_used_ips", LastUsedIps);
