@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Templates.Licenses
         {
         }
         /// <summary>
-        /// This feature was introduced in GitLab 8.7.
+        /// Lists all available license templates.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLicense"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Templates.Licenses
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLicense>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLicense.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 8.7.
+        /// Lists all available license templates.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -93,7 +93,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Templates.Licenses
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Templates.Licenses.LicensesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 8.7.
+        /// Lists all available license templates.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class LicensesRequestBuilderGetQueryParameters 

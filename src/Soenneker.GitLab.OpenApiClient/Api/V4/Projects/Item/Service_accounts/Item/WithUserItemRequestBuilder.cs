@@ -40,7 +40,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Service_accounts.I
         {
         }
         /// <summary>
-        /// Deletes a service account from a specified project.            Available only for project Owners or Maintainers, and administrators.
+        /// Deletes a specified project service account. Available only for project Owners, Maintainers, and administrators.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -77,7 +77,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Service_accounts.I
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesServiceAccount>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesServiceAccount.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Deletes a service account from a specified project.            Available only for project Owners or Maintainers, and administrators.
+        /// Deletes a specified project service account. Available only for project Owners, Maintainers, and administrators.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -127,7 +127,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Service_accounts.I
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Service_accounts.Item.WithUserItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Deletes a service account from a specified project.            Available only for project Owners or Maintainers, and administrators.
+        /// Deletes a specified project service account. Available only for project Owners, Maintainers, and administrators.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithUserItemRequestBuilderDeleteQueryParameters 

@@ -5,7 +5,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>Type of the entity to import</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBodyDf14F9Cb9DcbEntitiesItemSourceType
+    public enum RequestBodyFc578Ac29F9BEntitiesItemSourceType
     {
         [EnumMember(Value = "group_entity")]
         #pragma warning disable CS1591

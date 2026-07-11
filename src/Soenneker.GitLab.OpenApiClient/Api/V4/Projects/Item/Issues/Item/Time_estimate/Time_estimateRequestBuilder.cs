@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Time_e
         {
         }
         /// <summary>
-        /// Sets an estimated time of work for this issue.
+        /// Sets an estimated time of work for a specified issue.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssuableTimeStats"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Time_e
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssuableTimeStats>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssuableTimeStats.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Sets an estimated time of work for this issue.
+        /// Sets an estimated time of work for a specified issue.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

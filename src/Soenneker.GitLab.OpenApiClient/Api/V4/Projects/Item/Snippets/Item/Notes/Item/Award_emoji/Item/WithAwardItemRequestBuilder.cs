@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Snippets.Item.Note
         {
         }
         /// <summary>
-        /// Only an administrator or the author of the reaction can delete an emoji reaction. This feature was introduced in 8.9
+        /// Deletes a specified emoji reaction from a comment on a snippet. Only an administrator or the user who added the reaction can delete it.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Snippets.Item.Note
             await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get a single emoji reaction from an issue, snippet, or merge request. This feature was introduced in 8.9
+        /// Retrieves a specified emoji reaction from a comment on a snippet. This endpoint can be accessed without authentication if the comment is publicly accessible.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAwardEmoji"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -69,7 +69,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Snippets.Item.Note
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAwardEmoji>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAwardEmoji.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Only an administrator or the author of the reaction can delete an emoji reaction. This feature was introduced in 8.9
+        /// Deletes a specified emoji reaction from a comment on a snippet. Only an administrator or the user who added the reaction can delete it.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -88,7 +88,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Snippets.Item.Note
             return requestInfo;
         }
         /// <summary>
-        /// Get a single emoji reaction from an issue, snippet, or merge request. This feature was introduced in 8.9
+        /// Retrieves a specified emoji reaction from a comment on a snippet. This endpoint can be accessed without authentication if the comment is publicly accessible.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

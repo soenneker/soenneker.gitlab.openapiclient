@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Access_requests
         {
         }
         /// <summary>
-        /// This feature was introduced in GitLab 8.11.
+        /// Lists all access requests for a specified group that are viewable by the authenticated user.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAccessRequester"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Access_requests
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAccessRequester>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAccessRequester.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 8.11.
+        /// Requests access to a specified group for the authenticated user.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAccessRequester"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -83,7 +83,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Access_requests
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAccessRequester>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAccessRequester.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 8.11.
+        /// Lists all access requests for a specified group that are viewable by the authenticated user.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -102,7 +102,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Access_requests
             return requestInfo;
         }
         /// <summary>
-        /// This feature was introduced in GitLab 8.11.
+        /// Requests access to a specified group for the authenticated user.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -130,7 +130,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Access_requests
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Access_requests.Access_requestsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 8.11.
+        /// Lists all access requests for a specified group that are viewable by the authenticated user.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Access_requestsRequestBuilderGetQueryParameters 

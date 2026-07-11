@@ -65,7 +65,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Service_accounts.I
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalAccessToken>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalAccessToken.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Creates a personal access token for a specified project service account.              Available only for project Owners or Maintainers.
+        /// Creates a personal access token for a specified project service account. Available only for project Owners, Maintainers, and administrators.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalAccessTokenWithToken"/></returns>
         /// <param name="body">The request body</param>
@@ -104,7 +104,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Service_accounts.I
             return requestInfo;
         }
         /// <summary>
-        /// Creates a personal access token for a specified project service account.              Available only for project Owners or Maintainers.
+        /// Creates a personal access token for a specified project service account. Available only for project Owners, Maintainers, and administrators.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

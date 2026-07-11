@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Snippets.Item.Note
         {
         }
         /// <summary>
-        /// Get a list of all emoji reactions for a specified awardable. This feature was introduced in 8.9
+        /// Lists all emoji reactions for a specified comment on a snippet. This endpoint can be accessed without authentication if the comment is publicly accessible.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAwardEmoji"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Snippets.Item.Note
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAwardEmoji>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAwardEmoji.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Add an emoji reaction on the specified awardable. This feature was introduced in 8.9
+        /// Adds an emoji reaction to a comment on a snippet.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAwardEmoji"/></returns>
         /// <param name="body">The request body</param>
@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Snippets.Item.Note
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAwardEmoji>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAwardEmoji.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get a list of all emoji reactions for a specified awardable. This feature was introduced in 8.9
+        /// Lists all emoji reactions for a specified comment on a snippet. This endpoint can be accessed without authentication if the comment is publicly accessible.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -104,7 +104,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Snippets.Item.Note
             return requestInfo;
         }
         /// <summary>
-        /// Add an emoji reaction on the specified awardable. This feature was introduced in 8.9
+        /// Adds an emoji reaction to a comment on a snippet.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -135,7 +135,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Snippets.Item.Note
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Snippets.Item.Notes.Item.Award_emoji.Award_emojiRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get a list of all emoji reactions for a specified awardable. This feature was introduced in 8.9
+        /// Lists all emoji reactions for a specified comment on a snippet. This endpoint can be accessed without authentication if the comment is publicly accessible.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Award_emojiRequestBuilderGetQueryParameters 

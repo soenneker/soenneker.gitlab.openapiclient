@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Badges
         {
         }
         /// <summary>
-        /// This feature was introduced in GitLab 10.6.
+        /// Lists all badges for a specified project, including group badges.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBadge"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -71,7 +71,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Badges
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBadge>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBadge.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 10.6.
+        /// Creates a badge for a specified project.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBadge"/></returns>
         /// <param name="body">The request body</param>
@@ -91,7 +91,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Badges
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBadge>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBadge.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 10.6.
+        /// Lists all badges for a specified project, including group badges.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -110,7 +110,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Badges
             return requestInfo;
         }
         /// <summary>
-        /// This feature was introduced in GitLab 10.6.
+        /// Creates a badge for a specified project.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -141,7 +141,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Badges
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Badges.BadgesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 10.6.
+        /// Lists all badges for a specified project, including group badges.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class BadgesRequestBuilderGetQueryParameters 

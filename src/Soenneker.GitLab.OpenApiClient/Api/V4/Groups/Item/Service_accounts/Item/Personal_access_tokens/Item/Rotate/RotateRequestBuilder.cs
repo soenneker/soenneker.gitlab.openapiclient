@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Service_accounts.Ite
         {
         }
         /// <summary>
-        /// Rotates a specified personal access token for a group service account.
+        /// Rotates a specified personal access token for a group service account. This revokes the existing token and creates a token with the same name, description, and scopes.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalAccessTokenWithToken"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Service_accounts.Ite
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalAccessTokenWithToken>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalAccessTokenWithToken.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Rotates a specified personal access token for a group service account.
+        /// Rotates a specified personal access token for a group service account. This revokes the existing token and creates a token with the same name, description, and scopes.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

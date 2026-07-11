@@ -17433,7 +17433,8 @@
         "tags": [
           "Custom attributes"
         ],
-        "summary": "Get all custom attributes on a user",
+        "summary": "List all custom attributes for a user",
+        "description": "Lists all custom attributes for a specified user.",
         "operationId": "GetApiV4UsersIdCustomAttributes",
         "parameters": [
           {
@@ -17465,7 +17466,8 @@
         "tags": [
           "Custom attributes"
         ],
-        "summary": "Get a custom attribute on a user",
+        "summary": "Retrieve a custom attribute for a user",
+        "description": "Retrieves a specified custom attribute for a user.",
         "operationId": "GetApiV4UsersIdCustomAttributesKey",
         "parameters": [
           {
@@ -17504,7 +17506,8 @@
         "tags": [
           "Custom attributes"
         ],
-        "summary": "Set a custom attribute on a user",
+        "summary": "Creates or updates a custom attribute for a user",
+        "description": "Creates or updates a custom attribute for a specified user. If the attribute already exists, it is updated, otherwise a new attribute is created.",
         "operationId": "PutApiV4UsersIdCustomAttributesKey",
         "parameters": [
           {
@@ -17552,7 +17555,8 @@
         "tags": [
           "Custom attributes"
         ],
-        "summary": "Delete a custom attribute on a user",
+        "summary": "Delete a custom attribute for a user",
+        "description": "Deletes a specified custom attribute for a user.",
         "operationId": "DeleteApiV4UsersIdCustomAttributesKey",
         "parameters": [
           {
@@ -20747,8 +20751,8 @@
         "tags": [
           "Templates"
         ],
-        "summary": "Get all license templates",
-        "description": "This feature was introduced in GitLab 8.7.",
+        "summary": "List all license templates",
+        "description": "Lists all available license templates.",
         "operationId": "GetApiV4TemplatesLicenses",
         "parameters": [
           {
@@ -20802,8 +20806,8 @@
         "tags": [
           "Templates"
         ],
-        "summary": "Get a single license template",
-        "description": "This feature was introduced in GitLab 8.7.",
+        "summary": "Retrieve a license template",
+        "description": "Retrieves a specified license template. You can pass parameters to replace the license placeholder.",
         "operationId": "GetApiV4TemplatesLicensesName",
         "parameters": [
           {
@@ -20853,8 +20857,8 @@
         "tags": [
           "Templates"
         ],
-        "summary": "Get all .gitignore templates",
-        "description": "This feature was introduced in GitLab 8.8.",
+        "summary": "List all .gitignore templates",
+        "description": "Lists all .gitignore templates.",
         "operationId": "GetApiV4TemplatesGitignores",
         "parameters": [
           {
@@ -20899,8 +20903,8 @@
         "tags": [
           "Templates"
         ],
-        "summary": "Get a single .gitignore template",
-        "description": "This feature was introduced in GitLab 8.8.",
+        "summary": "Retrieve a .gitignore template",
+        "description": "Retrieves a specified .gitignore template.",
         "operationId": "GetApiV4TemplatesGitignoresName",
         "parameters": [
           {
@@ -20932,8 +20936,8 @@
         "tags": [
           "Templates"
         ],
-        "summary": "Get all GitLab CI/CD YAML templates",
-        "description": "This feature was introduced in GitLab 8.9.",
+        "summary": "List all GitLab CI/CD YAML templates",
+        "description": "Lists all GitLab CI/CD YAML templates.",
         "operationId": "GetApiV4TemplatesGitlabCiYmls",
         "parameters": [
           {
@@ -20978,8 +20982,8 @@
         "tags": [
           "Templates"
         ],
-        "summary": "Get a single GitLab CI/CD YAML template",
-        "description": "This feature was introduced in GitLab 8.9.",
+        "summary": "Retrieve a GitLab CI/CD YAML template",
+        "description": "Retrieves a specified GitLab CI/CD YAML template.",
         "operationId": "GetApiV4TemplatesGitlabCiYmlsName",
         "parameters": [
           {
@@ -21011,8 +21015,8 @@
         "tags": [
           "Templates"
         ],
-        "summary": "Get all Dockerfile templates",
-        "description": "This feature was introduced in GitLab 8.15.",
+        "summary": "List all Dockerfile templates",
+        "description": "Lists all Dockerfile templates.",
         "operationId": "GetApiV4TemplatesDockerfiles",
         "parameters": [
           {
@@ -21057,8 +21061,8 @@
         "tags": [
           "Templates"
         ],
-        "summary": "Get a single Dockerfile template",
-        "description": "This feature was introduced in GitLab 8.15.",
+        "summary": "Retrieve a Dockerfile template",
+        "description": "Retrieves a specified Dockerfile template.",
         "operationId": "GetApiV4TemplatesDockerfilesName",
         "parameters": [
           {
@@ -21810,7 +21814,8 @@
         "tags": [
           "Service accounts"
         ],
-        "summary": "Create a service account user. Available only for instance admins.",
+        "summary": "Create an instance service account",
+        "description": "Creates an instance service account.",
         "operationId": "PostApiV4ServiceAccounts",
         "requestBody": {
           "content": {
@@ -21838,8 +21843,8 @@
         "tags": [
           "Service accounts"
         ],
-        "summary": "Get list of service account users. Available only for instance admins",
-        "description": "Get list of service account users",
+        "summary": "List all instance service accounts",
+        "description": "Lists all instance service accounts. Use the \u0060page\u0060 and \u0060per_page\u0060 pagination parameters to filter the results.",
         "operationId": "GetApiV4ServiceAccounts",
         "parameters": [
           {
@@ -21900,8 +21905,8 @@
         "tags": [
           "Service accounts"
         ],
-        "summary": "Update a service account user. Available only for instance admins.",
-        "description": "Update a service account user",
+        "summary": "Update an instance service account",
+        "description": "Updates a specified instance service account.",
         "operationId": "PatchApiV4ServiceAccountsUserId",
         "parameters": [
           {
@@ -22675,7 +22680,7 @@
           "Service accounts"
         ],
         "summary": "Create a project service account",
-        "description": "Creates a service account in the specified project",
+        "description": "Creates a service account in a specified project.",
         "operationId": "PostApiV4ProjectsIdServiceAccounts",
         "parameters": [
           {
@@ -22723,7 +22728,7 @@
           "Service accounts"
         ],
         "summary": "List all project service accounts",
-        "description": "Lists all service accounts for a specified project",
+        "description": "Lists all service accounts in a specified project. Use the \u0060page\u0060 and \u0060per_page\u0060 pagination parameters to filter the results.",
         "operationId": "GetApiV4ProjectsIdServiceAccounts",
         "parameters": [
           {
@@ -22802,7 +22807,7 @@
           "Service accounts"
         ],
         "summary": "Delete a project service account",
-        "description": "Deletes a service account from a specified project.\n            Available only for project Owners or Maintainers, and administrators.",
+        "description": "Deletes a specified project service account. Available only for project Owners, Maintainers, and administrators.",
         "operationId": "DeleteApiV4ProjectsIdServiceAccountsUserId",
         "parameters": [
           {
@@ -23094,8 +23099,8 @@
           "Access tokens",
           "Service accounts"
         ],
-        "summary": "Create a personal access token for a project service account.",
-        "description": "Creates a personal access token for a specified project service account.\n              Available only for project Owners or Maintainers.",
+        "summary": "Create a personal access token for a project service account",
+        "description": "Creates a personal access token for a specified project service account. Available only for project Owners, Maintainers, and administrators.",
         "operationId": "PostApiV4ProjectsIdServiceAccountsUserIdPersonalAccessTokens",
         "parameters": [
           {
@@ -23214,7 +23219,7 @@
           "Service accounts"
         ],
         "summary": "Rotate a personal access token for a project service account",
-        "description": "Rotates a specified personal access token for a project service account.",
+        "description": "Rotates a specified personal access token for a project service account. This revokes the existing token and creates a token with the same name, description, and scopes.",
         "operationId": "PostApiV4ProjectsIdServiceAccountsUserIdPersonalAccessTokensTokenIdRotate",
         "parameters": [
           {
@@ -26415,7 +26420,7 @@
           "Service accounts"
         ],
         "summary": "Create a group service account",
-        "description": "Creates a service account in the specified group",
+        "description": "Creates a service account in a specified group.",
         "operationId": "PostApiV4GroupsIdServiceAccounts",
         "parameters": [
           {
@@ -26463,7 +26468,7 @@
           "Service accounts"
         ],
         "summary": "List all group service accounts",
-        "description": "Lists all service accounts for a specified group",
+        "description": "Lists all service accounts in a specified group. Use the \u0060page\u0060 and \u0060per_page\u0060 pagination parameters to filter the results.",
         "operationId": "GetApiV4GroupsIdServiceAccounts",
         "parameters": [
           {
@@ -26541,8 +26546,8 @@
         "tags": [
           "Service accounts"
         ],
-        "summary": "Delete a group service account.",
-        "description": "Deletes a service account from a specified group. Available only for group owners and admins.",
+        "summary": "Delete a group service account",
+        "description": "Deletes a specified group service account. Available only for group Owners and administrators.",
         "operationId": "DeleteApiV4GroupsIdServiceAccountsUserId",
         "parameters": [
           {
@@ -26834,8 +26839,8 @@
           "Access tokens",
           "Service accounts"
         ],
-        "summary": "Create a personal access token for a group service account.",
-        "description": "Creates a personal access token for a specified group service account.\n              Requires the group Owner role. This feature was introduced in GitLab 16.1.",
+        "summary": "Create a personal access token for a group service account",
+        "description": "Creates a personal access token for a specified group service account. Available only for group Owners and administrators. This feature was introduced in GitLab 16.1.",
         "operationId": "PostApiV4GroupsIdServiceAccountsUserIdPersonalAccessTokens",
         "parameters": [
           {
@@ -26953,8 +26958,8 @@
           "Access tokens",
           "Service accounts"
         ],
-        "summary": "Rotate personal access token for group service account",
-        "description": "Rotates a specified personal access token for a group service account.",
+        "summary": "Rotate a personal access token for a group service account",
+        "description": "Rotates a specified personal access token for a group service account. This revokes the existing token and creates a token with the same name, description, and scopes.",
         "operationId": "PostApiV4GroupsIdServiceAccountsUserIdPersonalAccessTokensTokenIdRotate",
         "parameters": [
           {
@@ -40598,7 +40603,8 @@
         "tags": [
           "Custom attributes"
         ],
-        "summary": "Get all custom attributes on a project",
+        "summary": "List all custom attributes for a project",
+        "description": "Lists all custom attributes for a specified project.",
         "operationId": "GetApiV4ProjectsIdCustomAttributes",
         "parameters": [
           {
@@ -40639,7 +40645,8 @@
         "tags": [
           "Custom attributes"
         ],
-        "summary": "Get a custom attribute on a project",
+        "summary": "Retrieve a custom attribute for a project",
+        "description": "Retrieves a specified custom attribute for a project.",
         "operationId": "GetApiV4ProjectsIdCustomAttributesKey",
         "parameters": [
           {
@@ -40687,7 +40694,8 @@
         "tags": [
           "Custom attributes"
         ],
-        "summary": "Set a custom attribute on a project",
+        "summary": "Creates or updates a custom attribute for a project",
+        "description": "Creates or updates a custom attribute for a specified project. If the attribute already exists, it is updated, otherwise a new attribute is created.",
         "operationId": "PutApiV4ProjectsIdCustomAttributesKey",
         "parameters": [
           {
@@ -40744,7 +40752,8 @@
         "tags": [
           "Custom attributes"
         ],
-        "summary": "Delete a custom attribute on a project",
+        "summary": "Delete a custom attribute for a project",
+        "description": "Deletes a specified custom attribute for a project.",
         "operationId": "DeleteApiV4ProjectsIdCustomAttributesKey",
         "parameters": [
           {
@@ -48929,7 +48938,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody15Be2094Db2F"
+                "$ref": "#/components/schemas/RequestBodyBe62F6C2B50E"
               }
             }
           }
@@ -49053,7 +49062,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyDf14F9Cb9Dcb"
+                "$ref": "#/components/schemas/RequestBodyFc578Ac29F9B"
               }
             }
           }
@@ -52032,8 +52041,8 @@
         "tags": [
           "Merge requests"
         ],
-        "summary": "Set a time estimate for a merge_request",
-        "description": "Sets an estimated time of work for this merge_request.",
+        "summary": "Set the estimated time for a merge request",
+        "description": "Sets an estimated time of work for a specified merge request.",
         "operationId": "PostApiV4ProjectsIdMergeRequestsMergeRequestIidTimeEstimate",
         "parameters": [
           {
@@ -52091,8 +52100,8 @@
         "tags": [
           "Merge requests"
         ],
-        "summary": "Reset the time estimate for a project merge_request",
-        "description": "Resets the estimated time for this merge_request to 0 seconds.",
+        "summary": "Reset the estimated time for a merge request",
+        "description": "Resets the estimated time for a specified merge request to \u00600\u0060 seconds.",
         "operationId": "PostApiV4ProjectsIdMergeRequestsMergeRequestIidResetTimeEstimate",
         "parameters": [
           {
@@ -52141,8 +52150,8 @@
         "tags": [
           "Merge requests"
         ],
-        "summary": "Add spent time for a merge_request",
-        "description": "Adds spent time for this merge_request.",
+        "summary": "Add spent time for a merge request",
+        "description": "Adds spent time for a specified merge request.",
         "operationId": "PostApiV4ProjectsIdMergeRequestsMergeRequestIidAddSpentTime",
         "parameters": [
           {
@@ -52200,8 +52209,8 @@
         "tags": [
           "Merge requests"
         ],
-        "summary": "Reset spent time for a merge_request",
-        "description": "Resets the total spent time for this merge_request to 0 seconds.",
+        "summary": "Reset spent time for a merge request",
+        "description": "Resets the total spent time for a specified merge request to \u00600\u0060 seconds.",
         "operationId": "PostApiV4ProjectsIdMergeRequestsMergeRequestIidResetSpentTime",
         "parameters": [
           {
@@ -52250,8 +52259,8 @@
         "tags": [
           "Merge requests"
         ],
-        "summary": "Get time tracking stats",
-        "description": "Get time tracking stats",
+        "summary": "Retrieve time tracking stats for a merge request",
+        "description": "Retrieves time tracking stats for a specified merge request, including time estimate and time spent in seconds and human-readable format (for example, \u00601h 30m\u0060).",
         "operationId": "GetApiV4ProjectsIdMergeRequestsMergeRequestIidTimeStats",
         "parameters": [
           {
@@ -58258,8 +58267,8 @@
         "tags": [
           "Issues"
         ],
-        "summary": "Set a time estimate for a issue",
-        "description": "Sets an estimated time of work for this issue.",
+        "summary": "Set the estimated time for an issue",
+        "description": "Sets an estimated time of work for a specified issue.",
         "operationId": "PostApiV4ProjectsIdIssuesIssueIidTimeEstimate",
         "parameters": [
           {
@@ -58317,8 +58326,8 @@
         "tags": [
           "Issues"
         ],
-        "summary": "Reset the time estimate for a project issue",
-        "description": "Resets the estimated time for this issue to 0 seconds.",
+        "summary": "Reset the estimated time for an issue",
+        "description": "Resets the estimated time for a specified issue to \u00600\u0060 seconds.",
         "operationId": "PostApiV4ProjectsIdIssuesIssueIidResetTimeEstimate",
         "parameters": [
           {
@@ -58367,8 +58376,8 @@
         "tags": [
           "Issues"
         ],
-        "summary": "Add spent time for a issue",
-        "description": "Adds spent time for this issue.",
+        "summary": "Add spent time for an issue",
+        "description": "Adds spent time for a specified issue.",
         "operationId": "PostApiV4ProjectsIdIssuesIssueIidAddSpentTime",
         "parameters": [
           {
@@ -58426,8 +58435,8 @@
         "tags": [
           "Issues"
         ],
-        "summary": "Reset spent time for a issue",
-        "description": "Resets the total spent time for this issue to 0 seconds.",
+        "summary": "Reset spent time for an issue",
+        "description": "Resets the total spent time for a specified issue to \u00600\u0060 seconds.",
         "operationId": "PostApiV4ProjectsIdIssuesIssueIidResetSpentTime",
         "parameters": [
           {
@@ -58476,8 +58485,8 @@
         "tags": [
           "Issues"
         ],
-        "summary": "Get time tracking stats",
-        "description": "Get time tracking stats",
+        "summary": "Retrieve time tracking stats for an issue",
+        "description": "Retrieves time tracking stats for a specified issue, including time estimate and time spent in seconds and human-readable format (for example, \u00601h 30m\u0060).",
         "operationId": "GetApiV4ProjectsIdIssuesIssueIidTimeStats",
         "parameters": [
           {
@@ -88367,7 +88376,8 @@
         "tags": [
           "Custom attributes"
         ],
-        "summary": "Get all custom attributes on a group",
+        "summary": "List all custom attributes for a group",
+        "description": "Lists all custom attributes for a specified group.",
         "operationId": "GetApiV4GroupsIdCustomAttributes",
         "parameters": [
           {
@@ -88407,7 +88417,8 @@
         "tags": [
           "Custom attributes"
         ],
-        "summary": "Get a custom attribute on a group",
+        "summary": "Retrieve a custom attribute for a group",
+        "description": "Retrieves a specified custom attribute for a group.",
         "operationId": "GetApiV4GroupsIdCustomAttributesKey",
         "parameters": [
           {
@@ -88454,7 +88465,8 @@
         "tags": [
           "Custom attributes"
         ],
-        "summary": "Set a custom attribute on a group",
+        "summary": "Creates or updates a custom attribute for a group",
+        "description": "Creates or updates a custom attribute for a specified group. If the attribute already exists, it is updated, otherwise a new attribute is created.",
         "operationId": "PutApiV4GroupsIdCustomAttributesKey",
         "parameters": [
           {
@@ -88510,7 +88522,8 @@
         "tags": [
           "Custom attributes"
         ],
-        "summary": "Delete a custom attribute on a group",
+        "summary": "Delete a custom attribute for a group",
+        "description": "Deletes a specified custom attribute for a group.",
         "operationId": "DeleteApiV4GroupsIdCustomAttributesKey",
         "parameters": [
           {
@@ -92136,8 +92149,8 @@
         "tags": [
           "Badges"
         ],
-        "summary": "List group badges.",
-        "description": "This feature was introduced in GitLab 10.6.",
+        "summary": "List all badges for a group",
+        "description": "Lists all badges for a specified group.",
         "operationId": "GetApiV4GroupsIdBadges",
         "parameters": [
           {
@@ -92198,8 +92211,8 @@
         "tags": [
           "Badges"
         ],
-        "summary": "Add a badge to a group.",
-        "description": "This feature was introduced in GitLab 10.6.",
+        "summary": "Create a badge for a group",
+        "description": "Creates a badge for a specified group.",
         "operationId": "PostApiV4GroupsIdBadges",
         "parameters": [
           {
@@ -92240,8 +92253,8 @@
         "tags": [
           "Badges"
         ],
-        "summary": "Preview a badge from a group.",
-        "description": "This feature was introduced in GitLab 10.6.",
+        "summary": "Retrieve a badge preview for a group",
+        "description": "Previews the final \u0060link_url\u0060 and \u0060image_url\u0060 for a specified group after resolving the placeholder interpolation.",
         "operationId": "GetApiV4GroupsIdBadgesRender",
         "parameters": [
           {
@@ -92293,8 +92306,8 @@
         "tags": [
           "Badges"
         ],
-        "summary": "Get a badge of a group.",
-        "description": "This feature was introduced in GitLab 10.6.",
+        "summary": "Retrieve a badge for a group",
+        "description": "Retrieves a specified badge for a group.",
         "operationId": "GetApiV4GroupsIdBadgesBadgeId",
         "parameters": [
           {
@@ -92333,8 +92346,8 @@
         "tags": [
           "Badges"
         ],
-        "summary": "Update a badge of a group.",
-        "description": "This feature was introduced in GitLab 10.6.",
+        "summary": "Update a badge for a group",
+        "description": "Updates a specified badge for a group.",
         "operationId": "PutApiV4GroupsIdBadgesBadgeId",
         "parameters": [
           {
@@ -92382,8 +92395,8 @@
         "tags": [
           "Badges"
         ],
-        "summary": "Remove a badge from the group.",
-        "description": "This feature was introduced in GitLab 10.6.",
+        "summary": "Delete a badge from a group",
+        "description": "Deletes a specified badge from a group.",
         "operationId": "DeleteApiV4GroupsIdBadgesBadgeId",
         "parameters": [
           {
@@ -92424,8 +92437,8 @@
         "tags": [
           "Badges"
         ],
-        "summary": "List project badges.",
-        "description": "This feature was introduced in GitLab 10.6.",
+        "summary": "List all badges for a project",
+        "description": "Lists all badges for a specified project, including group badges.",
         "operationId": "GetApiV4ProjectsIdBadges",
         "parameters": [
           {
@@ -92486,8 +92499,8 @@
         "tags": [
           "Badges"
         ],
-        "summary": "Add a badge to a project.",
-        "description": "This feature was introduced in GitLab 10.6.",
+        "summary": "Create a badge for a project",
+        "description": "Creates a badge for a specified project.",
         "operationId": "PostApiV4ProjectsIdBadges",
         "parameters": [
           {
@@ -92528,8 +92541,8 @@
         "tags": [
           "Badges"
         ],
-        "summary": "Preview a badge from a project.",
-        "description": "This feature was introduced in GitLab 10.6.",
+        "summary": "Retrieve a badge preview for a project",
+        "description": "Previews the final \u0060link_url\u0060 and \u0060image_url\u0060 for a specified project after resolving the placeholder interpolation.",
         "operationId": "GetApiV4ProjectsIdBadgesRender",
         "parameters": [
           {
@@ -92581,8 +92594,8 @@
         "tags": [
           "Badges"
         ],
-        "summary": "Get a badge of a project.",
-        "description": "This feature was introduced in GitLab 10.6.",
+        "summary": "Retrieve a badge for a project",
+        "description": "Retrieves a specified badge for a project.",
         "operationId": "GetApiV4ProjectsIdBadgesBadgeId",
         "parameters": [
           {
@@ -92621,8 +92634,8 @@
         "tags": [
           "Badges"
         ],
-        "summary": "Update a badge of a project.",
-        "description": "This feature was introduced in GitLab 10.6.",
+        "summary": "Update a badge for a project",
+        "description": "Updates a specified badge for a project.",
         "operationId": "PutApiV4ProjectsIdBadgesBadgeId",
         "parameters": [
           {
@@ -92670,8 +92683,8 @@
         "tags": [
           "Badges"
         ],
-        "summary": "Remove a badge from the project.",
-        "description": "This feature was introduced in GitLab 10.6.",
+        "summary": "Delete a badge from a project",
+        "description": "Deletes a specified badge from a project.",
         "operationId": "DeleteApiV4ProjectsIdBadgesBadgeId",
         "parameters": [
           {
@@ -92712,8 +92725,8 @@
         "tags": [
           "Award emoji"
         ],
-        "summary": "List an awardable\u0027s emoji reactions for projects",
-        "description": "Get a list of all emoji reactions for a specified awardable. This feature was introduced in 8.9",
+        "summary": "List all emoji reactions for an issue",
+        "description": "Lists all emoji reactions for a specified issue. This endpoint can be accessed without authentication if the issue is publicly accessible.",
         "operationId": "GetApiV4ProjectsIdIssuesIssueIidAwardEmoji",
         "parameters": [
           {
@@ -92782,8 +92795,8 @@
         "tags": [
           "Award emoji"
         ],
-        "summary": "Add a new emoji reaction",
-        "description": "Add an emoji reaction on the specified awardable. This feature was introduced in 8.9",
+        "summary": "Add an emoji reaction to an issue",
+        "description": "Adds an emoji reaction to an issue.",
         "operationId": "PostApiV4ProjectsIdIssuesIssueIidAwardEmoji",
         "parameters": [
           {
@@ -92842,8 +92855,8 @@
         "tags": [
           "Award emoji"
         ],
-        "summary": "Get a single emoji reaction",
-        "description": "Get a single emoji reaction from an issue, snippet, or merge request. This feature was introduced in 8.9",
+        "summary": "Retrieve an emoji reaction from an issue",
+        "description": "Retrieves a specified emoji reaction from an issue. This endpoint can be accessed without authentication if the issue is publicly accessible.",
         "operationId": "GetApiV4ProjectsIdIssuesIssueIidAwardEmojiAwardId",
         "parameters": [
           {
@@ -92900,8 +92913,8 @@
         "tags": [
           "Award emoji"
         ],
-        "summary": "Delete an emoji reaction",
-        "description": "Only an administrator or the author of the reaction can delete an emoji reaction. This feature was introduced in 8.9",
+        "summary": "Delete an emoji reaction from an issue",
+        "description": "Deletes a specified emoji reaction from an issue. Only an administrator or the user who added the reaction can delete it.",
         "operationId": "DeleteApiV4ProjectsIdIssuesIssueIidAwardEmojiAwardId",
         "parameters": [
           {
@@ -92960,8 +92973,8 @@
         "tags": [
           "Award emoji"
         ],
-        "summary": "List an awardable\u0027s emoji reactions for projects",
-        "description": "Get a list of all emoji reactions for a specified awardable. This feature was introduced in 8.9",
+        "summary": "List all emoji reactions for an issue comment",
+        "description": "Lists all emoji reactions for a specified comment on an issue. This endpoint can be accessed without authentication if the comment is publicly accessible.",
         "operationId": "GetApiV4ProjectsIdIssuesIssueIidNotesNoteIdAwardEmoji",
         "parameters": [
           {
@@ -93039,8 +93052,8 @@
         "tags": [
           "Award emoji"
         ],
-        "summary": "Add a new emoji reaction",
-        "description": "Add an emoji reaction on the specified awardable. This feature was introduced in 8.9",
+        "summary": "Add an emoji reaction to an issue comment",
+        "description": "Adds an emoji reaction to a comment on an issue.",
         "operationId": "PostApiV4ProjectsIdIssuesIssueIidNotesNoteIdAwardEmoji",
         "parameters": [
           {
@@ -93107,8 +93120,8 @@
         "tags": [
           "Award emoji"
         ],
-        "summary": "Get a single emoji reaction",
-        "description": "Get a single emoji reaction from an issue, snippet, or merge request. This feature was introduced in 8.9",
+        "summary": "Retrieve an emoji reaction from an issue comment",
+        "description": "Retrieves a specified emoji reaction from a comment on an issue. This endpoint can be accessed without authentication if the comment is publicly accessible.",
         "operationId": "GetApiV4ProjectsIdIssuesIssueIidNotesNoteIdAwardEmojiAwardId",
         "parameters": [
           {
@@ -93173,8 +93186,8 @@
         "tags": [
           "Award emoji"
         ],
-        "summary": "Delete an emoji reaction",
-        "description": "Only an administrator or the author of the reaction can delete an emoji reaction. This feature was introduced in 8.9",
+        "summary": "Delete an emoji reaction from an issue comment",
+        "description": "Deletes a specified emoji reaction from a comment on an issue. Only an administrator or the user who added the reaction can delete it.",
         "operationId": "DeleteApiV4ProjectsIdIssuesIssueIidNotesNoteIdAwardEmojiAwardId",
         "parameters": [
           {
@@ -93241,8 +93254,8 @@
         "tags": [
           "Award emoji"
         ],
-        "summary": "List an awardable\u0027s emoji reactions for projects",
-        "description": "Get a list of all emoji reactions for a specified awardable. This feature was introduced in 8.9",
+        "summary": "List all emoji reactions for a merge request",
+        "description": "Lists all emoji reactions for a specified merge request. This endpoint can be accessed without authentication if the merge request is publicly accessible.",
         "operationId": "GetApiV4ProjectsIdMergeRequestsMergeRequestIidAwardEmoji",
         "parameters": [
           {
@@ -93311,8 +93324,8 @@
         "tags": [
           "Award emoji"
         ],
-        "summary": "Add a new emoji reaction",
-        "description": "Add an emoji reaction on the specified awardable. This feature was introduced in 8.9",
+        "summary": "Add an emoji reaction to a merge request",
+        "description": "Adds an emoji reaction to a merge request.",
         "operationId": "PostApiV4ProjectsIdMergeRequestsMergeRequestIidAwardEmoji",
         "parameters": [
           {
@@ -93371,8 +93384,8 @@
         "tags": [
           "Award emoji"
         ],
-        "summary": "Get a single emoji reaction",
-        "description": "Get a single emoji reaction from an issue, snippet, or merge request. This feature was introduced in 8.9",
+        "summary": "Retrieve an emoji reaction from a merge request",
+        "description": "Retrieves a specified emoji reaction from a merge request. This endpoint can be accessed without authentication if the merge request is publicly accessible.",
         "operationId": "GetApiV4ProjectsIdMergeRequestsMergeRequestIidAwardEmojiAwardId",
         "parameters": [
           {
@@ -93429,8 +93442,8 @@
         "tags": [
           "Award emoji"
         ],
-        "summary": "Delete an emoji reaction",
-        "description": "Only an administrator or the author of the reaction can delete an emoji reaction. This feature was introduced in 8.9",
+        "summary": "Delete an emoji reaction from a merge request",
+        "description": "Deletes a specified emoji reaction from a merge request. Only an administrator or the user who added the reaction can delete it.",
         "operationId": "DeleteApiV4ProjectsIdMergeRequestsMergeRequestIidAwardEmojiAwardId",
         "parameters": [
           {
@@ -93489,8 +93502,8 @@
         "tags": [
           "Award emoji"
         ],
-        "summary": "List an awardable\u0027s emoji reactions for projects",
-        "description": "Get a list of all emoji reactions for a specified awardable. This feature was introduced in 8.9",
+        "summary": "List all emoji reactions for a merge request comment",
+        "description": "Lists all emoji reactions for a specified comment on a merge request. This endpoint can be accessed without authentication if the comment is publicly accessible.",
         "operationId": "GetApiV4ProjectsIdMergeRequestsMergeRequestIidNotesNoteIdAwardEmoji",
         "parameters": [
           {
@@ -93568,8 +93581,8 @@
         "tags": [
           "Award emoji"
         ],
-        "summary": "Add a new emoji reaction",
-        "description": "Add an emoji reaction on the specified awardable. This feature was introduced in 8.9",
+        "summary": "Add an emoji reaction to a merge request comment",
+        "description": "Adds an emoji reaction to a comment on a merge request.",
         "operationId": "PostApiV4ProjectsIdMergeRequestsMergeRequestIidNotesNoteIdAwardEmoji",
         "parameters": [
           {
@@ -93636,8 +93649,8 @@
         "tags": [
           "Award emoji"
         ],
-        "summary": "Get a single emoji reaction",
-        "description": "Get a single emoji reaction from an issue, snippet, or merge request. This feature was introduced in 8.9",
+        "summary": "Retrieve an emoji reaction from a merge request comment",
+        "description": "Retrieves a specified emoji reaction from a comment on a merge request. This endpoint can be accessed without authentication if the comment is publicly accessible.",
         "operationId": "GetApiV4ProjectsIdMergeRequestsMergeRequestIidNotesNoteIdAwardEmojiAwardId",
         "parameters": [
           {
@@ -93702,8 +93715,8 @@
         "tags": [
           "Award emoji"
         ],
-        "summary": "Delete an emoji reaction",
-        "description": "Only an administrator or the author of the reaction can delete an emoji reaction. This feature was introduced in 8.9",
+        "summary": "Delete an emoji reaction from a merge request comment",
+        "description": "Deletes a specified emoji reaction from a comment on a merge request. Only an administrator or the user who added the reaction can delete it.",
         "operationId": "DeleteApiV4ProjectsIdMergeRequestsMergeRequestIidNotesNoteIdAwardEmojiAwardId",
         "parameters": [
           {
@@ -93770,8 +93783,8 @@
         "tags": [
           "Award emoji"
         ],
-        "summary": "List an awardable\u0027s emoji reactions for projects",
-        "description": "Get a list of all emoji reactions for a specified awardable. This feature was introduced in 8.9",
+        "summary": "List all emoji reactions for a snippet",
+        "description": "Lists all emoji reactions for a specified snippet. This endpoint can be accessed without authentication if the snippet is publicly accessible.",
         "operationId": "GetApiV4ProjectsIdSnippetsSnippetIdAwardEmoji",
         "parameters": [
           {
@@ -93840,8 +93853,8 @@
         "tags": [
           "Award emoji"
         ],
-        "summary": "Add a new emoji reaction",
-        "description": "Add an emoji reaction on the specified awardable. This feature was introduced in 8.9",
+        "summary": "Add an emoji reaction to a snippet",
+        "description": "Adds an emoji reaction to a snippet.",
         "operationId": "PostApiV4ProjectsIdSnippetsSnippetIdAwardEmoji",
         "parameters": [
           {
@@ -93900,8 +93913,8 @@
         "tags": [
           "Award emoji"
         ],
-        "summary": "Get a single emoji reaction",
-        "description": "Get a single emoji reaction from an issue, snippet, or merge request. This feature was introduced in 8.9",
+        "summary": "Retrieve an emoji reaction from a snippet",
+        "description": "Retrieves a specified emoji reaction from a snippet. This endpoint can be accessed without authentication if the snippet is publicly accessible.",
         "operationId": "GetApiV4ProjectsIdSnippetsSnippetIdAwardEmojiAwardId",
         "parameters": [
           {
@@ -93958,8 +93971,8 @@
         "tags": [
           "Award emoji"
         ],
-        "summary": "Delete an emoji reaction",
-        "description": "Only an administrator or the author of the reaction can delete an emoji reaction. This feature was introduced in 8.9",
+        "summary": "Delete an emoji reaction from a snippet",
+        "description": "Deletes a specified emoji reaction from a snippet. Only an administrator or the user who added the reaction can delete it.",
         "operationId": "DeleteApiV4ProjectsIdSnippetsSnippetIdAwardEmojiAwardId",
         "parameters": [
           {
@@ -94018,8 +94031,8 @@
         "tags": [
           "Award emoji"
         ],
-        "summary": "List an awardable\u0027s emoji reactions for projects",
-        "description": "Get a list of all emoji reactions for a specified awardable. This feature was introduced in 8.9",
+        "summary": "List all emoji reactions for a snippet comment",
+        "description": "Lists all emoji reactions for a specified comment on a snippet. This endpoint can be accessed without authentication if the comment is publicly accessible.",
         "operationId": "GetApiV4ProjectsIdSnippetsSnippetIdNotesNoteIdAwardEmoji",
         "parameters": [
           {
@@ -94097,8 +94110,8 @@
         "tags": [
           "Award emoji"
         ],
-        "summary": "Add a new emoji reaction",
-        "description": "Add an emoji reaction on the specified awardable. This feature was introduced in 8.9",
+        "summary": "Add an emoji reaction to a snippet comment",
+        "description": "Adds an emoji reaction to a comment on a snippet.",
         "operationId": "PostApiV4ProjectsIdSnippetsSnippetIdNotesNoteIdAwardEmoji",
         "parameters": [
           {
@@ -94165,8 +94178,8 @@
         "tags": [
           "Award emoji"
         ],
-        "summary": "Get a single emoji reaction",
-        "description": "Get a single emoji reaction from an issue, snippet, or merge request. This feature was introduced in 8.9",
+        "summary": "Retrieve an emoji reaction from a snippet comment",
+        "description": "Retrieves a specified emoji reaction from a comment on a snippet. This endpoint can be accessed without authentication if the comment is publicly accessible.",
         "operationId": "GetApiV4ProjectsIdSnippetsSnippetIdNotesNoteIdAwardEmojiAwardId",
         "parameters": [
           {
@@ -94231,8 +94244,8 @@
         "tags": [
           "Award emoji"
         ],
-        "summary": "Delete an emoji reaction",
-        "description": "Only an administrator or the author of the reaction can delete an emoji reaction. This feature was introduced in 8.9",
+        "summary": "Delete an emoji reaction from a snippet comment",
+        "description": "Deletes a specified emoji reaction from a comment on a snippet. Only an administrator or the user who added the reaction can delete it.",
         "operationId": "DeleteApiV4ProjectsIdSnippetsSnippetIdNotesNoteIdAwardEmojiAwardId",
         "parameters": [
           {
@@ -94299,8 +94312,8 @@
         "tags": [
           "Award emoji"
         ],
-        "summary": "List an awardable\u0027s emoji reactions for groups",
-        "description": "Get a list of all emoji reactions for a specified awardable. This feature was introduced in 8.9",
+        "summary": "List all emoji reactions for an epic",
+        "description": "Lists all emoji reactions for a specified epic. This endpoint can be accessed without authentication if the epic is publicly accessible.",
         "operationId": "GetApiV4GroupsIdEpicsEpicIidAwardEmoji",
         "parameters": [
           {
@@ -94369,8 +94382,8 @@
         "tags": [
           "Award emoji"
         ],
-        "summary": "Add a new emoji reaction",
-        "description": "Add an emoji reaction on the specified awardable. This feature was introduced in 8.9",
+        "summary": "Add an emoji reaction to an epic",
+        "description": "Adds an emoji reaction to an epic.",
         "operationId": "PostApiV4GroupsIdEpicsEpicIidAwardEmoji",
         "parameters": [
           {
@@ -94429,8 +94442,8 @@
         "tags": [
           "Award emoji"
         ],
-        "summary": "Get a single emoji reaction",
-        "description": "Get a single emoji reaction from an issue, snippet, or merge request. This feature was introduced in 8.9",
+        "summary": "Retrieve an emoji reaction from an epic",
+        "description": "Retrieves a specified emoji reaction from an epic. This endpoint can be accessed without authentication if the epic is publicly accessible.",
         "operationId": "GetApiV4GroupsIdEpicsEpicIidAwardEmojiAwardId",
         "parameters": [
           {
@@ -94487,8 +94500,8 @@
         "tags": [
           "Award emoji"
         ],
-        "summary": "Delete an emoji reaction",
-        "description": "Only an administrator or the author of the reaction can delete an emoji reaction. This feature was introduced in 8.9",
+        "summary": "Delete an emoji reaction from an epic",
+        "description": "Deletes a specified emoji reaction from an epic. Only an administrator or the user who added the reaction can delete it.",
         "operationId": "DeleteApiV4GroupsIdEpicsEpicIidAwardEmojiAwardId",
         "parameters": [
           {
@@ -94547,8 +94560,8 @@
         "tags": [
           "Award emoji"
         ],
-        "summary": "List an awardable\u0027s emoji reactions for groups",
-        "description": "Get a list of all emoji reactions for a specified awardable. This feature was introduced in 8.9",
+        "summary": "List all emoji reactions for an epic comment",
+        "description": "Lists all emoji reactions for a specified comment on an epic. This endpoint can be accessed without authentication if the comment is publicly accessible.",
         "operationId": "GetApiV4GroupsIdEpicsEpicIidNotesNoteIdAwardEmoji",
         "parameters": [
           {
@@ -94626,8 +94639,8 @@
         "tags": [
           "Award emoji"
         ],
-        "summary": "Add a new emoji reaction",
-        "description": "Add an emoji reaction on the specified awardable. This feature was introduced in 8.9",
+        "summary": "Add an emoji reaction to an epic comment",
+        "description": "Adds an emoji reaction to a comment on an epic.",
         "operationId": "PostApiV4GroupsIdEpicsEpicIidNotesNoteIdAwardEmoji",
         "parameters": [
           {
@@ -94694,8 +94707,8 @@
         "tags": [
           "Award emoji"
         ],
-        "summary": "Get a single emoji reaction",
-        "description": "Get a single emoji reaction from an issue, snippet, or merge request. This feature was introduced in 8.9",
+        "summary": "Retrieve an emoji reaction from an epic comment",
+        "description": "Retrieves a specified emoji reaction from a comment on an epic. This endpoint can be accessed without authentication if the comment is publicly accessible.",
         "operationId": "GetApiV4GroupsIdEpicsEpicIidNotesNoteIdAwardEmojiAwardId",
         "parameters": [
           {
@@ -94760,8 +94773,8 @@
         "tags": [
           "Award emoji"
         ],
-        "summary": "Delete an emoji reaction",
-        "description": "Only an administrator or the author of the reaction can delete an emoji reaction. This feature was introduced in 8.9",
+        "summary": "Delete an emoji reaction from an epic comment",
+        "description": "Deletes a specified emoji reaction from a comment on an epic. Only an administrator or the user who added the reaction can delete it.",
         "operationId": "DeleteApiV4GroupsIdEpicsEpicIidNotesNoteIdAwardEmojiAwardId",
         "parameters": [
           {
@@ -96348,8 +96361,8 @@
         "tags": [
           "Access requests"
         ],
-        "summary": "Gets a list of access requests for a group.",
-        "description": "This feature was introduced in GitLab 8.11.",
+        "summary": "List all access requests for a group",
+        "description": "Lists all access requests for a specified group that are viewable by the authenticated user.",
         "operationId": "GetApiV4GroupsIdAccessRequests",
         "parameters": [
           {
@@ -96401,8 +96414,8 @@
         "tags": [
           "Access requests"
         ],
-        "summary": "Requests access for the authenticated user to a group.",
-        "description": "This feature was introduced in GitLab 8.11.",
+        "summary": "Request access to a group",
+        "description": "Requests access to a specified group for the authenticated user.",
         "operationId": "PostApiV4GroupsIdAccessRequests",
         "parameters": [
           {
@@ -96442,7 +96455,7 @@
           "Access requests"
         ],
         "summary": "Approve an access request",
-        "description": "Approves an access request for a specified user in a specified group or project.",
+        "description": "Approves an access request for a specified user in a group.",
         "operationId": "PutApiV4GroupsIdAccessRequestsUserIdApprove",
         "parameters": [
           {
@@ -96500,8 +96513,8 @@
         "tags": [
           "Access requests"
         ],
-        "summary": "Denies an access request for the given user.",
-        "description": "This feature was introduced in GitLab 8.11.",
+        "summary": "Deny an access request",
+        "description": "Denies an access request for a specified user in a group.",
         "operationId": "DeleteApiV4GroupsIdAccessRequestsUserId",
         "parameters": [
           {
@@ -96542,8 +96555,8 @@
         "tags": [
           "Access requests"
         ],
-        "summary": "Gets a list of access requests for a project.",
-        "description": "This feature was introduced in GitLab 8.11.",
+        "summary": "List all access requests for a project",
+        "description": "Lists all access requests for a specified project that are viewable by the authenticated user.",
         "operationId": "GetApiV4ProjectsIdAccessRequests",
         "parameters": [
           {
@@ -96595,8 +96608,8 @@
         "tags": [
           "Access requests"
         ],
-        "summary": "Requests access for the authenticated user to a project.",
-        "description": "This feature was introduced in GitLab 8.11.",
+        "summary": "Request access to a project",
+        "description": "Requests access to a specified project for the authenticated user.",
         "operationId": "PostApiV4ProjectsIdAccessRequests",
         "parameters": [
           {
@@ -96636,7 +96649,7 @@
           "Access requests"
         ],
         "summary": "Approve an access request",
-        "description": "Approves an access request for a specified user in a specified group or project.",
+        "description": "Approves an access request for a specified user in a project.",
         "operationId": "PutApiV4ProjectsIdAccessRequestsUserIdApprove",
         "parameters": [
           {
@@ -96694,8 +96707,8 @@
         "tags": [
           "Access requests"
         ],
-        "summary": "Denies an access request for the given user.",
-        "description": "This feature was introduced in GitLab 8.11.",
+        "summary": "Deny an access request",
+        "description": "Denies an access request for a specified user in a project.",
         "operationId": "DeleteApiV4ProjectsIdAccessRequestsUserId",
         "parameters": [
           {
@@ -132728,7 +132741,7 @@
           }
         }
       },
-      "RequestBody15Be2094Db2F": {
+      "RequestBodyBe62F6C2B50E": {
         "required": [
           "bucket",
           "entities"
@@ -132741,25 +132754,28 @@
             "nullable": true
           },
           "aws_s3_configuration": {
-            "$ref": "#/components/schemas/RequestBody15Be2094Db2FAwsS3Configuration"
+            "$ref": "#/components/schemas/RequestBodyBe62F6C2B50EAwsS3Configuration"
           },
           "s3_compatible_configuration": {
-            "$ref": "#/components/schemas/RequestBody15Be2094Db2Fs3CompatibleConfiguration"
+            "$ref": "#/components/schemas/RequestBodyBe62F6C2B50Es3CompatibleConfiguration"
+          },
+          "gcs_configuration": {
+            "$ref": "#/components/schemas/RequestBodyBe62F6C2B50EGcsConfiguration"
           },
           "gcs_hmac_configuration": {
-            "$ref": "#/components/schemas/RequestBody15Be2094Db2FGcsHmacConfiguration"
+            "$ref": "#/components/schemas/RequestBodyBe62F6C2B50EGcsHmacConfiguration"
           },
           "entities": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBody15Be2094Db2FEntitiesItem"
+              "$ref": "#/components/schemas/RequestBodyBe62F6C2B50EEntitiesItem"
             },
             "description": "List of entities to export",
             "nullable": true
           }
         }
       },
-      "RequestBodyDf14F9Cb9Dcb": {
+      "RequestBodyFc578Ac29F9B": {
         "required": [
           "bucket",
           "export_prefix",
@@ -132773,13 +132789,16 @@
             "nullable": true
           },
           "aws_s3_configuration": {
-            "$ref": "#/components/schemas/RequestBodyDf14F9Cb9DcbAwsS3Configuration"
+            "$ref": "#/components/schemas/RequestBodyFc578Ac29F9BAwsS3Configuration"
           },
           "s3_compatible_configuration": {
-            "$ref": "#/components/schemas/RequestBodyDf14F9Cb9DcbS3CompatibleConfiguration"
+            "$ref": "#/components/schemas/RequestBodyFc578Ac29F9Bs3CompatibleConfiguration"
+          },
+          "gcs_configuration": {
+            "$ref": "#/components/schemas/RequestBodyFc578Ac29F9BGcsConfiguration"
           },
           "gcs_hmac_configuration": {
-            "$ref": "#/components/schemas/RequestBodyDf14F9Cb9DcbGcsHmacConfiguration"
+            "$ref": "#/components/schemas/RequestBodyFc578Ac29F9BGcsHmacConfiguration"
           },
           "export_prefix": {
             "type": "string",
@@ -132789,7 +132808,7 @@
           "entities": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBodyDf14F9Cb9DcbEntitiesItem"
+              "$ref": "#/components/schemas/RequestBodyFc578Ac29F9BEntitiesItem"
             },
             "description": "List of entities to import",
             "nullable": true
@@ -143473,7 +143492,7 @@
         "description": "Platform Kubernetes data",
         "nullable": true
       },
-      "RequestBody15Be2094Db2FAwsS3Configuration": {
+      "RequestBodyBe62F6C2B50EAwsS3Configuration": {
         "required": [
           "aws_access_key_id",
           "aws_secret_access_key",
@@ -143505,7 +143524,7 @@
         "description": "AWS S3 object storage configuration",
         "nullable": true
       },
-      "RequestBody15Be2094Db2Fs3CompatibleConfiguration": {
+      "RequestBodyBe62F6C2B50Es3CompatibleConfiguration": {
         "required": [
           "aws_access_key_id",
           "aws_secret_access_key",
@@ -143544,7 +143563,28 @@
         "description": "MinIO or other S3-compatible object storage configuration",
         "nullable": true
       },
-      "RequestBody15Be2094Db2FGcsHmacConfiguration": {
+      "RequestBodyBe62F6C2B50EGcsConfiguration": {
+        "required": [
+          "google_project",
+          "google_json_key_string"
+        ],
+        "type": "object",
+        "properties": {
+          "google_project": {
+            "type": "string",
+            "description": "Google Cloud project ID",
+            "nullable": true
+          },
+          "google_json_key_string": {
+            "type": "string",
+            "description": "Google Cloud service account JSON key contents",
+            "nullable": true
+          }
+        },
+        "description": "Google Cloud Storage configuration using a service account JSON key",
+        "nullable": true
+      },
+      "RequestBodyBe62F6C2B50EGcsHmacConfiguration": {
         "required": [
           "google_storage_access_key_id",
           "google_storage_secret_access_key",
@@ -143577,7 +143617,7 @@
         "description": "Google Cloud Storage configuration using S3-interoperability HMAC keys",
         "nullable": true
       },
-      "RequestBody15Be2094Db2FEntitiesItem": {
+      "RequestBodyBe62F6C2B50EEntitiesItem": {
         "required": [
           "full_path"
         ],
@@ -143591,7 +143631,7 @@
           }
         }
       },
-      "RequestBodyDf14F9Cb9DcbAwsS3Configuration": {
+      "RequestBodyFc578Ac29F9BAwsS3Configuration": {
         "required": [
           "aws_access_key_id",
           "aws_secret_access_key",
@@ -143623,7 +143663,7 @@
         "description": "AWS S3 object storage configuration",
         "nullable": true
       },
-      "RequestBodyDf14F9Cb9DcbS3CompatibleConfiguration": {
+      "RequestBodyFc578Ac29F9Bs3CompatibleConfiguration": {
         "required": [
           "aws_access_key_id",
           "aws_secret_access_key",
@@ -143662,7 +143702,28 @@
         "description": "MinIO or other S3-compatible object storage configuration",
         "nullable": true
       },
-      "RequestBodyDf14F9Cb9DcbGcsHmacConfiguration": {
+      "RequestBodyFc578Ac29F9BGcsConfiguration": {
+        "required": [
+          "google_project",
+          "google_json_key_string"
+        ],
+        "type": "object",
+        "properties": {
+          "google_project": {
+            "type": "string",
+            "description": "Google Cloud project ID",
+            "nullable": true
+          },
+          "google_json_key_string": {
+            "type": "string",
+            "description": "Google Cloud service account JSON key contents",
+            "nullable": true
+          }
+        },
+        "description": "Google Cloud Storage configuration using a service account JSON key",
+        "nullable": true
+      },
+      "RequestBodyFc578Ac29F9BGcsHmacConfiguration": {
         "required": [
           "google_storage_access_key_id",
           "google_storage_secret_access_key",
@@ -143695,7 +143756,7 @@
         "description": "Google Cloud Storage configuration using S3-interoperability HMAC keys",
         "nullable": true
       },
-      "RequestBodyDf14F9Cb9DcbEntitiesItem": {
+      "RequestBodyFc578Ac29F9BEntitiesItem": {
         "required": [
           "source_type",
           "source_full_path",
@@ -143704,7 +143765,7 @@
         "type": "object",
         "properties": {
           "source_type": {
-            "$ref": "#/components/schemas/RequestBodyDf14F9Cb9DcbEntitiesItemSourceType"
+            "$ref": "#/components/schemas/RequestBodyFc578Ac29F9BEntitiesItemSourceType"
           },
           "source_full_path": {
             "type": "string",
@@ -159002,7 +159063,7 @@
           ]
         }
       },
-      "RequestBodyDf14F9Cb9DcbEntitiesItemSourceType": {
+      "RequestBodyFc578Ac29F9BEntitiesItemSourceType": {
         "minLength": 1,
         "enum": [
           "group_entity",
@@ -159012,7 +159073,7 @@
         "additionalProperties": false,
         "description": "Type of the entity to import",
         "x-ms-enum": {
-          "name": "RequestBodyDf14F9Cb9DcbEntitiesItemSourceType",
+          "name": "RequestBodyFc578Ac29F9BEntitiesItemSourceType",
           "modelAsString": false,
           "values": [
             {

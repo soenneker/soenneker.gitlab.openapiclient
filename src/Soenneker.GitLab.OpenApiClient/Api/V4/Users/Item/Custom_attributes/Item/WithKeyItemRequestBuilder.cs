@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Custom_attributes.Ite
         {
         }
         /// <summary>
-        /// Delete a custom attribute on a user
+        /// Deletes a specified custom attribute for a user.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Custom_attributes.Ite
             await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get a custom attribute on a user
+        /// Retrieves a specified custom attribute for a user.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCustomAttribute"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -69,7 +69,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Custom_attributes.Ite
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCustomAttribute>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCustomAttribute.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Set a custom attribute on a user
+        /// Creates or updates a custom attribute for a specified user. If the attribute already exists, it is updated, otherwise a new attribute is created.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCustomAttribute"/></returns>
         /// <param name="body">The request body</param>
@@ -89,7 +89,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Custom_attributes.Ite
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCustomAttribute>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCustomAttribute.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Delete a custom attribute on a user
+        /// Deletes a specified custom attribute for a user.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -108,7 +108,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Custom_attributes.Ite
             return requestInfo;
         }
         /// <summary>
-        /// Get a custom attribute on a user
+        /// Retrieves a specified custom attribute for a user.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -127,7 +127,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Custom_attributes.Ite
             return requestInfo;
         }
         /// <summary>
-        /// Set a custom attribute on a user
+        /// Creates or updates a custom attribute for a specified user. If the attribute already exists, it is updated, otherwise a new attribute is created.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

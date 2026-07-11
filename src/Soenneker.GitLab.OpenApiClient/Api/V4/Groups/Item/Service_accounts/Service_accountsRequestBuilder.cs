@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Service_accounts
         {
         }
         /// <summary>
-        /// Lists all service accounts for a specified group
+        /// Lists all service accounts in a specified group. Use the `page` and `per_page` pagination parameters to filter the results.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesServiceAccount"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Service_accounts
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesServiceAccount>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesServiceAccount.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Creates a service account in the specified group
+        /// Creates a service account in a specified group.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesServiceAccount"/></returns>
         /// <param name="body">The request body</param>
@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Service_accounts
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesServiceAccount>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesServiceAccount.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Lists all service accounts for a specified group
+        /// Lists all service accounts in a specified group. Use the `page` and `per_page` pagination parameters to filter the results.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -104,7 +104,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Service_accounts
             return requestInfo;
         }
         /// <summary>
-        /// Creates a service account in the specified group
+        /// Creates a service account in a specified group.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -135,7 +135,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Service_accounts
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Service_accounts.Service_accountsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all service accounts for a specified group
+        /// Lists all service accounts in a specified group. Use the `page` and `per_page` pagination parameters to filter the results.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Service_accountsRequestBuilderGetQueryParameters 

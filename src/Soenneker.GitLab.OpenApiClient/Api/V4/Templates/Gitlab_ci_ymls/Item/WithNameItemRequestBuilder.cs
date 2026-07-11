@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Templates.Gitlab_ci_ymls.Item
         {
         }
         /// <summary>
-        /// This feature was introduced in GitLab 8.9.
+        /// Retrieves a specified GitLab CI/CD YAML template.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTemplate"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Templates.Gitlab_ci_ymls.Item
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTemplate>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTemplate.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 8.9.
+        /// Retrieves a specified GitLab CI/CD YAML template.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

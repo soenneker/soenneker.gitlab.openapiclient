@@ -9,7 +9,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class RequestBodyDf14F9Cb9DcbEntitiesItem : IAdditionalDataHolder, IParsable
+    public partial class RequestBodyFc578Ac29F9BEntitiesItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -39,23 +39,23 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string SourceFullPath { get; set; }
 #endif
         /// <summary>Type of the entity to import</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyDf14F9Cb9DcbEntitiesItemSourceType? SourceType { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyFc578Ac29F9BEntitiesItemSourceType? SourceType { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyDf14F9Cb9DcbEntitiesItem"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyFc578Ac29F9BEntitiesItem"/> and sets the default values.
         /// </summary>
-        public RequestBodyDf14F9Cb9DcbEntitiesItem()
+        public RequestBodyFc578Ac29F9BEntitiesItem()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyDf14F9Cb9DcbEntitiesItem"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyFc578Ac29F9BEntitiesItem"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyDf14F9Cb9DcbEntitiesItem CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyFc578Ac29F9BEntitiesItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyDf14F9Cb9DcbEntitiesItem();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyFc578Ac29F9BEntitiesItem();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,7 +68,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "destination_namespace", n => { DestinationNamespace = n.GetStringValue(); } },
                 { "destination_slug", n => { DestinationSlug = n.GetStringValue(); } },
                 { "source_full_path", n => { SourceFullPath = n.GetStringValue(); } },
-                { "source_type", n => { SourceType = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyDf14F9Cb9DcbEntitiesItemSourceType>(); } },
+                { "source_type", n => { SourceType = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyFc578Ac29F9BEntitiesItemSourceType>(); } },
             };
         }
         /// <summary>
@@ -81,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("destination_namespace", DestinationNamespace);
             writer.WriteStringValue("destination_slug", DestinationSlug);
             writer.WriteStringValue("source_full_path", SourceFullPath);
-            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyDf14F9Cb9DcbEntitiesItemSourceType>("source_type", SourceType);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyFc578Ac29F9BEntitiesItemSourceType>("source_type", SourceType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

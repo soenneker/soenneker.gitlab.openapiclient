@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Access_requests.Item
         {
         }
         /// <summary>
-        /// Approves an access request for a specified user in a specified group or project.
+        /// Approves an access request for a specified user in a group.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMember"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Access_requests.Item
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMember>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMember.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Approves an access request for a specified user in a specified group or project.
+        /// Approves an access request for a specified user in a group.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

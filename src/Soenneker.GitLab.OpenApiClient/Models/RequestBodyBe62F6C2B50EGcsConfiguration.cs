@@ -8,55 +8,45 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// AWS S3 object storage configuration
+    /// Google Cloud Storage configuration using a service account JSON key
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RequestBody15Be2094Db2FAwsS3Configuration : IAdditionalDataHolder, IParsable
+    public partial class RequestBodyBe62F6C2B50EGcsConfiguration : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>AWS S3 access key ID</summary>
+        /// <summary>Google Cloud service account JSON key contents</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AwsAccessKeyId { get; set; }
+        public string? GoogleJsonKeyString { get; set; }
 #nullable restore
 #else
-        public string AwsAccessKeyId { get; set; }
+        public string GoogleJsonKeyString { get; set; }
 #endif
-        /// <summary>AWS S3 secret access key</summary>
+        /// <summary>Google Cloud project ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AwsSecretAccessKey { get; set; }
+        public string? GoogleProject { get; set; }
 #nullable restore
 #else
-        public string AwsSecretAccessKey { get; set; }
-#endif
-        /// <summary>Use path-style URLs instead of virtual-hosted-style URLs</summary>
-        public bool? PathStyle { get; set; }
-        /// <summary>AWS S3 object storage region</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Region { get; set; }
-#nullable restore
-#else
-        public string Region { get; set; }
+        public string GoogleProject { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15Be2094Db2FAwsS3Configuration"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBe62F6C2B50EGcsConfiguration"/> and sets the default values.
         /// </summary>
-        public RequestBody15Be2094Db2FAwsS3Configuration()
+        public RequestBodyBe62F6C2B50EGcsConfiguration()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15Be2094Db2FAwsS3Configuration"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBe62F6C2B50EGcsConfiguration"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15Be2094Db2FAwsS3Configuration CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBe62F6C2B50EGcsConfiguration CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody15Be2094Db2FAwsS3Configuration();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBe62F6C2B50EGcsConfiguration();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -66,10 +56,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "aws_access_key_id", n => { AwsAccessKeyId = n.GetStringValue(); } },
-                { "aws_secret_access_key", n => { AwsSecretAccessKey = n.GetStringValue(); } },
-                { "path_style", n => { PathStyle = n.GetBoolValue(); } },
-                { "region", n => { Region = n.GetStringValue(); } },
+                { "google_json_key_string", n => { GoogleJsonKeyString = n.GetStringValue(); } },
+                { "google_project", n => { GoogleProject = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -79,10 +67,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("aws_access_key_id", AwsAccessKeyId);
-            writer.WriteStringValue("aws_secret_access_key", AwsSecretAccessKey);
-            writer.WriteBoolValue("path_style", PathStyle);
-            writer.WriteStringValue("region", Region);
+            writer.WriteStringValue("google_json_key_string", GoogleJsonKeyString);
+            writer.WriteStringValue("google_project", GoogleProject);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

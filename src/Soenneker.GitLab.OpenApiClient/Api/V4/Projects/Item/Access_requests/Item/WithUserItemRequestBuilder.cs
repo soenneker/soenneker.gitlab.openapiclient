@@ -39,7 +39,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Access_requests.It
         {
         }
         /// <summary>
-        /// This feature was introduced in GitLab 8.11.
+        /// Denies an access request for a specified user in a project.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -56,7 +56,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Access_requests.It
             await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 8.11.
+        /// Denies an access request for a specified user in a project.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
