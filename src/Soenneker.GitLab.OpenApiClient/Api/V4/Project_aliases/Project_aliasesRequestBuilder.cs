@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Project_aliases
     public partial class Project_aliasesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.project_aliases.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The alias of the project</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Project_aliases.Item.WithNameItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Project_aliases.Item.WithNameItemRequestBuilder this[string position]
         {

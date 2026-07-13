@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ldap
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Ldap.Groups.GroupsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.ldap.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The LDAP provider name</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Ldap.Item.WithProviderItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Ldap.Item.WithProviderItemRequestBuilder this[string position]
         {

@@ -21,7 +21,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.WithSetting
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CollectionRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/vscode/settings_sync(/{settingsContextHash})/v1/collection", pathParameters)
+        public CollectionRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/vscode/settings_sync(/{settingsContextHash})/v1/collection{?settings_context_hash*}", pathParameters)
         {
         }
         /// <summary>
@@ -29,7 +29,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.WithSetting
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CollectionRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/vscode/settings_sync(/{settingsContextHash})/v1/collection", rawUrl)
+        public CollectionRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/vscode/settings_sync(/{settingsContextHash})/v1/collection{?settings_context_hash*}", rawUrl)
         {
         }
         /// <summary>
@@ -39,11 +39,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.WithSetting
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task DeleteAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.WithSettingsContextHash.V1.Collection.CollectionRequestBuilder.CollectionRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task DeleteAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.WithSettingsContextHash.V1.Collection.CollectionRequestBuilder.CollectionRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -56,11 +56,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.WithSetting
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.WithSettingsContextHash.V1.Collection.CollectionRequestBuilder.CollectionRequestBuilderDeleteQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.WithSettingsContextHash.V1.Collection.CollectionRequestBuilder.CollectionRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
         {
 #endif
             var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
@@ -76,6 +76,23 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.WithSetting
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.WithSettingsContextHash.V1.Collection.CollectionRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.WithSettingsContextHash.V1.Collection.CollectionRequestBuilder(rawUrl, RequestAdapter);
+        }
+        /// <summary>
+        /// Deletes all user vscode setting resources
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class CollectionRequestBuilderDeleteQueryParameters 
+        {
+            /// <summary>The settings context hash</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("settings_context_hash")]
+            public string? SettingsContextHash { get; set; }
+#nullable restore
+#else
+            [QueryParameter("settings_context_hash")]
+            public string SettingsContextHash { get; set; }
+#endif
         }
     }
 }

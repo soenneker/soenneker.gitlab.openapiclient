@@ -36,10 +36,18 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID of a namespace",
+            "description": "The ID or URL-encoded path of the namespace",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
             }
           }
         ],
@@ -4453,9 +4461,10 @@
           {
             "name": "name",
             "in": "path",
+            "description": "The alias of the project",
             "required": true,
             "schema": {
-              "type": "object"
+              "type": "string"
             }
           }
         ],
@@ -4483,9 +4492,10 @@
           {
             "name": "name",
             "in": "path",
+            "description": "The alias of the project",
             "required": true,
             "schema": {
-              "type": "object"
+              "type": "string"
             }
           }
         ],
@@ -4949,9 +4959,10 @@
           {
             "name": "id",
             "in": "path",
+            "description": "The ID of the vulnerability export",
             "required": true,
             "schema": {
-              "type": "object"
+              "type": "integer"
             }
           }
         ],
@@ -4981,9 +4992,10 @@
           {
             "name": "id",
             "in": "path",
+            "description": "The ID of the vulnerability export",
             "required": true,
             "schema": {
-              "type": "object"
+              "type": "integer"
             }
           }
         ],
@@ -6016,9 +6028,10 @@
           {
             "name": "managedLicenseId",
             "in": "path",
+            "description": "The ID of a managed license",
             "required": true,
             "schema": {
-              "type": "object"
+              "type": "string"
             }
           }
         ],
@@ -6062,9 +6075,10 @@
           {
             "name": "managedLicenseId",
             "in": "path",
+            "description": "The ID of a managed license",
             "required": true,
             "schema": {
-              "type": "object"
+              "type": "string"
             }
           }
         ],
@@ -6117,9 +6131,10 @@
           {
             "name": "managedLicenseId",
             "in": "path",
+            "description": "The ID of a managed license",
             "required": true,
             "schema": {
-              "type": "object"
+              "type": "string"
             }
           }
         ],
@@ -7981,6 +7996,24 @@
         "operationId": "PostApiV4GroupsIdHooksHookIdEventsHookLogIdResend",
         "parameters": [
           {
+            "name": "hookId",
+            "in": "path",
+            "description": "The ID of the hook",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "hookLogId",
+            "in": "path",
+            "description": "The ID of the hook log entry",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
             "name": "id",
             "in": "path",
             "description": "The ID or URL-encoded path of the group",
@@ -7995,23 +8028,6 @@
                   "type": "integer"
                 }
               ]
-            }
-          },
-          {
-            "name": "hookId",
-            "in": "path",
-            "description": "The ID of a group hook",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          },
-          {
-            "name": "hookLogId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "object"
             }
           }
         ],
@@ -9917,6 +9933,15 @@
         "operationId": "GetApiV4LdapProviderGroups",
         "parameters": [
           {
+            "name": "provider",
+            "in": "path",
+            "description": "The LDAP provider name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "search",
             "in": "query",
             "description": "Search for a specific LDAP group",
@@ -9924,14 +9949,6 @@
               "type": "string",
               "default": "",
               "nullable": true
-            }
-          },
-          {
-            "name": "provider",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "object"
             }
           }
         ],
@@ -17248,11 +17265,12 @@
         "operationId": "GetApiV4VscodeSettingsSyncSettingsContextHashV1Manifest",
         "parameters": [
           {
-            "name": "settingsContextHash",
-            "in": "path",
-            "required": true,
+            "name": "settings_context_hash",
+            "in": "query",
+            "description": "The settings context hash",
             "schema": {
-              "type": "object"
+              "type": "string",
+              "nullable": true
             }
           }
         ],
@@ -17279,6 +17297,15 @@
         "operationId": "GetApiV4VscodeSettingsSyncSettingsContextHashV1ResourceResourceNameId",
         "parameters": [
           {
+            "name": "settings_context_hash",
+            "in": "query",
+            "description": "The settings context hash",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
             "name": "resourceName",
             "in": "path",
             "description": "Name of the resource such as settings",
@@ -17294,14 +17321,6 @@
             "required": true,
             "schema": {
               "type": "string"
-            }
-          },
-          {
-            "name": "settingsContextHash",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "object"
             }
           }
         ],
@@ -17328,20 +17347,21 @@
         "operationId": "GetApiV4VscodeSettingsSyncSettingsContextHashV1ResourceResourceName",
         "parameters": [
           {
+            "name": "settings_context_hash",
+            "in": "query",
+            "description": "The settings context hash",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
             "name": "resourceName",
             "in": "path",
             "description": "Name of the resource such as settings",
             "required": true,
             "schema": {
               "$ref": "#/components/schemas/GetApiV4VscodeSettingsSyncSettingsContextHashV1ResourceResourceNameResourceNameParameter"
-            }
-          },
-          {
-            "name": "settingsContextHash",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "object"
             }
           }
         ],
@@ -17406,11 +17426,12 @@
         "operationId": "DeleteApiV4VscodeSettingsSyncSettingsContextHashV1Collection",
         "parameters": [
           {
-            "name": "settingsContextHash",
-            "in": "path",
-            "required": true,
+            "name": "settings_context_hash",
+            "in": "query",
+            "description": "The settings context hash",
             "schema": {
-              "type": "object"
+              "type": "string",
+              "nullable": true
             }
           }
         ],
@@ -17440,10 +17461,18 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID of the user",
+            "description": "The ID or URL-encoded path of the user",
             "required": true,
             "schema": {
-              "type": "integer"
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
             }
           }
         ],
@@ -17482,10 +17511,18 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID of the user",
+            "description": "The ID or URL-encoded path of the user",
             "required": true,
             "schema": {
-              "type": "integer"
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
             }
           }
         ],
@@ -17522,10 +17559,18 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID of the user",
+            "description": "The ID or URL-encoded path of the user",
             "required": true,
             "schema": {
-              "type": "integer"
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
             }
           }
         ],
@@ -17571,10 +17616,18 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID of the user",
+            "description": "The ID or URL-encoded path of the user",
             "required": true,
             "schema": {
-              "type": "integer"
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
             }
           }
         ],
@@ -18001,7 +18054,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesUser"
+                  "$ref": "#/components/schemas/ApiEntitiesUserProfile"
                 }
               }
             }
@@ -35316,18 +35369,18 @@
         "operationId": "GetApiV4SnippetsIdFilesRefFilePathRaw",
         "parameters": [
           {
-            "name": "filePath",
+            "name": "refValue",
             "in": "path",
-            "description": "The URL-encoded path to the file, like lib%2Fclass%2Erb",
+            "description": "The name of branch, tag or commit",
             "required": true,
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "refValue",
+            "name": "filePath",
             "in": "path",
-            "description": "The name of branch, tag or commit",
+            "description": "The URL-encoded path to the file, like lib%2Fclass%2Erb",
             "required": true,
             "schema": {
               "type": "string"
@@ -40622,8 +40675,7 @@
                   "type": "integer"
                 }
               ]
-            },
-            "example": 1
+            }
           }
         ],
         "responses": {
@@ -43663,18 +43715,18 @@
             }
           },
           {
-            "name": "filePath",
+            "name": "refValue",
             "in": "path",
-            "description": "The URL-encoded path to the file, like lib%2Fclass%2Erb",
+            "description": "The name of branch, tag or commit",
             "required": true,
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "refValue",
+            "name": "filePath",
             "in": "path",
-            "description": "The name of branch, tag or commit",
+            "description": "The URL-encoded path to the file, like lib%2Fclass%2Erb",
             "required": true,
             "schema": {
               "type": "string"
@@ -45670,6 +45722,24 @@
         "operationId": "PostApiV4ProjectsIdHooksHookIdEventsHookLogIdResend",
         "parameters": [
           {
+            "name": "hookId",
+            "in": "path",
+            "description": "The ID of the hook",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "hookLogId",
+            "in": "path",
+            "description": "The ID of the hook log entry",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
             "name": "id",
             "in": "path",
             "description": "The ID or URL-encoded path of the project",
@@ -45686,23 +45756,6 @@
               ]
             },
             "example": 1
-          },
-          {
-            "name": "hookId",
-            "in": "path",
-            "description": "The ID of the hook",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          },
-          {
-            "name": "hookLogId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -48066,9 +48119,10 @@
           {
             "name": "id",
             "in": "path",
+            "description": "The ID of a personal access token",
             "required": true,
             "schema": {
-              "type": "object"
+              "type": "integer"
             }
           }
         ],
@@ -48096,9 +48150,10 @@
           {
             "name": "id",
             "in": "path",
+            "description": "The ID of a personal access token",
             "required": true,
             "schema": {
-              "type": "object"
+              "type": "integer"
             }
           }
         ],
@@ -48128,9 +48183,10 @@
           {
             "name": "id",
             "in": "path",
+            "description": "The ID of a personal access token",
             "required": true,
             "schema": {
-              "type": "object"
+              "type": "integer"
             }
           }
         ],
@@ -50149,10 +50205,18 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID of a namespace",
+            "description": "The ID or URL-encoded path of the namespace",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
             }
           }
         ],
@@ -50230,10 +50294,18 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID of a namespace",
+            "description": "The ID or URL-encoded path of the namespace",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
             }
           }
         ],
@@ -50270,10 +50342,18 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID of a namespace",
+            "description": "The ID or URL-encoded path of the namespace",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
             }
           }
         ],
@@ -50678,8 +50758,7 @@
                   "type": "integer"
                 }
               ]
-            },
-            "example": 1
+            }
           },
           {
             "name": "mergeRequestIid",
@@ -50729,8 +50808,7 @@
                   "type": "integer"
                 }
               ]
-            },
-            "example": 1
+            }
           },
           {
             "name": "mergeRequestIid",
@@ -50789,8 +50867,7 @@
                   "type": "integer"
                 }
               ]
-            },
-            "example": 1
+            }
           },
           {
             "name": "mergeRequestIid",
@@ -50840,8 +50917,7 @@
                   "type": "integer"
                 }
               ]
-            },
-            "example": 1
+            }
           },
           {
             "name": "mergeRequestIid",
@@ -55483,8 +55559,7 @@
                   "type": "integer"
                 }
               ]
-            },
-            "example": 1
+            }
           }
         ],
         "responses": {
@@ -55525,8 +55600,7 @@
                   "type": "integer"
                 }
               ]
-            },
-            "example": 1
+            }
           }
         ],
         "requestBody": {
@@ -55560,6 +55634,23 @@
         "operationId": "GetApiV4ProjectsIdUploads",
         "parameters": [
           {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the project",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            }
+          },
+          {
             "name": "page",
             "in": "query",
             "description": "Current page number",
@@ -55580,24 +55671,6 @@
               "nullable": true
             },
             "example": 20
-          },
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The ID or URL-encoded path of the project",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "integer"
-                }
-              ]
-            },
-            "example": 1
           }
         ],
         "responses": {
@@ -55624,15 +55697,6 @@
         "operationId": "GetApiV4ProjectsIdUploadsUploadId",
         "parameters": [
           {
-            "name": "uploadId",
-            "in": "path",
-            "description": "The ID of a project upload",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          },
-          {
             "name": "id",
             "in": "path",
             "description": "The ID or URL-encoded path of the project",
@@ -55647,8 +55711,16 @@
                   "type": "integer"
                 }
               ]
-            },
-            "example": 1
+            }
+          },
+          {
+            "name": "uploadId",
+            "in": "path",
+            "description": "The ID of a project upload",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
           }
         ],
         "responses": {
@@ -55673,15 +55745,6 @@
         "operationId": "DeleteApiV4ProjectsIdUploadsUploadId",
         "parameters": [
           {
-            "name": "uploadId",
-            "in": "path",
-            "description": "The ID of a project upload",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          },
-          {
             "name": "id",
             "in": "path",
             "description": "The ID or URL-encoded path of the project",
@@ -55696,8 +55759,16 @@
                   "type": "integer"
                 }
               ]
-            },
-            "example": 1
+            }
+          },
+          {
+            "name": "uploadId",
+            "in": "path",
+            "description": "The ID of a project upload",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
           }
         ],
         "responses": {
@@ -55724,6 +55795,23 @@
         "operationId": "GetApiV4ProjectsIdUploadsSecretFilename",
         "parameters": [
           {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the project",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            }
+          },
+          {
             "name": "secret",
             "in": "path",
             "description": "The 32-character secret of a project upload",
@@ -55740,24 +55828,6 @@
             "schema": {
               "type": "string"
             }
-          },
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The ID or URL-encoded path of the project",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "integer"
-                }
-              ]
-            },
-            "example": 1
           }
         ],
         "responses": {
@@ -55782,6 +55852,23 @@
         "operationId": "DeleteApiV4ProjectsIdUploadsSecretFilename",
         "parameters": [
           {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the project",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            }
+          },
+          {
             "name": "secret",
             "in": "path",
             "description": "The 32-character secret of a project upload",
@@ -55798,24 +55885,6 @@
             "schema": {
               "type": "string"
             }
-          },
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The ID or URL-encoded path of the project",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "integer"
-                }
-              ]
-            },
-            "example": 1
           }
         ],
         "responses": {
@@ -55931,6 +56000,23 @@
         "operationId": "GetApiV4GroupsIdUploads",
         "parameters": [
           {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the group",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            }
+          },
+          {
             "name": "page",
             "in": "query",
             "description": "Current page number",
@@ -55951,23 +56037,6 @@
               "nullable": true
             },
             "example": 20
-          },
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The ID or URL-encoded path of the group",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "integer"
-                }
-              ]
-            }
           }
         ],
         "responses": {
@@ -55994,15 +56063,6 @@
         "operationId": "GetApiV4GroupsIdUploadsUploadId",
         "parameters": [
           {
-            "name": "uploadId",
-            "in": "path",
-            "description": "The ID of a group upload",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          },
-          {
             "name": "id",
             "in": "path",
             "description": "The ID or URL-encoded path of the group",
@@ -56017,6 +56077,15 @@
                   "type": "integer"
                 }
               ]
+            }
+          },
+          {
+            "name": "uploadId",
+            "in": "path",
+            "description": "The ID of a group upload",
+            "required": true,
+            "schema": {
+              "type": "integer"
             }
           }
         ],
@@ -56042,15 +56111,6 @@
         "operationId": "DeleteApiV4GroupsIdUploadsUploadId",
         "parameters": [
           {
-            "name": "uploadId",
-            "in": "path",
-            "description": "The ID of a group upload",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          },
-          {
             "name": "id",
             "in": "path",
             "description": "The ID or URL-encoded path of the group",
@@ -56065,6 +56125,15 @@
                   "type": "integer"
                 }
               ]
+            }
+          },
+          {
+            "name": "uploadId",
+            "in": "path",
+            "description": "The ID of a group upload",
+            "required": true,
+            "schema": {
+              "type": "integer"
             }
           }
         ],
@@ -56092,6 +56161,23 @@
         "operationId": "GetApiV4GroupsIdUploadsSecretFilename",
         "parameters": [
           {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the group",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            }
+          },
+          {
             "name": "secret",
             "in": "path",
             "description": "The 32-character secret of a group upload",
@@ -56107,23 +56193,6 @@
             "required": true,
             "schema": {
               "type": "string"
-            }
-          },
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The ID or URL-encoded path of the group",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "integer"
-                }
-              ]
             }
           }
         ],
@@ -56149,6 +56218,23 @@
         "operationId": "DeleteApiV4GroupsIdUploadsSecretFilename",
         "parameters": [
           {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the group",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            }
+          },
+          {
             "name": "secret",
             "in": "path",
             "description": "The 32-character secret of a group upload",
@@ -56164,23 +56250,6 @@
             "required": true,
             "schema": {
               "type": "string"
-            }
-          },
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The ID or URL-encoded path of the group",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "integer"
-                }
-              ]
             }
           }
         ],
@@ -56239,6 +56308,23 @@
         "operationId": "GetApiV4ProjectsIdCiLint",
         "parameters": [
           {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the project",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            }
+          },
+          {
             "name": "sha",
             "in": "query",
             "description": "\u0022Deprecated: Use content_ref instead\u0022",
@@ -56291,24 +56377,6 @@
               "type": "string",
               "nullable": true
             }
-          },
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The ID or URL-encoded path of the project",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "integer"
-                }
-              ]
-            },
-            "example": 1
           }
         ],
         "responses": {
@@ -56347,8 +56415,7 @@
                   "type": "integer"
                 }
               ]
-            },
-            "example": 1
+            }
           }
         ],
         "requestBody": {
@@ -96203,20 +96270,20 @@
         "operationId": "GetApiV4AdminBatchedBackgroundMigrationsId",
         "parameters": [
           {
-            "name": "database",
-            "in": "query",
-            "description": "The name of the database",
-            "schema": {
-              "$ref": "#/components/schemas/GetApiV4AdminBatchedBackgroundMigrationsIdDatabaseParameter"
-            }
-          },
-          {
             "name": "id",
             "in": "path",
             "description": "The batched background migration id",
             "required": true,
             "schema": {
               "type": "integer"
+            }
+          },
+          {
+            "name": "database",
+            "in": "query",
+            "description": "The name of the database",
+            "schema": {
+              "$ref": "#/components/schemas/GetApiV4AdminBatchedBackgroundMigrationsIdDatabaseParameter"
             }
           }
         ],
@@ -106787,7 +106854,7 @@
           }
         }
       },
-      "ApiEntitiesUser": {
+      "ApiEntitiesUserProfile": {
         "type": "object",
         "properties": {
           "id": {
@@ -106882,6 +106949,10 @@
           },
           "local_time": {
             "type": "string"
+          },
+          "bio_html": {
+            "type": "string",
+            "example": "My \u003Cem\u003Ebio\u003C/em\u003E."
           }
         }
       },
@@ -106901,6 +106972,104 @@
             "type": "string"
           },
           "clear_status_at": {
+            "type": "string"
+          }
+        }
+      },
+      "ApiEntitiesUser": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64",
+            "example": 1
+          },
+          "username": {
+            "type": "string",
+            "example": "admin"
+          },
+          "public_email": {
+            "type": "string",
+            "example": "john@example.com"
+          },
+          "name": {
+            "type": "string",
+            "example": "Administrator"
+          },
+          "state": {
+            "type": "string",
+            "example": "active"
+          },
+          "locked": {
+            "type": "boolean"
+          },
+          "avatar_url": {
+            "type": "string",
+            "example": "https://gravatar.com/avatar/1"
+          },
+          "avatar_path": {
+            "type": "string",
+            "example": "/user/avatar/28/The-Big-Lebowski-400-400.png"
+          },
+          "custom_attributes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesCustomAttribute"
+            }
+          },
+          "web_url": {
+            "type": "string",
+            "example": "https://gitlab.example.com/root"
+          },
+          "created_at": {
+            "type": "string"
+          },
+          "bio": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string"
+          },
+          "linkedin": {
+            "type": "string"
+          },
+          "twitter": {
+            "type": "string"
+          },
+          "discord": {
+            "type": "string"
+          },
+          "website_url": {
+            "type": "string"
+          },
+          "github": {
+            "type": "string"
+          },
+          "job_title": {
+            "type": "string"
+          },
+          "pronouns": {
+            "type": "string"
+          },
+          "organization": {
+            "type": "string"
+          },
+          "bot": {
+            "type": "boolean"
+          },
+          "work_information": {
+            "type": "string"
+          },
+          "followers": {
+            "type": "string"
+          },
+          "following": {
+            "type": "string"
+          },
+          "is_followed": {
+            "type": "string"
+          },
+          "local_time": {
             "type": "string"
           }
         }

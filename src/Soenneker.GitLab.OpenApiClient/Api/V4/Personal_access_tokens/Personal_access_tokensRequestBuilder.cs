@@ -25,9 +25,9 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Personal_access_tokens
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Personal_access_tokens.Self.SelfRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.personal_access_tokens.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The ID of a personal access token</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Personal_access_tokens.Item.Personal_access_tokensItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Personal_access_tokens.Item.Personal_access_tokensItemRequestBuilder this[string position]
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Personal_access_tokens.Item.Personal_access_tokensItemRequestBuilder this[int position]
         {
             get
             {
