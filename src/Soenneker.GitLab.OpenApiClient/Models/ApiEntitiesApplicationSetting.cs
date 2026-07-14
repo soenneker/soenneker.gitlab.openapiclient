@@ -3180,6 +3180,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string PlantumlUrl { get; set; }
 #endif
+        /// <summary>The policy_store_experiment_enabled property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PolicyStoreExperimentEnabled { get; set; }
+#nullable restore
+#else
+        public string PolicyStoreExperimentEnabled { get; set; }
+#endif
         /// <summary>The polling_interval_multiplier property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -5457,6 +5465,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "plantuml_diagram_proxy_enabled", n => { PlantumlDiagramProxyEnabled = n.GetStringValue(); } },
                 { "plantuml_enabled", n => { PlantumlEnabled = n.GetStringValue(); } },
                 { "plantuml_url", n => { PlantumlUrl = n.GetStringValue(); } },
+                { "policy_store_experiment_enabled", n => { PolicyStoreExperimentEnabled = n.GetStringValue(); } },
                 { "polling_interval_multiplier", n => { PollingIntervalMultiplier = n.GetStringValue(); } },
                 { "pre_receive_secret_detection_enabled", n => { PreReceiveSecretDetectionEnabled = n.GetStringValue(); } },
                 { "prevent_merge_requests_author_approval", n => { PreventMergeRequestsAuthorApproval = n.GetStringValue(); } },
@@ -6101,6 +6110,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("plantuml_diagram_proxy_enabled", PlantumlDiagramProxyEnabled);
             writer.WriteStringValue("plantuml_enabled", PlantumlEnabled);
             writer.WriteStringValue("plantuml_url", PlantumlUrl);
+            writer.WriteStringValue("policy_store_experiment_enabled", PolicyStoreExperimentEnabled);
             writer.WriteStringValue("polling_interval_multiplier", PollingIntervalMultiplier);
             writer.WriteStringValue("pre_receive_secret_detection_enabled", PreReceiveSecretDetectionEnabled);
             writer.WriteStringValue("prevent_merge_requests_author_approval", PreventMergeRequestsAuthorApproval);

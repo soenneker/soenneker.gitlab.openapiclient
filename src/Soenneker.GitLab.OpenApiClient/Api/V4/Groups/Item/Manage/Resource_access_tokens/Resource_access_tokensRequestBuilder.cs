@@ -19,9 +19,9 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Resource_acce
     public partial class Resource_access_tokensRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.manage.resource_access_tokens.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The ID of the resource access token</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Resource_access_tokens.Item.WithPratItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Resource_access_tokens.Item.WithPratItemRequestBuilder this[string position]
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Resource_access_tokens.Item.WithPratItemRequestBuilder this[int position]
         {
             get
             {

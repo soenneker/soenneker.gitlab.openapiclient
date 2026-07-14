@@ -961,21 +961,21 @@
         "operationId": "GetApiV4AiDuoWorkflowsWorkflowsIdCheckpoints",
         "parameters": [
           {
-            "name": "accept_compressed",
-            "in": "query",
-            "description": "Return compressed checkpoints",
-            "schema": {
-              "type": "boolean",
-              "nullable": true
-            }
-          },
-          {
             "name": "id",
             "in": "path",
             "description": "The ID of the workflow",
             "required": true,
             "schema": {
               "type": "integer"
+            }
+          },
+          {
+            "name": "accept_compressed",
+            "in": "query",
+            "description": "Return compressed checkpoints",
+            "schema": {
+              "type": "boolean",
+              "nullable": true
             }
           }
         ],
@@ -1003,6 +1003,15 @@
         "operationId": "GetApiV4AiDuoWorkflowsWorkflowsIdCheckpointsCheckpointId",
         "parameters": [
           {
+            "name": "id",
+            "in": "path",
+            "description": "The ID of the workflow",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
             "name": "checkpointId",
             "in": "path",
             "description": "The ID of the checkpoint",
@@ -1019,15 +1028,6 @@
             "schema": {
               "type": "boolean",
               "nullable": true
-            }
-          },
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The ID of the workflow",
-            "required": true,
-            "schema": {
-              "type": "integer"
             }
           }
         ],
@@ -3055,8 +3055,8 @@
         "tags": [
           "Resource events"
         ],
-        "summary": "Get a list of issue resource iteration events",
-        "description": "This feature was introduced in GitLab 13.4",
+        "summary": "List all issue iteration events",
+        "description": "Lists all iteration events for a specified issue.",
         "operationId": "GetApiV4ProjectsIdIssuesEventableIdResourceIterationEvents",
         "parameters": [
           {
@@ -3135,8 +3135,8 @@
         "tags": [
           "Resource events"
         ],
-        "summary": "Get a single issue resource iteration event",
-        "description": "This feature was introduced in GitLab 13.4",
+        "summary": "Retrieve an issue iteration event",
+        "description": "Retrieves an iteration event for a specified issue.",
         "operationId": "GetApiV4ProjectsIdIssuesEventableIdResourceIterationEventsEventId",
         "parameters": [
           {
@@ -5075,9 +5075,10 @@
           {
             "name": "id",
             "in": "path",
+            "description": "The ID of the vulnerability archive export",
             "required": true,
             "schema": {
-              "type": "object"
+              "type": "integer"
             }
           }
         ],
@@ -5107,9 +5108,10 @@
           {
             "name": "id",
             "in": "path",
+            "description": "The ID of the vulnerability archive export",
             "required": true,
             "schema": {
-              "type": "object"
+              "type": "integer"
             }
           }
         ],
@@ -6333,9 +6335,10 @@
           {
             "name": "patId",
             "in": "path",
+            "description": "The ID of the personal access token",
             "required": true,
             "schema": {
-              "type": "object"
+              "type": "integer"
             }
           }
         ],
@@ -6374,9 +6377,10 @@
           {
             "name": "patId",
             "in": "path",
+            "description": "The ID of the personal access token",
             "required": true,
             "schema": {
-              "type": "object"
+              "type": "integer"
             }
           }
         ],
@@ -6412,6 +6416,23 @@
         "description": "Lists all group and project access tokens associated with a top-level-group. This feature was introduced in GitLab 17.10.",
         "operationId": "GetApiV4GroupsIdManageResourceAccessTokens",
         "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the group",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            }
+          },
           {
             "name": "revoked",
             "in": "query",
@@ -6538,23 +6559,6 @@
               "nullable": true
             },
             "example": 20
-          },
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The ID or URL-encoded path of the group",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "integer"
-                }
-              ]
-            }
           }
         ],
         "responses": {
@@ -6581,17 +6585,6 @@
         "operationId": "DeleteApiV4GroupsIdManageResourceAccessTokensPratId",
         "parameters": [
           {
-            "name": "expires_at",
-            "in": "query",
-            "description": "The expiration date of the token",
-            "schema": {
-              "type": "string",
-              "format": "date",
-              "nullable": true
-            },
-            "example": "2021-01-31"
-          },
-          {
             "name": "id",
             "in": "path",
             "description": "The ID or URL-encoded path of the group",
@@ -6611,10 +6604,22 @@
           {
             "name": "pratId",
             "in": "path",
+            "description": "The ID of the resource access token",
             "required": true,
             "schema": {
-              "type": "object"
+              "type": "integer"
             }
+          },
+          {
+            "name": "expires_at",
+            "in": "query",
+            "description": "The expiration date of the token",
+            "schema": {
+              "type": "string",
+              "format": "date",
+              "nullable": true
+            },
+            "example": "2021-01-31"
           }
         ],
         "responses": {
@@ -6660,9 +6665,10 @@
           {
             "name": "pratId",
             "in": "path",
+            "description": "The ID of the resource access token",
             "required": true,
             "schema": {
-              "type": "object"
+              "type": "integer"
             }
           }
         ],
@@ -6698,6 +6704,23 @@
         "description": "Lists all SSH public keys associated with enterprise users in a top-level-group. This feature was introduced in GitLab 17.9.",
         "operationId": "GetApiV4GroupsIdManageSshKeys",
         "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the group",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            }
+          },
           {
             "name": "created_before",
             "in": "query",
@@ -6763,23 +6786,6 @@
               "nullable": true
             },
             "example": 20
-          },
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The ID or URL-encoded path of the group",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "integer"
-                }
-              ]
-            }
           }
         ],
         "responses": {
@@ -6825,9 +6831,10 @@
           {
             "name": "keyId",
             "in": "path",
+            "description": "The ID of the SSH key",
             "required": true,
             "schema": {
-              "type": "object"
+              "type": "integer"
             }
           }
         ],
@@ -8798,9 +8805,10 @@
           {
             "name": "mergeRequestIid",
             "in": "path",
+            "description": "The IID of the merge request",
             "required": true,
             "schema": {
-              "type": "object"
+              "type": "integer"
             }
           }
         ],
@@ -8846,9 +8854,10 @@
           {
             "name": "mergeRequestIid",
             "in": "path",
+            "description": "The IID of the merge request",
             "required": true,
             "schema": {
-              "type": "object"
+              "type": "integer"
             }
           }
         ],
@@ -12604,8 +12613,7 @@
                   "type": "integer"
                 }
               ]
-            },
-            "example": 1
+            }
           }
         ],
         "requestBody": {
@@ -12639,6 +12647,23 @@
         "operationId": "GetApiV4ProjectsIdExternalStatusChecks",
         "parameters": [
           {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the project",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            }
+          },
+          {
             "name": "page",
             "in": "query",
             "description": "Current page number",
@@ -12659,24 +12684,6 @@
               "nullable": true
             },
             "example": 20
-          },
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The ID or URL-encoded path of the project",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "integer"
-                }
-              ]
-            },
-            "example": 1
           }
         ],
         "responses": {
@@ -12703,16 +12710,6 @@
         "operationId": "PutApiV4ProjectsIdExternalStatusChecksCheckId",
         "parameters": [
           {
-            "name": "checkId",
-            "in": "path",
-            "description": "ID of an external status check",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "example": 1
-          },
-          {
             "name": "id",
             "in": "path",
             "description": "The ID or URL-encoded path of the project",
@@ -12727,6 +12724,15 @@
                   "type": "integer"
                 }
               ]
+            }
+          },
+          {
+            "name": "checkId",
+            "in": "path",
+            "description": "ID of an external status check",
+            "required": true,
+            "schema": {
+              "type": "integer"
             },
             "example": 1
           }
@@ -12762,15 +12768,6 @@
         "operationId": "DeleteApiV4ProjectsIdExternalStatusChecksCheckId",
         "parameters": [
           {
-            "name": "checkId",
-            "in": "path",
-            "description": "ID of an external status check",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          },
-          {
             "name": "id",
             "in": "path",
             "description": "The ID or URL-encoded path of the project",
@@ -12785,8 +12782,16 @@
                   "type": "integer"
                 }
               ]
-            },
-            "example": 1
+            }
+          },
+          {
+            "name": "checkId",
+            "in": "path",
+            "description": "ID of an external status check",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
           }
         ],
         "responses": {
@@ -12880,13 +12885,12 @@
                   "type": "integer"
                 }
               ]
-            },
-            "example": 1
+            }
           },
           {
             "name": "mergeRequestIid",
             "in": "path",
-            "description": "The IID of a merge request",
+            "description": "The IID of the merge request",
             "required": true,
             "schema": {
               "type": "integer"
@@ -13383,7 +13387,7 @@
           {
             "name": "approvalRuleId",
             "in": "path",
-            "description": "The ID of an approval_rule",
+            "description": "The ID of an approval rule",
             "required": true,
             "schema": {
               "type": "integer"
@@ -21843,7 +21847,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody67E3765E00D7"
+                "$ref": "#/components/schemas/RequestBodyE4642B3Ac7E6"
               }
             }
           }
@@ -22339,8 +22343,8 @@
         "tags": [
           "Resource events"
         ],
-        "summary": "Get a list of issue resource label events",
-        "description": "This feature was introduced in 11.3",
+        "summary": "List all project issue label events",
+        "description": "Lists all label events for a specified issue.",
         "operationId": "GetApiV4ProjectsIdIssuesEventableIdResourceLabelEvents",
         "parameters": [
           {
@@ -22411,8 +22415,8 @@
         "tags": [
           "Resource events"
         ],
-        "summary": "Get a single issue resource label event",
-        "description": "This feature was introduced in 11.3",
+        "summary": "Retrieve an issue label event",
+        "description": "Retrieves a label event for a specified project issue.",
         "operationId": "GetApiV4ProjectsIdIssuesEventableIdResourceLabelEventsEventId",
         "parameters": [
           {
@@ -22470,8 +22474,8 @@
         "tags": [
           "Resource events"
         ],
-        "summary": "Get a list of merge request resource label events",
-        "description": "This feature was introduced in 11.3",
+        "summary": "List all project merge request label events",
+        "description": "Lists all label events for a specified merge request.",
         "operationId": "GetApiV4ProjectsIdMergeRequestsEventableIdResourceLabelEvents",
         "parameters": [
           {
@@ -22542,8 +22546,8 @@
         "tags": [
           "Resource events"
         ],
-        "summary": "Get a single merge request resource label event",
-        "description": "This feature was introduced in 11.3",
+        "summary": "Retrieve a merge request label event",
+        "description": "Retrieves a label event for a specified project merge request.",
         "operationId": "GetApiV4ProjectsIdMergeRequestsEventableIdResourceLabelEventsEventId",
         "parameters": [
           {
@@ -22601,8 +22605,8 @@
         "tags": [
           "Resource events"
         ],
-        "summary": "Get a list of epic resource label events",
-        "description": "This feature was introduced in 11.3",
+        "summary": "List all group epic label events",
+        "description": "Lists all label events for a specified epic.",
         "operationId": "GetApiV4GroupsIdEpicsEventableIdResourceLabelEvents",
         "parameters": [
           {
@@ -22673,8 +22677,8 @@
         "tags": [
           "Resource events"
         ],
-        "summary": "Get a single epic resource label event",
-        "description": "This feature was introduced in 11.3",
+        "summary": "Retrieve an epic label event",
+        "description": "Retrieves a label event for a specified group epic.",
         "operationId": "GetApiV4GroupsIdEpicsEventableIdResourceLabelEventsEventId",
         "parameters": [
           {
@@ -23234,20 +23238,21 @@
             }
           },
           {
-            "name": "userId",
+            "name": "tokenId",
             "in": "path",
-            "description": "The ID of the service account",
+            "description": "The ID of the personal access token",
             "required": true,
             "schema": {
               "type": "integer"
             }
           },
           {
-            "name": "tokenId",
+            "name": "userId",
             "in": "path",
+            "description": "The ID of the service account",
             "required": true,
             "schema": {
-              "type": "object"
+              "type": "integer"
             }
           }
         ],
@@ -23293,20 +23298,21 @@
             }
           },
           {
-            "name": "userId",
+            "name": "tokenId",
             "in": "path",
-            "description": "The ID of the service account",
+            "description": "The ID of the personal access token",
             "required": true,
             "schema": {
               "type": "integer"
             }
           },
           {
-            "name": "tokenId",
+            "name": "userId",
             "in": "path",
+            "description": "The ID of the service account",
             "required": true,
             "schema": {
-              "type": "object"
+              "type": "integer"
             }
           }
         ],
@@ -24194,8 +24200,8 @@
         "tags": [
           "Notification settings"
         ],
-        "summary": "Get global notification level settings and email, defaults to Participate",
-        "description": "This feature was introduced in GitLab 8.12",
+        "summary": "Retrieve global notification settings",
+        "description": "Retrieves the global notification level and email address.",
         "operationId": "GetApiV4NotificationSettings",
         "responses": {
           "200": {
@@ -24214,8 +24220,8 @@
         "tags": [
           "Notification settings"
         ],
-        "summary": "Update global notification level settings and email, defaults to Participate",
-        "description": "This feature was introduced in GitLab 8.12",
+        "summary": "Update global notification settings",
+        "description": "Updates notification settings and email address.",
         "operationId": "PutApiV4NotificationSettings",
         "requestBody": {
           "content": {
@@ -24245,8 +24251,8 @@
         "tags": [
           "Notification settings"
         ],
-        "summary": "Get group level notification level settings, defaults to Global",
-        "description": "This feature was introduced in GitLab 8.12",
+        "summary": "Retrieve notification settings for a group",
+        "description": "Retrieves the notification level for a specified group.",
         "operationId": "GetApiV4GroupsIdNotificationSettings",
         "parameters": [
           {
@@ -24276,8 +24282,8 @@
         "tags": [
           "Notification settings"
         ],
-        "summary": "Update group level notification level settings, defaults to Global",
-        "description": "This feature was introduced in GitLab 8.12",
+        "summary": "Update notification settings for a group",
+        "description": "Updates the notification settings for a specified group.",
         "operationId": "PutApiV4GroupsIdNotificationSettings",
         "parameters": [
           {
@@ -24318,8 +24324,8 @@
         "tags": [
           "Notification settings"
         ],
-        "summary": "Get project level notification level settings, defaults to Global",
-        "description": "This feature was introduced in GitLab 8.12",
+        "summary": "Retrieve notification settings for a project",
+        "description": "Retrieves the notification level for a specified project.",
         "operationId": "GetApiV4ProjectsIdNotificationSettings",
         "parameters": [
           {
@@ -24349,8 +24355,8 @@
         "tags": [
           "Notification settings"
         ],
-        "summary": "Update project level notification level settings, defaults to Global",
-        "description": "This feature was introduced in GitLab 8.12",
+        "summary": "Update notification settings for a project",
+        "description": "Updates the notification settings for a specified project.",
         "operationId": "PutApiV4ProjectsIdNotificationSettings",
         "parameters": [
           {
@@ -24391,7 +24397,8 @@
         "tags": [
           "Notes"
         ],
-        "summary": "Get a list of issue notes",
+        "summary": "List all issue notes",
+        "description": "Lists all notes for a specified issue.",
         "operationId": "GetApiV4ProjectsIdIssuesNoteableIdNotes",
         "parameters": [
           {
@@ -24476,7 +24483,8 @@
         "tags": [
           "Notes"
         ],
-        "summary": "Create a new issue note",
+        "summary": "Create an issue note",
+        "description": "Creates a note for an issue.",
         "operationId": "PostApiV4ProjectsIdIssuesNoteableIdNotes",
         "parameters": [
           {
@@ -24526,7 +24534,8 @@
         "tags": [
           "Notes"
         ],
-        "summary": "Get a single issue note",
+        "summary": "Retrieve an issue note",
+        "description": "Retrieves a specified note for an issue.",
         "operationId": "GetApiV4ProjectsIdIssuesNoteableIdNotesNoteId",
         "parameters": [
           {
@@ -24574,7 +24583,8 @@
         "tags": [
           "Notes"
         ],
-        "summary": "Update an existing issue note",
+        "summary": "Update an issue note",
+        "description": "Updates an existing note for an issue.",
         "operationId": "PutApiV4ProjectsIdIssuesNoteableIdNotesNoteId",
         "parameters": [
           {
@@ -24631,7 +24641,8 @@
         "tags": [
           "Notes"
         ],
-        "summary": "Delete a issue note",
+        "summary": "Delete an issue note",
+        "description": "Deletes a specified note from an issue.",
         "operationId": "DeleteApiV4ProjectsIdIssuesNoteableIdNotesNoteId",
         "parameters": [
           {
@@ -24681,7 +24692,8 @@
         "tags": [
           "Notes"
         ],
-        "summary": "Get a list of merge request notes",
+        "summary": "List all merge request notes",
+        "description": "Lists all notes for a specified merge request.",
         "operationId": "GetApiV4ProjectsIdMergeRequestsNoteableIdNotes",
         "parameters": [
           {
@@ -24766,7 +24778,8 @@
         "tags": [
           "Notes"
         ],
-        "summary": "Create a new merge request note",
+        "summary": "Create a merge request note",
+        "description": "Creates a note for a merge request.",
         "operationId": "PostApiV4ProjectsIdMergeRequestsNoteableIdNotes",
         "parameters": [
           {
@@ -24816,7 +24829,8 @@
         "tags": [
           "Notes"
         ],
-        "summary": "Get a single merge request note",
+        "summary": "Retrieve a merge request note",
+        "description": "Retrieves a specified note for a merge request.",
         "operationId": "GetApiV4ProjectsIdMergeRequestsNoteableIdNotesNoteId",
         "parameters": [
           {
@@ -24864,7 +24878,8 @@
         "tags": [
           "Notes"
         ],
-        "summary": "Update an existing merge request note",
+        "summary": "Update a merge request note",
+        "description": "Updates an existing note for a merge request.",
         "operationId": "PutApiV4ProjectsIdMergeRequestsNoteableIdNotesNoteId",
         "parameters": [
           {
@@ -24922,6 +24937,7 @@
           "Notes"
         ],
         "summary": "Delete a merge request note",
+        "description": "Deletes a specified note from a merge request.",
         "operationId": "DeleteApiV4ProjectsIdMergeRequestsNoteableIdNotesNoteId",
         "parameters": [
           {
@@ -24971,7 +24987,8 @@
         "tags": [
           "Notes"
         ],
-        "summary": "Get a list of snippet notes",
+        "summary": "List all snippet notes",
+        "description": "Lists all notes for a specified snippet.",
         "operationId": "GetApiV4ProjectsIdSnippetsNoteableIdNotes",
         "parameters": [
           {
@@ -25056,7 +25073,8 @@
         "tags": [
           "Notes"
         ],
-        "summary": "Create a new snippet note",
+        "summary": "Create a snippet note",
+        "description": "Creates a note for a snippet.",
         "operationId": "PostApiV4ProjectsIdSnippetsNoteableIdNotes",
         "parameters": [
           {
@@ -25106,7 +25124,8 @@
         "tags": [
           "Notes"
         ],
-        "summary": "Get a single snippet note",
+        "summary": "Retrieve a snippet note",
+        "description": "Retrieves a specified note for a snippet.",
         "operationId": "GetApiV4ProjectsIdSnippetsNoteableIdNotesNoteId",
         "parameters": [
           {
@@ -25154,7 +25173,8 @@
         "tags": [
           "Notes"
         ],
-        "summary": "Update an existing snippet note",
+        "summary": "Update a snippet note",
+        "description": "Updates an existing note for a snippet.",
         "operationId": "PutApiV4ProjectsIdSnippetsNoteableIdNotesNoteId",
         "parameters": [
           {
@@ -25212,6 +25232,7 @@
           "Notes"
         ],
         "summary": "Delete a snippet note",
+        "description": "Deletes a specified note from a snippet.",
         "operationId": "DeleteApiV4ProjectsIdSnippetsNoteableIdNotesNoteId",
         "parameters": [
           {
@@ -25261,7 +25282,8 @@
         "tags": [
           "Notes"
         ],
-        "summary": "Get a list of wiki page meta notes",
+        "summary": "List all wiki page meta notes",
+        "description": "Lists all notes for a specified wiki page meta.",
         "operationId": "GetApiV4ProjectsIdWikiPagesNoteableIdNotes",
         "parameters": [
           {
@@ -25346,7 +25368,8 @@
         "tags": [
           "Notes"
         ],
-        "summary": "Create a new wiki page meta note",
+        "summary": "Create a wiki page meta note",
+        "description": "Creates a note for a wiki page meta.",
         "operationId": "PostApiV4ProjectsIdWikiPagesNoteableIdNotes",
         "parameters": [
           {
@@ -25396,7 +25419,8 @@
         "tags": [
           "Notes"
         ],
-        "summary": "Get a single wiki page meta note",
+        "summary": "Retrieve a wiki page meta note",
+        "description": "Retrieves a specified note for a wiki page meta.",
         "operationId": "GetApiV4ProjectsIdWikiPagesNoteableIdNotesNoteId",
         "parameters": [
           {
@@ -25444,7 +25468,8 @@
         "tags": [
           "Notes"
         ],
-        "summary": "Update an existing wiki page meta note",
+        "summary": "Update a wiki page meta note",
+        "description": "Updates an existing note for a wiki page meta.",
         "operationId": "PutApiV4ProjectsIdWikiPagesNoteableIdNotesNoteId",
         "parameters": [
           {
@@ -25502,6 +25527,7 @@
           "Notes"
         ],
         "summary": "Delete a wiki page meta note",
+        "description": "Deletes a specified note from a wiki page meta.",
         "operationId": "DeleteApiV4ProjectsIdWikiPagesNoteableIdNotesNoteId",
         "parameters": [
           {
@@ -25551,7 +25577,8 @@
         "tags": [
           "Notes"
         ],
-        "summary": "Get a list of epic notes",
+        "summary": "List all epic notes",
+        "description": "Lists all notes for a specified epic.",
         "operationId": "GetApiV4GroupsIdEpicsNoteableIdNotes",
         "parameters": [
           {
@@ -25636,7 +25663,8 @@
         "tags": [
           "Notes"
         ],
-        "summary": "Create a new epic note",
+        "summary": "Create an epic note",
+        "description": "Creates a note for an epic.",
         "operationId": "PostApiV4GroupsIdEpicsNoteableIdNotes",
         "parameters": [
           {
@@ -25686,7 +25714,8 @@
         "tags": [
           "Notes"
         ],
-        "summary": "Get a single epic note",
+        "summary": "Retrieve an epic note",
+        "description": "Retrieves a specified note for an epic.",
         "operationId": "GetApiV4GroupsIdEpicsNoteableIdNotesNoteId",
         "parameters": [
           {
@@ -25734,7 +25763,8 @@
         "tags": [
           "Notes"
         ],
-        "summary": "Update an existing epic note",
+        "summary": "Update an epic note",
+        "description": "Updates an existing note for an epic.",
         "operationId": "PutApiV4GroupsIdEpicsNoteableIdNotesNoteId",
         "parameters": [
           {
@@ -25791,7 +25821,8 @@
         "tags": [
           "Notes"
         ],
-        "summary": "Delete a epic note",
+        "summary": "Delete an epic note",
+        "description": "Deletes a specified note from an epic.",
         "operationId": "DeleteApiV4GroupsIdEpicsNoteableIdNotesNoteId",
         "parameters": [
           {
@@ -25841,7 +25872,8 @@
         "tags": [
           "Notes"
         ],
-        "summary": "Get a list of vulnerability notes",
+        "summary": "List all vulnerability notes",
+        "description": "Lists all notes for a specified vulnerability.",
         "operationId": "GetApiV4ProjectsIdVulnerabilitiesNoteableIdNotes",
         "parameters": [
           {
@@ -25926,7 +25958,8 @@
         "tags": [
           "Notes"
         ],
-        "summary": "Create a new vulnerability note",
+        "summary": "Create a vulnerability note",
+        "description": "Creates a note for a vulnerability.",
         "operationId": "PostApiV4ProjectsIdVulnerabilitiesNoteableIdNotes",
         "parameters": [
           {
@@ -25976,7 +26009,8 @@
         "tags": [
           "Notes"
         ],
-        "summary": "Get a single vulnerability note",
+        "summary": "Retrieve a vulnerability note",
+        "description": "Retrieves a specified note for a vulnerability.",
         "operationId": "GetApiV4ProjectsIdVulnerabilitiesNoteableIdNotesNoteId",
         "parameters": [
           {
@@ -26024,7 +26058,8 @@
         "tags": [
           "Notes"
         ],
-        "summary": "Update an existing vulnerability note",
+        "summary": "Update a vulnerability note",
+        "description": "Updates an existing note for a vulnerability.",
         "operationId": "PutApiV4ProjectsIdVulnerabilitiesNoteableIdNotesNoteId",
         "parameters": [
           {
@@ -26082,6 +26117,7 @@
           "Notes"
         ],
         "summary": "Delete a vulnerability note",
+        "description": "Deletes a specified note from a vulnerability.",
         "operationId": "DeleteApiV4ProjectsIdVulnerabilitiesNoteableIdNotesNoteId",
         "parameters": [
           {
@@ -26131,7 +26167,8 @@
         "tags": [
           "Notes"
         ],
-        "summary": "Get a list of wiki page meta notes",
+        "summary": "List all wiki page meta notes",
+        "description": "Lists all notes for a specified wiki page meta.",
         "operationId": "GetApiV4GroupsIdWikiPagesNoteableIdNotes",
         "parameters": [
           {
@@ -26216,7 +26253,8 @@
         "tags": [
           "Notes"
         ],
-        "summary": "Create a new wiki page meta note",
+        "summary": "Create a wiki page meta note",
+        "description": "Creates a note for a wiki page meta.",
         "operationId": "PostApiV4GroupsIdWikiPagesNoteableIdNotes",
         "parameters": [
           {
@@ -26266,7 +26304,8 @@
         "tags": [
           "Notes"
         ],
-        "summary": "Get a single wiki page meta note",
+        "summary": "Retrieve a wiki page meta note",
+        "description": "Retrieves a specified note for a wiki page meta.",
         "operationId": "GetApiV4GroupsIdWikiPagesNoteableIdNotesNoteId",
         "parameters": [
           {
@@ -26314,7 +26353,8 @@
         "tags": [
           "Notes"
         ],
-        "summary": "Update an existing wiki page meta note",
+        "summary": "Update a wiki page meta note",
+        "description": "Updates an existing note for a wiki page meta.",
         "operationId": "PutApiV4GroupsIdWikiPagesNoteableIdNotesNoteId",
         "parameters": [
           {
@@ -26372,6 +26412,7 @@
           "Notes"
         ],
         "summary": "Delete a wiki page meta note",
+        "description": "Deletes a specified note from a wiki page meta.",
         "operationId": "DeleteApiV4GroupsIdWikiPagesNoteableIdNotesNoteId",
         "parameters": [
           {
@@ -26974,20 +27015,21 @@
             }
           },
           {
-            "name": "userId",
+            "name": "tokenId",
             "in": "path",
-            "description": "The ID of the service account",
+            "description": "The ID of the personal access token",
             "required": true,
             "schema": {
               "type": "integer"
             }
           },
           {
-            "name": "tokenId",
+            "name": "userId",
             "in": "path",
+            "description": "The ID of the service account",
             "required": true,
             "schema": {
-              "type": "object"
+              "type": "integer"
             }
           }
         ],
@@ -27033,20 +27075,21 @@
             }
           },
           {
-            "name": "userId",
+            "name": "tokenId",
             "in": "path",
-            "description": "The ID of the service account",
+            "description": "The ID of the personal access token",
             "required": true,
             "schema": {
               "type": "integer"
             }
           },
           {
-            "name": "tokenId",
+            "name": "userId",
             "in": "path",
+            "description": "The ID of the service account",
             "required": true,
             "schema": {
-              "type": "object"
+              "type": "integer"
             }
           }
         ],
@@ -27730,6 +27773,15 @@
             }
           },
           {
+            "name": "name",
+            "in": "path",
+            "description": "The name of a label",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "include_ancestor_groups",
             "in": "query",
             "description": "Include ancestor groups",
@@ -27737,15 +27789,6 @@
               "type": "boolean",
               "default": true,
               "nullable": true
-            }
-          },
-          {
-            "name": "name",
-            "in": "path",
-            "description": "The name or id of the label to be updated",
-            "required": true,
-            "schema": {
-              "type": "string"
             }
           }
         ],
@@ -28169,6 +28212,15 @@
             }
           },
           {
+            "name": "name",
+            "in": "path",
+            "description": "The name of a label",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "include_ancestor_groups",
             "in": "query",
             "description": "Include ancestor groups",
@@ -28195,15 +28247,6 @@
               "type": "boolean",
               "default": true,
               "nullable": true
-            }
-          },
-          {
-            "name": "name",
-            "in": "path",
-            "description": "The name or id of the label to be updated",
-            "required": true,
-            "schema": {
-              "type": "string"
             }
           }
         ],
@@ -31589,6 +31632,15 @@
         "operationId": "DeleteApiV4AdminSidekiqQueuesQueueName",
         "parameters": [
           {
+            "name": "queueName",
+            "in": "path",
+            "description": "The Sidekiq queue name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "organization_id",
             "in": "query",
             "description": "Metadata key to match",
@@ -31848,14 +31900,6 @@
               "type": "string",
               "nullable": true
             }
-          },
-          {
-            "name": "queueName",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -31882,18 +31926,9 @@
         "operationId": "GetApiV4GroupsIdWikis",
         "parameters": [
           {
-            "name": "with_content",
-            "in": "query",
-            "description": "Include pages\u0027 content",
-            "schema": {
-              "type": "boolean",
-              "nullable": true
-            }
-          },
-          {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the group",
+            "description": "The ID or URL-encoded path of the group or project",
             "required": true,
             "schema": {
               "type": "object",
@@ -31905,6 +31940,15 @@
                   "type": "integer"
                 }
               ]
+            }
+          },
+          {
+            "name": "with_content",
+            "in": "query",
+            "description": "Include pages\u0027 content",
+            "schema": {
+              "type": "boolean",
+              "nullable": true
             }
           }
         ],
@@ -31932,7 +31976,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the group",
+            "description": "The ID or URL-encoded path of the group or project",
             "required": true,
             "schema": {
               "type": "object",
@@ -31980,6 +32024,23 @@
         "operationId": "GetApiV4GroupsIdWikisSlug",
         "parameters": [
           {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the group or project",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            }
+          },
+          {
             "name": "slug",
             "in": "path",
             "description": "The slug of a wiki page",
@@ -32004,23 +32065,6 @@
             "schema": {
               "type": "boolean",
               "nullable": true
-            }
-          },
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The ID or URL-encoded path of the group",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "integer"
-                }
-              ]
             }
           }
         ],
@@ -32048,7 +32092,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the group",
+            "description": "The ID or URL-encoded path of the group or project",
             "required": true,
             "schema": {
               "type": "object",
@@ -32103,18 +32147,9 @@
         "operationId": "DeleteApiV4GroupsIdWikisSlug",
         "parameters": [
           {
-            "name": "slug",
-            "in": "path",
-            "description": "The slug of a wiki page",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the group",
+            "description": "The ID or URL-encoded path of the group or project",
             "required": true,
             "schema": {
               "type": "object",
@@ -32126,6 +32161,15 @@
                   "type": "integer"
                 }
               ]
+            }
+          },
+          {
+            "name": "slug",
+            "in": "path",
+            "description": "The slug of a wiki page",
+            "required": true,
+            "schema": {
+              "type": "string"
             }
           }
         ],
@@ -32155,7 +32199,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the group",
+            "description": "The ID or URL-encoded path of the group or project",
             "required": true,
             "schema": {
               "type": "object",
@@ -32203,18 +32247,9 @@
         "operationId": "GetApiV4ProjectsIdWikis",
         "parameters": [
           {
-            "name": "with_content",
-            "in": "query",
-            "description": "Include pages\u0027 content",
-            "schema": {
-              "type": "boolean",
-              "nullable": true
-            }
-          },
-          {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "The ID or URL-encoded path of the group or project",
             "required": true,
             "schema": {
               "type": "object",
@@ -32226,8 +32261,16 @@
                   "type": "integer"
                 }
               ]
-            },
-            "example": 1
+            }
+          },
+          {
+            "name": "with_content",
+            "in": "query",
+            "description": "Include pages\u0027 content",
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
           }
         ],
         "responses": {
@@ -32254,7 +32297,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "The ID or URL-encoded path of the group or project",
             "required": true,
             "schema": {
               "type": "object",
@@ -32266,8 +32309,7 @@
                   "type": "integer"
                 }
               ]
-            },
-            "example": 1
+            }
           }
         ],
         "requestBody": {
@@ -32303,6 +32345,23 @@
         "operationId": "GetApiV4ProjectsIdWikisSlug",
         "parameters": [
           {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the group or project",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            }
+          },
+          {
             "name": "slug",
             "in": "path",
             "description": "The slug of a wiki page",
@@ -32328,24 +32387,6 @@
               "type": "boolean",
               "nullable": true
             }
-          },
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The ID or URL-encoded path of the project",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "integer"
-                }
-              ]
-            },
-            "example": 1
           }
         ],
         "responses": {
@@ -32372,7 +32413,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "The ID or URL-encoded path of the group or project",
             "required": true,
             "schema": {
               "type": "object",
@@ -32384,8 +32425,7 @@
                   "type": "integer"
                 }
               ]
-            },
-            "example": 1
+            }
           },
           {
             "name": "slug",
@@ -32428,18 +32468,9 @@
         "operationId": "DeleteApiV4ProjectsIdWikisSlug",
         "parameters": [
           {
-            "name": "slug",
-            "in": "path",
-            "description": "The slug of a wiki page",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "The ID or URL-encoded path of the group or project",
             "required": true,
             "schema": {
               "type": "object",
@@ -32451,8 +32482,16 @@
                   "type": "integer"
                 }
               ]
-            },
-            "example": 1
+            }
+          },
+          {
+            "name": "slug",
+            "in": "path",
+            "description": "The slug of a wiki page",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -32481,7 +32520,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "The ID or URL-encoded path of the group or project",
             "required": true,
             "schema": {
               "type": "object",
@@ -32493,8 +32532,7 @@
                   "type": "integer"
                 }
               ]
-            },
-            "example": 1
+            }
           }
         ],
         "requestBody": {
@@ -33920,7 +33958,7 @@
           {
             "name": "moduleName",
             "in": "path",
-            "description": "Name of the module",
+            "description": "The module name",
             "required": true,
             "schema": {
               "type": "string"
@@ -33929,7 +33967,7 @@
           {
             "name": "moduleSystem",
             "in": "path",
-            "description": "System of the module",
+            "description": "The module system (provider)",
             "required": true,
             "schema": {
               "type": "string"
@@ -33971,7 +34009,7 @@
           {
             "name": "moduleName",
             "in": "path",
-            "description": "Name of the module",
+            "description": "The module name",
             "required": true,
             "schema": {
               "type": "string"
@@ -33980,7 +34018,7 @@
           {
             "name": "moduleSystem",
             "in": "path",
-            "description": "System of the module",
+            "description": "The module system (provider)",
             "required": true,
             "schema": {
               "type": "string"
@@ -34022,7 +34060,7 @@
           {
             "name": "moduleName",
             "in": "path",
-            "description": "Name of the module",
+            "description": "The module name",
             "required": true,
             "schema": {
               "type": "string"
@@ -34031,7 +34069,7 @@
           {
             "name": "moduleSystem",
             "in": "path",
-            "description": "System of the module",
+            "description": "The module system (provider)",
             "required": true,
             "schema": {
               "type": "string"
@@ -36288,8 +36326,8 @@
         "tags": [
           "Resource events"
         ],
-        "summary": "List project Issue milestone events",
-        "description": "Gets a list of all milestone events for a single Issue",
+        "summary": "List all project issue milestone events",
+        "description": "Lists all milestone events for a specified issue.",
         "operationId": "GetApiV4ProjectsIdIssuesEventableIdResourceMilestoneEvents",
         "parameters": [
           {
@@ -36368,8 +36406,8 @@
         "tags": [
           "Resource events"
         ],
-        "summary": "Get single Issue milestone event",
-        "description": "Returns a single milestone event for a specific project Issue",
+        "summary": "Retrieve an issue milestone event",
+        "description": "Retrieves a specified milestone event for a project issue.",
         "operationId": "GetApiV4ProjectsIdIssuesEventableIdResourceMilestoneEventsEventId",
         "parameters": [
           {
@@ -36435,8 +36473,8 @@
         "tags": [
           "Resource events"
         ],
-        "summary": "List project Merge request milestone events",
-        "description": "Gets a list of all milestone events for a single Merge request",
+        "summary": "List all project merge request milestone events",
+        "description": "Lists all milestone events for a specified merge request.",
         "operationId": "GetApiV4ProjectsIdMergeRequestsEventableIdResourceMilestoneEvents",
         "parameters": [
           {
@@ -36515,8 +36553,8 @@
         "tags": [
           "Resource events"
         ],
-        "summary": "Get single Merge request milestone event",
-        "description": "Returns a single milestone event for a specific project Merge request",
+        "summary": "Retrieve a merge request milestone event",
+        "description": "Retrieves a specified milestone event for a project merge request.",
         "operationId": "GetApiV4ProjectsIdMergeRequestsEventableIdResourceMilestoneEventsEventId",
         "parameters": [
           {
@@ -40874,8 +40912,7 @@
                   "type": "integer"
                 }
               ]
-            },
-            "example": 1
+            }
           }
         ],
         "responses": {
@@ -43815,15 +43852,6 @@
         "operationId": "GetApiV4ProjectsIdSnapshot",
         "parameters": [
           {
-            "name": "wiki",
-            "in": "query",
-            "description": "Set to true to receive the wiki repository",
-            "schema": {
-              "type": "boolean",
-              "nullable": true
-            }
-          },
-          {
             "name": "id",
             "in": "path",
             "description": "The ID or URL-encoded path of the project",
@@ -43838,8 +43866,16 @@
                   "type": "integer"
                 }
               ]
-            },
-            "example": 1
+            }
+          },
+          {
+            "name": "wiki",
+            "in": "query",
+            "description": "Set to true to receive the wiki repository",
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
           }
         ],
         "responses": {
@@ -44379,8 +44415,7 @@
                   "type": "integer"
                 }
               ]
-            },
-            "example": 1
+            }
           }
         ],
         "responses": {
@@ -44419,8 +44454,7 @@
                   "type": "integer"
                 }
               ]
-            },
-            "example": 1
+            }
           }
         ],
         "requestBody": {
@@ -44456,6 +44490,23 @@
         "operationId": "GetApiV4ProjectsIdJobTokenScopeAllowlist",
         "parameters": [
           {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the project",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            }
+          },
+          {
             "name": "page",
             "in": "query",
             "description": "Current page number",
@@ -44476,24 +44527,6 @@
               "nullable": true
             },
             "example": 20
-          },
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The ID or URL-encoded path of the project",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "integer"
-                }
-              ]
-            },
-            "example": 1
           }
         ],
         "responses": {
@@ -44561,6 +44594,23 @@
         "operationId": "GetApiV4ProjectsIdJobTokenScopeGroupsAllowlist",
         "parameters": [
           {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the project",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            }
+          },
+          {
             "name": "page",
             "in": "query",
             "description": "Current page number",
@@ -44581,24 +44631,6 @@
               "nullable": true
             },
             "example": 20
-          },
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The ID or URL-encoded path of the project",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "integer"
-                }
-              ]
-            },
-            "example": 1
           }
         ],
         "responses": {
@@ -72649,9 +72681,10 @@
           {
             "name": "name",
             "in": "path",
+            "description": "The name of the feature flag",
             "required": true,
             "schema": {
-              "type": "object"
+              "type": "string"
             }
           }
         ],
@@ -72688,9 +72721,10 @@
           {
             "name": "name",
             "in": "path",
+            "description": "The name of the feature flag",
             "required": true,
             "schema": {
-              "type": "object"
+              "type": "string"
             }
           }
         ],
@@ -73728,9 +73762,10 @@
           {
             "name": "keyId",
             "in": "path",
+            "description": "The ID of the client key",
             "required": true,
             "schema": {
-              "type": "object"
+              "type": "integer"
             }
           }
         ],
@@ -76437,7 +76472,7 @@
           {
             "name": "distribution",
             "in": "path",
-            "description": "The Debian Codename or Suite",
+            "description": "The Debian distribution name",
             "required": true,
             "schema": {
               "pattern": "(?:^(?:[0-9A-Za-z\\u017F\\u212A][\\x2D.0-9A-Za-z\\u017F\\u212A]*)$)",
@@ -76448,7 +76483,7 @@
           {
             "name": "letter",
             "in": "path",
-            "description": "The Debian Classification (first-letter or lib-first-letter)",
+            "description": "The package name first letter",
             "required": true,
             "schema": {
               "type": "string"
@@ -76458,7 +76493,7 @@
           {
             "name": "packageName",
             "in": "path",
-            "description": "The Debian Source Package Name",
+            "description": "The package name",
             "required": true,
             "schema": {
               "pattern": "^[a-z0-9][\\-\u002B.a-z0-9]\u002B$",
@@ -76469,7 +76504,7 @@
           {
             "name": "packageVersion",
             "in": "path",
-            "description": "The Debian Source Package Version",
+            "description": "The package version",
             "required": true,
             "schema": {
               "pattern": "(?:^(?:(?:([0-9]{1,9}):)?([0-9][\u002B.0-9A-Za-z~\\u017F\\u212A]*)(-[\u002B.0-9A-Za-z~\\u017F\\u212A]\u002B){0,14}(?\u003C!-))$)",
@@ -76480,7 +76515,7 @@
           {
             "name": "fileName",
             "in": "path",
-            "description": "The Debian File Name",
+            "description": "The package file name",
             "required": true,
             "schema": {
               "type": "string"
@@ -77022,7 +77057,7 @@
           {
             "name": "packageName",
             "in": "path",
-            "description": "Package name",
+            "description": "The package name",
             "required": true,
             "schema": {
               "type": "string"
@@ -77032,7 +77067,7 @@
           {
             "name": "packageVersion",
             "in": "path",
-            "description": "Package version",
+            "description": "The package version",
             "required": true,
             "schema": {
               "type": "string"
@@ -77042,7 +77077,7 @@
           {
             "name": "packageUsername",
             "in": "path",
-            "description": "Package username",
+            "description": "The package username",
             "required": true,
             "schema": {
               "type": "string"
@@ -77052,7 +77087,7 @@
           {
             "name": "packageChannel",
             "in": "path",
-            "description": "Package channel",
+            "description": "The package channel",
             "required": true,
             "schema": {
               "type": "string"
@@ -78786,7 +78821,7 @@
           {
             "name": "packageName",
             "in": "path",
-            "description": "Package name",
+            "description": "The package name",
             "required": true,
             "schema": {
               "type": "string"
@@ -78796,7 +78831,7 @@
           {
             "name": "packageVersion",
             "in": "path",
-            "description": "Package version",
+            "description": "The package version",
             "required": true,
             "schema": {
               "type": "string"
@@ -78806,7 +78841,7 @@
           {
             "name": "packageUsername",
             "in": "path",
-            "description": "Package username",
+            "description": "The package username",
             "required": true,
             "schema": {
               "type": "string"
@@ -78816,7 +78851,7 @@
           {
             "name": "packageChannel",
             "in": "path",
-            "description": "Package channel",
+            "description": "The package channel",
             "required": true,
             "schema": {
               "type": "string"
@@ -80427,7 +80462,7 @@
           {
             "name": "packageName",
             "in": "path",
-            "description": "Package name",
+            "description": "The package name",
             "required": true,
             "schema": {
               "type": "string"
@@ -80437,7 +80472,7 @@
           {
             "name": "packageVersion",
             "in": "path",
-            "description": "Package version",
+            "description": "The package version",
             "required": true,
             "schema": {
               "type": "string"
@@ -80447,7 +80482,7 @@
           {
             "name": "packageUsername",
             "in": "path",
-            "description": "Package username",
+            "description": "The package username",
             "required": true,
             "schema": {
               "type": "string"
@@ -80457,7 +80492,7 @@
           {
             "name": "packageChannel",
             "in": "path",
-            "description": "Package channel",
+            "description": "The package channel",
             "required": true,
             "schema": {
               "type": "string"
@@ -109847,6 +109882,9 @@
           "dependency_firewall_policies_per_configuration_limit": {
             "type": "string"
           },
+          "policy_store_experiment_enabled": {
+            "type": "string"
+          },
           "secret_detection_service_auth_token": {
             "type": "string"
           },
@@ -125349,7 +125387,7 @@
           }
         }
       },
-      "RequestBody67E3765E00D7": {
+      "RequestBodyE4642B3Ac7E6": {
         "type": "object",
         "properties": {
           "admin_mode": {
@@ -125449,19 +125487,19 @@
             "nullable": true
           },
           "default_project_creation": {
-            "$ref": "#/components/schemas/RequestBody67E3765E00D7DefaultProjectCreation"
+            "$ref": "#/components/schemas/RequestBodyE4642B3Ac7E6DefaultProjectCreation"
           },
           "default_branch_protection": {
-            "$ref": "#/components/schemas/RequestBody67E3765E00D7DefaultBranchProtection"
+            "$ref": "#/components/schemas/RequestBodyE4642B3Ac7E6DefaultBranchProtection"
           },
           "default_branch_protection_defaults": {
-            "$ref": "#/components/schemas/RequestBody67E3765E00D7DefaultBranchProtectionDefaults"
+            "$ref": "#/components/schemas/RequestBodyE4642B3Ac7E6DefaultBranchProtectionDefaults"
           },
           "default_group_visibility": {
-            "$ref": "#/components/schemas/RequestBody67E3765E00D7DefaultGroupVisibility"
+            "$ref": "#/components/schemas/RequestBodyE4642B3Ac7E6DefaultGroupVisibility"
           },
           "default_project_visibility": {
-            "$ref": "#/components/schemas/RequestBody67E3765E00D7DefaultProjectVisibility"
+            "$ref": "#/components/schemas/RequestBodyE4642B3Ac7E6DefaultProjectVisibility"
           },
           "default_projects_limit": {
             "type": "integer",
@@ -125469,10 +125507,10 @@
             "nullable": true
           },
           "default_snippet_visibility": {
-            "$ref": "#/components/schemas/RequestBody67E3765E00D7DefaultSnippetVisibility"
+            "$ref": "#/components/schemas/RequestBodyE4642B3Ac7E6DefaultSnippetVisibility"
           },
           "dependency_management_settings": {
-            "$ref": "#/components/schemas/RequestBody67E3765E00D7DependencyManagementSettings"
+            "$ref": "#/components/schemas/RequestBodyE4642B3Ac7E6DependencyManagementSettings"
           },
           "disable_admin_oauth_scopes": {
             "type": "boolean",
@@ -125570,10 +125608,10 @@
             "nullable": true
           },
           "email_confirmation_setting": {
-            "$ref": "#/components/schemas/RequestBody67E3765E00D7EmailConfirmationSetting"
+            "$ref": "#/components/schemas/RequestBodyE4642B3Ac7E6EmailConfirmationSetting"
           },
           "enabled_git_access_protocol": {
-            "$ref": "#/components/schemas/RequestBody67E3765E00D7EnabledGitAccessProtocol"
+            "$ref": "#/components/schemas/RequestBodyE4642B3Ac7E6EnabledGitAccessProtocol"
           },
           "gitpod_enabled": {
             "type": "boolean",
@@ -125869,7 +125907,7 @@
             "nullable": true
           },
           "repository_storages_weighted": {
-            "$ref": "#/components/schemas/RequestBody67E3765E00D7RepositoryStoragesWeighted"
+            "$ref": "#/components/schemas/RequestBodyE4642B3Ac7E6RepositoryStoragesWeighted"
           },
           "require_two_factor_authentication": {
             "type": "boolean",
@@ -126033,7 +126071,7 @@
             "nullable": true
           },
           "whats_new_variant": {
-            "$ref": "#/components/schemas/RequestBody67E3765E00D7WhatsNewVariant"
+            "$ref": "#/components/schemas/RequestBodyE4642B3Ac7E6WhatsNewVariant"
           },
           "floc_enabled": {
             "type": "boolean",
@@ -126246,10 +126284,10 @@
             "nullable": true
           },
           "resource_usage_limits": {
-            "$ref": "#/components/schemas/RequestBody67E3765E00D7ResourceUsageLimits"
+            "$ref": "#/components/schemas/RequestBodyE4642B3Ac7E6ResourceUsageLimits"
           },
           "vscode_extension_marketplace": {
-            "$ref": "#/components/schemas/RequestBody67E3765E00D7VscodeExtensionMarketplace"
+            "$ref": "#/components/schemas/RequestBodyE4642B3Ac7E6VscodeExtensionMarketplace"
           },
           "enable_language_server_restrictions": {
             "type": "boolean",
@@ -126267,28 +126305,28 @@
             "nullable": true
           },
           "logging_field_schema_version": {
-            "$ref": "#/components/schemas/RequestBody67E3765E00D7LoggingFieldSchemaVersion"
+            "$ref": "#/components/schemas/RequestBodyE4642B3Ac7E6LoggingFieldSchemaVersion"
           },
           "logging_field_dual_emit_target": {
-            "$ref": "#/components/schemas/RequestBody67E3765E00D7LoggingFieldDualEmitTarget"
+            "$ref": "#/components/schemas/RequestBodyE4642B3Ac7E6LoggingFieldDualEmitTarget"
           },
           "rsa_key_restriction": {
-            "$ref": "#/components/schemas/RequestBody67E3765E00D7RsaKeyRestriction"
+            "$ref": "#/components/schemas/RequestBodyE4642B3Ac7E6RsaKeyRestriction"
           },
           "dsa_key_restriction": {
-            "$ref": "#/components/schemas/RequestBody67E3765E00D7DsaKeyRestriction"
+            "$ref": "#/components/schemas/RequestBodyE4642B3Ac7E6DsaKeyRestriction"
           },
           "ecdsa_key_restriction": {
-            "$ref": "#/components/schemas/RequestBody67E3765E00D7EcdsaKeyRestriction"
+            "$ref": "#/components/schemas/RequestBodyE4642B3Ac7E6EcdsaKeyRestriction"
           },
           "ed25519_key_restriction": {
-            "$ref": "#/components/schemas/RequestBody67E3765E00D7Ed25519KeyRestriction"
+            "$ref": "#/components/schemas/RequestBodyE4642B3Ac7E6Ed25519KeyRestriction"
           },
           "ecdsa_sk_key_restriction": {
-            "$ref": "#/components/schemas/RequestBody67E3765E00D7EcdsaSkKeyRestriction"
+            "$ref": "#/components/schemas/RequestBodyE4642B3Ac7E6EcdsaSkKeyRestriction"
           },
           "ed25519_sk_key_restriction": {
-            "$ref": "#/components/schemas/RequestBody67E3765E00D7Ed25519SkKeyRestriction"
+            "$ref": "#/components/schemas/RequestBodyE4642B3Ac7E6Ed25519SkKeyRestriction"
           },
           "elasticsearch_aws": {
             "type": "boolean",
@@ -126600,7 +126638,7 @@
           "duo_namespace_access_rules": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBody67E3765E00D7DuoNamespaceAccessRulesItem"
+              "$ref": "#/components/schemas/RequestBodyE4642B3Ac7E6DuoNamespaceAccessRulesItem"
             },
             "description": "AI entity access rules for controlling Duo feature access",
             "nullable": true
@@ -127961,6 +127999,10 @@
             "nullable": true
           },
           "dependency_firewall_policies_per_configuration_limit": {
+            "type": "string",
+            "nullable": true
+          },
+          "policy_store_experiment_enabled": {
             "type": "string",
             "nullable": true
           },
@@ -141787,13 +141829,13 @@
           }
         }
       },
-      "RequestBody67E3765E00D7DefaultBranchProtectionDefaults": {
+      "RequestBodyE4642B3Ac7E6DefaultBranchProtectionDefaults": {
         "type": "object",
         "properties": {
           "allowed_to_push": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBody67E3765E00D7DefaultBranchProtectionDefaultsAllowedToPushItem"
+              "$ref": "#/components/schemas/RequestBodyE4642B3Ac7E6DefaultBranchProtectionDefaultsAllowedToPushItem"
             },
             "description": "An array of access levels allowed to push",
             "nullable": true
@@ -141806,7 +141848,7 @@
           "allowed_to_merge": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBody67E3765E00D7DefaultBranchProtectionDefaultsAllowedToMergeItem"
+              "$ref": "#/components/schemas/RequestBodyE4642B3Ac7E6DefaultBranchProtectionDefaultsAllowedToMergeItem"
             },
             "description": "An array of access levels allowed to merge",
             "nullable": true
@@ -141825,7 +141867,7 @@
         "description": "Determine if developers can push to default branch",
         "nullable": true
       },
-      "RequestBody67E3765E00D7DependencyManagementSettings": {
+      "RequestBodyE4642B3Ac7E6DependencyManagementSettings": {
         "type": "object",
         "properties": {
           "security_update_scheduler_max_concurrency": {
@@ -141837,7 +141879,7 @@
         "description": "Dependency management settings",
         "nullable": true
       },
-      "RequestBody67E3765E00D7RepositoryStoragesWeighted": {
+      "RequestBodyE4642B3Ac7E6RepositoryStoragesWeighted": {
         "type": "object",
         "additionalProperties": {
           "type": "integer"
@@ -141845,12 +141887,12 @@
         "description": "Storage paths for new projects with a weighted value ranging from 0 to 100",
         "nullable": true
       },
-      "RequestBody67E3765E00D7ResourceUsageLimits": {
+      "RequestBodyE4642B3Ac7E6ResourceUsageLimits": {
         "type": "object",
         "description": "Definition for resource usage limits enforced in Sidekiq workers",
         "nullable": true
       },
-      "RequestBody67E3765E00D7VscodeExtensionMarketplace": {
+      "RequestBodyE4642B3Ac7E6VscodeExtensionMarketplace": {
         "type": "object",
         "properties": {
           "enabled": {
@@ -141864,20 +141906,20 @@
             "nullable": true
           },
           "custom_values": {
-            "$ref": "#/components/schemas/RequestBody67E3765E00D7VscodeExtensionMarketplaceCustomValues"
+            "$ref": "#/components/schemas/RequestBodyE4642B3Ac7E6VscodeExtensionMarketplaceCustomValues"
           }
         },
         "description": "Settings for VS Code Extension Marketplace",
         "nullable": true
       },
-      "RequestBody67E3765E00D7DuoNamespaceAccessRulesItem": {
+      "RequestBodyE4642B3Ac7E6DuoNamespaceAccessRulesItem": {
         "required": [
           "features"
         ],
         "type": "object",
         "properties": {
           "through_namespace": {
-            "$ref": "#/components/schemas/RequestBody67E3765E00D7DuoNamespaceAccessRulesItemThroughNamespace"
+            "$ref": "#/components/schemas/RequestBodyE4642B3Ac7E6DuoNamespaceAccessRulesItemThroughNamespace"
           },
           "features": {
             "type": "array",
@@ -145172,34 +145214,34 @@
         "description": "Data for rendering the vulnerabilities by severity count in PDF reports",
         "nullable": true
       },
-      "RequestBody67E3765E00D7DefaultBranchProtectionDefaultsAllowedToPushItem": {
+      "RequestBodyE4642B3Ac7E6DefaultBranchProtectionDefaultsAllowedToPushItem": {
         "required": [
           "access_level"
         ],
         "type": "object",
         "properties": {
           "access_level": {
-            "$ref": "#/components/schemas/RequestBody67E3765E00D7DefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyE4642B3Ac7E6DefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel"
           }
         }
       },
-      "RequestBody67E3765E00D7DefaultBranchProtectionDefaultsAllowedToMergeItem": {
+      "RequestBodyE4642B3Ac7E6DefaultBranchProtectionDefaultsAllowedToMergeItem": {
         "required": [
           "access_level"
         ],
         "type": "object",
         "properties": {
           "access_level": {
-            "$ref": "#/components/schemas/RequestBody67E3765E00D7DefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyE4642B3Ac7E6DefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel"
           }
         }
       },
-      "RequestBody67E3765E00D7VscodeExtensionMarketplaceCustomValues": {
+      "RequestBodyE4642B3Ac7E6VscodeExtensionMarketplaceCustomValues": {
         "type": "object",
         "description": "VS Code Extension Marketplace URL\u0027s when preset is \u0027custom\u0027",
         "nullable": true
       },
-      "RequestBody67E3765E00D7DuoNamespaceAccessRulesItemThroughNamespace": {
+      "RequestBodyE4642B3Ac7E6DuoNamespaceAccessRulesItemThroughNamespace": {
         "required": [
           "id"
         ],
@@ -150173,7 +150215,7 @@
           ]
         }
       },
-      "RequestBody67E3765E00D7DefaultProjectCreation": {
+      "RequestBodyE4642B3Ac7E6DefaultProjectCreation": {
         "enum": [
           0,
           3,
@@ -150186,7 +150228,7 @@
         "description": "Determine if developers can create projects in the group",
         "nullable": true
       },
-      "RequestBody67E3765E00D7DefaultBranchProtection": {
+      "RequestBodyE4642B3Ac7E6DefaultBranchProtection": {
         "enum": [
           0,
           3,
@@ -150199,7 +150241,7 @@
         "description": "Determine if developers can push to default branch",
         "nullable": true
       },
-      "RequestBody67E3765E00D7DefaultGroupVisibility": {
+      "RequestBodyE4642B3Ac7E6DefaultGroupVisibility": {
         "enum": [
           "private",
           "internal",
@@ -150210,7 +150252,7 @@
         "description": "The default group visibility",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody67E3765E00D7DefaultGroupVisibility",
+          "name": "RequestBodyE4642B3Ac7E6DefaultGroupVisibility",
           "modelAsString": false,
           "values": [
             {
@@ -150228,7 +150270,7 @@
           ]
         }
       },
-      "RequestBody67E3765E00D7DefaultProjectVisibility": {
+      "RequestBodyE4642B3Ac7E6DefaultProjectVisibility": {
         "enum": [
           "private",
           "internal",
@@ -150239,7 +150281,7 @@
         "description": "The default project visibility",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody67E3765E00D7DefaultProjectVisibility",
+          "name": "RequestBodyE4642B3Ac7E6DefaultProjectVisibility",
           "modelAsString": false,
           "values": [
             {
@@ -150257,7 +150299,7 @@
           ]
         }
       },
-      "RequestBody67E3765E00D7DefaultSnippetVisibility": {
+      "RequestBodyE4642B3Ac7E6DefaultSnippetVisibility": {
         "enum": [
           "private",
           "internal",
@@ -150268,7 +150310,7 @@
         "description": "The default snippet visibility",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody67E3765E00D7DefaultSnippetVisibility",
+          "name": "RequestBodyE4642B3Ac7E6DefaultSnippetVisibility",
           "modelAsString": false,
           "values": [
             {
@@ -150286,7 +150328,7 @@
           ]
         }
       },
-      "RequestBody67E3765E00D7EmailConfirmationSetting": {
+      "RequestBodyE4642B3Ac7E6EmailConfirmationSetting": {
         "enum": [
           "off",
           "soft",
@@ -150297,7 +150339,7 @@
         "description": "\u0022Email confirmation setting, possible values: \u0060off\u0060, \u0060soft\u0060, and \u0060hard\u0060\u0022",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody67E3765E00D7EmailConfirmationSetting",
+          "name": "RequestBodyE4642B3Ac7E6EmailConfirmationSetting",
           "modelAsString": false,
           "values": [
             {
@@ -150315,7 +150357,7 @@
           ]
         }
       },
-      "RequestBody67E3765E00D7EnabledGitAccessProtocol": {
+      "RequestBodyE4642B3Ac7E6EnabledGitAccessProtocol": {
         "enum": [
           "ssh",
           "http",
@@ -150326,7 +150368,7 @@
         "description": "Allow only the selected protocols to be used for Git access.",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody67E3765E00D7EnabledGitAccessProtocol",
+          "name": "RequestBodyE4642B3Ac7E6EnabledGitAccessProtocol",
           "modelAsString": false,
           "values": [
             {
@@ -150344,7 +150386,7 @@
           ]
         }
       },
-      "RequestBody67E3765E00D7WhatsNewVariant": {
+      "RequestBodyE4642B3Ac7E6WhatsNewVariant": {
         "enum": [
           "all_tiers",
           "current_tier",
@@ -150355,7 +150397,7 @@
         "description": "\u0022What\u0027s new variant, possible values: \u0060all_tiers\u0060, \u0060current_tier\u0060, and \u0060disabled\u0060.\u0022",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody67E3765E00D7WhatsNewVariant",
+          "name": "RequestBodyE4642B3Ac7E6WhatsNewVariant",
           "modelAsString": false,
           "values": [
             {
@@ -150373,7 +150415,7 @@
           ]
         }
       },
-      "RequestBody67E3765E00D7LoggingFieldSchemaVersion": {
+      "RequestBodyE4642B3Ac7E6LoggingFieldSchemaVersion": {
         "enum": [
           0,
           1
@@ -150383,7 +150425,7 @@
         "description": "Logging field schema version (v0, v1, \u2026). Cannot be downgraded.",
         "nullable": true
       },
-      "RequestBody67E3765E00D7LoggingFieldDualEmitTarget": {
+      "RequestBodyE4642B3Ac7E6LoggingFieldDualEmitTarget": {
         "enum": [
           1
         ],
@@ -150392,7 +150434,7 @@
         "description": "Version to dual-emit alongside schema_version. Must be strictly greater than schema_version, or omit/null to disable.",
         "nullable": true
       },
-      "RequestBody67E3765E00D7RsaKeyRestriction": {
+      "RequestBodyE4642B3Ac7E6RsaKeyRestriction": {
         "enum": [
           0,
           1024,
@@ -150406,7 +150448,7 @@
         "description": "Restrictions on the complexity of uploaded RSA keys. A value of -1 disables all RSA keys.",
         "nullable": true
       },
-      "RequestBody67E3765E00D7DsaKeyRestriction": {
+      "RequestBodyE4642B3Ac7E6DsaKeyRestriction": {
         "enum": [
           0,
           1024,
@@ -150419,7 +150461,7 @@
         "description": "Restrictions on the complexity of uploaded DSA keys. A value of -1 disables all DSA keys.",
         "nullable": true
       },
-      "RequestBody67E3765E00D7EcdsaKeyRestriction": {
+      "RequestBodyE4642B3Ac7E6EcdsaKeyRestriction": {
         "enum": [
           0,
           256,
@@ -150432,7 +150474,7 @@
         "description": "Restrictions on the complexity of uploaded ECDSA keys. A value of -1 disables all ECDSA keys.",
         "nullable": true
       },
-      "RequestBody67E3765E00D7Ed25519KeyRestriction": {
+      "RequestBodyE4642B3Ac7E6Ed25519KeyRestriction": {
         "enum": [
           0,
           256,
@@ -150443,7 +150485,7 @@
         "description": "Restrictions on the complexity of uploaded ED25519 keys. A value of -1 disables all ED25519 keys.",
         "nullable": true
       },
-      "RequestBody67E3765E00D7EcdsaSkKeyRestriction": {
+      "RequestBodyE4642B3Ac7E6EcdsaSkKeyRestriction": {
         "enum": [
           0,
           256,
@@ -150454,7 +150496,7 @@
         "description": "Restrictions on the complexity of uploaded ECDSA_SK keys. A value of -1 disables all ECDSA_SK keys.",
         "nullable": true
       },
-      "RequestBody67E3765E00D7Ed25519SkKeyRestriction": {
+      "RequestBodyE4642B3Ac7E6Ed25519SkKeyRestriction": {
         "enum": [
           0,
           256,
@@ -159543,7 +159585,7 @@
           ]
         }
       },
-      "RequestBody67E3765E00D7DefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel": {
+      "RequestBodyE4642B3Ac7E6DefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel": {
         "enum": [
           30,
           40,
@@ -159554,7 +159596,7 @@
         "additionalProperties": false,
         "description": "A valid access level"
       },
-      "RequestBody67E3765E00D7DefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel": {
+      "RequestBodyE4642B3Ac7E6DefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel": {
         "enum": [
           30,
           40,

@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues
     public partial class QueuesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.admin.sidekiq.queues.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The Sidekiq queue name</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item.WithQueueNameItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item.WithQueueNameItemRequestBuilder this[string position]
         {

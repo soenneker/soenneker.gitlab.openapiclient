@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Debian.Pool
     public partial class PoolRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.packages.debian.pool.item collection</summary>
-        /// <param name="position">The Debian Codename or Suite</param>
+        /// <param name="position">The Debian distribution name</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Debian.Pool.Item.WithDistributionItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Debian.Pool.Item.WithDistributionItemRequestBuilder this[string position]
         {

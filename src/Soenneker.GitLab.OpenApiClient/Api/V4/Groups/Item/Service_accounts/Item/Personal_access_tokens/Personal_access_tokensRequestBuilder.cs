@@ -19,9 +19,9 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Service_accounts.Ite
     public partial class Personal_access_tokensRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.service_accounts.item.personal_access_tokens.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The ID of the personal access token</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Service_accounts.Item.Personal_access_tokens.Item.WithTokenItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Service_accounts.Item.Personal_access_tokens.Item.WithTokenItemRequestBuilder this[string position]
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Service_accounts.Item.Personal_access_tokens.Item.WithTokenItemRequestBuilder this[int position]
         {
             get
             {

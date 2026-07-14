@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Resour
         {
         }
         /// <summary>
-        /// Gets a list of all milestone events for a single Issue
+        /// Lists all milestone events for a specified issue.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesResourceMilestoneEvent"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Resour
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesResourceMilestoneEvent>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesResourceMilestoneEvent.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Gets a list of all milestone events for a single Issue
+        /// Lists all milestone events for a specified issue.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -93,7 +93,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Resour
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Resource_milestone_events.Resource_milestone_eventsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Gets a list of all milestone events for a single Issue
+        /// Lists all milestone events for a specified issue.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Resource_milestone_eventsRequestBuilderGetQueryParameters 

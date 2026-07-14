@@ -19,9 +19,9 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Ssh_keys
     public partial class Ssh_keysRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.manage.ssh_keys.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The ID of the SSH key</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Ssh_keys.Item.WithKeyItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Ssh_keys.Item.WithKeyItemRequestBuilder this[string position]
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Ssh_keys.Item.WithKeyItemRequestBuilder this[int position]
         {
             get
             {

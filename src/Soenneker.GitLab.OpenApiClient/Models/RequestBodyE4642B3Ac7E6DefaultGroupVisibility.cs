@@ -3,21 +3,21 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>Allow only the selected protocols to be used for Git access.</summary>
+    /// <summary>The default group visibility</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBody67E3765E00D7EnabledGitAccessProtocol
+    public enum RequestBodyE4642B3Ac7E6DefaultGroupVisibility
     {
-        [EnumMember(Value = "ssh")]
+        [EnumMember(Value = "private")]
         #pragma warning disable CS1591
-        Ssh,
+        PrivateValue,
         #pragma warning restore CS1591
-        [EnumMember(Value = "http")]
+        [EnumMember(Value = "internal")]
         #pragma warning disable CS1591
-        Http,
+        InternalValue,
         #pragma warning restore CS1591
-        [EnumMember(Value = "all")]
+        [EnumMember(Value = "public")]
         #pragma warning disable CS1591
-        All,
+        PublicValue,
         #pragma warning restore CS1591
     }
 }
