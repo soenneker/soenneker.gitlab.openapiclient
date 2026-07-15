@@ -5,7 +5,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>Allowed to create subgroups</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBody2B200D12Bc21SubgroupCreationLevel
+    public enum RequestBody2D428C28B365SubgroupCreationLevel
     {
         [EnumMember(Value = "owner")]
         #pragma warning disable CS1591

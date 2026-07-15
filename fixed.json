@@ -9221,7 +9221,8 @@
         "tags": [
           "Push rules"
         ],
-        "summary": "Update an existing project push rule",
+        "summary": "Update push rules of a project",
+        "description": "Updates the push rules for a specified project.",
         "operationId": "PutApiV4ProjectsIdPushRule",
         "parameters": [
           {
@@ -9335,7 +9336,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyA7A890622Ef9"
+                "$ref": "#/components/schemas/RequestBodyDe9Fcc78C876"
               }
             }
           }
@@ -28629,7 +28630,8 @@
         "tags": [
           "Discussions"
         ],
-        "summary": "Get a list of issue discussions",
+        "summary": "List all discussions for an issue",
+        "description": "Lists all discussions for a specified issue.",
         "operationId": "GetApiV4ProjectsIdIssuesNoteableIdDiscussions",
         "parameters": [
           {
@@ -28690,7 +28692,8 @@
         "tags": [
           "Discussions"
         ],
-        "summary": "Create a new issue discussion",
+        "summary": "Create an issue discussion",
+        "description": "Creates a discussion for a specified issue. Replies can be added to it later.",
         "operationId": "PostApiV4ProjectsIdIssuesNoteableIdDiscussions",
         "parameters": [
           {
@@ -28740,7 +28743,8 @@
         "tags": [
           "Discussions"
         ],
-        "summary": "Get a single issue discussion",
+        "summary": "Retrieve a discussion for an issue",
+        "description": "Retrieves a specified discussion for an issue.",
         "operationId": "GetApiV4ProjectsIdIssuesNoteableIdDiscussionsDiscussionId",
         "parameters": [
           {
@@ -28788,7 +28792,8 @@
         "tags": [
           "Discussions"
         ],
-        "summary": "Resolve/unresolve an existing issue discussion",
+        "summary": "Resolve or unresolve an issue discussion",
+        "description": "Resolves or unresolves a specified issue discussion.",
         "operationId": "PutApiV4ProjectsIdIssuesNoteableIdDiscussionsDiscussionId",
         "parameters": [
           {
@@ -28847,7 +28852,8 @@
         "tags": [
           "Discussions"
         ],
-        "summary": "Get comments in a single issue discussion",
+        "summary": "List comments in an issue discussion",
+        "description": "Lists the comments in a specified issue discussion.",
         "operationId": "GetApiV4ProjectsIdIssuesNoteableIdDiscussionsDiscussionIdNotes",
         "parameters": [
           {
@@ -28895,7 +28901,8 @@
         "tags": [
           "Discussions"
         ],
-        "summary": "Add a comment to a issue discussion",
+        "summary": "Add a comment to an issue discussion",
+        "description": "Adds a comment to a specified issue discussion.",
         "operationId": "PostApiV4ProjectsIdIssuesNoteableIdDiscussionsDiscussionIdNotes",
         "parameters": [
           {
@@ -28954,7 +28961,8 @@
         "tags": [
           "Discussions"
         ],
-        "summary": "Get a comment in a issue discussion",
+        "summary": "Retrieve a comment from an issue discussion",
+        "description": "Retrieves a specified comment from a issue discussion.",
         "operationId": "GetApiV4ProjectsIdIssuesNoteableIdDiscussionsDiscussionIdNotesNoteId",
         "parameters": [
           {
@@ -29011,7 +29019,8 @@
         "tags": [
           "Discussions"
         ],
-        "summary": "Edit a comment in a issue discussion",
+        "summary": "Update a comment in an issue discussion",
+        "description": "Updates or changes the status of a specified comment in a issue discussion.",
         "operationId": "PutApiV4ProjectsIdIssuesNoteableIdDiscussionsDiscussionIdNotesNoteId",
         "parameters": [
           {
@@ -29077,7 +29086,8 @@
         "tags": [
           "Discussions"
         ],
-        "summary": "Delete a comment in a issue discussion",
+        "summary": "Delete a comment from an issue discussion",
+        "description": "Deletes a specified comment from a issue discussion.",
         "operationId": "DeleteApiV4ProjectsIdIssuesNoteableIdDiscussionsDiscussionIdNotesNoteId",
         "parameters": [
           {
@@ -29136,7 +29146,8 @@
         "tags": [
           "Discussions"
         ],
-        "summary": "Get a list of snippet discussions",
+        "summary": "List all discussions for a snippet",
+        "description": "Lists all discussions for a specified snippet.",
         "operationId": "GetApiV4ProjectsIdSnippetsNoteableIdDiscussions",
         "parameters": [
           {
@@ -29197,7 +29208,8 @@
         "tags": [
           "Discussions"
         ],
-        "summary": "Create a new snippet discussion",
+        "summary": "Create a snippet discussion",
+        "description": "Creates a discussion for a specified snippet. Replies can be added to it later.",
         "operationId": "PostApiV4ProjectsIdSnippetsNoteableIdDiscussions",
         "parameters": [
           {
@@ -29247,7 +29259,8 @@
         "tags": [
           "Discussions"
         ],
-        "summary": "Get a single snippet discussion",
+        "summary": "Retrieve a discussion for a snippet",
+        "description": "Retrieves a specified discussion for a snippet.",
         "operationId": "GetApiV4ProjectsIdSnippetsNoteableIdDiscussionsDiscussionId",
         "parameters": [
           {
@@ -29297,7 +29310,8 @@
         "tags": [
           "Discussions"
         ],
-        "summary": "Get comments in a single snippet discussion",
+        "summary": "List comments in a snippet discussion",
+        "description": "Lists the comments in a specified snippet discussion.",
         "operationId": "GetApiV4ProjectsIdSnippetsNoteableIdDiscussionsDiscussionIdNotes",
         "parameters": [
           {
@@ -29346,6 +29360,7 @@
           "Discussions"
         ],
         "summary": "Add a comment to a snippet discussion",
+        "description": "Adds a comment to a specified snippet discussion.",
         "operationId": "PostApiV4ProjectsIdSnippetsNoteableIdDiscussionsDiscussionIdNotes",
         "parameters": [
           {
@@ -29404,7 +29419,8 @@
         "tags": [
           "Discussions"
         ],
-        "summary": "Get a comment in a snippet discussion",
+        "summary": "Retrieve a comment from a snippet discussion",
+        "description": "Retrieves a specified comment from a snippet discussion.",
         "operationId": "GetApiV4ProjectsIdSnippetsNoteableIdDiscussionsDiscussionIdNotesNoteId",
         "parameters": [
           {
@@ -29461,7 +29477,8 @@
         "tags": [
           "Discussions"
         ],
-        "summary": "Edit a comment in a snippet discussion",
+        "summary": "Update a comment in a snippet discussion",
+        "description": "Updates or changes the status of a specified comment in a snippet discussion.",
         "operationId": "PutApiV4ProjectsIdSnippetsNoteableIdDiscussionsDiscussionIdNotesNoteId",
         "parameters": [
           {
@@ -29527,7 +29544,8 @@
         "tags": [
           "Discussions"
         ],
-        "summary": "Delete a comment in a snippet discussion",
+        "summary": "Delete a comment from a snippet discussion",
+        "description": "Deletes a specified comment from a snippet discussion.",
         "operationId": "DeleteApiV4ProjectsIdSnippetsNoteableIdDiscussionsDiscussionIdNotesNoteId",
         "parameters": [
           {
@@ -29586,7 +29604,8 @@
         "tags": [
           "Discussions"
         ],
-        "summary": "Get a list of merge request discussions",
+        "summary": "List all discussions for a merge request",
+        "description": "Lists all discussions for a specified merge request.",
         "operationId": "GetApiV4ProjectsIdMergeRequestsNoteableIdDiscussions",
         "parameters": [
           {
@@ -29647,7 +29666,8 @@
         "tags": [
           "Discussions"
         ],
-        "summary": "Create a new merge request discussion",
+        "summary": "Create a merge request discussion",
+        "description": "Creates a discussion for a specified merge request. Replies can be added to it later.",
         "operationId": "PostApiV4ProjectsIdMergeRequestsNoteableIdDiscussions",
         "parameters": [
           {
@@ -29697,7 +29717,8 @@
         "tags": [
           "Discussions"
         ],
-        "summary": "Get a single merge request discussion",
+        "summary": "Retrieve a discussion for a merge request",
+        "description": "Retrieves a specified discussion for a merge request.",
         "operationId": "GetApiV4ProjectsIdMergeRequestsNoteableIdDiscussionsDiscussionId",
         "parameters": [
           {
@@ -29745,7 +29766,8 @@
         "tags": [
           "Discussions"
         ],
-        "summary": "Resolve/unresolve an existing merge request discussion",
+        "summary": "Resolve or unresolve a merge request discussion",
+        "description": "Resolves or unresolves a specified merge request discussion.",
         "operationId": "PutApiV4ProjectsIdMergeRequestsNoteableIdDiscussionsDiscussionId",
         "parameters": [
           {
@@ -29804,7 +29826,8 @@
         "tags": [
           "Discussions"
         ],
-        "summary": "Get comments in a single merge request discussion",
+        "summary": "List comments in a merge request discussion",
+        "description": "Lists the comments in a specified merge request discussion.",
         "operationId": "GetApiV4ProjectsIdMergeRequestsNoteableIdDiscussionsDiscussionIdNotes",
         "parameters": [
           {
@@ -29853,6 +29876,7 @@
           "Discussions"
         ],
         "summary": "Add a comment to a merge request discussion",
+        "description": "Adds a comment to a specified merge request discussion.",
         "operationId": "PostApiV4ProjectsIdMergeRequestsNoteableIdDiscussionsDiscussionIdNotes",
         "parameters": [
           {
@@ -29911,7 +29935,8 @@
         "tags": [
           "Discussions"
         ],
-        "summary": "Get a comment in a merge request discussion",
+        "summary": "Retrieve a comment from a merge request discussion",
+        "description": "Retrieves a specified comment from a merge request discussion.",
         "operationId": "GetApiV4ProjectsIdMergeRequestsNoteableIdDiscussionsDiscussionIdNotesNoteId",
         "parameters": [
           {
@@ -29968,7 +29993,8 @@
         "tags": [
           "Discussions"
         ],
-        "summary": "Edit a comment in a merge request discussion",
+        "summary": "Update a comment in a merge request discussion",
+        "description": "Updates or changes the status of a specified comment in a merge request discussion.",
         "operationId": "PutApiV4ProjectsIdMergeRequestsNoteableIdDiscussionsDiscussionIdNotesNoteId",
         "parameters": [
           {
@@ -30034,7 +30060,8 @@
         "tags": [
           "Discussions"
         ],
-        "summary": "Delete a comment in a merge request discussion",
+        "summary": "Delete a comment from a merge request discussion",
+        "description": "Deletes a specified comment from a merge request discussion.",
         "operationId": "DeleteApiV4ProjectsIdMergeRequestsNoteableIdDiscussionsDiscussionIdNotesNoteId",
         "parameters": [
           {
@@ -30093,7 +30120,8 @@
         "tags": [
           "Discussions"
         ],
-        "summary": "Get a list of commit discussions",
+        "summary": "List all discussions for a commit",
+        "description": "Lists all discussions for a specified commit.",
         "operationId": "GetApiV4ProjectsIdRepositoryCommitsNoteableIdDiscussions",
         "parameters": [
           {
@@ -30154,7 +30182,8 @@
         "tags": [
           "Discussions"
         ],
-        "summary": "Create a new commit discussion",
+        "summary": "Create a commit discussion",
+        "description": "Creates a discussion for a specified commit. Replies can be added to it later.",
         "operationId": "PostApiV4ProjectsIdRepositoryCommitsNoteableIdDiscussions",
         "parameters": [
           {
@@ -30204,7 +30233,8 @@
         "tags": [
           "Discussions"
         ],
-        "summary": "Get a single commit discussion",
+        "summary": "Retrieve a discussion for a commit",
+        "description": "Retrieves a specified discussion for a commit.",
         "operationId": "GetApiV4ProjectsIdRepositoryCommitsNoteableIdDiscussionsDiscussionId",
         "parameters": [
           {
@@ -30254,7 +30284,8 @@
         "tags": [
           "Discussions"
         ],
-        "summary": "Get comments in a single commit discussion",
+        "summary": "List comments in a commit discussion",
+        "description": "Lists the comments in a specified commit discussion.",
         "operationId": "GetApiV4ProjectsIdRepositoryCommitsNoteableIdDiscussionsDiscussionIdNotes",
         "parameters": [
           {
@@ -30303,6 +30334,7 @@
           "Discussions"
         ],
         "summary": "Add a comment to a commit discussion",
+        "description": "Adds a comment to a specified commit discussion.",
         "operationId": "PostApiV4ProjectsIdRepositoryCommitsNoteableIdDiscussionsDiscussionIdNotes",
         "parameters": [
           {
@@ -30361,7 +30393,8 @@
         "tags": [
           "Discussions"
         ],
-        "summary": "Get a comment in a commit discussion",
+        "summary": "Retrieve a comment from a commit discussion",
+        "description": "Retrieves a specified comment from a commit discussion.",
         "operationId": "GetApiV4ProjectsIdRepositoryCommitsNoteableIdDiscussionsDiscussionIdNotesNoteId",
         "parameters": [
           {
@@ -30418,7 +30451,8 @@
         "tags": [
           "Discussions"
         ],
-        "summary": "Edit a comment in a commit discussion",
+        "summary": "Update a comment in a commit discussion",
+        "description": "Updates or changes the status of a specified comment in a commit discussion.",
         "operationId": "PutApiV4ProjectsIdRepositoryCommitsNoteableIdDiscussionsDiscussionIdNotesNoteId",
         "parameters": [
           {
@@ -30484,7 +30518,8 @@
         "tags": [
           "Discussions"
         ],
-        "summary": "Delete a comment in a commit discussion",
+        "summary": "Delete a comment from a commit discussion",
+        "description": "Deletes a specified comment from a commit discussion.",
         "operationId": "DeleteApiV4ProjectsIdRepositoryCommitsNoteableIdDiscussionsDiscussionIdNotesNoteId",
         "parameters": [
           {
@@ -30543,7 +30578,8 @@
         "tags": [
           "Discussions"
         ],
-        "summary": "Get a list of epic discussions",
+        "summary": "List all discussions for an epic",
+        "description": "Lists all discussions for a specified epic.",
         "operationId": "GetApiV4GroupsIdEpicsNoteableIdDiscussions",
         "parameters": [
           {
@@ -30604,7 +30640,8 @@
         "tags": [
           "Discussions"
         ],
-        "summary": "Create a new epic discussion",
+        "summary": "Create an epic discussion",
+        "description": "Creates a discussion for a specified epic. Replies can be added to it later.",
         "operationId": "PostApiV4GroupsIdEpicsNoteableIdDiscussions",
         "parameters": [
           {
@@ -30654,7 +30691,8 @@
         "tags": [
           "Discussions"
         ],
-        "summary": "Get a single epic discussion",
+        "summary": "Retrieve a discussion for an epic",
+        "description": "Retrieves a specified discussion for an epic.",
         "operationId": "GetApiV4GroupsIdEpicsNoteableIdDiscussionsDiscussionId",
         "parameters": [
           {
@@ -30702,7 +30740,8 @@
         "tags": [
           "Discussions"
         ],
-        "summary": "Resolve/unresolve an existing epic discussion",
+        "summary": "Resolve or unresolve an epic discussion",
+        "description": "Resolves or unresolves a specified epic discussion.",
         "operationId": "PutApiV4GroupsIdEpicsNoteableIdDiscussionsDiscussionId",
         "parameters": [
           {
@@ -30761,7 +30800,8 @@
         "tags": [
           "Discussions"
         ],
-        "summary": "Get comments in a single epic discussion",
+        "summary": "List comments in an epic discussion",
+        "description": "Lists the comments in a specified epic discussion.",
         "operationId": "GetApiV4GroupsIdEpicsNoteableIdDiscussionsDiscussionIdNotes",
         "parameters": [
           {
@@ -30809,7 +30849,8 @@
         "tags": [
           "Discussions"
         ],
-        "summary": "Add a comment to a epic discussion",
+        "summary": "Add a comment to an epic discussion",
+        "description": "Adds a comment to a specified epic discussion.",
         "operationId": "PostApiV4GroupsIdEpicsNoteableIdDiscussionsDiscussionIdNotes",
         "parameters": [
           {
@@ -30868,7 +30909,8 @@
         "tags": [
           "Discussions"
         ],
-        "summary": "Get a comment in a epic discussion",
+        "summary": "Retrieve a comment from an epic discussion",
+        "description": "Retrieves a specified comment from a epic discussion.",
         "operationId": "GetApiV4GroupsIdEpicsNoteableIdDiscussionsDiscussionIdNotesNoteId",
         "parameters": [
           {
@@ -30925,7 +30967,8 @@
         "tags": [
           "Discussions"
         ],
-        "summary": "Edit a comment in a epic discussion",
+        "summary": "Update a comment in an epic discussion",
+        "description": "Updates or changes the status of a specified comment in a epic discussion.",
         "operationId": "PutApiV4GroupsIdEpicsNoteableIdDiscussionsDiscussionIdNotesNoteId",
         "parameters": [
           {
@@ -30991,7 +31034,8 @@
         "tags": [
           "Discussions"
         ],
-        "summary": "Delete a comment in a epic discussion",
+        "summary": "Delete a comment from an epic discussion",
+        "description": "Deletes a specified comment from a epic discussion.",
         "operationId": "DeleteApiV4GroupsIdEpicsNoteableIdDiscussionsDiscussionIdNotesNoteId",
         "parameters": [
           {
@@ -34095,7 +34139,8 @@
         "tags": [
           "Tags"
         ],
-        "summary": "Get a project repository tags",
+        "summary": "List all project repository tags",
+        "description": "Lists all repository tags from a project, sorted by update date and time in descending order.",
         "operationId": "GetApiV4ProjectsIdRepositoryTags",
         "parameters": [
           {
@@ -34189,7 +34234,8 @@
         "tags": [
           "Tags"
         ],
-        "summary": "Create a new repository tag",
+        "summary": "Create a tag",
+        "description": "Creates a tag in the repository that points to a specified reference.",
         "operationId": "PostApiV4ProjectsIdRepositoryTags",
         "parameters": [
           {
@@ -34238,7 +34284,8 @@
         "tags": [
           "Tags"
         ],
-        "summary": "Get a single repository tag",
+        "summary": "Retrieve a single repository tag",
+        "description": "Retrieves a repository tag with a specified name. This endpoint can be accessed without authentication if the repository is publicly accessible.",
         "operationId": "GetApiV4ProjectsIdRepositoryTagsTagName",
         "parameters": [
           {
@@ -34285,7 +34332,8 @@
         "tags": [
           "Tags"
         ],
-        "summary": "Delete a repository tag",
+        "summary": "Delete a tag",
+        "description": "Deletes a specified repository tag.",
         "operationId": "DeleteApiV4ProjectsIdRepositoryTagsTagName",
         "parameters": [
           {
@@ -34334,7 +34382,8 @@
         "tags": [
           "Tags"
         ],
-        "summary": "Get a tag\u0027s signature",
+        "summary": "Retrieve X.509 signature of a tag",
+        "description": "Retrieves the X.509 signature from a signed tag. Unsigned tags return a \u0060404 Not Found\u0060 response.",
         "operationId": "GetApiV4ProjectsIdRepositoryTagsTagNameSignature",
         "parameters": [
           {
@@ -34956,7 +35005,8 @@
         "tags": [
           "Submodules"
         ],
-        "summary": "Update existing submodule reference in repository",
+        "summary": "Update a submodule reference",
+        "description": "Updates a reference for a specified submodule.",
         "operationId": "PutApiV4ProjectsIdRepositorySubmodulesSubmodule",
         "parameters": [
           {
@@ -35030,8 +35080,8 @@
         "tags": [
           "Snippets"
         ],
-        "summary": "Get a snippets list for an authenticated user",
-        "description": "This feature was introduced in GitLab 8.15.",
+        "summary": "List all snippets for current user",
+        "description": "Lists all snippets for the currently authenticated user.",
         "operationId": "GetApiV4Snippets",
         "parameters": [
           {
@@ -35094,8 +35144,8 @@
         "tags": [
           "Snippets"
         ],
-        "summary": "Create new snippet",
-        "description": "This feature was introduced in GitLab 8.15.",
+        "summary": "Create a snippet",
+        "description": "Creates a snippet.",
         "operationId": "PostApiV4Snippets",
         "requestBody": {
           "content": {
@@ -35125,8 +35175,8 @@
         "tags": [
           "Snippets"
         ],
-        "summary": "List all public personal snippets current_user has access to",
-        "description": "This feature was introduced in GitLab 8.15.",
+        "summary": "List all public snippets",
+        "description": "Lists all public snippets accessible to the currently authenticated user.",
         "operationId": "GetApiV4SnippetsPublic",
         "parameters": [
           {
@@ -35191,8 +35241,8 @@
         "tags": [
           "Snippets"
         ],
-        "summary": "List all snippets current_user has access to",
-        "description": "This feature was introduced in GitLab 16.3.",
+        "summary": "List all snippets",
+        "description": "Lists all snippets available to the currently authenticated user. Users with Administrator or Auditor access levels can see all snippets (both personal and project). This feature was introduced in GitLab 16.3.",
         "operationId": "GetApiV4SnippetsAll",
         "parameters": [
           {
@@ -35266,8 +35316,8 @@
         "tags": [
           "Snippets"
         ],
-        "summary": "Get a single snippet",
-        "description": "This feature was introduced in GitLab 8.15.",
+        "summary": "Retrieve a snippet",
+        "description": "Retrieves a specified snippet.",
         "operationId": "GetApiV4SnippetsId",
         "parameters": [
           {
@@ -35297,8 +35347,8 @@
         "tags": [
           "Snippets"
         ],
-        "summary": "Update an existing snippet",
-        "description": "This feature was introduced in GitLab 8.15.",
+        "summary": "Update snippet",
+        "description": "Updates a specified snippet.",
         "operationId": "PutApiV4SnippetsId",
         "parameters": [
           {
@@ -35337,8 +35387,8 @@
         "tags": [
           "Snippets"
         ],
-        "summary": "Remove snippet",
-        "description": "This feature was introduced in GitLab 8.15.",
+        "summary": "Delete snippet",
+        "description": "Deletes a specified snippet.",
         "operationId": "DeleteApiV4SnippetsId",
         "parameters": [
           {
@@ -35370,8 +35420,8 @@
         "tags": [
           "Snippets"
         ],
-        "summary": "Get a raw snippet",
-        "description": "This feature was introduced in GitLab 8.15.",
+        "summary": "Retrieve a raw snippet",
+        "description": "Retrieves the raw contents of a specified snippet as plain text",
         "operationId": "GetApiV4SnippetsIdRaw",
         "parameters": [
           {
@@ -35403,7 +35453,8 @@
         "tags": [
           "Snippets"
         ],
-        "summary": "Get raw snippet file contents from the repository",
+        "summary": "Retrieve snippet file content",
+        "description": "Retrieves the raw file content from a snippet as plain text.",
         "operationId": "GetApiV4SnippetsIdFilesRefFilePathRaw",
         "parameters": [
           {
@@ -35453,7 +35504,8 @@
         "tags": [
           "Snippets"
         ],
-        "summary": "Get the user agent details for a snippet",
+        "summary": "Retrieve user agent details for a snippet",
+        "description": "Retrieves user agent details for a specified snippet.",
         "operationId": "GetApiV4SnippetsIdUserAgentDetail",
         "parameters": [
           {
@@ -37360,7 +37412,8 @@
         "tags": [
           "Repositories"
         ],
-        "summary": "Get a project repository tree",
+        "summary": "List all repository trees in a project",
+        "description": "Lists all repository files and directories in a specified project. This endpoint can be accessed without authentication if the repository is publicly accessible. This command provides essentially the same features as the \u0060git ls-tree\u0060 command.",
         "operationId": "GetApiV4ProjectsIdRepositoryTree",
         "parameters": [
           {
@@ -37470,7 +37523,8 @@
         "tags": [
           "Repositories"
         ],
-        "summary": "Get raw blob contents from the repository",
+        "summary": "Retrieve raw blob content",
+        "description": "Retrieves the raw file contents for a blob, by blob SHA. This endpoint can be accessed without authentication if the repository is publicly accessible.",
         "operationId": "GetApiV4ProjectsIdRepositoryBlobsShaRaw",
         "parameters": [
           {
@@ -37521,7 +37575,8 @@
         "tags": [
           "Repositories"
         ],
-        "summary": "Get a blob from the repository",
+        "summary": "Retrieve a blob from a repository",
+        "description": "Retrieves information, such as size and content, about blobs in a repository. Blob content is Base64 encoded. This endpoint can be accessed without authentication, if the repository is publicly accessible.",
         "operationId": "GetApiV4ProjectsIdRepositoryBlobsSha",
         "parameters": [
           {
@@ -37572,7 +37627,8 @@
         "tags": [
           "Repositories"
         ],
-        "summary": "Get an archive of the repository",
+        "summary": "Retrieve file archive from a repository",
+        "description": "Retrieves the file archive of a specified repository. This endpoint can be accessed without authentication if the repository is publicly accessible. For GitLab.com users, this endpoint has a rate limit threshold of 5 requests per minute.",
         "operationId": "GetApiV4ProjectsIdRepositoryArchive",
         "parameters": [
           {
@@ -37674,7 +37730,8 @@
         "tags": [
           "Repositories"
         ],
-        "summary": "Compare two branches, tags, or commits",
+        "summary": "Compare branches, tags, or commits",
+        "description": "Compares branches, tags, or commits. Retrieves the differences between two branches, tags, or commits in a specified project.",
         "operationId": "GetApiV4ProjectsIdRepositoryCompare",
         "parameters": [
           {
@@ -37765,7 +37822,8 @@
         "tags": [
           "Repositories"
         ],
-        "summary": "Get repository health",
+        "summary": "Retrieve repository health statistics",
+        "description": "Retrieves statistics related to the health of a project repository. This endpoint is rate-limited to 5 requests/hour per project when \u0060generate\u0060 is \u0060true\u0060. Available only to users with push access to the repository.",
         "operationId": "GetApiV4ProjectsIdRepositoryHealth",
         "parameters": [
           {
@@ -37815,7 +37873,8 @@
         "tags": [
           "Repositories"
         ],
-        "summary": "Get repository contributors",
+        "summary": "Retrieve contributors metrics",
+        "description": "Retrieves a list of contributors to a specified repository.",
         "operationId": "GetApiV4ProjectsIdRepositoryContributors",
         "parameters": [
           {
@@ -37904,7 +37963,8 @@
         "tags": [
           "Repositories"
         ],
-        "summary": "Get the common ancestor between commits",
+        "summary": "Retrieve a merge base",
+        "description": "Retrieves the merge base for two specified commits.",
         "operationId": "GetApiV4ProjectsIdRepositoryMergeBase",
         "parameters": [
           {
@@ -37963,8 +38023,8 @@
         "tags": [
           "Repositories"
         ],
-        "summary": "Generates a changelog section for a release and returns it",
-        "description": "This feature was introduced in GitLab 14.6",
+        "summary": "Generate changelog data",
+        "description": "Generates changelog data based on commits in a repository, without committing them to a changelog file. Works exactly like \u0060POST /projects/:id/repository/changelog\u0060, except the changelog data is not committed to any changelog file.",
         "operationId": "GetApiV4ProjectsIdRepositoryChangelog",
         "parameters": [
           {
@@ -38077,8 +38137,8 @@
         "tags": [
           "Repositories"
         ],
-        "summary": "Generates a changelog section for a release and commits it in a changelog file",
-        "description": "This feature was introduced in GitLab 13.9",
+        "summary": "Add changelog data to file",
+        "description": "Adds changelog data to file.",
         "operationId": "PostApiV4ProjectsIdRepositoryChangelog",
         "parameters": [
           {
@@ -38128,7 +38188,8 @@
         "tags": [
           "Remote mirrors"
         ],
-        "summary": "List the project\u0027s remote mirrors",
+        "summary": "List all remote mirrors for a project",
+        "description": "Lists all remote mirrors for a specified project.",
         "operationId": "GetApiV4ProjectsIdRemoteMirrors",
         "parameters": [
           {
@@ -38188,7 +38249,8 @@
         "tags": [
           "Remote mirrors"
         ],
-        "summary": "Create remote mirror for a project",
+        "summary": "Create a push mirror",
+        "description": "Creates a push mirror.",
         "operationId": "PostApiV4ProjectsIdRemoteMirrors",
         "parameters": [
           {
@@ -38237,7 +38299,8 @@
         "tags": [
           "Remote mirrors"
         ],
-        "summary": "Get a single remote mirror",
+        "summary": "Retrieve a remote mirror for a project",
+        "description": "Retrieves a specified remote mirror for a project.",
         "operationId": "GetApiV4ProjectsIdRemoteMirrorsMirrorId",
         "parameters": [
           {
@@ -38284,7 +38347,8 @@
         "tags": [
           "Remote mirrors"
         ],
-        "summary": "Update the attributes of a single remote mirror",
+        "summary": "Update a remote mirror in a project",
+        "description": "Updates the configuration or operational status of a specified remote mirror.",
         "operationId": "PutApiV4ProjectsIdRemoteMirrorsMirrorId",
         "parameters": [
           {
@@ -38340,8 +38404,8 @@
         "tags": [
           "Remote mirrors"
         ],
-        "summary": "Delete a single remote mirror",
-        "description": "This feature was introduced in GitLab 14.10",
+        "summary": "Delete a remote mirror from a project",
+        "description": "Deletes a specified remote mirror from a project.",
         "operationId": "DeleteApiV4ProjectsIdRemoteMirrorsMirrorId",
         "parameters": [
           {
@@ -38390,7 +38454,8 @@
         "tags": [
           "Remote mirrors"
         ],
-        "summary": "Triggers a push mirror operation",
+        "summary": "Force push mirror update",
+        "description": "Forces an update to a push mirror.",
         "operationId": "PostApiV4ProjectsIdRemoteMirrorsMirrorIdSync",
         "parameters": [
           {
@@ -38439,7 +38504,8 @@
         "tags": [
           "Remote mirrors"
         ],
-        "summary": "Get the public key of a single remote mirror",
+        "summary": "Retrieve a public key for a remote mirror",
+        "description": "Retrieves the public key of a specified remote mirror that uses SSH authentication.",
         "operationId": "GetApiV4ProjectsIdRemoteMirrorsMirrorIdPublicKey",
         "parameters": [
           {
@@ -43421,7 +43487,8 @@
         "tags": [
           "Snippets"
         ],
-        "summary": "Get all project snippets",
+        "summary": "List all snippets for a project",
+        "description": "Lists all snippets for a specified project.",
         "operationId": "GetApiV4ProjectsIdSnippets",
         "parameters": [
           {
@@ -43481,7 +43548,8 @@
         "tags": [
           "Snippets"
         ],
-        "summary": "Create a new project snippet",
+        "summary": "Create a project snippet",
+        "description": "Creates a project snippet. The user must have permission to create snippets.",
         "operationId": "PostApiV4ProjectsIdSnippets",
         "parameters": [
           {
@@ -43530,7 +43598,8 @@
         "tags": [
           "Snippets"
         ],
-        "summary": "Get a single project snippet",
+        "summary": "Retrieve a project snippet",
+        "description": "Retrieves a specified project snippet.",
         "operationId": "GetApiV4ProjectsIdSnippetsSnippetId",
         "parameters": [
           {
@@ -43577,7 +43646,8 @@
         "tags": [
           "Snippets"
         ],
-        "summary": "Update an existing project snippet",
+        "summary": "Update a project snippet",
+        "description": "Updates a specified project snippet. The user must have permission to modify snippets. Updates to snippets with multiple files must use the \u0060files\u0060 attribute.",
         "operationId": "PutApiV4ProjectsIdSnippetsSnippetId",
         "parameters": [
           {
@@ -43634,6 +43704,7 @@
           "Snippets"
         ],
         "summary": "Delete a project snippet",
+        "description": "Deletes a specified project snippet.",
         "operationId": "DeleteApiV4ProjectsIdSnippetsSnippetId",
         "parameters": [
           {
@@ -43682,7 +43753,8 @@
         "tags": [
           "Snippets"
         ],
-        "summary": "Get a raw project snippet",
+        "summary": "Retrieve a raw project snippet",
+        "description": "Retrieves the raw contents of a specified project snippet as plain text",
         "operationId": "GetApiV4ProjectsIdSnippetsSnippetIdRaw",
         "parameters": [
           {
@@ -43731,7 +43803,8 @@
         "tags": [
           "Snippets"
         ],
-        "summary": "Get raw project snippet file contents from the repository",
+        "summary": "Retrieve snippet repository file content",
+        "description": "Retrieves the raw file content from a snippet repository as plain text.",
         "operationId": "GetApiV4ProjectsIdSnippetsSnippetIdFilesRefFilePathRaw",
         "parameters": [
           {
@@ -43798,7 +43871,8 @@
         "tags": [
           "Snippets"
         ],
-        "summary": "Get the user agent details for a project snippet",
+        "summary": "Retrieve user agent details for a project snippet",
+        "description": "Retrieves user agent details for a specified snippet. Available only for administrators.",
         "operationId": "GetApiV4ProjectsIdSnippetsSnippetIdUserAgentDetail",
         "parameters": [
           {
@@ -61282,7 +61356,7 @@
           "Integrations"
         ],
         "summary": "List all active integrations",
-        "description": "Get a list of all active integrations.",
+        "description": "Lists all active integrations.",
         "operationId": "GetApiV4ProjectsIdServices",
         "parameters": [
           {
@@ -61323,8 +61397,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Apple App Store integration",
-        "description": "Set Apple App Store integration.",
+        "summary": "Create or update the Apple App Store integration",
+        "description": "Creates or updates the Apple App Store integration.",
         "operationId": "PutApiV4ProjectsIdServicesAppleAppStore",
         "parameters": [
           {
@@ -61374,8 +61448,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Asana integration",
-        "description": "Set Asana integration.",
+        "summary": "Create or update the Asana integration",
+        "description": "Creates or updates the Asana integration.",
         "operationId": "PutApiV4ProjectsIdServicesAsana",
         "parameters": [
           {
@@ -61425,8 +61499,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Assembla integration",
-        "description": "Set Assembla integration.",
+        "summary": "Create or update the Assembla integration",
+        "description": "Creates or updates the Assembla integration.",
         "operationId": "PutApiV4ProjectsIdServicesAssembla",
         "parameters": [
           {
@@ -61476,8 +61550,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Bamboo integration",
-        "description": "Set Bamboo integration.",
+        "summary": "Create or update the Bamboo integration",
+        "description": "Creates or updates the Bamboo integration.",
         "operationId": "PutApiV4ProjectsIdServicesBamboo",
         "parameters": [
           {
@@ -61527,8 +61601,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Bugzilla integration",
-        "description": "Set Bugzilla integration.",
+        "summary": "Create or update the Bugzilla integration",
+        "description": "Creates or updates the Bugzilla integration.",
         "operationId": "PutApiV4ProjectsIdServicesBugzilla",
         "parameters": [
           {
@@ -61578,8 +61652,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Buildkite integration",
-        "description": "Set Buildkite integration.",
+        "summary": "Create or update the Buildkite integration",
+        "description": "Creates or updates the Buildkite integration.",
         "operationId": "PutApiV4ProjectsIdServicesBuildkite",
         "parameters": [
           {
@@ -61629,8 +61703,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Campfire integration",
-        "description": "Set Campfire integration.",
+        "summary": "Create or update the Campfire integration",
+        "description": "Creates or updates the Campfire integration.",
         "operationId": "PutApiV4ProjectsIdServicesCampfire",
         "parameters": [
           {
@@ -61680,8 +61754,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Confluence integration",
-        "description": "Set Confluence integration.",
+        "summary": "Create or update the Confluence integration",
+        "description": "Creates or updates the Confluence integration.",
         "operationId": "PutApiV4ProjectsIdServicesConfluence",
         "parameters": [
           {
@@ -61731,8 +61805,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Custom Issue Tracker integration",
-        "description": "Set Custom Issue Tracker integration.",
+        "summary": "Create or update the Custom Issue Tracker integration",
+        "description": "Creates or updates the Custom Issue Tracker integration.",
         "operationId": "PutApiV4ProjectsIdServicesCustomIssueTracker",
         "parameters": [
           {
@@ -61782,8 +61856,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Datadog integration",
-        "description": "Set Datadog integration.",
+        "summary": "Create or update the Datadog integration",
+        "description": "Creates or updates the Datadog integration.",
         "operationId": "PutApiV4ProjectsIdServicesDatadog",
         "parameters": [
           {
@@ -61833,8 +61907,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Diffblue Cover integration",
-        "description": "Set Diffblue Cover integration.",
+        "summary": "Create or update the Diffblue Cover integration",
+        "description": "Creates or updates the Diffblue Cover integration.",
         "operationId": "PutApiV4ProjectsIdServicesDiffblueCover",
         "parameters": [
           {
@@ -61884,8 +61958,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Discord integration",
-        "description": "Set Discord integration.",
+        "summary": "Create or update the Discord integration",
+        "description": "Creates or updates the Discord integration.",
         "operationId": "PutApiV4ProjectsIdServicesDiscord",
         "parameters": [
           {
@@ -61935,8 +62009,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Drone Ci integration",
-        "description": "Set Drone Ci integration.",
+        "summary": "Create or update the Drone Ci integration",
+        "description": "Creates or updates the Drone Ci integration.",
         "operationId": "PutApiV4ProjectsIdServicesDroneCi",
         "parameters": [
           {
@@ -61986,8 +62060,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Emails On Push integration",
-        "description": "Set Emails On Push integration.",
+        "summary": "Create or update the Emails On Push integration",
+        "description": "Creates or updates the Emails On Push integration.",
         "operationId": "PutApiV4ProjectsIdServicesEmailsOnPush",
         "parameters": [
           {
@@ -62037,8 +62111,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit External Wiki integration",
-        "description": "Set External Wiki integration.",
+        "summary": "Create or update the External Wiki integration",
+        "description": "Creates or updates the External Wiki integration.",
         "operationId": "PutApiV4ProjectsIdServicesExternalWiki",
         "parameters": [
           {
@@ -62088,8 +62162,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Gitlab Slack Application integration",
-        "description": "Set Gitlab Slack Application integration.",
+        "summary": "Create or update the Gitlab Slack Application integration",
+        "description": "Creates or updates the Gitlab Slack Application integration.",
         "operationId": "PutApiV4ProjectsIdServicesGitlabSlackApplication",
         "parameters": [
           {
@@ -62139,8 +62213,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Google Play integration",
-        "description": "Set Google Play integration.",
+        "summary": "Create or update the Google Play integration",
+        "description": "Creates or updates the Google Play integration.",
         "operationId": "PutApiV4ProjectsIdServicesGooglePlay",
         "parameters": [
           {
@@ -62190,8 +62264,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Hangouts Chat integration",
-        "description": "Set Hangouts Chat integration.",
+        "summary": "Create or update the Hangouts Chat integration",
+        "description": "Creates or updates the Hangouts Chat integration.",
         "operationId": "PutApiV4ProjectsIdServicesHangoutsChat",
         "parameters": [
           {
@@ -62241,8 +62315,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Harbor integration",
-        "description": "Set Harbor integration.",
+        "summary": "Create or update the Harbor integration",
+        "description": "Creates or updates the Harbor integration.",
         "operationId": "PutApiV4ProjectsIdServicesHarbor",
         "parameters": [
           {
@@ -62292,8 +62366,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Irker integration",
-        "description": "Set Irker integration.",
+        "summary": "Create or update the Irker integration",
+        "description": "Creates or updates the Irker integration.",
         "operationId": "PutApiV4ProjectsIdServicesIrker",
         "parameters": [
           {
@@ -62343,8 +62417,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Jenkins integration",
-        "description": "Set Jenkins integration.",
+        "summary": "Create or update the Jenkins integration",
+        "description": "Creates or updates the Jenkins integration.",
         "operationId": "PutApiV4ProjectsIdServicesJenkins",
         "parameters": [
           {
@@ -62394,8 +62468,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Jira integration",
-        "description": "Set Jira integration.",
+        "summary": "Create or update the Jira integration",
+        "description": "Creates or updates the Jira integration.",
         "operationId": "PutApiV4ProjectsIdServicesJira",
         "parameters": [
           {
@@ -62445,8 +62519,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Jira Cloud App integration",
-        "description": "Set Jira Cloud App integration.",
+        "summary": "Create or update the Jira Cloud App integration",
+        "description": "Creates or updates the Jira Cloud App integration.",
         "operationId": "PutApiV4ProjectsIdServicesJiraCloudApp",
         "parameters": [
           {
@@ -62496,8 +62570,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Linear integration",
-        "description": "Set Linear integration.",
+        "summary": "Create or update the Linear integration",
+        "description": "Creates or updates the Linear integration.",
         "operationId": "PutApiV4ProjectsIdServicesLinear",
         "parameters": [
           {
@@ -62547,8 +62621,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Matrix integration",
-        "description": "Set Matrix integration.",
+        "summary": "Create or update the Matrix integration",
+        "description": "Creates or updates the Matrix integration.",
         "operationId": "PutApiV4ProjectsIdServicesMatrix",
         "parameters": [
           {
@@ -62598,8 +62672,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Mattermost Slash Commands integration",
-        "description": "Set Mattermost Slash Commands integration.",
+        "summary": "Create or update the Mattermost Slash Commands integration",
+        "description": "Creates or updates the Mattermost Slash Commands integration.",
         "operationId": "PutApiV4ProjectsIdServicesMattermostSlashCommands",
         "parameters": [
           {
@@ -62649,8 +62723,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Packagist integration",
-        "description": "Set Packagist integration.",
+        "summary": "Create or update the Packagist integration",
+        "description": "Creates or updates the Packagist integration.",
         "operationId": "PutApiV4ProjectsIdServicesPackagist",
         "parameters": [
           {
@@ -62700,8 +62774,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Phorge integration",
-        "description": "Set Phorge integration.",
+        "summary": "Create or update the Phorge integration",
+        "description": "Creates or updates the Phorge integration.",
         "operationId": "PutApiV4ProjectsIdServicesPhorge",
         "parameters": [
           {
@@ -62751,8 +62825,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Pipelines Email integration",
-        "description": "Set Pipelines Email integration.",
+        "summary": "Create or update the Pipelines Email integration",
+        "description": "Creates or updates the Pipelines Email integration.",
         "operationId": "PutApiV4ProjectsIdServicesPipelinesEmail",
         "parameters": [
           {
@@ -62802,8 +62876,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Pivotaltracker integration",
-        "description": "Set Pivotaltracker integration.",
+        "summary": "Create or update the Pivotaltracker integration",
+        "description": "Creates or updates the Pivotaltracker integration.",
         "operationId": "PutApiV4ProjectsIdServicesPivotaltracker",
         "parameters": [
           {
@@ -62853,8 +62927,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Pumble integration",
-        "description": "Set Pumble integration.",
+        "summary": "Create or update the Pumble integration",
+        "description": "Creates or updates the Pumble integration.",
         "operationId": "PutApiV4ProjectsIdServicesPumble",
         "parameters": [
           {
@@ -62904,8 +62978,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Pushover integration",
-        "description": "Set Pushover integration.",
+        "summary": "Create or update the Pushover integration",
+        "description": "Creates or updates the Pushover integration.",
         "operationId": "PutApiV4ProjectsIdServicesPushover",
         "parameters": [
           {
@@ -62955,8 +63029,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Redmine integration",
-        "description": "Set Redmine integration.",
+        "summary": "Create or update the Redmine integration",
+        "description": "Creates or updates the Redmine integration.",
         "operationId": "PutApiV4ProjectsIdServicesRedmine",
         "parameters": [
           {
@@ -63006,8 +63080,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Ewm integration",
-        "description": "Set Ewm integration.",
+        "summary": "Create or update the Ewm integration",
+        "description": "Creates or updates the Ewm integration.",
         "operationId": "PutApiV4ProjectsIdServicesEwm",
         "parameters": [
           {
@@ -63057,8 +63131,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Youtrack integration",
-        "description": "Set Youtrack integration.",
+        "summary": "Create or update the Youtrack integration",
+        "description": "Creates or updates the Youtrack integration.",
         "operationId": "PutApiV4ProjectsIdServicesYoutrack",
         "parameters": [
           {
@@ -63108,8 +63182,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Clickup integration",
-        "description": "Set Clickup integration.",
+        "summary": "Create or update the Clickup integration",
+        "description": "Creates or updates the Clickup integration.",
         "operationId": "PutApiV4ProjectsIdServicesClickup",
         "parameters": [
           {
@@ -63159,8 +63233,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Slack integration",
-        "description": "Set Slack integration.",
+        "summary": "Create or update the Slack integration",
+        "description": "Creates or updates the Slack integration.",
         "operationId": "PutApiV4ProjectsIdServicesSlack",
         "parameters": [
           {
@@ -63210,8 +63284,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Microsoft Teams integration",
-        "description": "Set Microsoft Teams integration.",
+        "summary": "Create or update the Microsoft Teams integration",
+        "description": "Creates or updates the Microsoft Teams integration.",
         "operationId": "PutApiV4ProjectsIdServicesMicrosoftTeams",
         "parameters": [
           {
@@ -63261,8 +63335,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Mattermost integration",
-        "description": "Set Mattermost integration.",
+        "summary": "Create or update the Mattermost integration",
+        "description": "Creates or updates the Mattermost integration.",
         "operationId": "PutApiV4ProjectsIdServicesMattermost",
         "parameters": [
           {
@@ -63312,8 +63386,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Teamcity integration",
-        "description": "Set Teamcity integration.",
+        "summary": "Create or update the Teamcity integration",
+        "description": "Creates or updates the Teamcity integration.",
         "operationId": "PutApiV4ProjectsIdServicesTeamcity",
         "parameters": [
           {
@@ -63363,8 +63437,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Telegram integration",
-        "description": "Set Telegram integration.",
+        "summary": "Create or update the Telegram integration",
+        "description": "Creates or updates the Telegram integration.",
         "operationId": "PutApiV4ProjectsIdServicesTelegram",
         "parameters": [
           {
@@ -63414,8 +63488,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Unify Circuit integration",
-        "description": "Set Unify Circuit integration.",
+        "summary": "Create or update the Unify Circuit integration",
+        "description": "Creates or updates the Unify Circuit integration.",
         "operationId": "PutApiV4ProjectsIdServicesUnifyCircuit",
         "parameters": [
           {
@@ -63465,8 +63539,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Webex Teams integration",
-        "description": "Set Webex Teams integration.",
+        "summary": "Create or update the Webex Teams integration",
+        "description": "Creates or updates the Webex Teams integration.",
         "operationId": "PutApiV4ProjectsIdServicesWebexTeams",
         "parameters": [
           {
@@ -63516,8 +63590,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Zentao integration",
-        "description": "Set Zentao integration.",
+        "summary": "Create or update the Zentao integration",
+        "description": "Creates or updates the Zentao integration.",
         "operationId": "PutApiV4ProjectsIdServicesZentao",
         "parameters": [
           {
@@ -63567,8 +63641,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Squash Tm integration",
-        "description": "Set Squash Tm integration.",
+        "summary": "Create or update the Squash Tm integration",
+        "description": "Creates or updates the Squash Tm integration.",
         "operationId": "PutApiV4ProjectsIdServicesSquashTm",
         "parameters": [
           {
@@ -63618,8 +63692,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Github integration",
-        "description": "Set Github integration.",
+        "summary": "Create or update the Github integration",
+        "description": "Creates or updates the Github integration.",
         "operationId": "PutApiV4ProjectsIdServicesGithub",
         "parameters": [
           {
@@ -63669,8 +63743,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Git Guardian integration",
-        "description": "Set Git Guardian integration.",
+        "summary": "Create or update the Git Guardian integration",
+        "description": "Creates or updates the Git Guardian integration.",
         "operationId": "PutApiV4ProjectsIdServicesGitGuardian",
         "parameters": [
           {
@@ -63720,8 +63794,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Google Cloud Platform Artifact Registry integration",
-        "description": "Set Google Cloud Platform Artifact Registry integration.",
+        "summary": "Create or update the Google Cloud Platform Artifact Registry integration",
+        "description": "Creates or updates the Google Cloud Platform Artifact Registry integration.",
         "operationId": "PutApiV4ProjectsIdServicesGoogleCloudPlatformArtifactRegistry",
         "parameters": [
           {
@@ -63771,8 +63845,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Google Cloud Platform Workload Identity Federation integration",
-        "description": "Set Google Cloud Platform Workload Identity Federation integration.",
+        "summary": "Create or update the Google Cloud Platform Workload Identity Federation integration",
+        "description": "Creates or updates the Google Cloud Platform Workload Identity Federation integration.",
         "operationId": "PutApiV4ProjectsIdServicesGoogleCloudPlatformWorkloadIdentityFederation",
         "parameters": [
           {
@@ -63822,8 +63896,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Mock Ci integration",
-        "description": "Set Mock Ci integration.",
+        "summary": "Create or update the Mock Ci integration",
+        "description": "Creates or updates the Mock Ci integration.",
         "operationId": "PutApiV4ProjectsIdServicesMockCi",
         "parameters": [
           {
@@ -63873,8 +63947,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Mock Monitoring integration",
-        "description": "Set Mock Monitoring integration.",
+        "summary": "Create or update the Mock Monitoring integration",
+        "description": "Creates or updates the Mock Monitoring integration.",
         "operationId": "PutApiV4ProjectsIdServicesMockMonitoring",
         "parameters": [
           {
@@ -63925,7 +63999,7 @@
           "Integrations"
         ],
         "summary": "Disable an integration",
-        "description": "Disable the integration. Integration settings are preserved.",
+        "description": "Disables a specified integration. Integration settings are preserved.",
         "operationId": "DeleteApiV4ProjectsIdServicesSlug",
         "parameters": [
           {
@@ -63973,8 +64047,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Get an integration settings",
-        "description": "Get the integration settings.",
+        "summary": "Retrieve integration settings",
+        "description": "Retrieves the settings for a specified integration.",
         "operationId": "GetApiV4ProjectsIdServicesSlug",
         "parameters": [
           {
@@ -64075,7 +64149,7 @@
           "Integrations"
         ],
         "summary": "List all active integrations",
-        "description": "Get a list of all active integrations.",
+        "description": "Lists all active integrations.",
         "operationId": "GetApiV4ProjectsIdIntegrations",
         "parameters": [
           {
@@ -64116,8 +64190,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Apple App Store integration",
-        "description": "Set Apple App Store integration.",
+        "summary": "Create or update the Apple App Store integration",
+        "description": "Creates or updates the Apple App Store integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsAppleAppStore",
         "parameters": [
           {
@@ -64167,8 +64241,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Asana integration",
-        "description": "Set Asana integration.",
+        "summary": "Create or update the Asana integration",
+        "description": "Creates or updates the Asana integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsAsana",
         "parameters": [
           {
@@ -64218,8 +64292,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Assembla integration",
-        "description": "Set Assembla integration.",
+        "summary": "Create or update the Assembla integration",
+        "description": "Creates or updates the Assembla integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsAssembla",
         "parameters": [
           {
@@ -64269,8 +64343,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Bamboo integration",
-        "description": "Set Bamboo integration.",
+        "summary": "Create or update the Bamboo integration",
+        "description": "Creates or updates the Bamboo integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsBamboo",
         "parameters": [
           {
@@ -64320,8 +64394,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Bugzilla integration",
-        "description": "Set Bugzilla integration.",
+        "summary": "Create or update the Bugzilla integration",
+        "description": "Creates or updates the Bugzilla integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsBugzilla",
         "parameters": [
           {
@@ -64371,8 +64445,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Buildkite integration",
-        "description": "Set Buildkite integration.",
+        "summary": "Create or update the Buildkite integration",
+        "description": "Creates or updates the Buildkite integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsBuildkite",
         "parameters": [
           {
@@ -64422,8 +64496,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Campfire integration",
-        "description": "Set Campfire integration.",
+        "summary": "Create or update the Campfire integration",
+        "description": "Creates or updates the Campfire integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsCampfire",
         "parameters": [
           {
@@ -64473,8 +64547,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Confluence integration",
-        "description": "Set Confluence integration.",
+        "summary": "Create or update the Confluence integration",
+        "description": "Creates or updates the Confluence integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsConfluence",
         "parameters": [
           {
@@ -64524,8 +64598,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Custom Issue Tracker integration",
-        "description": "Set Custom Issue Tracker integration.",
+        "summary": "Create or update the Custom Issue Tracker integration",
+        "description": "Creates or updates the Custom Issue Tracker integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsCustomIssueTracker",
         "parameters": [
           {
@@ -64575,8 +64649,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Datadog integration",
-        "description": "Set Datadog integration.",
+        "summary": "Create or update the Datadog integration",
+        "description": "Creates or updates the Datadog integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsDatadog",
         "parameters": [
           {
@@ -64626,8 +64700,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Diffblue Cover integration",
-        "description": "Set Diffblue Cover integration.",
+        "summary": "Create or update the Diffblue Cover integration",
+        "description": "Creates or updates the Diffblue Cover integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsDiffblueCover",
         "parameters": [
           {
@@ -64677,8 +64751,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Discord integration",
-        "description": "Set Discord integration.",
+        "summary": "Create or update the Discord integration",
+        "description": "Creates or updates the Discord integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsDiscord",
         "parameters": [
           {
@@ -64728,8 +64802,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Drone Ci integration",
-        "description": "Set Drone Ci integration.",
+        "summary": "Create or update the Drone Ci integration",
+        "description": "Creates or updates the Drone Ci integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsDroneCi",
         "parameters": [
           {
@@ -64779,8 +64853,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Emails On Push integration",
-        "description": "Set Emails On Push integration.",
+        "summary": "Create or update the Emails On Push integration",
+        "description": "Creates or updates the Emails On Push integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsEmailsOnPush",
         "parameters": [
           {
@@ -64830,8 +64904,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit External Wiki integration",
-        "description": "Set External Wiki integration.",
+        "summary": "Create or update the External Wiki integration",
+        "description": "Creates or updates the External Wiki integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsExternalWiki",
         "parameters": [
           {
@@ -64881,8 +64955,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Gitlab Slack Application integration",
-        "description": "Set Gitlab Slack Application integration.",
+        "summary": "Create or update the Gitlab Slack Application integration",
+        "description": "Creates or updates the Gitlab Slack Application integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsGitlabSlackApplication",
         "parameters": [
           {
@@ -64932,8 +65006,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Google Play integration",
-        "description": "Set Google Play integration.",
+        "summary": "Create or update the Google Play integration",
+        "description": "Creates or updates the Google Play integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsGooglePlay",
         "parameters": [
           {
@@ -64983,8 +65057,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Hangouts Chat integration",
-        "description": "Set Hangouts Chat integration.",
+        "summary": "Create or update the Hangouts Chat integration",
+        "description": "Creates or updates the Hangouts Chat integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsHangoutsChat",
         "parameters": [
           {
@@ -65034,8 +65108,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Harbor integration",
-        "description": "Set Harbor integration.",
+        "summary": "Create or update the Harbor integration",
+        "description": "Creates or updates the Harbor integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsHarbor",
         "parameters": [
           {
@@ -65085,8 +65159,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Irker integration",
-        "description": "Set Irker integration.",
+        "summary": "Create or update the Irker integration",
+        "description": "Creates or updates the Irker integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsIrker",
         "parameters": [
           {
@@ -65136,8 +65210,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Jenkins integration",
-        "description": "Set Jenkins integration.",
+        "summary": "Create or update the Jenkins integration",
+        "description": "Creates or updates the Jenkins integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsJenkins",
         "parameters": [
           {
@@ -65187,8 +65261,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Jira integration",
-        "description": "Set Jira integration.",
+        "summary": "Create or update the Jira integration",
+        "description": "Creates or updates the Jira integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsJira",
         "parameters": [
           {
@@ -65238,8 +65312,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Jira Cloud App integration",
-        "description": "Set Jira Cloud App integration.",
+        "summary": "Create or update the Jira Cloud App integration",
+        "description": "Creates or updates the Jira Cloud App integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsJiraCloudApp",
         "parameters": [
           {
@@ -65289,8 +65363,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Linear integration",
-        "description": "Set Linear integration.",
+        "summary": "Create or update the Linear integration",
+        "description": "Creates or updates the Linear integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsLinear",
         "parameters": [
           {
@@ -65340,8 +65414,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Matrix integration",
-        "description": "Set Matrix integration.",
+        "summary": "Create or update the Matrix integration",
+        "description": "Creates or updates the Matrix integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsMatrix",
         "parameters": [
           {
@@ -65391,8 +65465,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Mattermost Slash Commands integration",
-        "description": "Set Mattermost Slash Commands integration.",
+        "summary": "Create or update the Mattermost Slash Commands integration",
+        "description": "Creates or updates the Mattermost Slash Commands integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsMattermostSlashCommands",
         "parameters": [
           {
@@ -65442,8 +65516,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Packagist integration",
-        "description": "Set Packagist integration.",
+        "summary": "Create or update the Packagist integration",
+        "description": "Creates or updates the Packagist integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsPackagist",
         "parameters": [
           {
@@ -65493,8 +65567,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Phorge integration",
-        "description": "Set Phorge integration.",
+        "summary": "Create or update the Phorge integration",
+        "description": "Creates or updates the Phorge integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsPhorge",
         "parameters": [
           {
@@ -65544,8 +65618,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Pipelines Email integration",
-        "description": "Set Pipelines Email integration.",
+        "summary": "Create or update the Pipelines Email integration",
+        "description": "Creates or updates the Pipelines Email integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsPipelinesEmail",
         "parameters": [
           {
@@ -65595,8 +65669,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Pivotaltracker integration",
-        "description": "Set Pivotaltracker integration.",
+        "summary": "Create or update the Pivotaltracker integration",
+        "description": "Creates or updates the Pivotaltracker integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsPivotaltracker",
         "parameters": [
           {
@@ -65646,8 +65720,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Pumble integration",
-        "description": "Set Pumble integration.",
+        "summary": "Create or update the Pumble integration",
+        "description": "Creates or updates the Pumble integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsPumble",
         "parameters": [
           {
@@ -65697,8 +65771,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Pushover integration",
-        "description": "Set Pushover integration.",
+        "summary": "Create or update the Pushover integration",
+        "description": "Creates or updates the Pushover integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsPushover",
         "parameters": [
           {
@@ -65748,8 +65822,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Redmine integration",
-        "description": "Set Redmine integration.",
+        "summary": "Create or update the Redmine integration",
+        "description": "Creates or updates the Redmine integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsRedmine",
         "parameters": [
           {
@@ -65799,8 +65873,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Ewm integration",
-        "description": "Set Ewm integration.",
+        "summary": "Create or update the Ewm integration",
+        "description": "Creates or updates the Ewm integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsEwm",
         "parameters": [
           {
@@ -65850,8 +65924,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Youtrack integration",
-        "description": "Set Youtrack integration.",
+        "summary": "Create or update the Youtrack integration",
+        "description": "Creates or updates the Youtrack integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsYoutrack",
         "parameters": [
           {
@@ -65901,8 +65975,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Clickup integration",
-        "description": "Set Clickup integration.",
+        "summary": "Create or update the Clickup integration",
+        "description": "Creates or updates the Clickup integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsClickup",
         "parameters": [
           {
@@ -65952,8 +66026,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Slack integration",
-        "description": "Set Slack integration.",
+        "summary": "Create or update the Slack integration",
+        "description": "Creates or updates the Slack integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsSlack",
         "parameters": [
           {
@@ -66003,8 +66077,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Microsoft Teams integration",
-        "description": "Set Microsoft Teams integration.",
+        "summary": "Create or update the Microsoft Teams integration",
+        "description": "Creates or updates the Microsoft Teams integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsMicrosoftTeams",
         "parameters": [
           {
@@ -66054,8 +66128,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Mattermost integration",
-        "description": "Set Mattermost integration.",
+        "summary": "Create or update the Mattermost integration",
+        "description": "Creates or updates the Mattermost integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsMattermost",
         "parameters": [
           {
@@ -66105,8 +66179,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Teamcity integration",
-        "description": "Set Teamcity integration.",
+        "summary": "Create or update the Teamcity integration",
+        "description": "Creates or updates the Teamcity integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsTeamcity",
         "parameters": [
           {
@@ -66156,8 +66230,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Telegram integration",
-        "description": "Set Telegram integration.",
+        "summary": "Create or update the Telegram integration",
+        "description": "Creates or updates the Telegram integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsTelegram",
         "parameters": [
           {
@@ -66207,8 +66281,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Unify Circuit integration",
-        "description": "Set Unify Circuit integration.",
+        "summary": "Create or update the Unify Circuit integration",
+        "description": "Creates or updates the Unify Circuit integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsUnifyCircuit",
         "parameters": [
           {
@@ -66258,8 +66332,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Webex Teams integration",
-        "description": "Set Webex Teams integration.",
+        "summary": "Create or update the Webex Teams integration",
+        "description": "Creates or updates the Webex Teams integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsWebexTeams",
         "parameters": [
           {
@@ -66309,8 +66383,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Zentao integration",
-        "description": "Set Zentao integration.",
+        "summary": "Create or update the Zentao integration",
+        "description": "Creates or updates the Zentao integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsZentao",
         "parameters": [
           {
@@ -66360,8 +66434,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Squash Tm integration",
-        "description": "Set Squash Tm integration.",
+        "summary": "Create or update the Squash Tm integration",
+        "description": "Creates or updates the Squash Tm integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsSquashTm",
         "parameters": [
           {
@@ -66411,8 +66485,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Github integration",
-        "description": "Set Github integration.",
+        "summary": "Create or update the Github integration",
+        "description": "Creates or updates the Github integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsGithub",
         "parameters": [
           {
@@ -66462,8 +66536,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Git Guardian integration",
-        "description": "Set Git Guardian integration.",
+        "summary": "Create or update the Git Guardian integration",
+        "description": "Creates or updates the Git Guardian integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsGitGuardian",
         "parameters": [
           {
@@ -66513,8 +66587,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Google Cloud Platform Artifact Registry integration",
-        "description": "Set Google Cloud Platform Artifact Registry integration.",
+        "summary": "Create or update the Google Cloud Platform Artifact Registry integration",
+        "description": "Creates or updates the Google Cloud Platform Artifact Registry integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsGoogleCloudPlatformArtifactRegistry",
         "parameters": [
           {
@@ -66564,8 +66638,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Google Cloud Platform Workload Identity Federation integration",
-        "description": "Set Google Cloud Platform Workload Identity Federation integration.",
+        "summary": "Create or update the Google Cloud Platform Workload Identity Federation integration",
+        "description": "Creates or updates the Google Cloud Platform Workload Identity Federation integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsGoogleCloudPlatformWorkloadIdentityFederation",
         "parameters": [
           {
@@ -66615,8 +66689,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Mock Ci integration",
-        "description": "Set Mock Ci integration.",
+        "summary": "Create or update the Mock Ci integration",
+        "description": "Creates or updates the Mock Ci integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsMockCi",
         "parameters": [
           {
@@ -66666,8 +66740,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Mock Monitoring integration",
-        "description": "Set Mock Monitoring integration.",
+        "summary": "Create or update the Mock Monitoring integration",
+        "description": "Creates or updates the Mock Monitoring integration.",
         "operationId": "PutApiV4ProjectsIdIntegrationsMockMonitoring",
         "parameters": [
           {
@@ -66718,7 +66792,7 @@
           "Integrations"
         ],
         "summary": "Disable an integration",
-        "description": "Disable the integration. Integration settings are preserved.",
+        "description": "Disables a specified integration. Integration settings are preserved.",
         "operationId": "DeleteApiV4ProjectsIdIntegrationsSlug",
         "parameters": [
           {
@@ -66766,8 +66840,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Get an integration settings",
-        "description": "Get the integration settings.",
+        "summary": "Retrieve integration settings",
+        "description": "Retrieves the settings for a specified integration.",
         "operationId": "GetApiV4ProjectsIdIntegrationsSlug",
         "parameters": [
           {
@@ -66868,7 +66942,7 @@
           "Integrations"
         ],
         "summary": "List all active integrations",
-        "description": "Get a list of all active integrations.",
+        "description": "Lists all active integrations.",
         "operationId": "GetApiV4GroupsIdIntegrations",
         "parameters": [
           {
@@ -66908,8 +66982,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Apple App Store integration",
-        "description": "Set Apple App Store integration.",
+        "summary": "Create or update the Apple App Store integration",
+        "description": "Creates or updates the Apple App Store integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsAppleAppStore",
         "parameters": [
           {
@@ -66958,8 +67032,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Asana integration",
-        "description": "Set Asana integration.",
+        "summary": "Create or update the Asana integration",
+        "description": "Creates or updates the Asana integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsAsana",
         "parameters": [
           {
@@ -67008,8 +67082,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Assembla integration",
-        "description": "Set Assembla integration.",
+        "summary": "Create or update the Assembla integration",
+        "description": "Creates or updates the Assembla integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsAssembla",
         "parameters": [
           {
@@ -67058,8 +67132,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Bamboo integration",
-        "description": "Set Bamboo integration.",
+        "summary": "Create or update the Bamboo integration",
+        "description": "Creates or updates the Bamboo integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsBamboo",
         "parameters": [
           {
@@ -67108,8 +67182,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Bugzilla integration",
-        "description": "Set Bugzilla integration.",
+        "summary": "Create or update the Bugzilla integration",
+        "description": "Creates or updates the Bugzilla integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsBugzilla",
         "parameters": [
           {
@@ -67158,8 +67232,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Buildkite integration",
-        "description": "Set Buildkite integration.",
+        "summary": "Create or update the Buildkite integration",
+        "description": "Creates or updates the Buildkite integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsBuildkite",
         "parameters": [
           {
@@ -67208,8 +67282,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Campfire integration",
-        "description": "Set Campfire integration.",
+        "summary": "Create or update the Campfire integration",
+        "description": "Creates or updates the Campfire integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsCampfire",
         "parameters": [
           {
@@ -67258,8 +67332,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Confluence integration",
-        "description": "Set Confluence integration.",
+        "summary": "Create or update the Confluence integration",
+        "description": "Creates or updates the Confluence integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsConfluence",
         "parameters": [
           {
@@ -67308,8 +67382,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Custom Issue Tracker integration",
-        "description": "Set Custom Issue Tracker integration.",
+        "summary": "Create or update the Custom Issue Tracker integration",
+        "description": "Creates or updates the Custom Issue Tracker integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsCustomIssueTracker",
         "parameters": [
           {
@@ -67358,8 +67432,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Datadog integration",
-        "description": "Set Datadog integration.",
+        "summary": "Create or update the Datadog integration",
+        "description": "Creates or updates the Datadog integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsDatadog",
         "parameters": [
           {
@@ -67408,8 +67482,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Diffblue Cover integration",
-        "description": "Set Diffblue Cover integration.",
+        "summary": "Create or update the Diffblue Cover integration",
+        "description": "Creates or updates the Diffblue Cover integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsDiffblueCover",
         "parameters": [
           {
@@ -67458,8 +67532,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Discord integration",
-        "description": "Set Discord integration.",
+        "summary": "Create or update the Discord integration",
+        "description": "Creates or updates the Discord integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsDiscord",
         "parameters": [
           {
@@ -67508,8 +67582,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Drone Ci integration",
-        "description": "Set Drone Ci integration.",
+        "summary": "Create or update the Drone Ci integration",
+        "description": "Creates or updates the Drone Ci integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsDroneCi",
         "parameters": [
           {
@@ -67558,8 +67632,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Emails On Push integration",
-        "description": "Set Emails On Push integration.",
+        "summary": "Create or update the Emails On Push integration",
+        "description": "Creates or updates the Emails On Push integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsEmailsOnPush",
         "parameters": [
           {
@@ -67608,8 +67682,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit External Wiki integration",
-        "description": "Set External Wiki integration.",
+        "summary": "Create or update the External Wiki integration",
+        "description": "Creates or updates the External Wiki integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsExternalWiki",
         "parameters": [
           {
@@ -67658,8 +67732,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Gitlab Slack Application integration",
-        "description": "Set Gitlab Slack Application integration.",
+        "summary": "Create or update the Gitlab Slack Application integration",
+        "description": "Creates or updates the Gitlab Slack Application integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsGitlabSlackApplication",
         "parameters": [
           {
@@ -67708,8 +67782,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Google Play integration",
-        "description": "Set Google Play integration.",
+        "summary": "Create or update the Google Play integration",
+        "description": "Creates or updates the Google Play integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsGooglePlay",
         "parameters": [
           {
@@ -67758,8 +67832,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Hangouts Chat integration",
-        "description": "Set Hangouts Chat integration.",
+        "summary": "Create or update the Hangouts Chat integration",
+        "description": "Creates or updates the Hangouts Chat integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsHangoutsChat",
         "parameters": [
           {
@@ -67808,8 +67882,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Harbor integration",
-        "description": "Set Harbor integration.",
+        "summary": "Create or update the Harbor integration",
+        "description": "Creates or updates the Harbor integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsHarbor",
         "parameters": [
           {
@@ -67858,8 +67932,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Irker integration",
-        "description": "Set Irker integration.",
+        "summary": "Create or update the Irker integration",
+        "description": "Creates or updates the Irker integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsIrker",
         "parameters": [
           {
@@ -67908,8 +67982,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Jenkins integration",
-        "description": "Set Jenkins integration.",
+        "summary": "Create or update the Jenkins integration",
+        "description": "Creates or updates the Jenkins integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsJenkins",
         "parameters": [
           {
@@ -67958,8 +68032,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Jira integration",
-        "description": "Set Jira integration.",
+        "summary": "Create or update the Jira integration",
+        "description": "Creates or updates the Jira integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsJira",
         "parameters": [
           {
@@ -68008,8 +68082,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Jira Cloud App integration",
-        "description": "Set Jira Cloud App integration.",
+        "summary": "Create or update the Jira Cloud App integration",
+        "description": "Creates or updates the Jira Cloud App integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsJiraCloudApp",
         "parameters": [
           {
@@ -68058,8 +68132,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Linear integration",
-        "description": "Set Linear integration.",
+        "summary": "Create or update the Linear integration",
+        "description": "Creates or updates the Linear integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsLinear",
         "parameters": [
           {
@@ -68108,8 +68182,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Matrix integration",
-        "description": "Set Matrix integration.",
+        "summary": "Create or update the Matrix integration",
+        "description": "Creates or updates the Matrix integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsMatrix",
         "parameters": [
           {
@@ -68158,8 +68232,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Mattermost Slash Commands integration",
-        "description": "Set Mattermost Slash Commands integration.",
+        "summary": "Create or update the Mattermost Slash Commands integration",
+        "description": "Creates or updates the Mattermost Slash Commands integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsMattermostSlashCommands",
         "parameters": [
           {
@@ -68208,8 +68282,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Packagist integration",
-        "description": "Set Packagist integration.",
+        "summary": "Create or update the Packagist integration",
+        "description": "Creates or updates the Packagist integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsPackagist",
         "parameters": [
           {
@@ -68258,8 +68332,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Phorge integration",
-        "description": "Set Phorge integration.",
+        "summary": "Create or update the Phorge integration",
+        "description": "Creates or updates the Phorge integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsPhorge",
         "parameters": [
           {
@@ -68308,8 +68382,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Pipelines Email integration",
-        "description": "Set Pipelines Email integration.",
+        "summary": "Create or update the Pipelines Email integration",
+        "description": "Creates or updates the Pipelines Email integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsPipelinesEmail",
         "parameters": [
           {
@@ -68358,8 +68432,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Pivotaltracker integration",
-        "description": "Set Pivotaltracker integration.",
+        "summary": "Create or update the Pivotaltracker integration",
+        "description": "Creates or updates the Pivotaltracker integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsPivotaltracker",
         "parameters": [
           {
@@ -68408,8 +68482,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Pumble integration",
-        "description": "Set Pumble integration.",
+        "summary": "Create or update the Pumble integration",
+        "description": "Creates or updates the Pumble integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsPumble",
         "parameters": [
           {
@@ -68458,8 +68532,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Pushover integration",
-        "description": "Set Pushover integration.",
+        "summary": "Create or update the Pushover integration",
+        "description": "Creates or updates the Pushover integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsPushover",
         "parameters": [
           {
@@ -68508,8 +68582,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Redmine integration",
-        "description": "Set Redmine integration.",
+        "summary": "Create or update the Redmine integration",
+        "description": "Creates or updates the Redmine integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsRedmine",
         "parameters": [
           {
@@ -68558,8 +68632,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Ewm integration",
-        "description": "Set Ewm integration.",
+        "summary": "Create or update the Ewm integration",
+        "description": "Creates or updates the Ewm integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsEwm",
         "parameters": [
           {
@@ -68608,8 +68682,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Youtrack integration",
-        "description": "Set Youtrack integration.",
+        "summary": "Create or update the Youtrack integration",
+        "description": "Creates or updates the Youtrack integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsYoutrack",
         "parameters": [
           {
@@ -68658,8 +68732,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Clickup integration",
-        "description": "Set Clickup integration.",
+        "summary": "Create or update the Clickup integration",
+        "description": "Creates or updates the Clickup integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsClickup",
         "parameters": [
           {
@@ -68708,8 +68782,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Slack integration",
-        "description": "Set Slack integration.",
+        "summary": "Create or update the Slack integration",
+        "description": "Creates or updates the Slack integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsSlack",
         "parameters": [
           {
@@ -68758,8 +68832,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Microsoft Teams integration",
-        "description": "Set Microsoft Teams integration.",
+        "summary": "Create or update the Microsoft Teams integration",
+        "description": "Creates or updates the Microsoft Teams integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsMicrosoftTeams",
         "parameters": [
           {
@@ -68808,8 +68882,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Mattermost integration",
-        "description": "Set Mattermost integration.",
+        "summary": "Create or update the Mattermost integration",
+        "description": "Creates or updates the Mattermost integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsMattermost",
         "parameters": [
           {
@@ -68858,8 +68932,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Teamcity integration",
-        "description": "Set Teamcity integration.",
+        "summary": "Create or update the Teamcity integration",
+        "description": "Creates or updates the Teamcity integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsTeamcity",
         "parameters": [
           {
@@ -68908,8 +68982,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Telegram integration",
-        "description": "Set Telegram integration.",
+        "summary": "Create or update the Telegram integration",
+        "description": "Creates or updates the Telegram integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsTelegram",
         "parameters": [
           {
@@ -68958,8 +69032,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Unify Circuit integration",
-        "description": "Set Unify Circuit integration.",
+        "summary": "Create or update the Unify Circuit integration",
+        "description": "Creates or updates the Unify Circuit integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsUnifyCircuit",
         "parameters": [
           {
@@ -69008,8 +69082,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Webex Teams integration",
-        "description": "Set Webex Teams integration.",
+        "summary": "Create or update the Webex Teams integration",
+        "description": "Creates or updates the Webex Teams integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsWebexTeams",
         "parameters": [
           {
@@ -69058,8 +69132,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Zentao integration",
-        "description": "Set Zentao integration.",
+        "summary": "Create or update the Zentao integration",
+        "description": "Creates or updates the Zentao integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsZentao",
         "parameters": [
           {
@@ -69108,8 +69182,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Squash Tm integration",
-        "description": "Set Squash Tm integration.",
+        "summary": "Create or update the Squash Tm integration",
+        "description": "Creates or updates the Squash Tm integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsSquashTm",
         "parameters": [
           {
@@ -69158,8 +69232,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Github integration",
-        "description": "Set Github integration.",
+        "summary": "Create or update the Github integration",
+        "description": "Creates or updates the Github integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsGithub",
         "parameters": [
           {
@@ -69208,8 +69282,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Git Guardian integration",
-        "description": "Set Git Guardian integration.",
+        "summary": "Create or update the Git Guardian integration",
+        "description": "Creates or updates the Git Guardian integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsGitGuardian",
         "parameters": [
           {
@@ -69258,8 +69332,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Google Cloud Platform Artifact Registry integration",
-        "description": "Set Google Cloud Platform Artifact Registry integration.",
+        "summary": "Create or update the Google Cloud Platform Artifact Registry integration",
+        "description": "Creates or updates the Google Cloud Platform Artifact Registry integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsGoogleCloudPlatformArtifactRegistry",
         "parameters": [
           {
@@ -69308,8 +69382,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Google Cloud Platform Workload Identity Federation integration",
-        "description": "Set Google Cloud Platform Workload Identity Federation integration.",
+        "summary": "Create or update the Google Cloud Platform Workload Identity Federation integration",
+        "description": "Creates or updates the Google Cloud Platform Workload Identity Federation integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsGoogleCloudPlatformWorkloadIdentityFederation",
         "parameters": [
           {
@@ -69358,8 +69432,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Mock Ci integration",
-        "description": "Set Mock Ci integration.",
+        "summary": "Create or update the Mock Ci integration",
+        "description": "Creates or updates the Mock Ci integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsMockCi",
         "parameters": [
           {
@@ -69408,8 +69482,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Create/Edit Mock Monitoring integration",
-        "description": "Set Mock Monitoring integration.",
+        "summary": "Create or update the Mock Monitoring integration",
+        "description": "Creates or updates the Mock Monitoring integration.",
         "operationId": "PutApiV4GroupsIdIntegrationsMockMonitoring",
         "parameters": [
           {
@@ -69459,7 +69533,7 @@
           "Integrations"
         ],
         "summary": "Disable an integration",
-        "description": "Disable the integration. Integration settings are preserved.",
+        "description": "Disables a specified integration. Integration settings are preserved.",
         "operationId": "DeleteApiV4GroupsIdIntegrationsSlug",
         "parameters": [
           {
@@ -69506,8 +69580,8 @@
         "tags": [
           "Integrations"
         ],
-        "summary": "Get an integration settings",
-        "description": "Get the integration settings.",
+        "summary": "Retrieve integration settings",
+        "description": "Retrieves the settings for a specified integration.",
         "operationId": "GetApiV4GroupsIdIntegrationsSlug",
         "parameters": [
           {
@@ -82833,7 +82907,7 @@
         "tags": [
           "Commits"
         ],
-        "summary": "List all merge requests for a commit",
+        "summary": "List all merge requests associated with a commit",
         "description": "Lists all merge requests associated with a specified commit.",
         "operationId": "GetApiV4ProjectsIdRepositoryCommitsShaMergeRequests",
         "parameters": [
@@ -88912,7 +88986,7 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody2B200D12Bc21"
+                "$ref": "#/components/schemas/RequestBody2D428C28B365"
               }
             }
           }
@@ -122746,7 +122820,7 @@
           }
         }
       },
-      "RequestBodyA7A890622Ef9": {
+      "RequestBodyDe9Fcc78C876": {
         "type": "object",
         "properties": {
           "action": {
@@ -122787,6 +122861,11 @@
           "pull_request.base.repo.full_name": {
             "type": "string",
             "description": "Target repository",
+            "nullable": true
+          },
+          "force": {
+            "type": "boolean",
+            "description": "Reset the mirror if it is in a hard-failed state and retry the update",
             "nullable": true
           }
         }
@@ -139134,7 +139213,7 @@
           }
         }
       },
-      "RequestBody2B200D12Bc21": {
+      "RequestBody2D428C28B365": {
         "type": "object",
         "properties": {
           "name": {
@@ -139148,7 +139227,7 @@
             "nullable": true
           },
           "shared_runners_setting": {
-            "$ref": "#/components/schemas/RequestBody2B200D12Bc21SharedRunnersSetting"
+            "$ref": "#/components/schemas/RequestBody2D428C28B365SharedRunnersSetting"
           },
           "description": {
             "type": "string",
@@ -139156,7 +139235,7 @@
             "nullable": true
           },
           "visibility": {
-            "$ref": "#/components/schemas/RequestBody2B200D12Bc21Visibility"
+            "$ref": "#/components/schemas/RequestBody2D428C28B365Visibility"
           },
           "avatar": {
             "type": "string",
@@ -139180,7 +139259,7 @@
             "nullable": true
           },
           "project_creation_level": {
-            "$ref": "#/components/schemas/RequestBody2B200D12Bc21ProjectCreationLevel"
+            "$ref": "#/components/schemas/RequestBody2D428C28B365ProjectCreationLevel"
           },
           "auto_devops_enabled": {
             "type": "boolean",
@@ -139188,7 +139267,7 @@
             "nullable": true
           },
           "subgroup_creation_level": {
-            "$ref": "#/components/schemas/RequestBody2B200D12Bc21SubgroupCreationLevel"
+            "$ref": "#/components/schemas/RequestBody2D428C28B365SubgroupCreationLevel"
           },
           "emails_disabled": {
             "type": "boolean",
@@ -139227,13 +139306,13 @@
             "example": "main"
           },
           "default_branch_protection": {
-            "$ref": "#/components/schemas/RequestBody2B200D12Bc21DefaultBranchProtection"
+            "$ref": "#/components/schemas/RequestBody2D428C28B365DefaultBranchProtection"
           },
           "default_branch_protection_defaults": {
-            "$ref": "#/components/schemas/RequestBody2B200D12Bc21DefaultBranchProtectionDefaults"
+            "$ref": "#/components/schemas/RequestBody2D428C28B365DefaultBranchProtectionDefaults"
           },
           "enabled_git_access_protocol": {
-            "$ref": "#/components/schemas/RequestBody2B200D12Bc21EnabledGitAccessProtocol"
+            "$ref": "#/components/schemas/RequestBody2D428C28B365EnabledGitAccessProtocol"
           },
           "crm_enabled": {
             "type": "boolean",
@@ -139276,10 +139355,10 @@
             "nullable": true
           },
           "wiki_access_level": {
-            "$ref": "#/components/schemas/RequestBody2B200D12Bc21WikiAccessLevel"
+            "$ref": "#/components/schemas/RequestBody2D428C28B365WikiAccessLevel"
           },
           "duo_availability": {
-            "$ref": "#/components/schemas/RequestBody2B200D12Bc21DuoAvailability"
+            "$ref": "#/components/schemas/RequestBody2D428C28B365DuoAvailability"
           },
           "duo_remote_flows_availability": {
             "type": "boolean",
@@ -139307,7 +139386,7 @@
             "nullable": true
           },
           "tool_approval_for_session_availability": {
-            "$ref": "#/components/schemas/RequestBody2B200D12Bc21ToolApprovalForSessionAvailability"
+            "$ref": "#/components/schemas/RequestBody2D428C28B365ToolApprovalForSessionAvailability"
           },
           "amazon_q_auto_review_enabled": {
             "type": "boolean",
@@ -139327,13 +139406,13 @@
           "foundational_agents_statuses": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBody2B200D12Bc21FoundationalAgentsStatusesItem"
+              "$ref": "#/components/schemas/RequestBody2D428C28B365FoundationalAgentsStatusesItem"
             },
             "description": "Whether each foundational agent has been enabled or disabled.",
             "nullable": true
           },
           "ai_settings_attributes": {
-            "$ref": "#/components/schemas/RequestBody2B200D12Bc21AiSettingsAttributes"
+            "$ref": "#/components/schemas/RequestBody2D428C28B365AiSettingsAttributes"
           },
           "prevent_sharing_groups_outside_hierarchy": {
             "type": "boolean",
@@ -139436,6 +139515,16 @@
             "description": "Enable automatic reviews by GitLab Duo on merge requests",
             "nullable": true
           },
+          "ai_audit_events_storage_enabled": {
+            "type": "boolean",
+            "description": "Indicates whether AI audit events are stored for the group",
+            "nullable": true
+          },
+          "lock_ai_audit_events_storage_enabled": {
+            "type": "boolean",
+            "description": "Indicates whether AI audit events storage is enforced for all subgroups and projects",
+            "nullable": true
+          },
           "web_based_commit_signing_enabled": {
             "type": "boolean",
             "description": "Enable web based commit signing for this group",
@@ -139477,7 +139566,7 @@
           "duo_namespace_access_rules": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBody2B200D12Bc21DuoNamespaceAccessRulesItem"
+              "$ref": "#/components/schemas/RequestBody2D428C28B365DuoNamespaceAccessRulesItem"
             },
             "description": "AI entity access rules for controlling Duo feature access",
             "nullable": true
@@ -144900,13 +144989,13 @@
         "description": "AI-related settings",
         "nullable": true
       },
-      "RequestBody2B200D12Bc21DefaultBranchProtectionDefaults": {
+      "RequestBody2D428C28B365DefaultBranchProtectionDefaults": {
         "type": "object",
         "properties": {
           "allowed_to_push": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBody2B200D12Bc21DefaultBranchProtectionDefaultsAllowedToPushItem"
+              "$ref": "#/components/schemas/RequestBody2D428C28B365DefaultBranchProtectionDefaultsAllowedToPushItem"
             },
             "description": "An array of access levels allowed to push",
             "nullable": true
@@ -144919,7 +145008,7 @@
           "allowed_to_merge": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBody2B200D12Bc21DefaultBranchProtectionDefaultsAllowedToMergeItem"
+              "$ref": "#/components/schemas/RequestBody2D428C28B365DefaultBranchProtectionDefaultsAllowedToMergeItem"
             },
             "description": "An array of access levels allowed to merge",
             "nullable": true
@@ -144938,7 +145027,7 @@
         "description": "Determine if developers can push to default branch",
         "nullable": true
       },
-      "RequestBody2B200D12Bc21FoundationalAgentsStatusesItem": {
+      "RequestBody2D428C28B365FoundationalAgentsStatusesItem": {
         "required": [
           "reference",
           "enabled"
@@ -144957,7 +145046,7 @@
           }
         }
       },
-      "RequestBody2B200D12Bc21AiSettingsAttributes": {
+      "RequestBody2D428C28B365AiSettingsAttributes": {
         "type": "object",
         "properties": {
           "duo_agent_platform_enabled": {
@@ -144986,7 +145075,7 @@
             "nullable": true
           },
           "prompt_injection_protection_level": {
-            "$ref": "#/components/schemas/RequestBody2B200D12Bc21AiSettingsAttributesPromptInjectionProtectionLevel"
+            "$ref": "#/components/schemas/RequestBody2D428C28B365AiSettingsAttributesPromptInjectionProtectionLevel"
           },
           "include_recommended_allowed": {
             "type": "boolean",
@@ -145004,29 +145093,29 @@
             "nullable": true
           },
           "minimum_access_level_execute": {
-            "$ref": "#/components/schemas/RequestBody2B200D12Bc21AiSettingsAttributesMinimumAccessLevelExecute"
+            "$ref": "#/components/schemas/RequestBody2D428C28B365AiSettingsAttributesMinimumAccessLevelExecute"
           },
           "minimum_access_level_execute_async": {
-            "$ref": "#/components/schemas/RequestBody2B200D12Bc21AiSettingsAttributesMinimumAccessLevelExecuteAsync"
+            "$ref": "#/components/schemas/RequestBody2D428C28B365AiSettingsAttributesMinimumAccessLevelExecuteAsync"
           },
           "minimum_access_level_manage": {
-            "$ref": "#/components/schemas/RequestBody2B200D12Bc21AiSettingsAttributesMinimumAccessLevelManage"
+            "$ref": "#/components/schemas/RequestBody2D428C28B365AiSettingsAttributesMinimumAccessLevelManage"
           },
           "minimum_access_level_enable_on_projects": {
-            "$ref": "#/components/schemas/RequestBody2B200D12Bc21AiSettingsAttributesMinimumAccessLevelEnableOnProjects"
+            "$ref": "#/components/schemas/RequestBody2D428C28B365AiSettingsAttributesMinimumAccessLevelEnableOnProjects"
           }
         },
         "description": "AI-related settings",
         "nullable": true
       },
-      "RequestBody2B200D12Bc21DuoNamespaceAccessRulesItem": {
+      "RequestBody2D428C28B365DuoNamespaceAccessRulesItem": {
         "required": [
           "features"
         ],
         "type": "object",
         "properties": {
           "through_namespace": {
-            "$ref": "#/components/schemas/RequestBody2B200D12Bc21DuoNamespaceAccessRulesItemThroughNamespace"
+            "$ref": "#/components/schemas/RequestBody2D428C28B365DuoNamespaceAccessRulesItemThroughNamespace"
           },
           "features": {
             "type": "array",
@@ -146224,29 +146313,29 @@
           }
         }
       },
-      "RequestBody2B200D12Bc21DefaultBranchProtectionDefaultsAllowedToPushItem": {
+      "RequestBody2D428C28B365DefaultBranchProtectionDefaultsAllowedToPushItem": {
         "required": [
           "access_level"
         ],
         "type": "object",
         "properties": {
           "access_level": {
-            "$ref": "#/components/schemas/RequestBody2B200D12Bc21DefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel"
+            "$ref": "#/components/schemas/RequestBody2D428C28B365DefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel"
           }
         }
       },
-      "RequestBody2B200D12Bc21DefaultBranchProtectionDefaultsAllowedToMergeItem": {
+      "RequestBody2D428C28B365DefaultBranchProtectionDefaultsAllowedToMergeItem": {
         "required": [
           "access_level"
         ],
         "type": "object",
         "properties": {
           "access_level": {
-            "$ref": "#/components/schemas/RequestBody2B200D12Bc21DefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel"
+            "$ref": "#/components/schemas/RequestBody2D428C28B365DefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel"
           }
         }
       },
-      "RequestBody2B200D12Bc21DuoNamespaceAccessRulesItemThroughNamespace": {
+      "RequestBody2D428C28B365DuoNamespaceAccessRulesItemThroughNamespace": {
         "required": [
           "id"
         ],
@@ -155715,7 +155804,7 @@
           ]
         }
       },
-      "RequestBody2B200D12Bc21SharedRunnersSetting": {
+      "RequestBody2D428C28B365SharedRunnersSetting": {
         "enum": [
           "disabled_and_unoverridable",
           "disabled_and_overridable",
@@ -155726,7 +155815,7 @@
         "description": "Enable/disable shared runners for the group and its subgroups and projects",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2B200D12Bc21SharedRunnersSetting",
+          "name": "RequestBody2D428C28B365SharedRunnersSetting",
           "modelAsString": false,
           "values": [
             {
@@ -155744,7 +155833,7 @@
           ]
         }
       },
-      "RequestBody2B200D12Bc21Visibility": {
+      "RequestBody2D428C28B365Visibility": {
         "enum": [
           "private",
           "internal",
@@ -155755,7 +155844,7 @@
         "description": "The visibility of the group",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2B200D12Bc21Visibility",
+          "name": "RequestBody2D428C28B365Visibility",
           "modelAsString": false,
           "values": [
             {
@@ -155773,7 +155862,7 @@
           ]
         }
       },
-      "RequestBody2B200D12Bc21ProjectCreationLevel": {
+      "RequestBody2D428C28B365ProjectCreationLevel": {
         "enum": [
           "noone",
           "owner",
@@ -155786,7 +155875,7 @@
         "description": "Determine if developers can create projects in the group",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2B200D12Bc21ProjectCreationLevel",
+          "name": "RequestBody2D428C28B365ProjectCreationLevel",
           "modelAsString": false,
           "values": [
             {
@@ -155812,7 +155901,7 @@
           ]
         }
       },
-      "RequestBody2B200D12Bc21SubgroupCreationLevel": {
+      "RequestBody2D428C28B365SubgroupCreationLevel": {
         "enum": [
           "owner",
           "maintainer"
@@ -155822,7 +155911,7 @@
         "description": "Allowed to create subgroups",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2B200D12Bc21SubgroupCreationLevel",
+          "name": "RequestBody2D428C28B365SubgroupCreationLevel",
           "modelAsString": false,
           "values": [
             {
@@ -155836,7 +155925,7 @@
           ]
         }
       },
-      "RequestBody2B200D12Bc21DefaultBranchProtection": {
+      "RequestBody2D428C28B365DefaultBranchProtection": {
         "enum": [
           0,
           3,
@@ -155849,7 +155938,7 @@
         "description": "Determine if developers can push to default branch",
         "nullable": true
       },
-      "RequestBody2B200D12Bc21EnabledGitAccessProtocol": {
+      "RequestBody2D428C28B365EnabledGitAccessProtocol": {
         "enum": [
           "ssh",
           "http",
@@ -155860,7 +155949,7 @@
         "description": "Allow only the selected protocols to be used for Git access.",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2B200D12Bc21EnabledGitAccessProtocol",
+          "name": "RequestBody2D428C28B365EnabledGitAccessProtocol",
           "modelAsString": false,
           "values": [
             {
@@ -155878,7 +155967,7 @@
           ]
         }
       },
-      "RequestBody2B200D12Bc21WikiAccessLevel": {
+      "RequestBody2D428C28B365WikiAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -155889,7 +155978,7 @@
         "description": "Wiki access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2B200D12Bc21WikiAccessLevel",
+          "name": "RequestBody2D428C28B365WikiAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -155907,7 +155996,7 @@
           ]
         }
       },
-      "RequestBody2B200D12Bc21DuoAvailability": {
+      "RequestBody2D428C28B365DuoAvailability": {
         "enum": [
           "default_on",
           "default_off",
@@ -155919,7 +156008,7 @@
         "description": "Duo availability. One of \u0060default_on\u0060, \u0060default_off\u0060, \u0060never_on\u0060 or \u0060always_on\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2B200D12Bc21DuoAvailability",
+          "name": "RequestBody2D428C28B365DuoAvailability",
           "modelAsString": false,
           "values": [
             {
@@ -155941,7 +156030,7 @@
           ]
         }
       },
-      "RequestBody2B200D12Bc21ToolApprovalForSessionAvailability": {
+      "RequestBody2D428C28B365ToolApprovalForSessionAvailability": {
         "enum": [
           "default_on",
           "default_off",
@@ -155952,7 +156041,7 @@
         "description": "Tool approval for session availability. One of \u0060default_on\u0060, \u0060default_off\u0060 or \u0060never_on\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2B200D12Bc21ToolApprovalForSessionAvailability",
+          "name": "RequestBody2D428C28B365ToolApprovalForSessionAvailability",
           "modelAsString": false,
           "values": [
             {
@@ -159485,7 +159574,7 @@
         "description": "The minimum access level required to enable Duo Agent Platform. This field is behind a feature flag.",
         "nullable": true
       },
-      "RequestBody2B200D12Bc21AiSettingsAttributesPromptInjectionProtectionLevel": {
+      "RequestBody2D428C28B365AiSettingsAttributesPromptInjectionProtectionLevel": {
         "enum": [
           "no_checks",
           "log_only",
@@ -159496,7 +159585,7 @@
         "description": "Prompt injection protection level. One of \u0060no_checks\u0060, \u0060log_only\u0060 or \u0060interrupt\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2B200D12Bc21AiSettingsAttributesPromptInjectionProtectionLevel",
+          "name": "RequestBody2D428C28B365AiSettingsAttributesPromptInjectionProtectionLevel",
           "modelAsString": false,
           "values": [
             {
@@ -159514,7 +159603,7 @@
           ]
         }
       },
-      "RequestBody2B200D12Bc21AiSettingsAttributesMinimumAccessLevelExecute": {
+      "RequestBody2D428C28B365AiSettingsAttributesMinimumAccessLevelExecute": {
         "enum": [
           10,
           15,
@@ -159528,7 +159617,7 @@
         "description": "The minimum access level required to execute Duo Agent Platform. This field is behind a feature flag.",
         "nullable": true
       },
-      "RequestBody2B200D12Bc21AiSettingsAttributesMinimumAccessLevelExecuteAsync": {
+      "RequestBody2D428C28B365AiSettingsAttributesMinimumAccessLevelExecuteAsync": {
         "enum": [
           30,
           40,
@@ -159539,7 +159628,7 @@
         "description": "The minimum access level required to execute Duo Agent Platform features in CI/CD. This field is behind a feature flag.",
         "nullable": true
       },
-      "RequestBody2B200D12Bc21AiSettingsAttributesMinimumAccessLevelManage": {
+      "RequestBody2D428C28B365AiSettingsAttributesMinimumAccessLevelManage": {
         "enum": [
           30,
           40,
@@ -159550,7 +159639,7 @@
         "description": "The minimum access level required to manage Duo Agent Platform. This field is behind a feature flag.",
         "nullable": true
       },
-      "RequestBody2B200D12Bc21AiSettingsAttributesMinimumAccessLevelEnableOnProjects": {
+      "RequestBody2D428C28B365AiSettingsAttributesMinimumAccessLevelEnableOnProjects": {
         "enum": [
           30,
           40,
@@ -159629,7 +159718,7 @@
         "additionalProperties": false,
         "description": "A valid access level"
       },
-      "RequestBody2B200D12Bc21DefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel": {
+      "RequestBody2D428C28B365DefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel": {
         "enum": [
           30,
           40,
@@ -159640,7 +159729,7 @@
         "additionalProperties": false,
         "description": "A valid access level"
       },
-      "RequestBody2B200D12Bc21DefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel": {
+      "RequestBody2D428C28B365DefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel": {
         "enum": [
           30,
           40,

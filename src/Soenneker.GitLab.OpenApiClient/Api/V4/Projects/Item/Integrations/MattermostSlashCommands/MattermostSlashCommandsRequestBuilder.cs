@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Integrations.Matte
         {
         }
         /// <summary>
-        /// Set Mattermost Slash Commands integration.
+        /// Creates or updates the Mattermost Slash Commands integration.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIntegrationBasic"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Integrations.Matte
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIntegrationBasic>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIntegrationBasic.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Set Mattermost Slash Commands integration.
+        /// Creates or updates the Mattermost Slash Commands integration.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

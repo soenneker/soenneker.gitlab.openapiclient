@@ -5,7 +5,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>Prompt injection protection level. One of `no_checks`, `log_only` or `interrupt`</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBody2B200D12Bc21AiSettingsAttributesPromptInjectionProtectionLevel
+    public enum RequestBody2D428C28B365AiSettingsAttributesPromptInjectionProtectionLevel
     {
         [EnumMember(Value = "no_checks")]
         #pragma warning disable CS1591

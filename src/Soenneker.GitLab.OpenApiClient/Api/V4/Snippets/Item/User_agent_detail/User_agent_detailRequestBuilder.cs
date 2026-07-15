@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Snippets.Item.User_agent_detail
         {
         }
         /// <summary>
-        /// Get the user agent details for a snippet
+        /// Retrieves user agent details for a specified snippet.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserAgentDetail"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Snippets.Item.User_agent_detail
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserAgentDetail>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserAgentDetail.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get the user agent details for a snippet
+        /// Retrieves user agent details for a specified snippet.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

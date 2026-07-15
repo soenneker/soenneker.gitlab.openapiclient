@@ -5,7 +5,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>Determine if developers can create projects in the group</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBody2B200D12Bc21ProjectCreationLevel
+    public enum RequestBody2D428C28B365ProjectCreationLevel
     {
         [EnumMember(Value = "noone")]
         #pragma warning disable CS1591

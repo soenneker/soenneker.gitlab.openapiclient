@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Snippets.Item.Files.Item.Item.Ra
         {
         }
         /// <summary>
-        /// Get raw snippet file contents from the repository
+        /// Retrieves the raw file content from a snippet as plain text.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson192"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Snippets.Item.Files.Item.Item.Ra
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson192>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson192.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get raw snippet file contents from the repository
+        /// Retrieves the raw file content from a snippet as plain text.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

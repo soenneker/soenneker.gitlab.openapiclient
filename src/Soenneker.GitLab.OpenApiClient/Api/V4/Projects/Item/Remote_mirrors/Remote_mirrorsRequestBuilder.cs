@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Remote_mirrors
         {
         }
         /// <summary>
-        /// List the project&apos;s remote mirrors
+        /// Lists all remote mirrors for a specified project.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRemoteMirror"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Remote_mirrors
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRemoteMirror>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRemoteMirror.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Create remote mirror for a project
+        /// Creates a push mirror.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRemoteMirror"/></returns>
         /// <param name="body">The request body</param>
@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Remote_mirrors
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRemoteMirror>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRemoteMirror.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// List the project&apos;s remote mirrors
+        /// Lists all remote mirrors for a specified project.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -104,7 +104,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Remote_mirrors
             return requestInfo;
         }
         /// <summary>
-        /// Create remote mirror for a project
+        /// Creates a push mirror.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -135,7 +135,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Remote_mirrors
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Remote_mirrors.Remote_mirrorsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// List the project&apos;s remote mirrors
+        /// Lists all remote mirrors for a specified project.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Remote_mirrorsRequestBuilderGetQueryParameters 

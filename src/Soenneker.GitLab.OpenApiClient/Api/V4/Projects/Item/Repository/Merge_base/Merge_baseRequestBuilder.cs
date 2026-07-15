@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Merge_b
         {
         }
         /// <summary>
-        /// Get the common ancestor between commits
+        /// Retrieves the merge base for two specified commits.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommit"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Merge_b
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommit>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommit.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get the common ancestor between commits
+        /// Retrieves the merge base for two specified commits.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Merge_b
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Merge_base.Merge_baseRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get the common ancestor between commits
+        /// Retrieves the merge base for two specified commits.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Merge_baseRequestBuilderGetQueryParameters 

@@ -5,7 +5,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>Duo availability. One of `default_on`, `default_off`, `never_on` or `always_on`</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBody2B200D12Bc21DuoAvailability
+    public enum RequestBody2D428C28B365DuoAvailability
     {
         [EnumMember(Value = "default_on")]
         #pragma warning disable CS1591

@@ -5,7 +5,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>Tool approval for session availability. One of `default_on`, `default_off` or `never_on`</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBody2B200D12Bc21ToolApprovalForSessionAvailability
+    public enum RequestBody2D428C28B365ToolApprovalForSessionAvailability
     {
         [EnumMember(Value = "default_on")]
         #pragma warning disable CS1591

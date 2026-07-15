@@ -3,21 +3,21 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>The visibility of the group</summary>
+    /// <summary>Enable/disable shared runners for the group and its subgroups and projects</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBody2B200D12Bc21Visibility
+    public enum RequestBody2D428C28B365SharedRunnersSetting
     {
-        [EnumMember(Value = "private")]
+        [EnumMember(Value = "disabled_and_unoverridable")]
         #pragma warning disable CS1591
-        PrivateValue,
+        DisabledAndUnoverridable,
         #pragma warning restore CS1591
-        [EnumMember(Value = "internal")]
+        [EnumMember(Value = "disabled_and_overridable")]
         #pragma warning disable CS1591
-        InternalValue,
+        DisabledAndOverridable,
         #pragma warning restore CS1591
-        [EnumMember(Value = "public")]
+        [EnumMember(Value = "enabled")]
         #pragma warning disable CS1591
-        PublicValue,
+        Enabled,
         #pragma warning restore CS1591
     }
 }

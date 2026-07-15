@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Contrib
         {
         }
         /// <summary>
-        /// Get repository contributors
+        /// Retrieves a list of contributors to a specified repository.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesContributor"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Contrib
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesContributor>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesContributor.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get repository contributors
+        /// Retrieves a list of contributors to a specified repository.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Contrib
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Contributors.ContributorsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get repository contributors
+        /// Retrieves a list of contributors to a specified repository.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ContributorsRequestBuilderGetQueryParameters 

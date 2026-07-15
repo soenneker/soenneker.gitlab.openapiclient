@@ -3,21 +3,21 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>Wiki access level. One of `disabled`, `private` or `enabled`</summary>
+    /// <summary>The visibility of the group</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBody2B200D12Bc21WikiAccessLevel
+    public enum RequestBody2D428C28B365Visibility
     {
-        [EnumMember(Value = "disabled")]
-        #pragma warning disable CS1591
-        Disabled,
-        #pragma warning restore CS1591
         [EnumMember(Value = "private")]
         #pragma warning disable CS1591
         PrivateValue,
         #pragma warning restore CS1591
-        [EnumMember(Value = "enabled")]
+        [EnumMember(Value = "internal")]
         #pragma warning disable CS1591
-        Enabled,
+        InternalValue,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "public")]
+        #pragma warning disable CS1591
+        PublicValue,
         #pragma warning restore CS1591
     }
 }

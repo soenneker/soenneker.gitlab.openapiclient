@@ -11,7 +11,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     /// AI-related settings
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RequestBody2B200D12Bc21AiSettingsAttributes : IAdditionalDataHolder, IParsable
+    public partial class RequestBody2D428C28B365AiSettingsAttributes : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -40,23 +40,23 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The minimum access level required to manage Duo Agent Platform. This field is behind a feature flag.</summary>
         public int? MinimumAccessLevelManage { get; set; }
         /// <summary>Prompt injection protection level. One of `no_checks`, `log_only` or `interrupt`</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2B200D12Bc21AiSettingsAttributesPromptInjectionProtectionLevel? PromptInjectionProtectionLevel { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2D428C28B365AiSettingsAttributesPromptInjectionProtectionLevel? PromptInjectionProtectionLevel { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2B200D12Bc21AiSettingsAttributes"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2D428C28B365AiSettingsAttributes"/> and sets the default values.
         /// </summary>
-        public RequestBody2B200D12Bc21AiSettingsAttributes()
+        public RequestBody2D428C28B365AiSettingsAttributes()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2B200D12Bc21AiSettingsAttributes"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2D428C28B365AiSettingsAttributes"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2B200D12Bc21AiSettingsAttributes CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2D428C28B365AiSettingsAttributes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2B200D12Bc21AiSettingsAttributes();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2D428C28B365AiSettingsAttributes();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,7 +78,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "minimum_access_level_execute", n => { MinimumAccessLevelExecute = n.GetIntValue(); } },
                 { "minimum_access_level_execute_async", n => { MinimumAccessLevelExecuteAsync = n.GetIntValue(); } },
                 { "minimum_access_level_manage", n => { MinimumAccessLevelManage = n.GetIntValue(); } },
-                { "prompt_injection_protection_level", n => { PromptInjectionProtectionLevel = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2B200D12Bc21AiSettingsAttributesPromptInjectionProtectionLevel>(); } },
+                { "prompt_injection_protection_level", n => { PromptInjectionProtectionLevel = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2D428C28B365AiSettingsAttributesPromptInjectionProtectionLevel>(); } },
             };
         }
         /// <summary>
@@ -100,7 +100,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("minimum_access_level_execute", MinimumAccessLevelExecute);
             writer.WriteIntValue("minimum_access_level_execute_async", MinimumAccessLevelExecuteAsync);
             writer.WriteIntValue("minimum_access_level_manage", MinimumAccessLevelManage);
-            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2B200D12Bc21AiSettingsAttributesPromptInjectionProtectionLevel>("prompt_injection_protection_level", PromptInjectionProtectionLevel);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2D428C28B365AiSettingsAttributesPromptInjectionProtectionLevel>("prompt_injection_protection_level", PromptInjectionProtectionLevel);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

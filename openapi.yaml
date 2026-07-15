@@ -7324,7 +7324,8 @@ paths:
               "$ref": "#/components/schemas/RequestBody_9df7b2e0dd43"
     put:
       operationId: putApiV4ProjectsIdPushRule
-      summary: Update an existing project push rule
+      summary: Update push rules of a project
+      description: Updates the push rules for a specified project.
       tags:
       - Push rules
       responses:
@@ -7409,7 +7410,7 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/RequestBody_a7a890622ef9"
+              "$ref": "#/components/schemas/RequestBody_de9fcc78c876"
     put:
       operationId: putApiV4ProjectsIdMirrorPull
       summary: Update project pull mirroring settings
@@ -22548,7 +22549,8 @@ paths:
   "/api/v4/projects/{id}/issues/{noteable_id}/discussions":
     get:
       operationId: getApiV4ProjectsIdIssuesNoteableIdDiscussions
-      summary: Get a list of issue discussions
+      summary: List all discussions for an issue
+      description: Lists all discussions for a specified issue.
       tags:
       - Discussions
       responses:
@@ -22595,7 +22597,9 @@ paths:
         example: 20
     post:
       operationId: postApiV4ProjectsIdIssuesNoteableIdDiscussions
-      summary: Create a new issue discussion
+      summary: Create an issue discussion
+      description: Creates a discussion for a specified issue. Replies can be added
+        to it later.
       tags:
       - Discussions
       responses:
@@ -22631,7 +22635,8 @@ paths:
   "/api/v4/projects/{id}/issues/{noteable_id}/discussions/{discussion_id}":
     get:
       operationId: getApiV4ProjectsIdIssuesNoteableIdDiscussionsDiscussionId
-      summary: Get a single issue discussion
+      summary: Retrieve a discussion for an issue
+      description: Retrieves a specified discussion for an issue.
       tags:
       - Discussions
       responses:
@@ -22666,7 +22671,8 @@ paths:
         in: path
     put:
       operationId: putApiV4ProjectsIdIssuesNoteableIdDiscussionsDiscussionId
-      summary: Resolve/unresolve an existing issue discussion
+      summary: Resolve or unresolve an issue discussion
+      description: Resolves or unresolves a specified issue discussion.
       tags:
       - Discussions
       responses:
@@ -22708,7 +22714,8 @@ paths:
   "/api/v4/projects/{id}/issues/{noteable_id}/discussions/{discussion_id}/notes":
     get:
       operationId: getApiV4ProjectsIdIssuesNoteableIdDiscussionsDiscussionIdNotes
-      summary: Get comments in a single issue discussion
+      summary: List comments in an issue discussion
+      description: Lists the comments in a specified issue discussion.
       tags:
       - Discussions
       responses:
@@ -22743,7 +22750,8 @@ paths:
         in: path
     post:
       operationId: postApiV4ProjectsIdIssuesNoteableIdDiscussionsDiscussionIdNotes
-      summary: Add a comment to a issue discussion
+      summary: Add a comment to an issue discussion
+      description: Adds a comment to a specified issue discussion.
       tags:
       - Discussions
       responses:
@@ -22785,7 +22793,8 @@ paths:
   "/api/v4/projects/{id}/issues/{noteable_id}/discussions/{discussion_id}/notes/{note_id}":
     get:
       operationId: getApiV4ProjectsIdIssuesNoteableIdDiscussionsDiscussionIdNotesNoteId
-      summary: Get a comment in a issue discussion
+      summary: Retrieve a comment from an issue discussion
+      description: Retrieves a specified comment from a issue discussion.
       tags:
       - Discussions
       responses:
@@ -22826,7 +22835,9 @@ paths:
         in: path
     put:
       operationId: putApiV4ProjectsIdIssuesNoteableIdDiscussionsDiscussionIdNotesNoteId
-      summary: Edit a comment in a issue discussion
+      summary: Update a comment in an issue discussion
+      description: Updates or changes the status of a specified comment in a issue
+        discussion.
       tags:
       - Discussions
       responses:
@@ -22873,7 +22884,8 @@ paths:
               "$ref": "#/components/schemas/RequestBody_7a3958209da0"
     delete:
       operationId: deleteApiV4ProjectsIdIssuesNoteableIdDiscussionsDiscussionIdNotesNoteId
-      summary: Delete a comment in a issue discussion
+      summary: Delete a comment from an issue discussion
+      description: Deletes a specified comment from a issue discussion.
       tags:
       - Discussions
       responses:
@@ -22915,7 +22927,8 @@ paths:
   "/api/v4/projects/{id}/snippets/{noteable_id}/discussions":
     get:
       operationId: getApiV4ProjectsIdSnippetsNoteableIdDiscussions
-      summary: Get a list of snippet discussions
+      summary: List all discussions for a snippet
+      description: Lists all discussions for a specified snippet.
       tags:
       - Discussions
       responses:
@@ -22962,7 +22975,9 @@ paths:
         example: 20
     post:
       operationId: postApiV4ProjectsIdSnippetsNoteableIdDiscussions
-      summary: Create a new snippet discussion
+      summary: Create a snippet discussion
+      description: Creates a discussion for a specified snippet. Replies can be added
+        to it later.
       tags:
       - Discussions
       responses:
@@ -22998,7 +23013,8 @@ paths:
   "/api/v4/projects/{id}/snippets/{noteable_id}/discussions/{discussion_id}":
     get:
       operationId: getApiV4ProjectsIdSnippetsNoteableIdDiscussionsDiscussionId
-      summary: Get a single snippet discussion
+      summary: Retrieve a discussion for a snippet
+      description: Retrieves a specified discussion for a snippet.
       tags:
       - Discussions
       responses:
@@ -23034,7 +23050,8 @@ paths:
   "/api/v4/projects/{id}/snippets/{noteable_id}/discussions/{discussion_id}/notes":
     get:
       operationId: getApiV4ProjectsIdSnippetsNoteableIdDiscussionsDiscussionIdNotes
-      summary: Get comments in a single snippet discussion
+      summary: List comments in a snippet discussion
+      description: Lists the comments in a specified snippet discussion.
       tags:
       - Discussions
       responses:
@@ -23070,6 +23087,7 @@ paths:
     post:
       operationId: postApiV4ProjectsIdSnippetsNoteableIdDiscussionsDiscussionIdNotes
       summary: Add a comment to a snippet discussion
+      description: Adds a comment to a specified snippet discussion.
       tags:
       - Discussions
       responses:
@@ -23111,7 +23129,8 @@ paths:
   "/api/v4/projects/{id}/snippets/{noteable_id}/discussions/{discussion_id}/notes/{note_id}":
     get:
       operationId: getApiV4ProjectsIdSnippetsNoteableIdDiscussionsDiscussionIdNotesNoteId
-      summary: Get a comment in a snippet discussion
+      summary: Retrieve a comment from a snippet discussion
+      description: Retrieves a specified comment from a snippet discussion.
       tags:
       - Discussions
       responses:
@@ -23152,7 +23171,9 @@ paths:
         in: path
     put:
       operationId: putApiV4ProjectsIdSnippetsNoteableIdDiscussionsDiscussionIdNotesNoteId
-      summary: Edit a comment in a snippet discussion
+      summary: Update a comment in a snippet discussion
+      description: Updates or changes the status of a specified comment in a snippet
+        discussion.
       tags:
       - Discussions
       responses:
@@ -23199,7 +23220,8 @@ paths:
               "$ref": "#/components/schemas/RequestBody_7a3958209da0"
     delete:
       operationId: deleteApiV4ProjectsIdSnippetsNoteableIdDiscussionsDiscussionIdNotesNoteId
-      summary: Delete a comment in a snippet discussion
+      summary: Delete a comment from a snippet discussion
+      description: Deletes a specified comment from a snippet discussion.
       tags:
       - Discussions
       responses:
@@ -23241,7 +23263,8 @@ paths:
   "/api/v4/projects/{id}/merge_requests/{noteable_id}/discussions":
     get:
       operationId: getApiV4ProjectsIdMergeRequestsNoteableIdDiscussions
-      summary: Get a list of merge request discussions
+      summary: List all discussions for a merge request
+      description: Lists all discussions for a specified merge request.
       tags:
       - Discussions
       responses:
@@ -23288,7 +23311,9 @@ paths:
         example: 20
     post:
       operationId: postApiV4ProjectsIdMergeRequestsNoteableIdDiscussions
-      summary: Create a new merge request discussion
+      summary: Create a merge request discussion
+      description: Creates a discussion for a specified merge request. Replies can
+        be added to it later.
       tags:
       - Discussions
       responses:
@@ -23324,7 +23349,8 @@ paths:
   "/api/v4/projects/{id}/merge_requests/{noteable_id}/discussions/{discussion_id}":
     get:
       operationId: getApiV4ProjectsIdMergeRequestsNoteableIdDiscussionsDiscussionId
-      summary: Get a single merge request discussion
+      summary: Retrieve a discussion for a merge request
+      description: Retrieves a specified discussion for a merge request.
       tags:
       - Discussions
       responses:
@@ -23359,7 +23385,8 @@ paths:
         in: path
     put:
       operationId: putApiV4ProjectsIdMergeRequestsNoteableIdDiscussionsDiscussionId
-      summary: Resolve/unresolve an existing merge request discussion
+      summary: Resolve or unresolve a merge request discussion
+      description: Resolves or unresolves a specified merge request discussion.
       tags:
       - Discussions
       responses:
@@ -23401,7 +23428,8 @@ paths:
   "/api/v4/projects/{id}/merge_requests/{noteable_id}/discussions/{discussion_id}/notes":
     get:
       operationId: getApiV4ProjectsIdMergeRequestsNoteableIdDiscussionsDiscussionIdNotes
-      summary: Get comments in a single merge request discussion
+      summary: List comments in a merge request discussion
+      description: Lists the comments in a specified merge request discussion.
       tags:
       - Discussions
       responses:
@@ -23437,6 +23465,7 @@ paths:
     post:
       operationId: postApiV4ProjectsIdMergeRequestsNoteableIdDiscussionsDiscussionIdNotes
       summary: Add a comment to a merge request discussion
+      description: Adds a comment to a specified merge request discussion.
       tags:
       - Discussions
       responses:
@@ -23478,7 +23507,8 @@ paths:
   "/api/v4/projects/{id}/merge_requests/{noteable_id}/discussions/{discussion_id}/notes/{note_id}":
     get:
       operationId: getApiV4ProjectsIdMergeRequestsNoteableIdDiscussionsDiscussionIdNotesNoteId
-      summary: Get a comment in a merge request discussion
+      summary: Retrieve a comment from a merge request discussion
+      description: Retrieves a specified comment from a merge request discussion.
       tags:
       - Discussions
       responses:
@@ -23519,7 +23549,9 @@ paths:
         in: path
     put:
       operationId: putApiV4ProjectsIdMergeRequestsNoteableIdDiscussionsDiscussionIdNotesNoteId
-      summary: Edit a comment in a merge request discussion
+      summary: Update a comment in a merge request discussion
+      description: Updates or changes the status of a specified comment in a merge
+        request discussion.
       tags:
       - Discussions
       responses:
@@ -23566,7 +23598,8 @@ paths:
               "$ref": "#/components/schemas/RequestBody_7a3958209da0"
     delete:
       operationId: deleteApiV4ProjectsIdMergeRequestsNoteableIdDiscussionsDiscussionIdNotesNoteId
-      summary: Delete a comment in a merge request discussion
+      summary: Delete a comment from a merge request discussion
+      description: Deletes a specified comment from a merge request discussion.
       tags:
       - Discussions
       responses:
@@ -23608,7 +23641,8 @@ paths:
   "/api/v4/projects/{id}/repository/commits/{noteable_id}/discussions":
     get:
       operationId: getApiV4ProjectsIdRepositoryCommitsNoteableIdDiscussions
-      summary: Get a list of commit discussions
+      summary: List all discussions for a commit
+      description: Lists all discussions for a specified commit.
       tags:
       - Discussions
       responses:
@@ -23655,7 +23689,9 @@ paths:
         example: 20
     post:
       operationId: postApiV4ProjectsIdRepositoryCommitsNoteableIdDiscussions
-      summary: Create a new commit discussion
+      summary: Create a commit discussion
+      description: Creates a discussion for a specified commit. Replies can be added
+        to it later.
       tags:
       - Discussions
       responses:
@@ -23691,7 +23727,8 @@ paths:
   "/api/v4/projects/{id}/repository/commits/{noteable_id}/discussions/{discussion_id}":
     get:
       operationId: getApiV4ProjectsIdRepositoryCommitsNoteableIdDiscussionsDiscussionId
-      summary: Get a single commit discussion
+      summary: Retrieve a discussion for a commit
+      description: Retrieves a specified discussion for a commit.
       tags:
       - Discussions
       responses:
@@ -23727,7 +23764,8 @@ paths:
   "/api/v4/projects/{id}/repository/commits/{noteable_id}/discussions/{discussion_id}/notes":
     get:
       operationId: getApiV4ProjectsIdRepositoryCommitsNoteableIdDiscussionsDiscussionIdNotes
-      summary: Get comments in a single commit discussion
+      summary: List comments in a commit discussion
+      description: Lists the comments in a specified commit discussion.
       tags:
       - Discussions
       responses:
@@ -23763,6 +23801,7 @@ paths:
     post:
       operationId: postApiV4ProjectsIdRepositoryCommitsNoteableIdDiscussionsDiscussionIdNotes
       summary: Add a comment to a commit discussion
+      description: Adds a comment to a specified commit discussion.
       tags:
       - Discussions
       responses:
@@ -23804,7 +23843,8 @@ paths:
   "/api/v4/projects/{id}/repository/commits/{noteable_id}/discussions/{discussion_id}/notes/{note_id}":
     get:
       operationId: getApiV4ProjectsIdRepositoryCommitsNoteableIdDiscussionsDiscussionIdNotesNoteId
-      summary: Get a comment in a commit discussion
+      summary: Retrieve a comment from a commit discussion
+      description: Retrieves a specified comment from a commit discussion.
       tags:
       - Discussions
       responses:
@@ -23845,7 +23885,9 @@ paths:
         in: path
     put:
       operationId: putApiV4ProjectsIdRepositoryCommitsNoteableIdDiscussionsDiscussionIdNotesNoteId
-      summary: Edit a comment in a commit discussion
+      summary: Update a comment in a commit discussion
+      description: Updates or changes the status of a specified comment in a commit
+        discussion.
       tags:
       - Discussions
       responses:
@@ -23892,7 +23934,8 @@ paths:
               "$ref": "#/components/schemas/RequestBody_7a3958209da0"
     delete:
       operationId: deleteApiV4ProjectsIdRepositoryCommitsNoteableIdDiscussionsDiscussionIdNotesNoteId
-      summary: Delete a comment in a commit discussion
+      summary: Delete a comment from a commit discussion
+      description: Deletes a specified comment from a commit discussion.
       tags:
       - Discussions
       responses:
@@ -23934,7 +23977,8 @@ paths:
   "/api/v4/groups/{id}/epics/{noteable_id}/discussions":
     get:
       operationId: getApiV4GroupsIdEpicsNoteableIdDiscussions
-      summary: Get a list of epic discussions
+      summary: List all discussions for an epic
+      description: Lists all discussions for a specified epic.
       tags:
       - Discussions
       responses:
@@ -23981,7 +24025,9 @@ paths:
         example: 20
     post:
       operationId: postApiV4GroupsIdEpicsNoteableIdDiscussions
-      summary: Create a new epic discussion
+      summary: Create an epic discussion
+      description: Creates a discussion for a specified epic. Replies can be added
+        to it later.
       tags:
       - Discussions
       responses:
@@ -24017,7 +24063,8 @@ paths:
   "/api/v4/groups/{id}/epics/{noteable_id}/discussions/{discussion_id}":
     get:
       operationId: getApiV4GroupsIdEpicsNoteableIdDiscussionsDiscussionId
-      summary: Get a single epic discussion
+      summary: Retrieve a discussion for an epic
+      description: Retrieves a specified discussion for an epic.
       tags:
       - Discussions
       responses:
@@ -24052,7 +24099,8 @@ paths:
         in: path
     put:
       operationId: putApiV4GroupsIdEpicsNoteableIdDiscussionsDiscussionId
-      summary: Resolve/unresolve an existing epic discussion
+      summary: Resolve or unresolve an epic discussion
+      description: Resolves or unresolves a specified epic discussion.
       tags:
       - Discussions
       responses:
@@ -24094,7 +24142,8 @@ paths:
   "/api/v4/groups/{id}/epics/{noteable_id}/discussions/{discussion_id}/notes":
     get:
       operationId: getApiV4GroupsIdEpicsNoteableIdDiscussionsDiscussionIdNotes
-      summary: Get comments in a single epic discussion
+      summary: List comments in an epic discussion
+      description: Lists the comments in a specified epic discussion.
       tags:
       - Discussions
       responses:
@@ -24129,7 +24178,8 @@ paths:
         in: path
     post:
       operationId: postApiV4GroupsIdEpicsNoteableIdDiscussionsDiscussionIdNotes
-      summary: Add a comment to a epic discussion
+      summary: Add a comment to an epic discussion
+      description: Adds a comment to a specified epic discussion.
       tags:
       - Discussions
       responses:
@@ -24171,7 +24221,8 @@ paths:
   "/api/v4/groups/{id}/epics/{noteable_id}/discussions/{discussion_id}/notes/{note_id}":
     get:
       operationId: getApiV4GroupsIdEpicsNoteableIdDiscussionsDiscussionIdNotesNoteId
-      summary: Get a comment in a epic discussion
+      summary: Retrieve a comment from an epic discussion
+      description: Retrieves a specified comment from a epic discussion.
       tags:
       - Discussions
       responses:
@@ -24212,7 +24263,9 @@ paths:
         in: path
     put:
       operationId: putApiV4GroupsIdEpicsNoteableIdDiscussionsDiscussionIdNotesNoteId
-      summary: Edit a comment in a epic discussion
+      summary: Update a comment in an epic discussion
+      description: Updates or changes the status of a specified comment in a epic
+        discussion.
       tags:
       - Discussions
       responses:
@@ -24259,7 +24312,8 @@ paths:
               "$ref": "#/components/schemas/RequestBody_7a3958209da0"
     delete:
       operationId: deleteApiV4GroupsIdEpicsNoteableIdDiscussionsDiscussionIdNotesNoteId
-      summary: Delete a comment in a epic discussion
+      summary: Delete a comment from an epic discussion
+      description: Deletes a specified comment from a epic discussion.
       tags:
       - Discussions
       responses:
@@ -26483,7 +26537,9 @@ paths:
   "/api/v4/projects/{id}/repository/tags":
     get:
       operationId: getApiV4ProjectsIdRepositoryTags
-      summary: Get a project repository tags
+      summary: List all project repository tags
+      description: Lists all repository tags from a project, sorted by update date
+        and time in descending order.
       tags:
       - Tags
       responses:
@@ -26569,7 +26625,8 @@ paths:
         example: 20
     post:
       operationId: postApiV4ProjectsIdRepositoryTags
-      summary: Create a new repository tag
+      summary: Create a tag
+      description: Creates a tag in the repository that points to a specified reference.
       tags:
       - Tags
       responses:
@@ -26603,7 +26660,9 @@ paths:
   "/api/v4/projects/{id}/repository/tags/{tag_name}":
     get:
       operationId: getApiV4ProjectsIdRepositoryTagsTagName
-      summary: Get a single repository tag
+      summary: Retrieve a single repository tag
+      description: Retrieves a repository tag with a specified name. This endpoint
+        can be accessed without authentication if the repository is publicly accessible.
       tags:
       - Tags
       responses:
@@ -26636,7 +26695,8 @@ paths:
         in: path
     delete:
       operationId: deleteApiV4ProjectsIdRepositoryTagsTagName
-      summary: Delete a repository tag
+      summary: Delete a tag
+      description: Deletes a specified repository tag.
       tags:
       - Tags
       responses:
@@ -26668,7 +26728,9 @@ paths:
   "/api/v4/projects/{id}/repository/tags/{tag_name}/signature":
     get:
       operationId: getApiV4ProjectsIdRepositoryTagsTagNameSignature
-      summary: Get a tag's signature
+      summary: Retrieve X.509 signature of a tag
+      description: Retrieves the X.509 signature from a signed tag. Unsigned tags
+        return a `404 Not Found` response.
       tags:
       - Tags
       responses:
@@ -27100,7 +27162,8 @@ paths:
   "/api/v4/projects/{id}/repository/submodules/{submodule}":
     put:
       operationId: putApiV4ProjectsIdRepositorySubmodulesSubmodule
-      summary: Update existing submodule reference in repository
+      summary: Update a submodule reference
+      description: Updates a reference for a specified submodule.
       tags:
       - Submodules
       responses:
@@ -27158,8 +27221,8 @@ paths:
   "/api/v4/snippets":
     get:
       operationId: getApiV4Snippets
-      summary: Get a snippets list for an authenticated user
-      description: This feature was introduced in GitLab 8.15.
+      summary: List all snippets for current user
+      description: Lists all snippets for the currently authenticated user.
       tags:
       - Snippets
       responses:
@@ -27210,8 +27273,8 @@ paths:
         example: 20
     post:
       operationId: postApiV4Snippets
-      summary: Create new snippet
-      description: This feature was introduced in GitLab 8.15.
+      summary: Create a snippet
+      description: Creates a snippet.
       tags:
       - Snippets
       responses:
@@ -27236,8 +27299,9 @@ paths:
   "/api/v4/snippets/public":
     get:
       operationId: getApiV4SnippetsPublic
-      summary: List all public personal snippets current_user has access to
-      description: This feature was introduced in GitLab 8.15.
+      summary: List all public snippets
+      description: Lists all public snippets accessible to the currently authenticated
+        user.
       tags:
       - Snippets
       responses:
@@ -27289,8 +27353,10 @@ paths:
   "/api/v4/snippets/all":
     get:
       operationId: getApiV4SnippetsAll
-      summary: List all snippets current_user has access to
-      description: This feature was introduced in GitLab 16.3.
+      summary: List all snippets
+      description: Lists all snippets available to the currently authenticated user.
+        Users with Administrator or Auditor access levels can see all snippets (both
+        personal and project). This feature was introduced in GitLab 16.3.
       tags:
       - Snippets
       responses:
@@ -27349,8 +27415,8 @@ paths:
   "/api/v4/snippets/{id}":
     get:
       operationId: getApiV4SnippetsId
-      summary: Get a single snippet
-      description: This feature was introduced in GitLab 8.15.
+      summary: Retrieve a snippet
+      description: Retrieves a specified snippet.
       tags:
       - Snippets
       responses:
@@ -27373,8 +27439,8 @@ paths:
         in: path
     put:
       operationId: putApiV4SnippetsId
-      summary: Update an existing snippet
-      description: This feature was introduced in GitLab 8.15.
+      summary: Update snippet
+      description: Updates a specified snippet.
       tags:
       - Snippets
       responses:
@@ -27405,8 +27471,8 @@ paths:
               "$ref": "#/components/schemas/RequestBody_3252d20dbeac"
     delete:
       operationId: deleteApiV4SnippetsId
-      summary: Remove snippet
-      description: This feature was introduced in GitLab 8.15.
+      summary: Delete snippet
+      description: Deletes a specified snippet.
       tags:
       - Snippets
       responses:
@@ -27430,8 +27496,8 @@ paths:
   "/api/v4/snippets/{id}/raw":
     get:
       operationId: getApiV4SnippetsIdRaw
-      summary: Get a raw snippet
-      description: This feature was introduced in GitLab 8.15.
+      summary: Retrieve a raw snippet
+      description: Retrieves the raw contents of a specified snippet as plain text
       tags:
       - Snippets
       responses:
@@ -27451,7 +27517,8 @@ paths:
   "/api/v4/snippets/{id}/files/{ref}/{file_path}/raw":
     get:
       operationId: getApiV4SnippetsIdFilesRefFilePathRaw
-      summary: Get raw snippet file contents from the repository
+      summary: Retrieve snippet file content
+      description: Retrieves the raw file content from a snippet as plain text.
       tags:
       - Snippets
       responses:
@@ -27483,7 +27550,8 @@ paths:
   "/api/v4/snippets/{id}/user_agent_detail":
     get:
       operationId: getApiV4SnippetsIdUserAgentDetail
-      summary: Get the user agent details for a snippet
+      summary: Retrieve user agent details for a snippet
+      description: Retrieves user agent details for a specified snippet.
       tags:
       - Snippets
       responses:
@@ -28946,7 +29014,11 @@ paths:
   "/api/v4/projects/{id}/repository/tree":
     get:
       operationId: getApiV4ProjectsIdRepositoryTree
-      summary: Get a project repository tree
+      summary: List all repository trees in a project
+      description: Lists all repository files and directories in a specified project.
+        This endpoint can be accessed without authentication if the repository is
+        publicly accessible. This command provides essentially the same features as
+        the `git ls-tree` command.
       tags:
       - Repositories
       responses:
@@ -29036,7 +29108,9 @@ paths:
   "/api/v4/projects/{id}/repository/blobs/{sha}/raw":
     get:
       operationId: getApiV4ProjectsIdRepositoryBlobsShaRaw
-      summary: Get raw blob contents from the repository
+      summary: Retrieve raw blob content
+      description: Retrieves the raw file contents for a blob, by blob SHA. This endpoint
+        can be accessed without authentication if the repository is publicly accessible.
       tags:
       - Repositories
       responses:
@@ -29066,7 +29140,10 @@ paths:
   "/api/v4/projects/{id}/repository/blobs/{sha}":
     get:
       operationId: getApiV4ProjectsIdRepositoryBlobsSha
-      summary: Get a blob from the repository
+      summary: Retrieve a blob from a repository
+      description: Retrieves information, such as size and content, about blobs in
+        a repository. Blob content is Base64 encoded. This endpoint can be accessed
+        without authentication, if the repository is publicly accessible.
       tags:
       - Repositories
       responses:
@@ -29096,7 +29173,11 @@ paths:
   "/api/v4/projects/{id}/repository/archive":
     get:
       operationId: getApiV4ProjectsIdRepositoryArchive
-      summary: Get an archive of the repository
+      summary: Retrieve file archive from a repository
+      description: Retrieves the file archive of a specified repository. This endpoint
+        can be accessed without authentication if the repository is publicly accessible.
+        For GitLab.com users, this endpoint has a rate limit threshold of 5 requests
+        per minute.
       tags:
       - Repositories
       responses:
@@ -29172,7 +29253,9 @@ paths:
   "/api/v4/projects/{id}/repository/compare":
     get:
       operationId: getApiV4ProjectsIdRepositoryCompare
-      summary: Compare two branches, tags, or commits
+      summary: Compare branches, tags, or commits
+      description: Compares branches, tags, or commits. Retrieves the differences
+        between two branches, tags, or commits in a specified project.
       tags:
       - Repositories
       responses:
@@ -29238,7 +29321,10 @@ paths:
   "/api/v4/projects/{id}/repository/health":
     get:
       operationId: getApiV4ProjectsIdRepositoryHealth
-      summary: Get repository health
+      summary: Retrieve repository health statistics
+      description: Retrieves statistics related to the health of a project repository.
+        This endpoint is rate-limited to 5 requests/hour per project when `generate`
+        is `true`. Available only to users with push access to the repository.
       tags:
       - Repositories
       responses:
@@ -29272,7 +29358,8 @@ paths:
   "/api/v4/projects/{id}/repository/contributors":
     get:
       operationId: getApiV4ProjectsIdRepositoryContributors
-      summary: Get repository contributors
+      summary: Retrieve contributors metrics
+      description: Retrieves a list of contributors to a specified repository.
       tags:
       - Repositories
       responses:
@@ -29349,7 +29436,8 @@ paths:
   "/api/v4/projects/{id}/repository/merge_base":
     get:
       operationId: getApiV4ProjectsIdRepositoryMergeBase
-      summary: Get the common ancestor between commits
+      summary: Retrieve a merge base
+      description: Retrieves the merge base for two specified commits.
       tags:
       - Repositories
       responses:
@@ -29391,8 +29479,10 @@ paths:
   "/api/v4/projects/{id}/repository/changelog":
     get:
       operationId: getApiV4ProjectsIdRepositoryChangelog
-      summary: Generates a changelog section for a release and returns it
-      description: This feature was introduced in GitLab 14.6
+      summary: Generate changelog data
+      description: Generates changelog data based on commits in a repository, without
+        committing them to a changelog file. Works exactly like `POST /projects/:id/repository/changelog`,
+        except the changelog data is not committed to any changelog file.
       tags:
       - Repositories
       responses:
@@ -29480,9 +29570,8 @@ paths:
         example: main
     post:
       operationId: postApiV4ProjectsIdRepositoryChangelog
-      summary: Generates a changelog section for a release and commits it in a changelog
-        file
-      description: This feature was introduced in GitLab 13.9
+      summary: Add changelog data to file
+      description: Adds changelog data to file.
       tags:
       - Repositories
       responses:
@@ -29511,7 +29600,8 @@ paths:
   "/api/v4/projects/{id}/remote_mirrors":
     get:
       operationId: getApiV4ProjectsIdRemoteMirrors
-      summary: List the project's remote mirrors
+      summary: List all remote mirrors for a project
+      description: Lists all remote mirrors for a specified project.
       tags:
       - Remote mirrors
       responses:
@@ -29556,7 +29646,8 @@ paths:
         example: 20
     post:
       operationId: postApiV4ProjectsIdRemoteMirrors
-      summary: Create remote mirror for a project
+      summary: Create a push mirror
+      description: Creates a push mirror.
       tags:
       - Remote mirrors
       responses:
@@ -29590,7 +29681,8 @@ paths:
   "/api/v4/projects/{id}/remote_mirrors/{mirror_id}":
     get:
       operationId: getApiV4ProjectsIdRemoteMirrorsMirrorId
-      summary: Get a single remote mirror
+      summary: Retrieve a remote mirror for a project
+      description: Retrieves a specified remote mirror for a project.
       tags:
       - Remote mirrors
       responses:
@@ -29623,7 +29715,9 @@ paths:
         in: path
     put:
       operationId: putApiV4ProjectsIdRemoteMirrorsMirrorId
-      summary: Update the attributes of a single remote mirror
+      summary: Update a remote mirror in a project
+      description: Updates the configuration or operational status of a specified
+        remote mirror.
       tags:
       - Remote mirrors
       responses:
@@ -29662,8 +29756,8 @@ paths:
               "$ref": "#/components/schemas/RequestBody_dbc6cb89995c"
     delete:
       operationId: deleteApiV4ProjectsIdRemoteMirrorsMirrorId
-      summary: Delete a single remote mirror
-      description: This feature was introduced in GitLab 14.10
+      summary: Delete a remote mirror from a project
+      description: Deletes a specified remote mirror from a project.
       tags:
       - Remote mirrors
       responses:
@@ -29693,7 +29787,8 @@ paths:
   "/api/v4/projects/{id}/remote_mirrors/{mirror_id}/sync":
     post:
       operationId: postApiV4ProjectsIdRemoteMirrorsMirrorIdSync
-      summary: Triggers a push mirror operation
+      summary: Force push mirror update
+      description: Forces an update to a push mirror.
       tags:
       - Remote mirrors
       responses:
@@ -29723,7 +29818,9 @@ paths:
   "/api/v4/projects/{id}/remote_mirrors/{mirror_id}/public_key":
     get:
       operationId: getApiV4ProjectsIdRemoteMirrorsMirrorIdPublicKey
-      summary: Get the public key of a single remote mirror
+      summary: Retrieve a public key for a remote mirror
+      description: Retrieves the public key of a specified remote mirror that uses
+        SSH authentication.
       tags:
       - Remote mirrors
       responses:
@@ -33672,7 +33769,8 @@ paths:
   "/api/v4/projects/{id}/snippets":
     get:
       operationId: getApiV4ProjectsIdSnippets
-      summary: Get all project snippets
+      summary: List all snippets for a project
+      description: Lists all snippets for a specified project.
       tags:
       - Snippets
       responses:
@@ -33715,7 +33813,9 @@ paths:
         example: 20
     post:
       operationId: postApiV4ProjectsIdSnippets
-      summary: Create a new project snippet
+      summary: Create a project snippet
+      description: Creates a project snippet. The user must have permission to create
+        snippets.
       tags:
       - Snippets
       responses:
@@ -33749,7 +33849,8 @@ paths:
   "/api/v4/projects/{id}/snippets/{snippet_id}":
     get:
       operationId: getApiV4ProjectsIdSnippetsSnippetId
-      summary: Get a single project snippet
+      summary: Retrieve a project snippet
+      description: Retrieves a specified project snippet.
       tags:
       - Snippets
       responses:
@@ -33780,7 +33881,10 @@ paths:
         in: path
     put:
       operationId: putApiV4ProjectsIdSnippetsSnippetId
-      summary: Update an existing project snippet
+      summary: Update a project snippet
+      description: Updates a specified project snippet. The user must have permission
+        to modify snippets. Updates to snippets with multiple files must use the `files`
+        attribute.
       tags:
       - Snippets
       responses:
@@ -33820,6 +33924,7 @@ paths:
     delete:
       operationId: deleteApiV4ProjectsIdSnippetsSnippetId
       summary: Delete a project snippet
+      description: Deletes a specified project snippet.
       tags:
       - Snippets
       responses:
@@ -33847,7 +33952,9 @@ paths:
   "/api/v4/projects/{id}/snippets/{snippet_id}/raw":
     get:
       operationId: getApiV4ProjectsIdSnippetsSnippetIdRaw
-      summary: Get a raw project snippet
+      summary: Retrieve a raw project snippet
+      description: Retrieves the raw contents of a specified project snippet as plain
+        text
       tags:
       - Snippets
       responses:
@@ -33879,7 +33986,9 @@ paths:
   "/api/v4/projects/{id}/snippets/{snippet_id}/files/{ref}/{file_path}/raw":
     get:
       operationId: getApiV4ProjectsIdSnippetsSnippetIdFilesRefFilePathRaw
-      summary: Get raw project snippet file contents from the repository
+      summary: Retrieve snippet repository file content
+      description: Retrieves the raw file content from a snippet repository as plain
+        text.
       tags:
       - Snippets
       responses:
@@ -33923,7 +34032,9 @@ paths:
   "/api/v4/projects/{id}/snippets/{snippet_id}/user_agent_detail":
     get:
       operationId: getApiV4ProjectsIdSnippetsSnippetIdUserAgentDetail
-      summary: Get the user agent details for a project snippet
+      summary: Retrieve user agent details for a project snippet
+      description: Retrieves user agent details for a specified snippet. Available
+        only for administrators.
       tags:
       - Snippets
       responses:
@@ -39236,8 +39347,6 @@ paths:
             application/json:
               schema:
                 "$ref": "#/components/schemas/APIEntitiesMergeRequestApprovals"
-        '304':
-          description: Not modified
         '404':
           description: Not found
         '401':
@@ -39280,8 +39389,6 @@ paths:
             application/json:
               schema:
                 "$ref": "#/components/schemas/APIEntitiesMergeRequestApprovals"
-        '304':
-          description: Not modified
         '404':
           description: Not found
         '401':
@@ -47541,7 +47648,7 @@ paths:
     get:
       operationId: getApiV4ProjectsIdServices
       summary: List all active integrations
-      description: Get a list of all active integrations.
+      description: Lists all active integrations.
       tags:
       - Integrations
       responses:
@@ -47568,8 +47675,8 @@ paths:
   "/api/v4/projects/{id}/services/apple-app-store":
     put:
       operationId: putApiV4ProjectsIdServicesAppleAppStore
-      summary: Create/Edit Apple App Store integration
-      description: Set Apple App Store integration.
+      summary: Create or update the Apple App Store integration
+      description: Creates or updates the Apple App Store integration.
       tags:
       - Integrations
       responses:
@@ -47606,8 +47713,8 @@ paths:
   "/api/v4/projects/{id}/services/asana":
     put:
       operationId: putApiV4ProjectsIdServicesAsana
-      summary: Create/Edit Asana integration
-      description: Set Asana integration.
+      summary: Create or update the Asana integration
+      description: Creates or updates the Asana integration.
       tags:
       - Integrations
       responses:
@@ -47644,8 +47751,8 @@ paths:
   "/api/v4/projects/{id}/services/assembla":
     put:
       operationId: putApiV4ProjectsIdServicesAssembla
-      summary: Create/Edit Assembla integration
-      description: Set Assembla integration.
+      summary: Create or update the Assembla integration
+      description: Creates or updates the Assembla integration.
       tags:
       - Integrations
       responses:
@@ -47682,8 +47789,8 @@ paths:
   "/api/v4/projects/{id}/services/bamboo":
     put:
       operationId: putApiV4ProjectsIdServicesBamboo
-      summary: Create/Edit Bamboo integration
-      description: Set Bamboo integration.
+      summary: Create or update the Bamboo integration
+      description: Creates or updates the Bamboo integration.
       tags:
       - Integrations
       responses:
@@ -47720,8 +47827,8 @@ paths:
   "/api/v4/projects/{id}/services/bugzilla":
     put:
       operationId: putApiV4ProjectsIdServicesBugzilla
-      summary: Create/Edit Bugzilla integration
-      description: Set Bugzilla integration.
+      summary: Create or update the Bugzilla integration
+      description: Creates or updates the Bugzilla integration.
       tags:
       - Integrations
       responses:
@@ -47758,8 +47865,8 @@ paths:
   "/api/v4/projects/{id}/services/buildkite":
     put:
       operationId: putApiV4ProjectsIdServicesBuildkite
-      summary: Create/Edit Buildkite integration
-      description: Set Buildkite integration.
+      summary: Create or update the Buildkite integration
+      description: Creates or updates the Buildkite integration.
       tags:
       - Integrations
       responses:
@@ -47796,8 +47903,8 @@ paths:
   "/api/v4/projects/{id}/services/campfire":
     put:
       operationId: putApiV4ProjectsIdServicesCampfire
-      summary: Create/Edit Campfire integration
-      description: Set Campfire integration.
+      summary: Create or update the Campfire integration
+      description: Creates or updates the Campfire integration.
       tags:
       - Integrations
       responses:
@@ -47834,8 +47941,8 @@ paths:
   "/api/v4/projects/{id}/services/confluence":
     put:
       operationId: putApiV4ProjectsIdServicesConfluence
-      summary: Create/Edit Confluence integration
-      description: Set Confluence integration.
+      summary: Create or update the Confluence integration
+      description: Creates or updates the Confluence integration.
       tags:
       - Integrations
       responses:
@@ -47872,8 +47979,8 @@ paths:
   "/api/v4/projects/{id}/services/custom-issue-tracker":
     put:
       operationId: putApiV4ProjectsIdServicesCustomIssueTracker
-      summary: Create/Edit Custom Issue Tracker integration
-      description: Set Custom Issue Tracker integration.
+      summary: Create or update the Custom Issue Tracker integration
+      description: Creates or updates the Custom Issue Tracker integration.
       tags:
       - Integrations
       responses:
@@ -47910,8 +48017,8 @@ paths:
   "/api/v4/projects/{id}/services/datadog":
     put:
       operationId: putApiV4ProjectsIdServicesDatadog
-      summary: Create/Edit Datadog integration
-      description: Set Datadog integration.
+      summary: Create or update the Datadog integration
+      description: Creates or updates the Datadog integration.
       tags:
       - Integrations
       responses:
@@ -47948,8 +48055,8 @@ paths:
   "/api/v4/projects/{id}/services/diffblue-cover":
     put:
       operationId: putApiV4ProjectsIdServicesDiffblueCover
-      summary: Create/Edit Diffblue Cover integration
-      description: Set Diffblue Cover integration.
+      summary: Create or update the Diffblue Cover integration
+      description: Creates or updates the Diffblue Cover integration.
       tags:
       - Integrations
       responses:
@@ -47986,8 +48093,8 @@ paths:
   "/api/v4/projects/{id}/services/discord":
     put:
       operationId: putApiV4ProjectsIdServicesDiscord
-      summary: Create/Edit Discord integration
-      description: Set Discord integration.
+      summary: Create or update the Discord integration
+      description: Creates or updates the Discord integration.
       tags:
       - Integrations
       responses:
@@ -48024,8 +48131,8 @@ paths:
   "/api/v4/projects/{id}/services/drone-ci":
     put:
       operationId: putApiV4ProjectsIdServicesDroneCi
-      summary: Create/Edit Drone Ci integration
-      description: Set Drone Ci integration.
+      summary: Create or update the Drone Ci integration
+      description: Creates or updates the Drone Ci integration.
       tags:
       - Integrations
       responses:
@@ -48062,8 +48169,8 @@ paths:
   "/api/v4/projects/{id}/services/emails-on-push":
     put:
       operationId: putApiV4ProjectsIdServicesEmailsOnPush
-      summary: Create/Edit Emails On Push integration
-      description: Set Emails On Push integration.
+      summary: Create or update the Emails On Push integration
+      description: Creates or updates the Emails On Push integration.
       tags:
       - Integrations
       responses:
@@ -48100,8 +48207,8 @@ paths:
   "/api/v4/projects/{id}/services/external-wiki":
     put:
       operationId: putApiV4ProjectsIdServicesExternalWiki
-      summary: Create/Edit External Wiki integration
-      description: Set External Wiki integration.
+      summary: Create or update the External Wiki integration
+      description: Creates or updates the External Wiki integration.
       tags:
       - Integrations
       responses:
@@ -48138,8 +48245,8 @@ paths:
   "/api/v4/projects/{id}/services/gitlab-slack-application":
     put:
       operationId: putApiV4ProjectsIdServicesGitlabSlackApplication
-      summary: Create/Edit Gitlab Slack Application integration
-      description: Set Gitlab Slack Application integration.
+      summary: Create or update the Gitlab Slack Application integration
+      description: Creates or updates the Gitlab Slack Application integration.
       tags:
       - Integrations
       responses:
@@ -48176,8 +48283,8 @@ paths:
   "/api/v4/projects/{id}/services/google-play":
     put:
       operationId: putApiV4ProjectsIdServicesGooglePlay
-      summary: Create/Edit Google Play integration
-      description: Set Google Play integration.
+      summary: Create or update the Google Play integration
+      description: Creates or updates the Google Play integration.
       tags:
       - Integrations
       responses:
@@ -48214,8 +48321,8 @@ paths:
   "/api/v4/projects/{id}/services/hangouts-chat":
     put:
       operationId: putApiV4ProjectsIdServicesHangoutsChat
-      summary: Create/Edit Hangouts Chat integration
-      description: Set Hangouts Chat integration.
+      summary: Create or update the Hangouts Chat integration
+      description: Creates or updates the Hangouts Chat integration.
       tags:
       - Integrations
       responses:
@@ -48252,8 +48359,8 @@ paths:
   "/api/v4/projects/{id}/services/harbor":
     put:
       operationId: putApiV4ProjectsIdServicesHarbor
-      summary: Create/Edit Harbor integration
-      description: Set Harbor integration.
+      summary: Create or update the Harbor integration
+      description: Creates or updates the Harbor integration.
       tags:
       - Integrations
       responses:
@@ -48290,8 +48397,8 @@ paths:
   "/api/v4/projects/{id}/services/irker":
     put:
       operationId: putApiV4ProjectsIdServicesIrker
-      summary: Create/Edit Irker integration
-      description: Set Irker integration.
+      summary: Create or update the Irker integration
+      description: Creates or updates the Irker integration.
       tags:
       - Integrations
       responses:
@@ -48328,8 +48435,8 @@ paths:
   "/api/v4/projects/{id}/services/jenkins":
     put:
       operationId: putApiV4ProjectsIdServicesJenkins
-      summary: Create/Edit Jenkins integration
-      description: Set Jenkins integration.
+      summary: Create or update the Jenkins integration
+      description: Creates or updates the Jenkins integration.
       tags:
       - Integrations
       responses:
@@ -48366,8 +48473,8 @@ paths:
   "/api/v4/projects/{id}/services/jira":
     put:
       operationId: putApiV4ProjectsIdServicesJira
-      summary: Create/Edit Jira integration
-      description: Set Jira integration.
+      summary: Create or update the Jira integration
+      description: Creates or updates the Jira integration.
       tags:
       - Integrations
       responses:
@@ -48404,8 +48511,8 @@ paths:
   "/api/v4/projects/{id}/services/jira-cloud-app":
     put:
       operationId: putApiV4ProjectsIdServicesJiraCloudApp
-      summary: Create/Edit Jira Cloud App integration
-      description: Set Jira Cloud App integration.
+      summary: Create or update the Jira Cloud App integration
+      description: Creates or updates the Jira Cloud App integration.
       tags:
       - Integrations
       responses:
@@ -48442,8 +48549,8 @@ paths:
   "/api/v4/projects/{id}/services/linear":
     put:
       operationId: putApiV4ProjectsIdServicesLinear
-      summary: Create/Edit Linear integration
-      description: Set Linear integration.
+      summary: Create or update the Linear integration
+      description: Creates or updates the Linear integration.
       tags:
       - Integrations
       responses:
@@ -48480,8 +48587,8 @@ paths:
   "/api/v4/projects/{id}/services/matrix":
     put:
       operationId: putApiV4ProjectsIdServicesMatrix
-      summary: Create/Edit Matrix integration
-      description: Set Matrix integration.
+      summary: Create or update the Matrix integration
+      description: Creates or updates the Matrix integration.
       tags:
       - Integrations
       responses:
@@ -48518,8 +48625,8 @@ paths:
   "/api/v4/projects/{id}/services/mattermost-slash-commands":
     put:
       operationId: putApiV4ProjectsIdServicesMattermostSlashCommands
-      summary: Create/Edit Mattermost Slash Commands integration
-      description: Set Mattermost Slash Commands integration.
+      summary: Create or update the Mattermost Slash Commands integration
+      description: Creates or updates the Mattermost Slash Commands integration.
       tags:
       - Integrations
       responses:
@@ -48556,8 +48663,8 @@ paths:
   "/api/v4/projects/{id}/services/packagist":
     put:
       operationId: putApiV4ProjectsIdServicesPackagist
-      summary: Create/Edit Packagist integration
-      description: Set Packagist integration.
+      summary: Create or update the Packagist integration
+      description: Creates or updates the Packagist integration.
       tags:
       - Integrations
       responses:
@@ -48594,8 +48701,8 @@ paths:
   "/api/v4/projects/{id}/services/phorge":
     put:
       operationId: putApiV4ProjectsIdServicesPhorge
-      summary: Create/Edit Phorge integration
-      description: Set Phorge integration.
+      summary: Create or update the Phorge integration
+      description: Creates or updates the Phorge integration.
       tags:
       - Integrations
       responses:
@@ -48632,8 +48739,8 @@ paths:
   "/api/v4/projects/{id}/services/pipelines-email":
     put:
       operationId: putApiV4ProjectsIdServicesPipelinesEmail
-      summary: Create/Edit Pipelines Email integration
-      description: Set Pipelines Email integration.
+      summary: Create or update the Pipelines Email integration
+      description: Creates or updates the Pipelines Email integration.
       tags:
       - Integrations
       responses:
@@ -48670,8 +48777,8 @@ paths:
   "/api/v4/projects/{id}/services/pivotaltracker":
     put:
       operationId: putApiV4ProjectsIdServicesPivotaltracker
-      summary: Create/Edit Pivotaltracker integration
-      description: Set Pivotaltracker integration.
+      summary: Create or update the Pivotaltracker integration
+      description: Creates or updates the Pivotaltracker integration.
       tags:
       - Integrations
       responses:
@@ -48708,8 +48815,8 @@ paths:
   "/api/v4/projects/{id}/services/pumble":
     put:
       operationId: putApiV4ProjectsIdServicesPumble
-      summary: Create/Edit Pumble integration
-      description: Set Pumble integration.
+      summary: Create or update the Pumble integration
+      description: Creates or updates the Pumble integration.
       tags:
       - Integrations
       responses:
@@ -48746,8 +48853,8 @@ paths:
   "/api/v4/projects/{id}/services/pushover":
     put:
       operationId: putApiV4ProjectsIdServicesPushover
-      summary: Create/Edit Pushover integration
-      description: Set Pushover integration.
+      summary: Create or update the Pushover integration
+      description: Creates or updates the Pushover integration.
       tags:
       - Integrations
       responses:
@@ -48784,8 +48891,8 @@ paths:
   "/api/v4/projects/{id}/services/redmine":
     put:
       operationId: putApiV4ProjectsIdServicesRedmine
-      summary: Create/Edit Redmine integration
-      description: Set Redmine integration.
+      summary: Create or update the Redmine integration
+      description: Creates or updates the Redmine integration.
       tags:
       - Integrations
       responses:
@@ -48822,8 +48929,8 @@ paths:
   "/api/v4/projects/{id}/services/ewm":
     put:
       operationId: putApiV4ProjectsIdServicesEwm
-      summary: Create/Edit Ewm integration
-      description: Set Ewm integration.
+      summary: Create or update the Ewm integration
+      description: Creates or updates the Ewm integration.
       tags:
       - Integrations
       responses:
@@ -48860,8 +48967,8 @@ paths:
   "/api/v4/projects/{id}/services/youtrack":
     put:
       operationId: putApiV4ProjectsIdServicesYoutrack
-      summary: Create/Edit Youtrack integration
-      description: Set Youtrack integration.
+      summary: Create or update the Youtrack integration
+      description: Creates or updates the Youtrack integration.
       tags:
       - Integrations
       responses:
@@ -48898,8 +49005,8 @@ paths:
   "/api/v4/projects/{id}/services/clickup":
     put:
       operationId: putApiV4ProjectsIdServicesClickup
-      summary: Create/Edit Clickup integration
-      description: Set Clickup integration.
+      summary: Create or update the Clickup integration
+      description: Creates or updates the Clickup integration.
       tags:
       - Integrations
       responses:
@@ -48936,8 +49043,8 @@ paths:
   "/api/v4/projects/{id}/services/slack":
     put:
       operationId: putApiV4ProjectsIdServicesSlack
-      summary: Create/Edit Slack integration
-      description: Set Slack integration.
+      summary: Create or update the Slack integration
+      description: Creates or updates the Slack integration.
       tags:
       - Integrations
       responses:
@@ -48974,8 +49081,8 @@ paths:
   "/api/v4/projects/{id}/services/microsoft-teams":
     put:
       operationId: putApiV4ProjectsIdServicesMicrosoftTeams
-      summary: Create/Edit Microsoft Teams integration
-      description: Set Microsoft Teams integration.
+      summary: Create or update the Microsoft Teams integration
+      description: Creates or updates the Microsoft Teams integration.
       tags:
       - Integrations
       responses:
@@ -49012,8 +49119,8 @@ paths:
   "/api/v4/projects/{id}/services/mattermost":
     put:
       operationId: putApiV4ProjectsIdServicesMattermost
-      summary: Create/Edit Mattermost integration
-      description: Set Mattermost integration.
+      summary: Create or update the Mattermost integration
+      description: Creates or updates the Mattermost integration.
       tags:
       - Integrations
       responses:
@@ -49050,8 +49157,8 @@ paths:
   "/api/v4/projects/{id}/services/teamcity":
     put:
       operationId: putApiV4ProjectsIdServicesTeamcity
-      summary: Create/Edit Teamcity integration
-      description: Set Teamcity integration.
+      summary: Create or update the Teamcity integration
+      description: Creates or updates the Teamcity integration.
       tags:
       - Integrations
       responses:
@@ -49088,8 +49195,8 @@ paths:
   "/api/v4/projects/{id}/services/telegram":
     put:
       operationId: putApiV4ProjectsIdServicesTelegram
-      summary: Create/Edit Telegram integration
-      description: Set Telegram integration.
+      summary: Create or update the Telegram integration
+      description: Creates or updates the Telegram integration.
       tags:
       - Integrations
       responses:
@@ -49126,8 +49233,8 @@ paths:
   "/api/v4/projects/{id}/services/unify-circuit":
     put:
       operationId: putApiV4ProjectsIdServicesUnifyCircuit
-      summary: Create/Edit Unify Circuit integration
-      description: Set Unify Circuit integration.
+      summary: Create or update the Unify Circuit integration
+      description: Creates or updates the Unify Circuit integration.
       tags:
       - Integrations
       responses:
@@ -49164,8 +49271,8 @@ paths:
   "/api/v4/projects/{id}/services/webex-teams":
     put:
       operationId: putApiV4ProjectsIdServicesWebexTeams
-      summary: Create/Edit Webex Teams integration
-      description: Set Webex Teams integration.
+      summary: Create or update the Webex Teams integration
+      description: Creates or updates the Webex Teams integration.
       tags:
       - Integrations
       responses:
@@ -49202,8 +49309,8 @@ paths:
   "/api/v4/projects/{id}/services/zentao":
     put:
       operationId: putApiV4ProjectsIdServicesZentao
-      summary: Create/Edit Zentao integration
-      description: Set Zentao integration.
+      summary: Create or update the Zentao integration
+      description: Creates or updates the Zentao integration.
       tags:
       - Integrations
       responses:
@@ -49240,8 +49347,8 @@ paths:
   "/api/v4/projects/{id}/services/squash-tm":
     put:
       operationId: putApiV4ProjectsIdServicesSquashTm
-      summary: Create/Edit Squash Tm integration
-      description: Set Squash Tm integration.
+      summary: Create or update the Squash Tm integration
+      description: Creates or updates the Squash Tm integration.
       tags:
       - Integrations
       responses:
@@ -49278,8 +49385,8 @@ paths:
   "/api/v4/projects/{id}/services/github":
     put:
       operationId: putApiV4ProjectsIdServicesGithub
-      summary: Create/Edit Github integration
-      description: Set Github integration.
+      summary: Create or update the Github integration
+      description: Creates or updates the Github integration.
       tags:
       - Integrations
       responses:
@@ -49316,8 +49423,8 @@ paths:
   "/api/v4/projects/{id}/services/git-guardian":
     put:
       operationId: putApiV4ProjectsIdServicesGitGuardian
-      summary: Create/Edit Git Guardian integration
-      description: Set Git Guardian integration.
+      summary: Create or update the Git Guardian integration
+      description: Creates or updates the Git Guardian integration.
       tags:
       - Integrations
       responses:
@@ -49354,8 +49461,9 @@ paths:
   "/api/v4/projects/{id}/services/google-cloud-platform-artifact-registry":
     put:
       operationId: putApiV4ProjectsIdServicesGoogleCloudPlatformArtifactRegistry
-      summary: Create/Edit Google Cloud Platform Artifact Registry integration
-      description: Set Google Cloud Platform Artifact Registry integration.
+      summary: Create or update the Google Cloud Platform Artifact Registry integration
+      description: Creates or updates the Google Cloud Platform Artifact Registry
+        integration.
       tags:
       - Integrations
       responses:
@@ -49392,8 +49500,10 @@ paths:
   "/api/v4/projects/{id}/services/google-cloud-platform-workload-identity-federation":
     put:
       operationId: putApiV4ProjectsIdServicesGoogleCloudPlatformWorkloadIdentityFederation
-      summary: Create/Edit Google Cloud Platform Workload Identity Federation integration
-      description: Set Google Cloud Platform Workload Identity Federation integration.
+      summary: Create or update the Google Cloud Platform Workload Identity Federation
+        integration
+      description: Creates or updates the Google Cloud Platform Workload Identity
+        Federation integration.
       tags:
       - Integrations
       responses:
@@ -49430,8 +49540,8 @@ paths:
   "/api/v4/projects/{id}/services/mock-ci":
     put:
       operationId: putApiV4ProjectsIdServicesMockCi
-      summary: Create/Edit Mock Ci integration
-      description: Set Mock Ci integration.
+      summary: Create or update the Mock Ci integration
+      description: Creates or updates the Mock Ci integration.
       tags:
       - Integrations
       responses:
@@ -49468,8 +49578,8 @@ paths:
   "/api/v4/projects/{id}/services/mock-monitoring":
     put:
       operationId: putApiV4ProjectsIdServicesMockMonitoring
-      summary: Create/Edit Mock Monitoring integration
-      description: Set Mock Monitoring integration.
+      summary: Create or update the Mock Monitoring integration
+      description: Creates or updates the Mock Monitoring integration.
       tags:
       - Integrations
       responses:
@@ -49507,7 +49617,7 @@ paths:
     delete:
       operationId: deleteApiV4ProjectsIdServicesSlug
       summary: Disable an integration
-      description: Disable the integration. Integration settings are preserved.
+      description: Disables a specified integration. Integration settings are preserved.
       tags:
       - Integrations
       responses:
@@ -49590,8 +49700,8 @@ paths:
         example: 1
     get:
       operationId: getApiV4ProjectsIdServicesSlug
-      summary: Get an integration settings
-      description: Get the integration settings.
+      summary: Retrieve integration settings
+      description: Retrieves the settings for a specified integration.
       tags:
       - Integrations
       responses:
@@ -49711,7 +49821,7 @@ paths:
     get:
       operationId: getApiV4ProjectsIdIntegrations
       summary: List all active integrations
-      description: Get a list of all active integrations.
+      description: Lists all active integrations.
       tags:
       - Integrations
       responses:
@@ -49738,8 +49848,8 @@ paths:
   "/api/v4/projects/{id}/integrations/apple-app-store":
     put:
       operationId: putApiV4ProjectsIdIntegrationsAppleAppStore
-      summary: Create/Edit Apple App Store integration
-      description: Set Apple App Store integration.
+      summary: Create or update the Apple App Store integration
+      description: Creates or updates the Apple App Store integration.
       tags:
       - Integrations
       responses:
@@ -49776,8 +49886,8 @@ paths:
   "/api/v4/projects/{id}/integrations/asana":
     put:
       operationId: putApiV4ProjectsIdIntegrationsAsana
-      summary: Create/Edit Asana integration
-      description: Set Asana integration.
+      summary: Create or update the Asana integration
+      description: Creates or updates the Asana integration.
       tags:
       - Integrations
       responses:
@@ -49814,8 +49924,8 @@ paths:
   "/api/v4/projects/{id}/integrations/assembla":
     put:
       operationId: putApiV4ProjectsIdIntegrationsAssembla
-      summary: Create/Edit Assembla integration
-      description: Set Assembla integration.
+      summary: Create or update the Assembla integration
+      description: Creates or updates the Assembla integration.
       tags:
       - Integrations
       responses:
@@ -49852,8 +49962,8 @@ paths:
   "/api/v4/projects/{id}/integrations/bamboo":
     put:
       operationId: putApiV4ProjectsIdIntegrationsBamboo
-      summary: Create/Edit Bamboo integration
-      description: Set Bamboo integration.
+      summary: Create or update the Bamboo integration
+      description: Creates or updates the Bamboo integration.
       tags:
       - Integrations
       responses:
@@ -49890,8 +50000,8 @@ paths:
   "/api/v4/projects/{id}/integrations/bugzilla":
     put:
       operationId: putApiV4ProjectsIdIntegrationsBugzilla
-      summary: Create/Edit Bugzilla integration
-      description: Set Bugzilla integration.
+      summary: Create or update the Bugzilla integration
+      description: Creates or updates the Bugzilla integration.
       tags:
       - Integrations
       responses:
@@ -49928,8 +50038,8 @@ paths:
   "/api/v4/projects/{id}/integrations/buildkite":
     put:
       operationId: putApiV4ProjectsIdIntegrationsBuildkite
-      summary: Create/Edit Buildkite integration
-      description: Set Buildkite integration.
+      summary: Create or update the Buildkite integration
+      description: Creates or updates the Buildkite integration.
       tags:
       - Integrations
       responses:
@@ -49966,8 +50076,8 @@ paths:
   "/api/v4/projects/{id}/integrations/campfire":
     put:
       operationId: putApiV4ProjectsIdIntegrationsCampfire
-      summary: Create/Edit Campfire integration
-      description: Set Campfire integration.
+      summary: Create or update the Campfire integration
+      description: Creates or updates the Campfire integration.
       tags:
       - Integrations
       responses:
@@ -50004,8 +50114,8 @@ paths:
   "/api/v4/projects/{id}/integrations/confluence":
     put:
       operationId: putApiV4ProjectsIdIntegrationsConfluence
-      summary: Create/Edit Confluence integration
-      description: Set Confluence integration.
+      summary: Create or update the Confluence integration
+      description: Creates or updates the Confluence integration.
       tags:
       - Integrations
       responses:
@@ -50042,8 +50152,8 @@ paths:
   "/api/v4/projects/{id}/integrations/custom-issue-tracker":
     put:
       operationId: putApiV4ProjectsIdIntegrationsCustomIssueTracker
-      summary: Create/Edit Custom Issue Tracker integration
-      description: Set Custom Issue Tracker integration.
+      summary: Create or update the Custom Issue Tracker integration
+      description: Creates or updates the Custom Issue Tracker integration.
       tags:
       - Integrations
       responses:
@@ -50080,8 +50190,8 @@ paths:
   "/api/v4/projects/{id}/integrations/datadog":
     put:
       operationId: putApiV4ProjectsIdIntegrationsDatadog
-      summary: Create/Edit Datadog integration
-      description: Set Datadog integration.
+      summary: Create or update the Datadog integration
+      description: Creates or updates the Datadog integration.
       tags:
       - Integrations
       responses:
@@ -50118,8 +50228,8 @@ paths:
   "/api/v4/projects/{id}/integrations/diffblue-cover":
     put:
       operationId: putApiV4ProjectsIdIntegrationsDiffblueCover
-      summary: Create/Edit Diffblue Cover integration
-      description: Set Diffblue Cover integration.
+      summary: Create or update the Diffblue Cover integration
+      description: Creates or updates the Diffblue Cover integration.
       tags:
       - Integrations
       responses:
@@ -50156,8 +50266,8 @@ paths:
   "/api/v4/projects/{id}/integrations/discord":
     put:
       operationId: putApiV4ProjectsIdIntegrationsDiscord
-      summary: Create/Edit Discord integration
-      description: Set Discord integration.
+      summary: Create or update the Discord integration
+      description: Creates or updates the Discord integration.
       tags:
       - Integrations
       responses:
@@ -50194,8 +50304,8 @@ paths:
   "/api/v4/projects/{id}/integrations/drone-ci":
     put:
       operationId: putApiV4ProjectsIdIntegrationsDroneCi
-      summary: Create/Edit Drone Ci integration
-      description: Set Drone Ci integration.
+      summary: Create or update the Drone Ci integration
+      description: Creates or updates the Drone Ci integration.
       tags:
       - Integrations
       responses:
@@ -50232,8 +50342,8 @@ paths:
   "/api/v4/projects/{id}/integrations/emails-on-push":
     put:
       operationId: putApiV4ProjectsIdIntegrationsEmailsOnPush
-      summary: Create/Edit Emails On Push integration
-      description: Set Emails On Push integration.
+      summary: Create or update the Emails On Push integration
+      description: Creates or updates the Emails On Push integration.
       tags:
       - Integrations
       responses:
@@ -50270,8 +50380,8 @@ paths:
   "/api/v4/projects/{id}/integrations/external-wiki":
     put:
       operationId: putApiV4ProjectsIdIntegrationsExternalWiki
-      summary: Create/Edit External Wiki integration
-      description: Set External Wiki integration.
+      summary: Create or update the External Wiki integration
+      description: Creates or updates the External Wiki integration.
       tags:
       - Integrations
       responses:
@@ -50308,8 +50418,8 @@ paths:
   "/api/v4/projects/{id}/integrations/gitlab-slack-application":
     put:
       operationId: putApiV4ProjectsIdIntegrationsGitlabSlackApplication
-      summary: Create/Edit Gitlab Slack Application integration
-      description: Set Gitlab Slack Application integration.
+      summary: Create or update the Gitlab Slack Application integration
+      description: Creates or updates the Gitlab Slack Application integration.
       tags:
       - Integrations
       responses:
@@ -50346,8 +50456,8 @@ paths:
   "/api/v4/projects/{id}/integrations/google-play":
     put:
       operationId: putApiV4ProjectsIdIntegrationsGooglePlay
-      summary: Create/Edit Google Play integration
-      description: Set Google Play integration.
+      summary: Create or update the Google Play integration
+      description: Creates or updates the Google Play integration.
       tags:
       - Integrations
       responses:
@@ -50384,8 +50494,8 @@ paths:
   "/api/v4/projects/{id}/integrations/hangouts-chat":
     put:
       operationId: putApiV4ProjectsIdIntegrationsHangoutsChat
-      summary: Create/Edit Hangouts Chat integration
-      description: Set Hangouts Chat integration.
+      summary: Create or update the Hangouts Chat integration
+      description: Creates or updates the Hangouts Chat integration.
       tags:
       - Integrations
       responses:
@@ -50422,8 +50532,8 @@ paths:
   "/api/v4/projects/{id}/integrations/harbor":
     put:
       operationId: putApiV4ProjectsIdIntegrationsHarbor
-      summary: Create/Edit Harbor integration
-      description: Set Harbor integration.
+      summary: Create or update the Harbor integration
+      description: Creates or updates the Harbor integration.
       tags:
       - Integrations
       responses:
@@ -50460,8 +50570,8 @@ paths:
   "/api/v4/projects/{id}/integrations/irker":
     put:
       operationId: putApiV4ProjectsIdIntegrationsIrker
-      summary: Create/Edit Irker integration
-      description: Set Irker integration.
+      summary: Create or update the Irker integration
+      description: Creates or updates the Irker integration.
       tags:
       - Integrations
       responses:
@@ -50498,8 +50608,8 @@ paths:
   "/api/v4/projects/{id}/integrations/jenkins":
     put:
       operationId: putApiV4ProjectsIdIntegrationsJenkins
-      summary: Create/Edit Jenkins integration
-      description: Set Jenkins integration.
+      summary: Create or update the Jenkins integration
+      description: Creates or updates the Jenkins integration.
       tags:
       - Integrations
       responses:
@@ -50536,8 +50646,8 @@ paths:
   "/api/v4/projects/{id}/integrations/jira":
     put:
       operationId: putApiV4ProjectsIdIntegrationsJira
-      summary: Create/Edit Jira integration
-      description: Set Jira integration.
+      summary: Create or update the Jira integration
+      description: Creates or updates the Jira integration.
       tags:
       - Integrations
       responses:
@@ -50574,8 +50684,8 @@ paths:
   "/api/v4/projects/{id}/integrations/jira-cloud-app":
     put:
       operationId: putApiV4ProjectsIdIntegrationsJiraCloudApp
-      summary: Create/Edit Jira Cloud App integration
-      description: Set Jira Cloud App integration.
+      summary: Create or update the Jira Cloud App integration
+      description: Creates or updates the Jira Cloud App integration.
       tags:
       - Integrations
       responses:
@@ -50612,8 +50722,8 @@ paths:
   "/api/v4/projects/{id}/integrations/linear":
     put:
       operationId: putApiV4ProjectsIdIntegrationsLinear
-      summary: Create/Edit Linear integration
-      description: Set Linear integration.
+      summary: Create or update the Linear integration
+      description: Creates or updates the Linear integration.
       tags:
       - Integrations
       responses:
@@ -50650,8 +50760,8 @@ paths:
   "/api/v4/projects/{id}/integrations/matrix":
     put:
       operationId: putApiV4ProjectsIdIntegrationsMatrix
-      summary: Create/Edit Matrix integration
-      description: Set Matrix integration.
+      summary: Create or update the Matrix integration
+      description: Creates or updates the Matrix integration.
       tags:
       - Integrations
       responses:
@@ -50688,8 +50798,8 @@ paths:
   "/api/v4/projects/{id}/integrations/mattermost-slash-commands":
     put:
       operationId: putApiV4ProjectsIdIntegrationsMattermostSlashCommands
-      summary: Create/Edit Mattermost Slash Commands integration
-      description: Set Mattermost Slash Commands integration.
+      summary: Create or update the Mattermost Slash Commands integration
+      description: Creates or updates the Mattermost Slash Commands integration.
       tags:
       - Integrations
       responses:
@@ -50726,8 +50836,8 @@ paths:
   "/api/v4/projects/{id}/integrations/packagist":
     put:
       operationId: putApiV4ProjectsIdIntegrationsPackagist
-      summary: Create/Edit Packagist integration
-      description: Set Packagist integration.
+      summary: Create or update the Packagist integration
+      description: Creates or updates the Packagist integration.
       tags:
       - Integrations
       responses:
@@ -50764,8 +50874,8 @@ paths:
   "/api/v4/projects/{id}/integrations/phorge":
     put:
       operationId: putApiV4ProjectsIdIntegrationsPhorge
-      summary: Create/Edit Phorge integration
-      description: Set Phorge integration.
+      summary: Create or update the Phorge integration
+      description: Creates or updates the Phorge integration.
       tags:
       - Integrations
       responses:
@@ -50802,8 +50912,8 @@ paths:
   "/api/v4/projects/{id}/integrations/pipelines-email":
     put:
       operationId: putApiV4ProjectsIdIntegrationsPipelinesEmail
-      summary: Create/Edit Pipelines Email integration
-      description: Set Pipelines Email integration.
+      summary: Create or update the Pipelines Email integration
+      description: Creates or updates the Pipelines Email integration.
       tags:
       - Integrations
       responses:
@@ -50840,8 +50950,8 @@ paths:
   "/api/v4/projects/{id}/integrations/pivotaltracker":
     put:
       operationId: putApiV4ProjectsIdIntegrationsPivotaltracker
-      summary: Create/Edit Pivotaltracker integration
-      description: Set Pivotaltracker integration.
+      summary: Create or update the Pivotaltracker integration
+      description: Creates or updates the Pivotaltracker integration.
       tags:
       - Integrations
       responses:
@@ -50878,8 +50988,8 @@ paths:
   "/api/v4/projects/{id}/integrations/pumble":
     put:
       operationId: putApiV4ProjectsIdIntegrationsPumble
-      summary: Create/Edit Pumble integration
-      description: Set Pumble integration.
+      summary: Create or update the Pumble integration
+      description: Creates or updates the Pumble integration.
       tags:
       - Integrations
       responses:
@@ -50916,8 +51026,8 @@ paths:
   "/api/v4/projects/{id}/integrations/pushover":
     put:
       operationId: putApiV4ProjectsIdIntegrationsPushover
-      summary: Create/Edit Pushover integration
-      description: Set Pushover integration.
+      summary: Create or update the Pushover integration
+      description: Creates or updates the Pushover integration.
       tags:
       - Integrations
       responses:
@@ -50954,8 +51064,8 @@ paths:
   "/api/v4/projects/{id}/integrations/redmine":
     put:
       operationId: putApiV4ProjectsIdIntegrationsRedmine
-      summary: Create/Edit Redmine integration
-      description: Set Redmine integration.
+      summary: Create or update the Redmine integration
+      description: Creates or updates the Redmine integration.
       tags:
       - Integrations
       responses:
@@ -50992,8 +51102,8 @@ paths:
   "/api/v4/projects/{id}/integrations/ewm":
     put:
       operationId: putApiV4ProjectsIdIntegrationsEwm
-      summary: Create/Edit Ewm integration
-      description: Set Ewm integration.
+      summary: Create or update the Ewm integration
+      description: Creates or updates the Ewm integration.
       tags:
       - Integrations
       responses:
@@ -51030,8 +51140,8 @@ paths:
   "/api/v4/projects/{id}/integrations/youtrack":
     put:
       operationId: putApiV4ProjectsIdIntegrationsYoutrack
-      summary: Create/Edit Youtrack integration
-      description: Set Youtrack integration.
+      summary: Create or update the Youtrack integration
+      description: Creates or updates the Youtrack integration.
       tags:
       - Integrations
       responses:
@@ -51068,8 +51178,8 @@ paths:
   "/api/v4/projects/{id}/integrations/clickup":
     put:
       operationId: putApiV4ProjectsIdIntegrationsClickup
-      summary: Create/Edit Clickup integration
-      description: Set Clickup integration.
+      summary: Create or update the Clickup integration
+      description: Creates or updates the Clickup integration.
       tags:
       - Integrations
       responses:
@@ -51106,8 +51216,8 @@ paths:
   "/api/v4/projects/{id}/integrations/slack":
     put:
       operationId: putApiV4ProjectsIdIntegrationsSlack
-      summary: Create/Edit Slack integration
-      description: Set Slack integration.
+      summary: Create or update the Slack integration
+      description: Creates or updates the Slack integration.
       tags:
       - Integrations
       responses:
@@ -51144,8 +51254,8 @@ paths:
   "/api/v4/projects/{id}/integrations/microsoft-teams":
     put:
       operationId: putApiV4ProjectsIdIntegrationsMicrosoftTeams
-      summary: Create/Edit Microsoft Teams integration
-      description: Set Microsoft Teams integration.
+      summary: Create or update the Microsoft Teams integration
+      description: Creates or updates the Microsoft Teams integration.
       tags:
       - Integrations
       responses:
@@ -51182,8 +51292,8 @@ paths:
   "/api/v4/projects/{id}/integrations/mattermost":
     put:
       operationId: putApiV4ProjectsIdIntegrationsMattermost
-      summary: Create/Edit Mattermost integration
-      description: Set Mattermost integration.
+      summary: Create or update the Mattermost integration
+      description: Creates or updates the Mattermost integration.
       tags:
       - Integrations
       responses:
@@ -51220,8 +51330,8 @@ paths:
   "/api/v4/projects/{id}/integrations/teamcity":
     put:
       operationId: putApiV4ProjectsIdIntegrationsTeamcity
-      summary: Create/Edit Teamcity integration
-      description: Set Teamcity integration.
+      summary: Create or update the Teamcity integration
+      description: Creates or updates the Teamcity integration.
       tags:
       - Integrations
       responses:
@@ -51258,8 +51368,8 @@ paths:
   "/api/v4/projects/{id}/integrations/telegram":
     put:
       operationId: putApiV4ProjectsIdIntegrationsTelegram
-      summary: Create/Edit Telegram integration
-      description: Set Telegram integration.
+      summary: Create or update the Telegram integration
+      description: Creates or updates the Telegram integration.
       tags:
       - Integrations
       responses:
@@ -51296,8 +51406,8 @@ paths:
   "/api/v4/projects/{id}/integrations/unify-circuit":
     put:
       operationId: putApiV4ProjectsIdIntegrationsUnifyCircuit
-      summary: Create/Edit Unify Circuit integration
-      description: Set Unify Circuit integration.
+      summary: Create or update the Unify Circuit integration
+      description: Creates or updates the Unify Circuit integration.
       tags:
       - Integrations
       responses:
@@ -51334,8 +51444,8 @@ paths:
   "/api/v4/projects/{id}/integrations/webex-teams":
     put:
       operationId: putApiV4ProjectsIdIntegrationsWebexTeams
-      summary: Create/Edit Webex Teams integration
-      description: Set Webex Teams integration.
+      summary: Create or update the Webex Teams integration
+      description: Creates or updates the Webex Teams integration.
       tags:
       - Integrations
       responses:
@@ -51372,8 +51482,8 @@ paths:
   "/api/v4/projects/{id}/integrations/zentao":
     put:
       operationId: putApiV4ProjectsIdIntegrationsZentao
-      summary: Create/Edit Zentao integration
-      description: Set Zentao integration.
+      summary: Create or update the Zentao integration
+      description: Creates or updates the Zentao integration.
       tags:
       - Integrations
       responses:
@@ -51410,8 +51520,8 @@ paths:
   "/api/v4/projects/{id}/integrations/squash-tm":
     put:
       operationId: putApiV4ProjectsIdIntegrationsSquashTm
-      summary: Create/Edit Squash Tm integration
-      description: Set Squash Tm integration.
+      summary: Create or update the Squash Tm integration
+      description: Creates or updates the Squash Tm integration.
       tags:
       - Integrations
       responses:
@@ -51448,8 +51558,8 @@ paths:
   "/api/v4/projects/{id}/integrations/github":
     put:
       operationId: putApiV4ProjectsIdIntegrationsGithub
-      summary: Create/Edit Github integration
-      description: Set Github integration.
+      summary: Create or update the Github integration
+      description: Creates or updates the Github integration.
       tags:
       - Integrations
       responses:
@@ -51486,8 +51596,8 @@ paths:
   "/api/v4/projects/{id}/integrations/git-guardian":
     put:
       operationId: putApiV4ProjectsIdIntegrationsGitGuardian
-      summary: Create/Edit Git Guardian integration
-      description: Set Git Guardian integration.
+      summary: Create or update the Git Guardian integration
+      description: Creates or updates the Git Guardian integration.
       tags:
       - Integrations
       responses:
@@ -51524,8 +51634,9 @@ paths:
   "/api/v4/projects/{id}/integrations/google-cloud-platform-artifact-registry":
     put:
       operationId: putApiV4ProjectsIdIntegrationsGoogleCloudPlatformArtifactRegistry
-      summary: Create/Edit Google Cloud Platform Artifact Registry integration
-      description: Set Google Cloud Platform Artifact Registry integration.
+      summary: Create or update the Google Cloud Platform Artifact Registry integration
+      description: Creates or updates the Google Cloud Platform Artifact Registry
+        integration.
       tags:
       - Integrations
       responses:
@@ -51562,8 +51673,10 @@ paths:
   "/api/v4/projects/{id}/integrations/google-cloud-platform-workload-identity-federation":
     put:
       operationId: putApiV4ProjectsIdIntegrationsGoogleCloudPlatformWorkloadIdentityFederation
-      summary: Create/Edit Google Cloud Platform Workload Identity Federation integration
-      description: Set Google Cloud Platform Workload Identity Federation integration.
+      summary: Create or update the Google Cloud Platform Workload Identity Federation
+        integration
+      description: Creates or updates the Google Cloud Platform Workload Identity
+        Federation integration.
       tags:
       - Integrations
       responses:
@@ -51600,8 +51713,8 @@ paths:
   "/api/v4/projects/{id}/integrations/mock-ci":
     put:
       operationId: putApiV4ProjectsIdIntegrationsMockCi
-      summary: Create/Edit Mock Ci integration
-      description: Set Mock Ci integration.
+      summary: Create or update the Mock Ci integration
+      description: Creates or updates the Mock Ci integration.
       tags:
       - Integrations
       responses:
@@ -51638,8 +51751,8 @@ paths:
   "/api/v4/projects/{id}/integrations/mock-monitoring":
     put:
       operationId: putApiV4ProjectsIdIntegrationsMockMonitoring
-      summary: Create/Edit Mock Monitoring integration
-      description: Set Mock Monitoring integration.
+      summary: Create or update the Mock Monitoring integration
+      description: Creates or updates the Mock Monitoring integration.
       tags:
       - Integrations
       responses:
@@ -51677,7 +51790,7 @@ paths:
     delete:
       operationId: deleteApiV4ProjectsIdIntegrationsSlug
       summary: Disable an integration
-      description: Disable the integration. Integration settings are preserved.
+      description: Disables a specified integration. Integration settings are preserved.
       tags:
       - Integrations
       responses:
@@ -51760,8 +51873,8 @@ paths:
         example: 1
     get:
       operationId: getApiV4ProjectsIdIntegrationsSlug
-      summary: Get an integration settings
-      description: Get the integration settings.
+      summary: Retrieve integration settings
+      description: Retrieves the settings for a specified integration.
       tags:
       - Integrations
       responses:
@@ -51881,7 +51994,7 @@ paths:
     get:
       operationId: getApiV4GroupsIdIntegrations
       summary: List all active integrations
-      description: Get a list of all active integrations.
+      description: Lists all active integrations.
       tags:
       - Integrations
       responses:
@@ -51907,8 +52020,8 @@ paths:
   "/api/v4/groups/{id}/integrations/apple-app-store":
     put:
       operationId: putApiV4GroupsIdIntegrationsAppleAppStore
-      summary: Create/Edit Apple App Store integration
-      description: Set Apple App Store integration.
+      summary: Create or update the Apple App Store integration
+      description: Creates or updates the Apple App Store integration.
       tags:
       - Integrations
       responses:
@@ -51944,8 +52057,8 @@ paths:
   "/api/v4/groups/{id}/integrations/asana":
     put:
       operationId: putApiV4GroupsIdIntegrationsAsana
-      summary: Create/Edit Asana integration
-      description: Set Asana integration.
+      summary: Create or update the Asana integration
+      description: Creates or updates the Asana integration.
       tags:
       - Integrations
       responses:
@@ -51981,8 +52094,8 @@ paths:
   "/api/v4/groups/{id}/integrations/assembla":
     put:
       operationId: putApiV4GroupsIdIntegrationsAssembla
-      summary: Create/Edit Assembla integration
-      description: Set Assembla integration.
+      summary: Create or update the Assembla integration
+      description: Creates or updates the Assembla integration.
       tags:
       - Integrations
       responses:
@@ -52018,8 +52131,8 @@ paths:
   "/api/v4/groups/{id}/integrations/bamboo":
     put:
       operationId: putApiV4GroupsIdIntegrationsBamboo
-      summary: Create/Edit Bamboo integration
-      description: Set Bamboo integration.
+      summary: Create or update the Bamboo integration
+      description: Creates or updates the Bamboo integration.
       tags:
       - Integrations
       responses:
@@ -52055,8 +52168,8 @@ paths:
   "/api/v4/groups/{id}/integrations/bugzilla":
     put:
       operationId: putApiV4GroupsIdIntegrationsBugzilla
-      summary: Create/Edit Bugzilla integration
-      description: Set Bugzilla integration.
+      summary: Create or update the Bugzilla integration
+      description: Creates or updates the Bugzilla integration.
       tags:
       - Integrations
       responses:
@@ -52092,8 +52205,8 @@ paths:
   "/api/v4/groups/{id}/integrations/buildkite":
     put:
       operationId: putApiV4GroupsIdIntegrationsBuildkite
-      summary: Create/Edit Buildkite integration
-      description: Set Buildkite integration.
+      summary: Create or update the Buildkite integration
+      description: Creates or updates the Buildkite integration.
       tags:
       - Integrations
       responses:
@@ -52129,8 +52242,8 @@ paths:
   "/api/v4/groups/{id}/integrations/campfire":
     put:
       operationId: putApiV4GroupsIdIntegrationsCampfire
-      summary: Create/Edit Campfire integration
-      description: Set Campfire integration.
+      summary: Create or update the Campfire integration
+      description: Creates or updates the Campfire integration.
       tags:
       - Integrations
       responses:
@@ -52166,8 +52279,8 @@ paths:
   "/api/v4/groups/{id}/integrations/confluence":
     put:
       operationId: putApiV4GroupsIdIntegrationsConfluence
-      summary: Create/Edit Confluence integration
-      description: Set Confluence integration.
+      summary: Create or update the Confluence integration
+      description: Creates or updates the Confluence integration.
       tags:
       - Integrations
       responses:
@@ -52203,8 +52316,8 @@ paths:
   "/api/v4/groups/{id}/integrations/custom-issue-tracker":
     put:
       operationId: putApiV4GroupsIdIntegrationsCustomIssueTracker
-      summary: Create/Edit Custom Issue Tracker integration
-      description: Set Custom Issue Tracker integration.
+      summary: Create or update the Custom Issue Tracker integration
+      description: Creates or updates the Custom Issue Tracker integration.
       tags:
       - Integrations
       responses:
@@ -52240,8 +52353,8 @@ paths:
   "/api/v4/groups/{id}/integrations/datadog":
     put:
       operationId: putApiV4GroupsIdIntegrationsDatadog
-      summary: Create/Edit Datadog integration
-      description: Set Datadog integration.
+      summary: Create or update the Datadog integration
+      description: Creates or updates the Datadog integration.
       tags:
       - Integrations
       responses:
@@ -52277,8 +52390,8 @@ paths:
   "/api/v4/groups/{id}/integrations/diffblue-cover":
     put:
       operationId: putApiV4GroupsIdIntegrationsDiffblueCover
-      summary: Create/Edit Diffblue Cover integration
-      description: Set Diffblue Cover integration.
+      summary: Create or update the Diffblue Cover integration
+      description: Creates or updates the Diffblue Cover integration.
       tags:
       - Integrations
       responses:
@@ -52314,8 +52427,8 @@ paths:
   "/api/v4/groups/{id}/integrations/discord":
     put:
       operationId: putApiV4GroupsIdIntegrationsDiscord
-      summary: Create/Edit Discord integration
-      description: Set Discord integration.
+      summary: Create or update the Discord integration
+      description: Creates or updates the Discord integration.
       tags:
       - Integrations
       responses:
@@ -52351,8 +52464,8 @@ paths:
   "/api/v4/groups/{id}/integrations/drone-ci":
     put:
       operationId: putApiV4GroupsIdIntegrationsDroneCi
-      summary: Create/Edit Drone Ci integration
-      description: Set Drone Ci integration.
+      summary: Create or update the Drone Ci integration
+      description: Creates or updates the Drone Ci integration.
       tags:
       - Integrations
       responses:
@@ -52388,8 +52501,8 @@ paths:
   "/api/v4/groups/{id}/integrations/emails-on-push":
     put:
       operationId: putApiV4GroupsIdIntegrationsEmailsOnPush
-      summary: Create/Edit Emails On Push integration
-      description: Set Emails On Push integration.
+      summary: Create or update the Emails On Push integration
+      description: Creates or updates the Emails On Push integration.
       tags:
       - Integrations
       responses:
@@ -52425,8 +52538,8 @@ paths:
   "/api/v4/groups/{id}/integrations/external-wiki":
     put:
       operationId: putApiV4GroupsIdIntegrationsExternalWiki
-      summary: Create/Edit External Wiki integration
-      description: Set External Wiki integration.
+      summary: Create or update the External Wiki integration
+      description: Creates or updates the External Wiki integration.
       tags:
       - Integrations
       responses:
@@ -52462,8 +52575,8 @@ paths:
   "/api/v4/groups/{id}/integrations/gitlab-slack-application":
     put:
       operationId: putApiV4GroupsIdIntegrationsGitlabSlackApplication
-      summary: Create/Edit Gitlab Slack Application integration
-      description: Set Gitlab Slack Application integration.
+      summary: Create or update the Gitlab Slack Application integration
+      description: Creates or updates the Gitlab Slack Application integration.
       tags:
       - Integrations
       responses:
@@ -52499,8 +52612,8 @@ paths:
   "/api/v4/groups/{id}/integrations/google-play":
     put:
       operationId: putApiV4GroupsIdIntegrationsGooglePlay
-      summary: Create/Edit Google Play integration
-      description: Set Google Play integration.
+      summary: Create or update the Google Play integration
+      description: Creates or updates the Google Play integration.
       tags:
       - Integrations
       responses:
@@ -52536,8 +52649,8 @@ paths:
   "/api/v4/groups/{id}/integrations/hangouts-chat":
     put:
       operationId: putApiV4GroupsIdIntegrationsHangoutsChat
-      summary: Create/Edit Hangouts Chat integration
-      description: Set Hangouts Chat integration.
+      summary: Create or update the Hangouts Chat integration
+      description: Creates or updates the Hangouts Chat integration.
       tags:
       - Integrations
       responses:
@@ -52573,8 +52686,8 @@ paths:
   "/api/v4/groups/{id}/integrations/harbor":
     put:
       operationId: putApiV4GroupsIdIntegrationsHarbor
-      summary: Create/Edit Harbor integration
-      description: Set Harbor integration.
+      summary: Create or update the Harbor integration
+      description: Creates or updates the Harbor integration.
       tags:
       - Integrations
       responses:
@@ -52610,8 +52723,8 @@ paths:
   "/api/v4/groups/{id}/integrations/irker":
     put:
       operationId: putApiV4GroupsIdIntegrationsIrker
-      summary: Create/Edit Irker integration
-      description: Set Irker integration.
+      summary: Create or update the Irker integration
+      description: Creates or updates the Irker integration.
       tags:
       - Integrations
       responses:
@@ -52647,8 +52760,8 @@ paths:
   "/api/v4/groups/{id}/integrations/jenkins":
     put:
       operationId: putApiV4GroupsIdIntegrationsJenkins
-      summary: Create/Edit Jenkins integration
-      description: Set Jenkins integration.
+      summary: Create or update the Jenkins integration
+      description: Creates or updates the Jenkins integration.
       tags:
       - Integrations
       responses:
@@ -52684,8 +52797,8 @@ paths:
   "/api/v4/groups/{id}/integrations/jira":
     put:
       operationId: putApiV4GroupsIdIntegrationsJira
-      summary: Create/Edit Jira integration
-      description: Set Jira integration.
+      summary: Create or update the Jira integration
+      description: Creates or updates the Jira integration.
       tags:
       - Integrations
       responses:
@@ -52721,8 +52834,8 @@ paths:
   "/api/v4/groups/{id}/integrations/jira-cloud-app":
     put:
       operationId: putApiV4GroupsIdIntegrationsJiraCloudApp
-      summary: Create/Edit Jira Cloud App integration
-      description: Set Jira Cloud App integration.
+      summary: Create or update the Jira Cloud App integration
+      description: Creates or updates the Jira Cloud App integration.
       tags:
       - Integrations
       responses:
@@ -52758,8 +52871,8 @@ paths:
   "/api/v4/groups/{id}/integrations/linear":
     put:
       operationId: putApiV4GroupsIdIntegrationsLinear
-      summary: Create/Edit Linear integration
-      description: Set Linear integration.
+      summary: Create or update the Linear integration
+      description: Creates or updates the Linear integration.
       tags:
       - Integrations
       responses:
@@ -52795,8 +52908,8 @@ paths:
   "/api/v4/groups/{id}/integrations/matrix":
     put:
       operationId: putApiV4GroupsIdIntegrationsMatrix
-      summary: Create/Edit Matrix integration
-      description: Set Matrix integration.
+      summary: Create or update the Matrix integration
+      description: Creates or updates the Matrix integration.
       tags:
       - Integrations
       responses:
@@ -52832,8 +52945,8 @@ paths:
   "/api/v4/groups/{id}/integrations/mattermost-slash-commands":
     put:
       operationId: putApiV4GroupsIdIntegrationsMattermostSlashCommands
-      summary: Create/Edit Mattermost Slash Commands integration
-      description: Set Mattermost Slash Commands integration.
+      summary: Create or update the Mattermost Slash Commands integration
+      description: Creates or updates the Mattermost Slash Commands integration.
       tags:
       - Integrations
       responses:
@@ -52869,8 +52982,8 @@ paths:
   "/api/v4/groups/{id}/integrations/packagist":
     put:
       operationId: putApiV4GroupsIdIntegrationsPackagist
-      summary: Create/Edit Packagist integration
-      description: Set Packagist integration.
+      summary: Create or update the Packagist integration
+      description: Creates or updates the Packagist integration.
       tags:
       - Integrations
       responses:
@@ -52906,8 +53019,8 @@ paths:
   "/api/v4/groups/{id}/integrations/phorge":
     put:
       operationId: putApiV4GroupsIdIntegrationsPhorge
-      summary: Create/Edit Phorge integration
-      description: Set Phorge integration.
+      summary: Create or update the Phorge integration
+      description: Creates or updates the Phorge integration.
       tags:
       - Integrations
       responses:
@@ -52943,8 +53056,8 @@ paths:
   "/api/v4/groups/{id}/integrations/pipelines-email":
     put:
       operationId: putApiV4GroupsIdIntegrationsPipelinesEmail
-      summary: Create/Edit Pipelines Email integration
-      description: Set Pipelines Email integration.
+      summary: Create or update the Pipelines Email integration
+      description: Creates or updates the Pipelines Email integration.
       tags:
       - Integrations
       responses:
@@ -52980,8 +53093,8 @@ paths:
   "/api/v4/groups/{id}/integrations/pivotaltracker":
     put:
       operationId: putApiV4GroupsIdIntegrationsPivotaltracker
-      summary: Create/Edit Pivotaltracker integration
-      description: Set Pivotaltracker integration.
+      summary: Create or update the Pivotaltracker integration
+      description: Creates or updates the Pivotaltracker integration.
       tags:
       - Integrations
       responses:
@@ -53017,8 +53130,8 @@ paths:
   "/api/v4/groups/{id}/integrations/pumble":
     put:
       operationId: putApiV4GroupsIdIntegrationsPumble
-      summary: Create/Edit Pumble integration
-      description: Set Pumble integration.
+      summary: Create or update the Pumble integration
+      description: Creates or updates the Pumble integration.
       tags:
       - Integrations
       responses:
@@ -53054,8 +53167,8 @@ paths:
   "/api/v4/groups/{id}/integrations/pushover":
     put:
       operationId: putApiV4GroupsIdIntegrationsPushover
-      summary: Create/Edit Pushover integration
-      description: Set Pushover integration.
+      summary: Create or update the Pushover integration
+      description: Creates or updates the Pushover integration.
       tags:
       - Integrations
       responses:
@@ -53091,8 +53204,8 @@ paths:
   "/api/v4/groups/{id}/integrations/redmine":
     put:
       operationId: putApiV4GroupsIdIntegrationsRedmine
-      summary: Create/Edit Redmine integration
-      description: Set Redmine integration.
+      summary: Create or update the Redmine integration
+      description: Creates or updates the Redmine integration.
       tags:
       - Integrations
       responses:
@@ -53128,8 +53241,8 @@ paths:
   "/api/v4/groups/{id}/integrations/ewm":
     put:
       operationId: putApiV4GroupsIdIntegrationsEwm
-      summary: Create/Edit Ewm integration
-      description: Set Ewm integration.
+      summary: Create or update the Ewm integration
+      description: Creates or updates the Ewm integration.
       tags:
       - Integrations
       responses:
@@ -53165,8 +53278,8 @@ paths:
   "/api/v4/groups/{id}/integrations/youtrack":
     put:
       operationId: putApiV4GroupsIdIntegrationsYoutrack
-      summary: Create/Edit Youtrack integration
-      description: Set Youtrack integration.
+      summary: Create or update the Youtrack integration
+      description: Creates or updates the Youtrack integration.
       tags:
       - Integrations
       responses:
@@ -53202,8 +53315,8 @@ paths:
   "/api/v4/groups/{id}/integrations/clickup":
     put:
       operationId: putApiV4GroupsIdIntegrationsClickup
-      summary: Create/Edit Clickup integration
-      description: Set Clickup integration.
+      summary: Create or update the Clickup integration
+      description: Creates or updates the Clickup integration.
       tags:
       - Integrations
       responses:
@@ -53239,8 +53352,8 @@ paths:
   "/api/v4/groups/{id}/integrations/slack":
     put:
       operationId: putApiV4GroupsIdIntegrationsSlack
-      summary: Create/Edit Slack integration
-      description: Set Slack integration.
+      summary: Create or update the Slack integration
+      description: Creates or updates the Slack integration.
       tags:
       - Integrations
       responses:
@@ -53276,8 +53389,8 @@ paths:
   "/api/v4/groups/{id}/integrations/microsoft-teams":
     put:
       operationId: putApiV4GroupsIdIntegrationsMicrosoftTeams
-      summary: Create/Edit Microsoft Teams integration
-      description: Set Microsoft Teams integration.
+      summary: Create or update the Microsoft Teams integration
+      description: Creates or updates the Microsoft Teams integration.
       tags:
       - Integrations
       responses:
@@ -53313,8 +53426,8 @@ paths:
   "/api/v4/groups/{id}/integrations/mattermost":
     put:
       operationId: putApiV4GroupsIdIntegrationsMattermost
-      summary: Create/Edit Mattermost integration
-      description: Set Mattermost integration.
+      summary: Create or update the Mattermost integration
+      description: Creates or updates the Mattermost integration.
       tags:
       - Integrations
       responses:
@@ -53350,8 +53463,8 @@ paths:
   "/api/v4/groups/{id}/integrations/teamcity":
     put:
       operationId: putApiV4GroupsIdIntegrationsTeamcity
-      summary: Create/Edit Teamcity integration
-      description: Set Teamcity integration.
+      summary: Create or update the Teamcity integration
+      description: Creates or updates the Teamcity integration.
       tags:
       - Integrations
       responses:
@@ -53387,8 +53500,8 @@ paths:
   "/api/v4/groups/{id}/integrations/telegram":
     put:
       operationId: putApiV4GroupsIdIntegrationsTelegram
-      summary: Create/Edit Telegram integration
-      description: Set Telegram integration.
+      summary: Create or update the Telegram integration
+      description: Creates or updates the Telegram integration.
       tags:
       - Integrations
       responses:
@@ -53424,8 +53537,8 @@ paths:
   "/api/v4/groups/{id}/integrations/unify-circuit":
     put:
       operationId: putApiV4GroupsIdIntegrationsUnifyCircuit
-      summary: Create/Edit Unify Circuit integration
-      description: Set Unify Circuit integration.
+      summary: Create or update the Unify Circuit integration
+      description: Creates or updates the Unify Circuit integration.
       tags:
       - Integrations
       responses:
@@ -53461,8 +53574,8 @@ paths:
   "/api/v4/groups/{id}/integrations/webex-teams":
     put:
       operationId: putApiV4GroupsIdIntegrationsWebexTeams
-      summary: Create/Edit Webex Teams integration
-      description: Set Webex Teams integration.
+      summary: Create or update the Webex Teams integration
+      description: Creates or updates the Webex Teams integration.
       tags:
       - Integrations
       responses:
@@ -53498,8 +53611,8 @@ paths:
   "/api/v4/groups/{id}/integrations/zentao":
     put:
       operationId: putApiV4GroupsIdIntegrationsZentao
-      summary: Create/Edit Zentao integration
-      description: Set Zentao integration.
+      summary: Create or update the Zentao integration
+      description: Creates or updates the Zentao integration.
       tags:
       - Integrations
       responses:
@@ -53535,8 +53648,8 @@ paths:
   "/api/v4/groups/{id}/integrations/squash-tm":
     put:
       operationId: putApiV4GroupsIdIntegrationsSquashTm
-      summary: Create/Edit Squash Tm integration
-      description: Set Squash Tm integration.
+      summary: Create or update the Squash Tm integration
+      description: Creates or updates the Squash Tm integration.
       tags:
       - Integrations
       responses:
@@ -53572,8 +53685,8 @@ paths:
   "/api/v4/groups/{id}/integrations/github":
     put:
       operationId: putApiV4GroupsIdIntegrationsGithub
-      summary: Create/Edit Github integration
-      description: Set Github integration.
+      summary: Create or update the Github integration
+      description: Creates or updates the Github integration.
       tags:
       - Integrations
       responses:
@@ -53609,8 +53722,8 @@ paths:
   "/api/v4/groups/{id}/integrations/git-guardian":
     put:
       operationId: putApiV4GroupsIdIntegrationsGitGuardian
-      summary: Create/Edit Git Guardian integration
-      description: Set Git Guardian integration.
+      summary: Create or update the Git Guardian integration
+      description: Creates or updates the Git Guardian integration.
       tags:
       - Integrations
       responses:
@@ -53646,8 +53759,9 @@ paths:
   "/api/v4/groups/{id}/integrations/google-cloud-platform-artifact-registry":
     put:
       operationId: putApiV4GroupsIdIntegrationsGoogleCloudPlatformArtifactRegistry
-      summary: Create/Edit Google Cloud Platform Artifact Registry integration
-      description: Set Google Cloud Platform Artifact Registry integration.
+      summary: Create or update the Google Cloud Platform Artifact Registry integration
+      description: Creates or updates the Google Cloud Platform Artifact Registry
+        integration.
       tags:
       - Integrations
       responses:
@@ -53683,8 +53797,10 @@ paths:
   "/api/v4/groups/{id}/integrations/google-cloud-platform-workload-identity-federation":
     put:
       operationId: putApiV4GroupsIdIntegrationsGoogleCloudPlatformWorkloadIdentityFederation
-      summary: Create/Edit Google Cloud Platform Workload Identity Federation integration
-      description: Set Google Cloud Platform Workload Identity Federation integration.
+      summary: Create or update the Google Cloud Platform Workload Identity Federation
+        integration
+      description: Creates or updates the Google Cloud Platform Workload Identity
+        Federation integration.
       tags:
       - Integrations
       responses:
@@ -53720,8 +53836,8 @@ paths:
   "/api/v4/groups/{id}/integrations/mock-ci":
     put:
       operationId: putApiV4GroupsIdIntegrationsMockCi
-      summary: Create/Edit Mock Ci integration
-      description: Set Mock Ci integration.
+      summary: Create or update the Mock Ci integration
+      description: Creates or updates the Mock Ci integration.
       tags:
       - Integrations
       responses:
@@ -53757,8 +53873,8 @@ paths:
   "/api/v4/groups/{id}/integrations/mock-monitoring":
     put:
       operationId: putApiV4GroupsIdIntegrationsMockMonitoring
-      summary: Create/Edit Mock Monitoring integration
-      description: Set Mock Monitoring integration.
+      summary: Create or update the Mock Monitoring integration
+      description: Creates or updates the Mock Monitoring integration.
       tags:
       - Integrations
       responses:
@@ -53795,7 +53911,7 @@ paths:
     delete:
       operationId: deleteApiV4GroupsIdIntegrationsSlug
       summary: Disable an integration
-      description: Disable the integration. Integration settings are preserved.
+      description: Disables a specified integration. Integration settings are preserved.
       tags:
       - Integrations
       responses:
@@ -53877,8 +53993,8 @@ paths:
         in: path
     get:
       operationId: getApiV4GroupsIdIntegrationsSlug
-      summary: Get an integration settings
-      description: Get the integration settings.
+      summary: Retrieve integration settings
+      description: Retrieves the settings for a specified integration.
       tags:
       - Integrations
       responses:
@@ -64080,7 +64196,7 @@ paths:
   "/api/v4/projects/{id}/repository/commits/{sha}/merge_requests":
     get:
       operationId: getApiV4ProjectsIdRepositoryCommitsShaMergeRequests
-      summary: List all merge requests for a commit
+      summary: List all merge requests associated with a commit
       description: Lists all merge requests associated with a specified commit.
       tags:
       - Commits
@@ -69107,7 +69223,7 @@ paths:
         content:
           multipart/form-data:
             schema:
-              "$ref": "#/components/schemas/RequestBody_2b200d12bc21"
+              "$ref": "#/components/schemas/RequestBody_2d428c28b365"
     get:
       operationId: getApiV4GroupsId
       summary: Retrieve a group
@@ -94926,7 +95042,7 @@ components:
           description: Reject commit when it’s not DCO certified.
           example: true
           nullable: true
-    RequestBody_a7a890622ef9:
+    RequestBody_de9fcc78c876:
       type: object
       properties:
         action:
@@ -94960,6 +95076,11 @@ components:
         pull_request.base.repo.full_name:
           type: string
           description: Target repository
+          nullable: true
+        force:
+          type: boolean
+          description: Reset the mirror if it is in a hard-failed state and retry
+            the update
           nullable: true
     RequestBody_dc0e88ca59c5:
       type: object
@@ -113527,7 +113648,7 @@ components:
       required:
       - name
       - path
-    RequestBody_2b200d12bc21:
+    RequestBody_2d428c28b365:
       type: object
       properties:
         name:
@@ -113986,6 +114107,15 @@ components:
         auto_duo_code_review_enabled:
           type: boolean
           description: Enable automatic reviews by GitLab Duo on merge requests
+          nullable: true
+        ai_audit_events_storage_enabled:
+          type: boolean
+          description: Indicates whether AI audit events are stored for the group
+          nullable: true
+        lock_ai_audit_events_storage_enabled:
+          type: boolean
+          description: Indicates whether AI audit events storage is enforced for all
+            subgroups and projects
           nullable: true
         web_based_commit_signing_enabled:
           type: boolean

@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Tags.It
         {
         }
         /// <summary>
-        /// Get a tag&apos;s signature
+        /// Retrieves the X.509 signature from a signed tag. Unsigned tags return a `404 Not Found` response.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTagSignature"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Tags.It
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTagSignature>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTagSignature.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get a tag&apos;s signature
+        /// Retrieves the X.509 signature from a signed tag. Unsigned tags return a `404 Not Found` response.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
