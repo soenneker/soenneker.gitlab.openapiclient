@@ -31928,15 +31928,6 @@
             }
           },
           {
-            "name": "policy_sync_config_id",
-            "in": "query",
-            "description": "Metadata key to match",
-            "schema": {
-              "type": "string",
-              "nullable": true
-            }
-          },
-          {
             "name": "worker_class",
             "in": "query",
             "description": "Metadata key to match",
