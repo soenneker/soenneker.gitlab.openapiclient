@@ -9,43 +9,43 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class RequestBodyE4642B3Ac7E6DuoNamespaceAccessRulesItem : IAdditionalDataHolder, IParsable
+    public partial class RequestBodyBddd5De04Ffa : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>List of accessible features</summary>
+        /// <summary>Context parameters (user, namespace, project). An actor context is resolved from the user. Defaults to current user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Features { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBddd5De04FfaContext? Context { get; set; }
 #nullable restore
 #else
-        public List<string> Features { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBddd5De04FfaContext Context { get; set; }
 #endif
-        /// <summary>Object containing through namespace information</summary>
+        /// <summary>The variant name to assign (e.g., control, candidate)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE4642B3Ac7E6DuoNamespaceAccessRulesItemThroughNamespace? ThroughNamespace { get; set; }
+        public string? Variant { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE4642B3Ac7E6DuoNamespaceAccessRulesItemThroughNamespace ThroughNamespace { get; set; }
+        public string Variant { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE4642B3Ac7E6DuoNamespaceAccessRulesItem"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBddd5De04Ffa"/> and sets the default values.
         /// </summary>
-        public RequestBodyE4642B3Ac7E6DuoNamespaceAccessRulesItem()
+        public RequestBodyBddd5De04Ffa()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE4642B3Ac7E6DuoNamespaceAccessRulesItem"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBddd5De04Ffa"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE4642B3Ac7E6DuoNamespaceAccessRulesItem CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBddd5De04Ffa CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE4642B3Ac7E6DuoNamespaceAccessRulesItem();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBddd5De04Ffa();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -55,8 +55,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "features", n => { Features = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "through_namespace", n => { ThroughNamespace = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE4642B3Ac7E6DuoNamespaceAccessRulesItemThroughNamespace>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE4642B3Ac7E6DuoNamespaceAccessRulesItemThroughNamespace.CreateFromDiscriminatorValue); } },
+                { "context", n => { Context = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBddd5De04FfaContext>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBddd5De04FfaContext.CreateFromDiscriminatorValue); } },
+                { "variant", n => { Variant = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -66,8 +66,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfPrimitiveValues<string>("features", Features);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE4642B3Ac7E6DuoNamespaceAccessRulesItemThroughNamespace>("through_namespace", ThroughNamespace);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBddd5De04FfaContext>("context", Context);
+            writer.WriteStringValue("variant", Variant);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -2112,6 +2112,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string GroupArchiveUnarchiveApiLimit { get; set; }
 #endif
+        /// <summary>The group_create_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? GroupCreateLimit { get; set; }
+#nullable restore
+#else
+        public string GroupCreateLimit { get; set; }
+#endif
         /// <summary>The group_download_export_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -3251,6 +3259,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #nullable restore
 #else
         public string ProjectApiLimit { get; set; }
+#endif
+        /// <summary>The project_create_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ProjectCreateLimit { get; set; }
+#nullable restore
+#else
+        public string ProjectCreateLimit { get; set; }
 #endif
         /// <summary>The project_download_export_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -5327,6 +5343,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "gravatar_enabled", n => { GravatarEnabled = n.GetStringValue(); } },
                 { "group_api_limit", n => { GroupApiLimit = n.GetStringValue(); } },
                 { "group_archive_unarchive_api_limit", n => { GroupArchiveUnarchiveApiLimit = n.GetStringValue(); } },
+                { "group_create_limit", n => { GroupCreateLimit = n.GetStringValue(); } },
                 { "group_download_export_limit", n => { GroupDownloadExportLimit = n.GetStringValue(); } },
                 { "group_export_limit", n => { GroupExportLimit = n.GetStringValue(); } },
                 { "group_import_limit", n => { GroupImportLimit = n.GetStringValue(); } },
@@ -5474,6 +5491,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "product_analytics_data_collector_host", n => { ProductAnalyticsDataCollectorHost = n.GetStringValue(); } },
                 { "product_analytics_enabled", n => { ProductAnalyticsEnabled = n.GetStringValue(); } },
                 { "project_api_limit", n => { ProjectApiLimit = n.GetStringValue(); } },
+                { "project_create_limit", n => { ProjectCreateLimit = n.GetStringValue(); } },
                 { "project_download_export_limit", n => { ProjectDownloadExportLimit = n.GetStringValue(); } },
                 { "project_export_enabled", n => { ProjectExportEnabled = n.GetStringValue(); } },
                 { "project_export_limit", n => { ProjectExportLimit = n.GetStringValue(); } },
@@ -5972,6 +5990,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("gravatar_enabled", GravatarEnabled);
             writer.WriteStringValue("group_api_limit", GroupApiLimit);
             writer.WriteStringValue("group_archive_unarchive_api_limit", GroupArchiveUnarchiveApiLimit);
+            writer.WriteStringValue("group_create_limit", GroupCreateLimit);
             writer.WriteStringValue("group_download_export_limit", GroupDownloadExportLimit);
             writer.WriteStringValue("group_export_limit", GroupExportLimit);
             writer.WriteStringValue("group_import_limit", GroupImportLimit);
@@ -6119,6 +6138,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("product_analytics_data_collector_host", ProductAnalyticsDataCollectorHost);
             writer.WriteStringValue("product_analytics_enabled", ProductAnalyticsEnabled);
             writer.WriteStringValue("project_api_limit", ProjectApiLimit);
+            writer.WriteStringValue("project_create_limit", ProjectCreateLimit);
             writer.WriteStringValue("project_download_export_limit", ProjectDownloadExportLimit);
             writer.WriteStringValue("project_export_enabled", ProjectExportEnabled);
             writer.WriteStringValue("project_export_limit", ProjectExportLimit);

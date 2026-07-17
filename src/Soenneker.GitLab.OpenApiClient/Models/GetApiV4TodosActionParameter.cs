@@ -56,6 +56,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         #pragma warning disable CS1591
         SshKeyExpiringSoon,
         #pragma warning restore CS1591
+        [EnumMember(Value = "transfer_failed")]
+        #pragma warning disable CS1591
+        TransferFailed,
+        #pragma warning restore CS1591
         [EnumMember(Value = "merge_train_removed")]
         #pragma warning disable CS1591
         MergeTrainRemoved,
