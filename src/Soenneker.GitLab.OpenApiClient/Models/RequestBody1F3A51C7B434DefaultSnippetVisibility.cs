@@ -5,7 +5,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>The default snippet visibility</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBody0974Bb273DbeDefaultSnippetVisibility
+    public enum RequestBody1F3A51C7B434DefaultSnippetVisibility
     {
         [EnumMember(Value = "private")]
         #pragma warning disable CS1591

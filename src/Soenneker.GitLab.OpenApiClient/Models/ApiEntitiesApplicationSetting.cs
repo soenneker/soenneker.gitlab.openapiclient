@@ -4884,6 +4884,22 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string VulnerabilityManagementPoliciesPerConfigurationLimit { get; set; }
 #endif
+        /// <summary>The web_hook_event_resend_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? WebHookEventResendLimit { get; set; }
+#nullable restore
+#else
+        public string WebHookEventResendLimit { get; set; }
+#endif
+        /// <summary>The web_hook_test_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? WebHookTestLimit { get; set; }
+#nullable restore
+#else
+        public string WebHookTestLimit { get; set; }
+#endif
         /// <summary>The whats_new_variant property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -5694,6 +5710,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "vscode_extension_marketplace_extension_host_domain", n => { VscodeExtensionMarketplaceExtensionHostDomain = n.GetStringValue(); } },
                 { "vscode_extension_marketplace_single_origin_fallback_enabled", n => { VscodeExtensionMarketplaceSingleOriginFallbackEnabled = n.GetStringValue(); } },
                 { "vulnerability_management_policies_per_configuration_limit", n => { VulnerabilityManagementPoliciesPerConfigurationLimit = n.GetStringValue(); } },
+                { "web_hook_event_resend_limit", n => { WebHookEventResendLimit = n.GetStringValue(); } },
+                { "web_hook_test_limit", n => { WebHookTestLimit = n.GetStringValue(); } },
                 { "whats_new_variant", n => { WhatsNewVariant = n.GetStringValue(); } },
                 { "wiki_asciidoc_allow_uri_includes", n => { WikiAsciidocAllowUriIncludes = n.GetStringValue(); } },
                 { "wiki_page_max_content_bytes", n => { WikiPageMaxContentBytes = n.GetStringValue(); } },
@@ -6341,6 +6359,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("vscode_extension_marketplace_extension_host_domain", VscodeExtensionMarketplaceExtensionHostDomain);
             writer.WriteStringValue("vscode_extension_marketplace_single_origin_fallback_enabled", VscodeExtensionMarketplaceSingleOriginFallbackEnabled);
             writer.WriteStringValue("vulnerability_management_policies_per_configuration_limit", VulnerabilityManagementPoliciesPerConfigurationLimit);
+            writer.WriteStringValue("web_hook_event_resend_limit", WebHookEventResendLimit);
+            writer.WriteStringValue("web_hook_test_limit", WebHookTestLimit);
             writer.WriteStringValue("whats_new_variant", WhatsNewVariant);
             writer.WriteStringValue("wiki_asciidoc_allow_uri_includes", WikiAsciidocAllowUriIncludes);
             writer.WriteStringValue("wiki_page_max_content_bytes", WikiPageMaxContentBytes);

@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Hooks.Item.Events.It
         {
         }
         /// <summary>
-        /// Resends a webhook event. This endpoint has a rate limit of five requests per minute for each webhook and authenticated user. To disable this limit on GitLab Self-Managed and GitLab Dedicated, an administrator can disable the feature flag named web_hook_event_resend_api_endpoint_rate_limit.
+        /// Resends a webhook event. This endpoint has a rate limit of five requests per minute for each authenticated user for a given project or group. On GitLab Self-Managed and GitLab Dedicated, an administrator can change this limit in the application settings.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson71"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Hooks.Item.Events.It
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson71>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson71.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Resends a webhook event. This endpoint has a rate limit of five requests per minute for each webhook and authenticated user. To disable this limit on GitLab Self-Managed and GitLab Dedicated, an administrator can disable the feature flag named web_hook_event_resend_api_endpoint_rate_limit.
+        /// Resends a webhook event. This endpoint has a rate limit of five requests per minute for each authenticated user for a given project or group. On GitLab Self-Managed and GitLab Dedicated, an administrator can change this limit in the application settings.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
