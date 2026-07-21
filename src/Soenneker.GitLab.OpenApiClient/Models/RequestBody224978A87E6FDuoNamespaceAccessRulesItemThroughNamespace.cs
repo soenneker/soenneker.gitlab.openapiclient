@@ -8,31 +8,47 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// Dependency management settings
+    /// Object containing through namespace information
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RequestBody1F3A51C7B434DependencyManagementSettings : IAdditionalDataHolder, IParsable
+    public partial class RequestBody224978A87E6FDuoNamespaceAccessRulesItemThroughNamespace : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Maximum number of dependency management security update scheduler jobs that run concurrently across the Sidekiq fleet</summary>
-        public int? SecurityUpdateSchedulerMaxConcurrency { get; set; }
+        /// <summary>Full path of the through namespace</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? FullPath { get; set; }
+#nullable restore
+#else
+        public string FullPath { get; set; }
+#endif
+        /// <summary>ID of the through namespace</summary>
+        public int? Id { get; set; }
+        /// <summary>Name of the through namespace</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Name { get; set; }
+#nullable restore
+#else
+        public string Name { get; set; }
+#endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1F3A51C7B434DependencyManagementSettings"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody224978A87E6FDuoNamespaceAccessRulesItemThroughNamespace"/> and sets the default values.
         /// </summary>
-        public RequestBody1F3A51C7B434DependencyManagementSettings()
+        public RequestBody224978A87E6FDuoNamespaceAccessRulesItemThroughNamespace()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1F3A51C7B434DependencyManagementSettings"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody224978A87E6FDuoNamespaceAccessRulesItemThroughNamespace"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1F3A51C7B434DependencyManagementSettings CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody224978A87E6FDuoNamespaceAccessRulesItemThroughNamespace CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1F3A51C7B434DependencyManagementSettings();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody224978A87E6FDuoNamespaceAccessRulesItemThroughNamespace();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -42,7 +58,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "security_update_scheduler_max_concurrency", n => { SecurityUpdateSchedulerMaxConcurrency = n.GetIntValue(); } },
+                { "full_path", n => { FullPath = n.GetStringValue(); } },
+                { "id", n => { Id = n.GetIntValue(); } },
+                { "name", n => { Name = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -52,7 +70,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("security_update_scheduler_max_concurrency", SecurityUpdateSchedulerMaxConcurrency);
+            writer.WriteStringValue("full_path", FullPath);
+            writer.WriteIntValue("id", Id);
+            writer.WriteStringValue("name", Name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

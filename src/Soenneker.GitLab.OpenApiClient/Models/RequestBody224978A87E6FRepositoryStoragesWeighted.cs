@@ -11,26 +11,26 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     /// Storage paths for new projects with a weighted value ranging from 0 to 100
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RequestBody1F3A51C7B434RepositoryStoragesWeighted : IAdditionalDataHolder, IParsable
+    public partial class RequestBody224978A87E6FRepositoryStoragesWeighted : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1F3A51C7B434RepositoryStoragesWeighted"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody224978A87E6FRepositoryStoragesWeighted"/> and sets the default values.
         /// </summary>
-        public RequestBody1F3A51C7B434RepositoryStoragesWeighted()
+        public RequestBody224978A87E6FRepositoryStoragesWeighted()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1F3A51C7B434RepositoryStoragesWeighted"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody224978A87E6FRepositoryStoragesWeighted"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1F3A51C7B434RepositoryStoragesWeighted CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody224978A87E6FRepositoryStoragesWeighted CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1F3A51C7B434RepositoryStoragesWeighted();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody224978A87E6FRepositoryStoragesWeighted();
         }
         /// <summary>
         /// The deserialization information for the current model

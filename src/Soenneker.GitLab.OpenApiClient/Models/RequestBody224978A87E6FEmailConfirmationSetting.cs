@@ -3,21 +3,21 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>&quot;What&apos;s new variant, possible values: `all_tiers`, `current_tier`, and `disabled`.&quot;</summary>
+    /// <summary>&quot;Email confirmation setting, possible values: `off`, `soft`, and `hard`&quot;</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBody1F3A51C7B434WhatsNewVariant
+    public enum RequestBody224978A87E6FEmailConfirmationSetting
     {
-        [EnumMember(Value = "all_tiers")]
+        [EnumMember(Value = "off")]
         #pragma warning disable CS1591
-        AllTiers,
+        Off,
         #pragma warning restore CS1591
-        [EnumMember(Value = "current_tier")]
+        [EnumMember(Value = "soft")]
         #pragma warning disable CS1591
-        CurrentTier,
+        Soft,
         #pragma warning restore CS1591
-        [EnumMember(Value = "disabled")]
+        [EnumMember(Value = "hard")]
         #pragma warning disable CS1591
-        Disabled,
+        Hard,
         #pragma warning restore CS1591
     }
 }

@@ -3940,6 +3940,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string SidekiqJobLimiterMode { get; set; }
 #endif
+        /// <summary>The sidekiq_timezone_override property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? SidekiqTimezoneOverride { get; set; }
+#nullable restore
+#else
+        public string SidekiqTimezoneOverride { get; set; }
+#endif
         /// <summary>The signin_enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -5592,6 +5600,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "sidekiq_job_limiter_compression_threshold_bytes", n => { SidekiqJobLimiterCompressionThresholdBytes = n.GetStringValue(); } },
                 { "sidekiq_job_limiter_limit_bytes", n => { SidekiqJobLimiterLimitBytes = n.GetStringValue(); } },
                 { "sidekiq_job_limiter_mode", n => { SidekiqJobLimiterMode = n.GetStringValue(); } },
+                { "sidekiq_timezone_override", n => { SidekiqTimezoneOverride = n.GetStringValue(); } },
                 { "sign_in_restrictions", n => { SignInRestrictions = n.GetStringValue(); } },
                 { "signin_enabled", n => { SigninEnabled = n.GetStringValue(); } },
                 { "signup_enabled", n => { SignupEnabled = n.GetStringValue(); } },
@@ -6241,6 +6250,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("sidekiq_job_limiter_compression_threshold_bytes", SidekiqJobLimiterCompressionThresholdBytes);
             writer.WriteStringValue("sidekiq_job_limiter_limit_bytes", SidekiqJobLimiterLimitBytes);
             writer.WriteStringValue("sidekiq_job_limiter_mode", SidekiqJobLimiterMode);
+            writer.WriteStringValue("sidekiq_timezone_override", SidekiqTimezoneOverride);
             writer.WriteStringValue("signin_enabled", SigninEnabled);
             writer.WriteStringValue("sign_in_restrictions", SignInRestrictions);
             writer.WriteStringValue("signup_enabled", SignupEnabled);
