@@ -415,10 +415,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectWithAccessLinksProperty? Links { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectWithAccessLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectWithAccessLinksProperty Links { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectWithAccessLinks Links { get; set; }
 #endif
         /// <summary>The marked_for_deletion_at property</summary>
         public DateTimeOffset? MarkedForDeletionAt { get; set; }
@@ -673,10 +673,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The permissions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectWithAccessPermissionsProperty? Permissions { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectWithAccessPermissions? Permissions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectWithAccessPermissionsProperty Permissions { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectWithAccessPermissions Permissions { get; set; }
 #endif
         /// <summary>The pre_receive_secret_detection_enabled property</summary>
         public bool? PreReceiveSecretDetectionEnabled { get; set; }
@@ -1032,7 +1032,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "lfs_enabled", n => { LfsEnabled = n.GetBoolValue(); } },
                 { "license", n => { License = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLicenseBasic>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLicenseBasic.CreateFromDiscriminatorValue); } },
                 { "license_url", n => { LicenseUrl = n.GetStringValue(); } },
-                { "_links", n => { Links = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectWithAccessLinksProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectWithAccessLinksProperty.CreateFromDiscriminatorValue); } },
+                { "_links", n => { Links = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectWithAccessLinks>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectWithAccessLinks.CreateFromDiscriminatorValue); } },
                 { "marked_for_deletion_at", n => { MarkedForDeletionAt = n.GetDateTimeOffsetValue(); } },
                 { "marked_for_deletion_on", n => { MarkedForDeletionOn = n.GetDateTimeOffsetValue(); } },
                 { "max_artifacts_size", n => { MaxArtifactsSize = n.GetIntValue(); } },
@@ -1071,7 +1071,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "pages_access_level", n => { PagesAccessLevel = n.GetStringValue(); } },
                 { "path", n => { Path = n.GetStringValue(); } },
                 { "path_with_namespace", n => { PathWithNamespace = n.GetStringValue(); } },
-                { "permissions", n => { Permissions = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectWithAccessPermissionsProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectWithAccessPermissionsProperty.CreateFromDiscriminatorValue); } },
+                { "permissions", n => { Permissions = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectWithAccessPermissions>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectWithAccessPermissions.CreateFromDiscriminatorValue); } },
                 { "pre_receive_secret_detection_enabled", n => { PreReceiveSecretDetectionEnabled = n.GetBoolValue(); } },
                 { "prevent_merge_without_jira_issue", n => { PreventMergeWithoutJiraIssue = n.GetStringValue(); } },
                 { "printing_merge_request_link_enabled", n => { PrintingMergeRequestLinkEnabled = n.GetBoolValue(); } },
@@ -1201,7 +1201,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("lfs_enabled", LfsEnabled);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLicenseBasic>("license", License);
             writer.WriteStringValue("license_url", LicenseUrl);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectWithAccessLinksProperty>("_links", Links);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectWithAccessLinks>("_links", Links);
             writer.WriteDateTimeOffsetValue("marked_for_deletion_at", MarkedForDeletionAt);
             writer.WriteDateTimeOffsetValue("marked_for_deletion_on", MarkedForDeletionOn);
             writer.WriteIntValue("max_artifacts_size", MaxArtifactsSize);
@@ -1240,7 +1240,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("pages_access_level", PagesAccessLevel);
             writer.WriteStringValue("path", Path);
             writer.WriteStringValue("path_with_namespace", PathWithNamespace);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectWithAccessPermissionsProperty>("permissions", Permissions);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectWithAccessPermissions>("permissions", Permissions);
             writer.WriteBoolValue("pre_receive_secret_detection_enabled", PreReceiveSecretDetectionEnabled);
             writer.WriteStringValue("prevent_merge_without_jira_issue", PreventMergeWithoutJiraIssue);
             writer.WriteBoolValue("printing_merge_request_link_enabled", PrintingMergeRequestLinkEnabled);

@@ -281,10 +281,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The statistics property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Statistics { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupStatistics? Statistics { get; set; }
 #nullable restore
 #else
-        public string Statistics { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupStatistics Statistics { get; set; }
 #endif
         /// <summary>The subgroup_creation_level property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -401,7 +401,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "share_with_group_lock", n => { ShareWithGroupLock = n.GetBoolValue(); } },
                 { "shared_runners_setting", n => { SharedRunnersSetting = n.GetStringValue(); } },
                 { "show_diff_preview_in_email", n => { ShowDiffPreviewInEmail = n.GetBoolValue(); } },
-                { "statistics", n => { Statistics = n.GetStringValue(); } },
+                { "statistics", n => { Statistics = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupStatistics>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupStatistics.CreateFromDiscriminatorValue); } },
                 { "subgroup_creation_level", n => { SubgroupCreationLevel = n.GetStringValue(); } },
                 { "two_factor_grace_period", n => { TwoFactorGracePeriod = n.GetIntValue(); } },
                 { "visibility", n => { Visibility = n.GetStringValue(); } },
@@ -465,7 +465,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("shared_runners_setting", SharedRunnersSetting);
             writer.WriteBoolValue("share_with_group_lock", ShareWithGroupLock);
             writer.WriteBoolValue("show_diff_preview_in_email", ShowDiffPreviewInEmail);
-            writer.WriteStringValue("statistics", Statistics);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupStatistics>("statistics", Statistics);
             writer.WriteStringValue("subgroup_creation_level", SubgroupCreationLevel);
             writer.WriteIntValue("two_factor_grace_period", TwoFactorGracePeriod);
             writer.WriteStringValue("visibility", Visibility);

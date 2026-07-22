@@ -17,10 +17,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowRunDataProperty? Data { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowRunData? Data { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowRunDataProperty Data { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowRunData Data { get; set; }
 #endif
         /// <summary>The info property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowRunDataProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowRunDataProperty.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowRunData>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowRunData.CreateFromDiscriminatorValue); } },
                 { "info", n => { Info = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowRunInfo>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowRunInfo.CreateFromDiscriminatorValue); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowRunDataProperty>("data", Data);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowRunData>("data", Data);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowRunInfo>("info", Info);
             writer.WriteAdditionalData(AdditionalData);
         }

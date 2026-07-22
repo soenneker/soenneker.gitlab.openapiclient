@@ -17,10 +17,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The assets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Assets { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleaseAssets? Assets { get; set; }
 #nullable restore
 #else
-        public string Assets { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleaseAssets Assets { get; set; }
 #endif
         /// <summary>The author property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -75,10 +75,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Links { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleaseLinks? Links { get; set; }
 #nullable restore
 #else
-        public string Links { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleaseLinks Links { get; set; }
 #endif
         /// <summary>The milestones property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -141,7 +141,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "assets", n => { Assets = n.GetStringValue(); } },
+                { "assets", n => { Assets = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleaseAssets>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleaseAssets.CreateFromDiscriminatorValue); } },
                 { "author", n => { Author = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic.CreateFromDiscriminatorValue); } },
                 { "commit", n => { Commit = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommit>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommit.CreateFromDiscriminatorValue); } },
                 { "commit_path", n => { CommitPath = n.GetStringValue(); } },
@@ -149,7 +149,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "description_html", n => { DescriptionHtml = n.GetStringValue(); } },
                 { "evidences", n => { Evidences = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesEvidence>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesEvidence.CreateFromDiscriminatorValue); } },
-                { "_links", n => { Links = n.GetStringValue(); } },
+                { "_links", n => { Links = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleaseLinks>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleaseLinks.CreateFromDiscriminatorValue); } },
                 { "milestones", n => { Milestones = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMilestoneWithStats>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMilestoneWithStats.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "released_at", n => { ReleasedAt = n.GetDateTimeOffsetValue(); } },
@@ -165,7 +165,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("assets", Assets);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleaseAssets>("assets", Assets);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic>("author", Author);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommit>("commit", Commit);
             writer.WriteStringValue("commit_path", CommitPath);
@@ -173,7 +173,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("description_html", DescriptionHtml);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesEvidence>("evidences", Evidences);
-            writer.WriteStringValue("_links", Links);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleaseLinks>("_links", Links);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMilestoneWithStats>("milestones", Milestones);
             writer.WriteStringValue("name", Name);
             writer.WriteDateTimeOffsetValue("released_at", ReleasedAt);

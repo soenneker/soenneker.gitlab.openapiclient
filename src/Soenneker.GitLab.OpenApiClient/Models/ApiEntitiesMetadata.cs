@@ -19,10 +19,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The kas property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMetadataKasProperty? Kas { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMetadataKas? Kas { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMetadataKasProperty Kas { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMetadataKas Kas { get; set; }
 #endif
         /// <summary>The revision property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "enterprise", n => { Enterprise = n.GetBoolValue(); } },
-                { "kas", n => { Kas = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMetadataKasProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMetadataKasProperty.CreateFromDiscriminatorValue); } },
+                { "kas", n => { Kas = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMetadataKas>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMetadataKas.CreateFromDiscriminatorValue); } },
                 { "revision", n => { Revision = n.GetStringValue(); } },
                 { "version", n => { Version = n.GetStringValue(); } },
             };
@@ -79,7 +79,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("enterprise", Enterprise);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMetadataKasProperty>("kas", Kas);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMetadataKas>("kas", Kas);
             writer.WriteStringValue("revision", Revision);
             writer.WriteStringValue("version", Version);
             writer.WriteAdditionalData(AdditionalData);

@@ -85,10 +85,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEpicLinksProperty? Links { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEpicLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEpicLinksProperty Links { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEpicLinks Links { get; set; }
 #endif
         /// <summary>The parent_id property</summary>
         public long? ParentId { get; set; }
@@ -212,7 +212,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "imported", n => { Imported = n.GetBoolValue(); } },
                 { "imported_from", n => { ImportedFrom = n.GetStringValue(); } },
                 { "labels", n => { Labels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "_links", n => { Links = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEpicLinksProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEpicLinksProperty.CreateFromDiscriminatorValue); } },
+                { "_links", n => { Links = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEpicLinks>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEpicLinks.CreateFromDiscriminatorValue); } },
                 { "parent_id", n => { ParentId = n.GetLongValue(); } },
                 { "parent_iid", n => { ParentIid = n.GetIntValue(); } },
                 { "reference", n => { Reference = n.GetStringValue(); } },
@@ -259,7 +259,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("imported", Imported);
             writer.WriteStringValue("imported_from", ImportedFrom);
             writer.WriteCollectionOfPrimitiveValues<string>("labels", Labels);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEpicLinksProperty>("_links", Links);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEpicLinks>("_links", Links);
             writer.WriteLongValue("parent_id", ParentId);
             writer.WriteIntValue("parent_iid", ParentIid);
             writer.WriteStringValue("reference", Reference);

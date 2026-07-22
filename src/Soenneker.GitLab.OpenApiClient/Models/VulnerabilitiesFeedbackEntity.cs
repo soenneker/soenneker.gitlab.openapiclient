@@ -41,10 +41,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The comment_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CommentDetails { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntityCommentDetails? CommentDetails { get; set; }
 #nullable restore
 #else
-        public string CommentDetails { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntityCommentDetails CommentDetails { get; set; }
 #endif
         /// <summary>The created_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -121,10 +121,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The pipeline property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Pipeline { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntityPipeline? Pipeline { get; set; }
 #nullable restore
 #else
-        public string Pipeline { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntityPipeline Pipeline { get; set; }
 #endif
         /// <summary>The project_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -162,7 +162,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "author", n => { Author = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.UserEntity>(global::Soenneker.GitLab.OpenApiClient.Models.UserEntity.CreateFromDiscriminatorValue); } },
                 { "branch", n => { Branch = n.GetStringValue(); } },
                 { "category", n => { Category = n.GetStringValue(); } },
-                { "comment_details", n => { CommentDetails = n.GetStringValue(); } },
+                { "comment_details", n => { CommentDetails = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntityCommentDetails>(global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntityCommentDetails.CreateFromDiscriminatorValue); } },
                 { "created_at", n => { CreatedAt = n.GetStringValue(); } },
                 { "dismissal_reason", n => { DismissalReason = n.GetStringValue(); } },
                 { "feedback_type", n => { FeedbackType = n.GetStringValue(); } },
@@ -172,7 +172,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "issue_url", n => { IssueUrl = n.GetStringValue(); } },
                 { "merge_request_iid", n => { MergeRequestIid = n.GetStringValue(); } },
                 { "merge_request_path", n => { MergeRequestPath = n.GetStringValue(); } },
-                { "pipeline", n => { Pipeline = n.GetStringValue(); } },
+                { "pipeline", n => { Pipeline = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntityPipeline>(global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntityPipeline.CreateFromDiscriminatorValue); } },
                 { "project_id", n => { ProjectId = n.GetStringValue(); } },
             };
         }
@@ -186,7 +186,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.UserEntity>("author", Author);
             writer.WriteStringValue("branch", Branch);
             writer.WriteStringValue("category", Category);
-            writer.WriteStringValue("comment_details", CommentDetails);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntityCommentDetails>("comment_details", CommentDetails);
             writer.WriteStringValue("created_at", CreatedAt);
             writer.WriteStringValue("dismissal_reason", DismissalReason);
             writer.WriteStringValue("feedback_type", FeedbackType);
@@ -196,7 +196,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("issue_url", IssueUrl);
             writer.WriteStringValue("merge_request_iid", MergeRequestIid);
             writer.WriteStringValue("merge_request_path", MergeRequestPath);
-            writer.WriteStringValue("pipeline", Pipeline);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntityPipeline>("pipeline", Pipeline);
             writer.WriteStringValue("project_id", ProjectId);
             writer.WriteAdditionalData(AdditionalData);
         }

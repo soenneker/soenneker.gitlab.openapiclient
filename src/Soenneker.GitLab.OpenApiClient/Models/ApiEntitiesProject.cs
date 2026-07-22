@@ -415,10 +415,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLinksProperty? Links { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLinksProperty Links { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLinks Links { get; set; }
 #endif
         /// <summary>The marked_for_deletion_at property</summary>
         public DateTimeOffset? MarkedForDeletionAt { get; set; }
@@ -1024,7 +1024,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "lfs_enabled", n => { LfsEnabled = n.GetBoolValue(); } },
                 { "license", n => { License = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLicenseBasic>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLicenseBasic.CreateFromDiscriminatorValue); } },
                 { "license_url", n => { LicenseUrl = n.GetStringValue(); } },
-                { "_links", n => { Links = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLinksProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLinksProperty.CreateFromDiscriminatorValue); } },
+                { "_links", n => { Links = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLinks>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLinks.CreateFromDiscriminatorValue); } },
                 { "marked_for_deletion_at", n => { MarkedForDeletionAt = n.GetDateTimeOffsetValue(); } },
                 { "marked_for_deletion_on", n => { MarkedForDeletionOn = n.GetDateTimeOffsetValue(); } },
                 { "max_artifacts_size", n => { MaxArtifactsSize = n.GetIntValue(); } },
@@ -1192,7 +1192,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("lfs_enabled", LfsEnabled);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLicenseBasic>("license", License);
             writer.WriteStringValue("license_url", LicenseUrl);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLinksProperty>("_links", Links);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLinks>("_links", Links);
             writer.WriteDateTimeOffsetValue("marked_for_deletion_at", MarkedForDeletionAt);
             writer.WriteDateTimeOffsetValue("marked_for_deletion_on", MarkedForDeletionOn);
             writer.WriteIntValue("max_artifacts_size", MaxArtifactsSize);

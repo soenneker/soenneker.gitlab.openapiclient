@@ -22,6 +22,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string AiResolutionEnabled { get; set; }
 #endif
+        /// <summary>The assets property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Assets { get; set; }
+#nullable restore
+#else
+        public string Assets { get; set; }
+#endif
         /// <summary>The auto_severity_override property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -70,6 +78,22 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string CreateVulnerabilityFeedbackMergeRequestPath { get; set; }
 #endif
+        /// <summary>The description property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Description { get; set; }
+#nullable restore
+#else
+        public string Description { get; set; }
+#endif
+        /// <summary>The description_html property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DescriptionHtml { get; set; }
+#nullable restore
+#else
+        public string DescriptionHtml { get; set; }
+#endif
         /// <summary>The details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -85,6 +109,22 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity DismissalFeedback { get; set; }
+#endif
+        /// <summary>The evidence property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Evidence { get; set; }
+#nullable restore
+#else
+        public string Evidence { get; set; }
+#endif
+        /// <summary>The evidence_source property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? EvidenceSource { get; set; }
+#nullable restore
+#else
+        public string EvidenceSource { get; set; }
 #endif
         /// <summary>The external_issue_links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -105,10 +145,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The found_by_pipeline property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FoundByPipeline { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFindingEntityFoundByPipeline? FoundByPipeline { get; set; }
 #nullable restore
 #else
-        public string FoundByPipeline { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFindingEntityFoundByPipeline FoundByPipeline { get; set; }
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -142,6 +182,22 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIssueLinkEntity IssueLinks { get; set; }
 #endif
+        /// <summary>The links property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Links { get; set; }
+#nullable restore
+#else
+        public string Links { get; set; }
+#endif
+        /// <summary>The location property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Location { get; set; }
+#nullable restore
+#else
+        public string Location { get; set; }
+#endif
         /// <summary>The matches_auto_dismiss_policy property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -166,14 +222,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesMergeRequestLinkEntity MergeRequestLinks { get; set; }
 #endif
-        /// <summary>The metadata property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Metadata { get; set; }
-#nullable restore
-#else
-        public string Metadata { get; set; }
-#endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -190,6 +238,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public global::Soenneker.GitLab.OpenApiClient.Models.ProjectEntity Project { get; set; }
 #endif
+        /// <summary>The remediations property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Remediations { get; set; }
+#nullable restore
+#else
+        public string Remediations { get; set; }
+#endif
         /// <summary>The report_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -197,6 +253,22 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #nullable restore
 #else
         public string ReportType { get; set; }
+#endif
+        /// <summary>The request property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesRequestEntity? Request { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesRequestEntity Request { get; set; }
+#endif
+        /// <summary>The response property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesResponseEntity? Response { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesResponseEntity Response { get; set; }
 #endif
         /// <summary>The scan property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -222,6 +294,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Severity { get; set; }
 #endif
+        /// <summary>The solution property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Solution { get; set; }
+#nullable restore
+#else
+        public string Solution { get; set; }
+#endif
         /// <summary>The state property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -237,6 +317,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesStateTransitionEntity StateTransitions { get; set; }
+#endif
+        /// <summary>The supporting_messages property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? SupportingMessages { get; set; }
+#nullable restore
+#else
+        public string SupportingMessages { get; set; }
 #endif
         /// <summary>The unverified property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -280,33 +368,44 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "ai_resolution_enabled", n => { AiResolutionEnabled = n.GetStringValue(); } },
+                { "assets", n => { Assets = n.GetStringValue(); } },
                 { "auto_severity_override", n => { AutoSeverityOverride = n.GetStringValue(); } },
                 { "blob_path", n => { BlobPath = n.GetStringValue(); } },
                 { "create_jira_issue_url", n => { CreateJiraIssueUrl = n.GetStringValue(); } },
                 { "create_vulnerability_feedback_dismissal_path", n => { CreateVulnerabilityFeedbackDismissalPath = n.GetStringValue(); } },
                 { "create_vulnerability_feedback_issue_path", n => { CreateVulnerabilityFeedbackIssuePath = n.GetStringValue(); } },
                 { "create_vulnerability_feedback_merge_request_path", n => { CreateVulnerabilityFeedbackMergeRequestPath = n.GetStringValue(); } },
+                { "description", n => { Description = n.GetStringValue(); } },
+                { "description_html", n => { DescriptionHtml = n.GetStringValue(); } },
                 { "details", n => { Details = n.GetStringValue(); } },
                 { "dismissal_feedback", n => { DismissalFeedback = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity>(global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity.CreateFromDiscriminatorValue); } },
+                { "evidence", n => { Evidence = n.GetStringValue(); } },
+                { "evidence_source", n => { EvidenceSource = n.GetStringValue(); } },
                 { "external_issue_links", n => { ExternalIssueLinks = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesExternalIssueLinkEntity>(global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesExternalIssueLinkEntity.CreateFromDiscriminatorValue); } },
                 { "false_positive", n => { FalsePositive = n.GetStringValue(); } },
-                { "found_by_pipeline", n => { FoundByPipeline = n.GetStringValue(); } },
+                { "found_by_pipeline", n => { FoundByPipeline = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFindingEntityFoundByPipeline>(global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFindingEntityFoundByPipeline.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "identifiers", n => { Identifiers = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIdentifierEntity>(global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIdentifierEntity.CreateFromDiscriminatorValue); } },
                 { "issue_feedback", n => { IssueFeedback = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity>(global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity.CreateFromDiscriminatorValue); } },
                 { "issue_links", n => { IssueLinks = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIssueLinkEntity>(global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIssueLinkEntity.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetStringValue(); } },
+                { "location", n => { Location = n.GetStringValue(); } },
                 { "matches_auto_dismiss_policy", n => { MatchesAutoDismissPolicy = n.GetStringValue(); } },
                 { "merge_request_feedback", n => { MergeRequestFeedback = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity>(global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity.CreateFromDiscriminatorValue); } },
                 { "merge_request_links", n => { MergeRequestLinks = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesMergeRequestLinkEntity>(global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesMergeRequestLinkEntity.CreateFromDiscriminatorValue); } },
-                { "metadata", n => { Metadata = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "project", n => { Project = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ProjectEntity>(global::Soenneker.GitLab.OpenApiClient.Models.ProjectEntity.CreateFromDiscriminatorValue); } },
+                { "remediations", n => { Remediations = n.GetStringValue(); } },
                 { "report_type", n => { ReportType = n.GetStringValue(); } },
+                { "request", n => { Request = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesRequestEntity>(global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesRequestEntity.CreateFromDiscriminatorValue); } },
+                { "response", n => { Response = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesResponseEntity>(global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesResponseEntity.CreateFromDiscriminatorValue); } },
                 { "scan", n => { Scan = n.GetStringValue(); } },
                 { "scanner", n => { Scanner = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesScannerEntity>(global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesScannerEntity.CreateFromDiscriminatorValue); } },
                 { "severity", n => { Severity = n.GetStringValue(); } },
+                { "solution", n => { Solution = n.GetStringValue(); } },
                 { "state", n => { State = n.GetStringValue(); } },
                 { "state_transitions", n => { StateTransitions = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesStateTransitionEntity>(global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesStateTransitionEntity.CreateFromDiscriminatorValue); } },
+                { "supporting_messages", n => { SupportingMessages = n.GetStringValue(); } },
                 { "unverified", n => { Unverified = n.GetStringValue(); } },
                 { "uuid", n => { Uuid = n.GetStringValue(); } },
             };
@@ -319,33 +418,44 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("ai_resolution_enabled", AiResolutionEnabled);
+            writer.WriteStringValue("assets", Assets);
             writer.WriteStringValue("auto_severity_override", AutoSeverityOverride);
             writer.WriteStringValue("blob_path", BlobPath);
             writer.WriteStringValue("create_jira_issue_url", CreateJiraIssueUrl);
             writer.WriteStringValue("create_vulnerability_feedback_dismissal_path", CreateVulnerabilityFeedbackDismissalPath);
             writer.WriteStringValue("create_vulnerability_feedback_issue_path", CreateVulnerabilityFeedbackIssuePath);
             writer.WriteStringValue("create_vulnerability_feedback_merge_request_path", CreateVulnerabilityFeedbackMergeRequestPath);
+            writer.WriteStringValue("description", Description);
+            writer.WriteStringValue("description_html", DescriptionHtml);
             writer.WriteStringValue("details", Details);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity>("dismissal_feedback", DismissalFeedback);
+            writer.WriteStringValue("evidence", Evidence);
+            writer.WriteStringValue("evidence_source", EvidenceSource);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesExternalIssueLinkEntity>("external_issue_links", ExternalIssueLinks);
             writer.WriteStringValue("false_positive", FalsePositive);
-            writer.WriteStringValue("found_by_pipeline", FoundByPipeline);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFindingEntityFoundByPipeline>("found_by_pipeline", FoundByPipeline);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIdentifierEntity>("identifiers", Identifiers);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity>("issue_feedback", IssueFeedback);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIssueLinkEntity>("issue_links", IssueLinks);
+            writer.WriteStringValue("links", Links);
+            writer.WriteStringValue("location", Location);
             writer.WriteStringValue("matches_auto_dismiss_policy", MatchesAutoDismissPolicy);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity>("merge_request_feedback", MergeRequestFeedback);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesMergeRequestLinkEntity>("merge_request_links", MergeRequestLinks);
-            writer.WriteStringValue("metadata", Metadata);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ProjectEntity>("project", Project);
+            writer.WriteStringValue("remediations", Remediations);
             writer.WriteStringValue("report_type", ReportType);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesRequestEntity>("request", Request);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesResponseEntity>("response", Response);
             writer.WriteStringValue("scan", Scan);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesScannerEntity>("scanner", Scanner);
             writer.WriteStringValue("severity", Severity);
+            writer.WriteStringValue("solution", Solution);
             writer.WriteStringValue("state", State);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesStateTransitionEntity>("state_transitions", StateTransitions);
+            writer.WriteStringValue("supporting_messages", SupportingMessages);
             writer.WriteStringValue("unverified", Unverified);
             writer.WriteStringValue("uuid", Uuid);
             writer.WriteAdditionalData(AdditionalData);

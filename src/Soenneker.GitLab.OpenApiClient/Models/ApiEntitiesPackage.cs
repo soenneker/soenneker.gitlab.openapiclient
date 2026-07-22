@@ -33,10 +33,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Links { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackageLinks? Links { get; set; }
 #nullable restore
 #else
-        public string Links { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackageLinks Links { get; set; }
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -142,7 +142,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "creator_id", n => { CreatorId = n.GetLongValue(); } },
                 { "id", n => { Id = n.GetLongValue(); } },
                 { "last_downloaded_at", n => { LastDownloadedAt = n.GetDateTimeOffsetValue(); } },
-                { "_links", n => { Links = n.GetStringValue(); } },
+                { "_links", n => { Links = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackageLinks>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackageLinks.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "package_type", n => { PackageType = n.GetStringValue(); } },
                 { "pipeline", n => { Pipeline = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagePipeline>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagePipeline.CreateFromDiscriminatorValue); } },
@@ -167,7 +167,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteLongValue("creator_id", CreatorId);
             writer.WriteLongValue("id", Id);
             writer.WriteDateTimeOffsetValue("last_downloaded_at", LastDownloadedAt);
-            writer.WriteStringValue("_links", Links);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackageLinks>("_links", Links);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("package_type", PackageType);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagePipeline>("pipeline", Pipeline);

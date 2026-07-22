@@ -2,7 +2,8 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
-using Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.WithSettingsContextHash;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.Item;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.V1;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -10,17 +11,34 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\vscode\settings_sync(
+    /// Builds and executes requests for operations under \api\v4\vscode\settings_sync
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Settings_syncRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The v1 property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.V1.V1RequestBuilder V1
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.V1.V1RequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.vscode.settings_sync.item collection</summary>
+        /// <param name="position">The settings context hash</param>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.Item.WithSettingsContextHashItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.Item.WithSettingsContextHashItemRequestBuilder this[string position]
+        {
+            get
+            {
+                var urlTplParams = new Dictionary<string, object>(PathParameters);
+                urlTplParams.Add("settingsContextHash", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.Item.WithSettingsContextHashItemRequestBuilder(urlTplParams, RequestAdapter);
+            }
+        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.Settings_syncRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Settings_syncRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/vscode/settings_sync(", pathParameters)
+        public Settings_syncRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/vscode/settings_sync", pathParameters)
         {
         }
         /// <summary>
@@ -28,16 +46,8 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Settings_syncRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/vscode/settings_sync(", rawUrl)
+        public Settings_syncRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/vscode/settings_sync", rawUrl)
         {
-        }
-        /// <summary>
-        /// Builds and executes requests for operations under \api\v4\vscode\settings_sync(\{settingsContextHash})
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.WithSettingsContextHash.WithSettingsContextHashRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.WithSettingsContextHash.WithSettingsContextHashRequestBuilder WithSettingsContextHash()
-        {
-            return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.WithSettingsContextHash.WithSettingsContextHashRequestBuilder(PathParameters, RequestAdapter);
         }
     }
 }

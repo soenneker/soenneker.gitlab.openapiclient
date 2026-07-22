@@ -331,10 +331,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestUserProperty? User { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestUser? User { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestUserProperty User { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestUser User { get; set; }
 #endif
         /// <summary>The user_notes_count property</summary>
         public int? UserNotesCount { get; set; }
@@ -437,7 +437,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "title_html", n => { TitleHtml = n.GetStringValue(); } },
                 { "updated_at", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
                 { "upvotes", n => { Upvotes = n.GetIntValue(); } },
-                { "user", n => { User = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestUserProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestUserProperty.CreateFromDiscriminatorValue); } },
+                { "user", n => { User = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestUser>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestUser.CreateFromDiscriminatorValue); } },
                 { "user_notes_count", n => { UserNotesCount = n.GetIntValue(); } },
                 { "web_url", n => { WebUrl = n.GetStringValue(); } },
                 { "work_in_progress", n => { WorkInProgress = n.GetBoolValue(); } },
@@ -514,7 +514,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("title_html", TitleHtml);
             writer.WriteDateTimeOffsetValue("updated_at", UpdatedAt);
             writer.WriteIntValue("upvotes", Upvotes);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestUserProperty>("user", User);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestUser>("user", User);
             writer.WriteIntValue("user_notes_count", UserNotesCount);
             writer.WriteStringValue("web_url", WebUrl);
             writer.WriteBoolValue("work_in_progress", WorkInProgress);

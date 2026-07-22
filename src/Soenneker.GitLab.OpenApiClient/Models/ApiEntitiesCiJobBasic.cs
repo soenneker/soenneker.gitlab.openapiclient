@@ -63,10 +63,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The project property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Project { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobBasicProject? Project { get; set; }
 #nullable restore
 #else
-        public string Project { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobBasicProject Project { get; set; }
 #endif
         /// <summary>Time spent enqueued</summary>
         public float? QueuedDuration { get; set; }
@@ -150,7 +150,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "id", n => { Id = n.GetLongValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "pipeline", n => { Pipeline = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiPipelineBasic>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiPipelineBasic.CreateFromDiscriminatorValue); } },
-                { "project", n => { Project = n.GetStringValue(); } },
+                { "project", n => { Project = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobBasicProject>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobBasicProject.CreateFromDiscriminatorValue); } },
                 { "queued_duration", n => { QueuedDuration = n.GetFloatValue(); } },
                 { "ref", n => { Ref = n.GetStringValue(); } },
                 { "stage", n => { Stage = n.GetStringValue(); } },
@@ -179,7 +179,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteLongValue("id", Id);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiPipelineBasic>("pipeline", Pipeline);
-            writer.WriteStringValue("project", Project);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobBasicProject>("project", Project);
             writer.WriteFloatValue("queued_duration", QueuedDuration);
             writer.WriteStringValue("ref", Ref);
             writer.WriteStringValue("stage", Stage);

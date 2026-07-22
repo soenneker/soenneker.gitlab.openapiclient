@@ -108,6 +108,7 @@ using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Templates;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Terraform;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Transfer;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Transfer_locations;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Trigger;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Triggers;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Unarchive;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Unstar;
@@ -656,6 +657,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Transfer_locations.Transfer_locationsRequestBuilder Transfer_locations
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Transfer_locations.Transfer_locationsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The trigger property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Trigger.TriggerRequestBuilder Trigger
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Trigger.TriggerRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The triggers property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Triggers.TriggersRequestBuilder Triggers

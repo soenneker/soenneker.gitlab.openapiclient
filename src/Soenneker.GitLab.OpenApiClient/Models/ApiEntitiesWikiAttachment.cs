@@ -41,10 +41,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The link property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesWikiAttachmentLinkProperty? Link { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesWikiAttachmentLink? Link { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesWikiAttachmentLinkProperty Link { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesWikiAttachmentLink Link { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesWikiAttachment"/> and sets the default values.
@@ -74,7 +74,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "branch", n => { Branch = n.GetStringValue(); } },
                 { "file_name", n => { FileName = n.GetStringValue(); } },
                 { "file_path", n => { FilePath = n.GetStringValue(); } },
-                { "link", n => { Link = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesWikiAttachmentLinkProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesWikiAttachmentLinkProperty.CreateFromDiscriminatorValue); } },
+                { "link", n => { Link = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesWikiAttachmentLink>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesWikiAttachmentLink.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -87,7 +87,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("branch", Branch);
             writer.WriteStringValue("file_name", FileName);
             writer.WriteStringValue("file_path", FilePath);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesWikiAttachmentLinkProperty>("link", Link);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesWikiAttachmentLink>("link", Link);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

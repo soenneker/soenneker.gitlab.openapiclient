@@ -15,10 +15,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The access_level property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccessLevel { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBillableMembershipAccessLevel? AccessLevel { get; set; }
 #nullable restore
 #else
-        public string AccessLevel { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBillableMembershipAccessLevel AccessLevel { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -95,7 +95,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "access_level", n => { AccessLevel = n.GetStringValue(); } },
+                { "access_level", n => { AccessLevel = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBillableMembershipAccessLevel>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBillableMembershipAccessLevel.CreateFromDiscriminatorValue); } },
                 { "created_at", n => { CreatedAt = n.GetStringValue(); } },
                 { "expires_at", n => { ExpiresAt = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
@@ -111,7 +111,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("access_level", AccessLevel);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBillableMembershipAccessLevel>("access_level", AccessLevel);
             writer.WriteStringValue("created_at", CreatedAt);
             writer.WriteStringValue("expires_at", ExpiresAt);
             writer.WriteStringValue("id", Id);

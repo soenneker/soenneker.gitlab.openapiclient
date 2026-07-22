@@ -55,10 +55,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The issue_stats property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMilestoneWithStatsIssueStatsProperty? IssueStats { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMilestoneWithStatsIssueStats? IssueStats { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMilestoneWithStatsIssueStatsProperty IssueStats { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMilestoneWithStatsIssueStats IssueStats { get; set; }
 #endif
         /// <summary>The project_id property</summary>
         public long? ProjectId { get; set; }
@@ -134,7 +134,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "group_id", n => { GroupId = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetLongValue(); } },
                 { "iid", n => { Iid = n.GetLongValue(); } },
-                { "issue_stats", n => { IssueStats = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMilestoneWithStatsIssueStatsProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMilestoneWithStatsIssueStatsProperty.CreateFromDiscriminatorValue); } },
+                { "issue_stats", n => { IssueStats = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMilestoneWithStatsIssueStats>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMilestoneWithStatsIssueStats.CreateFromDiscriminatorValue); } },
                 { "project_id", n => { ProjectId = n.GetLongValue(); } },
                 { "start_date", n => { StartDate = n.GetStringValue(); } },
                 { "state", n => { State = n.GetStringValue(); } },
@@ -157,7 +157,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("group_id", GroupId);
             writer.WriteLongValue("id", Id);
             writer.WriteLongValue("iid", Iid);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMilestoneWithStatsIssueStatsProperty>("issue_stats", IssueStats);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMilestoneWithStatsIssueStats>("issue_stats", IssueStats);
             writer.WriteLongValue("project_id", ProjectId);
             writer.WriteStringValue("start_date", StartDate);
             writer.WriteStringValue("state", State);

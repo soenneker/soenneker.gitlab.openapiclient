@@ -37,10 +37,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectExportStatusLinksProperty? Links { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectExportStatusLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectExportStatusLinksProperty Links { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectExportStatusLinks Links { get; set; }
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -103,7 +103,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "export_status", n => { ExportStatus = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetLongValue(); } },
-                { "_links", n => { Links = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectExportStatusLinksProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectExportStatusLinksProperty.CreateFromDiscriminatorValue); } },
+                { "_links", n => { Links = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectExportStatusLinks>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectExportStatusLinks.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "name_with_namespace", n => { NameWithNamespace = n.GetStringValue(); } },
                 { "path", n => { Path = n.GetStringValue(); } },
@@ -121,7 +121,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("export_status", ExportStatus);
             writer.WriteLongValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectExportStatusLinksProperty>("_links", Links);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectExportStatusLinks>("_links", Links);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("name_with_namespace", NameWithNamespace);
             writer.WriteStringValue("path", Path);

@@ -17,10 +17,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The checksum_information property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAdminModelChecksumInformationProperty? ChecksumInformation { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAdminModelChecksumInformation? ChecksumInformation { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAdminModelChecksumInformationProperty ChecksumInformation { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAdminModelChecksumInformation ChecksumInformation { get; set; }
 #endif
         /// <summary>The created_at property</summary>
         public DateTimeOffset? CreatedAt { get; set; }
@@ -67,7 +67,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "checksum_information", n => { ChecksumInformation = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAdminModelChecksumInformationProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAdminModelChecksumInformationProperty.CreateFromDiscriminatorValue); } },
+                { "checksum_information", n => { ChecksumInformation = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAdminModelChecksumInformation>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAdminModelChecksumInformation.CreateFromDiscriminatorValue); } },
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "file_size", n => { FileSize = n.GetIntValue(); } },
                 { "model_class", n => { ModelClass = n.GetStringValue(); } },
@@ -81,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAdminModelChecksumInformationProperty>("checksum_information", ChecksumInformation);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAdminModelChecksumInformation>("checksum_information", ChecksumInformation);
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
             writer.WriteIntValue("file_size", FileSize);
             writer.WriteStringValue("model_class", ModelClass);

@@ -2201,10 +2201,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Links { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoSiteStatusLinks? Links { get; set; }
 #nullable restore
 #else
-        public string Links { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoSiteStatusLinks Links { get; set; }
 #endif
         /// <summary>The merge_request_diffs_checksum_failed_count property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -5152,7 +5152,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "lfs_objects_verification_total_count", n => { LfsObjectsVerificationTotalCount = n.GetStringValue(); } },
                 { "lfs_objects_verified_count", n => { LfsObjectsVerifiedCount = n.GetStringValue(); } },
                 { "lfs_objects_verified_in_percentage", n => { LfsObjectsVerifiedInPercentage = n.GetStringValue(); } },
-                { "_links", n => { Links = n.GetStringValue(); } },
+                { "_links", n => { Links = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoSiteStatusLinks>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoSiteStatusLinks.CreateFromDiscriminatorValue); } },
                 { "merge_request_diffs_checksum_failed_count", n => { MergeRequestDiffsChecksumFailedCount = n.GetStringValue(); } },
                 { "merge_request_diffs_checksum_total_count", n => { MergeRequestDiffsChecksumTotalCount = n.GetStringValue(); } },
                 { "merge_request_diffs_checksummed_count", n => { MergeRequestDiffsChecksummedCount = n.GetStringValue(); } },
@@ -5766,7 +5766,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("lfs_objects_verification_total_count", LfsObjectsVerificationTotalCount);
             writer.WriteStringValue("lfs_objects_verified_count", LfsObjectsVerifiedCount);
             writer.WriteStringValue("lfs_objects_verified_in_percentage", LfsObjectsVerifiedInPercentage);
-            writer.WriteStringValue("_links", Links);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoSiteStatusLinks>("_links", Links);
             writer.WriteStringValue("merge_request_diffs_checksum_failed_count", MergeRequestDiffsChecksumFailedCount);
             writer.WriteStringValue("merge_request_diffs_checksummed_count", MergeRequestDiffsChecksummedCount);
             writer.WriteStringValue("merge_request_diffs_checksum_total_count", MergeRequestDiffsChecksumTotalCount);

@@ -87,10 +87,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRelatedEpicLinksProperty? Links { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRelatedEpicLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRelatedEpicLinksProperty Links { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRelatedEpicLinks Links { get; set; }
 #endif
         /// <summary>The link_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -229,7 +229,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "link_created_at", n => { LinkCreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "link_type", n => { LinkType = n.GetStringValue(); } },
                 { "link_updated_at", n => { LinkUpdatedAt = n.GetDateTimeOffsetValue(); } },
-                { "_links", n => { Links = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRelatedEpicLinksProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRelatedEpicLinksProperty.CreateFromDiscriminatorValue); } },
+                { "_links", n => { Links = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRelatedEpicLinks>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRelatedEpicLinks.CreateFromDiscriminatorValue); } },
                 { "parent_id", n => { ParentId = n.GetLongValue(); } },
                 { "parent_iid", n => { ParentIid = n.GetIntValue(); } },
                 { "reference", n => { Reference = n.GetStringValue(); } },
@@ -278,7 +278,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("imported_from", ImportedFrom);
             writer.WriteCollectionOfPrimitiveValues<string>("labels", Labels);
             writer.WriteDateTimeOffsetValue("link_created_at", LinkCreatedAt);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRelatedEpicLinksProperty>("_links", Links);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRelatedEpicLinks>("_links", Links);
             writer.WriteStringValue("link_type", LinkType);
             writer.WriteDateTimeOffsetValue("link_updated_at", LinkUpdatedAt);
             writer.WriteLongValue("parent_id", ParentId);

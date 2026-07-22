@@ -43,10 +43,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoNodeLinksProperty? Links { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoNodeLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoNodeLinksProperty Links { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoNodeLinks Links { get; set; }
 #endif
         /// <summary>The minimum_reverification_interval property</summary>
         public int? MinimumReverificationInterval { get; set; }
@@ -154,7 +154,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "files_max_capacity", n => { FilesMaxCapacity = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetLongValue(); } },
                 { "internal_url", n => { InternalUrl = n.GetStringValue(); } },
-                { "_links", n => { Links = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoNodeLinksProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoNodeLinksProperty.CreateFromDiscriminatorValue); } },
+                { "_links", n => { Links = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoNodeLinks>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoNodeLinks.CreateFromDiscriminatorValue); } },
                 { "minimum_reverification_interval", n => { MinimumReverificationInterval = n.GetIntValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "primary", n => { Primary = n.GetBoolValue(); } },
@@ -184,7 +184,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("files_max_capacity", FilesMaxCapacity);
             writer.WriteLongValue("id", Id);
             writer.WriteStringValue("internal_url", InternalUrl);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoNodeLinksProperty>("_links", Links);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoNodeLinks>("_links", Links);
             writer.WriteIntValue("minimum_reverification_interval", MinimumReverificationInterval);
             writer.WriteStringValue("name", Name);
             writer.WriteBoolValue("primary", Primary);

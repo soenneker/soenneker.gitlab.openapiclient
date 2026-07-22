@@ -138,10 +138,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEpicIssueLinksProperty? Links { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEpicIssueLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEpicIssueLinksProperty Links { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEpicIssueLinks Links { get; set; }
 #endif
         /// <summary>The merge_requests_count property</summary>
         public int? MergeRequestsCount { get; set; }
@@ -300,7 +300,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "issue_type", n => { IssueType = n.GetStringValue(); } },
                 { "iteration", n => { Iteration = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIteration>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIteration.CreateFromDiscriminatorValue); } },
                 { "labels", n => { Labels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "_links", n => { Links = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEpicIssueLinksProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEpicIssueLinksProperty.CreateFromDiscriminatorValue); } },
+                { "_links", n => { Links = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEpicIssueLinks>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEpicIssueLinks.CreateFromDiscriminatorValue); } },
                 { "merge_requests_count", n => { MergeRequestsCount = n.GetIntValue(); } },
                 { "milestone", n => { Milestone = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMilestone>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMilestone.CreateFromDiscriminatorValue); } },
                 { "moved_to_id", n => { MovedToId = n.GetLongValue(); } },
@@ -355,7 +355,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("issue_type", IssueType);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIteration>("iteration", Iteration);
             writer.WriteCollectionOfPrimitiveValues<string>("labels", Labels);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEpicIssueLinksProperty>("_links", Links);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEpicIssueLinks>("_links", Links);
             writer.WriteIntValue("merge_requests_count", MergeRequestsCount);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMilestone>("milestone", Milestone);
             writer.WriteLongValue("moved_to_id", MovedToId);

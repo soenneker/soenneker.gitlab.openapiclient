@@ -15,10 +15,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The action property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Action { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.DetailedStatusEntityAction? Action { get; set; }
 #nullable restore
 #else
-        public string Action { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.DetailedStatusEntityAction Action { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -113,7 +113,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "action", n => { Action = n.GetStringValue(); } },
+                { "action", n => { Action = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.DetailedStatusEntityAction>(global::Soenneker.GitLab.OpenApiClient.Models.DetailedStatusEntityAction.CreateFromDiscriminatorValue); } },
                 { "details_path", n => { DetailsPath = n.GetStringValue(); } },
                 { "favicon", n => { Favicon = n.GetStringValue(); } },
                 { "group", n => { Group = n.GetStringValue(); } },
@@ -132,7 +132,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("action", Action);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.DetailedStatusEntityAction>("action", Action);
             writer.WriteStringValue("details_path", DetailsPath);
             writer.WriteStringValue("favicon", Favicon);
             writer.WriteStringValue("group", Group);

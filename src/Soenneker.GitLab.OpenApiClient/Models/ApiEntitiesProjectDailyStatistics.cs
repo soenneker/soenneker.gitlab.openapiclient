@@ -17,10 +17,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The fetches property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectDailyStatisticsFetchesProperty? Fetches { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectDailyStatisticsFetches? Fetches { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectDailyStatisticsFetchesProperty Fetches { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectDailyStatisticsFetches Fetches { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectDailyStatistics"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "fetches", n => { Fetches = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectDailyStatisticsFetchesProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectDailyStatisticsFetchesProperty.CreateFromDiscriminatorValue); } },
+                { "fetches", n => { Fetches = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectDailyStatisticsFetches>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectDailyStatisticsFetches.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectDailyStatisticsFetchesProperty>("fetches", Fetches);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectDailyStatisticsFetches>("fetches", Fetches);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
