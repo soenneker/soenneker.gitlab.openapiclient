@@ -41545,7 +41545,7 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody3B7De9F4Db35"
+                "$ref": "#/components/schemas/RequestBodyCf91A0E3De5E"
               }
             }
           }
@@ -41588,7 +41588,7 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody2861E6Bcd64D"
+                "$ref": "#/components/schemas/RequestBody151Cb880B5Fa"
               }
             }
           }
@@ -41719,7 +41719,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesProjectWithAccess"
+                  "$ref": "#/components/schemas/ApiEntitiesProjectsWithAccessAndCatalogSetting"
                 }
               }
             }
@@ -41756,7 +41756,7 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyC759Bc073Ec5"
+                "$ref": "#/components/schemas/RequestBody2913C4F9F47A"
               }
             }
           }
@@ -41767,7 +41767,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesProject"
+                  "$ref": "#/components/schemas/ApiEntitiesProjectsWithCatalogSetting"
                 }
               }
             }
@@ -45076,7 +45076,7 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody62Cfdeef4F25"
+                "$ref": "#/components/schemas/RequestBody1C830D224756"
               }
             }
           }
@@ -45198,7 +45198,7 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody4E27310E47B5"
+                "$ref": "#/components/schemas/RequestBody87Fdf22Dd64E"
               }
             }
           }
@@ -45323,7 +45323,7 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody22Adef8Ecfea"
+                "$ref": "#/components/schemas/RequestBodyF3A212C3C4F4"
               }
             }
           }
@@ -113146,7 +113146,7 @@
           }
         }
       },
-      "ApiEntitiesProjectWithAccess": {
+      "ApiEntitiesProjectsWithAccessAndCatalogSetting": {
         "type": "object",
         "properties": {
           "id": {
@@ -113257,7 +113257,7 @@
             "example": "registry.gitlab.example.com/gitlab/gitlab-client"
           },
           "_links": {
-            "$ref": "#/components/schemas/ApiEntitiesProjectWithAccessLinks"
+            "$ref": "#/components/schemas/ApiEntitiesProjectsWithAccessAndCatalogSettingLinks"
           },
           "marked_for_deletion_at": {
             "type": "string",
@@ -113536,7 +113536,7 @@
           "shared_with_groups": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/ApiEntitiesProjectWithAccessSharedWithGroupsItemProperty"
+              "$ref": "#/components/schemas/ApiEntitiesProjectsWithAccessAndCatalogSettingSharedWithGroupsItemProperty"
             }
           },
           "only_allow_merge_if_pipeline_succeeds": {
@@ -113717,7 +113717,585 @@
             "example": "This requires the title to include a Jira label"
           },
           "permissions": {
-            "$ref": "#/components/schemas/ApiEntitiesProjectWithAccessPermissions"
+            "$ref": "#/components/schemas/ApiEntitiesProjectsWithAccessAndCatalogSettingPermissions"
+          },
+          "cicd_catalog_enabled": {
+            "type": "boolean"
+          }
+        }
+      },
+      "ApiEntitiesProjectsWithCatalogSetting": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64",
+            "example": 1
+          },
+          "description": {
+            "type": "string",
+            "example": "desc"
+          },
+          "name": {
+            "type": "string",
+            "example": "project1"
+          },
+          "name_with_namespace": {
+            "type": "string",
+            "example": "John Doe / project1"
+          },
+          "path": {
+            "type": "string",
+            "example": "project1"
+          },
+          "path_with_namespace": {
+            "type": "string",
+            "example": "namespace1/project1"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2020-05-07T04:27:17.016Z"
+          },
+          "default_branch": {
+            "type": "string",
+            "example": "main"
+          },
+          "tag_list": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "topics": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "ssh_url_to_repo": {
+            "type": "string",
+            "example": "git@gitlab.example.com:gitlab/gitlab.git"
+          },
+          "http_url_to_repo": {
+            "type": "string",
+            "example": "https://gitlab.example.com/gitlab/gitlab.git"
+          },
+          "web_url": {
+            "type": "string",
+            "example": "https://gitlab.example.com/gitlab/gitlab"
+          },
+          "readme_url": {
+            "type": "string",
+            "example": "https://gitlab.example.com/gitlab/gitlab/blob/master/README.md"
+          },
+          "forks_count": {
+            "type": "integer",
+            "example": 1
+          },
+          "license_url": {
+            "type": "string",
+            "example": "https://gitlab.example.com/gitlab/gitlab/blob/master/LICENCE"
+          },
+          "license": {
+            "$ref": "#/components/schemas/ApiEntitiesLicenseBasic"
+          },
+          "avatar_url": {
+            "type": "string",
+            "example": "http://example.com/uploads/project/avatar/3/uploads/avatar.png"
+          },
+          "star_count": {
+            "type": "integer",
+            "example": 1
+          },
+          "last_activity_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2013-09-30T13:46:02Z"
+          },
+          "visibility": {
+            "type": "string",
+            "example": "public"
+          },
+          "namespace": {
+            "$ref": "#/components/schemas/ApiEntitiesNamespaceBasic"
+          },
+          "custom_attributes": {
+            "$ref": "#/components/schemas/ApiEntitiesCustomAttribute"
+          },
+          "repository_storage": {
+            "type": "string",
+            "example": "default"
+          },
+          "forked_from_project": {
+            "$ref": "#/components/schemas/ApiEntitiesBasicProjectDetails"
+          },
+          "container_registry_image_prefix": {
+            "type": "string",
+            "example": "registry.gitlab.example.com/gitlab/gitlab-client"
+          },
+          "_links": {
+            "$ref": "#/components/schemas/ApiEntitiesProjectsWithCatalogSettingLinks"
+          },
+          "marked_for_deletion_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2020-05-07T04:27:17.016Z"
+          },
+          "marked_for_deletion_on": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2020-05-07T04:27:17.016Z"
+          },
+          "packages_enabled": {
+            "type": "boolean"
+          },
+          "empty_repo": {
+            "type": "boolean"
+          },
+          "archived": {
+            "type": "boolean"
+          },
+          "owner": {
+            "$ref": "#/components/schemas/ApiEntitiesUserBasic"
+          },
+          "resolve_outdated_diff_discussions": {
+            "type": "boolean"
+          },
+          "container_expiration_policy": {
+            "$ref": "#/components/schemas/ApiEntitiesContainerExpirationPolicy"
+          },
+          "repository_object_format": {
+            "type": "string",
+            "example": "sha1"
+          },
+          "issues_enabled": {
+            "type": "boolean"
+          },
+          "merge_requests_enabled": {
+            "type": "boolean"
+          },
+          "wiki_enabled": {
+            "type": "boolean"
+          },
+          "jobs_enabled": {
+            "type": "boolean"
+          },
+          "snippets_enabled": {
+            "type": "boolean"
+          },
+          "container_registry_enabled": {
+            "type": "boolean"
+          },
+          "service_desk_enabled": {
+            "type": "boolean"
+          },
+          "service_desk_address": {
+            "type": "string",
+            "example": "address@example.com"
+          },
+          "can_create_merge_request_in": {
+            "type": "boolean"
+          },
+          "issues_access_level": {
+            "type": "string",
+            "example": "enabled"
+          },
+          "repository_access_level": {
+            "type": "string",
+            "example": "enabled"
+          },
+          "merge_requests_access_level": {
+            "type": "string",
+            "example": "enabled"
+          },
+          "forking_access_level": {
+            "type": "string",
+            "example": "enabled"
+          },
+          "wiki_access_level": {
+            "type": "string",
+            "example": "enabled"
+          },
+          "builds_access_level": {
+            "type": "string",
+            "example": "enabled"
+          },
+          "snippets_access_level": {
+            "type": "string",
+            "example": "enabled"
+          },
+          "pages_access_level": {
+            "type": "string",
+            "example": "enabled"
+          },
+          "analytics_access_level": {
+            "type": "string",
+            "example": "enabled"
+          },
+          "container_registry_access_level": {
+            "type": "string",
+            "example": "enabled"
+          },
+          "security_and_compliance_access_level": {
+            "type": "string",
+            "example": "enabled"
+          },
+          "releases_access_level": {
+            "type": "string",
+            "example": "enabled"
+          },
+          "environments_access_level": {
+            "type": "string",
+            "example": "enabled"
+          },
+          "feature_flags_access_level": {
+            "type": "string",
+            "example": "enabled"
+          },
+          "infrastructure_access_level": {
+            "type": "string",
+            "example": "enabled"
+          },
+          "monitor_access_level": {
+            "type": "string",
+            "example": "enabled"
+          },
+          "model_experiments_access_level": {
+            "type": "string",
+            "example": "enabled"
+          },
+          "model_registry_access_level": {
+            "type": "string",
+            "example": "enabled"
+          },
+          "package_registry_access_level": {
+            "type": "string",
+            "example": "enabled"
+          },
+          "emails_disabled": {
+            "type": "boolean"
+          },
+          "emails_enabled": {
+            "type": "boolean"
+          },
+          "show_diff_preview_in_email": {
+            "type": "boolean"
+          },
+          "shared_runners_enabled": {
+            "type": "boolean"
+          },
+          "lfs_enabled": {
+            "type": "boolean"
+          },
+          "creator_id": {
+            "type": "integer",
+            "format": "int64",
+            "example": 1
+          },
+          "mr_default_target_self": {
+            "type": "boolean"
+          },
+          "import_url": {
+            "type": "string",
+            "example": "https://gitlab.com/gitlab/gitlab.git"
+          },
+          "import_type": {
+            "type": "string",
+            "example": "git"
+          },
+          "import_status": {
+            "type": "string",
+            "example": "none"
+          },
+          "import_error": {
+            "type": "string",
+            "example": "Import error"
+          },
+          "open_issues_count": {
+            "type": "integer",
+            "example": 1
+          },
+          "description_html": {
+            "type": "string"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2020-05-07T04:27:17.016Z"
+          },
+          "ci_default_git_depth": {
+            "type": "integer",
+            "example": 20
+          },
+          "ci_delete_pipelines_in_seconds": {
+            "type": "integer",
+            "example": 86400
+          },
+          "ci_forward_deployment_enabled": {
+            "type": "boolean"
+          },
+          "ci_forward_deployment_rollback_allowed": {
+            "type": "boolean"
+          },
+          "ci_job_token_scope_enabled": {
+            "type": "boolean"
+          },
+          "ci_separated_caches": {
+            "type": "boolean"
+          },
+          "ci_allow_fork_pipelines_to_run_in_parent_project": {
+            "type": "boolean"
+          },
+          "ci_id_token_sub_claim_components": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "build_git_strategy": {
+            "type": "string",
+            "example": "fetch"
+          },
+          "keep_latest_artifact": {
+            "type": "boolean"
+          },
+          "restrict_user_defined_variables": {
+            "type": "boolean"
+          },
+          "ci_pipeline_variables_minimum_override_role": {
+            "type": "string"
+          },
+          "runner_token_expiration_interval": {
+            "type": "integer",
+            "example": 3600
+          },
+          "group_runners_enabled": {
+            "type": "boolean"
+          },
+          "resource_group_default_process_mode": {
+            "type": "string",
+            "example": "unordered"
+          },
+          "auto_cancel_pending_pipelines": {
+            "type": "string",
+            "example": "enabled"
+          },
+          "build_timeout": {
+            "type": "integer",
+            "example": 3600
+          },
+          "auto_devops_enabled": {
+            "type": "boolean"
+          },
+          "auto_devops_deploy_strategy": {
+            "type": "string",
+            "example": "continuous"
+          },
+          "ci_push_repository_for_job_token_allowed": {
+            "type": "boolean"
+          },
+          "protect_merge_request_pipelines": {
+            "type": "boolean"
+          },
+          "ci_display_pipeline_variables": {
+            "type": "boolean"
+          },
+          "runners_token": {
+            "type": "string",
+            "example": "b8547b1dc37721d05889db52fa2f02"
+          },
+          "ci_config_path": {
+            "type": "string"
+          },
+          "public_jobs": {
+            "type": "boolean"
+          },
+          "shared_with_groups": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesProjectsWithCatalogSettingSharedWithGroupsItemProperty"
+            }
+          },
+          "only_allow_merge_if_pipeline_succeeds": {
+            "type": "boolean"
+          },
+          "allow_merge_on_skipped_pipeline": {
+            "type": "boolean"
+          },
+          "request_access_enabled": {
+            "type": "boolean"
+          },
+          "only_allow_merge_if_all_discussions_are_resolved": {
+            "type": "boolean"
+          },
+          "remove_source_branch_after_merge": {
+            "type": "boolean"
+          },
+          "printing_merge_request_link_enabled": {
+            "type": "boolean"
+          },
+          "merge_method": {
+            "type": "string",
+            "example": "merge"
+          },
+          "squash_option": {
+            "type": "string",
+            "example": "default_off"
+          },
+          "enforce_auth_checks_on_uploads": {
+            "type": "boolean"
+          },
+          "suggestion_commit_message": {
+            "type": "string",
+            "example": "Suggestion message"
+          },
+          "merge_commit_template": {
+            "type": "string",
+            "example": "%(title)"
+          },
+          "squash_commit_template": {
+            "type": "string",
+            "example": "%(source_branch)"
+          },
+          "mr_default_title_template": {
+            "type": "string",
+            "example": "%(source_branch)"
+          },
+          "issue_branch_template": {
+            "type": "string",
+            "example": "%(title)"
+          },
+          "statistics": {
+            "$ref": "#/components/schemas/ApiEntitiesProjectStatistics"
+          },
+          "warn_about_potentially_unwanted_characters": {
+            "type": "boolean"
+          },
+          "autoclose_referenced_issues": {
+            "type": "boolean"
+          },
+          "max_artifacts_size": {
+            "type": "integer"
+          },
+          "approvals_before_merge": {
+            "type": "string"
+          },
+          "mirror": {
+            "type": "string"
+          },
+          "mirror_user_id": {
+            "type": "string"
+          },
+          "mirror_trigger_builds": {
+            "type": "string"
+          },
+          "only_mirror_protected_branches": {
+            "type": "string"
+          },
+          "mirror_overwrites_diverged_branches": {
+            "type": "string"
+          },
+          "external_authorization_classification_label": {
+            "type": "string"
+          },
+          "requirements_enabled": {
+            "type": "string"
+          },
+          "requirements_access_level": {
+            "type": "string"
+          },
+          "security_and_compliance_enabled": {
+            "type": "string"
+          },
+          "secret_push_protection_enabled": {
+            "type": "boolean"
+          },
+          "pre_receive_secret_detection_enabled": {
+            "type": "boolean"
+          },
+          "compliance_frameworks": {
+            "type": "string"
+          },
+          "issues_template": {
+            "type": "string"
+          },
+          "merge_requests_template": {
+            "type": "string"
+          },
+          "ci_restrict_pipeline_cancellation_role": {
+            "type": "string"
+          },
+          "merge_pipelines_enabled": {
+            "type": "string"
+          },
+          "merge_trains_enabled": {
+            "type": "string"
+          },
+          "merge_trains_skip_train_allowed": {
+            "type": "string"
+          },
+          "merge_train_enforcement": {
+            "type": "string"
+          },
+          "max_pipelines_per_merge_train": {
+            "type": "string"
+          },
+          "only_allow_merge_if_all_status_checks_passed": {
+            "type": "string"
+          },
+          "allow_pipeline_trigger_approve_deployment": {
+            "type": "boolean"
+          },
+          "prevent_merge_without_jira_issue": {
+            "type": "string"
+          },
+          "auto_duo_code_review_enabled": {
+            "type": "string"
+          },
+          "reviewer_assignment_strategy": {
+            "type": "string",
+            "example": "code_owners"
+          },
+          "duo_remote_flows_enabled": {
+            "type": "string"
+          },
+          "duo_foundational_flows_enabled": {
+            "type": "string"
+          },
+          "duo_sast_fp_detection_enabled": {
+            "type": "string"
+          },
+          "duo_secret_detection_fp_enabled": {
+            "type": "string"
+          },
+          "duo_dependency_bump_breaking_changes_enabled": {
+            "type": "string"
+          },
+          "duo_sast_vr_workflow_enabled": {
+            "type": "string"
+          },
+          "web_based_commit_signing_enabled": {
+            "type": "string"
+          },
+          "spp_repository_pipeline_access": {
+            "type": "boolean",
+            "description": "The spp_repository_pipeline_access setting is only visible if the security_orchestration_policies feature is available."
+          },
+          "security_policy_pipeline_must_succeed": {
+            "type": "boolean",
+            "description": "Require all security policy pipelines to succeed before merge requests can be merged."
+          },
+          "merge_request_title_regex": {
+            "type": "string",
+            "example": "/Title of merge request/"
+          },
+          "merge_request_title_regex_description": {
+            "type": "string",
+            "example": "This requires the title to include a Jira label"
+          },
+          "cicd_catalog_enabled": {
+            "type": "boolean"
           }
         }
       },
@@ -130705,7 +131283,7 @@
           }
         }
       },
-      "RequestBody3B7De9F4Db35": {
+      "RequestBodyCf91A0E3De5E": {
         "type": "object",
         "properties": {
           "name": {
@@ -130732,7 +131310,7 @@
             "nullable": true
           },
           "build_git_strategy": {
-            "$ref": "#/components/schemas/RequestBody3B7De9F4Db35BuildGitStrategy"
+            "$ref": "#/components/schemas/RequestBodyCf91A0E3De5EBuildGitStrategy"
           },
           "build_timeout": {
             "type": "integer",
@@ -130740,7 +131318,7 @@
             "nullable": true
           },
           "auto_cancel_pending_pipelines": {
-            "$ref": "#/components/schemas/RequestBody3B7De9F4Db35AutoCancelPendingPipelines"
+            "$ref": "#/components/schemas/RequestBodyCf91A0E3De5EAutoCancelPendingPipelines"
           },
           "ci_config_path": {
             "type": "string",
@@ -130778,61 +131356,61 @@
             "nullable": true
           },
           "issues_access_level": {
-            "$ref": "#/components/schemas/RequestBody3B7De9F4Db35IssuesAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyCf91A0E3De5EIssuesAccessLevel"
           },
           "repository_access_level": {
-            "$ref": "#/components/schemas/RequestBody3B7De9F4Db35RepositoryAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyCf91A0E3De5ERepositoryAccessLevel"
           },
           "merge_requests_access_level": {
-            "$ref": "#/components/schemas/RequestBody3B7De9F4Db35MergeRequestsAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyCf91A0E3De5EMergeRequestsAccessLevel"
           },
           "forking_access_level": {
-            "$ref": "#/components/schemas/RequestBody3B7De9F4Db35ForkingAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyCf91A0E3De5EForkingAccessLevel"
           },
           "wiki_access_level": {
-            "$ref": "#/components/schemas/RequestBody3B7De9F4Db35WikiAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyCf91A0E3De5EWikiAccessLevel"
           },
           "builds_access_level": {
-            "$ref": "#/components/schemas/RequestBody3B7De9F4Db35BuildsAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyCf91A0E3De5EBuildsAccessLevel"
           },
           "snippets_access_level": {
-            "$ref": "#/components/schemas/RequestBody3B7De9F4Db35SnippetsAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyCf91A0E3De5ESnippetsAccessLevel"
           },
           "package_registry_access_level": {
-            "$ref": "#/components/schemas/RequestBody3B7De9F4Db35PackageRegistryAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyCf91A0E3De5EPackageRegistryAccessLevel"
           },
           "pages_access_level": {
-            "$ref": "#/components/schemas/RequestBody3B7De9F4Db35PagesAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyCf91A0E3De5EPagesAccessLevel"
           },
           "analytics_access_level": {
-            "$ref": "#/components/schemas/RequestBody3B7De9F4Db35AnalyticsAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyCf91A0E3De5EAnalyticsAccessLevel"
           },
           "container_registry_access_level": {
-            "$ref": "#/components/schemas/RequestBody3B7De9F4Db35ContainerRegistryAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyCf91A0E3De5EContainerRegistryAccessLevel"
           },
           "security_and_compliance_access_level": {
-            "$ref": "#/components/schemas/RequestBody3B7De9F4Db35SecurityAndComplianceAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyCf91A0E3De5ESecurityAndComplianceAccessLevel"
           },
           "releases_access_level": {
-            "$ref": "#/components/schemas/RequestBody3B7De9F4Db35ReleasesAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyCf91A0E3De5EReleasesAccessLevel"
           },
           "environments_access_level": {
-            "$ref": "#/components/schemas/RequestBody3B7De9F4Db35EnvironmentsAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyCf91A0E3De5EEnvironmentsAccessLevel"
           },
           "feature_flags_access_level": {
-            "$ref": "#/components/schemas/RequestBody3B7De9F4Db35FeatureFlagsAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyCf91A0E3De5EFeatureFlagsAccessLevel"
           },
           "infrastructure_access_level": {
-            "$ref": "#/components/schemas/RequestBody3B7De9F4Db35InfrastructureAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyCf91A0E3De5EInfrastructureAccessLevel"
           },
           "monitor_access_level": {
-            "$ref": "#/components/schemas/RequestBody3B7De9F4Db35MonitorAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyCf91A0E3De5EMonitorAccessLevel"
           },
           "model_experiments_access_level": {
-            "$ref": "#/components/schemas/RequestBody3B7De9F4Db35ModelExperimentsAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyCf91A0E3De5EModelExperimentsAccessLevel"
           },
           "model_registry_access_level": {
-            "$ref": "#/components/schemas/RequestBody3B7De9F4Db35ModelRegistryAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyCf91A0E3De5EModelRegistryAccessLevel"
           },
           "emails_disabled": {
             "type": "boolean",
@@ -130875,7 +131453,7 @@
             "nullable": true
           },
           "resource_group_default_process_mode": {
-            "$ref": "#/components/schemas/RequestBody3B7De9F4Db35ResourceGroupDefaultProcessMode"
+            "$ref": "#/components/schemas/RequestBodyCf91A0E3De5EResourceGroupDefaultProcessMode"
           },
           "resolve_outdated_diff_discussions": {
             "type": "boolean",
@@ -130898,7 +131476,7 @@
             "nullable": true
           },
           "container_expiration_policy_attributes": {
-            "$ref": "#/components/schemas/RequestBody3B7De9F4Db35ContainerExpirationPolicyAttributes"
+            "$ref": "#/components/schemas/RequestBodyCf91A0E3De5EContainerExpirationPolicyAttributes"
           },
           "lfs_enabled": {
             "type": "boolean",
@@ -130906,7 +131484,7 @@
             "nullable": true
           },
           "visibility": {
-            "$ref": "#/components/schemas/RequestBody3B7De9F4Db35Visibility"
+            "$ref": "#/components/schemas/RequestBodyCf91A0E3De5EVisibility"
           },
           "public_builds": {
             "type": "boolean",
@@ -130966,7 +131544,7 @@
             "nullable": true
           },
           "merge_method": {
-            "$ref": "#/components/schemas/RequestBody3B7De9F4Db35MergeMethod"
+            "$ref": "#/components/schemas/RequestBodyCf91A0E3De5EMergeMethod"
           },
           "suggestion_commit_message": {
             "type": "string",
@@ -130994,7 +131572,7 @@
             "nullable": true
           },
           "auto_devops_deploy_strategy": {
-            "$ref": "#/components/schemas/RequestBody3B7De9F4Db35AutoDevopsDeployStrategy"
+            "$ref": "#/components/schemas/RequestBodyCf91A0E3De5EAutoDevopsDeployStrategy"
           },
           "autoclose_referenced_issues": {
             "type": "boolean",
@@ -131007,7 +131585,7 @@
             "nullable": true
           },
           "squash_option": {
-            "$ref": "#/components/schemas/RequestBody3B7De9F4Db35SquashOption"
+            "$ref": "#/components/schemas/RequestBodyCf91A0E3De5ESquashOption"
           },
           "mr_default_target_self": {
             "type": "boolean",
@@ -131018,6 +131596,11 @@
             "maxLength": 100,
             "type": "string",
             "description": "Template used to generate the default merge request title. Maximum 100 characters.",
+            "nullable": true
+          },
+          "cicd_catalog_enabled": {
+            "type": "boolean",
+            "description": "Set whether the project is a CI/CD catalog project",
             "nullable": true
           },
           "only_allow_merge_if_all_status_checks_passed": {
@@ -131046,7 +131629,7 @@
             "nullable": true
           },
           "requirements_access_level": {
-            "$ref": "#/components/schemas/RequestBody3B7De9F4Db35RequirementsAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyCf91A0E3De5ERequirementsAccessLevel"
           },
           "prevent_merge_without_jira_issue": {
             "type": "boolean",
@@ -131099,7 +131682,7 @@
             "nullable": true
           },
           "repository_object_format": {
-            "$ref": "#/components/schemas/RequestBody3B7De9F4Db35RepositoryObjectFormat"
+            "$ref": "#/components/schemas/RequestBodyCf91A0E3De5ERepositoryObjectFormat"
           },
           "initialize_with_readme": {
             "type": "boolean",
@@ -131138,7 +131721,7 @@
           }
         }
       },
-      "RequestBody2861E6Bcd64D": {
+      "RequestBody151Cb880B5Fa": {
         "required": [
           "name"
         ],
@@ -131168,7 +131751,7 @@
             "nullable": true
           },
           "build_git_strategy": {
-            "$ref": "#/components/schemas/RequestBody2861E6Bcd64DBuildGitStrategy"
+            "$ref": "#/components/schemas/RequestBody151Cb880B5FaBuildGitStrategy"
           },
           "build_timeout": {
             "type": "integer",
@@ -131176,7 +131759,7 @@
             "nullable": true
           },
           "auto_cancel_pending_pipelines": {
-            "$ref": "#/components/schemas/RequestBody2861E6Bcd64DAutoCancelPendingPipelines"
+            "$ref": "#/components/schemas/RequestBody151Cb880B5FaAutoCancelPendingPipelines"
           },
           "ci_config_path": {
             "type": "string",
@@ -131214,61 +131797,61 @@
             "nullable": true
           },
           "issues_access_level": {
-            "$ref": "#/components/schemas/RequestBody2861E6Bcd64DIssuesAccessLevel"
+            "$ref": "#/components/schemas/RequestBody151Cb880B5FaIssuesAccessLevel"
           },
           "repository_access_level": {
-            "$ref": "#/components/schemas/RequestBody2861E6Bcd64DRepositoryAccessLevel"
+            "$ref": "#/components/schemas/RequestBody151Cb880B5FaRepositoryAccessLevel"
           },
           "merge_requests_access_level": {
-            "$ref": "#/components/schemas/RequestBody2861E6Bcd64DMergeRequestsAccessLevel"
+            "$ref": "#/components/schemas/RequestBody151Cb880B5FaMergeRequestsAccessLevel"
           },
           "forking_access_level": {
-            "$ref": "#/components/schemas/RequestBody2861E6Bcd64DForkingAccessLevel"
+            "$ref": "#/components/schemas/RequestBody151Cb880B5FaForkingAccessLevel"
           },
           "wiki_access_level": {
-            "$ref": "#/components/schemas/RequestBody2861E6Bcd64DWikiAccessLevel"
+            "$ref": "#/components/schemas/RequestBody151Cb880B5FaWikiAccessLevel"
           },
           "builds_access_level": {
-            "$ref": "#/components/schemas/RequestBody2861E6Bcd64DBuildsAccessLevel"
+            "$ref": "#/components/schemas/RequestBody151Cb880B5FaBuildsAccessLevel"
           },
           "snippets_access_level": {
-            "$ref": "#/components/schemas/RequestBody2861E6Bcd64DSnippetsAccessLevel"
+            "$ref": "#/components/schemas/RequestBody151Cb880B5FaSnippetsAccessLevel"
           },
           "package_registry_access_level": {
-            "$ref": "#/components/schemas/RequestBody2861E6Bcd64DPackageRegistryAccessLevel"
+            "$ref": "#/components/schemas/RequestBody151Cb880B5FaPackageRegistryAccessLevel"
           },
           "pages_access_level": {
-            "$ref": "#/components/schemas/RequestBody2861E6Bcd64DPagesAccessLevel"
+            "$ref": "#/components/schemas/RequestBody151Cb880B5FaPagesAccessLevel"
           },
           "analytics_access_level": {
-            "$ref": "#/components/schemas/RequestBody2861E6Bcd64DAnalyticsAccessLevel"
+            "$ref": "#/components/schemas/RequestBody151Cb880B5FaAnalyticsAccessLevel"
           },
           "container_registry_access_level": {
-            "$ref": "#/components/schemas/RequestBody2861E6Bcd64DContainerRegistryAccessLevel"
+            "$ref": "#/components/schemas/RequestBody151Cb880B5FaContainerRegistryAccessLevel"
           },
           "security_and_compliance_access_level": {
-            "$ref": "#/components/schemas/RequestBody2861E6Bcd64DSecurityAndComplianceAccessLevel"
+            "$ref": "#/components/schemas/RequestBody151Cb880B5FaSecurityAndComplianceAccessLevel"
           },
           "releases_access_level": {
-            "$ref": "#/components/schemas/RequestBody2861E6Bcd64DReleasesAccessLevel"
+            "$ref": "#/components/schemas/RequestBody151Cb880B5FaReleasesAccessLevel"
           },
           "environments_access_level": {
-            "$ref": "#/components/schemas/RequestBody2861E6Bcd64DEnvironmentsAccessLevel"
+            "$ref": "#/components/schemas/RequestBody151Cb880B5FaEnvironmentsAccessLevel"
           },
           "feature_flags_access_level": {
-            "$ref": "#/components/schemas/RequestBody2861E6Bcd64DFeatureFlagsAccessLevel"
+            "$ref": "#/components/schemas/RequestBody151Cb880B5FaFeatureFlagsAccessLevel"
           },
           "infrastructure_access_level": {
-            "$ref": "#/components/schemas/RequestBody2861E6Bcd64DInfrastructureAccessLevel"
+            "$ref": "#/components/schemas/RequestBody151Cb880B5FaInfrastructureAccessLevel"
           },
           "monitor_access_level": {
-            "$ref": "#/components/schemas/RequestBody2861E6Bcd64DMonitorAccessLevel"
+            "$ref": "#/components/schemas/RequestBody151Cb880B5FaMonitorAccessLevel"
           },
           "model_experiments_access_level": {
-            "$ref": "#/components/schemas/RequestBody2861E6Bcd64DModelExperimentsAccessLevel"
+            "$ref": "#/components/schemas/RequestBody151Cb880B5FaModelExperimentsAccessLevel"
           },
           "model_registry_access_level": {
-            "$ref": "#/components/schemas/RequestBody2861E6Bcd64DModelRegistryAccessLevel"
+            "$ref": "#/components/schemas/RequestBody151Cb880B5FaModelRegistryAccessLevel"
           },
           "emails_disabled": {
             "type": "boolean",
@@ -131311,7 +131894,7 @@
             "nullable": true
           },
           "resource_group_default_process_mode": {
-            "$ref": "#/components/schemas/RequestBody2861E6Bcd64DResourceGroupDefaultProcessMode"
+            "$ref": "#/components/schemas/RequestBody151Cb880B5FaResourceGroupDefaultProcessMode"
           },
           "resolve_outdated_diff_discussions": {
             "type": "boolean",
@@ -131334,7 +131917,7 @@
             "nullable": true
           },
           "container_expiration_policy_attributes": {
-            "$ref": "#/components/schemas/RequestBody2861E6Bcd64DContainerExpirationPolicyAttributes"
+            "$ref": "#/components/schemas/RequestBody151Cb880B5FaContainerExpirationPolicyAttributes"
           },
           "lfs_enabled": {
             "type": "boolean",
@@ -131342,7 +131925,7 @@
             "nullable": true
           },
           "visibility": {
-            "$ref": "#/components/schemas/RequestBody2861E6Bcd64DVisibility"
+            "$ref": "#/components/schemas/RequestBody151Cb880B5FaVisibility"
           },
           "public_builds": {
             "type": "boolean",
@@ -131402,7 +131985,7 @@
             "nullable": true
           },
           "merge_method": {
-            "$ref": "#/components/schemas/RequestBody2861E6Bcd64DMergeMethod"
+            "$ref": "#/components/schemas/RequestBody151Cb880B5FaMergeMethod"
           },
           "suggestion_commit_message": {
             "type": "string",
@@ -131430,7 +132013,7 @@
             "nullable": true
           },
           "auto_devops_deploy_strategy": {
-            "$ref": "#/components/schemas/RequestBody2861E6Bcd64DAutoDevopsDeployStrategy"
+            "$ref": "#/components/schemas/RequestBody151Cb880B5FaAutoDevopsDeployStrategy"
           },
           "autoclose_referenced_issues": {
             "type": "boolean",
@@ -131443,7 +132026,7 @@
             "nullable": true
           },
           "squash_option": {
-            "$ref": "#/components/schemas/RequestBody2861E6Bcd64DSquashOption"
+            "$ref": "#/components/schemas/RequestBody151Cb880B5FaSquashOption"
           },
           "mr_default_target_self": {
             "type": "boolean",
@@ -131454,6 +132037,11 @@
             "maxLength": 100,
             "type": "string",
             "description": "Template used to generate the default merge request title. Maximum 100 characters.",
+            "nullable": true
+          },
+          "cicd_catalog_enabled": {
+            "type": "boolean",
+            "description": "Set whether the project is a CI/CD catalog project",
             "nullable": true
           },
           "only_allow_merge_if_all_status_checks_passed": {
@@ -131482,7 +132070,7 @@
             "nullable": true
           },
           "requirements_access_level": {
-            "$ref": "#/components/schemas/RequestBody2861E6Bcd64DRequirementsAccessLevel"
+            "$ref": "#/components/schemas/RequestBody151Cb880B5FaRequirementsAccessLevel"
           },
           "prevent_merge_without_jira_issue": {
             "type": "boolean",
@@ -131535,7 +132123,7 @@
             "nullable": true
           },
           "repository_object_format": {
-            "$ref": "#/components/schemas/RequestBody2861E6Bcd64DRepositoryObjectFormat"
+            "$ref": "#/components/schemas/RequestBody151Cb880B5FaRepositoryObjectFormat"
           },
           "initialize_with_readme": {
             "type": "boolean",
@@ -131574,7 +132162,7 @@
           }
         }
       },
-      "RequestBodyC759Bc073Ec5": {
+      "RequestBody2913C4F9F47A": {
         "type": "object",
         "properties": {
           "name": {
@@ -131601,7 +132189,7 @@
             "nullable": true
           },
           "build_git_strategy": {
-            "$ref": "#/components/schemas/RequestBodyC759Bc073Ec5BuildGitStrategy"
+            "$ref": "#/components/schemas/RequestBody2913C4F9F47ABuildGitStrategy"
           },
           "build_timeout": {
             "type": "integer",
@@ -131609,7 +132197,7 @@
             "nullable": true
           },
           "auto_cancel_pending_pipelines": {
-            "$ref": "#/components/schemas/RequestBodyC759Bc073Ec5AutoCancelPendingPipelines"
+            "$ref": "#/components/schemas/RequestBody2913C4F9F47AAutoCancelPendingPipelines"
           },
           "ci_config_path": {
             "type": "string",
@@ -131647,61 +132235,61 @@
             "nullable": true
           },
           "issues_access_level": {
-            "$ref": "#/components/schemas/RequestBodyC759Bc073Ec5IssuesAccessLevel"
+            "$ref": "#/components/schemas/RequestBody2913C4F9F47AIssuesAccessLevel"
           },
           "repository_access_level": {
-            "$ref": "#/components/schemas/RequestBodyC759Bc073Ec5RepositoryAccessLevel"
+            "$ref": "#/components/schemas/RequestBody2913C4F9F47ARepositoryAccessLevel"
           },
           "merge_requests_access_level": {
-            "$ref": "#/components/schemas/RequestBodyC759Bc073Ec5MergeRequestsAccessLevel"
+            "$ref": "#/components/schemas/RequestBody2913C4F9F47AMergeRequestsAccessLevel"
           },
           "forking_access_level": {
-            "$ref": "#/components/schemas/RequestBodyC759Bc073Ec5ForkingAccessLevel"
+            "$ref": "#/components/schemas/RequestBody2913C4F9F47AForkingAccessLevel"
           },
           "wiki_access_level": {
-            "$ref": "#/components/schemas/RequestBodyC759Bc073Ec5WikiAccessLevel"
+            "$ref": "#/components/schemas/RequestBody2913C4F9F47AWikiAccessLevel"
           },
           "builds_access_level": {
-            "$ref": "#/components/schemas/RequestBodyC759Bc073Ec5BuildsAccessLevel"
+            "$ref": "#/components/schemas/RequestBody2913C4F9F47ABuildsAccessLevel"
           },
           "snippets_access_level": {
-            "$ref": "#/components/schemas/RequestBodyC759Bc073Ec5SnippetsAccessLevel"
+            "$ref": "#/components/schemas/RequestBody2913C4F9F47ASnippetsAccessLevel"
           },
           "package_registry_access_level": {
-            "$ref": "#/components/schemas/RequestBodyC759Bc073Ec5PackageRegistryAccessLevel"
+            "$ref": "#/components/schemas/RequestBody2913C4F9F47APackageRegistryAccessLevel"
           },
           "pages_access_level": {
-            "$ref": "#/components/schemas/RequestBodyC759Bc073Ec5PagesAccessLevel"
+            "$ref": "#/components/schemas/RequestBody2913C4F9F47APagesAccessLevel"
           },
           "analytics_access_level": {
-            "$ref": "#/components/schemas/RequestBodyC759Bc073Ec5AnalyticsAccessLevel"
+            "$ref": "#/components/schemas/RequestBody2913C4F9F47AAnalyticsAccessLevel"
           },
           "container_registry_access_level": {
-            "$ref": "#/components/schemas/RequestBodyC759Bc073Ec5ContainerRegistryAccessLevel"
+            "$ref": "#/components/schemas/RequestBody2913C4F9F47AContainerRegistryAccessLevel"
           },
           "security_and_compliance_access_level": {
-            "$ref": "#/components/schemas/RequestBodyC759Bc073Ec5SecurityAndComplianceAccessLevel"
+            "$ref": "#/components/schemas/RequestBody2913C4F9F47ASecurityAndComplianceAccessLevel"
           },
           "releases_access_level": {
-            "$ref": "#/components/schemas/RequestBodyC759Bc073Ec5ReleasesAccessLevel"
+            "$ref": "#/components/schemas/RequestBody2913C4F9F47AReleasesAccessLevel"
           },
           "environments_access_level": {
-            "$ref": "#/components/schemas/RequestBodyC759Bc073Ec5EnvironmentsAccessLevel"
+            "$ref": "#/components/schemas/RequestBody2913C4F9F47AEnvironmentsAccessLevel"
           },
           "feature_flags_access_level": {
-            "$ref": "#/components/schemas/RequestBodyC759Bc073Ec5FeatureFlagsAccessLevel"
+            "$ref": "#/components/schemas/RequestBody2913C4F9F47AFeatureFlagsAccessLevel"
           },
           "infrastructure_access_level": {
-            "$ref": "#/components/schemas/RequestBodyC759Bc073Ec5InfrastructureAccessLevel"
+            "$ref": "#/components/schemas/RequestBody2913C4F9F47AInfrastructureAccessLevel"
           },
           "monitor_access_level": {
-            "$ref": "#/components/schemas/RequestBodyC759Bc073Ec5MonitorAccessLevel"
+            "$ref": "#/components/schemas/RequestBody2913C4F9F47AMonitorAccessLevel"
           },
           "model_experiments_access_level": {
-            "$ref": "#/components/schemas/RequestBodyC759Bc073Ec5ModelExperimentsAccessLevel"
+            "$ref": "#/components/schemas/RequestBody2913C4F9F47AModelExperimentsAccessLevel"
           },
           "model_registry_access_level": {
-            "$ref": "#/components/schemas/RequestBodyC759Bc073Ec5ModelRegistryAccessLevel"
+            "$ref": "#/components/schemas/RequestBody2913C4F9F47AModelRegistryAccessLevel"
           },
           "emails_disabled": {
             "type": "boolean",
@@ -131744,7 +132332,7 @@
             "nullable": true
           },
           "resource_group_default_process_mode": {
-            "$ref": "#/components/schemas/RequestBodyC759Bc073Ec5ResourceGroupDefaultProcessMode"
+            "$ref": "#/components/schemas/RequestBody2913C4F9F47AResourceGroupDefaultProcessMode"
           },
           "resolve_outdated_diff_discussions": {
             "type": "boolean",
@@ -131767,7 +132355,7 @@
             "nullable": true
           },
           "container_expiration_policy_attributes": {
-            "$ref": "#/components/schemas/RequestBodyC759Bc073Ec5ContainerExpirationPolicyAttributes"
+            "$ref": "#/components/schemas/RequestBody2913C4F9F47AContainerExpirationPolicyAttributes"
           },
           "lfs_enabled": {
             "type": "boolean",
@@ -131775,7 +132363,7 @@
             "nullable": true
           },
           "visibility": {
-            "$ref": "#/components/schemas/RequestBodyC759Bc073Ec5Visibility"
+            "$ref": "#/components/schemas/RequestBody2913C4F9F47AVisibility"
           },
           "public_builds": {
             "type": "boolean",
@@ -131835,7 +132423,7 @@
             "nullable": true
           },
           "merge_method": {
-            "$ref": "#/components/schemas/RequestBodyC759Bc073Ec5MergeMethod"
+            "$ref": "#/components/schemas/RequestBody2913C4F9F47AMergeMethod"
           },
           "suggestion_commit_message": {
             "type": "string",
@@ -131863,7 +132451,7 @@
             "nullable": true
           },
           "auto_devops_deploy_strategy": {
-            "$ref": "#/components/schemas/RequestBodyC759Bc073Ec5AutoDevopsDeployStrategy"
+            "$ref": "#/components/schemas/RequestBody2913C4F9F47AAutoDevopsDeployStrategy"
           },
           "autoclose_referenced_issues": {
             "type": "boolean",
@@ -131876,7 +132464,7 @@
             "nullable": true
           },
           "squash_option": {
-            "$ref": "#/components/schemas/RequestBodyC759Bc073Ec5SquashOption"
+            "$ref": "#/components/schemas/RequestBody2913C4F9F47ASquashOption"
           },
           "mr_default_target_self": {
             "type": "boolean",
@@ -131887,6 +132475,11 @@
             "maxLength": 100,
             "type": "string",
             "description": "Template used to generate the default merge request title. Maximum 100 characters.",
+            "nullable": true
+          },
+          "cicd_catalog_enabled": {
+            "type": "boolean",
+            "description": "Set whether the project is a CI/CD catalog project",
             "nullable": true
           },
           "only_allow_merge_if_all_status_checks_passed": {
@@ -131915,7 +132508,7 @@
             "nullable": true
           },
           "requirements_access_level": {
-            "$ref": "#/components/schemas/RequestBodyC759Bc073Ec5RequirementsAccessLevel"
+            "$ref": "#/components/schemas/RequestBody2913C4F9F47ARequirementsAccessLevel"
           },
           "prevent_merge_without_jira_issue": {
             "type": "boolean",
@@ -132003,7 +132596,7 @@
             "nullable": true
           },
           "ci_pipeline_variables_minimum_override_role": {
-            "$ref": "#/components/schemas/RequestBodyC759Bc073Ec5CiPipelineVariablesMinimumOverrideRole"
+            "$ref": "#/components/schemas/RequestBody2913C4F9F47ACiPipelineVariablesMinimumOverrideRole"
           },
           "ci_push_repository_for_job_token_allowed": {
             "type": "boolean",
@@ -132099,7 +132692,7 @@
             "nullable": true
           },
           "merge_train_enforcement": {
-            "$ref": "#/components/schemas/RequestBodyC759Bc073Ec5MergeTrainEnforcement"
+            "$ref": "#/components/schemas/RequestBody2913C4F9F47AMergeTrainEnforcement"
           },
           "max_pipelines_per_merge_train": {
             "type": "integer",
@@ -132122,7 +132715,7 @@
             "nullable": true
           },
           "reviewer_assignment_strategy": {
-            "$ref": "#/components/schemas/RequestBodyC759Bc073Ec5ReviewerAssignmentStrategy"
+            "$ref": "#/components/schemas/RequestBody2913C4F9F47AReviewerAssignmentStrategy"
           }
         }
       },
@@ -132391,7 +132984,7 @@
           }
         }
       },
-      "RequestBody62Cfdeef4F25": {
+      "RequestBody1C830D224756": {
         "required": [
           "path",
           "file"
@@ -132437,7 +133030,7 @@
             "nullable": true
           },
           "override_params": {
-            "$ref": "#/components/schemas/RequestBody62Cfdeef4F25OverrideParams"
+            "$ref": "#/components/schemas/RequestBody1C830D224756OverrideParams"
           },
           "file.path": {
             "type": "string",
@@ -132514,7 +133107,7 @@
           }
         }
       },
-      "RequestBody4E27310E47B5": {
+      "RequestBody87Fdf22Dd64E": {
         "required": [
           "url",
           "path"
@@ -132559,7 +133152,7 @@
             "nullable": true
           },
           "override_params": {
-            "$ref": "#/components/schemas/RequestBody4E27310E47B5OverrideParams"
+            "$ref": "#/components/schemas/RequestBody87Fdf22Dd64EOverrideParams"
           }
         }
       },
@@ -132639,7 +133232,7 @@
           }
         }
       },
-      "RequestBody22Adef8Ecfea": {
+      "RequestBodyF3A212C3C4F4": {
         "required": [
           "region",
           "bucket_name",
@@ -132708,7 +133301,7 @@
             "nullable": true
           },
           "override_params": {
-            "$ref": "#/components/schemas/RequestBody22Adef8EcfeaOverrideParams"
+            "$ref": "#/components/schemas/RequestBodyF3A212C3C4F4OverrideParams"
           }
         }
       },
@@ -141720,7 +142313,7 @@
       "ApiEntitiesProjectSharedWithGroupsItem": {
         "type": "object"
       },
-      "ApiEntitiesProjectWithAccessLinks": {
+      "ApiEntitiesProjectsWithAccessAndCatalogSettingLinks": {
         "type": "object",
         "properties": {
           "self": {
@@ -141757,10 +142350,10 @@
           }
         }
       },
-      "ApiEntitiesProjectWithAccessSharedWithGroupsItem": {
+      "ApiEntitiesProjectsWithAccessAndCatalogSettingSharedWithGroupsItem": {
         "type": "object"
       },
-      "ApiEntitiesProjectWithAccessPermissions": {
+      "ApiEntitiesProjectsWithAccessAndCatalogSettingPermissions": {
         "type": "object",
         "properties": {
           "project_access": {
@@ -141770,6 +142363,46 @@
             "$ref": "#/components/schemas/ApiEntitiesGroupAccess"
           }
         }
+      },
+      "ApiEntitiesProjectsWithCatalogSettingLinks": {
+        "type": "object",
+        "properties": {
+          "self": {
+            "type": "string",
+            "example": "https://gitlab.example.com/api/v4/projects/4"
+          },
+          "issues": {
+            "type": "string",
+            "example": "https://gitlab.example.com/api/v4/projects/4/issues"
+          },
+          "merge_requests": {
+            "type": "string",
+            "example": "https://gitlab.example.com/api/v4/projects/4/merge_requests"
+          },
+          "repo_branches": {
+            "type": "string",
+            "example": "https://gitlab.example.com/api/v4/projects/4/repository/branches"
+          },
+          "labels": {
+            "type": "string",
+            "example": "https://gitlab.example.com/api/v4/projects/4/labels"
+          },
+          "events": {
+            "type": "string",
+            "example": "https://gitlab.example.com/api/v4/projects/4/events"
+          },
+          "members": {
+            "type": "string",
+            "example": "https://gitlab.example.com/api/v4/projects/4/members"
+          },
+          "cluster_agents": {
+            "type": "string",
+            "example": "https://gitlab.example.com/api/v4/projects/4/cluster_agents"
+          }
+        }
+      },
+      "ApiEntitiesProjectsWithCatalogSettingSharedWithGroupsItem": {
+        "type": "object"
       },
       "ApiEntitiesProjectDailyStatisticsFetches": {
         "type": "object",
@@ -143345,7 +143978,7 @@
       "RequestBody586Dac379Fa0AllowedToCreateItem": {
         "type": "object"
       },
-      "RequestBody3B7De9F4Db35ContainerExpirationPolicyAttributes": {
+      "RequestBodyCf91A0E3De5EContainerExpirationPolicyAttributes": {
         "type": "object",
         "properties": {
           "cadence": {
@@ -143382,7 +144015,7 @@
         "description": "Object that contains information on the container expiration policy",
         "nullable": true
       },
-      "RequestBody2861E6Bcd64DContainerExpirationPolicyAttributes": {
+      "RequestBody151Cb880B5FaContainerExpirationPolicyAttributes": {
         "type": "object",
         "properties": {
           "cadence": {
@@ -143419,7 +144052,7 @@
         "description": "Object that contains information on the container expiration policy",
         "nullable": true
       },
-      "RequestBodyC759Bc073Ec5ContainerExpirationPolicyAttributes": {
+      "RequestBody2913C4F9F47AContainerExpirationPolicyAttributes": {
         "type": "object",
         "properties": {
           "cadence": {
@@ -143501,7 +144134,7 @@
           }
         }
       },
-      "RequestBody62Cfdeef4F25OverrideParams": {
+      "RequestBody1C830D224756OverrideParams": {
         "type": "object",
         "properties": {
           "description": {
@@ -143510,7 +144143,7 @@
             "nullable": true
           },
           "build_git_strategy": {
-            "$ref": "#/components/schemas/RequestBody62Cfdeef4F25OverrideParamsBuildGitStrategy"
+            "$ref": "#/components/schemas/RequestBody1C830D224756OverrideParamsBuildGitStrategy"
           },
           "build_timeout": {
             "type": "integer",
@@ -143518,7 +144151,7 @@
             "nullable": true
           },
           "auto_cancel_pending_pipelines": {
-            "$ref": "#/components/schemas/RequestBody62Cfdeef4F25OverrideParamsAutoCancelPendingPipelines"
+            "$ref": "#/components/schemas/RequestBody1C830D224756OverrideParamsAutoCancelPendingPipelines"
           },
           "ci_config_path": {
             "type": "string",
@@ -143556,61 +144189,61 @@
             "nullable": true
           },
           "issues_access_level": {
-            "$ref": "#/components/schemas/RequestBody62Cfdeef4F25OverrideParamsIssuesAccessLevel"
+            "$ref": "#/components/schemas/RequestBody1C830D224756OverrideParamsIssuesAccessLevel"
           },
           "repository_access_level": {
-            "$ref": "#/components/schemas/RequestBody62Cfdeef4F25OverrideParamsRepositoryAccessLevel"
+            "$ref": "#/components/schemas/RequestBody1C830D224756OverrideParamsRepositoryAccessLevel"
           },
           "merge_requests_access_level": {
-            "$ref": "#/components/schemas/RequestBody62Cfdeef4F25OverrideParamsMergeRequestsAccessLevel"
+            "$ref": "#/components/schemas/RequestBody1C830D224756OverrideParamsMergeRequestsAccessLevel"
           },
           "forking_access_level": {
-            "$ref": "#/components/schemas/RequestBody62Cfdeef4F25OverrideParamsForkingAccessLevel"
+            "$ref": "#/components/schemas/RequestBody1C830D224756OverrideParamsForkingAccessLevel"
           },
           "wiki_access_level": {
-            "$ref": "#/components/schemas/RequestBody62Cfdeef4F25OverrideParamsWikiAccessLevel"
+            "$ref": "#/components/schemas/RequestBody1C830D224756OverrideParamsWikiAccessLevel"
           },
           "builds_access_level": {
-            "$ref": "#/components/schemas/RequestBody62Cfdeef4F25OverrideParamsBuildsAccessLevel"
+            "$ref": "#/components/schemas/RequestBody1C830D224756OverrideParamsBuildsAccessLevel"
           },
           "snippets_access_level": {
-            "$ref": "#/components/schemas/RequestBody62Cfdeef4F25OverrideParamsSnippetsAccessLevel"
+            "$ref": "#/components/schemas/RequestBody1C830D224756OverrideParamsSnippetsAccessLevel"
           },
           "package_registry_access_level": {
-            "$ref": "#/components/schemas/RequestBody62Cfdeef4F25OverrideParamsPackageRegistryAccessLevel"
+            "$ref": "#/components/schemas/RequestBody1C830D224756OverrideParamsPackageRegistryAccessLevel"
           },
           "pages_access_level": {
-            "$ref": "#/components/schemas/RequestBody62Cfdeef4F25OverrideParamsPagesAccessLevel"
+            "$ref": "#/components/schemas/RequestBody1C830D224756OverrideParamsPagesAccessLevel"
           },
           "analytics_access_level": {
-            "$ref": "#/components/schemas/RequestBody62Cfdeef4F25OverrideParamsAnalyticsAccessLevel"
+            "$ref": "#/components/schemas/RequestBody1C830D224756OverrideParamsAnalyticsAccessLevel"
           },
           "container_registry_access_level": {
-            "$ref": "#/components/schemas/RequestBody62Cfdeef4F25OverrideParamsContainerRegistryAccessLevel"
+            "$ref": "#/components/schemas/RequestBody1C830D224756OverrideParamsContainerRegistryAccessLevel"
           },
           "security_and_compliance_access_level": {
-            "$ref": "#/components/schemas/RequestBody62Cfdeef4F25OverrideParamsSecurityAndComplianceAccessLevel"
+            "$ref": "#/components/schemas/RequestBody1C830D224756OverrideParamsSecurityAndComplianceAccessLevel"
           },
           "releases_access_level": {
-            "$ref": "#/components/schemas/RequestBody62Cfdeef4F25OverrideParamsReleasesAccessLevel"
+            "$ref": "#/components/schemas/RequestBody1C830D224756OverrideParamsReleasesAccessLevel"
           },
           "environments_access_level": {
-            "$ref": "#/components/schemas/RequestBody62Cfdeef4F25OverrideParamsEnvironmentsAccessLevel"
+            "$ref": "#/components/schemas/RequestBody1C830D224756OverrideParamsEnvironmentsAccessLevel"
           },
           "feature_flags_access_level": {
-            "$ref": "#/components/schemas/RequestBody62Cfdeef4F25OverrideParamsFeatureFlagsAccessLevel"
+            "$ref": "#/components/schemas/RequestBody1C830D224756OverrideParamsFeatureFlagsAccessLevel"
           },
           "infrastructure_access_level": {
-            "$ref": "#/components/schemas/RequestBody62Cfdeef4F25OverrideParamsInfrastructureAccessLevel"
+            "$ref": "#/components/schemas/RequestBody1C830D224756OverrideParamsInfrastructureAccessLevel"
           },
           "monitor_access_level": {
-            "$ref": "#/components/schemas/RequestBody62Cfdeef4F25OverrideParamsMonitorAccessLevel"
+            "$ref": "#/components/schemas/RequestBody1C830D224756OverrideParamsMonitorAccessLevel"
           },
           "model_experiments_access_level": {
-            "$ref": "#/components/schemas/RequestBody62Cfdeef4F25OverrideParamsModelExperimentsAccessLevel"
+            "$ref": "#/components/schemas/RequestBody1C830D224756OverrideParamsModelExperimentsAccessLevel"
           },
           "model_registry_access_level": {
-            "$ref": "#/components/schemas/RequestBody62Cfdeef4F25OverrideParamsModelRegistryAccessLevel"
+            "$ref": "#/components/schemas/RequestBody1C830D224756OverrideParamsModelRegistryAccessLevel"
           },
           "emails_disabled": {
             "type": "boolean",
@@ -143653,7 +144286,7 @@
             "nullable": true
           },
           "resource_group_default_process_mode": {
-            "$ref": "#/components/schemas/RequestBody62Cfdeef4F25OverrideParamsResourceGroupDefaultProcessMode"
+            "$ref": "#/components/schemas/RequestBody1C830D224756OverrideParamsResourceGroupDefaultProcessMode"
           },
           "resolve_outdated_diff_discussions": {
             "type": "boolean",
@@ -143676,7 +144309,7 @@
             "nullable": true
           },
           "container_expiration_policy_attributes": {
-            "$ref": "#/components/schemas/RequestBody62Cfdeef4F25OverrideParamsContainerExpirationPolicyAttributes"
+            "$ref": "#/components/schemas/RequestBody1C830D224756OverrideParamsContainerExpirationPolicyAttributes"
           },
           "lfs_enabled": {
             "type": "boolean",
@@ -143684,7 +144317,7 @@
             "nullable": true
           },
           "visibility": {
-            "$ref": "#/components/schemas/RequestBody62Cfdeef4F25OverrideParamsVisibility"
+            "$ref": "#/components/schemas/RequestBody1C830D224756OverrideParamsVisibility"
           },
           "public_builds": {
             "type": "boolean",
@@ -143744,7 +144377,7 @@
             "nullable": true
           },
           "merge_method": {
-            "$ref": "#/components/schemas/RequestBody62Cfdeef4F25OverrideParamsMergeMethod"
+            "$ref": "#/components/schemas/RequestBody1C830D224756OverrideParamsMergeMethod"
           },
           "suggestion_commit_message": {
             "type": "string",
@@ -143772,7 +144405,7 @@
             "nullable": true
           },
           "auto_devops_deploy_strategy": {
-            "$ref": "#/components/schemas/RequestBody62Cfdeef4F25OverrideParamsAutoDevopsDeployStrategy"
+            "$ref": "#/components/schemas/RequestBody1C830D224756OverrideParamsAutoDevopsDeployStrategy"
           },
           "autoclose_referenced_issues": {
             "type": "boolean",
@@ -143785,7 +144418,7 @@
             "nullable": true
           },
           "squash_option": {
-            "$ref": "#/components/schemas/RequestBody62Cfdeef4F25OverrideParamsSquashOption"
+            "$ref": "#/components/schemas/RequestBody1C830D224756OverrideParamsSquashOption"
           },
           "mr_default_target_self": {
             "type": "boolean",
@@ -143796,6 +144429,11 @@
             "maxLength": 100,
             "type": "string",
             "description": "Template used to generate the default merge request title. Maximum 100 characters.",
+            "nullable": true
+          },
+          "cicd_catalog_enabled": {
+            "type": "boolean",
+            "description": "Set whether the project is a CI/CD catalog project",
             "nullable": true
           },
           "only_allow_merge_if_all_status_checks_passed": {
@@ -143824,7 +144462,7 @@
             "nullable": true
           },
           "requirements_access_level": {
-            "$ref": "#/components/schemas/RequestBody62Cfdeef4F25OverrideParamsRequirementsAccessLevel"
+            "$ref": "#/components/schemas/RequestBody1C830D224756OverrideParamsRequirementsAccessLevel"
           },
           "prevent_merge_without_jira_issue": {
             "type": "boolean",
@@ -143880,7 +144518,7 @@
         "description": "New project params to override values in the export",
         "nullable": true
       },
-      "RequestBody4E27310E47B5OverrideParams": {
+      "RequestBody87Fdf22Dd64EOverrideParams": {
         "type": "object",
         "properties": {
           "description": {
@@ -143889,7 +144527,7 @@
             "nullable": true
           },
           "build_git_strategy": {
-            "$ref": "#/components/schemas/RequestBody4E27310E47B5OverrideParamsBuildGitStrategy"
+            "$ref": "#/components/schemas/RequestBody87Fdf22Dd64EOverrideParamsBuildGitStrategy"
           },
           "build_timeout": {
             "type": "integer",
@@ -143897,7 +144535,7 @@
             "nullable": true
           },
           "auto_cancel_pending_pipelines": {
-            "$ref": "#/components/schemas/RequestBody4E27310E47B5OverrideParamsAutoCancelPendingPipelines"
+            "$ref": "#/components/schemas/RequestBody87Fdf22Dd64EOverrideParamsAutoCancelPendingPipelines"
           },
           "ci_config_path": {
             "type": "string",
@@ -143935,61 +144573,61 @@
             "nullable": true
           },
           "issues_access_level": {
-            "$ref": "#/components/schemas/RequestBody4E27310E47B5OverrideParamsIssuesAccessLevel"
+            "$ref": "#/components/schemas/RequestBody87Fdf22Dd64EOverrideParamsIssuesAccessLevel"
           },
           "repository_access_level": {
-            "$ref": "#/components/schemas/RequestBody4E27310E47B5OverrideParamsRepositoryAccessLevel"
+            "$ref": "#/components/schemas/RequestBody87Fdf22Dd64EOverrideParamsRepositoryAccessLevel"
           },
           "merge_requests_access_level": {
-            "$ref": "#/components/schemas/RequestBody4E27310E47B5OverrideParamsMergeRequestsAccessLevel"
+            "$ref": "#/components/schemas/RequestBody87Fdf22Dd64EOverrideParamsMergeRequestsAccessLevel"
           },
           "forking_access_level": {
-            "$ref": "#/components/schemas/RequestBody4E27310E47B5OverrideParamsForkingAccessLevel"
+            "$ref": "#/components/schemas/RequestBody87Fdf22Dd64EOverrideParamsForkingAccessLevel"
           },
           "wiki_access_level": {
-            "$ref": "#/components/schemas/RequestBody4E27310E47B5OverrideParamsWikiAccessLevel"
+            "$ref": "#/components/schemas/RequestBody87Fdf22Dd64EOverrideParamsWikiAccessLevel"
           },
           "builds_access_level": {
-            "$ref": "#/components/schemas/RequestBody4E27310E47B5OverrideParamsBuildsAccessLevel"
+            "$ref": "#/components/schemas/RequestBody87Fdf22Dd64EOverrideParamsBuildsAccessLevel"
           },
           "snippets_access_level": {
-            "$ref": "#/components/schemas/RequestBody4E27310E47B5OverrideParamsSnippetsAccessLevel"
+            "$ref": "#/components/schemas/RequestBody87Fdf22Dd64EOverrideParamsSnippetsAccessLevel"
           },
           "package_registry_access_level": {
-            "$ref": "#/components/schemas/RequestBody4E27310E47B5OverrideParamsPackageRegistryAccessLevel"
+            "$ref": "#/components/schemas/RequestBody87Fdf22Dd64EOverrideParamsPackageRegistryAccessLevel"
           },
           "pages_access_level": {
-            "$ref": "#/components/schemas/RequestBody4E27310E47B5OverrideParamsPagesAccessLevel"
+            "$ref": "#/components/schemas/RequestBody87Fdf22Dd64EOverrideParamsPagesAccessLevel"
           },
           "analytics_access_level": {
-            "$ref": "#/components/schemas/RequestBody4E27310E47B5OverrideParamsAnalyticsAccessLevel"
+            "$ref": "#/components/schemas/RequestBody87Fdf22Dd64EOverrideParamsAnalyticsAccessLevel"
           },
           "container_registry_access_level": {
-            "$ref": "#/components/schemas/RequestBody4E27310E47B5OverrideParamsContainerRegistryAccessLevel"
+            "$ref": "#/components/schemas/RequestBody87Fdf22Dd64EOverrideParamsContainerRegistryAccessLevel"
           },
           "security_and_compliance_access_level": {
-            "$ref": "#/components/schemas/RequestBody4E27310E47B5OverrideParamsSecurityAndComplianceAccessLevel"
+            "$ref": "#/components/schemas/RequestBody87Fdf22Dd64EOverrideParamsSecurityAndComplianceAccessLevel"
           },
           "releases_access_level": {
-            "$ref": "#/components/schemas/RequestBody4E27310E47B5OverrideParamsReleasesAccessLevel"
+            "$ref": "#/components/schemas/RequestBody87Fdf22Dd64EOverrideParamsReleasesAccessLevel"
           },
           "environments_access_level": {
-            "$ref": "#/components/schemas/RequestBody4E27310E47B5OverrideParamsEnvironmentsAccessLevel"
+            "$ref": "#/components/schemas/RequestBody87Fdf22Dd64EOverrideParamsEnvironmentsAccessLevel"
           },
           "feature_flags_access_level": {
-            "$ref": "#/components/schemas/RequestBody4E27310E47B5OverrideParamsFeatureFlagsAccessLevel"
+            "$ref": "#/components/schemas/RequestBody87Fdf22Dd64EOverrideParamsFeatureFlagsAccessLevel"
           },
           "infrastructure_access_level": {
-            "$ref": "#/components/schemas/RequestBody4E27310E47B5OverrideParamsInfrastructureAccessLevel"
+            "$ref": "#/components/schemas/RequestBody87Fdf22Dd64EOverrideParamsInfrastructureAccessLevel"
           },
           "monitor_access_level": {
-            "$ref": "#/components/schemas/RequestBody4E27310E47B5OverrideParamsMonitorAccessLevel"
+            "$ref": "#/components/schemas/RequestBody87Fdf22Dd64EOverrideParamsMonitorAccessLevel"
           },
           "model_experiments_access_level": {
-            "$ref": "#/components/schemas/RequestBody4E27310E47B5OverrideParamsModelExperimentsAccessLevel"
+            "$ref": "#/components/schemas/RequestBody87Fdf22Dd64EOverrideParamsModelExperimentsAccessLevel"
           },
           "model_registry_access_level": {
-            "$ref": "#/components/schemas/RequestBody4E27310E47B5OverrideParamsModelRegistryAccessLevel"
+            "$ref": "#/components/schemas/RequestBody87Fdf22Dd64EOverrideParamsModelRegistryAccessLevel"
           },
           "emails_disabled": {
             "type": "boolean",
@@ -144032,7 +144670,7 @@
             "nullable": true
           },
           "resource_group_default_process_mode": {
-            "$ref": "#/components/schemas/RequestBody4E27310E47B5OverrideParamsResourceGroupDefaultProcessMode"
+            "$ref": "#/components/schemas/RequestBody87Fdf22Dd64EOverrideParamsResourceGroupDefaultProcessMode"
           },
           "resolve_outdated_diff_discussions": {
             "type": "boolean",
@@ -144055,7 +144693,7 @@
             "nullable": true
           },
           "container_expiration_policy_attributes": {
-            "$ref": "#/components/schemas/RequestBody4E27310E47B5OverrideParamsContainerExpirationPolicyAttributes"
+            "$ref": "#/components/schemas/RequestBody87Fdf22Dd64EOverrideParamsContainerExpirationPolicyAttributes"
           },
           "lfs_enabled": {
             "type": "boolean",
@@ -144063,7 +144701,7 @@
             "nullable": true
           },
           "visibility": {
-            "$ref": "#/components/schemas/RequestBody4E27310E47B5OverrideParamsVisibility"
+            "$ref": "#/components/schemas/RequestBody87Fdf22Dd64EOverrideParamsVisibility"
           },
           "public_builds": {
             "type": "boolean",
@@ -144123,7 +144761,7 @@
             "nullable": true
           },
           "merge_method": {
-            "$ref": "#/components/schemas/RequestBody4E27310E47B5OverrideParamsMergeMethod"
+            "$ref": "#/components/schemas/RequestBody87Fdf22Dd64EOverrideParamsMergeMethod"
           },
           "suggestion_commit_message": {
             "type": "string",
@@ -144151,7 +144789,7 @@
             "nullable": true
           },
           "auto_devops_deploy_strategy": {
-            "$ref": "#/components/schemas/RequestBody4E27310E47B5OverrideParamsAutoDevopsDeployStrategy"
+            "$ref": "#/components/schemas/RequestBody87Fdf22Dd64EOverrideParamsAutoDevopsDeployStrategy"
           },
           "autoclose_referenced_issues": {
             "type": "boolean",
@@ -144164,7 +144802,7 @@
             "nullable": true
           },
           "squash_option": {
-            "$ref": "#/components/schemas/RequestBody4E27310E47B5OverrideParamsSquashOption"
+            "$ref": "#/components/schemas/RequestBody87Fdf22Dd64EOverrideParamsSquashOption"
           },
           "mr_default_target_self": {
             "type": "boolean",
@@ -144175,6 +144813,11 @@
             "maxLength": 100,
             "type": "string",
             "description": "Template used to generate the default merge request title. Maximum 100 characters.",
+            "nullable": true
+          },
+          "cicd_catalog_enabled": {
+            "type": "boolean",
+            "description": "Set whether the project is a CI/CD catalog project",
             "nullable": true
           },
           "only_allow_merge_if_all_status_checks_passed": {
@@ -144203,7 +144846,7 @@
             "nullable": true
           },
           "requirements_access_level": {
-            "$ref": "#/components/schemas/RequestBody4E27310E47B5OverrideParamsRequirementsAccessLevel"
+            "$ref": "#/components/schemas/RequestBody87Fdf22Dd64EOverrideParamsRequirementsAccessLevel"
           },
           "prevent_merge_without_jira_issue": {
             "type": "boolean",
@@ -144259,7 +144902,7 @@
         "description": "New project params to override values in the export",
         "nullable": true
       },
-      "RequestBody22Adef8EcfeaOverrideParams": {
+      "RequestBodyF3A212C3C4F4OverrideParams": {
         "type": "object",
         "properties": {
           "description": {
@@ -144268,7 +144911,7 @@
             "nullable": true
           },
           "build_git_strategy": {
-            "$ref": "#/components/schemas/RequestBody22Adef8EcfeaOverrideParamsBuildGitStrategy"
+            "$ref": "#/components/schemas/RequestBodyF3A212C3C4F4OverrideParamsBuildGitStrategy"
           },
           "build_timeout": {
             "type": "integer",
@@ -144276,7 +144919,7 @@
             "nullable": true
           },
           "auto_cancel_pending_pipelines": {
-            "$ref": "#/components/schemas/RequestBody22Adef8EcfeaOverrideParamsAutoCancelPendingPipelines"
+            "$ref": "#/components/schemas/RequestBodyF3A212C3C4F4OverrideParamsAutoCancelPendingPipelines"
           },
           "ci_config_path": {
             "type": "string",
@@ -144314,61 +144957,61 @@
             "nullable": true
           },
           "issues_access_level": {
-            "$ref": "#/components/schemas/RequestBody22Adef8EcfeaOverrideParamsIssuesAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyF3A212C3C4F4OverrideParamsIssuesAccessLevel"
           },
           "repository_access_level": {
-            "$ref": "#/components/schemas/RequestBody22Adef8EcfeaOverrideParamsRepositoryAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyF3A212C3C4F4OverrideParamsRepositoryAccessLevel"
           },
           "merge_requests_access_level": {
-            "$ref": "#/components/schemas/RequestBody22Adef8EcfeaOverrideParamsMergeRequestsAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyF3A212C3C4F4OverrideParamsMergeRequestsAccessLevel"
           },
           "forking_access_level": {
-            "$ref": "#/components/schemas/RequestBody22Adef8EcfeaOverrideParamsForkingAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyF3A212C3C4F4OverrideParamsForkingAccessLevel"
           },
           "wiki_access_level": {
-            "$ref": "#/components/schemas/RequestBody22Adef8EcfeaOverrideParamsWikiAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyF3A212C3C4F4OverrideParamsWikiAccessLevel"
           },
           "builds_access_level": {
-            "$ref": "#/components/schemas/RequestBody22Adef8EcfeaOverrideParamsBuildsAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyF3A212C3C4F4OverrideParamsBuildsAccessLevel"
           },
           "snippets_access_level": {
-            "$ref": "#/components/schemas/RequestBody22Adef8EcfeaOverrideParamsSnippetsAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyF3A212C3C4F4OverrideParamsSnippetsAccessLevel"
           },
           "package_registry_access_level": {
-            "$ref": "#/components/schemas/RequestBody22Adef8EcfeaOverrideParamsPackageRegistryAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyF3A212C3C4F4OverrideParamsPackageRegistryAccessLevel"
           },
           "pages_access_level": {
-            "$ref": "#/components/schemas/RequestBody22Adef8EcfeaOverrideParamsPagesAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyF3A212C3C4F4OverrideParamsPagesAccessLevel"
           },
           "analytics_access_level": {
-            "$ref": "#/components/schemas/RequestBody22Adef8EcfeaOverrideParamsAnalyticsAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyF3A212C3C4F4OverrideParamsAnalyticsAccessLevel"
           },
           "container_registry_access_level": {
-            "$ref": "#/components/schemas/RequestBody22Adef8EcfeaOverrideParamsContainerRegistryAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyF3A212C3C4F4OverrideParamsContainerRegistryAccessLevel"
           },
           "security_and_compliance_access_level": {
-            "$ref": "#/components/schemas/RequestBody22Adef8EcfeaOverrideParamsSecurityAndComplianceAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyF3A212C3C4F4OverrideParamsSecurityAndComplianceAccessLevel"
           },
           "releases_access_level": {
-            "$ref": "#/components/schemas/RequestBody22Adef8EcfeaOverrideParamsReleasesAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyF3A212C3C4F4OverrideParamsReleasesAccessLevel"
           },
           "environments_access_level": {
-            "$ref": "#/components/schemas/RequestBody22Adef8EcfeaOverrideParamsEnvironmentsAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyF3A212C3C4F4OverrideParamsEnvironmentsAccessLevel"
           },
           "feature_flags_access_level": {
-            "$ref": "#/components/schemas/RequestBody22Adef8EcfeaOverrideParamsFeatureFlagsAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyF3A212C3C4F4OverrideParamsFeatureFlagsAccessLevel"
           },
           "infrastructure_access_level": {
-            "$ref": "#/components/schemas/RequestBody22Adef8EcfeaOverrideParamsInfrastructureAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyF3A212C3C4F4OverrideParamsInfrastructureAccessLevel"
           },
           "monitor_access_level": {
-            "$ref": "#/components/schemas/RequestBody22Adef8EcfeaOverrideParamsMonitorAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyF3A212C3C4F4OverrideParamsMonitorAccessLevel"
           },
           "model_experiments_access_level": {
-            "$ref": "#/components/schemas/RequestBody22Adef8EcfeaOverrideParamsModelExperimentsAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyF3A212C3C4F4OverrideParamsModelExperimentsAccessLevel"
           },
           "model_registry_access_level": {
-            "$ref": "#/components/schemas/RequestBody22Adef8EcfeaOverrideParamsModelRegistryAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyF3A212C3C4F4OverrideParamsModelRegistryAccessLevel"
           },
           "emails_disabled": {
             "type": "boolean",
@@ -144411,7 +145054,7 @@
             "nullable": true
           },
           "resource_group_default_process_mode": {
-            "$ref": "#/components/schemas/RequestBody22Adef8EcfeaOverrideParamsResourceGroupDefaultProcessMode"
+            "$ref": "#/components/schemas/RequestBodyF3A212C3C4F4OverrideParamsResourceGroupDefaultProcessMode"
           },
           "resolve_outdated_diff_discussions": {
             "type": "boolean",
@@ -144434,7 +145077,7 @@
             "nullable": true
           },
           "container_expiration_policy_attributes": {
-            "$ref": "#/components/schemas/RequestBody22Adef8EcfeaOverrideParamsContainerExpirationPolicyAttributes"
+            "$ref": "#/components/schemas/RequestBodyF3A212C3C4F4OverrideParamsContainerExpirationPolicyAttributes"
           },
           "lfs_enabled": {
             "type": "boolean",
@@ -144442,7 +145085,7 @@
             "nullable": true
           },
           "visibility": {
-            "$ref": "#/components/schemas/RequestBody22Adef8EcfeaOverrideParamsVisibility"
+            "$ref": "#/components/schemas/RequestBodyF3A212C3C4F4OverrideParamsVisibility"
           },
           "public_builds": {
             "type": "boolean",
@@ -144502,7 +145145,7 @@
             "nullable": true
           },
           "merge_method": {
-            "$ref": "#/components/schemas/RequestBody22Adef8EcfeaOverrideParamsMergeMethod"
+            "$ref": "#/components/schemas/RequestBodyF3A212C3C4F4OverrideParamsMergeMethod"
           },
           "suggestion_commit_message": {
             "type": "string",
@@ -144530,7 +145173,7 @@
             "nullable": true
           },
           "auto_devops_deploy_strategy": {
-            "$ref": "#/components/schemas/RequestBody22Adef8EcfeaOverrideParamsAutoDevopsDeployStrategy"
+            "$ref": "#/components/schemas/RequestBodyF3A212C3C4F4OverrideParamsAutoDevopsDeployStrategy"
           },
           "autoclose_referenced_issues": {
             "type": "boolean",
@@ -144543,7 +145186,7 @@
             "nullable": true
           },
           "squash_option": {
-            "$ref": "#/components/schemas/RequestBody22Adef8EcfeaOverrideParamsSquashOption"
+            "$ref": "#/components/schemas/RequestBodyF3A212C3C4F4OverrideParamsSquashOption"
           },
           "mr_default_target_self": {
             "type": "boolean",
@@ -144554,6 +145197,11 @@
             "maxLength": 100,
             "type": "string",
             "description": "Template used to generate the default merge request title. Maximum 100 characters.",
+            "nullable": true
+          },
+          "cicd_catalog_enabled": {
+            "type": "boolean",
+            "description": "Set whether the project is a CI/CD catalog project",
             "nullable": true
           },
           "only_allow_merge_if_all_status_checks_passed": {
@@ -144582,7 +145230,7 @@
             "nullable": true
           },
           "requirements_access_level": {
-            "$ref": "#/components/schemas/RequestBody22Adef8EcfeaOverrideParamsRequirementsAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyF3A212C3C4F4OverrideParamsRequirementsAccessLevel"
           },
           "prevent_merge_without_jira_issue": {
             "type": "boolean",
@@ -146408,7 +147056,7 @@
           }
         }
       },
-      "RequestBody62Cfdeef4F25OverrideParamsContainerExpirationPolicyAttributes": {
+      "RequestBody1C830D224756OverrideParamsContainerExpirationPolicyAttributes": {
         "type": "object",
         "properties": {
           "cadence": {
@@ -146445,7 +147093,7 @@
         "description": "Object that contains information on the container expiration policy",
         "nullable": true
       },
-      "RequestBody4E27310E47B5OverrideParamsContainerExpirationPolicyAttributes": {
+      "RequestBody87Fdf22Dd64EOverrideParamsContainerExpirationPolicyAttributes": {
         "type": "object",
         "properties": {
           "cadence": {
@@ -146482,7 +147130,7 @@
         "description": "Object that contains information on the container expiration policy",
         "nullable": true
       },
-      "RequestBody22Adef8EcfeaOverrideParamsContainerExpirationPolicyAttributes": {
+      "RequestBodyF3A212C3C4F4OverrideParamsContainerExpirationPolicyAttributes": {
         "type": "object",
         "properties": {
           "cadence": {
@@ -150121,7 +150769,10 @@
       "ApiEntitiesProjectSharedWithGroupsItemProperty": {
         "type": "object"
       },
-      "ApiEntitiesProjectWithAccessSharedWithGroupsItemProperty": {
+      "ApiEntitiesProjectsWithAccessAndCatalogSettingSharedWithGroupsItemProperty": {
+        "type": "object"
+      },
+      "ApiEntitiesProjectsWithCatalogSettingSharedWithGroupsItemProperty": {
         "type": "object"
       },
       "ApiEntitiesProjectSnippetFilesItemProperty": {
@@ -152075,7 +152726,7 @@
         "description": "\u0022Access levels allowed to create (defaults: \u006040\u0060, maintainer access level)\u0022",
         "nullable": true
       },
-      "RequestBody3B7De9F4Db35BuildGitStrategy": {
+      "RequestBodyCf91A0E3De5EBuildGitStrategy": {
         "enum": [
           "fetch",
           "clone"
@@ -152085,7 +152736,7 @@
         "description": "The Git strategy. Defaults to \u0060fetch\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody3B7De9F4Db35BuildGitStrategy",
+          "name": "RequestBodyCf91A0E3De5EBuildGitStrategy",
           "modelAsString": false,
           "values": [
             {
@@ -152099,7 +152750,7 @@
           ]
         }
       },
-      "RequestBody3B7De9F4Db35AutoCancelPendingPipelines": {
+      "RequestBodyCf91A0E3De5EAutoCancelPendingPipelines": {
         "enum": [
           "disabled",
           "enabled"
@@ -152109,7 +152760,7 @@
         "description": "Auto-cancel pending pipelines",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody3B7De9F4Db35AutoCancelPendingPipelines",
+          "name": "RequestBodyCf91A0E3De5EAutoCancelPendingPipelines",
           "modelAsString": false,
           "values": [
             {
@@ -152123,7 +152774,7 @@
           ]
         }
       },
-      "RequestBody3B7De9F4Db35IssuesAccessLevel": {
+      "RequestBodyCf91A0E3De5EIssuesAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -152134,7 +152785,7 @@
         "description": "Issues access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody3B7De9F4Db35IssuesAccessLevel",
+          "name": "RequestBodyCf91A0E3De5EIssuesAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -152152,7 +152803,7 @@
           ]
         }
       },
-      "RequestBody3B7De9F4Db35RepositoryAccessLevel": {
+      "RequestBodyCf91A0E3De5ERepositoryAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -152163,7 +152814,7 @@
         "description": "Repository access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody3B7De9F4Db35RepositoryAccessLevel",
+          "name": "RequestBodyCf91A0E3De5ERepositoryAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -152181,7 +152832,7 @@
           ]
         }
       },
-      "RequestBody3B7De9F4Db35MergeRequestsAccessLevel": {
+      "RequestBodyCf91A0E3De5EMergeRequestsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -152192,7 +152843,7 @@
         "description": "Merge requests access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody3B7De9F4Db35MergeRequestsAccessLevel",
+          "name": "RequestBodyCf91A0E3De5EMergeRequestsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -152210,7 +152861,7 @@
           ]
         }
       },
-      "RequestBody3B7De9F4Db35ForkingAccessLevel": {
+      "RequestBodyCf91A0E3De5EForkingAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -152221,7 +152872,7 @@
         "description": "Forks access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody3B7De9F4Db35ForkingAccessLevel",
+          "name": "RequestBodyCf91A0E3De5EForkingAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -152239,7 +152890,7 @@
           ]
         }
       },
-      "RequestBody3B7De9F4Db35WikiAccessLevel": {
+      "RequestBodyCf91A0E3De5EWikiAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -152250,7 +152901,7 @@
         "description": "Wiki access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody3B7De9F4Db35WikiAccessLevel",
+          "name": "RequestBodyCf91A0E3De5EWikiAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -152268,7 +152919,7 @@
           ]
         }
       },
-      "RequestBody3B7De9F4Db35BuildsAccessLevel": {
+      "RequestBodyCf91A0E3De5EBuildsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -152279,7 +152930,7 @@
         "description": "Builds access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody3B7De9F4Db35BuildsAccessLevel",
+          "name": "RequestBodyCf91A0E3De5EBuildsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -152297,7 +152948,7 @@
           ]
         }
       },
-      "RequestBody3B7De9F4Db35SnippetsAccessLevel": {
+      "RequestBodyCf91A0E3De5ESnippetsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -152308,7 +152959,7 @@
         "description": "Snippets access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody3B7De9F4Db35SnippetsAccessLevel",
+          "name": "RequestBodyCf91A0E3De5ESnippetsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -152326,7 +152977,7 @@
           ]
         }
       },
-      "RequestBody3B7De9F4Db35PackageRegistryAccessLevel": {
+      "RequestBodyCf91A0E3De5EPackageRegistryAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -152338,7 +152989,7 @@
         "description": "Controls visibility of the package registry. One of \u0060disabled\u0060, \u0060private\u0060, \u0060enabled\u0060 or \u0060public\u0060. \u0060private\u0060 will make the package registry accessible only to project members (reporter role and above). \u0060enabled\u0060 will make the package registry accessible to everyone who has access to the project. \u0060public\u0060 will make the package registry accessible to everyone. \u0060disabled\u0060 will disable the package registry",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody3B7De9F4Db35PackageRegistryAccessLevel",
+          "name": "RequestBodyCf91A0E3De5EPackageRegistryAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -152360,7 +153011,7 @@
           ]
         }
       },
-      "RequestBody3B7De9F4Db35PagesAccessLevel": {
+      "RequestBodyCf91A0E3De5EPagesAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -152372,7 +153023,7 @@
         "description": "Pages access level. One of \u0060disabled\u0060, \u0060private\u0060, \u0060enabled\u0060 or \u0060public\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody3B7De9F4Db35PagesAccessLevel",
+          "name": "RequestBodyCf91A0E3De5EPagesAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -152394,7 +153045,7 @@
           ]
         }
       },
-      "RequestBody3B7De9F4Db35AnalyticsAccessLevel": {
+      "RequestBodyCf91A0E3De5EAnalyticsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -152405,7 +153056,7 @@
         "description": "Analytics access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody3B7De9F4Db35AnalyticsAccessLevel",
+          "name": "RequestBodyCf91A0E3De5EAnalyticsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -152423,7 +153074,7 @@
           ]
         }
       },
-      "RequestBody3B7De9F4Db35ContainerRegistryAccessLevel": {
+      "RequestBodyCf91A0E3De5EContainerRegistryAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -152434,7 +153085,7 @@
         "description": "Controls visibility of the container registry. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060. \u0060private\u0060 will make the container registry accessible only to project members (reporter role and above). \u0060enabled\u0060 will make the container registry accessible to everyone who has access to the project. \u0060disabled\u0060 will disable the container registry",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody3B7De9F4Db35ContainerRegistryAccessLevel",
+          "name": "RequestBodyCf91A0E3De5EContainerRegistryAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -152452,7 +153103,7 @@
           ]
         }
       },
-      "RequestBody3B7De9F4Db35SecurityAndComplianceAccessLevel": {
+      "RequestBodyCf91A0E3De5ESecurityAndComplianceAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -152463,7 +153114,7 @@
         "description": "Security and compliance access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody3B7De9F4Db35SecurityAndComplianceAccessLevel",
+          "name": "RequestBodyCf91A0E3De5ESecurityAndComplianceAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -152481,7 +153132,7 @@
           ]
         }
       },
-      "RequestBody3B7De9F4Db35ReleasesAccessLevel": {
+      "RequestBodyCf91A0E3De5EReleasesAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -152492,7 +153143,7 @@
         "description": "Releases access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody3B7De9F4Db35ReleasesAccessLevel",
+          "name": "RequestBodyCf91A0E3De5EReleasesAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -152510,7 +153161,7 @@
           ]
         }
       },
-      "RequestBody3B7De9F4Db35EnvironmentsAccessLevel": {
+      "RequestBodyCf91A0E3De5EEnvironmentsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -152521,7 +153172,7 @@
         "description": "Environments access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody3B7De9F4Db35EnvironmentsAccessLevel",
+          "name": "RequestBodyCf91A0E3De5EEnvironmentsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -152539,7 +153190,7 @@
           ]
         }
       },
-      "RequestBody3B7De9F4Db35FeatureFlagsAccessLevel": {
+      "RequestBodyCf91A0E3De5EFeatureFlagsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -152550,7 +153201,7 @@
         "description": "Feature flags access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody3B7De9F4Db35FeatureFlagsAccessLevel",
+          "name": "RequestBodyCf91A0E3De5EFeatureFlagsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -152568,7 +153219,7 @@
           ]
         }
       },
-      "RequestBody3B7De9F4Db35InfrastructureAccessLevel": {
+      "RequestBodyCf91A0E3De5EInfrastructureAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -152579,7 +153230,7 @@
         "description": "Infrastructure access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody3B7De9F4Db35InfrastructureAccessLevel",
+          "name": "RequestBodyCf91A0E3De5EInfrastructureAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -152597,7 +153248,7 @@
           ]
         }
       },
-      "RequestBody3B7De9F4Db35MonitorAccessLevel": {
+      "RequestBodyCf91A0E3De5EMonitorAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -152608,7 +153259,7 @@
         "description": "Monitor access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody3B7De9F4Db35MonitorAccessLevel",
+          "name": "RequestBodyCf91A0E3De5EMonitorAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -152626,7 +153277,7 @@
           ]
         }
       },
-      "RequestBody3B7De9F4Db35ModelExperimentsAccessLevel": {
+      "RequestBodyCf91A0E3De5EModelExperimentsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -152637,7 +153288,7 @@
         "description": "Model experiments access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody3B7De9F4Db35ModelExperimentsAccessLevel",
+          "name": "RequestBodyCf91A0E3De5EModelExperimentsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -152655,7 +153306,7 @@
           ]
         }
       },
-      "RequestBody3B7De9F4Db35ModelRegistryAccessLevel": {
+      "RequestBodyCf91A0E3De5EModelRegistryAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -152666,7 +153317,7 @@
         "description": "Model registry access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody3B7De9F4Db35ModelRegistryAccessLevel",
+          "name": "RequestBodyCf91A0E3De5EModelRegistryAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -152684,7 +153335,7 @@
           ]
         }
       },
-      "RequestBody3B7De9F4Db35ResourceGroupDefaultProcessMode": {
+      "RequestBodyCf91A0E3De5EResourceGroupDefaultProcessMode": {
         "enum": [
           "unordered",
           "oldest_first",
@@ -152696,7 +153347,7 @@
         "description": "The process mode of the resource group",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody3B7De9F4Db35ResourceGroupDefaultProcessMode",
+          "name": "RequestBodyCf91A0E3De5EResourceGroupDefaultProcessMode",
           "modelAsString": false,
           "values": [
             {
@@ -152718,7 +153369,7 @@
           ]
         }
       },
-      "RequestBody3B7De9F4Db35Visibility": {
+      "RequestBodyCf91A0E3De5EVisibility": {
         "enum": [
           "private",
           "internal",
@@ -152729,7 +153380,7 @@
         "description": "The visibility of the project.",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody3B7De9F4Db35Visibility",
+          "name": "RequestBodyCf91A0E3De5EVisibility",
           "modelAsString": false,
           "values": [
             {
@@ -152747,7 +153398,7 @@
           ]
         }
       },
-      "RequestBody3B7De9F4Db35MergeMethod": {
+      "RequestBodyCf91A0E3De5EMergeMethod": {
         "enum": [
           "ff",
           "rebase_merge",
@@ -152758,7 +153409,7 @@
         "description": "The merge method used when merging merge requests",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody3B7De9F4Db35MergeMethod",
+          "name": "RequestBodyCf91A0E3De5EMergeMethod",
           "modelAsString": false,
           "values": [
             {
@@ -152776,7 +153427,7 @@
           ]
         }
       },
-      "RequestBody3B7De9F4Db35AutoDevopsDeployStrategy": {
+      "RequestBodyCf91A0E3De5EAutoDevopsDeployStrategy": {
         "enum": [
           "continuous",
           "manual",
@@ -152787,7 +153438,7 @@
         "description": "Auto Deploy strategy",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody3B7De9F4Db35AutoDevopsDeployStrategy",
+          "name": "RequestBodyCf91A0E3De5EAutoDevopsDeployStrategy",
           "modelAsString": false,
           "values": [
             {
@@ -152805,7 +153456,7 @@
           ]
         }
       },
-      "RequestBody3B7De9F4Db35SquashOption": {
+      "RequestBodyCf91A0E3De5ESquashOption": {
         "enum": [
           "never",
           "always",
@@ -152817,7 +153468,7 @@
         "description": "Squash default for project. One of \u0060never\u0060, \u0060always\u0060, \u0060default_on\u0060, or \u0060default_off\u0060.",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody3B7De9F4Db35SquashOption",
+          "name": "RequestBodyCf91A0E3De5ESquashOption",
           "modelAsString": false,
           "values": [
             {
@@ -152839,7 +153490,7 @@
           ]
         }
       },
-      "RequestBody3B7De9F4Db35RequirementsAccessLevel": {
+      "RequestBodyCf91A0E3De5ERequirementsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -152850,7 +153501,7 @@
         "description": "Requirements feature access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody3B7De9F4Db35RequirementsAccessLevel",
+          "name": "RequestBodyCf91A0E3De5ERequirementsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -152868,7 +153519,7 @@
           ]
         }
       },
-      "RequestBody3B7De9F4Db35RepositoryObjectFormat": {
+      "RequestBodyCf91A0E3De5ERepositoryObjectFormat": {
         "enum": [
           "sha1",
           "sha256"
@@ -152878,7 +153529,7 @@
         "description": "The object format of the project repository",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody3B7De9F4Db35RepositoryObjectFormat",
+          "name": "RequestBodyCf91A0E3De5ERepositoryObjectFormat",
           "modelAsString": false,
           "values": [
             {
@@ -152892,7 +153543,7 @@
           ]
         }
       },
-      "RequestBody2861E6Bcd64DBuildGitStrategy": {
+      "RequestBody151Cb880B5FaBuildGitStrategy": {
         "enum": [
           "fetch",
           "clone"
@@ -152902,7 +153553,7 @@
         "description": "The Git strategy. Defaults to \u0060fetch\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2861E6Bcd64DBuildGitStrategy",
+          "name": "RequestBody151Cb880B5FaBuildGitStrategy",
           "modelAsString": false,
           "values": [
             {
@@ -152916,7 +153567,7 @@
           ]
         }
       },
-      "RequestBody2861E6Bcd64DAutoCancelPendingPipelines": {
+      "RequestBody151Cb880B5FaAutoCancelPendingPipelines": {
         "enum": [
           "disabled",
           "enabled"
@@ -152926,7 +153577,7 @@
         "description": "Auto-cancel pending pipelines",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2861E6Bcd64DAutoCancelPendingPipelines",
+          "name": "RequestBody151Cb880B5FaAutoCancelPendingPipelines",
           "modelAsString": false,
           "values": [
             {
@@ -152940,7 +153591,7 @@
           ]
         }
       },
-      "RequestBody2861E6Bcd64DIssuesAccessLevel": {
+      "RequestBody151Cb880B5FaIssuesAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -152951,7 +153602,7 @@
         "description": "Issues access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2861E6Bcd64DIssuesAccessLevel",
+          "name": "RequestBody151Cb880B5FaIssuesAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -152969,7 +153620,7 @@
           ]
         }
       },
-      "RequestBody2861E6Bcd64DRepositoryAccessLevel": {
+      "RequestBody151Cb880B5FaRepositoryAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -152980,7 +153631,7 @@
         "description": "Repository access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2861E6Bcd64DRepositoryAccessLevel",
+          "name": "RequestBody151Cb880B5FaRepositoryAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -152998,7 +153649,7 @@
           ]
         }
       },
-      "RequestBody2861E6Bcd64DMergeRequestsAccessLevel": {
+      "RequestBody151Cb880B5FaMergeRequestsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -153009,7 +153660,7 @@
         "description": "Merge requests access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2861E6Bcd64DMergeRequestsAccessLevel",
+          "name": "RequestBody151Cb880B5FaMergeRequestsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -153027,7 +153678,7 @@
           ]
         }
       },
-      "RequestBody2861E6Bcd64DForkingAccessLevel": {
+      "RequestBody151Cb880B5FaForkingAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -153038,7 +153689,7 @@
         "description": "Forks access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2861E6Bcd64DForkingAccessLevel",
+          "name": "RequestBody151Cb880B5FaForkingAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -153056,7 +153707,7 @@
           ]
         }
       },
-      "RequestBody2861E6Bcd64DWikiAccessLevel": {
+      "RequestBody151Cb880B5FaWikiAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -153067,7 +153718,7 @@
         "description": "Wiki access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2861E6Bcd64DWikiAccessLevel",
+          "name": "RequestBody151Cb880B5FaWikiAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -153085,7 +153736,7 @@
           ]
         }
       },
-      "RequestBody2861E6Bcd64DBuildsAccessLevel": {
+      "RequestBody151Cb880B5FaBuildsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -153096,7 +153747,7 @@
         "description": "Builds access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2861E6Bcd64DBuildsAccessLevel",
+          "name": "RequestBody151Cb880B5FaBuildsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -153114,7 +153765,7 @@
           ]
         }
       },
-      "RequestBody2861E6Bcd64DSnippetsAccessLevel": {
+      "RequestBody151Cb880B5FaSnippetsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -153125,7 +153776,7 @@
         "description": "Snippets access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2861E6Bcd64DSnippetsAccessLevel",
+          "name": "RequestBody151Cb880B5FaSnippetsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -153143,7 +153794,7 @@
           ]
         }
       },
-      "RequestBody2861E6Bcd64DPackageRegistryAccessLevel": {
+      "RequestBody151Cb880B5FaPackageRegistryAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -153155,7 +153806,7 @@
         "description": "Controls visibility of the package registry. One of \u0060disabled\u0060, \u0060private\u0060, \u0060enabled\u0060 or \u0060public\u0060. \u0060private\u0060 will make the package registry accessible only to project members (reporter role and above). \u0060enabled\u0060 will make the package registry accessible to everyone who has access to the project. \u0060public\u0060 will make the package registry accessible to everyone. \u0060disabled\u0060 will disable the package registry",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2861E6Bcd64DPackageRegistryAccessLevel",
+          "name": "RequestBody151Cb880B5FaPackageRegistryAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -153177,7 +153828,7 @@
           ]
         }
       },
-      "RequestBody2861E6Bcd64DPagesAccessLevel": {
+      "RequestBody151Cb880B5FaPagesAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -153189,7 +153840,7 @@
         "description": "Pages access level. One of \u0060disabled\u0060, \u0060private\u0060, \u0060enabled\u0060 or \u0060public\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2861E6Bcd64DPagesAccessLevel",
+          "name": "RequestBody151Cb880B5FaPagesAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -153211,7 +153862,7 @@
           ]
         }
       },
-      "RequestBody2861E6Bcd64DAnalyticsAccessLevel": {
+      "RequestBody151Cb880B5FaAnalyticsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -153222,7 +153873,7 @@
         "description": "Analytics access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2861E6Bcd64DAnalyticsAccessLevel",
+          "name": "RequestBody151Cb880B5FaAnalyticsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -153240,7 +153891,7 @@
           ]
         }
       },
-      "RequestBody2861E6Bcd64DContainerRegistryAccessLevel": {
+      "RequestBody151Cb880B5FaContainerRegistryAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -153251,7 +153902,7 @@
         "description": "Controls visibility of the container registry. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060. \u0060private\u0060 will make the container registry accessible only to project members (reporter role and above). \u0060enabled\u0060 will make the container registry accessible to everyone who has access to the project. \u0060disabled\u0060 will disable the container registry",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2861E6Bcd64DContainerRegistryAccessLevel",
+          "name": "RequestBody151Cb880B5FaContainerRegistryAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -153269,7 +153920,7 @@
           ]
         }
       },
-      "RequestBody2861E6Bcd64DSecurityAndComplianceAccessLevel": {
+      "RequestBody151Cb880B5FaSecurityAndComplianceAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -153280,7 +153931,7 @@
         "description": "Security and compliance access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2861E6Bcd64DSecurityAndComplianceAccessLevel",
+          "name": "RequestBody151Cb880B5FaSecurityAndComplianceAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -153298,7 +153949,7 @@
           ]
         }
       },
-      "RequestBody2861E6Bcd64DReleasesAccessLevel": {
+      "RequestBody151Cb880B5FaReleasesAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -153309,7 +153960,7 @@
         "description": "Releases access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2861E6Bcd64DReleasesAccessLevel",
+          "name": "RequestBody151Cb880B5FaReleasesAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -153327,7 +153978,7 @@
           ]
         }
       },
-      "RequestBody2861E6Bcd64DEnvironmentsAccessLevel": {
+      "RequestBody151Cb880B5FaEnvironmentsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -153338,7 +153989,7 @@
         "description": "Environments access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2861E6Bcd64DEnvironmentsAccessLevel",
+          "name": "RequestBody151Cb880B5FaEnvironmentsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -153356,7 +154007,7 @@
           ]
         }
       },
-      "RequestBody2861E6Bcd64DFeatureFlagsAccessLevel": {
+      "RequestBody151Cb880B5FaFeatureFlagsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -153367,7 +154018,7 @@
         "description": "Feature flags access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2861E6Bcd64DFeatureFlagsAccessLevel",
+          "name": "RequestBody151Cb880B5FaFeatureFlagsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -153385,7 +154036,7 @@
           ]
         }
       },
-      "RequestBody2861E6Bcd64DInfrastructureAccessLevel": {
+      "RequestBody151Cb880B5FaInfrastructureAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -153396,7 +154047,7 @@
         "description": "Infrastructure access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2861E6Bcd64DInfrastructureAccessLevel",
+          "name": "RequestBody151Cb880B5FaInfrastructureAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -153414,7 +154065,7 @@
           ]
         }
       },
-      "RequestBody2861E6Bcd64DMonitorAccessLevel": {
+      "RequestBody151Cb880B5FaMonitorAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -153425,7 +154076,7 @@
         "description": "Monitor access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2861E6Bcd64DMonitorAccessLevel",
+          "name": "RequestBody151Cb880B5FaMonitorAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -153443,7 +154094,7 @@
           ]
         }
       },
-      "RequestBody2861E6Bcd64DModelExperimentsAccessLevel": {
+      "RequestBody151Cb880B5FaModelExperimentsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -153454,7 +154105,7 @@
         "description": "Model experiments access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2861E6Bcd64DModelExperimentsAccessLevel",
+          "name": "RequestBody151Cb880B5FaModelExperimentsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -153472,7 +154123,7 @@
           ]
         }
       },
-      "RequestBody2861E6Bcd64DModelRegistryAccessLevel": {
+      "RequestBody151Cb880B5FaModelRegistryAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -153483,7 +154134,7 @@
         "description": "Model registry access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2861E6Bcd64DModelRegistryAccessLevel",
+          "name": "RequestBody151Cb880B5FaModelRegistryAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -153501,7 +154152,7 @@
           ]
         }
       },
-      "RequestBody2861E6Bcd64DResourceGroupDefaultProcessMode": {
+      "RequestBody151Cb880B5FaResourceGroupDefaultProcessMode": {
         "enum": [
           "unordered",
           "oldest_first",
@@ -153513,7 +154164,7 @@
         "description": "The process mode of the resource group",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2861E6Bcd64DResourceGroupDefaultProcessMode",
+          "name": "RequestBody151Cb880B5FaResourceGroupDefaultProcessMode",
           "modelAsString": false,
           "values": [
             {
@@ -153535,7 +154186,7 @@
           ]
         }
       },
-      "RequestBody2861E6Bcd64DVisibility": {
+      "RequestBody151Cb880B5FaVisibility": {
         "enum": [
           "private",
           "internal",
@@ -153546,7 +154197,7 @@
         "description": "The visibility of the project.",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2861E6Bcd64DVisibility",
+          "name": "RequestBody151Cb880B5FaVisibility",
           "modelAsString": false,
           "values": [
             {
@@ -153564,7 +154215,7 @@
           ]
         }
       },
-      "RequestBody2861E6Bcd64DMergeMethod": {
+      "RequestBody151Cb880B5FaMergeMethod": {
         "enum": [
           "ff",
           "rebase_merge",
@@ -153575,7 +154226,7 @@
         "description": "The merge method used when merging merge requests",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2861E6Bcd64DMergeMethod",
+          "name": "RequestBody151Cb880B5FaMergeMethod",
           "modelAsString": false,
           "values": [
             {
@@ -153593,7 +154244,7 @@
           ]
         }
       },
-      "RequestBody2861E6Bcd64DAutoDevopsDeployStrategy": {
+      "RequestBody151Cb880B5FaAutoDevopsDeployStrategy": {
         "enum": [
           "continuous",
           "manual",
@@ -153604,7 +154255,7 @@
         "description": "Auto Deploy strategy",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2861E6Bcd64DAutoDevopsDeployStrategy",
+          "name": "RequestBody151Cb880B5FaAutoDevopsDeployStrategy",
           "modelAsString": false,
           "values": [
             {
@@ -153622,7 +154273,7 @@
           ]
         }
       },
-      "RequestBody2861E6Bcd64DSquashOption": {
+      "RequestBody151Cb880B5FaSquashOption": {
         "enum": [
           "never",
           "always",
@@ -153634,7 +154285,7 @@
         "description": "Squash default for project. One of \u0060never\u0060, \u0060always\u0060, \u0060default_on\u0060, or \u0060default_off\u0060.",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2861E6Bcd64DSquashOption",
+          "name": "RequestBody151Cb880B5FaSquashOption",
           "modelAsString": false,
           "values": [
             {
@@ -153656,7 +154307,7 @@
           ]
         }
       },
-      "RequestBody2861E6Bcd64DRequirementsAccessLevel": {
+      "RequestBody151Cb880B5FaRequirementsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -153667,7 +154318,7 @@
         "description": "Requirements feature access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2861E6Bcd64DRequirementsAccessLevel",
+          "name": "RequestBody151Cb880B5FaRequirementsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -153685,7 +154336,7 @@
           ]
         }
       },
-      "RequestBody2861E6Bcd64DRepositoryObjectFormat": {
+      "RequestBody151Cb880B5FaRepositoryObjectFormat": {
         "enum": [
           "sha1",
           "sha256"
@@ -153695,7 +154346,7 @@
         "description": "The object format of the project repository",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2861E6Bcd64DRepositoryObjectFormat",
+          "name": "RequestBody151Cb880B5FaRepositoryObjectFormat",
           "modelAsString": false,
           "values": [
             {
@@ -153709,7 +154360,7 @@
           ]
         }
       },
-      "RequestBodyC759Bc073Ec5BuildGitStrategy": {
+      "RequestBody2913C4F9F47ABuildGitStrategy": {
         "enum": [
           "fetch",
           "clone"
@@ -153719,7 +154370,7 @@
         "description": "The Git strategy. Defaults to \u0060fetch\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyC759Bc073Ec5BuildGitStrategy",
+          "name": "RequestBody2913C4F9F47ABuildGitStrategy",
           "modelAsString": false,
           "values": [
             {
@@ -153733,7 +154384,7 @@
           ]
         }
       },
-      "RequestBodyC759Bc073Ec5AutoCancelPendingPipelines": {
+      "RequestBody2913C4F9F47AAutoCancelPendingPipelines": {
         "enum": [
           "disabled",
           "enabled"
@@ -153743,7 +154394,7 @@
         "description": "Auto-cancel pending pipelines",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyC759Bc073Ec5AutoCancelPendingPipelines",
+          "name": "RequestBody2913C4F9F47AAutoCancelPendingPipelines",
           "modelAsString": false,
           "values": [
             {
@@ -153757,7 +154408,7 @@
           ]
         }
       },
-      "RequestBodyC759Bc073Ec5IssuesAccessLevel": {
+      "RequestBody2913C4F9F47AIssuesAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -153768,7 +154419,7 @@
         "description": "Issues access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyC759Bc073Ec5IssuesAccessLevel",
+          "name": "RequestBody2913C4F9F47AIssuesAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -153786,7 +154437,7 @@
           ]
         }
       },
-      "RequestBodyC759Bc073Ec5RepositoryAccessLevel": {
+      "RequestBody2913C4F9F47ARepositoryAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -153797,7 +154448,7 @@
         "description": "Repository access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyC759Bc073Ec5RepositoryAccessLevel",
+          "name": "RequestBody2913C4F9F47ARepositoryAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -153815,7 +154466,7 @@
           ]
         }
       },
-      "RequestBodyC759Bc073Ec5MergeRequestsAccessLevel": {
+      "RequestBody2913C4F9F47AMergeRequestsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -153826,7 +154477,7 @@
         "description": "Merge requests access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyC759Bc073Ec5MergeRequestsAccessLevel",
+          "name": "RequestBody2913C4F9F47AMergeRequestsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -153844,7 +154495,7 @@
           ]
         }
       },
-      "RequestBodyC759Bc073Ec5ForkingAccessLevel": {
+      "RequestBody2913C4F9F47AForkingAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -153855,7 +154506,7 @@
         "description": "Forks access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyC759Bc073Ec5ForkingAccessLevel",
+          "name": "RequestBody2913C4F9F47AForkingAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -153873,7 +154524,7 @@
           ]
         }
       },
-      "RequestBodyC759Bc073Ec5WikiAccessLevel": {
+      "RequestBody2913C4F9F47AWikiAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -153884,7 +154535,7 @@
         "description": "Wiki access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyC759Bc073Ec5WikiAccessLevel",
+          "name": "RequestBody2913C4F9F47AWikiAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -153902,7 +154553,7 @@
           ]
         }
       },
-      "RequestBodyC759Bc073Ec5BuildsAccessLevel": {
+      "RequestBody2913C4F9F47ABuildsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -153913,7 +154564,7 @@
         "description": "Builds access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyC759Bc073Ec5BuildsAccessLevel",
+          "name": "RequestBody2913C4F9F47ABuildsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -153931,7 +154582,7 @@
           ]
         }
       },
-      "RequestBodyC759Bc073Ec5SnippetsAccessLevel": {
+      "RequestBody2913C4F9F47ASnippetsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -153942,7 +154593,7 @@
         "description": "Snippets access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyC759Bc073Ec5SnippetsAccessLevel",
+          "name": "RequestBody2913C4F9F47ASnippetsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -153960,7 +154611,7 @@
           ]
         }
       },
-      "RequestBodyC759Bc073Ec5PackageRegistryAccessLevel": {
+      "RequestBody2913C4F9F47APackageRegistryAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -153972,7 +154623,7 @@
         "description": "Controls visibility of the package registry. One of \u0060disabled\u0060, \u0060private\u0060, \u0060enabled\u0060 or \u0060public\u0060. \u0060private\u0060 will make the package registry accessible only to project members (reporter role and above). \u0060enabled\u0060 will make the package registry accessible to everyone who has access to the project. \u0060public\u0060 will make the package registry accessible to everyone. \u0060disabled\u0060 will disable the package registry",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyC759Bc073Ec5PackageRegistryAccessLevel",
+          "name": "RequestBody2913C4F9F47APackageRegistryAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -153994,7 +154645,7 @@
           ]
         }
       },
-      "RequestBodyC759Bc073Ec5PagesAccessLevel": {
+      "RequestBody2913C4F9F47APagesAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -154006,7 +154657,7 @@
         "description": "Pages access level. One of \u0060disabled\u0060, \u0060private\u0060, \u0060enabled\u0060 or \u0060public\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyC759Bc073Ec5PagesAccessLevel",
+          "name": "RequestBody2913C4F9F47APagesAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -154028,7 +154679,7 @@
           ]
         }
       },
-      "RequestBodyC759Bc073Ec5AnalyticsAccessLevel": {
+      "RequestBody2913C4F9F47AAnalyticsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -154039,7 +154690,7 @@
         "description": "Analytics access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyC759Bc073Ec5AnalyticsAccessLevel",
+          "name": "RequestBody2913C4F9F47AAnalyticsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -154057,7 +154708,7 @@
           ]
         }
       },
-      "RequestBodyC759Bc073Ec5ContainerRegistryAccessLevel": {
+      "RequestBody2913C4F9F47AContainerRegistryAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -154068,7 +154719,7 @@
         "description": "Controls visibility of the container registry. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060. \u0060private\u0060 will make the container registry accessible only to project members (reporter role and above). \u0060enabled\u0060 will make the container registry accessible to everyone who has access to the project. \u0060disabled\u0060 will disable the container registry",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyC759Bc073Ec5ContainerRegistryAccessLevel",
+          "name": "RequestBody2913C4F9F47AContainerRegistryAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -154086,7 +154737,7 @@
           ]
         }
       },
-      "RequestBodyC759Bc073Ec5SecurityAndComplianceAccessLevel": {
+      "RequestBody2913C4F9F47ASecurityAndComplianceAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -154097,7 +154748,7 @@
         "description": "Security and compliance access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyC759Bc073Ec5SecurityAndComplianceAccessLevel",
+          "name": "RequestBody2913C4F9F47ASecurityAndComplianceAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -154115,7 +154766,7 @@
           ]
         }
       },
-      "RequestBodyC759Bc073Ec5ReleasesAccessLevel": {
+      "RequestBody2913C4F9F47AReleasesAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -154126,7 +154777,7 @@
         "description": "Releases access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyC759Bc073Ec5ReleasesAccessLevel",
+          "name": "RequestBody2913C4F9F47AReleasesAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -154144,7 +154795,7 @@
           ]
         }
       },
-      "RequestBodyC759Bc073Ec5EnvironmentsAccessLevel": {
+      "RequestBody2913C4F9F47AEnvironmentsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -154155,7 +154806,7 @@
         "description": "Environments access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyC759Bc073Ec5EnvironmentsAccessLevel",
+          "name": "RequestBody2913C4F9F47AEnvironmentsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -154173,7 +154824,7 @@
           ]
         }
       },
-      "RequestBodyC759Bc073Ec5FeatureFlagsAccessLevel": {
+      "RequestBody2913C4F9F47AFeatureFlagsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -154184,7 +154835,7 @@
         "description": "Feature flags access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyC759Bc073Ec5FeatureFlagsAccessLevel",
+          "name": "RequestBody2913C4F9F47AFeatureFlagsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -154202,7 +154853,7 @@
           ]
         }
       },
-      "RequestBodyC759Bc073Ec5InfrastructureAccessLevel": {
+      "RequestBody2913C4F9F47AInfrastructureAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -154213,7 +154864,7 @@
         "description": "Infrastructure access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyC759Bc073Ec5InfrastructureAccessLevel",
+          "name": "RequestBody2913C4F9F47AInfrastructureAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -154231,7 +154882,7 @@
           ]
         }
       },
-      "RequestBodyC759Bc073Ec5MonitorAccessLevel": {
+      "RequestBody2913C4F9F47AMonitorAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -154242,7 +154893,7 @@
         "description": "Monitor access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyC759Bc073Ec5MonitorAccessLevel",
+          "name": "RequestBody2913C4F9F47AMonitorAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -154260,7 +154911,7 @@
           ]
         }
       },
-      "RequestBodyC759Bc073Ec5ModelExperimentsAccessLevel": {
+      "RequestBody2913C4F9F47AModelExperimentsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -154271,7 +154922,7 @@
         "description": "Model experiments access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyC759Bc073Ec5ModelExperimentsAccessLevel",
+          "name": "RequestBody2913C4F9F47AModelExperimentsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -154289,7 +154940,7 @@
           ]
         }
       },
-      "RequestBodyC759Bc073Ec5ModelRegistryAccessLevel": {
+      "RequestBody2913C4F9F47AModelRegistryAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -154300,7 +154951,7 @@
         "description": "Model registry access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyC759Bc073Ec5ModelRegistryAccessLevel",
+          "name": "RequestBody2913C4F9F47AModelRegistryAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -154318,7 +154969,7 @@
           ]
         }
       },
-      "RequestBodyC759Bc073Ec5ResourceGroupDefaultProcessMode": {
+      "RequestBody2913C4F9F47AResourceGroupDefaultProcessMode": {
         "enum": [
           "unordered",
           "oldest_first",
@@ -154330,7 +154981,7 @@
         "description": "The process mode of the resource group",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyC759Bc073Ec5ResourceGroupDefaultProcessMode",
+          "name": "RequestBody2913C4F9F47AResourceGroupDefaultProcessMode",
           "modelAsString": false,
           "values": [
             {
@@ -154352,7 +155003,7 @@
           ]
         }
       },
-      "RequestBodyC759Bc073Ec5Visibility": {
+      "RequestBody2913C4F9F47AVisibility": {
         "enum": [
           "private",
           "internal",
@@ -154363,7 +155014,7 @@
         "description": "The visibility of the project.",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyC759Bc073Ec5Visibility",
+          "name": "RequestBody2913C4F9F47AVisibility",
           "modelAsString": false,
           "values": [
             {
@@ -154381,7 +155032,7 @@
           ]
         }
       },
-      "RequestBodyC759Bc073Ec5MergeMethod": {
+      "RequestBody2913C4F9F47AMergeMethod": {
         "enum": [
           "ff",
           "rebase_merge",
@@ -154392,7 +155043,7 @@
         "description": "The merge method used when merging merge requests",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyC759Bc073Ec5MergeMethod",
+          "name": "RequestBody2913C4F9F47AMergeMethod",
           "modelAsString": false,
           "values": [
             {
@@ -154410,7 +155061,7 @@
           ]
         }
       },
-      "RequestBodyC759Bc073Ec5AutoDevopsDeployStrategy": {
+      "RequestBody2913C4F9F47AAutoDevopsDeployStrategy": {
         "enum": [
           "continuous",
           "manual",
@@ -154421,7 +155072,7 @@
         "description": "Auto Deploy strategy",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyC759Bc073Ec5AutoDevopsDeployStrategy",
+          "name": "RequestBody2913C4F9F47AAutoDevopsDeployStrategy",
           "modelAsString": false,
           "values": [
             {
@@ -154439,7 +155090,7 @@
           ]
         }
       },
-      "RequestBodyC759Bc073Ec5SquashOption": {
+      "RequestBody2913C4F9F47ASquashOption": {
         "enum": [
           "never",
           "always",
@@ -154451,7 +155102,7 @@
         "description": "Squash default for project. One of \u0060never\u0060, \u0060always\u0060, \u0060default_on\u0060, or \u0060default_off\u0060.",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyC759Bc073Ec5SquashOption",
+          "name": "RequestBody2913C4F9F47ASquashOption",
           "modelAsString": false,
           "values": [
             {
@@ -154473,7 +155124,7 @@
           ]
         }
       },
-      "RequestBodyC759Bc073Ec5RequirementsAccessLevel": {
+      "RequestBody2913C4F9F47ARequirementsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -154484,7 +155135,7 @@
         "description": "Requirements feature access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyC759Bc073Ec5RequirementsAccessLevel",
+          "name": "RequestBody2913C4F9F47ARequirementsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -154502,7 +155153,7 @@
           ]
         }
       },
-      "RequestBodyC759Bc073Ec5CiPipelineVariablesMinimumOverrideRole": {
+      "RequestBody2913C4F9F47ACiPipelineVariablesMinimumOverrideRole": {
         "enum": [
           "no_one_allowed",
           "developer",
@@ -154514,7 +155165,7 @@
         "description": "Limit ability to override CI/CD variables when triggering a pipeline to only users with at least the set minimum role",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyC759Bc073Ec5CiPipelineVariablesMinimumOverrideRole",
+          "name": "RequestBody2913C4F9F47ACiPipelineVariablesMinimumOverrideRole",
           "modelAsString": false,
           "values": [
             {
@@ -154536,7 +155187,7 @@
           ]
         }
       },
-      "RequestBodyC759Bc073Ec5MergeTrainEnforcement": {
+      "RequestBody2913C4F9F47AMergeTrainEnforcement": {
         "enum": [
           "allow_bypass",
           "enforce_for_all_users",
@@ -154547,7 +155198,7 @@
         "description": "Merge train enforcement level. One of \u0060allow_bypass\u0060, \u0060enforce_for_all_users\u0060, or \u0060enforce_with_owner_override\u0060.",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyC759Bc073Ec5MergeTrainEnforcement",
+          "name": "RequestBody2913C4F9F47AMergeTrainEnforcement",
           "modelAsString": false,
           "values": [
             {
@@ -154565,7 +155216,7 @@
           ]
         }
       },
-      "RequestBodyC759Bc073Ec5ReviewerAssignmentStrategy": {
+      "RequestBody2913C4F9F47AReviewerAssignmentStrategy": {
         "enum": [
           "disabled",
           "code_owners",
@@ -154576,7 +155227,7 @@
         "description": "Strategy used to automatically assign reviewers to merge requests. One of \u0060disabled\u0060, \u0060code_owners\u0060, or \u0060dap_powered\u0060.",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyC759Bc073Ec5ReviewerAssignmentStrategy",
+          "name": "RequestBody2913C4F9F47AReviewerAssignmentStrategy",
           "modelAsString": false,
           "values": [
             {
@@ -157878,7 +158529,7 @@
           ]
         }
       },
-      "RequestBody62Cfdeef4F25OverrideParamsBuildGitStrategy": {
+      "RequestBody1C830D224756OverrideParamsBuildGitStrategy": {
         "enum": [
           "fetch",
           "clone"
@@ -157888,7 +158539,7 @@
         "description": "The Git strategy. Defaults to \u0060fetch\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody62Cfdeef4F25OverrideParamsBuildGitStrategy",
+          "name": "RequestBody1C830D224756OverrideParamsBuildGitStrategy",
           "modelAsString": false,
           "values": [
             {
@@ -157902,7 +158553,7 @@
           ]
         }
       },
-      "RequestBody62Cfdeef4F25OverrideParamsAutoCancelPendingPipelines": {
+      "RequestBody1C830D224756OverrideParamsAutoCancelPendingPipelines": {
         "enum": [
           "disabled",
           "enabled"
@@ -157912,7 +158563,7 @@
         "description": "Auto-cancel pending pipelines",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody62Cfdeef4F25OverrideParamsAutoCancelPendingPipelines",
+          "name": "RequestBody1C830D224756OverrideParamsAutoCancelPendingPipelines",
           "modelAsString": false,
           "values": [
             {
@@ -157926,7 +158577,7 @@
           ]
         }
       },
-      "RequestBody62Cfdeef4F25OverrideParamsIssuesAccessLevel": {
+      "RequestBody1C830D224756OverrideParamsIssuesAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -157937,7 +158588,7 @@
         "description": "Issues access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody62Cfdeef4F25OverrideParamsIssuesAccessLevel",
+          "name": "RequestBody1C830D224756OverrideParamsIssuesAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -157955,7 +158606,7 @@
           ]
         }
       },
-      "RequestBody62Cfdeef4F25OverrideParamsRepositoryAccessLevel": {
+      "RequestBody1C830D224756OverrideParamsRepositoryAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -157966,7 +158617,7 @@
         "description": "Repository access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody62Cfdeef4F25OverrideParamsRepositoryAccessLevel",
+          "name": "RequestBody1C830D224756OverrideParamsRepositoryAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -157984,7 +158635,7 @@
           ]
         }
       },
-      "RequestBody62Cfdeef4F25OverrideParamsMergeRequestsAccessLevel": {
+      "RequestBody1C830D224756OverrideParamsMergeRequestsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -157995,7 +158646,7 @@
         "description": "Merge requests access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody62Cfdeef4F25OverrideParamsMergeRequestsAccessLevel",
+          "name": "RequestBody1C830D224756OverrideParamsMergeRequestsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -158013,7 +158664,7 @@
           ]
         }
       },
-      "RequestBody62Cfdeef4F25OverrideParamsForkingAccessLevel": {
+      "RequestBody1C830D224756OverrideParamsForkingAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -158024,7 +158675,7 @@
         "description": "Forks access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody62Cfdeef4F25OverrideParamsForkingAccessLevel",
+          "name": "RequestBody1C830D224756OverrideParamsForkingAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -158042,7 +158693,7 @@
           ]
         }
       },
-      "RequestBody62Cfdeef4F25OverrideParamsWikiAccessLevel": {
+      "RequestBody1C830D224756OverrideParamsWikiAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -158053,7 +158704,7 @@
         "description": "Wiki access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody62Cfdeef4F25OverrideParamsWikiAccessLevel",
+          "name": "RequestBody1C830D224756OverrideParamsWikiAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -158071,7 +158722,7 @@
           ]
         }
       },
-      "RequestBody62Cfdeef4F25OverrideParamsBuildsAccessLevel": {
+      "RequestBody1C830D224756OverrideParamsBuildsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -158082,7 +158733,7 @@
         "description": "Builds access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody62Cfdeef4F25OverrideParamsBuildsAccessLevel",
+          "name": "RequestBody1C830D224756OverrideParamsBuildsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -158100,7 +158751,7 @@
           ]
         }
       },
-      "RequestBody62Cfdeef4F25OverrideParamsSnippetsAccessLevel": {
+      "RequestBody1C830D224756OverrideParamsSnippetsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -158111,7 +158762,7 @@
         "description": "Snippets access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody62Cfdeef4F25OverrideParamsSnippetsAccessLevel",
+          "name": "RequestBody1C830D224756OverrideParamsSnippetsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -158129,7 +158780,7 @@
           ]
         }
       },
-      "RequestBody62Cfdeef4F25OverrideParamsPackageRegistryAccessLevel": {
+      "RequestBody1C830D224756OverrideParamsPackageRegistryAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -158141,7 +158792,7 @@
         "description": "Controls visibility of the package registry. One of \u0060disabled\u0060, \u0060private\u0060, \u0060enabled\u0060 or \u0060public\u0060. \u0060private\u0060 will make the package registry accessible only to project members (reporter role and above). \u0060enabled\u0060 will make the package registry accessible to everyone who has access to the project. \u0060public\u0060 will make the package registry accessible to everyone. \u0060disabled\u0060 will disable the package registry",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody62Cfdeef4F25OverrideParamsPackageRegistryAccessLevel",
+          "name": "RequestBody1C830D224756OverrideParamsPackageRegistryAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -158163,7 +158814,7 @@
           ]
         }
       },
-      "RequestBody62Cfdeef4F25OverrideParamsPagesAccessLevel": {
+      "RequestBody1C830D224756OverrideParamsPagesAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -158175,7 +158826,7 @@
         "description": "Pages access level. One of \u0060disabled\u0060, \u0060private\u0060, \u0060enabled\u0060 or \u0060public\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody62Cfdeef4F25OverrideParamsPagesAccessLevel",
+          "name": "RequestBody1C830D224756OverrideParamsPagesAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -158197,7 +158848,7 @@
           ]
         }
       },
-      "RequestBody62Cfdeef4F25OverrideParamsAnalyticsAccessLevel": {
+      "RequestBody1C830D224756OverrideParamsAnalyticsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -158208,7 +158859,7 @@
         "description": "Analytics access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody62Cfdeef4F25OverrideParamsAnalyticsAccessLevel",
+          "name": "RequestBody1C830D224756OverrideParamsAnalyticsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -158226,7 +158877,7 @@
           ]
         }
       },
-      "RequestBody62Cfdeef4F25OverrideParamsContainerRegistryAccessLevel": {
+      "RequestBody1C830D224756OverrideParamsContainerRegistryAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -158237,7 +158888,7 @@
         "description": "Controls visibility of the container registry. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060. \u0060private\u0060 will make the container registry accessible only to project members (reporter role and above). \u0060enabled\u0060 will make the container registry accessible to everyone who has access to the project. \u0060disabled\u0060 will disable the container registry",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody62Cfdeef4F25OverrideParamsContainerRegistryAccessLevel",
+          "name": "RequestBody1C830D224756OverrideParamsContainerRegistryAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -158255,7 +158906,7 @@
           ]
         }
       },
-      "RequestBody62Cfdeef4F25OverrideParamsSecurityAndComplianceAccessLevel": {
+      "RequestBody1C830D224756OverrideParamsSecurityAndComplianceAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -158266,7 +158917,7 @@
         "description": "Security and compliance access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody62Cfdeef4F25OverrideParamsSecurityAndComplianceAccessLevel",
+          "name": "RequestBody1C830D224756OverrideParamsSecurityAndComplianceAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -158284,7 +158935,7 @@
           ]
         }
       },
-      "RequestBody62Cfdeef4F25OverrideParamsReleasesAccessLevel": {
+      "RequestBody1C830D224756OverrideParamsReleasesAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -158295,7 +158946,7 @@
         "description": "Releases access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody62Cfdeef4F25OverrideParamsReleasesAccessLevel",
+          "name": "RequestBody1C830D224756OverrideParamsReleasesAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -158313,7 +158964,7 @@
           ]
         }
       },
-      "RequestBody62Cfdeef4F25OverrideParamsEnvironmentsAccessLevel": {
+      "RequestBody1C830D224756OverrideParamsEnvironmentsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -158324,7 +158975,7 @@
         "description": "Environments access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody62Cfdeef4F25OverrideParamsEnvironmentsAccessLevel",
+          "name": "RequestBody1C830D224756OverrideParamsEnvironmentsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -158342,7 +158993,7 @@
           ]
         }
       },
-      "RequestBody62Cfdeef4F25OverrideParamsFeatureFlagsAccessLevel": {
+      "RequestBody1C830D224756OverrideParamsFeatureFlagsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -158353,7 +159004,7 @@
         "description": "Feature flags access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody62Cfdeef4F25OverrideParamsFeatureFlagsAccessLevel",
+          "name": "RequestBody1C830D224756OverrideParamsFeatureFlagsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -158371,7 +159022,7 @@
           ]
         }
       },
-      "RequestBody62Cfdeef4F25OverrideParamsInfrastructureAccessLevel": {
+      "RequestBody1C830D224756OverrideParamsInfrastructureAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -158382,7 +159033,7 @@
         "description": "Infrastructure access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody62Cfdeef4F25OverrideParamsInfrastructureAccessLevel",
+          "name": "RequestBody1C830D224756OverrideParamsInfrastructureAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -158400,7 +159051,7 @@
           ]
         }
       },
-      "RequestBody62Cfdeef4F25OverrideParamsMonitorAccessLevel": {
+      "RequestBody1C830D224756OverrideParamsMonitorAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -158411,7 +159062,7 @@
         "description": "Monitor access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody62Cfdeef4F25OverrideParamsMonitorAccessLevel",
+          "name": "RequestBody1C830D224756OverrideParamsMonitorAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -158429,7 +159080,7 @@
           ]
         }
       },
-      "RequestBody62Cfdeef4F25OverrideParamsModelExperimentsAccessLevel": {
+      "RequestBody1C830D224756OverrideParamsModelExperimentsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -158440,7 +159091,7 @@
         "description": "Model experiments access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody62Cfdeef4F25OverrideParamsModelExperimentsAccessLevel",
+          "name": "RequestBody1C830D224756OverrideParamsModelExperimentsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -158458,7 +159109,7 @@
           ]
         }
       },
-      "RequestBody62Cfdeef4F25OverrideParamsModelRegistryAccessLevel": {
+      "RequestBody1C830D224756OverrideParamsModelRegistryAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -158469,7 +159120,7 @@
         "description": "Model registry access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody62Cfdeef4F25OverrideParamsModelRegistryAccessLevel",
+          "name": "RequestBody1C830D224756OverrideParamsModelRegistryAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -158487,7 +159138,7 @@
           ]
         }
       },
-      "RequestBody62Cfdeef4F25OverrideParamsResourceGroupDefaultProcessMode": {
+      "RequestBody1C830D224756OverrideParamsResourceGroupDefaultProcessMode": {
         "enum": [
           "unordered",
           "oldest_first",
@@ -158499,7 +159150,7 @@
         "description": "The process mode of the resource group",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody62Cfdeef4F25OverrideParamsResourceGroupDefaultProcessMode",
+          "name": "RequestBody1C830D224756OverrideParamsResourceGroupDefaultProcessMode",
           "modelAsString": false,
           "values": [
             {
@@ -158521,7 +159172,7 @@
           ]
         }
       },
-      "RequestBody62Cfdeef4F25OverrideParamsVisibility": {
+      "RequestBody1C830D224756OverrideParamsVisibility": {
         "enum": [
           "private",
           "internal",
@@ -158532,7 +159183,7 @@
         "description": "The visibility of the project.",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody62Cfdeef4F25OverrideParamsVisibility",
+          "name": "RequestBody1C830D224756OverrideParamsVisibility",
           "modelAsString": false,
           "values": [
             {
@@ -158550,7 +159201,7 @@
           ]
         }
       },
-      "RequestBody62Cfdeef4F25OverrideParamsMergeMethod": {
+      "RequestBody1C830D224756OverrideParamsMergeMethod": {
         "enum": [
           "ff",
           "rebase_merge",
@@ -158561,7 +159212,7 @@
         "description": "The merge method used when merging merge requests",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody62Cfdeef4F25OverrideParamsMergeMethod",
+          "name": "RequestBody1C830D224756OverrideParamsMergeMethod",
           "modelAsString": false,
           "values": [
             {
@@ -158579,7 +159230,7 @@
           ]
         }
       },
-      "RequestBody62Cfdeef4F25OverrideParamsAutoDevopsDeployStrategy": {
+      "RequestBody1C830D224756OverrideParamsAutoDevopsDeployStrategy": {
         "enum": [
           "continuous",
           "manual",
@@ -158590,7 +159241,7 @@
         "description": "Auto Deploy strategy",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody62Cfdeef4F25OverrideParamsAutoDevopsDeployStrategy",
+          "name": "RequestBody1C830D224756OverrideParamsAutoDevopsDeployStrategy",
           "modelAsString": false,
           "values": [
             {
@@ -158608,7 +159259,7 @@
           ]
         }
       },
-      "RequestBody62Cfdeef4F25OverrideParamsSquashOption": {
+      "RequestBody1C830D224756OverrideParamsSquashOption": {
         "enum": [
           "never",
           "always",
@@ -158620,7 +159271,7 @@
         "description": "Squash default for project. One of \u0060never\u0060, \u0060always\u0060, \u0060default_on\u0060, or \u0060default_off\u0060.",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody62Cfdeef4F25OverrideParamsSquashOption",
+          "name": "RequestBody1C830D224756OverrideParamsSquashOption",
           "modelAsString": false,
           "values": [
             {
@@ -158642,7 +159293,7 @@
           ]
         }
       },
-      "RequestBody62Cfdeef4F25OverrideParamsRequirementsAccessLevel": {
+      "RequestBody1C830D224756OverrideParamsRequirementsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -158653,7 +159304,7 @@
         "description": "Requirements feature access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody62Cfdeef4F25OverrideParamsRequirementsAccessLevel",
+          "name": "RequestBody1C830D224756OverrideParamsRequirementsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -158671,7 +159322,7 @@
           ]
         }
       },
-      "RequestBody4E27310E47B5OverrideParamsBuildGitStrategy": {
+      "RequestBody87Fdf22Dd64EOverrideParamsBuildGitStrategy": {
         "enum": [
           "fetch",
           "clone"
@@ -158681,7 +159332,7 @@
         "description": "The Git strategy. Defaults to \u0060fetch\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody4E27310E47B5OverrideParamsBuildGitStrategy",
+          "name": "RequestBody87Fdf22Dd64EOverrideParamsBuildGitStrategy",
           "modelAsString": false,
           "values": [
             {
@@ -158695,7 +159346,7 @@
           ]
         }
       },
-      "RequestBody4E27310E47B5OverrideParamsAutoCancelPendingPipelines": {
+      "RequestBody87Fdf22Dd64EOverrideParamsAutoCancelPendingPipelines": {
         "enum": [
           "disabled",
           "enabled"
@@ -158705,7 +159356,7 @@
         "description": "Auto-cancel pending pipelines",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody4E27310E47B5OverrideParamsAutoCancelPendingPipelines",
+          "name": "RequestBody87Fdf22Dd64EOverrideParamsAutoCancelPendingPipelines",
           "modelAsString": false,
           "values": [
             {
@@ -158719,7 +159370,7 @@
           ]
         }
       },
-      "RequestBody4E27310E47B5OverrideParamsIssuesAccessLevel": {
+      "RequestBody87Fdf22Dd64EOverrideParamsIssuesAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -158730,7 +159381,7 @@
         "description": "Issues access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody4E27310E47B5OverrideParamsIssuesAccessLevel",
+          "name": "RequestBody87Fdf22Dd64EOverrideParamsIssuesAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -158748,7 +159399,7 @@
           ]
         }
       },
-      "RequestBody4E27310E47B5OverrideParamsRepositoryAccessLevel": {
+      "RequestBody87Fdf22Dd64EOverrideParamsRepositoryAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -158759,7 +159410,7 @@
         "description": "Repository access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody4E27310E47B5OverrideParamsRepositoryAccessLevel",
+          "name": "RequestBody87Fdf22Dd64EOverrideParamsRepositoryAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -158777,7 +159428,7 @@
           ]
         }
       },
-      "RequestBody4E27310E47B5OverrideParamsMergeRequestsAccessLevel": {
+      "RequestBody87Fdf22Dd64EOverrideParamsMergeRequestsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -158788,7 +159439,7 @@
         "description": "Merge requests access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody4E27310E47B5OverrideParamsMergeRequestsAccessLevel",
+          "name": "RequestBody87Fdf22Dd64EOverrideParamsMergeRequestsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -158806,7 +159457,7 @@
           ]
         }
       },
-      "RequestBody4E27310E47B5OverrideParamsForkingAccessLevel": {
+      "RequestBody87Fdf22Dd64EOverrideParamsForkingAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -158817,7 +159468,7 @@
         "description": "Forks access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody4E27310E47B5OverrideParamsForkingAccessLevel",
+          "name": "RequestBody87Fdf22Dd64EOverrideParamsForkingAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -158835,7 +159486,7 @@
           ]
         }
       },
-      "RequestBody4E27310E47B5OverrideParamsWikiAccessLevel": {
+      "RequestBody87Fdf22Dd64EOverrideParamsWikiAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -158846,7 +159497,7 @@
         "description": "Wiki access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody4E27310E47B5OverrideParamsWikiAccessLevel",
+          "name": "RequestBody87Fdf22Dd64EOverrideParamsWikiAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -158864,7 +159515,7 @@
           ]
         }
       },
-      "RequestBody4E27310E47B5OverrideParamsBuildsAccessLevel": {
+      "RequestBody87Fdf22Dd64EOverrideParamsBuildsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -158875,7 +159526,7 @@
         "description": "Builds access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody4E27310E47B5OverrideParamsBuildsAccessLevel",
+          "name": "RequestBody87Fdf22Dd64EOverrideParamsBuildsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -158893,7 +159544,7 @@
           ]
         }
       },
-      "RequestBody4E27310E47B5OverrideParamsSnippetsAccessLevel": {
+      "RequestBody87Fdf22Dd64EOverrideParamsSnippetsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -158904,7 +159555,7 @@
         "description": "Snippets access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody4E27310E47B5OverrideParamsSnippetsAccessLevel",
+          "name": "RequestBody87Fdf22Dd64EOverrideParamsSnippetsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -158922,7 +159573,7 @@
           ]
         }
       },
-      "RequestBody4E27310E47B5OverrideParamsPackageRegistryAccessLevel": {
+      "RequestBody87Fdf22Dd64EOverrideParamsPackageRegistryAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -158934,7 +159585,7 @@
         "description": "Controls visibility of the package registry. One of \u0060disabled\u0060, \u0060private\u0060, \u0060enabled\u0060 or \u0060public\u0060. \u0060private\u0060 will make the package registry accessible only to project members (reporter role and above). \u0060enabled\u0060 will make the package registry accessible to everyone who has access to the project. \u0060public\u0060 will make the package registry accessible to everyone. \u0060disabled\u0060 will disable the package registry",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody4E27310E47B5OverrideParamsPackageRegistryAccessLevel",
+          "name": "RequestBody87Fdf22Dd64EOverrideParamsPackageRegistryAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -158956,7 +159607,7 @@
           ]
         }
       },
-      "RequestBody4E27310E47B5OverrideParamsPagesAccessLevel": {
+      "RequestBody87Fdf22Dd64EOverrideParamsPagesAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -158968,7 +159619,7 @@
         "description": "Pages access level. One of \u0060disabled\u0060, \u0060private\u0060, \u0060enabled\u0060 or \u0060public\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody4E27310E47B5OverrideParamsPagesAccessLevel",
+          "name": "RequestBody87Fdf22Dd64EOverrideParamsPagesAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -158990,7 +159641,7 @@
           ]
         }
       },
-      "RequestBody4E27310E47B5OverrideParamsAnalyticsAccessLevel": {
+      "RequestBody87Fdf22Dd64EOverrideParamsAnalyticsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -159001,7 +159652,7 @@
         "description": "Analytics access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody4E27310E47B5OverrideParamsAnalyticsAccessLevel",
+          "name": "RequestBody87Fdf22Dd64EOverrideParamsAnalyticsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -159019,7 +159670,7 @@
           ]
         }
       },
-      "RequestBody4E27310E47B5OverrideParamsContainerRegistryAccessLevel": {
+      "RequestBody87Fdf22Dd64EOverrideParamsContainerRegistryAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -159030,7 +159681,7 @@
         "description": "Controls visibility of the container registry. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060. \u0060private\u0060 will make the container registry accessible only to project members (reporter role and above). \u0060enabled\u0060 will make the container registry accessible to everyone who has access to the project. \u0060disabled\u0060 will disable the container registry",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody4E27310E47B5OverrideParamsContainerRegistryAccessLevel",
+          "name": "RequestBody87Fdf22Dd64EOverrideParamsContainerRegistryAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -159048,7 +159699,7 @@
           ]
         }
       },
-      "RequestBody4E27310E47B5OverrideParamsSecurityAndComplianceAccessLevel": {
+      "RequestBody87Fdf22Dd64EOverrideParamsSecurityAndComplianceAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -159059,7 +159710,7 @@
         "description": "Security and compliance access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody4E27310E47B5OverrideParamsSecurityAndComplianceAccessLevel",
+          "name": "RequestBody87Fdf22Dd64EOverrideParamsSecurityAndComplianceAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -159077,7 +159728,7 @@
           ]
         }
       },
-      "RequestBody4E27310E47B5OverrideParamsReleasesAccessLevel": {
+      "RequestBody87Fdf22Dd64EOverrideParamsReleasesAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -159088,7 +159739,7 @@
         "description": "Releases access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody4E27310E47B5OverrideParamsReleasesAccessLevel",
+          "name": "RequestBody87Fdf22Dd64EOverrideParamsReleasesAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -159106,7 +159757,7 @@
           ]
         }
       },
-      "RequestBody4E27310E47B5OverrideParamsEnvironmentsAccessLevel": {
+      "RequestBody87Fdf22Dd64EOverrideParamsEnvironmentsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -159117,7 +159768,7 @@
         "description": "Environments access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody4E27310E47B5OverrideParamsEnvironmentsAccessLevel",
+          "name": "RequestBody87Fdf22Dd64EOverrideParamsEnvironmentsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -159135,7 +159786,7 @@
           ]
         }
       },
-      "RequestBody4E27310E47B5OverrideParamsFeatureFlagsAccessLevel": {
+      "RequestBody87Fdf22Dd64EOverrideParamsFeatureFlagsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -159146,7 +159797,7 @@
         "description": "Feature flags access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody4E27310E47B5OverrideParamsFeatureFlagsAccessLevel",
+          "name": "RequestBody87Fdf22Dd64EOverrideParamsFeatureFlagsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -159164,7 +159815,7 @@
           ]
         }
       },
-      "RequestBody4E27310E47B5OverrideParamsInfrastructureAccessLevel": {
+      "RequestBody87Fdf22Dd64EOverrideParamsInfrastructureAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -159175,7 +159826,7 @@
         "description": "Infrastructure access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody4E27310E47B5OverrideParamsInfrastructureAccessLevel",
+          "name": "RequestBody87Fdf22Dd64EOverrideParamsInfrastructureAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -159193,7 +159844,7 @@
           ]
         }
       },
-      "RequestBody4E27310E47B5OverrideParamsMonitorAccessLevel": {
+      "RequestBody87Fdf22Dd64EOverrideParamsMonitorAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -159204,7 +159855,7 @@
         "description": "Monitor access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody4E27310E47B5OverrideParamsMonitorAccessLevel",
+          "name": "RequestBody87Fdf22Dd64EOverrideParamsMonitorAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -159222,7 +159873,7 @@
           ]
         }
       },
-      "RequestBody4E27310E47B5OverrideParamsModelExperimentsAccessLevel": {
+      "RequestBody87Fdf22Dd64EOverrideParamsModelExperimentsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -159233,7 +159884,7 @@
         "description": "Model experiments access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody4E27310E47B5OverrideParamsModelExperimentsAccessLevel",
+          "name": "RequestBody87Fdf22Dd64EOverrideParamsModelExperimentsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -159251,7 +159902,7 @@
           ]
         }
       },
-      "RequestBody4E27310E47B5OverrideParamsModelRegistryAccessLevel": {
+      "RequestBody87Fdf22Dd64EOverrideParamsModelRegistryAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -159262,7 +159913,7 @@
         "description": "Model registry access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody4E27310E47B5OverrideParamsModelRegistryAccessLevel",
+          "name": "RequestBody87Fdf22Dd64EOverrideParamsModelRegistryAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -159280,7 +159931,7 @@
           ]
         }
       },
-      "RequestBody4E27310E47B5OverrideParamsResourceGroupDefaultProcessMode": {
+      "RequestBody87Fdf22Dd64EOverrideParamsResourceGroupDefaultProcessMode": {
         "enum": [
           "unordered",
           "oldest_first",
@@ -159292,7 +159943,7 @@
         "description": "The process mode of the resource group",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody4E27310E47B5OverrideParamsResourceGroupDefaultProcessMode",
+          "name": "RequestBody87Fdf22Dd64EOverrideParamsResourceGroupDefaultProcessMode",
           "modelAsString": false,
           "values": [
             {
@@ -159314,7 +159965,7 @@
           ]
         }
       },
-      "RequestBody4E27310E47B5OverrideParamsVisibility": {
+      "RequestBody87Fdf22Dd64EOverrideParamsVisibility": {
         "enum": [
           "private",
           "internal",
@@ -159325,7 +159976,7 @@
         "description": "The visibility of the project.",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody4E27310E47B5OverrideParamsVisibility",
+          "name": "RequestBody87Fdf22Dd64EOverrideParamsVisibility",
           "modelAsString": false,
           "values": [
             {
@@ -159343,7 +159994,7 @@
           ]
         }
       },
-      "RequestBody4E27310E47B5OverrideParamsMergeMethod": {
+      "RequestBody87Fdf22Dd64EOverrideParamsMergeMethod": {
         "enum": [
           "ff",
           "rebase_merge",
@@ -159354,7 +160005,7 @@
         "description": "The merge method used when merging merge requests",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody4E27310E47B5OverrideParamsMergeMethod",
+          "name": "RequestBody87Fdf22Dd64EOverrideParamsMergeMethod",
           "modelAsString": false,
           "values": [
             {
@@ -159372,7 +160023,7 @@
           ]
         }
       },
-      "RequestBody4E27310E47B5OverrideParamsAutoDevopsDeployStrategy": {
+      "RequestBody87Fdf22Dd64EOverrideParamsAutoDevopsDeployStrategy": {
         "enum": [
           "continuous",
           "manual",
@@ -159383,7 +160034,7 @@
         "description": "Auto Deploy strategy",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody4E27310E47B5OverrideParamsAutoDevopsDeployStrategy",
+          "name": "RequestBody87Fdf22Dd64EOverrideParamsAutoDevopsDeployStrategy",
           "modelAsString": false,
           "values": [
             {
@@ -159401,7 +160052,7 @@
           ]
         }
       },
-      "RequestBody4E27310E47B5OverrideParamsSquashOption": {
+      "RequestBody87Fdf22Dd64EOverrideParamsSquashOption": {
         "enum": [
           "never",
           "always",
@@ -159413,7 +160064,7 @@
         "description": "Squash default for project. One of \u0060never\u0060, \u0060always\u0060, \u0060default_on\u0060, or \u0060default_off\u0060.",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody4E27310E47B5OverrideParamsSquashOption",
+          "name": "RequestBody87Fdf22Dd64EOverrideParamsSquashOption",
           "modelAsString": false,
           "values": [
             {
@@ -159435,7 +160086,7 @@
           ]
         }
       },
-      "RequestBody4E27310E47B5OverrideParamsRequirementsAccessLevel": {
+      "RequestBody87Fdf22Dd64EOverrideParamsRequirementsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -159446,7 +160097,7 @@
         "description": "Requirements feature access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody4E27310E47B5OverrideParamsRequirementsAccessLevel",
+          "name": "RequestBody87Fdf22Dd64EOverrideParamsRequirementsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -159464,7 +160115,7 @@
           ]
         }
       },
-      "RequestBody22Adef8EcfeaOverrideParamsBuildGitStrategy": {
+      "RequestBodyF3A212C3C4F4OverrideParamsBuildGitStrategy": {
         "enum": [
           "fetch",
           "clone"
@@ -159474,7 +160125,7 @@
         "description": "The Git strategy. Defaults to \u0060fetch\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody22Adef8EcfeaOverrideParamsBuildGitStrategy",
+          "name": "RequestBodyF3A212C3C4F4OverrideParamsBuildGitStrategy",
           "modelAsString": false,
           "values": [
             {
@@ -159488,7 +160139,7 @@
           ]
         }
       },
-      "RequestBody22Adef8EcfeaOverrideParamsAutoCancelPendingPipelines": {
+      "RequestBodyF3A212C3C4F4OverrideParamsAutoCancelPendingPipelines": {
         "enum": [
           "disabled",
           "enabled"
@@ -159498,7 +160149,7 @@
         "description": "Auto-cancel pending pipelines",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody22Adef8EcfeaOverrideParamsAutoCancelPendingPipelines",
+          "name": "RequestBodyF3A212C3C4F4OverrideParamsAutoCancelPendingPipelines",
           "modelAsString": false,
           "values": [
             {
@@ -159512,7 +160163,7 @@
           ]
         }
       },
-      "RequestBody22Adef8EcfeaOverrideParamsIssuesAccessLevel": {
+      "RequestBodyF3A212C3C4F4OverrideParamsIssuesAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -159523,7 +160174,7 @@
         "description": "Issues access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody22Adef8EcfeaOverrideParamsIssuesAccessLevel",
+          "name": "RequestBodyF3A212C3C4F4OverrideParamsIssuesAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -159541,7 +160192,7 @@
           ]
         }
       },
-      "RequestBody22Adef8EcfeaOverrideParamsRepositoryAccessLevel": {
+      "RequestBodyF3A212C3C4F4OverrideParamsRepositoryAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -159552,7 +160203,7 @@
         "description": "Repository access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody22Adef8EcfeaOverrideParamsRepositoryAccessLevel",
+          "name": "RequestBodyF3A212C3C4F4OverrideParamsRepositoryAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -159570,7 +160221,7 @@
           ]
         }
       },
-      "RequestBody22Adef8EcfeaOverrideParamsMergeRequestsAccessLevel": {
+      "RequestBodyF3A212C3C4F4OverrideParamsMergeRequestsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -159581,7 +160232,7 @@
         "description": "Merge requests access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody22Adef8EcfeaOverrideParamsMergeRequestsAccessLevel",
+          "name": "RequestBodyF3A212C3C4F4OverrideParamsMergeRequestsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -159599,7 +160250,7 @@
           ]
         }
       },
-      "RequestBody22Adef8EcfeaOverrideParamsForkingAccessLevel": {
+      "RequestBodyF3A212C3C4F4OverrideParamsForkingAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -159610,7 +160261,7 @@
         "description": "Forks access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody22Adef8EcfeaOverrideParamsForkingAccessLevel",
+          "name": "RequestBodyF3A212C3C4F4OverrideParamsForkingAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -159628,7 +160279,7 @@
           ]
         }
       },
-      "RequestBody22Adef8EcfeaOverrideParamsWikiAccessLevel": {
+      "RequestBodyF3A212C3C4F4OverrideParamsWikiAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -159639,7 +160290,7 @@
         "description": "Wiki access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody22Adef8EcfeaOverrideParamsWikiAccessLevel",
+          "name": "RequestBodyF3A212C3C4F4OverrideParamsWikiAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -159657,7 +160308,7 @@
           ]
         }
       },
-      "RequestBody22Adef8EcfeaOverrideParamsBuildsAccessLevel": {
+      "RequestBodyF3A212C3C4F4OverrideParamsBuildsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -159668,7 +160319,7 @@
         "description": "Builds access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody22Adef8EcfeaOverrideParamsBuildsAccessLevel",
+          "name": "RequestBodyF3A212C3C4F4OverrideParamsBuildsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -159686,7 +160337,7 @@
           ]
         }
       },
-      "RequestBody22Adef8EcfeaOverrideParamsSnippetsAccessLevel": {
+      "RequestBodyF3A212C3C4F4OverrideParamsSnippetsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -159697,7 +160348,7 @@
         "description": "Snippets access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody22Adef8EcfeaOverrideParamsSnippetsAccessLevel",
+          "name": "RequestBodyF3A212C3C4F4OverrideParamsSnippetsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -159715,7 +160366,7 @@
           ]
         }
       },
-      "RequestBody22Adef8EcfeaOverrideParamsPackageRegistryAccessLevel": {
+      "RequestBodyF3A212C3C4F4OverrideParamsPackageRegistryAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -159727,7 +160378,7 @@
         "description": "Controls visibility of the package registry. One of \u0060disabled\u0060, \u0060private\u0060, \u0060enabled\u0060 or \u0060public\u0060. \u0060private\u0060 will make the package registry accessible only to project members (reporter role and above). \u0060enabled\u0060 will make the package registry accessible to everyone who has access to the project. \u0060public\u0060 will make the package registry accessible to everyone. \u0060disabled\u0060 will disable the package registry",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody22Adef8EcfeaOverrideParamsPackageRegistryAccessLevel",
+          "name": "RequestBodyF3A212C3C4F4OverrideParamsPackageRegistryAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -159749,7 +160400,7 @@
           ]
         }
       },
-      "RequestBody22Adef8EcfeaOverrideParamsPagesAccessLevel": {
+      "RequestBodyF3A212C3C4F4OverrideParamsPagesAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -159761,7 +160412,7 @@
         "description": "Pages access level. One of \u0060disabled\u0060, \u0060private\u0060, \u0060enabled\u0060 or \u0060public\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody22Adef8EcfeaOverrideParamsPagesAccessLevel",
+          "name": "RequestBodyF3A212C3C4F4OverrideParamsPagesAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -159783,7 +160434,7 @@
           ]
         }
       },
-      "RequestBody22Adef8EcfeaOverrideParamsAnalyticsAccessLevel": {
+      "RequestBodyF3A212C3C4F4OverrideParamsAnalyticsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -159794,7 +160445,7 @@
         "description": "Analytics access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody22Adef8EcfeaOverrideParamsAnalyticsAccessLevel",
+          "name": "RequestBodyF3A212C3C4F4OverrideParamsAnalyticsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -159812,7 +160463,7 @@
           ]
         }
       },
-      "RequestBody22Adef8EcfeaOverrideParamsContainerRegistryAccessLevel": {
+      "RequestBodyF3A212C3C4F4OverrideParamsContainerRegistryAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -159823,7 +160474,7 @@
         "description": "Controls visibility of the container registry. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060. \u0060private\u0060 will make the container registry accessible only to project members (reporter role and above). \u0060enabled\u0060 will make the container registry accessible to everyone who has access to the project. \u0060disabled\u0060 will disable the container registry",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody22Adef8EcfeaOverrideParamsContainerRegistryAccessLevel",
+          "name": "RequestBodyF3A212C3C4F4OverrideParamsContainerRegistryAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -159841,7 +160492,7 @@
           ]
         }
       },
-      "RequestBody22Adef8EcfeaOverrideParamsSecurityAndComplianceAccessLevel": {
+      "RequestBodyF3A212C3C4F4OverrideParamsSecurityAndComplianceAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -159852,7 +160503,7 @@
         "description": "Security and compliance access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody22Adef8EcfeaOverrideParamsSecurityAndComplianceAccessLevel",
+          "name": "RequestBodyF3A212C3C4F4OverrideParamsSecurityAndComplianceAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -159870,7 +160521,7 @@
           ]
         }
       },
-      "RequestBody22Adef8EcfeaOverrideParamsReleasesAccessLevel": {
+      "RequestBodyF3A212C3C4F4OverrideParamsReleasesAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -159881,7 +160532,7 @@
         "description": "Releases access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody22Adef8EcfeaOverrideParamsReleasesAccessLevel",
+          "name": "RequestBodyF3A212C3C4F4OverrideParamsReleasesAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -159899,7 +160550,7 @@
           ]
         }
       },
-      "RequestBody22Adef8EcfeaOverrideParamsEnvironmentsAccessLevel": {
+      "RequestBodyF3A212C3C4F4OverrideParamsEnvironmentsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -159910,7 +160561,7 @@
         "description": "Environments access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody22Adef8EcfeaOverrideParamsEnvironmentsAccessLevel",
+          "name": "RequestBodyF3A212C3C4F4OverrideParamsEnvironmentsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -159928,7 +160579,7 @@
           ]
         }
       },
-      "RequestBody22Adef8EcfeaOverrideParamsFeatureFlagsAccessLevel": {
+      "RequestBodyF3A212C3C4F4OverrideParamsFeatureFlagsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -159939,7 +160590,7 @@
         "description": "Feature flags access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody22Adef8EcfeaOverrideParamsFeatureFlagsAccessLevel",
+          "name": "RequestBodyF3A212C3C4F4OverrideParamsFeatureFlagsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -159957,7 +160608,7 @@
           ]
         }
       },
-      "RequestBody22Adef8EcfeaOverrideParamsInfrastructureAccessLevel": {
+      "RequestBodyF3A212C3C4F4OverrideParamsInfrastructureAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -159968,7 +160619,7 @@
         "description": "Infrastructure access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody22Adef8EcfeaOverrideParamsInfrastructureAccessLevel",
+          "name": "RequestBodyF3A212C3C4F4OverrideParamsInfrastructureAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -159986,7 +160637,7 @@
           ]
         }
       },
-      "RequestBody22Adef8EcfeaOverrideParamsMonitorAccessLevel": {
+      "RequestBodyF3A212C3C4F4OverrideParamsMonitorAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -159997,7 +160648,7 @@
         "description": "Monitor access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody22Adef8EcfeaOverrideParamsMonitorAccessLevel",
+          "name": "RequestBodyF3A212C3C4F4OverrideParamsMonitorAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -160015,7 +160666,7 @@
           ]
         }
       },
-      "RequestBody22Adef8EcfeaOverrideParamsModelExperimentsAccessLevel": {
+      "RequestBodyF3A212C3C4F4OverrideParamsModelExperimentsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -160026,7 +160677,7 @@
         "description": "Model experiments access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody22Adef8EcfeaOverrideParamsModelExperimentsAccessLevel",
+          "name": "RequestBodyF3A212C3C4F4OverrideParamsModelExperimentsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -160044,7 +160695,7 @@
           ]
         }
       },
-      "RequestBody22Adef8EcfeaOverrideParamsModelRegistryAccessLevel": {
+      "RequestBodyF3A212C3C4F4OverrideParamsModelRegistryAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -160055,7 +160706,7 @@
         "description": "Model registry access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody22Adef8EcfeaOverrideParamsModelRegistryAccessLevel",
+          "name": "RequestBodyF3A212C3C4F4OverrideParamsModelRegistryAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -160073,7 +160724,7 @@
           ]
         }
       },
-      "RequestBody22Adef8EcfeaOverrideParamsResourceGroupDefaultProcessMode": {
+      "RequestBodyF3A212C3C4F4OverrideParamsResourceGroupDefaultProcessMode": {
         "enum": [
           "unordered",
           "oldest_first",
@@ -160085,7 +160736,7 @@
         "description": "The process mode of the resource group",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody22Adef8EcfeaOverrideParamsResourceGroupDefaultProcessMode",
+          "name": "RequestBodyF3A212C3C4F4OverrideParamsResourceGroupDefaultProcessMode",
           "modelAsString": false,
           "values": [
             {
@@ -160107,7 +160758,7 @@
           ]
         }
       },
-      "RequestBody22Adef8EcfeaOverrideParamsVisibility": {
+      "RequestBodyF3A212C3C4F4OverrideParamsVisibility": {
         "enum": [
           "private",
           "internal",
@@ -160118,7 +160769,7 @@
         "description": "The visibility of the project.",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody22Adef8EcfeaOverrideParamsVisibility",
+          "name": "RequestBodyF3A212C3C4F4OverrideParamsVisibility",
           "modelAsString": false,
           "values": [
             {
@@ -160136,7 +160787,7 @@
           ]
         }
       },
-      "RequestBody22Adef8EcfeaOverrideParamsMergeMethod": {
+      "RequestBodyF3A212C3C4F4OverrideParamsMergeMethod": {
         "enum": [
           "ff",
           "rebase_merge",
@@ -160147,7 +160798,7 @@
         "description": "The merge method used when merging merge requests",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody22Adef8EcfeaOverrideParamsMergeMethod",
+          "name": "RequestBodyF3A212C3C4F4OverrideParamsMergeMethod",
           "modelAsString": false,
           "values": [
             {
@@ -160165,7 +160816,7 @@
           ]
         }
       },
-      "RequestBody22Adef8EcfeaOverrideParamsAutoDevopsDeployStrategy": {
+      "RequestBodyF3A212C3C4F4OverrideParamsAutoDevopsDeployStrategy": {
         "enum": [
           "continuous",
           "manual",
@@ -160176,7 +160827,7 @@
         "description": "Auto Deploy strategy",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody22Adef8EcfeaOverrideParamsAutoDevopsDeployStrategy",
+          "name": "RequestBodyF3A212C3C4F4OverrideParamsAutoDevopsDeployStrategy",
           "modelAsString": false,
           "values": [
             {
@@ -160194,7 +160845,7 @@
           ]
         }
       },
-      "RequestBody22Adef8EcfeaOverrideParamsSquashOption": {
+      "RequestBodyF3A212C3C4F4OverrideParamsSquashOption": {
         "enum": [
           "never",
           "always",
@@ -160206,7 +160857,7 @@
         "description": "Squash default for project. One of \u0060never\u0060, \u0060always\u0060, \u0060default_on\u0060, or \u0060default_off\u0060.",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody22Adef8EcfeaOverrideParamsSquashOption",
+          "name": "RequestBodyF3A212C3C4F4OverrideParamsSquashOption",
           "modelAsString": false,
           "values": [
             {
@@ -160228,7 +160879,7 @@
           ]
         }
       },
-      "RequestBody22Adef8EcfeaOverrideParamsRequirementsAccessLevel": {
+      "RequestBodyF3A212C3C4F4OverrideParamsRequirementsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -160239,7 +160890,7 @@
         "description": "Requirements feature access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody22Adef8EcfeaOverrideParamsRequirementsAccessLevel",
+          "name": "RequestBodyF3A212C3C4F4OverrideParamsRequirementsAccessLevel",
           "modelAsString": false,
           "values": [
             {
