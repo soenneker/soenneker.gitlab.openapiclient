@@ -3324,6 +3324,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ProjectMembersApiLimit { get; set; }
 #endif
+        /// <summary>The project_repositories_blobs_batch_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ProjectRepositoriesBlobsBatchLimit { get; set; }
+#nullable restore
+#else
+        public string ProjectRepositoriesBlobsBatchLimit { get; set; }
+#endif
         /// <summary>The project_runner_token_expiration_interval property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -5523,6 +5531,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "project_invited_groups_api_limit", n => { ProjectInvitedGroupsApiLimit = n.GetStringValue(); } },
                 { "project_jobs_api_rate_limit", n => { ProjectJobsApiRateLimit = n.GetStringValue(); } },
                 { "project_members_api_limit", n => { ProjectMembersApiLimit = n.GetStringValue(); } },
+                { "project_repositories_blobs_batch_limit", n => { ProjectRepositoriesBlobsBatchLimit = n.GetStringValue(); } },
                 { "project_runner_token_expiration_interval", n => { ProjectRunnerTokenExpirationInterval = n.GetStringValue(); } },
                 { "project_secrets_limit", n => { ProjectSecretsLimit = n.GetStringValue(); } },
                 { "projects_api_limit", n => { ProjectsApiLimit = n.GetStringValue(); } },
@@ -6173,6 +6182,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("project_invited_groups_api_limit", ProjectInvitedGroupsApiLimit);
             writer.WriteStringValue("project_jobs_api_rate_limit", ProjectJobsApiRateLimit);
             writer.WriteStringValue("project_members_api_limit", ProjectMembersApiLimit);
+            writer.WriteStringValue("project_repositories_blobs_batch_limit", ProjectRepositoriesBlobsBatchLimit);
             writer.WriteStringValue("project_runner_token_expiration_interval", ProjectRunnerTokenExpirationInterval);
             writer.WriteStringValue("projects_api_limit", ProjectsApiLimit);
             writer.WriteStringValue("projects_api_rate_limit_unauthenticated", ProjectsApiRateLimitUnauthenticated);

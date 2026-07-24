@@ -7,30 +7,31 @@ using System.IO;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>
-    /// Storage paths for new projects with a weighted value ranging from 0 to 100
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RequestBody224978A87E6FRepositoryStoragesWeighted : IAdditionalDataHolder, IParsable
+    #pragma warning disable CS1591
+    public partial class RequestBodyE7D6020C5EceDefaultBranchProtectionDefaultsAllowedToPushItem : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
+        /// <summary>A valid access level</summary>
+        public int? AccessLevel { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody224978A87E6FRepositoryStoragesWeighted"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE7D6020C5EceDefaultBranchProtectionDefaultsAllowedToPushItem"/> and sets the default values.
         /// </summary>
-        public RequestBody224978A87E6FRepositoryStoragesWeighted()
+        public RequestBodyE7D6020C5EceDefaultBranchProtectionDefaultsAllowedToPushItem()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody224978A87E6FRepositoryStoragesWeighted"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE7D6020C5EceDefaultBranchProtectionDefaultsAllowedToPushItem"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody224978A87E6FRepositoryStoragesWeighted CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE7D6020C5EceDefaultBranchProtectionDefaultsAllowedToPushItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody224978A87E6FRepositoryStoragesWeighted();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE7D6020C5EceDefaultBranchProtectionDefaultsAllowedToPushItem();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -40,6 +41,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "access_level", n => { AccessLevel = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -49,6 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteIntValue("access_level", AccessLevel);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
