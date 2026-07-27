@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Slack.Trigger
         {
         }
         /// <summary>
-        /// Added in GitLab 9.4
+        /// Triggers a global slack command.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson329"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Slack.Trigger
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson329>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson329.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Added in GitLab 9.4
+        /// Triggers a global slack command.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

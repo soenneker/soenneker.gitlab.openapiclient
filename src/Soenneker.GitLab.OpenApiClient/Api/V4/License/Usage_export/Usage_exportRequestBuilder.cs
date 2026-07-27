@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.License.Usage_export
         {
         }
         /// <summary>
-        /// Get usage data on the currently active license
+        /// Downloads usage data for the currently active license.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson80"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.License.Usage_export
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson80>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson80.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get usage data on the currently active license
+        /// Downloads usage data for the currently active license.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

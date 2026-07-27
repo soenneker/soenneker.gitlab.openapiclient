@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Managed_licenses
         {
         }
         /// <summary>
-        /// Get project software license policies
+        /// Lists all software license policies for a specified project.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesManagedLicense"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Managed_licenses
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesManagedLicense>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesManagedLicense.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Create a new software license policy in a project
+        /// Creates a software license policy for a specified project.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesManagedLicense"/></returns>
         /// <param name="body">The request body</param>
@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Managed_licenses
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesManagedLicense>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesManagedLicense.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get project software license policies
+        /// Lists all software license policies for a specified project.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -104,7 +104,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Managed_licenses
             return requestInfo;
         }
         /// <summary>
-        /// Create a new software license policy in a project
+        /// Creates a software license policy for a specified project.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -135,7 +135,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Managed_licenses
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Managed_licenses.Managed_licensesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get project software license policies
+        /// Lists all software license policies for a specified project.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Managed_licensesRequestBuilderGetQueryParameters 

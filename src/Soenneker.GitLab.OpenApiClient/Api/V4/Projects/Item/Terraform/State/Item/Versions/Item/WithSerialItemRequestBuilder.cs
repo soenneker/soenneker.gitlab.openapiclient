@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Terraform.State.It
         {
         }
         /// <summary>
-        /// Delete a Terraform state version
+        /// Deletes a specified Terraform state version.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Terraform.State.It
             await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get a Terraform state version
+        /// Retrieves a specified Terraform state version.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson175"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -69,7 +69,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Terraform.State.It
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson175>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson175.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Delete a Terraform state version
+        /// Deletes a specified Terraform state version.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -88,7 +88,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Terraform.State.It
             return requestInfo;
         }
         /// <summary>
-        /// Get a Terraform state version
+        /// Retrieves a specified Terraform state version.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

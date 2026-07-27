@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Terraform.State.It
         {
         }
         /// <summary>
-        /// Delete a Terraform state of a certain name
+        /// Deletes a Terraform state for a specified project.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -69,7 +69,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Terraform.State.It
             await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get a Terraform state by its name
+        /// Retrieves a Terraform state by name for a specified project.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson178"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -87,7 +87,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Terraform.State.It
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson178>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson178.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Add a new Terraform state or update an existing one
+        /// Creates or updates a Terraform state for a specified project.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson179"/></returns>
         /// <param name="body">The request body</param>
@@ -107,7 +107,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Terraform.State.It
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson179>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson179.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Delete a Terraform state of a certain name
+        /// Deletes a Terraform state for a specified project.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -126,7 +126,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Terraform.State.It
             return requestInfo;
         }
         /// <summary>
-        /// Get a Terraform state by its name
+        /// Retrieves a Terraform state by name for a specified project.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -145,7 +145,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Terraform.State.It
             return requestInfo;
         }
         /// <summary>
-        /// Add a new Terraform state or update an existing one
+        /// Creates or updates a Terraform state for a specified project.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -176,7 +176,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Terraform.State.It
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Terraform.State.Item.WithNameItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get a Terraform state by its name
+        /// Retrieves a Terraform state by name for a specified project.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithNameItemRequestBuilderGetQueryParameters 

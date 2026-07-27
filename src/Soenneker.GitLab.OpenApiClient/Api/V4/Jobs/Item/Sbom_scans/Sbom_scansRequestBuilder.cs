@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Sbom_scans
         {
         }
         /// <summary>
-        /// Upload an SBOM file to be scanned
+        /// Uploads an SBOM file to be scanned for a specified job.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSecurityVulnerabilityScanningSbomScan"/></returns>
         /// <param name="body">The request body</param>
@@ -73,7 +73,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Sbom_scans
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSecurityVulnerabilityScanningSbomScan>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSecurityVulnerabilityScanningSbomScan.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Upload an SBOM file to be scanned
+        /// Uploads an SBOM file to be scanned for a specified job.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

@@ -40,7 +40,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Artifacts
         {
         }
         /// <summary>
-        /// Download the artifacts file for job
+        /// Downloads artifacts for a specified job.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson435"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -58,7 +58,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Artifacts
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson435>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson435.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Upload a job artifact
+        /// Uploads artifacts for a specified job.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson434"/></returns>
         /// <param name="body">The request body</param>
@@ -78,7 +78,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Artifacts
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson434>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson434.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Download the artifacts file for job
+        /// Downloads artifacts for a specified job.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -97,7 +97,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Artifacts
             return requestInfo;
         }
         /// <summary>
-        /// Upload a job artifact
+        /// Uploads artifacts for a specified job.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -128,7 +128,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Artifacts
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Artifacts.ArtifactsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Download the artifacts file for job
+        /// Downloads artifacts for a specified job.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ArtifactsRequestBuilderGetQueryParameters 

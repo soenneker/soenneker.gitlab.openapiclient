@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Artifacts.Authorize
         {
         }
         /// <summary>
-        /// Authorize uploading job artifact
+        /// Authorizes uploading artifacts for a specified job.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson433"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Artifacts.Authorize
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson433>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson433.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Authorize uploading job artifact
+        /// Authorizes uploading artifacts for a specified job.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

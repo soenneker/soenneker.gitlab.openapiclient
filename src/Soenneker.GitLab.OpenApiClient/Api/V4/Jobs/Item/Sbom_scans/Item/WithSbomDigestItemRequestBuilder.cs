@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Sbom_scans.Item
         {
         }
         /// <summary>
-        /// Download an SBOM scan result file
+        /// Downloads an SBOM scan result file for a specified job.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSecurityVulnerabilityScanningSbomScan"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Sbom_scans.Item
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSecurityVulnerabilityScanningSbomScan>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSecurityVulnerabilityScanningSbomScan.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Reuse sbom scan results if scans for sboms with given digest already exist
+        /// Reuses existing SBOM scan results if scans for the specified digest already exist.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSecurityVulnerabilityScanningSbomScan"/></returns>
         /// <param name="body">The request body</param>
@@ -72,7 +72,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Sbom_scans.Item
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSecurityVulnerabilityScanningSbomScan>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSecurityVulnerabilityScanningSbomScan.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Download an SBOM scan result file
+        /// Downloads an SBOM scan result file for a specified job.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -91,7 +91,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Sbom_scans.Item
             return requestInfo;
         }
         /// <summary>
-        /// Reuse sbom scan results if scans for sboms with given digest already exist
+        /// Reuses existing SBOM scan results if scans for the specified digest already exist.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

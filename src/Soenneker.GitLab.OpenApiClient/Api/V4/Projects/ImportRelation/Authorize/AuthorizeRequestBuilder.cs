@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.ImportRelation.Authoriz
         {
         }
         /// <summary>
-        /// This feature was introduced in GitLab 16.11
+        /// Authorizes uploading a project relation import file. This feature was introduced in GitLab 16.11.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson238"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.ImportRelation.Authoriz
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson238>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson238.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 16.11
+        /// Authorizes uploading a project relation import file. This feature was introduced in GitLab 16.11.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

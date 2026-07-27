@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Services.Mattermos
         {
         }
         /// <summary>
-        /// Added in GitLab 8.13
+        /// Triggers a slash command for mattermost-slash-commands.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson325"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Services.Mattermos
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson325>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson325.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Added in GitLab 8.13
+        /// Triggers a slash command for mattermost-slash-commands.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

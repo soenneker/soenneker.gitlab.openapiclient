@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Security_scans.Sas
         {
         }
         /// <summary>
-        /// Scan a file for vulnerabilities.
+        /// Scans a specified file for security vulnerabilities using SAST.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson2"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Security_scans.Sas
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson2>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson2.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Scan a file for vulnerabilities.
+        /// Scans a specified file for security vulnerabilities using SAST.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

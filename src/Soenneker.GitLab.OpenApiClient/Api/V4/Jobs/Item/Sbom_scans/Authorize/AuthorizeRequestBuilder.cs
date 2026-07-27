@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Sbom_scans.Authorize
         {
         }
         /// <summary>
-        /// Authorize uploading SBOM file to be scanned
+        /// Authorizes uploading an SBOM file to be scanned for a specified job.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponse"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Sbom_scans.Authorize
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Authorize uploading SBOM file to be scanned
+        /// Authorizes uploading an SBOM file to be scanned for a specified job.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

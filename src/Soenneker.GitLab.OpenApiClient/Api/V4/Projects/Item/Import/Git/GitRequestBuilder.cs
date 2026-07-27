@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Import.Git
         {
         }
         /// <summary>
-        /// This feature was introduced in GitLab 18.10.
+        /// Imports a project from a specified Git URL. This feature was introduced in GitLab 18.10.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectImportStatus"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Import.Git
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectImportStatus>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectImportStatus.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 18.10.
+        /// Imports a project from a specified Git URL. This feature was introduced in GitLab 18.10.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

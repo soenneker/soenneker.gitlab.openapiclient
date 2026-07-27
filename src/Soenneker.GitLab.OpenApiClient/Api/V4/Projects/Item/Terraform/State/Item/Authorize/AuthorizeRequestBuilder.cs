@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Terraform.State.It
         {
         }
         /// <summary>
-        /// This feature was introduced in GitLab 18.5
+        /// Authorizes uploading a Terraform state for a specified project. This feature was introduced in GitLab 18.5.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson181"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Terraform.State.It
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson181>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson181.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 18.5
+        /// Authorizes uploading a Terraform state for a specified project. This feature was introduced in GitLab 18.5.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

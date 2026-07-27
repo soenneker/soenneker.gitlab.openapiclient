@@ -70,7 +70,8 @@
         "tags": [
           "Software composition analysis"
         ],
-        "summary": "Authorize uploading SBOM file to be scanned",
+        "summary": "Authorize SBOM file upload",
+        "description": "Authorizes uploading an SBOM file to be scanned for a specified job.",
         "operationId": "PostApiV4JobsIdSbomScansAuthorize",
         "parameters": [
           {
@@ -111,7 +112,8 @@
         "tags": [
           "Software composition analysis"
         ],
-        "summary": "Upload an SBOM file to be scanned",
+        "summary": "Upload an SBOM file",
+        "description": "Uploads an SBOM file to be scanned for a specified job.",
         "operationId": "PostApiV4JobsIdSbomScans",
         "parameters": [
           {
@@ -152,7 +154,8 @@
         "tags": [
           "Software composition analysis"
         ],
-        "summary": "Reuse sbom scan results if scans for sboms with given digest already exist",
+        "summary": "Reuse SBOM scan results",
+        "description": "Reuses existing SBOM scan results if scans for the specified digest already exist.",
         "operationId": "PostApiV4JobsIdSbomScansSbomDigest",
         "parameters": [
           {
@@ -200,7 +203,8 @@
         "tags": [
           "Software composition analysis"
         ],
-        "summary": "Download an SBOM scan result file",
+        "summary": "Download an SBOM scan result",
+        "description": "Downloads an SBOM scan result file for a specified job.",
         "operationId": "GetApiV4JobsIdSbomScansSbomScanId",
         "parameters": [
           {
@@ -301,7 +305,8 @@
         "tags": [
           "Security scans"
         ],
-        "summary": "Scan a file for vulnerabilities.",
+        "summary": "Scan a file for vulnerabilities",
+        "description": "Scans a specified file for security vulnerabilities using SAST.",
         "operationId": "PostApiV4ProjectsIdSecurityScansSastSastEndpoint",
         "parameters": [
           {
@@ -5898,7 +5903,8 @@
         "tags": [
           "Licenses"
         ],
-        "summary": "Get project software license policies",
+        "summary": "List all software license policies",
+        "description": "Lists all software license policies for a specified project.",
         "operationId": "GetApiV4ProjectsIdManagedLicenses",
         "parameters": [
           {
@@ -5958,7 +5964,8 @@
         "tags": [
           "Licenses"
         ],
-        "summary": "Create a new software license policy in a project",
+        "summary": "Create a software license policy",
+        "description": "Creates a software license policy for a specified project.",
         "operationId": "PostApiV4ProjectsIdManagedLicenses",
         "parameters": [
           {
@@ -6007,7 +6014,8 @@
         "tags": [
           "Licenses"
         ],
-        "summary": "Get a specific software license policy from a project",
+        "summary": "Retrieve a software license policy",
+        "description": "Retrieves a specified software license policy from a project.",
         "operationId": "GetApiV4ProjectsIdManagedLicensesManagedLicenseId",
         "parameters": [
           {
@@ -6054,7 +6062,8 @@
         "tags": [
           "Licenses"
         ],
-        "summary": "Update an existing software license policy from a project",
+        "summary": "Update a software license policy",
+        "description": "Updates a specified software license policy for a project.",
         "operationId": "PatchApiV4ProjectsIdManagedLicensesManagedLicenseId",
         "parameters": [
           {
@@ -6110,7 +6119,8 @@
         "tags": [
           "Licenses"
         ],
-        "summary": "Delete an existing software license policy from a project",
+        "summary": "Delete a software license policy",
+        "description": "Deletes a specified software license policy from a project.",
         "operationId": "DeleteApiV4ProjectsIdManagedLicensesManagedLicenseId",
         "parameters": [
           {
@@ -9498,8 +9508,8 @@
         "tags": [
           "Licenses"
         ],
-        "summary": "Retrieve license usage data",
-        "description": "Get usage data on the currently active license",
+        "summary": "Download license usage data",
+        "description": "Downloads usage data for the currently active license.",
         "operationId": "GetApiV4LicenseUsageExport",
         "responses": {
           "200": {
@@ -22190,7 +22200,8 @@
         "tags": [
           "Resource events"
         ],
-        "summary": "Get a list of issue resource state events",
+        "summary": "List all project issue state events",
+        "description": "Lists all state events for a specified issue.",
         "operationId": "GetApiV4ProjectsIdIssuesEventableIdResourceStateEvents",
         "parameters": [
           {
@@ -22253,7 +22264,8 @@
         "tags": [
           "Resource events"
         ],
-        "summary": "Get a single issue resource state event",
+        "summary": "Retrieve an issue state event",
+        "description": "Retrieves a state event for a specified project issue.",
         "operationId": "GetApiV4ProjectsIdIssuesEventableIdResourceStateEventsEventId",
         "parameters": [
           {
@@ -22303,7 +22315,8 @@
         "tags": [
           "Resource events"
         ],
-        "summary": "Get a list of merge request resource state events",
+        "summary": "List all project merge request state events",
+        "description": "Lists all state events for a specified merge request.",
         "operationId": "GetApiV4ProjectsIdMergeRequestsEventableIdResourceStateEvents",
         "parameters": [
           {
@@ -22366,7 +22379,8 @@
         "tags": [
           "Resource events"
         ],
-        "summary": "Get a single merge request resource state event",
+        "summary": "Retrieve a merge request state event",
+        "description": "Retrieves a state event for a specified project merge request.",
         "operationId": "GetApiV4ProjectsIdMergeRequestsEventableIdResourceStateEventsEventId",
         "parameters": [
           {
@@ -22416,7 +22430,8 @@
         "tags": [
           "Resource events"
         ],
-        "summary": "Get a list of epic resource state events",
+        "summary": "List all group epic state events",
+        "description": "Lists all state events for a specified epic.",
         "operationId": "GetApiV4GroupsIdEpicsEventableIdResourceStateEvents",
         "parameters": [
           {
@@ -22479,7 +22494,8 @@
         "tags": [
           "Resource events"
         ],
-        "summary": "Get a single epic resource state event",
+        "summary": "Retrieve an epic state event",
+        "description": "Retrieves a state event for a specified group epic.",
         "operationId": "GetApiV4GroupsIdEpicsEventableIdResourceStateEventsEventId",
         "parameters": [
           {
@@ -33465,8 +33481,8 @@
         "tags": [
           "Terraform"
         ],
-        "summary": "Get a Terraform state version",
-        "description": "Get a Terraform state version",
+        "summary": "Retrieve a Terraform state version",
+        "description": "Retrieves a specified Terraform state version.",
         "operationId": "GetApiV4ProjectsIdTerraformStateNameVersionsSerial",
         "parameters": [
           {
@@ -33523,7 +33539,7 @@
           "Terraform"
         ],
         "summary": "Delete a Terraform state version",
-        "description": "Delete a Terraform state version",
+        "description": "Deletes a specified Terraform state version.",
         "operationId": "DeleteApiV4ProjectsIdTerraformStateNameVersionsSerial",
         "parameters": [
           {
@@ -33777,8 +33793,8 @@
         "tags": [
           "Terraform"
         ],
-        "summary": "Get a Terraform state by its name",
-        "description": "Get a Terraform state by its name",
+        "summary": "Retrieve a Terraform state",
+        "description": "Retrieves a Terraform state by name for a specified project.",
         "operationId": "GetApiV4ProjectsIdTerraformStateName",
         "parameters": [
           {
@@ -33835,8 +33851,8 @@
         "tags": [
           "Terraform"
         ],
-        "summary": "Add a new Terraform state or update an existing one",
-        "description": "Add a new Terraform state or update an existing one",
+        "summary": "Create or update a Terraform state",
+        "description": "Creates or updates a Terraform state for a specified project.",
         "operationId": "PostApiV4ProjectsIdTerraformStateName",
         "parameters": [
           {
@@ -33892,8 +33908,8 @@
         "tags": [
           "Terraform"
         ],
-        "summary": "Delete a Terraform state of a certain name",
-        "description": "Delete a Terraform state of a certain name",
+        "summary": "Delete a Terraform state",
+        "description": "Deletes a Terraform state for a specified project.",
         "operationId": "DeleteApiV4ProjectsIdTerraformStateName",
         "parameters": [
           {
@@ -33943,7 +33959,7 @@
           "Terraform"
         ],
         "summary": "Authorize Terraform state upload",
-        "description": "This feature was introduced in GitLab 18.5",
+        "description": "Authorizes uploading a Terraform state for a specified project. This feature was introduced in GitLab 18.5.",
         "operationId": "PostApiV4ProjectsIdTerraformStateNameAuthorize",
         "parameters": [
           {
@@ -33992,8 +34008,8 @@
         "tags": [
           "Terraform"
         ],
-        "summary": "Lock a Terraform state of a certain name",
-        "description": "Lock a Terraform state of a certain name",
+        "summary": "Lock a Terraform state",
+        "description": "Locks a Terraform state for a specified project.",
         "operationId": "PostApiV4ProjectsIdTerraformStateNameLock",
         "parameters": [
           {
@@ -34049,8 +34065,8 @@
         "tags": [
           "Terraform"
         ],
-        "summary": "Unlock a Terraform state of a certain name",
-        "description": "Unlock a Terraform state of a certain name",
+        "summary": "Unlock a Terraform state",
+        "description": "Unlocks a Terraform state for a specified project.",
         "operationId": "DeleteApiV4ProjectsIdTerraformStateNameLock",
         "parameters": [
           {
@@ -36039,8 +36055,8 @@
           "Search",
           "Projects"
         ],
-        "summary": "Search on GitLab within a project",
-        "description": "This feature was introduced in GitLab 10.5.",
+        "summary": "Search a project",
+        "description": "Searches for content in a specified project.",
         "operationId": "GetApiV4ProjectsIdDashSearch",
         "parameters": [
           {
@@ -38254,6 +38270,83 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ApiEntitiesBatchBlob"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v4/projects/{id}/repository/diverging_commits": {
+      "get": {
+        "tags": [
+          "Repositories"
+        ],
+        "summary": "Retrieve diverging commit counts between two refs",
+        "operationId": "GetApiV4ProjectsIdRepositoryDivergingCommits",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the project",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "example": 1
+          },
+          {
+            "name": "from",
+            "in": "query",
+            "description": "The ref to compare from",
+            "required": true,
+            "schema": {
+              "maxLength": 255,
+              "type": "string",
+              "nullable": true
+            },
+            "example": "main"
+          },
+          {
+            "name": "to",
+            "in": "query",
+            "description": "The ref to compare to",
+            "required": true,
+            "schema": {
+              "maxLength": 255,
+              "type": "string",
+              "nullable": true
+            },
+            "example": "feature"
+          },
+          {
+            "name": "max_count",
+            "in": "query",
+            "description": "Maximum number of commits to count. 0 for unlimited",
+            "schema": {
+              "minimum": 0,
+              "type": "integer",
+              "default": 0,
+              "nullable": true
+            },
+            "example": 1000
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesDivergingCommitCount"
                 }
               }
             }
@@ -45193,7 +45286,7 @@
           "Project import"
         ],
         "summary": "Import a project from a Git URL",
-        "description": "This feature was introduced in GitLab 18.10.",
+        "description": "Imports a project from a specified Git URL. This feature was introduced in GitLab 18.10.",
         "operationId": "PostApiV4ProjectsIdImportGit",
         "parameters": [
           {
@@ -45273,8 +45366,8 @@
         "tags": [
           "Project import"
         ],
-        "summary": "Workhorse authorize the project relation import upload",
-        "description": "This feature was introduced in GitLab 16.11",
+        "summary": "Authorize project relation import",
+        "description": "Authorizes uploading a project relation import file. This feature was introduced in GitLab 16.11.",
         "operationId": "PostApiV4ProjectsImportRelationAuthorize",
         "responses": {
           "201": {
@@ -51348,8 +51441,8 @@
           "Projects",
           "Merge requests"
         ],
-        "summary": "Create merge request for missing ci config in project",
-        "description": "Creates a merge request to add missing CI configuration",
+        "summary": "Create a CI configuration merge request",
+        "description": "Creates a merge request to add CI configuration to a specified project.",
         "operationId": "PostApiV4ProjectsIdCreateCiConfig",
         "parameters": [
           {
@@ -60444,7 +60537,8 @@
         "tags": [
           "Metric images"
         ],
-        "summary": "Upload a metric image for an incident",
+        "summary": "Authorize metric image upload",
+        "description": "Authorizes uploading a metric image for a specified incident.",
         "operationId": "PostApiV4ProjectsIdIssuesIssueIidMetricImagesAuthorize",
         "parameters": [
           {
@@ -64342,7 +64436,7 @@
           "Integrations"
         ],
         "summary": "Trigger a slash command for mattermost-slash-commands",
-        "description": "Added in GitLab 8.13",
+        "description": "Triggers a slash command for mattermost-slash-commands.",
         "operationId": "PostApiV4ProjectsIdServicesMattermostSlashCommandsTrigger",
         "parameters": [
           {
@@ -67135,7 +67229,7 @@
           "Integrations"
         ],
         "summary": "Trigger a slash command for mattermost-slash-commands",
-        "description": "Added in GitLab 8.13",
+        "description": "Triggers a slash command for mattermost-slash-commands.",
         "operationId": "PostApiV4ProjectsIdIntegrationsMattermostSlashCommandsTrigger",
         "parameters": [
           {
@@ -69874,7 +69968,7 @@
           "Integrations"
         ],
         "summary": "Trigger a global slack command",
-        "description": "Added in GitLab 9.4",
+        "description": "Triggers a global slack command.",
         "operationId": "PostApiV4SlackTrigger",
         "requestBody": {
           "content": {
@@ -87819,6 +87913,7 @@
           "Jobs"
         ],
         "summary": "Request a job",
+        "description": "Requests a job for a runner to execute.",
         "operationId": "PostApiV4JobsRequest",
         "requestBody": {
           "content": {
@@ -87930,7 +88025,8 @@
         "tags": [
           "Jobs"
         ],
-        "summary": "Authorize uploading job artifact",
+        "summary": "Authorize artifacts upload",
+        "description": "Authorizes uploading artifacts for a specified job.",
         "operationId": "PostApiV4JobsIdArtifactsAuthorize",
         "parameters": [
           {
@@ -87971,7 +88067,8 @@
         "tags": [
           "Jobs"
         ],
-        "summary": "Upload a job artifact",
+        "summary": "Upload job artifacts",
+        "description": "Uploads artifacts for a specified job.",
         "operationId": "PostApiV4JobsIdArtifacts",
         "parameters": [
           {
@@ -88010,7 +88107,8 @@
         "tags": [
           "Jobs"
         ],
-        "summary": "Download the artifacts file for job",
+        "summary": "Download job artifacts",
+        "description": "Downloads artifacts for a specified job.",
         "operationId": "GetApiV4JobsIdArtifacts",
         "parameters": [
           {
@@ -112297,6 +112395,19 @@
           "content": {
             "type": "string",
             "example": "VGhpcyBpcyBhIGZpbGU="
+          }
+        }
+      },
+      "ApiEntitiesDivergingCommitCount": {
+        "type": "object",
+        "properties": {
+          "behind": {
+            "type": "integer",
+            "example": 3
+          },
+          "ahead": {
+            "type": "integer",
+            "example": 5
           }
         }
       },

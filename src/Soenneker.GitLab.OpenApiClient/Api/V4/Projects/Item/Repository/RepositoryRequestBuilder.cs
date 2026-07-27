@@ -9,6 +9,7 @@ using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Changelog;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Compare;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Contributors;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Diverging_commits;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Health;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Merge_base;
@@ -62,6 +63,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Contributors.ContributorsRequestBuilder Contributors
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Contributors.ContributorsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The diverging_commits property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Diverging_commits.Diverging_commitsRequestBuilder Diverging_commits
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Diverging_commits.Diverging_commitsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The files property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.FilesRequestBuilder Files

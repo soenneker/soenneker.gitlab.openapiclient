@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
         {
         }
         /// <summary>
-        /// Get a list of merge request resource state events
+        /// Lists all state events for a specified merge request.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesResourceStateEvent"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesResourceStateEvent>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesResourceStateEvent.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get a list of merge request resource state events
+        /// Lists all state events for a specified merge request.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -93,7 +93,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Resource_state_events.Resource_state_eventsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get a list of merge request resource state events
+        /// Lists all state events for a specified merge request.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Resource_state_eventsRequestBuilderGetQueryParameters 
