@@ -34,6 +34,23 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Experiments.Item.Assignments
         {
         }
         /// <summary>
+        /// Removes the cached variant assignment for the given experiment and context, returning the actor to normal rollout assignment. Defaults to current user if no context is provided.
+        /// </summary>
+        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
+        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public async Task DeleteAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Experiments.Item.Assignments.AssignmentsRequestBuilder.AssignmentsRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        {
+#nullable restore
+#else
+        public async Task DeleteAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Experiments.Item.Assignments.AssignmentsRequestBuilder.AssignmentsRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        {
+#endif
+            var requestInfo = ToDeleteRequestInformation(requestConfiguration);
+            await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
+        }
+        /// <summary>
         /// Returns the currently cached variant assignment for the given experiment and context. Defaults to current user if no context is provided.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesExperimentsAssignment"/></returns>
@@ -70,6 +87,25 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Experiments.Item.Assignments
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesExperimentsAssignment>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesExperimentsAssignment.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+        }
+        /// <summary>
+        /// Removes the cached variant assignment for the given experiment and context, returning the actor to normal rollout assignment. Defaults to current user if no context is provided.
+        /// </summary>
+        /// <returns>A <see cref="RequestInformation"/></returns>
+        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Experiments.Item.Assignments.AssignmentsRequestBuilder.AssignmentsRequestBuilderDeleteQueryParameters>>? requestConfiguration = default)
+        {
+#nullable restore
+#else
+        public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Experiments.Item.Assignments.AssignmentsRequestBuilder.AssignmentsRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
+        {
+#endif
+            var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
+            requestInfo.Configure(requestConfiguration);
+            requestInfo.Headers.TryAdd("Accept", "application/json");
+            return requestInfo;
         }
         /// <summary>
         /// Returns the currently cached variant assignment for the given experiment and context. Defaults to current user if no context is provided.
@@ -120,6 +156,23 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Experiments.Item.Assignments
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Experiments.Item.Assignments.AssignmentsRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Experiments.Item.Assignments.AssignmentsRequestBuilder(rawUrl, RequestAdapter);
+        }
+        /// <summary>
+        /// Removes the cached variant assignment for the given experiment and context, returning the actor to normal rollout assignment. Defaults to current user if no context is provided.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class AssignmentsRequestBuilderDeleteQueryParameters 
+        {
+            /// <summary>Context parameters (user, namespace, project). An actor context is resolved from the user. Defaults to current user.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("context")]
+            public string? Context { get; set; }
+#nullable restore
+#else
+            [QueryParameter("context")]
+            public string Context { get; set; }
+#endif
         }
         /// <summary>
         /// Returns the currently cached variant assignment for the given experiment and context. Defaults to current user if no context is provided.

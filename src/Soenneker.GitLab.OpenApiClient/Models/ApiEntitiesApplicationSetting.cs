@@ -96,6 +96,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string AllowAllIntegrations { get; set; }
 #endif
+        /// <summary>The allow_application_default_credentials_for_offline_transfer property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AllowApplicationDefaultCredentialsForOfflineTransfer { get; set; }
+#nullable restore
+#else
+        public string AllowApplicationDefaultCredentialsForOfflineTransfer { get; set; }
+#endif
         /// <summary>The allow_bypass_placeholder_confirmation property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -4148,14 +4156,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string StaticObjectsExternalStorageUrl { get; set; }
 #endif
-        /// <summary>The suggest_pipeline_enabled property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? SuggestPipelineEnabled { get; set; }
-#nullable restore
-#else
-        public string SuggestPipelineEnabled { get; set; }
-#endif
         /// <summary>The terminal_max_session_time property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -5120,6 +5120,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "akismet_enabled", n => { AkismetEnabled = n.GetStringValue(); } },
                 { "allow_account_deletion", n => { AllowAccountDeletion = n.GetStringValue(); } },
                 { "allow_all_integrations", n => { AllowAllIntegrations = n.GetStringValue(); } },
+                { "allow_application_default_credentials_for_offline_transfer", n => { AllowApplicationDefaultCredentialsForOfflineTransfer = n.GetStringValue(); } },
                 { "allow_bypass_placeholder_confirmation", n => { AllowBypassPlaceholderConfirmation = n.GetStringValue(); } },
                 { "allow_contribution_mapping_to_admins", n => { AllowContributionMappingToAdmins = n.GetStringValue(); } },
                 { "allow_deploy_tokens_and_keys_with_external_authn", n => { AllowDeployTokensAndKeysWithExternalAuthn = n.GetStringValue(); } },
@@ -5634,7 +5635,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "spam_check_endpoint_url", n => { SpamCheckEndpointUrl = n.GetStringValue(); } },
                 { "static_objects_external_storage_auth_token", n => { StaticObjectsExternalStorageAuthToken = n.GetStringValue(); } },
                 { "static_objects_external_storage_url", n => { StaticObjectsExternalStorageUrl = n.GetStringValue(); } },
-                { "suggest_pipeline_enabled", n => { SuggestPipelineEnabled = n.GetStringValue(); } },
                 { "terminal_max_session_time", n => { TerminalMaxSessionTime = n.GetStringValue(); } },
                 { "terms", n => { Terms = n.GetStringValue(); } },
                 { "terraform_state_encryption_enabled", n => { TerraformStateEncryptionEnabled = n.GetStringValue(); } },
@@ -5771,6 +5771,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("akismet_enabled", AkismetEnabled);
             writer.WriteStringValue("allow_account_deletion", AllowAccountDeletion);
             writer.WriteStringValue("allow_all_integrations", AllowAllIntegrations);
+            writer.WriteStringValue("allow_application_default_credentials_for_offline_transfer", AllowApplicationDefaultCredentialsForOfflineTransfer);
             writer.WriteStringValue("allow_bypass_placeholder_confirmation", AllowBypassPlaceholderConfirmation);
             writer.WriteStringValue("allow_contribution_mapping_to_admins", AllowContributionMappingToAdmins);
             writer.WriteStringValue("allow_deploy_tokens_and_keys_with_external_authn", AllowDeployTokensAndKeysWithExternalAuthn);
@@ -6285,7 +6286,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("spam_check_endpoint_url", SpamCheckEndpointUrl);
             writer.WriteStringValue("static_objects_external_storage_auth_token", StaticObjectsExternalStorageAuthToken);
             writer.WriteStringValue("static_objects_external_storage_url", StaticObjectsExternalStorageUrl);
-            writer.WriteStringValue("suggest_pipeline_enabled", SuggestPipelineEnabled);
             writer.WriteStringValue("terminal_max_session_time", TerminalMaxSessionTime);
             writer.WriteStringValue("terms", Terms);
             writer.WriteStringValue("terraform_state_encryption_enabled", TerraformStateEncryptionEnabled);
