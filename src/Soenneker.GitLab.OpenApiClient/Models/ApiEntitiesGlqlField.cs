@@ -14,6 +14,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Base field name. For aliased parameterised fields this is the underlying field (for example, `durationQuantile`), while `key` is the alias (for example, `p50`). For standard fields, same as `key`</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Field { get; set; }
+#nullable restore
+#else
+        public string Field { get; set; }
+#endif
         /// <summary>Unique field key</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -37,6 +45,22 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #nullable restore
 #else
         public string Name { get; set; }
+#endif
+        /// <summary>Resolved parameter metadata for parameterised fields, absent when the field has no parameters</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGlqlFieldParametersProperty? Parameters { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGlqlFieldParametersProperty Parameters { get; set; }
+#endif
+        /// <summary>Field classification. Either `dimension` or `metric` for analytics mode fields, absent for standard fields</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Type { get; set; }
+#nullable restore
+#else
+        public string Type { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGlqlField"/> and sets the default values.
@@ -63,9 +87,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "field", n => { Field = n.GetStringValue(); } },
                 { "key", n => { Key = n.GetStringValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
+                { "parameters", n => { Parameters = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGlqlFieldParametersProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGlqlFieldParametersProperty.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -75,9 +102,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("field", Field);
             writer.WriteStringValue("key", Key);
             writer.WriteStringValue("label", Label);
             writer.WriteStringValue("name", Name);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGlqlFieldParametersProperty>("parameters", Parameters);
+            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

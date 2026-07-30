@@ -3,17 +3,17 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>Append or replace signal (conversation or compaction)</summary>
+    /// <summary>The type of agent being registered.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBody70Df885A8506ChannelBlobsItemStepAction
+    public enum RequestBody80C272D831B7AgentType
     {
-        [EnumMember(Value = "conversation")]
+        [EnumMember(Value = "claude-code")]
         #pragma warning disable CS1591
-        Conversation,
+        ClaudeCode,
         #pragma warning restore CS1591
-        [EnumMember(Value = "compaction")]
+        [EnumMember(Value = "opencode")]
         #pragma warning disable CS1591
-        Compaction,
+        Opencode,
         #pragma warning restore CS1591
     }
 }

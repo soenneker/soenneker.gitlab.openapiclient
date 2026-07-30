@@ -7,30 +7,39 @@ using System.IO;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>
-    /// Storage paths for new projects with a weighted value ranging from 0 to 100
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RequestBody5A061B2B66C4RepositoryStoragesWeighted : IAdditionalDataHolder, IParsable
+    #pragma warning disable CS1591
+    public partial class RequestBody80C272D831B7 : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The type of agent being registered.</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody80C272D831B7AgentType? AgentType { get; set; }
+        /// <summary>SHA-256 hash of the machine identifier.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? MachineFingerprint { get; set; }
+#nullable restore
+#else
+        public string MachineFingerprint { get; set; }
+#endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5A061B2B66C4RepositoryStoragesWeighted"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody80C272D831B7"/> and sets the default values.
         /// </summary>
-        public RequestBody5A061B2B66C4RepositoryStoragesWeighted()
+        public RequestBody80C272D831B7()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5A061B2B66C4RepositoryStoragesWeighted"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody80C272D831B7"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5A061B2B66C4RepositoryStoragesWeighted CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody80C272D831B7 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5A061B2B66C4RepositoryStoragesWeighted();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody80C272D831B7();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -40,6 +49,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "agent_type", n => { AgentType = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody80C272D831B7AgentType>(); } },
+                { "machine_fingerprint", n => { MachineFingerprint = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -49,6 +60,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody80C272D831B7AgentType>("agent_type", AgentType);
+            writer.WriteStringValue("machine_fingerprint", MachineFingerprint);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -9,7 +9,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class RequestBody70Df885A8506ChannelBlobsItem : IAdditionalDataHolder, IParsable
+    public partial class RequestBody7Cf2D653Fe95ChannelBlobsItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -31,7 +31,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Data { get; set; }
 #endif
         /// <summary>Append or replace signal (conversation or compaction)</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody70Df885A8506ChannelBlobsItemStepAction? StepAction { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody7Cf2D653Fe95ChannelBlobsItemStepAction? StepAction { get; set; }
         /// <summary>Channel version</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -49,21 +49,21 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string WriteType { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody70Df885A8506ChannelBlobsItem"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody7Cf2D653Fe95ChannelBlobsItem"/> and sets the default values.
         /// </summary>
-        public RequestBody70Df885A8506ChannelBlobsItem()
+        public RequestBody7Cf2D653Fe95ChannelBlobsItem()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody70Df885A8506ChannelBlobsItem"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody7Cf2D653Fe95ChannelBlobsItem"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody70Df885A8506ChannelBlobsItem CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody7Cf2D653Fe95ChannelBlobsItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody70Df885A8506ChannelBlobsItem();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody7Cf2D653Fe95ChannelBlobsItem();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -75,7 +75,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             {
                 { "channel", n => { Channel = n.GetStringValue(); } },
                 { "data", n => { Data = n.GetStringValue(); } },
-                { "step_action", n => { StepAction = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody70Df885A8506ChannelBlobsItemStepAction>(); } },
+                { "step_action", n => { StepAction = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody7Cf2D653Fe95ChannelBlobsItemStepAction>(); } },
                 { "version", n => { Version = n.GetStringValue(); } },
                 { "write_type", n => { WriteType = n.GetStringValue(); } },
             };
@@ -89,7 +89,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("channel", Channel);
             writer.WriteStringValue("data", Data);
-            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody70Df885A8506ChannelBlobsItemStepAction>("step_action", StepAction);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody7Cf2D653Fe95ChannelBlobsItemStepAction>("step_action", StepAction);
             writer.WriteStringValue("version", Version);
             writer.WriteStringValue("write_type", WriteType);
             writer.WriteAdditionalData(AdditionalData);

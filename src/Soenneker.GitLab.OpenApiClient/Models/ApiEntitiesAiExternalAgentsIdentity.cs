@@ -7,48 +7,55 @@ using System.IO;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>
-    /// Object containing through namespace information
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RequestBody5A061B2B66C4DuoNamespaceAccessRulesItemThroughNamespace : IAdditionalDataHolder, IParsable
+    #pragma warning disable CS1591
+    public partial class ApiEntitiesAiExternalAgentsIdentity : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Full path of the through namespace</summary>
+        /// <summary>The agent_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FullPath { get; set; }
+        public string? AgentType { get; set; }
 #nullable restore
 #else
-        public string FullPath { get; set; }
+        public string AgentType { get; set; }
 #endif
-        /// <summary>ID of the through namespace</summary>
-        public int? Id { get; set; }
-        /// <summary>Name of the through namespace</summary>
+        /// <summary>The created_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? CreatedAt { get; set; }
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string CreatedAt { get; set; }
+#endif
+        /// <summary>The id property</summary>
+        public int? Id { get; set; }
+        /// <summary>The revoked_at property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? RevokedAt { get; set; }
+#nullable restore
+#else
+        public string RevokedAt { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5A061B2B66C4DuoNamespaceAccessRulesItemThroughNamespace"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiExternalAgentsIdentity"/> and sets the default values.
         /// </summary>
-        public RequestBody5A061B2B66C4DuoNamespaceAccessRulesItemThroughNamespace()
+        public ApiEntitiesAiExternalAgentsIdentity()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5A061B2B66C4DuoNamespaceAccessRulesItemThroughNamespace"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiExternalAgentsIdentity"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5A061B2B66C4DuoNamespaceAccessRulesItemThroughNamespace CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiExternalAgentsIdentity CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5A061B2B66C4DuoNamespaceAccessRulesItemThroughNamespace();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiExternalAgentsIdentity();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -58,9 +65,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "full_path", n => { FullPath = n.GetStringValue(); } },
+                { "agent_type", n => { AgentType = n.GetStringValue(); } },
+                { "created_at", n => { CreatedAt = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
-                { "name", n => { Name = n.GetStringValue(); } },
+                { "revoked_at", n => { RevokedAt = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -70,9 +78,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("full_path", FullPath);
+            writer.WriteStringValue("agent_type", AgentType);
+            writer.WriteStringValue("created_at", CreatedAt);
             writer.WriteIntValue("id", Id);
-            writer.WriteStringValue("name", Name);
+            writer.WriteStringValue("revoked_at", RevokedAt);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

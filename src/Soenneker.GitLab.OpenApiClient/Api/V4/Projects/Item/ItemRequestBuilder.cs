@@ -5,6 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Access_requests;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Access_tokens;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ai_agent;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Alert_management_alerts;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Analytics;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Approval_rules;
@@ -142,6 +143,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Access_tokens.Access_tokensRequestBuilder Access_tokens
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Access_tokens.Access_tokensRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The ai_agent property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ai_agent.Ai_agentRequestBuilder Ai_agent
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ai_agent.Ai_agentRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The alert_management_alerts property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Alert_management_alerts.Alert_management_alertsRequestBuilder Alert_management_alerts

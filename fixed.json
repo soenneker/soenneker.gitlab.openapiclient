@@ -662,6 +662,58 @@
         }
       }
     },
+    "/api/v4/projects/{id}/ai_agent/identities": {
+      "post": {
+        "tags": [
+          "Projects",
+          "Ai agent identities"
+        ],
+        "summary": "Register an external agent identity.",
+        "description": "Registers a new agent identity for the current user, project, agent type, and machine fingerprint combination. Returns an existing record if one already exists. Returns 403 if the identity has been revoked.",
+        "operationId": "PostApiV4ProjectsIdAiAgentIdentities",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the project",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "example": 1
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestBody80C272D831B7"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesAiExternalAgentsIdentity"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/v4/ai/duo_workflows/workflows/{id}/audit_events": {
       "post": {
         "tags": [
@@ -939,7 +991,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody70Df885A8506"
+                "$ref": "#/components/schemas/RequestBody7Cf2D653Fe95"
               }
             }
           }
@@ -22082,7 +22134,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody5A061B2B66C4"
+                "$ref": "#/components/schemas/RequestBodyE431B88Ea4C1"
               }
             }
           }
@@ -51719,6 +51771,28 @@
             "example": "2019-03-15T08:00:00Z"
           },
           {
+            "name": "merged_after",
+            "in": "query",
+            "description": "Returns merge requests merged on or after the given time. Expected in ISO 8601 format.",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            },
+            "example": "2019-03-15T08:00:00Z"
+          },
+          {
+            "name": "merged_before",
+            "in": "query",
+            "description": "Returns merge requests merged on or before the given time. Expected in ISO 8601 format.",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            },
+            "example": "2019-03-15T08:00:00Z"
+          },
+          {
             "name": "view",
             "in": "query",
             "description": "If simple, returns the \u0060iid\u0060, URL, title, description, and basic state of merge request",
@@ -52253,6 +52327,28 @@
             "name": "updated_before",
             "in": "query",
             "description": "Returns merge requests updated on or before the given time. Expected in ISO 8601 format.",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            },
+            "example": "2019-03-15T08:00:00Z"
+          },
+          {
+            "name": "merged_after",
+            "in": "query",
+            "description": "Returns merge requests merged on or after the given time. Expected in ISO 8601 format.",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            },
+            "example": "2019-03-15T08:00:00Z"
+          },
+          {
+            "name": "merged_before",
+            "in": "query",
+            "description": "Returns merge requests merged on or before the given time. Expected in ISO 8601 format.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -53072,6 +53168,28 @@
             "name": "updated_before",
             "in": "query",
             "description": "Returns merge requests updated on or before the given time. Expected in ISO 8601 format.",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            },
+            "example": "2019-03-15T08:00:00Z"
+          },
+          {
+            "name": "merged_after",
+            "in": "query",
+            "description": "Returns merge requests merged on or after the given time. Expected in ISO 8601 format.",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            },
+            "example": "2019-03-15T08:00:00Z"
+          },
+          {
+            "name": "merged_before",
+            "in": "query",
+            "description": "Returns merge requests merged on or before the given time. Expected in ISO 8601 format.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -75647,6 +75765,28 @@
             "example": "2019-03-15T08:00:00Z"
           },
           {
+            "name": "merged_after",
+            "in": "query",
+            "description": "Returns merge requests merged on or after the given time. Expected in ISO 8601 format.",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            },
+            "example": "2019-03-15T08:00:00Z"
+          },
+          {
+            "name": "merged_before",
+            "in": "query",
+            "description": "Returns merge requests merged on or before the given time. Expected in ISO 8601 format.",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            },
+            "example": "2019-03-15T08:00:00Z"
+          },
+          {
             "name": "view",
             "in": "query",
             "description": "If simple, returns the \u0060iid\u0060, URL, title, description, and basic state of merge request",
@@ -97624,6 +97764,26 @@
           }
         }
       },
+      "ApiEntitiesAiExternalAgentsIdentity": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "example": 1
+          },
+          "agent_type": {
+            "type": "string",
+            "example": "claude-code"
+          },
+          "revoked_at": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string",
+            "example": "2026-06-17T00:00:00.000Z"
+          }
+        }
+      },
       "ApiEntitiesCustomAttribute": {
         "type": "object",
         "properties": {
@@ -110673,6 +110833,9 @@
           "pypi_package_requests_forwarding": {
             "type": "string"
           },
+          "rubygems_package_requests_forwarding": {
+            "type": "string"
+          },
           "group_owners_can_manage_default_branch_protection": {
             "type": "string"
           },
@@ -117777,6 +117940,19 @@
             "type": "string",
             "description": "Underlying name of field, often the same as \u0060key\u0060, but it may be different if one type of field has multiple possible keys. Example \u0060created\u0060 and \u0060createdAt\u0060",
             "example": "title"
+          },
+          "field": {
+            "type": "string",
+            "description": "Base field name. For aliased parameterised fields this is the underlying field (for example, \u0060durationQuantile\u0060), while \u0060key\u0060 is the alias (for example, \u0060p50\u0060). For standard fields, same as \u0060key\u0060",
+            "example": "title"
+          },
+          "type": {
+            "type": "string",
+            "description": "Field classification. Either \u0060dimension\u0060 or \u0060metric\u0060 for analytics mode fields, absent for standard fields",
+            "example": "dimension"
+          },
+          "parameters": {
+            "$ref": "#/components/schemas/ApiEntitiesGlqlFieldParametersProperty"
           }
         }
       },
@@ -122012,6 +122188,24 @@
           }
         }
       },
+      "RequestBody80C272D831B7": {
+        "required": [
+          "agent_type",
+          "machine_fingerprint"
+        ],
+        "type": "object",
+        "properties": {
+          "agent_type": {
+            "$ref": "#/components/schemas/RequestBody80C272D831B7AgentType"
+          },
+          "machine_fingerprint": {
+            "maxLength": 64,
+            "type": "string",
+            "description": "SHA-256 hash of the machine identifier.",
+            "nullable": true
+          }
+        }
+      },
       "RequestBody8129788813D5": {
         "required": [
           "events"
@@ -122180,7 +122374,7 @@
           }
         }
       },
-      "RequestBody70Df885A8506": {
+      "RequestBody7Cf2D653Fe95": {
         "required": [
           "thread_ts",
           "metadata"
@@ -122198,7 +122392,7 @@
             "nullable": true
           },
           "checkpoint": {
-            "$ref": "#/components/schemas/RequestBody70Df885A8506Checkpoint"
+            "$ref": "#/components/schemas/RequestBody7Cf2D653Fe95Checkpoint"
           },
           "compressed_checkpoint": {
             "type": "string",
@@ -122206,11 +122400,16 @@
             "nullable": true
           },
           "metadata": {
-            "$ref": "#/components/schemas/RequestBody70Df885A8506Metadata"
+            "$ref": "#/components/schemas/RequestBody7Cf2D653Fe95Metadata"
           },
           "model_metadata_json": {
             "type": "string",
             "description": "JSON string of the model metadata",
+            "nullable": true
+          },
+          "flow_metadata_json": {
+            "type": "string",
+            "description": "JSON string of the flow metadata",
             "nullable": true
           },
           "current_thread": {
@@ -122222,7 +122421,7 @@
           "channel_blobs": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBody70Df885A8506ChannelBlobsItem"
+              "$ref": "#/components/schemas/RequestBody7Cf2D653Fe95ChannelBlobsItem"
             },
             "description": "Per-channel blobs for incremental checkpoint storage",
             "nullable": true
@@ -126667,7 +126866,7 @@
           }
         }
       },
-      "RequestBody5A061B2B66C4": {
+      "RequestBodyE431B88Ea4C1": {
         "type": "object",
         "properties": {
           "admin_mode": {
@@ -126767,19 +126966,19 @@
             "nullable": true
           },
           "default_project_creation": {
-            "$ref": "#/components/schemas/RequestBody5A061B2B66C4DefaultProjectCreation"
+            "$ref": "#/components/schemas/RequestBodyE431B88Ea4C1DefaultProjectCreation"
           },
           "default_branch_protection": {
-            "$ref": "#/components/schemas/RequestBody5A061B2B66C4DefaultBranchProtection"
+            "$ref": "#/components/schemas/RequestBodyE431B88Ea4C1DefaultBranchProtection"
           },
           "default_branch_protection_defaults": {
-            "$ref": "#/components/schemas/RequestBody5A061B2B66C4DefaultBranchProtectionDefaults"
+            "$ref": "#/components/schemas/RequestBodyE431B88Ea4C1DefaultBranchProtectionDefaults"
           },
           "default_group_visibility": {
-            "$ref": "#/components/schemas/RequestBody5A061B2B66C4DefaultGroupVisibility"
+            "$ref": "#/components/schemas/RequestBodyE431B88Ea4C1DefaultGroupVisibility"
           },
           "default_project_visibility": {
-            "$ref": "#/components/schemas/RequestBody5A061B2B66C4DefaultProjectVisibility"
+            "$ref": "#/components/schemas/RequestBodyE431B88Ea4C1DefaultProjectVisibility"
           },
           "default_projects_limit": {
             "type": "integer",
@@ -126787,10 +126986,10 @@
             "nullable": true
           },
           "default_snippet_visibility": {
-            "$ref": "#/components/schemas/RequestBody5A061B2B66C4DefaultSnippetVisibility"
+            "$ref": "#/components/schemas/RequestBodyE431B88Ea4C1DefaultSnippetVisibility"
           },
           "dependency_management_settings": {
-            "$ref": "#/components/schemas/RequestBody5A061B2B66C4DependencyManagementSettings"
+            "$ref": "#/components/schemas/RequestBodyE431B88Ea4C1DependencyManagementSettings"
           },
           "disable_admin_oauth_scopes": {
             "type": "boolean",
@@ -126888,10 +127087,10 @@
             "nullable": true
           },
           "email_confirmation_setting": {
-            "$ref": "#/components/schemas/RequestBody5A061B2B66C4EmailConfirmationSetting"
+            "$ref": "#/components/schemas/RequestBodyE431B88Ea4C1EmailConfirmationSetting"
           },
           "enabled_git_access_protocol": {
-            "$ref": "#/components/schemas/RequestBody5A061B2B66C4EnabledGitAccessProtocol"
+            "$ref": "#/components/schemas/RequestBodyE431B88Ea4C1EnabledGitAccessProtocol"
           },
           "gitpod_enabled": {
             "type": "boolean",
@@ -127187,7 +127386,7 @@
             "nullable": true
           },
           "repository_storages_weighted": {
-            "$ref": "#/components/schemas/RequestBody5A061B2B66C4RepositoryStoragesWeighted"
+            "$ref": "#/components/schemas/RequestBodyE431B88Ea4C1RepositoryStoragesWeighted"
           },
           "require_two_factor_authentication": {
             "type": "boolean",
@@ -127351,7 +127550,7 @@
             "nullable": true
           },
           "whats_new_variant": {
-            "$ref": "#/components/schemas/RequestBody5A061B2B66C4WhatsNewVariant"
+            "$ref": "#/components/schemas/RequestBodyE431B88Ea4C1WhatsNewVariant"
           },
           "floc_enabled": {
             "type": "boolean",
@@ -127559,10 +127758,10 @@
             "nullable": true
           },
           "resource_usage_limits": {
-            "$ref": "#/components/schemas/RequestBody5A061B2B66C4ResourceUsageLimits"
+            "$ref": "#/components/schemas/RequestBodyE431B88Ea4C1ResourceUsageLimits"
           },
           "vscode_extension_marketplace": {
-            "$ref": "#/components/schemas/RequestBody5A061B2B66C4VscodeExtensionMarketplace"
+            "$ref": "#/components/schemas/RequestBodyE431B88Ea4C1VscodeExtensionMarketplace"
           },
           "enable_language_server_restrictions": {
             "type": "boolean",
@@ -127580,28 +127779,28 @@
             "nullable": true
           },
           "logging_field_schema_version": {
-            "$ref": "#/components/schemas/RequestBody5A061B2B66C4LoggingFieldSchemaVersion"
+            "$ref": "#/components/schemas/RequestBodyE431B88Ea4C1LoggingFieldSchemaVersion"
           },
           "logging_field_dual_emit_target": {
-            "$ref": "#/components/schemas/RequestBody5A061B2B66C4LoggingFieldDualEmitTarget"
+            "$ref": "#/components/schemas/RequestBodyE431B88Ea4C1LoggingFieldDualEmitTarget"
           },
           "rsa_key_restriction": {
-            "$ref": "#/components/schemas/RequestBody5A061B2B66C4RsaKeyRestriction"
+            "$ref": "#/components/schemas/RequestBodyE431B88Ea4C1RsaKeyRestriction"
           },
           "dsa_key_restriction": {
-            "$ref": "#/components/schemas/RequestBody5A061B2B66C4DsaKeyRestriction"
+            "$ref": "#/components/schemas/RequestBodyE431B88Ea4C1DsaKeyRestriction"
           },
           "ecdsa_key_restriction": {
-            "$ref": "#/components/schemas/RequestBody5A061B2B66C4EcdsaKeyRestriction"
+            "$ref": "#/components/schemas/RequestBodyE431B88Ea4C1EcdsaKeyRestriction"
           },
           "ed25519_key_restriction": {
-            "$ref": "#/components/schemas/RequestBody5A061B2B66C4Ed25519KeyRestriction"
+            "$ref": "#/components/schemas/RequestBodyE431B88Ea4C1Ed25519KeyRestriction"
           },
           "ecdsa_sk_key_restriction": {
-            "$ref": "#/components/schemas/RequestBody5A061B2B66C4EcdsaSkKeyRestriction"
+            "$ref": "#/components/schemas/RequestBodyE431B88Ea4C1EcdsaSkKeyRestriction"
           },
           "ed25519_sk_key_restriction": {
-            "$ref": "#/components/schemas/RequestBody5A061B2B66C4Ed25519SkKeyRestriction"
+            "$ref": "#/components/schemas/RequestBodyE431B88Ea4C1Ed25519SkKeyRestriction"
           },
           "elasticsearch_aws": {
             "type": "boolean",
@@ -127759,6 +127958,11 @@
             "description": "PyPI package requests are forwarded to pypi.org if not found on GitLab.",
             "nullable": true
           },
+          "rubygems_package_requests_forwarding": {
+            "type": "boolean",
+            "description": "RubyGems package requests are forwarded to rubygems.org if not found on GitLab.",
+            "nullable": true
+          },
           "virtual_registries_endpoints_api_limit": {
             "type": "integer",
             "description": "Virtual Registries API endpoints rate limit.",
@@ -127913,7 +128117,7 @@
           "duo_namespace_access_rules": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBody5A061B2B66C4DuoNamespaceAccessRulesItem"
+              "$ref": "#/components/schemas/RequestBodyE431B88Ea4C1DuoNamespaceAccessRulesItem"
             },
             "description": "AI entity access rules for controlling Duo feature access",
             "nullable": true
@@ -142806,6 +143010,13 @@
           "token": "secr3t"
         }
       },
+      "ApiEntitiesGlqlFieldParameters": {
+        "type": "object",
+        "description": "Resolved parameter metadata for parameterised fields, absent when the field has no parameters",
+        "example": {
+          "granularity": "weekly"
+        }
+      },
       "ApiEntitiesCiJobProject": {
         "type": "object",
         "properties": {
@@ -143189,17 +143400,17 @@
           }
         }
       },
-      "RequestBody70Df885A8506Checkpoint": {
+      "RequestBody7Cf2D653Fe95Checkpoint": {
         "type": "object",
         "description": "Checkpoint content",
         "nullable": true
       },
-      "RequestBody70Df885A8506Metadata": {
+      "RequestBody7Cf2D653Fe95Metadata": {
         "type": "object",
         "description": "Checkpoint metadata",
         "nullable": true
       },
-      "RequestBody70Df885A8506ChannelBlobsItem": {
+      "RequestBody7Cf2D653Fe95ChannelBlobsItem": {
         "required": [
           "channel",
           "version",
@@ -143228,7 +143439,7 @@
             "nullable": true
           },
           "step_action": {
-            "$ref": "#/components/schemas/RequestBody70Df885A8506ChannelBlobsItemStepAction"
+            "$ref": "#/components/schemas/RequestBody7Cf2D653Fe95ChannelBlobsItemStepAction"
           },
           "data": {
             "maxLength": 1398104,
@@ -143815,13 +144026,13 @@
           }
         }
       },
-      "RequestBody5A061B2B66C4DefaultBranchProtectionDefaults": {
+      "RequestBodyE431B88Ea4C1DefaultBranchProtectionDefaults": {
         "type": "object",
         "properties": {
           "allowed_to_push": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBody5A061B2B66C4DefaultBranchProtectionDefaultsAllowedToPushItem"
+              "$ref": "#/components/schemas/RequestBodyE431B88Ea4C1DefaultBranchProtectionDefaultsAllowedToPushItem"
             },
             "description": "An array of access levels allowed to push",
             "nullable": true
@@ -143834,7 +144045,7 @@
           "allowed_to_merge": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBody5A061B2B66C4DefaultBranchProtectionDefaultsAllowedToMergeItem"
+              "$ref": "#/components/schemas/RequestBodyE431B88Ea4C1DefaultBranchProtectionDefaultsAllowedToMergeItem"
             },
             "description": "An array of access levels allowed to merge",
             "nullable": true
@@ -143853,7 +144064,7 @@
         "description": "Determine if developers can push to default branch",
         "nullable": true
       },
-      "RequestBody5A061B2B66C4DependencyManagementSettings": {
+      "RequestBodyE431B88Ea4C1DependencyManagementSettings": {
         "type": "object",
         "properties": {
           "security_update_scheduler_max_concurrency": {
@@ -143865,7 +144076,7 @@
         "description": "Dependency management settings",
         "nullable": true
       },
-      "RequestBody5A061B2B66C4RepositoryStoragesWeighted": {
+      "RequestBodyE431B88Ea4C1RepositoryStoragesWeighted": {
         "type": "object",
         "additionalProperties": {
           "type": "integer"
@@ -143873,12 +144084,12 @@
         "description": "Storage paths for new projects with a weighted value ranging from 0 to 100",
         "nullable": true
       },
-      "RequestBody5A061B2B66C4ResourceUsageLimits": {
+      "RequestBodyE431B88Ea4C1ResourceUsageLimits": {
         "type": "object",
         "description": "Definition for resource usage limits enforced in Sidekiq workers",
         "nullable": true
       },
-      "RequestBody5A061B2B66C4VscodeExtensionMarketplace": {
+      "RequestBodyE431B88Ea4C1VscodeExtensionMarketplace": {
         "type": "object",
         "properties": {
           "enabled": {
@@ -143892,20 +144103,20 @@
             "nullable": true
           },
           "custom_values": {
-            "$ref": "#/components/schemas/RequestBody5A061B2B66C4VscodeExtensionMarketplaceCustomValues"
+            "$ref": "#/components/schemas/RequestBodyE431B88Ea4C1VscodeExtensionMarketplaceCustomValues"
           }
         },
         "description": "Settings for VS Code Extension Marketplace",
         "nullable": true
       },
-      "RequestBody5A061B2B66C4DuoNamespaceAccessRulesItem": {
+      "RequestBodyE431B88Ea4C1DuoNamespaceAccessRulesItem": {
         "required": [
           "features"
         ],
         "type": "object",
         "properties": {
           "through_namespace": {
-            "$ref": "#/components/schemas/RequestBody5A061B2B66C4DuoNamespaceAccessRulesItemThroughNamespace"
+            "$ref": "#/components/schemas/RequestBodyE431B88Ea4C1DuoNamespaceAccessRulesItemThroughNamespace"
           },
           "features": {
             "type": "array",
@@ -147265,34 +147476,34 @@
         "description": "Data for rendering the vulnerabilities by severity count in PDF reports",
         "nullable": true
       },
-      "RequestBody5A061B2B66C4DefaultBranchProtectionDefaultsAllowedToPushItem": {
+      "RequestBodyE431B88Ea4C1DefaultBranchProtectionDefaultsAllowedToPushItem": {
         "required": [
           "access_level"
         ],
         "type": "object",
         "properties": {
           "access_level": {
-            "$ref": "#/components/schemas/RequestBody5A061B2B66C4DefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyE431B88Ea4C1DefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel"
           }
         }
       },
-      "RequestBody5A061B2B66C4DefaultBranchProtectionDefaultsAllowedToMergeItem": {
+      "RequestBodyE431B88Ea4C1DefaultBranchProtectionDefaultsAllowedToMergeItem": {
         "required": [
           "access_level"
         ],
         "type": "object",
         "properties": {
           "access_level": {
-            "$ref": "#/components/schemas/RequestBody5A061B2B66C4DefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyE431B88Ea4C1DefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel"
           }
         }
       },
-      "RequestBody5A061B2B66C4VscodeExtensionMarketplaceCustomValues": {
+      "RequestBodyE431B88Ea4C1VscodeExtensionMarketplaceCustomValues": {
         "type": "object",
         "description": "VS Code Extension Marketplace URL\u0027s when preset is \u0027custom\u0027",
         "nullable": true
       },
-      "RequestBody5A061B2B66C4DuoNamespaceAccessRulesItemThroughNamespace": {
+      "RequestBodyE431B88Ea4C1DuoNamespaceAccessRulesItemThroughNamespace": {
         "required": [
           "id"
         ],
@@ -151118,6 +151329,10 @@
       "ApiEntitiesIntegrationPropertiesProperty": {
         "type": "object"
       },
+      "ApiEntitiesGlqlFieldParametersProperty": {
+        "type": "object",
+        "description": "Resolved parameter metadata for parameterised fields, absent when the field has no parameters"
+      },
       "ApiEntitiesDraftNotePositionProperty": {
         "type": "object"
       },
@@ -151337,6 +151552,30 @@
             {
               "value": "small_file",
               "name": "SmallFile"
+            }
+          ]
+        }
+      },
+      "RequestBody80C272D831B7AgentType": {
+        "minLength": 1,
+        "enum": [
+          "claude-code",
+          "opencode"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "The type of agent being registered.",
+        "x-ms-enum": {
+          "name": "RequestBody80C272D831B7AgentType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "claude-code",
+              "name": "ClaudeCode"
+            },
+            {
+              "value": "opencode",
+              "name": "Opencode"
             }
           ]
         }
@@ -152215,7 +152454,7 @@
           ]
         }
       },
-      "RequestBody5A061B2B66C4DefaultProjectCreation": {
+      "RequestBodyE431B88Ea4C1DefaultProjectCreation": {
         "enum": [
           0,
           3,
@@ -152228,7 +152467,7 @@
         "description": "Determine if developers can create projects in the group",
         "nullable": true
       },
-      "RequestBody5A061B2B66C4DefaultBranchProtection": {
+      "RequestBodyE431B88Ea4C1DefaultBranchProtection": {
         "enum": [
           0,
           3,
@@ -152241,7 +152480,7 @@
         "description": "Determine if developers can push to default branch",
         "nullable": true
       },
-      "RequestBody5A061B2B66C4DefaultGroupVisibility": {
+      "RequestBodyE431B88Ea4C1DefaultGroupVisibility": {
         "enum": [
           "private",
           "internal",
@@ -152252,7 +152491,7 @@
         "description": "The default group visibility",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody5A061B2B66C4DefaultGroupVisibility",
+          "name": "RequestBodyE431B88Ea4C1DefaultGroupVisibility",
           "modelAsString": false,
           "values": [
             {
@@ -152270,7 +152509,7 @@
           ]
         }
       },
-      "RequestBody5A061B2B66C4DefaultProjectVisibility": {
+      "RequestBodyE431B88Ea4C1DefaultProjectVisibility": {
         "enum": [
           "private",
           "internal",
@@ -152281,7 +152520,7 @@
         "description": "The default project visibility",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody5A061B2B66C4DefaultProjectVisibility",
+          "name": "RequestBodyE431B88Ea4C1DefaultProjectVisibility",
           "modelAsString": false,
           "values": [
             {
@@ -152299,7 +152538,7 @@
           ]
         }
       },
-      "RequestBody5A061B2B66C4DefaultSnippetVisibility": {
+      "RequestBodyE431B88Ea4C1DefaultSnippetVisibility": {
         "enum": [
           "private",
           "internal",
@@ -152310,7 +152549,7 @@
         "description": "The default snippet visibility",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody5A061B2B66C4DefaultSnippetVisibility",
+          "name": "RequestBodyE431B88Ea4C1DefaultSnippetVisibility",
           "modelAsString": false,
           "values": [
             {
@@ -152328,7 +152567,7 @@
           ]
         }
       },
-      "RequestBody5A061B2B66C4EmailConfirmationSetting": {
+      "RequestBodyE431B88Ea4C1EmailConfirmationSetting": {
         "enum": [
           "off",
           "soft",
@@ -152339,7 +152578,7 @@
         "description": "\u0022Email confirmation setting, possible values: \u0060off\u0060, \u0060soft\u0060, and \u0060hard\u0060\u0022",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody5A061B2B66C4EmailConfirmationSetting",
+          "name": "RequestBodyE431B88Ea4C1EmailConfirmationSetting",
           "modelAsString": false,
           "values": [
             {
@@ -152357,7 +152596,7 @@
           ]
         }
       },
-      "RequestBody5A061B2B66C4EnabledGitAccessProtocol": {
+      "RequestBodyE431B88Ea4C1EnabledGitAccessProtocol": {
         "enum": [
           "ssh",
           "http",
@@ -152368,7 +152607,7 @@
         "description": "Allow only the selected protocols to be used for Git access.",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody5A061B2B66C4EnabledGitAccessProtocol",
+          "name": "RequestBodyE431B88Ea4C1EnabledGitAccessProtocol",
           "modelAsString": false,
           "values": [
             {
@@ -152386,7 +152625,7 @@
           ]
         }
       },
-      "RequestBody5A061B2B66C4WhatsNewVariant": {
+      "RequestBodyE431B88Ea4C1WhatsNewVariant": {
         "enum": [
           "all_tiers",
           "current_tier",
@@ -152397,7 +152636,7 @@
         "description": "\u0022What\u0027s new variant, possible values: \u0060all_tiers\u0060, \u0060current_tier\u0060, and \u0060disabled\u0060.\u0022",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody5A061B2B66C4WhatsNewVariant",
+          "name": "RequestBodyE431B88Ea4C1WhatsNewVariant",
           "modelAsString": false,
           "values": [
             {
@@ -152415,7 +152654,7 @@
           ]
         }
       },
-      "RequestBody5A061B2B66C4LoggingFieldSchemaVersion": {
+      "RequestBodyE431B88Ea4C1LoggingFieldSchemaVersion": {
         "enum": [
           0,
           1
@@ -152425,7 +152664,7 @@
         "description": "Logging field schema version (v0, v1, \u2026). Cannot be downgraded.",
         "nullable": true
       },
-      "RequestBody5A061B2B66C4LoggingFieldDualEmitTarget": {
+      "RequestBodyE431B88Ea4C1LoggingFieldDualEmitTarget": {
         "enum": [
           1
         ],
@@ -152434,7 +152673,7 @@
         "description": "Version to dual-emit alongside schema_version. Must be strictly greater than schema_version, or omit/null to disable.",
         "nullable": true
       },
-      "RequestBody5A061B2B66C4RsaKeyRestriction": {
+      "RequestBodyE431B88Ea4C1RsaKeyRestriction": {
         "enum": [
           0,
           1024,
@@ -152448,7 +152687,7 @@
         "description": "Restrictions on the complexity of uploaded RSA keys. A value of -1 disables all RSA keys.",
         "nullable": true
       },
-      "RequestBody5A061B2B66C4DsaKeyRestriction": {
+      "RequestBodyE431B88Ea4C1DsaKeyRestriction": {
         "enum": [
           0,
           1024,
@@ -152461,7 +152700,7 @@
         "description": "Restrictions on the complexity of uploaded DSA keys. A value of -1 disables all DSA keys.",
         "nullable": true
       },
-      "RequestBody5A061B2B66C4EcdsaKeyRestriction": {
+      "RequestBodyE431B88Ea4C1EcdsaKeyRestriction": {
         "enum": [
           0,
           256,
@@ -152474,7 +152713,7 @@
         "description": "Restrictions on the complexity of uploaded ECDSA keys. A value of -1 disables all ECDSA keys.",
         "nullable": true
       },
-      "RequestBody5A061B2B66C4Ed25519KeyRestriction": {
+      "RequestBodyE431B88Ea4C1Ed25519KeyRestriction": {
         "enum": [
           0,
           256,
@@ -152485,7 +152724,7 @@
         "description": "Restrictions on the complexity of uploaded ED25519 keys. A value of -1 disables all ED25519 keys.",
         "nullable": true
       },
-      "RequestBody5A061B2B66C4EcdsaSkKeyRestriction": {
+      "RequestBodyE431B88Ea4C1EcdsaSkKeyRestriction": {
         "enum": [
           0,
           256,
@@ -152496,7 +152735,7 @@
         "description": "Restrictions on the complexity of uploaded ECDSA_SK keys. A value of -1 disables all ECDSA_SK keys.",
         "nullable": true
       },
-      "RequestBody5A061B2B66C4Ed25519SkKeyRestriction": {
+      "RequestBodyE431B88Ea4C1Ed25519SkKeyRestriction": {
         "enum": [
           0,
           256,
@@ -158409,7 +158648,7 @@
           ]
         }
       },
-      "RequestBody70Df885A8506ChannelBlobsItemStepAction": {
+      "RequestBody7Cf2D653Fe95ChannelBlobsItemStepAction": {
         "minLength": 1,
         "enum": [
           "conversation",
@@ -158419,7 +158658,7 @@
         "additionalProperties": false,
         "description": "Append or replace signal (conversation or compaction)",
         "x-ms-enum": {
-          "name": "RequestBody70Df885A8506ChannelBlobsItemStepAction",
+          "name": "RequestBody7Cf2D653Fe95ChannelBlobsItemStepAction",
           "modelAsString": false,
           "values": [
             {
@@ -161585,7 +161824,7 @@
           ]
         }
       },
-      "RequestBody5A061B2B66C4DefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel": {
+      "RequestBodyE431B88Ea4C1DefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel": {
         "enum": [
           30,
           40,
@@ -161596,7 +161835,7 @@
         "additionalProperties": false,
         "description": "A valid access level"
       },
-      "RequestBody5A061B2B66C4DefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel": {
+      "RequestBodyE431B88Ea4C1DefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel": {
         "enum": [
           30,
           40,
@@ -173025,6 +173264,10 @@
     {
       "name": "Agents",
       "description": "Operations related to agents."
+    },
+    {
+      "name": "Ai agent identities",
+      "description": "Operations related to ai agent identities."
     },
     {
       "name": "Alert management",

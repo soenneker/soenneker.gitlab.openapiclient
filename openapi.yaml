@@ -34,6 +34,8 @@ tags:
   description: Operations related to advanced search rollout.
 - name: Agents
   description: Operations related to agents.
+- name: Ai agent identities
+  description: Operations related to ai agent identities.
 - name: Alert management
   description: Operations related to alert management.
 - name: Analytics
@@ -1118,6 +1120,48 @@ paths:
         '400':
           description: Bad Request
       x-gitlab-lifecycle: experiment
+  "/api/v4/projects/{id}/ai_agent/identities":
+    post:
+      operationId: postApiV4ProjectsIdAiAgentIdentities
+      summary: Register an external agent identity.
+      description: Registers a new agent identity for the current user, project, agent
+        type, and machine fingerprint combination. Returns an existing record if one
+        already exists. Returns 403 if the identity has been revoked.
+      tags:
+      - Projects
+      - Ai agent identities
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/APIEntitiesAiExternalAgentsIdentity"
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+      parameters:
+      - name: id
+        required: true
+        description: The ID or URL-encoded path of the project
+        schema:
+          oneOf:
+          - type: string
+          - type: integer
+        in: path
+        example: 1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              "$ref": "#/components/schemas/RequestBody_80c272d831b7"
+      x-gitlab-lifecycle: experiment
   "/api/v4/ai/duo_workflows/workflows/{id}/audit_events":
     post:
       operationId: postApiV4AiDuoWorkflowsWorkflowsIdAuditEvents
@@ -1329,7 +1373,7 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/RequestBody_70df885a8506"
+              "$ref": "#/components/schemas/RequestBody_7cf2d653fe95"
     get:
       operationId: getApiV4AiDuoWorkflowsWorkflowsIdCheckpoints
       summary: List all workflow checkpoints
@@ -17523,7 +17567,7 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/RequestBody_5a061b2b66c4"
+              "$ref": "#/components/schemas/RequestBody_e431b88ea4c1"
   "/api/v4/service_accounts":
     post:
       operationId: postApiV4ServiceAccounts
@@ -40061,6 +40105,26 @@ paths:
           nullable: true
         in: query
         example: '2019-03-15T08:00:00Z'
+      - name: merged_after
+        required: false
+        description: Returns merge requests merged on or after the given time. Expected
+          in ISO 8601 format.
+        schema:
+          type: string
+          format: date-time
+          nullable: true
+        in: query
+        example: '2019-03-15T08:00:00Z'
+      - name: merged_before
+        required: false
+        description: Returns merge requests merged on or before the given time. Expected
+          in ISO 8601 format.
+        schema:
+          type: string
+          format: date-time
+          nullable: true
+        in: query
+        example: '2019-03-15T08:00:00Z'
       - name: view
         required: false
         description: If simple, returns the `iid`, URL, title, description, and basic
@@ -40556,6 +40620,26 @@ paths:
       - name: updated_before
         required: false
         description: Returns merge requests updated on or before the given time. Expected
+          in ISO 8601 format.
+        schema:
+          type: string
+          format: date-time
+          nullable: true
+        in: query
+        example: '2019-03-15T08:00:00Z'
+      - name: merged_after
+        required: false
+        description: Returns merge requests merged on or after the given time. Expected
+          in ISO 8601 format.
+        schema:
+          type: string
+          format: date-time
+          nullable: true
+        in: query
+        example: '2019-03-15T08:00:00Z'
+      - name: merged_before
+        required: false
+        description: Returns merge requests merged on or before the given time. Expected
           in ISO 8601 format.
         schema:
           type: string
@@ -41250,6 +41334,26 @@ paths:
       - name: updated_before
         required: false
         description: Returns merge requests updated on or before the given time. Expected
+          in ISO 8601 format.
+        schema:
+          type: string
+          format: date-time
+          nullable: true
+        in: query
+        example: '2019-03-15T08:00:00Z'
+      - name: merged_after
+        required: false
+        description: Returns merge requests merged on or after the given time. Expected
+          in ISO 8601 format.
+        schema:
+          type: string
+          format: date-time
+          nullable: true
+        in: query
+        example: '2019-03-15T08:00:00Z'
+      - name: merged_before
+        required: false
+        description: Returns merge requests merged on or before the given time. Expected
           in ISO 8601 format.
         schema:
           type: string
@@ -58830,6 +58934,26 @@ paths:
           nullable: true
         in: query
         example: '2019-03-15T08:00:00Z'
+      - name: merged_after
+        required: false
+        description: Returns merge requests merged on or after the given time. Expected
+          in ISO 8601 format.
+        schema:
+          type: string
+          format: date-time
+          nullable: true
+        in: query
+        example: '2019-03-15T08:00:00Z'
+      - name: merged_before
+        required: false
+        description: Returns merge requests merged on or before the given time. Expected
+          in ISO 8601 format.
+        schema:
+          type: string
+          format: date-time
+          nullable: true
+        in: query
+        example: '2019-03-15T08:00:00Z'
       - name: view
         required: false
         description: If simple, returns the `iid`, URL, title, description, and basic
@@ -75998,6 +76122,20 @@ components:
           type: array
           items:
             "$ref": "#/components/schemas/APIEntitiesAiSemanticCodeGroupedResult"
+    APIEntitiesAiExternalAgentsIdentity:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 1
+        agent_type:
+          type: string
+          example: claude-code
+        revoked_at:
+          type: string
+        created_at:
+          type: string
+          example: '2026-06-17T00:00:00.000Z'
     APIEntitiesCustomAttribute:
       type: object
       properties:
@@ -85279,6 +85417,8 @@ components:
           type: string
         pypi_package_requests_forwarding:
           type: string
+        rubygems_package_requests_forwarding:
+          type: string
         group_owners_can_manage_default_branch_protection:
           type: string
         maintenance_mode:
@@ -90643,6 +90783,23 @@ components:
             be different if one type of field has multiple possible keys. Example
             `created` and `createdAt`
           example: title
+        field:
+          type: string
+          description: Base field name. For aliased parameterised fields this is the
+            underlying field (for example, `durationQuantile`), while `key` is the
+            alias (for example, `p50`). For standard fields, same as `key`
+          example: title
+        type:
+          type: string
+          description: Field classification. Either `dimension` or `metric` for analytics
+            mode fields, absent for standard fields
+          example: dimension
+        parameters:
+          type: object
+          description: Resolved parameter metadata for parameterised fields, absent
+            when the field has no parameters
+          example:
+            granularity: weekly
     APIEntitiesGlqlResult:
       type: object
       properties:
@@ -93958,6 +94115,24 @@ components:
           nullable: true
       required:
       - project_path
+    RequestBody_80c272d831b7:
+      type: object
+      properties:
+        agent_type:
+          type: string
+          enum:
+          - claude-code
+          - opencode
+          description: The type of agent being registered.
+          minLength: 1
+        machine_fingerprint:
+          type: string
+          description: SHA-256 hash of the machine identifier.
+          nullable: true
+          maxLength: 64
+      required:
+      - agent_type
+      - machine_fingerprint
     RequestBody_8129788813d5:
       type: object
       properties:
@@ -94146,7 +94321,7 @@ components:
           nullable: true
       required:
       - status_event
-    RequestBody_70df885a8506:
+    RequestBody_7cf2d653fe95:
       type: object
       properties:
         thread_ts:
@@ -94172,6 +94347,10 @@ components:
         model_metadata_json:
           type: string
           description: JSON string of the model metadata
+          nullable: true
+        flow_metadata_json:
+          type: string
+          description: JSON string of the flow metadata
           nullable: true
         current_thread:
           type: integer
@@ -98695,7 +98874,7 @@ components:
           description: Scopes available to the application. Separate multiple scopes
             with a space.
           nullable: true
-    RequestBody_5a061b2b66c4:
+    RequestBody_e431b88ea4c1:
       type: object
       properties:
         admin_mode:
@@ -99838,6 +100017,11 @@ components:
           type: boolean
           description: PyPI package requests are forwarded to pypi.org if not found
             on GitLab.
+          nullable: true
+        rubygems_package_requests_forwarding:
+          type: boolean
+          description: RubyGems package requests are forwarded to rubygems.org if
+            not found on GitLab.
           nullable: true
         virtual_registries_endpoints_api_limit:
           type: integer
