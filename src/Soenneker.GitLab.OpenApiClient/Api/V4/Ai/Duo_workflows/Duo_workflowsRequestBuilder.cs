@@ -5,6 +5,7 @@ using Microsoft.Kiota.Abstractions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Agent_workflows;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Code_review;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Direct_access;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Flow_callbacks;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.List_tools;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Revoke_token;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows;
@@ -35,6 +36,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Direct_access.Direct_accessRequestBuilder Direct_access
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Direct_access.Direct_accessRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The flow_callbacks property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Flow_callbacks.Flow_callbacksRequestBuilder Flow_callbacks
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Flow_callbacks.Flow_callbacksRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The list_tools property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.List_tools.List_toolsRequestBuilder List_tools
