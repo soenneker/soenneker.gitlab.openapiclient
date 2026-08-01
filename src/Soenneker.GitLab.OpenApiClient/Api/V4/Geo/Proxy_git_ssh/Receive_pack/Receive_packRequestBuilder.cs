@@ -36,22 +36,22 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Proxy_git_ssh.Receive_pack
         /// <summary>
         /// Responsible for making HTTP POST /repo.git/info/refs?service=git-receive-pack                  request from secondary gitlab-shell to primary
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson353"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GeoProxyGitSshReceivePack201Response"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson353?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5B6A3A7A2747 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GeoProxyGitSshReceivePack201Response?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5B6A3A7A2747 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson353> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5B6A3A7A2747 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GeoProxyGitSshReceivePack201Response> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5B6A3A7A2747 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson353>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson353.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GeoProxyGitSshReceivePack201Response>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GeoProxyGitSshReceivePack201Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Responsible for making HTTP POST /repo.git/info/refs?service=git-receive-pack                  request from secondary gitlab-shell to primary

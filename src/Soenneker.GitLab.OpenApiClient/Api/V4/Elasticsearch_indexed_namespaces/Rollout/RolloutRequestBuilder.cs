@@ -36,22 +36,22 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Elasticsearch_indexed_namespaces
         /// <summary>
         /// &quot;This feature was introduced in GitLab 12.7.**DEPRECATED**: This endpoint is deprecated and for GitLab.com use only.This will only ever increase the number of indexed namespaces. Providing a value lower than the current rolled out percentage will have no effect.This percentage is never persisted but is used to calculate the number of new namespaces to rollout.If the same percentage is applied again at a later time, due to possible new namespaces being created during the period, some of them will also be indexed. Therefore you may expect that setting this to 10%, then waiting a month and setting to 10% again will trigger new namespaces to be added (i.e. 10% of the number of newly created namespaces in the last month within the given plan).&quot;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson90"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ElasticsearchIndexedNamespacesRollout200Response"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson90?> PutAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5C6D6Eacec15 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ElasticsearchIndexedNamespacesRollout200Response?> PutAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5C6D6Eacec15 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson90> PutAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5C6D6Eacec15 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ElasticsearchIndexedNamespacesRollout200Response> PutAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5C6D6Eacec15 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson90>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.DefaultResponseResponseJson90.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ElasticsearchIndexedNamespacesRollout200Response>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ElasticsearchIndexedNamespacesRollout200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &quot;This feature was introduced in GitLab 12.7.**DEPRECATED**: This endpoint is deprecated and for GitLab.com use only.This will only ever increase the number of indexed namespaces. Providing a value lower than the current rolled out percentage will have no effect.This percentage is never persisted but is used to calculate the number of new namespaces to rollout.If the same percentage is applied again at a later time, due to possible new namespaces being created during the period, some of them will also be indexed. Therefore you may expect that setting this to 10%, then waiting a month and setting to 10% again will trigger new namespaces to be added (i.e. 10% of the number of newly created namespaces in the last month within the given plan).&quot;
