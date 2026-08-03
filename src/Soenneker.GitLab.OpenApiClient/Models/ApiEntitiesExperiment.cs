@@ -14,6 +14,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The context property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? Context { get; set; }
+#nullable restore
+#else
+        public List<string> Context { get; set; }
+#endif
         /// <summary>The current_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -63,6 +71,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "context", n => { Context = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "current_status", n => { CurrentStatus = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesExperimentCurrentStatus>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesExperimentCurrentStatus.CreateFromDiscriminatorValue); } },
                 { "definition", n => { Definition = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureDefinition>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureDefinition.CreateFromDiscriminatorValue); } },
                 { "key", n => { Key = n.GetStringValue(); } },
@@ -75,6 +84,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteCollectionOfPrimitiveValues<string>("context", Context);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesExperimentCurrentStatus>("current_status", CurrentStatus);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureDefinition>("definition", Definition);
             writer.WriteStringValue("key", Key);

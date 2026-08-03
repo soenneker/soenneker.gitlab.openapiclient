@@ -8,29 +8,29 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// Checkpoint metadata
+    /// Checkpoint content
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RequestBody7Cf2D653Fe95Metadata : IAdditionalDataHolder, IParsable
+    public partial class RequestBody66Ff509E3374Checkpoint : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody7Cf2D653Fe95Metadata"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody66Ff509E3374Checkpoint"/> and sets the default values.
         /// </summary>
-        public RequestBody7Cf2D653Fe95Metadata()
+        public RequestBody66Ff509E3374Checkpoint()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody7Cf2D653Fe95Metadata"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody66Ff509E3374Checkpoint"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody7Cf2D653Fe95Metadata CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody66Ff509E3374Checkpoint CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody7Cf2D653Fe95Metadata();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody66Ff509E3374Checkpoint();
         }
         /// <summary>
         /// The deserialization information for the current model

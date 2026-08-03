@@ -1128,7 +1128,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody7Cf2D653Fe95"
+                "$ref": "#/components/schemas/RequestBody66Ff509E3374"
               }
             }
           }
@@ -8649,7 +8649,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyEa91039Ecafb"
+                "$ref": "#/components/schemas/RequestBody1C9E643F3Fda"
               }
             }
           }
@@ -8750,7 +8750,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyEa91039Ecafb"
+                "$ref": "#/components/schemas/RequestBody1C9E643F3Fda"
               }
             }
           }
@@ -100807,6 +100807,10 @@
             "type": "boolean",
             "default": false
           },
+          "create_security_scan_profiles": {
+            "type": "boolean",
+            "default": false
+          },
           "destroy_package": {
             "type": "boolean",
             "default": false
@@ -105336,6 +105340,12 @@
           "key": {
             "type": "string",
             "example": "code_quality_walkthrough"
+          },
+          "context": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "definition": {
             "$ref": "#/components/schemas/ApiEntitiesFeatureDefinition"
@@ -122574,7 +122584,7 @@
           }
         }
       },
-      "RequestBody7Cf2D653Fe95": {
+      "RequestBody66Ff509E3374": {
         "required": [
           "thread_ts",
           "metadata"
@@ -122592,7 +122602,7 @@
             "nullable": true
           },
           "checkpoint": {
-            "$ref": "#/components/schemas/RequestBody7Cf2D653Fe95Checkpoint"
+            "$ref": "#/components/schemas/RequestBody66Ff509E3374Checkpoint"
           },
           "compressed_checkpoint": {
             "type": "string",
@@ -122600,7 +122610,7 @@
             "nullable": true
           },
           "metadata": {
-            "$ref": "#/components/schemas/RequestBody7Cf2D653Fe95Metadata"
+            "$ref": "#/components/schemas/RequestBody66Ff509E3374Metadata"
           },
           "model_metadata_json": {
             "type": "string",
@@ -122621,7 +122631,7 @@
           "channel_blobs": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBody7Cf2D653Fe95ChannelBlobsItem"
+              "$ref": "#/components/schemas/RequestBody66Ff509E3374ChannelBlobsItem"
             },
             "description": "Per-channel blobs for incremental checkpoint storage",
             "nullable": true
@@ -123988,14 +123998,14 @@
           }
         }
       },
-      "RequestBodyEa91039Ecafb": {
+      "RequestBody1C9E643F3Fda": {
         "required": [
           "base_access_level"
         ],
         "type": "object",
         "properties": {
           "base_access_level": {
-            "$ref": "#/components/schemas/RequestBodyEa91039EcafbBaseAccessLevel"
+            "$ref": "#/components/schemas/RequestBody1C9E643F3FdaBaseAccessLevel"
           },
           "name": {
             "type": "string",
@@ -124025,6 +124035,11 @@
           "admin_ai_catalog_item_consumer": {
             "type": "boolean",
             "description": "Enable, disable, and configure custom agents and flows from the AI catalog for a project.",
+            "nullable": true
+          },
+          "create_security_scan_profiles": {
+            "type": "boolean",
+            "description": "Create security scan profiles.",
             "nullable": true
           },
           "destroy_package": {
@@ -143603,17 +143618,17 @@
           }
         }
       },
-      "RequestBody7Cf2D653Fe95Checkpoint": {
+      "RequestBody66Ff509E3374Checkpoint": {
         "type": "object",
         "description": "Checkpoint content",
         "nullable": true
       },
-      "RequestBody7Cf2D653Fe95Metadata": {
+      "RequestBody66Ff509E3374Metadata": {
         "type": "object",
         "description": "Checkpoint metadata",
         "nullable": true
       },
-      "RequestBody7Cf2D653Fe95ChannelBlobsItem": {
+      "RequestBody66Ff509E3374ChannelBlobsItem": {
         "required": [
           "channel",
           "version",
@@ -143638,11 +143653,11 @@
           "write_type": {
             "maxLength": 255,
             "type": "string",
-            "description": "Serialization type (e.g. msgpack)",
+            "description": "Blob serialization type. The read path decodes zlib-compressed JSON, so producers must send \u0022json\u0022.",
             "nullable": true
           },
           "step_action": {
-            "$ref": "#/components/schemas/RequestBody7Cf2D653Fe95ChannelBlobsItemStepAction"
+            "$ref": "#/components/schemas/RequestBody66Ff509E3374ChannelBlobsItemStepAction"
           },
           "data": {
             "maxLength": 1398104,
@@ -152289,7 +152304,7 @@
           ]
         }
       },
-      "RequestBodyEa91039EcafbBaseAccessLevel": {
+      "RequestBody1C9E643F3FdaBaseAccessLevel": {
         "enum": [
           10,
           15,
@@ -158905,7 +158920,7 @@
           ]
         }
       },
-      "RequestBody7Cf2D653Fe95ChannelBlobsItemStepAction": {
+      "RequestBody66Ff509E3374ChannelBlobsItemStepAction": {
         "minLength": 1,
         "enum": [
           "conversation",
@@ -158915,7 +158930,7 @@
         "additionalProperties": false,
         "description": "Append or replace signal (conversation or compaction)",
         "x-ms-enum": {
-          "name": "RequestBody7Cf2D653Fe95ChannelBlobsItemStepAction",
+          "name": "RequestBody66Ff509E3374ChannelBlobsItemStepAction",
           "modelAsString": false,
           "values": [
             {

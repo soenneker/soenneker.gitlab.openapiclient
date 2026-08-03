@@ -50,6 +50,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public bool? ArchiveProject { get; set; }
         /// <summary>The base_access_level property</summary>
         public int? BaseAccessLevel { get; set; }
+        /// <summary>The create_security_scan_profiles property</summary>
+        public bool? CreateSecurityScanProfiles { get; set; }
         /// <summary>The description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -143,6 +145,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             AdminWebHook = false;
             ApplySecurityScanProfiles = false;
             ArchiveProject = false;
+            CreateSecurityScanProfiles = false;
             DestroyPackage = false;
             ManageDeployTokens = false;
             ManageGroupAccessTokens = false;
@@ -205,6 +208,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "apply_security_scan_profiles", n => { ApplySecurityScanProfiles = n.GetBoolValue(); } },
                 { "archive_project", n => { ArchiveProject = n.GetBoolValue(); } },
                 { "base_access_level", n => { BaseAccessLevel = n.GetIntValue(); } },
+                { "create_security_scan_profiles", n => { CreateSecurityScanProfiles = n.GetBoolValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "destroy_package", n => { DestroyPackage = n.GetBoolValue(); } },
                 { "group_id", n => { GroupId = n.GetLongValue(); } },
@@ -261,6 +265,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("apply_security_scan_profiles", ApplySecurityScanProfiles);
             writer.WriteBoolValue("archive_project", ArchiveProject);
             writer.WriteIntValue("base_access_level", BaseAccessLevel);
+            writer.WriteBoolValue("create_security_scan_profiles", CreateSecurityScanProfiles);
             writer.WriteStringValue("description", Description);
             writer.WriteBoolValue("destroy_package", DestroyPackage);
             writer.WriteLongValue("group_id", GroupId);

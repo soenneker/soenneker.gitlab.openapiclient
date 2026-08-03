@@ -1495,7 +1495,7 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/RequestBody_7cf2d653fe95"
+              "$ref": "#/components/schemas/RequestBody_66ff509e3374"
     get:
       operationId: getApiV4AiDuoWorkflowsWorkflowsIdCheckpoints
       summary: List all workflow checkpoints
@@ -6940,7 +6940,7 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/RequestBody_ea91039ecafb"
+              "$ref": "#/components/schemas/RequestBody_1c9e643f3fda"
   "/api/v4/groups/{id}/member_roles/{member_role_id}":
     delete:
       operationId: deleteApiV4GroupsIdMemberRolesMemberRoleId
@@ -7010,7 +7010,7 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/RequestBody_ea91039ecafb"
+              "$ref": "#/components/schemas/RequestBody_1c9e643f3fda"
   "/api/v4/member_roles/{member_role_id}":
     delete:
       operationId: deleteApiV4MemberRolesMemberRoleId
@@ -78355,6 +78355,9 @@ components:
         admin_ai_catalog_item_consumer:
           type: boolean
           default: false
+        create_security_scan_profiles:
+          type: boolean
+          default: false
         destroy_package:
           type: boolean
           default: false
@@ -81446,6 +81449,12 @@ components:
         key:
           type: string
           example: code_quality_walkthrough
+        context:
+          type: array
+          example:
+          - user
+          items:
+            type: string
         definition:
           "$ref": "#/components/schemas/APIEntitiesFeatureDefinition"
         current_status:
@@ -94494,7 +94503,7 @@ components:
           nullable: true
       required:
       - status_event
-    RequestBody_7cf2d653fe95:
+    RequestBody_66ff509e3374:
       type: object
       properties:
         thread_ts:
@@ -94548,7 +94557,8 @@ components:
                 maxLength: 255
               write_type:
                 type: string
-                description: Serialization type (e.g. msgpack)
+                description: Blob serialization type. The read path decodes zlib-compressed
+                  JSON, so producers must send "json".
                 nullable: true
                 maxLength: 255
               step_action:
@@ -96327,7 +96337,7 @@ components:
           nullable: true
       required:
       - extern_uid
-    RequestBody_ea91039ecafb:
+    RequestBody_1c9e643f3fda:
       type: object
       properties:
         base_access_level:
@@ -96365,6 +96375,10 @@ components:
           type: boolean
           description: Enable, disable, and configure custom agents and flows from
             the AI catalog for a project.
+          nullable: true
+        create_security_scan_profiles:
+          type: boolean
+          description: Create security scan profiles.
           nullable: true
         destroy_package:
           type: boolean
