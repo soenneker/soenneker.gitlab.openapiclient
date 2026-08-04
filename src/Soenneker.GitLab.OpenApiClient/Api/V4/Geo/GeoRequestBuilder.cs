@@ -2,6 +2,7 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Failures;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Node_proxy;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Proxy;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Proxy_git_ssh;
@@ -20,6 +21,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Geo
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GeoRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The failures property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Failures.FailuresRequestBuilder Failures
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Failures.FailuresRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The node_proxy property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Node_proxy.Node_proxyRequestBuilder Node_proxy
         {

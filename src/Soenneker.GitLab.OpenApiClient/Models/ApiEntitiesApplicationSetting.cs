@@ -3004,6 +3004,22 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ObservabilityBackendSslVerificationEnabled { get; set; }
 #endif
+        /// <summary>The offline_transfer_exports_enabled property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? OfflineTransferExportsEnabled { get; set; }
+#nullable restore
+#else
+        public string OfflineTransferExportsEnabled { get; set; }
+#endif
+        /// <summary>The offline_transfer_imports_enabled property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? OfflineTransferImportsEnabled { get; set; }
+#nullable restore
+#else
+        public string OfflineTransferImportsEnabled { get; set; }
+#endif
         /// <summary>The organization_cluster_agent_authorization_enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -5499,6 +5515,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "nuget_skip_metadata_url_validation", n => { NugetSkipMetadataUrlValidation = n.GetStringValue(); } },
                 { "oauth_access_token_expires_in", n => { OauthAccessTokenExpiresIn = n.GetStringValue(); } },
                 { "observability_backend_ssl_verification_enabled", n => { ObservabilityBackendSslVerificationEnabled = n.GetStringValue(); } },
+                { "offline_transfer_exports_enabled", n => { OfflineTransferExportsEnabled = n.GetStringValue(); } },
+                { "offline_transfer_imports_enabled", n => { OfflineTransferImportsEnabled = n.GetStringValue(); } },
                 { "organization_cluster_agent_authorization_enabled", n => { OrganizationClusterAgentAuthorizationEnabled = n.GetStringValue(); } },
                 { "outbound_local_requests_allowlist_raw", n => { OutboundLocalRequestsAllowlistRaw = n.GetStringValue(); } },
                 { "outbound_local_requests_whitelist", n => { OutboundLocalRequestsWhitelist = n.GetStringValue(); } },
@@ -6151,6 +6169,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("nuget_skip_metadata_url_validation", NugetSkipMetadataUrlValidation);
             writer.WriteStringValue("oauth_access_token_expires_in", OauthAccessTokenExpiresIn);
             writer.WriteStringValue("observability_backend_ssl_verification_enabled", ObservabilityBackendSslVerificationEnabled);
+            writer.WriteStringValue("offline_transfer_exports_enabled", OfflineTransferExportsEnabled);
+            writer.WriteStringValue("offline_transfer_imports_enabled", OfflineTransferImportsEnabled);
             writer.WriteStringValue("organization_cluster_agent_authorization_enabled", OrganizationClusterAgentAuthorizationEnabled);
             writer.WriteStringValue("outbound_local_requests_allowlist_raw", OutboundLocalRequestsAllowlistRaw);
             writer.WriteStringValue("outbound_local_requests_whitelist", OutboundLocalRequestsWhitelist);

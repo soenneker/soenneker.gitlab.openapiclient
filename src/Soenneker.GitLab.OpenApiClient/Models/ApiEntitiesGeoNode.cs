@@ -14,6 +14,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The checksum_mismatch_report_threshold property</summary>
+        public int? ChecksumMismatchReportThreshold { get; set; }
+        /// <summary>The checksum_mismatch_self_heal_cooldown_minutes property</summary>
+        public int? ChecksumMismatchSelfHealCooldownMinutes { get; set; }
         /// <summary>The clone_protocol property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -147,6 +151,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "checksum_mismatch_report_threshold", n => { ChecksumMismatchReportThreshold = n.GetIntValue(); } },
+                { "checksum_mismatch_self_heal_cooldown_minutes", n => { ChecksumMismatchSelfHealCooldownMinutes = n.GetIntValue(); } },
                 { "clone_protocol", n => { CloneProtocol = n.GetStringValue(); } },
                 { "container_repositories_max_capacity", n => { ContainerRepositoriesMaxCapacity = n.GetIntValue(); } },
                 { "current", n => { Current = n.GetBoolValue(); } },
@@ -177,6 +183,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteIntValue("checksum_mismatch_report_threshold", ChecksumMismatchReportThreshold);
+            writer.WriteIntValue("checksum_mismatch_self_heal_cooldown_minutes", ChecksumMismatchSelfHealCooldownMinutes);
             writer.WriteStringValue("clone_protocol", CloneProtocol);
             writer.WriteIntValue("container_repositories_max_capacity", ContainerRepositoriesMaxCapacity);
             writer.WriteBoolValue("current", Current);

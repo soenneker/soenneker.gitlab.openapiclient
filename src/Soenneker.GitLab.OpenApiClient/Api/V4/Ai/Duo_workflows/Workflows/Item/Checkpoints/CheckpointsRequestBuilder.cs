@@ -35,7 +35,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CheckpointsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/ai/duo_workflows/workflows/{%2Did}/checkpoints{?accept_compressed*}", pathParameters)
+        public CheckpointsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/ai/duo_workflows/workflows/{%2Did}/checkpoints{?accept_compressed*,checkpoint_ns*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CheckpointsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/ai/duo_workflows/workflows/{%2Did}/checkpoints{?accept_compressed*}", rawUrl)
+        public CheckpointsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/ai/duo_workflows/workflows/{%2Did}/checkpoints{?accept_compressed*,checkpoint_ns*}", rawUrl)
         {
         }
         /// <summary>
@@ -73,11 +73,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsIdCheckpoints201Response?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody66Ff509E3374 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsIdCheckpoints201Response?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC3A5D8790936 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsIdCheckpoints201Response> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody66Ff509E3374 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsIdCheckpoints201Response> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC3A5D8790936 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -111,11 +111,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody66Ff509E3374 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC3A5D8790936 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody66Ff509E3374 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC3A5D8790936 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -143,6 +143,16 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.
             /// <summary>Return compressed checkpoints</summary>
             [QueryParameter("accept_compressed")]
             public bool? AcceptCompressed { get; set; }
+            /// <summary>&quot;Only return checkpoints belonging to this LangGraph checkpoint namespace (the flow&apos;s own top-level lineage if omitted or blank). Unset (the default): return checkpoints from every lineage, unfiltered, preserving prior behavior.&quot;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("checkpoint_ns")]
+            public string? CheckpointNs { get; set; }
+#nullable restore
+#else
+            [QueryParameter("checkpoint_ns")]
+            public string CheckpointNs { get; set; }
+#endif
         }
     }
 }

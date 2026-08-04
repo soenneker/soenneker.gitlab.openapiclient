@@ -3,21 +3,21 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>&quot;Email confirmation setting, possible values: `off`, `soft`, and `hard`&quot;</summary>
+    /// <summary>Allow only the selected protocols to be used for Git access.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBodyE431B88Ea4C1EmailConfirmationSetting
+    public enum RequestBody3Dc15D3C2Ef0EnabledGitAccessProtocol
     {
-        [EnumMember(Value = "off")]
+        [EnumMember(Value = "ssh")]
         #pragma warning disable CS1591
-        Off,
+        Ssh,
         #pragma warning restore CS1591
-        [EnumMember(Value = "soft")]
+        [EnumMember(Value = "http")]
         #pragma warning disable CS1591
-        Soft,
+        Http,
         #pragma warning restore CS1591
-        [EnumMember(Value = "hard")]
+        [EnumMember(Value = "all")]
         #pragma warning disable CS1591
-        Hard,
+        All,
         #pragma warning restore CS1591
     }
 }

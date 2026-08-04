@@ -8,31 +8,29 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// Dependency management settings
+    /// Default response schema
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RequestBodyE431B88Ea4C1DependencyManagementSettings : IAdditionalDataHolder, IParsable
+    public partial class PostApiV4GeoFailures201Response : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Maximum number of dependency management security update scheduler jobs that run concurrently across the Sidekiq fleet</summary>
-        public int? SecurityUpdateSchedulerMaxConcurrency { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE431B88Ea4C1DependencyManagementSettings"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GeoFailures201Response"/> and sets the default values.
         /// </summary>
-        public RequestBodyE431B88Ea4C1DependencyManagementSettings()
+        public PostApiV4GeoFailures201Response()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE431B88Ea4C1DependencyManagementSettings"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GeoFailures201Response"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE431B88Ea4C1DependencyManagementSettings CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GeoFailures201Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE431B88Ea4C1DependencyManagementSettings();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GeoFailures201Response();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -42,7 +40,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "security_update_scheduler_max_concurrency", n => { SecurityUpdateSchedulerMaxConcurrency = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -52,7 +49,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("security_update_scheduler_max_concurrency", SecurityUpdateSchedulerMaxConcurrency);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

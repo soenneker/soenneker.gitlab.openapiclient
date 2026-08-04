@@ -16,6 +16,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The blob_download_timeout property</summary>
         public int? BlobDownloadTimeout { get; set; }
+        /// <summary>The checksum_mismatch_report_threshold property</summary>
+        public int? ChecksumMismatchReportThreshold { get; set; }
+        /// <summary>The checksum_mismatch_self_heal_cooldown_minutes property</summary>
+        public int? ChecksumMismatchSelfHealCooldownMinutes { get; set; }
         /// <summary>The container_repositories_max_capacity property</summary>
         public int? ContainerRepositoriesMaxCapacity { get; set; }
         /// <summary>The current property</summary>
@@ -142,6 +146,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "blob_download_timeout", n => { BlobDownloadTimeout = n.GetIntValue(); } },
+                { "checksum_mismatch_report_threshold", n => { ChecksumMismatchReportThreshold = n.GetIntValue(); } },
+                { "checksum_mismatch_self_heal_cooldown_minutes", n => { ChecksumMismatchSelfHealCooldownMinutes = n.GetIntValue(); } },
                 { "container_repositories_max_capacity", n => { ContainerRepositoriesMaxCapacity = n.GetIntValue(); } },
                 { "current", n => { Current = n.GetBoolValue(); } },
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
@@ -172,6 +178,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("blob_download_timeout", BlobDownloadTimeout);
+            writer.WriteIntValue("checksum_mismatch_report_threshold", ChecksumMismatchReportThreshold);
+            writer.WriteIntValue("checksum_mismatch_self_heal_cooldown_minutes", ChecksumMismatchSelfHealCooldownMinutes);
             writer.WriteIntValue("container_repositories_max_capacity", ContainerRepositoriesMaxCapacity);
             writer.WriteBoolValue("current", Current);
             writer.WriteBoolValue("enabled", Enabled);
