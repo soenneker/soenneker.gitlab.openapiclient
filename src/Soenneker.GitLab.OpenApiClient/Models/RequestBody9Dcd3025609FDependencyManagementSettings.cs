@@ -8,29 +8,31 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// VS Code Extension Marketplace URL&apos;s when preset is &apos;custom&apos;
+    /// Dependency management settings
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RequestBody3Dc15D3C2Ef0VscodeExtensionMarketplaceCustomValues : IAdditionalDataHolder, IParsable
+    public partial class RequestBody9Dcd3025609FDependencyManagementSettings : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Maximum number of dependency management security update scheduler jobs that run concurrently across the Sidekiq fleet</summary>
+        public int? SecurityUpdateSchedulerMaxConcurrency { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3Dc15D3C2Ef0VscodeExtensionMarketplaceCustomValues"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FDependencyManagementSettings"/> and sets the default values.
         /// </summary>
-        public RequestBody3Dc15D3C2Ef0VscodeExtensionMarketplaceCustomValues()
+        public RequestBody9Dcd3025609FDependencyManagementSettings()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3Dc15D3C2Ef0VscodeExtensionMarketplaceCustomValues"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FDependencyManagementSettings"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3Dc15D3C2Ef0VscodeExtensionMarketplaceCustomValues CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FDependencyManagementSettings CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3Dc15D3C2Ef0VscodeExtensionMarketplaceCustomValues();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FDependencyManagementSettings();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -40,6 +42,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "security_update_scheduler_max_concurrency", n => { SecurityUpdateSchedulerMaxConcurrency = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -49,6 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteIntValue("security_update_scheduler_max_concurrency", SecurityUpdateSchedulerMaxConcurrency);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -6952,7 +6952,7 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/RequestBody_1c9e643f3fda"
+              "$ref": "#/components/schemas/RequestBody_099e406a34d9"
   "/api/v4/groups/{id}/member_roles/{member_role_id}":
     delete:
       operationId: deleteApiV4GroupsIdMemberRolesMemberRoleId
@@ -7022,7 +7022,7 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/RequestBody_1c9e643f3fda"
+              "$ref": "#/components/schemas/RequestBody_099e406a34d9"
   "/api/v4/member_roles/{member_role_id}":
     delete:
       operationId: deleteApiV4MemberRolesMemberRoleId
@@ -17703,7 +17703,7 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/RequestBody_3dc15d3c2ef0"
+              "$ref": "#/components/schemas/RequestBody_9dcd3025609f"
   "/api/v4/service_accounts":
     post:
       operationId: postApiV4ServiceAccounts
@@ -21234,7 +21234,7 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/RequestBody_f8df00b9df82"
+              "$ref": "#/components/schemas/RequestBody_047f0d8da63f"
     get:
       operationId: getApiV4Mcp
       summary: Get MCP response listener
@@ -78471,6 +78471,9 @@ components:
         update_sec_ai_workflow_settings:
           type: boolean
           default: false
+        update_security_scan_profiles:
+          type: boolean
+          default: false
         read_admin_cicd:
           type: boolean
           default: false
@@ -85241,6 +85244,8 @@ components:
           type: string
         mcp_server_enabled:
           type: string
+        dynamic_client_registration_enabled:
+          type: string
         active_context_pause_indexing:
           type: string
         allow_all_integrations:
@@ -85505,6 +85510,8 @@ components:
           type: string
         display_gitlab_credits_user_data:
           type: string
+        use_nats_for_audit_streaming:
+          type: boolean
         project_secrets_limit:
           type: string
         group_secrets_limit:
@@ -96392,7 +96399,7 @@ components:
           nullable: true
       required:
       - extern_uid
-    RequestBody_1c9e643f3fda:
+    RequestBody_099e406a34d9:
       type: object
       properties:
         base_access_level:
@@ -96568,6 +96575,10 @@ components:
           type: boolean
           description: Update security AI workflow settings such as SAST Vulnerability
             Resolution. Also requires the `read_vulnerability` permission.
+          nullable: true
+        update_security_scan_profiles:
+          type: boolean
+          description: Update security scan profiles.
           nullable: true
         read_admin_cicd:
           type: boolean
@@ -99184,7 +99195,7 @@ components:
           description: Scopes available to the application. Separate multiple scopes
             with a space.
           nullable: true
-    RequestBody_3dc15d3c2ef0:
+    RequestBody_9dcd3025609f:
       type: object
       properties:
         admin_mode:
@@ -100515,6 +100526,11 @@ components:
           description: The ID of a project to use as the Duo Code Review custom instructions
             template for this instance
           nullable: true
+        use_nats_for_audit_streaming:
+          type: boolean
+          description: Route audit event streaming through NATS JetStream when the
+            instance has NATS configured
+          nullable: true
         allow_local_requests_from_web_hooks_and_services:
           type: string
           nullable: true
@@ -101269,6 +101285,9 @@ components:
           type: string
           nullable: true
         mcp_server_enabled:
+          type: string
+          nullable: true
+        dynamic_client_registration_enabled:
           type: string
           nullable: true
         allow_all_integrations:
@@ -102083,7 +102102,7 @@ components:
           description: "[Deprecated in 14.10] No longer allowed to update confidentiality
             of notes"
           nullable: true
-    RequestBody_f8df00b9df82:
+    RequestBody_047f0d8da63f:
       type: object
       properties:
         jsonrpc:
@@ -102097,9 +102116,11 @@ components:
           description: Name of the JSON-RPC method invoked on the MCP server.
           nullable: true
         id:
-          type: string
-          description: ID of the JSON-RPC request returned in the response.
-          nullable: true
+          oneOf:
+          - type: integer
+            nullable: true
+          - type: string
+            nullable: true
         params:
           oneOf:
           - type: object

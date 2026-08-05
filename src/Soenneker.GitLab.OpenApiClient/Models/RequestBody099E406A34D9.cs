@@ -9,7 +9,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class RequestBody1C9E643F3Fda : IAdditionalDataHolder, IParsable
+    public partial class RequestBody099E406A34D9 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -118,22 +118,24 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public bool? RemoveProject { get; set; }
         /// <summary>Update security AI workflow settings such as SAST Vulnerability Resolution. Also requires the `read_vulnerability` permission.</summary>
         public bool? UpdateSecAiWorkflowSettings { get; set; }
+        /// <summary>Update security scan profiles.</summary>
+        public bool? UpdateSecurityScanProfiles { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1C9E643F3Fda"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody099E406A34D9"/> and sets the default values.
         /// </summary>
-        public RequestBody1C9E643F3Fda()
+        public RequestBody099E406A34D9()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1C9E643F3Fda"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody099E406A34D9"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1C9E643F3Fda CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody099E406A34D9 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1C9E643F3Fda();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody099E406A34D9();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -189,6 +191,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "remove_group", n => { RemoveGroup = n.GetBoolValue(); } },
                 { "remove_project", n => { RemoveProject = n.GetBoolValue(); } },
                 { "update_sec_ai_workflow_settings", n => { UpdateSecAiWorkflowSettings = n.GetBoolValue(); } },
+                { "update_security_scan_profiles", n => { UpdateSecurityScanProfiles = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -244,6 +247,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("remove_group", RemoveGroup);
             writer.WriteBoolValue("remove_project", RemoveProject);
             writer.WriteBoolValue("update_sec_ai_workflow_settings", UpdateSecAiWorkflowSettings);
+            writer.WriteBoolValue("update_security_scan_profiles", UpdateSecurityScanProfiles);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -9,7 +9,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class RequestBody3Dc15D3C2Ef0DefaultBranchProtectionDefaultsAllowedToMergeItem : IAdditionalDataHolder, IParsable
+    public partial class RequestBody9Dcd3025609FDefaultBranchProtectionDefaultsAllowedToMergeItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>A valid access level</summary>
@@ -17,21 +17,21 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3Dc15D3C2Ef0DefaultBranchProtectionDefaultsAllowedToMergeItem"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FDefaultBranchProtectionDefaultsAllowedToMergeItem"/> and sets the default values.
         /// </summary>
-        public RequestBody3Dc15D3C2Ef0DefaultBranchProtectionDefaultsAllowedToMergeItem()
+        public RequestBody9Dcd3025609FDefaultBranchProtectionDefaultsAllowedToMergeItem()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3Dc15D3C2Ef0DefaultBranchProtectionDefaultsAllowedToMergeItem"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FDefaultBranchProtectionDefaultsAllowedToMergeItem"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3Dc15D3C2Ef0DefaultBranchProtectionDefaultsAllowedToMergeItem CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FDefaultBranchProtectionDefaultsAllowedToMergeItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3Dc15D3C2Ef0DefaultBranchProtectionDefaultsAllowedToMergeItem();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FDefaultBranchProtectionDefaultsAllowedToMergeItem();
         }
         /// <summary>
         /// The deserialization information for the current model

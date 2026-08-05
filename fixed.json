@@ -8659,7 +8659,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody1C9E643F3Fda"
+                "$ref": "#/components/schemas/RequestBody099E406A34D9"
               }
             }
           }
@@ -8760,7 +8760,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody1C9E643F3Fda"
+                "$ref": "#/components/schemas/RequestBody099E406A34D9"
               }
             }
           }
@@ -22281,7 +22281,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody3Dc15D3C2Ef0"
+                "$ref": "#/components/schemas/RequestBody9Dcd3025609F"
               }
             }
           }
@@ -26909,7 +26909,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyF8Df00B9Df82"
+                "$ref": "#/components/schemas/RequestBody047F0D8Da63F"
               }
             }
           }
@@ -100955,6 +100955,10 @@
             "type": "boolean",
             "default": false
           },
+          "update_security_scan_profiles": {
+            "type": "boolean",
+            "default": false
+          },
           "read_admin_cicd": {
             "type": "boolean",
             "default": false
@@ -110504,6 +110508,9 @@
           "mcp_server_enabled": {
             "type": "string"
           },
+          "dynamic_client_registration_enabled": {
+            "type": "string"
+          },
           "active_context_pause_indexing": {
             "type": "string"
           },
@@ -110899,6 +110906,9 @@
           },
           "display_gitlab_credits_user_data": {
             "type": "string"
+          },
+          "use_nats_for_audit_streaming": {
+            "type": "boolean"
           },
           "project_secrets_limit": {
             "type": "string"
@@ -124062,14 +124072,14 @@
           }
         }
       },
-      "RequestBody1C9E643F3Fda": {
+      "RequestBody099E406A34D9": {
         "required": [
           "base_access_level"
         ],
         "type": "object",
         "properties": {
           "base_access_level": {
-            "$ref": "#/components/schemas/RequestBody1C9E643F3FdaBaseAccessLevel"
+            "$ref": "#/components/schemas/RequestBody099E406A34D9BaseAccessLevel"
           },
           "name": {
             "type": "string",
@@ -124234,6 +124244,11 @@
           "update_sec_ai_workflow_settings": {
             "type": "boolean",
             "description": "Update security AI workflow settings such as SAST Vulnerability Resolution. Also requires the \u0060read_vulnerability\u0060 permission.",
+            "nullable": true
+          },
+          "update_security_scan_profiles": {
+            "type": "boolean",
+            "description": "Update security scan profiles.",
             "nullable": true
           },
           "read_admin_cicd": {
@@ -127188,7 +127203,7 @@
           }
         }
       },
-      "RequestBody3Dc15D3C2Ef0": {
+      "RequestBody9Dcd3025609F": {
         "type": "object",
         "properties": {
           "admin_mode": {
@@ -127288,19 +127303,19 @@
             "nullable": true
           },
           "default_project_creation": {
-            "$ref": "#/components/schemas/RequestBody3Dc15D3C2Ef0DefaultProjectCreation"
+            "$ref": "#/components/schemas/RequestBody9Dcd3025609FDefaultProjectCreation"
           },
           "default_branch_protection": {
-            "$ref": "#/components/schemas/RequestBody3Dc15D3C2Ef0DefaultBranchProtection"
+            "$ref": "#/components/schemas/RequestBody9Dcd3025609FDefaultBranchProtection"
           },
           "default_branch_protection_defaults": {
-            "$ref": "#/components/schemas/RequestBody3Dc15D3C2Ef0DefaultBranchProtectionDefaults"
+            "$ref": "#/components/schemas/RequestBody9Dcd3025609FDefaultBranchProtectionDefaults"
           },
           "default_group_visibility": {
-            "$ref": "#/components/schemas/RequestBody3Dc15D3C2Ef0DefaultGroupVisibility"
+            "$ref": "#/components/schemas/RequestBody9Dcd3025609FDefaultGroupVisibility"
           },
           "default_project_visibility": {
-            "$ref": "#/components/schemas/RequestBody3Dc15D3C2Ef0DefaultProjectVisibility"
+            "$ref": "#/components/schemas/RequestBody9Dcd3025609FDefaultProjectVisibility"
           },
           "default_projects_limit": {
             "type": "integer",
@@ -127308,10 +127323,10 @@
             "nullable": true
           },
           "default_snippet_visibility": {
-            "$ref": "#/components/schemas/RequestBody3Dc15D3C2Ef0DefaultSnippetVisibility"
+            "$ref": "#/components/schemas/RequestBody9Dcd3025609FDefaultSnippetVisibility"
           },
           "dependency_management_settings": {
-            "$ref": "#/components/schemas/RequestBody3Dc15D3C2Ef0DependencyManagementSettings"
+            "$ref": "#/components/schemas/RequestBody9Dcd3025609FDependencyManagementSettings"
           },
           "disable_admin_oauth_scopes": {
             "type": "boolean",
@@ -127409,10 +127424,10 @@
             "nullable": true
           },
           "email_confirmation_setting": {
-            "$ref": "#/components/schemas/RequestBody3Dc15D3C2Ef0EmailConfirmationSetting"
+            "$ref": "#/components/schemas/RequestBody9Dcd3025609FEmailConfirmationSetting"
           },
           "enabled_git_access_protocol": {
-            "$ref": "#/components/schemas/RequestBody3Dc15D3C2Ef0EnabledGitAccessProtocol"
+            "$ref": "#/components/schemas/RequestBody9Dcd3025609FEnabledGitAccessProtocol"
           },
           "gitpod_enabled": {
             "type": "boolean",
@@ -127708,7 +127723,7 @@
             "nullable": true
           },
           "repository_storages_weighted": {
-            "$ref": "#/components/schemas/RequestBody3Dc15D3C2Ef0RepositoryStoragesWeighted"
+            "$ref": "#/components/schemas/RequestBody9Dcd3025609FRepositoryStoragesWeighted"
           },
           "require_two_factor_authentication": {
             "type": "boolean",
@@ -127872,7 +127887,7 @@
             "nullable": true
           },
           "whats_new_variant": {
-            "$ref": "#/components/schemas/RequestBody3Dc15D3C2Ef0WhatsNewVariant"
+            "$ref": "#/components/schemas/RequestBody9Dcd3025609FWhatsNewVariant"
           },
           "floc_enabled": {
             "type": "boolean",
@@ -128080,10 +128095,10 @@
             "nullable": true
           },
           "resource_usage_limits": {
-            "$ref": "#/components/schemas/RequestBody3Dc15D3C2Ef0ResourceUsageLimits"
+            "$ref": "#/components/schemas/RequestBody9Dcd3025609FResourceUsageLimits"
           },
           "vscode_extension_marketplace": {
-            "$ref": "#/components/schemas/RequestBody3Dc15D3C2Ef0VscodeExtensionMarketplace"
+            "$ref": "#/components/schemas/RequestBody9Dcd3025609FVscodeExtensionMarketplace"
           },
           "enable_language_server_restrictions": {
             "type": "boolean",
@@ -128101,28 +128116,28 @@
             "nullable": true
           },
           "logging_field_schema_version": {
-            "$ref": "#/components/schemas/RequestBody3Dc15D3C2Ef0LoggingFieldSchemaVersion"
+            "$ref": "#/components/schemas/RequestBody9Dcd3025609FLoggingFieldSchemaVersion"
           },
           "logging_field_dual_emit_target": {
-            "$ref": "#/components/schemas/RequestBody3Dc15D3C2Ef0LoggingFieldDualEmitTarget"
+            "$ref": "#/components/schemas/RequestBody9Dcd3025609FLoggingFieldDualEmitTarget"
           },
           "rsa_key_restriction": {
-            "$ref": "#/components/schemas/RequestBody3Dc15D3C2Ef0RsaKeyRestriction"
+            "$ref": "#/components/schemas/RequestBody9Dcd3025609FRsaKeyRestriction"
           },
           "dsa_key_restriction": {
-            "$ref": "#/components/schemas/RequestBody3Dc15D3C2Ef0DsaKeyRestriction"
+            "$ref": "#/components/schemas/RequestBody9Dcd3025609FDsaKeyRestriction"
           },
           "ecdsa_key_restriction": {
-            "$ref": "#/components/schemas/RequestBody3Dc15D3C2Ef0EcdsaKeyRestriction"
+            "$ref": "#/components/schemas/RequestBody9Dcd3025609FEcdsaKeyRestriction"
           },
           "ed25519_key_restriction": {
-            "$ref": "#/components/schemas/RequestBody3Dc15D3C2Ef0Ed25519KeyRestriction"
+            "$ref": "#/components/schemas/RequestBody9Dcd3025609FEd25519KeyRestriction"
           },
           "ecdsa_sk_key_restriction": {
-            "$ref": "#/components/schemas/RequestBody3Dc15D3C2Ef0EcdsaSkKeyRestriction"
+            "$ref": "#/components/schemas/RequestBody9Dcd3025609FEcdsaSkKeyRestriction"
           },
           "ed25519_sk_key_restriction": {
-            "$ref": "#/components/schemas/RequestBody3Dc15D3C2Ef0Ed25519SkKeyRestriction"
+            "$ref": "#/components/schemas/RequestBody9Dcd3025609FEd25519SkKeyRestriction"
           },
           "elasticsearch_aws": {
             "type": "boolean",
@@ -128439,7 +128454,7 @@
           "duo_namespace_access_rules": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBody3Dc15D3C2Ef0DuoNamespaceAccessRulesItem"
+              "$ref": "#/components/schemas/RequestBody9Dcd3025609FDuoNamespaceAccessRulesItem"
             },
             "description": "AI entity access rules for controlling Duo feature access",
             "nullable": true
@@ -128457,6 +128472,11 @@
           "duo_template_project_id": {
             "type": "integer",
             "description": "The ID of a project to use as the Duo Code Review custom instructions template for this instance",
+            "nullable": true
+          },
+          "use_nats_for_audit_streaming": {
+            "type": "boolean",
+            "description": "Route audit event streaming through NATS JetStream when the instance has NATS configured",
             "nullable": true
           },
           "allow_local_requests_from_web_hooks_and_services": {
@@ -129464,6 +129484,10 @@
             "nullable": true
           },
           "mcp_server_enabled": {
+            "type": "string",
+            "nullable": true
+          },
+          "dynamic_client_registration_enabled": {
             "type": "string",
             "nullable": true
           },
@@ -130522,7 +130546,7 @@
           }
         }
       },
-      "RequestBodyF8Df00B9Df82": {
+      "RequestBody047F0D8Da63F": {
         "required": [
           "jsonrpc",
           "method"
@@ -130530,7 +130554,7 @@
         "type": "object",
         "properties": {
           "jsonrpc": {
-            "$ref": "#/components/schemas/RequestBodyF8Df00B9Df82Jsonrpc"
+            "$ref": "#/components/schemas/RequestBody047F0D8Da63FJsonrpc"
           },
           "method": {
             "type": "string",
@@ -130538,12 +130562,10 @@
             "nullable": true
           },
           "id": {
-            "type": "string",
-            "description": "ID of the JSON-RPC request returned in the response.",
-            "nullable": true
+            "$ref": "#/components/schemas/RequestBody047F0D8Da63FId"
           },
           "params": {
-            "$ref": "#/components/schemas/RequestBodyF8Df00B9Df82Params"
+            "$ref": "#/components/schemas/RequestBody047F0D8Da63FParams"
           }
         }
       },
@@ -142303,7 +142325,20 @@
           }
         ]
       },
-      "RequestBodyF8Df00B9Df82Params": {
+      "RequestBody047F0D8Da63FId": {
+        "type": "object",
+        "oneOf": [
+          {
+            "type": "integer",
+            "nullable": true
+          },
+          {
+            "type": "string",
+            "nullable": true
+          }
+        ]
+      },
+      "RequestBody047F0D8Da63FParams": {
         "required": [
           "type"
         ],
@@ -142314,7 +142349,7 @@
             "nullable": true
           },
           {
-            "$ref": "#/components/schemas/RequestBodyF8Df00B9Df82ParamsBranch2"
+            "$ref": "#/components/schemas/RequestBody047F0D8Da63FParamsBranch2"
           }
         ],
         "properties": {
@@ -142326,7 +142361,7 @@
         "discriminator": {
           "propertyName": "type",
           "mapping": {
-            "RequestBodyF8Df00B9Df82Params_2": "#/components/schemas/RequestBodyF8Df00B9Df82ParamsBranch2"
+            "RequestBody047F0D8Da63FParams_2": "#/components/schemas/RequestBody047F0D8Da63FParamsBranch2"
           }
         }
       },
@@ -144378,13 +144413,13 @@
           }
         }
       },
-      "RequestBody3Dc15D3C2Ef0DefaultBranchProtectionDefaults": {
+      "RequestBody9Dcd3025609FDefaultBranchProtectionDefaults": {
         "type": "object",
         "properties": {
           "allowed_to_push": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBody3Dc15D3C2Ef0DefaultBranchProtectionDefaultsAllowedToPushItem"
+              "$ref": "#/components/schemas/RequestBody9Dcd3025609FDefaultBranchProtectionDefaultsAllowedToPushItem"
             },
             "description": "An array of access levels allowed to push",
             "nullable": true
@@ -144397,7 +144432,7 @@
           "allowed_to_merge": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBody3Dc15D3C2Ef0DefaultBranchProtectionDefaultsAllowedToMergeItem"
+              "$ref": "#/components/schemas/RequestBody9Dcd3025609FDefaultBranchProtectionDefaultsAllowedToMergeItem"
             },
             "description": "An array of access levels allowed to merge",
             "nullable": true
@@ -144416,7 +144451,7 @@
         "description": "Determine if developers can push to default branch",
         "nullable": true
       },
-      "RequestBody3Dc15D3C2Ef0DependencyManagementSettings": {
+      "RequestBody9Dcd3025609FDependencyManagementSettings": {
         "type": "object",
         "properties": {
           "security_update_scheduler_max_concurrency": {
@@ -144428,7 +144463,7 @@
         "description": "Dependency management settings",
         "nullable": true
       },
-      "RequestBody3Dc15D3C2Ef0RepositoryStoragesWeighted": {
+      "RequestBody9Dcd3025609FRepositoryStoragesWeighted": {
         "type": "object",
         "additionalProperties": {
           "type": "integer"
@@ -144436,12 +144471,12 @@
         "description": "Storage paths for new projects with a weighted value ranging from 0 to 100",
         "nullable": true
       },
-      "RequestBody3Dc15D3C2Ef0ResourceUsageLimits": {
+      "RequestBody9Dcd3025609FResourceUsageLimits": {
         "type": "object",
         "description": "Definition for resource usage limits enforced in Sidekiq workers",
         "nullable": true
       },
-      "RequestBody3Dc15D3C2Ef0VscodeExtensionMarketplace": {
+      "RequestBody9Dcd3025609FVscodeExtensionMarketplace": {
         "type": "object",
         "properties": {
           "enabled": {
@@ -144455,20 +144490,20 @@
             "nullable": true
           },
           "custom_values": {
-            "$ref": "#/components/schemas/RequestBody3Dc15D3C2Ef0VscodeExtensionMarketplaceCustomValues"
+            "$ref": "#/components/schemas/RequestBody9Dcd3025609FVscodeExtensionMarketplaceCustomValues"
           }
         },
         "description": "Settings for VS Code Extension Marketplace",
         "nullable": true
       },
-      "RequestBody3Dc15D3C2Ef0DuoNamespaceAccessRulesItem": {
+      "RequestBody9Dcd3025609FDuoNamespaceAccessRulesItem": {
         "required": [
           "features"
         ],
         "type": "object",
         "properties": {
           "through_namespace": {
-            "$ref": "#/components/schemas/RequestBody3Dc15D3C2Ef0DuoNamespaceAccessRulesItemThroughNamespace"
+            "$ref": "#/components/schemas/RequestBody9Dcd3025609FDuoNamespaceAccessRulesItemThroughNamespace"
           },
           "features": {
             "type": "array",
@@ -147864,34 +147899,34 @@
         "description": "Data for rendering the vulnerabilities by severity count in PDF reports",
         "nullable": true
       },
-      "RequestBody3Dc15D3C2Ef0DefaultBranchProtectionDefaultsAllowedToPushItem": {
+      "RequestBody9Dcd3025609FDefaultBranchProtectionDefaultsAllowedToPushItem": {
         "required": [
           "access_level"
         ],
         "type": "object",
         "properties": {
           "access_level": {
-            "$ref": "#/components/schemas/RequestBody3Dc15D3C2Ef0DefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel"
+            "$ref": "#/components/schemas/RequestBody9Dcd3025609FDefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel"
           }
         }
       },
-      "RequestBody3Dc15D3C2Ef0DefaultBranchProtectionDefaultsAllowedToMergeItem": {
+      "RequestBody9Dcd3025609FDefaultBranchProtectionDefaultsAllowedToMergeItem": {
         "required": [
           "access_level"
         ],
         "type": "object",
         "properties": {
           "access_level": {
-            "$ref": "#/components/schemas/RequestBody3Dc15D3C2Ef0DefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel"
+            "$ref": "#/components/schemas/RequestBody9Dcd3025609FDefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel"
           }
         }
       },
-      "RequestBody3Dc15D3C2Ef0VscodeExtensionMarketplaceCustomValues": {
+      "RequestBody9Dcd3025609FVscodeExtensionMarketplaceCustomValues": {
         "type": "object",
         "description": "VS Code Extension Marketplace URL\u0027s when preset is \u0027custom\u0027",
         "nullable": true
       },
-      "RequestBody3Dc15D3C2Ef0DuoNamespaceAccessRulesItemThroughNamespace": {
+      "RequestBody9Dcd3025609FDuoNamespaceAccessRulesItemThroughNamespace": {
         "required": [
           "id"
         ],
@@ -149214,7 +149249,7 @@
         "description": "End line for a multi-line note",
         "nullable": true
       },
-      "RequestBodyF8Df00B9Df82ParamsBranch2": {
+      "RequestBody047F0D8Da63FParamsBranch2": {
         "required": [
           "value"
         ],
@@ -152484,7 +152519,7 @@
           ]
         }
       },
-      "RequestBody1C9E643F3FdaBaseAccessLevel": {
+      "RequestBody099E406A34D9BaseAccessLevel": {
         "enum": [
           10,
           15,
@@ -152906,7 +152941,7 @@
           ]
         }
       },
-      "RequestBody3Dc15D3C2Ef0DefaultProjectCreation": {
+      "RequestBody9Dcd3025609FDefaultProjectCreation": {
         "enum": [
           0,
           3,
@@ -152919,7 +152954,7 @@
         "description": "Determine if developers can create projects in the group",
         "nullable": true
       },
-      "RequestBody3Dc15D3C2Ef0DefaultBranchProtection": {
+      "RequestBody9Dcd3025609FDefaultBranchProtection": {
         "enum": [
           0,
           3,
@@ -152932,7 +152967,7 @@
         "description": "Determine if developers can push to default branch",
         "nullable": true
       },
-      "RequestBody3Dc15D3C2Ef0DefaultGroupVisibility": {
+      "RequestBody9Dcd3025609FDefaultGroupVisibility": {
         "enum": [
           "private",
           "internal",
@@ -152943,7 +152978,7 @@
         "description": "The default group visibility",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody3Dc15D3C2Ef0DefaultGroupVisibility",
+          "name": "RequestBody9Dcd3025609FDefaultGroupVisibility",
           "modelAsString": false,
           "values": [
             {
@@ -152961,7 +152996,7 @@
           ]
         }
       },
-      "RequestBody3Dc15D3C2Ef0DefaultProjectVisibility": {
+      "RequestBody9Dcd3025609FDefaultProjectVisibility": {
         "enum": [
           "private",
           "internal",
@@ -152972,7 +153007,7 @@
         "description": "The default project visibility",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody3Dc15D3C2Ef0DefaultProjectVisibility",
+          "name": "RequestBody9Dcd3025609FDefaultProjectVisibility",
           "modelAsString": false,
           "values": [
             {
@@ -152990,7 +153025,7 @@
           ]
         }
       },
-      "RequestBody3Dc15D3C2Ef0DefaultSnippetVisibility": {
+      "RequestBody9Dcd3025609FDefaultSnippetVisibility": {
         "enum": [
           "private",
           "internal",
@@ -153001,7 +153036,7 @@
         "description": "The default snippet visibility",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody3Dc15D3C2Ef0DefaultSnippetVisibility",
+          "name": "RequestBody9Dcd3025609FDefaultSnippetVisibility",
           "modelAsString": false,
           "values": [
             {
@@ -153019,7 +153054,7 @@
           ]
         }
       },
-      "RequestBody3Dc15D3C2Ef0EmailConfirmationSetting": {
+      "RequestBody9Dcd3025609FEmailConfirmationSetting": {
         "enum": [
           "off",
           "soft",
@@ -153030,7 +153065,7 @@
         "description": "\u0022Email confirmation setting, possible values: \u0060off\u0060, \u0060soft\u0060, and \u0060hard\u0060\u0022",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody3Dc15D3C2Ef0EmailConfirmationSetting",
+          "name": "RequestBody9Dcd3025609FEmailConfirmationSetting",
           "modelAsString": false,
           "values": [
             {
@@ -153048,7 +153083,7 @@
           ]
         }
       },
-      "RequestBody3Dc15D3C2Ef0EnabledGitAccessProtocol": {
+      "RequestBody9Dcd3025609FEnabledGitAccessProtocol": {
         "enum": [
           "ssh",
           "http",
@@ -153059,7 +153094,7 @@
         "description": "Allow only the selected protocols to be used for Git access.",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody3Dc15D3C2Ef0EnabledGitAccessProtocol",
+          "name": "RequestBody9Dcd3025609FEnabledGitAccessProtocol",
           "modelAsString": false,
           "values": [
             {
@@ -153077,7 +153112,7 @@
           ]
         }
       },
-      "RequestBody3Dc15D3C2Ef0WhatsNewVariant": {
+      "RequestBody9Dcd3025609FWhatsNewVariant": {
         "enum": [
           "all_tiers",
           "current_tier",
@@ -153088,7 +153123,7 @@
         "description": "\u0022What\u0027s new variant, possible values: \u0060all_tiers\u0060, \u0060current_tier\u0060, and \u0060disabled\u0060.\u0022",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody3Dc15D3C2Ef0WhatsNewVariant",
+          "name": "RequestBody9Dcd3025609FWhatsNewVariant",
           "modelAsString": false,
           "values": [
             {
@@ -153106,7 +153141,7 @@
           ]
         }
       },
-      "RequestBody3Dc15D3C2Ef0LoggingFieldSchemaVersion": {
+      "RequestBody9Dcd3025609FLoggingFieldSchemaVersion": {
         "enum": [
           0,
           1
@@ -153116,7 +153151,7 @@
         "description": "Logging field schema version (v0, v1, \u2026). Cannot be downgraded.",
         "nullable": true
       },
-      "RequestBody3Dc15D3C2Ef0LoggingFieldDualEmitTarget": {
+      "RequestBody9Dcd3025609FLoggingFieldDualEmitTarget": {
         "enum": [
           1
         ],
@@ -153125,7 +153160,7 @@
         "description": "Version to dual-emit alongside schema_version. Must be strictly greater than schema_version, or omit/null to disable.",
         "nullable": true
       },
-      "RequestBody3Dc15D3C2Ef0RsaKeyRestriction": {
+      "RequestBody9Dcd3025609FRsaKeyRestriction": {
         "enum": [
           0,
           1024,
@@ -153139,7 +153174,7 @@
         "description": "Restrictions on the complexity of uploaded RSA keys. A value of -1 disables all RSA keys.",
         "nullable": true
       },
-      "RequestBody3Dc15D3C2Ef0DsaKeyRestriction": {
+      "RequestBody9Dcd3025609FDsaKeyRestriction": {
         "enum": [
           0,
           1024,
@@ -153152,7 +153187,7 @@
         "description": "Restrictions on the complexity of uploaded DSA keys. A value of -1 disables all DSA keys.",
         "nullable": true
       },
-      "RequestBody3Dc15D3C2Ef0EcdsaKeyRestriction": {
+      "RequestBody9Dcd3025609FEcdsaKeyRestriction": {
         "enum": [
           0,
           256,
@@ -153165,7 +153200,7 @@
         "description": "Restrictions on the complexity of uploaded ECDSA keys. A value of -1 disables all ECDSA keys.",
         "nullable": true
       },
-      "RequestBody3Dc15D3C2Ef0Ed25519KeyRestriction": {
+      "RequestBody9Dcd3025609FEd25519KeyRestriction": {
         "enum": [
           0,
           256,
@@ -153176,7 +153211,7 @@
         "description": "Restrictions on the complexity of uploaded ED25519 keys. A value of -1 disables all ED25519 keys.",
         "nullable": true
       },
-      "RequestBody3Dc15D3C2Ef0EcdsaSkKeyRestriction": {
+      "RequestBody9Dcd3025609FEcdsaSkKeyRestriction": {
         "enum": [
           0,
           256,
@@ -153187,7 +153222,7 @@
         "description": "Restrictions on the complexity of uploaded ECDSA_SK keys. A value of -1 disables all ECDSA_SK keys.",
         "nullable": true
       },
-      "RequestBody3Dc15D3C2Ef0Ed25519SkKeyRestriction": {
+      "RequestBody9Dcd3025609FEd25519SkKeyRestriction": {
         "enum": [
           0,
           256,
@@ -153222,7 +153257,7 @@
           ]
         }
       },
-      "RequestBodyF8Df00B9Df82Jsonrpc": {
+      "RequestBody047F0D8Da63FJsonrpc": {
         "minLength": 1,
         "enum": [
           2
@@ -162276,7 +162311,7 @@
           ]
         }
       },
-      "RequestBody3Dc15D3C2Ef0DefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel": {
+      "RequestBody9Dcd3025609FDefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel": {
         "enum": [
           30,
           40,
@@ -162287,7 +162322,7 @@
         "additionalProperties": false,
         "description": "A valid access level"
       },
-      "RequestBody3Dc15D3C2Ef0DefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel": {
+      "RequestBody9Dcd3025609FDefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel": {
         "enum": [
           30,
           40,

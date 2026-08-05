@@ -1240,6 +1240,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string DuoWorkflowsDefaultImageRegistry { get; set; }
 #endif
+        /// <summary>The dynamic_client_registration_enabled property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DynamicClientRegistrationEnabled { get; set; }
+#nullable restore
+#else
+        public string DynamicClientRegistrationEnabled { get; set; }
+#endif
         /// <summary>The ecdsa_key_restriction property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -4708,6 +4716,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string UseClickhouseForAnalytics { get; set; }
 #endif
+        /// <summary>The use_nats_for_audit_streaming property</summary>
+        public bool? UseNatsForAuditStreaming { get; set; }
         /// <summary>The user_contributed_projects_api_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -5290,6 +5300,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "duo_template_project_id", n => { DuoTemplateProjectId = n.GetStringValue(); } },
                 { "duo_workflow_oauth_application_id", n => { DuoWorkflowOauthApplicationId = n.GetStringValue(); } },
                 { "duo_workflows_default_image_registry", n => { DuoWorkflowsDefaultImageRegistry = n.GetStringValue(); } },
+                { "dynamic_client_registration_enabled", n => { DynamicClientRegistrationEnabled = n.GetStringValue(); } },
                 { "ecdsa_key_restriction", n => { EcdsaKeyRestriction = n.GetStringValue(); } },
                 { "ecdsa_sk_key_restriction", n => { EcdsaSkKeyRestriction = n.GetStringValue(); } },
                 { "ed25519_key_restriction", n => { Ed25519KeyRestriction = n.GetStringValue(); } },
@@ -5728,6 +5739,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "usage_ping_features_enabled", n => { UsagePingFeaturesEnabled = n.GetStringValue(); } },
                 { "usage_ping_generation_enabled", n => { UsagePingGenerationEnabled = n.GetStringValue(); } },
                 { "use_clickhouse_for_analytics", n => { UseClickhouseForAnalytics = n.GetStringValue(); } },
+                { "use_nats_for_audit_streaming", n => { UseNatsForAuditStreaming = n.GetBoolValue(); } },
                 { "user_contributed_projects_api_limit", n => { UserContributedProjectsApiLimit = n.GetStringValue(); } },
                 { "user_deactivation_emails_enabled", n => { UserDeactivationEmailsEnabled = n.GetStringValue(); } },
                 { "user_default_external", n => { UserDefaultExternal = n.GetStringValue(); } },
@@ -5944,6 +5956,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("duo_template_project_id", DuoTemplateProjectId);
             writer.WriteStringValue("duo_workflow_oauth_application_id", DuoWorkflowOauthApplicationId);
             writer.WriteStringValue("duo_workflows_default_image_registry", DuoWorkflowsDefaultImageRegistry);
+            writer.WriteStringValue("dynamic_client_registration_enabled", DynamicClientRegistrationEnabled);
             writer.WriteStringValue("ecdsa_key_restriction", EcdsaKeyRestriction);
             writer.WriteStringValue("ecdsa_sk_key_restriction", EcdsaSkKeyRestriction);
             writer.WriteStringValue("ed25519_key_restriction", Ed25519KeyRestriction);
@@ -6382,6 +6395,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("usage_ping_features_enabled", UsagePingFeaturesEnabled);
             writer.WriteStringValue("usage_ping_generation_enabled", UsagePingGenerationEnabled);
             writer.WriteStringValue("use_clickhouse_for_analytics", UseClickhouseForAnalytics);
+            writer.WriteBoolValue("use_nats_for_audit_streaming", UseNatsForAuditStreaming);
             writer.WriteStringValue("user_contributed_projects_api_limit", UserContributedProjectsApiLimit);
             writer.WriteStringValue("user_deactivation_emails_enabled", UserDeactivationEmailsEnabled);
             writer.WriteStringValue("user_default_external", UserDefaultExternal);

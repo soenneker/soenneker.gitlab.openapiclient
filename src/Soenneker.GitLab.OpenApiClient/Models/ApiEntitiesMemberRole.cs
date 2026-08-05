@@ -122,6 +122,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public bool? RemoveProject { get; set; }
         /// <summary>The update_sec_ai_workflow_settings property</summary>
         public bool? UpdateSecAiWorkflowSettings { get; set; }
+        /// <summary>The update_security_scan_profiles property</summary>
+        public bool? UpdateSecurityScanProfiles { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMemberRole"/> and sets the default values.
         /// </summary>
@@ -171,6 +173,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             RemoveGroup = false;
             RemoveProject = false;
             UpdateSecAiWorkflowSettings = false;
+            UpdateSecurityScanProfiles = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -238,6 +241,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "remove_group", n => { RemoveGroup = n.GetBoolValue(); } },
                 { "remove_project", n => { RemoveProject = n.GetBoolValue(); } },
                 { "update_sec_ai_workflow_settings", n => { UpdateSecAiWorkflowSettings = n.GetBoolValue(); } },
+                { "update_security_scan_profiles", n => { UpdateSecurityScanProfiles = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -295,6 +299,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("remove_group", RemoveGroup);
             writer.WriteBoolValue("remove_project", RemoveProject);
             writer.WriteBoolValue("update_sec_ai_workflow_settings", UpdateSecAiWorkflowSettings);
+            writer.WriteBoolValue("update_security_scan_profiles", UpdateSecurityScanProfiles);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
