@@ -65,6 +65,60 @@
         }
       }
     },
+    "/api/v4/internal/gitlab_subscriptions/namespaces/{id}/projects": {
+      "get": {
+        "tags": [
+          "Namespace projects"
+        ],
+        "summary": "Returns the projects of a namespace (including subgroups), with license data included",
+        "description": "Used by CustomersDot to check OSS program compliance for a namespace, avoiding one API call per project to fetch license data.",
+        "operationId": "GetApiV4InternalGitlabSubscriptionsNamespacesIdProjects",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Current page number",
+            "schema": {
+              "type": "integer",
+              "default": 1,
+              "nullable": true
+            },
+            "example": 1
+          },
+          {
+            "name": "per_page",
+            "in": "query",
+            "description": "Number of items per page",
+            "schema": {
+              "type": "integer",
+              "default": 20,
+              "nullable": true
+            },
+            "example": 20
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GitlabSubscriptionsApiEntitiesInternalProjectWithLicense"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/v4/jobs/{id}/sbom_scans/authorize": {
       "post": {
         "tags": [
@@ -1128,7 +1182,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyC3A5D8790936"
+                "$ref": "#/components/schemas/RequestBodyAe660D4Bfe67"
               }
             }
           }
@@ -1177,7 +1231,7 @@
             "in": "query",
             "description": "\u0022Only return checkpoints belonging to this LangGraph checkpoint namespace (the flow\u0027s own top-level lineage if omitted or blank). Unset (the default): return checkpoints from every lineage, unfiltered, preserving prior behavior.\u0022",
             "schema": {
-              "maxLength": 255,
+              "maxLength": 4096,
               "type": "string",
               "nullable": true
             }
@@ -1567,7 +1621,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody6Bc874Fddbf3"
+                "$ref": "#/components/schemas/RequestBody96013D8Cf931"
               }
             }
           }
@@ -97857,6 +97911,60 @@
           }
         }
       },
+      "ApiEntitiesLicenseBasic": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "example": "gpl-3.0"
+          },
+          "name": {
+            "type": "string",
+            "example": "GNU General Public License v3.0"
+          },
+          "nickname": {
+            "type": "string",
+            "example": "GNU GPLv3"
+          },
+          "html_url": {
+            "type": "string",
+            "example": "http://choosealicense.com/licenses/gpl-3.0"
+          },
+          "source_url": {
+            "type": "string"
+          }
+        }
+      },
+      "GitlabSubscriptionsApiEntitiesInternalProjectWithLicense": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "example": 1
+          },
+          "path_with_namespace": {
+            "type": "string",
+            "example": "namespace1/project1"
+          },
+          "web_url": {
+            "type": "string",
+            "example": "https://gitlab.example.com/namespace1/project1"
+          },
+          "visibility": {
+            "type": "string",
+            "example": "public"
+          },
+          "empty_repo": {
+            "type": "boolean"
+          },
+          "wiki_enabled": {
+            "type": "boolean"
+          },
+          "license": {
+            "$ref": "#/components/schemas/ApiEntitiesLicenseBasic"
+          }
+        }
+      },
       "ApiEntitiesSecurityVulnerabilityScanningSbomScan": {
         "type": "object",
         "properties": {
@@ -107310,30 +107418,6 @@
           "updated_at": {
             "type": "string",
             "example": "2023-01-01T00:00:00.000Z"
-          }
-        }
-      },
-      "ApiEntitiesLicenseBasic": {
-        "type": "object",
-        "properties": {
-          "key": {
-            "type": "string",
-            "example": "gpl-3.0"
-          },
-          "name": {
-            "type": "string",
-            "example": "GNU General Public License v3.0"
-          },
-          "nickname": {
-            "type": "string",
-            "example": "GNU GPLv3"
-          },
-          "html_url": {
-            "type": "string",
-            "example": "http://choosealicense.com/licenses/gpl-3.0"
-          },
-          "source_url": {
-            "type": "string"
           }
         }
       },
@@ -122652,7 +122736,7 @@
           }
         }
       },
-      "RequestBodyC3A5D8790936": {
+      "RequestBodyAe660D4Bfe67": {
         "required": [
           "thread_ts",
           "metadata"
@@ -122670,13 +122754,13 @@
             "nullable": true
           },
           "checkpoint_ns": {
-            "maxLength": 255,
+            "maxLength": 4096,
             "type": "string",
             "description": "LangGraph checkpoint namespace this checkpoint belongs to. Omitted (or blank) for the flow\u0027s own top-level checkpoint lineage; set to LangGraph\u0027s namespace string for one nested subgraph invocation, e.g. a delegated subagent dispatched by DelegationNode.",
             "nullable": true
           },
           "checkpoint": {
-            "$ref": "#/components/schemas/RequestBodyC3A5D8790936Checkpoint"
+            "$ref": "#/components/schemas/RequestBodyAe660D4Bfe67Checkpoint"
           },
           "compressed_checkpoint": {
             "type": "string",
@@ -122684,7 +122768,7 @@
             "nullable": true
           },
           "metadata": {
-            "$ref": "#/components/schemas/RequestBodyC3A5D8790936Metadata"
+            "$ref": "#/components/schemas/RequestBodyAe660D4Bfe67Metadata"
           },
           "model_metadata_json": {
             "type": "string",
@@ -122705,7 +122789,7 @@
           "channel_blobs": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBodyC3A5D8790936ChannelBlobsItem"
+              "$ref": "#/components/schemas/RequestBodyAe660D4Bfe67ChannelBlobsItem"
             },
             "description": "Per-channel blobs for incremental checkpoint storage",
             "nullable": true
@@ -122791,7 +122875,7 @@
           }
         }
       },
-      "RequestBody6Bc874Fddbf3": {
+      "RequestBody96013D8Cf931": {
         "type": "object",
         "properties": {
           "project_id": {
@@ -122865,7 +122949,7 @@
             "example": "main"
           },
           "environment": {
-            "$ref": "#/components/schemas/RequestBody6Bc874Fddbf3Environment"
+            "$ref": "#/components/schemas/RequestBody96013D8Cf931Environment"
           },
           "ai_catalog_item_version_id": {
             "type": "integer",
@@ -122876,7 +122960,7 @@
           "additional_context": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBody6Bc874Fddbf3AdditionalContextItem"
+              "$ref": "#/components/schemas/RequestBody96013D8Cf931AdditionalContextItem"
             },
             "description": "Additional Context required by the Flow, in JSON format. Contains an array of context details, where each detail is a Hash with a minimum of \u0022Category\u0022 and \u0022Content\u0022 keys.",
             "nullable": true
@@ -122901,7 +122985,7 @@
             "example": 123
           },
           "source": {
-            "$ref": "#/components/schemas/RequestBody6Bc874Fddbf3Source"
+            "$ref": "#/components/schemas/RequestBody96013D8Cf931Source"
           }
         }
       },
@@ -143787,17 +143871,17 @@
           }
         }
       },
-      "RequestBodyC3A5D8790936Checkpoint": {
+      "RequestBodyAe660D4Bfe67Checkpoint": {
         "type": "object",
         "description": "Checkpoint content",
         "nullable": true
       },
-      "RequestBodyC3A5D8790936Metadata": {
+      "RequestBodyAe660D4Bfe67Metadata": {
         "type": "object",
         "description": "Checkpoint metadata",
         "nullable": true
       },
-      "RequestBodyC3A5D8790936ChannelBlobsItem": {
+      "RequestBodyAe660D4Bfe67ChannelBlobsItem": {
         "required": [
           "channel",
           "version",
@@ -143826,7 +143910,7 @@
             "nullable": true
           },
           "step_action": {
-            "$ref": "#/components/schemas/RequestBodyC3A5D8790936ChannelBlobsItemStepAction"
+            "$ref": "#/components/schemas/RequestBodyAe660D4Bfe67ChannelBlobsItemStepAction"
           },
           "data": {
             "maxLength": 1398104,
@@ -143873,7 +143957,7 @@
           }
         }
       },
-      "RequestBody6Bc874Fddbf3AdditionalContextItem": {
+      "RequestBody96013D8Cf931AdditionalContextItem": {
         "required": [
           "Category",
           "Content"
@@ -152125,7 +152209,7 @@
           ]
         }
       },
-      "RequestBody6Bc874Fddbf3Environment": {
+      "RequestBody96013D8Cf931Environment": {
         "enum": [
           "ide",
           "web",
@@ -152138,7 +152222,7 @@
         "description": "Environment for the workflow.",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody6Bc874Fddbf3Environment",
+          "name": "RequestBody96013D8Cf931Environment",
           "modelAsString": false,
           "values": [
             {
@@ -152164,22 +152248,22 @@
           ]
         }
       },
-      "RequestBody6Bc874Fddbf3Source": {
+      "RequestBody96013D8Cf931Source": {
         "enum": [
           "merge_request_code_conflict",
           "merge_request_dependency_bump",
           "merge_request_fix_pipeline",
           "merge_request_resolve_discussion",
-          "work_item_to_mr",
+          "work_item_to_merge_request",
           "fix_pipeline",
-          "convert_plateform_ci_pipeline"
+          "convert_platform_ci_pipeline"
         ],
         "type": "string",
         "additionalProperties": false,
         "description": "Where the session was triggered from",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody6Bc874Fddbf3Source",
+          "name": "RequestBody96013D8Cf931Source",
           "modelAsString": false,
           "values": [
             {
@@ -152199,16 +152283,16 @@
               "name": "MergeRequestResolveDiscussion"
             },
             {
-              "value": "work_item_to_mr",
-              "name": "WorkItemToMr"
+              "value": "work_item_to_merge_request",
+              "name": "WorkItemToMergeRequest"
             },
             {
               "value": "fix_pipeline",
               "name": "FixPipeline"
             },
             {
-              "value": "convert_plateform_ci_pipeline",
-              "name": "ConvertPlateformCiPipeline"
+              "value": "convert_platform_ci_pipeline",
+              "name": "ConvertPlatformCiPipeline"
             }
           ]
         }
@@ -159135,7 +159219,7 @@
           ]
         }
       },
-      "RequestBodyC3A5D8790936ChannelBlobsItemStepAction": {
+      "RequestBodyAe660D4Bfe67ChannelBlobsItemStepAction": {
         "minLength": 1,
         "enum": [
           "conversation",
@@ -159145,7 +159229,7 @@
         "additionalProperties": false,
         "description": "Append or replace signal (conversation or compaction)",
         "x-ms-enum": {
-          "name": "RequestBodyC3A5D8790936ChannelBlobsItemStepAction",
+          "name": "RequestBodyAe660D4Bfe67ChannelBlobsItemStepAction",
           "modelAsString": false,
           "values": [
             {
@@ -174123,6 +174207,10 @@
     {
       "name": "Milestones",
       "description": "Operations related to milestones."
+    },
+    {
+      "name": "Namespace projects",
+      "description": "Operations related to namespace projects."
     },
     {
       "name": "Namespaces",

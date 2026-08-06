@@ -5,7 +5,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>Where the session was triggered from</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBody6Bc874Fddbf3Source
+    public enum RequestBody96013D8Cf931Source
     {
         [EnumMember(Value = "merge_request_code_conflict")]
         #pragma warning disable CS1591
@@ -23,17 +23,17 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         #pragma warning disable CS1591
         MergeRequestResolveDiscussion,
         #pragma warning restore CS1591
-        [EnumMember(Value = "work_item_to_mr")]
+        [EnumMember(Value = "work_item_to_merge_request")]
         #pragma warning disable CS1591
-        WorkItemToMr,
+        WorkItemToMergeRequest,
         #pragma warning restore CS1591
         [EnumMember(Value = "fix_pipeline")]
         #pragma warning disable CS1591
         FixPipeline,
         #pragma warning restore CS1591
-        [EnumMember(Value = "convert_plateform_ci_pipeline")]
+        [EnumMember(Value = "convert_platform_ci_pipeline")]
         #pragma warning disable CS1591
-        ConvertPlateformCiPipeline,
+        ConvertPlatformCiPipeline,
         #pragma warning restore CS1591
     }
 }

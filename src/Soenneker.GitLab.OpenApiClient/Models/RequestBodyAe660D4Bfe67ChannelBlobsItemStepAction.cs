@@ -5,7 +5,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>Append or replace signal (conversation or compaction)</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBodyC3A5D8790936ChannelBlobsItemStepAction
+    public enum RequestBodyAe660D4Bfe67ChannelBlobsItemStepAction
     {
         [EnumMember(Value = "conversation")]
         #pragma warning disable CS1591
