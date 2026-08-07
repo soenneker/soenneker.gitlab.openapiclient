@@ -64,6 +64,7 @@ using Soenneker.GitLab.OpenApiClient.Api.V4.Project_aliases;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Project_repository_storage_moves;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Registry;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Rollouts;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Runner_controllers;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Runners;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Search;
@@ -408,6 +409,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Registry.RegistryRequestBuilder Registry
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Registry.RegistryRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The rollouts property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Rollouts.RolloutsRequestBuilder Rollouts
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Rollouts.RolloutsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The runner_controllers property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Runner_controllers.Runner_controllersRequestBuilder Runner_controllers

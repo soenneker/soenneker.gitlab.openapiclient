@@ -11,6 +11,7 @@ using Soenneker.GitLab.OpenApiClient.Api.V4.User.Gpg_keys;
 using Soenneker.GitLab.OpenApiClient.Api.V4.User.Keys;
 using Soenneker.GitLab.OpenApiClient.Api.V4.User.Personal_access_tokens;
 using Soenneker.GitLab.OpenApiClient.Api.V4.User.Preferences;
+using Soenneker.GitLab.OpenApiClient.Api.V4.User.Push_subscriptions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.User.Runners;
 using Soenneker.GitLab.OpenApiClient.Api.V4.User.Status;
 using Soenneker.GitLab.OpenApiClient.Api.V4.User.Support_pin;
@@ -67,6 +68,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.User.Preferences.PreferencesRequestBuilder Preferences
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.User.Preferences.PreferencesRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The push_subscriptions property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.User.Push_subscriptions.Push_subscriptionsRequestBuilder Push_subscriptions
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.User.Push_subscriptions.Push_subscriptionsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The runners property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.User.Runners.RunnersRequestBuilder Runners

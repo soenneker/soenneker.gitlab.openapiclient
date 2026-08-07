@@ -119,6 +119,49 @@
         }
       }
     },
+    "/api/v4/rollouts/{id}": {
+      "post": {
+        "tags": [
+          "Rollouts"
+        ],
+        "summary": "Ingest a rollout workflow event",
+        "description": "Reports flow-graph progress from the CD orchestrator (a Starlark workflow run by AutoFlow).",
+        "operationId": "PostApiV4RolloutsId",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID of the rollout",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 1
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestBody523117C79970"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "Accepted",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesCdRollout"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/v4/jobs/{id}/sbom_scans/authorize": {
       "post": {
         "tags": [
@@ -49722,7 +49765,7 @@
           "Offline transfers"
         ],
         "summary": "Start a new offline transfer export",
-        "description": "Initiates a new offline transfer export",
+        "description": "Initiates a new offline transfer export. For more information, see https://docs.gitlab.com/user/group/import/offline_transfer_migrations/",
         "operationId": "PostApiV4OfflineExports",
         "requestBody": {
           "content": {
@@ -49751,7 +49794,7 @@
           "Offline transfers"
         ],
         "summary": "List all offline transfer exports",
-        "description": "Lists all offline transfer exports",
+        "description": "Lists all offline transfer exports. For more information, see https://docs.gitlab.com/user/group/import/offline_transfer_migrations/",
         "operationId": "GetApiV4OfflineExports",
         "parameters": [
           {
@@ -49813,7 +49856,7 @@
           "Offline transfers"
         ],
         "summary": "Get offline transfer export details",
-        "description": "Retrieves details of an offline transfer export",
+        "description": "Retrieves details of an offline transfer export. For more information, see https://docs.gitlab.com/user/group/import/offline_transfer_migrations/",
         "operationId": "GetApiV4OfflineExportsId",
         "parameters": [
           {
@@ -49846,7 +49889,7 @@
           "Offline transfers"
         ],
         "summary": "Start a new offline transfer import",
-        "description": "Initiates a new offline transfer import from object storage",
+        "description": "Initiates a new offline transfer import from object storage. For more information, see https://docs.gitlab.com/user/group/import/offline_transfer_migrations/",
         "operationId": "PostApiV4OfflineImports",
         "requestBody": {
           "content": {
@@ -51277,6 +51320,69 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ApiEntitiesNamespaceExistence"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v4/user/push_subscriptions": {
+      "post": {
+        "tags": [
+          "Mobile push subscriptions"
+        ],
+        "summary": "Register a mobile device for push notifications",
+        "description": "Idempotently registers the calling user\u0027s device token for APNs push notifications. Re-registering an existing token refreshes its attributes; a token previously owned by another user is reassigned to the calling user.",
+        "operationId": "PostApiV4UserPushSubscriptions",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestBody0B4A46Acc458"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesMobilePushSubscription"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Mobile push subscriptions"
+        ],
+        "summary": "Unregister a mobile device from push notifications",
+        "description": "Removes the calling user\u0027s push subscriptions for the given device token.",
+        "operationId": "DeleteApiV4UserPushSubscriptions",
+        "parameters": [
+          {
+            "name": "device_token",
+            "in": "query",
+            "description": "The hexadecimal APNs device token",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteApiV4UserPushSubscriptions204Response"
                 }
               }
             }
@@ -97965,6 +98071,37 @@
           }
         }
       },
+      "ApiEntitiesCdRollout": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "example": 1
+          },
+          "iid": {
+            "type": "integer",
+            "example": 1
+          },
+          "state": {
+            "type": "string",
+            "example": "in_progress"
+          },
+          "workflow_ref": {
+            "type": "string",
+            "example": "cd-rollout-1"
+          },
+          "started_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2026-07-22T11:37:00Z"
+          },
+          "finished_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2026-07-22T11:42:00Z"
+          }
+        }
+      },
       "ApiEntitiesSecurityVulnerabilityScanningSbomScan": {
         "type": "object",
         "properties": {
@@ -116750,6 +116887,21 @@
           }
         }
       },
+      "ApiEntitiesMobilePushSubscription": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64",
+            "example": 1
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2026-07-30T12:00:00.000Z"
+          }
+        }
+      },
       "ApiEntitiesMetadata": {
         "type": "object",
         "properties": {
@@ -122275,6 +122427,25 @@
             "type": "boolean",
             "description": "Whether the add-on is a trial",
             "nullable": true
+          }
+        }
+      },
+      "RequestBody523117C79970": {
+        "required": [
+          "topic",
+          "type",
+          "data"
+        ],
+        "type": "object",
+        "properties": {
+          "topic": {
+            "$ref": "#/components/schemas/RequestBody523117C79970Topic"
+          },
+          "type": {
+            "$ref": "#/components/schemas/RequestBody523117C79970Type"
+          },
+          "data": {
+            "$ref": "#/components/schemas/RequestBody523117C79970Data"
           }
         }
       },
@@ -135062,6 +135233,48 @@
           }
         }
       },
+      "RequestBody0B4A46Acc458": {
+        "required": [
+          "device_token"
+        ],
+        "type": "object",
+        "properties": {
+          "device_token": {
+            "type": "string",
+            "description": "The hexadecimal APNs device token",
+            "nullable": true
+          },
+          "platform": {
+            "$ref": "#/components/schemas/RequestBody0B4A46Acc458Platform"
+          },
+          "apns_environment": {
+            "$ref": "#/components/schemas/RequestBody0B4A46Acc458ApnsEnvironment"
+          },
+          "bundle_id": {
+            "type": "string",
+            "description": "The application bundle identifier",
+            "nullable": true
+          },
+          "device_name": {
+            "type": "string",
+            "description": "A human-readable device name",
+            "nullable": true
+          },
+          "app_version": {
+            "type": "string",
+            "description": "The installed application version",
+            "nullable": true
+          },
+          "locale": {
+            "type": "string",
+            "description": "The device locale",
+            "nullable": true
+          },
+          "payload_mode": {
+            "$ref": "#/components/schemas/RequestBody0B4A46Acc458PayloadMode"
+          }
+        }
+      },
       "RequestBody8Fcd74Eb78F4": {
         "required": [
           "approvals_required"
@@ -143699,6 +143912,42 @@
           }
         }
       },
+      "RequestBody523117C79970Data": {
+        "required": [
+          "position"
+        ],
+        "type": "object",
+        "properties": {
+          "position": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            },
+            "description": "Zero-based path to the stage/step in the flow definition",
+            "nullable": true
+          },
+          "stage_name": {
+            "maxLength": 255,
+            "type": "string",
+            "description": "Name of the enclosing stage (a GitLab environment name); absent for a step outside any stage",
+            "nullable": true
+          },
+          "step_type": {
+            "maxLength": 255,
+            "type": "string",
+            "description": "The step type, present on step_* events",
+            "nullable": true
+          },
+          "error": {
+            "maxLength": 2000,
+            "type": "string",
+            "description": "Failure detail, present on step_failed",
+            "nullable": true
+          }
+        },
+        "description": "The event payload",
+        "nullable": true
+      },
       "RequestBody781D3Ae061DfFilesContent": {
         "type": "object",
         "description": "Full file contents, where keys are file paths and values are the file contents",
@@ -150809,6 +151058,11 @@
         "type": "object",
         "description": "Default response schema"
       },
+      "DeleteApiV4UserPushSubscriptions204Response": {
+        "title": "DefaultResponse",
+        "type": "object",
+        "description": "Default response schema"
+      },
       "PutApiV4ProjectsIdMergeRequestsMergeRequestIidResetApprovals200Response": {
         "title": "DefaultResponse",
         "type": "object",
@@ -151926,6 +152180,64 @@
       },
       "RequestBody586Dac379Fa0AllowedToCreateItemProperty": {
         "type": "object"
+      },
+      "RequestBody523117C79970Topic": {
+        "minLength": 1,
+        "enum": [
+          "com.gitlab.cd.deployment"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "The event topic",
+        "x-ms-enum": {
+          "name": "RequestBody523117C79970Topic",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "com.gitlab.cd.deployment",
+              "name": "ComGitlabCdDeployment"
+            }
+          ]
+        }
+      },
+      "RequestBody523117C79970Type": {
+        "minLength": 1,
+        "enum": [
+          "com.gitlab.cd.stage_started",
+          "com.gitlab.cd.stage_succeeded",
+          "com.gitlab.cd.step_started",
+          "com.gitlab.cd.step_succeeded",
+          "com.gitlab.cd.step_failed"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "The event type",
+        "x-ms-enum": {
+          "name": "RequestBody523117C79970Type",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "com.gitlab.cd.stage_started",
+              "name": "ComGitlabCdStageStarted"
+            },
+            {
+              "value": "com.gitlab.cd.stage_succeeded",
+              "name": "ComGitlabCdStageSucceeded"
+            },
+            {
+              "value": "com.gitlab.cd.step_started",
+              "name": "ComGitlabCdStepStarted"
+            },
+            {
+              "value": "com.gitlab.cd.step_succeeded",
+              "name": "ComGitlabCdStepSucceeded"
+            },
+            {
+              "value": "com.gitlab.cd.step_failed",
+              "name": "ComGitlabCdStepFailed"
+            }
+          ]
+        }
       },
       "RequestBody5Fb43D25135DStatus": {
         "minLength": 1,
@@ -157027,6 +157339,73 @@
             {
               "value": "public",
               "name": "PublicValue"
+            }
+          ]
+        }
+      },
+      "RequestBody0B4A46Acc458Platform": {
+        "enum": [
+          "ios"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "The device platform",
+        "nullable": true,
+        "x-ms-enum": {
+          "name": "RequestBody0B4A46Acc458Platform",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "ios",
+              "name": "Ios"
+            }
+          ]
+        }
+      },
+      "RequestBody0B4A46Acc458ApnsEnvironment": {
+        "enum": [
+          "production",
+          "sandbox"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "The APNs environment the token was issued for",
+        "nullable": true,
+        "x-ms-enum": {
+          "name": "RequestBody0B4A46Acc458ApnsEnvironment",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "production",
+              "name": "Production"
+            },
+            {
+              "value": "sandbox",
+              "name": "Sandbox"
+            }
+          ]
+        }
+      },
+      "RequestBody0B4A46Acc458PayloadMode": {
+        "enum": [
+          "full",
+          "id_only"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "Whether notifications carry the full content or only identifiers",
+        "nullable": true,
+        "x-ms-enum": {
+          "name": "RequestBody0B4A46Acc458PayloadMode",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "full",
+              "name": "Full"
+            },
+            {
+              "value": "id_only",
+              "name": "IdOnly"
             }
           ]
         }
@@ -174209,6 +174588,10 @@
       "description": "Operations related to milestones."
     },
     {
+      "name": "Mobile push subscriptions",
+      "description": "Operations related to mobile push subscriptions."
+    },
+    {
       "name": "Namespace projects",
       "description": "Operations related to namespace projects."
     },
@@ -174297,6 +174680,10 @@
       "description": "Operations related to plan limits."
     },
     {
+      "name": "Policy store",
+      "description": "Operations related to policy store."
+    },
+    {
       "name": "Project Google Cloud integration",
       "description": "Operations related to project Google Cloud integration."
     },
@@ -174375,6 +174762,10 @@
     {
       "name": "Resource subscriptions",
       "description": "Operations related to resource subscriptions."
+    },
+    {
+      "name": "Rollouts",
+      "description": "Operations related to rollouts."
     },
     {
       "name": "Runner controller tokens",

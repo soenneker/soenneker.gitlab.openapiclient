@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Offline_exports
         {
         }
         /// <summary>
-        /// Lists all offline transfer exports
+        /// Lists all offline transfer exports. For more information, see https://docs.gitlab.com/user/group/import/offline_transfer_migrations/
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4OfflineExports200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Offline_exports
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4OfflineExports200Response>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4OfflineExports200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Initiates a new offline transfer export
+        /// Initiates a new offline transfer export. For more information, see https://docs.gitlab.com/user/group/import/offline_transfer_migrations/
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OfflineExports201Response"/></returns>
         /// <param name="body">The request body</param>
@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Offline_exports
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OfflineExports201Response>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OfflineExports201Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Lists all offline transfer exports
+        /// Lists all offline transfer exports. For more information, see https://docs.gitlab.com/user/group/import/offline_transfer_migrations/
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -104,7 +104,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Offline_exports
             return requestInfo;
         }
         /// <summary>
-        /// Initiates a new offline transfer export
+        /// Initiates a new offline transfer export. For more information, see https://docs.gitlab.com/user/group/import/offline_transfer_migrations/
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -135,7 +135,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Offline_exports
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Offline_exports.Offline_exportsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all offline transfer exports
+        /// Lists all offline transfer exports. For more information, see https://docs.gitlab.com/user/group/import/offline_transfer_migrations/
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Offline_exportsRequestBuilderGetQueryParameters 

@@ -220,6 +220,8 @@ tags:
   description: Operations related to migrations.
 - name: Milestones
   description: Operations related to milestones.
+- name: Mobile push subscriptions
+  description: Operations related to mobile push subscriptions.
 - name: Namespace projects
   description: Operations related to namespace projects.
 - name: Namespaces
@@ -264,6 +266,8 @@ tags:
   description: Operations related to pipelines.
 - name: Plan limits
   description: Operations related to plan limits.
+- name: Policy store
+  description: Operations related to policy store.
 - name: Project Google Cloud integration
   description: Operations related to project Google Cloud integration.
 - name: Project alias
@@ -304,6 +308,8 @@ tags:
   description: Operations related to resource events.
 - name: Resource subscriptions
   description: Operations related to resource subscriptions.
+- name: Rollouts
+  description: Operations related to rollouts.
 - name: Runner controller tokens
   description: Operations related to runner controller tokens.
 - name: Runner controllers
@@ -688,6 +694,43 @@ paths:
         required: true
         schema: {}
         in: path
+  "/api/v4/rollouts/{id}":
+    post:
+      operationId: postApiV4RolloutsId
+      summary: Ingest a rollout workflow event
+      description: Reports flow-graph progress from the CD orchestrator (a Starlark
+        workflow run by AutoFlow).
+      tags:
+      - Rollouts
+      responses:
+        '202':
+          description: Accepted
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/APIEntitiesCdRollout"
+        '401':
+          description: Unauthorized
+        '422':
+          description: Unprocessable entity
+        '404':
+          description: Not Found
+        '400':
+          description: Bad Request
+      parameters:
+      - name: id
+        required: true
+        description: The ID of the rollout
+        schema:
+          type: integer
+        in: path
+        example: 1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              "$ref": "#/components/schemas/RequestBody_523117c79970"
   "/api/v4/jobs/{id}/sbom_scans/authorize":
     post:
       operationId: postApiV4JobsIdSbomScansAuthorize
@@ -38572,7 +38615,8 @@ paths:
     post:
       operationId: postApiV4OfflineExports
       summary: Start a new offline transfer export
-      description: Initiates a new offline transfer export
+      description: Initiates a new offline transfer export. For more information,
+        see https://docs.gitlab.com/user/group/import/offline_transfer_migrations/
       tags:
       - Offline transfers
       responses:
@@ -38589,7 +38633,7 @@ paths:
     get:
       operationId: getApiV4OfflineExports
       summary: List all offline transfer exports
-      description: Lists all offline transfer exports
+      description: Lists all offline transfer exports. For more information, see https://docs.gitlab.com/user/group/import/offline_transfer_migrations/
       tags:
       - Offline transfers
       responses:
@@ -38644,7 +38688,8 @@ paths:
     get:
       operationId: getApiV4OfflineExportsId
       summary: Get offline transfer export details
-      description: Retrieves details of an offline transfer export
+      description: Retrieves details of an offline transfer export. For more information,
+        see https://docs.gitlab.com/user/group/import/offline_transfer_migrations/
       tags:
       - Offline transfers
       responses:
@@ -38665,7 +38710,8 @@ paths:
     post:
       operationId: postApiV4OfflineImports
       summary: Start a new offline transfer import
-      description: Initiates a new offline transfer import from object storage
+      description: Initiates a new offline transfer import from object storage. For
+        more information, see https://docs.gitlab.com/user/group/import/offline_transfer_migrations/
       tags:
       - Offline transfers
       responses:
@@ -39681,6 +39727,58 @@ paths:
           namespaces are considered.
         schema:
           type: integer
+          nullable: true
+        in: query
+  "/api/v4/user/push_subscriptions":
+    post:
+      operationId: postApiV4UserPushSubscriptions
+      summary: Register a mobile device for push notifications
+      description: Idempotently registers the calling user's device token for APNs
+        push notifications. Re-registering an existing token refreshes its attributes;
+        a token previously owned by another user is reassigned to the calling user.
+      tags:
+      - Mobile push subscriptions
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/APIEntitiesMobilePushSubscription"
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+        '404':
+          description: Not Found
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              "$ref": "#/components/schemas/RequestBody_0b4a46acc458"
+    delete:
+      operationId: deleteApiV4UserPushSubscriptions
+      summary: Unregister a mobile device from push notifications
+      description: Removes the calling user's push subscriptions for the given device
+        token.
+      tags:
+      - Mobile push subscriptions
+      responses:
+        '204':
+          description: No Content
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+        '404':
+          description: Not Found
+      parameters:
+      - name: device_token
+        required: true
+        description: The hexadecimal APNs device token
+        schema:
+          type: string
           nullable: true
         in: query
   "/api/v4/metadata":
@@ -76303,6 +76401,29 @@ components:
           type: boolean
         license:
           "$ref": "#/components/schemas/APIEntitiesLicenseBasic"
+    APIEntitiesCdRollout:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 1
+        iid:
+          type: integer
+          example: 1
+        state:
+          type: string
+          example: in_progress
+        workflow_ref:
+          type: string
+          example: cd-rollout-1
+        started_at:
+          type: string
+          format: date-time
+          example: '2026-07-22T11:37:00Z'
+        finished_at:
+          type: string
+          format: date-time
+          example: '2026-07-22T11:42:00Z'
     APIEntitiesSecurityVulnerabilityScanningSbomScan:
       type: object
       properties:
@@ -89914,6 +90035,17 @@ components:
           - my-group1
           items:
             type: string
+    APIEntitiesMobilePushSubscription:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 1
+        created_at:
+          type: string
+          format: date-time
+          example: '2026-07-30T12:00:00.000Z'
     APIEntitiesMetadata:
       type: object
       properties:
@@ -94072,6 +94204,58 @@ components:
       required:
       - started_on
       - expires_on
+    RequestBody_523117c79970:
+      type: object
+      properties:
+        topic:
+          type: string
+          enum:
+          - com.gitlab.cd.deployment
+          description: The event topic
+          minLength: 1
+        type:
+          type: string
+          enum:
+          - com.gitlab.cd.stage_started
+          - com.gitlab.cd.stage_succeeded
+          - com.gitlab.cd.step_started
+          - com.gitlab.cd.step_succeeded
+          - com.gitlab.cd.step_failed
+          description: The event type
+          minLength: 1
+        data:
+          type: object
+          description: The event payload
+          properties:
+            position:
+              type: array
+              items:
+                type: integer
+              description: Zero-based path to the stage/step in the flow definition
+              nullable: true
+            stage_name:
+              type: string
+              description: Name of the enclosing stage (a GitLab environment name);
+                absent for a step outside any stage
+              nullable: true
+              maxLength: 255
+            step_type:
+              type: string
+              description: The step type, present on step_* events
+              nullable: true
+              maxLength: 255
+            error:
+              type: string
+              description: Failure detail, present on step_failed
+              nullable: true
+              maxLength: 2000
+          required:
+          - position
+          nullable: true
+      required:
+      - topic
+      - type
+      - data
     RequestBody_c172efdc6039:
       type: object
       properties:
@@ -109051,6 +109235,52 @@ components:
           nullable: true
       required:
       - reason
+    RequestBody_0b4a46acc458:
+      type: object
+      properties:
+        device_token:
+          type: string
+          description: The hexadecimal APNs device token
+          nullable: true
+        platform:
+          type: string
+          enum:
+          - ios
+          description: The device platform
+          nullable: true
+        apns_environment:
+          type: string
+          enum:
+          - production
+          - sandbox
+          default: production
+          description: The APNs environment the token was issued for
+          nullable: true
+        bundle_id:
+          type: string
+          description: The application bundle identifier
+          nullable: true
+        device_name:
+          type: string
+          description: A human-readable device name
+          nullable: true
+        app_version:
+          type: string
+          description: The installed application version
+          nullable: true
+        locale:
+          type: string
+          description: The device locale
+          nullable: true
+        payload_mode:
+          type: string
+          enum:
+          - full
+          - id_only
+          description: Whether notifications carry the full content or only identifiers
+          nullable: true
+      required:
+      - device_token
     RequestBody_8fcd74eb78f4:
       type: object
       properties:
