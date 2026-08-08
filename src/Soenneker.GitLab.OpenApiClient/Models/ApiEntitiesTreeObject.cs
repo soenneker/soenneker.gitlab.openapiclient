@@ -22,6 +22,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
+        /// <summary>The last_commit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommit? LastCommit { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommit LastCommit { get; set; }
+#endif
         /// <summary>The mode property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -80,6 +88,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "id", n => { Id = n.GetStringValue(); } },
+                { "last_commit", n => { LastCommit = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommit>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommit.CreateFromDiscriminatorValue); } },
                 { "mode", n => { Mode = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "path", n => { Path = n.GetStringValue(); } },
@@ -94,6 +103,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("id", Id);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommit>("last_commit", LastCommit);
             writer.WriteStringValue("mode", Mode);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("path", Path);
