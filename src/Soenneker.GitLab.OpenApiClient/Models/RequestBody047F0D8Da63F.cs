@@ -23,13 +23,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody047F0D8Da63FId Id { get; set; }
 #endif
         /// <summary>JSON-RPC protocol version identifier. Must be `2.0`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Jsonrpc { get; set; }
-#nullable restore
-#else
-        public string Jsonrpc { get; set; }
-#endif
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody047F0D8Da63FJsonrpc? Jsonrpc { get; set; }
         /// <summary>Name of the JSON-RPC method invoked on the MCP server.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -72,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "id", n => { Id = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody047F0D8Da63FId>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody047F0D8Da63FId.CreateFromDiscriminatorValue); } },
-                { "jsonrpc", n => { Jsonrpc = n.GetStringValue(); } },
+                { "jsonrpc", n => { Jsonrpc = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody047F0D8Da63FJsonrpc>(); } },
                 { "method", n => { Method = n.GetStringValue(); } },
                 { "params", n => { Params = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody047F0D8Da63FParams>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody047F0D8Da63FParams.CreateFromDiscriminatorValue); } },
             };
@@ -85,7 +79,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody047F0D8Da63FId>("id", Id);
-            writer.WriteStringValue("jsonrpc", Jsonrpc);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody047F0D8Da63FJsonrpc>("jsonrpc", Jsonrpc);
             writer.WriteStringValue("method", Method);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody047F0D8Da63FParams>("params", Params);
             writer.WriteAdditionalData(AdditionalData);

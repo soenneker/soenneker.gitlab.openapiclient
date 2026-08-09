@@ -10,7 +10,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         [EnumMember(Value = "0")]
         #pragma warning disable CS1591
-        Zero,
+        Value0,
         #pragma warning restore CS1591
         [EnumMember(Value = "any")]
         #pragma warning disable CS1591

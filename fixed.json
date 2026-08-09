@@ -1591,7 +1591,7 @@
               "type": "string",
               "nullable": true
             },
-            "example": 1
+            "example": "1"
           }
         ],
         "responses": {
@@ -1721,7 +1721,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1"
           }
         ],
         "requestBody": {
@@ -2995,7 +2995,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 5
+            "example": "5"
           },
           {
             "name": "state",
@@ -4521,7 +4521,7 @@
               "type": "string",
               "nullable": true
             },
-            "example": 1.6
+            "example": "1.6"
           },
           {
             "name": "page",
@@ -4578,7 +4578,7 @@
               "type": "string",
               "nullable": true
             },
-            "example": 1.6
+            "example": "1.6"
           }
         ],
         "responses": {
@@ -11125,7 +11125,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1"
           },
           {
             "name": "updated_before",
@@ -11225,7 +11225,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1"
           },
           {
             "name": "epicIid",
@@ -11267,7 +11267,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1"
           },
           {
             "name": "epicIid",
@@ -11320,7 +11320,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1"
           },
           {
             "name": "relatedEpicLinkId",
@@ -11374,7 +11374,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1"
           },
           {
             "name": "page",
@@ -11430,7 +11430,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1"
           },
           {
             "name": "boardId",
@@ -11474,7 +11474,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1"
           },
           {
             "name": "boardId",
@@ -11540,7 +11540,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1"
           },
           {
             "name": "boardId",
@@ -12029,7 +12029,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1"
           },
           {
             "name": "epicIid",
@@ -12070,7 +12070,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1"
           },
           {
             "name": "epicIid",
@@ -12122,7 +12122,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1"
           },
           {
             "name": "epicIid",
@@ -12173,7 +12173,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1"
           },
           {
             "name": "epicIid",
@@ -12224,7 +12224,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1"
           },
           {
             "name": "epicIid",
@@ -12295,7 +12295,7 @@
                 }
               ]
             },
-            "example": 1
+            "example": "1"
           },
           {
             "name": "epicIid",
@@ -12380,7 +12380,7 @@
                 }
               ]
             },
-            "example": 1
+            "example": "1"
           },
           {
             "name": "epicIid",
@@ -12456,7 +12456,7 @@
                 }
               ]
             },
-            "example": 1
+            "example": "1"
           },
           {
             "name": "epicIid",
@@ -12534,7 +12534,7 @@
                 }
               ]
             },
-            "example": 1
+            "example": "1"
           },
           {
             "name": "epicIid",
@@ -13210,7 +13210,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1"
           },
           {
             "name": "mergeRequestIid",
@@ -13313,7 +13313,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1"
           },
           {
             "name": "mergeRequestIid",
@@ -37455,7 +37455,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 2
+            "example": "2"
           }
         ],
         "requestBody": {
@@ -37783,7 +37783,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 2
+            "example": "2"
           }
         ],
         "requestBody": {
@@ -47116,7 +47116,7 @@
               "type": "string",
               "nullable": true
             },
-            "example": 12
+            "example": "12"
           },
           {
             "name": "description",
@@ -47373,7 +47373,7 @@
               "type": "string",
               "nullable": true
             },
-            "example": 12
+            "example": "12"
           },
           {
             "name": "description",
@@ -57383,7 +57383,7 @@
                 }
               ]
             },
-            "example": 2
+            "example": "2"
           }
         ],
         "responses": {
@@ -71757,7 +71757,7 @@
               "type": "string",
               "nullable": true
             },
-            "example": 12
+            "example": "12"
           },
           {
             "name": "description",
@@ -72014,7 +72014,7 @@
               "type": "string",
               "nullable": true
             },
-            "example": 12
+            "example": "12"
           },
           {
             "name": "description",
@@ -78010,7 +78010,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -78091,7 +78091,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -78172,7 +78172,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -78253,7 +78253,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -78344,7 +78344,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -78435,7 +78435,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -78534,7 +78534,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -78644,7 +78644,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -78745,7 +78745,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -78836,7 +78836,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -78937,7 +78937,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -79038,7 +79038,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -79149,7 +79149,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -79260,7 +79260,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -79379,7 +79379,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -79509,7 +79509,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -79774,7 +79774,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -79896,7 +79896,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -79987,7 +79987,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -80066,7 +80066,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -80147,7 +80147,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -80238,7 +80238,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -80319,7 +80319,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -80410,7 +80410,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -80491,7 +80491,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -80582,7 +80582,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -80663,7 +80663,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -80693,7 +80693,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 0
+            "example": "0"
           },
           {
             "name": "fileName",
@@ -80762,7 +80762,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -80792,7 +80792,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 0
+            "example": "0"
           },
           {
             "name": "fileName",
@@ -80872,7 +80872,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -80902,7 +80902,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 0
+            "example": "0"
           },
           {
             "name": "fileName",
@@ -80973,7 +80973,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -81003,7 +81003,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 0
+            "example": "0"
           },
           {
             "name": "conanPackageReference",
@@ -81023,7 +81023,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 0
+            "example": "0"
           },
           {
             "name": "fileName",
@@ -81092,7 +81092,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -81122,7 +81122,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 0
+            "example": "0"
           },
           {
             "name": "conanPackageReference",
@@ -81142,7 +81142,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 0
+            "example": "0"
           },
           {
             "name": "fileName",
@@ -81222,7 +81222,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -81252,7 +81252,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 0
+            "example": "0"
           },
           {
             "name": "conanPackageReference",
@@ -81272,7 +81272,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 0
+            "example": "0"
           },
           {
             "name": "fileName",
@@ -81415,7 +81415,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -81501,7 +81501,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -81575,7 +81575,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -81637,7 +81637,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -81701,7 +81701,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -81775,7 +81775,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -81839,7 +81839,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -81913,7 +81913,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -81977,7 +81977,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -82051,7 +82051,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -82115,7 +82115,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -82145,7 +82145,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 0
+            "example": "0"
           },
           {
             "name": "fileName",
@@ -82197,7 +82197,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -82227,7 +82227,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 0
+            "example": "0"
           },
           {
             "name": "fileName",
@@ -82290,7 +82290,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -82320,7 +82320,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 0
+            "example": "0"
           },
           {
             "name": "fileName",
@@ -82374,7 +82374,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -82404,7 +82404,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 0
+            "example": "0"
           },
           {
             "name": "conanPackageReference",
@@ -82424,7 +82424,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 0
+            "example": "0"
           },
           {
             "name": "fileName",
@@ -82476,7 +82476,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -82506,7 +82506,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 0
+            "example": "0"
           },
           {
             "name": "conanPackageReference",
@@ -82526,7 +82526,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 0
+            "example": "0"
           },
           {
             "name": "fileName",
@@ -82589,7 +82589,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 1
+            "example": "1.0"
           },
           {
             "name": "packageUsername",
@@ -82619,7 +82619,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 0
+            "example": "0"
           },
           {
             "name": "conanPackageReference",
@@ -82639,7 +82639,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 0
+            "example": "0"
           },
           {
             "name": "fileName",
@@ -86201,7 +86201,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 11
+            "example": "11"
           },
           {
             "name": "page",
@@ -86396,7 +86396,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 11
+            "example": "11"
           }
         ],
         "requestBody": {
@@ -86439,7 +86439,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 11
+            "example": "11"
           },
           {
             "name": "ref",
@@ -86483,7 +86483,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 11
+            "example": "11"
           },
           {
             "name": "pipelineId",
@@ -86525,7 +86525,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 11
+            "example": "11"
           },
           {
             "name": "pipelineId",
@@ -86569,7 +86569,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 11
+            "example": "11"
           },
           {
             "name": "pipelineId",
@@ -86668,7 +86668,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 11
+            "example": "11"
           },
           {
             "name": "pipelineId",
@@ -86758,7 +86758,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 11
+            "example": "11"
           },
           {
             "name": "pipelineId",
@@ -86802,7 +86802,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 11
+            "example": "11"
           },
           {
             "name": "pipelineId",
@@ -86846,7 +86846,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 11
+            "example": "11"
           },
           {
             "name": "pipelineId",
@@ -86890,7 +86890,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 11
+            "example": "11"
           },
           {
             "name": "pipelineId",
@@ -86943,7 +86943,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 11
+            "example": "11"
           },
           {
             "name": "pipelineId",
@@ -86987,7 +86987,7 @@
             "schema": {
               "type": "string"
             },
-            "example": 11
+            "example": "11"
           },
           {
             "name": "pipelineId",
@@ -97595,7 +97595,7 @@
                   "name": "Raymond Smith",
                   "state": "active",
                   "created_at": "2012-10-22T14:13:35Z",
-                  "access_level": 20
+                  "access_level": "20"
                 }
               }
             }
@@ -97789,7 +97789,7 @@
                   "name": "Raymond Smith",
                   "state": "active",
                   "created_at": "2012-10-22T14:13:35Z",
-                  "access_level": 20
+                  "access_level": "20"
                 }
               }
             }
@@ -106934,7 +106934,7 @@
           },
           "changes_count": {
             "type": "string",
-            "example": 1
+            "example": "1"
           },
           "latest_build_started_at": {
             "type": "string",
@@ -107983,7 +107983,7 @@
         "properties": {
           "experiment_id": {
             "type": "string",
-            "example": 1
+            "example": "1"
           },
           "name": {
             "type": "string",
@@ -108028,7 +108028,7 @@
         "properties": {
           "experiment_id": {
             "type": "string",
-            "example": 1
+            "example": "1"
           }
         }
       },
@@ -108040,7 +108040,7 @@
           },
           "session": {
             "type": "string",
-            "example": 1
+            "example": "1"
           }
         }
       },
@@ -112801,7 +112801,7 @@
           },
           "mode": {
             "type": "string",
-            "example": 40000
+            "example": "040000"
           },
           "last_commit": {
             "$ref": "#/components/schemas/ApiEntitiesCommit"
@@ -112831,11 +112831,11 @@
           },
           "a_mode": {
             "type": "string",
-            "example": 100755
+            "example": "100755"
           },
           "b_mode": {
             "type": "string",
-            "example": 100644
+            "example": "100644"
           },
           "new_file": {
             "type": "boolean"
@@ -116045,7 +116045,7 @@
           },
           "version": {
             "type": "string",
-            "example": 12
+            "example": "12"
           },
           "description": {
             "type": "string",
@@ -116971,7 +116971,7 @@
           },
           "real_size": {
             "type": "string",
-            "example": 1
+            "example": "1"
           },
           "patch_id_sha": {
             "type": "string",
@@ -117015,7 +117015,7 @@
           },
           "real_size": {
             "type": "string",
-            "example": 1
+            "example": "1"
           },
           "patch_id_sha": {
             "type": "string",
@@ -117481,7 +117481,7 @@
           },
           "changes_count": {
             "type": "string",
-            "example": 1
+            "example": "1"
           },
           "latest_build_started_at": {
             "type": "string",
@@ -121551,7 +121551,7 @@
           },
           "mode": {
             "type": "string",
-            "example": 100644
+            "example": "100644"
           }
         }
       },
@@ -122150,7 +122150,7 @@
         "properties": {
           "id": {
             "type": "string",
-            "example": 1234
+            "example": "1234"
           },
           "job_class_name": {
             "type": "string",
@@ -122806,13 +122806,13 @@
             "type": "string",
             "description": "The ID or path of the workflow project",
             "nullable": true,
-            "example": 1
+            "example": "1"
           },
           "namespace_id": {
             "type": "string",
             "description": "The ID or path of the workflow namespace",
             "nullable": true,
-            "example": 1
+            "example": "1"
           },
           "ai_catalog_item_consumer_id": {
             "type": "integer",
@@ -123050,13 +123050,13 @@
             "type": "string",
             "description": "the ID of the root namespace",
             "nullable": true,
-            "example": 1
+            "example": "1"
           },
           "project_id": {
             "type": "string",
             "description": "The ID or path of the project",
             "nullable": true,
-            "example": 1
+            "example": "1"
           }
         }
       },
@@ -123067,13 +123067,13 @@
             "type": "string",
             "description": "The ID or path of the workflow project",
             "nullable": true,
-            "example": 1
+            "example": "1"
           },
           "namespace_id": {
             "type": "string",
             "description": "The ID or path of the workflow namespace",
             "nullable": true,
-            "example": 1
+            "example": "1"
           },
           "ai_catalog_item_consumer_id": {
             "type": "integer",
@@ -125363,7 +125363,7 @@
             "type": "string",
             "description": "ID or URL-encoded path of the target group",
             "nullable": true,
-            "example": 1
+            "example": "1"
           },
           "target_epic_iid": {
             "type": "integer",
@@ -132302,7 +132302,7 @@
             "type": "string",
             "description": "Metadata version of the package",
             "nullable": true,
-            "example": 2.3
+            "example": "2.3"
           },
           "author_email": {
             "type": "string",
@@ -143829,7 +143829,7 @@
       "ApiEntitiesCiSecureFileMetadata": {
         "type": "object",
         "example": {
-          "id": 7.594991E+37
+          "id": "75949910542696343243264405377658443914"
         }
       },
       "ApiEntitiesCiJobBasicProject": {
@@ -144567,7 +144567,7 @@
             "type": "string",
             "description": "Value of the variable",
             "nullable": true,
-            "example": 123
+            "example": "123"
           }
         }
       },
@@ -144609,7 +144609,7 @@
             "type": "string",
             "description": "Value of the variable",
             "nullable": true,
-            "example": 123
+            "example": "123"
           }
         }
       },
@@ -145051,7 +145051,7 @@
             "type": "string",
             "description": "Value of the variable",
             "nullable": true,
-            "example": 123
+            "example": "123"
           }
         }
       },
@@ -145093,7 +145093,7 @@
             "type": "string",
             "description": "Value of the variable",
             "nullable": true,
-            "example": 123
+            "example": "123"
           }
         }
       },
@@ -146526,7 +146526,7 @@
             "type": "string",
             "description": "Value of the variable",
             "nullable": true,
-            "example": 123
+            "example": "123"
           }
         }
       },
@@ -146568,7 +146568,7 @@
             "type": "string",
             "description": "Value of the variable",
             "nullable": true,
-            "example": 123
+            "example": "123"
           }
         }
       },
@@ -147647,7 +147647,7 @@
             "type": "string",
             "description": "The value of the variable",
             "nullable": true,
-            "example": true
+            "example": "true"
           },
           "variable_type": {
             "$ref": "#/components/schemas/RequestBody16F5F03716B4VariablesItemVariableType"
@@ -153670,11 +153670,21 @@
       "RequestBody047F0D8Da63FJsonrpc": {
         "minLength": 1,
         "enum": [
-          2
+          "2.0"
         ],
         "type": "string",
         "additionalProperties": false,
-        "description": "JSON-RPC protocol version identifier. Must be \u00602.0\u0060."
+        "description": "JSON-RPC protocol version identifier. Must be \u00602.0\u0060.",
+        "x-ms-enum": {
+          "name": "RequestBody047F0D8Da63FJsonrpc",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "2.0",
+              "name": "Value20"
+            }
+          ]
+        }
       },
       "RequestBody081A4A70422DFormat": {
         "enum": [
@@ -164767,11 +164777,21 @@
       },
       "GetApiV4ProjectsIdPackagesTerraformModulesModuleNameModuleSystemTerraformGetParameter": {
         "enum": [
-          1
+          "1"
         ],
         "type": "string",
         "additionalProperties": false,
-        "nullable": true
+        "nullable": true,
+        "x-ms-enum": {
+          "name": "GetApiV4ProjectsIdPackagesTerraformModulesModuleNameModuleSystemTerraformGetParameter",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "1",
+              "name": "Value1"
+            }
+          ]
+        }
       },
       "GetApiV4ProjectsIdRepositoryTagsSortParameter": {
         "enum": [
@@ -167541,7 +167561,7 @@
       },
       "GetApiV4IssuesDueDateParameter": {
         "enum": [
-          0,
+          "0",
           "any",
           "today",
           "tomorrow",
@@ -167558,6 +167578,10 @@
           "name": "GetApiV4IssuesDueDateParameter",
           "modelAsString": false,
           "values": [
+            {
+              "value": "0",
+              "name": "Value0"
+            },
             {
               "value": "any",
               "name": "Any"
@@ -167846,7 +167870,7 @@
       },
       "GetApiV4GroupsIdIssuesDueDateParameter": {
         "enum": [
-          0,
+          "0",
           "any",
           "today",
           "tomorrow",
@@ -167863,6 +167887,10 @@
           "name": "GetApiV4GroupsIdIssuesDueDateParameter",
           "modelAsString": false,
           "values": [
+            {
+              "value": "0",
+              "name": "Value0"
+            },
             {
               "value": "any",
               "name": "Any"
@@ -168249,7 +168277,7 @@
       },
       "GetApiV4ProjectsIdIssuesDueDateParameter": {
         "enum": [
-          0,
+          "0",
           "any",
           "today",
           "tomorrow",
@@ -168266,6 +168294,10 @@
           "name": "GetApiV4ProjectsIdIssuesDueDateParameter",
           "modelAsString": false,
           "values": [
+            {
+              "value": "0",
+              "name": "Value0"
+            },
             {
               "value": "any",
               "name": "Any"
