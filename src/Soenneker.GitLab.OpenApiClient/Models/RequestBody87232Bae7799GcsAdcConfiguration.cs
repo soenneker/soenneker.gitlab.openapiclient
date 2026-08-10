@@ -8,10 +8,10 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// Google Cloud Storage configuration using Application Default Credentials. Available on GitLab Self-Managed or GitLab Dedicated, and must be enabled by an administrator.
+    /// Google Cloud Storage configuration using Application Default Credentials. Available on GitLab Self-Managed or GitLab Dedicated, and must be enabled by an administrator. Only administrators can use these credentials, and the bucket name must start with &quot;gitlab-offline-transfer-&quot;. For more information, see https://docs.gitlab.com/administration/settings/import_and_export_settings/#allow-application-default-credentials-for-offline-transfer
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RequestBodyE9Df3163642FGcsAdcConfiguration : IAdditionalDataHolder, IParsable
+    public partial class RequestBody87232Bae7799GcsAdcConfiguration : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -24,21 +24,21 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string GoogleProject { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE9Df3163642FGcsAdcConfiguration"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody87232Bae7799GcsAdcConfiguration"/> and sets the default values.
         /// </summary>
-        public RequestBodyE9Df3163642FGcsAdcConfiguration()
+        public RequestBody87232Bae7799GcsAdcConfiguration()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE9Df3163642FGcsAdcConfiguration"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody87232Bae7799GcsAdcConfiguration"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE9Df3163642FGcsAdcConfiguration CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody87232Bae7799GcsAdcConfiguration CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE9Df3163642FGcsAdcConfiguration();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody87232Bae7799GcsAdcConfiguration();
         }
         /// <summary>
         /// The deserialization information for the current model

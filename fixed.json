@@ -759,6 +759,270 @@
         }
       }
     },
+    "/api/v4/projects/{id}/ai_agent/sessions": {
+      "post": {
+        "tags": [
+          "Projects",
+          "Ai agent sessions"
+        ],
+        "summary": "Create an external agent session.",
+        "description": "Creates a new external agent session for the current user and project. Returns an existing record if an idempotency_key is provided and a matching session already exists.",
+        "operationId": "PostApiV4ProjectsIdAiAgentSessions",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the project",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "example": 1
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestBody9Fed56308Dd0"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesAiExternalAgentsSession"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Projects",
+          "Ai agent sessions"
+        ],
+        "summary": "List external agent sessions for a project.",
+        "description": "Returns a paginated list of external agent sessions for the project.",
+        "operationId": "GetApiV4ProjectsIdAiAgentSessions",
+        "parameters": [
+          {
+            "name": "agent_type",
+            "in": "query",
+            "description": "Filter by agent type.",
+            "schema": {
+              "$ref": "#/components/schemas/GetApiV4ProjectsIdAiAgentSessionsAgentTypeParameter"
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "description": "Filter by status.",
+            "schema": {
+              "$ref": "#/components/schemas/GetApiV4ProjectsIdAiAgentSessionsStatusParameter"
+            }
+          },
+          {
+            "name": "created_after",
+            "in": "query",
+            "description": "Filter sessions created after this time.",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            }
+          },
+          {
+            "name": "created_before",
+            "in": "query",
+            "description": "Filter sessions created before this time.",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Current page number",
+            "schema": {
+              "type": "integer",
+              "default": 1,
+              "nullable": true
+            },
+            "example": 1
+          },
+          {
+            "name": "per_page",
+            "in": "query",
+            "description": "Number of items per page",
+            "schema": {
+              "type": "integer",
+              "default": 20,
+              "nullable": true
+            },
+            "example": 20
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the project",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "example": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesAiExternalAgentsSession"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v4/projects/{id}/ai_agent/sessions/{sessionId}": {
+      "patch": {
+        "tags": [
+          "Projects",
+          "Ai agent sessions"
+        ],
+        "summary": "Complete or fail an external agent session.",
+        "description": "Marks a session as completed or failed. The authenticated user must be the creator of the session. Returns the existing record unchanged if jsonl_sha256 matches the stored value.",
+        "operationId": "PatchApiV4ProjectsIdAiAgentSessionsSessionId",
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "path",
+            "description": "The session ID.",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the project",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "example": 1
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestBody2Bd45A9E85D9"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesAiExternalAgentsSession"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v4/projects/{id}/ai_agent/identities": {
+      "post": {
+        "tags": [
+          "Projects",
+          "Ai agent identities"
+        ],
+        "summary": "Register an external agent identity.",
+        "description": "Registers a new agent identity for the current user, project, agent type, and machine fingerprint combination. Returns an existing record if one already exists. Returns 403 if the identity has been revoked.",
+        "operationId": "PostApiV4ProjectsIdAiAgentIdentities",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the project",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "example": 1
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestBody80C272D831B7"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesAiExternalAgentsIdentity"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/v4/ai/duo_workflows/flow_callbacks": {
       "get": {
         "tags": [
@@ -896,58 +1160,6 @@
         }
       }
     },
-    "/api/v4/projects/{id}/ai_agent/identities": {
-      "post": {
-        "tags": [
-          "Projects",
-          "Ai agent identities"
-        ],
-        "summary": "Register an external agent identity.",
-        "description": "Registers a new agent identity for the current user, project, agent type, and machine fingerprint combination. Returns an existing record if one already exists. Returns 403 if the identity has been revoked.",
-        "operationId": "PostApiV4ProjectsIdAiAgentIdentities",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The ID or URL-encoded path of the project",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "integer"
-                }
-              ]
-            },
-            "example": 1
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RequestBody80C272D831B7"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesAiExternalAgentsIdentity"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/api/v4/ai/duo_workflows/workflows/{id}/audit_events": {
       "post": {
         "tags": [
@@ -1077,7 +1289,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody752E903252D0"
+                "$ref": "#/components/schemas/RequestBodyD98Ff4Ec17A4"
               }
             }
           }
@@ -1664,7 +1876,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody96013D8Cf931"
+                "$ref": "#/components/schemas/RequestBody0B3B859426Ba"
               }
             }
           }
@@ -49782,7 +49994,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyDb31C1Cadc09"
+                "$ref": "#/components/schemas/RequestBodyB99C594968C8"
               }
             }
           }
@@ -49906,7 +50118,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyE9Df3163642F"
+                "$ref": "#/components/schemas/RequestBody87232Bae7799"
               }
             }
           }
@@ -98197,6 +98409,67 @@
           }
         }
       },
+      "ApiEntitiesAiExternalAgentsSession": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "example": 1
+          },
+          "agent_type": {
+            "type": "string",
+            "example": "claude-code"
+          },
+          "agent_identity_id": {
+            "type": "integer",
+            "example": 1
+          },
+          "user_id": {
+            "type": "integer",
+            "example": 1
+          },
+          "sync_type": {
+            "type": "string",
+            "example": "hook"
+          },
+          "status": {
+            "type": "string",
+            "example": "running"
+          },
+          "goal": {
+            "type": "string",
+            "example": "Implement the login feature"
+          },
+          "created_at": {
+            "type": "string",
+            "example": "2026-06-17T00:00:00.000Z"
+          },
+          "updated_at": {
+            "type": "string",
+            "example": "2026-06-17T00:00:00.000Z"
+          }
+        }
+      },
+      "ApiEntitiesAiExternalAgentsIdentity": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "example": 1
+          },
+          "agent_type": {
+            "type": "string",
+            "example": "claude-code"
+          },
+          "revoked_at": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string",
+            "example": "2026-06-17T00:00:00.000Z"
+          }
+        }
+      },
       "ApiEntitiesAiDuoWorkflowsFlowCallbackHook": {
         "type": "object",
         "properties": {
@@ -98224,26 +98497,6 @@
             "type": "string",
             "format": "date-time",
             "example": "2026-07-22T11:37:00Z"
-          }
-        }
-      },
-      "ApiEntitiesAiExternalAgentsIdentity": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "example": 1
-          },
-          "agent_type": {
-            "type": "string",
-            "example": "claude-code"
-          },
-          "revoked_at": {
-            "type": "string"
-          },
-          "created_at": {
-            "type": "string",
-            "example": "2026-06-17T00:00:00.000Z"
           }
         }
       },
@@ -122702,6 +122955,80 @@
           }
         }
       },
+      "RequestBody9Fed56308Dd0": {
+        "required": [
+          "agent_type",
+          "agent_identity_id",
+          "sync_type"
+        ],
+        "type": "object",
+        "properties": {
+          "agent_type": {
+            "$ref": "#/components/schemas/RequestBody9Fed56308Dd0AgentType"
+          },
+          "agent_identity_id": {
+            "type": "integer",
+            "description": "ID of the registered agent identity.",
+            "nullable": true
+          },
+          "sync_type": {
+            "$ref": "#/components/schemas/RequestBody9Fed56308Dd0SyncType"
+          },
+          "goal": {
+            "type": "string",
+            "description": "User-provided session description.",
+            "nullable": true
+          },
+          "started_at": {
+            "type": "string",
+            "description": "Session start time, supports backfill.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "idempotency_key": {
+            "maxLength": 255,
+            "type": "string",
+            "description": "Client-generated UUID for retry safety.",
+            "nullable": true
+          }
+        }
+      },
+      "RequestBody2Bd45A9E85D9": {
+        "required": [
+          "status"
+        ],
+        "type": "object",
+        "properties": {
+          "status": {
+            "$ref": "#/components/schemas/RequestBody2Bd45A9E85D9Status"
+          },
+          "jsonl_sha256": {
+            "maxLength": 64,
+            "pattern": "^\\p{AHex}{64}$",
+            "type": "string",
+            "description": "SHA-256 of the transcript file.",
+            "nullable": true
+          }
+        }
+      },
+      "RequestBody80C272D831B7": {
+        "required": [
+          "agent_type",
+          "machine_fingerprint"
+        ],
+        "type": "object",
+        "properties": {
+          "agent_type": {
+            "$ref": "#/components/schemas/RequestBody80C272D831B7AgentType"
+          },
+          "machine_fingerprint": {
+            "maxLength": 64,
+            "type": "string",
+            "description": "SHA-256 hash of the machine identifier.",
+            "nullable": true
+          }
+        }
+      },
       "RequestBody3Bf1A359C145": {
         "required": [
           "url"
@@ -122731,24 +123058,6 @@
             "maxLength": 8192,
             "type": "string",
             "description": "Optional shared secret sent verbatim as the X-Gitlab-Token header. Not returned.",
-            "nullable": true
-          }
-        }
-      },
-      "RequestBody80C272D831B7": {
-        "required": [
-          "agent_type",
-          "machine_fingerprint"
-        ],
-        "type": "object",
-        "properties": {
-          "agent_type": {
-            "$ref": "#/components/schemas/RequestBody80C272D831B7AgentType"
-          },
-          "machine_fingerprint": {
-            "maxLength": 64,
-            "type": "string",
-            "description": "SHA-256 hash of the machine identifier.",
             "nullable": true
           }
         }
@@ -122799,7 +123108,7 @@
           }
         }
       },
-      "RequestBody752E903252D0": {
+      "RequestBodyD98Ff4Ec17A4": {
         "type": "object",
         "properties": {
           "project_id": {
@@ -122857,7 +123166,7 @@
             "example": "main"
           },
           "environment": {
-            "$ref": "#/components/schemas/RequestBody752E903252D0Environment"
+            "$ref": "#/components/schemas/RequestBodyD98Ff4Ec17A4Environment"
           },
           "ai_catalog_item_version_id": {
             "type": "integer",
@@ -122868,7 +123177,7 @@
           "additional_context": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBody752E903252D0AdditionalContextItem"
+              "$ref": "#/components/schemas/RequestBodyD98Ff4Ec17A4AdditionalContextItem"
             },
             "description": "Additional Context required by the Flow, in JSON format. Contains an array of context details, where each detail is a Hash with a minimum of \u0022Category\u0022 and \u0022Content\u0022 keys.",
             "nullable": true
@@ -123060,7 +123369,7 @@
           }
         }
       },
-      "RequestBody96013D8Cf931": {
+      "RequestBody0B3B859426Ba": {
         "type": "object",
         "properties": {
           "project_id": {
@@ -123134,7 +123443,7 @@
             "example": "main"
           },
           "environment": {
-            "$ref": "#/components/schemas/RequestBody96013D8Cf931Environment"
+            "$ref": "#/components/schemas/RequestBody0B3B859426BaEnvironment"
           },
           "ai_catalog_item_version_id": {
             "type": "integer",
@@ -123145,7 +123454,7 @@
           "additional_context": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBody96013D8Cf931AdditionalContextItem"
+              "$ref": "#/components/schemas/RequestBody0B3B859426BaAdditionalContextItem"
             },
             "description": "Additional Context required by the Flow, in JSON format. Contains an array of context details, where each detail is a Hash with a minimum of \u0022Category\u0022 and \u0022Content\u0022 keys.",
             "nullable": true
@@ -123170,7 +123479,7 @@
             "example": 123
           },
           "source": {
-            "$ref": "#/components/schemas/RequestBody96013D8Cf931Source"
+            "$ref": "#/components/schemas/RequestBody0B3B859426BaSource"
           }
         }
       },
@@ -135111,7 +135420,7 @@
           }
         }
       },
-      "RequestBodyDb31C1Cadc09": {
+      "RequestBodyB99C594968C8": {
         "required": [
           "bucket",
           "entities"
@@ -135124,31 +135433,31 @@
             "nullable": true
           },
           "aws_s3_configuration": {
-            "$ref": "#/components/schemas/RequestBodyDb31C1Cadc09AwsS3Configuration"
+            "$ref": "#/components/schemas/RequestBodyB99C594968C8AwsS3Configuration"
           },
           "s3_compatible_configuration": {
-            "$ref": "#/components/schemas/RequestBodyDb31C1Cadc09S3CompatibleConfiguration"
+            "$ref": "#/components/schemas/RequestBodyB99C594968C8S3CompatibleConfiguration"
           },
           "gcs_configuration": {
-            "$ref": "#/components/schemas/RequestBodyDb31C1Cadc09GcsConfiguration"
+            "$ref": "#/components/schemas/RequestBodyB99C594968C8GcsConfiguration"
           },
           "gcs_hmac_configuration": {
-            "$ref": "#/components/schemas/RequestBodyDb31C1Cadc09GcsHmacConfiguration"
+            "$ref": "#/components/schemas/RequestBodyB99C594968C8GcsHmacConfiguration"
           },
           "gcs_adc_configuration": {
-            "$ref": "#/components/schemas/RequestBodyDb31C1Cadc09GcsAdcConfiguration"
+            "$ref": "#/components/schemas/RequestBodyB99C594968C8GcsAdcConfiguration"
           },
           "entities": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBodyDb31C1Cadc09EntitiesItem"
+              "$ref": "#/components/schemas/RequestBodyB99C594968C8EntitiesItem"
             },
             "description": "List of entities to export",
             "nullable": true
           }
         }
       },
-      "RequestBodyE9Df3163642F": {
+      "RequestBody87232Bae7799": {
         "required": [
           "bucket",
           "export_prefix",
@@ -135162,19 +135471,19 @@
             "nullable": true
           },
           "aws_s3_configuration": {
-            "$ref": "#/components/schemas/RequestBodyE9Df3163642FAwsS3Configuration"
+            "$ref": "#/components/schemas/RequestBody87232Bae7799AwsS3Configuration"
           },
           "s3_compatible_configuration": {
-            "$ref": "#/components/schemas/RequestBodyE9Df3163642Fs3CompatibleConfiguration"
+            "$ref": "#/components/schemas/RequestBody87232Bae7799S3CompatibleConfiguration"
           },
           "gcs_configuration": {
-            "$ref": "#/components/schemas/RequestBodyE9Df3163642FGcsConfiguration"
+            "$ref": "#/components/schemas/RequestBody87232Bae7799GcsConfiguration"
           },
           "gcs_hmac_configuration": {
-            "$ref": "#/components/schemas/RequestBodyE9Df3163642FGcsHmacConfiguration"
+            "$ref": "#/components/schemas/RequestBody87232Bae7799GcsHmacConfiguration"
           },
           "gcs_adc_configuration": {
-            "$ref": "#/components/schemas/RequestBodyE9Df3163642FGcsAdcConfiguration"
+            "$ref": "#/components/schemas/RequestBody87232Bae7799GcsAdcConfiguration"
           },
           "export_prefix": {
             "type": "string",
@@ -135184,7 +135493,7 @@
           "entities": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBodyE9Df3163642FEntitiesItem"
+              "$ref": "#/components/schemas/RequestBody87232Bae7799EntitiesItem"
             },
             "description": "List of entities to import",
             "nullable": true
@@ -144115,7 +144424,7 @@
           }
         }
       },
-      "RequestBody752E903252D0AdditionalContextItem": {
+      "RequestBodyD98Ff4Ec17A4AdditionalContextItem": {
         "required": [
           "Category",
           "Content"
@@ -144220,7 +144529,7 @@
           }
         }
       },
-      "RequestBody96013D8Cf931AdditionalContextItem": {
+      "RequestBody0B3B859426BaAdditionalContextItem": {
         "required": [
           "Category",
           "Content"
@@ -146669,7 +146978,7 @@
         "description": "Platform Kubernetes data",
         "nullable": true
       },
-      "RequestBodyDb31C1Cadc09AwsS3Configuration": {
+      "RequestBodyB99C594968C8AwsS3Configuration": {
         "required": [
           "aws_access_key_id",
           "aws_secret_access_key",
@@ -146701,7 +147010,7 @@
         "description": "AWS S3 object storage configuration",
         "nullable": true
       },
-      "RequestBodyDb31C1Cadc09S3CompatibleConfiguration": {
+      "RequestBodyB99C594968C8S3CompatibleConfiguration": {
         "required": [
           "aws_access_key_id",
           "aws_secret_access_key",
@@ -146740,7 +147049,7 @@
         "description": "MinIO or other S3-compatible object storage configuration",
         "nullable": true
       },
-      "RequestBodyDb31C1Cadc09GcsConfiguration": {
+      "RequestBodyB99C594968C8GcsConfiguration": {
         "required": [
           "google_project",
           "google_json_key_string"
@@ -146761,7 +147070,7 @@
         "description": "Google Cloud Storage configuration using a service account JSON key",
         "nullable": true
       },
-      "RequestBodyDb31C1Cadc09GcsHmacConfiguration": {
+      "RequestBodyB99C594968C8GcsHmacConfiguration": {
         "required": [
           "google_storage_access_key_id",
           "google_storage_secret_access_key",
@@ -146794,7 +147103,7 @@
         "description": "Google Cloud Storage configuration using S3-interoperability HMAC keys",
         "nullable": true
       },
-      "RequestBodyDb31C1Cadc09GcsAdcConfiguration": {
+      "RequestBodyB99C594968C8GcsAdcConfiguration": {
         "required": [
           "google_project"
         ],
@@ -146806,10 +147115,10 @@
             "nullable": true
           }
         },
-        "description": "Google Cloud Storage configuration using Application Default Credentials. Available on GitLab Self-Managed or GitLab Dedicated, and must be enabled by an administrator.",
+        "description": "Google Cloud Storage configuration using Application Default Credentials. Available on GitLab Self-Managed or GitLab Dedicated, and must be enabled by an administrator. Only administrators can use these credentials, and the bucket name must start with \u0022gitlab-offline-transfer-\u0022. For more information, see https://docs.gitlab.com/administration/settings/import_and_export_settings/#allow-application-default-credentials-for-offline-transfer",
         "nullable": true
       },
-      "RequestBodyDb31C1Cadc09EntitiesItem": {
+      "RequestBodyB99C594968C8EntitiesItem": {
         "required": [
           "full_path"
         ],
@@ -146823,7 +147132,7 @@
           }
         }
       },
-      "RequestBodyE9Df3163642FAwsS3Configuration": {
+      "RequestBody87232Bae7799AwsS3Configuration": {
         "required": [
           "aws_access_key_id",
           "aws_secret_access_key",
@@ -146855,7 +147164,7 @@
         "description": "AWS S3 object storage configuration",
         "nullable": true
       },
-      "RequestBodyE9Df3163642Fs3CompatibleConfiguration": {
+      "RequestBody87232Bae7799S3CompatibleConfiguration": {
         "required": [
           "aws_access_key_id",
           "aws_secret_access_key",
@@ -146894,7 +147203,7 @@
         "description": "MinIO or other S3-compatible object storage configuration",
         "nullable": true
       },
-      "RequestBodyE9Df3163642FGcsConfiguration": {
+      "RequestBody87232Bae7799GcsConfiguration": {
         "required": [
           "google_project",
           "google_json_key_string"
@@ -146915,7 +147224,7 @@
         "description": "Google Cloud Storage configuration using a service account JSON key",
         "nullable": true
       },
-      "RequestBodyE9Df3163642FGcsHmacConfiguration": {
+      "RequestBody87232Bae7799GcsHmacConfiguration": {
         "required": [
           "google_storage_access_key_id",
           "google_storage_secret_access_key",
@@ -146948,7 +147257,7 @@
         "description": "Google Cloud Storage configuration using S3-interoperability HMAC keys",
         "nullable": true
       },
-      "RequestBodyE9Df3163642FGcsAdcConfiguration": {
+      "RequestBody87232Bae7799GcsAdcConfiguration": {
         "required": [
           "google_project"
         ],
@@ -146960,10 +147269,10 @@
             "nullable": true
           }
         },
-        "description": "Google Cloud Storage configuration using Application Default Credentials. Available on GitLab Self-Managed or GitLab Dedicated, and must be enabled by an administrator.",
+        "description": "Google Cloud Storage configuration using Application Default Credentials. Available on GitLab Self-Managed or GitLab Dedicated, and must be enabled by an administrator. Only administrators can use these credentials, and the bucket name must start with \u0022gitlab-offline-transfer-\u0022. For more information, see https://docs.gitlab.com/administration/settings/import_and_export_settings/#allow-application-default-credentials-for-offline-transfer",
         "nullable": true
       },
-      "RequestBodyE9Df3163642FEntitiesItem": {
+      "RequestBody87232Bae7799EntitiesItem": {
         "required": [
           "source_type",
           "source_full_path",
@@ -146972,7 +147281,7 @@
         "type": "object",
         "properties": {
           "source_type": {
-            "$ref": "#/components/schemas/RequestBodyE9Df3163642FEntitiesItemSourceType"
+            "$ref": "#/components/schemas/RequestBody87232Bae7799EntitiesItemSourceType"
           },
           "source_full_path": {
             "type": "string",
@@ -152404,6 +152713,83 @@
           ]
         }
       },
+      "RequestBody9Fed56308Dd0AgentType": {
+        "minLength": 1,
+        "enum": [
+          "claude-code",
+          "opencode"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "The type of agent.",
+        "x-ms-enum": {
+          "name": "RequestBody9Fed56308Dd0AgentType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "claude-code",
+              "name": "ClaudeCode"
+            },
+            {
+              "value": "opencode",
+              "name": "Opencode"
+            }
+          ]
+        }
+      },
+      "RequestBody9Fed56308Dd0SyncType": {
+        "minLength": 1,
+        "enum": [
+          "hook",
+          "fallback",
+          "manual"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "How the session was synced.",
+        "x-ms-enum": {
+          "name": "RequestBody9Fed56308Dd0SyncType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "hook",
+              "name": "Hook"
+            },
+            {
+              "value": "fallback",
+              "name": "Fallback"
+            },
+            {
+              "value": "manual",
+              "name": "Manual"
+            }
+          ]
+        }
+      },
+      "RequestBody2Bd45A9E85D9Status": {
+        "minLength": 1,
+        "enum": [
+          "completed",
+          "failed"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "Terminal status.",
+        "x-ms-enum": {
+          "name": "RequestBody2Bd45A9E85D9Status",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "completed",
+              "name": "Completed"
+            },
+            {
+              "value": "failed",
+              "name": "Failed"
+            }
+          ]
+        }
+      },
       "RequestBody80C272D831B7AgentType": {
         "minLength": 1,
         "enum": [
@@ -152428,20 +152814,21 @@
           ]
         }
       },
-      "RequestBody752E903252D0Environment": {
+      "RequestBodyD98Ff4Ec17A4Environment": {
         "enum": [
           "ide",
           "web",
           "chat_partial",
           "chat",
-          "ambient"
+          "ambient",
+          "external"
         ],
         "type": "string",
         "additionalProperties": false,
         "description": "Environment for the workflow.",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody752E903252D0Environment",
+          "name": "RequestBodyD98Ff4Ec17A4Environment",
           "modelAsString": false,
           "values": [
             {
@@ -152463,6 +152850,10 @@
             {
               "value": "ambient",
               "name": "Ambient"
+            },
+            {
+              "value": "external",
+              "name": "External"
             }
           ]
         }
@@ -152535,20 +152926,21 @@
           ]
         }
       },
-      "RequestBody96013D8Cf931Environment": {
+      "RequestBody0B3B859426BaEnvironment": {
         "enum": [
           "ide",
           "web",
           "chat_partial",
           "chat",
-          "ambient"
+          "ambient",
+          "external"
         ],
         "type": "string",
         "additionalProperties": false,
         "description": "Environment for the workflow.",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody96013D8Cf931Environment",
+          "name": "RequestBody0B3B859426BaEnvironment",
           "modelAsString": false,
           "values": [
             {
@@ -152570,11 +152962,15 @@
             {
               "value": "ambient",
               "name": "Ambient"
+            },
+            {
+              "value": "external",
+              "name": "External"
             }
           ]
         }
       },
-      "RequestBody96013D8Cf931Source": {
+      "RequestBody0B3B859426BaSource": {
         "enum": [
           "merge_request_code_conflict",
           "merge_request_dependency_bump",
@@ -152589,7 +152985,7 @@
         "description": "Where the session was triggered from",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody96013D8Cf931Source",
+          "name": "RequestBody0B3B859426BaSource",
           "modelAsString": false,
           "values": [
             {
@@ -162487,7 +162883,7 @@
           ]
         }
       },
-      "RequestBodyE9Df3163642FEntitiesItemSourceType": {
+      "RequestBody87232Bae7799EntitiesItemSourceType": {
         "minLength": 1,
         "enum": [
           "group_entity",
@@ -162497,7 +162893,7 @@
         "additionalProperties": false,
         "description": "Type of the entity to import",
         "x-ms-enum": {
-          "name": "RequestBodyE9Df3163642FEntitiesItemSourceType",
+          "name": "RequestBody87232Bae7799EntitiesItemSourceType",
           "modelAsString": false,
           "values": [
             {
@@ -162863,6 +163259,67 @@
         "type": "integer",
         "additionalProperties": false,
         "description": "A valid access level"
+      },
+      "GetApiV4ProjectsIdAiAgentSessionsAgentTypeParameter": {
+        "enum": [
+          "claude-code",
+          "opencode"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "nullable": true,
+        "x-ms-enum": {
+          "name": "GetApiV4ProjectsIdAiAgentSessionsAgentTypeParameter",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "claude-code",
+              "name": "ClaudeCode"
+            },
+            {
+              "value": "opencode",
+              "name": "Opencode"
+            }
+          ]
+        }
+      },
+      "GetApiV4ProjectsIdAiAgentSessionsStatusParameter": {
+        "enum": [
+          "created",
+          "running",
+          "finished",
+          "failed",
+          "stopped"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "nullable": true,
+        "x-ms-enum": {
+          "name": "GetApiV4ProjectsIdAiAgentSessionsStatusParameter",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "created",
+              "name": "Created"
+            },
+            {
+              "value": "running",
+              "name": "Running"
+            },
+            {
+              "value": "finished",
+              "name": "Finished"
+            },
+            {
+              "value": "failed",
+              "name": "Failed"
+            },
+            {
+              "value": "stopped",
+              "name": "Stopped"
+            }
+          ]
+        }
       },
       "GetApiV4ProjectsIdIterationsStateParameter": {
         "enum": [
@@ -174264,6 +174721,10 @@
     {
       "name": "Ai agent identities",
       "description": "Operations related to ai agent identities."
+    },
+    {
+      "name": "Ai agent sessions",
+      "description": "Operations related to ai agent sessions."
     },
     {
       "name": "Alert management",

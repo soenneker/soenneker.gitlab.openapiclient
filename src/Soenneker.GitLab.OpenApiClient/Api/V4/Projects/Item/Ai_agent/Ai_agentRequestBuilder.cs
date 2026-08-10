@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ai_agent.Identities;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ai_agent.Sessions;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -19,6 +20,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ai_agent
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ai_agent.Identities.IdentitiesRequestBuilder Identities
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ai_agent.Identities.IdentitiesRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The sessions property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ai_agent.Sessions.SessionsRequestBuilder Sessions
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ai_agent.Sessions.SessionsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ai_agent.Ai_agentRequestBuilder"/> and sets the default values.

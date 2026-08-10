@@ -3,17 +3,21 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>Type of the entity to import</summary>
+    /// <summary>How the session was synced.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBodyE9Df3163642FEntitiesItemSourceType
+    public enum RequestBody9Fed56308Dd0SyncType
     {
-        [EnumMember(Value = "group_entity")]
+        [EnumMember(Value = "hook")]
         #pragma warning disable CS1591
-        GroupEntity,
+        Hook,
         #pragma warning restore CS1591
-        [EnumMember(Value = "project_entity")]
+        [EnumMember(Value = "fallback")]
         #pragma warning disable CS1591
-        ProjectEntity,
+        Fallback,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "manual")]
+        #pragma warning disable CS1591
+        Manual,
         #pragma warning restore CS1591
     }
 }

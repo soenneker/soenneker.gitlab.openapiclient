@@ -5,7 +5,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>Environment for the workflow.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBody96013D8Cf931Environment
+    public enum RequestBody0B3B859426BaEnvironment
     {
         [EnumMember(Value = "ide")]
         #pragma warning disable CS1591
@@ -26,6 +26,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         [EnumMember(Value = "ambient")]
         #pragma warning disable CS1591
         Ambient,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "external")]
+        #pragma warning disable CS1591
+        External,
         #pragma warning restore CS1591
     }
 }

@@ -7,45 +7,56 @@ using System.IO;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
+    /// <summary>
+    /// AWS S3 object storage configuration
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class RequestBody752E903252D0AdditionalContextItem : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class RequestBodyB99C594968C8AwsS3Configuration : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The category of the context detail</summary>
+        /// <summary>AWS S3 access key ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Category { get; set; }
+        public string? AwsAccessKeyId { get; set; }
 #nullable restore
 #else
-        public string Category { get; set; }
+        public string AwsAccessKeyId { get; set; }
 #endif
-        /// <summary>The content type of the context detail</summary>
+        /// <summary>AWS S3 secret access key</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Content { get; set; }
+        public string? AwsSecretAccessKey { get; set; }
 #nullable restore
 #else
-        public string Content { get; set; }
+        public string AwsSecretAccessKey { get; set; }
+#endif
+        /// <summary>Use path-style URLs instead of virtual-hosted-style URLs</summary>
+        public bool? PathStyle { get; set; }
+        /// <summary>AWS S3 object storage region</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Region { get; set; }
+#nullable restore
+#else
+        public string Region { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody752E903252D0AdditionalContextItem"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB99C594968C8AwsS3Configuration"/> and sets the default values.
         /// </summary>
-        public RequestBody752E903252D0AdditionalContextItem()
+        public RequestBodyB99C594968C8AwsS3Configuration()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody752E903252D0AdditionalContextItem"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB99C594968C8AwsS3Configuration"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody752E903252D0AdditionalContextItem CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB99C594968C8AwsS3Configuration CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody752E903252D0AdditionalContextItem();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB99C594968C8AwsS3Configuration();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -55,8 +66,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "Category", n => { Category = n.GetStringValue(); } },
-                { "Content", n => { Content = n.GetStringValue(); } },
+                { "aws_access_key_id", n => { AwsAccessKeyId = n.GetStringValue(); } },
+                { "aws_secret_access_key", n => { AwsSecretAccessKey = n.GetStringValue(); } },
+                { "path_style", n => { PathStyle = n.GetBoolValue(); } },
+                { "region", n => { Region = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -66,8 +79,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("Category", Category);
-            writer.WriteStringValue("Content", Content);
+            writer.WriteStringValue("aws_access_key_id", AwsAccessKeyId);
+            writer.WriteStringValue("aws_secret_access_key", AwsSecretAccessKey);
+            writer.WriteBoolValue("path_style", PathStyle);
+            writer.WriteStringValue("region", Region);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

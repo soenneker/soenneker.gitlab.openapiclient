@@ -11,7 +11,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     /// Google Cloud Storage configuration using S3-interoperability HMAC keys
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RequestBodyE9Df3163642FGcsHmacConfiguration : IAdditionalDataHolder, IParsable
+    public partial class RequestBody87232Bae7799GcsHmacConfiguration : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -42,9 +42,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Region { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE9Df3163642FGcsHmacConfiguration"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody87232Bae7799GcsHmacConfiguration"/> and sets the default values.
         /// </summary>
-        public RequestBodyE9Df3163642FGcsHmacConfiguration()
+        public RequestBody87232Bae7799GcsHmacConfiguration()
         {
             AdditionalData = new Dictionary<string, object>();
             PathStyle = true;
@@ -52,12 +52,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE9Df3163642FGcsHmacConfiguration"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody87232Bae7799GcsHmacConfiguration"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE9Df3163642FGcsHmacConfiguration CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody87232Bae7799GcsHmacConfiguration CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE9Df3163642FGcsHmacConfiguration();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody87232Bae7799GcsHmacConfiguration();
         }
         /// <summary>
         /// The deserialization information for the current model

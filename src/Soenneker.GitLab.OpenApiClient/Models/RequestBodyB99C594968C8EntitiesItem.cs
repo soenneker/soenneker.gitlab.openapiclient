@@ -7,46 +7,37 @@ using System.IO;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>
-    /// Google Cloud Storage configuration using a service account JSON key
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RequestBodyE9Df3163642FGcsConfiguration : IAdditionalDataHolder, IParsable
+    #pragma warning disable CS1591
+    public partial class RequestBodyB99C594968C8EntitiesItem : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Google Cloud service account JSON key contents</summary>
+        /// <summary>Relative path of the entity to export</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GoogleJsonKeyString { get; set; }
+        public string? FullPath { get; set; }
 #nullable restore
 #else
-        public string GoogleJsonKeyString { get; set; }
-#endif
-        /// <summary>Google Cloud project ID</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? GoogleProject { get; set; }
-#nullable restore
-#else
-        public string GoogleProject { get; set; }
+        public string FullPath { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE9Df3163642FGcsConfiguration"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB99C594968C8EntitiesItem"/> and sets the default values.
         /// </summary>
-        public RequestBodyE9Df3163642FGcsConfiguration()
+        public RequestBodyB99C594968C8EntitiesItem()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE9Df3163642FGcsConfiguration"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB99C594968C8EntitiesItem"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE9Df3163642FGcsConfiguration CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB99C594968C8EntitiesItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE9Df3163642FGcsConfiguration();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB99C594968C8EntitiesItem();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -56,8 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "google_json_key_string", n => { GoogleJsonKeyString = n.GetStringValue(); } },
-                { "google_project", n => { GoogleProject = n.GetStringValue(); } },
+                { "full_path", n => { FullPath = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -67,8 +57,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("google_json_key_string", GoogleJsonKeyString);
-            writer.WriteStringValue("google_project", GoogleProject);
+            writer.WriteStringValue("full_path", FullPath);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

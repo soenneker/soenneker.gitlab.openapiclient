@@ -8,13 +8,21 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// Google Cloud Storage configuration using Application Default Credentials. Available on GitLab Self-Managed or GitLab Dedicated, and must be enabled by an administrator.
+    /// Google Cloud Storage configuration using a service account JSON key
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RequestBodyDb31C1Cadc09GcsAdcConfiguration : IAdditionalDataHolder, IParsable
+    public partial class RequestBody87232Bae7799GcsConfiguration : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Google Cloud service account JSON key contents</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? GoogleJsonKeyString { get; set; }
+#nullable restore
+#else
+        public string GoogleJsonKeyString { get; set; }
+#endif
         /// <summary>Google Cloud project ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -24,21 +32,21 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string GoogleProject { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyDb31C1Cadc09GcsAdcConfiguration"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody87232Bae7799GcsConfiguration"/> and sets the default values.
         /// </summary>
-        public RequestBodyDb31C1Cadc09GcsAdcConfiguration()
+        public RequestBody87232Bae7799GcsConfiguration()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyDb31C1Cadc09GcsAdcConfiguration"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody87232Bae7799GcsConfiguration"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyDb31C1Cadc09GcsAdcConfiguration CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody87232Bae7799GcsConfiguration CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyDb31C1Cadc09GcsAdcConfiguration();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody87232Bae7799GcsConfiguration();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -48,6 +56,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "google_json_key_string", n => { GoogleJsonKeyString = n.GetStringValue(); } },
                 { "google_project", n => { GoogleProject = n.GetStringValue(); } },
             };
         }
@@ -58,6 +67,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("google_json_key_string", GoogleJsonKeyString);
             writer.WriteStringValue("google_project", GoogleProject);
             writer.WriteAdditionalData(AdditionalData);
         }
