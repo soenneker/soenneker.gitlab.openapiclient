@@ -41,13 +41,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The size property</summary>
         public int? Size { get; set; }
         /// <summary>The type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobArtifactEntryType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobArtifactEntry"/> and sets the default values.
         /// </summary>
@@ -77,7 +71,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "path", n => { Path = n.GetStringValue(); } },
                 { "size", n => { Size = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobArtifactEntryType>(); } },
             };
         }
         /// <summary>
@@ -91,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("path", Path);
             writer.WriteIntValue("size", Size);
-            writer.WriteStringValue("type", Type);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobArtifactEntryType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

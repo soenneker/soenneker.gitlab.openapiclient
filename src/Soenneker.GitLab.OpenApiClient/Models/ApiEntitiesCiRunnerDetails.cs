@@ -79,13 +79,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The is_shared property</summary>
         public bool? IsShared { get; set; }
         /// <summary>The job_execution_status property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? JobExecutionStatus { get; set; }
-#nullable restore
-#else
-        public string JobExecutionStatus { get; set; }
-#endif
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerDetailsJobExecutionStatus? JobExecutionStatus { get; set; }
         /// <summary>The locked property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -147,13 +141,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Revision { get; set; }
 #endif
         /// <summary>The runner_type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? RunnerType { get; set; }
-#nullable restore
-#else
-        public string RunnerType { get; set; }
-#endif
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerDetailsRunnerType? RunnerType { get; set; }
         /// <summary>The run_untagged property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -222,7 +210,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "id", n => { Id = n.GetLongValue(); } },
                 { "ip_address", n => { IpAddress = n.GetStringValue(); } },
                 { "is_shared", n => { IsShared = n.GetBoolValue(); } },
-                { "job_execution_status", n => { JobExecutionStatus = n.GetStringValue(); } },
+                { "job_execution_status", n => { JobExecutionStatus = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerDetailsJobExecutionStatus>(); } },
                 { "locked", n => { Locked = n.GetStringValue(); } },
                 { "maintenance_note", n => { MaintenanceNote = n.GetStringValue(); } },
                 { "maximum_timeout", n => { MaximumTimeout = n.GetStringValue(); } },
@@ -233,7 +221,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "projects", n => { Projects = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicProjectDetails>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicProjectDetails.CreateFromDiscriminatorValue); } },
                 { "revision", n => { Revision = n.GetStringValue(); } },
                 { "run_untagged", n => { RunUntagged = n.GetStringValue(); } },
-                { "runner_type", n => { RunnerType = n.GetStringValue(); } },
+                { "runner_type", n => { RunnerType = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerDetailsRunnerType>(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
                 { "tag_list", n => { TagList = n.GetStringValue(); } },
                 { "version", n => { Version = n.GetStringValue(); } },
@@ -257,7 +245,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteLongValue("id", Id);
             writer.WriteStringValue("ip_address", IpAddress);
             writer.WriteBoolValue("is_shared", IsShared);
-            writer.WriteStringValue("job_execution_status", JobExecutionStatus);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerDetailsJobExecutionStatus>("job_execution_status", JobExecutionStatus);
             writer.WriteStringValue("locked", Locked);
             writer.WriteStringValue("maintenance_note", MaintenanceNote);
             writer.WriteStringValue("maximum_timeout", MaximumTimeout);
@@ -267,7 +255,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("platform", Platform);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicProjectDetails>("projects", Projects);
             writer.WriteStringValue("revision", Revision);
-            writer.WriteStringValue("runner_type", RunnerType);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerDetailsRunnerType>("runner_type", RunnerType);
             writer.WriteStringValue("run_untagged", RunUntagged);
             writer.WriteStringValue("status", Status);
             writer.WriteStringValue("tag_list", TagList);

@@ -47,13 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The is_shared property</summary>
         public bool? IsShared { get; set; }
         /// <summary>The job_execution_status property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? JobExecutionStatus { get; set; }
-#nullable restore
-#else
-        public string JobExecutionStatus { get; set; }
-#endif
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerJobExecutionStatus? JobExecutionStatus { get; set; }
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -67,13 +61,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The paused property</summary>
         public bool? Paused { get; set; }
         /// <summary>The runner_type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? RunnerType { get; set; }
-#nullable restore
-#else
-        public string RunnerType { get; set; }
-#endif
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerRunnerType? RunnerType { get; set; }
         /// <summary>The status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -114,11 +102,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "id", n => { Id = n.GetLongValue(); } },
                 { "ip_address", n => { IpAddress = n.GetStringValue(); } },
                 { "is_shared", n => { IsShared = n.GetBoolValue(); } },
-                { "job_execution_status", n => { JobExecutionStatus = n.GetStringValue(); } },
+                { "job_execution_status", n => { JobExecutionStatus = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerJobExecutionStatus>(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "online", n => { Online = n.GetBoolValue(); } },
                 { "paused", n => { Paused = n.GetBoolValue(); } },
-                { "runner_type", n => { RunnerType = n.GetStringValue(); } },
+                { "runner_type", n => { RunnerType = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerRunnerType>(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
             };
         }
@@ -136,11 +124,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteLongValue("id", Id);
             writer.WriteStringValue("ip_address", IpAddress);
             writer.WriteBoolValue("is_shared", IsShared);
-            writer.WriteStringValue("job_execution_status", JobExecutionStatus);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerJobExecutionStatus>("job_execution_status", JobExecutionStatus);
             writer.WriteStringValue("name", Name);
             writer.WriteBoolValue("online", Online);
             writer.WriteBoolValue("paused", Paused);
-            writer.WriteStringValue("runner_type", RunnerType);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerRunnerType>("runner_type", RunnerType);
             writer.WriteStringValue("status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }

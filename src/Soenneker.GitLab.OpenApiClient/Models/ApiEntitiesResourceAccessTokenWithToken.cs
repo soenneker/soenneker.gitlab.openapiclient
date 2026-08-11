@@ -63,13 +63,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The resource_id property</summary>
         public int? ResourceId { get; set; }
         /// <summary>The resource_type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ResourceType { get; set; }
-#nullable restore
-#else
-        public string ResourceType { get; set; }
-#endif
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesResourceAccessTokenWithTokenResourceType? ResourceType { get; set; }
         /// <summary>The revoked property</summary>
         public bool? Revoked { get; set; }
         /// <summary>The scopes property</summary>
@@ -127,7 +121,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "last_used_ips", n => { LastUsedIps = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "resource_id", n => { ResourceId = n.GetIntValue(); } },
-                { "resource_type", n => { ResourceType = n.GetStringValue(); } },
+                { "resource_type", n => { ResourceType = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesResourceAccessTokenWithTokenResourceType>(); } },
                 { "revoked", n => { Revoked = n.GetBoolValue(); } },
                 { "scopes", n => { Scopes = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesResourceAccessTokenWithToken_scopes>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesResourceAccessTokenWithToken_scopes.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "token", n => { Token = n.GetStringValue(); } },
@@ -153,7 +147,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("last_used_ips", LastUsedIps);
             writer.WriteStringValue("name", Name);
             writer.WriteIntValue("resource_id", ResourceId);
-            writer.WriteStringValue("resource_type", ResourceType);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesResourceAccessTokenWithTokenResourceType>("resource_type", ResourceType);
             writer.WriteBoolValue("revoked", Revoked);
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesResourceAccessTokenWithToken_scopes>("scopes", Scopes);
             writer.WriteStringValue("token", Token);

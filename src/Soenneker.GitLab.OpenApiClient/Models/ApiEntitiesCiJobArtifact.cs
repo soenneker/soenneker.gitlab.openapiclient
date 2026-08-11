@@ -15,13 +15,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The file_format property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? FileFormat { get; set; }
-#nullable restore
-#else
-        public string FileFormat { get; set; }
-#endif
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobArtifactFileFormat? FileFormat { get; set; }
         /// <summary>The filename property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -31,13 +25,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Filename { get; set; }
 #endif
         /// <summary>The file_type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? FileType { get; set; }
-#nullable restore
-#else
-        public string FileType { get; set; }
-#endif
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobArtifactFileType? FileType { get; set; }
         /// <summary>The size property</summary>
         public int? Size { get; set; }
         /// <summary>
@@ -65,8 +53,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "file_format", n => { FileFormat = n.GetStringValue(); } },
-                { "file_type", n => { FileType = n.GetStringValue(); } },
+                { "file_format", n => { FileFormat = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobArtifactFileFormat>(); } },
+                { "file_type", n => { FileType = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobArtifactFileType>(); } },
                 { "filename", n => { Filename = n.GetStringValue(); } },
                 { "size", n => { Size = n.GetIntValue(); } },
             };
@@ -78,9 +66,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("file_format", FileFormat);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobArtifactFileFormat>("file_format", FileFormat);
             writer.WriteStringValue("filename", Filename);
-            writer.WriteStringValue("file_type", FileType);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobArtifactFileType>("file_type", FileType);
             writer.WriteIntValue("size", Size);
             writer.WriteAdditionalData(AdditionalData);
         }

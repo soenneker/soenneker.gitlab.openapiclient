@@ -3,17 +3,22 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>Format of the generated report</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBody1Bb359633F1EExportFormat
+    #pragma warning disable CS1591
+    public enum ApiEntitiesCiJobArtifactFileFormat
+    #pragma warning restore CS1591
     {
-        [EnumMember(Value = "csv")]
+        [EnumMember(Value = "raw")]
         #pragma warning disable CS1591
-        Csv,
+        Raw,
         #pragma warning restore CS1591
-        [EnumMember(Value = "pdf")]
+        [EnumMember(Value = "zip")]
         #pragma warning disable CS1591
-        Pdf,
+        Zip,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "gzip")]
+        #pragma warning disable CS1591
+        Gzip,
         #pragma warning restore CS1591
     }
 }

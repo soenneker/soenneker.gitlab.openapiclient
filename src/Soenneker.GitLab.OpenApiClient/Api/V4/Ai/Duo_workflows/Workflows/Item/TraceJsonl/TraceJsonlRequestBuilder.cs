@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TraceJsonlRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/ai/duo_workflows/workflows/{%2Did}/trace.jsonl{?full*}", pathParameters)
+        public TraceJsonlRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/ai/duo_workflows/workflows/{%2Did}/trace.jsonl{?full*,thread*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TraceJsonlRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/ai/duo_workflows/workflows/{%2Did}/trace.jsonl{?full*}", rawUrl)
+        public TraceJsonlRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/ai/duo_workflows/workflows/{%2Did}/trace.jsonl{?full*,thread*}", rawUrl)
         {
         }
         /// <summary>
@@ -88,6 +88,16 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.
             /// <summary>Include internal channels (conversation history, handover, etc). Restricted to the workflow owner; non-owners receive a 403.</summary>
             [QueryParameter("full")]
             public bool? Full { get; set; }
+            /// <summary>&quot;Which thread to return: omit for the full cross-thread trace (default), &apos;latest&apos; for the latest thread only, or a current_thread id for that thread only. Only applies on the blob-read path.&quot;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("thread")]
+            public string? Thread { get; set; }
+#nullable restore
+#else
+            [QueryParameter("thread")]
+            public string Thread { get; set; }
+#endif
         }
     }
 }

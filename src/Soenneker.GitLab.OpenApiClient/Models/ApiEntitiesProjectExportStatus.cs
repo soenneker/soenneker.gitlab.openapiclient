@@ -25,13 +25,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Description { get; set; }
 #endif
         /// <summary>The export_status property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ExportStatus { get; set; }
-#nullable restore
-#else
-        public string ExportStatus { get; set; }
-#endif
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectExportStatusExportStatus? ExportStatus { get; set; }
         /// <summary>The id property</summary>
         public long? Id { get; set; }
         /// <summary>The links property</summary>
@@ -101,7 +95,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             {
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "export_status", n => { ExportStatus = n.GetStringValue(); } },
+                { "export_status", n => { ExportStatus = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectExportStatusExportStatus>(); } },
                 { "id", n => { Id = n.GetLongValue(); } },
                 { "_links", n => { Links = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectExportStatusLinks>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectExportStatusLinks.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
@@ -119,7 +113,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
             writer.WriteStringValue("description", Description);
-            writer.WriteStringValue("export_status", ExportStatus);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectExportStatusExportStatus>("export_status", ExportStatus);
             writer.WriteLongValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectExportStatusLinks>("_links", Links);
             writer.WriteStringValue("name", Name);

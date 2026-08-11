@@ -59,13 +59,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ImportSource { get; set; }
 #endif
         /// <summary>The import_status property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ImportStatus { get; set; }
-#nullable restore
-#else
-        public string ImportStatus { get; set; }
-#endif
+        public global::Soenneker.GitLab.OpenApiClient.Models.ProjectImportEntityImportStatus? ImportStatus { get; set; }
         /// <summary>The import_warning property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -138,7 +132,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "import_error", n => { ImportError = n.GetStringValue(); } },
                 { "import_source", n => { ImportSource = n.GetStringValue(); } },
-                { "import_status", n => { ImportStatus = n.GetStringValue(); } },
+                { "import_status", n => { ImportStatus = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ProjectImportEntityImportStatus>(); } },
                 { "import_warning", n => { ImportWarning = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "provider_link", n => { ProviderLink = n.GetStringValue(); } },
@@ -160,7 +154,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("id", Id);
             writer.WriteStringValue("import_error", ImportError);
             writer.WriteStringValue("import_source", ImportSource);
-            writer.WriteStringValue("import_status", ImportStatus);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ProjectImportEntityImportStatus>("import_status", ImportStatus);
             writer.WriteStringValue("import_warning", ImportWarning);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("provider_link", ProviderLink);

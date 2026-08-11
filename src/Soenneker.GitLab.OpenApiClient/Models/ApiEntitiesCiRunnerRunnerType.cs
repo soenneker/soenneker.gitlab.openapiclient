@@ -3,21 +3,22 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>The type of vulnerability grouping this report is being created for</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBody1Bb359633F1EReportDataDashboardType
+    #pragma warning disable CS1591
+    public enum ApiEntitiesCiRunnerRunnerType
+    #pragma warning restore CS1591
     {
-        [EnumMember(Value = ":project")]
+        [EnumMember(Value = "instance_type")]
         #pragma warning disable CS1591
-        ColonProject,
+        InstanceType,
         #pragma warning restore CS1591
-        [EnumMember(Value = ":group")]
+        [EnumMember(Value = "group_type")]
         #pragma warning disable CS1591
-        ColonGroup,
+        GroupType,
         #pragma warning restore CS1591
-        [EnumMember(Value = ":instance")]
+        [EnumMember(Value = "project_type")]
         #pragma warning disable CS1591
-        ColonInstance,
+        ProjectType,
         #pragma warning restore CS1591
     }
 }

@@ -49,13 +49,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string IpAddress { get; set; }
 #endif
         /// <summary>The job_execution_status property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? JobExecutionStatus { get; set; }
-#nullable restore
-#else
-        public string JobExecutionStatus { get; set; }
-#endif
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerManagerJobExecutionStatus? JobExecutionStatus { get; set; }
         /// <summary>The platform property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -126,7 +120,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "created_at", n => { CreatedAt = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetLongValue(); } },
                 { "ip_address", n => { IpAddress = n.GetStringValue(); } },
-                { "job_execution_status", n => { JobExecutionStatus = n.GetStringValue(); } },
+                { "job_execution_status", n => { JobExecutionStatus = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerManagerJobExecutionStatus>(); } },
                 { "platform", n => { Platform = n.GetStringValue(); } },
                 { "revision", n => { Revision = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
@@ -146,7 +140,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("created_at", CreatedAt);
             writer.WriteLongValue("id", Id);
             writer.WriteStringValue("ip_address", IpAddress);
-            writer.WriteStringValue("job_execution_status", JobExecutionStatus);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerManagerJobExecutionStatus>("job_execution_status", JobExecutionStatus);
             writer.WriteStringValue("platform", Platform);
             writer.WriteStringValue("revision", Revision);
             writer.WriteStringValue("status", Status);

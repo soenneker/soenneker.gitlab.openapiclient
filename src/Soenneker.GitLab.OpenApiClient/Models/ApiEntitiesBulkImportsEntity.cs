@@ -51,13 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string DestinationSlug { get; set; }
 #endif
         /// <summary>The entity_type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? EntityType { get; set; }
-#nullable restore
-#else
-        public string EntityType { get; set; }
-#endif
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsEntityEntityType? EntityType { get; set; }
         /// <summary>The failures property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -97,13 +91,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsEntityStatsProperty Stats { get; set; }
 #endif
         /// <summary>The status property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Status { get; set; }
-#nullable restore
-#else
-        public string Status { get; set; }
-#endif
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsEntityStatus? Status { get; set; }
         /// <summary>The updated_at property</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>
@@ -137,7 +125,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "destination_name", n => { DestinationName = n.GetStringValue(); } },
                 { "destination_namespace", n => { DestinationNamespace = n.GetStringValue(); } },
                 { "destination_slug", n => { DestinationSlug = n.GetStringValue(); } },
-                { "entity_type", n => { EntityType = n.GetStringValue(); } },
+                { "entity_type", n => { EntityType = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsEntityEntityType>(); } },
                 { "failures", n => { Failures = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsEntityFailure>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsEntityFailure.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "has_failures", n => { HasFailures = n.GetBoolValue(); } },
                 { "id", n => { Id = n.GetLongValue(); } },
@@ -148,7 +136,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "project_id", n => { ProjectId = n.GetLongValue(); } },
                 { "source_full_path", n => { SourceFullPath = n.GetStringValue(); } },
                 { "stats", n => { Stats = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsEntityStatsProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsEntityStatsProperty.CreateFromDiscriminatorValue); } },
-                { "status", n => { Status = n.GetStringValue(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsEntityStatus>(); } },
                 { "updated_at", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
             };
         }
@@ -165,7 +153,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("destination_name", DestinationName);
             writer.WriteStringValue("destination_namespace", DestinationNamespace);
             writer.WriteStringValue("destination_slug", DestinationSlug);
-            writer.WriteStringValue("entity_type", EntityType);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsEntityEntityType>("entity_type", EntityType);
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsEntityFailure>("failures", Failures);
             writer.WriteBoolValue("has_failures", HasFailures);
             writer.WriteLongValue("id", Id);
@@ -176,7 +164,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteLongValue("project_id", ProjectId);
             writer.WriteStringValue("source_full_path", SourceFullPath);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsEntityStatsProperty>("stats", Stats);
-            writer.WriteStringValue("status", Status);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsEntityStatus>("status", Status);
             writer.WriteDateTimeOffsetValue("updated_at", UpdatedAt);
             writer.WriteAdditionalData(AdditionalData);
         }

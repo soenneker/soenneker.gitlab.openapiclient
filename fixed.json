@@ -75,6 +75,23 @@
         "operationId": "GetApiV4InternalGitlabSubscriptionsNamespacesIdProjects",
         "parameters": [
           {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the namespace",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            }
+          },
+          {
             "name": "page",
             "in": "query",
             "description": "Current page number",
@@ -95,14 +112,6 @@
               "nullable": true
             },
             "example": 20
-          },
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -426,9 +435,10 @@
           {
             "name": "sastEndpoint",
             "in": "path",
+            "description": "The name of the SAST scanner service endpoint to call",
             "required": true,
             "schema": {
-              "type": "object"
+              "type": "string"
             }
           }
         ],
@@ -1848,6 +1858,16 @@
               "nullable": true
             },
             "example": false
+          },
+          {
+            "name": "thread",
+            "in": "query",
+            "description": "\u0022Which thread to return: omit for the full cross-thread trace (default), \u0027latest\u0027 for the latest thread only, or a current_thread id for that thread only. Only applies on the blob-read path.\u0022",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "example": "latest"
           }
         ],
         "responses": {
@@ -5368,7 +5388,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody1Bb359633F1E"
+                "$ref": "#/components/schemas/RequestBody4460F88C4A6D"
               }
             }
           }
@@ -5410,7 +5430,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody1Bb359633F1E"
+                "$ref": "#/components/schemas/RequestBody4460F88C4A6D"
               }
             }
           }
@@ -13676,9 +13696,10 @@
           {
             "name": "approvalRuleId",
             "in": "path",
+            "description": "The ID of an approval rule",
             "required": true,
             "schema": {
-              "type": "object"
+              "type": "integer"
             }
           }
         ],
@@ -92178,6 +92199,15 @@
         "operationId": "DeleteApiV4GroupsIdSshCertificatesSshCertificatesId",
         "parameters": [
           {
+            "name": "sshCertificatesId",
+            "in": "path",
+            "description": "The ID of a group SSH certificate",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
             "name": "id",
             "in": "path",
             "description": "The ID or URL-encoded path of the group",
@@ -92192,14 +92222,6 @@
                   "type": "integer"
                 }
               ]
-            }
-          },
-          {
-            "name": "sshCertificatesId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "object"
             }
           }
         ],
@@ -94285,6 +94307,15 @@
         "operationId": "GetApiV4ProjectsIdIssuesIssueIidNotesNoteIdAwardEmoji",
         "parameters": [
           {
+            "name": "noteId",
+            "in": "path",
+            "description": "The ID of a note",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
             "name": "page",
             "in": "query",
             "description": "Current page number",
@@ -94331,14 +94362,6 @@
             "required": true,
             "schema": {
               "type": "integer"
-            }
-          },
-          {
-            "name": "noteId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "object"
             }
           }
         ],
@@ -94393,9 +94416,10 @@
           {
             "name": "noteId",
             "in": "path",
+            "description": "The ID of a note",
             "required": true,
             "schema": {
-              "type": "object"
+              "type": "integer"
             }
           }
         ],
@@ -94470,9 +94494,10 @@
           {
             "name": "noteId",
             "in": "path",
+            "description": "The ID of a note",
             "required": true,
             "schema": {
-              "type": "object"
+              "type": "integer"
             }
           }
         ],
@@ -94536,9 +94561,10 @@
           {
             "name": "noteId",
             "in": "path",
+            "description": "The ID of a note",
             "required": true,
             "schema": {
-              "type": "object"
+              "type": "integer"
             }
           }
         ],
@@ -94814,6 +94840,15 @@
         "operationId": "GetApiV4ProjectsIdMergeRequestsMergeRequestIidNotesNoteIdAwardEmoji",
         "parameters": [
           {
+            "name": "noteId",
+            "in": "path",
+            "description": "The ID of a note",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
             "name": "page",
             "in": "query",
             "description": "Current page number",
@@ -94860,14 +94895,6 @@
             "required": true,
             "schema": {
               "type": "integer"
-            }
-          },
-          {
-            "name": "noteId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "object"
             }
           }
         ],
@@ -94922,9 +94949,10 @@
           {
             "name": "noteId",
             "in": "path",
+            "description": "The ID of a note",
             "required": true,
             "schema": {
-              "type": "object"
+              "type": "integer"
             }
           }
         ],
@@ -94999,9 +95027,10 @@
           {
             "name": "noteId",
             "in": "path",
+            "description": "The ID of a note",
             "required": true,
             "schema": {
-              "type": "object"
+              "type": "integer"
             }
           }
         ],
@@ -95065,9 +95094,10 @@
           {
             "name": "noteId",
             "in": "path",
+            "description": "The ID of a note",
             "required": true,
             "schema": {
-              "type": "object"
+              "type": "integer"
             }
           }
         ],
@@ -95343,6 +95373,15 @@
         "operationId": "GetApiV4ProjectsIdSnippetsSnippetIdNotesNoteIdAwardEmoji",
         "parameters": [
           {
+            "name": "noteId",
+            "in": "path",
+            "description": "The ID of a note",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
             "name": "page",
             "in": "query",
             "description": "Current page number",
@@ -95389,14 +95428,6 @@
             "required": true,
             "schema": {
               "type": "integer"
-            }
-          },
-          {
-            "name": "noteId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "object"
             }
           }
         ],
@@ -95451,9 +95482,10 @@
           {
             "name": "noteId",
             "in": "path",
+            "description": "The ID of a note",
             "required": true,
             "schema": {
-              "type": "object"
+              "type": "integer"
             }
           }
         ],
@@ -95528,9 +95560,10 @@
           {
             "name": "noteId",
             "in": "path",
+            "description": "The ID of a note",
             "required": true,
             "schema": {
-              "type": "object"
+              "type": "integer"
             }
           }
         ],
@@ -95594,9 +95627,10 @@
           {
             "name": "noteId",
             "in": "path",
+            "description": "The ID of a note",
             "required": true,
             "schema": {
-              "type": "object"
+              "type": "integer"
             }
           }
         ],
@@ -95872,6 +95906,15 @@
         "operationId": "GetApiV4GroupsIdEpicsEpicIidNotesNoteIdAwardEmoji",
         "parameters": [
           {
+            "name": "noteId",
+            "in": "path",
+            "description": "The ID of a note",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
             "name": "page",
             "in": "query",
             "description": "Current page number",
@@ -95919,14 +95962,6 @@
               "type": "integer"
             },
             "example": 1
-          },
-          {
-            "name": "noteId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "object"
-            }
           }
         ],
         "responses": {
@@ -95980,9 +96015,10 @@
           {
             "name": "noteId",
             "in": "path",
+            "description": "The ID of a note",
             "required": true,
             "schema": {
-              "type": "object"
+              "type": "integer"
             }
           }
         ],
@@ -96057,9 +96093,10 @@
           {
             "name": "noteId",
             "in": "path",
+            "description": "The ID of a note",
             "required": true,
             "schema": {
-              "type": "object"
+              "type": "integer"
             }
           }
         ],
@@ -96123,9 +96160,10 @@
           {
             "name": "noteId",
             "in": "path",
+            "description": "The ID of a note",
             "required": true,
             "schema": {
-              "type": "object"
+              "type": "integer"
             }
           }
         ],
@@ -101337,8 +101375,7 @@
             "example": "Guest user who can also read_code"
           },
           "base_access_level": {
-            "type": "integer",
-            "example": 40
+            "$ref": "#/components/schemas/ApiEntitiesMemberRoleBaseAccessLevel"
           },
           "apply_security_scan_profiles": {
             "type": "boolean",
@@ -101644,8 +101681,7 @@
             "example": "develop"
           },
           "status": {
-            "type": "string",
-            "example": "merging"
+            "$ref": "#/components/schemas/ApiEntitiesMergeTrainsCarStatus"
           },
           "merged_at": {
             "type": "string",
@@ -112939,12 +112975,10 @@
             }
           },
           "access_level": {
-            "type": "integer",
-            "example": 40
+            "$ref": "#/components/schemas/ApiEntitiesResourceAccessTokenWithTokenAccessLevel"
           },
           "resource_type": {
-            "type": "string",
-            "example": "project"
+            "$ref": "#/components/schemas/ApiEntitiesResourceAccessTokenWithTokenResourceType"
           },
           "resource_id": {
             "type": "integer",
@@ -113020,12 +113054,10 @@
             }
           },
           "access_level": {
-            "type": "integer",
-            "example": 40
+            "$ref": "#/components/schemas/ApiEntitiesResourceAccessTokenAccessLevel"
           },
           "resource_type": {
-            "type": "string",
-            "example": "project"
+            "$ref": "#/components/schemas/ApiEntitiesResourceAccessTokenResourceType"
           },
           "resource_id": {
             "type": "integer",
@@ -116095,8 +116127,7 @@
             "example": "2020-05-07T04:27:17.016Z"
           },
           "export_status": {
-            "type": "string",
-            "example": "finished"
+            "$ref": "#/components/schemas/ApiEntitiesProjectExportStatusExportStatus"
           },
           "_links": {
             "$ref": "#/components/schemas/ApiEntitiesProjectExportStatusLinks"
@@ -116107,8 +116138,7 @@
         "type": "object",
         "properties": {
           "status": {
-            "type": "string",
-            "example": "started"
+            "$ref": "#/components/schemas/ApiEntitiesBulkImportsExportBatchStatusStatus"
           },
           "batch_number": {
             "type": "integer",
@@ -116137,8 +116167,7 @@
             "example": "issues"
           },
           "status": {
-            "type": "string",
-            "example": "started"
+            "$ref": "#/components/schemas/ApiEntitiesBulkImportsExportStatusStatus"
           },
           "error": {
             "type": "string",
@@ -116882,8 +116911,7 @@
             "example": 1
           },
           "status": {
-            "type": "string",
-            "example": "finished"
+            "$ref": "#/components/schemas/ApiEntitiesBulkImportStatus"
           },
           "source_type": {
             "type": "string",
@@ -118599,8 +118627,7 @@
             "example": "source/source-repo"
           },
           "import_status": {
-            "type": "string",
-            "example": "scheduled"
+            "$ref": "#/components/schemas/ProjectImportEntityImportStatus"
           },
           "human_import_status_name": {
             "type": "string",
@@ -119174,8 +119201,7 @@
         "type": "object",
         "properties": {
           "file_type": {
-            "type": "string",
-            "example": "archive"
+            "$ref": "#/components/schemas/ApiEntitiesCiJobArtifactFileType"
           },
           "size": {
             "type": "integer",
@@ -119186,8 +119212,7 @@
             "example": "artifacts.zip"
           },
           "file_format": {
-            "type": "string",
-            "example": "zip"
+            "$ref": "#/components/schemas/ApiEntitiesCiJobArtifactFileFormat"
           }
         }
       },
@@ -119220,8 +119245,7 @@
             "example": true
           },
           "runner_type": {
-            "type": "string",
-            "example": "instance_type"
+            "$ref": "#/components/schemas/ApiEntitiesCiRunnerRunnerType"
           },
           "name": {
             "type": "string",
@@ -119244,8 +119268,7 @@
             "example": "online"
           },
           "job_execution_status": {
-            "type": "string",
-            "example": "idle"
+            "$ref": "#/components/schemas/ApiEntitiesCiRunnerJobExecutionStatus"
           }
         }
       },
@@ -119294,8 +119317,7 @@
             "example": "online"
           },
           "job_execution_status": {
-            "type": "string",
-            "example": "idle"
+            "$ref": "#/components/schemas/ApiEntitiesCiRunnerManagerJobExecutionStatus"
           }
         }
       },
@@ -120821,8 +120843,7 @@
             "example": true
           },
           "runner_type": {
-            "type": "string",
-            "example": "instance_type"
+            "$ref": "#/components/schemas/ApiEntitiesCiRunnerDetailsRunnerType"
           },
           "name": {
             "type": "string",
@@ -120845,8 +120866,7 @@
             "example": "online"
           },
           "job_execution_status": {
-            "type": "string",
-            "example": "idle"
+            "$ref": "#/components/schemas/ApiEntitiesCiRunnerDetailsJobExecutionStatus"
           },
           "tag_list": {
             "type": "string"
@@ -121795,8 +121815,7 @@
             "example": "coverage/index.html"
           },
           "type": {
-            "type": "string",
-            "example": "file"
+            "$ref": "#/components/schemas/ApiEntitiesCiJobArtifactEntryType"
           },
           "size": {
             "type": "integer",
@@ -121860,11 +121879,10 @@
             "example": 1
           },
           "status": {
-            "type": "string",
-            "example": "created"
+            "$ref": "#/components/schemas/ApiEntitiesBulkImportsEntityStatus"
           },
           "entity_type": {
-            "type": "string"
+            "$ref": "#/components/schemas/ApiEntitiesBulkImportsEntityEntityType"
           },
           "source_full_path": {
             "type": "string",
@@ -123996,11 +124014,11 @@
           }
         }
       },
-      "RequestBody1Bb359633F1E": {
+      "RequestBody4460F88C4A6D": {
         "type": "object",
         "properties": {
           "export_format": {
-            "$ref": "#/components/schemas/RequestBody1Bb359633F1EExportFormat"
+            "$ref": "#/components/schemas/RequestBody4460F88C4A6DExportFormat"
           },
           "send_email": {
             "type": "boolean",
@@ -124008,7 +124026,7 @@
             "nullable": true
           },
           "report_data": {
-            "$ref": "#/components/schemas/RequestBody1Bb359633F1EReportData"
+            "$ref": "#/components/schemas/RequestBody4460F88C4A6DReportData"
           }
         }
       },
@@ -144823,32 +144841,32 @@
         "description": "\u0022A valid Cube query. See reference documentation: https://cube.dev/docs/query-format\u0022",
         "nullable": true
       },
-      "RequestBody1Bb359633F1EReportData": {
+      "RequestBody4460F88C4A6DReportData": {
         "type": "object",
         "properties": {
           "project_vulnerabilities_history": {
-            "$ref": "#/components/schemas/RequestBody1Bb359633F1EReportDataProjectVulnerabilitiesHistory"
+            "$ref": "#/components/schemas/RequestBody4460F88C4A6DReportDataProjectVulnerabilitiesHistory"
           },
           "group_vulnerabilities_over_time": {
-            "$ref": "#/components/schemas/RequestBody1Bb359633F1EReportDataGroupVulnerabilitiesOverTime"
+            "$ref": "#/components/schemas/RequestBody4460F88C4A6DReportDataGroupVulnerabilitiesOverTime"
           },
           "project_security_status": {
-            "$ref": "#/components/schemas/RequestBody1Bb359633F1EReportDataProjectSecurityStatus"
+            "$ref": "#/components/schemas/RequestBody4460F88C4A6DReportDataProjectSecurityStatus"
           },
           "total_risk_score": {
-            "$ref": "#/components/schemas/RequestBody1Bb359633F1EReportDataTotalRiskScore"
+            "$ref": "#/components/schemas/RequestBody4460F88C4A6DReportDataTotalRiskScore"
           },
           "open_vulnerabilities_over_time": {
-            "$ref": "#/components/schemas/RequestBody1Bb359633F1EReportDataOpenVulnerabilitiesOverTime"
+            "$ref": "#/components/schemas/RequestBody4460F88C4A6DReportDataOpenVulnerabilitiesOverTime"
           },
           "vulnerabilities_by_age": {
-            "$ref": "#/components/schemas/RequestBody1Bb359633F1EReportDataVulnerabilitiesByAge"
+            "$ref": "#/components/schemas/RequestBody4460F88C4A6DReportDataVulnerabilitiesByAge"
           },
           "vulnerabilities_by_severity_count": {
-            "$ref": "#/components/schemas/RequestBody1Bb359633F1EReportDataVulnerabilitiesBySeverityCount"
+            "$ref": "#/components/schemas/RequestBody4460F88C4A6DReportDataVulnerabilitiesBySeverityCount"
           },
           "dashboard_type": {
-            "$ref": "#/components/schemas/RequestBody1Bb359633F1EReportDataDashboardType"
+            "$ref": "#/components/schemas/RequestBody4460F88C4A6DReportDataDashboardType"
           },
           "full_path": {
             "type": "string",
@@ -148500,56 +148518,56 @@
         "description": "Event-specific payload",
         "nullable": true
       },
-      "RequestBody1Bb359633F1EReportDataProjectVulnerabilitiesHistory": {
+      "RequestBody4460F88C4A6DReportDataProjectVulnerabilitiesHistory": {
         "type": "object",
         "description": "This object should include an SVG asset to be rendered in PDF reports",
         "nullable": true
       },
-      "RequestBody1Bb359633F1EReportDataGroupVulnerabilitiesOverTime": {
+      "RequestBody4460F88C4A6DReportDataGroupVulnerabilitiesOverTime": {
         "type": "object",
         "description": "This object should include an SVG asset to be rendered in PDF reports",
         "nullable": true
       },
-      "RequestBody1Bb359633F1EReportDataProjectSecurityStatus": {
+      "RequestBody4460F88C4A6DReportDataProjectSecurityStatus": {
         "type": "object",
         "description": "Data for rendering the project grades summary in PDF reports",
         "nullable": true
       },
-      "RequestBody1Bb359633F1EReportDataTotalRiskScore": {
+      "RequestBody4460F88C4A6DReportDataTotalRiskScore": {
         "type": "object",
         "description": "Data for rendering the total risk score in PDF reports",
         "nullable": true
       },
-      "RequestBody1Bb359633F1EReportDataOpenVulnerabilitiesOverTime": {
+      "RequestBody4460F88C4A6DReportDataOpenVulnerabilitiesOverTime": {
         "type": "object",
         "description": "Data for rendering the open vulnerabilities over time in PDF reports",
         "nullable": true
       },
-      "RequestBody1Bb359633F1EReportDataVulnerabilitiesByAge": {
+      "RequestBody4460F88C4A6DReportDataVulnerabilitiesByAge": {
         "type": "object",
         "description": "Data for rendering the vulnerabilities by age in PDF reports",
         "nullable": true
       },
-      "RequestBody1Bb359633F1EReportDataVulnerabilitiesBySeverityCount": {
+      "RequestBody4460F88C4A6DReportDataVulnerabilitiesBySeverityCount": {
         "type": "object",
         "properties": {
           "critical": {
-            "$ref": "#/components/schemas/RequestBody1Bb359633F1EReportDataVulnerabilitiesBySeverityCountCritical"
+            "$ref": "#/components/schemas/RequestBody4460F88C4A6DReportDataVulnerabilitiesBySeverityCountCritical"
           },
           "high": {
-            "$ref": "#/components/schemas/RequestBody1Bb359633F1EReportDataVulnerabilitiesBySeverityCountHigh"
+            "$ref": "#/components/schemas/RequestBody4460F88C4A6DReportDataVulnerabilitiesBySeverityCountHigh"
           },
           "medium": {
-            "$ref": "#/components/schemas/RequestBody1Bb359633F1EReportDataVulnerabilitiesBySeverityCountMedium"
+            "$ref": "#/components/schemas/RequestBody4460F88C4A6DReportDataVulnerabilitiesBySeverityCountMedium"
           },
           "low": {
-            "$ref": "#/components/schemas/RequestBody1Bb359633F1EReportDataVulnerabilitiesBySeverityCountLow"
+            "$ref": "#/components/schemas/RequestBody4460F88C4A6DReportDataVulnerabilitiesBySeverityCountLow"
           },
           "unknown": {
-            "$ref": "#/components/schemas/RequestBody1Bb359633F1EReportDataVulnerabilitiesBySeverityCountUnknown"
+            "$ref": "#/components/schemas/RequestBody4460F88C4A6DReportDataVulnerabilitiesBySeverityCountUnknown"
           },
           "info": {
-            "$ref": "#/components/schemas/RequestBody1Bb359633F1EReportDataVulnerabilitiesBySeverityCountInfo"
+            "$ref": "#/components/schemas/RequestBody4460F88C4A6DReportDataVulnerabilitiesBySeverityCountInfo"
           }
         },
         "description": "Data for rendering the vulnerabilities by severity count in PDF reports",
@@ -149617,7 +149635,7 @@
         "description": "Object containing through namespace information",
         "nullable": true
       },
-      "RequestBody1Bb359633F1EReportDataVulnerabilitiesBySeverityCountCritical": {
+      "RequestBody4460F88C4A6DReportDataVulnerabilitiesBySeverityCountCritical": {
         "type": "object",
         "properties": {
           "count": {
@@ -149636,9 +149654,10 @@
             "nullable": true
           }
         },
+        "description": "Count, median age, and color for critical severity vulnerabilities",
         "nullable": true
       },
-      "RequestBody1Bb359633F1EReportDataVulnerabilitiesBySeverityCountHigh": {
+      "RequestBody4460F88C4A6DReportDataVulnerabilitiesBySeverityCountHigh": {
         "type": "object",
         "properties": {
           "count": {
@@ -149657,9 +149676,10 @@
             "nullable": true
           }
         },
+        "description": "Count, median age, and color for high severity vulnerabilities",
         "nullable": true
       },
-      "RequestBody1Bb359633F1EReportDataVulnerabilitiesBySeverityCountMedium": {
+      "RequestBody4460F88C4A6DReportDataVulnerabilitiesBySeverityCountMedium": {
         "type": "object",
         "properties": {
           "count": {
@@ -149678,9 +149698,10 @@
             "nullable": true
           }
         },
+        "description": "Count, median age, and color for medium severity vulnerabilities",
         "nullable": true
       },
-      "RequestBody1Bb359633F1EReportDataVulnerabilitiesBySeverityCountLow": {
+      "RequestBody4460F88C4A6DReportDataVulnerabilitiesBySeverityCountLow": {
         "type": "object",
         "properties": {
           "count": {
@@ -149699,9 +149720,10 @@
             "nullable": true
           }
         },
+        "description": "Count, median age, and color for low severity vulnerabilities",
         "nullable": true
       },
-      "RequestBody1Bb359633F1EReportDataVulnerabilitiesBySeverityCountUnknown": {
+      "RequestBody4460F88C4A6DReportDataVulnerabilitiesBySeverityCountUnknown": {
         "type": "object",
         "properties": {
           "count": {
@@ -149720,9 +149742,10 @@
             "nullable": true
           }
         },
+        "description": "Count, median age, and color for unknown severity vulnerabilities",
         "nullable": true
       },
-      "RequestBody1Bb359633F1EReportDataVulnerabilitiesBySeverityCountInfo": {
+      "RequestBody4460F88C4A6DReportDataVulnerabilitiesBySeverityCountInfo": {
         "type": "object",
         "properties": {
           "count": {
@@ -149741,6 +149764,7 @@
             "nullable": true
           }
         },
+        "description": "Count, median age, and color for info severity vulnerabilities",
         "nullable": true
       },
       "RequestBodyB85E769F8A5EPositionLineRangeStart": {
@@ -152504,6 +152528,717 @@
       "RequestBody586Dac379Fa0AllowedToCreateItemProperty": {
         "type": "object"
       },
+      "ApiEntitiesMemberRoleBaseAccessLevel": {
+        "enum": [
+          5,
+          10,
+          15,
+          20,
+          25,
+          30,
+          40
+        ],
+        "type": "integer",
+        "additionalProperties": false,
+        "example": 40
+      },
+      "ApiEntitiesMergeTrainsCarStatus": {
+        "enum": [
+          "idle",
+          "stale",
+          "fresh",
+          "merging",
+          "merged",
+          "skip_merged"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "example": "merging",
+        "x-ms-enum": {
+          "name": "ApiEntitiesMergeTrainsCarStatus",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "idle",
+              "name": "Idle"
+            },
+            {
+              "value": "stale",
+              "name": "Stale"
+            },
+            {
+              "value": "fresh",
+              "name": "Fresh"
+            },
+            {
+              "value": "merging",
+              "name": "Merging"
+            },
+            {
+              "value": "merged",
+              "name": "Merged"
+            },
+            {
+              "value": "skip_merged",
+              "name": "SkipMerged"
+            }
+          ]
+        }
+      },
+      "ApiEntitiesResourceAccessTokenWithTokenAccessLevel": {
+        "enum": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "type": "integer",
+        "additionalProperties": false,
+        "example": 40
+      },
+      "ApiEntitiesResourceAccessTokenWithTokenResourceType": {
+        "enum": [
+          "project",
+          "group"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "example": "project",
+        "x-ms-enum": {
+          "name": "ApiEntitiesResourceAccessTokenWithTokenResourceType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "project",
+              "name": "Project"
+            },
+            {
+              "value": "group",
+              "name": "Group"
+            }
+          ]
+        }
+      },
+      "ApiEntitiesResourceAccessTokenAccessLevel": {
+        "enum": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "type": "integer",
+        "additionalProperties": false,
+        "example": 40
+      },
+      "ApiEntitiesResourceAccessTokenResourceType": {
+        "enum": [
+          "project",
+          "group"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "example": "project",
+        "x-ms-enum": {
+          "name": "ApiEntitiesResourceAccessTokenResourceType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "project",
+              "name": "Project"
+            },
+            {
+              "value": "group",
+              "name": "Group"
+            }
+          ]
+        }
+      },
+      "ApiEntitiesProjectExportStatusExportStatus": {
+        "enum": [
+          "queued",
+          "started",
+          "finished",
+          "failed"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "example": "finished",
+        "x-ms-enum": {
+          "name": "ApiEntitiesProjectExportStatusExportStatus",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "queued",
+              "name": "Queued"
+            },
+            {
+              "value": "started",
+              "name": "Started"
+            },
+            {
+              "value": "finished",
+              "name": "Finished"
+            },
+            {
+              "value": "failed",
+              "name": "Failed"
+            }
+          ]
+        }
+      },
+      "ApiEntitiesBulkImportsExportBatchStatusStatus": {
+        "enum": [
+          "started",
+          "finished",
+          "failed"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "example": "started",
+        "x-ms-enum": {
+          "name": "ApiEntitiesBulkImportsExportBatchStatusStatus",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "started",
+              "name": "Started"
+            },
+            {
+              "value": "finished",
+              "name": "Finished"
+            },
+            {
+              "value": "failed",
+              "name": "Failed"
+            }
+          ]
+        }
+      },
+      "ApiEntitiesBulkImportsExportStatusStatus": {
+        "enum": [
+          "pending",
+          "started",
+          "finished",
+          "failed"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "example": "started",
+        "x-ms-enum": {
+          "name": "ApiEntitiesBulkImportsExportStatusStatus",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "pending",
+              "name": "Pending"
+            },
+            {
+              "value": "started",
+              "name": "Started"
+            },
+            {
+              "value": "finished",
+              "name": "Finished"
+            },
+            {
+              "value": "failed",
+              "name": "Failed"
+            }
+          ]
+        }
+      },
+      "ApiEntitiesBulkImportStatus": {
+        "enum": [
+          "created",
+          "started",
+          "finished",
+          "timeout",
+          "failed"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "example": "finished",
+        "x-ms-enum": {
+          "name": "ApiEntitiesBulkImportStatus",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "created",
+              "name": "Created"
+            },
+            {
+              "value": "started",
+              "name": "Started"
+            },
+            {
+              "value": "finished",
+              "name": "Finished"
+            },
+            {
+              "value": "timeout",
+              "name": "Timeout"
+            },
+            {
+              "value": "failed",
+              "name": "Failed"
+            }
+          ]
+        }
+      },
+      "ProjectImportEntityImportStatus": {
+        "enum": [
+          "scheduled",
+          "started",
+          "finished",
+          "failed",
+          "canceled"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "example": "scheduled",
+        "x-ms-enum": {
+          "name": "ProjectImportEntityImportStatus",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "scheduled",
+              "name": "Scheduled"
+            },
+            {
+              "value": "started",
+              "name": "Started"
+            },
+            {
+              "value": "finished",
+              "name": "Finished"
+            },
+            {
+              "value": "failed",
+              "name": "Failed"
+            },
+            {
+              "value": "canceled",
+              "name": "Canceled"
+            }
+          ]
+        }
+      },
+      "ApiEntitiesCiJobArtifactFileType": {
+        "enum": [
+          "archive",
+          "metadata",
+          "trace",
+          "junit",
+          "sast",
+          "dependency_scanning",
+          "container_scanning",
+          "dast",
+          "codequality",
+          "license_scanning",
+          "performance",
+          "metrics",
+          "metrics_referee",
+          "network_referee",
+          "lsif",
+          "dotenv",
+          "cobertura",
+          "terraform",
+          "accessibility",
+          "cluster_applications",
+          "secret_detection",
+          "requirements",
+          "coverage_fuzzing",
+          "browser_performance",
+          "load_performance",
+          "api_fuzzing",
+          "cluster_image_scanning",
+          "cyclonedx",
+          "requirements_v2",
+          "annotations",
+          "repository_xray",
+          "jacoco",
+          "sarif"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "example": "archive",
+        "x-ms-enum": {
+          "name": "ApiEntitiesCiJobArtifactFileType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "archive",
+              "name": "Archive"
+            },
+            {
+              "value": "metadata",
+              "name": "Metadata"
+            },
+            {
+              "value": "trace",
+              "name": "Trace"
+            },
+            {
+              "value": "junit",
+              "name": "Junit"
+            },
+            {
+              "value": "sast",
+              "name": "Sast"
+            },
+            {
+              "value": "dependency_scanning",
+              "name": "DependencyScanning"
+            },
+            {
+              "value": "container_scanning",
+              "name": "ContainerScanning"
+            },
+            {
+              "value": "dast",
+              "name": "Dast"
+            },
+            {
+              "value": "codequality",
+              "name": "Codequality"
+            },
+            {
+              "value": "license_scanning",
+              "name": "LicenseScanning"
+            },
+            {
+              "value": "performance",
+              "name": "Performance"
+            },
+            {
+              "value": "metrics",
+              "name": "Metrics"
+            },
+            {
+              "value": "metrics_referee",
+              "name": "MetricsReferee"
+            },
+            {
+              "value": "network_referee",
+              "name": "NetworkReferee"
+            },
+            {
+              "value": "lsif",
+              "name": "Lsif"
+            },
+            {
+              "value": "dotenv",
+              "name": "Dotenv"
+            },
+            {
+              "value": "cobertura",
+              "name": "Cobertura"
+            },
+            {
+              "value": "terraform",
+              "name": "Terraform"
+            },
+            {
+              "value": "accessibility",
+              "name": "Accessibility"
+            },
+            {
+              "value": "cluster_applications",
+              "name": "ClusterApplications"
+            },
+            {
+              "value": "secret_detection",
+              "name": "SecretDetection"
+            },
+            {
+              "value": "requirements",
+              "name": "Requirements"
+            },
+            {
+              "value": "coverage_fuzzing",
+              "name": "CoverageFuzzing"
+            },
+            {
+              "value": "browser_performance",
+              "name": "BrowserPerformance"
+            },
+            {
+              "value": "load_performance",
+              "name": "LoadPerformance"
+            },
+            {
+              "value": "api_fuzzing",
+              "name": "ApiFuzzing"
+            },
+            {
+              "value": "cluster_image_scanning",
+              "name": "ClusterImageScanning"
+            },
+            {
+              "value": "cyclonedx",
+              "name": "Cyclonedx"
+            },
+            {
+              "value": "requirements_v2",
+              "name": "RequirementsV2"
+            },
+            {
+              "value": "annotations",
+              "name": "Annotations"
+            },
+            {
+              "value": "repository_xray",
+              "name": "RepositoryXray"
+            },
+            {
+              "value": "jacoco",
+              "name": "Jacoco"
+            },
+            {
+              "value": "sarif",
+              "name": "Sarif"
+            }
+          ]
+        }
+      },
+      "ApiEntitiesCiJobArtifactFileFormat": {
+        "enum": [
+          "raw",
+          "zip",
+          "gzip"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "example": "zip",
+        "x-ms-enum": {
+          "name": "ApiEntitiesCiJobArtifactFileFormat",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "raw",
+              "name": "Raw"
+            },
+            {
+              "value": "zip",
+              "name": "Zip"
+            },
+            {
+              "value": "gzip",
+              "name": "Gzip"
+            }
+          ]
+        }
+      },
+      "ApiEntitiesCiRunnerRunnerType": {
+        "enum": [
+          "instance_type",
+          "group_type",
+          "project_type"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "example": "instance_type",
+        "x-ms-enum": {
+          "name": "ApiEntitiesCiRunnerRunnerType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "instance_type",
+              "name": "InstanceType"
+            },
+            {
+              "value": "group_type",
+              "name": "GroupType"
+            },
+            {
+              "value": "project_type",
+              "name": "ProjectType"
+            }
+          ]
+        }
+      },
+      "ApiEntitiesCiRunnerJobExecutionStatus": {
+        "enum": [
+          "active",
+          "idle"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "example": "idle",
+        "x-ms-enum": {
+          "name": "ApiEntitiesCiRunnerJobExecutionStatus",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "active",
+              "name": "Active"
+            },
+            {
+              "value": "idle",
+              "name": "Idle"
+            }
+          ]
+        }
+      },
+      "ApiEntitiesCiRunnerManagerJobExecutionStatus": {
+        "enum": [
+          "active",
+          "idle"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "example": "idle",
+        "x-ms-enum": {
+          "name": "ApiEntitiesCiRunnerManagerJobExecutionStatus",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "active",
+              "name": "Active"
+            },
+            {
+              "value": "idle",
+              "name": "Idle"
+            }
+          ]
+        }
+      },
+      "ApiEntitiesCiRunnerDetailsRunnerType": {
+        "enum": [
+          "instance_type",
+          "group_type",
+          "project_type"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "example": "instance_type",
+        "x-ms-enum": {
+          "name": "ApiEntitiesCiRunnerDetailsRunnerType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "instance_type",
+              "name": "InstanceType"
+            },
+            {
+              "value": "group_type",
+              "name": "GroupType"
+            },
+            {
+              "value": "project_type",
+              "name": "ProjectType"
+            }
+          ]
+        }
+      },
+      "ApiEntitiesCiRunnerDetailsJobExecutionStatus": {
+        "enum": [
+          "active",
+          "idle"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "example": "idle",
+        "x-ms-enum": {
+          "name": "ApiEntitiesCiRunnerDetailsJobExecutionStatus",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "active",
+              "name": "Active"
+            },
+            {
+              "value": "idle",
+              "name": "Idle"
+            }
+          ]
+        }
+      },
+      "ApiEntitiesCiJobArtifactEntryType": {
+        "enum": [
+          "file",
+          "directory"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "example": "file",
+        "x-ms-enum": {
+          "name": "ApiEntitiesCiJobArtifactEntryType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "file",
+              "name": "File"
+            },
+            {
+              "value": "directory",
+              "name": "Directory"
+            }
+          ]
+        }
+      },
+      "ApiEntitiesBulkImportsEntityStatus": {
+        "enum": [
+          "created",
+          "started",
+          "finished",
+          "timeout",
+          "failed"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "example": "created",
+        "x-ms-enum": {
+          "name": "ApiEntitiesBulkImportsEntityStatus",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "created",
+              "name": "Created"
+            },
+            {
+              "value": "started",
+              "name": "Started"
+            },
+            {
+              "value": "finished",
+              "name": "Finished"
+            },
+            {
+              "value": "timeout",
+              "name": "Timeout"
+            },
+            {
+              "value": "failed",
+              "name": "Failed"
+            }
+          ]
+        }
+      },
+      "ApiEntitiesBulkImportsEntityEntityType": {
+        "enum": [
+          "group",
+          "project"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "ApiEntitiesBulkImportsEntityEntityType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "group",
+              "name": "Group"
+            },
+            {
+              "value": "project",
+              "name": "Project"
+            }
+          ]
+        }
+      },
       "RequestBody523117C79970Topic": {
         "minLength": 1,
         "enum": [
@@ -153152,7 +153887,7 @@
         "additionalProperties": false,
         "description": "Level of permissions for the linked SA group"
       },
-      "RequestBody1Bb359633F1EExportFormat": {
+      "RequestBody4460F88C4A6DExportFormat": {
         "enum": [
           "csv",
           "pdf"
@@ -153162,7 +153897,7 @@
         "description": "Format of the generated report",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody1Bb359633F1EExportFormat",
+          "name": "RequestBody4460F88C4A6DExportFormat",
           "modelAsString": false,
           "values": [
             {
@@ -160218,7 +160953,7 @@
         "description": "The access levels allowed to approve",
         "nullable": true
       },
-      "RequestBody1Bb359633F1EReportDataDashboardType": {
+      "RequestBody4460F88C4A6DReportDataDashboardType": {
         "enum": [
           ":project",
           ":group",
@@ -160229,7 +160964,7 @@
         "description": "The type of vulnerability grouping this report is being created for",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody1Bb359633F1EReportDataDashboardType",
+          "name": "RequestBody4460F88C4A6DReportDataDashboardType",
           "modelAsString": false,
           "values": [
             {

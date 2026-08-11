@@ -27,13 +27,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The objects_count property</summary>
         public int? ObjectsCount { get; set; }
         /// <summary>The status property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Status { get; set; }
-#nullable restore
-#else
-        public string Status { get; set; }
-#endif
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsExportBatchStatusStatus? Status { get; set; }
         /// <summary>The updated_at property</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>
@@ -64,7 +58,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "batch_number", n => { BatchNumber = n.GetIntValue(); } },
                 { "error", n => { Error = n.GetStringValue(); } },
                 { "objects_count", n => { ObjectsCount = n.GetIntValue(); } },
-                { "status", n => { Status = n.GetStringValue(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsExportBatchStatusStatus>(); } },
                 { "updated_at", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
             };
         }
@@ -78,7 +72,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("batch_number", BatchNumber);
             writer.WriteStringValue("error", Error);
             writer.WriteIntValue("objects_count", ObjectsCount);
-            writer.WriteStringValue("status", Status);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsExportBatchStatusStatus>("status", Status);
             writer.WriteDateTimeOffsetValue("updated_at", UpdatedAt);
             writer.WriteAdditionalData(AdditionalData);
         }
