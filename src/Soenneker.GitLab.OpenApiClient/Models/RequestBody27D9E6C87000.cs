@@ -9,7 +9,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class RequestBody099E406A34D9 : IAdditionalDataHolder, IParsable
+    public partial class RequestBody27D9E6C87000 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -52,6 +52,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public int? BaseAccessLevel { get; set; }
         /// <summary>Create security scan profiles.</summary>
         public bool? CreateSecurityScanProfiles { get; set; }
+        /// <summary>Delete security scan profiles.</summary>
+        public bool? DeleteSecurityScanProfiles { get; set; }
         /// <summary>Description for role</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -121,21 +123,21 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Update security scan profiles.</summary>
         public bool? UpdateSecurityScanProfiles { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody099E406A34D9"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody27D9E6C87000"/> and sets the default values.
         /// </summary>
-        public RequestBody099E406A34D9()
+        public RequestBody27D9E6C87000()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody099E406A34D9"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody27D9E6C87000"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody099E406A34D9 CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody27D9E6C87000 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody099E406A34D9();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody27D9E6C87000();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -164,6 +166,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "archive_project", n => { ArchiveProject = n.GetBoolValue(); } },
                 { "base_access_level", n => { BaseAccessLevel = n.GetIntValue(); } },
                 { "create_security_scan_profiles", n => { CreateSecurityScanProfiles = n.GetBoolValue(); } },
+                { "delete_security_scan_profiles", n => { DeleteSecurityScanProfiles = n.GetBoolValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "destroy_package", n => { DestroyPackage = n.GetBoolValue(); } },
                 { "manage_deploy_tokens", n => { ManageDeployTokens = n.GetBoolValue(); } },
@@ -220,6 +223,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("archive_project", ArchiveProject);
             writer.WriteIntValue("base_access_level", BaseAccessLevel);
             writer.WriteBoolValue("create_security_scan_profiles", CreateSecurityScanProfiles);
+            writer.WriteBoolValue("delete_security_scan_profiles", DeleteSecurityScanProfiles);
             writer.WriteStringValue("description", Description);
             writer.WriteBoolValue("destroy_package", DestroyPackage);
             writer.WriteBoolValue("manage_deploy_tokens", ManageDeployTokens);

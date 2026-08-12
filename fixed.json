@@ -8988,7 +8988,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody099E406A34D9"
+                "$ref": "#/components/schemas/RequestBody27D9E6C87000"
               }
             }
           }
@@ -9089,7 +9089,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody099E406A34D9"
+                "$ref": "#/components/schemas/RequestBody27D9E6C87000"
               }
             }
           }
@@ -101405,6 +101405,10 @@
             "type": "boolean",
             "default": false
           },
+          "delete_security_scan_profiles": {
+            "type": "boolean",
+            "default": false
+          },
           "remove_group": {
             "type": "boolean",
             "default": false
@@ -107268,6 +107272,23 @@
           }
         }
       },
+      "ApiEntitiesMergeRequestsStatusCheckResponseExternalStatusCheck": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "example": 1
+          },
+          "name": {
+            "type": "string",
+            "example": "QA"
+          },
+          "external_url": {
+            "type": "string",
+            "example": "https://www.example.com"
+          }
+        }
+      },
       "ApiEntitiesMergeRequestsStatusCheckResponse": {
         "type": "object",
         "properties": {
@@ -107280,7 +107301,7 @@
             "$ref": "#/components/schemas/ApiEntitiesMergeRequest"
           },
           "external_status_check": {
-            "$ref": "#/components/schemas/ApiEntitiesExternalStatusCheck"
+            "$ref": "#/components/schemas/ApiEntitiesMergeRequestsStatusCheckResponseExternalStatusCheck"
           }
         }
       },
@@ -124668,14 +124689,14 @@
           }
         }
       },
-      "RequestBody099E406A34D9": {
+      "RequestBody27D9E6C87000": {
         "required": [
           "base_access_level"
         ],
         "type": "object",
         "properties": {
           "base_access_level": {
-            "$ref": "#/components/schemas/RequestBody099E406A34D9BaseAccessLevel"
+            "$ref": "#/components/schemas/RequestBody27D9E6C87000BaseAccessLevel"
           },
           "name": {
             "type": "string",
@@ -124720,6 +124741,11 @@
           "remove_project": {
             "type": "boolean",
             "description": "Allows deletion of projects.",
+            "nullable": true
+          },
+          "delete_security_scan_profiles": {
+            "type": "boolean",
+            "description": "Delete security scan profiles.",
             "nullable": true
           },
           "remove_group": {
@@ -154060,7 +154086,7 @@
           ]
         }
       },
-      "RequestBody099E406A34D9BaseAccessLevel": {
+      "RequestBody27D9E6C87000BaseAccessLevel": {
         "enum": [
           10,
           15,

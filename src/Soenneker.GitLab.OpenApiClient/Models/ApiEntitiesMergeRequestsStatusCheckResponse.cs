@@ -17,10 +17,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The external_status_check property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesExternalStatusCheck? ExternalStatusCheck { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestsStatusCheckResponseExternalStatusCheck? ExternalStatusCheck { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesExternalStatusCheck ExternalStatusCheck { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestsStatusCheckResponseExternalStatusCheck ExternalStatusCheck { get; set; }
 #endif
         /// <summary>The id property</summary>
         public long? Id { get; set; }
@@ -57,7 +57,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "external_status_check", n => { ExternalStatusCheck = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesExternalStatusCheck>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesExternalStatusCheck.CreateFromDiscriminatorValue); } },
+                { "external_status_check", n => { ExternalStatusCheck = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestsStatusCheckResponseExternalStatusCheck>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestsStatusCheckResponseExternalStatusCheck.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetLongValue(); } },
                 { "merge_request", n => { MergeRequest = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequest>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequest.CreateFromDiscriminatorValue); } },
             };
@@ -69,7 +69,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesExternalStatusCheck>("external_status_check", ExternalStatusCheck);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestsStatusCheckResponseExternalStatusCheck>("external_status_check", ExternalStatusCheck);
             writer.WriteLongValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequest>("merge_request", MergeRequest);
             writer.WriteAdditionalData(AdditionalData);
