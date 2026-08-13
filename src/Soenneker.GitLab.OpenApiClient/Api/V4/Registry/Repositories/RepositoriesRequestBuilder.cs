@@ -18,7 +18,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Registry.Repositories
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.registry.repositories.item collection</summary>
         /// <param name="position">The ID of the repository</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Registry.Repositories.Item.RepositoriesItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Registry.Repositories.Item.RepositoriesItemRequestBuilder this[string position]
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Registry.Repositories.Item.RepositoriesItemRequestBuilder this[int position]
         {
             get
             {

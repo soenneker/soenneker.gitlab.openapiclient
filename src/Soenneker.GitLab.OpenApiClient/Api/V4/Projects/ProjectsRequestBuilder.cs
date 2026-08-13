@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item collection</summary>
         /// <param name="position">The ID or URL-encoded path of the project</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.ItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.ItemRequestBuilder this[string position]
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.ItemRequestBuilder this[int position]
         {
             get
             {

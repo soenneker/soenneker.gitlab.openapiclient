@@ -21,7 +21,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Links
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.issues.item.links.item collection</summary>
         /// <param name="position">ID of an issue relationship</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Links.Item.WithIssueLinkItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Links.Item.WithIssueLinkItemRequestBuilder this[string position]
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Links.Item.WithIssueLinkItemRequestBuilder this[int position]
         {
             get
             {

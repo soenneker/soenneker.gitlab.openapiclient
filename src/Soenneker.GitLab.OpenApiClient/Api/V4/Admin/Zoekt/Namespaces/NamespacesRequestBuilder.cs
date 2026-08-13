@@ -18,7 +18,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Namespaces
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.admin.zoekt.namespaces.item collection</summary>
         /// <param name="position">The ID or URL-encoded path of the namespace</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Namespaces.Item.NamespacesItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Namespaces.Item.NamespacesItemRequestBuilder this[string position]
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Namespaces.Item.NamespacesItemRequestBuilder this[int position]
         {
             get
             {

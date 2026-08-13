@@ -5,7 +5,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>The event topic</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBody523117C79970Topic
+    public enum RequestBodyA6C22Cd9956CTopic
     {
         [EnumMember(Value = "com.gitlab.cd.deployment")]
         #pragma warning disable CS1591

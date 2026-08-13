@@ -21,7 +21,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Keys
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.keys.item collection</summary>
         /// <param name="position">The ID of an SSH key</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Keys.Item.KeysItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Keys.Item.KeysItemRequestBuilder this[string position]
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Keys.Item.KeysItemRequestBuilder this[int position]
         {
             get
             {

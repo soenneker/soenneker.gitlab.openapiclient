@@ -21,7 +21,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Knowledge_graph.Namespaces
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.admin.knowledge_graph.namespaces.item collection</summary>
         /// <param name="position">The ID or URL-encoded path of the namespace</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Knowledge_graph.Namespaces.Item.NamespacesItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Knowledge_graph.Namespaces.Item.NamespacesItemRequestBuilder this[string position]
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Knowledge_graph.Namespaces.Item.NamespacesItemRequestBuilder this[int position]
         {
             get
             {

@@ -18,7 +18,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Active_context.Collections
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.admin.active_context.collections.item collection</summary>
         /// <param name="position">Collection name or ID</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Active_context.Collections.Item.CollectionsItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Active_context.Collections.Item.CollectionsItemRequestBuilder this[string position]
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Active_context.Collections.Item.CollectionsItemRequestBuilder this[int position]
         {
             get
             {
