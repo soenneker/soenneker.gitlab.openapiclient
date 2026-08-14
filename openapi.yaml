@@ -88,6 +88,8 @@ tags:
   description: Operations related to cluster agents.
 - name: Clusters
   description: Operations related to clusters.
+- name: Code Suggestions
+  description: Operations related to Code Suggestions.
 - name: Code review analytics
   description: Operations related to code review analytics.
 - name: Code search
@@ -738,7 +740,7 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/RequestBody_a6c22cd9956c"
+              "$ref": "#/components/schemas/RequestBody_70f8c0578b6a"
   "/api/v4/jobs/{id}/sbom_scans/authorize":
     post:
       operationId: postApiV4JobsIdSbomScansAuthorize
@@ -1028,6 +1030,8 @@ paths:
       summary: Generate code completions
       description: Generates code completions. Uses the AI abstraction layer to generate
         code completions. Requests to this endpoint are proxied to the AI Gateway.
+      tags:
+      - Code Suggestions
       responses:
         '200':
           description: OK
@@ -1046,6 +1050,8 @@ paths:
       description: Retrieves user-specific connection details which can be used by
         IDEs or clients to send `completion` requests to Code Suggestions directly
         through the AI Gateway.
+      tags:
+      - Code Suggestions
       responses:
         '201':
           description: Created
@@ -1070,6 +1076,8 @@ paths:
       description: Validates the status Code Suggestions for a specified project.
         This checks if the project has `code_suggestions` enabled or if an ancestor
         group has the Code Suggestions add-on enabled.
+      tags:
+      - Code Suggestions
       responses:
         '200':
           description: OK
@@ -1094,6 +1102,8 @@ paths:
       description: Retrieves user-specific connection details which can be used by
         IDEs or clients for telemetry, including an instance-specific application
         ID, application access token, and clickhouse data plane URL.
+      tags:
+      - Code Suggestions
       responses:
         '201':
           description: Created
@@ -40805,6 +40815,7 @@ paths:
           in ISO 8601 format.
         schema:
           type: string
+          format: date-time
           nullable: true
         in: query
         example: '2019-03-15T08:00:00Z'
@@ -40814,6 +40825,7 @@ paths:
           in ISO 8601 format
         schema:
           type: string
+          format: date-time
           nullable: true
         in: query
         example: '2019-03-15T08:00:00Z'
@@ -40824,7 +40836,7 @@ paths:
           type: string
           nullable: true
         in: query
-        example: '2019-03-15T08:00:00Z'
+        example: production
       - name: merge_user_id
         required: false
         description: Returns merge requests which have been merged by the user with
@@ -41326,6 +41338,7 @@ paths:
           in ISO 8601 format.
         schema:
           type: string
+          format: date-time
           nullable: true
         in: query
         example: '2019-03-15T08:00:00Z'
@@ -41335,6 +41348,7 @@ paths:
           in ISO 8601 format
         schema:
           type: string
+          format: date-time
           nullable: true
         in: query
         example: '2019-03-15T08:00:00Z'
@@ -41345,7 +41359,7 @@ paths:
           type: string
           nullable: true
         in: query
-        example: '2019-03-15T08:00:00Z'
+        example: production
       - name: merge_user_id
         required: false
         description: Returns merge requests which have been merged by the user with
@@ -42040,6 +42054,7 @@ paths:
           in ISO 8601 format.
         schema:
           type: string
+          format: date-time
           nullable: true
         in: query
         example: '2019-03-15T08:00:00Z'
@@ -42049,6 +42064,7 @@ paths:
           in ISO 8601 format
         schema:
           type: string
+          format: date-time
           nullable: true
         in: query
         example: '2019-03-15T08:00:00Z'
@@ -42059,7 +42075,7 @@ paths:
           type: string
           nullable: true
         in: query
-        example: '2019-03-15T08:00:00Z'
+        example: production
       - name: merge_user_id
         required: false
         description: Returns merge requests which have been merged by the user with
@@ -59654,6 +59670,7 @@ paths:
           in ISO 8601 format.
         schema:
           type: string
+          format: date-time
           nullable: true
         in: query
         example: '2019-03-15T08:00:00Z'
@@ -59663,6 +59680,7 @@ paths:
           in ISO 8601 format
         schema:
           type: string
+          format: date-time
           nullable: true
         in: query
         example: '2019-03-15T08:00:00Z'
@@ -59673,7 +59691,7 @@ paths:
           type: string
           nullable: true
         in: query
-        example: '2019-03-15T08:00:00Z'
+        example: production
       - name: merge_user_id
         required: false
         description: Returns merge requests which have been merged by the user with
@@ -75301,7 +75319,7 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/RequestBody_a9e6fb278ceb"
+              "$ref": "#/components/schemas/RequestBody_ee5cd6f7e046"
   "/api/v4/admin/migrations/pending":
     get:
       operationId: getApiV4AdminMigrationsPending
@@ -94210,6 +94228,9 @@ components:
     APIEntitiesPlanLimit:
       type: object
       properties:
+        cargo_max_file_size:
+          type: integer
+          example: 5368709120
         ci_instance_level_variables:
           type: integer
           example: 25
@@ -94626,7 +94647,7 @@ components:
       required:
       - started_on
       - expires_on
-    RequestBody_a6c22cd9956c:
+    RequestBody_70f8c0578b6a:
       type: object
       properties:
         topic:
@@ -94648,7 +94669,8 @@ components:
               type: array
               items:
                 type: integer
-              description: Zero-based path to the stage/step in the flow definition
+              description: Zero-based path to the stage/step in the flow definition;
+                required for every event except com.gitlab.cd.rollout_succeeded
               nullable: true
             stage_name:
               type: string
@@ -94673,8 +94695,6 @@ components:
               description: Failure detail, present on step_failed
               nullable: true
               maxLength: 2000
-          required:
-          - position
           nullable: true
       required:
       - topic
@@ -117322,7 +117342,7 @@ components:
           description: A description of the image or URL
           example: An example metric
           nullable: true
-    RequestBody_a9e6fb278ceb:
+    RequestBody_ee5cd6f7e046:
       type: object
       properties:
         plan_name:
@@ -117341,6 +117361,10 @@ components:
           - opensource
           description: Name of the plan to update
           minLength: 1
+        cargo_max_file_size:
+          type: integer
+          description: Maximum Cargo package file size in bytes
+          nullable: true
         ci_instance_level_variables:
           type: integer
           description: Maximum number of Instance-level CI/CD variables that can be

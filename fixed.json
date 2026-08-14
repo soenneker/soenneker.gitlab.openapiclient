@@ -150,7 +150,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyA6C22Cd9956C"
+                "$ref": "#/components/schemas/RequestBody70F8C0578B6A"
               }
             }
           }
@@ -556,6 +556,9 @@
     },
     "/api/v4/code_suggestions/completions": {
       "post": {
+        "tags": [
+          "Code Suggestions"
+        ],
         "summary": "Generate code completions",
         "description": "Generates code completions. Uses the AI abstraction layer to generate code completions. Requests to this endpoint are proxied to the AI Gateway.",
         "operationId": "PostApiV4CodeSuggestionsCompletions",
@@ -584,6 +587,9 @@
     },
     "/api/v4/code_suggestions/direct_access": {
       "post": {
+        "tags": [
+          "Code Suggestions"
+        ],
         "summary": "Retrieve direct connection details for the AI Gateway",
         "description": "Retrieves user-specific connection details which can be used by IDEs or clients to send \u0060completion\u0060 requests to Code Suggestions directly through the AI Gateway.",
         "operationId": "PostApiV4CodeSuggestionsDirectAccess",
@@ -612,6 +618,9 @@
     },
     "/api/v4/code_suggestions/enabled": {
       "post": {
+        "tags": [
+          "Code Suggestions"
+        ],
         "summary": "Validate status of Code Suggestions",
         "description": "Validates the status Code Suggestions for a specified project. This checks if the project has \u0060code_suggestions\u0060 enabled or if an ancestor group has the Code Suggestions add-on enabled.",
         "operationId": "PostApiV4CodeSuggestionsEnabled",
@@ -640,6 +649,9 @@
     },
     "/api/v4/code_suggestions/connection_details": {
       "post": {
+        "tags": [
+          "Code Suggestions"
+        ],
         "summary": "Retrieve connection details",
         "description": "Retrieves user-specific connection details which can be used by IDEs or clients for telemetry, including an instance-specific application ID, application access token, and clickhouse data plane URL.",
         "operationId": "PostApiV4CodeSuggestionsConnectionDetails",
@@ -52056,6 +52068,7 @@
             "description": "Returns merge requests deployed before the given date/time. Expected in ISO 8601 format.",
             "schema": {
               "type": "string",
+              "format": "date-time",
               "nullable": true
             },
             "example": "2019-03-15T08:00:00Z"
@@ -52066,6 +52079,7 @@
             "description": "Returns merge requests deployed after the given date/time. Expected in ISO 8601 format",
             "schema": {
               "type": "string",
+              "format": "date-time",
               "nullable": true
             },
             "example": "2019-03-15T08:00:00Z"
@@ -52078,7 +52092,7 @@
               "type": "string",
               "nullable": true
             },
-            "example": "2019-03-15T08:00:00Z"
+            "example": "production"
           },
           {
             "name": "merge_user_id",
@@ -52620,6 +52634,7 @@
             "description": "Returns merge requests deployed before the given date/time. Expected in ISO 8601 format.",
             "schema": {
               "type": "string",
+              "format": "date-time",
               "nullable": true
             },
             "example": "2019-03-15T08:00:00Z"
@@ -52630,6 +52645,7 @@
             "description": "Returns merge requests deployed after the given date/time. Expected in ISO 8601 format",
             "schema": {
               "type": "string",
+              "format": "date-time",
               "nullable": true
             },
             "example": "2019-03-15T08:00:00Z"
@@ -52642,7 +52658,7 @@
               "type": "string",
               "nullable": true
             },
-            "example": "2019-03-15T08:00:00Z"
+            "example": "production"
           },
           {
             "name": "merge_user_id",
@@ -53455,6 +53471,7 @@
             "description": "Returns merge requests deployed before the given date/time. Expected in ISO 8601 format.",
             "schema": {
               "type": "string",
+              "format": "date-time",
               "nullable": true
             },
             "example": "2019-03-15T08:00:00Z"
@@ -53465,6 +53482,7 @@
             "description": "Returns merge requests deployed after the given date/time. Expected in ISO 8601 format",
             "schema": {
               "type": "string",
+              "format": "date-time",
               "nullable": true
             },
             "example": "2019-03-15T08:00:00Z"
@@ -53477,7 +53495,7 @@
               "type": "string",
               "nullable": true
             },
-            "example": "2019-03-15T08:00:00Z"
+            "example": "production"
           },
           {
             "name": "merge_user_id",
@@ -75793,6 +75811,7 @@
             "description": "Returns merge requests deployed before the given date/time. Expected in ISO 8601 format.",
             "schema": {
               "type": "string",
+              "format": "date-time",
               "nullable": true
             },
             "example": "2019-03-15T08:00:00Z"
@@ -75803,6 +75822,7 @@
             "description": "Returns merge requests deployed after the given date/time. Expected in ISO 8601 format",
             "schema": {
               "type": "string",
+              "format": "date-time",
               "nullable": true
             },
             "example": "2019-03-15T08:00:00Z"
@@ -75815,7 +75835,7 @@
               "type": "string",
               "nullable": true
             },
-            "example": "2019-03-15T08:00:00Z"
+            "example": "production"
           },
           {
             "name": "merge_user_id",
@@ -95761,7 +95781,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyA9E6Fb278Ceb"
+                "$ref": "#/components/schemas/RequestBodyEe5Cd6F7E046"
               }
             }
           }
@@ -121268,6 +121288,10 @@
       "ApiEntitiesPlanLimit": {
         "type": "object",
         "properties": {
+          "cargo_max_file_size": {
+            "type": "integer",
+            "example": 5368709120
+          },
           "ci_instance_level_variables": {
             "type": "integer",
             "example": 25
@@ -121781,7 +121805,7 @@
           }
         }
       },
-      "RequestBodyA6C22Cd9956C": {
+      "RequestBody70F8C0578B6A": {
         "required": [
           "topic",
           "type",
@@ -121790,7 +121814,7 @@
         "type": "object",
         "properties": {
           "topic": {
-            "$ref": "#/components/schemas/RequestBodyA6C22Cd9956CTopic"
+            "$ref": "#/components/schemas/RequestBody70F8C0578B6ATopic"
           },
           "type": {
             "maxLength": 255,
@@ -121799,7 +121823,7 @@
             "nullable": true
           },
           "data": {
-            "$ref": "#/components/schemas/RequestBodyA6C22Cd9956CData"
+            "$ref": "#/components/schemas/RequestBody70F8C0578B6AData"
           }
         }
       },
@@ -141506,14 +141530,19 @@
           }
         }
       },
-      "RequestBodyA9E6Fb278Ceb": {
+      "RequestBodyEe5Cd6F7E046": {
         "required": [
           "plan_name"
         ],
         "type": "object",
         "properties": {
           "plan_name": {
-            "$ref": "#/components/schemas/RequestBodyA9E6Fb278CebPlanName"
+            "$ref": "#/components/schemas/RequestBodyEe5Cd6F7E046PlanName"
+          },
+          "cargo_max_file_size": {
+            "type": "integer",
+            "description": "Maximum Cargo package file size in bytes",
+            "nullable": true
           },
           "ci_instance_level_variables": {
             "type": "integer",
@@ -143315,10 +143344,7 @@
           }
         }
       },
-      "RequestBodyA6C22Cd9956CData": {
-        "required": [
-          "position"
-        ],
+      "RequestBody70F8C0578B6AData": {
         "type": "object",
         "properties": {
           "position": {
@@ -143326,7 +143352,7 @@
             "items": {
               "type": "integer"
             },
-            "description": "Zero-based path to the stage/step in the flow definition",
+            "description": "Zero-based path to the stage/step in the flow definition; required for every event except com.gitlab.cd.rollout_succeeded",
             "nullable": true
           },
           "stage_name": {
@@ -152307,7 +152333,7 @@
           ]
         }
       },
-      "RequestBodyA6C22Cd9956CTopic": {
+      "RequestBody70F8C0578B6ATopic": {
         "minLength": 1,
         "enum": [
           "com.gitlab.cd.deployment"
@@ -152316,7 +152342,7 @@
         "additionalProperties": false,
         "description": "The event topic",
         "x-ms-enum": {
-          "name": "RequestBodyA6C22Cd9956CTopic",
+          "name": "RequestBody70F8C0578B6ATopic",
           "modelAsString": false,
           "values": [
             {
@@ -159357,7 +159383,7 @@
         "additionalProperties": false,
         "description": "The group access level"
       },
-      "RequestBodyA9E6Fb278CebPlanName": {
+      "RequestBodyEe5Cd6F7E046PlanName": {
         "minLength": 1,
         "enum": [
           "default",
@@ -159376,7 +159402,7 @@
         "additionalProperties": false,
         "description": "Name of the plan to update",
         "x-ms-enum": {
-          "name": "RequestBodyA9E6Fb278CebPlanName",
+          "name": "RequestBodyEe5Cd6F7E046PlanName",
           "modelAsString": false,
           "values": [
             {
@@ -174585,6 +174611,10 @@
     {
       "name": "Clusters",
       "description": "Operations related to clusters."
+    },
+    {
+      "name": "Code Suggestions",
+      "description": "Operations related to Code Suggestions."
     },
     {
       "name": "Code review analytics",

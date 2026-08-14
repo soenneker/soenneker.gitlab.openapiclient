@@ -14,6 +14,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The cargo_max_file_size property</summary>
+        public int? CargoMaxFileSize { get; set; }
         /// <summary>The ci_active_jobs property</summary>
         public int? CiActiveJobs { get; set; }
         /// <summary>The ci_instance_level_variables property</summary>
@@ -99,6 +101,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "cargo_max_file_size", n => { CargoMaxFileSize = n.GetIntValue(); } },
                 { "ci_active_jobs", n => { CiActiveJobs = n.GetIntValue(); } },
                 { "ci_instance_level_variables", n => { CiInstanceLevelVariables = n.GetIntValue(); } },
                 { "ci_needs_size_limit", n => { CiNeedsSizeLimit = n.GetIntValue(); } },
@@ -135,6 +138,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteIntValue("cargo_max_file_size", CargoMaxFileSize);
             writer.WriteIntValue("ci_active_jobs", CiActiveJobs);
             writer.WriteIntValue("ci_instance_level_variables", CiInstanceLevelVariables);
             writer.WriteIntValue("ci_needs_size_limit", CiNeedsSizeLimit);

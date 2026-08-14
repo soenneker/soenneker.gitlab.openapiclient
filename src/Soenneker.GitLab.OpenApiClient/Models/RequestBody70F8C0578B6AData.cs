@@ -11,7 +11,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     /// The event payload
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RequestBodyA6C22Cd9956CData : IAdditionalDataHolder, IParsable
+    public partial class RequestBody70F8C0578B6AData : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -31,7 +31,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Error { get; set; }
 #endif
-        /// <summary>Zero-based path to the stage/step in the flow definition</summary>
+        /// <summary>Zero-based path to the stage/step in the flow definition; required for every event except com.gitlab.cd.rollout_succeeded</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<int?>? Position { get; set; }
@@ -56,21 +56,21 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string StepType { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA6C22Cd9956CData"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody70F8C0578B6AData"/> and sets the default values.
         /// </summary>
-        public RequestBodyA6C22Cd9956CData()
+        public RequestBody70F8C0578B6AData()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA6C22Cd9956CData"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody70F8C0578B6AData"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA6C22Cd9956CData CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody70F8C0578B6AData CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA6C22Cd9956CData();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody70F8C0578B6AData();
         }
         /// <summary>
         /// The deserialization information for the current model

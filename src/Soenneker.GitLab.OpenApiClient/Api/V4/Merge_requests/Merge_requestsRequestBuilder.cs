@@ -148,25 +148,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Merge_requests
             [QueryParameter("created_before")]
             public DateTimeOffset? CreatedBefore { get; set; }
             /// <summary>Returns merge requests deployed after the given date/time. Expected in ISO 8601 format</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("deployed_after")]
-            public string? DeployedAfter { get; set; }
-#nullable restore
-#else
-            [QueryParameter("deployed_after")]
-            public string DeployedAfter { get; set; }
-#endif
+            public DateTimeOffset? DeployedAfter { get; set; }
             /// <summary>Returns merge requests deployed before the given date/time. Expected in ISO 8601 format.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("deployed_before")]
-            public string? DeployedBefore { get; set; }
-#nullable restore
-#else
-            [QueryParameter("deployed_before")]
-            public string DeployedBefore { get; set; }
-#endif
+            public DateTimeOffset? DeployedBefore { get; set; }
             /// <summary>Filter merge requests against their `draft` status. `true` to return only draft merge requests, `false` to return non-draft merge requests.</summary>
             [QueryParameter("draft")]
             public bool? Draft { get; set; }

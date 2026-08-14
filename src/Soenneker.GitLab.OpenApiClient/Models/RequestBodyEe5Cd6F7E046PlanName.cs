@@ -5,7 +5,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>Name of the plan to update</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBodyA9E6Fb278CebPlanName
+    public enum RequestBodyEe5Cd6F7E046PlanName
     {
         [EnumMember(Value = "default")]
         #pragma warning disable CS1591
