@@ -17,10 +17,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Additional properties to be tracked</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1B519Ba16Fe9AdditionalProperties? AdditionalProperties { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1B519Ba16Fe9AdditionalPropertiesProperty? AdditionalProperties { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1B519Ba16Fe9AdditionalProperties AdditionalProperties { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1B519Ba16Fe9AdditionalPropertiesProperty AdditionalProperties { get; set; }
 #endif
         /// <summary>The event name that should be tracked</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -69,7 +69,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "additional_properties", n => { AdditionalProperties = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1B519Ba16Fe9AdditionalProperties>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1B519Ba16Fe9AdditionalProperties.CreateFromDiscriminatorValue); } },
+                { "additional_properties", n => { AdditionalProperties = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1B519Ba16Fe9AdditionalPropertiesProperty>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1B519Ba16Fe9AdditionalPropertiesProperty.CreateFromDiscriminatorValue); } },
                 { "event", n => { Event = n.GetStringValue(); } },
                 { "namespace_id", n => { NamespaceId = n.GetIntValue(); } },
                 { "project_id", n => { ProjectId = n.GetIntValue(); } },
@@ -84,7 +84,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1B519Ba16Fe9AdditionalProperties>("additional_properties", AdditionalProperties);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1B519Ba16Fe9AdditionalPropertiesProperty>("additional_properties", AdditionalProperties);
             writer.WriteStringValue("event", Event);
             writer.WriteIntValue("namespace_id", NamespaceId);
             writer.WriteIntValue("project_id", ProjectId);

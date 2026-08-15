@@ -17,10 +17,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Additional error-type-specific data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC16Df62E1C21FailuresItemContext? Context { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC16Df62E1C21FailuresItemContextProperty? Context { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC16Df62E1C21FailuresItemContext Context { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC16Df62E1C21FailuresItemContextProperty Context { get; set; }
 #endif
         /// <summary>The type of verification error being reported</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -67,7 +67,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "context", n => { Context = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC16Df62E1C21FailuresItemContext>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC16Df62E1C21FailuresItemContext.CreateFromDiscriminatorValue); } },
+                { "context", n => { Context = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC16Df62E1C21FailuresItemContextProperty>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC16Df62E1C21FailuresItemContextProperty.CreateFromDiscriminatorValue); } },
                 { "error_type", n => { ErrorType = n.GetStringValue(); } },
                 { "replicable_id", n => { ReplicableId = n.GetIntValue(); } },
                 { "replicable_name", n => { ReplicableName = n.GetStringValue(); } },
@@ -81,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC16Df62E1C21FailuresItemContext>("context", Context);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC16Df62E1C21FailuresItemContextProperty>("context", Context);
             writer.WriteStringValue("error_type", ErrorType);
             writer.WriteIntValue("replicable_id", ReplicableId);
             writer.WriteStringValue("replicable_name", ReplicableName);

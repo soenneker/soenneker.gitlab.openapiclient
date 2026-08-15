@@ -17,10 +17,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Input values for the job</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0F9000E47C5FInputs? Inputs { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0F9000E47C5FInputsProperty? Inputs { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0F9000E47C5FInputs Inputs { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0F9000E47C5FInputsProperty Inputs { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0F9000E47C5F"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "inputs", n => { Inputs = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0F9000E47C5FInputs>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0F9000E47C5FInputs.CreateFromDiscriminatorValue); } },
+                { "inputs", n => { Inputs = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0F9000E47C5FInputsProperty>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0F9000E47C5FInputsProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0F9000E47C5FInputs>("inputs", Inputs);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0F9000E47C5FInputsProperty>("inputs", Inputs);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

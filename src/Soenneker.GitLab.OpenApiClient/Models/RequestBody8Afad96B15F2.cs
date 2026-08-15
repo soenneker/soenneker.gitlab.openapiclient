@@ -19,10 +19,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>&quot;A valid Cube query. See reference documentation: https://cube.dev/docs/query-format&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8Afad96B15F2Query? Query { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8Afad96B15F2QueryProperty? Query { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8Afad96B15F2Query Query { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8Afad96B15F2QueryProperty Query { get; set; }
 #endif
         /// <summary>The query type. Currently only &quot;multi&quot; is supported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -59,7 +59,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "include_token", n => { IncludeToken = n.GetBoolValue(); } },
-                { "query", n => { Query = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8Afad96B15F2Query>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8Afad96B15F2Query.CreateFromDiscriminatorValue); } },
+                { "query", n => { Query = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8Afad96B15F2QueryProperty>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8Afad96B15F2QueryProperty.CreateFromDiscriminatorValue); } },
                 { "queryType", n => { QueryType = n.GetStringValue(); } },
             };
         }
@@ -71,7 +71,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("include_token", IncludeToken);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8Afad96B15F2Query>("query", Query);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8Afad96B15F2QueryProperty>("query", Query);
             writer.WriteStringValue("queryType", QueryType);
             writer.WriteAdditionalData(AdditionalData);
         }

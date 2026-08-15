@@ -8,29 +8,29 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// Context parameters (user, namespace, project). An actor context is resolved from the user. Defaults to current user.
+    /// Optional stages of import to be performed
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RequestBodyBddd5De04FfaContext : IAdditionalDataHolder, IParsable
+    public partial class RequestBodyAf60E1Cb94AdOptionalStagesProperty : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBddd5De04FfaContext"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAf60E1Cb94AdOptionalStagesProperty"/> and sets the default values.
         /// </summary>
-        public RequestBodyBddd5De04FfaContext()
+        public RequestBodyAf60E1Cb94AdOptionalStagesProperty()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBddd5De04FfaContext"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAf60E1Cb94AdOptionalStagesProperty"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBddd5De04FfaContext CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAf60E1Cb94AdOptionalStagesProperty CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBddd5De04FfaContext();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAf60E1Cb94AdOptionalStagesProperty();
         }
         /// <summary>
         /// The deserialization information for the current model

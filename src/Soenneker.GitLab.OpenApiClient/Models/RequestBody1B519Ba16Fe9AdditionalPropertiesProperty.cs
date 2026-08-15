@@ -8,29 +8,29 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// The list of inputs to be used to create the pipeline.
+    /// Additional properties to be tracked
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RequestBody2E490B211A2CInputs : IAdditionalDataHolder, IParsable
+    public partial class RequestBody1B519Ba16Fe9AdditionalPropertiesProperty : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2E490B211A2CInputs"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1B519Ba16Fe9AdditionalPropertiesProperty"/> and sets the default values.
         /// </summary>
-        public RequestBody2E490B211A2CInputs()
+        public RequestBody1B519Ba16Fe9AdditionalPropertiesProperty()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2E490B211A2CInputs"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1B519Ba16Fe9AdditionalPropertiesProperty"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2E490B211A2CInputs CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1B519Ba16Fe9AdditionalPropertiesProperty CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2E490B211A2CInputs();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1B519Ba16Fe9AdditionalPropertiesProperty();
         }
         /// <summary>
         /// The deserialization information for the current model

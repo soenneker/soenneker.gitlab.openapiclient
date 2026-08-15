@@ -17,10 +17,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Event-specific payload</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8129788813D5EventsItemData? Data { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8129788813D5EventsItemDataProperty? Data { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8129788813D5EventsItemData Data { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8129788813D5EventsItemDataProperty Data { get; set; }
 #endif
         /// <summary>CloudEvent id (UUID)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -73,7 +73,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8129788813D5EventsItemData>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8129788813D5EventsItemData.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8129788813D5EventsItemDataProperty>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8129788813D5EventsItemDataProperty.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "source", n => { Source = n.GetStringValue(); } },
                 { "time", n => { Time = n.GetDateTimeOffsetValue(); } },
@@ -87,7 +87,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8129788813D5EventsItemData>("data", Data);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8129788813D5EventsItemDataProperty>("data", Data);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("source", Source);
             writer.WriteDateTimeOffsetValue("time", Time);

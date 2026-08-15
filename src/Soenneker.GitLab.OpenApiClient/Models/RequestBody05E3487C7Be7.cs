@@ -33,10 +33,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The event object with variable properties</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody05E3487C7Be7Event? Event { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody05E3487C7Be7EventProperty? Event { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody05E3487C7Be7Event Event { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody05E3487C7Be7EventProperty Event { get; set; }
 #endif
         /// <summary>A unique identifier for this specific event</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -99,7 +99,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             {
                 { "api_app_id", n => { ApiAppId = n.GetStringValue(); } },
                 { "authed_users", n => { AuthedUsers = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "event", n => { Event = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody05E3487C7Be7Event>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody05E3487C7Be7Event.CreateFromDiscriminatorValue); } },
+                { "event", n => { Event = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody05E3487C7Be7EventProperty>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody05E3487C7Be7EventProperty.CreateFromDiscriminatorValue); } },
                 { "event_id", n => { EventId = n.GetStringValue(); } },
                 { "event_time", n => { EventTime = n.GetIntValue(); } },
                 { "team_id", n => { TeamId = n.GetStringValue(); } },
@@ -116,7 +116,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("api_app_id", ApiAppId);
             writer.WriteCollectionOfPrimitiveValues<string>("authed_users", AuthedUsers);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody05E3487C7Be7Event>("event", Event);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody05E3487C7Be7EventProperty>("event", Event);
             writer.WriteStringValue("event_id", EventId);
             writer.WriteIntValue("event_time", EventTime);
             writer.WriteStringValue("team_id", TeamId);

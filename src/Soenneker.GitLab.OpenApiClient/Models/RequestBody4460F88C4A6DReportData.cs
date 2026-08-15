@@ -28,50 +28,50 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>This object should include an SVG asset to be rendered in PDF reports</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataGroupVulnerabilitiesOverTime? GroupVulnerabilitiesOverTime { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataGroupVulnerabilitiesOverTimeProperty? GroupVulnerabilitiesOverTime { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataGroupVulnerabilitiesOverTime GroupVulnerabilitiesOverTime { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataGroupVulnerabilitiesOverTimeProperty GroupVulnerabilitiesOverTime { get; set; }
 #endif
         /// <summary>Data for rendering the open vulnerabilities over time in PDF reports</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataOpenVulnerabilitiesOverTime? OpenVulnerabilitiesOverTime { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataOpenVulnerabilitiesOverTimeProperty? OpenVulnerabilitiesOverTime { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataOpenVulnerabilitiesOverTime OpenVulnerabilitiesOverTime { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataOpenVulnerabilitiesOverTimeProperty OpenVulnerabilitiesOverTime { get; set; }
 #endif
         /// <summary>Data for rendering the project grades summary in PDF reports</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataProjectSecurityStatus? ProjectSecurityStatus { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataProjectSecurityStatusProperty? ProjectSecurityStatus { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataProjectSecurityStatus ProjectSecurityStatus { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataProjectSecurityStatusProperty ProjectSecurityStatus { get; set; }
 #endif
         /// <summary>This object should include an SVG asset to be rendered in PDF reports</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataProjectVulnerabilitiesHistory? ProjectVulnerabilitiesHistory { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataProjectVulnerabilitiesHistoryProperty? ProjectVulnerabilitiesHistory { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataProjectVulnerabilitiesHistory ProjectVulnerabilitiesHistory { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataProjectVulnerabilitiesHistoryProperty ProjectVulnerabilitiesHistory { get; set; }
 #endif
         /// <summary>Data for rendering the total risk score in PDF reports</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataTotalRiskScore? TotalRiskScore { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataTotalRiskScoreProperty? TotalRiskScore { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataTotalRiskScore TotalRiskScore { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataTotalRiskScoreProperty TotalRiskScore { get; set; }
 #endif
         /// <summary>Data for rendering the vulnerabilities by age in PDF reports</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataVulnerabilitiesByAge? VulnerabilitiesByAge { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataVulnerabilitiesByAgeProperty? VulnerabilitiesByAge { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataVulnerabilitiesByAge VulnerabilitiesByAge { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataVulnerabilitiesByAgeProperty VulnerabilitiesByAge { get; set; }
 #endif
         /// <summary>Data for rendering the vulnerabilities by severity count in PDF reports</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -108,12 +108,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             {
                 { "dashboard_type", n => { DashboardType = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataDashboardType>(); } },
                 { "full_path", n => { FullPath = n.GetStringValue(); } },
-                { "group_vulnerabilities_over_time", n => { GroupVulnerabilitiesOverTime = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataGroupVulnerabilitiesOverTime>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataGroupVulnerabilitiesOverTime.CreateFromDiscriminatorValue); } },
-                { "open_vulnerabilities_over_time", n => { OpenVulnerabilitiesOverTime = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataOpenVulnerabilitiesOverTime>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataOpenVulnerabilitiesOverTime.CreateFromDiscriminatorValue); } },
-                { "project_security_status", n => { ProjectSecurityStatus = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataProjectSecurityStatus>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataProjectSecurityStatus.CreateFromDiscriminatorValue); } },
-                { "project_vulnerabilities_history", n => { ProjectVulnerabilitiesHistory = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataProjectVulnerabilitiesHistory>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataProjectVulnerabilitiesHistory.CreateFromDiscriminatorValue); } },
-                { "total_risk_score", n => { TotalRiskScore = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataTotalRiskScore>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataTotalRiskScore.CreateFromDiscriminatorValue); } },
-                { "vulnerabilities_by_age", n => { VulnerabilitiesByAge = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataVulnerabilitiesByAge>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataVulnerabilitiesByAge.CreateFromDiscriminatorValue); } },
+                { "group_vulnerabilities_over_time", n => { GroupVulnerabilitiesOverTime = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataGroupVulnerabilitiesOverTimeProperty>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataGroupVulnerabilitiesOverTimeProperty.CreateFromDiscriminatorValue); } },
+                { "open_vulnerabilities_over_time", n => { OpenVulnerabilitiesOverTime = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataOpenVulnerabilitiesOverTimeProperty>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataOpenVulnerabilitiesOverTimeProperty.CreateFromDiscriminatorValue); } },
+                { "project_security_status", n => { ProjectSecurityStatus = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataProjectSecurityStatusProperty>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataProjectSecurityStatusProperty.CreateFromDiscriminatorValue); } },
+                { "project_vulnerabilities_history", n => { ProjectVulnerabilitiesHistory = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataProjectVulnerabilitiesHistoryProperty>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataProjectVulnerabilitiesHistoryProperty.CreateFromDiscriminatorValue); } },
+                { "total_risk_score", n => { TotalRiskScore = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataTotalRiskScoreProperty>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataTotalRiskScoreProperty.CreateFromDiscriminatorValue); } },
+                { "vulnerabilities_by_age", n => { VulnerabilitiesByAge = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataVulnerabilitiesByAgeProperty>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataVulnerabilitiesByAgeProperty.CreateFromDiscriminatorValue); } },
                 { "vulnerabilities_by_severity_count", n => { VulnerabilitiesBySeverityCount = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataVulnerabilitiesBySeverityCount>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataVulnerabilitiesBySeverityCount.CreateFromDiscriminatorValue); } },
             };
         }
@@ -126,12 +126,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataDashboardType>("dashboard_type", DashboardType);
             writer.WriteStringValue("full_path", FullPath);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataGroupVulnerabilitiesOverTime>("group_vulnerabilities_over_time", GroupVulnerabilitiesOverTime);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataOpenVulnerabilitiesOverTime>("open_vulnerabilities_over_time", OpenVulnerabilitiesOverTime);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataProjectSecurityStatus>("project_security_status", ProjectSecurityStatus);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataProjectVulnerabilitiesHistory>("project_vulnerabilities_history", ProjectVulnerabilitiesHistory);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataTotalRiskScore>("total_risk_score", TotalRiskScore);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataVulnerabilitiesByAge>("vulnerabilities_by_age", VulnerabilitiesByAge);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataGroupVulnerabilitiesOverTimeProperty>("group_vulnerabilities_over_time", GroupVulnerabilitiesOverTime);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataOpenVulnerabilitiesOverTimeProperty>("open_vulnerabilities_over_time", OpenVulnerabilitiesOverTime);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataProjectSecurityStatusProperty>("project_security_status", ProjectSecurityStatus);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataProjectVulnerabilitiesHistoryProperty>("project_vulnerabilities_history", ProjectVulnerabilitiesHistory);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataTotalRiskScoreProperty>("total_risk_score", TotalRiskScore);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataVulnerabilitiesByAgeProperty>("vulnerabilities_by_age", VulnerabilitiesByAge);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataVulnerabilitiesBySeverityCount>("vulnerabilities_by_severity_count", VulnerabilitiesBySeverityCount);
             writer.WriteAdditionalData(AdditionalData);
         }

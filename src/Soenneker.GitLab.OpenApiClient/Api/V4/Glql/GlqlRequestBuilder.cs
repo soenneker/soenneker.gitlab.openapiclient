@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Glql.Schema;
 using Soenneker.GitLab.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
@@ -17,6 +18,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Glql
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GlqlRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The schema property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Glql.Schema.SchemaRequestBuilder Schema
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Glql.Schema.SchemaRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Glql.GlqlRequestBuilder"/> and sets the default values.
         /// </summary>

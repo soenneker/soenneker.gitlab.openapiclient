@@ -25,10 +25,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Checkpoint content</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAe660D4Bfe67Checkpoint? Checkpoint { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAe660D4Bfe67CheckpointProperty? Checkpoint { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAe660D4Bfe67Checkpoint Checkpoint { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAe660D4Bfe67CheckpointProperty Checkpoint { get; set; }
 #endif
         /// <summary>LangGraph checkpoint namespace this checkpoint belongs to. Omitted (or blank) for the flow&apos;s own top-level checkpoint lineage; set to LangGraph&apos;s namespace string for one nested subgraph invocation, e.g. a delegated subagent dispatched by DelegationNode.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -59,10 +59,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Checkpoint metadata</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAe660D4Bfe67Metadata? Metadata { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAe660D4Bfe67MetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAe660D4Bfe67Metadata Metadata { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAe660D4Bfe67MetadataProperty Metadata { get; set; }
 #endif
         /// <summary>JSON string of the model metadata</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -115,12 +115,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "channel_blobs", n => { ChannelBlobs = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAe660D4Bfe67ChannelBlobsItem>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAe660D4Bfe67ChannelBlobsItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "checkpoint", n => { Checkpoint = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAe660D4Bfe67Checkpoint>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAe660D4Bfe67Checkpoint.CreateFromDiscriminatorValue); } },
+                { "checkpoint", n => { Checkpoint = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAe660D4Bfe67CheckpointProperty>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAe660D4Bfe67CheckpointProperty.CreateFromDiscriminatorValue); } },
                 { "checkpoint_ns", n => { CheckpointNs = n.GetStringValue(); } },
                 { "compressed_checkpoint", n => { CompressedCheckpoint = n.GetStringValue(); } },
                 { "current_thread", n => { CurrentThread = n.GetIntValue(); } },
                 { "flow_metadata_json", n => { FlowMetadataJson = n.GetStringValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAe660D4Bfe67Metadata>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAe660D4Bfe67Metadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAe660D4Bfe67MetadataProperty>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAe660D4Bfe67MetadataProperty.CreateFromDiscriminatorValue); } },
                 { "model_metadata_json", n => { ModelMetadataJson = n.GetStringValue(); } },
                 { "parent_ts", n => { ParentTs = n.GetStringValue(); } },
                 { "thread_ts", n => { ThreadTs = n.GetStringValue(); } },
@@ -134,12 +134,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAe660D4Bfe67ChannelBlobsItem>("channel_blobs", ChannelBlobs);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAe660D4Bfe67Checkpoint>("checkpoint", Checkpoint);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAe660D4Bfe67CheckpointProperty>("checkpoint", Checkpoint);
             writer.WriteStringValue("checkpoint_ns", CheckpointNs);
             writer.WriteStringValue("compressed_checkpoint", CompressedCheckpoint);
             writer.WriteIntValue("current_thread", CurrentThread);
             writer.WriteStringValue("flow_metadata_json", FlowMetadataJson);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAe660D4Bfe67Metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAe660D4Bfe67MetadataProperty>("metadata", Metadata);
             writer.WriteStringValue("model_metadata_json", ModelMetadataJson);
             writer.WriteStringValue("parent_ts", ParentTs);
             writer.WriteStringValue("thread_ts", ThreadTs);

@@ -17,10 +17,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Input values for the job</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody377058D496CdJobInputs? JobInputs { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody377058D496CdJobInputsProperty? JobInputs { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody377058D496CdJobInputs JobInputs { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody377058D496CdJobInputsProperty JobInputs { get; set; }
 #endif
         /// <summary>User defined variables that will be included when running the job</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "job_inputs", n => { JobInputs = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody377058D496CdJobInputs>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody377058D496CdJobInputs.CreateFromDiscriminatorValue); } },
+                { "job_inputs", n => { JobInputs = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody377058D496CdJobInputsProperty>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody377058D496CdJobInputsProperty.CreateFromDiscriminatorValue); } },
                 { "job_variables_attributes", n => { JobVariablesAttributes = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody377058D496CdJobVariablesAttributesItem>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody377058D496CdJobVariablesAttributesItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody377058D496CdJobInputs>("job_inputs", JobInputs);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody377058D496CdJobInputsProperty>("job_inputs", JobInputs);
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody377058D496CdJobVariablesAttributesItem>("job_variables_attributes", JobVariablesAttributes);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -17,10 +17,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The list of inputs to be used to create the pipeline.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2E490B211A2CInputs? Inputs { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2E490B211A2CInputsProperty? Inputs { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2E490B211A2CInputs Inputs { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2E490B211A2CInputsProperty Inputs { get; set; }
 #endif
         /// <summary>The unique token of trigger or job token</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -33,10 +33,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The list of variables to be injected into build</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2E490B211A2CVariables? Variables { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2E490B211A2CVariablesProperty? Variables { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2E490B211A2CVariables Variables { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2E490B211A2CVariablesProperty Variables { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2E490B211A2C"/> and sets the default values.
@@ -63,9 +63,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "inputs", n => { Inputs = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2E490B211A2CInputs>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2E490B211A2CInputs.CreateFromDiscriminatorValue); } },
+                { "inputs", n => { Inputs = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2E490B211A2CInputsProperty>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2E490B211A2CInputsProperty.CreateFromDiscriminatorValue); } },
                 { "token", n => { Token = n.GetStringValue(); } },
-                { "variables", n => { Variables = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2E490B211A2CVariables>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2E490B211A2CVariables.CreateFromDiscriminatorValue); } },
+                { "variables", n => { Variables = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2E490B211A2CVariablesProperty>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2E490B211A2CVariablesProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -75,9 +75,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2E490B211A2CInputs>("inputs", Inputs);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2E490B211A2CInputsProperty>("inputs", Inputs);
             writer.WriteStringValue("token", Token);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2E490B211A2CVariables>("variables", Variables);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2E490B211A2CVariablesProperty>("variables", Variables);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

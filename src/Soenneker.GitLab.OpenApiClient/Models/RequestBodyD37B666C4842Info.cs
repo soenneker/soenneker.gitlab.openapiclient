@@ -42,18 +42,18 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Runner&apos;s features</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37B666C4842InfoFeatures? Features { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37B666C4842InfoFeaturesProperty? Features { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37B666C4842InfoFeatures Features { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37B666C4842InfoFeaturesProperty Features { get; set; }
 #endif
         /// <summary>Runner&apos;s labels</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37B666C4842InfoLabels? Labels { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37B666C4842InfoLabelsProperty? Labels { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37B666C4842InfoLabels Labels { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37B666C4842InfoLabelsProperty Labels { get; set; }
 #endif
         /// <summary>Runner&apos;s name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -115,8 +115,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "architecture", n => { Architecture = n.GetStringValue(); } },
                 { "config", n => { Config = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37B666C4842InfoConfig>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37B666C4842InfoConfig.CreateFromDiscriminatorValue); } },
                 { "executor", n => { Executor = n.GetStringValue(); } },
-                { "features", n => { Features = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37B666C4842InfoFeatures>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37B666C4842InfoFeatures.CreateFromDiscriminatorValue); } },
-                { "labels", n => { Labels = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37B666C4842InfoLabels>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37B666C4842InfoLabels.CreateFromDiscriminatorValue); } },
+                { "features", n => { Features = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37B666C4842InfoFeaturesProperty>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37B666C4842InfoFeaturesProperty.CreateFromDiscriminatorValue); } },
+                { "labels", n => { Labels = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37B666C4842InfoLabelsProperty>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37B666C4842InfoLabelsProperty.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "platform", n => { Platform = n.GetStringValue(); } },
                 { "revision", n => { Revision = n.GetStringValue(); } },
@@ -133,8 +133,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("architecture", Architecture);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37B666C4842InfoConfig>("config", Config);
             writer.WriteStringValue("executor", Executor);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37B666C4842InfoFeatures>("features", Features);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37B666C4842InfoLabels>("labels", Labels);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37B666C4842InfoFeaturesProperty>("features", Features);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37B666C4842InfoLabelsProperty>("labels", Labels);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("platform", Platform);
             writer.WriteStringValue("revision", Revision);

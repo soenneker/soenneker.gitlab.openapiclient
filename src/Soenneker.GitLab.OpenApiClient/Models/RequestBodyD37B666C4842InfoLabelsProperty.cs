@@ -8,29 +8,29 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// Additional error-type-specific data
+    /// Runner&apos;s labels
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RequestBodyC16Df62E1C21FailuresItemContext : IAdditionalDataHolder, IParsable
+    public partial class RequestBodyD37B666C4842InfoLabelsProperty : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC16Df62E1C21FailuresItemContext"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37B666C4842InfoLabelsProperty"/> and sets the default values.
         /// </summary>
-        public RequestBodyC16Df62E1C21FailuresItemContext()
+        public RequestBodyD37B666C4842InfoLabelsProperty()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC16Df62E1C21FailuresItemContext"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37B666C4842InfoLabelsProperty"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC16Df62E1C21FailuresItemContext CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37B666C4842InfoLabelsProperty CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC16Df62E1C21FailuresItemContext();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD37B666C4842InfoLabelsProperty();
         }
         /// <summary>
         /// The deserialization information for the current model

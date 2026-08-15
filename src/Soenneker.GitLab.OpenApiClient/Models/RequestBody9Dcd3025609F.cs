@@ -2731,10 +2731,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Storage paths for new projects with a weighted value ranging from 0 to 100</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FRepositoryStoragesWeighted? RepositoryStoragesWeighted { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FRepositoryStoragesWeightedProperty? RepositoryStoragesWeighted { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FRepositoryStoragesWeighted RepositoryStoragesWeighted { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FRepositoryStoragesWeightedProperty RepositoryStoragesWeighted { get; set; }
 #endif
         /// <summary>Require explicit admin approval for new signups</summary>
         public bool? RequireAdminApprovalAfterUserSignup { get; set; }
@@ -2777,10 +2777,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Definition for resource usage limits enforced in Sidekiq workers</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FResourceUsageLimits? ResourceUsageLimits { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FResourceUsageLimitsProperty? ResourceUsageLimits { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FResourceUsageLimits ResourceUsageLimits { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FResourceUsageLimitsProperty ResourceUsageLimits { get; set; }
 #endif
         /// <summary>Selected levels cannot be used by non-admin users for groups, projects or snippets. If the public level is restricted, user profiles are only visible to logged in users.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -4563,7 +4563,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "remember_me_enabled", n => { RememberMeEnabled = n.GetStringValue(); } },
                 { "repository_checks_enabled", n => { RepositoryChecksEnabled = n.GetBoolValue(); } },
                 { "repository_size_limit", n => { RepositorySizeLimit = n.GetIntValue(); } },
-                { "repository_storages_weighted", n => { RepositoryStoragesWeighted = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FRepositoryStoragesWeighted>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FRepositoryStoragesWeighted.CreateFromDiscriminatorValue); } },
+                { "repository_storages_weighted", n => { RepositoryStoragesWeighted = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FRepositoryStoragesWeightedProperty>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FRepositoryStoragesWeightedProperty.CreateFromDiscriminatorValue); } },
                 { "require_admin_approval_after_user_signup", n => { RequireAdminApprovalAfterUserSignup = n.GetBoolValue(); } },
                 { "require_admin_two_factor_authentication", n => { RequireAdminTwoFactorAuthentication = n.GetStringValue(); } },
                 { "require_email_verification_on_account_locked", n => { RequireEmailVerificationOnAccountLocked = n.GetStringValue(); } },
@@ -4571,7 +4571,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "require_sha_for_merge", n => { RequireShaForMerge = n.GetStringValue(); } },
                 { "require_two_factor_authentication", n => { RequireTwoFactorAuthentication = n.GetBoolValue(); } },
                 { "resource_access_token_notify_inherited", n => { ResourceAccessTokenNotifyInherited = n.GetStringValue(); } },
-                { "resource_usage_limits", n => { ResourceUsageLimits = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FResourceUsageLimits>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FResourceUsageLimits.CreateFromDiscriminatorValue); } },
+                { "resource_usage_limits", n => { ResourceUsageLimits = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FResourceUsageLimitsProperty>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FResourceUsageLimitsProperty.CreateFromDiscriminatorValue); } },
                 { "restricted_visibility_levels", n => { RestrictedVisibilityLevels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "root_moved_permanently_redirection", n => { RootMovedPermanentlyRedirection = n.GetStringValue(); } },
                 { "rsa_key_restriction", n => { RsaKeyRestriction = n.GetIntValue(); } },
@@ -5215,7 +5215,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("remember_me_enabled", RememberMeEnabled);
             writer.WriteBoolValue("repository_checks_enabled", RepositoryChecksEnabled);
             writer.WriteIntValue("repository_size_limit", RepositorySizeLimit);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FRepositoryStoragesWeighted>("repository_storages_weighted", RepositoryStoragesWeighted);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FRepositoryStoragesWeightedProperty>("repository_storages_weighted", RepositoryStoragesWeighted);
             writer.WriteBoolValue("require_admin_approval_after_user_signup", RequireAdminApprovalAfterUserSignup);
             writer.WriteStringValue("require_admin_two_factor_authentication", RequireAdminTwoFactorAuthentication);
             writer.WriteStringValue("require_email_verification_on_account_locked", RequireEmailVerificationOnAccountLocked);
@@ -5223,7 +5223,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("require_sha_for_merge", RequireShaForMerge);
             writer.WriteBoolValue("require_two_factor_authentication", RequireTwoFactorAuthentication);
             writer.WriteStringValue("resource_access_token_notify_inherited", ResourceAccessTokenNotifyInherited);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FResourceUsageLimits>("resource_usage_limits", ResourceUsageLimits);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FResourceUsageLimitsProperty>("resource_usage_limits", ResourceUsageLimits);
             writer.WriteCollectionOfPrimitiveValues<string>("restricted_visibility_levels", RestrictedVisibilityLevels);
             writer.WriteStringValue("root_moved_permanently_redirection", RootMovedPermanentlyRedirection);
             writer.WriteIntValue("rsa_key_restriction", RsaKeyRestriction);

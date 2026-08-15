@@ -70414,6 +70414,28 @@
         }
       }
     },
+    "/api/v4/glql/schema": {
+      "get": {
+        "tags": [
+          "GLQL"
+        ],
+        "summary": "Retrieve the GLQL schema",
+        "description": "\u0022Retrieves the GLQL schema: data sources with their filter, display and sort fields, the operator, value kind and reference type vocabularies, the available functions, and the display types a query can be rendered as.\u0022",
+        "operationId": "GetApiV4GlqlSchema",
+        "responses": {
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApiV4GlqlSchema200Response"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/v4/groups/{id}/variables": {
       "get": {
         "tags": [
@@ -121924,7 +121946,7 @@
             "nullable": true
           },
           "files_content": {
-            "$ref": "#/components/schemas/RequestBody781D3Ae061DfFilesContent"
+            "$ref": "#/components/schemas/RequestBody781D3Ae061DfFilesContentProperty"
           }
         }
       },
@@ -122365,7 +122387,7 @@
             "nullable": true
           },
           "checkpoint": {
-            "$ref": "#/components/schemas/RequestBodyAe660D4Bfe67Checkpoint"
+            "$ref": "#/components/schemas/RequestBodyAe660D4Bfe67CheckpointProperty"
           },
           "compressed_checkpoint": {
             "type": "string",
@@ -122373,7 +122395,7 @@
             "nullable": true
           },
           "metadata": {
-            "$ref": "#/components/schemas/RequestBodyAe660D4Bfe67Metadata"
+            "$ref": "#/components/schemas/RequestBodyAe660D4Bfe67MetadataProperty"
           },
           "model_metadata_json": {
             "type": "string",
@@ -122979,7 +123001,7 @@
         "type": "object",
         "properties": {
           "query": {
-            "$ref": "#/components/schemas/RequestBody8Afad96B15F2Query"
+            "$ref": "#/components/schemas/RequestBody8Afad96B15F2QueryProperty"
           },
           "queryType": {
             "type": "string",
@@ -124755,7 +124777,7 @@
             "nullable": true
           },
           "context": {
-            "$ref": "#/components/schemas/RequestBodyBddd5De04FfaContext"
+            "$ref": "#/components/schemas/RequestBodyBddd5De04FfaContextProperty"
           }
         }
       },
@@ -127417,7 +127439,7 @@
             "nullable": true
           },
           "repository_storages_weighted": {
-            "$ref": "#/components/schemas/RequestBody9Dcd3025609FRepositoryStoragesWeighted"
+            "$ref": "#/components/schemas/RequestBody9Dcd3025609FRepositoryStoragesWeightedProperty"
           },
           "require_two_factor_authentication": {
             "type": "boolean",
@@ -127789,7 +127811,7 @@
             "nullable": true
           },
           "resource_usage_limits": {
-            "$ref": "#/components/schemas/RequestBody9Dcd3025609FResourceUsageLimits"
+            "$ref": "#/components/schemas/RequestBody9Dcd3025609FResourceUsageLimitsProperty"
           },
           "vscode_extension_marketplace": {
             "$ref": "#/components/schemas/RequestBody9Dcd3025609FVscodeExtensionMarketplace"
@@ -135727,7 +135749,7 @@
             "nullable": true
           },
           "event": {
-            "$ref": "#/components/schemas/RequestBody05E3487C7Be7Event"
+            "$ref": "#/components/schemas/RequestBody05E3487C7Be7EventProperty"
           },
           "type": {
             "type": "string",
@@ -138501,7 +138523,7 @@
             "nullable": true
           },
           "optional_stages": {
-            "$ref": "#/components/schemas/RequestBodyAf60E1Cb94AdOptionalStages"
+            "$ref": "#/components/schemas/RequestBodyAf60E1Cb94AdOptionalStagesProperty"
           },
           "timeout_strategy": {
             "$ref": "#/components/schemas/RequestBodyAf60E1Cb94AdTimeoutStrategy"
@@ -140002,10 +140024,10 @@
             "example": "6d056f63e50fe6f8c5f8f4aa10edb7"
           },
           "variables": {
-            "$ref": "#/components/schemas/RequestBody2E490B211A2CVariables"
+            "$ref": "#/components/schemas/RequestBody2E490B211A2CVariablesProperty"
           },
           "inputs": {
-            "$ref": "#/components/schemas/RequestBody2E490B211A2CInputs"
+            "$ref": "#/components/schemas/RequestBody2E490B211A2CInputsProperty"
           }
         }
       },
@@ -140192,7 +140214,7 @@
             "nullable": true
           },
           "inputs": {
-            "$ref": "#/components/schemas/RequestBody16F5F03716B4Inputs"
+            "$ref": "#/components/schemas/RequestBody16F5F03716B4InputsProperty"
           }
         }
       },
@@ -140554,7 +140576,7 @@
         "type": "object",
         "properties": {
           "inputs": {
-            "$ref": "#/components/schemas/RequestBody0F9000E47C5FInputs"
+            "$ref": "#/components/schemas/RequestBody0F9000E47C5FInputsProperty"
           }
         }
       },
@@ -140570,7 +140592,7 @@
             "nullable": true
           },
           "job_inputs": {
-            "$ref": "#/components/schemas/RequestBody377058D496CdJobInputs"
+            "$ref": "#/components/schemas/RequestBody377058D496CdJobInputsProperty"
           }
         }
       },
@@ -141240,7 +141262,7 @@
         "type": "object",
         "properties": {
           "metadata": {
-            "$ref": "#/components/schemas/RequestBody790567470193Metadata"
+            "$ref": "#/components/schemas/RequestBody790567470193MetadataProperty"
           }
         }
       },
@@ -141960,7 +141982,7 @@
             "example": "namespace/project"
           },
           "additional_properties": {
-            "$ref": "#/components/schemas/RequestBody1B519Ba16Fe9AdditionalProperties"
+            "$ref": "#/components/schemas/RequestBody1B519Ba16Fe9AdditionalPropertiesProperty"
           },
           "send_to_snowplow": {
             "type": "boolean",
@@ -143443,7 +143465,7 @@
             "nullable": true
           },
           "metadata": {
-            "$ref": "#/components/schemas/RequestBodyE1213847C669AdditionalContextItemMetadata"
+            "$ref": "#/components/schemas/RequestBodyE1213847C669AdditionalContextItemMetadataProperty"
           }
         }
       },
@@ -143532,7 +143554,7 @@
             "nullable": true
           },
           "data": {
-            "$ref": "#/components/schemas/RequestBody8129788813D5EventsItemData"
+            "$ref": "#/components/schemas/RequestBody8129788813D5EventsItemDataProperty"
           }
         }
       },
@@ -143939,22 +143961,22 @@
         "type": "object",
         "properties": {
           "project_vulnerabilities_history": {
-            "$ref": "#/components/schemas/RequestBody4460F88C4A6DReportDataProjectVulnerabilitiesHistory"
+            "$ref": "#/components/schemas/RequestBody4460F88C4A6DReportDataProjectVulnerabilitiesHistoryProperty"
           },
           "group_vulnerabilities_over_time": {
-            "$ref": "#/components/schemas/RequestBody4460F88C4A6DReportDataGroupVulnerabilitiesOverTime"
+            "$ref": "#/components/schemas/RequestBody4460F88C4A6DReportDataGroupVulnerabilitiesOverTimeProperty"
           },
           "project_security_status": {
-            "$ref": "#/components/schemas/RequestBody4460F88C4A6DReportDataProjectSecurityStatus"
+            "$ref": "#/components/schemas/RequestBody4460F88C4A6DReportDataProjectSecurityStatusProperty"
           },
           "total_risk_score": {
-            "$ref": "#/components/schemas/RequestBody4460F88C4A6DReportDataTotalRiskScore"
+            "$ref": "#/components/schemas/RequestBody4460F88C4A6DReportDataTotalRiskScoreProperty"
           },
           "open_vulnerabilities_over_time": {
-            "$ref": "#/components/schemas/RequestBody4460F88C4A6DReportDataOpenVulnerabilitiesOverTime"
+            "$ref": "#/components/schemas/RequestBody4460F88C4A6DReportDataOpenVulnerabilitiesOverTimeProperty"
           },
           "vulnerabilities_by_age": {
-            "$ref": "#/components/schemas/RequestBody4460F88C4A6DReportDataVulnerabilitiesByAge"
+            "$ref": "#/components/schemas/RequestBody4460F88C4A6DReportDataVulnerabilitiesByAgeProperty"
           },
           "vulnerabilities_by_severity_count": {
             "$ref": "#/components/schemas/RequestBody4460F88C4A6DReportDataVulnerabilitiesBySeverityCount"
@@ -144258,7 +144280,7 @@
             "nullable": true
           },
           "custom_values": {
-            "$ref": "#/components/schemas/RequestBody9Dcd3025609FVscodeExtensionMarketplaceCustomValues"
+            "$ref": "#/components/schemas/RequestBody9Dcd3025609FVscodeExtensionMarketplaceCustomValuesProperty"
           }
         },
         "description": "Settings for VS Code Extension Marketplace",
@@ -146687,7 +146709,7 @@
             "nullable": true
           },
           "context": {
-            "$ref": "#/components/schemas/RequestBodyC16Df62E1C21FailuresItemContext"
+            "$ref": "#/components/schemas/RequestBodyC16Df62E1C21FailuresItemContextProperty"
           }
         }
       },
@@ -146787,7 +146809,7 @@
             "nullable": true
           },
           "parameters": {
-            "$ref": "#/components/schemas/RequestBody2014Afd4B67CStrategiesItemParameters"
+            "$ref": "#/components/schemas/RequestBody2014Afd4B67CStrategiesItemParametersProperty"
           },
           "user_list_id": {
             "type": "integer",
@@ -146818,7 +146840,7 @@
             "nullable": true
           },
           "parameters": {
-            "$ref": "#/components/schemas/RequestBodyD6C4Ed39Fc6AStrategiesItemParameters"
+            "$ref": "#/components/schemas/RequestBodyD6C4Ed39Fc6AStrategiesItemParametersProperty"
           },
           "user_list_id": {
             "type": "integer",
@@ -147146,13 +147168,13 @@
             "nullable": true
           },
           "features": {
-            "$ref": "#/components/schemas/RequestBodyD37B666C4842InfoFeatures"
+            "$ref": "#/components/schemas/RequestBodyD37B666C4842InfoFeaturesProperty"
           },
           "config": {
             "$ref": "#/components/schemas/RequestBodyD37B666C4842InfoConfig"
           },
           "labels": {
-            "$ref": "#/components/schemas/RequestBodyD37B666C4842InfoLabels"
+            "$ref": "#/components/schemas/RequestBodyD37B666C4842InfoLabelsProperty"
           }
         },
         "description": "Runner\u0027s metadata",
@@ -150729,6 +150751,11 @@
         "type": "object",
         "description": "Default response schema"
       },
+      "GetApiV4GlqlSchema200Response": {
+        "title": "DefaultResponse",
+        "type": "object",
+        "description": "Default response schema"
+      },
       "GetApiV4GroupsIdPlaceholderReassignments200Response": {
         "title": "DefaultResponse",
         "type": "object",
@@ -151598,6 +151625,18 @@
       "ApiEntitiesPlanLimitLimitsHistoryProperty": {
         "type": "object"
       },
+      "RequestBody781D3Ae061DfFilesContentProperty": {
+        "type": "object",
+        "description": "Full file contents, where keys are file paths and values are the file contents"
+      },
+      "RequestBodyAe660D4Bfe67CheckpointProperty": {
+        "type": "object",
+        "description": "Checkpoint content"
+      },
+      "RequestBodyAe660D4Bfe67MetadataProperty": {
+        "type": "object",
+        "description": "Checkpoint metadata"
+      },
       "RequestBody585Cb2928E88AllowedToPushItemProperty": {
         "type": "object"
       },
@@ -151616,11 +151655,122 @@
       "RequestBodyA8Db8C5327E1AllowedToUnprotectItemProperty": {
         "type": "object"
       },
+      "RequestBody8Afad96B15F2QueryProperty": {
+        "type": "object",
+        "description": "\u0022A valid Cube query. See reference documentation: https://cube.dev/docs/query-format\u0022"
+      },
+      "RequestBodyBddd5De04FfaContextProperty": {
+        "type": "object",
+        "description": "Context parameters (user, namespace, project). An actor context is resolved from the user. Defaults to current user."
+      },
+      "RequestBody9Dcd3025609FRepositoryStoragesWeightedProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer"
+        },
+        "description": "Storage paths for new projects with a weighted value ranging from 0 to 100"
+      },
+      "RequestBody9Dcd3025609FResourceUsageLimitsProperty": {
+        "type": "object",
+        "description": "Definition for resource usage limits enforced in Sidekiq workers"
+      },
       "RequestBodyF7A70312C3CfEventsItemProperty": {
         "type": "object"
       },
       "RequestBody586Dac379Fa0AllowedToCreateItemProperty": {
         "type": "object"
+      },
+      "RequestBody05E3487C7Be7EventProperty": {
+        "type": "object",
+        "description": "The event object with variable properties"
+      },
+      "RequestBodyAf60E1Cb94AdOptionalStagesProperty": {
+        "type": "object",
+        "description": "Optional stages of import to be performed"
+      },
+      "RequestBody2E490B211A2CVariablesProperty": {
+        "type": "object",
+        "description": "The list of variables to be injected into build"
+      },
+      "RequestBody2E490B211A2CInputsProperty": {
+        "type": "object",
+        "description": "The list of inputs to be used to create the pipeline."
+      },
+      "RequestBody16F5F03716B4InputsProperty": {
+        "type": "object",
+        "description": "The list of inputs to be used to create the pipeline."
+      },
+      "RequestBody0F9000E47C5FInputsProperty": {
+        "type": "object",
+        "description": "Input values for the job"
+      },
+      "RequestBody377058D496CdJobInputsProperty": {
+        "type": "object",
+        "description": "Input values for the job"
+      },
+      "RequestBody790567470193MetadataProperty": {
+        "type": "object",
+        "description": "The metadata for the release"
+      },
+      "RequestBody1B519Ba16Fe9AdditionalPropertiesProperty": {
+        "type": "object",
+        "description": "Additional properties to be tracked"
+      },
+      "RequestBodyE1213847C669AdditionalContextItemMetadataProperty": {
+        "type": "object",
+        "description": "Metadata of the additional context."
+      },
+      "RequestBody8129788813D5EventsItemDataProperty": {
+        "type": "object",
+        "description": "Event-specific payload"
+      },
+      "RequestBody4460F88C4A6DReportDataProjectVulnerabilitiesHistoryProperty": {
+        "type": "object",
+        "description": "This object should include an SVG asset to be rendered in PDF reports"
+      },
+      "RequestBody4460F88C4A6DReportDataGroupVulnerabilitiesOverTimeProperty": {
+        "type": "object",
+        "description": "This object should include an SVG asset to be rendered in PDF reports"
+      },
+      "RequestBody4460F88C4A6DReportDataProjectSecurityStatusProperty": {
+        "type": "object",
+        "description": "Data for rendering the project grades summary in PDF reports"
+      },
+      "RequestBody4460F88C4A6DReportDataTotalRiskScoreProperty": {
+        "type": "object",
+        "description": "Data for rendering the total risk score in PDF reports"
+      },
+      "RequestBody4460F88C4A6DReportDataOpenVulnerabilitiesOverTimeProperty": {
+        "type": "object",
+        "description": "Data for rendering the open vulnerabilities over time in PDF reports"
+      },
+      "RequestBody4460F88C4A6DReportDataVulnerabilitiesByAgeProperty": {
+        "type": "object",
+        "description": "Data for rendering the vulnerabilities by age in PDF reports"
+      },
+      "RequestBody9Dcd3025609FVscodeExtensionMarketplaceCustomValuesProperty": {
+        "type": "object",
+        "description": "VS Code Extension Marketplace URL\u0027s when preset is \u0027custom\u0027"
+      },
+      "RequestBodyC16Df62E1C21FailuresItemContextProperty": {
+        "type": "object",
+        "description": "Additional error-type-specific data"
+      },
+      "RequestBody2014Afd4B67CStrategiesItemParametersProperty": {
+        "type": "object",
+        "description": "The strategy parameters as a JSON-formatted string e.g. \u0060{\u0022userIds\u0022:\u0022user1\u0022}\u0060"
+      },
+      "RequestBodyD6C4Ed39Fc6AStrategiesItemParametersProperty": {
+        "type": "object",
+        "description": "The strategy parameters as a JSON-formatted string e.g. \u0060{\u0022userIds\u0022:\u0022user1\u0022}\u0060"
+      },
+      "RequestBodyD37B666C4842InfoFeaturesProperty": {
+        "type": "object",
+        "description": "Runner\u0027s features"
+      },
+      "RequestBodyD37B666C4842InfoLabelsProperty": {
+        "type": "object",
+        "description": "Runner\u0027s labels"
       },
       "ApiEntitiesMemberRoleBaseAccessLevel": {
         "enum": [

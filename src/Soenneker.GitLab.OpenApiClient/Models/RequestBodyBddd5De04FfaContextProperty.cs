@@ -8,29 +8,29 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// Full file contents, where keys are file paths and values are the file contents
+    /// Context parameters (user, namespace, project). An actor context is resolved from the user. Defaults to current user.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RequestBody781D3Ae061DfFilesContent : IAdditionalDataHolder, IParsable
+    public partial class RequestBodyBddd5De04FfaContextProperty : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody781D3Ae061DfFilesContent"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBddd5De04FfaContextProperty"/> and sets the default values.
         /// </summary>
-        public RequestBody781D3Ae061DfFilesContent()
+        public RequestBodyBddd5De04FfaContextProperty()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody781D3Ae061DfFilesContent"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBddd5De04FfaContextProperty"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody781D3Ae061DfFilesContent CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBddd5De04FfaContextProperty CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody781D3Ae061DfFilesContent();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBddd5De04FfaContextProperty();
         }
         /// <summary>
         /// The deserialization information for the current model

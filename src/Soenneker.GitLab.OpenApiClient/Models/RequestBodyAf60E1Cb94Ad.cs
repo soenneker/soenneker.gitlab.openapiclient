@@ -33,10 +33,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Optional stages of import to be performed</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAf60E1Cb94AdOptionalStages? OptionalStages { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAf60E1Cb94AdOptionalStagesProperty? OptionalStages { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAf60E1Cb94AdOptionalStages OptionalStages { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAf60E1Cb94AdOptionalStagesProperty OptionalStages { get; set; }
 #endif
         /// <summary>Pagination limit</summary>
         public int? PaginationLimit { get; set; }
@@ -87,7 +87,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             {
                 { "github_hostname", n => { GithubHostname = n.GetStringValue(); } },
                 { "new_name", n => { NewName = n.GetStringValue(); } },
-                { "optional_stages", n => { OptionalStages = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAf60E1Cb94AdOptionalStages>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAf60E1Cb94AdOptionalStages.CreateFromDiscriminatorValue); } },
+                { "optional_stages", n => { OptionalStages = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAf60E1Cb94AdOptionalStagesProperty>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAf60E1Cb94AdOptionalStagesProperty.CreateFromDiscriminatorValue); } },
                 { "pagination_limit", n => { PaginationLimit = n.GetIntValue(); } },
                 { "personal_access_token", n => { PersonalAccessToken = n.GetStringValue(); } },
                 { "repo_id", n => { RepoId = n.GetIntValue(); } },
@@ -104,7 +104,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("github_hostname", GithubHostname);
             writer.WriteStringValue("new_name", NewName);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAf60E1Cb94AdOptionalStages>("optional_stages", OptionalStages);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAf60E1Cb94AdOptionalStagesProperty>("optional_stages", OptionalStages);
             writer.WriteIntValue("pagination_limit", PaginationLimit);
             writer.WriteStringValue("personal_access_token", PersonalAccessToken);
             writer.WriteIntValue("repo_id", RepoId);

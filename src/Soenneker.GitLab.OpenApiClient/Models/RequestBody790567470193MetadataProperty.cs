@@ -8,29 +8,29 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// This object should include an SVG asset to be rendered in PDF reports
+    /// The metadata for the release
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RequestBody4460F88C4A6DReportDataProjectVulnerabilitiesHistory : IAdditionalDataHolder, IParsable
+    public partial class RequestBody790567470193MetadataProperty : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataProjectVulnerabilitiesHistory"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody790567470193MetadataProperty"/> and sets the default values.
         /// </summary>
-        public RequestBody4460F88C4A6DReportDataProjectVulnerabilitiesHistory()
+        public RequestBody790567470193MetadataProperty()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataProjectVulnerabilitiesHistory"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody790567470193MetadataProperty"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataProjectVulnerabilitiesHistory CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody790567470193MetadataProperty CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataProjectVulnerabilitiesHistory();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody790567470193MetadataProperty();
         }
         /// <summary>
         /// The deserialization information for the current model

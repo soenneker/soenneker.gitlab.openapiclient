@@ -8,29 +8,29 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// The strategy parameters as a JSON-formatted string e.g. `{&quot;userIds&quot;:&quot;user1&quot;}`
+    /// Full file contents, where keys are file paths and values are the file contents
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RequestBody2014Afd4B67CStrategiesItemParameters : IAdditionalDataHolder, IParsable
+    public partial class RequestBody781D3Ae061DfFilesContentProperty : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2014Afd4B67CStrategiesItemParameters"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody781D3Ae061DfFilesContentProperty"/> and sets the default values.
         /// </summary>
-        public RequestBody2014Afd4B67CStrategiesItemParameters()
+        public RequestBody781D3Ae061DfFilesContentProperty()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2014Afd4B67CStrategiesItemParameters"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody781D3Ae061DfFilesContentProperty"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2014Afd4B67CStrategiesItemParameters CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody781D3Ae061DfFilesContentProperty CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2014Afd4B67CStrategiesItemParameters();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody781D3Ae061DfFilesContentProperty();
         }
         /// <summary>
         /// The deserialization information for the current model

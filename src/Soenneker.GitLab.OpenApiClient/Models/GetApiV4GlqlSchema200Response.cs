@@ -8,29 +8,29 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// VS Code Extension Marketplace URL&apos;s when preset is &apos;custom&apos;
+    /// Default response schema
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RequestBody9Dcd3025609FVscodeExtensionMarketplaceCustomValues : IAdditionalDataHolder, IParsable
+    public partial class GetApiV4GlqlSchema200Response : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FVscodeExtensionMarketplaceCustomValues"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GlqlSchema200Response"/> and sets the default values.
         /// </summary>
-        public RequestBody9Dcd3025609FVscodeExtensionMarketplaceCustomValues()
+        public GetApiV4GlqlSchema200Response()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FVscodeExtensionMarketplaceCustomValues"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GlqlSchema200Response"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FVscodeExtensionMarketplaceCustomValues CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GlqlSchema200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FVscodeExtensionMarketplaceCustomValues();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GlqlSchema200Response();
         }
         /// <summary>
         /// The deserialization information for the current model

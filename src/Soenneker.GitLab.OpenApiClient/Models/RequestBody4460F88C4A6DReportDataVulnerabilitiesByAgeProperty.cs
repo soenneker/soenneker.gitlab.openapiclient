@@ -8,29 +8,29 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// Additional properties to be tracked
+    /// Data for rendering the vulnerabilities by age in PDF reports
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RequestBody1B519Ba16Fe9AdditionalProperties : IAdditionalDataHolder, IParsable
+    public partial class RequestBody4460F88C4A6DReportDataVulnerabilitiesByAgeProperty : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1B519Ba16Fe9AdditionalProperties"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataVulnerabilitiesByAgeProperty"/> and sets the default values.
         /// </summary>
-        public RequestBody1B519Ba16Fe9AdditionalProperties()
+        public RequestBody4460F88C4A6DReportDataVulnerabilitiesByAgeProperty()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1B519Ba16Fe9AdditionalProperties"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataVulnerabilitiesByAgeProperty"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1B519Ba16Fe9AdditionalProperties CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataVulnerabilitiesByAgeProperty CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1B519Ba16Fe9AdditionalProperties();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataVulnerabilitiesByAgeProperty();
         }
         /// <summary>
         /// The deserialization information for the current model

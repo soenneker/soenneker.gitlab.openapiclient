@@ -17,10 +17,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The list of inputs to be used to create the pipeline.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody16F5F03716B4Inputs? Inputs { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody16F5F03716B4InputsProperty? Inputs { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody16F5F03716B4Inputs Inputs { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody16F5F03716B4InputsProperty Inputs { get; set; }
 #endif
         /// <summary>Reference</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -63,7 +63,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "inputs", n => { Inputs = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody16F5F03716B4Inputs>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody16F5F03716B4Inputs.CreateFromDiscriminatorValue); } },
+                { "inputs", n => { Inputs = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody16F5F03716B4InputsProperty>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody16F5F03716B4InputsProperty.CreateFromDiscriminatorValue); } },
                 { "ref", n => { Ref = n.GetStringValue(); } },
                 { "variables", n => { Variables = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody16F5F03716B4VariablesItem>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody16F5F03716B4VariablesItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
@@ -75,7 +75,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody16F5F03716B4Inputs>("inputs", Inputs);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody16F5F03716B4InputsProperty>("inputs", Inputs);
             writer.WriteStringValue("ref", Ref);
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody16F5F03716B4VariablesItem>("variables", Variables);
             writer.WriteAdditionalData(AdditionalData);

@@ -25,10 +25,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Full file contents, where keys are file paths and values are the file contents</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody781D3Ae061DfFilesContent? FilesContent { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody781D3Ae061DfFilesContentProperty? FilesContent { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody781D3Ae061DfFilesContent FilesContent { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody781D3Ae061DfFilesContentProperty FilesContent { get; set; }
 #endif
         /// <summary>Description of the merge request</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -72,7 +72,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "diffs", n => { Diffs = n.GetStringValue(); } },
-                { "files_content", n => { FilesContent = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody781D3Ae061DfFilesContent>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody781D3Ae061DfFilesContent.CreateFromDiscriminatorValue); } },
+                { "files_content", n => { FilesContent = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody781D3Ae061DfFilesContentProperty>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody781D3Ae061DfFilesContentProperty.CreateFromDiscriminatorValue); } },
                 { "mr_description", n => { MrDescription = n.GetStringValue(); } },
                 { "mr_title", n => { MrTitle = n.GetStringValue(); } },
             };
@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("diffs", Diffs);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody781D3Ae061DfFilesContent>("files_content", FilesContent);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody781D3Ae061DfFilesContentProperty>("files_content", FilesContent);
             writer.WriteStringValue("mr_description", MrDescription);
             writer.WriteStringValue("mr_title", MrTitle);
             writer.WriteAdditionalData(AdditionalData);

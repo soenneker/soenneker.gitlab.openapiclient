@@ -18,10 +18,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>VS Code Extension Marketplace URL&apos;s when preset is &apos;custom&apos;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FVscodeExtensionMarketplaceCustomValues? CustomValues { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FVscodeExtensionMarketplaceCustomValuesProperty? CustomValues { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FVscodeExtensionMarketplaceCustomValues CustomValues { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FVscodeExtensionMarketplaceCustomValuesProperty CustomValues { get; set; }
 #endif
         /// <summary>Enables VS Code Extension Marketplace for Web IDE and Workspaces</summary>
         public bool? Enabled { get; set; }
@@ -58,7 +58,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "custom_values", n => { CustomValues = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FVscodeExtensionMarketplaceCustomValues>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FVscodeExtensionMarketplaceCustomValues.CreateFromDiscriminatorValue); } },
+                { "custom_values", n => { CustomValues = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FVscodeExtensionMarketplaceCustomValuesProperty>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FVscodeExtensionMarketplaceCustomValuesProperty.CreateFromDiscriminatorValue); } },
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
                 { "preset", n => { Preset = n.GetStringValue(); } },
             };
@@ -70,7 +70,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FVscodeExtensionMarketplaceCustomValues>("custom_values", CustomValues);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FVscodeExtensionMarketplaceCustomValuesProperty>("custom_values", CustomValues);
             writer.WriteBoolValue("enabled", Enabled);
             writer.WriteStringValue("preset", Preset);
             writer.WriteAdditionalData(AdditionalData);

@@ -35,10 +35,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Metadata of the additional context.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE1213847C669AdditionalContextItemMetadata? Metadata { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE1213847C669AdditionalContextItemMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE1213847C669AdditionalContextItemMetadata Metadata { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE1213847C669AdditionalContextItemMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE1213847C669AdditionalContextItem"/> and sets the default values.
@@ -68,7 +68,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "category", n => { Category = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE1213847C669AdditionalContextItemCategory>(); } },
                 { "content", n => { Content = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE1213847C669AdditionalContextItemMetadata>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE1213847C669AdditionalContextItemMetadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE1213847C669AdditionalContextItemMetadataProperty>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE1213847C669AdditionalContextItemMetadataProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -81,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE1213847C669AdditionalContextItemCategory>("category", Category);
             writer.WriteStringValue("content", Content);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE1213847C669AdditionalContextItemMetadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE1213847C669AdditionalContextItemMetadataProperty>("metadata", Metadata);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

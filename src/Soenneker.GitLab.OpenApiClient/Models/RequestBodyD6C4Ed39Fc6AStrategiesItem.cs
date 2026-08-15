@@ -29,10 +29,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The strategy parameters as a JSON-formatted string e.g. `{&quot;userIds&quot;:&quot;user1&quot;}`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD6C4Ed39Fc6AStrategiesItemParameters? Parameters { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD6C4Ed39Fc6AStrategiesItemParametersProperty? Parameters { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD6C4Ed39Fc6AStrategiesItemParameters Parameters { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD6C4Ed39Fc6AStrategiesItemParametersProperty Parameters { get; set; }
 #endif
         /// <summary>Array of scopes for the strategy</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -72,7 +72,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "_destroy", n => { Destroy = n.GetBoolValue(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "parameters", n => { Parameters = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD6C4Ed39Fc6AStrategiesItemParameters>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD6C4Ed39Fc6AStrategiesItemParameters.CreateFromDiscriminatorValue); } },
+                { "parameters", n => { Parameters = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD6C4Ed39Fc6AStrategiesItemParametersProperty>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD6C4Ed39Fc6AStrategiesItemParametersProperty.CreateFromDiscriminatorValue); } },
                 { "scopes", n => { Scopes = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD6C4Ed39Fc6AStrategiesItemScopesItem>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD6C4Ed39Fc6AStrategiesItemScopesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "user_list_id", n => { UserListId = n.GetIntValue(); } },
             };
@@ -87,7 +87,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("_destroy", Destroy);
             writer.WriteIntValue("id", Id);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD6C4Ed39Fc6AStrategiesItemParameters>("parameters", Parameters);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD6C4Ed39Fc6AStrategiesItemParametersProperty>("parameters", Parameters);
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD6C4Ed39Fc6AStrategiesItemScopesItem>("scopes", Scopes);
             writer.WriteIntValue("user_list_id", UserListId);
             writer.WriteAdditionalData(AdditionalData);

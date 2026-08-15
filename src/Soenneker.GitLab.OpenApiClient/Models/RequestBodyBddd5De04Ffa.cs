@@ -17,10 +17,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Context parameters (user, namespace, project). An actor context is resolved from the user. Defaults to current user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBddd5De04FfaContext? Context { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBddd5De04FfaContextProperty? Context { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBddd5De04FfaContext Context { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBddd5De04FfaContextProperty Context { get; set; }
 #endif
         /// <summary>The variant name to assign (e.g., control, candidate)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "context", n => { Context = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBddd5De04FfaContext>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBddd5De04FfaContext.CreateFromDiscriminatorValue); } },
+                { "context", n => { Context = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBddd5De04FfaContextProperty>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBddd5De04FfaContextProperty.CreateFromDiscriminatorValue); } },
                 { "variant", n => { Variant = n.GetStringValue(); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBddd5De04FfaContext>("context", Context);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBddd5De04FfaContextProperty>("context", Context);
             writer.WriteStringValue("variant", Variant);
             writer.WriteAdditionalData(AdditionalData);
         }

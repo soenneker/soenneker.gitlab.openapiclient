@@ -8,29 +8,29 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// Checkpoint content
+    /// Additional error-type-specific data
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RequestBodyAe660D4Bfe67Checkpoint : IAdditionalDataHolder, IParsable
+    public partial class RequestBodyC16Df62E1C21FailuresItemContextProperty : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAe660D4Bfe67Checkpoint"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC16Df62E1C21FailuresItemContextProperty"/> and sets the default values.
         /// </summary>
-        public RequestBodyAe660D4Bfe67Checkpoint()
+        public RequestBodyC16Df62E1C21FailuresItemContextProperty()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAe660D4Bfe67Checkpoint"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC16Df62E1C21FailuresItemContextProperty"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAe660D4Bfe67Checkpoint CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC16Df62E1C21FailuresItemContextProperty CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAe660D4Bfe67Checkpoint();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC16Df62E1C21FailuresItemContextProperty();
         }
         /// <summary>
         /// The deserialization information for the current model
