@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>&quot;Status of the run. Accepts: [\&quot;RUNNING\&quot;, \&quot;SCHEDULED\&quot;, \&quot;FINISHED\&quot;, \&quot;FAILED\&quot;, \&quot;KILLED\&quot;].&quot;</summary>
+    /// <summary>Status of the run. Accepts: [&quot;RUNNING&quot;, &quot;SCHEDULED&quot;, &quot;FINISHED&quot;, &quot;FAILED&quot;, &quot;KILLED&quot;].</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum RequestBodyE087351Bb683Status
     {

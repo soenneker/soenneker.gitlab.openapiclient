@@ -15,7 +15,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The type of the export file</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody73C33B7E94B7ExportType? ExportType { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.SbomExportType? ExportType { get; set; }
         /// <summary>Send an email when the export completes</summary>
         public bool? SendEmail { get; set; }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "export_type", n => { ExportType = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody73C33B7E94B7ExportType>(); } },
+                { "export_type", n => { ExportType = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.SbomExportType>(); } },
                 { "send_email", n => { SendEmail = n.GetBoolValue(); } },
             };
         }
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody73C33B7E94B7ExportType>("export_type", ExportType);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.SbomExportType>("export_type", ExportType);
             writer.WriteBoolValue("send_email", SendEmail);
             writer.WriteAdditionalData(AdditionalData);
         }

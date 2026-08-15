@@ -153,7 +153,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ci.Lint
             /// <summary>If the list of jobs that would exist in a static check or pipeline        simulation should be included in the response. This is false by default</summary>
             [QueryParameter("include_jobs")]
             public bool? IncludeJobs { get; set; }
-            /// <summary>&quot;Deprecated: Use dry_run_ref instead&quot;</summary>
+            /// <summary>Deprecated: Use dry_run_ref instead</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("ref")]
@@ -163,7 +163,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ci.Lint
             [QueryParameter("ref")]
             public string Ref { get; set; }
 #endif
-            /// <summary>&quot;Deprecated: Use content_ref instead&quot;</summary>
+            /// <summary>Deprecated: Use content_ref instead</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("sha")]

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Available filters: [environment_scope]. Example: filter[environment_scope]=production&quot;
+    /// Available filters: [environment_scope]. Example: filter[environment_scope]=production
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RequestBody0Eb6615434AbFilter : IAdditionalDataHolder, IParsable

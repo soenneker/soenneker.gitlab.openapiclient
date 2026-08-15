@@ -30,7 +30,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string EnvironmentScope { get; set; }
 #endif
-        /// <summary>&quot;Available filters: [environment_scope]. Example: filter[environment_scope]=production&quot;</summary>
+        /// <summary>Available filters: [environment_scope]. Example: filter[environment_scope]=production</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0Eb6615434AbFilter? Filter { get; set; }
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Value { get; set; }
 #endif
-        /// <summary>&quot;The type of the variable. Default: env_var&quot;</summary>
+        /// <summary>The type of the variable. Default: env_var</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0Eb6615434AbVariableType? VariableType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0Eb6615434Ab"/> and sets the default values.

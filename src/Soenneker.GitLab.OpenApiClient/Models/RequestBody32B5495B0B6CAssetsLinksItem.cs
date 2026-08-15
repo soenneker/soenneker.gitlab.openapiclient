@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string DirectAssetPath { get; set; }
 #endif
-        /// <summary>&quot;Deprecated: optional path for a direct asset link&quot;</summary>
+        /// <summary>Deprecated: optional path for a direct asset link</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Filepath { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Filepath { get; set; }
 #endif
-        /// <summary>&quot;The type of the link: `other`, `runbook`, `image`, `package`. Defaults to `other`&quot;</summary>
+        /// <summary>The type of the link: `other`, `runbook`, `image`, `package`. Defaults to `other`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? LinkType { get; set; }

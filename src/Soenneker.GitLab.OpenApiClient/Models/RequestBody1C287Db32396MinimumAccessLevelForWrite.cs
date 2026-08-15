@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>&quot;Minimum GitLab access level required to write to the Terraform state. Valid values: developer, maintainer, owner, admin.&quot;</summary>
+    /// <summary>Minimum GitLab access level required to write to the Terraform state. Valid values: developer, maintainer, owner, admin.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum RequestBody1C287Db32396MinimumAccessLevelForWrite
     {

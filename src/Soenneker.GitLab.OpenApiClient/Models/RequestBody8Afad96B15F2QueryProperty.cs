@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;A valid Cube query. See reference documentation: https://cube.dev/docs/query-format&quot;
+    /// A valid Cube query. See reference documentation: https://cube.dev/docs/query-format
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RequestBody8Afad96B15F2QueryProperty : IAdditionalDataHolder, IParsable

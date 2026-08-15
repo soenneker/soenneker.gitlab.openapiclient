@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.Item.Bridges;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.Item.Cancel;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.Item.Jobs;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.Item.Metadata;
@@ -25,6 +26,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.Item
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithPipelineItemRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The bridges property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.Item.Bridges.BridgesRequestBuilder Bridges
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.Item.Bridges.BridgesRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The cancel property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.Item.Cancel.CancelRequestBuilder Cancel
         {
@@ -132,7 +138,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.Item
 #endif
             var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
         }
         /// <summary>

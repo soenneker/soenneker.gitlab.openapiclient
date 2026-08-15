@@ -97,7 +97,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositor
 #endif
             var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
         }
         /// <summary>
@@ -167,7 +166,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositor
             [QueryParameter("name_regex_keep")]
             public string NameRegexKeep { get; set; }
 #endif
-            /// <summary>&quot;Delete older than: 1h, 1d, 1month&quot;</summary>
+            /// <summary>Delete older than: 1h, 1d, 1month</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("older_than")]

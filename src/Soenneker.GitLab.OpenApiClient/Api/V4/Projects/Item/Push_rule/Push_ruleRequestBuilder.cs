@@ -124,7 +124,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Push_rule
 #endif
             var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
         }
         /// <summary>

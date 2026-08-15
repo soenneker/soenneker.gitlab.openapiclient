@@ -120,10 +120,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Iterations
             /// <summary>Return &quot;opened&quot;, &quot;upcoming&quot;, &quot;current (previously started)&quot;, &quot;closed&quot;, or &quot;all&quot; iterations. Filtering by `started` state is deprecated starting with 14.1, please use `current` instead.</summary>
             [QueryParameter("state")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdIterationsStateParameter? State { get; set; }
-            /// <summary>&quot;Return milestones updated after the specified datetime. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ&quot;</summary>
+            /// <summary>Return milestones updated after the specified datetime. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ</summary>
             [QueryParameter("updated_after")]
             public DateTimeOffset? UpdatedAfter { get; set; }
-            /// <summary>&quot;Return milestones updated before the specified datetime. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ&quot;</summary>
+            /// <summary>Return milestones updated before the specified datetime. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ</summary>
             [QueryParameter("updated_before")]
             public DateTimeOffset? UpdatedBefore { get; set; }
         }

@@ -178,7 +178,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Environments
             [QueryParameter("search")]
             public string Search { get; set; }
 #endif
-            /// <summary>&quot;List all environments that match a specific state. Accepted values: `available`, `stopping`, or `stopped`. If no state value given, returns all environments&quot;</summary>
+            /// <summary>List all environments that match a specific state. Accepted values: `available`, `stopping`, or `stopped`. If no state value given, returns all environments</summary>
             [QueryParameter("states")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdEnvironmentsStatesParameter? States { get; set; }
         }

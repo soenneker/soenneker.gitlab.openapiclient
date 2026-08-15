@@ -23,7 +23,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody70F8C0578B6AData Data { get; set; }
 #endif
         /// <summary>The event topic</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody70F8C0578B6ATopic? Topic { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ComGitlabCdDeploymentTopic? Topic { get; set; }
         /// <summary>The event type</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -58,7 +58,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "data", n => { Data = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody70F8C0578B6AData>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody70F8C0578B6AData.CreateFromDiscriminatorValue); } },
-                { "topic", n => { Topic = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody70F8C0578B6ATopic>(); } },
+                { "topic", n => { Topic = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ComGitlabCdDeploymentTopic>(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
         }
@@ -70,7 +70,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody70F8C0578B6AData>("data", Data);
-            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody70F8C0578B6ATopic>("topic", Topic);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ComGitlabCdDeploymentTopic>("topic", Topic);
             writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

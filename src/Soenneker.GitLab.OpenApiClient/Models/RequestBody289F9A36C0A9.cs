@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Value { get; set; }
 #endif
-        /// <summary>&quot;The type of the variable. Default: env_var&quot;</summary>
+        /// <summary>The type of the variable. Default: env_var</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody289F9A36C0A9VariableType? VariableType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody289F9A36C0A9"/> and sets the default values.

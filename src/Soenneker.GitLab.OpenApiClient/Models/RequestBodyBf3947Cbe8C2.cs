@@ -18,7 +18,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>End of the date range</summary>
         public Date? EndDate { get; set; }
         /// <summary>The format of export to be generated</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBf3947Cbe8C2ExportFormat? ExportFormat { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.CsvExportFormat? ExportFormat { get; set; }
         /// <summary>Start of the date range</summary>
         public Date? StartDate { get; set; }
         /// <summary>
@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "end_date", n => { EndDate = n.GetDateValue(); } },
-                { "export_format", n => { ExportFormat = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBf3947Cbe8C2ExportFormat>(); } },
+                { "export_format", n => { ExportFormat = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.CsvExportFormat>(); } },
                 { "start_date", n => { StartDate = n.GetDateValue(); } },
             };
         }
@@ -59,7 +59,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateValue("end_date", EndDate);
-            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBf3947Cbe8C2ExportFormat>("export_format", ExportFormat);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.CsvExportFormat>("export_format", ExportFormat);
             writer.WriteDateValue("start_date", StartDate);
             writer.WriteAdditionalData(AdditionalData);
         }

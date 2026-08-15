@@ -65,7 +65,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>Controls visibility of the container registry. One of `disabled`, `private` or `enabled`. `private` will make the container registry accessible only to project members (reporter role and above). `enabled` will make the container registry accessible to everyone who has access to the project. `disabled` will disable the container registry</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1C830D224756OverrideParamsContainerRegistryAccessLevel? ContainerRegistryAccessLevel { get; set; }
-        /// <summary>&quot;Deprecated: Use :container_registry_access_level instead. Flag indication if the container registry is enabled for that project&quot;</summary>
+        /// <summary>Deprecated: Use :container_registry_access_level instead. Flag indication if the container registry is enabled for that project</summary>
         public bool? ContainerRegistryEnabled { get; set; }
         /// <summary>The description of the project</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public bool? DuoSastVrWorkflowEnabled { get; set; }
         /// <summary>Enable GitLab Duo Secret Detection false positive detection for this project</summary>
         public bool? DuoSecretDetectionFpEnabled { get; set; }
-        /// <summary>&quot;Deprecated: Use emails_enabled instead.&quot;</summary>
+        /// <summary>Deprecated: Use emails_enabled instead.</summary>
         public bool? EmailsDisabled { get; set; }
         /// <summary>Enable email notifications</summary>
         public bool? EmailsEnabled { get; set; }
@@ -183,7 +183,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public bool? OnlyAllowMergeIfPipelineSucceeds { get; set; }
         /// <summary>Controls visibility of the package registry. One of `disabled`, `private`, `enabled` or `public`. `private` will make the package registry accessible only to project members (reporter role and above). `enabled` will make the package registry accessible to everyone who has access to the project. `public` will make the package registry accessible to everyone. `disabled` will disable the package registry</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1C830D224756OverrideParamsPackageRegistryAccessLevel? PackageRegistryAccessLevel { get; set; }
-        /// <summary>&quot;Deprecated: Use :package_registry_access_level instead. Enable project packages feature&quot;</summary>
+        /// <summary>Deprecated: Use :package_registry_access_level instead. Enable project packages feature</summary>
         public bool? PackagesEnabled { get; set; }
         /// <summary>Pages access level. One of `disabled`, `private`, `enabled` or `public`</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody1C830D224756OverrideParamsPagesAccessLevel? PagesAccessLevel { get; set; }
@@ -191,7 +191,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public bool? PreventMergeWithoutJiraIssue { get; set; }
         /// <summary>Show link to create/view merge request when pushing from the command line</summary>
         public bool? PrintingMergeRequestLinkEnabled { get; set; }
-        /// <summary>&quot;Deprecated: Use public_jobs instead.&quot;</summary>
+        /// <summary>Deprecated: Use public_jobs instead.</summary>
         public bool? PublicBuilds { get; set; }
         /// <summary>Perform public builds</summary>
         public bool? PublicJobs { get; set; }
@@ -251,7 +251,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string SuggestionCommitMessage { get; set; }
 #endif
-        /// <summary>&quot;Deprecated: Use :topics instead&quot;</summary>
+        /// <summary>Deprecated: Use :topics instead</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? TagList { get; set; }

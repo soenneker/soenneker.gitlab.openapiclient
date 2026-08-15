@@ -127,7 +127,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Application.Plan_limits
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Plan_limitsRequestBuilderGetQueryParameters 
         {
-            /// <summary>&quot;Name of the plan to get the limits from. Default: default.&quot;</summary>
+            /// <summary>Name of the plan to get the limits from. Default: default.</summary>
             [QueryParameter("plan_name")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ApplicationPlanLimitsPlanNameParameter? PlanName { get; set; }
         }

@@ -24,7 +24,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>Maximum number of runs/candidates to fetch in a page. Default is 200, maximum in 1000</summary>
         public int? MaxResults { get; set; }
-        /// <summary>&quot;Order criteria. Can be by a column of the run/candidate (created_at, name) or by a metric ifprefixed by `metrics`. Valid examples: `created_at`, `created_at DESC`, `metrics.my_metric DESC`Sorting by candidate parameter or metadata is not supported.&quot;</summary>
+        /// <summary>Order criteria. Can be by a column of the run/candidate (created_at, name) or by a metric ifprefixed by `metrics`. Valid examples: `created_at`, `created_at DESC`, `metrics.my_metric DESC`Sorting by candidate parameter or metadata is not supported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OrderBy { get; set; }

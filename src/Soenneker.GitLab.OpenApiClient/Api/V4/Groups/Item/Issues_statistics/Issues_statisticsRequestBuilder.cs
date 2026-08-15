@@ -36,20 +36,20 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics
         /// <summary>
         /// Retrieves statistics for issues in a specified group.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdIssuesStatistics200Response"/></returns>
+        /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdIssuesStatistics200Response?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics.Issues_statisticsRequestBuilder.Issues_statisticsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics.Issues_statisticsRequestBuilder.Issues_statisticsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdIssuesStatistics200Response> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics.Issues_statisticsRequestBuilder.Issues_statisticsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics.Issues_statisticsRequestBuilder.Issues_statisticsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdIssuesStatistics200Response>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdIssuesStatistics200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieves statistics for issues in a specified group.
@@ -67,7 +67,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
         }
         /// <summary>
@@ -123,7 +122,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics
             /// <summary>The ID of an epic associated with the issues</summary>
             [QueryParameter("epic_id")]
             public int? EpicId { get; set; }
-            /// <summary>&quot;The health status of the issue. Must be one of: on_track, needs_attention, at_risk, none, any&quot;</summary>
+            /// <summary>The health status of the issue. Must be one of: on_track, needs_attention, at_risk, none, any</summary>
             [QueryParameter("health_status")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdIssuesStatisticsHealthStatusParameter? HealthStatus { get; set; }
             /// <summary>The IID array of issues</summary>
@@ -277,7 +276,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics
             /// <summary>Return issues without the specified weight</summary>
             [QueryParameter("not%5Bweight%5D")]
             public int? Notweight { get; set; }
-            /// <summary>&quot;Return issues for the given scope: `created_by_me`, `assigned_to_me` or `all`&quot;</summary>
+            /// <summary>Return issues for the given scope: `created_by_me`, `assigned_to_me` or `all`</summary>
             [QueryParameter("scope")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdIssuesStatisticsScopeParameter? Scope { get; set; }
             /// <summary>Search issues for text present in the title, description, or any combination of these</summary>

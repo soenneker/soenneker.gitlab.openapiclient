@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>&quot;The severity of the issue. Only applies to incidents. Accepts: unknown, low, medium, high, critical&quot;</summary>
+    /// <summary>The severity of the issue. Only applies to incidents. Accepts: unknown, low, medium, high, critical</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum RequestBody87Ffe09Df217Severity
     {

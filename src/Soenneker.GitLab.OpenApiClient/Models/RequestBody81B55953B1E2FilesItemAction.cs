@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>&quot;The type of action to perform on the file, must be one of: create, update, delete, move&quot;</summary>
+    /// <summary>The type of action to perform on the file, must be one of: create, update, delete, move</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum RequestBody81B55953B1E2FilesItemAction
     {

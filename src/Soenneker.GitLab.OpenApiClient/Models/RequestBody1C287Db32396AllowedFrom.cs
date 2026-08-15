@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>&quot;Source restriction for write requests. Default: anywhere. Valid values: anywhere, ci_only, ci_on_protected_branch_only.&quot;</summary>
+    /// <summary>Source restriction for write requests. Default: anywhere. Valid values: anywhere, ci_only, ci_on_protected_branch_only.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum RequestBody1C287Db32396AllowedFrom
     {

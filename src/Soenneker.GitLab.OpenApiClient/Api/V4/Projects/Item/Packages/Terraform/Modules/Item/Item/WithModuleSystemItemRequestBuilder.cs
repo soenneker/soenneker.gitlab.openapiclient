@@ -36,20 +36,19 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Terraform
         /// <summary>
         /// Downloads the latest version of a specified module. This feature was introduced in GitLab 16.7.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdPackagesTerraformModulesModuleNameModuleSystem200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdPackagesTerraformModulesModuleNameModuleSystem200Response?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Terraform.Modules.Item.Item.WithModuleSystemItemRequestBuilder.WithModuleSystemItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Terraform.Modules.Item.Item.WithModuleSystemItemRequestBuilder.WithModuleSystemItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdPackagesTerraformModulesModuleNameModuleSystem200Response> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Terraform.Modules.Item.Item.WithModuleSystemItemRequestBuilder.WithModuleSystemItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Terraform.Modules.Item.Item.WithModuleSystemItemRequestBuilder.WithModuleSystemItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdPackagesTerraformModulesModuleNameModuleSystem200Response>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdPackagesTerraformModulesModuleNameModuleSystem200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Downloads the latest version of a specified module. This feature was introduced in GitLab 16.7.
@@ -67,7 +66,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Terraform
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
         }
         /// <summary>
@@ -87,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Terraform
         {
             /// <summary>Terraform get redirection flag</summary>
             [QueryParameter("terraform%2Dget")]
-            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdPackagesTerraformModulesModuleNameModuleSystemTerraformGetParameter? TerraformGet { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.Value1TerraformGet? TerraformGet { get; set; }
         }
     }
 }

@@ -95,10 +95,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Search.Semantic
             [QueryParameter("directory_path")]
             public string DirectoryPath { get; set; }
 #endif
-            /// <summary>&quot;Number of nearest neighbours to retrieve internally (default: 64). Higher values improve recall at the cost of latency.&quot;</summary>
+            /// <summary>Number of nearest neighbours to retrieve internally (default: 64). Higher values improve recall at the cost of latency.</summary>
             [QueryParameter("knn")]
             public int? Knn { get; set; }
-            /// <summary>&quot;Maximum number of results to return (default: 20).&quot;</summary>
+            /// <summary>Maximum number of results to return (default: 20).</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
             /// <summary>Natural language search query (e.g. &quot;authentication middleware&quot;, &quot;rate limiting logic&quot;)</summary>

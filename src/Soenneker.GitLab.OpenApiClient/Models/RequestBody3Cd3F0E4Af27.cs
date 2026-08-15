@@ -40,7 +40,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3Cd3F0E4Af27Output Output { get; set; }
 #endif
-        /// <summary>&quot;Job&apos;s status: running, success, failed&quot;</summary>
+        /// <summary>Job&apos;s status: running, success, failed</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? State { get; set; }

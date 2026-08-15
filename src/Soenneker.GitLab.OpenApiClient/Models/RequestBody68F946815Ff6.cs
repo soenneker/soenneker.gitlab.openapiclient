@@ -36,7 +36,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Value { get; set; }
 #endif
-        /// <summary>&quot;The type of a variable. Available types are: env_var (default) and file&quot;</summary>
+        /// <summary>The type of a variable. Available types are: env_var (default) and file</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody68F946815Ff6VariableType? VariableType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody68F946815Ff6"/> and sets the default values.

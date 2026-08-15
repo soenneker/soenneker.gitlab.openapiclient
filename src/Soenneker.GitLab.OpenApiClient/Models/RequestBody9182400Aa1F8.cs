@@ -50,7 +50,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>Indicates due date should be sourced from due_date_fixed field not the issue milestones</summary>
         public bool? DueDateIsFixed { get; set; }
-        /// <summary>&quot;Deprecated: use due_date_fixed instead&quot;</summary>
+        /// <summary>Deprecated: use due_date_fixed instead</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EndDate { get; set; }
@@ -76,7 +76,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<string> RemoveLabels { get; set; }
 #endif
-        /// <summary>&quot;Deprecated: use start_date_fixed instead&quot;</summary>
+        /// <summary>Deprecated: use start_date_fixed instead</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? StartDate { get; set; }

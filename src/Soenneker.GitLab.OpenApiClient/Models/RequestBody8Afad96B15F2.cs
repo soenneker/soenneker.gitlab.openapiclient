@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether to include the access token in the response. (Only required for funnel generation.)</summary>
         public bool? IncludeToken { get; set; }
-        /// <summary>&quot;A valid Cube query. See reference documentation: https://cube.dev/docs/query-format&quot;</summary>
+        /// <summary>A valid Cube query. See reference documentation: https://cube.dev/docs/query-format</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8Afad96B15F2QueryProperty? Query { get; set; }

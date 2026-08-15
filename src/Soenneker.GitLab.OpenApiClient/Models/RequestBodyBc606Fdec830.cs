@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>The access level of the runner</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBc606Fdec830AccessLevel? AccessLevel { get; set; }
-        /// <summary>&quot;Deprecated: Use `paused` instead. Specifies if the runner is allowed to receive new jobs&quot;</summary>
+        /// <summary>Deprecated: Use `paused` instead. Specifies if the runner is allowed to receive new jobs</summary>
         public bool? Active { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -36,7 +36,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>Specifies if the runner should be locked for the current project</summary>
         public bool? Locked { get; set; }
-        /// <summary>&quot;Deprecated: see `maintenance_note`&quot;</summary>
+        /// <summary>Deprecated: see `maintenance_note`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MaintainerNote { get; set; }

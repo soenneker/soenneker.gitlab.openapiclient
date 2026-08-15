@@ -64,7 +64,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public int? EpicId { get; set; }
         /// <summary>The IID of an epic to associate the issue with (deprecated)</summary>
         public int? EpicIid { get; set; }
-        /// <summary>&quot;The type of the issue. Accepts: issue, incident, test_case, requirement, task, ticket&quot;</summary>
+        /// <summary>The type of the issue. Accepts: issue, incident, test_case, requirement, task, ticket</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody87Ffe09Df217IssueType? IssueType { get; set; }
         /// <summary>Comma-separated list of label names</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -92,7 +92,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<string> RemoveLabels { get; set; }
 #endif
-        /// <summary>&quot;The severity of the issue. Only applies to incidents. Accepts: unknown, low, medium, high, critical&quot;</summary>
+        /// <summary>The severity of the issue. Only applies to incidents. Accepts: unknown, low, medium, high, critical</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody87Ffe09Df217Severity? Severity { get; set; }
         /// <summary>Date string in the format YEAR-MONTH-DAY</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

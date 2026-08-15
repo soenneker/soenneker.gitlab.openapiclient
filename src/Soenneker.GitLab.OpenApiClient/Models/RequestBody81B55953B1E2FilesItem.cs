@@ -12,7 +12,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     public partial class RequestBody81B55953B1E2FilesItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>&quot;The type of action to perform on the file, must be one of: create, update, delete, move&quot;</summary>
+        /// <summary>The type of action to perform on the file, must be one of: create, update, delete, move</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody81B55953B1E2FilesItemAction? Action { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }

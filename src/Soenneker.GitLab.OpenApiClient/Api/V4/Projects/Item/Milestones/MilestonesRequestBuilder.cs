@@ -153,7 +153,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Milestones
             /// <summary>Include milestones from all parent groups</summary>
             [QueryParameter("include_ancestors")]
             public bool? IncludeAncestors { get; set; }
-            /// <summary>&quot;Deprecated: see `include_ancestors`&quot;</summary>
+            /// <summary>Deprecated: see `include_ancestors`</summary>
             [QueryParameter("include_parent_milestones")]
             public bool? IncludeParentMilestones { get; set; }
             /// <summary>Current page number</summary>
@@ -185,10 +185,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Milestones
             [QueryParameter("title")]
             public string Title { get; set; }
 #endif
-            /// <summary>&quot;Return milestones updated after the specified datetime. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ&quot;</summary>
+            /// <summary>Return milestones updated after the specified datetime. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ</summary>
             [QueryParameter("updated_after")]
             public DateTimeOffset? UpdatedAfter { get; set; }
-            /// <summary>&quot;Return milestones updated before the specified datetime. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ&quot;</summary>
+            /// <summary>Return milestones updated before the specified datetime. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ</summary>
             [QueryParameter("updated_before")]
             public DateTimeOffset? UpdatedBefore { get; set; }
         }

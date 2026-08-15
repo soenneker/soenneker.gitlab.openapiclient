@@ -26,7 +26,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Require admin users to re-authenticate for administrative (i.e. potentially dangerous) operations</summary>
         public bool? AdminMode { get; set; }
-        /// <summary>&quot;Deprecated: Use :abuse_notification_email instead. Abuse reports will be sent to this address if it is set. Abuse reports are always available in the admin area.&quot;</summary>
+        /// <summary>Deprecated: Use :abuse_notification_email instead. Abuse reports will be sent to this address if it is set. Abuse reports are always available in the admin area.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AdminNotificationEmail { get; set; }
@@ -134,7 +134,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string AllowGroupOwnersToManageLdap { get; set; }
 #endif
-        /// <summary>&quot;Deprecated: Use :allow_local_requests_from_web_hooks_and_services instead. Allow requests to the local network from hooks and services.&quot;</summary>
+        /// <summary>Deprecated: Use :allow_local_requests_from_web_hooks_and_services instead. Allow requests to the local network from hooks and services.</summary>
         public bool? AllowLocalRequestsFromHooksAndServices { get; set; }
         /// <summary>The allow_local_requests_from_system_hooks property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -236,7 +236,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string AssetProxyUrl { get; set; }
 #endif
-        /// <summary>&quot;Deprecated: Use :asset_proxy_allowlist instead. Assets that match these domain(s) will NOT be proxied. Wildcards allowed. Your GitLab installation URL is automatically whitelisted.&quot;</summary>
+        /// <summary>Deprecated: Use :asset_proxy_allowlist instead. Assets that match these domain(s) will NOT be proxied. Wildcards allowed. Your GitLab installation URL is automatically whitelisted.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? AssetProxyWhitelist { get; set; }
@@ -770,7 +770,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string DnsRebindingProtectionEnabled { get; set; }
 #endif
-        /// <summary>&quot;ONLY users with e-mail addresses that match these domain(s) will be able to sign-up. Wildcards allowed. Enter multiple entries on separate lines. Ex: domain.com, *.domain.com&quot;</summary>
+        /// <summary>ONLY users with e-mail addresses that match these domain(s) will be able to sign-up. Wildcards allowed. Enter multiple entries on separate lines. Ex: domain.com, *.domain.com</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? DomainAllowlist { get; set; }
@@ -786,7 +786,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string DomainAllowlistRaw { get; set; }
 #endif
-        /// <summary>&quot;Users with e-mail addresses that match these domain(s) will NOT be able to sign-up. Wildcards allowed. Enter multiple entries on separate lines. Ex: domain.com, *.domain.com&quot;</summary>
+        /// <summary>Users with e-mail addresses that match these domain(s) will NOT be able to sign-up. Wildcards allowed. Enter multiple entries on separate lines. Ex: domain.com, *.domain.com</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? DomainDenylist { get; set; }
@@ -1220,7 +1220,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>Some email servers do not support overriding the email sender name. Enable this option to include the name of the author of the issue, merge request or comment in the email body instead.</summary>
         public bool? EmailAuthorInBody { get; set; }
-        /// <summary>&quot;Email confirmation setting, possible values: `off`, `soft`, and `hard`&quot;</summary>
+        /// <summary>Email confirmation setting, possible values: `off`, `soft`, and `hard`</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FEmailConfirmationSetting? EmailConfirmationSetting { get; set; }
         /// <summary>Enable Email-based one-time passwords (OTP) as a multi-factor authentication method.</summary>
         public bool? EmailOtpEnabled { get; set; }
@@ -2074,7 +2074,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public int? MaxDecompressedArchiveSize { get; set; }
         /// <summary>Maximum export size in MB</summary>
         public int? MaxExportSize { get; set; }
-        /// <summary>&quot;Maximum allowed object count for GitHub API responses. 0 for unlimited. Count is an estimate based on the number of : , { and [ occurrences in the response.&quot;</summary>
+        /// <summary>Maximum allowed object count for GitHub API responses. 0 for unlimited. Count is an estimate based on the number of : , { and [ occurrences in the response.</summary>
         public int? MaxGithubResponseJsonValueCount { get; set; }
         /// <summary>Maximum allowed size in MB for GitHub API responses. 0 for unlimited.</summary>
         public int? MaxGithubResponseSizeLimit { get; set; }
@@ -2254,7 +2254,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ModelPromptCacheEnabled { get; set; }
 #endif
-        /// <summary>&quot;Maximum duration (in seconds) between refreshes of namespace statistics (Default: 300)&quot;</summary>
+        /// <summary>Maximum duration (in seconds) between refreshes of namespace statistics (Default: 300)</summary>
         public int? NamespaceAggregationScheduleLeaseDurationInSeconds { get; set; }
         /// <summary>The notes_create_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -2426,7 +2426,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string PasswordUppercaseRequired { get; set; }
 #endif
-        /// <summary>&quot;Deprecated: Use :performance_bar_allowed_group_path instead. Path of the group that is allowed to toggle the performance bar.&quot;</summary>
+        /// <summary>Deprecated: Use :performance_bar_allowed_group_path instead. Path of the group that is allowed to toggle the performance bar.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PerformanceBarAllowedGroupId { get; set; }
@@ -2442,7 +2442,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string PerformanceBarAllowedGroupPath { get; set; }
 #endif
-        /// <summary>&quot;Deprecated: Pass `performance_bar_allowed_group_path: nil` instead. Allow enabling the performance.&quot;</summary>
+        /// <summary>Deprecated: Pass `performance_bar_allowed_group_path: nil` instead. Allow enabling the performance.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PerformanceBarEnabled { get; set; }
@@ -3940,7 +3940,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string WebHookTestLimit { get; set; }
 #endif
-        /// <summary>&quot;What&apos;s new variant, possible values: `all_tiers`, `current_tier`, and `disabled`.&quot;</summary>
+        /// <summary>What&apos;s new variant, possible values: `all_tiers`, `current_tier`, and `disabled`.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FWhatsNewVariant? WhatsNewVariant { get; set; }
         /// <summary>Allow URI includes for AsciiDoc wiki pages</summary>
         public bool? WikiAsciidocAllowUriIncludes { get; set; }

@@ -5,7 +5,9 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.Item.Exists;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.Item.Gitlab_subscription;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.Item.Minutes;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.Item.Storage;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.Item.Subscription_add_on_purchase;
 using Soenneker.GitLab.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
@@ -30,10 +32,20 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.Item
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.Item.Gitlab_subscription.Gitlab_subscriptionRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The minutes property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.Item.Minutes.MinutesRequestBuilder Minutes
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.Item.Minutes.MinutesRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The storage property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.Item.Storage.StorageRequestBuilder Storage
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.Item.Storage.StorageRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The subscription_add_on_purchase property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.Item.Subscription_add_on_purchase.Subscription_add_on_purchaseRequestBuilder Subscription_add_on_purchase
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.Item.Subscription_add_on_purchase.Subscription_add_on_purchaseRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.Item.NamespacesItemRequestBuilder"/> and sets the default values.

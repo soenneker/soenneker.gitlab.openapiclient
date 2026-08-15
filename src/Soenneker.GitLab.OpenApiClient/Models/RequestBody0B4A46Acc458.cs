@@ -59,7 +59,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Whether notifications carry the full content or only identifiers</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0B4A46Acc458PayloadMode? PayloadMode { get; set; }
         /// <summary>The device platform</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0B4A46Acc458Platform? Platform { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.IosPlatform? Platform { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0B4A46Acc458"/> and sets the default values.
         /// </summary>
@@ -92,7 +92,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "device_token", n => { DeviceToken = n.GetStringValue(); } },
                 { "locale", n => { Locale = n.GetStringValue(); } },
                 { "payload_mode", n => { PayloadMode = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0B4A46Acc458PayloadMode>(); } },
-                { "platform", n => { Platform = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0B4A46Acc458Platform>(); } },
+                { "platform", n => { Platform = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.IosPlatform>(); } },
             };
         }
         /// <summary>
@@ -109,7 +109,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("device_token", DeviceToken);
             writer.WriteStringValue("locale", Locale);
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0B4A46Acc458PayloadMode>("payload_mode", PayloadMode);
-            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0B4A46Acc458Platform>("platform", Platform);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.IosPlatform>("platform", Platform);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

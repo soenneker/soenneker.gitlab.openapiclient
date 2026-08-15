@@ -155,7 +155,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Runners
             /// <summary>Number of items per page</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>&quot;Deprecated: Use `type` or `status` instead. The scope of runners to return&quot;</summary>
+            /// <summary>Deprecated: Use `type` or `status` instead. The scope of runners to return</summary>
             [QueryParameter("scope")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdRunnersScopeParameter? Scope { get; set; }
             /// <summary>The status of runners to return</summary>

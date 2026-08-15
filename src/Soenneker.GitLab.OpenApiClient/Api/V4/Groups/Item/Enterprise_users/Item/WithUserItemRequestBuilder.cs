@@ -110,7 +110,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Enterprise_users.Ite
 #endif
             var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
         }
         /// <summary>
@@ -169,7 +168,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Enterprise_users.Ite
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithUserItemRequestBuilderDeleteQueryParameters 
         {
-            /// <summary>&quot;If `false`, deletes the user and moves their contributions to a system-wide \&quot;Ghost User\&quot;. If `true`, deletes the user, their associated contributions, and any groups owned solely by the user. Default value: `false`.&quot;</summary>
+            /// <summary>If `false`, deletes the user and moves their contributions to a system-wide &quot;Ghost User&quot;. If `true`, deletes the user, their associated contributions, and any groups owned solely by the user. Default value: `false`.</summary>
             [QueryParameter("hard_delete")]
             public bool? HardDelete { get; set; }
         }

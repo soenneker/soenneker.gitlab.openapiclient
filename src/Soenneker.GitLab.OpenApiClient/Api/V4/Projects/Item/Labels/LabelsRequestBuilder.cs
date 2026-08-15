@@ -4,6 +4,7 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Labels.Item;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Labels.Promote;
 using Soenneker.GitLab.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
@@ -18,6 +19,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Labels
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LabelsRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The promote property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Labels.Promote.PromoteRequestBuilder Promote
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Labels.Promote.PromoteRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.labels.item collection</summary>
         /// <param name="position">The ID or name of a label</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Labels.Item.NameItemRequestBuilder"/></returns>
@@ -35,7 +41,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Labels
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public LabelsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/labels{?archived*,include_ancestor_groups*,page*,per_page*,search*,with_counts*}", pathParameters)
+        public LabelsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/labels{?archived*,include_ancestor_groups*,label_id*,name*,page*,per_page*,search*,with_counts*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,8 +49,27 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Labels
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public LabelsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/labels{?archived*,include_ancestor_groups*,page*,per_page*,search*,with_counts*}", rawUrl)
+        public LabelsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/labels{?archived*,include_ancestor_groups*,label_id*,name*,page*,per_page*,search*,with_counts*}", rawUrl)
         {
+        }
+        /// <summary>
+        /// Deprecated in GitLab 12.4. Use DELETE /projects/:id/labels/:name instead.
+        /// </summary>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLabel"/></returns>
+        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
+        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        [Obsolete("")]
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLabel?> DeleteAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Labels.LabelsRequestBuilder.LabelsRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        {
+#nullable restore
+#else
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLabel> DeleteAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Labels.LabelsRequestBuilder.LabelsRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        {
+#endif
+            var requestInfo = ToDeleteRequestInformation(requestConfiguration);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLabel>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLabel.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Lists all labels for a specified project. By default, this request returns 20 results at a time because the API results are paginated.
@@ -83,6 +108,47 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Labels
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLabel>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLabel.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+        }
+        /// <summary>
+        /// Deprecated in GitLab 12.4. Use PUT /projects/:id/labels/:name instead.
+        /// </summary>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLabel"/></returns>
+        /// <param name="body">The request body</param>
+        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
+        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        [Obsolete("")]
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLabel?> PutAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5A4E5Cc28E59 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        {
+#nullable restore
+#else
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLabel> PutAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5A4E5Cc28E59 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        {
+#endif
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
+            var requestInfo = ToPutRequestInformation(body, requestConfiguration);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLabel>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLabel.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+        }
+        /// <summary>
+        /// Deprecated in GitLab 12.4. Use DELETE /projects/:id/labels/:name instead.
+        /// </summary>
+        /// <returns>A <see cref="RequestInformation"/></returns>
+        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        [Obsolete("")]
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Labels.LabelsRequestBuilder.LabelsRequestBuilderDeleteQueryParameters>>? requestConfiguration = default)
+        {
+#nullable restore
+#else
+        public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Labels.LabelsRequestBuilder.LabelsRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
+        {
+#endif
+            var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
+            requestInfo.Configure(requestConfiguration);
+            requestInfo.Headers.TryAdd("Accept", "application/json");
+            return requestInfo;
         }
         /// <summary>
         /// Lists all labels for a specified project. By default, this request returns 20 results at a time because the API results are paginated.
@@ -126,6 +192,29 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Labels
             return requestInfo;
         }
         /// <summary>
+        /// Deprecated in GitLab 12.4. Use PUT /projects/:id/labels/:name instead.
+        /// </summary>
+        /// <returns>A <see cref="RequestInformation"/></returns>
+        /// <param name="body">The request body</param>
+        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        [Obsolete("")]
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public RequestInformation ToPutRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5A4E5Cc28E59 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        {
+#nullable restore
+#else
+        public RequestInformation ToPutRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody5A4E5Cc28E59 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        {
+#endif
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
+            var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
+            requestInfo.Configure(requestConfiguration);
+            requestInfo.Headers.TryAdd("Accept", "application/json");
+            requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
+            return requestInfo;
+        }
+        /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Labels.LabelsRequestBuilder"/></returns>
@@ -133,6 +222,26 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Labels
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Labels.LabelsRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Labels.LabelsRequestBuilder(rawUrl, RequestAdapter);
+        }
+        /// <summary>
+        /// Deprecated in GitLab 12.4. Use DELETE /projects/:id/labels/:name instead.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class LabelsRequestBuilderDeleteQueryParameters 
+        {
+            /// <summary>The ID of the label to be deleted</summary>
+            [QueryParameter("label_id")]
+            public int? LabelId { get; set; }
+            /// <summary>The name of the label to be deleted</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("name")]
+            public string? Name { get; set; }
+#nullable restore
+#else
+            [QueryParameter("name")]
+            public string Name { get; set; }
+#endif
         }
         /// <summary>
         /// Lists all labels for a specified project. By default, this request returns 20 results at a time because the API results are paginated.

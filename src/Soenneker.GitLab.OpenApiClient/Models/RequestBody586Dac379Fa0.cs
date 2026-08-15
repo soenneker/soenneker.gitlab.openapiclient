@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody586Dac379Fa0AllowedToCreateItemProperty> AllowedToCreate { get; set; }
 #endif
-        /// <summary>&quot;Access levels allowed to create (defaults: `40`, maintainer access level)&quot;</summary>
+        /// <summary>Access levels allowed to create (defaults: `40`, maintainer access level)</summary>
         public int? CreateAccessLevel { get; set; }
         /// <summary>The name of the protected tag</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

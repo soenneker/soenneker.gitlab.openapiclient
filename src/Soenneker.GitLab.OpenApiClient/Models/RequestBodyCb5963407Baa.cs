@@ -15,7 +15,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Target service audience (e.g. gitlab-artifact-registry)</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCb5963407BaaAudience? Audience { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.GitlabArtifactRegistryAudience? Audience { get; set; }
         /// <summary>Requested token lifetime in seconds. Defaults to 300; cap is 43200. Pending appsec review of client-controlled TTL.</summary>
         public int? ExpiresIn { get; set; }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "audience", n => { Audience = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCb5963407BaaAudience>(); } },
+                { "audience", n => { Audience = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.GitlabArtifactRegistryAudience>(); } },
                 { "expires_in", n => { ExpiresIn = n.GetIntValue(); } },
             };
         }
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCb5963407BaaAudience>("audience", Audience);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.GitlabArtifactRegistryAudience>("audience", Audience);
             writer.WriteIntValue("expires_in", ExpiresIn);
             writer.WriteAdditionalData(AdditionalData);
         }

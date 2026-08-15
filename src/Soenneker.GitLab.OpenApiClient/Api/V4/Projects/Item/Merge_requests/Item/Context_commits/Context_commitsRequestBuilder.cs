@@ -104,7 +104,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
 #endif
             var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/api/v4/projects/{%2Did}/merge_requests/{eventable%2Did}/context_commits?commits={commits}", PathParameters);
             requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
         }
         /// <summary>

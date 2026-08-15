@@ -8,6 +8,7 @@ using Soenneker.GitLab.OpenApiClient.Api.V4.User.Applications;
 using Soenneker.GitLab.OpenApiClient.Api.V4.User.Avatar;
 using Soenneker.GitLab.OpenApiClient.Api.V4.User.Emails;
 using Soenneker.GitLab.OpenApiClient.Api.V4.User.Gpg_keys;
+using Soenneker.GitLab.OpenApiClient.Api.V4.User.Item;
 using Soenneker.GitLab.OpenApiClient.Api.V4.User.Keys;
 using Soenneker.GitLab.OpenApiClient.Api.V4.User.Personal_access_tokens;
 using Soenneker.GitLab.OpenApiClient.Api.V4.User.Preferences;
@@ -88,6 +89,18 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.User.Support_pin.Support_pinRequestBuilder Support_pin
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.User.Support_pin.Support_pinRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.user.item collection</summary>
+        /// <param name="position">The ID or username of the user</param>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.User.Item.WithUserItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.User.Item.WithUserItemRequestBuilder this[string position]
+        {
+            get
+            {
+                var urlTplParams = new Dictionary<string, object>(PathParameters);
+                urlTplParams.Add("userId", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.User.Item.WithUserItemRequestBuilder(urlTplParams, RequestAdapter);
+            }
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.User.UserRequestBuilder"/> and sets the default values.

@@ -4,7 +4,7 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Feature_flags.Unleash.Item.Client;
-using Soenneker.GitLab.OpenApiClient.Models;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Feature_flags.Unleash.Item.Features;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -22,6 +22,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Feature_flags.Unleash.Item
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Feature_flags.Unleash.Item.Client.ClientRequestBuilder Client
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Feature_flags.Unleash.Item.Client.ClientRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The features property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Feature_flags.Unleash.Item.Features.FeaturesRequestBuilder Features
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Feature_flags.Unleash.Item.Features.FeaturesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Feature_flags.Unleash.Item.WithProjectItemRequestBuilder"/> and sets the default values.
@@ -42,20 +47,20 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Feature_flags.Unleash.Item
         /// <summary>
         /// Get Unleash features
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4FeatureFlagsUnleashProjectId200Response"/></returns>
+        /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4FeatureFlagsUnleashProjectId200Response?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Feature_flags.Unleash.Item.WithProjectItemRequestBuilder.WithProjectItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Feature_flags.Unleash.Item.WithProjectItemRequestBuilder.WithProjectItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4FeatureFlagsUnleashProjectId200Response> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Feature_flags.Unleash.Item.WithProjectItemRequestBuilder.WithProjectItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Feature_flags.Unleash.Item.WithProjectItemRequestBuilder.WithProjectItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4FeatureFlagsUnleashProjectId200Response>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4FeatureFlagsUnleashProjectId200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get Unleash features
@@ -73,7 +78,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Feature_flags.Unleash.Item
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
         }
         /// <summary>

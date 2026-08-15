@@ -201,10 +201,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects
             /// <summary>Include projects in pending delete state. Can only be set by admins</summary>
             [QueryParameter("include_pending_delete")]
             public bool? IncludePendingDelete { get; set; }
-            /// <summary>&quot;Limit results to projects with last_activity after specified time. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ&quot;</summary>
+            /// <summary>Limit results to projects with last_activity after specified time. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ</summary>
             [QueryParameter("last_activity_after")]
             public DateTimeOffset? LastActivityAfter { get; set; }
-            /// <summary>&quot;Limit results to projects with last_activity before specified time. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ&quot;</summary>
+            /// <summary>Limit results to projects with last_activity before specified time. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ</summary>
             [QueryParameter("last_activity_before")]
             public DateTimeOffset? LastActivityBefore { get; set; }
             /// <summary>Date when the project was marked for deletion</summary>
@@ -279,10 +279,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects
             /// <summary>Limit results to projects with the assigned topic given by the topic ID</summary>
             [QueryParameter("topic_id")]
             public int? TopicId { get; set; }
-            /// <summary>&quot;Return projects updated after the specified datetime. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ&quot;</summary>
+            /// <summary>Return projects updated after the specified datetime. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ</summary>
             [QueryParameter("updated_after")]
             public DateTimeOffset? UpdatedAfter { get; set; }
-            /// <summary>&quot;Return projects updated before the specified datetime. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ&quot;</summary>
+            /// <summary>Return projects updated before the specified datetime. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ</summary>
             [QueryParameter("updated_before")]
             public DateTimeOffset? UpdatedBefore { get; set; }
             /// <summary>Limit by visibility</summary>

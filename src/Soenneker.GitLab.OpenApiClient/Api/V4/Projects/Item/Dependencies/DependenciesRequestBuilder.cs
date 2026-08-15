@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Dependencies
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class DependenciesRequestBuilderGetQueryParameters 
         {
-            /// <summary>&quot;Returns dependencies belonging to specified package managers: bundler, yarn, npm, pnpm, bun, maven, composer, pip, conan, go, nuget, sbt, gradle, pipenv, poetry, setuptools, apk, conda, pub, cargo.&quot;</summary>
+            /// <summary>Returns dependencies belonging to specified package managers: bundler, yarn, npm, pnpm, bun, maven, composer, pip, conan, go, nuget, sbt, gradle, pipenv, poetry, setuptools, apk, conda, pub, cargo.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("package_manager")]

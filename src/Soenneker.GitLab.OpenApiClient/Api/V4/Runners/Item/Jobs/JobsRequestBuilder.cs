@@ -97,7 +97,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners.Item.Jobs
 #endif
             /// <summary>Order by `id`</summary>
             [QueryParameter("order_by")]
-            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4RunnersIdJobsOrderByParameter? OrderBy { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.IdOrderBy? OrderBy { get; set; }
             /// <summary>Current page number</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }

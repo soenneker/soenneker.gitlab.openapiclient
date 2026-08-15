@@ -153,7 +153,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners
 #endif
             var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/api/v4/runners?token={token}", PathParameters);
             requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
         }
         /// <summary>
@@ -238,7 +237,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners
             /// <summary>Number of items per page</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>&quot;Deprecated: Use `type` or `status` instead. The scope of runners to return&quot;</summary>
+            /// <summary>Deprecated: Use `type` or `status` instead. The scope of runners to return</summary>
             [QueryParameter("scope")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4RunnersScopeParameter? Scope { get; set; }
             /// <summary>The status of runners to return</summary>

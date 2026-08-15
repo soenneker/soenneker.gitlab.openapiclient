@@ -164,7 +164,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Variables.Item
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithKeyItemRequestBuilderDeleteQueryParameters 
         {
-            /// <summary>&quot;Available filters: [environment_scope]. Example: filter[environment_scope]=production&quot;</summary>
+            /// <summary>Available filters: [environment_scope]. Example: filter[environment_scope]=production</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("filter")]
@@ -191,7 +191,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Variables.Item
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithKeyItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>&quot;Available filters: [environment_scope]. Example: filter[environment_scope]=production&quot;</summary>
+            /// <summary>Available filters: [environment_scope]. Example: filter[environment_scope]=production</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("filter")]

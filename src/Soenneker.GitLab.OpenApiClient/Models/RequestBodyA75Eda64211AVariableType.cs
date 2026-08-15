@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>&quot;The type of the variable. Default: env_var&quot;</summary>
+    /// <summary>The type of the variable. Default: env_var</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum RequestBodyA75Eda64211AVariableType
     {

@@ -18,7 +18,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public int? BlobDownloadTimeout { get; set; }
         /// <summary>The number of consecutive checksum mismatches on a secondary before it reports the resource to the primary for self-heal re-verification. Read from the secondary site; has no effect when set on the primary.</summary>
         public int? ChecksumMismatchReportThreshold { get; set; }
-        /// <summary>&quot;The minimum time (in minutes) between self-heal re-verification triggers for the same resource. Both the primary and each secondary use their own value: secondaries use it to throttle re-reporting the same resource, and the primary uses it to throttle re-verifying an already-verified resource.&quot;</summary>
+        /// <summary>The minimum time (in minutes) between self-heal re-verification triggers for the same resource. Both the primary and each secondary use their own value: secondaries use it to throttle re-reporting the same resource, and the primary uses it to throttle re-verifying an already-verified resource.</summary>
         public int? ChecksumMismatchSelfHealCooldownMinutes { get; set; }
         /// <summary>Control the maximum concurrency of container repository sync for this site. Defaults to 10.</summary>
         public int? ContainerRepositoriesMaxCapacity { get; set; }
@@ -72,7 +72,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<string> SelectiveSyncShards { get; set; }
 #endif
-        /// <summary>&quot;Limit syncing to only specific groups, or shards. Valid values: `\&quot;namespaces\&quot;`, `\&quot;shards\&quot;`, or `null`&quot;</summary>
+        /// <summary>Limit syncing to only specific groups, or shards. Valid values: `&quot;namespaces&quot;`, `&quot;shards&quot;`, or `null`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SelectiveSyncType { get; set; }

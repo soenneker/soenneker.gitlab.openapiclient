@@ -329,7 +329,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests
             [QueryParameter("reviewer_username")]
             public string ReviewerUsername { get; set; }
 #endif
-            /// <summary>&quot;Returns merge requests for the given scope: `created_by_me`, `assigned_to_me`, `reviews_for_me` or `all`&quot;</summary>
+            /// <summary>Returns merge requests for the given scope: `created_by_me`, `assigned_to_me`, `reviews_for_me` or `all`</summary>
             [QueryParameter("scope")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdMergeRequestsScopeParameter? Scope { get; set; }
             /// <summary>Search merge requests against their `title` and `description`.</summary>
@@ -379,11 +379,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests
             public DateTimeOffset? UpdatedBefore { get; set; }
             /// <summary>If simple, returns the `iid`, URL, title, description, and basic state of merge request</summary>
             [QueryParameter("view")]
-            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdMergeRequestsViewParameter? View { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.SimpleView? View { get; set; }
             /// <summary>Deprecated. Use `draft` instead. Filter merge requests against their `wip` status. `yes` to return only draft merge requests, `no` to return non-draft merge requests.</summary>
             [QueryParameter("wip")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdMergeRequestsWipParameter? Wip { get; set; }
-            /// <summary>&quot;If `true`, response returns more details for each label in labels field: `:name`,`:color`, `:description`, `:description_html`, `:text_color`&quot;</summary>
+            /// <summary>If `true`, response returns more details for each label in labels field: `:name`,`:color`, `:description`, `:description_html`, `:text_color`</summary>
             [QueryParameter("with_labels_details")]
             public bool? WithLabelsDetails { get; set; }
             /// <summary>If `true`, this projection requests (but does not guarantee) that the `merge_status` field be recalculated asynchronously. Introduced in GitLab 13.0.</summary>

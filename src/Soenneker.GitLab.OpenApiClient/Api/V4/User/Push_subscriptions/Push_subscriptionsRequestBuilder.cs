@@ -86,7 +86,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User.Push_subscriptions
 #endif
             var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/api/v4/user/push_subscriptions?device_token={device_token}", PathParameters);
             requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
         }
         /// <summary>

@@ -117,7 +117,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Ldap_group_links
 #endif
             var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/api/v4/groups/{id}/ldap_group_links?provider={provider}{&cn*,filter*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
         }
         /// <summary>

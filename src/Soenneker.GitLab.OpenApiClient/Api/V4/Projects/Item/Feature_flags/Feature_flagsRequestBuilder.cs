@@ -146,7 +146,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags
             /// <summary>Number of items per page</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>&quot;The scope of feature flags, one of: `enabled`, `disabled`&quot;</summary>
+            /// <summary>The scope of feature flags, one of: `enabled`, `disabled`</summary>
             [QueryParameter("scope")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdFeatureFlagsScopeParameter? Scope { get; set; }
         }

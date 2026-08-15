@@ -28,7 +28,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<int?> GroupIds { get; set; }
 #endif
-        /// <summary>&quot;Deprecated: The group ids for this rule&quot;</summary>
+        /// <summary>Deprecated: The group ids for this rule</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<int?>? Groups { get; set; }
@@ -86,7 +86,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<string> Usernames { get; set; }
 #endif
-        /// <summary>&quot;Deprecated: The user ids for this rule&quot;</summary>
+        /// <summary>Deprecated: The user ids for this rule</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<int?>? Users { get; set; }

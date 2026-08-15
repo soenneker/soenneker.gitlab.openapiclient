@@ -74,7 +74,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public bool? ManageProjectAccessTokens { get; set; }
         /// <summary>Allows linking security policy projects.</summary>
         public bool? ManageSecurityPolicyLink { get; set; }
-        /// <summary>&quot;Name for role (default: &apos;Custom&apos;)&quot;</summary>
+        /// <summary>Name for role (default: &apos;Custom&apos;)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }

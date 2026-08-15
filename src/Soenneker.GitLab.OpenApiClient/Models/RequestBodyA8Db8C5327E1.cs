@@ -42,7 +42,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public bool? AllowForcePush { get; set; }
         /// <summary>Prevent pushes to this branch if it matches an item in CODEOWNERS</summary>
         public bool? CodeOwnerApprovalRequired { get; set; }
-        /// <summary>&quot;Access levels allowed to unprotect (defaults: `40`, maintainer access level)&quot;</summary>
+        /// <summary>Access levels allowed to unprotect (defaults: `40`, maintainer access level)</summary>
         public int? UnprotectAccessLevel { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA8Db8C5327E1"/> and sets the default values.

@@ -24,7 +24,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string MergeCommitMessage { get; set; }
 #endif
-        /// <summary>&quot;Deprecated: Use auto_merge instead.&quot;</summary>
+        /// <summary>Deprecated: Use auto_merge instead.</summary>
         public bool? MergeWhenPipelineSucceeds { get; set; }
         /// <summary>If present, then this SHA must match the HEAD of the source branch, otherwise the merge fails.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

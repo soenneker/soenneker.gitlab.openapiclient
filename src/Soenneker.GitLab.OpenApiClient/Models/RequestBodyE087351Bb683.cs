@@ -24,7 +24,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string RunId { get; set; }
 #endif
-        /// <summary>&quot;Status of the run. Accepts: [\&quot;RUNNING\&quot;, \&quot;SCHEDULED\&quot;, \&quot;FINISHED\&quot;, \&quot;FAILED\&quot;, \&quot;KILLED\&quot;].&quot;</summary>
+        /// <summary>Status of the run. Accepts: [&quot;RUNNING&quot;, &quot;SCHEDULED&quot;, &quot;FINISHED&quot;, &quot;FAILED&quot;, &quot;KILLED&quot;].</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE087351Bb683Status? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE087351Bb683"/> and sets the default values.

@@ -42,7 +42,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public bool? AllowForcePush { get; set; }
         /// <summary>Prevent pushes to this branch if it matches an item in CODEOWNERS</summary>
         public bool? CodeOwnerApprovalRequired { get; set; }
-        /// <summary>&quot;Access levels allowed to merge (defaults: `40`, maintainer access level)&quot;</summary>
+        /// <summary>Access levels allowed to merge (defaults: `40`, maintainer access level)</summary>
         public int? MergeAccessLevel { get; set; }
         /// <summary>The name of the protected branch</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -52,9 +52,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>&quot;Access levels allowed to push (defaults: `40`, maintainer access level)&quot;</summary>
+        /// <summary>Access levels allowed to push (defaults: `40`, maintainer access level)</summary>
         public int? PushAccessLevel { get; set; }
-        /// <summary>&quot;Access levels allowed to unprotect (defaults: `40`, maintainer access level)&quot;</summary>
+        /// <summary>Access levels allowed to unprotect (defaults: `40`, maintainer access level)</summary>
         public int? UnprotectAccessLevel { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody585Cb2928E88"/> and sets the default values.

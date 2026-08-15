@@ -28,7 +28,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<int?> GroupIds { get; set; }
 #endif
-        /// <summary>&quot;Deprecated: The group ids for this rule&quot;</summary>
+        /// <summary>Deprecated: The group ids for this rule</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<int?>? Groups { get; set; }
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public List<int?> ProtectedBranchIds { get; set; }
 #endif
         /// <summary>The type of the report required when rule type equals to report_approver</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyFe7Bfa8A8F49ReportType? ReportType { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.CodeCoverageReportType? ReportType { get; set; }
         /// <summary>The type of approval rule</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -94,7 +94,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<string> Usernames { get; set; }
 #endif
-        /// <summary>&quot;Deprecated: The user ids for this rule&quot;</summary>
+        /// <summary>Deprecated: The user ids for this rule</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<int?>? Users { get; set; }
@@ -144,7 +144,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "groups", n => { Groups = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "protected_branch_ids", n => { ProtectedBranchIds = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
-                { "report_type", n => { ReportType = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyFe7Bfa8A8F49ReportType>(); } },
+                { "report_type", n => { ReportType = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.CodeCoverageReportType>(); } },
                 { "rule_type", n => { RuleType = n.GetStringValue(); } },
                 { "scanners", n => { Scanners = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "severity_levels", n => { SeverityLevels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -169,7 +169,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<int?>("groups", Groups);
             writer.WriteStringValue("name", Name);
             writer.WriteCollectionOfPrimitiveValues<int?>("protected_branch_ids", ProtectedBranchIds);
-            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyFe7Bfa8A8F49ReportType>("report_type", ReportType);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.CodeCoverageReportType>("report_type", ReportType);
             writer.WriteStringValue("rule_type", RuleType);
             writer.WriteCollectionOfPrimitiveValues<string>("scanners", Scanners);
             writer.WriteCollectionOfPrimitiveValues<string>("severity_levels", SeverityLevels);

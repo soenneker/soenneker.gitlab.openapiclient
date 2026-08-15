@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>&quot;The type of the link: `other`, `runbook`, `image`, or `package`. Defaults to `other`&quot;</summary>
+    /// <summary>The type of the link: `other`, `runbook`, `image`, or `package`. Defaults to `other`</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum RequestBody3609C40A5E04LinkType
     {

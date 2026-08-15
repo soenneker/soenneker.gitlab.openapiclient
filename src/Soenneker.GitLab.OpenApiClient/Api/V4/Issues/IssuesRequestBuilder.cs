@@ -136,13 +136,13 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Issues
             /// <summary>Return issues created before the specified time</summary>
             [QueryParameter("created_before")]
             public DateTimeOffset? CreatedBefore { get; set; }
-            /// <summary>&quot;Return issues that have no due date (`0`), or whose due date is this week, this month, between two weeks ago and next month, or which are overdue. Accepts: `overdue`, `week`, `month`, `next_month_and_previous_two_weeks`, `0`&quot;</summary>
+            /// <summary>Return issues that have no due date (`0`), or whose due date is this week, this month, between two weeks ago and next month, or which are overdue. Accepts: `overdue`, `week`, `month`, `next_month_and_previous_two_weeks`, `0`</summary>
             [QueryParameter("due_date")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4IssuesDueDateParameter? DueDate { get; set; }
             /// <summary>The ID of an epic associated with the issues</summary>
             [QueryParameter("epic_id")]
             public int? EpicId { get; set; }
-            /// <summary>&quot;The health status of the issue. Must be one of: on_track, needs_attention, at_risk, none, any&quot;</summary>
+            /// <summary>The health status of the issue. Must be one of: on_track, needs_attention, at_risk, none, any</summary>
             [QueryParameter("health_status")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4IssuesHealthStatusParameter? HealthStatus { get; set; }
             /// <summary>The IID array of issues</summary>
@@ -165,7 +165,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Issues
             [QueryParameter("in")]
             public string In { get; set; }
 #endif
-            /// <summary>&quot;The type of the issue. Accepts: issue, incident, test_case, requirement, task, ticket&quot;</summary>
+            /// <summary>The type of the issue. Accepts: issue, incident, test_case, requirement, task, ticket</summary>
             [QueryParameter("issue_type")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4IssuesIssueTypeParameter? IssueType { get; set; }
             /// <summary>Return issues which are assigned to the iteration with the given ID</summary>
@@ -311,7 +311,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Issues
             /// <summary>Number of items per page</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>&quot;Return issues for the given scope: `created_by_me`, `assigned_to_me` or `all`&quot;</summary>
+            /// <summary>Return issues for the given scope: `created_by_me`, `assigned_to_me` or `all`</summary>
             [QueryParameter("scope")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4IssuesScopeParameter? Scope { get; set; }
             /// <summary>Search issues for text present in the title, description, or any combination of these</summary>
