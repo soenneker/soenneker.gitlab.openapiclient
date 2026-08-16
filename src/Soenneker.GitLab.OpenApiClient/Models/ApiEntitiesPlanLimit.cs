@@ -15,7 +15,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The cargo_max_file_size property</summary>
-        public int? CargoMaxFileSize { get; set; }
+        public long? CargoMaxFileSize { get; set; }
         /// <summary>The ci_active_jobs property</summary>
         public int? CiActiveJobs { get; set; }
         /// <summary>The ci_instance_level_variables property</summary>
@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The ci_registered_project_runners property</summary>
         public int? CiRegisteredProjectRunners { get; set; }
         /// <summary>The conan_max_file_size property</summary>
-        public int? ConanMaxFileSize { get; set; }
+        public long? ConanMaxFileSize { get; set; }
         /// <summary>The dotenv_size property</summary>
         public int? DotenvSize { get; set; }
         /// <summary>The dotenv_variables property</summary>
@@ -41,7 +41,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The enforcement_limit property</summary>
         public int? EnforcementLimit { get; set; }
         /// <summary>The generic_packages_max_file_size property</summary>
-        public int? GenericPackagesMaxFileSize { get; set; }
+        public long? GenericPackagesMaxFileSize { get; set; }
         /// <summary>The helm_max_file_size property</summary>
         public int? HelmMaxFileSize { get; set; }
         /// <summary>The limits_history property</summary>
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPlanLimitLimitsHistoryProperty LimitsHistory { get; set; }
 #endif
         /// <summary>The maven_max_file_size property</summary>
-        public int? MavenMaxFileSize { get; set; }
+        public long? MavenMaxFileSize { get; set; }
         /// <summary>The max_pipelines_per_merge_train property</summary>
         public int? MaxPipelinesPerMergeTrain { get; set; }
         /// <summary>The notification_limit property</summary>
@@ -65,7 +65,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The pipeline_hierarchy_size property</summary>
         public int? PipelineHierarchySize { get; set; }
         /// <summary>The pypi_max_file_size property</summary>
-        public int? PypiMaxFileSize { get; set; }
+        public long? PypiMaxFileSize { get; set; }
         /// <summary>The storage_size_limit property</summary>
         public int? StorageSizeLimit { get; set; }
         /// <summary>The terraform_module_max_file_size property</summary>
@@ -101,7 +101,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "cargo_max_file_size", n => { CargoMaxFileSize = n.GetIntValue(); } },
+                { "cargo_max_file_size", n => { CargoMaxFileSize = n.GetLongValue(); } },
                 { "ci_active_jobs", n => { CiActiveJobs = n.GetIntValue(); } },
                 { "ci_instance_level_variables", n => { CiInstanceLevelVariables = n.GetIntValue(); } },
                 { "ci_needs_size_limit", n => { CiNeedsSizeLimit = n.GetIntValue(); } },
@@ -110,20 +110,20 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "ci_project_subscriptions", n => { CiProjectSubscriptions = n.GetIntValue(); } },
                 { "ci_registered_group_runners", n => { CiRegisteredGroupRunners = n.GetIntValue(); } },
                 { "ci_registered_project_runners", n => { CiRegisteredProjectRunners = n.GetIntValue(); } },
-                { "conan_max_file_size", n => { ConanMaxFileSize = n.GetIntValue(); } },
+                { "conan_max_file_size", n => { ConanMaxFileSize = n.GetLongValue(); } },
                 { "dotenv_size", n => { DotenvSize = n.GetIntValue(); } },
                 { "dotenv_variables", n => { DotenvVariables = n.GetIntValue(); } },
                 { "enforcement_limit", n => { EnforcementLimit = n.GetIntValue(); } },
-                { "generic_packages_max_file_size", n => { GenericPackagesMaxFileSize = n.GetIntValue(); } },
+                { "generic_packages_max_file_size", n => { GenericPackagesMaxFileSize = n.GetLongValue(); } },
                 { "helm_max_file_size", n => { HelmMaxFileSize = n.GetIntValue(); } },
                 { "limits_history", n => { LimitsHistory = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPlanLimitLimitsHistoryProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPlanLimitLimitsHistoryProperty.CreateFromDiscriminatorValue); } },
-                { "maven_max_file_size", n => { MavenMaxFileSize = n.GetIntValue(); } },
+                { "maven_max_file_size", n => { MavenMaxFileSize = n.GetLongValue(); } },
                 { "max_pipelines_per_merge_train", n => { MaxPipelinesPerMergeTrain = n.GetIntValue(); } },
                 { "notification_limit", n => { NotificationLimit = n.GetIntValue(); } },
                 { "npm_max_file_size", n => { NpmMaxFileSize = n.GetIntValue(); } },
                 { "nuget_max_file_size", n => { NugetMaxFileSize = n.GetIntValue(); } },
                 { "pipeline_hierarchy_size", n => { PipelineHierarchySize = n.GetIntValue(); } },
-                { "pypi_max_file_size", n => { PypiMaxFileSize = n.GetIntValue(); } },
+                { "pypi_max_file_size", n => { PypiMaxFileSize = n.GetLongValue(); } },
                 { "storage_size_limit", n => { StorageSizeLimit = n.GetIntValue(); } },
                 { "terraform_module_max_file_size", n => { TerraformModuleMaxFileSize = n.GetIntValue(); } },
                 { "web_hook_calls", n => { WebHookCalls = n.GetIntValue(); } },
@@ -138,7 +138,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("cargo_max_file_size", CargoMaxFileSize);
+            writer.WriteLongValue("cargo_max_file_size", CargoMaxFileSize);
             writer.WriteIntValue("ci_active_jobs", CiActiveJobs);
             writer.WriteIntValue("ci_instance_level_variables", CiInstanceLevelVariables);
             writer.WriteIntValue("ci_needs_size_limit", CiNeedsSizeLimit);
@@ -147,20 +147,20 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("ci_project_subscriptions", CiProjectSubscriptions);
             writer.WriteIntValue("ci_registered_group_runners", CiRegisteredGroupRunners);
             writer.WriteIntValue("ci_registered_project_runners", CiRegisteredProjectRunners);
-            writer.WriteIntValue("conan_max_file_size", ConanMaxFileSize);
+            writer.WriteLongValue("conan_max_file_size", ConanMaxFileSize);
             writer.WriteIntValue("dotenv_size", DotenvSize);
             writer.WriteIntValue("dotenv_variables", DotenvVariables);
             writer.WriteIntValue("enforcement_limit", EnforcementLimit);
-            writer.WriteIntValue("generic_packages_max_file_size", GenericPackagesMaxFileSize);
+            writer.WriteLongValue("generic_packages_max_file_size", GenericPackagesMaxFileSize);
             writer.WriteIntValue("helm_max_file_size", HelmMaxFileSize);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPlanLimitLimitsHistoryProperty>("limits_history", LimitsHistory);
-            writer.WriteIntValue("maven_max_file_size", MavenMaxFileSize);
+            writer.WriteLongValue("maven_max_file_size", MavenMaxFileSize);
             writer.WriteIntValue("max_pipelines_per_merge_train", MaxPipelinesPerMergeTrain);
             writer.WriteIntValue("notification_limit", NotificationLimit);
             writer.WriteIntValue("npm_max_file_size", NpmMaxFileSize);
             writer.WriteIntValue("nuget_max_file_size", NugetMaxFileSize);
             writer.WriteIntValue("pipeline_hierarchy_size", PipelineHierarchySize);
-            writer.WriteIntValue("pypi_max_file_size", PypiMaxFileSize);
+            writer.WriteLongValue("pypi_max_file_size", PypiMaxFileSize);
             writer.WriteIntValue("storage_size_limit", StorageSizeLimit);
             writer.WriteIntValue("terraform_module_max_file_size", TerraformModuleMaxFileSize);
             writer.WriteIntValue("web_hook_calls", WebHookCalls);

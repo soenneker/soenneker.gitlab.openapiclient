@@ -39,7 +39,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The started_at property</summary>
         public DateTimeOffset? StartedAt { get; set; }
         /// <summary>The version property</summary>
-        public int? Version { get; set; }
+        public long? Version { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSearchMigration"/> and sets the default values.
         /// </summary>
@@ -71,7 +71,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "obsolete", n => { Obsolete = n.GetBoolValue(); } },
                 { "started_at", n => { StartedAt = n.GetDateTimeOffsetValue(); } },
-                { "version", n => { Version = n.GetIntValue(); } },
+                { "version", n => { Version = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -87,7 +87,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteBoolValue("obsolete", Obsolete);
             writer.WriteDateTimeOffsetValue("started_at", StartedAt);
-            writer.WriteIntValue("version", Version);
+            writer.WriteLongValue("version", Version);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

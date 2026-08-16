@@ -119535,6 +119535,7 @@
         "properties": {
           "version": {
             "type": "integer",
+            "format": "int64",
             "example": 20230427555555
           },
           "name": {
@@ -134055,6 +134056,7 @@
         "properties": {
           "cargo_max_file_size": {
             "type": "integer",
+            "format": "int64",
             "example": 5368709120
           },
           "ci_instance_level_variables": {
@@ -134091,6 +134093,7 @@
           },
           "conan_max_file_size": {
             "type": "integer",
+            "format": "int64",
             "example": 3221225472
           },
           "dotenv_variables": {
@@ -134107,6 +134110,7 @@
           },
           "generic_packages_max_file_size": {
             "type": "integer",
+            "format": "int64",
             "example": 5368709120
           },
           "helm_max_file_size": {
@@ -134118,6 +134122,7 @@
           },
           "maven_max_file_size": {
             "type": "integer",
+            "format": "int64",
             "example": 3221225472
           },
           "notification_limit": {
@@ -134138,6 +134143,7 @@
           },
           "pypi_max_file_size": {
             "type": "integer",
+            "format": "int64",
             "example": 3221225472
           },
           "terraform_module_max_file_size": {
