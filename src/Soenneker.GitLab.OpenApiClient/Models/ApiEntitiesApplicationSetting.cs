@@ -2368,6 +2368,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string IframeRenderingEnabled { get; set; }
 #endif
+        /// <summary>The import_jobs_concurrency_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ImportJobsConcurrencyLimit { get; set; }
+#nullable restore
+#else
+        public string ImportJobsConcurrencyLimit { get; set; }
+#endif
         /// <summary>The import_sources property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -5441,6 +5449,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "iframe_rendering_allowlist", n => { IframeRenderingAllowlist = n.GetStringValue(); } },
                 { "iframe_rendering_allowlist_raw", n => { IframeRenderingAllowlistRaw = n.GetStringValue(); } },
                 { "iframe_rendering_enabled", n => { IframeRenderingEnabled = n.GetStringValue(); } },
+                { "import_jobs_concurrency_limit", n => { ImportJobsConcurrencyLimit = n.GetStringValue(); } },
                 { "import_sources", n => { ImportSources = n.GetStringValue(); } },
                 { "inactive_projects_delete_after_months", n => { InactiveProjectsDeleteAfterMonths = n.GetStringValue(); } },
                 { "inactive_projects_min_size_mb", n => { InactiveProjectsMinSizeMb = n.GetStringValue(); } },
@@ -6097,6 +6106,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("iframe_rendering_allowlist", IframeRenderingAllowlist);
             writer.WriteStringValue("iframe_rendering_allowlist_raw", IframeRenderingAllowlistRaw);
             writer.WriteStringValue("iframe_rendering_enabled", IframeRenderingEnabled);
+            writer.WriteStringValue("import_jobs_concurrency_limit", ImportJobsConcurrencyLimit);
             writer.WriteStringValue("import_sources", ImportSources);
             writer.WriteStringValue("inactive_projects_delete_after_months", InactiveProjectsDeleteAfterMonths);
             writer.WriteStringValue("inactive_projects_min_size_mb", InactiveProjectsMinSizeMb);

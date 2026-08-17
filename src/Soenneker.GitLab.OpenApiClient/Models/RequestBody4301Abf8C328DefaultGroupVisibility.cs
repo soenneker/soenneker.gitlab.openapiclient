@@ -5,7 +5,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>The default group visibility</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBody9Dcd3025609FDefaultGroupVisibility
+    public enum RequestBody4301Abf8C328DefaultGroupVisibility
     {
         [EnumMember(Value = "private")]
         #pragma warning disable CS1591

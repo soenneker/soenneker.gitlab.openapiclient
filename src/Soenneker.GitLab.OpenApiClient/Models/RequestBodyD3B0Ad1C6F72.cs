@@ -9,29 +9,37 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class RequestBody9Dcd3025609FDefaultBranchProtectionDefaultsAllowedToPushItem : IAdditionalDataHolder, IParsable
+    public partial class RequestBodyD3B0Ad1C6F72 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>A valid access level</summary>
-        public int? AccessLevel { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Batch of audit events. Maximum 500.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD3B0Ad1C6F72EventsItem>? Events { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD3B0Ad1C6F72EventsItem> Events { get; set; }
+#endif
+        /// <summary>The session ID to associate events with.</summary>
+        public int? SessionId { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FDefaultBranchProtectionDefaultsAllowedToPushItem"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD3B0Ad1C6F72"/> and sets the default values.
         /// </summary>
-        public RequestBody9Dcd3025609FDefaultBranchProtectionDefaultsAllowedToPushItem()
+        public RequestBodyD3B0Ad1C6F72()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FDefaultBranchProtectionDefaultsAllowedToPushItem"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD3B0Ad1C6F72"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FDefaultBranchProtectionDefaultsAllowedToPushItem CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD3B0Ad1C6F72 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9Dcd3025609FDefaultBranchProtectionDefaultsAllowedToPushItem();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD3B0Ad1C6F72();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -41,7 +49,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "access_level", n => { AccessLevel = n.GetIntValue(); } },
+                { "events", n => { Events = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD3B0Ad1C6F72EventsItem>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD3B0Ad1C6F72EventsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "session_id", n => { SessionId = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -51,7 +60,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("access_level", AccessLevel);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD3B0Ad1C6F72EventsItem>("events", Events);
+            writer.WriteIntValue("session_id", SessionId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -2,6 +2,7 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ai_agent.Audit_events;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ai_agent.Identities;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ai_agent.Sessions;
 using System.Collections.Generic;
@@ -16,6 +17,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ai_agent
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Ai_agentRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The audit_events property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ai_agent.Audit_events.Audit_eventsRequestBuilder Audit_events
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ai_agent.Audit_events.Audit_eventsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The identities property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ai_agent.Identities.IdentitiesRequestBuilder Identities
         {
