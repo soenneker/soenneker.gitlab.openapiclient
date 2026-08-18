@@ -11,7 +11,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     /// Count, median age, and color for unknown severity vulnerabilities
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RequestBody4460F88C4A6DReportDataVulnerabilitiesBySeverityCountUnknown : IAdditionalDataHolder, IParsable
+    public partial class RequestBodyC0052911B7D9ReportDataVulnerabilitiesBySeverityCountUnknown : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -28,21 +28,21 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Median age in days</summary>
         public double? MedianAge { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataVulnerabilitiesBySeverityCountUnknown"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC0052911B7D9ReportDataVulnerabilitiesBySeverityCountUnknown"/> and sets the default values.
         /// </summary>
-        public RequestBody4460F88C4A6DReportDataVulnerabilitiesBySeverityCountUnknown()
+        public RequestBodyC0052911B7D9ReportDataVulnerabilitiesBySeverityCountUnknown()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataVulnerabilitiesBySeverityCountUnknown"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC0052911B7D9ReportDataVulnerabilitiesBySeverityCountUnknown"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataVulnerabilitiesBySeverityCountUnknown CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC0052911B7D9ReportDataVulnerabilitiesBySeverityCountUnknown CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataVulnerabilitiesBySeverityCountUnknown();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC0052911B7D9ReportDataVulnerabilitiesBySeverityCountUnknown();
         }
         /// <summary>
         /// The deserialization information for the current model

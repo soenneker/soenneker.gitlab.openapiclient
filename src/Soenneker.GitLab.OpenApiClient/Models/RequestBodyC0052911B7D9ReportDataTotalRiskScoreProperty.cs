@@ -8,41 +8,29 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// Count, median age, and color for critical severity vulnerabilities
+    /// Data for rendering the total risk score in PDF reports
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RequestBody4460F88C4A6DReportDataVulnerabilitiesBySeverityCountCritical : IAdditionalDataHolder, IParsable
+    public partial class RequestBodyC0052911B7D9ReportDataTotalRiskScoreProperty : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Severity color hex code</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Color { get; set; }
-#nullable restore
-#else
-        public string Color { get; set; }
-#endif
-        /// <summary>Number of vulnerabilities</summary>
-        public int? Count { get; set; }
-        /// <summary>Median age in days</summary>
-        public double? MedianAge { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataVulnerabilitiesBySeverityCountCritical"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC0052911B7D9ReportDataTotalRiskScoreProperty"/> and sets the default values.
         /// </summary>
-        public RequestBody4460F88C4A6DReportDataVulnerabilitiesBySeverityCountCritical()
+        public RequestBodyC0052911B7D9ReportDataTotalRiskScoreProperty()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataVulnerabilitiesBySeverityCountCritical"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC0052911B7D9ReportDataTotalRiskScoreProperty"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataVulnerabilitiesBySeverityCountCritical CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC0052911B7D9ReportDataTotalRiskScoreProperty CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4460F88C4A6DReportDataVulnerabilitiesBySeverityCountCritical();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyC0052911B7D9ReportDataTotalRiskScoreProperty();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -52,9 +40,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "color", n => { Color = n.GetStringValue(); } },
-                { "count", n => { Count = n.GetIntValue(); } },
-                { "medianAge", n => { MedianAge = n.GetDoubleValue(); } },
             };
         }
         /// <summary>
@@ -64,9 +49,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("color", Color);
-            writer.WriteIntValue("count", Count);
-            writer.WriteDoubleValue("medianAge", MedianAge);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.Checkpoints.By_thread_ts;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.Checkpoints.Item;
 using Soenneker.GitLab.OpenApiClient.Models;
 using System.Collections.Generic;
@@ -18,6 +19,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CheckpointsRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The by_thread_ts property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.Checkpoints.By_thread_ts.By_thread_tsRequestBuilder By_thread_ts
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.Checkpoints.By_thread_ts.By_thread_tsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.ai.duo_workflows.workflows.item.checkpoints.item collection</summary>
         /// <param name="position">The ID of the checkpoint</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.Checkpoints.Item.WithCheckpointItemRequestBuilder"/></returns>
