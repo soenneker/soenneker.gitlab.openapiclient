@@ -280,6 +280,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string AuthorizedKeysEnabled { get; set; }
 #endif
+        /// <summary>The auto_accept_awarded_achievements property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AutoAcceptAwardedAchievements { get; set; }
+#nullable restore
+#else
+        public string AutoAcceptAwardedAchievements { get; set; }
+#endif
         /// <summary>The auto_ban_user_on_excessive_projects_download property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -5185,6 +5193,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "asset_proxy_whitelist", n => { AssetProxyWhitelist = n.GetStringValue(); } },
                 { "authn_data_retention_cleanup_enabled", n => { AuthnDataRetentionCleanupEnabled = n.GetStringValue(); } },
                 { "authorized_keys_enabled", n => { AuthorizedKeysEnabled = n.GetStringValue(); } },
+                { "auto_accept_awarded_achievements", n => { AutoAcceptAwardedAchievements = n.GetStringValue(); } },
                 { "auto_ban_user_on_excessive_projects_download", n => { AutoBanUserOnExcessiveProjectsDownload = n.GetStringValue(); } },
                 { "auto_devops_domain", n => { AutoDevopsDomain = n.GetStringValue(); } },
                 { "auto_devops_enabled", n => { AutoDevopsEnabled = n.GetStringValue(); } },
@@ -5842,6 +5851,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("asset_proxy_whitelist", AssetProxyWhitelist);
             writer.WriteStringValue("authn_data_retention_cleanup_enabled", AuthnDataRetentionCleanupEnabled);
             writer.WriteStringValue("authorized_keys_enabled", AuthorizedKeysEnabled);
+            writer.WriteStringValue("auto_accept_awarded_achievements", AutoAcceptAwardedAchievements);
             writer.WriteStringValue("auto_ban_user_on_excessive_projects_download", AutoBanUserOnExcessiveProjectsDownload);
             writer.WriteStringValue("autocomplete_users_limit", AutocompleteUsersLimit);
             writer.WriteStringValue("autocomplete_users_unauthenticated_limit", AutocompleteUsersUnauthenticatedLimit);

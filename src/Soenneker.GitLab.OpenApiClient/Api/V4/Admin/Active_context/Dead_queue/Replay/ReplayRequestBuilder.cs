@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Active_context.Dead_queue.
         {
         }
         /// <summary>
-        /// Replay items from the dead queue into another queue
+        /// Enqueues a background task that replays dead queue items into the specified target queue.
         /// </summary>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Active_context.Dead_queue.
             await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Replay items from the dead queue into another queue
+        /// Enqueues a background task that replays dead queue items into the specified target queue.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

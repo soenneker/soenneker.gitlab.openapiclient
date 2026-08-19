@@ -5,7 +5,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>Environment for the workflow.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBody0B3B859426BaEnvironment
+    public enum RequestBody24Bfaf02A0F1Environment
     {
         [EnumMember(Value = "ide")]
         #pragma warning disable CS1591

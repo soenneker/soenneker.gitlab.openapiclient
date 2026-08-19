@@ -9,29 +9,43 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class RequestBody4301Abf8C328DefaultBranchProtectionDefaultsAllowedToMergeItem : IAdditionalDataHolder, IParsable
+    public partial class RequestBody949Adbf6Ddd5AdditionalContextItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>A valid access level</summary>
-        public int? AccessLevel { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The category of the context detail</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Category { get; set; }
+#nullable restore
+#else
+        public string Category { get; set; }
+#endif
+        /// <summary>The content type of the context detail</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Content { get; set; }
+#nullable restore
+#else
+        public string Content { get; set; }
+#endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4301Abf8C328DefaultBranchProtectionDefaultsAllowedToMergeItem"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody949Adbf6Ddd5AdditionalContextItem"/> and sets the default values.
         /// </summary>
-        public RequestBody4301Abf8C328DefaultBranchProtectionDefaultsAllowedToMergeItem()
+        public RequestBody949Adbf6Ddd5AdditionalContextItem()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4301Abf8C328DefaultBranchProtectionDefaultsAllowedToMergeItem"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody949Adbf6Ddd5AdditionalContextItem"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4301Abf8C328DefaultBranchProtectionDefaultsAllowedToMergeItem CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody949Adbf6Ddd5AdditionalContextItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4301Abf8C328DefaultBranchProtectionDefaultsAllowedToMergeItem();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody949Adbf6Ddd5AdditionalContextItem();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -41,7 +55,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "access_level", n => { AccessLevel = n.GetIntValue(); } },
+                { "Category", n => { Category = n.GetStringValue(); } },
+                { "Content", n => { Content = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -51,7 +66,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("access_level", AccessLevel);
+            writer.WriteStringValue("Category", Category);
+            writer.WriteStringValue("Content", Content);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

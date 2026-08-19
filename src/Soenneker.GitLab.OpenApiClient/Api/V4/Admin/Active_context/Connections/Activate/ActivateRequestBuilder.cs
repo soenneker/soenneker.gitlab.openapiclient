@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Active_context.Connections
         {
         }
         /// <summary>
-        /// Activate an ActiveContext connection
+        /// Activates the specified connection and deactivates the previously active connection, if any.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiActiveContextConnection"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Active_context.Connections
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiActiveContextConnection>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiActiveContextConnection.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Activate an ActiveContext connection
+        /// Activates the specified connection and deactivates the previously active connection, if any.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

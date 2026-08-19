@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Active_context.Collections
         {
         }
         /// <summary>
-        /// Update collection options
+        /// Updates the queue shard count and/or queue shard limit for the specified collection.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiActiveContextCollection"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Active_context.Collections
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiActiveContextCollection>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiActiveContextCollection.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Update collection options
+        /// Updates the queue shard count and/or queue shard limit for the specified collection.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

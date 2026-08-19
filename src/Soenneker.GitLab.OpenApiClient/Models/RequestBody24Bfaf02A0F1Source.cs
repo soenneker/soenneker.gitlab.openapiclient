@@ -5,7 +5,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>Where the session was triggered from</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBody0B3B859426BaSource
+    public enum RequestBody24Bfaf02A0F1Source
     {
         [EnumMember(Value = "merge_request_code_conflict")]
         #pragma warning disable CS1591

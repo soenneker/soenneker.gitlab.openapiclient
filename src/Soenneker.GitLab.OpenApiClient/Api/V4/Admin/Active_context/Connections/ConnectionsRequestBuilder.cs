@@ -46,7 +46,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Active_context.Connections
         {
         }
         /// <summary>
-        /// Get all ActiveContext connections
+        /// Returns every ActiveContext connection configured for this instance.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiActiveContextConnection"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -64,7 +64,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Active_context.Connections
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiActiveContextConnection>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiActiveContextConnection.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get all ActiveContext connections
+        /// Returns every ActiveContext connection configured for this instance.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

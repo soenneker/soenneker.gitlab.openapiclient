@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Active_context.Code.Enable
         {
         }
         /// <summary>
-        /// Update enabled namespace state
+        /// Transitions the indexing state of an enabled namespace to pending or ready.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiActiveContextCodeEnabledNamespace"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Active_context.Code.Enable
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiActiveContextCodeEnabledNamespace>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiActiveContextCodeEnabledNamespace.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Update enabled namespace state
+        /// Transitions the indexing state of an enabled namespace to pending or ready.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

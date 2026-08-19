@@ -15,7 +15,7 @@ info:
   title: GitLab REST API
   description: GitLab REST API used to interact with a GitLab installation.
   termsOfService: https://handbook.gitlab.com/handbook/legal/api-terms/
-  version: 19.3.0-pre
+  version: v4
   license:
     name: CC BY-SA 4.0
     url: https://gitlab.com/gitlab-org/gitlab/-/blob/master/LICENSE
@@ -742,7 +742,7 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/RequestBody_70f8c0578b6a"
+              "$ref": "#/components/schemas/RequestBody_af2d93c7f7ea"
   "/api/v4/jobs/{id}/sbom_scans/authorize":
     post:
       operationId: postApiV4JobsIdSbomScansAuthorize
@@ -1728,7 +1728,7 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/RequestBody_d98ff4ec17a4"
+              "$ref": "#/components/schemas/RequestBody_949adbf6ddd5"
       x-gitlab-lifecycle: experiment
   "/api/v4/ai/duo_workflows/revoke_token":
     post:
@@ -2198,7 +2198,7 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/RequestBody_0b3b859426ba"
+              "$ref": "#/components/schemas/RequestBody_24bfaf02a0f1"
       x-gitlab-lifecycle: experiment
   "/api/v4/ai/duo_workflows/workflows/agent_privileges":
     get:
@@ -12879,6 +12879,7 @@ paths:
     get:
       operationId: getApiV4AdminActiveContextConnections
       summary: Get all ActiveContext connections
+      description: Returns every ActiveContext connection configured for this instance.
       tags:
       - Active context
       responses:
@@ -12896,6 +12897,8 @@ paths:
     put:
       operationId: putApiV4AdminActiveContextConnectionsActivate
       summary: Activate an ActiveContext connection
+      description: Activates the specified connection and deactivates the previously
+        active connection, if any.
       tags:
       - Active context
       responses:
@@ -12923,6 +12926,8 @@ paths:
     put:
       operationId: putApiV4AdminActiveContextConnectionsDeactivate
       summary: Deactivate an ActiveContext connection
+      description: Deactivates the specified connection. This asynchronously drops
+        indexed data for the connection and deletes the connection record.
       tags:
       - Active context
       responses:
@@ -12950,6 +12955,8 @@ paths:
     put:
       operationId: putApiV4AdminActiveContextCollectionsId
       summary: Update collection options
+      description: Updates the queue shard count and/or queue shard limit for the
+        specified collection.
       tags:
       - Active context
       responses:
@@ -12988,6 +12995,8 @@ paths:
     delete:
       operationId: deleteApiV4AdminActiveContextDeadQueue
       summary: Clear the ActiveContext dead queue
+      description: Removes all items from the dead queue and returns the number of
+        items cleared.
       tags:
       - Active context
       responses:
@@ -13001,6 +13010,8 @@ paths:
     post:
       operationId: postApiV4AdminActiveContextDeadQueueReplay
       summary: Replay items from the dead queue into another queue
+      description: Enqueues a background task that replays dead queue items into the
+        specified target queue.
       tags:
       - Active context
       responses:
@@ -13022,6 +13033,8 @@ paths:
     put:
       operationId: putApiV4AdminActiveContextCodeEnabledNamespaces
       summary: Update enabled namespace state
+      description: Transitions the indexing state of an enabled namespace to pending
+        or ready.
       tags:
       - Active context
       responses:
@@ -18084,7 +18097,7 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/RequestBody_4301abf8c328"
+              "$ref": "#/components/schemas/RequestBody_f33ea4923f09"
   "/api/v4/service_accounts":
     post:
       operationId: postApiV4ServiceAccounts
@@ -85843,6 +85856,8 @@ components:
           type: integer
         logging_field_dual_emit_target:
           type: integer
+        auto_accept_awarded_achievements:
+          type: string
         deactivate_dormant_users:
           type: string
         deactivate_dormant_users_period:
@@ -94740,7 +94755,7 @@ components:
       required:
       - started_on
       - expires_on
-    RequestBody_70f8c0578b6a:
+    RequestBody_af2d93c7f7ea:
       type: object
       properties:
         topic:
@@ -94783,9 +94798,14 @@ components:
               description: The step type, present on step_* events
               nullable: true
               maxLength: 255
+            service:
+              type: string
+              description: Name of the Cd::Service, present on service_started/service_succeeded/service_failed
+              nullable: true
+              maxLength: 255
             error:
               type: string
-              description: Failure detail, present on step_failed
+              description: Failure detail, present on step_failed and service_failed
               nullable: true
               maxLength: 2000
           nullable: true
@@ -95317,7 +95337,7 @@ components:
       - project_id
       - merge_request_iid
       - review_output
-    RequestBody_d98ff4ec17a4:
+    RequestBody_949adbf6ddd5:
       type: object
       properties:
         project_id:
@@ -95407,13 +95427,6 @@ components:
             required:
             - Category
             - Content
-          nullable: true
-        shallow_clone:
-          type: boolean
-          default: true
-          description: Whether or not the workflow should use a shallow clone of the
-            repository during its execution.  Defaults to true.
-          example: true
           nullable: true
         issue_id:
           type: integer
@@ -95632,7 +95645,7 @@ components:
           description: The ID or path of the project
           example: '1'
           nullable: true
-    RequestBody_0b3b859426ba:
+    RequestBody_24bfaf02a0f1:
       type: object
       properties:
         project_id:
@@ -95734,13 +95747,6 @@ components:
             required:
             - Category
             - Content
-          nullable: true
-        shallow_clone:
-          type: boolean
-          default: true
-          description: Whether or not the workflow should use a shallow clone of the
-            repository during its execution.  Defaults to true.
-          example: true
           nullable: true
         issue_id:
           type: integer
@@ -100095,7 +100101,7 @@ components:
           description: Scopes available to the application. Separate multiple scopes
             with a space.
           nullable: true
-    RequestBody_4301abf8c328:
+    RequestBody_f33ea4923f09:
       type: object
       properties:
         admin_mode:
@@ -102173,6 +102179,9 @@ components:
           type: string
           nullable: true
         granular_tokens_enforced_after:
+          type: string
+          nullable: true
+        auto_accept_awarded_achievements:
           type: string
           nullable: true
         deactivate_dormant_users:

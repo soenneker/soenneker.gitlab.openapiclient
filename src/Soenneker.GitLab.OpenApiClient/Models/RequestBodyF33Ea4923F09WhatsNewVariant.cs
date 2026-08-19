@@ -5,7 +5,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>What&apos;s new variant, possible values: `all_tiers`, `current_tier`, and `disabled`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBody4301Abf8C328WhatsNewVariant
+    public enum RequestBodyF33Ea4923F09WhatsNewVariant
     {
         [EnumMember(Value = "all_tiers")]
         #pragma warning disable CS1591
