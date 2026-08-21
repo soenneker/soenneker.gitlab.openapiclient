@@ -74,7 +74,6 @@ using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pages_access;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipeline;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipeline_schedules;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines;
-using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Product_analytics;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Protected_branches;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Protected_environments;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Protected_tags;
@@ -488,11 +487,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.PipelinesRequestBuilder Pipelines
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.PipelinesRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The product_analytics property</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Product_analytics.Product_analyticsRequestBuilder Product_analytics
-        {
-            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Product_analytics.Product_analyticsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The protected_branches property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Protected_branches.Protected_branchesRequestBuilder Protected_branches
