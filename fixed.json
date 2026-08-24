@@ -18113,7 +18113,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody7006A9228543"
+                "$ref": "#/components/schemas/RequestBodyA3F99C49163E"
               }
             }
           },
@@ -25519,7 +25519,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody2Dac44D324B8"
+                "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4"
               }
             }
           }
@@ -138416,7 +138416,7 @@
           }
         }
       },
-      "RequestBody7006A9228543": {
+      "RequestBodyA3F99C49163E": {
         "required": [
           "queue"
         ],
@@ -138424,7 +138424,7 @@
         "properties": {
           "queue": {
             "type": "string",
-            "description": "Target queue name (e.g. retry_queue, code, code_backfill)",
+            "description": "Target queue name (e.g. retry_queue, second_retry_queue, code, code_backfill)",
             "nullable": true
           }
         }
@@ -139670,7 +139670,7 @@
           }
         }
       },
-      "RequestBody2Dac44D324B8": {
+      "RequestBodyB5F7B529C5F4": {
         "type": "object",
         "properties": {
           "admin_mode": {
@@ -139770,19 +139770,19 @@
             "nullable": true
           },
           "default_project_creation": {
-            "$ref": "#/components/schemas/RequestBody2Dac44D324B8DefaultProjectCreation"
+            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4DefaultProjectCreation"
           },
           "default_branch_protection": {
-            "$ref": "#/components/schemas/RequestBody2Dac44D324B8DefaultBranchProtection"
+            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4DefaultBranchProtection"
           },
           "default_branch_protection_defaults": {
-            "$ref": "#/components/schemas/RequestBody2Dac44D324B8DefaultBranchProtectionDefaults"
+            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaults"
           },
           "default_group_visibility": {
-            "$ref": "#/components/schemas/RequestBody2Dac44D324B8DefaultGroupVisibility"
+            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4DefaultGroupVisibility"
           },
           "default_project_visibility": {
-            "$ref": "#/components/schemas/RequestBody2Dac44D324B8DefaultProjectVisibility"
+            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4DefaultProjectVisibility"
           },
           "default_projects_limit": {
             "type": "integer",
@@ -139790,10 +139790,10 @@
             "nullable": true
           },
           "default_snippet_visibility": {
-            "$ref": "#/components/schemas/RequestBody2Dac44D324B8DefaultSnippetVisibility"
+            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4DefaultSnippetVisibility"
           },
           "dependency_management_settings": {
-            "$ref": "#/components/schemas/RequestBody2Dac44D324B8DependencyManagementSettings"
+            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4DependencyManagementSettings"
           },
           "disable_admin_oauth_scopes": {
             "type": "boolean",
@@ -139891,10 +139891,10 @@
             "nullable": true
           },
           "email_confirmation_setting": {
-            "$ref": "#/components/schemas/RequestBody2Dac44D324B8EmailConfirmationSetting"
+            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4EmailConfirmationSetting"
           },
           "enabled_git_access_protocol": {
-            "$ref": "#/components/schemas/RequestBody2Dac44D324B8EnabledGitAccessProtocol"
+            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4EnabledGitAccessProtocol"
           },
           "gitpod_enabled": {
             "type": "boolean",
@@ -140190,7 +140190,7 @@
             "nullable": true
           },
           "repository_storages_weighted": {
-            "$ref": "#/components/schemas/RequestBody2Dac44D324B8RepositoryStoragesWeightedProperty"
+            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4RepositoryStoragesWeightedProperty"
           },
           "require_two_factor_authentication": {
             "type": "boolean",
@@ -140354,7 +140354,7 @@
             "nullable": true
           },
           "whats_new_variant": {
-            "$ref": "#/components/schemas/RequestBody2Dac44D324B8WhatsNewVariant"
+            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4WhatsNewVariant"
           },
           "floc_enabled": {
             "type": "boolean",
@@ -140562,10 +140562,10 @@
             "nullable": true
           },
           "resource_usage_limits": {
-            "$ref": "#/components/schemas/RequestBody2Dac44D324B8ResourceUsageLimitsProperty"
+            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4ResourceUsageLimitsProperty"
           },
           "vscode_extension_marketplace": {
-            "$ref": "#/components/schemas/RequestBody2Dac44D324B8VscodeExtensionMarketplace"
+            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4VscodeExtensionMarketplace"
           },
           "enable_language_server_restrictions": {
             "type": "boolean",
@@ -140583,28 +140583,838 @@
             "nullable": true
           },
           "logging_field_schema_version": {
-            "$ref": "#/components/schemas/RequestBody2Dac44D324B8LoggingFieldSchemaVersion"
+            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4LoggingFieldSchemaVersion"
           },
           "logging_field_dual_emit_target": {
-            "$ref": "#/components/schemas/RequestBody2Dac44D324B8LoggingFieldDualEmitTarget"
+            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4LoggingFieldDualEmitTarget"
           },
           "rsa_key_restriction": {
-            "$ref": "#/components/schemas/RequestBody2Dac44D324B8RsaKeyRestriction"
+            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4RsaKeyRestriction"
           },
           "dsa_key_restriction": {
-            "$ref": "#/components/schemas/RequestBody2Dac44D324B8DsaKeyRestriction"
+            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4DsaKeyRestriction"
           },
           "ecdsa_key_restriction": {
-            "$ref": "#/components/schemas/RequestBody2Dac44D324B8EcdsaKeyRestriction"
+            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4EcdsaKeyRestriction"
           },
           "ed25519_key_restriction": {
-            "$ref": "#/components/schemas/RequestBody2Dac44D324B8Ed25519KeyRestriction"
+            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4Ed25519KeyRestriction"
           },
           "ecdsa_sk_key_restriction": {
-            "$ref": "#/components/schemas/RequestBody2Dac44D324B8EcdsaSkKeyRestriction"
+            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4EcdsaSkKeyRestriction"
           },
           "ed25519_sk_key_restriction": {
-            "$ref": "#/components/schemas/RequestBody2Dac44D324B8Ed25519SkKeyRestriction"
+            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4Ed25519SkKeyRestriction"
+          },
+          "allow_account_deletion": {
+            "type": "string",
+            "description": "Set to \u0060true\u0060 to allow users to delete their accounts. Premium and Ultimate only.",
+            "nullable": true
+          },
+          "allow_application_default_credentials_for_offline_transfer": {
+            "type": "string",
+            "description": "Allow Google Cloud Application Default Credentials for offline transfer. Even when enabled, only administrators can use these credentials, and the bucket name must start with \u0060gitlab-offline-transfer-\u0060. Has no effect on GitLab.com. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/602489) in GitLab 19.3.",
+            "nullable": true
+          },
+          "allow_bypass_placeholder_confirmation": {
+            "type": "string",
+            "description": "Skip confirmation when administrators reassign placeholder users. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/534330) in GitLab 18.0.",
+            "nullable": true
+          },
+          "allow_local_requests_from_system_hooks": {
+            "type": "string",
+            "description": "Allow requests to the local network from system hooks.",
+            "nullable": true
+          },
+          "allow_local_requests_from_web_hooks_and_services": {
+            "type": "string",
+            "description": "Allow requests to the local network from webhooks and integrations.",
+            "nullable": true
+          },
+          "allow_project_creation_for_guest_and_below": {
+            "type": "string",
+            "description": "Indicates whether users assigned up to the Guest role can create groups and personal projects. Defaults to \u0060true\u0060.",
+            "nullable": true
+          },
+          "allow_s3_compatible_storage_for_offline_transfer": {
+            "type": "string",
+            "description": "Allow S3-compatible object storage for offline transfer. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/579705) in GitLab 18.9.",
+            "nullable": true
+          },
+          "archive_builds_in_human_readable": {
+            "type": "string",
+            "description": "Set the duration for which the jobs are considered as old and expired. After that time passes, the jobs are archived and no longer able to be retried. Make it empty to never expire jobs. It has to be no less than 1 day, for example: \u006015 days\u0060, \u00601 month\u0060, \u00602 years\u0060.",
+            "nullable": true
+          },
+          "asciidoc_max_includes": {
+            "type": "string",
+            "description": "Maximum limit of AsciiDoc include directives being processed in any one document. Default: 32. Maximum: 64.",
+            "nullable": true
+          },
+          "authorized_keys_enabled": {
+            "type": "string",
+            "description": "By default, the \u0060authorized_keys\u0060 file supports Git over SSH without additional configuration. GitLab can be optimized to authenticate SSH keys via the database file. Only disable this if you have configured your OpenSSH server to use the AuthorizedKeysCommand.",
+            "nullable": true
+          },
+          "auto_accept_awarded_achievements": {
+            "type": "string",
+            "description": "If \u0060true\u0060, newly awarded achievements are accepted automatically and appear on user profiles immediately. Does not affect achievements awarded before this setting is enabled. Recipients can still hide any achievement. Default value: \u0060false\u0060. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/607750) in GitLab 19.4.",
+            "nullable": true
+          },
+          "auto_devops_domain": {
+            "type": "string",
+            "description": "Specify a domain to use by default for every project\u0027s Auto Review Apps and Auto Deploy stages.",
+            "nullable": true
+          },
+          "auto_devops_enabled": {
+            "type": "string",
+            "description": "Enable Auto DevOps for projects by default. It automatically builds, tests, and deploys applications based on a predefined CI/CD configuration.",
+            "nullable": true
+          },
+          "bulk_import_max_download_file_size": {
+            "type": "string",
+            "description": "Maximum download file size when importing from source GitLab instances by direct transfer.",
+            "nullable": true
+          },
+          "can_create_group": {
+            "type": "string",
+            "description": "Indicates whether users can create top-level groups. Defaults to \u0060true\u0060.",
+            "nullable": true
+          },
+          "ci_delete_pipelines_in_seconds_limit_human_readable": {
+            "type": "string",
+            "description": "Maximum value that is allowed for configuring pipeline retention. Defaults to \u00601 year\u0060.",
+            "nullable": true
+          },
+          "ci_max_total_yaml_size_bytes": {
+            "type": "string",
+            "description": "The maximum amount of memory, in bytes, that can be allocated for the pipeline configuration, with all included YAML configuration files.",
+            "nullable": true
+          },
+          "ci_partitions_in_seconds_limit": {
+            "type": "string",
+            "description": "The time window, in seconds, before new CI partitions are created and the system switches to the next set of partitions. Must be between 1 month and 6 months. Default is 1 month (\u00602592000\u0060). Write-only. Not returned in GET responses. Deprecated in favor of \u0060ci_partitions_in_seconds_limit_human_readable\u0060 and is scheduled for removal in API v5.",
+            "nullable": true
+          },
+          "ci_partitions_in_seconds_limit_human_readable": {
+            "type": "string",
+            "description": "The time window before new CI partitions are created and the system switches to the next set of partitions. Must be between \u00601 month\u0060 and \u00606 months\u0060. Defaults to \u00601 month\u0060.",
+            "nullable": true
+          },
+          "commit_email_hostname": {
+            "type": "string",
+            "description": "Custom hostname (for private commit emails).",
+            "nullable": true
+          },
+          "container_expiration_policies_enable_historic_entries": {
+            "type": "string",
+            "description": "Enable cleanup policies for all projects.",
+            "nullable": true
+          },
+          "container_registry_cleanup_tags_service_max_list_size": {
+            "type": "string",
+            "description": "The maximum number of tags that can be deleted in a single execution of cleanup policies.",
+            "nullable": true
+          },
+          "container_registry_delete_tags_service_timeout": {
+            "type": "string",
+            "description": "The maximum time, in seconds, that the cleanup process can take to delete a batch of tags for cleanup policies.",
+            "nullable": true
+          },
+          "container_registry_expiration_policies_caching": {
+            "type": "string",
+            "description": "Caching during the execution of cleanup policies.",
+            "nullable": true
+          },
+          "container_registry_expiration_policies_worker_capacity": {
+            "type": "string",
+            "description": "Number of workers for cleanup policies.",
+            "nullable": true
+          },
+          "custom_http_clone_url_root": {
+            "type": "string",
+            "description": "Set a custom Git clone URL for HTTP(S).",
+            "nullable": true
+          },
+          "default_branch_name": {
+            "type": "string",
+            "description": "Set the initial branch name for all projects in an instance.",
+            "nullable": true
+          },
+          "default_dark_syntax_highlighting_theme": {
+            "type": "string",
+            "description": "Default dark mode syntax highlighting theme for users who are new or not signed in. See [IDs of available themes](https://gitlab.com/gitlab-org/gitlab/blob/master/lib/gitlab/themes.rb#L16).",
+            "nullable": true
+          },
+          "default_preferred_language": {
+            "type": "string",
+            "description": "Default preferred language for users who are not logged in.",
+            "nullable": true
+          },
+          "default_syntax_highlighting_theme": {
+            "type": "string",
+            "description": "Default syntax highlighting theme for users who are new or not signed in. See [IDs of available themes](https://gitlab.com/gitlab-org/gitlab/blob/master/lib/gitlab/themes.rb#L16).",
+            "nullable": true
+          },
+          "delete_inactive_projects": {
+            "type": "string",
+            "description": "Enable dormant project deletion. Default is \u0060false\u0060.",
+            "nullable": true
+          },
+          "deletion_adjourned_period": {
+            "type": "string",
+            "description": "Number of days to wait before deleting a project or group that is marked for deletion. Value must be between \u00601\u0060 and \u006090\u0060. Defaults to \u006030\u0060.",
+            "nullable": true
+          },
+          "diff_max_commits": {
+            "type": "string",
+            "description": "Maximum number of diff commits per merge request.",
+            "nullable": true
+          },
+          "diff_max_files": {
+            "type": "string",
+            "description": "Maximum files in a diff.",
+            "nullable": true
+          },
+          "diff_max_lines": {
+            "type": "string",
+            "description": "Maximum lines in a diff.",
+            "nullable": true
+          },
+          "diff_max_patch_bytes": {
+            "type": "string",
+            "description": "Maximum diff patch size, in bytes.",
+            "nullable": true
+          },
+          "diff_max_versions": {
+            "type": "string",
+            "description": "Maximum number of diff versions per merge request.",
+            "nullable": true
+          },
+          "disable_password_authentication_for_users_with_sso_identities": {
+            "type": "string",
+            "description": "Disable password authentication in the web interface for users with an SSO identity. This does not affect Git operations over HTTP(S). Default is \u0060false\u0060.",
+            "nullable": true
+          },
+          "dns_rebinding_protection_enabled": {
+            "type": "string",
+            "description": "Enforce DNS-rebinding attack protection.",
+            "nullable": true
+          },
+          "email_restrictions": {
+            "type": "string",
+            "description": "Regular expression that is checked against the email used during registration.",
+            "nullable": true
+          },
+          "email_restrictions_enabled": {
+            "type": "string",
+            "description": "Prevent new users from creating an account by email.",
+            "nullable": true
+          },
+          "enforce_terms": {
+            "type": "string",
+            "description": "(**If enabled, requires**: \u0060terms\u0060) Enforce application ToS to all users.",
+            "nullable": true
+          },
+          "external_auth_client_cert": {
+            "type": "string",
+            "description": "(**If enabled, requires**: \u0060external_auth_client_key\u0060) The certificate to use to authenticate with the external authorization service.",
+            "nullable": true
+          },
+          "external_auth_client_key": {
+            "type": "string",
+            "description": "Private key for the certificate when authentication is required for the external authorization service, this is encrypted when stored.",
+            "nullable": true
+          },
+          "external_auth_client_key_pass": {
+            "type": "string",
+            "description": "Passphrase to use for the private key when authenticating with the external service this is encrypted when stored.",
+            "nullable": true
+          },
+          "external_authorization_service_default_label": {
+            "type": "string",
+            "description": "The default classification label to use when requesting authorization and no classification label has been specified on the project.",
+            "nullable": true
+          },
+          "external_authorization_service_enabled": {
+            "type": "string",
+            "description": "(**If enabled, requires**: \u0060external_authorization_service_default_label\u0060, \u0060external_authorization_service_timeout\u0060, and \u0060external_authorization_service_url\u0060) Enable using an external authorization service for accessing projects.",
+            "nullable": true
+          },
+          "external_authorization_service_timeout": {
+            "type": "string",
+            "description": "The timeout after which an authorization request is aborted, in seconds. When a request times out, access is denied to the user. (min: 0.001, max: 10, step: 0.001).",
+            "nullable": true
+          },
+          "external_authorization_service_url": {
+            "type": "string",
+            "description": "URL to which authorization requests are directed.",
+            "nullable": true
+          },
+          "external_pipeline_validation_service_timeout": {
+            "type": "string",
+            "description": "How long to wait for a response from the pipeline validation service. Assumes \u0060OK\u0060 if it times out.",
+            "nullable": true
+          },
+          "external_pipeline_validation_service_token": {
+            "type": "string",
+            "description": "Optional. Token to include as the \u0060X-Gitlab-Token\u0060 header in requests to the URL in \u0060external_pipeline_validation_service_url\u0060.",
+            "nullable": true
+          },
+          "external_pipeline_validation_service_url": {
+            "type": "string",
+            "description": "URL to use for pipeline validation requests.",
+            "nullable": true
+          },
+          "failed_login_attempts_unlock_period_in_minutes": {
+            "type": "string",
+            "description": "Time period in minutes after which the user is unlocked when maximum number of failed sign-in attempts reached.",
+            "nullable": true
+          },
+          "first_day_of_week": {
+            "type": "string",
+            "description": "Start day of the week for calendar views and date pickers. Valid values are \u00600\u0060 (default) for Sunday, \u00601\u0060 for Monday, and \u00606\u0060 for Saturday.",
+            "nullable": true
+          },
+          "gitlab_dedicated_instance": {
+            "type": "string",
+            "description": "Indicates whether the instance was provisioned for GitLab Dedicated.",
+            "nullable": true
+          },
+          "gitlab_environment_toolkit_instance": {
+            "type": "string",
+            "description": "Indicates whether the instance was provisioned with the GitLab Environment Toolkit for Service Ping reporting.",
+            "nullable": true
+          },
+          "gitlab_product_usage_data_enabled": {
+            "type": "string",
+            "description": "Indicates if product usage data collection is enabled. When the \u0060GITLAB_PRODUCT_USAGE_DATA_ENABLED\u0060 environment variable is set, the API returns the effective value from the environment variable.",
+            "nullable": true
+          },
+          "gitlab_shell_operation_limit": {
+            "type": "string",
+            "description": "Maximum number of Git operations per minute a user can perform. Default: \u0060600\u0060.",
+            "nullable": true
+          },
+          "hashed_storage_enabled": {
+            "type": "string",
+            "description": "Create new projects using hashed storage paths: Enable immutable, hash-based paths and repository names to store repositories on disk. This prevents repositories from having to be moved or renamed when the Project URL changes and may improve disk I/O performance. (Always enabled in GitLab versions 13.0 and later, configuration is scheduled for removal in 14.0)",
+            "nullable": true
+          },
+          "hide_third_party_offers": {
+            "type": "string",
+            "description": "Do not display offers from third parties in GitLab.",
+            "nullable": true
+          },
+          "inactive_projects_delete_after_months": {
+            "type": "string",
+            "description": "If \u0060delete_inactive_projects\u0060 is \u0060true\u0060, the time (in months) to wait before deleting dormant projects. Default is \u00602\u0060.",
+            "nullable": true
+          },
+          "inactive_projects_min_size_mb": {
+            "type": "string",
+            "description": "If \u0060delete_inactive_projects\u0060 is \u0060true\u0060, the minimum repository size for projects to be checked for inactivity. Default is \u00600\u0060.",
+            "nullable": true
+          },
+          "inactive_projects_send_warning_email_after_months": {
+            "type": "string",
+            "description": "If \u0060delete_inactive_projects\u0060 is \u0060true\u0060, sets the time (in months) to wait before emailing Maintainers that the project is scheduled to be deleted because it is dormant. Default is \u00601\u0060.",
+            "nullable": true
+          },
+          "inactive_resource_access_tokens_delete_after_days": {
+            "type": "string",
+            "description": "Specifies retention period for inactive project and group access tokens. Default is \u006030\u0060.",
+            "nullable": true
+          },
+          "include_optional_metrics_in_service_ping": {
+            "type": "string",
+            "description": "Whether or not optional metrics are enabled in Service Ping.",
+            "nullable": true
+          },
+          "keep_latest_artifact": {
+            "type": "string",
+            "description": "Prevent the deletion of the artifacts from the most recent successful jobs, regardless of the expiry time. Enabled by default.",
+            "nullable": true
+          },
+          "kroki_diagram_proxy_enabled": {
+            "type": "string",
+            "description": "Enable Kroki diagram proxy. Default is \u0060false\u0060.",
+            "nullable": true
+          },
+          "kroki_formats": {
+            "type": "string",
+            "description": "Additional formats supported by the Kroki instance. Possible values are \u0060true\u0060 or \u0060false\u0060 for formats \u0060bpmn\u0060, \u0060blockdiag\u0060, \u0060excalidraw\u0060, and \u0060mermaid\u0060 in the format \u0060\u003Cformat\u003E: true\u0060 or \u0060\u003Cformat\u003E: false\u0060.",
+            "nullable": true
+          },
+          "lock_require_sha_for_merge": {
+            "type": "string",
+            "description": "Enforce the \u0060require_sha_for_merge\u0060 setting for all groups on the instance. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/236732) in GitLab 19.2.",
+            "nullable": true
+          },
+          "max_http_decompressed_size": {
+            "type": "string",
+            "description": "Maximum allowed size in MiB for Gzip-compressed HTTP responses from outbound requests after decompression. 0 for unlimited.",
+            "nullable": true
+          },
+          "max_http_response_csv_structural_chars": {
+            "type": "string",
+            "description": "Maximum allowed object count in CSV HTTP responses from outbound requests. Count is an estimate based on the number of \u0060,\u0060, \u0060;\u0060, \u0060\\t\u0060, and \u0060\\n\u0060 occurrences in the response. Introduced in GitLab 18.4.",
+            "nullable": true
+          },
+          "max_http_response_json_depth": {
+            "type": "string",
+            "description": "Maximum allowed nesting depth in JSON HTTP responses from outbound requests.",
+            "nullable": true
+          },
+          "max_http_response_json_structural_chars": {
+            "type": "string",
+            "description": "Maximum allowed object count in JSON HTTP responses from outbound requests. Count is an estimate based on the number of \u0060:\u0060, \u0060,\u0060, \u0060{\u0060, and \u0060[\u0060 occurrences in the response. Introduced in GitLab 18.4.",
+            "nullable": true
+          },
+          "max_http_response_size_limit": {
+            "type": "string",
+            "description": "Maximum allowed size in MiB for HTTP responses from outbound requests. 0 for unlimited. Applicable for integrations, importers, and webhooks. Introduced in GitLab 18.4.",
+            "nullable": true
+          },
+          "max_http_response_xml_structural_chars": {
+            "type": "string",
+            "description": "Maximum allowed object count in XML HTTP responses from outbound requests. Count is an estimate based on the number of \u0060\u003C\u0060, and \u0060=\u0060 occurrences in the response. Introduced in GitLab 18.4.",
+            "nullable": true
+          },
+          "max_login_attempts": {
+            "type": "string",
+            "description": "Maximum number of sign-in attempts before locking out the user.",
+            "nullable": true
+          },
+          "max_yaml_depth": {
+            "type": "string",
+            "description": "The maximum depth of nested CI/CD configuration added with the \u0060include\u0060 keyword. Default: \u0060100\u0060.",
+            "nullable": true
+          },
+          "max_yaml_size_bytes": {
+            "type": "string",
+            "description": "The maximum size in bytes of a single CI/CD configuration file. Default: \u00602097152\u0060.",
+            "nullable": true
+          },
+          "minimum_password_length": {
+            "type": "string",
+            "description": "Indicates whether passwords require a minimum length. Premium and Ultimate only.",
+            "nullable": true
+          },
+          "mirror_available": {
+            "type": "string",
+            "description": "Allow repository mirroring to configured by project Maintainers. If disabled, only Administrators can configure repository mirroring.",
+            "nullable": true
+          },
+          "notify_on_unknown_sign_in": {
+            "type": "string",
+            "description": "Enable sending notification if sign in from unknown IP address happens.",
+            "nullable": true
+          },
+          "offline_transfer_exports_enabled": {
+            "type": "string",
+            "description": "Enable exporting GitLab groups and projects by offline transfer. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/588971) in GitLab 19.3.",
+            "nullable": true
+          },
+          "offline_transfer_imports_enabled": {
+            "type": "string",
+            "description": "Enable importing GitLab groups and projects by offline transfer. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/588971) in GitLab 19.3.",
+            "nullable": true
+          },
+          "package_registry_allow_anyone_to_pull_option": {
+            "type": "string",
+            "description": "Enable to allow anyone to pull from package registry visible and changeable.",
+            "nullable": true
+          },
+          "package_registry_cleanup_policies_worker_capacity": {
+            "type": "string",
+            "description": "Number of workers assigned to the packages cleanup policies.",
+            "nullable": true
+          },
+          "pages_domain_verification_enabled": {
+            "type": "string",
+            "description": "Require users to prove ownership of custom domains. Domain verification is an essential security measure for public GitLab sites. Users are required to demonstrate they control a domain before it is enabled.",
+            "nullable": true
+          },
+          "pages_unique_domain_default_enabled": {
+            "type": "string",
+            "description": "Enable unique domains by default for Pages sites to avoid cookie sharing between sites under a given namespace. Default is \u0060true\u0060.",
+            "nullable": true
+          },
+          "plantuml_diagram_proxy_enabled": {
+            "type": "string",
+            "description": "Enable PlantUML diagram proxy. Default is \u0060false\u0060.",
+            "nullable": true
+          },
+          "projects_api_rate_limit_unauthenticated": {
+            "type": "string",
+            "description": "Maximum number of requests per 10 minutes per IP address for unauthenticated requests to the list all projects API. Default: 400. To disable throttling, set to 0.",
+            "nullable": true
+          },
+          "protected_ci_variables": {
+            "type": "string",
+            "description": "CI/CD variables are protected by default.",
+            "nullable": true
+          },
+          "rate_limiting_response_text": {
+            "type": "string",
+            "description": "When rate limiting is enabled via the \u0060throttle_*\u0060 settings, send this plain text response when a rate limit is exceeded. \u0027Retry later\u0027 is sent if this is blank.",
+            "nullable": true
+          },
+          "receive_max_input_size": {
+            "type": "string",
+            "description": "Maximum push size (MB).",
+            "nullable": true
+          },
+          "relation_export_batch_size": {
+            "type": "string",
+            "description": "The size of each batch when exporting batched relations. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/194607) in GitLab 18.2.",
+            "nullable": true
+          },
+          "remember_me_enabled": {
+            "type": "string",
+            "description": "Enable **Remember me** setting.",
+            "nullable": true
+          },
+          "require_admin_two_factor_authentication": {
+            "type": "string",
+            "description": "Allow administrators to require 2FA for all administrators on the instance.",
+            "nullable": true
+          },
+          "require_email_verification_on_account_locked": {
+            "type": "string",
+            "description": "If \u0060true\u0060, all users on the instance must verify their identity after suspicious sign-in activity is detected.",
+            "nullable": true
+          },
+          "require_sha_for_merge": {
+            "type": "string",
+            "description": "Instance default that requires a valid commit \u0060sha\u0060 for calls to the merge a merge request endpoint. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/236732) in GitLab 19.2.",
+            "nullable": true
+          },
+          "runner_jobs_endpoints_api_limit": {
+            "type": "string",
+            "description": "Maximum number of requests per minute per job token for requests to \u0060/jobs/*\u0060 requests to the runner jobs API endpoints. Default: 200. To disable throttling, set to 0. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/462537) in GitLab 18.5.",
+            "nullable": true
+          },
+          "runner_jobs_patch_trace_api_limit": {
+            "type": "string",
+            "description": "Maximum number of requests per minute per runner token for requests to the \u0060PATCH /jobs/:id/trace\u0060 runner jobs API endpoint. Default: 2000. To disable throttling, set to 0. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/462537) in GitLab 18.5.",
+            "nullable": true
+          },
+          "runner_jobs_request_api_limit": {
+            "type": "string",
+            "description": "Maximum number of requests per minute per runner token for requests to the \u0060/jobs/request\u0060 runner jobs API endpoint. Default: 2000. To disable throttling, set to 0. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/462537) in GitLab 18.5.",
+            "nullable": true
+          },
+          "search_rate_limit": {
+            "type": "string",
+            "description": "Maximum number of requests per minute for performing a search while authenticated. Default: 30. To disable throttling, set to 0.",
+            "nullable": true
+          },
+          "search_rate_limit_unauthenticated": {
+            "type": "string",
+            "description": "Maximum number of requests per minute for performing a search while unauthenticated. Default: 10. To disable throttling, set to 0.",
+            "nullable": true
+          },
+          "sidekiq_job_limiter_compression_threshold_bytes": {
+            "type": "string",
+            "description": "The threshold in bytes at which Sidekiq jobs are compressed before being stored in Redis. Default: 100,000 bytes (100 KB).",
+            "nullable": true
+          },
+          "sidekiq_job_limiter_limit_bytes": {
+            "type": "string",
+            "description": "The threshold in bytes at which Sidekiq jobs are rejected. Default: 0 bytes (doesn\u0027t reject any job).",
+            "nullable": true
+          },
+          "sidekiq_job_limiter_mode": {
+            "type": "string",
+            "description": "\u0060track\u0060 or \u0060compress\u0060. Sets the behavior for Sidekiq job size limits. Default: \u0027compress\u0027.",
+            "nullable": true
+          },
+          "sidekiq_timezone_override": {
+            "type": "string",
+            "description": "IANA timezone identifier (for example, \u0060America/Chicago\u0060) applied to all Sidekiq cron jobs. When blank, no override is applied and cron jobs use the Rails application timezone.",
+            "nullable": true
+          },
+          "sign_in_restrictions": {
+            "type": "string",
+            "description": "Application sign in restrictions.",
+            "nullable": true
+          },
+          "silent_admin_exports_enabled": {
+            "type": "string",
+            "description": "Enable Silent admin exports. Default is \u0060false\u0060.",
+            "nullable": true
+          },
+          "silent_mode_enabled": {
+            "type": "string",
+            "description": "Enable Silent mode. Default is \u0060false\u0060.",
+            "nullable": true
+          },
+          "snippet_size_limit": {
+            "type": "string",
+            "description": "Maximum snippet content size in **bytes**. Default: 52428800 Bytes (50 MB).",
+            "nullable": true
+          },
+          "snowplow_database_collector_hostname": {
+            "type": "string",
+            "description": "The Snowplow collector for database events hostname. (for example, \u0060db-snowplow.trx.gitlab.net\u0060)",
+            "nullable": true
+          },
+          "spam_check_api_key": {
+            "type": "string",
+            "description": "API key used by GitLab for accessing the Spam Check service endpoint.",
+            "nullable": true
+          },
+          "static_objects_external_storage_auth_token": {
+            "type": "string",
+            "description": "Authentication token for the external storage linked in \u0060static_objects_external_storage_url\u0060.",
+            "nullable": true
+          },
+          "static_objects_external_storage_url": {
+            "type": "string",
+            "description": "URL to an external storage for repository static objects.",
+            "nullable": true
+          },
+          "terms": {
+            "type": "string",
+            "description": "(**Required by**: \u0060enforce_terms\u0060) Markdown content for the ToS.",
+            "nullable": true
+          },
+          "throttle_authenticated_api_enabled": {
+            "type": "string",
+            "description": "(**If enabled, requires**: \u0060throttle_authenticated_api_period_in_seconds\u0060 and \u0060throttle_authenticated_api_requests_per_period\u0060) Enable authenticated API request rate limit. Helps reduce request volume (for example, from crawlers or abusive bots).",
+            "nullable": true
+          },
+          "throttle_authenticated_api_period_in_seconds": {
+            "type": "string",
+            "description": "Rate limit period (in seconds).",
+            "nullable": true
+          },
+          "throttle_authenticated_api_requests_per_period": {
+            "type": "string",
+            "description": "Maximum requests per period per user.",
+            "nullable": true
+          },
+          "throttle_authenticated_git_http_enabled": {
+            "type": "string",
+            "description": "If \u0060true\u0060, enforces the authenticated Git HTTP request rate limit. Default value: \u0060false\u0060.",
+            "nullable": true
+          },
+          "throttle_authenticated_git_http_period_in_seconds": {
+            "type": "string",
+            "description": "Rate limit period in seconds. \u0060throttle_authenticated_git_http_enabled\u0060 must be \u0060true\u0060. Default value: \u00603600\u0060.",
+            "nullable": true
+          },
+          "throttle_authenticated_git_http_requests_per_period": {
+            "type": "string",
+            "description": "Maximum requests per period per user. \u0060throttle_authenticated_git_http_enabled\u0060 must be \u0060true\u0060. Default value: \u00603600\u0060.",
+            "nullable": true
+          },
+          "throttle_authenticated_packages_api_enabled": {
+            "type": "string",
+            "description": "(**If enabled, requires**: \u0060throttle_authenticated_packages_api_period_in_seconds\u0060 and \u0060throttle_authenticated_packages_api_requests_per_period\u0060) Enable authenticated API request rate limit. Helps reduce request volume (for example, from crawlers or abusive bots).",
+            "nullable": true
+          },
+          "throttle_authenticated_packages_api_period_in_seconds": {
+            "type": "string",
+            "description": "Rate limit period (in seconds).",
+            "nullable": true
+          },
+          "throttle_authenticated_packages_api_requests_per_period": {
+            "type": "string",
+            "description": "Maximum requests per period per user.",
+            "nullable": true
+          },
+          "throttle_authenticated_web_enabled": {
+            "type": "string",
+            "description": "(**If enabled, requires**: \u0060throttle_authenticated_web_period_in_seconds\u0060 and \u0060throttle_authenticated_web_requests_per_period\u0060) Enable authenticated web request rate limit. Helps reduce request volume (for example, from crawlers or abusive bots).",
+            "nullable": true
+          },
+          "throttle_authenticated_web_period_in_seconds": {
+            "type": "string",
+            "description": "Rate limit period (in seconds).",
+            "nullable": true
+          },
+          "throttle_authenticated_web_requests_per_period": {
+            "type": "string",
+            "description": "Maximum requests per period per user.",
+            "nullable": true
+          },
+          "throttle_unauthenticated_api_enabled": {
+            "type": "string",
+            "description": "(**If enabled, requires**: \u0060throttle_unauthenticated_api_period_in_seconds\u0060 and \u0060throttle_unauthenticated_api_requests_per_period\u0060) Enable unauthenticated API request rate limit. Helps reduce request volume (for example, from crawlers or abusive bots).",
+            "nullable": true
+          },
+          "throttle_unauthenticated_api_period_in_seconds": {
+            "type": "string",
+            "description": "Rate limit period in seconds.",
+            "nullable": true
+          },
+          "throttle_unauthenticated_api_requests_per_period": {
+            "type": "string",
+            "description": "Maximum requests per period per IP.",
+            "nullable": true
+          },
+          "throttle_unauthenticated_enabled": {
+            "type": "string",
+            "description": "([Deprecated](https://gitlab.com/gitlab-org/gitlab/-/issues/335300) in GitLab 14.3. Use \u0060throttle_unauthenticated_web_enabled\u0060 or \u0060throttle_unauthenticated_api_enabled\u0060 instead.) (**If enabled, requires**: \u0060throttle_unauthenticated_period_in_seconds\u0060 and \u0060throttle_unauthenticated_requests_per_period\u0060) Enable unauthenticated web request rate limit. Helps reduce request volume (for example, from crawlers or abusive bots).",
+            "nullable": true
+          },
+          "throttle_unauthenticated_git_http_enabled": {
+            "type": "string",
+            "description": "If \u0060true\u0060, enforces the unauthenticated Git HTTP request rate limit. Default value: \u0060false\u0060.",
+            "nullable": true
+          },
+          "throttle_unauthenticated_git_http_period_in_seconds": {
+            "type": "string",
+            "description": "Rate limit period in seconds. \u0060throttle_unauthenticated_git_http_enabled\u0060 must be \u0060true\u0060. Default value: \u00603600\u0060.",
+            "nullable": true
+          },
+          "throttle_unauthenticated_git_http_requests_per_period": {
+            "type": "string",
+            "description": "Maximum requests per period per IP. \u0060throttle_unauthenticated_git_http_enabled\u0060 must be \u0060true\u0060. Default value: \u00603600\u0060.",
+            "nullable": true
+          },
+          "throttle_unauthenticated_packages_api_enabled": {
+            "type": "string",
+            "description": "(**If enabled, requires**: \u0060throttle_unauthenticated_packages_api_period_in_seconds\u0060 and \u0060throttle_unauthenticated_packages_api_requests_per_period\u0060) Enable unauthenticated API request rate limit. Helps reduce request volume (for example, from crawlers or abusive bots).",
+            "nullable": true
+          },
+          "throttle_unauthenticated_packages_api_period_in_seconds": {
+            "type": "string",
+            "description": "Rate limit period (in seconds).",
+            "nullable": true
+          },
+          "throttle_unauthenticated_packages_api_requests_per_period": {
+            "type": "string",
+            "description": "Maximum requests per period per user.",
+            "nullable": true
+          },
+          "throttle_unauthenticated_period_in_seconds": {
+            "type": "string",
+            "description": "([Deprecated](https://gitlab.com/gitlab-org/gitlab/-/issues/335300) in GitLab 14.3. Use \u0060throttle_unauthenticated_web_period_in_seconds\u0060 or \u0060throttle_unauthenticated_api_period_in_seconds\u0060 instead.) Rate limit period in seconds.",
+            "nullable": true
+          },
+          "throttle_unauthenticated_requests_per_period": {
+            "type": "string",
+            "description": "([Deprecated](https://gitlab.com/gitlab-org/gitlab/-/issues/335300) in GitLab 14.3. Use \u0060throttle_unauthenticated_web_requests_per_period\u0060 or \u0060throttle_unauthenticated_api_requests_per_period\u0060 instead.) Maximum requests per period per IP.",
+            "nullable": true
+          },
+          "throttle_unauthenticated_web_enabled": {
+            "type": "string",
+            "description": "(**If enabled, requires**: \u0060throttle_unauthenticated_web_period_in_seconds\u0060 and \u0060throttle_unauthenticated_web_requests_per_period\u0060) Enable unauthenticated web request rate limit. Helps reduce request volume (for example, from crawlers or abusive bots).",
+            "nullable": true
+          },
+          "throttle_unauthenticated_web_period_in_seconds": {
+            "type": "string",
+            "description": "Rate limit period in seconds.",
+            "nullable": true
+          },
+          "throttle_unauthenticated_web_requests_per_period": {
+            "type": "string",
+            "description": "Maximum requests per period per IP.",
+            "nullable": true
+          },
+          "time_tracking_limit_to_hours": {
+            "type": "string",
+            "description": "Limit display of time tracking units to hours. Default is \u0060false\u0060.",
+            "nullable": true
+          },
+          "top_level_group_creation_enabled": {
+            "type": "string",
+            "description": "Allows a user to create top-level-groups. Default is \u0060true\u0060.",
+            "nullable": true
+          },
+          "unique_ips_limit_enabled": {
+            "type": "string",
+            "description": "(**If enabled, requires**: \u0060unique_ips_limit_per_user\u0060 and \u0060unique_ips_limit_time_window\u0060) Limit sign in from multiple IPs.",
+            "nullable": true
+          },
+          "unique_ips_limit_per_user": {
+            "type": "string",
+            "description": "Maximum number of IPs per user.",
+            "nullable": true
+          },
+          "unique_ips_limit_time_window": {
+            "type": "string",
+            "description": "How many seconds an IP is counted towards the limit.",
+            "nullable": true
+          },
+          "update_runner_versions_enabled": {
+            "type": "string",
+            "description": "Fetch GitLab Runner release version data from GitLab.com.",
+            "nullable": true
+          },
+          "use_clickhouse_for_analytics": {
+            "type": "string",
+            "description": "Enables ClickHouse as a data source for analytics reports. ClickHouse must be configured for this setting to take effect. Available on Premium and Ultimate only.",
+            "nullable": true
+          },
+          "user_default_external": {
+            "type": "string",
+            "description": "Newly registered users are external by default.",
+            "nullable": true
+          },
+          "user_default_internal_regex": {
+            "type": "string",
+            "description": "Specify an email address regex pattern to identify default internal users.",
+            "nullable": true
+          },
+          "user_defaults_to_private_profile": {
+            "type": "string",
+            "description": "Newly created users have private profile by default. Defaults to \u0060false\u0060.",
+            "nullable": true
+          },
+          "user_oauth_applications": {
+            "type": "string",
+            "description": "Allow users to register any application to use GitLab as an OAuth provider. This setting does not affect group-level OAuth applications.",
+            "nullable": true
+          },
+          "user_show_add_ssh_key_message": {
+            "type": "string",
+            "description": "When set to \u0060false\u0060 disable the \u0060You won\u0027t be able to pull or push repositories via SSH until you add an SSH key to your profile\u0060 warning shown to users with no uploaded SSH key.",
+            "nullable": true
+          },
+          "users_api_limit_followers": {
+            "type": "string",
+            "description": "Maximum number of requests per minute, per user or IP address. Default: 100. Set to \u00600\u0060 to disable limits. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/181054) in GitLab 17.10.",
+            "nullable": true
+          },
+          "users_api_limit_following": {
+            "type": "string",
+            "description": "Maximum number of requests per minute, per user or IP address. Default: 100. Set to \u00600\u0060 to disable limits. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/181054) in GitLab 17.10.",
+            "nullable": true
+          },
+          "users_api_limit_gpg_key": {
+            "type": "string",
+            "description": "Maximum number of requests per minute, per user or IP address. Default: 120. Set to \u00600\u0060 to disable limits. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/181054) in GitLab 17.10.",
+            "nullable": true
+          },
+          "users_api_limit_gpg_keys": {
+            "type": "string",
+            "description": "Maximum number of requests per minute, per user or IP address. Default: 120. Set to \u00600\u0060 to disable limits. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/181054) in GitLab 17.10.",
+            "nullable": true
+          },
+          "users_api_limit_status": {
+            "type": "string",
+            "description": "Maximum number of requests per minute, per user or IP address. Default: 240. Set to \u00600\u0060 to disable limits. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/181054) in GitLab 17.10.",
+            "nullable": true
+          },
+          "version_check_enabled": {
+            "type": "string",
+            "description": "Let GitLab inform you when an update is available.",
+            "nullable": true
+          },
+          "web_hook_event_resend_limit": {
+            "type": "string",
+            "description": "Maximum number of webhook event resend requests per minute, per user, for a given project or group. Default: 5. Set to \u00600\u0060 to disable limits. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/587887) in GitLab 19.3.",
+            "nullable": true
+          },
+          "web_hook_test_limit": {
+            "type": "string",
+            "description": "Maximum number of webhook test requests per minute, per user, for a given project or group. Default: 5. Set to \u00600\u0060 to disable limits. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/587887) in GitLab 19.3.",
+            "nullable": true
           },
           "elasticsearch_aws": {
             "type": "boolean",
@@ -140921,7 +141731,7 @@
           "duo_namespace_access_rules": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBody2Dac44D324B8DuoNamespaceAccessRulesItem"
+              "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4DuoNamespaceAccessRulesItem"
             },
             "description": "AI entity access rules for controlling Duo feature access",
             "nullable": true
@@ -140946,55 +141756,222 @@
             "description": "Route audit event streaming through NATS JetStream when the instance has NATS configured",
             "nullable": true
           },
-          "allow_local_requests_from_web_hooks_and_services": {
+          "allow_all_integrations": {
             "type": "string",
+            "description": "When \u0060false\u0060, only integrations in \u0060allowed_integrations\u0060 are allowed on the instance. Ultimate only.",
             "nullable": true
           },
-          "allow_local_requests_from_system_hooks": {
+          "allow_group_owners_to_manage_ldap": {
             "type": "string",
+            "description": "Set to \u0060true\u0060 to allow group owners to manage LDAP. Premium and Ultimate only.",
+            "nullable": true
+          },
+          "allowed_integrations": {
+            "type": "string",
+            "description": "When \u0060allow_all_integrations\u0060 is \u0060false\u0060, only integrations in this list are allowed on the instance. Ultimate only.",
+            "nullable": true
+          },
+          "automatic_purchased_storage_allocation": {
+            "type": "string",
+            "description": "Enabling this permits automatic allocation of purchased storage in a namespace. Relevant only to EE distributions.",
+            "nullable": true
+          },
+          "check_namespace_plan": {
+            "type": "string",
+            "description": "Enabling this makes only licensed EE features available to projects if the project namespace\u0027s plan includes the feature or if the project is public. Premium and Ultimate only.",
+            "nullable": true
+          },
+          "delete_unconfirmed_users": {
+            "type": "string",
+            "description": "Specifies whether users who have not confirmed their email should be deleted. Default is \u0060false\u0060. When set to \u0060true\u0060, unconfirmed users are deleted after \u0060unconfirmed_users_delete_after_days\u0060 days. GitLab Self-Managed, Premium and Ultimate only.",
+            "nullable": true
+          },
+          "disable_invite_members": {
+            "type": "string",
+            "description": "Disable invite members functionality for group.",
+            "nullable": true
+          },
+          "elasticsearch_client_adapter": {
+            "type": "string",
+            "description": "The Faraday adapter used by the Elasticsearch Ruby Client. Defaults to \u0060typhoeus\u0060. Possible values are \u0060typhoeus\u0060 and \u0060net_http\u0060. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/550805) in GitLab 18.5. Premium and Ultimate only.",
+            "nullable": true
+          },
+          "elasticsearch_indexed_field_length_limit": {
+            "type": "string",
+            "description": "Maximum size of text fields to index by Elasticsearch. 0 value means no limit. This does not apply to repository and wiki indexing. Premium and Ultimate only.",
+            "nullable": true
+          },
+          "elasticsearch_indexed_file_size_limit_kb": {
+            "type": "string",
+            "description": "Maximum size of repository and wiki files that are indexed by Elasticsearch. Premium and Ultimate only.",
+            "nullable": true
+          },
+          "elasticsearch_max_bulk_concurrency": {
+            "type": "string",
+            "description": "Maximum concurrency of Elasticsearch bulk requests per indexing operation. This only applies to repository indexing operations. Premium and Ultimate only.",
+            "nullable": true
+          },
+          "elasticsearch_max_bulk_size_mb": {
+            "type": "string",
+            "description": "Maximum size of Elasticsearch bulk indexing requests in MB. This only applies to repository indexing operations. Premium and Ultimate only.",
+            "nullable": true
+          },
+          "elasticsearch_max_code_indexing_concurrency": {
+            "type": "string",
+            "description": "Maximum concurrency of Elasticsearch code indexing background jobs. This only applies to repository indexing operations. Premium and Ultimate only.",
+            "nullable": true
+          },
+          "elasticsearch_replicas": {
+            "type": "string",
+            "description": "Number of replicas for Elasticsearch indices. Use an integer to set all indices to the same value. Use an object to set per-index values. For example: \u0060{\u0022gitlab-production\u0022: 1, \u0022gitlab-production-notes\u0022: 2}\u0060. \u003Cbr\u003EWhen using an object, you must provide both \u0060elasticsearch_shards\u0060 and \u0060elasticsearch_replicas\u0060 for each index. If either value is missing for an index, that index is skipped. Premium and Ultimate only.",
+            "nullable": true
+          },
+          "elasticsearch_requeue_workers": {
+            "type": "string",
+            "description": "Enable automatic requeuing of indexing workers. This improves non-code indexing throughput by enqueuing Sidekiq jobs until all documents are processed. Premium and Ultimate only.",
+            "nullable": true
+          },
+          "elasticsearch_retry_on_failure": {
+            "type": "string",
+            "description": "Maximum number of possible retries for Elasticsearch search requests. Premium and Ultimate only.",
+            "nullable": true
+          },
+          "elasticsearch_shards": {
+            "type": "string",
+            "description": "Number of shards for Elasticsearch indices. Use an integer to set all indices to the same value. Use an object to set per-index values. For example: \u0060{\u0022gitlab-production\u0022: 5, \u0022gitlab-production-notes\u0022: 3}\u0060. \u003Cbr\u003EWhen using an object, you must provide both \u0060elasticsearch_shards\u0060 and \u0060elasticsearch_replicas\u0060 for each index. If either value is missing for an index, that index is skipped. Premium and Ultimate only.",
+            "nullable": true
+          },
+          "elasticsearch_worker_number_of_shards": {
+            "type": "string",
+            "description": "Number of indexing worker shards. This improves non-code indexing throughput by enqueuing more parallel Sidekiq jobs. Default is \u00602\u0060. Premium and Ultimate only.",
+            "nullable": true
+          },
+          "enforce_namespace_storage_limit": {
+            "type": "string",
+            "description": "Enabling this permits enforcement of namespace storage limits.",
+            "nullable": true
+          },
+          "enforce_pipl_compliance": {
+            "type": "string",
+            "description": "Sets whether pipl compliance is enforced for the saas application or not",
+            "nullable": true
+          },
+          "geo_node_allowed_ips": {
+            "type": "string",
+            "description": "Comma-separated list of IPs and CIDRs of allowed secondary nodes. For example, \u00601.1.1.1, 2.2.2.0/24\u0060. GitLab Self-Managed, Premium and Ultimate only.",
+            "nullable": true
+          },
+          "geo_status_timeout": {
+            "type": "string",
+            "description": "The amount of seconds after which a request to get a secondary node status times out. GitLab Self-Managed, Premium and Ultimate only.",
+            "nullable": true
+          },
+          "globally_allowed_ips": {
+            "type": "string",
+            "description": "Comma-separated list of IP addresses and CIDRs always allowed for inbound traffic. For example, \u00601.1.1.1, 2.2.2.0/24\u0060.",
+            "nullable": true
+          },
+          "group_secrets_limit": {
+            "type": "string",
+            "description": "Maximum number of secrets allowed per group in Secrets Manager. Default: 500. To disable the limit, set to \u00600\u0060. Ultimate only. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/219436) in GitLab 18.9.",
+            "nullable": true
+          },
+          "lock_memberships_to_saml": {
+            "type": "string",
+            "description": "Enforce a global lock on SAML group memberships.",
+            "nullable": true
+          },
+          "max_personal_access_token_lifetime": {
+            "type": "string",
+            "description": "Maximum allowable lifetime for access tokens in days. When left blank, default value of 365 is applied. When set, value must be 365 or less. When changed, existing access tokens with an expiration date beyond the maximum allowable lifetime are revoked. GitLab Self-Managed, Ultimate only. In GitLab 17.6 or later, the maximum lifetime limit can be [extended to 400 days](https://gitlab.com/gitlab-org/gitlab/-/issues/461901) by enabling a feature flag named \u0060buffered_token_expiration_limit\u0060.",
+            "nullable": true
+          },
+          "max_ssh_key_lifetime": {
+            "type": "string",
+            "description": "Maximum allowable lifetime for SSH keys in days. GitLab Self-Managed, Ultimate only. In GitLab 17.6 or later, the maximum lifetime limit can be [extended to 400 days](https://gitlab.com/gitlab-org/gitlab/-/issues/461901) by enabling a feature flag named \u0060buffered_token_expiration_limit\u0060.",
+            "nullable": true
+          },
+          "mirror_capacity_threshold": {
+            "type": "string",
+            "description": "Minimum capacity to be available before scheduling more mirrors preemptively. Premium and Ultimate only.",
+            "nullable": true
+          },
+          "mirror_max_capacity": {
+            "type": "string",
+            "description": "Maximum number of mirrors that can be synchronizing at the same time. Premium and Ultimate only.",
+            "nullable": true
+          },
+          "mirror_max_delay": {
+            "type": "string",
+            "description": "Maximum time (in minutes) between updates that a mirror can have when scheduled to synchronize. Premium and Ultimate only.",
+            "nullable": true
+          },
+          "package_metadata_purl_types": {
+            "type": "string",
+            "description": "List of package registry metadata to sync. See [the list](https://gitlab.com/gitlab-org/gitlab/-/blob/ace16c20d5da7c4928dd03fb139692638b557fe3/app/models/concerns/enums/package_metadata.rb#L5) of the available values. GitLab Self-Managed, Ultimate only.",
+            "nullable": true
+          },
+          "password_lowercase_required": {
+            "type": "string",
+            "description": "Indicates whether passwords require at least one lowercase letter. Premium and Ultimate only.",
+            "nullable": true
+          },
+          "password_number_required": {
+            "type": "string",
+            "description": "Indicates whether passwords require at least one number. Premium and Ultimate only.",
+            "nullable": true
+          },
+          "password_symbol_required": {
+            "type": "string",
+            "description": "Indicates whether passwords require at least one symbol character. Premium and Ultimate only.",
+            "nullable": true
+          },
+          "password_uppercase_required": {
+            "type": "string",
+            "description": "Indicates whether passwords require at least one uppercase letter. Premium and Ultimate only.",
+            "nullable": true
+          },
+          "project_secrets_limit": {
+            "type": "string",
+            "description": "Maximum number of secrets allowed per project in Secrets Manager. Default: 100. To disable the limit, set to \u00600\u0060. Ultimate only. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/219436) in GitLab 18.9.",
+            "nullable": true
+          },
+          "scan_execution_policies_action_limit": {
+            "type": "string",
+            "description": "Maximum number of \u0060actions\u0060 per scan execution policy. Default: 0. Maximum: 20",
+            "nullable": true
+          },
+          "scan_execution_policies_schedule_limit": {
+            "type": "string",
+            "description": "Maximum number of \u0060type: schedule\u0060 rules per scan execution policy. Default: 0. Maximum: 20",
+            "nullable": true
+          },
+          "secret_push_protection_available": {
+            "type": "string",
+            "description": "Allow projects to enable secret push protection. This does not enable secret push protection. Ultimate only.",
+            "nullable": true
+          },
+          "security_approval_policies_limit": {
+            "type": "string",
+            "description": "Maximum number of active merge request approval policies per security policy project. Default: 5. Maximum: 20",
+            "nullable": true
+          },
+          "security_mr_report_cache_lifetime_minutes": {
+            "type": "string",
+            "description": "Number of minutes to cache security reports on merge requests (10-60). Default: 10. Premium and Ultimate only. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/223399) in GitLab 18.10.",
+            "nullable": true
+          },
+          "shared_runners_minutes": {
+            "type": "string",
+            "description": "Set the maximum number of compute minutes that a group can use on instance runners per month. Premium and Ultimate only.",
+            "nullable": true
+          },
+          "unconfirmed_users_delete_after_days": {
+            "type": "string",
+            "description": "Specifies how many days after account creation to delete users who have not confirmed their email. Only applicable if \u0060delete_unconfirmed_users\u0060 is set to \u0060true\u0060. Must be \u00601\u0060 or greater. Default is \u00607\u0060. GitLab Self-Managed, Premium and Ultimate only.",
             "nullable": true
           },
           "allow_possible_spam": {
-            "type": "string",
-            "nullable": true
-          },
-          "dns_rebinding_protection_enabled": {
-            "type": "string",
-            "nullable": true
-          },
-          "archive_builds_in_human_readable": {
-            "type": "string",
-            "nullable": true
-          },
-          "static_objects_external_storage_auth_token": {
-            "type": "string",
-            "nullable": true
-          },
-          "static_objects_external_storage_url": {
-            "type": "string",
-            "nullable": true
-          },
-          "authorized_keys_enabled": {
-            "type": "string",
-            "nullable": true
-          },
-          "auto_devops_enabled": {
-            "type": "string",
-            "nullable": true
-          },
-          "auto_devops_domain": {
-            "type": "string",
-            "nullable": true
-          },
-          "allow_bypass_placeholder_confirmation": {
-            "type": "string",
-            "nullable": true
-          },
-          "ci_delete_pipelines_in_seconds_limit_human_readable": {
-            "type": "string",
-            "nullable": true
-          },
-          "ci_partitions_in_seconds_limit_human_readable": {
             "type": "string",
             "nullable": true
           },
@@ -141002,43 +141979,7 @@
             "type": "string",
             "nullable": true
           },
-          "container_expiration_policies_enable_historic_entries": {
-            "type": "string",
-            "nullable": true
-          },
-          "container_registry_expiration_policies_caching": {
-            "type": "string",
-            "nullable": true
-          },
-          "default_branch_name": {
-            "type": "string",
-            "nullable": true
-          },
-          "default_preferred_language": {
-            "type": "string",
-            "nullable": true
-          },
-          "default_syntax_highlighting_theme": {
-            "type": "string",
-            "nullable": true
-          },
-          "default_dark_syntax_highlighting_theme": {
-            "type": "string",
-            "nullable": true
-          },
-          "delete_inactive_projects": {
-            "type": "string",
-            "nullable": true
-          },
-          "deletion_adjourned_period": {
-            "type": "string",
-            "nullable": true
-          },
           "deny_all_requests_except_allowed": {
-            "type": "string",
-            "nullable": true
-          },
-          "disable_password_authentication_for_users_with_sso_identities": {
             "type": "string",
             "nullable": true
           },
@@ -141066,14 +142007,6 @@
             "type": "string",
             "nullable": true
           },
-          "require_email_verification_on_account_locked": {
-            "type": "string",
-            "nullable": true
-          },
-          "enforce_terms": {
-            "type": "string",
-            "nullable": true
-          },
           "error_tracking_enabled": {
             "type": "string",
             "nullable": true
@@ -141082,55 +142015,7 @@
             "type": "string",
             "nullable": true
           },
-          "external_pipeline_validation_service_timeout": {
-            "type": "string",
-            "nullable": true
-          },
-          "external_pipeline_validation_service_token": {
-            "type": "string",
-            "nullable": true
-          },
-          "external_pipeline_validation_service_url": {
-            "type": "string",
-            "nullable": true
-          },
-          "failed_login_attempts_unlock_period_in_minutes": {
-            "type": "string",
-            "nullable": true
-          },
-          "first_day_of_week": {
-            "type": "string",
-            "nullable": true
-          },
           "force_pages_access_control": {
-            "type": "string",
-            "nullable": true
-          },
-          "hashed_storage_enabled": {
-            "type": "string",
-            "nullable": true
-          },
-          "hide_third_party_offers": {
-            "type": "string",
-            "nullable": true
-          },
-          "inactive_resource_access_tokens_delete_after_days": {
-            "type": "string",
-            "nullable": true
-          },
-          "inactive_projects_delete_after_months": {
-            "type": "string",
-            "nullable": true
-          },
-          "inactive_projects_min_size_mb": {
-            "type": "string",
-            "nullable": true
-          },
-          "inactive_projects_send_warning_email_after_months": {
-            "type": "string",
-            "nullable": true
-          },
-          "include_optional_metrics_in_service_ping": {
             "type": "string",
             "nullable": true
           },
@@ -141142,63 +142027,7 @@
             "type": "string",
             "nullable": true
           },
-          "require_sha_for_merge": {
-            "type": "string",
-            "nullable": true
-          },
-          "lock_require_sha_for_merge": {
-            "type": "string",
-            "nullable": true
-          },
           "max_artifacts_content_include_size": {
-            "type": "string",
-            "nullable": true
-          },
-          "max_http_decompressed_size": {
-            "type": "string",
-            "nullable": true
-          },
-          "max_http_response_size_limit": {
-            "type": "string",
-            "nullable": true
-          },
-          "max_http_response_json_depth": {
-            "type": "string",
-            "nullable": true
-          },
-          "max_http_response_json_structural_chars": {
-            "type": "string",
-            "nullable": true
-          },
-          "max_http_response_xml_structural_chars": {
-            "type": "string",
-            "nullable": true
-          },
-          "max_http_response_csv_structural_chars": {
-            "type": "string",
-            "nullable": true
-          },
-          "max_login_attempts": {
-            "type": "string",
-            "nullable": true
-          },
-          "max_yaml_size_bytes": {
-            "type": "string",
-            "nullable": true
-          },
-          "max_yaml_depth": {
-            "type": "string",
-            "nullable": true
-          },
-          "minimum_password_length": {
-            "type": "string",
-            "nullable": true
-          },
-          "mirror_available": {
-            "type": "string",
-            "nullable": true
-          },
-          "notify_on_unknown_sign_in": {
             "type": "string",
             "nullable": true
           },
@@ -141206,83 +142035,11 @@
             "type": "string",
             "nullable": true
           },
-          "pages_domain_verification_enabled": {
-            "type": "string",
-            "nullable": true
-          },
-          "pages_unique_domain_default_enabled": {
-            "type": "string",
-            "nullable": true
-          },
           "instance_token_prefix": {
             "type": "string",
             "nullable": true
           },
-          "kroki_formats": {
-            "type": "string",
-            "nullable": true
-          },
-          "kroki_diagram_proxy_enabled": {
-            "type": "string",
-            "nullable": true
-          },
-          "plantuml_diagram_proxy_enabled": {
-            "type": "string",
-            "nullable": true
-          },
           "pages_extra_deployments_default_expiry_seconds": {
-            "type": "string",
-            "nullable": true
-          },
-          "receive_max_input_size": {
-            "type": "string",
-            "nullable": true
-          },
-          "require_admin_two_factor_authentication": {
-            "type": "string",
-            "nullable": true
-          },
-          "remember_me_enabled": {
-            "type": "string",
-            "nullable": true
-          },
-          "sign_in_restrictions": {
-            "type": "string",
-            "nullable": true
-          },
-          "silent_mode_enabled": {
-            "type": "string",
-            "nullable": true
-          },
-          "spam_check_api_key": {
-            "type": "string",
-            "nullable": true
-          },
-          "terms": {
-            "type": "string",
-            "nullable": true
-          },
-          "throttle_authenticated_api_enabled": {
-            "type": "string",
-            "nullable": true
-          },
-          "throttle_authenticated_api_period_in_seconds": {
-            "type": "string",
-            "nullable": true
-          },
-          "throttle_authenticated_api_requests_per_period": {
-            "type": "string",
-            "nullable": true
-          },
-          "throttle_authenticated_git_http_enabled": {
-            "type": "string",
-            "nullable": true
-          },
-          "throttle_authenticated_git_http_period_in_seconds": {
-            "type": "string",
-            "nullable": true
-          },
-          "throttle_authenticated_git_http_requests_per_period": {
             "type": "string",
             "nullable": true
           },
@@ -141295,30 +142052,6 @@
             "nullable": true
           },
           "throttle_authenticated_git_lfs_requests_per_period": {
-            "type": "string",
-            "nullable": true
-          },
-          "throttle_authenticated_web_enabled": {
-            "type": "string",
-            "nullable": true
-          },
-          "throttle_authenticated_web_period_in_seconds": {
-            "type": "string",
-            "nullable": true
-          },
-          "throttle_authenticated_web_requests_per_period": {
-            "type": "string",
-            "nullable": true
-          },
-          "throttle_authenticated_packages_api_enabled": {
-            "type": "string",
-            "nullable": true
-          },
-          "throttle_authenticated_packages_api_period_in_seconds": {
-            "type": "string",
-            "nullable": true
-          },
-          "throttle_authenticated_packages_api_requests_per_period": {
             "type": "string",
             "nullable": true
           },
@@ -141346,42 +142079,6 @@
             "type": "string",
             "nullable": true
           },
-          "throttle_unauthenticated_api_enabled": {
-            "type": "string",
-            "nullable": true
-          },
-          "throttle_unauthenticated_api_period_in_seconds": {
-            "type": "string",
-            "nullable": true
-          },
-          "throttle_unauthenticated_api_requests_per_period": {
-            "type": "string",
-            "nullable": true
-          },
-          "throttle_unauthenticated_enabled": {
-            "type": "string",
-            "nullable": true
-          },
-          "throttle_unauthenticated_period_in_seconds": {
-            "type": "string",
-            "nullable": true
-          },
-          "throttle_unauthenticated_requests_per_period": {
-            "type": "string",
-            "nullable": true
-          },
-          "throttle_unauthenticated_packages_api_enabled": {
-            "type": "string",
-            "nullable": true
-          },
-          "throttle_unauthenticated_packages_api_period_in_seconds": {
-            "type": "string",
-            "nullable": true
-          },
-          "throttle_unauthenticated_packages_api_requests_per_period": {
-            "type": "string",
-            "nullable": true
-          },
           "throttle_unauthenticated_files_api_enabled": {
             "type": "string",
             "nullable": true
@@ -141391,18 +142088,6 @@
             "nullable": true
           },
           "throttle_unauthenticated_files_api_requests_per_period": {
-            "type": "string",
-            "nullable": true
-          },
-          "throttle_unauthenticated_git_http_enabled": {
-            "type": "string",
-            "nullable": true
-          },
-          "throttle_unauthenticated_git_http_period_in_seconds": {
-            "type": "string",
-            "nullable": true
-          },
-          "throttle_unauthenticated_git_http_requests_per_period": {
             "type": "string",
             "nullable": true
           },
@@ -141430,10 +142115,6 @@
             "type": "string",
             "nullable": true
           },
-          "top_level_group_creation_enabled": {
-            "type": "string",
-            "nullable": true
-          },
           "protected_paths_raw": {
             "type": "string",
             "nullable": true
@@ -141442,107 +142123,11 @@
             "type": "string",
             "nullable": true
           },
-          "time_tracking_limit_to_hours": {
-            "type": "string",
-            "nullable": true
-          },
-          "update_runner_versions_enabled": {
-            "type": "string",
-            "nullable": true
-          },
-          "unique_ips_limit_enabled": {
-            "type": "string",
-            "nullable": true
-          },
-          "unique_ips_limit_per_user": {
-            "type": "string",
-            "nullable": true
-          },
-          "unique_ips_limit_time_window": {
-            "type": "string",
-            "nullable": true
-          },
           "usage_ping_generation_enabled": {
             "type": "string",
             "nullable": true
           },
           "usage_ping_features_enabled": {
-            "type": "string",
-            "nullable": true
-          },
-          "use_clickhouse_for_analytics": {
-            "type": "string",
-            "nullable": true
-          },
-          "user_default_external": {
-            "type": "string",
-            "nullable": true
-          },
-          "user_show_add_ssh_key_message": {
-            "type": "string",
-            "nullable": true
-          },
-          "user_default_internal_regex": {
-            "type": "string",
-            "nullable": true
-          },
-          "user_oauth_applications": {
-            "type": "string",
-            "nullable": true
-          },
-          "version_check_enabled": {
-            "type": "string",
-            "nullable": true
-          },
-          "diff_max_patch_bytes": {
-            "type": "string",
-            "nullable": true
-          },
-          "diff_max_files": {
-            "type": "string",
-            "nullable": true
-          },
-          "diff_max_lines": {
-            "type": "string",
-            "nullable": true
-          },
-          "diff_max_versions": {
-            "type": "string",
-            "nullable": true
-          },
-          "diff_max_commits": {
-            "type": "string",
-            "nullable": true
-          },
-          "commit_email_hostname": {
-            "type": "string",
-            "nullable": true
-          },
-          "protected_ci_variables": {
-            "type": "string",
-            "nullable": true
-          },
-          "snowplow_database_collector_hostname": {
-            "type": "string",
-            "nullable": true
-          },
-          "gitlab_product_usage_data_enabled": {
-            "type": "string",
-            "nullable": true
-          },
-          "custom_http_clone_url_root": {
-            "type": "string",
-            "nullable": true
-          },
-          "snippet_size_limit": {
-            "type": "string",
-            "nullable": true
-          },
-          "email_restrictions_enabled": {
-            "type": "string",
-            "nullable": true
-          },
-          "email_restrictions": {
             "type": "string",
             "nullable": true
           },
@@ -141590,34 +142175,6 @@
             "type": "string",
             "nullable": true
           },
-          "container_registry_delete_tags_service_timeout": {
-            "type": "string",
-            "nullable": true
-          },
-          "rate_limiting_response_text": {
-            "type": "string",
-            "nullable": true
-          },
-          "package_registry_allow_anyone_to_pull_option": {
-            "type": "string",
-            "nullable": true
-          },
-          "package_registry_cleanup_policies_worker_capacity": {
-            "type": "string",
-            "nullable": true
-          },
-          "container_registry_expiration_policies_worker_capacity": {
-            "type": "string",
-            "nullable": true
-          },
-          "container_registry_cleanup_tags_service_max_list_size": {
-            "type": "string",
-            "nullable": true
-          },
-          "keep_latest_artifact": {
-            "type": "string",
-            "nullable": true
-          },
           "resource_access_token_notify_inherited": {
             "type": "string",
             "nullable": true
@@ -141646,30 +142203,6 @@
             "type": "string",
             "nullable": true
           },
-          "sidekiq_job_limiter_mode": {
-            "type": "string",
-            "nullable": true
-          },
-          "sidekiq_job_limiter_compression_threshold_bytes": {
-            "type": "string",
-            "nullable": true
-          },
-          "sidekiq_job_limiter_limit_bytes": {
-            "type": "string",
-            "nullable": true
-          },
-          "sidekiq_timezone_override": {
-            "type": "string",
-            "nullable": true
-          },
-          "search_rate_limit": {
-            "type": "string",
-            "nullable": true
-          },
-          "search_rate_limit_unauthenticated": {
-            "type": "string",
-            "nullable": true
-          },
           "search_rate_limit_allowlist_raw": {
             "type": "string",
             "nullable": true
@@ -141682,10 +142215,6 @@
             "type": "string",
             "nullable": true
           },
-          "can_create_group": {
-            "type": "string",
-            "nullable": true
-          },
           "can_create_organization": {
             "type": "string",
             "nullable": true
@@ -141694,47 +142223,11 @@
             "type": "string",
             "nullable": true
           },
-          "relation_export_batch_size": {
-            "type": "string",
-            "nullable": true
-          },
-          "bulk_import_max_download_file_size": {
-            "type": "string",
-            "nullable": true
-          },
-          "silent_admin_exports_enabled": {
-            "type": "string",
-            "nullable": true
-          },
           "allow_contribution_mapping_to_admins": {
             "type": "string",
             "nullable": true
           },
-          "allow_s3_compatible_storage_for_offline_transfer": {
-            "type": "string",
-            "nullable": true
-          },
-          "allow_application_default_credentials_for_offline_transfer": {
-            "type": "string",
-            "nullable": true
-          },
-          "offline_transfer_exports_enabled": {
-            "type": "string",
-            "nullable": true
-          },
-          "offline_transfer_imports_enabled": {
-            "type": "string",
-            "nullable": true
-          },
-          "user_defaults_to_private_profile": {
-            "type": "string",
-            "nullable": true
-          },
           "deactivation_email_additional_text": {
-            "type": "string",
-            "nullable": true
-          },
-          "projects_api_rate_limit_unauthenticated": {
             "type": "string",
             "nullable": true
           },
@@ -141798,67 +142291,11 @@
             "type": "string",
             "nullable": true
           },
-          "users_api_limit_followers": {
-            "type": "string",
-            "nullable": true
-          },
-          "users_api_limit_following": {
-            "type": "string",
-            "nullable": true
-          },
-          "users_api_limit_status": {
-            "type": "string",
-            "nullable": true
-          },
           "users_api_limit_ssh_keys": {
             "type": "string",
             "nullable": true
           },
           "users_api_limit_ssh_key": {
-            "type": "string",
-            "nullable": true
-          },
-          "users_api_limit_gpg_keys": {
-            "type": "string",
-            "nullable": true
-          },
-          "users_api_limit_gpg_key": {
-            "type": "string",
-            "nullable": true
-          },
-          "web_hook_event_resend_limit": {
-            "type": "string",
-            "nullable": true
-          },
-          "web_hook_test_limit": {
-            "type": "string",
-            "nullable": true
-          },
-          "gitlab_dedicated_instance": {
-            "type": "string",
-            "nullable": true
-          },
-          "gitlab_environment_toolkit_instance": {
-            "type": "string",
-            "nullable": true
-          },
-          "allow_account_deletion": {
-            "type": "string",
-            "nullable": true
-          },
-          "gitlab_shell_operation_limit": {
-            "type": "string",
-            "nullable": true
-          },
-          "ci_max_total_yaml_size_bytes": {
-            "type": "string",
-            "nullable": true
-          },
-          "allow_project_creation_for_guest_and_below": {
-            "type": "string",
-            "nullable": true
-          },
-          "asciidoc_max_includes": {
             "type": "string",
             "nullable": true
           },
@@ -141918,18 +142355,6 @@
             "type": "string",
             "nullable": true
           },
-          "runner_jobs_request_api_limit": {
-            "type": "string",
-            "nullable": true
-          },
-          "runner_jobs_patch_trace_api_limit": {
-            "type": "string",
-            "nullable": true
-          },
-          "runner_jobs_endpoints_api_limit": {
-            "type": "string",
-            "nullable": true
-          },
           "background_operations_max_jobs": {
             "type": "string",
             "nullable": true
@@ -141939,10 +142364,6 @@
             "nullable": true
           },
           "granular_tokens_enforced_after": {
-            "type": "string",
-            "nullable": true
-          },
-          "auto_accept_awarded_achievements": {
             "type": "string",
             "nullable": true
           },
@@ -141970,26 +142391,6 @@
             "type": "string",
             "nullable": true
           },
-          "allow_all_integrations": {
-            "type": "string",
-            "nullable": true
-          },
-          "allowed_integrations": {
-            "type": "string",
-            "nullable": true
-          },
-          "allow_group_owners_to_manage_ldap": {
-            "type": "string",
-            "nullable": true
-          },
-          "automatic_purchased_storage_allocation": {
-            "type": "string",
-            "nullable": true
-          },
-          "check_namespace_plan": {
-            "type": "string",
-            "nullable": true
-          },
           "ci_cd_catalog_projects_allowlist": {
             "type": "string",
             "nullable": true
@@ -142010,55 +142411,11 @@
             "type": "string",
             "nullable": true
           },
-          "elasticsearch_client_adapter": {
-            "type": "string",
-            "nullable": true
-          },
           "elasticsearch_client_request_timeout": {
             "type": "string",
             "nullable": true
           },
-          "elasticsearch_indexed_field_length_limit": {
-            "type": "string",
-            "nullable": true
-          },
-          "elasticsearch_indexed_file_size_limit_kb": {
-            "type": "string",
-            "nullable": true
-          },
           "elasticsearch_indexing_timeout_minutes": {
-            "type": "string",
-            "nullable": true
-          },
-          "elasticsearch_requeue_workers": {
-            "type": "string",
-            "nullable": true
-          },
-          "elasticsearch_worker_number_of_shards": {
-            "type": "string",
-            "nullable": true
-          },
-          "elasticsearch_max_bulk_concurrency": {
-            "type": "string",
-            "nullable": true
-          },
-          "elasticsearch_max_bulk_size_mb": {
-            "type": "string",
-            "nullable": true
-          },
-          "elasticsearch_max_code_indexing_concurrency": {
-            "type": "string",
-            "nullable": true
-          },
-          "elasticsearch_retry_on_failure": {
-            "type": "string",
-            "nullable": true
-          },
-          "elasticsearch_replicas": {
-            "type": "string",
-            "nullable": true
-          },
-          "elasticsearch_shards": {
             "type": "string",
             "nullable": true
           },
@@ -142082,18 +142439,6 @@
             "type": "string",
             "nullable": true
           },
-          "enforce_namespace_storage_limit": {
-            "type": "string",
-            "nullable": true
-          },
-          "geo_node_allowed_ips": {
-            "type": "string",
-            "nullable": true
-          },
-          "geo_status_timeout": {
-            "type": "string",
-            "nullable": true
-          },
           "instance_level_ai_beta_features_enabled": {
             "type": "string",
             "nullable": true
@@ -142102,19 +142447,7 @@
             "type": "string",
             "nullable": true
           },
-          "lock_memberships_to_saml": {
-            "type": "string",
-            "nullable": true
-          },
           "lock_model_prompt_cache_enabled": {
-            "type": "string",
-            "nullable": true
-          },
-          "max_personal_access_token_lifetime": {
-            "type": "string",
-            "nullable": true
-          },
-          "max_ssh_key_lifetime": {
             "type": "string",
             "nullable": true
           },
@@ -142138,10 +142471,6 @@
             "type": "string",
             "nullable": true
           },
-          "shared_runners_minutes": {
-            "type": "string",
-            "nullable": true
-          },
           "throttle_incident_management_notification_enabled": {
             "type": "string",
             "nullable": true
@@ -142151,10 +142480,6 @@
             "nullable": true
           },
           "throttle_incident_management_notification_period_in_seconds": {
-            "type": "string",
-            "nullable": true
-          },
-          "package_metadata_purl_types": {
             "type": "string",
             "nullable": true
           },
@@ -142175,10 +142500,6 @@
             "nullable": true
           },
           "cube_api_key": {
-            "type": "string",
-            "nullable": true
-          },
-          "security_approval_policies_limit": {
             "type": "string",
             "nullable": true
           },
@@ -142318,14 +142639,6 @@
             "type": "string",
             "nullable": true
           },
-          "scan_execution_policies_action_limit": {
-            "type": "string",
-            "nullable": true
-          },
-          "scan_execution_policies_schedule_limit": {
-            "type": "string",
-            "nullable": true
-          },
           "pipeline_execution_policies_per_configuration_limit": {
             "type": "string",
             "nullable": true
@@ -142378,23 +142691,7 @@
             "type": "string",
             "nullable": true
           },
-          "enforce_pipl_compliance": {
-            "type": "string",
-            "nullable": true
-          },
           "display_gitlab_credits_user_data": {
-            "type": "string",
-            "nullable": true
-          },
-          "project_secrets_limit": {
-            "type": "string",
-            "nullable": true
-          },
-          "group_secrets_limit": {
-            "type": "string",
-            "nullable": true
-          },
-          "security_mr_report_cache_lifetime_minutes": {
             "type": "string",
             "nullable": true
           },
@@ -142406,95 +142703,7 @@
             "type": "string",
             "nullable": true
           },
-          "external_auth_client_cert": {
-            "type": "string",
-            "nullable": true
-          },
-          "external_auth_client_key": {
-            "type": "string",
-            "nullable": true
-          },
-          "external_auth_client_key_pass": {
-            "type": "string",
-            "nullable": true
-          },
-          "external_authorization_service_default_label": {
-            "type": "string",
-            "nullable": true
-          },
-          "external_authorization_service_enabled": {
-            "type": "string",
-            "nullable": true
-          },
-          "external_authorization_service_timeout": {
-            "type": "string",
-            "nullable": true
-          },
-          "external_authorization_service_url": {
-            "type": "string",
-            "nullable": true
-          },
           "allow_deploy_tokens_and_keys_with_external_authn": {
-            "type": "string",
-            "nullable": true
-          },
-          "ci_partitions_in_seconds_limit": {
-            "type": "string",
-            "nullable": true
-          },
-          "throttle_unauthenticated_web_enabled": {
-            "type": "string",
-            "nullable": true
-          },
-          "throttle_unauthenticated_web_period_in_seconds": {
-            "type": "string",
-            "nullable": true
-          },
-          "throttle_unauthenticated_web_requests_per_period": {
-            "type": "string",
-            "nullable": true
-          },
-          "mirror_max_capacity": {
-            "type": "string",
-            "nullable": true
-          },
-          "mirror_max_delay": {
-            "type": "string",
-            "nullable": true
-          },
-          "mirror_capacity_threshold": {
-            "type": "string",
-            "nullable": true
-          },
-          "password_number_required": {
-            "type": "string",
-            "nullable": true
-          },
-          "password_symbol_required": {
-            "type": "string",
-            "nullable": true
-          },
-          "password_uppercase_required": {
-            "type": "string",
-            "nullable": true
-          },
-          "password_lowercase_required": {
-            "type": "string",
-            "nullable": true
-          },
-          "delete_unconfirmed_users": {
-            "type": "string",
-            "nullable": true
-          },
-          "unconfirmed_users_delete_after_days": {
-            "type": "string",
-            "nullable": true
-          },
-          "secret_push_protection_available": {
-            "type": "string",
-            "nullable": true
-          },
-          "globally_allowed_ips": {
             "type": "string",
             "nullable": true
           },
@@ -142507,10 +142716,6 @@
             "nullable": true
           },
           "dependency_scanning_sbom_scan_api_download_limit": {
-            "type": "string",
-            "nullable": true
-          },
-          "disable_invite_members": {
             "type": "string",
             "nullable": true
           }
@@ -156993,13 +157198,13 @@
           }
         }
       },
-      "RequestBody2Dac44D324B8DefaultBranchProtectionDefaults": {
+      "RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaults": {
         "type": "object",
         "properties": {
           "allowed_to_push": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBody2Dac44D324B8DefaultBranchProtectionDefaultsAllowedToPushItem"
+              "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaultsAllowedToPushItem"
             },
             "description": "An array of access levels allowed to push",
             "nullable": true
@@ -157012,7 +157217,7 @@
           "allowed_to_merge": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBody2Dac44D324B8DefaultBranchProtectionDefaultsAllowedToMergeItem"
+              "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaultsAllowedToMergeItem"
             },
             "description": "An array of access levels allowed to merge",
             "nullable": true
@@ -157031,7 +157236,7 @@
         "description": "Determine if developers can push to default branch",
         "nullable": true
       },
-      "RequestBody2Dac44D324B8DependencyManagementSettings": {
+      "RequestBodyB5F7B529C5F4DependencyManagementSettings": {
         "type": "object",
         "properties": {
           "security_update_scheduler_max_concurrency": {
@@ -157043,7 +157248,7 @@
         "description": "Dependency management settings",
         "nullable": true
       },
-      "RequestBody2Dac44D324B8RepositoryStoragesWeighted": {
+      "RequestBodyB5F7B529C5F4RepositoryStoragesWeighted": {
         "type": "object",
         "additionalProperties": {
           "type": "integer"
@@ -157051,12 +157256,12 @@
         "description": "Storage paths for new projects with a weighted value ranging from 0 to 100",
         "nullable": true
       },
-      "RequestBody2Dac44D324B8ResourceUsageLimits": {
+      "RequestBodyB5F7B529C5F4ResourceUsageLimits": {
         "type": "object",
         "description": "Definition for resource usage limits enforced in Sidekiq workers",
         "nullable": true
       },
-      "RequestBody2Dac44D324B8VscodeExtensionMarketplace": {
+      "RequestBodyB5F7B529C5F4VscodeExtensionMarketplace": {
         "type": "object",
         "properties": {
           "enabled": {
@@ -157070,20 +157275,20 @@
             "nullable": true
           },
           "custom_values": {
-            "$ref": "#/components/schemas/RequestBody2Dac44D324B8VscodeExtensionMarketplaceCustomValuesProperty"
+            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4VscodeExtensionMarketplaceCustomValuesProperty"
           }
         },
         "description": "Settings for VS Code Extension Marketplace",
         "nullable": true
       },
-      "RequestBody2Dac44D324B8DuoNamespaceAccessRulesItem": {
+      "RequestBodyB5F7B529C5F4DuoNamespaceAccessRulesItem": {
         "required": [
           "features"
         ],
         "type": "object",
         "properties": {
           "through_namespace": {
-            "$ref": "#/components/schemas/RequestBody2Dac44D324B8DuoNamespaceAccessRulesItemThroughNamespace"
+            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4DuoNamespaceAccessRulesItemThroughNamespace"
           },
           "features": {
             "type": "array",
@@ -160484,34 +160689,34 @@
         "description": "Data for rendering the vulnerabilities by severity count in PDF reports",
         "nullable": true
       },
-      "RequestBody2Dac44D324B8DefaultBranchProtectionDefaultsAllowedToPushItem": {
+      "RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaultsAllowedToPushItem": {
         "required": [
           "access_level"
         ],
         "type": "object",
         "properties": {
           "access_level": {
-            "$ref": "#/components/schemas/RequestBody2Dac44D324B8DefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel"
           }
         }
       },
-      "RequestBody2Dac44D324B8DefaultBranchProtectionDefaultsAllowedToMergeItem": {
+      "RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaultsAllowedToMergeItem": {
         "required": [
           "access_level"
         ],
         "type": "object",
         "properties": {
           "access_level": {
-            "$ref": "#/components/schemas/RequestBody2Dac44D324B8DefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel"
           }
         }
       },
-      "RequestBody2Dac44D324B8VscodeExtensionMarketplaceCustomValues": {
+      "RequestBodyB5F7B529C5F4VscodeExtensionMarketplaceCustomValues": {
         "type": "object",
         "description": "VS Code Extension Marketplace URL\u0027s when preset is \u0027custom\u0027",
         "nullable": true
       },
-      "RequestBody2Dac44D324B8DuoNamespaceAccessRulesItemThroughNamespace": {
+      "RequestBodyB5F7B529C5F4DuoNamespaceAccessRulesItemThroughNamespace": {
         "required": [
           "id"
         ],
@@ -162074,14 +162279,14 @@
         "type": "object",
         "description": "Context parameters (user, namespace, project). An actor context is resolved from the user. Defaults to current user."
       },
-      "RequestBody2Dac44D324B8RepositoryStoragesWeightedProperty": {
+      "RequestBodyB5F7B529C5F4RepositoryStoragesWeightedProperty": {
         "type": "object",
         "additionalProperties": {
           "type": "integer"
         },
         "description": "Storage paths for new projects with a weighted value ranging from 0 to 100"
       },
-      "RequestBody2Dac44D324B8ResourceUsageLimitsProperty": {
+      "RequestBodyB5F7B529C5F4ResourceUsageLimitsProperty": {
         "type": "object",
         "description": "Definition for resource usage limits enforced in Sidekiq workers"
       },
@@ -162163,7 +162368,7 @@
         "type": "object",
         "description": "Data for rendering the vulnerabilities by age in PDF reports"
       },
-      "RequestBody2Dac44D324B8VscodeExtensionMarketplaceCustomValuesProperty": {
+      "RequestBodyB5F7B529C5F4VscodeExtensionMarketplaceCustomValuesProperty": {
         "type": "object",
         "description": "VS Code Extension Marketplace URL\u0027s when preset is \u0027custom\u0027"
       },
@@ -164102,7 +164307,7 @@
           ]
         }
       },
-      "RequestBody2Dac44D324B8DefaultProjectCreation": {
+      "RequestBodyB5F7B529C5F4DefaultProjectCreation": {
         "enum": [
           0,
           3,
@@ -164115,7 +164320,7 @@
         "description": "Determine if developers can create projects in the group",
         "nullable": true
       },
-      "RequestBody2Dac44D324B8DefaultBranchProtection": {
+      "RequestBodyB5F7B529C5F4DefaultBranchProtection": {
         "enum": [
           0,
           3,
@@ -164128,7 +164333,7 @@
         "description": "Determine if developers can push to default branch",
         "nullable": true
       },
-      "RequestBody2Dac44D324B8DefaultGroupVisibility": {
+      "RequestBodyB5F7B529C5F4DefaultGroupVisibility": {
         "enum": [
           "private",
           "internal",
@@ -164139,7 +164344,7 @@
         "description": "The default group visibility",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2Dac44D324B8DefaultGroupVisibility",
+          "name": "RequestBodyB5F7B529C5F4DefaultGroupVisibility",
           "modelAsString": false,
           "values": [
             {
@@ -164157,7 +164362,7 @@
           ]
         }
       },
-      "RequestBody2Dac44D324B8DefaultProjectVisibility": {
+      "RequestBodyB5F7B529C5F4DefaultProjectVisibility": {
         "enum": [
           "private",
           "internal",
@@ -164168,7 +164373,7 @@
         "description": "The default project visibility",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2Dac44D324B8DefaultProjectVisibility",
+          "name": "RequestBodyB5F7B529C5F4DefaultProjectVisibility",
           "modelAsString": false,
           "values": [
             {
@@ -164186,7 +164391,7 @@
           ]
         }
       },
-      "RequestBody2Dac44D324B8DefaultSnippetVisibility": {
+      "RequestBodyB5F7B529C5F4DefaultSnippetVisibility": {
         "enum": [
           "private",
           "internal",
@@ -164197,7 +164402,7 @@
         "description": "The default snippet visibility",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2Dac44D324B8DefaultSnippetVisibility",
+          "name": "RequestBodyB5F7B529C5F4DefaultSnippetVisibility",
           "modelAsString": false,
           "values": [
             {
@@ -164215,7 +164420,7 @@
           ]
         }
       },
-      "RequestBody2Dac44D324B8EmailConfirmationSetting": {
+      "RequestBodyB5F7B529C5F4EmailConfirmationSetting": {
         "enum": [
           "off",
           "soft",
@@ -164226,7 +164431,7 @@
         "description": "Email confirmation setting, possible values: \u0060off\u0060, \u0060soft\u0060, and \u0060hard\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2Dac44D324B8EmailConfirmationSetting",
+          "name": "RequestBodyB5F7B529C5F4EmailConfirmationSetting",
           "modelAsString": false,
           "values": [
             {
@@ -164244,7 +164449,7 @@
           ]
         }
       },
-      "RequestBody2Dac44D324B8EnabledGitAccessProtocol": {
+      "RequestBodyB5F7B529C5F4EnabledGitAccessProtocol": {
         "enum": [
           "ssh",
           "http",
@@ -164255,7 +164460,7 @@
         "description": "Allow only the selected protocols to be used for Git access.",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2Dac44D324B8EnabledGitAccessProtocol",
+          "name": "RequestBodyB5F7B529C5F4EnabledGitAccessProtocol",
           "modelAsString": false,
           "values": [
             {
@@ -164273,7 +164478,7 @@
           ]
         }
       },
-      "RequestBody2Dac44D324B8WhatsNewVariant": {
+      "RequestBodyB5F7B529C5F4WhatsNewVariant": {
         "enum": [
           "all_tiers",
           "current_tier",
@@ -164284,7 +164489,7 @@
         "description": "What\u0027s new variant, possible values: \u0060all_tiers\u0060, \u0060current_tier\u0060, and \u0060disabled\u0060.",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2Dac44D324B8WhatsNewVariant",
+          "name": "RequestBodyB5F7B529C5F4WhatsNewVariant",
           "modelAsString": false,
           "values": [
             {
@@ -164302,7 +164507,7 @@
           ]
         }
       },
-      "RequestBody2Dac44D324B8LoggingFieldSchemaVersion": {
+      "RequestBodyB5F7B529C5F4LoggingFieldSchemaVersion": {
         "enum": [
           0,
           1
@@ -164312,7 +164517,7 @@
         "description": "Logging field schema version (v0, v1, \u2026). Cannot be downgraded.",
         "nullable": true
       },
-      "RequestBody2Dac44D324B8LoggingFieldDualEmitTarget": {
+      "RequestBodyB5F7B529C5F4LoggingFieldDualEmitTarget": {
         "enum": [
           1
         ],
@@ -164321,7 +164526,7 @@
         "description": "Version to dual-emit alongside schema_version. Must be strictly greater than schema_version, or omit/null to disable.",
         "nullable": true
       },
-      "RequestBody2Dac44D324B8RsaKeyRestriction": {
+      "RequestBodyB5F7B529C5F4RsaKeyRestriction": {
         "enum": [
           0,
           1024,
@@ -164335,7 +164540,7 @@
         "description": "Restrictions on the complexity of uploaded RSA keys. A value of -1 disables all RSA keys.",
         "nullable": true
       },
-      "RequestBody2Dac44D324B8DsaKeyRestriction": {
+      "RequestBodyB5F7B529C5F4DsaKeyRestriction": {
         "enum": [
           0,
           1024,
@@ -164348,7 +164553,7 @@
         "description": "Restrictions on the complexity of uploaded DSA keys. A value of -1 disables all DSA keys.",
         "nullable": true
       },
-      "RequestBody2Dac44D324B8EcdsaKeyRestriction": {
+      "RequestBodyB5F7B529C5F4EcdsaKeyRestriction": {
         "enum": [
           0,
           256,
@@ -164361,7 +164566,7 @@
         "description": "Restrictions on the complexity of uploaded ECDSA keys. A value of -1 disables all ECDSA keys.",
         "nullable": true
       },
-      "RequestBody2Dac44D324B8Ed25519KeyRestriction": {
+      "RequestBodyB5F7B529C5F4Ed25519KeyRestriction": {
         "enum": [
           0,
           256,
@@ -164372,7 +164577,7 @@
         "description": "Restrictions on the complexity of uploaded ED25519 keys. A value of -1 disables all ED25519 keys.",
         "nullable": true
       },
-      "RequestBody2Dac44D324B8EcdsaSkKeyRestriction": {
+      "RequestBodyB5F7B529C5F4EcdsaSkKeyRestriction": {
         "enum": [
           0,
           256,
@@ -164383,7 +164588,7 @@
         "description": "Restrictions on the complexity of uploaded ECDSA_SK keys. A value of -1 disables all ECDSA_SK keys.",
         "nullable": true
       },
-      "RequestBody2Dac44D324B8Ed25519SkKeyRestriction": {
+      "RequestBodyB5F7B529C5F4Ed25519SkKeyRestriction": {
         "enum": [
           0,
           256,
@@ -173548,7 +173753,7 @@
           ]
         }
       },
-      "RequestBody2Dac44D324B8DefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel": {
+      "RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel": {
         "enum": [
           30,
           40,
@@ -173559,7 +173764,7 @@
         "additionalProperties": false,
         "description": "A valid access level"
       },
-      "RequestBody2Dac44D324B8DefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel": {
+      "RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel": {
         "enum": [
           30,
           40,
@@ -185379,6 +185584,10 @@
       "name": "Database dictionary",
       "description": "Use this API to list the tables in a GitLab database and retrieve the\n[database dictionary](https://docs.gitlab.com/development/database/database_dictionary/) entry for a\nsingle table.\n\nRetrieving the entry for a single table requires administrator access to the instance.",
       "x-displayName": "Database dictionary"
+    },
+    {
+      "name": "Dependency firewall",
+      "description": "Operations related to dependency firewall."
     },
     {
       "name": "Dependency management",

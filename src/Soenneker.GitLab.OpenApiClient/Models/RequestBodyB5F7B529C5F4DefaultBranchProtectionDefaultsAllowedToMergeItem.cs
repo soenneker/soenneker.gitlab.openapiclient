@@ -9,35 +9,29 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class RequestBody7006A9228543 : IAdditionalDataHolder, IParsable
+    public partial class RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaultsAllowedToMergeItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>A valid access level</summary>
+        public int? AccessLevel { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Target queue name (e.g. retry_queue, code, code_backfill)</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Queue { get; set; }
-#nullable restore
-#else
-        public string Queue { get; set; }
-#endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody7006A9228543"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaultsAllowedToMergeItem"/> and sets the default values.
         /// </summary>
-        public RequestBody7006A9228543()
+        public RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaultsAllowedToMergeItem()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody7006A9228543"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaultsAllowedToMergeItem"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody7006A9228543 CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaultsAllowedToMergeItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody7006A9228543();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaultsAllowedToMergeItem();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -47,7 +41,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "queue", n => { Queue = n.GetStringValue(); } },
+                { "access_level", n => { AccessLevel = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -57,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("queue", Queue);
+            writer.WriteIntValue("access_level", AccessLevel);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

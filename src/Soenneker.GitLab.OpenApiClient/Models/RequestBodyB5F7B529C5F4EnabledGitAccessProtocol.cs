@@ -5,7 +5,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>Allow only the selected protocols to be used for Git access.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBody2Dac44D324B8EnabledGitAccessProtocol
+    public enum RequestBodyB5F7B529C5F4EnabledGitAccessProtocol
     {
         [EnumMember(Value = "ssh")]
         #pragma warning disable CS1591

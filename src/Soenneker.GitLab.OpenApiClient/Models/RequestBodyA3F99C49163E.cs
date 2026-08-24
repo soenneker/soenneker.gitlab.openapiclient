@@ -7,32 +7,37 @@ using System.IO;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>
-    /// Dependency management settings
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RequestBody2Dac44D324B8DependencyManagementSettings : IAdditionalDataHolder, IParsable
+    #pragma warning disable CS1591
+    public partial class RequestBodyA3F99C49163E : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Maximum number of dependency management security update scheduler jobs that run concurrently across the Sidekiq fleet</summary>
-        public int? SecurityUpdateSchedulerMaxConcurrency { get; set; }
+        /// <summary>Target queue name (e.g. retry_queue, second_retry_queue, code, code_backfill)</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Queue { get; set; }
+#nullable restore
+#else
+        public string Queue { get; set; }
+#endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2Dac44D324B8DependencyManagementSettings"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA3F99C49163E"/> and sets the default values.
         /// </summary>
-        public RequestBody2Dac44D324B8DependencyManagementSettings()
+        public RequestBodyA3F99C49163E()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2Dac44D324B8DependencyManagementSettings"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA3F99C49163E"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2Dac44D324B8DependencyManagementSettings CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA3F99C49163E CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2Dac44D324B8DependencyManagementSettings();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA3F99C49163E();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -42,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "security_update_scheduler_max_concurrency", n => { SecurityUpdateSchedulerMaxConcurrency = n.GetIntValue(); } },
+                { "queue", n => { Queue = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -52,7 +57,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("security_update_scheduler_max_concurrency", SecurityUpdateSchedulerMaxConcurrency);
+            writer.WriteStringValue("queue", Queue);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
