@@ -154,6 +154,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string State { get; set; }
 #endif
+        /// <summary>The two_factor_enabled property</summary>
+        public bool? TwoFactorEnabled { get; set; }
         /// <summary>The username property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -214,6 +216,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "override", n => { Override = n.GetStringValue(); } },
                 { "public_email", n => { PublicEmail = n.GetStringValue(); } },
                 { "state", n => { State = n.GetStringValue(); } },
+                { "two_factor_enabled", n => { TwoFactorEnabled = n.GetBoolValue(); } },
                 { "username", n => { Username = n.GetStringValue(); } },
                 { "web_url", n => { WebUrl = n.GetStringValue(); } },
             };
@@ -244,6 +247,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("override", Override);
             writer.WriteStringValue("public_email", PublicEmail);
             writer.WriteStringValue("state", State);
+            writer.WriteBoolValue("two_factor_enabled", TwoFactorEnabled);
             writer.WriteStringValue("username", Username);
             writer.WriteStringValue("web_url", WebUrl);
             writer.WriteAdditionalData(AdditionalData);

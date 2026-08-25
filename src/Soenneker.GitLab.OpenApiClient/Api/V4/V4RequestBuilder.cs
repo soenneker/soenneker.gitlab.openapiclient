@@ -34,6 +34,7 @@ using Soenneker.GitLab.OpenApiClient.Api.V4.Group;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Group_repository_storage_moves;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Hooks;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Iam;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Import;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Integrations;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Internal;
@@ -259,6 +260,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Hooks.HooksRequestBuilder Hooks
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Hooks.HooksRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The iam property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Iam.IamRequestBuilder Iam
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Iam.IamRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The import property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Import.ImportRequestBuilder Import

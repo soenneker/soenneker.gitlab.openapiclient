@@ -9,7 +9,7 @@
       "url": "https://gitlab.com/gitlab-org/gitlab/-/blob/master/LICENSE",
       "x-gitlab-description": "The license applies to the OpenAPI specification document itself. For terms governing use of the GitLab API, see the termsOfService field."
     },
-    "version": "v4"
+    "version": "19.3"
   },
   "servers": [
     {
@@ -562,11 +562,10 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyAf2D93C7F7Ea"
+                "$ref": "#/components/schemas/RequestBody2D9Be0E2518E"
               }
             }
-          },
-          "required": true
+          }
         },
         "responses": {
           "202": {
@@ -2526,6 +2525,9 @@
           },
           "401": {
             "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
           },
           "404": {
             "description": "Not found"
@@ -43578,6 +43580,108 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ApiEntitiesDivergingCommitCount"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        }
+      }
+    },
+    "/api/v4/projects/{id}/repository/diff_stats": {
+      "get": {
+        "tags": [
+          "Repositories"
+        ],
+        "summary": "Get diff statistics between two commits",
+        "description": "Returns the number of added and deleted lines for every file that differs between two refs.",
+        "operationId": "GetApiV4ProjectsIdRepositoryDiffStats",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the project",
+            "required": true,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "example": 1
+          },
+          {
+            "name": "from",
+            "in": "query",
+            "description": "The commit SHA or branch/tag to compare from",
+            "required": true,
+            "schema": {
+              "maxLength": 255,
+              "type": "string",
+              "nullable": true
+            },
+            "example": "main"
+          },
+          {
+            "name": "to",
+            "in": "query",
+            "description": "The commit SHA or branch/tag to compare to",
+            "required": true,
+            "schema": {
+              "maxLength": 255,
+              "type": "string",
+              "nullable": true
+            },
+            "example": "feature"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Current page number",
+            "schema": {
+              "type": "integer",
+              "default": 1,
+              "nullable": true
+            },
+            "example": 1
+          },
+          {
+            "name": "per_page",
+            "in": "query",
+            "description": "Number of items per page",
+            "schema": {
+              "type": "integer",
+              "default": 20,
+              "nullable": true
+            },
+            "example": 20
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesDiffStat"
                 }
               }
             }
@@ -107695,6 +107799,27 @@
         }
       }
     },
+    "/api/v4/iam/userinfo": {
+      "get": {
+        "tags": [
+          "Authn"
+        ],
+        "summary": "Return the OIDC ID-token claims for the caller identified by an IAM OAuth token",
+        "description": "Authenticates exclusively via an IAM-issued OAuth JWT and returns the subset of OIDC claims documented as \u0022Included in ID Token\u0022 in the OpenID Connect provider docs",
+        "operationId": "GetApiV4IamUserinfo",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
     "/api/v4/applications": {
       "post": {
         "tags": [
@@ -111197,7 +111322,7 @@
           },
           "malware": {
             "type": "boolean",
-            "description": "Malware status: true if a GLAM identifier is present, false if the SSCS add-on is active but none found, null if the SSCS add-on is inactive."
+            "description": "Malware status: true if a GLAM identifier is present, false otherwise. Omitted when malware detection is not enabled for the project."
           }
         }
       },
@@ -125238,6 +125363,27 @@
           }
         }
       },
+      "ApiEntitiesDiffStat": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "example": "app/models/user.rb"
+          },
+          "old_path": {
+            "type": "string",
+            "example": "app/models/user.rb"
+          },
+          "additions": {
+            "type": "integer",
+            "example": 10
+          },
+          "deletions": {
+            "type": "integer",
+            "example": 3
+          }
+        }
+      },
       "ApiEntitiesChangelog": {
         "type": "object",
         "properties": {
@@ -129744,6 +129890,9 @@
           },
           "expires_at": {
             "type": "string"
+          },
+          "two_factor_enabled": {
+            "type": "boolean"
           },
           "group_saml_identity": {
             "$ref": "#/components/schemas/ApiEntitiesIdentity"
@@ -134584,16 +134733,13 @@
           }
         }
       },
-      "RequestBodyAf2D93C7F7Ea": {
-        "required": [
-          "topic",
-          "type",
-          "data"
-        ],
+      "RequestBody2D9Be0E2518E": {
         "type": "object",
         "properties": {
           "topic": {
-            "$ref": "#/components/schemas/ComGitlabCdDeploymentTopic"
+            "type": "string",
+            "description": "The event topic",
+            "nullable": true
           },
           "type": {
             "maxLength": 255,
@@ -134602,7 +134748,18 @@
             "nullable": true
           },
           "data": {
-            "$ref": "#/components/schemas/RequestBodyAf2D93C7F7EaData"
+            "$ref": "#/components/schemas/RequestBody2D9Be0E2518EData"
+          },
+          "value": {
+            "$ref": "#/components/schemas/RequestBody2D9Be0E2518EValueProperty"
+          },
+          "channel_tokens": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RequestBody2D9Be0E2518EChannelTokensItem"
+            },
+            "description": "AutoFlow channels opened alongside this event, for posting a value back into them later",
+            "nullable": true
           }
         }
       },
@@ -156330,7 +156487,7 @@
           }
         }
       },
-      "RequestBodyAf2D93C7F7EaData": {
+      "RequestBody2D9Be0E2518EData": {
         "type": "object",
         "properties": {
           "position": {
@@ -156374,6 +156531,32 @@
         },
         "description": "The event payload",
         "nullable": true
+      },
+      "RequestBody2D9Be0E2518EValue": {
+        "type": "object",
+        "description": "AutoFlow Value (protojson), decoded into the same topic/type/data shape as \u0060data\u0060 above",
+        "nullable": true
+      },
+      "RequestBody2D9Be0E2518EChannelTokensItem": {
+        "required": [
+          "channel_name",
+          "token"
+        ],
+        "type": "object",
+        "properties": {
+          "channel_name": {
+            "maxLength": 255,
+            "type": "string",
+            "description": "Name of the AutoFlow channel",
+            "nullable": true
+          },
+          "token": {
+            "maxLength": 4096,
+            "type": "string",
+            "description": "Token used to post a value into the channel",
+            "nullable": true
+          }
+        }
       },
       "RequestBody781D3Ae061DfFilesContent": {
         "type": "object",
@@ -162245,6 +162428,10 @@
       "ApiEntitiesPlanLimitLimitsHistoryProperty": {
         "type": "object"
       },
+      "RequestBody2D9Be0E2518EValueProperty": {
+        "type": "object",
+        "description": "AutoFlow Value (protojson), decoded into the same topic/type/data shape as \u0060data\u0060 above"
+      },
       "RequestBody781D3Ae061DfFilesContentProperty": {
         "type": "object",
         "description": "Full file contents, where keys are file paths and values are the file contents"
@@ -163099,25 +163286,6 @@
             {
               "value": "project",
               "name": "Project"
-            }
-          ]
-        }
-      },
-      "ComGitlabCdDeploymentTopic": {
-        "minLength": 1,
-        "enum": [
-          "com.gitlab.cd.deployment"
-        ],
-        "type": "string",
-        "additionalProperties": false,
-        "description": "The event topic",
-        "x-ms-enum": {
-          "name": "ComGitlabCdDeploymentTopic",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "com.gitlab.cd.deployment",
-              "name": "ComGitlabCdDeployment"
             }
           ]
         }
@@ -185377,6 +185545,10 @@
         "url": "https://docs.gitlab.com/api/audit_events/"
       },
       "x-displayName": "Audit events"
+    },
+    {
+      "name": "Authn",
+      "description": "Operations related to authn."
     },
     {
       "name": "Avatars",

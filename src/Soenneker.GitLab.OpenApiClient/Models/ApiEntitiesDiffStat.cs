@@ -9,45 +9,47 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class RequestBodyAf2D93C7F7Ea : IAdditionalDataHolder, IParsable
+    public partial class ApiEntitiesDiffStat : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The event payload</summary>
+        /// <summary>The additions property</summary>
+        public int? Additions { get; set; }
+        /// <summary>The deletions property</summary>
+        public int? Deletions { get; set; }
+        /// <summary>The old_path property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAf2D93C7F7EaData? Data { get; set; }
+        public string? OldPath { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAf2D93C7F7EaData Data { get; set; }
+        public string OldPath { get; set; }
 #endif
-        /// <summary>The event topic</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.ComGitlabCdDeploymentTopic? Topic { get; set; }
-        /// <summary>The event type</summary>
+        /// <summary>The path property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get; set; }
+        public string? Path { get; set; }
 #nullable restore
 #else
-        public string Type { get; set; }
+        public string Path { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAf2D93C7F7Ea"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDiffStat"/> and sets the default values.
         /// </summary>
-        public RequestBodyAf2D93C7F7Ea()
+        public ApiEntitiesDiffStat()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAf2D93C7F7Ea"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDiffStat"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAf2D93C7F7Ea CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDiffStat CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAf2D93C7F7Ea();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDiffStat();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -57,9 +59,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAf2D93C7F7EaData>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAf2D93C7F7EaData.CreateFromDiscriminatorValue); } },
-                { "topic", n => { Topic = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ComGitlabCdDeploymentTopic>(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
+                { "additions", n => { Additions = n.GetIntValue(); } },
+                { "deletions", n => { Deletions = n.GetIntValue(); } },
+                { "old_path", n => { OldPath = n.GetStringValue(); } },
+                { "path", n => { Path = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -69,9 +72,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAf2D93C7F7EaData>("data", Data);
-            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ComGitlabCdDeploymentTopic>("topic", Topic);
-            writer.WriteStringValue("type", Type);
+            writer.WriteIntValue("additions", Additions);
+            writer.WriteIntValue("deletions", Deletions);
+            writer.WriteStringValue("old_path", OldPath);
+            writer.WriteStringValue("path", Path);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

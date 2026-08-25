@@ -30,7 +30,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityLicenseEntity Licenses { get; set; }
 #endif
-        /// <summary>Malware status: true if a GLAM identifier is present, false if the SSCS add-on is active but none found, null if the SSCS add-on is inactive.</summary>
+        /// <summary>Malware status: true if a GLAM identifier is present, false otherwise. Omitted when malware detection is not enabled for the project.</summary>
         public bool? Malware { get; set; }
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
