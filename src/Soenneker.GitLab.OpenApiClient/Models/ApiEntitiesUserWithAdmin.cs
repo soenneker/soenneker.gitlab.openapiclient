@@ -280,6 +280,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ProvisionedByGroupId { get; set; }
 #endif
+        /// <summary>The provisioned_by_project_id property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ProvisionedByProjectId { get; set; }
+#nullable restore
+#else
+        public string ProvisionedByProjectId { get; set; }
+#endif
         /// <summary>The public_email property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -432,6 +440,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "projects_limit", n => { ProjectsLimit = n.GetIntValue(); } },
                 { "pronouns", n => { Pronouns = n.GetStringValue(); } },
                 { "provisioned_by_group_id", n => { ProvisionedByGroupId = n.GetStringValue(); } },
+                { "provisioned_by_project_id", n => { ProvisionedByProjectId = n.GetStringValue(); } },
                 { "public_email", n => { PublicEmail = n.GetStringValue(); } },
                 { "scim_identities", n => { ScimIdentities = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesScimIdentity>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesScimIdentity.CreateFromDiscriminatorValue); } },
                 { "shared_runners_minutes_limit", n => { SharedRunnersMinutesLimit = n.GetStringValue(); } },
@@ -496,6 +505,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("projects_limit", ProjectsLimit);
             writer.WriteStringValue("pronouns", Pronouns);
             writer.WriteStringValue("provisioned_by_group_id", ProvisionedByGroupId);
+            writer.WriteStringValue("provisioned_by_project_id", ProvisionedByProjectId);
             writer.WriteStringValue("public_email", PublicEmail);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesScimIdentity>("scim_identities", ScimIdentities);
             writer.WriteStringValue("shared_runners_minutes_limit", SharedRunnersMinutesLimit);

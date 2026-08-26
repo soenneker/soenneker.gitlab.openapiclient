@@ -28,6 +28,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         #pragma warning disable CS1591
         Projects,
         #pragma warning restore CS1591
+        [EnumMember(Value = "groups")]
+        #pragma warning disable CS1591
+        Groups,
+        #pragma warning restore CS1591
         [EnumMember(Value = "issues")]
         #pragma warning disable CS1591
         Issues,

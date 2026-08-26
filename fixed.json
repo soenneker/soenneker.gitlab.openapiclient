@@ -26666,6 +26666,65 @@
       }
     },
     "/api/v4/projects/{id}/service_accounts/{userId}": {
+      "get": {
+        "tags": [
+          "Service accounts"
+        ],
+        "summary": "Get a single project service account",
+        "description": "Gets a specified service account in a specified project.",
+        "operationId": "GetApiV4ProjectsIdServiceAccountsUserId",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the project",
+            "required": true,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "userId",
+            "in": "path",
+            "description": "The ID of the service account",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesServiceAccount"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Bad request"
+          },
+          "401": {
+            "description": "401 Unauthorized"
+          },
+          "403": {
+            "description": "403 Forbidden"
+          },
+          "404": {
+            "description": "404 User not found"
+          }
+        }
+      },
       "delete": {
         "tags": [
           "Service accounts"
@@ -30825,6 +30884,65 @@
       }
     },
     "/api/v4/groups/{id}/service_accounts/{userId}": {
+      "get": {
+        "tags": [
+          "Service accounts"
+        ],
+        "summary": "Get a single group service account",
+        "description": "Gets a specified service account in a specified group.",
+        "operationId": "GetApiV4GroupsIdServiceAccountsUserId",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the group",
+            "required": true,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "userId",
+            "in": "path",
+            "description": "The ID of the service account",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesServiceAccount"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "400 Bad request"
+          },
+          "401": {
+            "description": "401 Unauthorized"
+          },
+          "403": {
+            "description": "403 Forbidden"
+          },
+          "404": {
+            "description": "404 User not found"
+          }
+        }
+      },
       "delete": {
         "tags": [
           "Service accounts"
@@ -55920,7 +56038,7 @@
           "Organizations"
         ],
         "summary": "Create an organization",
-        "description": "Creates an organization. This feature was introduced in GitLab 17.5. This feature is behind the \u0060allow_organization_creation\u0060 feature flag. In GitLab 18.3, the feature flag changed to \u0060organization_switching\u0060.",
+        "description": "Creates an organization. This feature was introduced in GitLab 17.5. This feature is behind the \u0060allow_organization_creation\u0060 feature flag. In GitLab 18.3, the feature flag changed to \u0060organization_switching\u0060. In GitLab 19.4, the feature flag changed to \u0060org_stage_experimental\u0060.",
         "operationId": "PostApiV4Organizations",
         "requestBody": {
           "content": {
@@ -80571,6 +80689,9 @@
           },
           "400": {
             "description": "Bad request"
+          },
+          "429": {
+            "description": "Too many requests"
           },
           "503": {
             "description": "Service unavailable"
@@ -120748,6 +120869,9 @@
             "type": "string"
           },
           "namespace_id": {
+            "type": "string"
+          },
+          "provisioned_by_project_id": {
             "type": "string"
           },
           "created_by": {
@@ -176036,6 +176160,7 @@
           "commits",
           "notes",
           "projects",
+          "groups",
           "issues",
           "work_items",
           "merge_requests",
@@ -176068,6 +176193,10 @@
             {
               "value": "projects",
               "name": "Projects"
+            },
+            {
+              "value": "groups",
+              "name": "Groups"
             },
             {
               "value": "issues",
@@ -176137,6 +176266,7 @@
           "commits",
           "notes",
           "projects",
+          "groups",
           "issues",
           "work_items",
           "merge_requests",
@@ -176168,6 +176298,10 @@
             {
               "value": "projects",
               "name": "Projects"
+            },
+            {
+              "value": "groups",
+              "name": "Groups"
             },
             {
               "value": "issues",
