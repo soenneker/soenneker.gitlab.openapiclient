@@ -9,7 +9,7 @@
       "url": "https://gitlab.com/gitlab-org/gitlab/-/blob/master/LICENSE",
       "x-gitlab-description": "The license applies to the OpenAPI specification document itself. For terms governing use of the GitLab API, see the termsOfService field."
     },
-    "version": "19.3"
+    "version": "19.4"
   },
   "servers": [
     {
@@ -25521,7 +25521,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4"
+                "$ref": "#/components/schemas/RequestBodyE380D60Bb8E3"
               }
             }
           }
@@ -121932,6 +121932,9 @@
           "concurrent_bitbucket_server_import_jobs_limit": {
             "type": "string"
           },
+          "concurrent_pull_request_import_jobs_limit": {
+            "type": "string"
+          },
           "import_jobs_concurrency_limit": {
             "type": "string"
           },
@@ -139951,7 +139954,7 @@
           }
         }
       },
-      "RequestBodyB5F7B529C5F4": {
+      "RequestBodyE380D60Bb8E3": {
         "type": "object",
         "properties": {
           "admin_mode": {
@@ -140051,19 +140054,19 @@
             "nullable": true
           },
           "default_project_creation": {
-            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4DefaultProjectCreation"
+            "$ref": "#/components/schemas/RequestBodyE380D60Bb8E3DefaultProjectCreation"
           },
           "default_branch_protection": {
-            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4DefaultBranchProtection"
+            "$ref": "#/components/schemas/RequestBodyE380D60Bb8E3DefaultBranchProtection"
           },
           "default_branch_protection_defaults": {
-            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaults"
+            "$ref": "#/components/schemas/RequestBodyE380D60Bb8E3DefaultBranchProtectionDefaults"
           },
           "default_group_visibility": {
-            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4DefaultGroupVisibility"
+            "$ref": "#/components/schemas/RequestBodyE380D60Bb8E3DefaultGroupVisibility"
           },
           "default_project_visibility": {
-            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4DefaultProjectVisibility"
+            "$ref": "#/components/schemas/RequestBodyE380D60Bb8E3DefaultProjectVisibility"
           },
           "default_projects_limit": {
             "type": "integer",
@@ -140071,10 +140074,10 @@
             "nullable": true
           },
           "default_snippet_visibility": {
-            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4DefaultSnippetVisibility"
+            "$ref": "#/components/schemas/RequestBodyE380D60Bb8E3DefaultSnippetVisibility"
           },
           "dependency_management_settings": {
-            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4DependencyManagementSettings"
+            "$ref": "#/components/schemas/RequestBodyE380D60Bb8E3DependencyManagementSettings"
           },
           "disable_admin_oauth_scopes": {
             "type": "boolean",
@@ -140172,10 +140175,10 @@
             "nullable": true
           },
           "email_confirmation_setting": {
-            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4EmailConfirmationSetting"
+            "$ref": "#/components/schemas/RequestBodyE380D60Bb8E3EmailConfirmationSetting"
           },
           "enabled_git_access_protocol": {
-            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4EnabledGitAccessProtocol"
+            "$ref": "#/components/schemas/RequestBodyE380D60Bb8E3EnabledGitAccessProtocol"
           },
           "gitpod_enabled": {
             "type": "boolean",
@@ -140471,7 +140474,7 @@
             "nullable": true
           },
           "repository_storages_weighted": {
-            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4RepositoryStoragesWeightedProperty"
+            "$ref": "#/components/schemas/RequestBodyE380D60Bb8E3RepositoryStoragesWeightedProperty"
           },
           "require_two_factor_authentication": {
             "type": "boolean",
@@ -140635,7 +140638,7 @@
             "nullable": true
           },
           "whats_new_variant": {
-            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4WhatsNewVariant"
+            "$ref": "#/components/schemas/RequestBodyE380D60Bb8E3WhatsNewVariant"
           },
           "floc_enabled": {
             "type": "boolean",
@@ -140757,6 +140760,11 @@
             "description": "Bitbucket Server Importer maximum number of simultaneous import jobs",
             "nullable": true
           },
+          "concurrent_pull_request_import_jobs_limit": {
+            "type": "integer",
+            "description": "Maximum number of simultaneous pull request import jobs for the GitHub, Bitbucket Cloud, and Bitbucket Server importers",
+            "nullable": true
+          },
           "allow_runner_registration_token": {
             "type": "boolean",
             "description": "Allow registering runners using a registration token",
@@ -140843,10 +140851,10 @@
             "nullable": true
           },
           "resource_usage_limits": {
-            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4ResourceUsageLimitsProperty"
+            "$ref": "#/components/schemas/RequestBodyE380D60Bb8E3ResourceUsageLimitsProperty"
           },
           "vscode_extension_marketplace": {
-            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4VscodeExtensionMarketplace"
+            "$ref": "#/components/schemas/RequestBodyE380D60Bb8E3VscodeExtensionMarketplace"
           },
           "enable_language_server_restrictions": {
             "type": "boolean",
@@ -140864,28 +140872,28 @@
             "nullable": true
           },
           "logging_field_schema_version": {
-            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4LoggingFieldSchemaVersion"
+            "$ref": "#/components/schemas/RequestBodyE380D60Bb8E3LoggingFieldSchemaVersion"
           },
           "logging_field_dual_emit_target": {
-            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4LoggingFieldDualEmitTarget"
+            "$ref": "#/components/schemas/RequestBodyE380D60Bb8E3LoggingFieldDualEmitTarget"
           },
           "rsa_key_restriction": {
-            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4RsaKeyRestriction"
+            "$ref": "#/components/schemas/RequestBodyE380D60Bb8E3RsaKeyRestriction"
           },
           "dsa_key_restriction": {
-            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4DsaKeyRestriction"
+            "$ref": "#/components/schemas/RequestBodyE380D60Bb8E3DsaKeyRestriction"
           },
           "ecdsa_key_restriction": {
-            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4EcdsaKeyRestriction"
+            "$ref": "#/components/schemas/RequestBodyE380D60Bb8E3EcdsaKeyRestriction"
           },
           "ed25519_key_restriction": {
-            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4Ed25519KeyRestriction"
+            "$ref": "#/components/schemas/RequestBodyE380D60Bb8E3Ed25519KeyRestriction"
           },
           "ecdsa_sk_key_restriction": {
-            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4EcdsaSkKeyRestriction"
+            "$ref": "#/components/schemas/RequestBodyE380D60Bb8E3EcdsaSkKeyRestriction"
           },
           "ed25519_sk_key_restriction": {
-            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4Ed25519SkKeyRestriction"
+            "$ref": "#/components/schemas/RequestBodyE380D60Bb8E3Ed25519SkKeyRestriction"
           },
           "allow_account_deletion": {
             "type": "string",
@@ -142012,7 +142020,7 @@
           "duo_namespace_access_rules": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4DuoNamespaceAccessRulesItem"
+              "$ref": "#/components/schemas/RequestBodyE380D60Bb8E3DuoNamespaceAccessRulesItem"
             },
             "description": "AI entity access rules for controlling Duo feature access",
             "nullable": true
@@ -157505,13 +157513,13 @@
           }
         }
       },
-      "RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaults": {
+      "RequestBodyE380D60Bb8E3DefaultBranchProtectionDefaults": {
         "type": "object",
         "properties": {
           "allowed_to_push": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaultsAllowedToPushItem"
+              "$ref": "#/components/schemas/RequestBodyE380D60Bb8E3DefaultBranchProtectionDefaultsAllowedToPushItem"
             },
             "description": "An array of access levels allowed to push",
             "nullable": true
@@ -157524,7 +157532,7 @@
           "allowed_to_merge": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaultsAllowedToMergeItem"
+              "$ref": "#/components/schemas/RequestBodyE380D60Bb8E3DefaultBranchProtectionDefaultsAllowedToMergeItem"
             },
             "description": "An array of access levels allowed to merge",
             "nullable": true
@@ -157543,7 +157551,7 @@
         "description": "Determine if developers can push to default branch",
         "nullable": true
       },
-      "RequestBodyB5F7B529C5F4DependencyManagementSettings": {
+      "RequestBodyE380D60Bb8E3DependencyManagementSettings": {
         "type": "object",
         "properties": {
           "security_update_scheduler_max_concurrency": {
@@ -157555,7 +157563,7 @@
         "description": "Dependency management settings",
         "nullable": true
       },
-      "RequestBodyB5F7B529C5F4RepositoryStoragesWeighted": {
+      "RequestBodyE380D60Bb8E3RepositoryStoragesWeighted": {
         "type": "object",
         "additionalProperties": {
           "type": "integer"
@@ -157563,12 +157571,12 @@
         "description": "Storage paths for new projects with a weighted value ranging from 0 to 100",
         "nullable": true
       },
-      "RequestBodyB5F7B529C5F4ResourceUsageLimits": {
+      "RequestBodyE380D60Bb8E3ResourceUsageLimits": {
         "type": "object",
         "description": "Definition for resource usage limits enforced in Sidekiq workers",
         "nullable": true
       },
-      "RequestBodyB5F7B529C5F4VscodeExtensionMarketplace": {
+      "RequestBodyE380D60Bb8E3VscodeExtensionMarketplace": {
         "type": "object",
         "properties": {
           "enabled": {
@@ -157582,20 +157590,20 @@
             "nullable": true
           },
           "custom_values": {
-            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4VscodeExtensionMarketplaceCustomValuesProperty"
+            "$ref": "#/components/schemas/RequestBodyE380D60Bb8E3VscodeExtensionMarketplaceCustomValuesProperty"
           }
         },
         "description": "Settings for VS Code Extension Marketplace",
         "nullable": true
       },
-      "RequestBodyB5F7B529C5F4DuoNamespaceAccessRulesItem": {
+      "RequestBodyE380D60Bb8E3DuoNamespaceAccessRulesItem": {
         "required": [
           "features"
         ],
         "type": "object",
         "properties": {
           "through_namespace": {
-            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4DuoNamespaceAccessRulesItemThroughNamespace"
+            "$ref": "#/components/schemas/RequestBodyE380D60Bb8E3DuoNamespaceAccessRulesItemThroughNamespace"
           },
           "features": {
             "type": "array",
@@ -160996,34 +161004,34 @@
         "description": "Data for rendering the vulnerabilities by severity count in PDF reports",
         "nullable": true
       },
-      "RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaultsAllowedToPushItem": {
+      "RequestBodyE380D60Bb8E3DefaultBranchProtectionDefaultsAllowedToPushItem": {
         "required": [
           "access_level"
         ],
         "type": "object",
         "properties": {
           "access_level": {
-            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyE380D60Bb8E3DefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel"
           }
         }
       },
-      "RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaultsAllowedToMergeItem": {
+      "RequestBodyE380D60Bb8E3DefaultBranchProtectionDefaultsAllowedToMergeItem": {
         "required": [
           "access_level"
         ],
         "type": "object",
         "properties": {
           "access_level": {
-            "$ref": "#/components/schemas/RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyE380D60Bb8E3DefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel"
           }
         }
       },
-      "RequestBodyB5F7B529C5F4VscodeExtensionMarketplaceCustomValues": {
+      "RequestBodyE380D60Bb8E3VscodeExtensionMarketplaceCustomValues": {
         "type": "object",
         "description": "VS Code Extension Marketplace URL\u0027s when preset is \u0027custom\u0027",
         "nullable": true
       },
-      "RequestBodyB5F7B529C5F4DuoNamespaceAccessRulesItemThroughNamespace": {
+      "RequestBodyE380D60Bb8E3DuoNamespaceAccessRulesItemThroughNamespace": {
         "required": [
           "id"
         ],
@@ -162590,14 +162598,14 @@
         "type": "object",
         "description": "Context parameters (user, namespace, project). An actor context is resolved from the user. Defaults to current user."
       },
-      "RequestBodyB5F7B529C5F4RepositoryStoragesWeightedProperty": {
+      "RequestBodyE380D60Bb8E3RepositoryStoragesWeightedProperty": {
         "type": "object",
         "additionalProperties": {
           "type": "integer"
         },
         "description": "Storage paths for new projects with a weighted value ranging from 0 to 100"
       },
-      "RequestBodyB5F7B529C5F4ResourceUsageLimitsProperty": {
+      "RequestBodyE380D60Bb8E3ResourceUsageLimitsProperty": {
         "type": "object",
         "description": "Definition for resource usage limits enforced in Sidekiq workers"
       },
@@ -162679,7 +162687,7 @@
         "type": "object",
         "description": "Data for rendering the vulnerabilities by age in PDF reports"
       },
-      "RequestBodyB5F7B529C5F4VscodeExtensionMarketplaceCustomValuesProperty": {
+      "RequestBodyE380D60Bb8E3VscodeExtensionMarketplaceCustomValuesProperty": {
         "type": "object",
         "description": "VS Code Extension Marketplace URL\u0027s when preset is \u0027custom\u0027"
       },
@@ -164599,7 +164607,7 @@
           ]
         }
       },
-      "RequestBodyB5F7B529C5F4DefaultProjectCreation": {
+      "RequestBodyE380D60Bb8E3DefaultProjectCreation": {
         "enum": [
           0,
           3,
@@ -164612,7 +164620,7 @@
         "description": "Determine if developers can create projects in the group",
         "nullable": true
       },
-      "RequestBodyB5F7B529C5F4DefaultBranchProtection": {
+      "RequestBodyE380D60Bb8E3DefaultBranchProtection": {
         "enum": [
           0,
           3,
@@ -164625,7 +164633,7 @@
         "description": "Determine if developers can push to default branch",
         "nullable": true
       },
-      "RequestBodyB5F7B529C5F4DefaultGroupVisibility": {
+      "RequestBodyE380D60Bb8E3DefaultGroupVisibility": {
         "enum": [
           "private",
           "internal",
@@ -164636,7 +164644,7 @@
         "description": "The default group visibility",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyB5F7B529C5F4DefaultGroupVisibility",
+          "name": "RequestBodyE380D60Bb8E3DefaultGroupVisibility",
           "modelAsString": false,
           "values": [
             {
@@ -164654,7 +164662,7 @@
           ]
         }
       },
-      "RequestBodyB5F7B529C5F4DefaultProjectVisibility": {
+      "RequestBodyE380D60Bb8E3DefaultProjectVisibility": {
         "enum": [
           "private",
           "internal",
@@ -164665,7 +164673,7 @@
         "description": "The default project visibility",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyB5F7B529C5F4DefaultProjectVisibility",
+          "name": "RequestBodyE380D60Bb8E3DefaultProjectVisibility",
           "modelAsString": false,
           "values": [
             {
@@ -164683,7 +164691,7 @@
           ]
         }
       },
-      "RequestBodyB5F7B529C5F4DefaultSnippetVisibility": {
+      "RequestBodyE380D60Bb8E3DefaultSnippetVisibility": {
         "enum": [
           "private",
           "internal",
@@ -164694,7 +164702,7 @@
         "description": "The default snippet visibility",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyB5F7B529C5F4DefaultSnippetVisibility",
+          "name": "RequestBodyE380D60Bb8E3DefaultSnippetVisibility",
           "modelAsString": false,
           "values": [
             {
@@ -164712,7 +164720,7 @@
           ]
         }
       },
-      "RequestBodyB5F7B529C5F4EmailConfirmationSetting": {
+      "RequestBodyE380D60Bb8E3EmailConfirmationSetting": {
         "enum": [
           "off",
           "soft",
@@ -164723,7 +164731,7 @@
         "description": "Email confirmation setting, possible values: \u0060off\u0060, \u0060soft\u0060, and \u0060hard\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyB5F7B529C5F4EmailConfirmationSetting",
+          "name": "RequestBodyE380D60Bb8E3EmailConfirmationSetting",
           "modelAsString": false,
           "values": [
             {
@@ -164741,7 +164749,7 @@
           ]
         }
       },
-      "RequestBodyB5F7B529C5F4EnabledGitAccessProtocol": {
+      "RequestBodyE380D60Bb8E3EnabledGitAccessProtocol": {
         "enum": [
           "ssh",
           "http",
@@ -164752,7 +164760,7 @@
         "description": "Allow only the selected protocols to be used for Git access.",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyB5F7B529C5F4EnabledGitAccessProtocol",
+          "name": "RequestBodyE380D60Bb8E3EnabledGitAccessProtocol",
           "modelAsString": false,
           "values": [
             {
@@ -164770,7 +164778,7 @@
           ]
         }
       },
-      "RequestBodyB5F7B529C5F4WhatsNewVariant": {
+      "RequestBodyE380D60Bb8E3WhatsNewVariant": {
         "enum": [
           "all_tiers",
           "current_tier",
@@ -164781,7 +164789,7 @@
         "description": "What\u0027s new variant, possible values: \u0060all_tiers\u0060, \u0060current_tier\u0060, and \u0060disabled\u0060.",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyB5F7B529C5F4WhatsNewVariant",
+          "name": "RequestBodyE380D60Bb8E3WhatsNewVariant",
           "modelAsString": false,
           "values": [
             {
@@ -164799,7 +164807,7 @@
           ]
         }
       },
-      "RequestBodyB5F7B529C5F4LoggingFieldSchemaVersion": {
+      "RequestBodyE380D60Bb8E3LoggingFieldSchemaVersion": {
         "enum": [
           0,
           1
@@ -164809,7 +164817,7 @@
         "description": "Logging field schema version (v0, v1, \u2026). Cannot be downgraded.",
         "nullable": true
       },
-      "RequestBodyB5F7B529C5F4LoggingFieldDualEmitTarget": {
+      "RequestBodyE380D60Bb8E3LoggingFieldDualEmitTarget": {
         "enum": [
           1
         ],
@@ -164818,7 +164826,7 @@
         "description": "Version to dual-emit alongside schema_version. Must be strictly greater than schema_version, or omit/null to disable.",
         "nullable": true
       },
-      "RequestBodyB5F7B529C5F4RsaKeyRestriction": {
+      "RequestBodyE380D60Bb8E3RsaKeyRestriction": {
         "enum": [
           0,
           1024,
@@ -164832,7 +164840,7 @@
         "description": "Restrictions on the complexity of uploaded RSA keys. A value of -1 disables all RSA keys.",
         "nullable": true
       },
-      "RequestBodyB5F7B529C5F4DsaKeyRestriction": {
+      "RequestBodyE380D60Bb8E3DsaKeyRestriction": {
         "enum": [
           0,
           1024,
@@ -164845,7 +164853,7 @@
         "description": "Restrictions on the complexity of uploaded DSA keys. A value of -1 disables all DSA keys.",
         "nullable": true
       },
-      "RequestBodyB5F7B529C5F4EcdsaKeyRestriction": {
+      "RequestBodyE380D60Bb8E3EcdsaKeyRestriction": {
         "enum": [
           0,
           256,
@@ -164858,7 +164866,7 @@
         "description": "Restrictions on the complexity of uploaded ECDSA keys. A value of -1 disables all ECDSA keys.",
         "nullable": true
       },
-      "RequestBodyB5F7B529C5F4Ed25519KeyRestriction": {
+      "RequestBodyE380D60Bb8E3Ed25519KeyRestriction": {
         "enum": [
           0,
           256,
@@ -164869,7 +164877,7 @@
         "description": "Restrictions on the complexity of uploaded ED25519 keys. A value of -1 disables all ED25519 keys.",
         "nullable": true
       },
-      "RequestBodyB5F7B529C5F4EcdsaSkKeyRestriction": {
+      "RequestBodyE380D60Bb8E3EcdsaSkKeyRestriction": {
         "enum": [
           0,
           256,
@@ -164880,7 +164888,7 @@
         "description": "Restrictions on the complexity of uploaded ECDSA_SK keys. A value of -1 disables all ECDSA_SK keys.",
         "nullable": true
       },
-      "RequestBodyB5F7B529C5F4Ed25519SkKeyRestriction": {
+      "RequestBodyE380D60Bb8E3Ed25519SkKeyRestriction": {
         "enum": [
           0,
           256,
@@ -174045,7 +174053,7 @@
           ]
         }
       },
-      "RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel": {
+      "RequestBodyE380D60Bb8E3DefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel": {
         "enum": [
           30,
           40,
@@ -174056,7 +174064,7 @@
         "additionalProperties": false,
         "description": "A valid access level"
       },
-      "RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel": {
+      "RequestBodyE380D60Bb8E3DefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel": {
         "enum": [
           30,
           40,

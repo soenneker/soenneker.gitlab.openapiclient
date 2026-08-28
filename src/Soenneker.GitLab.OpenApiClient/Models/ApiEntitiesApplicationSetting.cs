@@ -530,6 +530,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ConcurrentGithubImportJobsLimit { get; set; }
 #endif
+        /// <summary>The concurrent_pull_request_import_jobs_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ConcurrentPullRequestImportJobsLimit { get; set; }
+#nullable restore
+#else
+        public string ConcurrentPullRequestImportJobsLimit { get; set; }
+#endif
         /// <summary>The concurrent_relation_batch_export_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -5233,6 +5241,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "concurrent_bitbucket_import_jobs_limit", n => { ConcurrentBitbucketImportJobsLimit = n.GetStringValue(); } },
                 { "concurrent_bitbucket_server_import_jobs_limit", n => { ConcurrentBitbucketServerImportJobsLimit = n.GetStringValue(); } },
                 { "concurrent_github_import_jobs_limit", n => { ConcurrentGithubImportJobsLimit = n.GetStringValue(); } },
+                { "concurrent_pull_request_import_jobs_limit", n => { ConcurrentPullRequestImportJobsLimit = n.GetStringValue(); } },
                 { "concurrent_relation_batch_export_limit", n => { ConcurrentRelationBatchExportLimit = n.GetStringValue(); } },
                 { "concurrent_relation_export_limit", n => { ConcurrentRelationExportLimit = n.GetStringValue(); } },
                 { "container_expiration_policies_enable_historic_entries", n => { ContainerExpirationPoliciesEnableHistoricEntries = n.GetStringValue(); } },
@@ -5892,6 +5901,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("concurrent_bitbucket_import_jobs_limit", ConcurrentBitbucketImportJobsLimit);
             writer.WriteStringValue("concurrent_bitbucket_server_import_jobs_limit", ConcurrentBitbucketServerImportJobsLimit);
             writer.WriteStringValue("concurrent_github_import_jobs_limit", ConcurrentGithubImportJobsLimit);
+            writer.WriteStringValue("concurrent_pull_request_import_jobs_limit", ConcurrentPullRequestImportJobsLimit);
             writer.WriteStringValue("concurrent_relation_batch_export_limit", ConcurrentRelationBatchExportLimit);
             writer.WriteStringValue("concurrent_relation_export_limit", ConcurrentRelationExportLimit);
             writer.WriteStringValue("container_expiration_policies_enable_historic_entries", ContainerExpirationPoliciesEnableHistoricEntries);

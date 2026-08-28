@@ -11,25 +11,25 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     /// Determine if developers can push to default branch
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaults : IAdditionalDataHolder, IParsable
+    public partial class RequestBodyE380D60Bb8E3DefaultBranchProtectionDefaults : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array of access levels allowed to merge</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaultsAllowedToMergeItem>? AllowedToMerge { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE380D60Bb8E3DefaultBranchProtectionDefaultsAllowedToMergeItem>? AllowedToMerge { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaultsAllowedToMergeItem> AllowedToMerge { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE380D60Bb8E3DefaultBranchProtectionDefaultsAllowedToMergeItem> AllowedToMerge { get; set; }
 #endif
         /// <summary>An array of access levels allowed to push</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaultsAllowedToPushItem>? AllowedToPush { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE380D60Bb8E3DefaultBranchProtectionDefaultsAllowedToPushItem>? AllowedToPush { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaultsAllowedToPushItem> AllowedToPush { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE380D60Bb8E3DefaultBranchProtectionDefaultsAllowedToPushItem> AllowedToPush { get; set; }
 #endif
         /// <summary>Allow force push for all users with push access.</summary>
         public bool? AllowForcePush { get; set; }
@@ -38,21 +38,21 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Allow developers to initial push</summary>
         public bool? DeveloperCanInitialPush { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaults"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE380D60Bb8E3DefaultBranchProtectionDefaults"/> and sets the default values.
         /// </summary>
-        public RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaults()
+        public RequestBodyE380D60Bb8E3DefaultBranchProtectionDefaults()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaults"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE380D60Bb8E3DefaultBranchProtectionDefaults"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaults CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE380D60Bb8E3DefaultBranchProtectionDefaults CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaults();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE380D60Bb8E3DefaultBranchProtectionDefaults();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -63,8 +63,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "allow_force_push", n => { AllowForcePush = n.GetBoolValue(); } },
-                { "allowed_to_merge", n => { AllowedToMerge = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaultsAllowedToMergeItem>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaultsAllowedToMergeItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "allowed_to_push", n => { AllowedToPush = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaultsAllowedToPushItem>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaultsAllowedToPushItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "allowed_to_merge", n => { AllowedToMerge = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE380D60Bb8E3DefaultBranchProtectionDefaultsAllowedToMergeItem>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE380D60Bb8E3DefaultBranchProtectionDefaultsAllowedToMergeItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "allowed_to_push", n => { AllowedToPush = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE380D60Bb8E3DefaultBranchProtectionDefaultsAllowedToPushItem>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE380D60Bb8E3DefaultBranchProtectionDefaultsAllowedToPushItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "code_owner_approval_required", n => { CodeOwnerApprovalRequired = n.GetBoolValue(); } },
                 { "developer_can_initial_push", n => { DeveloperCanInitialPush = n.GetBoolValue(); } },
             };
@@ -76,8 +76,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaultsAllowedToMergeItem>("allowed_to_merge", AllowedToMerge);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB5F7B529C5F4DefaultBranchProtectionDefaultsAllowedToPushItem>("allowed_to_push", AllowedToPush);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE380D60Bb8E3DefaultBranchProtectionDefaultsAllowedToMergeItem>("allowed_to_merge", AllowedToMerge);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE380D60Bb8E3DefaultBranchProtectionDefaultsAllowedToPushItem>("allowed_to_push", AllowedToPush);
             writer.WriteBoolValue("allow_force_push", AllowForcePush);
             writer.WriteBoolValue("code_owner_approval_required", CodeOwnerApprovalRequired);
             writer.WriteBoolValue("developer_can_initial_push", DeveloperCanInitialPush);
