@@ -8,6 +8,7 @@ using Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Direct_access;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Flow_callbacks;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.List_tools;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Revoke_token;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Tools;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Ws;
 using System.Collections.Generic;
@@ -51,6 +52,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Revoke_token.Revoke_tokenRequestBuilder Revoke_token
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Revoke_token.Revoke_tokenRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The tools property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Tools.ToolsRequestBuilder Tools
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Tools.ToolsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The workflows property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.WorkflowsRequestBuilder Workflows

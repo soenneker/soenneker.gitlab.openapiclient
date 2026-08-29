@@ -11,7 +11,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     /// The event payload
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RequestBody2D9Be0E2518EData : IAdditionalDataHolder, IParsable
+    public partial class RequestBodyA8C515Dc1A08Data : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -39,6 +39,22 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<int?> Position { get; set; }
 #endif
+        /// <summary>Human-readable prompt, present on approval_requested</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Reason { get; set; }
+#nullable restore
+#else
+        public string Reason { get; set; }
+#endif
+        /// <summary>Name of the AutoFlow channel to post the approval decision back into, present on approval_requested</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Reply { get; set; }
+#nullable restore
+#else
+        public string Reply { get; set; }
+#endif
         /// <summary>Name of the Cd::Service, present on service_started/service_succeeded/service_failed</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -64,21 +80,21 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string StepType { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2D9Be0E2518EData"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA8C515Dc1A08Data"/> and sets the default values.
         /// </summary>
-        public RequestBody2D9Be0E2518EData()
+        public RequestBodyA8C515Dc1A08Data()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2D9Be0E2518EData"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA8C515Dc1A08Data"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2D9Be0E2518EData CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA8C515Dc1A08Data CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2D9Be0E2518EData();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA8C515Dc1A08Data();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -91,6 +107,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "environment", n => { Environment = n.GetStringValue(); } },
                 { "error", n => { Error = n.GetStringValue(); } },
                 { "position", n => { Position = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
+                { "reason", n => { Reason = n.GetStringValue(); } },
+                { "reply", n => { Reply = n.GetStringValue(); } },
                 { "service", n => { Service = n.GetStringValue(); } },
                 { "stage_name", n => { StageName = n.GetStringValue(); } },
                 { "step_type", n => { StepType = n.GetStringValue(); } },
@@ -106,6 +124,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("environment", Environment);
             writer.WriteStringValue("error", Error);
             writer.WriteCollectionOfPrimitiveValues<int?>("position", Position);
+            writer.WriteStringValue("reason", Reason);
+            writer.WriteStringValue("reply", Reply);
             writer.WriteStringValue("service", Service);
             writer.WriteStringValue("stage_name", StageName);
             writer.WriteStringValue("step_type", StepType);

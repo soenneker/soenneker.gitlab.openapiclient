@@ -2056,6 +2056,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string GlobalSearchCommitsEnabled { get; set; }
 #endif
+        /// <summary>The global_search_groups_enabled property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? GlobalSearchGroupsEnabled { get; set; }
+#nullable restore
+#else
+        public string GlobalSearchGroupsEnabled { get; set; }
+#endif
         /// <summary>The global_search_limited_indexing_enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -5434,6 +5442,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "global_search_block_anonymous_searches_enabled", n => { GlobalSearchBlockAnonymousSearchesEnabled = n.GetStringValue(); } },
                 { "global_search_code_enabled", n => { GlobalSearchCodeEnabled = n.GetStringValue(); } },
                 { "global_search_commits_enabled", n => { GlobalSearchCommitsEnabled = n.GetStringValue(); } },
+                { "global_search_groups_enabled", n => { GlobalSearchGroupsEnabled = n.GetStringValue(); } },
                 { "global_search_limited_indexing_enabled", n => { GlobalSearchLimitedIndexingEnabled = n.GetStringValue(); } },
                 { "global_search_merge_requests_enabled", n => { GlobalSearchMergeRequestsEnabled = n.GetStringValue(); } },
                 { "global_search_snippet_titles_enabled", n => { GlobalSearchSnippetTitlesEnabled = n.GetStringValue(); } },
@@ -6094,6 +6103,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("global_search_block_anonymous_searches_enabled", GlobalSearchBlockAnonymousSearchesEnabled);
             writer.WriteStringValue("global_search_code_enabled", GlobalSearchCodeEnabled);
             writer.WriteStringValue("global_search_commits_enabled", GlobalSearchCommitsEnabled);
+            writer.WriteStringValue("global_search_groups_enabled", GlobalSearchGroupsEnabled);
             writer.WriteStringValue("global_search_limited_indexing_enabled", GlobalSearchLimitedIndexingEnabled);
             writer.WriteStringValue("global_search_merge_requests_enabled", GlobalSearchMergeRequestsEnabled);
             writer.WriteStringValue("global_search_snippet_titles_enabled", GlobalSearchSnippetTitlesEnabled);

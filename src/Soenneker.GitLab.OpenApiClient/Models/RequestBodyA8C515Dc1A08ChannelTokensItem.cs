@@ -9,29 +9,43 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class RequestBodyE380D60Bb8E3DefaultBranchProtectionDefaultsAllowedToMergeItem : IAdditionalDataHolder, IParsable
+    public partial class RequestBodyA8C515Dc1A08ChannelTokensItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>A valid access level</summary>
-        public int? AccessLevel { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Name of the AutoFlow channel</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ChannelName { get; set; }
+#nullable restore
+#else
+        public string ChannelName { get; set; }
+#endif
+        /// <summary>Token used to post a value into the channel</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Token { get; set; }
+#nullable restore
+#else
+        public string Token { get; set; }
+#endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE380D60Bb8E3DefaultBranchProtectionDefaultsAllowedToMergeItem"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA8C515Dc1A08ChannelTokensItem"/> and sets the default values.
         /// </summary>
-        public RequestBodyE380D60Bb8E3DefaultBranchProtectionDefaultsAllowedToMergeItem()
+        public RequestBodyA8C515Dc1A08ChannelTokensItem()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE380D60Bb8E3DefaultBranchProtectionDefaultsAllowedToMergeItem"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA8C515Dc1A08ChannelTokensItem"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE380D60Bb8E3DefaultBranchProtectionDefaultsAllowedToMergeItem CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA8C515Dc1A08ChannelTokensItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE380D60Bb8E3DefaultBranchProtectionDefaultsAllowedToMergeItem();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA8C515Dc1A08ChannelTokensItem();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -41,7 +55,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "access_level", n => { AccessLevel = n.GetIntValue(); } },
+                { "channel_name", n => { ChannelName = n.GetStringValue(); } },
+                { "token", n => { Token = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -51,7 +66,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("access_level", AccessLevel);
+            writer.WriteStringValue("channel_name", ChannelName);
+            writer.WriteStringValue("token", Token);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

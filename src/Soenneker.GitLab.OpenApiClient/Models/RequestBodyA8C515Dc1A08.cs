@@ -9,7 +9,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class RequestBody2D9Be0E2518E : IAdditionalDataHolder, IParsable
+    public partial class RequestBodyA8C515Dc1A08 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -17,18 +17,18 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>AutoFlow channels opened alongside this event, for posting a value back into them later</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2D9Be0E2518EChannelTokensItem>? ChannelTokens { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA8C515Dc1A08ChannelTokensItem>? ChannelTokens { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2D9Be0E2518EChannelTokensItem> ChannelTokens { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA8C515Dc1A08ChannelTokensItem> ChannelTokens { get; set; }
 #endif
         /// <summary>The event payload</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2D9Be0E2518EData? Data { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA8C515Dc1A08Data? Data { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2D9Be0E2518EData Data { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA8C515Dc1A08Data Data { get; set; }
 #endif
         /// <summary>The event topic</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -49,27 +49,27 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>AutoFlow Value (protojson), decoded into the same topic/type/data shape as `data` above</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2D9Be0E2518EValueProperty? Value { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA8C515Dc1A08ValueProperty? Value { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2D9Be0E2518EValueProperty Value { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA8C515Dc1A08ValueProperty Value { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2D9Be0E2518E"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA8C515Dc1A08"/> and sets the default values.
         /// </summary>
-        public RequestBody2D9Be0E2518E()
+        public RequestBodyA8C515Dc1A08()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2D9Be0E2518E"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA8C515Dc1A08"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2D9Be0E2518E CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA8C515Dc1A08 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2D9Be0E2518E();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA8C515Dc1A08();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,11 +79,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "channel_tokens", n => { ChannelTokens = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2D9Be0E2518EChannelTokensItem>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2D9Be0E2518EChannelTokensItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "data", n => { Data = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2D9Be0E2518EData>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2D9Be0E2518EData.CreateFromDiscriminatorValue); } },
+                { "channel_tokens", n => { ChannelTokens = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA8C515Dc1A08ChannelTokensItem>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA8C515Dc1A08ChannelTokensItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "data", n => { Data = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA8C515Dc1A08Data>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA8C515Dc1A08Data.CreateFromDiscriminatorValue); } },
                 { "topic", n => { Topic = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
-                { "value", n => { Value = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2D9Be0E2518EValueProperty>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2D9Be0E2518EValueProperty.CreateFromDiscriminatorValue); } },
+                { "value", n => { Value = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA8C515Dc1A08ValueProperty>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA8C515Dc1A08ValueProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -93,11 +93,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2D9Be0E2518EChannelTokensItem>("channel_tokens", ChannelTokens);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2D9Be0E2518EData>("data", Data);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA8C515Dc1A08ChannelTokensItem>("channel_tokens", ChannelTokens);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA8C515Dc1A08Data>("data", Data);
             writer.WriteStringValue("topic", Topic);
             writer.WriteStringValue("type", Type);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody2D9Be0E2518EValueProperty>("value", Value);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyA8C515Dc1A08ValueProperty>("value", Value);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

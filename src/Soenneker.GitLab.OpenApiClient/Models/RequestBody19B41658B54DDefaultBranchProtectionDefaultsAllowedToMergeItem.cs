@@ -7,32 +7,31 @@ using System.IO;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>
-    /// Dependency management settings
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RequestBodyE380D60Bb8E3DependencyManagementSettings : IAdditionalDataHolder, IParsable
+    #pragma warning disable CS1591
+    public partial class RequestBody19B41658B54DDefaultBranchProtectionDefaultsAllowedToMergeItem : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
+        /// <summary>A valid access level</summary>
+        public int? AccessLevel { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Maximum number of dependency management security update scheduler jobs that run concurrently across the Sidekiq fleet</summary>
-        public int? SecurityUpdateSchedulerMaxConcurrency { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE380D60Bb8E3DependencyManagementSettings"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody19B41658B54DDefaultBranchProtectionDefaultsAllowedToMergeItem"/> and sets the default values.
         /// </summary>
-        public RequestBodyE380D60Bb8E3DependencyManagementSettings()
+        public RequestBody19B41658B54DDefaultBranchProtectionDefaultsAllowedToMergeItem()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE380D60Bb8E3DependencyManagementSettings"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody19B41658B54DDefaultBranchProtectionDefaultsAllowedToMergeItem"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE380D60Bb8E3DependencyManagementSettings CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody19B41658B54DDefaultBranchProtectionDefaultsAllowedToMergeItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE380D60Bb8E3DependencyManagementSettings();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody19B41658B54DDefaultBranchProtectionDefaultsAllowedToMergeItem();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -42,7 +41,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "security_update_scheduler_max_concurrency", n => { SecurityUpdateSchedulerMaxConcurrency = n.GetIntValue(); } },
+                { "access_level", n => { AccessLevel = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -52,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("security_update_scheduler_max_concurrency", SecurityUpdateSchedulerMaxConcurrency);
+            writer.WriteIntValue("access_level", AccessLevel);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
