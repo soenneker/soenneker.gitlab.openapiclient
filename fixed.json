@@ -17254,7 +17254,6 @@
             "in": "query",
             "description": "The record identifiers to filter by",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "array",
@@ -58584,7 +58583,6 @@
             "in": "query",
             "description": "Returns merge requests assigned to the given user \u0060id\u0060. \u0060None\u0060 returns unassigned merge requests. \u0060Any\u0060 returns merge requests with an assignee.",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -58654,7 +58652,6 @@
             "in": "query",
             "description": "Returns merge requests which have the user as a reviewer with the given user \u0060id\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Mutually exclusive with \u0060reviewer_username\u0060.",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -58886,7 +58883,6 @@
             "in": "query",
             "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests assigned to the given user \u0060id\u0060. \u0060None\u0060 returns unassigned merge requests. \u0060Any\u0060 returns merge requests with an assignee.",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -59014,7 +59010,6 @@
             "in": "query",
             "description": "Return merge requests which have specified the users with the given IDs as an individual approver",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "string",
@@ -59032,7 +59027,6 @@
             "in": "query",
             "description": "Return merge requests which have been approved by the specified users with the given IDs",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "string",
@@ -59050,7 +59044,6 @@
             "in": "query",
             "description": "Return merge requests which have been approved by the specified users with the given\n            usernames",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "string",
@@ -59159,7 +59152,6 @@
             "in": "query",
             "description": "Returns merge requests assigned to the given user \u0060id\u0060. \u0060None\u0060 returns unassigned merge requests. \u0060Any\u0060 returns merge requests with an assignee.",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -59229,7 +59221,6 @@
             "in": "query",
             "description": "Returns merge requests which have the user as a reviewer with the given user \u0060id\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Mutually exclusive with \u0060reviewer_username\u0060.",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -59461,7 +59452,6 @@
             "in": "query",
             "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests assigned to the given user \u0060id\u0060. \u0060None\u0060 returns unassigned merge requests. \u0060Any\u0060 returns merge requests with an assignee.",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -59589,7 +59579,6 @@
             "in": "query",
             "description": "Return merge requests which have specified the users with the given IDs as an individual approver",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "string",
@@ -59607,7 +59596,6 @@
             "in": "query",
             "description": "Return merge requests which have been approved by the specified users with the given IDs",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "string",
@@ -59625,7 +59613,6 @@
             "in": "query",
             "description": "Return merge requests which have been approved by the specified users with the given\n            usernames",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "string",
@@ -60055,7 +60042,6 @@
             "in": "query",
             "description": "Returns merge requests assigned to the given user \u0060id\u0060. \u0060None\u0060 returns unassigned merge requests. \u0060Any\u0060 returns merge requests with an assignee.",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -60125,7 +60111,6 @@
             "in": "query",
             "description": "Returns merge requests which have the user as a reviewer with the given user \u0060id\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Mutually exclusive with \u0060reviewer_username\u0060.",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -60357,7 +60342,6 @@
             "in": "query",
             "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests assigned to the given user \u0060id\u0060. \u0060None\u0060 returns unassigned merge requests. \u0060Any\u0060 returns merge requests with an assignee.",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -60485,7 +60469,6 @@
             "in": "query",
             "description": "Return merge requests which have specified the users with the given IDs as an individual approver",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "string",
@@ -60503,7 +60486,6 @@
             "in": "query",
             "description": "Return merge requests which have been approved by the specified users with the given IDs",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "string",
@@ -60521,7 +60503,6 @@
             "in": "query",
             "description": "Return merge requests which have been approved by the specified users with the given\n            usernames",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "string",
@@ -64565,7 +64546,6 @@
             "in": "query",
             "description": "Return issues which are assigned to the user with the given ID",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -64733,7 +64713,6 @@
             "in": "query",
             "description": "Return issues which are not assigned to the iteration with the given ID",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -64786,7 +64765,6 @@
             "in": "query",
             "description": "The weight of the issue",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -64804,7 +64782,6 @@
             "in": "query",
             "description": "The ID of an epic associated with the issues",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -64830,7 +64807,6 @@
             "in": "query",
             "description": "Return issues which are assigned to the iteration with the given ID",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -65014,7 +64990,6 @@
             "in": "query",
             "description": "Return issues which are assigned to the user with the given ID",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -65182,7 +65157,6 @@
             "in": "query",
             "description": "Return issues which are not assigned to the iteration with the given ID",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -65235,7 +65209,6 @@
             "in": "query",
             "description": "The weight of the issue",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -65253,7 +65226,6 @@
             "in": "query",
             "description": "The ID of an epic associated with the issues",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -65279,7 +65251,6 @@
             "in": "query",
             "description": "Return issues which are assigned to the iteration with the given ID",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -65550,7 +65521,6 @@
             "in": "query",
             "description": "Return issues which are assigned to the user with the given ID",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -65718,7 +65688,6 @@
             "in": "query",
             "description": "Return issues which are not assigned to the iteration with the given ID",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -65771,7 +65740,6 @@
             "in": "query",
             "description": "The weight of the issue",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -65789,7 +65757,6 @@
             "in": "query",
             "description": "The ID of an epic associated with the issues",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -65815,7 +65782,6 @@
             "in": "query",
             "description": "Return issues which are assigned to the iteration with the given ID",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -65992,7 +65958,6 @@
             "in": "query",
             "description": "Return issues which are assigned to the user with the given ID",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -66160,7 +66125,6 @@
             "in": "query",
             "description": "Return issues which are not assigned to the iteration with the given ID",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -66213,7 +66177,6 @@
             "in": "query",
             "description": "The weight of the issue",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -66231,7 +66194,6 @@
             "in": "query",
             "description": "The ID of an epic associated with the issues",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -66257,7 +66219,6 @@
             "in": "query",
             "description": "Return issues which are assigned to the iteration with the given ID",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -66770,7 +66731,6 @@
             "in": "query",
             "description": "Return issues which are assigned to the user with the given ID",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -66938,7 +66898,6 @@
             "in": "query",
             "description": "Return issues which are not assigned to the iteration with the given ID",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -66991,7 +66950,6 @@
             "in": "query",
             "description": "The weight of the issue",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -67009,7 +66967,6 @@
             "in": "query",
             "description": "The ID of an epic associated with the issues",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -67035,7 +66992,6 @@
             "in": "query",
             "description": "Return issues which are assigned to the iteration with the given ID",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -67272,7 +67228,6 @@
             "in": "query",
             "description": "Return issues which are assigned to the user with the given ID",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -67440,7 +67395,6 @@
             "in": "query",
             "description": "Return issues which are not assigned to the iteration with the given ID",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -67493,7 +67447,6 @@
             "in": "query",
             "description": "The weight of the issue",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -67511,7 +67464,6 @@
             "in": "query",
             "description": "The ID of an epic associated with the issues",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -67537,7 +67489,6 @@
             "in": "query",
             "description": "Return issues which are assigned to the iteration with the given ID",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -85820,7 +85771,6 @@
             "in": "query",
             "description": "Returns merge requests assigned to the given user \u0060id\u0060. \u0060None\u0060 returns unassigned merge requests. \u0060Any\u0060 returns merge requests with an assignee.",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -85890,7 +85840,6 @@
             "in": "query",
             "description": "Returns merge requests which have the user as a reviewer with the given user \u0060id\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Mutually exclusive with \u0060reviewer_username\u0060.",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -86122,7 +86071,6 @@
             "in": "query",
             "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests assigned to the given user \u0060id\u0060. \u0060None\u0060 returns unassigned merge requests. \u0060Any\u0060 returns merge requests with an assignee.",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "type": "integer",
@@ -97390,7 +97338,6 @@
             "in": "query",
             "description": "The scope of builds to show",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "$ref": "#/components/schemas/GetApiV4ProjectsIdPipelinesPipelineIdJobsScopeParameterOneOf1"
@@ -97492,7 +97439,6 @@
             "in": "query",
             "description": "The scope of builds to show",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "$ref": "#/components/schemas/GetApiV4ProjectsIdPipelinesPipelineIdBridgesScopeParameterOneOf1"
@@ -97595,7 +97541,6 @@
             "in": "query",
             "description": "The scope of builds to show",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "$ref": "#/components/schemas/GetApiV4ProjectsIdPipelinesPipelineIdTriggerJobsScopeParameterOneOf1"
