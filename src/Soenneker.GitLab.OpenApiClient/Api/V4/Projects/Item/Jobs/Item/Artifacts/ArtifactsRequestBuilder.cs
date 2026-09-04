@@ -3,8 +3,10 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Artifacts.Item;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Artifacts.Keep;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Artifacts.Tree;
+using Soenneker.GitLab.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -28,12 +30,24 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Artifact
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Artifacts.Tree.TreeRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.jobs.item.artifacts.item collection</summary>
+        /// <param name="position">Path to a file inside the artifacts archive.</param>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Artifacts.Item.WithArtifactPathItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Artifacts.Item.WithArtifactPathItemRequestBuilder this[string position]
+        {
+            get
+            {
+                var urlTplParams = new Dictionary<string, object>(PathParameters);
+                urlTplParams.Add("artifactPath", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Artifacts.Item.WithArtifactPathItemRequestBuilder(urlTplParams, RequestAdapter);
+            }
+        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Artifacts.ArtifactsRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ArtifactsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/jobs/{jobId}/artifacts{?job_token*}", pathParameters)
+        public ArtifactsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/jobs/{jobId}/artifacts{?file_type*,job_token*}", pathParameters)
         {
         }
         /// <summary>
@@ -41,7 +55,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Artifact
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ArtifactsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/jobs/{jobId}/artifacts{?job_token*}", rawUrl)
+        public ArtifactsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/jobs/{jobId}/artifacts{?file_type*,job_token*}", rawUrl)
         {
         }
         /// <summary>
@@ -62,7 +76,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Artifact
             await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 8.5
+        /// This feature was introduced in GitLab 8.5. The `file_type` attribute was added in GitLab 19.4.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -98,7 +112,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Artifact
             return requestInfo;
         }
         /// <summary>
-        /// This feature was introduced in GitLab 8.5
+        /// This feature was introduced in GitLab 8.5. The `file_type` attribute was added in GitLab 19.4.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -113,6 +127,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Artifact
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
+            requestInfo.Headers.TryAdd("Accept", "application/octet-stream");
             return requestInfo;
         }
         /// <summary>
@@ -125,11 +140,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Artifact
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Artifacts.ArtifactsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 8.5
+        /// This feature was introduced in GitLab 8.5. The `file_type` attribute was added in GitLab 19.4.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ArtifactsRequestBuilderGetQueryParameters 
         {
+            /// <summary>The type of artifact to download. Defaults to the job artifacts archive.</summary>
+            [QueryParameter("file_type")]
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdJobsJobIdArtifactsFileTypeParameter? FileType { get; set; }
             /// <summary>To be used with triggers for multi-project pipelines, available only on Premium and Ultimate tiers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

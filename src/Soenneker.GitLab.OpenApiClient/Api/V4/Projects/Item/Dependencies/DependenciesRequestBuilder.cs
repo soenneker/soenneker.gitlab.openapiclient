@@ -89,11 +89,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Dependencies
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("package_manager")]
-            public string[]? PackageManager { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdDependenciesPackageManagerParameterItem[]? PackageManager { get; set; }
 #nullable restore
 #else
             [QueryParameter("package_manager")]
-            public string[] PackageManager { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdDependenciesPackageManagerParameterItem[] PackageManager { get; set; }
 #endif
             /// <summary>Current page number</summary>
             [QueryParameter("page")]

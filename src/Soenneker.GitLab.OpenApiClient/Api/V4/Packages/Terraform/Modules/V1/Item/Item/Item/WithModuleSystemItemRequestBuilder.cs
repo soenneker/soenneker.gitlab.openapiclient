@@ -4,6 +4,7 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Terraform.Modules.V1.Item.Item.Item.Download;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Terraform.Modules.V1.Item.Item.Item.Item;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Terraform.Modules.V1.Item.Item.Item.Versions;
 using Soenneker.GitLab.OpenApiClient.Models;
 using System.Collections.Generic;
@@ -28,6 +29,18 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Terraform.Modules.V1.It
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Terraform.Modules.V1.Item.Item.Item.Versions.VersionsRequestBuilder Versions
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Terraform.Modules.V1.Item.Item.Item.Versions.VersionsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.packages.terraform.modules.v1.item.item.item.item collection</summary>
+        /// <param name="position">Version of the module</param>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Terraform.Modules.V1.Item.Item.Item.Item.WithModuleVersionItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Terraform.Modules.V1.Item.Item.Item.Item.WithModuleVersionItemRequestBuilder this[string position]
+        {
+            get
+            {
+                var urlTplParams = new Dictionary<string, object>(PathParameters);
+                urlTplParams.Add("moduleVersion", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Terraform.Modules.V1.Item.Item.Item.Item.WithModuleVersionItemRequestBuilder(urlTplParams, RequestAdapter);
+            }
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Terraform.Modules.V1.Item.Item.Item.WithModuleSystemItemRequestBuilder"/> and sets the default values.

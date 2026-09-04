@@ -4,6 +4,7 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Debian;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Maven;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Npm;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Nuget;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Pypi;
@@ -25,6 +26,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Debian.DebianRequestBuilder Debian
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Debian.DebianRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The maven property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Maven.MavenRequestBuilder Maven
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Maven.MavenRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The npm property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Npm.NpmRequestBuilder Npm

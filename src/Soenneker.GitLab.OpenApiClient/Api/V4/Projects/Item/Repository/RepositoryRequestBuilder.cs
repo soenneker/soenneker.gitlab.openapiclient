@@ -5,6 +5,7 @@ using Microsoft.Kiota.Abstractions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Archive;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Blobs;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Branches;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Changed_paths;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Changelog;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Compare;
@@ -44,6 +45,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Branches.BranchesRequestBuilder Branches
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Branches.BranchesRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The changed_paths property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Changed_paths.Changed_pathsRequestBuilder Changed_paths
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Changed_paths.Changed_pathsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The changelog property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Changelog.ChangelogRequestBuilder Changelog

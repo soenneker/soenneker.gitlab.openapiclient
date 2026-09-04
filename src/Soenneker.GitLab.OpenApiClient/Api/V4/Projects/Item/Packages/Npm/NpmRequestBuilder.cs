@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Npm.Item;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Npm.Package;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -19,6 +20,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Npm
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Npm.Npm.NpmRequestBuilder Npm
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Npm.Npm.NpmRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The package property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Npm.Package.PackageRequestBuilder Package
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Npm.Package.PackageRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.packages.npm.item collection</summary>
         /// <param name="position">Package name</param>

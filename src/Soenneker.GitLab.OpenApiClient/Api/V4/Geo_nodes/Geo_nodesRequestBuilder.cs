@@ -25,7 +25,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Geo_nodes
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Geo_nodes.Status.StatusRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.geo_nodes.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The ID of the node</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Geo_nodes.Item.Geo_nodesItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Geo_nodes.Item.Geo_nodesItemRequestBuilder this[int position]
         {

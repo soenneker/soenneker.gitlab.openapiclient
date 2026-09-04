@@ -124,11 +124,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("scope")]
-            public string[]? Scope { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdJobsScopeParameterItem[]? Scope { get; set; }
 #nullable restore
 #else
             [QueryParameter("scope")]
-            public string[] Scope { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdJobsScopeParameterItem[] Scope { get; set; }
 #endif
         }
     }

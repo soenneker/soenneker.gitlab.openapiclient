@@ -4,6 +4,7 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item.Assets;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item.Downloads;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item.Evidence;
 using Soenneker.GitLab.OpenApiClient.Models;
 using System.Collections.Generic;
@@ -23,6 +24,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item.Assets.AssetsRequestBuilder Assets
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item.Assets.AssetsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The downloads property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item.Downloads.DownloadsRequestBuilder Downloads
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item.Downloads.DownloadsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The evidence property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item.Evidence.EvidenceRequestBuilder Evidence
@@ -90,11 +96,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRelease?> PutAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBdc9945Ede2C body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRelease?> PutAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody03F401B76780 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRelease> PutAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBdc9945Ede2C body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRelease> PutAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody03F401B76780 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -147,11 +153,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPutRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBdc9945Ede2C body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody03F401B76780 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPutRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBdc9945Ede2C body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody03F401B76780 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

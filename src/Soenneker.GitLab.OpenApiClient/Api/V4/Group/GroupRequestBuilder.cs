@@ -18,7 +18,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Group
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.group.item collection</summary>
         /// <param name="position">The ID or URL-encoded path of a group</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Group.Item.GroupItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Group.Item.GroupItemRequestBuilder this[int position]
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Group.Item.GroupItemRequestBuilder this[string position]
         {
             get
             {

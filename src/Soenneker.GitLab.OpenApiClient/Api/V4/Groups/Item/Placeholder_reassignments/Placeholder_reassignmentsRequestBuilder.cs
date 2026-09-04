@@ -91,6 +91,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Placeholder_reassign
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
+            requestInfo.Headers.TryAdd("Accept", "text/csv");
             return requestInfo;
         }
         /// <summary>

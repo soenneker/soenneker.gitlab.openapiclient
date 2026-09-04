@@ -112,6 +112,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAdminModel.ApiEntitiesAdminModel_record_identifier CreateFromDiscriminatorValue(IParseNode parseNode)
             {
                 if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
                 var result = new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAdminModel.ApiEntitiesAdminModel_record_identifier();
                 if(parseNode.GetIntValue() is int integerValue)
                 {

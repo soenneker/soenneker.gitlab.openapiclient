@@ -21,7 +21,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitaly.Object_pool_memb
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Object_pool_membersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/internal/gitaly/object_pool_members?disk_paths={disk_paths}&storage={storage}{&upstream_only*}", pathParameters)
+        public Object_pool_membersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/internal/gitaly/object_pool_members?storage={storage}{&upstream_only*,disk_paths*}", pathParameters)
         {
         }
         /// <summary>
@@ -29,7 +29,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitaly.Object_pool_memb
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Object_pool_membersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/internal/gitaly/object_pool_members?disk_paths={disk_paths}&storage={storage}{&upstream_only*}", rawUrl)
+        public Object_pool_membersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/internal/gitaly/object_pool_members?storage={storage}{&upstream_only*,disk_paths*}", rawUrl)
         {
         }
         /// <summary>

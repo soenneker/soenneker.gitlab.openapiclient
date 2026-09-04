@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Conan;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Maven;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Npm;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Terraform;
 using System.Collections.Generic;
@@ -21,6 +22,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Packages
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Conan.ConanRequestBuilder Conan
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Conan.ConanRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The maven property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Maven.MavenRequestBuilder Maven
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Maven.MavenRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The npm property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Npm.NpmRequestBuilder Npm

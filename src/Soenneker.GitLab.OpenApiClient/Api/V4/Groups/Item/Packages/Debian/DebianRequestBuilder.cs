@@ -2,6 +2,7 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Debian.Dists;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Debian.Pool;
 using System.Collections.Generic;
 using System.IO;
@@ -15,6 +16,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Debian
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DebianRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The dists property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Debian.Dists.DistsRequestBuilder Dists
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Debian.Dists.DistsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The pool property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Debian.Pool.PoolRequestBuilder Pool
         {

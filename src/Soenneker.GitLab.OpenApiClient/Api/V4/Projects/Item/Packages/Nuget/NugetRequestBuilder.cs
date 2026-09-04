@@ -4,8 +4,12 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget.Authorize;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget.Download;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget.IndexNamespace;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget.Item;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget.Metadata;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget.Query;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget.Symbolfiles;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget.Symbolpackage;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget.V2;
 using System.Collections.Generic;
@@ -26,15 +30,30 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget.Authorize.AuthorizeRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The download property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget.Download.DownloadRequestBuilder Download
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget.Download.DownloadRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The index property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget.IndexNamespace.IndexRequestBuilder Index
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget.IndexNamespace.IndexRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The metadata property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget.Metadata.MetadataRequestBuilder Metadata
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget.Metadata.MetadataRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The query property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget.Query.QueryRequestBuilder Query
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget.Query.QueryRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The symbolfiles property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget.Symbolfiles.SymbolfilesRequestBuilder Symbolfiles
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget.Symbolfiles.SymbolfilesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The symbolpackage property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget.Symbolpackage.SymbolpackageRequestBuilder Symbolpackage
@@ -45,6 +64,18 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget.V2.V2RequestBuilder V2
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget.V2.V2RequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.packages.nuget.item collection</summary>
+        /// <param name="position">The NuGet package name</param>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget.Item.WithPackageNameItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget.Item.WithPackageNameItemRequestBuilder this[string position]
+        {
+            get
+            {
+                var urlTplParams = new Dictionary<string, object>(PathParameters);
+                urlTplParams.Add("packageName", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget.Item.WithPackageNameItemRequestBuilder(urlTplParams, RequestAdapter);
+            }
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget.NugetRequestBuilder"/> and sets the default values.

@@ -89,11 +89,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Iterations
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("in")]
-            public string[]? In { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdIterationsInParameterItem[]? In { get; set; }
 #nullable restore
 #else
             [QueryParameter("in")]
-            public string[] In { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdIterationsInParameterItem[] In { get; set; }
 #endif
             /// <summary>Include iterations from parent and its ancestors</summary>
             [QueryParameter("include_ancestors")]

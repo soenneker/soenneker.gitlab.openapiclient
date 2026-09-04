@@ -27,7 +27,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Data_management.Item
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.admin.data_management.item.item collection</summary>
         /// <param name="position">The identifier of the model record</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Data_management.Item.Item.WithRecordIdentifierItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Data_management.Item.Item.WithRecordIdentifierItemRequestBuilder this[int position]
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Data_management.Item.Item.WithRecordIdentifierItemRequestBuilder this[string position]
         {
             get
             {

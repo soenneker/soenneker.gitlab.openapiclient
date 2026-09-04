@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Experiments
     public partial class ExperimentsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.experiments.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The experiment name</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Experiments.Item.ExperimentNameItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Experiments.Item.ExperimentNameItemRequestBuilder this[string position]
         {

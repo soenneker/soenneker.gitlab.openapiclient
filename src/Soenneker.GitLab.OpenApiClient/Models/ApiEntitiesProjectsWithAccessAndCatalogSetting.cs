@@ -64,6 +64,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string AutoDuoCodeReviewEnabled { get; set; }
 #endif
+        /// <summary>The automatic_rebase_enabled property</summary>
+        public bool? AutomaticRebaseEnabled { get; set; }
         /// <summary>The avatar_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -971,6 +973,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "auto_devops_enabled", n => { AutoDevopsEnabled = n.GetBoolValue(); } },
                 { "auto_duo_code_review_enabled", n => { AutoDuoCodeReviewEnabled = n.GetStringValue(); } },
                 { "autoclose_referenced_issues", n => { AutocloseReferencedIssues = n.GetBoolValue(); } },
+                { "automatic_rebase_enabled", n => { AutomaticRebaseEnabled = n.GetBoolValue(); } },
                 { "avatar_url", n => { AvatarUrl = n.GetStringValue(); } },
                 { "build_git_strategy", n => { BuildGitStrategy = n.GetStringValue(); } },
                 { "build_timeout", n => { BuildTimeout = n.GetIntValue(); } },
@@ -1141,6 +1144,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("auto_devops_deploy_strategy", AutoDevopsDeployStrategy);
             writer.WriteBoolValue("auto_devops_enabled", AutoDevopsEnabled);
             writer.WriteStringValue("auto_duo_code_review_enabled", AutoDuoCodeReviewEnabled);
+            writer.WriteBoolValue("automatic_rebase_enabled", AutomaticRebaseEnabled);
             writer.WriteStringValue("avatar_url", AvatarUrl);
             writer.WriteStringValue("build_git_strategy", BuildGitStrategy);
             writer.WriteStringValue("builds_access_level", BuildsAccessLevel);

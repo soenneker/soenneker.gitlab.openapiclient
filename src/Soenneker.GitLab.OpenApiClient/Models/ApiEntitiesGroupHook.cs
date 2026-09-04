@@ -64,6 +64,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>The disabled_until property</summary>
         public DateTimeOffset? DisabledUntil { get; set; }
+        /// <summary>The duo_flow_callback_enabled property</summary>
+        public bool? DuoFlowCallbackEnabled { get; set; }
         /// <summary>The emoji_events property</summary>
         public bool? EmojiEvents { get; set; }
         /// <summary>The enable_ssl_verification property</summary>
@@ -179,6 +181,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "deployment_events", n => { DeploymentEvents = n.GetBoolValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "disabled_until", n => { DisabledUntil = n.GetDateTimeOffsetValue(); } },
+                { "duo_flow_callback_enabled", n => { DuoFlowCallbackEnabled = n.GetBoolValue(); } },
                 { "emoji_events", n => { EmojiEvents = n.GetBoolValue(); } },
                 { "enable_ssl_verification", n => { EnableSslVerification = n.GetBoolValue(); } },
                 { "feature_flag_events", n => { FeatureFlagEvents = n.GetBoolValue(); } },
@@ -226,6 +229,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("deployment_events", DeploymentEvents);
             writer.WriteStringValue("description", Description);
             writer.WriteDateTimeOffsetValue("disabled_until", DisabledUntil);
+            writer.WriteBoolValue("duo_flow_callback_enabled", DuoFlowCallbackEnabled);
             writer.WriteBoolValue("emoji_events", EmojiEvents);
             writer.WriteBoolValue("enable_ssl_verification", EnableSslVerification);
             writer.WriteBoolValue("feature_flag_events", FeatureFlagEvents);

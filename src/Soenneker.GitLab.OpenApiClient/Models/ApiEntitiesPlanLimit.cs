@@ -66,6 +66,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public int? PipelineHierarchySize { get; set; }
         /// <summary>The pypi_max_file_size property</summary>
         public long? PypiMaxFileSize { get; set; }
+        /// <summary>The service_desk_outbound_emails_per_day property</summary>
+        public int? ServiceDeskOutboundEmailsPerDay { get; set; }
+        /// <summary>The service_desk_outbound_emails_per_hour property</summary>
+        public int? ServiceDeskOutboundEmailsPerHour { get; set; }
         /// <summary>The storage_size_limit property</summary>
         public int? StorageSizeLimit { get; set; }
         /// <summary>The terraform_module_max_file_size property</summary>
@@ -124,6 +128,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "nuget_max_file_size", n => { NugetMaxFileSize = n.GetIntValue(); } },
                 { "pipeline_hierarchy_size", n => { PipelineHierarchySize = n.GetIntValue(); } },
                 { "pypi_max_file_size", n => { PypiMaxFileSize = n.GetLongValue(); } },
+                { "service_desk_outbound_emails_per_day", n => { ServiceDeskOutboundEmailsPerDay = n.GetIntValue(); } },
+                { "service_desk_outbound_emails_per_hour", n => { ServiceDeskOutboundEmailsPerHour = n.GetIntValue(); } },
                 { "storage_size_limit", n => { StorageSizeLimit = n.GetIntValue(); } },
                 { "terraform_module_max_file_size", n => { TerraformModuleMaxFileSize = n.GetIntValue(); } },
                 { "web_hook_calls", n => { WebHookCalls = n.GetIntValue(); } },
@@ -161,6 +167,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("nuget_max_file_size", NugetMaxFileSize);
             writer.WriteIntValue("pipeline_hierarchy_size", PipelineHierarchySize);
             writer.WriteLongValue("pypi_max_file_size", PypiMaxFileSize);
+            writer.WriteIntValue("service_desk_outbound_emails_per_day", ServiceDeskOutboundEmailsPerDay);
+            writer.WriteIntValue("service_desk_outbound_emails_per_hour", ServiceDeskOutboundEmailsPerHour);
             writer.WriteIntValue("storage_size_limit", StorageSizeLimit);
             writer.WriteIntValue("terraform_module_max_file_size", TerraformModuleMaxFileSize);
             writer.WriteIntValue("web_hook_calls", WebHookCalls);

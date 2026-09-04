@@ -21,7 +21,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithQueueNameItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/admin/sidekiq/queues/{queueName}{?ai_resource*,artifact_size*,artifact_used_cdn*,artifacts_dependencies_count*,artifacts_dependencies_size*,bulk_import_entity_id*,caller_id*,client_id*,feature_category*,gl_user_id*,job_id*,kubernetes_agent_id*,merge_action_status*,mvcc_manifest*,organization_id*,pipeline_id*,project*,related_class*,remote_ip*,root_caller_id*,root_namespace*,scoped_user*,scoped_user_id*,sidekiq_destination_shard_redis*,subscription_plan*,user*,user_id*,worker_class*}", pathParameters)
+        public WithQueueNameItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/admin/sidekiq/queues/{queueName}{?ai_resource*,artifact_size*,artifact_used_cdn*,artifacts_dependencies_count*,artifacts_dependencies_size*,bulk_import_entity_id*,caller_id*,client_id*,feature_category*,gl_root_namespace_id*,gl_user_id*,job_id*,kubernetes_agent_id*,merge_action_status*,mvcc_manifest*,organization_id*,pipeline_id*,project*,related_class*,remote_ip*,root_caller_id*,root_namespace*,scoped_user*,scoped_user_id*,sidekiq_destination_shard_redis*,subscription_plan*,user*,user_id*,worker_class*}", pathParameters)
         {
         }
         /// <summary>
@@ -29,7 +29,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithQueueNameItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/admin/sidekiq/queues/{queueName}{?ai_resource*,artifact_size*,artifact_used_cdn*,artifacts_dependencies_count*,artifacts_dependencies_size*,bulk_import_entity_id*,caller_id*,client_id*,feature_category*,gl_user_id*,job_id*,kubernetes_agent_id*,merge_action_status*,mvcc_manifest*,organization_id*,pipeline_id*,project*,related_class*,remote_ip*,root_caller_id*,root_namespace*,scoped_user*,scoped_user_id*,sidekiq_destination_shard_redis*,subscription_plan*,user*,user_id*,worker_class*}", rawUrl)
+        public WithQueueNameItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/admin/sidekiq/queues/{queueName}{?ai_resource*,artifact_size*,artifact_used_cdn*,artifacts_dependencies_count*,artifacts_dependencies_size*,bulk_import_entity_id*,caller_id*,client_id*,feature_category*,gl_root_namespace_id*,gl_user_id*,job_id*,kubernetes_agent_id*,merge_action_status*,mvcc_manifest*,organization_id*,pipeline_id*,project*,related_class*,remote_ip*,root_caller_id*,root_namespace*,scoped_user*,scoped_user_id*,sidekiq_destination_shard_redis*,subscription_plan*,user*,user_id*,worker_class*}", rawUrl)
         {
         }
         /// <summary>
@@ -171,6 +171,16 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
 #else
             [QueryParameter("feature_category")]
             public string FeatureCategory { get; set; }
+#endif
+            /// <summary>Metadata key to match</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("gl_root_namespace_id")]
+            public string? GlRootNamespaceId { get; set; }
+#nullable restore
+#else
+            [QueryParameter("gl_root_namespace_id")]
+            public string GlRootNamespaceId { get; set; }
 #endif
             /// <summary>Metadata key to match</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

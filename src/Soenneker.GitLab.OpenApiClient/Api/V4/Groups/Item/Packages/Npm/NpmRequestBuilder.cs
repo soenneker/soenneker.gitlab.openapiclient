@@ -2,6 +2,8 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Npm.Item;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Npm.Package;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -18,6 +20,23 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Npm
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Npm.Npm.NpmRequestBuilder Npm
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Npm.Npm.NpmRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The package property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Npm.Package.PackageRequestBuilder Package
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Npm.Package.PackageRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.packages.npm.item collection</summary>
+        /// <param name="position">Package name</param>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Npm.Item.WithPackageNameItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Npm.Item.WithPackageNameItemRequestBuilder this[string position]
+        {
+            get
+            {
+                var urlTplParams = new Dictionary<string, object>(PathParameters);
+                urlTplParams.Add("packageName", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Npm.Item.WithPackageNameItemRequestBuilder(urlTplParams, RequestAdapter);
+            }
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Npm.NpmRequestBuilder"/> and sets the default values.

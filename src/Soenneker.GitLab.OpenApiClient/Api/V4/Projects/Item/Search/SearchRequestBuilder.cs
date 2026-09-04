@@ -97,11 +97,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Search
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fields")]
-            public string[]? Fields { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.TitleItem[]? Fields { get; set; }
 #nullable restore
 #else
             [QueryParameter("fields")]
-            public string[] Fields { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.TitleItem[] Fields { get; set; }
 #endif
             /// <summary>Number of context lines around each match. Available with advanced and exact code search. Introduced in GitLab 18.11.</summary>
             [QueryParameter("num_context_lines")]

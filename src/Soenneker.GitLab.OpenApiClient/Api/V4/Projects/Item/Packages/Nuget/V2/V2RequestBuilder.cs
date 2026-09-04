@@ -7,6 +7,7 @@ using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget.V2.Auth
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget.V2.FindPackagesById;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget.V2.Metadata;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget.V2.Packages;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget.V2.PackagesWithPackageNameWithPackageVersion;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -73,6 +74,18 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget.V2
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
+        }
+        /// <summary>
+        /// Builds and executes requests for operations under \api\v4\projects\{-id}\packages\nuget\v2\Packages(Id=&apos;{packageName}&apos;,Version=&apos;{packageVersion}&apos;)
+        /// </summary>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget.V2.PackagesWithPackageNameWithPackageVersion.PackagesWithPackageNameWithPackageVersionRequestBuilder"/></returns>
+        /// <param name="packageName">The NuGet package name</param>
+        /// <param name="packageVersion">The NuGet package version</param>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget.V2.PackagesWithPackageNameWithPackageVersion.PackagesWithPackageNameWithPackageVersionRequestBuilder PackagesWithPackageNameWithPackageVersion(string packageName, string packageVersion)
+        {
+            if(string.IsNullOrEmpty(packageName)) throw new ArgumentNullException(nameof(packageName));
+            if(string.IsNullOrEmpty(packageVersion)) throw new ArgumentNullException(nameof(packageVersion));
+            return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget.V2.PackagesWithPackageNameWithPackageVersion.PackagesWithPackageNameWithPackageVersionRequestBuilder(PathParameters, RequestAdapter, packageName, packageVersion);
         }
         /// <summary>
         /// Uploads a NuGet v2 package file for a specified project.

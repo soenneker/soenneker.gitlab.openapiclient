@@ -264,6 +264,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string AssetProxyWhitelist { get; set; }
 #endif
+        /// <summary>The audit_events_api_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AuditEventsApiLimit { get; set; }
+#nullable restore
+#else
+        public string AuditEventsApiLimit { get; set; }
+#endif
         /// <summary>The authn_data_retention_cleanup_enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -4228,6 +4236,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string StaticObjectsExternalStorageUrl { get; set; }
 #endif
+        /// <summary>The tags_create_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? TagsCreateLimit { get; set; }
+#nullable restore
+#else
+        public string TagsCreateLimit { get; set; }
+#endif
         /// <summary>The terminal_max_session_time property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -5215,6 +5231,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "asset_proxy_enabled", n => { AssetProxyEnabled = n.GetStringValue(); } },
                 { "asset_proxy_url", n => { AssetProxyUrl = n.GetStringValue(); } },
                 { "asset_proxy_whitelist", n => { AssetProxyWhitelist = n.GetStringValue(); } },
+                { "audit_events_api_limit", n => { AuditEventsApiLimit = n.GetStringValue(); } },
                 { "authn_data_retention_cleanup_enabled", n => { AuthnDataRetentionCleanupEnabled = n.GetStringValue(); } },
                 { "authorized_keys_enabled", n => { AuthorizedKeysEnabled = n.GetStringValue(); } },
                 { "auto_accept_awarded_achievements", n => { AutoAcceptAwardedAchievements = n.GetStringValue(); } },
@@ -5718,6 +5735,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "spam_check_endpoint_url", n => { SpamCheckEndpointUrl = n.GetStringValue(); } },
                 { "static_objects_external_storage_auth_token", n => { StaticObjectsExternalStorageAuthToken = n.GetStringValue(); } },
                 { "static_objects_external_storage_url", n => { StaticObjectsExternalStorageUrl = n.GetStringValue(); } },
+                { "tags_create_limit", n => { TagsCreateLimit = n.GetStringValue(); } },
                 { "terminal_max_session_time", n => { TerminalMaxSessionTime = n.GetStringValue(); } },
                 { "terms", n => { Terms = n.GetStringValue(); } },
                 { "terraform_state_encryption_enabled", n => { TerraformStateEncryptionEnabled = n.GetStringValue(); } },
@@ -5876,6 +5894,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("asset_proxy_enabled", AssetProxyEnabled);
             writer.WriteStringValue("asset_proxy_url", AssetProxyUrl);
             writer.WriteStringValue("asset_proxy_whitelist", AssetProxyWhitelist);
+            writer.WriteStringValue("audit_events_api_limit", AuditEventsApiLimit);
             writer.WriteStringValue("authn_data_retention_cleanup_enabled", AuthnDataRetentionCleanupEnabled);
             writer.WriteStringValue("authorized_keys_enabled", AuthorizedKeysEnabled);
             writer.WriteStringValue("auto_accept_awarded_achievements", AutoAcceptAwardedAchievements);
@@ -6379,6 +6398,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("spam_check_endpoint_url", SpamCheckEndpointUrl);
             writer.WriteStringValue("static_objects_external_storage_auth_token", StaticObjectsExternalStorageAuthToken);
             writer.WriteStringValue("static_objects_external_storage_url", StaticObjectsExternalStorageUrl);
+            writer.WriteStringValue("tags_create_limit", TagsCreateLimit);
             writer.WriteStringValue("terminal_max_session_time", TerminalMaxSessionTime);
             writer.WriteStringValue("terms", Terms);
             writer.WriteStringValue("terraform_state_encryption_enabled", TerraformStateEncryptionEnabled);

@@ -7,8 +7,12 @@ using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Cargo;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Composer;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Conan;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Debian;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Generic;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Go;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Helm;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Item;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Maven;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Ml_models;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Npm;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Protection;
@@ -50,10 +54,30 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Debian.DebianRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The generic property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Generic.GenericRequestBuilder Generic
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Generic.GenericRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The go property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Go.GoRequestBuilder Go
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Go.GoRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The helm property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Helm.HelmRequestBuilder Helm
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Helm.HelmRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The maven property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Maven.MavenRequestBuilder Maven
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Maven.MavenRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The ml_models property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Ml_models.Ml_modelsRequestBuilder Ml_models
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Ml_models.Ml_modelsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The npm property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Npm.NpmRequestBuilder Npm

@@ -18,7 +18,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Dependency_list_exports
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.dependency_list_exports.item collection</summary>
         /// <param name="position">The ID of the dependency list export</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Dependency_list_exports.Item.WithExportItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Dependency_list_exports.Item.WithExportItemRequestBuilder this[int position]
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Dependency_list_exports.Item.WithExportItemRequestBuilder this[string position]
         {
             get
             {

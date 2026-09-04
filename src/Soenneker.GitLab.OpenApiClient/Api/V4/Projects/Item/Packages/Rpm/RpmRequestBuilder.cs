@@ -4,6 +4,8 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Rpm.Authorize;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Rpm.Item;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Rpm.Repodata;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -21,6 +23,23 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Rpm
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Rpm.Authorize.AuthorizeRequestBuilder Authorize
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Rpm.Authorize.AuthorizeRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The repodata property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Rpm.Repodata.RepodataRequestBuilder Repodata
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Rpm.Repodata.RepodataRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.packages.rpm.item collection</summary>
+        /// <param name="position">RPM package file id</param>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Rpm.Item.WithPackageFileItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Rpm.Item.WithPackageFileItemRequestBuilder this[int position]
+        {
+            get
+            {
+                var urlTplParams = new Dictionary<string, object>(PathParameters);
+                urlTplParams.Add("packageFileId", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Rpm.Item.WithPackageFileItemRequestBuilder(urlTplParams, RequestAdapter);
+            }
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Rpm.RpmRequestBuilder"/> and sets the default values.

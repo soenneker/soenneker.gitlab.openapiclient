@@ -2,6 +2,8 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Group.Item.Packages.Composer.Item;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Group.Item.Packages.Composer.P2;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Group.Item.Packages.Composer.P;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Group.Item.Packages.Composer.Packages;
 using System.Collections.Generic;
@@ -21,10 +23,27 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Group.Item.Packages.Composer
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Group.Item.Packages.Composer.P.PRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The p2 property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Group.Item.Packages.Composer.P2.P2RequestBuilder P2
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Group.Item.Packages.Composer.P2.P2RequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The packages property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Group.Item.Packages.Composer.Packages.PackagesRequestBuilder Packages
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Group.Item.Packages.Composer.Packages.PackagesRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.group.item.packages.composer.item collection</summary>
+        /// <param name="position">The Composer package name</param>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Group.Item.Packages.Composer.Item.WithPackageNameItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Group.Item.Packages.Composer.Item.WithPackageNameItemRequestBuilder this[string position]
+        {
+            get
+            {
+                var urlTplParams = new Dictionary<string, object>(PathParameters);
+                urlTplParams.Add("packageName", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Group.Item.Packages.Composer.Item.WithPackageNameItemRequestBuilder(urlTplParams, RequestAdapter);
+            }
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Group.Item.Packages.Composer.ComposerRequestBuilder"/> and sets the default values.

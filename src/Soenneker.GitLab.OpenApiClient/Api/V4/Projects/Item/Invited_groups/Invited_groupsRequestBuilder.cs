@@ -108,11 +108,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Invited_groups
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("relation")]
-            public string[]? Relation { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdInvitedGroupsRelationParameterItem[]? Relation { get; set; }
 #nullable restore
 #else
             [QueryParameter("relation")]
-            public string[] Relation { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdInvitedGroupsRelationParameterItem[] Relation { get; set; }
 #endif
             /// <summary>Search for a specific group</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

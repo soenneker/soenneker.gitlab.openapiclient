@@ -66,6 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Usage_data.Metric_definitions
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
+            requestInfo.Headers.TryAdd("Accept", "application/yaml");
             return requestInfo;
         }
         /// <summary>

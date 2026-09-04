@@ -28,6 +28,7 @@ using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Custom_attributes;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Debian_distributions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Dependencies;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Dependency_list_exports;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Dependency_proxy;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deploy_keys;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deploy_tokens;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments;
@@ -39,6 +40,7 @@ using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Export;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Export_relations;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.External_status_checks;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags_settings;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags_user_lists;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Fork;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Forks;
@@ -258,6 +260,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Dependency_list_exports.Dependency_list_exportsRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The dependency_proxy property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Dependency_proxy.Dependency_proxyRequestBuilder Dependency_proxy
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Dependency_proxy.Dependency_proxyRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The deploy_keys property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deploy_keys.Deploy_keysRequestBuilder Deploy_keys
         {
@@ -312,6 +319,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags.Feature_flagsRequestBuilder Feature_flags
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags.Feature_flagsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The feature_flags_settings property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags_settings.Feature_flags_settingsRequestBuilder Feature_flags_settings
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags_settings.Feature_flags_settingsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The feature_flags_user_lists property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags_user_lists.Feature_flags_user_listsRequestBuilder Feature_flags_user_lists

@@ -94,11 +94,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Search
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fields")]
-            public string[]? Fields { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.TitleItem[]? Fields { get; set; }
 #nullable restore
 #else
             [QueryParameter("fields")]
-            public string[] Fields { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.TitleItem[] Fields { get; set; }
 #endif
             /// <summary>Includes archived projects in the search. Introduced in GitLab 18.9.</summary>
             [QueryParameter("include_archived")]

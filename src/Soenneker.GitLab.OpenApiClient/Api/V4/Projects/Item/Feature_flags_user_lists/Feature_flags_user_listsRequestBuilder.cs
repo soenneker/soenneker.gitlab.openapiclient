@@ -21,7 +21,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags_user
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.feature_flags_user_lists.item collection</summary>
         /// <param name="position">The internal ID of the project&apos;s feature flag user list</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags_user_lists.Item.WithIItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags_user_lists.Item.WithIItemRequestBuilder this[int position]
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags_user_lists.Item.WithIItemRequestBuilder this[string position]
         {
             get
             {

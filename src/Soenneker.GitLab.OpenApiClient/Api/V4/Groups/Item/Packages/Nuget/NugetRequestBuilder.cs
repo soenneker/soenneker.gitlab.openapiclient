@@ -3,7 +3,9 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Nuget.IndexNamespace;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Nuget.Metadata;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Nuget.Query;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Nuget.Symbolfiles;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Nuget.V2;
 using System.Collections.Generic;
 using System.IO;
@@ -22,10 +24,20 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Nuget
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Nuget.IndexNamespace.IndexRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The metadata property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Nuget.Metadata.MetadataRequestBuilder Metadata
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Nuget.Metadata.MetadataRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The query property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Nuget.Query.QueryRequestBuilder Query
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Nuget.Query.QueryRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The symbolfiles property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Nuget.Symbolfiles.SymbolfilesRequestBuilder Symbolfiles
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Nuget.Symbolfiles.SymbolfilesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The v2 property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Nuget.V2.V2RequestBuilder V2
