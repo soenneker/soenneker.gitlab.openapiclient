@@ -150,10 +150,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Milestones
             [QueryParameter("iids")]
             public int?[] Iids { get; set; }
 #endif
-            /// <summary>Include milestones from all parent groups</summary>
+            /// <summary>Include milestones from all parent groups. Mutually exclusive with `include_parent_milestones`.</summary>
             [QueryParameter("include_ancestors")]
             public bool? IncludeAncestors { get; set; }
-            /// <summary>Deprecated: see `include_ancestors`</summary>
+            /// <summary>Deprecated: see `include_ancestors`. Mutually exclusive with `include_ancestors`.</summary>
             [QueryParameter("include_parent_milestones")]
             public bool? IncludeParentMilestones { get; set; }
             /// <summary>Current page number</summary>

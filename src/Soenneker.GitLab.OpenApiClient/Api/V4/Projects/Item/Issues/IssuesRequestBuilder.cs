@@ -73,11 +73,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssue?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody782244Cb51Ab body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssue?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyF5Dab59A683C body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssue> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody782244Cb51Ab body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssue> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyF5Dab59A683C body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -111,11 +111,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody782244Cb51Ab body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyF5Dab59A683C body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody782244Cb51Ab body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyF5Dab59A683C body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -140,10 +140,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class IssuesRequestBuilderGetQueryParameters 
         {
-            /// <summary>Return issues which are assigned to the user with the given ID</summary>
+            /// <summary>Return issues which are assigned to the user with the given ID. Mutually exclusive with `assignee_username`.</summary>
             [QueryParameter("assignee_id")]
             public int? AssigneeId { get; set; }
-            /// <summary>Return issues which are assigned to the user with the given username</summary>
+            /// <summary>Return issues which are assigned to the user with the given username. Mutually exclusive with `assignee_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("assignee_username")]
@@ -153,10 +153,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues
             [QueryParameter("assignee_username")]
             public string[] AssigneeUsername { get; set; }
 #endif
-            /// <summary>Return issues which are authored by the user with the given ID</summary>
+            /// <summary>Return issues which are authored by the user with the given ID. Mutually exclusive with `author_username`.</summary>
             [QueryParameter("author_id")]
             public int? AuthorId { get; set; }
-            /// <summary>Return issues which are authored by the user with the given username</summary>
+            /// <summary>Return issues which are authored by the user with the given username. Mutually exclusive with `author_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("author_username")]
@@ -220,10 +220,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues
             /// <summary>The type of the issue. Accepts: issue, incident, test_case, requirement, task, ticket</summary>
             [QueryParameter("issue_type")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdIssuesIssueTypeParameter? IssueType { get; set; }
-            /// <summary>Return issues which are assigned to the iteration with the given ID</summary>
+            /// <summary>Return issues which are assigned to the iteration with the given ID. Mutually exclusive with `iteration_title`.</summary>
             [QueryParameter("iteration_id")]
             public int? IterationId { get; set; }
-            /// <summary>Return issues which are assigned to the iteration with the given title</summary>
+            /// <summary>Return issues which are assigned to the iteration with the given title. Mutually exclusive with `iteration_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("iteration_title")]
@@ -243,7 +243,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues
             [QueryParameter("labels")]
             public string[] Labels { get; set; }
 #endif
-            /// <summary>Milestone title</summary>
+            /// <summary>Milestone title. Mutually exclusive with `milestone_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("milestone")]
@@ -253,7 +253,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues
             [QueryParameter("milestone")]
             public string Milestone { get; set; }
 #endif
-            /// <summary>Return issues assigned to milestones with the specified timebox value (&quot;Any&quot;, &quot;None&quot;, &quot;Upcoming&quot; or &quot;Started&quot;)</summary>
+            /// <summary>Return issues assigned to milestones with the specified timebox value (&quot;Any&quot;, &quot;None&quot;, &quot;Upcoming&quot; or &quot;Started&quot;). Mutually exclusive with `milestone`.</summary>
             [QueryParameter("milestone_id")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdIssuesMilestoneIdParameter? MilestoneId { get; set; }
             /// <summary>Return issues reacted by the authenticated user by the given emoji</summary>
@@ -276,10 +276,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues
             [QueryParameter("not")]
             public string Not { get; set; }
 #endif
-            /// <summary>Return issues which are not assigned to the user with the given ID</summary>
+            /// <summary>Return issues which are not assigned to the user with the given ID. Mutually exclusive with `not[assignee_username]`.</summary>
             [QueryParameter("not%5Bassignee_id%5D")]
             public int? NotassigneeId { get; set; }
-            /// <summary>Return issues which are not assigned to the user with the given username</summary>
+            /// <summary>Return issues which are not assigned to the user with the given username. Mutually exclusive with `not[assignee_id]`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("not%5Bassignee_username%5D")]
@@ -289,10 +289,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues
             [QueryParameter("not%5Bassignee_username%5D")]
             public string[] NotassigneeUsername { get; set; }
 #endif
-            /// <summary>Return issues which are not authored by the user with the given ID</summary>
+            /// <summary>Return issues which are not authored by the user with the given ID. Mutually exclusive with `not[author_username]`.</summary>
             [QueryParameter("not%5Bauthor_id%5D")]
             public int? NotauthorId { get; set; }
-            /// <summary>Return issues which are not authored by the user with the given username</summary>
+            /// <summary>Return issues which are not authored by the user with the given username. Mutually exclusive with `not[author_id]`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("not%5Bauthor_username%5D")]
@@ -312,10 +312,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues
             [QueryParameter("not%5Biids%5D")]
             public int?[] Notiids { get; set; }
 #endif
-            /// <summary>Return issues which are not assigned to the iteration with the given ID</summary>
+            /// <summary>Return issues which are not assigned to the iteration with the given ID. Mutually exclusive with `not[iteration_title]`.</summary>
             [QueryParameter("not%5Biteration_id%5D")]
             public int? NotiterationId { get; set; }
-            /// <summary>Return issues which are not assigned to the iteration with the given title</summary>
+            /// <summary>Return issues which are not assigned to the iteration with the given title. Mutually exclusive with `not[iteration_id]`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("not%5Biteration_title%5D")]
@@ -335,7 +335,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues
             [QueryParameter("not%5Blabels%5D")]
             public string[] Notlabels { get; set; }
 #endif
-            /// <summary>Milestone title</summary>
+            /// <summary>Milestone title. Mutually exclusive with `not[milestone_id]`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("not%5Bmilestone%5D")]
@@ -345,7 +345,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues
             [QueryParameter("not%5Bmilestone%5D")]
             public string Notmilestone { get; set; }
 #endif
-            /// <summary>Return issues assigned to milestones without the specified timebox value (&quot;Any&quot;, &quot;None&quot;, &quot;Upcoming&quot; or &quot;Started&quot;)</summary>
+            /// <summary>Return issues assigned to milestones without the specified timebox value (&quot;Any&quot;, &quot;None&quot;, &quot;Upcoming&quot; or &quot;Started&quot;). Mutually exclusive with `not[milestone]`.</summary>
             [QueryParameter("not%5Bmilestone_id%5D")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdIssuesNotMilestoneIdParameter? NotmilestoneId { get; set; }
             /// <summary>Return issues without the specified weight</summary>

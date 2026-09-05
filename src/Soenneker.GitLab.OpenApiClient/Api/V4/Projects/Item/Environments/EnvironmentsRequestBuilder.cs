@@ -152,7 +152,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Environments
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class EnvironmentsRequestBuilderGetQueryParameters 
         {
-            /// <summary>Return the environment with this name. Mutually exclusive with search</summary>
+            /// <summary>Return the environment with this name. Mutually exclusive with search. Mutually exclusive with `search`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("name")]
@@ -168,7 +168,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Environments
             /// <summary>Number of items per page</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Return list of environments matching the search criteria. Mutually exclusive with name. Must be at least 3 characters.</summary>
+            /// <summary>Return list of environments matching the search criteria. Mutually exclusive with name. Must be at least 3 characters. Mutually exclusive with `name`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("search")]

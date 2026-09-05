@@ -60,11 +60,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ci.Lint
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiLintResult?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCc06103459Df body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiLintResult?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCeb6D7A55D5E body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiLintResult> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCc06103459Df body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiLintResult> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCeb6D7A55D5E body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -98,11 +98,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ci.Lint
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCc06103459Df body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCeb6D7A55D5E body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCc06103459Df body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCeb6D7A55D5E body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -127,7 +127,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ci.Lint
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class LintRequestBuilderGetQueryParameters 
         {
-            /// <summary>The CI/CD configuration content is taken from this commit SHA, branch or tag. Defaults to the HEAD of the project&apos;s default branch</summary>
+            /// <summary>The CI/CD configuration content is taken from this commit SHA, branch or tag. Defaults to the HEAD of the project&apos;s default branch. Mutually exclusive with `sha`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("content_ref")]
@@ -140,7 +140,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ci.Lint
             /// <summary>Run pipeline creation simulation, or only do static check. This is false by default</summary>
             [QueryParameter("dry_run")]
             public bool? DryRun { get; set; }
-            /// <summary>Branch or tag used as context when executing a dry run. Defaults to the default branch of the project. Only used when dry_run is true</summary>
+            /// <summary>Branch or tag used as context when executing a dry run. Defaults to the default branch of the project. Only used when dry_run is true. Mutually exclusive with `ref`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("dry_run_ref")]
@@ -153,7 +153,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ci.Lint
             /// <summary>If the list of jobs that would exist in a static check or pipeline        simulation should be included in the response. This is false by default</summary>
             [QueryParameter("include_jobs")]
             public bool? IncludeJobs { get; set; }
-            /// <summary>Deprecated: Use dry_run_ref instead</summary>
+            /// <summary>Deprecated: Use dry_run_ref instead. Mutually exclusive with `dry_run_ref`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("ref")]
@@ -163,7 +163,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ci.Lint
             [QueryParameter("ref")]
             public string Ref { get; set; }
 #endif
-            /// <summary>Deprecated: Use content_ref instead</summary>
+            /// <summary>Deprecated: Use content_ref instead. Mutually exclusive with `content_ref`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("sha")]

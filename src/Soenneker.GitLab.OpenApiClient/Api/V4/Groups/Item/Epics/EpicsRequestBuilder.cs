@@ -140,10 +140,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class EpicsRequestBuilderGetQueryParameters 
         {
-            /// <summary>Return epics which are authored by the user with the given ID</summary>
+            /// <summary>Return epics which are authored by the user with the given ID. Mutually exclusive with `author_username`.</summary>
             [QueryParameter("author_id")]
             public int? AuthorId { get; set; }
-            /// <summary>Return epics which are authored by the given username</summary>
+            /// <summary>Return epics which are authored by the given username. Mutually exclusive with `author_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("author_username")]
@@ -198,10 +198,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics
             [QueryParameter("not")]
             public string Not { get; set; }
 #endif
-            /// <summary>Return epics which are not authored by the user with the given ID</summary>
+            /// <summary>Return epics which are not authored by the user with the given ID. Mutually exclusive with `not[author_username]`.</summary>
             [QueryParameter("not%5Bauthor_id%5D")]
             public int? NotauthorId { get; set; }
-            /// <summary>Return epics which are not authored by the given username</summary>
+            /// <summary>Return epics which are not authored by the given username. Mutually exclusive with `not[author_id]`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("not%5Bauthor_username%5D")]
