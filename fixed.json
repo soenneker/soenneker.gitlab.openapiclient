@@ -190860,7 +190860,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "GetApiV4ProjectsIdPackagesConanV2ConansPackageNamePackageVersionPackageUsernamePackageChannelRevisionsRecipeRevisionFilesFileNameFileNameParameter",
+          "name": "ValueE16E4FCA16E7E78D",
           "modelAsString": false,
           "values": [
             {
@@ -190903,7 +190903,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PutApiV4ProjectsIdPackagesConanV2ConansPackageNamePackageVersionPackageUsernamePackageChannelRevisionsRecipeRevisionFilesFileNameFileNameParameter",
+          "name": "ValueA13DE67E193054E0",
           "modelAsString": false,
           "values": [
             {
@@ -190946,7 +190946,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PutApiV4ProjectsIdPackagesConanV2ConansPackageNamePackageVersionPackageUsernamePackageChannelRevisionsRecipeRevisionFilesFileNameAuthorizeFileNameParameter",
+          "name": "Value20112D057CC85B32",
           "modelAsString": false,
           "values": [
             {
@@ -190989,7 +190989,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "GetApiV4ProjectsIdPackagesConanV2ConansPackageNamePackageVersionPackageUsernamePackageChannelRevisionsRecipeRevisionPackagesConanPackageReferenceRevisionsPackageRevisionFilesFileNameFileNameParameter",
+          "name": "Value35F017F504A355D6",
           "modelAsString": false,
           "values": [
             {
@@ -191032,7 +191032,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PutApiV4ProjectsIdPackagesConanV2ConansPackageNamePackageVersionPackageUsernamePackageChannelRevisionsRecipeRevisionPackagesConanPackageReferenceRevisionsPackageRevisionFilesFileNameFileNameParameter",
+          "name": "Value4DD32DF26FD79894",
           "modelAsString": false,
           "values": [
             {
@@ -191075,7 +191075,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PutApiV4ProjectsIdPackagesConanV2ConansPackageNamePackageVersionPackageUsernamePackageChannelRevisionsRecipeRevisionPackagesConanPackageReferenceRevisionsPackageRevisionFilesFileNameAuthorizeFileNameParameter",
+          "name": "Value8618CC82209118D6",
           "modelAsString": false,
           "values": [
             {
@@ -191118,7 +191118,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "GetApiV4ProjectsIdPackagesConanV1FilesPackageNamePackageVersionPackageUsernamePackageChannelRecipeRevisionExportFileNameFileNameParameter",
+          "name": "Value4276E2B55CFF6F62",
           "modelAsString": false,
           "values": [
             {
@@ -191161,7 +191161,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PutApiV4ProjectsIdPackagesConanV1FilesPackageNamePackageVersionPackageUsernamePackageChannelRecipeRevisionExportFileNameFileNameParameter",
+          "name": "Value0AEC7CCA7087724A",
           "modelAsString": false,
           "values": [
             {
@@ -191204,7 +191204,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PutApiV4ProjectsIdPackagesConanV1FilesPackageNamePackageVersionPackageUsernamePackageChannelRecipeRevisionExportFileNameAuthorizeFileNameParameter",
+          "name": "Value5F1A934F61EB6E13",
           "modelAsString": false,
           "values": [
             {
@@ -191247,7 +191247,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "GetApiV4ProjectsIdPackagesConanV1FilesPackageNamePackageVersionPackageUsernamePackageChannelRecipeRevisionPackageConanPackageReferencePackageRevisionFileNameFileNameParameter",
+          "name": "Value8BE91C18EC748AE4",
           "modelAsString": false,
           "values": [
             {
@@ -191290,7 +191290,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PutApiV4ProjectsIdPackagesConanV1FilesPackageNamePackageVersionPackageUsernamePackageChannelRecipeRevisionPackageConanPackageReferencePackageRevisionFileNameFileNameParameter",
+          "name": "Value84602BC74750DFA8",
           "modelAsString": false,
           "values": [
             {
@@ -191333,7 +191333,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PutApiV4ProjectsIdPackagesConanV1FilesPackageNamePackageVersionPackageUsernamePackageChannelRecipeRevisionPackageConanPackageReferencePackageRevisionFileNameAuthorizeFileNameParameter",
+          "name": "ValueF31D2026A7664411",
           "modelAsString": false,
           "values": [
             {
@@ -191462,7 +191462,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PutApiV4PackagesConanV1FilesPackageNamePackageVersionPackageUsernamePackageChannelRecipeRevisionExportFileNameAuthorizeFileNameParameter",
+          "name": "Value3F72E7BE76789D70",
           "modelAsString": false,
           "values": [
             {
@@ -191505,7 +191505,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "GetApiV4PackagesConanV1FilesPackageNamePackageVersionPackageUsernamePackageChannelRecipeRevisionPackageConanPackageReferencePackageRevisionFileNameFileNameParameter",
+          "name": "Value935A96E634521731",
           "modelAsString": false,
           "values": [
             {
@@ -191548,7 +191548,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PutApiV4PackagesConanV1FilesPackageNamePackageVersionPackageUsernamePackageChannelRecipeRevisionPackageConanPackageReferencePackageRevisionFileNameFileNameParameter",
+          "name": "Value7226DB0F9CCB7C55",
           "modelAsString": false,
           "values": [
             {
@@ -191591,7 +191591,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PutApiV4PackagesConanV1FilesPackageNamePackageVersionPackageUsernamePackageChannelRecipeRevisionPackageConanPackageReferencePackageRevisionFileNameAuthorizeFileNameParameter",
+          "name": "Value88E0BC0A84116FA6",
           "modelAsString": false,
           "values": [
             {
