@@ -11,26 +11,26 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     /// VS Code Extension Marketplace URL&apos;s when preset is &apos;custom&apos;
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RequestBodyDdb13E33E88AVscodeExtensionMarketplaceCustomValuesProperty : IAdditionalDataHolder, IParsable
+    public partial class RequestBody8Af545D0360BVscodeExtensionMarketplaceCustomValuesProperty : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyDdb13E33E88AVscodeExtensionMarketplaceCustomValuesProperty"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8Af545D0360BVscodeExtensionMarketplaceCustomValuesProperty"/> and sets the default values.
         /// </summary>
-        public RequestBodyDdb13E33E88AVscodeExtensionMarketplaceCustomValuesProperty()
+        public RequestBody8Af545D0360BVscodeExtensionMarketplaceCustomValuesProperty()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyDdb13E33E88AVscodeExtensionMarketplaceCustomValuesProperty"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8Af545D0360BVscodeExtensionMarketplaceCustomValuesProperty"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyDdb13E33E88AVscodeExtensionMarketplaceCustomValuesProperty CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8Af545D0360BVscodeExtensionMarketplaceCustomValuesProperty CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyDdb13E33E88AVscodeExtensionMarketplaceCustomValuesProperty();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8Af545D0360BVscodeExtensionMarketplaceCustomValuesProperty();
         }
         /// <summary>
         /// The deserialization information for the current model

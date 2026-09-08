@@ -9,7 +9,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class RequestBody01E586919B93 : IAdditionalDataHolder, IParsable
+    public partial class RequestBodyE824C02454Fe : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -17,10 +17,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Categorical claims about the merge request</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody01E586919B93ClaimsItem>? Claims { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE824C02454FeClaimsItem>? Claims { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody01E586919B93ClaimsItem> Claims { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE824C02454FeClaimsItem> Claims { get; set; }
 #endif
         /// <summary>The full SHA of the diff revision the claims were assessed against</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -48,22 +48,24 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Summary { get; set; }
 #endif
+        /// <summary>ID of the Duo workflow session that produced these claims</summary>
+        public int? WorkflowId { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody01E586919B93"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE824C02454Fe"/> and sets the default values.
         /// </summary>
-        public RequestBody01E586919B93()
+        public RequestBodyE824C02454Fe()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody01E586919B93"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE824C02454Fe"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody01E586919B93 CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE824C02454Fe CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody01E586919B93();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE824C02454Fe();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -73,11 +75,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "claims", n => { Claims = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody01E586919B93ClaimsItem>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody01E586919B93ClaimsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "claims", n => { Claims = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE824C02454FeClaimsItem>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE824C02454FeClaimsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "diff_sha", n => { DiffSha = n.GetStringValue(); } },
                 { "merge_request_iid", n => { MergeRequestIid = n.GetIntValue(); } },
                 { "project_id", n => { ProjectId = n.GetStringValue(); } },
                 { "summary", n => { Summary = n.GetStringValue(); } },
+                { "workflow_id", n => { WorkflowId = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -87,11 +90,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody01E586919B93ClaimsItem>("claims", Claims);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE824C02454FeClaimsItem>("claims", Claims);
             writer.WriteStringValue("diff_sha", DiffSha);
             writer.WriteIntValue("merge_request_iid", MergeRequestIid);
             writer.WriteStringValue("project_id", ProjectId);
             writer.WriteStringValue("summary", Summary);
+            writer.WriteIntValue("workflow_id", WorkflowId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

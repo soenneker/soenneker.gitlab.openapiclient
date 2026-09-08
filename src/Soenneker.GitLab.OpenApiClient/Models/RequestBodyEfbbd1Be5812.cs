@@ -9,7 +9,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class RequestBody3Cd3F0E4Af27 : IAdditionalDataHolder, IParsable
+    public partial class RequestBodyEfbbd1Be5812 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -35,10 +35,18 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Build log state</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3Cd3F0E4Af27Output? Output { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyEfbbd1Be5812Output? Output { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3Cd3F0E4Af27Output Output { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyEfbbd1Be5812Output Output { get; set; }
+#endif
+        /// <summary>Runtime environment key emitted by the runner on job suspension</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? RuntimeEnvironmentKey { get; set; }
+#nullable restore
+#else
+        public string RuntimeEnvironmentKey { get; set; }
 #endif
         /// <summary>Job&apos;s status: running, success, failed</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -57,21 +65,21 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Token { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3Cd3F0E4Af27"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyEfbbd1Be5812"/> and sets the default values.
         /// </summary>
-        public RequestBody3Cd3F0E4Af27()
+        public RequestBodyEfbbd1Be5812()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3Cd3F0E4Af27"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyEfbbd1Be5812"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3Cd3F0E4Af27 CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyEfbbd1Be5812 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3Cd3F0E4Af27();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyEfbbd1Be5812();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -84,7 +92,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "checksum", n => { Checksum = n.GetStringValue(); } },
                 { "exit_code", n => { ExitCode = n.GetIntValue(); } },
                 { "failure_reason", n => { FailureReason = n.GetStringValue(); } },
-                { "output", n => { Output = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3Cd3F0E4Af27Output>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3Cd3F0E4Af27Output.CreateFromDiscriminatorValue); } },
+                { "output", n => { Output = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyEfbbd1Be5812Output>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyEfbbd1Be5812Output.CreateFromDiscriminatorValue); } },
+                { "runtime_environment_key", n => { RuntimeEnvironmentKey = n.GetStringValue(); } },
                 { "state", n => { State = n.GetStringValue(); } },
                 { "token", n => { Token = n.GetStringValue(); } },
             };
@@ -99,7 +108,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("checksum", Checksum);
             writer.WriteIntValue("exit_code", ExitCode);
             writer.WriteStringValue("failure_reason", FailureReason);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody3Cd3F0E4Af27Output>("output", Output);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyEfbbd1Be5812Output>("output", Output);
+            writer.WriteStringValue("runtime_environment_key", RuntimeEnvironmentKey);
             writer.WriteStringValue("state", State);
             writer.WriteStringValue("token", Token);
             writer.WriteAdditionalData(AdditionalData);

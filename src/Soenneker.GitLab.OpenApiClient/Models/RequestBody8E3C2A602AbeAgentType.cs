@@ -5,7 +5,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>The type of agent.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBody9Fed56308Dd0AgentType
+    public enum RequestBody8E3C2A602AbeAgentType
     {
         [EnumMember(Value = "claude-code")]
         #pragma warning disable CS1591

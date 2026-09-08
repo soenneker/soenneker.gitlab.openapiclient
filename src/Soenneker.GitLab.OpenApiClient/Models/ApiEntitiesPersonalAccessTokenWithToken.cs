@@ -42,6 +42,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public long? Id { get; set; }
         /// <summary>The last_used_at property</summary>
         public DateTimeOffset? LastUsedAt { get; set; }
+        /// <summary>The five most recent unique IP addresses that have authenticated with this token. When the limit is reached, the oldest IP address is removed. The list updates once per minute per token.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? LastUsedIps { get; set; }
+#nullable restore
+#else
+        public List<string> LastUsedIps { get; set; }
+#endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -103,6 +111,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "granular_scopes", n => { GranularScopes = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalAccessTokenGranularScope>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalAccessTokenGranularScope.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "id", n => { Id = n.GetLongValue(); } },
                 { "last_used_at", n => { LastUsedAt = n.GetDateTimeOffsetValue(); } },
+                { "last_used_ips", n => { LastUsedIps = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "revoked", n => { Revoked = n.GetBoolValue(); } },
                 { "scopes", n => { Scopes = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalAccessTokenWithToken_scopes>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalAccessTokenWithToken_scopes.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -125,6 +134,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalAccessTokenGranularScope>("granular_scopes", GranularScopes);
             writer.WriteLongValue("id", Id);
             writer.WriteDateTimeOffsetValue("last_used_at", LastUsedAt);
+            writer.WriteCollectionOfPrimitiveValues<string>("last_used_ips", LastUsedIps);
             writer.WriteStringValue("name", Name);
             writer.WriteBoolValue("revoked", Revoked);
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalAccessTokenWithToken_scopes>("scopes", Scopes);

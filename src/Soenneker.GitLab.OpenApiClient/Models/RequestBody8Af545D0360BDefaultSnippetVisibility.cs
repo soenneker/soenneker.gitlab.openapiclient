@@ -3,21 +3,21 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>How the session was synced.</summary>
+    /// <summary>The default snippet visibility</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBody9Fed56308Dd0SyncType
+    public enum RequestBody8Af545D0360BDefaultSnippetVisibility
     {
-        [EnumMember(Value = "hook")]
+        [EnumMember(Value = "private")]
         #pragma warning disable CS1591
-        Hook,
+        PrivateValue,
         #pragma warning restore CS1591
-        [EnumMember(Value = "fallback")]
+        [EnumMember(Value = "internal")]
         #pragma warning disable CS1591
-        Fallback,
+        InternalValue,
         #pragma warning restore CS1591
-        [EnumMember(Value = "manual")]
+        [EnumMember(Value = "public")]
         #pragma warning disable CS1591
-        Manual,
+        PublicValue,
         #pragma warning restore CS1591
     }
 }

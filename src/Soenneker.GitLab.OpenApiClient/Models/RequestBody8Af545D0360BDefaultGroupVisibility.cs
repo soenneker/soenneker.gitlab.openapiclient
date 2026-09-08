@@ -3,21 +3,21 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>Email confirmation setting, possible values: `off`, `soft`, and `hard`</summary>
+    /// <summary>The default group visibility</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBodyDdb13E33E88AEmailConfirmationSetting
+    public enum RequestBody8Af545D0360BDefaultGroupVisibility
     {
-        [EnumMember(Value = "off")]
+        [EnumMember(Value = "private")]
         #pragma warning disable CS1591
-        Off,
+        PrivateValue,
         #pragma warning restore CS1591
-        [EnumMember(Value = "soft")]
+        [EnumMember(Value = "internal")]
         #pragma warning disable CS1591
-        Soft,
+        InternalValue,
         #pragma warning restore CS1591
-        [EnumMember(Value = "hard")]
+        [EnumMember(Value = "public")]
         #pragma warning disable CS1591
-        Hard,
+        PublicValue,
         #pragma warning restore CS1591
     }
 }

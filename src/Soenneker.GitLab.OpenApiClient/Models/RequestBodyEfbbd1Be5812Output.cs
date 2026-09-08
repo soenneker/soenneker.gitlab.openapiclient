@@ -8,29 +8,39 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// Storage paths for new projects with a weighted value ranging from 0 to 100
+    /// Build log state
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RequestBodyDdb13E33E88ARepositoryStoragesWeightedProperty : IAdditionalDataHolder, IParsable
+    public partial class RequestBodyEfbbd1Be5812Output : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Job&apos;s trace size in bytes</summary>
+        public int? Bytesize { get; set; }
+        /// <summary>Job&apos;s trace CRC32 checksum</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Checksum { get; set; }
+#nullable restore
+#else
+        public string Checksum { get; set; }
+#endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyDdb13E33E88ARepositoryStoragesWeightedProperty"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyEfbbd1Be5812Output"/> and sets the default values.
         /// </summary>
-        public RequestBodyDdb13E33E88ARepositoryStoragesWeightedProperty()
+        public RequestBodyEfbbd1Be5812Output()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyDdb13E33E88ARepositoryStoragesWeightedProperty"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyEfbbd1Be5812Output"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyDdb13E33E88ARepositoryStoragesWeightedProperty CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyEfbbd1Be5812Output CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyDdb13E33E88ARepositoryStoragesWeightedProperty();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyEfbbd1Be5812Output();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -40,6 +50,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "bytesize", n => { Bytesize = n.GetIntValue(); } },
+                { "checksum", n => { Checksum = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -49,6 +61,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteIntValue("bytesize", Bytesize);
+            writer.WriteStringValue("checksum", Checksum);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

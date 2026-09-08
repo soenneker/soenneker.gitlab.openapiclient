@@ -7,30 +7,37 @@ using System.IO;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>
-    /// Fallback array item schema
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ApiEntitiesPersonalAccessTokenWithLastUsedIps_scopes : IAdditionalDataHolder, IParsable
+    #pragma warning disable CS1591
+    public partial class ApiEntitiesCiRuntimeEnvironmentKey : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The runtime_environment_key property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? RuntimeEnvironmentKey { get; set; }
+#nullable restore
+#else
+        public string RuntimeEnvironmentKey { get; set; }
+#endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalAccessTokenWithLastUsedIps_scopes"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRuntimeEnvironmentKey"/> and sets the default values.
         /// </summary>
-        public ApiEntitiesPersonalAccessTokenWithLastUsedIps_scopes()
+        public ApiEntitiesCiRuntimeEnvironmentKey()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalAccessTokenWithLastUsedIps_scopes"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRuntimeEnvironmentKey"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalAccessTokenWithLastUsedIps_scopes CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRuntimeEnvironmentKey CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalAccessTokenWithLastUsedIps_scopes();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRuntimeEnvironmentKey();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -40,6 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "runtime_environment_key", n => { RuntimeEnvironmentKey = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -49,6 +57,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("runtime_environment_key", RuntimeEnvironmentKey);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

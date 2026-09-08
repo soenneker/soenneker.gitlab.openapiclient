@@ -8,6 +8,7 @@ using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Cancel;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Erase;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Play;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Retry;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Runtime_environment_key;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Trace;
 using Soenneker.GitLab.OpenApiClient.Models;
 using System.Collections.Generic;
@@ -47,6 +48,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Retry.RetryRequestBuilder Retry
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Retry.RetryRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The runtime_environment_key property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Runtime_environment_key.Runtime_environment_keyRequestBuilder Runtime_environment_key
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Runtime_environment_key.Runtime_environment_keyRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The tracePath property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Trace.TraceRequestBuilder TracePath
