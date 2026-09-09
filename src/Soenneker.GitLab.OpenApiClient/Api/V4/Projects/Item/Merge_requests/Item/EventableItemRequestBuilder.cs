@@ -37,6 +37,7 @@ using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Re
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Status_check_responses;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Status_checks;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Subscribe;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Suggested_reviewers;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Time_estimate;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Time_stats;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Todo;
@@ -226,6 +227,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Subscribe.SubscribeRequestBuilder Subscribe
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Subscribe.SubscribeRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The suggested_reviewers property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Suggested_reviewers.Suggested_reviewersRequestBuilder Suggested_reviewers
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Suggested_reviewers.Suggested_reviewersRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The time_estimate property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Time_estimate.Time_estimateRequestBuilder Time_estimate

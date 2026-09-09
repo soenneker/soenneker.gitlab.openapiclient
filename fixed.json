@@ -17167,6 +17167,81 @@
         }
       }
     },
+    "/api/v4/projects/{id}/merge_requests/{mergeRequestIid}/suggested_reviewers": {
+      "post": {
+        "tags": [
+          "GitLab Duo workflows",
+          "Internal operations"
+        ],
+        "summary": "Set the AI-recommended reviewers for a merge request",
+        "description": "Replaces the AI-recommended reviewers persisted for a specified merge request. Available only when the recommend reviewers flow is enabled for the project.",
+        "operationId": "PostApiV4ProjectsIdMergeRequestsMergeRequestIidSuggestedReviewers",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the project.",
+            "required": true,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "mergeRequestIid",
+            "in": "path",
+            "description": "The internal ID of the merge request.",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestBodyAd699F18A0B7"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesAiSuggestedReviewer"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        }
+      }
+    },
     "/api/v4/admin/data_management/{modelName}/{recordIdentifier}": {
       "get": {
         "tags": [
@@ -57384,7 +57459,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyD07B7211412B"
+                "$ref": "#/components/schemas/RequestBody1D42F280041C"
               }
             }
           },
@@ -107018,7 +107093,7 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyFdaf0F5A0Faa"
+                "$ref": "#/components/schemas/RequestBody1Ab15Ee78A23"
               }
             }
           },
@@ -107064,7 +107139,7 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyAc9C4462C09C"
+                "$ref": "#/components/schemas/RequestBody458681Bdbaec"
               }
             }
           }
@@ -117322,7 +117397,7 @@
           },
           "malware": {
             "type": "boolean",
-            "description": "Malware status: true if a GLAM identifier is present, false otherwise. Omitted when malware detection is not enabled for the project."
+            "description": "Malware status: true if the package version matches a malware advisory, false otherwise. Omitted when malware detection is not enabled for the project."
           }
         }
       },
@@ -125599,6 +125674,26 @@
           "created_at": {
             "type": "string",
             "format": "date-time"
+          }
+        }
+      },
+      "ApiEntitiesAiSuggestedReviewer": {
+        "type": "object",
+        "properties": {
+          "user": {
+            "$ref": "#/components/schemas/ApiEntitiesUserBasic"
+          },
+          "reason": {
+            "type": "string",
+            "example": "Authored most of the changed files."
+          },
+          "approval_rule": {
+            "$ref": "#/components/schemas/ApiEntitiesAiSuggestedReviewerApprovalRuleProperty"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-01-31T15:10:45.080Z"
           }
         }
       },
@@ -144915,6 +145010,22 @@
           }
         }
       },
+      "RequestBodyAd699F18A0B7": {
+        "required": [
+          "suggestions"
+        ],
+        "type": "object",
+        "properties": {
+          "suggestions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RequestBodyAd699F18A0B7SuggestionsItem"
+            },
+            "description": "Recommended reviewers (maximum is 50).",
+            "nullable": true
+          }
+        }
+      },
       "RequestBody6Bf5071F175C": {
         "type": "object",
         "properties": {
@@ -154172,11 +154283,10 @@
           }
         }
       },
-      "RequestBodyD07B7211412B": {
+      "RequestBody1D42F280041C": {
         "required": [
           "bucket",
-          "export_prefix",
-          "entities"
+          "export_prefix"
         ],
         "type": "object",
         "properties": {
@@ -154186,19 +154296,19 @@
             "nullable": true
           },
           "aws_s3_configuration": {
-            "$ref": "#/components/schemas/RequestBodyD07B7211412BAwsS3Configuration"
+            "$ref": "#/components/schemas/RequestBody1D42F280041CAwsS3Configuration"
           },
           "s3_compatible_configuration": {
-            "$ref": "#/components/schemas/RequestBodyD07B7211412Bs3CompatibleConfiguration"
+            "$ref": "#/components/schemas/RequestBody1D42F280041Cs3CompatibleConfiguration"
           },
           "gcs_configuration": {
-            "$ref": "#/components/schemas/RequestBodyD07B7211412BGcsConfiguration"
+            "$ref": "#/components/schemas/RequestBody1D42F280041CGcsConfiguration"
           },
           "gcs_hmac_configuration": {
-            "$ref": "#/components/schemas/RequestBodyD07B7211412BGcsHmacConfiguration"
+            "$ref": "#/components/schemas/RequestBody1D42F280041CGcsHmacConfiguration"
           },
           "gcs_adc_configuration": {
-            "$ref": "#/components/schemas/RequestBodyD07B7211412BGcsAdcConfiguration"
+            "$ref": "#/components/schemas/RequestBody1D42F280041CGcsAdcConfiguration"
           },
           "export_prefix": {
             "type": "string",
@@ -154208,10 +154318,13 @@
           "entities": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBodyD07B7211412BEntitiesItem"
+              "$ref": "#/components/schemas/RequestBody1D42F280041CEntitiesItem"
             },
             "description": "List of entities to import",
             "nullable": true
+          },
+          "import_all": {
+            "$ref": "#/components/schemas/RequestBody1D42F280041CImportAll"
           }
         }
       },
@@ -160203,7 +160316,7 @@
           }
         }
       },
-      "RequestBodyFdaf0F5A0Faa": {
+      "RequestBody1Ab15Ee78A23": {
         "required": [
           "name",
           "path"
@@ -160235,7 +160348,7 @@
             "nullable": true
           },
           "visibility": {
-            "$ref": "#/components/schemas/RequestBodyFdaf0F5A0FaaVisibility"
+            "$ref": "#/components/schemas/RequestBody1Ab15Ee78A23Visibility"
           },
           "avatar": {
             "type": "string",
@@ -160259,7 +160372,7 @@
             "nullable": true
           },
           "project_creation_level": {
-            "$ref": "#/components/schemas/RequestBodyFdaf0F5A0FaaProjectCreationLevel"
+            "$ref": "#/components/schemas/RequestBody1Ab15Ee78A23ProjectCreationLevel"
           },
           "auto_devops_enabled": {
             "type": "boolean",
@@ -160267,7 +160380,7 @@
             "nullable": true
           },
           "subgroup_creation_level": {
-            "$ref": "#/components/schemas/RequestBodyFdaf0F5A0FaaSubgroupCreationLevel"
+            "$ref": "#/components/schemas/RequestBody1Ab15Ee78A23SubgroupCreationLevel"
           },
           "emails_disabled": {
             "type": "boolean",
@@ -160306,13 +160419,13 @@
             "example": "main"
           },
           "default_branch_protection": {
-            "$ref": "#/components/schemas/RequestBodyFdaf0F5A0FaaDefaultBranchProtection"
+            "$ref": "#/components/schemas/RequestBody1Ab15Ee78A23DefaultBranchProtection"
           },
           "default_branch_protection_defaults": {
-            "$ref": "#/components/schemas/RequestBodyFdaf0F5A0FaaDefaultBranchProtectionDefaults"
+            "$ref": "#/components/schemas/RequestBody1Ab15Ee78A23DefaultBranchProtectionDefaults"
           },
           "enabled_git_access_protocol": {
-            "$ref": "#/components/schemas/RequestBodyFdaf0F5A0FaaEnabledGitAccessProtocol"
+            "$ref": "#/components/schemas/RequestBody1Ab15Ee78A23EnabledGitAccessProtocol"
           },
           "crm_enabled": {
             "type": "boolean",
@@ -160355,10 +160468,10 @@
             "nullable": true
           },
           "wiki_access_level": {
-            "$ref": "#/components/schemas/RequestBodyFdaf0F5A0FaaWikiAccessLevel"
+            "$ref": "#/components/schemas/RequestBody1Ab15Ee78A23WikiAccessLevel"
           },
           "duo_availability": {
-            "$ref": "#/components/schemas/RequestBodyFdaf0F5A0FaaDuoAvailability"
+            "$ref": "#/components/schemas/RequestBody1Ab15Ee78A23DuoAvailability"
           },
           "duo_remote_flows_availability": {
             "type": "boolean",
@@ -160386,7 +160499,7 @@
             "nullable": true
           },
           "tool_approval_for_session_availability": {
-            "$ref": "#/components/schemas/RequestBodyFdaf0F5A0FaaToolApprovalForSessionAvailability"
+            "$ref": "#/components/schemas/RequestBody1Ab15Ee78A23ToolApprovalForSessionAvailability"
           },
           "amazon_q_auto_review_enabled": {
             "type": "boolean",
@@ -160406,17 +160519,17 @@
           "foundational_agents_statuses": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBodyFdaf0F5A0FaaFoundationalAgentsStatusesItem"
+              "$ref": "#/components/schemas/RequestBody1Ab15Ee78A23FoundationalAgentsStatusesItem"
             },
             "description": "Whether each foundational agent has been enabled or disabled.",
             "nullable": true
           },
           "ai_settings_attributes": {
-            "$ref": "#/components/schemas/RequestBodyFdaf0F5A0FaaAiSettingsAttributes"
+            "$ref": "#/components/schemas/RequestBody1Ab15Ee78A23AiSettingsAttributes"
           }
         }
       },
-      "RequestBodyAc9C4462C09C": {
+      "RequestBody458681Bdbaec": {
         "type": "object",
         "properties": {
           "name": {
@@ -160430,7 +160543,7 @@
             "nullable": true
           },
           "shared_runners_setting": {
-            "$ref": "#/components/schemas/RequestBodyAc9C4462C09CSharedRunnersSetting"
+            "$ref": "#/components/schemas/RequestBody458681BdbaecSharedRunnersSetting"
           },
           "description": {
             "type": "string",
@@ -160438,7 +160551,7 @@
             "nullable": true
           },
           "visibility": {
-            "$ref": "#/components/schemas/RequestBodyAc9C4462C09CVisibility"
+            "$ref": "#/components/schemas/RequestBody458681BdbaecVisibility"
           },
           "avatar": {
             "type": "string",
@@ -160462,7 +160575,7 @@
             "nullable": true
           },
           "project_creation_level": {
-            "$ref": "#/components/schemas/RequestBodyAc9C4462C09CProjectCreationLevel"
+            "$ref": "#/components/schemas/RequestBody458681BdbaecProjectCreationLevel"
           },
           "auto_devops_enabled": {
             "type": "boolean",
@@ -160470,7 +160583,7 @@
             "nullable": true
           },
           "subgroup_creation_level": {
-            "$ref": "#/components/schemas/RequestBodyAc9C4462C09CSubgroupCreationLevel"
+            "$ref": "#/components/schemas/RequestBody458681BdbaecSubgroupCreationLevel"
           },
           "emails_disabled": {
             "type": "boolean",
@@ -160509,13 +160622,13 @@
             "example": "main"
           },
           "default_branch_protection": {
-            "$ref": "#/components/schemas/RequestBodyAc9C4462C09CDefaultBranchProtection"
+            "$ref": "#/components/schemas/RequestBody458681BdbaecDefaultBranchProtection"
           },
           "default_branch_protection_defaults": {
-            "$ref": "#/components/schemas/RequestBodyAc9C4462C09CDefaultBranchProtectionDefaults"
+            "$ref": "#/components/schemas/RequestBody458681BdbaecDefaultBranchProtectionDefaults"
           },
           "enabled_git_access_protocol": {
-            "$ref": "#/components/schemas/RequestBodyAc9C4462C09CEnabledGitAccessProtocol"
+            "$ref": "#/components/schemas/RequestBody458681BdbaecEnabledGitAccessProtocol"
           },
           "crm_enabled": {
             "type": "boolean",
@@ -160558,10 +160671,10 @@
             "nullable": true
           },
           "wiki_access_level": {
-            "$ref": "#/components/schemas/RequestBodyAc9C4462C09CWikiAccessLevel"
+            "$ref": "#/components/schemas/RequestBody458681BdbaecWikiAccessLevel"
           },
           "duo_availability": {
-            "$ref": "#/components/schemas/RequestBodyAc9C4462C09CDuoAvailability"
+            "$ref": "#/components/schemas/RequestBody458681BdbaecDuoAvailability"
           },
           "duo_remote_flows_availability": {
             "type": "boolean",
@@ -160589,7 +160702,7 @@
             "nullable": true
           },
           "tool_approval_for_session_availability": {
-            "$ref": "#/components/schemas/RequestBodyAc9C4462C09CToolApprovalForSessionAvailability"
+            "$ref": "#/components/schemas/RequestBody458681BdbaecToolApprovalForSessionAvailability"
           },
           "amazon_q_auto_review_enabled": {
             "type": "boolean",
@@ -160609,13 +160722,13 @@
           "foundational_agents_statuses": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBodyAc9C4462C09CFoundationalAgentsStatusesItem"
+              "$ref": "#/components/schemas/RequestBody458681BdbaecFoundationalAgentsStatusesItem"
             },
             "description": "Whether each foundational agent has been enabled or disabled.",
             "nullable": true
           },
           "ai_settings_attributes": {
-            "$ref": "#/components/schemas/RequestBodyAc9C4462C09CAiSettingsAttributes"
+            "$ref": "#/components/schemas/RequestBody458681BdbaecAiSettingsAttributes"
           },
           "prevent_sharing_groups_outside_hierarchy": {
             "type": "boolean",
@@ -160769,7 +160882,7 @@
           "duo_namespace_access_rules": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBodyAc9C4462C09CDuoNamespaceAccessRulesItem"
+              "$ref": "#/components/schemas/RequestBody458681BdbaecDuoNamespaceAccessRulesItem"
             },
             "description": "AI entity access rules for controlling Duo feature access",
             "nullable": true
@@ -162269,6 +162382,9 @@
         }
       },
       "ApiEntitiesAuditEventDetails": {
+        "type": "object"
+      },
+      "ApiEntitiesAiSuggestedReviewerApprovalRule": {
         "type": "object"
       },
       "ApiEntitiesAdminModelChecksumInformation": {
@@ -163941,6 +164057,34 @@
         "type": "object",
         "description": "Context parameters (user, namespace, project). An actor context is resolved from the user. Defaults to current user.",
         "nullable": true
+      },
+      "RequestBodyAd699F18A0B7SuggestionsItem": {
+        "required": [
+          "user_id",
+          "approval_rule_type"
+        ],
+        "type": "object",
+        "properties": {
+          "user_id": {
+            "type": "integer",
+            "description": "ID of the recommended user.",
+            "nullable": true
+          },
+          "reason": {
+            "maxLength": 2048,
+            "type": "string",
+            "description": "Model rationale for the recommendation (maximum 2048 characters).",
+            "nullable": true
+          },
+          "approval_rule_id": {
+            "type": "integer",
+            "description": "ID of the approval rule the user was suggested for.",
+            "nullable": true
+          },
+          "approval_rule_type": {
+            "$ref": "#/components/schemas/RequestBodyAd699F18A0B7SuggestionsItemApprovalRuleType"
+          }
+        }
       },
       "RequestBodyE1043Ccdf400MetricsItem": {
         "required": [
@@ -166124,7 +166268,7 @@
           }
         }
       },
-      "RequestBodyD07B7211412BAwsS3Configuration": {
+      "RequestBody1D42F280041CAwsS3Configuration": {
         "required": [
           "aws_access_key_id",
           "aws_secret_access_key",
@@ -166156,7 +166300,7 @@
         "description": "AWS S3 object storage configuration",
         "nullable": true
       },
-      "RequestBodyD07B7211412Bs3CompatibleConfiguration": {
+      "RequestBody1D42F280041Cs3CompatibleConfiguration": {
         "required": [
           "aws_access_key_id",
           "aws_secret_access_key",
@@ -166194,7 +166338,7 @@
         "description": "MinIO or other S3-compatible object storage configuration",
         "nullable": true
       },
-      "RequestBodyD07B7211412BGcsConfiguration": {
+      "RequestBody1D42F280041CGcsConfiguration": {
         "required": [
           "google_project",
           "google_json_key_string"
@@ -166215,7 +166359,7 @@
         "description": "Google Cloud Storage configuration using a service account JSON key",
         "nullable": true
       },
-      "RequestBodyD07B7211412BGcsHmacConfiguration": {
+      "RequestBody1D42F280041CGcsHmacConfiguration": {
         "required": [
           "google_storage_access_key_id",
           "google_storage_secret_access_key",
@@ -166247,7 +166391,7 @@
         "description": "Google Cloud Storage configuration using S3-interoperability HMAC keys",
         "nullable": true
       },
-      "RequestBodyD07B7211412BGcsAdcConfiguration": {
+      "RequestBody1D42F280041CGcsAdcConfiguration": {
         "required": [
           "google_project"
         ],
@@ -166262,7 +166406,7 @@
         "description": "Google Cloud Storage configuration using Application Default Credentials. Available on GitLab Self-Managed or GitLab Dedicated, and must be enabled by an administrator. Only administrators can use these credentials, and the bucket name must start with \u0022gitlab-offline-transfer-\u0022. For more information, see https://docs.gitlab.com/administration/settings/import_and_export_settings/#allow-application-default-credentials-for-offline-transfer",
         "nullable": true
       },
-      "RequestBodyD07B7211412BEntitiesItem": {
+      "RequestBody1D42F280041CEntitiesItem": {
         "required": [
           "source_type",
           "source_full_path",
@@ -166271,7 +166415,7 @@
         "type": "object",
         "properties": {
           "source_type": {
-            "$ref": "#/components/schemas/RequestBodyD07B7211412BEntitiesItemSourceType"
+            "$ref": "#/components/schemas/RequestBody1D42F280041CEntitiesItemSourceType"
           },
           "source_full_path": {
             "type": "string",
@@ -166289,6 +166433,22 @@
             "nullable": true
           }
         }
+      },
+      "RequestBody1D42F280041CImportAll": {
+        "required": [
+          "destination_namespace"
+        ],
+        "type": "object",
+        "properties": {
+          "destination_namespace": {
+            "type": "string",
+            "description": "Full path of the destination namespace the source structure is recreated under. Use an empty string to recreate it at the instance root.",
+            "nullable": true,
+            "example": "destination-group/subgroup"
+          }
+        },
+        "description": "Import every top-level group in the export, recreating the source instance structure",
+        "nullable": true
       },
       "RequestBody6B7A2E61A22CGitlabSubscriptionAttributes": {
         "type": "object",
@@ -167082,13 +167242,13 @@
           "environment": "production"
         }
       },
-      "RequestBodyFdaf0F5A0FaaDefaultBranchProtectionDefaults": {
+      "RequestBody1Ab15Ee78A23DefaultBranchProtectionDefaults": {
         "type": "object",
         "properties": {
           "allowed_to_push": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBodyFdaf0F5A0FaaDefaultBranchProtectionDefaultsAllowedToPushItem"
+              "$ref": "#/components/schemas/RequestBody1Ab15Ee78A23DefaultBranchProtectionDefaultsAllowedToPushItem"
             },
             "description": "An array of access levels allowed to push",
             "nullable": true
@@ -167101,7 +167261,7 @@
           "allowed_to_merge": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBodyFdaf0F5A0FaaDefaultBranchProtectionDefaultsAllowedToMergeItem"
+              "$ref": "#/components/schemas/RequestBody1Ab15Ee78A23DefaultBranchProtectionDefaultsAllowedToMergeItem"
             },
             "description": "An array of access levels allowed to merge",
             "nullable": true
@@ -167120,7 +167280,7 @@
         "description": "Determine if developers can push to default branch",
         "nullable": true
       },
-      "RequestBodyFdaf0F5A0FaaFoundationalAgentsStatusesItem": {
+      "RequestBody1Ab15Ee78A23FoundationalAgentsStatusesItem": {
         "required": [
           "reference",
           "enabled"
@@ -167139,7 +167299,7 @@
           }
         }
       },
-      "RequestBodyFdaf0F5A0FaaAiSettingsAttributes": {
+      "RequestBody1Ab15Ee78A23AiSettingsAttributes": {
         "type": "object",
         "properties": {
           "duo_agent_platform_enabled": {
@@ -167159,7 +167319,7 @@
           },
           "ai_catalog_restricted_to_group_hierarchy": {
             "type": "boolean",
-            "description": "Restrict the AI Catalog to items within this top-level group hierarchy",
+            "description": "Confine the AI Catalog to items within this top-level group hierarchy",
             "nullable": true
           },
           "foundational_agents_default_enabled": {
@@ -167168,7 +167328,7 @@
             "nullable": true
           },
           "prompt_injection_protection_level": {
-            "$ref": "#/components/schemas/RequestBodyFdaf0F5A0FaaAiSettingsAttributesPromptInjectionProtectionLevel"
+            "$ref": "#/components/schemas/RequestBody1Ab15Ee78A23AiSettingsAttributesPromptInjectionProtectionLevel"
           },
           "include_recommended_allowed": {
             "type": "boolean",
@@ -167186,28 +167346,28 @@
             "nullable": true
           },
           "minimum_access_level_execute": {
-            "$ref": "#/components/schemas/RequestBodyFdaf0F5A0FaaAiSettingsAttributesMinimumAccessLevelExecute"
+            "$ref": "#/components/schemas/RequestBody1Ab15Ee78A23AiSettingsAttributesMinimumAccessLevelExecute"
           },
           "minimum_access_level_execute_async": {
-            "$ref": "#/components/schemas/RequestBodyFdaf0F5A0FaaAiSettingsAttributesMinimumAccessLevelExecuteAsync"
+            "$ref": "#/components/schemas/RequestBody1Ab15Ee78A23AiSettingsAttributesMinimumAccessLevelExecuteAsync"
           },
           "minimum_access_level_manage": {
-            "$ref": "#/components/schemas/RequestBodyFdaf0F5A0FaaAiSettingsAttributesMinimumAccessLevelManage"
+            "$ref": "#/components/schemas/RequestBody1Ab15Ee78A23AiSettingsAttributesMinimumAccessLevelManage"
           },
           "minimum_access_level_enable_on_projects": {
-            "$ref": "#/components/schemas/RequestBodyFdaf0F5A0FaaAiSettingsAttributesMinimumAccessLevelEnableOnProjects"
+            "$ref": "#/components/schemas/RequestBody1Ab15Ee78A23AiSettingsAttributesMinimumAccessLevelEnableOnProjects"
           }
         },
         "description": "AI-related settings",
         "nullable": true
       },
-      "RequestBodyAc9C4462C09CDefaultBranchProtectionDefaults": {
+      "RequestBody458681BdbaecDefaultBranchProtectionDefaults": {
         "type": "object",
         "properties": {
           "allowed_to_push": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBodyAc9C4462C09CDefaultBranchProtectionDefaultsAllowedToPushItem"
+              "$ref": "#/components/schemas/RequestBody458681BdbaecDefaultBranchProtectionDefaultsAllowedToPushItem"
             },
             "description": "An array of access levels allowed to push",
             "nullable": true
@@ -167220,7 +167380,7 @@
           "allowed_to_merge": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBodyAc9C4462C09CDefaultBranchProtectionDefaultsAllowedToMergeItem"
+              "$ref": "#/components/schemas/RequestBody458681BdbaecDefaultBranchProtectionDefaultsAllowedToMergeItem"
             },
             "description": "An array of access levels allowed to merge",
             "nullable": true
@@ -167239,7 +167399,7 @@
         "description": "Determine if developers can push to default branch",
         "nullable": true
       },
-      "RequestBodyAc9C4462C09CFoundationalAgentsStatusesItem": {
+      "RequestBody458681BdbaecFoundationalAgentsStatusesItem": {
         "required": [
           "reference",
           "enabled"
@@ -167258,7 +167418,7 @@
           }
         }
       },
-      "RequestBodyAc9C4462C09CAiSettingsAttributes": {
+      "RequestBody458681BdbaecAiSettingsAttributes": {
         "type": "object",
         "properties": {
           "duo_agent_platform_enabled": {
@@ -167278,7 +167438,7 @@
           },
           "ai_catalog_restricted_to_group_hierarchy": {
             "type": "boolean",
-            "description": "Restrict the AI Catalog to items within this top-level group hierarchy",
+            "description": "Confine the AI Catalog to items within this top-level group hierarchy",
             "nullable": true
           },
           "foundational_agents_default_enabled": {
@@ -167287,7 +167447,7 @@
             "nullable": true
           },
           "prompt_injection_protection_level": {
-            "$ref": "#/components/schemas/RequestBodyAc9C4462C09CAiSettingsAttributesPromptInjectionProtectionLevel"
+            "$ref": "#/components/schemas/RequestBody458681BdbaecAiSettingsAttributesPromptInjectionProtectionLevel"
           },
           "include_recommended_allowed": {
             "type": "boolean",
@@ -167305,29 +167465,29 @@
             "nullable": true
           },
           "minimum_access_level_execute": {
-            "$ref": "#/components/schemas/RequestBodyAc9C4462C09CAiSettingsAttributesMinimumAccessLevelExecute"
+            "$ref": "#/components/schemas/RequestBody458681BdbaecAiSettingsAttributesMinimumAccessLevelExecute"
           },
           "minimum_access_level_execute_async": {
-            "$ref": "#/components/schemas/RequestBodyAc9C4462C09CAiSettingsAttributesMinimumAccessLevelExecuteAsync"
+            "$ref": "#/components/schemas/RequestBody458681BdbaecAiSettingsAttributesMinimumAccessLevelExecuteAsync"
           },
           "minimum_access_level_manage": {
-            "$ref": "#/components/schemas/RequestBodyAc9C4462C09CAiSettingsAttributesMinimumAccessLevelManage"
+            "$ref": "#/components/schemas/RequestBody458681BdbaecAiSettingsAttributesMinimumAccessLevelManage"
           },
           "minimum_access_level_enable_on_projects": {
-            "$ref": "#/components/schemas/RequestBodyAc9C4462C09CAiSettingsAttributesMinimumAccessLevelEnableOnProjects"
+            "$ref": "#/components/schemas/RequestBody458681BdbaecAiSettingsAttributesMinimumAccessLevelEnableOnProjects"
           }
         },
         "description": "AI-related settings",
         "nullable": true
       },
-      "RequestBodyAc9C4462C09CDuoNamespaceAccessRulesItem": {
+      "RequestBody458681BdbaecDuoNamespaceAccessRulesItem": {
         "required": [
           "features"
         ],
         "type": "object",
         "properties": {
           "through_namespace": {
-            "$ref": "#/components/schemas/RequestBodyAc9C4462C09CDuoNamespaceAccessRulesItemThroughNamespace"
+            "$ref": "#/components/schemas/RequestBody458681BdbaecDuoNamespaceAccessRulesItemThroughNamespace"
           },
           "features": {
             "type": "array",
@@ -168565,51 +168725,51 @@
         "description": "Runner\u0027s labels",
         "nullable": true
       },
-      "RequestBodyFdaf0F5A0FaaDefaultBranchProtectionDefaultsAllowedToPushItem": {
+      "RequestBody1Ab15Ee78A23DefaultBranchProtectionDefaultsAllowedToPushItem": {
         "required": [
           "access_level"
         ],
         "type": "object",
         "properties": {
           "access_level": {
-            "$ref": "#/components/schemas/RequestBodyFdaf0F5A0FaaDefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel"
+            "$ref": "#/components/schemas/RequestBody1Ab15Ee78A23DefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel"
           }
         }
       },
-      "RequestBodyFdaf0F5A0FaaDefaultBranchProtectionDefaultsAllowedToMergeItem": {
+      "RequestBody1Ab15Ee78A23DefaultBranchProtectionDefaultsAllowedToMergeItem": {
         "required": [
           "access_level"
         ],
         "type": "object",
         "properties": {
           "access_level": {
-            "$ref": "#/components/schemas/RequestBodyFdaf0F5A0FaaDefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel"
+            "$ref": "#/components/schemas/RequestBody1Ab15Ee78A23DefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel"
           }
         }
       },
-      "RequestBodyAc9C4462C09CDefaultBranchProtectionDefaultsAllowedToPushItem": {
+      "RequestBody458681BdbaecDefaultBranchProtectionDefaultsAllowedToPushItem": {
         "required": [
           "access_level"
         ],
         "type": "object",
         "properties": {
           "access_level": {
-            "$ref": "#/components/schemas/RequestBodyAc9C4462C09CDefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel"
+            "$ref": "#/components/schemas/RequestBody458681BdbaecDefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel"
           }
         }
       },
-      "RequestBodyAc9C4462C09CDefaultBranchProtectionDefaultsAllowedToMergeItem": {
+      "RequestBody458681BdbaecDefaultBranchProtectionDefaultsAllowedToMergeItem": {
         "required": [
           "access_level"
         ],
         "type": "object",
         "properties": {
           "access_level": {
-            "$ref": "#/components/schemas/RequestBodyAc9C4462C09CDefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel"
+            "$ref": "#/components/schemas/RequestBody458681BdbaecDefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel"
           }
         }
       },
-      "RequestBodyAc9C4462C09CDuoNamespaceAccessRulesItemThroughNamespace": {
+      "RequestBody458681BdbaecDuoNamespaceAccessRulesItemThroughNamespace": {
         "required": [
           "id"
         ],
@@ -169425,6 +169585,9 @@
         "type": "object"
       },
       "ApiEntitiesAuditEventDetailsProperty": {
+        "type": "object"
+      },
+      "ApiEntitiesAiSuggestedReviewerApprovalRuleProperty": {
         "type": "object"
       },
       "ApiEntitiesSearchMigrationMigrationStateProperty": {
@@ -177628,7 +177791,7 @@
           ]
         }
       },
-      "RequestBodyFdaf0F5A0FaaVisibility": {
+      "RequestBody1Ab15Ee78A23Visibility": {
         "enum": [
           "private",
           "internal",
@@ -177639,7 +177802,7 @@
         "description": "The visibility of the group",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyFdaf0F5A0FaaVisibility",
+          "name": "RequestBody1Ab15Ee78A23Visibility",
           "modelAsString": false,
           "values": [
             {
@@ -177657,7 +177820,7 @@
           ]
         }
       },
-      "RequestBodyFdaf0F5A0FaaProjectCreationLevel": {
+      "RequestBody1Ab15Ee78A23ProjectCreationLevel": {
         "enum": [
           "noone",
           "owner",
@@ -177670,7 +177833,7 @@
         "description": "Determine if developers can create projects in the group",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyFdaf0F5A0FaaProjectCreationLevel",
+          "name": "RequestBody1Ab15Ee78A23ProjectCreationLevel",
           "modelAsString": false,
           "values": [
             {
@@ -177696,7 +177859,7 @@
           ]
         }
       },
-      "RequestBodyFdaf0F5A0FaaSubgroupCreationLevel": {
+      "RequestBody1Ab15Ee78A23SubgroupCreationLevel": {
         "enum": [
           "owner",
           "maintainer"
@@ -177706,7 +177869,7 @@
         "description": "Allowed to create subgroups",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyFdaf0F5A0FaaSubgroupCreationLevel",
+          "name": "RequestBody1Ab15Ee78A23SubgroupCreationLevel",
           "modelAsString": false,
           "values": [
             {
@@ -177720,7 +177883,7 @@
           ]
         }
       },
-      "RequestBodyFdaf0F5A0FaaDefaultBranchProtection": {
+      "RequestBody1Ab15Ee78A23DefaultBranchProtection": {
         "enum": [
           0,
           3,
@@ -177733,7 +177896,7 @@
         "description": "Determine if developers can push to default branch",
         "nullable": true
       },
-      "RequestBodyFdaf0F5A0FaaEnabledGitAccessProtocol": {
+      "RequestBody1Ab15Ee78A23EnabledGitAccessProtocol": {
         "enum": [
           "ssh",
           "http",
@@ -177744,7 +177907,7 @@
         "description": "Allow only the selected protocols to be used for Git access.",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyFdaf0F5A0FaaEnabledGitAccessProtocol",
+          "name": "RequestBody1Ab15Ee78A23EnabledGitAccessProtocol",
           "modelAsString": false,
           "values": [
             {
@@ -177762,7 +177925,7 @@
           ]
         }
       },
-      "RequestBodyFdaf0F5A0FaaWikiAccessLevel": {
+      "RequestBody1Ab15Ee78A23WikiAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -177773,7 +177936,7 @@
         "description": "Wiki access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyFdaf0F5A0FaaWikiAccessLevel",
+          "name": "RequestBody1Ab15Ee78A23WikiAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -177791,7 +177954,7 @@
           ]
         }
       },
-      "RequestBodyFdaf0F5A0FaaDuoAvailability": {
+      "RequestBody1Ab15Ee78A23DuoAvailability": {
         "enum": [
           "always_on",
           "default_on",
@@ -177803,7 +177966,7 @@
         "description": "Duo availability. One of \u0060default_on\u0060, \u0060default_off\u0060, \u0060never_on\u0060 or \u0060always_on\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyFdaf0F5A0FaaDuoAvailability",
+          "name": "RequestBody1Ab15Ee78A23DuoAvailability",
           "modelAsString": false,
           "values": [
             {
@@ -177825,7 +177988,7 @@
           ]
         }
       },
-      "RequestBodyFdaf0F5A0FaaToolApprovalForSessionAvailability": {
+      "RequestBody1Ab15Ee78A23ToolApprovalForSessionAvailability": {
         "enum": [
           "default_on",
           "default_off",
@@ -177836,7 +177999,7 @@
         "description": "Tool approval for session availability. One of \u0060default_on\u0060, \u0060default_off\u0060 or \u0060never_on\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyFdaf0F5A0FaaToolApprovalForSessionAvailability",
+          "name": "RequestBody1Ab15Ee78A23ToolApprovalForSessionAvailability",
           "modelAsString": false,
           "values": [
             {
@@ -177854,7 +178017,7 @@
           ]
         }
       },
-      "RequestBodyAc9C4462C09CSharedRunnersSetting": {
+      "RequestBody458681BdbaecSharedRunnersSetting": {
         "enum": [
           "disabled_and_unoverridable",
           "disabled_and_overridable",
@@ -177865,7 +178028,7 @@
         "description": "Enable/disable shared runners for the group and its subgroups and projects",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyAc9C4462C09CSharedRunnersSetting",
+          "name": "RequestBody458681BdbaecSharedRunnersSetting",
           "modelAsString": false,
           "values": [
             {
@@ -177883,7 +178046,7 @@
           ]
         }
       },
-      "RequestBodyAc9C4462C09CVisibility": {
+      "RequestBody458681BdbaecVisibility": {
         "enum": [
           "private",
           "internal",
@@ -177894,7 +178057,7 @@
         "description": "The visibility of the group",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyAc9C4462C09CVisibility",
+          "name": "RequestBody458681BdbaecVisibility",
           "modelAsString": false,
           "values": [
             {
@@ -177912,7 +178075,7 @@
           ]
         }
       },
-      "RequestBodyAc9C4462C09CProjectCreationLevel": {
+      "RequestBody458681BdbaecProjectCreationLevel": {
         "enum": [
           "noone",
           "owner",
@@ -177925,7 +178088,7 @@
         "description": "Determine if developers can create projects in the group",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyAc9C4462C09CProjectCreationLevel",
+          "name": "RequestBody458681BdbaecProjectCreationLevel",
           "modelAsString": false,
           "values": [
             {
@@ -177951,7 +178114,7 @@
           ]
         }
       },
-      "RequestBodyAc9C4462C09CSubgroupCreationLevel": {
+      "RequestBody458681BdbaecSubgroupCreationLevel": {
         "enum": [
           "owner",
           "maintainer"
@@ -177961,7 +178124,7 @@
         "description": "Allowed to create subgroups",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyAc9C4462C09CSubgroupCreationLevel",
+          "name": "RequestBody458681BdbaecSubgroupCreationLevel",
           "modelAsString": false,
           "values": [
             {
@@ -177975,7 +178138,7 @@
           ]
         }
       },
-      "RequestBodyAc9C4462C09CDefaultBranchProtection": {
+      "RequestBody458681BdbaecDefaultBranchProtection": {
         "enum": [
           0,
           3,
@@ -177988,7 +178151,7 @@
         "description": "Determine if developers can push to default branch",
         "nullable": true
       },
-      "RequestBodyAc9C4462C09CEnabledGitAccessProtocol": {
+      "RequestBody458681BdbaecEnabledGitAccessProtocol": {
         "enum": [
           "ssh",
           "http",
@@ -177999,7 +178162,7 @@
         "description": "Allow only the selected protocols to be used for Git access.",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyAc9C4462C09CEnabledGitAccessProtocol",
+          "name": "RequestBody458681BdbaecEnabledGitAccessProtocol",
           "modelAsString": false,
           "values": [
             {
@@ -178017,7 +178180,7 @@
           ]
         }
       },
-      "RequestBodyAc9C4462C09CWikiAccessLevel": {
+      "RequestBody458681BdbaecWikiAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -178028,7 +178191,7 @@
         "description": "Wiki access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyAc9C4462C09CWikiAccessLevel",
+          "name": "RequestBody458681BdbaecWikiAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -178046,7 +178209,7 @@
           ]
         }
       },
-      "RequestBodyAc9C4462C09CDuoAvailability": {
+      "RequestBody458681BdbaecDuoAvailability": {
         "enum": [
           "always_on",
           "default_on",
@@ -178058,7 +178221,7 @@
         "description": "Duo availability. One of \u0060default_on\u0060, \u0060default_off\u0060, \u0060never_on\u0060 or \u0060always_on\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyAc9C4462C09CDuoAvailability",
+          "name": "RequestBody458681BdbaecDuoAvailability",
           "modelAsString": false,
           "values": [
             {
@@ -178080,7 +178243,7 @@
           ]
         }
       },
-      "RequestBodyAc9C4462C09CToolApprovalForSessionAvailability": {
+      "RequestBody458681BdbaecToolApprovalForSessionAvailability": {
         "enum": [
           "default_on",
           "default_off",
@@ -178091,7 +178254,7 @@
         "description": "Tool approval for session availability. One of \u0060default_on\u0060, \u0060default_off\u0060 or \u0060never_on\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyAc9C4462C09CToolApprovalForSessionAvailability",
+          "name": "RequestBody458681BdbaecToolApprovalForSessionAvailability",
           "modelAsString": false,
           "values": [
             {
@@ -178824,6 +178987,30 @@
             {
               "value": ":instance",
               "name": "ColonInstance"
+            }
+          ]
+        }
+      },
+      "RequestBodyAd699F18A0B7SuggestionsItemApprovalRuleType": {
+        "minLength": 1,
+        "enum": [
+          "merge_request_rule",
+          "project_rule"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "Type of the approval rule the user was suggested for.",
+        "x-ms-enum": {
+          "name": "RequestBodyAd699F18A0B7SuggestionsItemApprovalRuleType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "merge_request_rule",
+              "name": "MergeRequestRule"
+            },
+            {
+              "value": "project_rule",
+              "name": "ProjectRule"
             }
           ]
         }
@@ -181462,7 +181649,7 @@
           ]
         }
       },
-      "RequestBodyD07B7211412BEntitiesItemSourceType": {
+      "RequestBody1D42F280041CEntitiesItemSourceType": {
         "minLength": 1,
         "enum": [
           "group_entity",
@@ -181472,7 +181659,7 @@
         "additionalProperties": false,
         "description": "Type of the entity to import",
         "x-ms-enum": {
-          "name": "RequestBodyD07B7211412BEntitiesItemSourceType",
+          "name": "RequestBody1D42F280041CEntitiesItemSourceType",
           "modelAsString": false,
           "values": [
             {
@@ -181595,7 +181782,7 @@
           ]
         }
       },
-      "RequestBodyFdaf0F5A0FaaAiSettingsAttributesPromptInjectionProtectionLevel": {
+      "RequestBody1Ab15Ee78A23AiSettingsAttributesPromptInjectionProtectionLevel": {
         "enum": [
           "no_checks",
           "log_only",
@@ -181606,7 +181793,7 @@
         "description": "Prompt injection protection level. One of \u0060no_checks\u0060, \u0060log_only\u0060 or \u0060interrupt\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyFdaf0F5A0FaaAiSettingsAttributesPromptInjectionProtectionLevel",
+          "name": "RequestBody1Ab15Ee78A23AiSettingsAttributesPromptInjectionProtectionLevel",
           "modelAsString": false,
           "values": [
             {
@@ -181624,7 +181811,7 @@
           ]
         }
       },
-      "RequestBodyFdaf0F5A0FaaAiSettingsAttributesMinimumAccessLevelExecute": {
+      "RequestBody1Ab15Ee78A23AiSettingsAttributesMinimumAccessLevelExecute": {
         "enum": [
           10,
           15,
@@ -181638,7 +181825,7 @@
         "description": "The minimum access level required to execute Duo Agent Platform. This field is behind a feature flag.",
         "nullable": true
       },
-      "RequestBodyFdaf0F5A0FaaAiSettingsAttributesMinimumAccessLevelExecuteAsync": {
+      "RequestBody1Ab15Ee78A23AiSettingsAttributesMinimumAccessLevelExecuteAsync": {
         "enum": [
           30,
           40,
@@ -181649,7 +181836,7 @@
         "description": "The minimum access level required to execute Duo Agent Platform features in CI/CD. This field is behind a feature flag.",
         "nullable": true
       },
-      "RequestBodyFdaf0F5A0FaaAiSettingsAttributesMinimumAccessLevelManage": {
+      "RequestBody1Ab15Ee78A23AiSettingsAttributesMinimumAccessLevelManage": {
         "enum": [
           30,
           40,
@@ -181660,7 +181847,7 @@
         "description": "The minimum access level required to manage Duo Agent Platform. This field is behind a feature flag.",
         "nullable": true
       },
-      "RequestBodyFdaf0F5A0FaaAiSettingsAttributesMinimumAccessLevelEnableOnProjects": {
+      "RequestBody1Ab15Ee78A23AiSettingsAttributesMinimumAccessLevelEnableOnProjects": {
         "enum": [
           30,
           40,
@@ -181671,7 +181858,7 @@
         "description": "The minimum access level required to enable Duo Agent Platform. This field is behind a feature flag.",
         "nullable": true
       },
-      "RequestBodyAc9C4462C09CAiSettingsAttributesPromptInjectionProtectionLevel": {
+      "RequestBody458681BdbaecAiSettingsAttributesPromptInjectionProtectionLevel": {
         "enum": [
           "no_checks",
           "log_only",
@@ -181682,7 +181869,7 @@
         "description": "Prompt injection protection level. One of \u0060no_checks\u0060, \u0060log_only\u0060 or \u0060interrupt\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyAc9C4462C09CAiSettingsAttributesPromptInjectionProtectionLevel",
+          "name": "RequestBody458681BdbaecAiSettingsAttributesPromptInjectionProtectionLevel",
           "modelAsString": false,
           "values": [
             {
@@ -181700,7 +181887,7 @@
           ]
         }
       },
-      "RequestBodyAc9C4462C09CAiSettingsAttributesMinimumAccessLevelExecute": {
+      "RequestBody458681BdbaecAiSettingsAttributesMinimumAccessLevelExecute": {
         "enum": [
           10,
           15,
@@ -181714,7 +181901,7 @@
         "description": "The minimum access level required to execute Duo Agent Platform. This field is behind a feature flag.",
         "nullable": true
       },
-      "RequestBodyAc9C4462C09CAiSettingsAttributesMinimumAccessLevelExecuteAsync": {
+      "RequestBody458681BdbaecAiSettingsAttributesMinimumAccessLevelExecuteAsync": {
         "enum": [
           30,
           40,
@@ -181725,7 +181912,7 @@
         "description": "The minimum access level required to execute Duo Agent Platform features in CI/CD. This field is behind a feature flag.",
         "nullable": true
       },
-      "RequestBodyAc9C4462C09CAiSettingsAttributesMinimumAccessLevelManage": {
+      "RequestBody458681BdbaecAiSettingsAttributesMinimumAccessLevelManage": {
         "enum": [
           30,
           40,
@@ -181736,7 +181923,7 @@
         "description": "The minimum access level required to manage Duo Agent Platform. This field is behind a feature flag.",
         "nullable": true
       },
-      "RequestBodyAc9C4462C09CAiSettingsAttributesMinimumAccessLevelEnableOnProjects": {
+      "RequestBody458681BdbaecAiSettingsAttributesMinimumAccessLevelEnableOnProjects": {
         "enum": [
           30,
           40,
@@ -181793,7 +181980,7 @@
         "additionalProperties": false,
         "description": "A valid access level"
       },
-      "RequestBodyFdaf0F5A0FaaDefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel": {
+      "RequestBody1Ab15Ee78A23DefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel": {
         "enum": [
           30,
           40,
@@ -181804,7 +181991,7 @@
         "additionalProperties": false,
         "description": "A valid access level"
       },
-      "RequestBodyFdaf0F5A0FaaDefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel": {
+      "RequestBody1Ab15Ee78A23DefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel": {
         "enum": [
           30,
           40,
@@ -181815,7 +182002,7 @@
         "additionalProperties": false,
         "description": "A valid access level"
       },
-      "RequestBodyAc9C4462C09CDefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel": {
+      "RequestBody458681BdbaecDefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel": {
         "enum": [
           30,
           40,
@@ -181826,7 +182013,7 @@
         "additionalProperties": false,
         "description": "A valid access level"
       },
-      "RequestBodyAc9C4462C09CDefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel": {
+      "RequestBody458681BdbaecDefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel": {
         "enum": [
           30,
           40,
