@@ -18716,6 +18716,229 @@
         }
       }
     },
+    "/api/v4/internal/org_mover/maintenance_state": {
+      "get": {
+        "tags": [
+          "Organizations"
+        ],
+        "summary": "Report an organization\u0027s current lifecycle state",
+        "description": "Returns the organization\u0027s current maintenance lifecycle state.",
+        "operationId": "GetApiV4InternalOrgMoverMaintenanceState",
+        "parameters": [
+          {
+            "name": "organization_id",
+            "in": "query",
+            "description": "The ID of the organization",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/api/v4/internal/org_mover/maintenance_readiness": {
+      "get": {
+        "tags": [
+          "Organizations"
+        ],
+        "summary": "Report cutover readiness for an organization",
+        "description": "Reports whether an organization is drained and safe to enter maintenance.",
+        "operationId": "GetApiV4InternalOrgMoverMaintenanceReadiness",
+        "parameters": [
+          {
+            "name": "organization_id",
+            "in": "query",
+            "description": "The ID of the organization",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/api/v4/internal/org_mover/start_maintenance": {
+      "post": {
+        "tags": [
+          "Organizations"
+        ],
+        "summary": "Start maintenance on an organization (active -\u003E maintenance_initialization)",
+        "description": "Begins the maintenance transition for an organization.",
+        "operationId": "PostApiV4InternalOrgMoverStartMaintenance",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestBody24Ae73F25200"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "422": {
+            "description": "Unprocessable entity"
+          }
+        }
+      }
+    },
+    "/api/v4/internal/org_mover/confirm_maintenance": {
+      "post": {
+        "tags": [
+          "Organizations"
+        ],
+        "summary": "Confirm maintenance on an organization (maintenance_initialization -\u003E maintenance)",
+        "description": "Completes the maintenance transition once the organization is drained.",
+        "operationId": "PostApiV4InternalOrgMoverConfirmMaintenance",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestBodyB3428D7Dbbdb"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "Conflict"
+          },
+          "422": {
+            "description": "Unprocessable entity"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/api/v4/internal/org_mover/cancel_maintenance": {
+      "post": {
+        "tags": [
+          "Organizations"
+        ],
+        "summary": "Cancel maintenance on an organization (maintenance_initialization -\u003E active)",
+        "description": "Aborts maintenance initialization before the organization reaches the maintenance state, returning it to active.",
+        "operationId": "PostApiV4InternalOrgMoverCancelMaintenance",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestBodyB3428D7Dbbdb"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "422": {
+            "description": "Unprocessable entity"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/api/v4/internal/org_mover/exit_maintenance": {
+      "post": {
+        "tags": [
+          "Organizations"
+        ],
+        "summary": "Exit maintenance on an organization (maintenance -\u003E active)",
+        "description": "Returns an organization from maintenance to active.",
+        "operationId": "PostApiV4InternalOrgMoverExitMaintenance",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestBodyB3428D7Dbbdb"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "422": {
+            "description": "Unprocessable entity"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
     "/api/v4/internal/gitaly/object_pool_members": {
       "get": {
         "summary": "List Gitaly object pool members",
@@ -48919,7 +49142,7 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody5D2F6F9A2B75"
+                "$ref": "#/components/schemas/RequestBody269D7B646C56"
               }
             }
           }
@@ -57232,6 +57455,14 @@
             "schema": {
               "type": "integer"
             }
+          },
+          {
+            "name": "download_mode",
+            "in": "query",
+            "description": "Requested download transfer mode (\u0060proxy\u0060 or \u0060direct\u0060). Only honored when allowed by the object storage configuration.",
+            "schema": {
+              "$ref": "#/components/schemas/GetApiV4ProjectsIdPackagesPackageIdPackageFilesPackageFileIdDownloadDownloadModeParameter"
+            }
           }
         ],
         "responses": {
@@ -61623,7 +61854,7 @@
           {
             "name": "author_id",
             "in": "query",
-            "description": "Returns merge requests created by the given user \u0060id\u0060. Mutually exclusive with \u0060author_username\u0060. Combine with \u0060scope=all\u0060 or \u0060scope=assigned_to_me\u0060. Mutually exclusive with \u0060author_username\u0060.",
+            "description": "Returns merge requests created by the given user \u0060id\u0060. Combine with \u0060scope=all\u0060 or \u0060scope=assigned_to_me\u0060. Mutually exclusive with \u0060author_username\u0060.",
             "schema": {
               "type": "integer",
               "nullable": true
@@ -61632,7 +61863,7 @@
           {
             "name": "author_username",
             "in": "query",
-            "description": "Returns merge requests created by the given \u0060username\u0060. Mutually exclusive with \u0060author_id\u0060. Mutually exclusive with \u0060author_id\u0060.",
+            "description": "Returns merge requests created by the given \u0060username\u0060. Mutually exclusive with \u0060author_id\u0060.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -61658,7 +61889,7 @@
           {
             "name": "assignee_username",
             "in": "query",
-            "description": "Returns merge requests created by the given \u0060username\u0060. Mutually exclusive with \u0060author_id\u0060. Mutually exclusive with \u0060assignee_id\u0060.",
+            "description": "Returns merge requests created by the given \u0060username\u0060. Mutually exclusive with \u0060assignee_id\u0060.",
             "schema": {
               "type": "array",
               "items": {
@@ -61670,7 +61901,7 @@
           {
             "name": "reviewer_username",
             "in": "query",
-            "description": "Returns merge requests which have the user as a reviewer with the given \u0060username\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Mutually exclusive with \u0060reviewer_id\u0060. Introduced in GitLab 13.8. Mutually exclusive with \u0060reviewer_id\u0060.",
+            "description": "Returns merge requests which have the user as a reviewer with the given \u0060username\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Introduced in GitLab 13.8. Mutually exclusive with \u0060reviewer_id\u0060.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -61710,7 +61941,7 @@
           {
             "name": "reviewer_id",
             "in": "query",
-            "description": "Returns merge requests which have the user as a reviewer with the given user \u0060id\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Mutually exclusive with \u0060reviewer_username\u0060. Mutually exclusive with \u0060reviewer_username\u0060.",
+            "description": "Returns merge requests which have the user as a reviewer with the given user \u0060id\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Mutually exclusive with \u0060reviewer_username\u0060.",
             "schema": {
               "oneOf": [
                 {
@@ -61923,7 +62154,7 @@
           {
             "name": "not[author_id]",
             "in": "query",
-            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests created by the given user \u0060id\u0060. Mutually exclusive with \u0060author_username\u0060. Combine with \u0060scope=all\u0060 or \u0060scope=assigned_to_me\u0060. Mutually exclusive with \u0060not[author_username]\u0060.",
+            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests created by the given user \u0060id\u0060. Combine with \u0060scope=all\u0060 or \u0060scope=assigned_to_me\u0060. Mutually exclusive with \u0060not[author_username]\u0060.",
             "schema": {
               "type": "integer",
               "nullable": true
@@ -61932,7 +62163,7 @@
           {
             "name": "not[author_username]",
             "in": "query",
-            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests created by the given \u0060username\u0060. Mutually exclusive with \u0060author_id\u0060. Mutually exclusive with \u0060not[author_id]\u0060.",
+            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests created by the given \u0060username\u0060. Mutually exclusive with \u0060not[author_id]\u0060.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -61958,7 +62189,7 @@
           {
             "name": "not[assignee_username]",
             "in": "query",
-            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests created by the given \u0060username\u0060. Mutually exclusive with \u0060author_id\u0060. Mutually exclusive with \u0060not[assignee_id]\u0060.",
+            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests created by the given \u0060username\u0060. Mutually exclusive with \u0060not[assignee_id]\u0060.",
             "schema": {
               "type": "array",
               "items": {
@@ -61970,7 +62201,7 @@
           {
             "name": "not[reviewer_username]",
             "in": "query",
-            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests which have the user as a reviewer with the given \u0060username\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Mutually exclusive with \u0060reviewer_id\u0060. Introduced in GitLab 13.8. Mutually exclusive with \u0060not[reviewer_id]\u0060.",
+            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests which have the user as a reviewer with the given \u0060username\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Introduced in GitLab 13.8. Mutually exclusive with \u0060not[reviewer_id]\u0060.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -62009,7 +62240,7 @@
           {
             "name": "not[reviewer_id]",
             "in": "query",
-            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests which have the user as a reviewer with the given user \u0060id\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Mutually exclusive with \u0060reviewer_username\u0060. Mutually exclusive with \u0060not[reviewer_username]\u0060.",
+            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests which have the user as a reviewer with the given user \u0060id\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Mutually exclusive with \u0060not[reviewer_username]\u0060.",
             "schema": {
               "type": "integer",
               "nullable": true
@@ -62050,7 +62281,7 @@
           {
             "name": "merge_user_id",
             "in": "query",
-            "description": "Returns merge requests which have been merged by the user with the given user \u0060id\u0060. Mutually exclusive with \u0060merge_user_username\u0060. Mutually exclusive with \u0060merge_user_username\u0060.",
+            "description": "Returns merge requests which have been merged by the user with the given user \u0060id\u0060. Mutually exclusive with \u0060merge_user_username\u0060.",
             "schema": {
               "type": "integer",
               "nullable": true
@@ -62059,7 +62290,7 @@
           {
             "name": "merge_user_username",
             "in": "query",
-            "description": "Returns merge requests which have been merged by the user with the given \u0060username\u0060. Mutually exclusive with \u0060merge_user_id\u0060. Mutually exclusive with \u0060merge_user_id\u0060.",
+            "description": "Returns merge requests which have been merged by the user with the given \u0060username\u0060. Mutually exclusive with \u0060merge_user_id\u0060.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -62190,7 +62421,7 @@
           {
             "name": "author_id",
             "in": "query",
-            "description": "Returns merge requests created by the given user \u0060id\u0060. Mutually exclusive with \u0060author_username\u0060. Combine with \u0060scope=all\u0060 or \u0060scope=assigned_to_me\u0060. Mutually exclusive with \u0060author_username\u0060.",
+            "description": "Returns merge requests created by the given user \u0060id\u0060. Combine with \u0060scope=all\u0060 or \u0060scope=assigned_to_me\u0060. Mutually exclusive with \u0060author_username\u0060.",
             "schema": {
               "type": "integer",
               "nullable": true
@@ -62199,7 +62430,7 @@
           {
             "name": "author_username",
             "in": "query",
-            "description": "Returns merge requests created by the given \u0060username\u0060. Mutually exclusive with \u0060author_id\u0060. Mutually exclusive with \u0060author_id\u0060.",
+            "description": "Returns merge requests created by the given \u0060username\u0060. Mutually exclusive with \u0060author_id\u0060.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -62225,7 +62456,7 @@
           {
             "name": "assignee_username",
             "in": "query",
-            "description": "Returns merge requests created by the given \u0060username\u0060. Mutually exclusive with \u0060author_id\u0060. Mutually exclusive with \u0060assignee_id\u0060.",
+            "description": "Returns merge requests created by the given \u0060username\u0060. Mutually exclusive with \u0060assignee_id\u0060.",
             "schema": {
               "type": "array",
               "items": {
@@ -62237,7 +62468,7 @@
           {
             "name": "reviewer_username",
             "in": "query",
-            "description": "Returns merge requests which have the user as a reviewer with the given \u0060username\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Mutually exclusive with \u0060reviewer_id\u0060. Introduced in GitLab 13.8. Mutually exclusive with \u0060reviewer_id\u0060.",
+            "description": "Returns merge requests which have the user as a reviewer with the given \u0060username\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Introduced in GitLab 13.8. Mutually exclusive with \u0060reviewer_id\u0060.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -62277,7 +62508,7 @@
           {
             "name": "reviewer_id",
             "in": "query",
-            "description": "Returns merge requests which have the user as a reviewer with the given user \u0060id\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Mutually exclusive with \u0060reviewer_username\u0060. Mutually exclusive with \u0060reviewer_username\u0060.",
+            "description": "Returns merge requests which have the user as a reviewer with the given user \u0060id\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Mutually exclusive with \u0060reviewer_username\u0060.",
             "schema": {
               "oneOf": [
                 {
@@ -62490,7 +62721,7 @@
           {
             "name": "not[author_id]",
             "in": "query",
-            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests created by the given user \u0060id\u0060. Mutually exclusive with \u0060author_username\u0060. Combine with \u0060scope=all\u0060 or \u0060scope=assigned_to_me\u0060. Mutually exclusive with \u0060not[author_username]\u0060.",
+            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests created by the given user \u0060id\u0060. Combine with \u0060scope=all\u0060 or \u0060scope=assigned_to_me\u0060. Mutually exclusive with \u0060not[author_username]\u0060.",
             "schema": {
               "type": "integer",
               "nullable": true
@@ -62499,7 +62730,7 @@
           {
             "name": "not[author_username]",
             "in": "query",
-            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests created by the given \u0060username\u0060. Mutually exclusive with \u0060author_id\u0060. Mutually exclusive with \u0060not[author_id]\u0060.",
+            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests created by the given \u0060username\u0060. Mutually exclusive with \u0060not[author_id]\u0060.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -62525,7 +62756,7 @@
           {
             "name": "not[assignee_username]",
             "in": "query",
-            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests created by the given \u0060username\u0060. Mutually exclusive with \u0060author_id\u0060. Mutually exclusive with \u0060not[assignee_id]\u0060.",
+            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests created by the given \u0060username\u0060. Mutually exclusive with \u0060not[assignee_id]\u0060.",
             "schema": {
               "type": "array",
               "items": {
@@ -62537,7 +62768,7 @@
           {
             "name": "not[reviewer_username]",
             "in": "query",
-            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests which have the user as a reviewer with the given \u0060username\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Mutually exclusive with \u0060reviewer_id\u0060. Introduced in GitLab 13.8. Mutually exclusive with \u0060not[reviewer_id]\u0060.",
+            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests which have the user as a reviewer with the given \u0060username\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Introduced in GitLab 13.8. Mutually exclusive with \u0060not[reviewer_id]\u0060.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -62576,7 +62807,7 @@
           {
             "name": "not[reviewer_id]",
             "in": "query",
-            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests which have the user as a reviewer with the given user \u0060id\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Mutually exclusive with \u0060reviewer_username\u0060. Mutually exclusive with \u0060not[reviewer_username]\u0060.",
+            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests which have the user as a reviewer with the given user \u0060id\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Mutually exclusive with \u0060not[reviewer_username]\u0060.",
             "schema": {
               "type": "integer",
               "nullable": true
@@ -62617,7 +62848,7 @@
           {
             "name": "merge_user_id",
             "in": "query",
-            "description": "Returns merge requests which have been merged by the user with the given user \u0060id\u0060. Mutually exclusive with \u0060merge_user_username\u0060. Mutually exclusive with \u0060merge_user_username\u0060.",
+            "description": "Returns merge requests which have been merged by the user with the given user \u0060id\u0060. Mutually exclusive with \u0060merge_user_username\u0060.",
             "schema": {
               "type": "integer",
               "nullable": true
@@ -62626,7 +62857,7 @@
           {
             "name": "merge_user_username",
             "in": "query",
-            "description": "Returns merge requests which have been merged by the user with the given \u0060username\u0060. Mutually exclusive with \u0060merge_user_id\u0060. Mutually exclusive with \u0060merge_user_id\u0060.",
+            "description": "Returns merge requests which have been merged by the user with the given \u0060username\u0060. Mutually exclusive with \u0060merge_user_id\u0060.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -63077,7 +63308,7 @@
           {
             "name": "author_id",
             "in": "query",
-            "description": "Returns merge requests created by the given user \u0060id\u0060. Mutually exclusive with \u0060author_username\u0060. Combine with \u0060scope=all\u0060 or \u0060scope=assigned_to_me\u0060. Mutually exclusive with \u0060author_username\u0060.",
+            "description": "Returns merge requests created by the given user \u0060id\u0060. Combine with \u0060scope=all\u0060 or \u0060scope=assigned_to_me\u0060. Mutually exclusive with \u0060author_username\u0060.",
             "schema": {
               "type": "integer",
               "nullable": true
@@ -63086,7 +63317,7 @@
           {
             "name": "author_username",
             "in": "query",
-            "description": "Returns merge requests created by the given \u0060username\u0060. Mutually exclusive with \u0060author_id\u0060. Mutually exclusive with \u0060author_id\u0060.",
+            "description": "Returns merge requests created by the given \u0060username\u0060. Mutually exclusive with \u0060author_id\u0060.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -63112,7 +63343,7 @@
           {
             "name": "assignee_username",
             "in": "query",
-            "description": "Returns merge requests created by the given \u0060username\u0060. Mutually exclusive with \u0060author_id\u0060. Mutually exclusive with \u0060assignee_id\u0060.",
+            "description": "Returns merge requests created by the given \u0060username\u0060. Mutually exclusive with \u0060assignee_id\u0060.",
             "schema": {
               "type": "array",
               "items": {
@@ -63124,7 +63355,7 @@
           {
             "name": "reviewer_username",
             "in": "query",
-            "description": "Returns merge requests which have the user as a reviewer with the given \u0060username\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Mutually exclusive with \u0060reviewer_id\u0060. Introduced in GitLab 13.8. Mutually exclusive with \u0060reviewer_id\u0060.",
+            "description": "Returns merge requests which have the user as a reviewer with the given \u0060username\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Introduced in GitLab 13.8. Mutually exclusive with \u0060reviewer_id\u0060.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -63164,7 +63395,7 @@
           {
             "name": "reviewer_id",
             "in": "query",
-            "description": "Returns merge requests which have the user as a reviewer with the given user \u0060id\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Mutually exclusive with \u0060reviewer_username\u0060. Mutually exclusive with \u0060reviewer_username\u0060.",
+            "description": "Returns merge requests which have the user as a reviewer with the given user \u0060id\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Mutually exclusive with \u0060reviewer_username\u0060.",
             "schema": {
               "oneOf": [
                 {
@@ -63377,7 +63608,7 @@
           {
             "name": "not[author_id]",
             "in": "query",
-            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests created by the given user \u0060id\u0060. Mutually exclusive with \u0060author_username\u0060. Combine with \u0060scope=all\u0060 or \u0060scope=assigned_to_me\u0060. Mutually exclusive with \u0060not[author_username]\u0060.",
+            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests created by the given user \u0060id\u0060. Combine with \u0060scope=all\u0060 or \u0060scope=assigned_to_me\u0060. Mutually exclusive with \u0060not[author_username]\u0060.",
             "schema": {
               "type": "integer",
               "nullable": true
@@ -63386,7 +63617,7 @@
           {
             "name": "not[author_username]",
             "in": "query",
-            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests created by the given \u0060username\u0060. Mutually exclusive with \u0060author_id\u0060. Mutually exclusive with \u0060not[author_id]\u0060.",
+            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests created by the given \u0060username\u0060. Mutually exclusive with \u0060not[author_id]\u0060.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -63412,7 +63643,7 @@
           {
             "name": "not[assignee_username]",
             "in": "query",
-            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests created by the given \u0060username\u0060. Mutually exclusive with \u0060author_id\u0060. Mutually exclusive with \u0060not[assignee_id]\u0060.",
+            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests created by the given \u0060username\u0060. Mutually exclusive with \u0060not[assignee_id]\u0060.",
             "schema": {
               "type": "array",
               "items": {
@@ -63424,7 +63655,7 @@
           {
             "name": "not[reviewer_username]",
             "in": "query",
-            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests which have the user as a reviewer with the given \u0060username\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Mutually exclusive with \u0060reviewer_id\u0060. Introduced in GitLab 13.8. Mutually exclusive with \u0060not[reviewer_id]\u0060.",
+            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests which have the user as a reviewer with the given \u0060username\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Introduced in GitLab 13.8. Mutually exclusive with \u0060not[reviewer_id]\u0060.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -63463,7 +63694,7 @@
           {
             "name": "not[reviewer_id]",
             "in": "query",
-            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests which have the user as a reviewer with the given user \u0060id\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Mutually exclusive with \u0060reviewer_username\u0060. Mutually exclusive with \u0060not[reviewer_username]\u0060.",
+            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests which have the user as a reviewer with the given user \u0060id\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Mutually exclusive with \u0060not[reviewer_username]\u0060.",
             "schema": {
               "type": "integer",
               "nullable": true
@@ -63504,7 +63735,7 @@
           {
             "name": "merge_user_id",
             "in": "query",
-            "description": "Returns merge requests which have been merged by the user with the given user \u0060id\u0060. Mutually exclusive with \u0060merge_user_username\u0060. Mutually exclusive with \u0060merge_user_username\u0060.",
+            "description": "Returns merge requests which have been merged by the user with the given user \u0060id\u0060. Mutually exclusive with \u0060merge_user_username\u0060.",
             "schema": {
               "type": "integer",
               "nullable": true
@@ -63513,7 +63744,7 @@
           {
             "name": "merge_user_username",
             "in": "query",
-            "description": "Returns merge requests which have been merged by the user with the given \u0060username\u0060. Mutually exclusive with \u0060merge_user_id\u0060. Mutually exclusive with \u0060merge_user_id\u0060.",
+            "description": "Returns merge requests which have been merged by the user with the given \u0060username\u0060. Mutually exclusive with \u0060merge_user_id\u0060.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -63658,7 +63889,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyB3B0A765Ad52"
+                "$ref": "#/components/schemas/RequestBodyF2A98056Bc9C"
               }
             }
           },
@@ -63864,7 +64095,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody2B4971Ab6883"
+                "$ref": "#/components/schemas/RequestBody6Bd49Bb73271"
               }
             }
           }
@@ -70466,7 +70697,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyF5Dab59A683C"
+                "$ref": "#/components/schemas/RequestBody0290A07Ba120"
               }
             }
           },
@@ -70989,7 +71220,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyDfb032907E0A"
+                "$ref": "#/components/schemas/RequestBody834D35Fb870B"
               }
             }
           }
@@ -86171,6 +86402,14 @@
               "pattern": "^(?!(?:[\\uD800-\\uDBFF][\\uDC00-\\uDFFF]|[^\\n\\uD800-\\uDFFF])*\\.\\.)[\\w\u002B.\\-]\u002B$",
               "type": "string"
             }
+          },
+          {
+            "name": "download_mode",
+            "in": "query",
+            "description": "Requested download transfer mode (\u0060proxy\u0060 or \u0060direct\u0060). Only honored when allowed by the object storage configuration.",
+            "schema": {
+              "$ref": "#/components/schemas/GetApiV4ProjectsIdPackagesGenericPackageNamePackageVersionFileNameDownloadModeParameter"
+            }
           }
         ],
         "responses": {
@@ -86349,6 +86588,14 @@
             "required": true,
             "schema": {
               "type": "string"
+            }
+          },
+          {
+            "name": "download_mode",
+            "in": "query",
+            "description": "Requested download transfer mode (\u0060proxy\u0060 or \u0060direct\u0060). Only honored when allowed by the object storage configuration.",
+            "schema": {
+              "$ref": "#/components/schemas/GetApiV4ProjectsIdPackagesGenericPackageNamePackageVersionPathFileNameDownloadModeParameter"
             }
           }
         ],
@@ -88667,7 +88914,7 @@
           {
             "name": "name",
             "in": "query",
-            "description": "Return the environment with this name. Mutually exclusive with search. Mutually exclusive with \u0060search\u0060.",
+            "description": "Return the environment with this name. Mutually exclusive with \u0060search\u0060.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -88676,7 +88923,7 @@
           {
             "name": "search",
             "in": "query",
-            "description": "Return list of environments matching the search criteria. Mutually exclusive with name. Must be at least 3 characters. Mutually exclusive with \u0060name\u0060.",
+            "description": "Return list of environments matching the search criteria. Must be at least 3 characters. Mutually exclusive with \u0060name\u0060.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -89983,7 +90230,7 @@
           {
             "name": "author_id",
             "in": "query",
-            "description": "Returns merge requests created by the given user \u0060id\u0060. Mutually exclusive with \u0060author_username\u0060. Combine with \u0060scope=all\u0060 or \u0060scope=assigned_to_me\u0060. Mutually exclusive with \u0060author_username\u0060.",
+            "description": "Returns merge requests created by the given user \u0060id\u0060. Combine with \u0060scope=all\u0060 or \u0060scope=assigned_to_me\u0060. Mutually exclusive with \u0060author_username\u0060.",
             "schema": {
               "type": "integer",
               "nullable": true
@@ -89992,7 +90239,7 @@
           {
             "name": "author_username",
             "in": "query",
-            "description": "Returns merge requests created by the given \u0060username\u0060. Mutually exclusive with \u0060author_id\u0060. Mutually exclusive with \u0060author_id\u0060.",
+            "description": "Returns merge requests created by the given \u0060username\u0060. Mutually exclusive with \u0060author_id\u0060.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -90018,7 +90265,7 @@
           {
             "name": "assignee_username",
             "in": "query",
-            "description": "Returns merge requests created by the given \u0060username\u0060. Mutually exclusive with \u0060author_id\u0060. Mutually exclusive with \u0060assignee_id\u0060.",
+            "description": "Returns merge requests created by the given \u0060username\u0060. Mutually exclusive with \u0060assignee_id\u0060.",
             "schema": {
               "type": "array",
               "items": {
@@ -90030,7 +90277,7 @@
           {
             "name": "reviewer_username",
             "in": "query",
-            "description": "Returns merge requests which have the user as a reviewer with the given \u0060username\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Mutually exclusive with \u0060reviewer_id\u0060. Introduced in GitLab 13.8. Mutually exclusive with \u0060reviewer_id\u0060.",
+            "description": "Returns merge requests which have the user as a reviewer with the given \u0060username\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Introduced in GitLab 13.8. Mutually exclusive with \u0060reviewer_id\u0060.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -90070,7 +90317,7 @@
           {
             "name": "reviewer_id",
             "in": "query",
-            "description": "Returns merge requests which have the user as a reviewer with the given user \u0060id\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Mutually exclusive with \u0060reviewer_username\u0060. Mutually exclusive with \u0060reviewer_username\u0060.",
+            "description": "Returns merge requests which have the user as a reviewer with the given user \u0060id\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Mutually exclusive with \u0060reviewer_username\u0060.",
             "schema": {
               "oneOf": [
                 {
@@ -90283,7 +90530,7 @@
           {
             "name": "not[author_id]",
             "in": "query",
-            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests created by the given user \u0060id\u0060. Mutually exclusive with \u0060author_username\u0060. Combine with \u0060scope=all\u0060 or \u0060scope=assigned_to_me\u0060. Mutually exclusive with \u0060not[author_username]\u0060.",
+            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests created by the given user \u0060id\u0060. Combine with \u0060scope=all\u0060 or \u0060scope=assigned_to_me\u0060. Mutually exclusive with \u0060not[author_username]\u0060.",
             "schema": {
               "type": "integer",
               "nullable": true
@@ -90292,7 +90539,7 @@
           {
             "name": "not[author_username]",
             "in": "query",
-            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests created by the given \u0060username\u0060. Mutually exclusive with \u0060author_id\u0060. Mutually exclusive with \u0060not[author_id]\u0060.",
+            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests created by the given \u0060username\u0060. Mutually exclusive with \u0060not[author_id]\u0060.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -90318,7 +90565,7 @@
           {
             "name": "not[assignee_username]",
             "in": "query",
-            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests created by the given \u0060username\u0060. Mutually exclusive with \u0060author_id\u0060. Mutually exclusive with \u0060not[assignee_id]\u0060.",
+            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests created by the given \u0060username\u0060. Mutually exclusive with \u0060not[assignee_id]\u0060.",
             "schema": {
               "type": "array",
               "items": {
@@ -90330,7 +90577,7 @@
           {
             "name": "not[reviewer_username]",
             "in": "query",
-            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests which have the user as a reviewer with the given \u0060username\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Mutually exclusive with \u0060reviewer_id\u0060. Introduced in GitLab 13.8. Mutually exclusive with \u0060not[reviewer_id]\u0060.",
+            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests which have the user as a reviewer with the given \u0060username\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Introduced in GitLab 13.8. Mutually exclusive with \u0060not[reviewer_id]\u0060.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -90369,7 +90616,7 @@
           {
             "name": "not[reviewer_id]",
             "in": "query",
-            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests which have the user as a reviewer with the given user \u0060id\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Mutually exclusive with \u0060reviewer_username\u0060. Mutually exclusive with \u0060not[reviewer_username]\u0060.",
+            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests which have the user as a reviewer with the given user \u0060id\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Mutually exclusive with \u0060not[reviewer_username]\u0060.",
             "schema": {
               "type": "integer",
               "nullable": true
@@ -90410,7 +90657,7 @@
           {
             "name": "merge_user_id",
             "in": "query",
-            "description": "Returns merge requests which have been merged by the user with the given user \u0060id\u0060. Mutually exclusive with \u0060merge_user_username\u0060. Mutually exclusive with \u0060merge_user_username\u0060.",
+            "description": "Returns merge requests which have been merged by the user with the given user \u0060id\u0060. Mutually exclusive with \u0060merge_user_username\u0060.",
             "schema": {
               "type": "integer",
               "nullable": true
@@ -90419,7 +90666,7 @@
           {
             "name": "merge_user_username",
             "in": "query",
-            "description": "Returns merge requests which have been merged by the user with the given \u0060username\u0060. Mutually exclusive with \u0060merge_user_id\u0060. Mutually exclusive with \u0060merge_user_id\u0060.",
+            "description": "Returns merge requests which have been merged by the user with the given \u0060username\u0060. Mutually exclusive with \u0060merge_user_id\u0060.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -109424,6 +109671,14 @@
               "type": "boolean",
               "default": false
             }
+          },
+          {
+            "name": "download_mode",
+            "in": "query",
+            "description": "Requested download transfer mode (\u0060proxy\u0060 or \u0060direct\u0060). Only honored when allowed by the object storage configuration.",
+            "schema": {
+              "$ref": "#/components/schemas/GetApiV4ProjectsIdJobsArtifactsRefNameDownloadDownloadModeParameter"
+            }
           }
         ],
         "responses": {
@@ -109592,6 +109847,14 @@
             "schema": {
               "type": "string",
               "nullable": true
+            }
+          },
+          {
+            "name": "download_mode",
+            "in": "query",
+            "description": "Requested download transfer mode (\u0060proxy\u0060 or \u0060direct\u0060). Only honored when allowed by the object storage configuration.",
+            "schema": {
+              "$ref": "#/components/schemas/GetApiV4ProjectsIdJobsJobIdArtifactsDownloadModeParameter"
             }
           }
         ],
@@ -132254,6 +132517,9 @@
           "ci_display_pipeline_variables": {
             "type": "boolean"
           },
+          "ci_skip_branch_pipelines_for_mrs": {
+            "type": "boolean"
+          },
           "runners_token": {
             "type": "string",
             "example": "b8547b1dc37721d05889db52fa2f02"
@@ -132851,6 +133117,9 @@
           "ci_display_pipeline_variables": {
             "type": "boolean"
           },
+          "ci_skip_branch_pipelines_for_mrs": {
+            "type": "boolean"
+          },
           "runners_token": {
             "type": "string",
             "example": "b8547b1dc37721d05889db52fa2f02"
@@ -133430,6 +133699,9 @@
             "type": "boolean"
           },
           "ci_display_pipeline_variables": {
+            "type": "boolean"
+          },
+          "ci_skip_branch_pipelines_for_mrs": {
             "type": "boolean"
           },
           "runners_token": {
@@ -145245,6 +145517,36 @@
           }
         }
       },
+      "RequestBody24Ae73F25200": {
+        "required": [
+          "organization_id",
+          "maintenance_reason"
+        ],
+        "type": "object",
+        "properties": {
+          "organization_id": {
+            "type": "integer",
+            "description": "The ID of the organization",
+            "nullable": true
+          },
+          "maintenance_reason": {
+            "$ref": "#/components/schemas/RequestBody24Ae73F25200MaintenanceReason"
+          }
+        }
+      },
+      "RequestBodyB3428D7Dbbdb": {
+        "required": [
+          "organization_id"
+        ],
+        "type": "object",
+        "properties": {
+          "organization_id": {
+            "type": "integer",
+            "description": "The ID of the organization",
+            "nullable": true
+          }
+        }
+      },
       "RequestBodyD75Fb92Cf06C": {
         "required": [
           "name"
@@ -152361,7 +152663,7 @@
           }
         }
       },
-      "RequestBody5D2F6F9A2B75": {
+      "RequestBody269D7B646C56": {
         "type": "object",
         "properties": {
           "name": {
@@ -152388,7 +152690,7 @@
             "nullable": true
           },
           "build_git_strategy": {
-            "$ref": "#/components/schemas/RequestBody5D2F6F9A2B75BuildGitStrategy"
+            "$ref": "#/components/schemas/RequestBody269D7B646C56BuildGitStrategy"
           },
           "build_timeout": {
             "type": "integer",
@@ -152396,7 +152698,7 @@
             "nullable": true
           },
           "auto_cancel_pending_pipelines": {
-            "$ref": "#/components/schemas/RequestBody5D2F6F9A2B75AutoCancelPendingPipelines"
+            "$ref": "#/components/schemas/RequestBody269D7B646C56AutoCancelPendingPipelines"
           },
           "ci_config_path": {
             "type": "string",
@@ -152434,61 +152736,61 @@
             "nullable": true
           },
           "issues_access_level": {
-            "$ref": "#/components/schemas/RequestBody5D2F6F9A2B75IssuesAccessLevel"
+            "$ref": "#/components/schemas/RequestBody269D7B646C56IssuesAccessLevel"
           },
           "repository_access_level": {
-            "$ref": "#/components/schemas/RequestBody5D2F6F9A2B75RepositoryAccessLevel"
+            "$ref": "#/components/schemas/RequestBody269D7B646C56RepositoryAccessLevel"
           },
           "merge_requests_access_level": {
-            "$ref": "#/components/schemas/RequestBody5D2F6F9A2B75MergeRequestsAccessLevel"
+            "$ref": "#/components/schemas/RequestBody269D7B646C56MergeRequestsAccessLevel"
           },
           "forking_access_level": {
-            "$ref": "#/components/schemas/RequestBody5D2F6F9A2B75ForkingAccessLevel"
+            "$ref": "#/components/schemas/RequestBody269D7B646C56ForkingAccessLevel"
           },
           "wiki_access_level": {
-            "$ref": "#/components/schemas/RequestBody5D2F6F9A2B75WikiAccessLevel"
+            "$ref": "#/components/schemas/RequestBody269D7B646C56WikiAccessLevel"
           },
           "builds_access_level": {
-            "$ref": "#/components/schemas/RequestBody5D2F6F9A2B75BuildsAccessLevel"
+            "$ref": "#/components/schemas/RequestBody269D7B646C56BuildsAccessLevel"
           },
           "snippets_access_level": {
-            "$ref": "#/components/schemas/RequestBody5D2F6F9A2B75SnippetsAccessLevel"
+            "$ref": "#/components/schemas/RequestBody269D7B646C56SnippetsAccessLevel"
           },
           "package_registry_access_level": {
-            "$ref": "#/components/schemas/RequestBody5D2F6F9A2B75PackageRegistryAccessLevel"
+            "$ref": "#/components/schemas/RequestBody269D7B646C56PackageRegistryAccessLevel"
           },
           "pages_access_level": {
-            "$ref": "#/components/schemas/RequestBody5D2F6F9A2B75PagesAccessLevel"
+            "$ref": "#/components/schemas/RequestBody269D7B646C56PagesAccessLevel"
           },
           "analytics_access_level": {
-            "$ref": "#/components/schemas/RequestBody5D2F6F9A2B75AnalyticsAccessLevel"
+            "$ref": "#/components/schemas/RequestBody269D7B646C56AnalyticsAccessLevel"
           },
           "container_registry_access_level": {
-            "$ref": "#/components/schemas/RequestBody5D2F6F9A2B75ContainerRegistryAccessLevel"
+            "$ref": "#/components/schemas/RequestBody269D7B646C56ContainerRegistryAccessLevel"
           },
           "security_and_compliance_access_level": {
-            "$ref": "#/components/schemas/RequestBody5D2F6F9A2B75SecurityAndComplianceAccessLevel"
+            "$ref": "#/components/schemas/RequestBody269D7B646C56SecurityAndComplianceAccessLevel"
           },
           "releases_access_level": {
-            "$ref": "#/components/schemas/RequestBody5D2F6F9A2B75ReleasesAccessLevel"
+            "$ref": "#/components/schemas/RequestBody269D7B646C56ReleasesAccessLevel"
           },
           "environments_access_level": {
-            "$ref": "#/components/schemas/RequestBody5D2F6F9A2B75EnvironmentsAccessLevel"
+            "$ref": "#/components/schemas/RequestBody269D7B646C56EnvironmentsAccessLevel"
           },
           "feature_flags_access_level": {
-            "$ref": "#/components/schemas/RequestBody5D2F6F9A2B75FeatureFlagsAccessLevel"
+            "$ref": "#/components/schemas/RequestBody269D7B646C56FeatureFlagsAccessLevel"
           },
           "infrastructure_access_level": {
-            "$ref": "#/components/schemas/RequestBody5D2F6F9A2B75InfrastructureAccessLevel"
+            "$ref": "#/components/schemas/RequestBody269D7B646C56InfrastructureAccessLevel"
           },
           "monitor_access_level": {
-            "$ref": "#/components/schemas/RequestBody5D2F6F9A2B75MonitorAccessLevel"
+            "$ref": "#/components/schemas/RequestBody269D7B646C56MonitorAccessLevel"
           },
           "model_experiments_access_level": {
-            "$ref": "#/components/schemas/RequestBody5D2F6F9A2B75ModelExperimentsAccessLevel"
+            "$ref": "#/components/schemas/RequestBody269D7B646C56ModelExperimentsAccessLevel"
           },
           "model_registry_access_level": {
-            "$ref": "#/components/schemas/RequestBody5D2F6F9A2B75ModelRegistryAccessLevel"
+            "$ref": "#/components/schemas/RequestBody269D7B646C56ModelRegistryAccessLevel"
           },
           "emails_disabled": {
             "type": "boolean",
@@ -152531,7 +152833,7 @@
             "nullable": true
           },
           "resource_group_default_process_mode": {
-            "$ref": "#/components/schemas/RequestBody5D2F6F9A2B75ResourceGroupDefaultProcessMode"
+            "$ref": "#/components/schemas/RequestBody269D7B646C56ResourceGroupDefaultProcessMode"
           },
           "resolve_outdated_diff_discussions": {
             "type": "boolean",
@@ -152554,7 +152856,7 @@
             "nullable": true
           },
           "container_expiration_policy_attributes": {
-            "$ref": "#/components/schemas/RequestBody5D2F6F9A2B75ContainerExpirationPolicyAttributes"
+            "$ref": "#/components/schemas/RequestBody269D7B646C56ContainerExpirationPolicyAttributes"
           },
           "lfs_enabled": {
             "type": "boolean",
@@ -152562,7 +152864,7 @@
             "nullable": true
           },
           "visibility": {
-            "$ref": "#/components/schemas/RequestBody5D2F6F9A2B75Visibility"
+            "$ref": "#/components/schemas/RequestBody269D7B646C56Visibility"
           },
           "public_builds": {
             "type": "boolean",
@@ -152622,7 +152924,7 @@
             "nullable": true
           },
           "merge_method": {
-            "$ref": "#/components/schemas/RequestBody5D2F6F9A2B75MergeMethod"
+            "$ref": "#/components/schemas/RequestBody269D7B646C56MergeMethod"
           },
           "suggestion_commit_message": {
             "type": "string",
@@ -152650,7 +152952,7 @@
             "nullable": true
           },
           "auto_devops_deploy_strategy": {
-            "$ref": "#/components/schemas/RequestBody5D2F6F9A2B75AutoDevopsDeployStrategy"
+            "$ref": "#/components/schemas/RequestBody269D7B646C56AutoDevopsDeployStrategy"
           },
           "autoclose_referenced_issues": {
             "type": "boolean",
@@ -152663,7 +152965,7 @@
             "nullable": true
           },
           "squash_option": {
-            "$ref": "#/components/schemas/RequestBody5D2F6F9A2B75SquashOption"
+            "$ref": "#/components/schemas/RequestBody269D7B646C56SquashOption"
           },
           "mr_default_target_self": {
             "type": "boolean",
@@ -152707,7 +153009,7 @@
             "nullable": true
           },
           "requirements_access_level": {
-            "$ref": "#/components/schemas/RequestBody5D2F6F9A2B75RequirementsAccessLevel"
+            "$ref": "#/components/schemas/RequestBody269D7B646C56RequirementsAccessLevel"
           },
           "prevent_merge_without_jira_issue": {
             "type": "boolean",
@@ -152795,7 +153097,7 @@
             "nullable": true
           },
           "ci_pipeline_variables_minimum_override_role": {
-            "$ref": "#/components/schemas/RequestBody5D2F6F9A2B75CiPipelineVariablesMinimumOverrideRole"
+            "$ref": "#/components/schemas/RequestBody269D7B646C56CiPipelineVariablesMinimumOverrideRole"
           },
           "ci_push_repository_for_job_token_allowed": {
             "type": "boolean",
@@ -152830,13 +153132,18 @@
             "description": "Display all manually-defined variables in the pipeline details page after running a pipeline manually",
             "nullable": true
           },
+          "ci_skip_branch_pipelines_for_mrs": {
+            "type": "boolean",
+            "description": "Skip the branch pipeline when a branch has an open merge request, and run only the merge request pipeline",
+            "nullable": true
+          },
           "automatic_rebase_enabled": {
             "type": "boolean",
             "description": "Enable automatic rebase of the source branch before merge",
             "nullable": true
           },
           "feature_flags_minimum_role": {
-            "$ref": "#/components/schemas/RequestBody5D2F6F9A2B75FeatureFlagsMinimumRole"
+            "$ref": "#/components/schemas/RequestBody269D7B646C56FeatureFlagsMinimumRole"
           },
           "allow_pipeline_trigger_approve_deployment": {
             "type": "boolean",
@@ -152899,7 +153206,7 @@
             "nullable": true
           },
           "merge_train_enforcement": {
-            "$ref": "#/components/schemas/RequestBody5D2F6F9A2B75MergeTrainEnforcement"
+            "$ref": "#/components/schemas/RequestBody269D7B646C56MergeTrainEnforcement"
           },
           "max_pipelines_per_merge_train": {
             "type": "integer",
@@ -152922,7 +153229,7 @@
             "nullable": true
           },
           "reviewer_assignment_strategy": {
-            "$ref": "#/components/schemas/RequestBody5D2F6F9A2B75ReviewerAssignmentStrategy"
+            "$ref": "#/components/schemas/RequestBody269D7B646C56ReviewerAssignmentStrategy"
           }
         }
       },
@@ -154513,7 +154820,7 @@
           }
         }
       },
-      "RequestBodyB3B0A765Ad52": {
+      "RequestBodyF2A98056Bc9C": {
         "required": [
           "title",
           "source_branch",
@@ -154599,7 +154906,7 @@
           "milestone": {
             "maxLength": 255,
             "type": "string",
-            "description": "The title of a project or ancestor-group milestone to assign the merge request to. Mutually exclusive with \u0060milestone_id\u0060. Mutually exclusive with \u0060milestone_id\u0060.",
+            "description": "The title of a project or ancestor-group milestone to assign the merge request to. Mutually exclusive with \u0060milestone_id\u0060.",
             "nullable": true
           },
           "remove_source_branch": {
@@ -154634,7 +154941,7 @@
           }
         }
       },
-      "RequestBody2B4971Ab6883": {
+      "RequestBody6Bd49Bb73271": {
         "type": "object",
         "properties": {
           "title": {
@@ -154648,7 +154955,7 @@
             "nullable": true
           },
           "state_event": {
-            "$ref": "#/components/schemas/RequestBody2B4971Ab6883StateEvent"
+            "$ref": "#/components/schemas/RequestBody6Bd49Bb73271StateEvent"
           },
           "discussion_locked": {
             "type": "boolean",
@@ -154713,7 +155020,7 @@
           "milestone": {
             "maxLength": 255,
             "type": "string",
-            "description": "The title of a project or ancestor-group milestone to assign the merge request to. Mutually exclusive with \u0060milestone_id\u0060. Mutually exclusive with \u0060milestone_id\u0060.",
+            "description": "The title of a project or ancestor-group milestone to assign the merge request to. Mutually exclusive with \u0060milestone_id\u0060.",
             "nullable": true
           },
           "remove_source_branch": {
@@ -154975,7 +155282,7 @@
           }
         }
       },
-      "RequestBodyF5Dab59A683C": {
+      "RequestBody0290A07Ba120": {
         "required": [
           "title"
         ],
@@ -155033,7 +155340,7 @@
           "milestone": {
             "maxLength": 255,
             "type": "string",
-            "description": "The title of a project or ancestor-group milestone to assign the issue to. Mutually exclusive with \u0060milestone_id\u0060. Mutually exclusive with \u0060milestone_id\u0060.",
+            "description": "The title of a project or ancestor-group milestone to assign the issue to. Mutually exclusive with \u0060milestone_id\u0060.",
             "nullable": true
           },
           "labels": {
@@ -155081,10 +155388,10 @@
             "nullable": true
           },
           "issue_type": {
-            "$ref": "#/components/schemas/RequestBodyF5Dab59A683CIssueType"
+            "$ref": "#/components/schemas/RequestBody0290A07Ba120IssueType"
           },
           "severity": {
-            "$ref": "#/components/schemas/RequestBodyF5Dab59A683CSeverity"
+            "$ref": "#/components/schemas/RequestBody0290A07Ba120Severity"
           },
           "weight": {
             "type": "integer",
@@ -155103,7 +155410,7 @@
           }
         }
       },
-      "RequestBodyDfb032907E0A": {
+      "RequestBody834D35Fb870B": {
         "type": "object",
         "properties": {
           "title": {
@@ -155118,7 +155425,7 @@
             "nullable": true
           },
           "state_event": {
-            "$ref": "#/components/schemas/RequestBodyDfb032907E0AStateEvent"
+            "$ref": "#/components/schemas/RequestBody834D35Fb870BStateEvent"
           },
           "description": {
             "type": "string",
@@ -155146,7 +155453,7 @@
           "milestone": {
             "maxLength": 255,
             "type": "string",
-            "description": "The title of a project or ancestor-group milestone to assign the issue to. Mutually exclusive with \u0060milestone_id\u0060. Mutually exclusive with \u0060milestone_id\u0060.",
+            "description": "The title of a project or ancestor-group milestone to assign the issue to. Mutually exclusive with \u0060milestone_id\u0060.",
             "nullable": true
           },
           "labels": {
@@ -155194,10 +155501,10 @@
             "nullable": true
           },
           "issue_type": {
-            "$ref": "#/components/schemas/RequestBodyDfb032907E0AIssueType"
+            "$ref": "#/components/schemas/RequestBody834D35Fb870BIssueType"
           },
           "severity": {
-            "$ref": "#/components/schemas/RequestBodyDfb032907E0ASeverity"
+            "$ref": "#/components/schemas/RequestBody834D35Fb870BSeverity"
           },
           "weight": {
             "type": "integer",
@@ -164722,7 +165029,7 @@
         "description": "Object that contains information on the container expiration policy",
         "nullable": true
       },
-      "RequestBody5D2F6F9A2B75ContainerExpirationPolicyAttributes": {
+      "RequestBody269D7B646C56ContainerExpirationPolicyAttributes": {
         "type": "object",
         "properties": {
           "cadence": {
@@ -171714,6 +172021,45 @@
           ]
         }
       },
+      "RequestBody24Ae73F25200MaintenanceReason": {
+        "minLength": 1,
+        "enum": [
+          "migration",
+          "isolation",
+          "incident",
+          "billing",
+          "legal"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "The reason for entering maintenance",
+        "x-ms-enum": {
+          "name": "RequestBody24Ae73F25200MaintenanceReason",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "migration",
+              "name": "Migration"
+            },
+            {
+              "value": "isolation",
+              "name": "Isolation"
+            },
+            {
+              "value": "incident",
+              "name": "Incident"
+            },
+            {
+              "value": "billing",
+              "name": "Billing"
+            },
+            {
+              "value": "legal",
+              "name": "Legal"
+            }
+          ]
+        }
+      },
       "RequestBodyE087351Bb683Status": {
         "enum": [
           "RUNNING",
@@ -174661,7 +175007,7 @@
           ]
         }
       },
-      "RequestBody5D2F6F9A2B75BuildGitStrategy": {
+      "RequestBody269D7B646C56BuildGitStrategy": {
         "enum": [
           "fetch",
           "clone"
@@ -174671,7 +175017,7 @@
         "description": "The Git strategy. Defaults to \u0060fetch\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody5D2F6F9A2B75BuildGitStrategy",
+          "name": "RequestBody269D7B646C56BuildGitStrategy",
           "modelAsString": false,
           "values": [
             {
@@ -174685,7 +175031,7 @@
           ]
         }
       },
-      "RequestBody5D2F6F9A2B75AutoCancelPendingPipelines": {
+      "RequestBody269D7B646C56AutoCancelPendingPipelines": {
         "enum": [
           "disabled",
           "enabled"
@@ -174695,7 +175041,7 @@
         "description": "Auto-cancel pending pipelines",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody5D2F6F9A2B75AutoCancelPendingPipelines",
+          "name": "RequestBody269D7B646C56AutoCancelPendingPipelines",
           "modelAsString": false,
           "values": [
             {
@@ -174709,7 +175055,7 @@
           ]
         }
       },
-      "RequestBody5D2F6F9A2B75IssuesAccessLevel": {
+      "RequestBody269D7B646C56IssuesAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -174720,7 +175066,7 @@
         "description": "Issues access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody5D2F6F9A2B75IssuesAccessLevel",
+          "name": "RequestBody269D7B646C56IssuesAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -174738,7 +175084,7 @@
           ]
         }
       },
-      "RequestBody5D2F6F9A2B75RepositoryAccessLevel": {
+      "RequestBody269D7B646C56RepositoryAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -174749,7 +175095,7 @@
         "description": "Repository access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody5D2F6F9A2B75RepositoryAccessLevel",
+          "name": "RequestBody269D7B646C56RepositoryAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -174767,7 +175113,7 @@
           ]
         }
       },
-      "RequestBody5D2F6F9A2B75MergeRequestsAccessLevel": {
+      "RequestBody269D7B646C56MergeRequestsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -174778,7 +175124,7 @@
         "description": "Merge requests access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody5D2F6F9A2B75MergeRequestsAccessLevel",
+          "name": "RequestBody269D7B646C56MergeRequestsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -174796,7 +175142,7 @@
           ]
         }
       },
-      "RequestBody5D2F6F9A2B75ForkingAccessLevel": {
+      "RequestBody269D7B646C56ForkingAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -174807,7 +175153,7 @@
         "description": "Forks access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody5D2F6F9A2B75ForkingAccessLevel",
+          "name": "RequestBody269D7B646C56ForkingAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -174825,7 +175171,7 @@
           ]
         }
       },
-      "RequestBody5D2F6F9A2B75WikiAccessLevel": {
+      "RequestBody269D7B646C56WikiAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -174836,7 +175182,7 @@
         "description": "Wiki access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody5D2F6F9A2B75WikiAccessLevel",
+          "name": "RequestBody269D7B646C56WikiAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -174854,7 +175200,7 @@
           ]
         }
       },
-      "RequestBody5D2F6F9A2B75BuildsAccessLevel": {
+      "RequestBody269D7B646C56BuildsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -174865,7 +175211,7 @@
         "description": "Builds access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody5D2F6F9A2B75BuildsAccessLevel",
+          "name": "RequestBody269D7B646C56BuildsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -174883,7 +175229,7 @@
           ]
         }
       },
-      "RequestBody5D2F6F9A2B75SnippetsAccessLevel": {
+      "RequestBody269D7B646C56SnippetsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -174894,7 +175240,7 @@
         "description": "Snippets access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody5D2F6F9A2B75SnippetsAccessLevel",
+          "name": "RequestBody269D7B646C56SnippetsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -174912,7 +175258,7 @@
           ]
         }
       },
-      "RequestBody5D2F6F9A2B75PackageRegistryAccessLevel": {
+      "RequestBody269D7B646C56PackageRegistryAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -174924,7 +175270,7 @@
         "description": "Controls visibility of the package registry. One of \u0060disabled\u0060, \u0060private\u0060, \u0060enabled\u0060 or \u0060public\u0060. \u0060private\u0060 will make the package registry accessible only to project members (reporter role and above). \u0060enabled\u0060 will make the package registry accessible to everyone who has access to the project. \u0060public\u0060 will make the package registry accessible to everyone. \u0060disabled\u0060 will disable the package registry",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody5D2F6F9A2B75PackageRegistryAccessLevel",
+          "name": "RequestBody269D7B646C56PackageRegistryAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -174946,7 +175292,7 @@
           ]
         }
       },
-      "RequestBody5D2F6F9A2B75PagesAccessLevel": {
+      "RequestBody269D7B646C56PagesAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -174958,7 +175304,7 @@
         "description": "Pages access level. One of \u0060disabled\u0060, \u0060private\u0060, \u0060enabled\u0060 or \u0060public\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody5D2F6F9A2B75PagesAccessLevel",
+          "name": "RequestBody269D7B646C56PagesAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -174980,7 +175326,7 @@
           ]
         }
       },
-      "RequestBody5D2F6F9A2B75AnalyticsAccessLevel": {
+      "RequestBody269D7B646C56AnalyticsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -174991,7 +175337,7 @@
         "description": "Analytics access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody5D2F6F9A2B75AnalyticsAccessLevel",
+          "name": "RequestBody269D7B646C56AnalyticsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -175009,7 +175355,7 @@
           ]
         }
       },
-      "RequestBody5D2F6F9A2B75ContainerRegistryAccessLevel": {
+      "RequestBody269D7B646C56ContainerRegistryAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -175020,7 +175366,7 @@
         "description": "Controls visibility of the container registry. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060. \u0060private\u0060 will make the container registry accessible only to project members (reporter role and above). \u0060enabled\u0060 will make the container registry accessible to everyone who has access to the project. \u0060disabled\u0060 will disable the container registry",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody5D2F6F9A2B75ContainerRegistryAccessLevel",
+          "name": "RequestBody269D7B646C56ContainerRegistryAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -175038,7 +175384,7 @@
           ]
         }
       },
-      "RequestBody5D2F6F9A2B75SecurityAndComplianceAccessLevel": {
+      "RequestBody269D7B646C56SecurityAndComplianceAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -175049,7 +175395,7 @@
         "description": "Security and compliance access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody5D2F6F9A2B75SecurityAndComplianceAccessLevel",
+          "name": "RequestBody269D7B646C56SecurityAndComplianceAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -175067,7 +175413,7 @@
           ]
         }
       },
-      "RequestBody5D2F6F9A2B75ReleasesAccessLevel": {
+      "RequestBody269D7B646C56ReleasesAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -175078,7 +175424,7 @@
         "description": "Releases access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody5D2F6F9A2B75ReleasesAccessLevel",
+          "name": "RequestBody269D7B646C56ReleasesAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -175096,7 +175442,7 @@
           ]
         }
       },
-      "RequestBody5D2F6F9A2B75EnvironmentsAccessLevel": {
+      "RequestBody269D7B646C56EnvironmentsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -175107,7 +175453,7 @@
         "description": "Environments access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody5D2F6F9A2B75EnvironmentsAccessLevel",
+          "name": "RequestBody269D7B646C56EnvironmentsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -175125,7 +175471,7 @@
           ]
         }
       },
-      "RequestBody5D2F6F9A2B75FeatureFlagsAccessLevel": {
+      "RequestBody269D7B646C56FeatureFlagsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -175136,7 +175482,7 @@
         "description": "Feature flags access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody5D2F6F9A2B75FeatureFlagsAccessLevel",
+          "name": "RequestBody269D7B646C56FeatureFlagsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -175154,7 +175500,7 @@
           ]
         }
       },
-      "RequestBody5D2F6F9A2B75InfrastructureAccessLevel": {
+      "RequestBody269D7B646C56InfrastructureAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -175165,7 +175511,7 @@
         "description": "Infrastructure access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody5D2F6F9A2B75InfrastructureAccessLevel",
+          "name": "RequestBody269D7B646C56InfrastructureAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -175183,7 +175529,7 @@
           ]
         }
       },
-      "RequestBody5D2F6F9A2B75MonitorAccessLevel": {
+      "RequestBody269D7B646C56MonitorAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -175194,7 +175540,7 @@
         "description": "Monitor access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody5D2F6F9A2B75MonitorAccessLevel",
+          "name": "RequestBody269D7B646C56MonitorAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -175212,7 +175558,7 @@
           ]
         }
       },
-      "RequestBody5D2F6F9A2B75ModelExperimentsAccessLevel": {
+      "RequestBody269D7B646C56ModelExperimentsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -175223,7 +175569,7 @@
         "description": "Model experiments access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody5D2F6F9A2B75ModelExperimentsAccessLevel",
+          "name": "RequestBody269D7B646C56ModelExperimentsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -175241,7 +175587,7 @@
           ]
         }
       },
-      "RequestBody5D2F6F9A2B75ModelRegistryAccessLevel": {
+      "RequestBody269D7B646C56ModelRegistryAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -175252,7 +175598,7 @@
         "description": "Model registry access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody5D2F6F9A2B75ModelRegistryAccessLevel",
+          "name": "RequestBody269D7B646C56ModelRegistryAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -175270,7 +175616,7 @@
           ]
         }
       },
-      "RequestBody5D2F6F9A2B75ResourceGroupDefaultProcessMode": {
+      "RequestBody269D7B646C56ResourceGroupDefaultProcessMode": {
         "enum": [
           "unordered",
           "oldest_first",
@@ -175282,7 +175628,7 @@
         "description": "The process mode of the resource group",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody5D2F6F9A2B75ResourceGroupDefaultProcessMode",
+          "name": "RequestBody269D7B646C56ResourceGroupDefaultProcessMode",
           "modelAsString": false,
           "values": [
             {
@@ -175304,7 +175650,7 @@
           ]
         }
       },
-      "RequestBody5D2F6F9A2B75Visibility": {
+      "RequestBody269D7B646C56Visibility": {
         "enum": [
           "private",
           "internal",
@@ -175315,7 +175661,7 @@
         "description": "The visibility of the project.",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody5D2F6F9A2B75Visibility",
+          "name": "RequestBody269D7B646C56Visibility",
           "modelAsString": false,
           "values": [
             {
@@ -175333,7 +175679,7 @@
           ]
         }
       },
-      "RequestBody5D2F6F9A2B75MergeMethod": {
+      "RequestBody269D7B646C56MergeMethod": {
         "enum": [
           "ff",
           "rebase_merge",
@@ -175344,7 +175690,7 @@
         "description": "The merge method used when merging merge requests",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody5D2F6F9A2B75MergeMethod",
+          "name": "RequestBody269D7B646C56MergeMethod",
           "modelAsString": false,
           "values": [
             {
@@ -175362,7 +175708,7 @@
           ]
         }
       },
-      "RequestBody5D2F6F9A2B75AutoDevopsDeployStrategy": {
+      "RequestBody269D7B646C56AutoDevopsDeployStrategy": {
         "enum": [
           "continuous",
           "manual",
@@ -175373,7 +175719,7 @@
         "description": "Auto Deploy strategy",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody5D2F6F9A2B75AutoDevopsDeployStrategy",
+          "name": "RequestBody269D7B646C56AutoDevopsDeployStrategy",
           "modelAsString": false,
           "values": [
             {
@@ -175391,7 +175737,7 @@
           ]
         }
       },
-      "RequestBody5D2F6F9A2B75SquashOption": {
+      "RequestBody269D7B646C56SquashOption": {
         "enum": [
           "never",
           "always",
@@ -175403,7 +175749,7 @@
         "description": "Squash default for project. One of \u0060never\u0060, \u0060always\u0060, \u0060default_on\u0060, or \u0060default_off\u0060.",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody5D2F6F9A2B75SquashOption",
+          "name": "RequestBody269D7B646C56SquashOption",
           "modelAsString": false,
           "values": [
             {
@@ -175425,7 +175771,7 @@
           ]
         }
       },
-      "RequestBody5D2F6F9A2B75RequirementsAccessLevel": {
+      "RequestBody269D7B646C56RequirementsAccessLevel": {
         "enum": [
           "disabled",
           "private",
@@ -175436,7 +175782,7 @@
         "description": "Requirements feature access level. One of \u0060disabled\u0060, \u0060private\u0060 or \u0060enabled\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody5D2F6F9A2B75RequirementsAccessLevel",
+          "name": "RequestBody269D7B646C56RequirementsAccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -175454,7 +175800,7 @@
           ]
         }
       },
-      "RequestBody5D2F6F9A2B75CiPipelineVariablesMinimumOverrideRole": {
+      "RequestBody269D7B646C56CiPipelineVariablesMinimumOverrideRole": {
         "enum": [
           "no_one_allowed",
           "developer",
@@ -175466,7 +175812,7 @@
         "description": "Limit ability to override CI/CD variables when triggering a pipeline to only users with at least the set minimum role",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody5D2F6F9A2B75CiPipelineVariablesMinimumOverrideRole",
+          "name": "RequestBody269D7B646C56CiPipelineVariablesMinimumOverrideRole",
           "modelAsString": false,
           "values": [
             {
@@ -175488,7 +175834,7 @@
           ]
         }
       },
-      "RequestBody5D2F6F9A2B75FeatureFlagsMinimumRole": {
+      "RequestBody269D7B646C56FeatureFlagsMinimumRole": {
         "enum": [
           "no_one_allowed",
           "developer",
@@ -175500,7 +175846,7 @@
         "description": "Limit the ability to create, update, toggle, and delete feature flags to only users with at least the set minimum role",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody5D2F6F9A2B75FeatureFlagsMinimumRole",
+          "name": "RequestBody269D7B646C56FeatureFlagsMinimumRole",
           "modelAsString": false,
           "values": [
             {
@@ -175522,7 +175868,7 @@
           ]
         }
       },
-      "RequestBody5D2F6F9A2B75MergeTrainEnforcement": {
+      "RequestBody269D7B646C56MergeTrainEnforcement": {
         "enum": [
           "allow_bypass",
           "enforce_for_all_users",
@@ -175533,7 +175879,7 @@
         "description": "Merge train enforcement level. One of \u0060allow_bypass\u0060, \u0060enforce_for_all_users\u0060, or \u0060enforce_with_owner_override\u0060.",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody5D2F6F9A2B75MergeTrainEnforcement",
+          "name": "RequestBody269D7B646C56MergeTrainEnforcement",
           "modelAsString": false,
           "values": [
             {
@@ -175551,7 +175897,7 @@
           ]
         }
       },
-      "RequestBody5D2F6F9A2B75ReviewerAssignmentStrategy": {
+      "RequestBody269D7B646C56ReviewerAssignmentStrategy": {
         "enum": [
           "disabled",
           "code_owners"
@@ -175561,7 +175907,7 @@
         "description": "Strategy used to automatically assign reviewers to merge requests. One of \u0060disabled\u0060 or \u0060code_owners\u0060.",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody5D2F6F9A2B75ReviewerAssignmentStrategy",
+          "name": "RequestBody269D7B646C56ReviewerAssignmentStrategy",
           "modelAsString": false,
           "values": [
             {
@@ -176355,7 +176701,7 @@
           ]
         }
       },
-      "RequestBody2B4971Ab6883StateEvent": {
+      "RequestBody6Bd49Bb73271StateEvent": {
         "enum": [
           "close",
           "reopen"
@@ -176365,7 +176711,7 @@
         "description": "New state (close/reopen).",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody2B4971Ab6883StateEvent",
+          "name": "RequestBody6Bd49Bb73271StateEvent",
           "modelAsString": false,
           "values": [
             {
@@ -176403,7 +176749,7 @@
           ]
         }
       },
-      "RequestBodyF5Dab59A683CIssueType": {
+      "RequestBody0290A07Ba120IssueType": {
         "enum": [
           "issue",
           "incident",
@@ -176417,7 +176763,7 @@
         "description": "The type of the issue. Accepts: issue, incident, test_case, requirement, task, ticket",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyF5Dab59A683CIssueType",
+          "name": "RequestBody0290A07Ba120IssueType",
           "modelAsString": false,
           "values": [
             {
@@ -176447,7 +176793,7 @@
           ]
         }
       },
-      "RequestBodyF5Dab59A683CSeverity": {
+      "RequestBody0290A07Ba120Severity": {
         "enum": [
           "unknown",
           "low",
@@ -176460,7 +176806,7 @@
         "description": "The severity of the issue. Only applies to incidents. Accepts: unknown, low, medium, high, critical",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyF5Dab59A683CSeverity",
+          "name": "RequestBody0290A07Ba120Severity",
           "modelAsString": false,
           "values": [
             {
@@ -176486,7 +176832,7 @@
           ]
         }
       },
-      "RequestBodyDfb032907E0AStateEvent": {
+      "RequestBody834D35Fb870BStateEvent": {
         "enum": [
           "reopen",
           "close"
@@ -176496,7 +176842,7 @@
         "description": "State of the issue",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyDfb032907E0AStateEvent",
+          "name": "RequestBody834D35Fb870BStateEvent",
           "modelAsString": false,
           "values": [
             {
@@ -176510,7 +176856,7 @@
           ]
         }
       },
-      "RequestBodyDfb032907E0AIssueType": {
+      "RequestBody834D35Fb870BIssueType": {
         "enum": [
           "issue",
           "incident",
@@ -176524,7 +176870,7 @@
         "description": "The type of the issue. Accepts: issue, incident, test_case, requirement, task, ticket",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyDfb032907E0AIssueType",
+          "name": "RequestBody834D35Fb870BIssueType",
           "modelAsString": false,
           "values": [
             {
@@ -176554,7 +176900,7 @@
           ]
         }
       },
-      "RequestBodyDfb032907E0ASeverity": {
+      "RequestBody834D35Fb870BSeverity": {
         "enum": [
           "unknown",
           "low",
@@ -176567,7 +176913,7 @@
         "description": "The severity of the issue. Only applies to incidents. Accepts: unknown, low, medium, high, critical",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyDfb032907E0ASeverity",
+          "name": "RequestBody834D35Fb870BSeverity",
           "modelAsString": false,
           "values": [
             {
@@ -186755,6 +187101,29 @@
           ]
         }
       },
+      "GetApiV4ProjectsIdPackagesPackageIdPackageFilesPackageFileIdDownloadDownloadModeParameter": {
+        "enum": [
+          "proxy",
+          "direct"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "nullable": true,
+        "x-ms-enum": {
+          "name": "GetApiV4ProjectsIdPackagesPackageIdPackageFilesPackageFileIdDownloadDownloadModeParameter",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "proxy",
+              "name": "Proxy"
+            },
+            {
+              "value": "direct",
+              "name": "Direct"
+            }
+          ]
+        }
+      },
       "GetApiV4OfflineExportsSortParameter": {
         "enum": [
           "asc",
@@ -190511,6 +190880,52 @@
           ]
         }
       },
+      "GetApiV4ProjectsIdPackagesGenericPackageNamePackageVersionFileNameDownloadModeParameter": {
+        "enum": [
+          "proxy",
+          "direct"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "nullable": true,
+        "x-ms-enum": {
+          "name": "GetApiV4ProjectsIdPackagesGenericPackageNamePackageVersionFileNameDownloadModeParameter",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "proxy",
+              "name": "Proxy"
+            },
+            {
+              "value": "direct",
+              "name": "Direct"
+            }
+          ]
+        }
+      },
+      "GetApiV4ProjectsIdPackagesGenericPackageNamePackageVersionPathFileNameDownloadModeParameter": {
+        "enum": [
+          "proxy",
+          "direct"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "nullable": true,
+        "x-ms-enum": {
+          "name": "GetApiV4ProjectsIdPackagesGenericPackageNamePackageVersionPathFileNameDownloadModeParameter",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "proxy",
+              "name": "Proxy"
+            },
+            {
+              "value": "direct",
+              "name": "Direct"
+            }
+          ]
+        }
+      },
       "GetApiV4ProjectsIdFeatureFlagsScopeParameter": {
         "enum": [
           "enabled",
@@ -194127,6 +194542,29 @@
         "additionalProperties": false,
         "nullable": true
       },
+      "GetApiV4ProjectsIdJobsArtifactsRefNameDownloadDownloadModeParameter": {
+        "enum": [
+          "proxy",
+          "direct"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "nullable": true,
+        "x-ms-enum": {
+          "name": "GetApiV4ProjectsIdJobsArtifactsRefNameDownloadDownloadModeParameter",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "proxy",
+              "name": "Proxy"
+            },
+            {
+              "value": "direct",
+              "name": "Direct"
+            }
+          ]
+        }
+      },
       "GetApiV4ProjectsIdJobsJobIdArtifactsFileTypeParameter": {
         "enum": [
           "accessibility",
@@ -194255,6 +194693,29 @@
             {
               "value": "sarif",
               "name": "Sarif"
+            }
+          ]
+        }
+      },
+      "GetApiV4ProjectsIdJobsJobIdArtifactsDownloadModeParameter": {
+        "enum": [
+          "proxy",
+          "direct"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "nullable": true,
+        "x-ms-enum": {
+          "name": "GetApiV4ProjectsIdJobsJobIdArtifactsDownloadModeParameter",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "proxy",
+              "name": "Proxy"
+            },
+            {
+              "value": "direct",
+              "name": "Direct"
             }
           ]
         }

@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.GitLab.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -21,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Item.Pack
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DownloadRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/packages/{packageId}/package_files/{packageFileId}/download", pathParameters)
+        public DownloadRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/packages/{packageId}/package_files/{packageFileId}/download{?download_mode*}", pathParameters)
         {
         }
         /// <summary>
@@ -29,7 +30,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Item.Pack
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DownloadRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/packages/{packageId}/package_files/{packageFileId}/download", rawUrl)
+        public DownloadRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/packages/{packageId}/package_files/{packageFileId}/download{?download_mode*}", rawUrl)
         {
         }
         /// <summary>
@@ -40,11 +41,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Item.Pack
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<Stream?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Item.Package_files.Item.Download.DownloadRequestBuilder.DownloadRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<Stream> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Item.Package_files.Item.Download.DownloadRequestBuilder.DownloadRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -57,11 +58,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Item.Pack
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Item.Package_files.Item.Download.DownloadRequestBuilder.DownloadRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Item.Package_files.Item.Download.DownloadRequestBuilder.DownloadRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
@@ -77,6 +78,16 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Item.Pack
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Item.Package_files.Item.Download.DownloadRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Item.Package_files.Item.Download.DownloadRequestBuilder(rawUrl, RequestAdapter);
+        }
+        /// <summary>
+        /// This feature was introduced in GitLab 18.4
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class DownloadRequestBuilderGetQueryParameters 
+        {
+            /// <summary>Requested download transfer mode (`proxy` or `direct`). Only honored when allowed by the object storage configuration.</summary>
+            [QueryParameter("download_mode")]
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdPackagesPackageIdPackageFilesPackageFileIdDownloadDownloadModeParameter? DownloadMode { get; set; }
         }
     }
 }

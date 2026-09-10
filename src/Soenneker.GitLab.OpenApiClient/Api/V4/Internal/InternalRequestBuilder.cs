@@ -5,6 +5,7 @@ using Microsoft.Kiota.Abstractions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Agents;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitaly;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitlab_subscriptions;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Org_mover;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -31,6 +32,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Internal
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitlab_subscriptions.Gitlab_subscriptionsRequestBuilder Gitlab_subscriptions
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitlab_subscriptions.Gitlab_subscriptionsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The org_mover property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Org_mover.Org_moverRequestBuilder Org_mover
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Org_mover.Org_moverRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.InternalRequestBuilder"/> and sets the default values.

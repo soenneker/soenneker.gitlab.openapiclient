@@ -73,11 +73,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequest?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB3B0A765Ad52 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequest?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyF2A98056Bc9C body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequest> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB3B0A765Ad52 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequest> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyF2A98056Bc9C body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -111,11 +111,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB3B0A765Ad52 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyF2A98056Bc9C body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB3B0A765Ad52 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyF2A98056Bc9C body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -173,7 +173,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests
             /// <summary>Returns merge requests assigned to the given user `id`. `None` returns unassigned merge requests. `Any` returns merge requests with an assignee. Mutually exclusive with `assignee_username`.</summary>
             [QueryParameter("assignee_id")]
             public int? AssigneeId { get; set; }
-            /// <summary>Returns merge requests created by the given `username`. Mutually exclusive with `author_id`. Mutually exclusive with `assignee_id`.</summary>
+            /// <summary>Returns merge requests created by the given `username`. Mutually exclusive with `assignee_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("assignee_username")]
@@ -183,10 +183,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests
             [QueryParameter("assignee_username")]
             public string[] AssigneeUsername { get; set; }
 #endif
-            /// <summary>Returns merge requests created by the given user `id`. Mutually exclusive with `author_username`. Combine with `scope=all` or `scope=assigned_to_me`. Mutually exclusive with `author_username`.</summary>
+            /// <summary>Returns merge requests created by the given user `id`. Combine with `scope=all` or `scope=assigned_to_me`. Mutually exclusive with `author_username`.</summary>
             [QueryParameter("author_id")]
             public int? AuthorId { get; set; }
-            /// <summary>Returns merge requests created by the given `username`. Mutually exclusive with `author_id`. Mutually exclusive with `author_id`.</summary>
+            /// <summary>Returns merge requests created by the given `username`. Mutually exclusive with `author_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("author_username")]
@@ -257,10 +257,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests
             /// <summary>Returns merge requests merged on or before the given time. Expected in ISO 8601 format.</summary>
             [QueryParameter("merged_before")]
             public DateTimeOffset? MergedBefore { get; set; }
-            /// <summary>Returns merge requests which have been merged by the user with the given user `id`. Mutually exclusive with `merge_user_username`. Mutually exclusive with `merge_user_username`.</summary>
+            /// <summary>Returns merge requests which have been merged by the user with the given user `id`. Mutually exclusive with `merge_user_username`.</summary>
             [QueryParameter("merge_user_id")]
             public int? MergeUserId { get; set; }
-            /// <summary>Returns merge requests which have been merged by the user with the given `username`. Mutually exclusive with `merge_user_id`. Mutually exclusive with `merge_user_id`.</summary>
+            /// <summary>Returns merge requests which have been merged by the user with the given `username`. Mutually exclusive with `merge_user_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("merge_user_username")]
@@ -303,7 +303,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests
             /// <summary>`&lt;Negated&gt;` Returns merge requests assigned to the given user `id`. `None` returns unassigned merge requests. `Any` returns merge requests with an assignee. Mutually exclusive with `not[assignee_username]`.</summary>
             [QueryParameter("not%5Bassignee_id%5D")]
             public int? NotassigneeId { get; set; }
-            /// <summary>`&lt;Negated&gt;` Returns merge requests created by the given `username`. Mutually exclusive with `author_id`. Mutually exclusive with `not[assignee_id]`.</summary>
+            /// <summary>`&lt;Negated&gt;` Returns merge requests created by the given `username`. Mutually exclusive with `not[assignee_id]`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("not%5Bassignee_username%5D")]
@@ -313,10 +313,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests
             [QueryParameter("not%5Bassignee_username%5D")]
             public string[] NotassigneeUsername { get; set; }
 #endif
-            /// <summary>`&lt;Negated&gt;` Returns merge requests created by the given user `id`. Mutually exclusive with `author_username`. Combine with `scope=all` or `scope=assigned_to_me`. Mutually exclusive with `not[author_username]`.</summary>
+            /// <summary>`&lt;Negated&gt;` Returns merge requests created by the given user `id`. Combine with `scope=all` or `scope=assigned_to_me`. Mutually exclusive with `not[author_username]`.</summary>
             [QueryParameter("not%5Bauthor_id%5D")]
             public int? NotauthorId { get; set; }
-            /// <summary>`&lt;Negated&gt;` Returns merge requests created by the given `username`. Mutually exclusive with `author_id`. Mutually exclusive with `not[author_id]`.</summary>
+            /// <summary>`&lt;Negated&gt;` Returns merge requests created by the given `username`. Mutually exclusive with `not[author_id]`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("not%5Bauthor_username%5D")]
@@ -356,10 +356,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests
             [QueryParameter("not%5Bmy_reaction_emoji%5D")]
             public string NotmyReactionEmoji { get; set; }
 #endif
-            /// <summary>`&lt;Negated&gt;` Returns merge requests which have the user as a reviewer with the given user `id`. `None` returns merge requests with no reviewers. `Any` returns merge requests with any reviewer. Mutually exclusive with `reviewer_username`. Mutually exclusive with `not[reviewer_username]`.</summary>
+            /// <summary>`&lt;Negated&gt;` Returns merge requests which have the user as a reviewer with the given user `id`. `None` returns merge requests with no reviewers. `Any` returns merge requests with any reviewer. Mutually exclusive with `not[reviewer_username]`.</summary>
             [QueryParameter("not%5Breviewer_id%5D")]
             public int? NotreviewerId { get; set; }
-            /// <summary>`&lt;Negated&gt;` Returns merge requests which have the user as a reviewer with the given `username`. `None` returns merge requests with no reviewers. `Any` returns merge requests with any reviewer. Mutually exclusive with `reviewer_id`. Introduced in GitLab 13.8. Mutually exclusive with `not[reviewer_id]`.</summary>
+            /// <summary>`&lt;Negated&gt;` Returns merge requests which have the user as a reviewer with the given `username`. `None` returns merge requests with no reviewers. `Any` returns merge requests with any reviewer. Introduced in GitLab 13.8. Mutually exclusive with `not[reviewer_id]`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("not%5Breviewer_username%5D")]
@@ -378,10 +378,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests
             /// <summary>Number of items per page</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Returns merge requests which have the user as a reviewer with the given user `id`. `None` returns merge requests with no reviewers. `Any` returns merge requests with any reviewer. Mutually exclusive with `reviewer_username`. Mutually exclusive with `reviewer_username`.</summary>
+            /// <summary>Returns merge requests which have the user as a reviewer with the given user `id`. `None` returns merge requests with no reviewers. `Any` returns merge requests with any reviewer. Mutually exclusive with `reviewer_username`.</summary>
             [QueryParameter("reviewer_id")]
             public int? ReviewerId { get; set; }
-            /// <summary>Returns merge requests which have the user as a reviewer with the given `username`. `None` returns merge requests with no reviewers. `Any` returns merge requests with any reviewer. Mutually exclusive with `reviewer_id`. Introduced in GitLab 13.8. Mutually exclusive with `reviewer_id`.</summary>
+            /// <summary>Returns merge requests which have the user as a reviewer with the given `username`. `None` returns merge requests with no reviewers. `Any` returns merge requests with any reviewer. Introduced in GitLab 13.8. Mutually exclusive with `reviewer_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("reviewer_username")]

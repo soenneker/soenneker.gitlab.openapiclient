@@ -146,6 +146,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>The ci_separated_caches property</summary>
         public bool? CiSeparatedCaches { get; set; }
+        /// <summary>The ci_skip_branch_pipelines_for_mrs property</summary>
+        public bool? CiSkipBranchPipelinesForMrs { get; set; }
         /// <summary>The compliance_frameworks property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -992,6 +994,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "ci_push_repository_for_job_token_allowed", n => { CiPushRepositoryForJobTokenAllowed = n.GetBoolValue(); } },
                 { "ci_restrict_pipeline_cancellation_role", n => { CiRestrictPipelineCancellationRole = n.GetStringValue(); } },
                 { "ci_separated_caches", n => { CiSeparatedCaches = n.GetBoolValue(); } },
+                { "ci_skip_branch_pipelines_for_mrs", n => { CiSkipBranchPipelinesForMrs = n.GetBoolValue(); } },
                 { "cicd_catalog_enabled", n => { CicdCatalogEnabled = n.GetBoolValue(); } },
                 { "compliance_frameworks", n => { ComplianceFrameworks = n.GetStringValue(); } },
                 { "container_expiration_policy", n => { ContainerExpirationPolicy = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesContainerExpirationPolicy>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesContainerExpirationPolicy.CreateFromDiscriminatorValue); } },
@@ -1164,6 +1167,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("ci_push_repository_for_job_token_allowed", CiPushRepositoryForJobTokenAllowed);
             writer.WriteStringValue("ci_restrict_pipeline_cancellation_role", CiRestrictPipelineCancellationRole);
             writer.WriteBoolValue("ci_separated_caches", CiSeparatedCaches);
+            writer.WriteBoolValue("ci_skip_branch_pipelines_for_mrs", CiSkipBranchPipelinesForMrs);
             writer.WriteStringValue("compliance_frameworks", ComplianceFrameworks);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesContainerExpirationPolicy>("container_expiration_policy", ContainerExpirationPolicy);
             writer.WriteStringValue("container_registry_access_level", ContainerRegistryAccessLevel);

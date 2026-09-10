@@ -4,6 +4,7 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Generic.Item.Item.Item.Item.Authorize;
+using Soenneker.GitLab.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -27,7 +28,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Generic.I
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithFileNameItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/packages/generic/{packageName}/{packageVersion}/{fileName%2Did}/{fileName}", pathParameters)
+        public WithFileNameItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/packages/generic/{packageName}/{packageVersion}/{fileName%2Did}/{fileName}{?download_mode*}", pathParameters)
         {
         }
         /// <summary>
@@ -35,7 +36,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Generic.I
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithFileNameItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/packages/generic/{packageName}/{packageVersion}/{fileName%2Did}/{fileName}", rawUrl)
+        public WithFileNameItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/packages/generic/{packageName}/{packageVersion}/{fileName%2Did}/{fileName}{?download_mode*}", rawUrl)
         {
         }
         /// <summary>
@@ -46,11 +47,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Generic.I
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<Stream?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Generic.Item.Item.Item.Item.WithFileNameItemRequestBuilder.WithFileNameItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<Stream> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Generic.Item.Item.Item.Item.WithFileNameItemRequestBuilder.WithFileNameItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -82,11 +83,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Generic.I
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Generic.Item.Item.Item.Item.WithFileNameItemRequestBuilder.WithFileNameItemRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Generic.Item.Item.Item.Item.WithFileNameItemRequestBuilder.WithFileNameItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
@@ -122,6 +123,16 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Generic.I
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Generic.Item.Item.Item.Item.WithFileNameItemRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Generic.Item.Item.Item.Item.WithFileNameItemRequestBuilder(rawUrl, RequestAdapter);
+        }
+        /// <summary>
+        /// This feature was introduced in GitLab 13.5
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class WithFileNameItemRequestBuilderGetQueryParameters 
+        {
+            /// <summary>Requested download transfer mode (`proxy` or `direct`). Only honored when allowed by the object storage configuration.</summary>
+            [QueryParameter("download_mode")]
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdPackagesGenericPackageNamePackageVersionPathFileNameDownloadModeParameter? DownloadMode { get; set; }
         }
     }
 }

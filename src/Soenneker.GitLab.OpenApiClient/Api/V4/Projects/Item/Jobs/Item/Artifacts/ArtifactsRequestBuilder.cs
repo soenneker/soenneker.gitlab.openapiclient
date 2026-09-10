@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Artifact
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ArtifactsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/jobs/{jobId}/artifacts{?file_type*,job_token*}", pathParameters)
+        public ArtifactsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/jobs/{jobId}/artifacts{?download_mode*,file_type*,job_token*}", pathParameters)
         {
         }
         /// <summary>
@@ -55,7 +55,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Artifact
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ArtifactsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/jobs/{jobId}/artifacts{?file_type*,job_token*}", rawUrl)
+        public ArtifactsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/jobs/{jobId}/artifacts{?download_mode*,file_type*,job_token*}", rawUrl)
         {
         }
         /// <summary>
@@ -145,6 +145,9 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Artifact
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ArtifactsRequestBuilderGetQueryParameters 
         {
+            /// <summary>Requested download transfer mode (`proxy` or `direct`). Only honored when allowed by the object storage configuration.</summary>
+            [QueryParameter("download_mode")]
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdJobsJobIdArtifactsDownloadModeParameter? DownloadMode { get; set; }
             /// <summary>The type of artifact to download. Defaults to the job artifacts archive.</summary>
             [QueryParameter("file_type")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdJobsJobIdArtifactsFileTypeParameter? FileType { get; set; }
