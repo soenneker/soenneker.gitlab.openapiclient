@@ -3648,6 +3648,45 @@ paths:
           description: OK
         '401':
           description: Unauthorized
+  "/api/v4/ai/duo_workflows/workflows/{workflow_id}/execute":
+    post:
+      operationId: postApiV4AiDuoWorkflowsWorkflowsWorkflowIdExecute
+      summary: Request Duo Workflows server-side execution connection details
+      description: Workhorse pre-authorization endpoint. Returns the connection details
+        Workhorse needs to run the flow itself over gRPC and stream the actions it
+        receives back to the caller, for callers that cannot execute actions of their
+        own. Requests must arrive through Workhorse.
+      tags:
+      - GitLab Duo workflows
+      responses:
+        '200':
+          description: OK
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+        '429':
+          description: Too many requests
+        '400':
+          description: Bad Request
+      parameters:
+      - name: workflow_id
+        required: true
+        description: The ID of the workflow to execute
+        schema:
+          type: string
+          pattern: "^\\d+$"
+        in: path
+        example: '1'
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              "$ref": "#/components/schemas/RequestBody_af873e8e2570"
+      x-gitlab-lifecycle: experiment
   "/api/v4/ai/duo_workflows/workflows/{workflow_id}/resume":
     post:
       operationId: postApiV4AiDuoWorkflowsWorkflowsWorkflowIdResume
@@ -19785,7 +19824,7 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/RequestBody_8af545d0360b"
+              "$ref": "#/components/schemas/RequestBody_8a91eaf1b58c"
   "/api/v4/service_accounts":
     post:
       operationId: postApiV4ServiceAccounts
@@ -43438,7 +43477,7 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/RequestBody_a41b1296e61e"
+              "$ref": "#/components/schemas/RequestBody_210e5e345564"
     delete:
       operationId: deleteApiV4UserPushSubscriptions
       summary: Unregister a mobile device from push notifications
@@ -75805,7 +75844,7 @@ paths:
         content:
           multipart/form-data:
             schema:
-              "$ref": "#/components/schemas/RequestBody_1ab15ee78a23"
+              "$ref": "#/components/schemas/RequestBody_ca36c5857eaa"
   "/api/v4/groups/{id}":
     put:
       operationId: putApiV4GroupsId
@@ -75837,7 +75876,7 @@ paths:
         content:
           multipart/form-data:
             schema:
-              "$ref": "#/components/schemas/RequestBody_458681bdbaec"
+              "$ref": "#/components/schemas/RequestBody_ea23abb32b0c"
     get:
       operationId: getApiV4GroupsId
       summary: Retrieve a group
@@ -77071,7 +77110,7 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/RequestBody_a5c8ad7d0148"
+              "$ref": "#/components/schemas/RequestBody_89001ae93e52"
   "/api/v4/groups/{id}/share/{group_id}":
     delete:
       operationId: deleteApiV4GroupsIdShareGroupId
@@ -90736,6 +90775,8 @@ components:
           type: string
         disable_password_authentication_for_users_with_sso_identities:
           type: string
+        block_jwt_for_reclaimed_paths:
+          type: string
         root_moved_permanently_redirection:
           type: string
         disabled_oauth_sign_in_sources:
@@ -91721,6 +91762,8 @@ components:
         zoekt_max_projects_for_legacy_search:
           type: string
         zoekt_max_restarts_15m:
+          type: string
+        orbit_auto_index_root_namespace:
           type: string
         duo_workflow_oauth_application_id:
           type: string
@@ -96189,6 +96232,18 @@ components:
           type: object
           example:
             latest: 1.0.1
+    APIEntitiesCiMinutesUsage:
+      type: object
+      properties:
+        total_minutes_used:
+          type: integer
+          example: 105
+        monthly_minutes_used:
+          type: integer
+          example: 100
+        purchased_minutes_used:
+          type: integer
+          example: 5
     APIEntitiesNamespace:
       type: object
       properties:
@@ -96230,6 +96285,8 @@ components:
         shared_runners_minutes_limit:
           type: integer
           example: 133
+        ci_minutes_usage:
+          "$ref": "#/components/schemas/APIEntitiesCiMinutesUsage"
         extra_shared_runners_minutes_limit:
           type: integer
           example: 133
@@ -99681,6 +99738,9 @@ components:
         prompt_injection_protection_level:
           type: string
           example: no_checks
+        web_search_enabled:
+          type: boolean
+          example: false
         include_recommended_allowed:
           type: boolean
           example: false
@@ -101772,6 +101832,45 @@ components:
           description: An opaque string echoed back in every callback payload, useful
             for correlating callbacks to the triggering request.
           example: autoflow-run-abc123
+          nullable: true
+          maxLength: 255
+    RequestBody_af873e8e2570:
+      type: object
+      properties:
+        project_id:
+          type: string
+          description: The ID or path of the workflow project
+          example: '1'
+          nullable: true
+          maxLength: 255
+        namespace_id:
+          type: string
+          description: The ID or path of the workflow namespace
+          example: '1'
+          nullable: true
+          maxLength: 255
+        root_namespace_id:
+          type: string
+          description: The ID of the root namespace
+          example: '1'
+          nullable: true
+          maxLength: 255
+        ai_catalog_item_version_id:
+          type: integer
+          description: The ID of the AI Catalog ItemVersion that sourced the flow
+            config used by the workflow.
+          example: 1
+          nullable: true
+        client_type:
+          type: string
+          description: The type of client starting the session
+          example: browser
+          nullable: true
+          maxLength: 255
+        user_selected_model_identifier:
+          type: string
+          description: Identifier of the model the user selected for this session
+          example: claude_sonnet_4_5
           nullable: true
           maxLength: 255
     RequestBody_7139042d9372:
@@ -106425,7 +106524,7 @@ components:
           description: Scopes available to the application. Separate multiple scopes
             with a space.
           nullable: true
-    RequestBody_8af545d0360b:
+    RequestBody_8a91eaf1b58c:
       type: object
       properties:
         admin_mode:
@@ -108868,6 +108967,9 @@ components:
         deny_all_requests_except_allowed:
           type: string
           nullable: true
+        block_jwt_for_reclaimed_paths:
+          type: string
+          nullable: true
         root_moved_permanently_redirection:
           type: string
           nullable: true
@@ -109361,6 +109463,9 @@ components:
           type: string
           nullable: true
         zoekt_max_restarts_15m:
+          type: string
+          nullable: true
+        orbit_auto_index_root_namespace:
           type: string
           nullable: true
         duo_workflow_oauth_application_id:
@@ -116812,7 +116917,7 @@ components:
           nullable: true
       required:
       - reason
-    RequestBody_a41b1296e61e:
+    RequestBody_210e5e345564:
       type: object
       properties:
         device_token:
@@ -116823,6 +116928,7 @@ components:
           type: string
           enum:
           - ios
+          - macos
           description: The device platform
           nullable: true
         apns_environment:
@@ -123190,7 +123296,7 @@ components:
           example:
             environment: production
           nullable: true
-    RequestBody_1ab15ee78a23:
+    RequestBody_ca36c5857eaa:
       type: object
       properties:
         name:
@@ -123490,6 +123596,11 @@ components:
               description: Confine the AI Catalog to items within this top-level group
                 hierarchy
               nullable: true
+            web_search_enabled:
+              type: boolean
+              description: Allow web search in GitLab Duo Chat for this top-level
+                group
+              nullable: true
             foundational_agents_default_enabled:
               type: boolean
               description: Whether new foundational agents are enabled by default
@@ -123560,7 +123671,7 @@ components:
       required:
       - name
       - path
-    RequestBody_458681bdbaec:
+    RequestBody_ea23abb32b0c:
       type: object
       properties:
         name:
@@ -123862,6 +123973,11 @@ components:
               description: Confine the AI Catalog to items within this top-level group
                 hierarchy
               nullable: true
+            web_search_enabled:
+              type: boolean
+              description: Allow web search in GitLab Duo Chat for this top-level
+                group
+              nullable: true
             foundational_agents_default_enabled:
               type: boolean
               description: Whether new foundational agents are enabled by default
@@ -124125,7 +124241,7 @@ components:
           nullable: true
       required:
       - organization_id
-    RequestBody_a5c8ad7d0148:
+    RequestBody_89001ae93e52:
       type: object
       properties:
         group_id:
@@ -124135,6 +124251,7 @@ components:
         group_access:
           type: integer
           enum:
+          - 5
           - 10
           - 15
           - 20

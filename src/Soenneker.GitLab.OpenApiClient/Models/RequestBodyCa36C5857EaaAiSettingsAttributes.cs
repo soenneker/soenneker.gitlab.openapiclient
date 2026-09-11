@@ -7,87 +7,58 @@ using System.IO;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
+    /// <summary>
+    /// AI-related settings
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class ApiEntitiesAiSettings : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class RequestBodyCa36C5857EaaAiSettingsAttributes : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The ai_catalog_restricted_to_group_hierarchy property</summary>
+        /// <summary>Confine the AI Catalog to items within this top-level group hierarchy</summary>
         public bool? AiCatalogRestrictedToGroupHierarchy { get; set; }
-        /// <summary>The ai_usage_data_collection_enabled property</summary>
+        /// <summary>Enable AI usage data collection for this namespace</summary>
         public bool? AiUsageDataCollectionEnabled { get; set; }
-        /// <summary>The allow_all_unix_sockets property</summary>
+        /// <summary>Whether to allow all Unix sockets for network access</summary>
         public bool? AllowAllUnixSockets { get; set; }
-        /// <summary>The allow_project_extension property</summary>
+        /// <summary>Whether to allow projects to extend the network access domain allowlist</summary>
         public bool? AllowProjectExtension { get; set; }
-        /// <summary>The duo_agent_platform_enabled property</summary>
+        /// <summary>Whether Duo Agent Platform features are enabled</summary>
         public bool? DuoAgentPlatformEnabled { get; set; }
-        /// <summary>The duo_workflow_mcp_enabled property</summary>
+        /// <summary>Enable MCP support for Duo Agent Platform</summary>
         public bool? DuoWorkflowMcpEnabled { get; set; }
-        /// <summary>The foundational_agents_default_enabled property</summary>
+        /// <summary>Whether new foundational agents are enabled by default</summary>
         public bool? FoundationalAgentsDefaultEnabled { get; set; }
-        /// <summary>The include_recommended_allowed property</summary>
+        /// <summary>Whether to include recommended domains in the network access allowlist</summary>
         public bool? IncludeRecommendedAllowed { get; set; }
-        /// <summary>The minimum_access_level_enable_on_projects property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? MinimumAccessLevelEnableOnProjects { get; set; }
-#nullable restore
-#else
-        public string MinimumAccessLevelEnableOnProjects { get; set; }
-#endif
-        /// <summary>The minimum_access_level_execute property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? MinimumAccessLevelExecute { get; set; }
-#nullable restore
-#else
-        public string MinimumAccessLevelExecute { get; set; }
-#endif
-        /// <summary>The minimum_access_level_execute_async property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? MinimumAccessLevelExecuteAsync { get; set; }
-#nullable restore
-#else
-        public string MinimumAccessLevelExecuteAsync { get; set; }
-#endif
-        /// <summary>The minimum_access_level_manage property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? MinimumAccessLevelManage { get; set; }
-#nullable restore
-#else
-        public string MinimumAccessLevelManage { get; set; }
-#endif
-        /// <summary>The prompt_injection_protection_level property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? PromptInjectionProtectionLevel { get; set; }
-#nullable restore
-#else
-        public string PromptInjectionProtectionLevel { get; set; }
-#endif
-        /// <summary>The web_search_enabled property</summary>
+        /// <summary>The minimum access level required to enable Duo Agent Platform. This field is behind a feature flag.</summary>
+        public int? MinimumAccessLevelEnableOnProjects { get; set; }
+        /// <summary>The minimum access level required to execute Duo Agent Platform. This field is behind a feature flag.</summary>
+        public int? MinimumAccessLevelExecute { get; set; }
+        /// <summary>The minimum access level required to execute Duo Agent Platform features in CI/CD. This field is behind a feature flag.</summary>
+        public int? MinimumAccessLevelExecuteAsync { get; set; }
+        /// <summary>The minimum access level required to manage Duo Agent Platform. This field is behind a feature flag.</summary>
+        public int? MinimumAccessLevelManage { get; set; }
+        /// <summary>Prompt injection protection level. One of `no_checks`, `log_only` or `interrupt`</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCa36C5857EaaAiSettingsAttributesPromptInjectionProtectionLevel? PromptInjectionProtectionLevel { get; set; }
+        /// <summary>Allow web search in GitLab Duo Chat for this top-level group</summary>
         public bool? WebSearchEnabled { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSettings"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCa36C5857EaaAiSettingsAttributes"/> and sets the default values.
         /// </summary>
-        public ApiEntitiesAiSettings()
+        public RequestBodyCa36C5857EaaAiSettingsAttributes()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSettings"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCa36C5857EaaAiSettingsAttributes"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSettings CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCa36C5857EaaAiSettingsAttributes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSettings();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCa36C5857EaaAiSettingsAttributes();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -105,11 +76,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "duo_workflow_mcp_enabled", n => { DuoWorkflowMcpEnabled = n.GetBoolValue(); } },
                 { "foundational_agents_default_enabled", n => { FoundationalAgentsDefaultEnabled = n.GetBoolValue(); } },
                 { "include_recommended_allowed", n => { IncludeRecommendedAllowed = n.GetBoolValue(); } },
-                { "minimum_access_level_enable_on_projects", n => { MinimumAccessLevelEnableOnProjects = n.GetStringValue(); } },
-                { "minimum_access_level_execute", n => { MinimumAccessLevelExecute = n.GetStringValue(); } },
-                { "minimum_access_level_execute_async", n => { MinimumAccessLevelExecuteAsync = n.GetStringValue(); } },
-                { "minimum_access_level_manage", n => { MinimumAccessLevelManage = n.GetStringValue(); } },
-                { "prompt_injection_protection_level", n => { PromptInjectionProtectionLevel = n.GetStringValue(); } },
+                { "minimum_access_level_enable_on_projects", n => { MinimumAccessLevelEnableOnProjects = n.GetIntValue(); } },
+                { "minimum_access_level_execute", n => { MinimumAccessLevelExecute = n.GetIntValue(); } },
+                { "minimum_access_level_execute_async", n => { MinimumAccessLevelExecuteAsync = n.GetIntValue(); } },
+                { "minimum_access_level_manage", n => { MinimumAccessLevelManage = n.GetIntValue(); } },
+                { "prompt_injection_protection_level", n => { PromptInjectionProtectionLevel = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCa36C5857EaaAiSettingsAttributesPromptInjectionProtectionLevel>(); } },
                 { "web_search_enabled", n => { WebSearchEnabled = n.GetBoolValue(); } },
             };
         }
@@ -128,11 +99,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("duo_workflow_mcp_enabled", DuoWorkflowMcpEnabled);
             writer.WriteBoolValue("foundational_agents_default_enabled", FoundationalAgentsDefaultEnabled);
             writer.WriteBoolValue("include_recommended_allowed", IncludeRecommendedAllowed);
-            writer.WriteStringValue("minimum_access_level_enable_on_projects", MinimumAccessLevelEnableOnProjects);
-            writer.WriteStringValue("minimum_access_level_execute", MinimumAccessLevelExecute);
-            writer.WriteStringValue("minimum_access_level_execute_async", MinimumAccessLevelExecuteAsync);
-            writer.WriteStringValue("minimum_access_level_manage", MinimumAccessLevelManage);
-            writer.WriteStringValue("prompt_injection_protection_level", PromptInjectionProtectionLevel);
+            writer.WriteIntValue("minimum_access_level_enable_on_projects", MinimumAccessLevelEnableOnProjects);
+            writer.WriteIntValue("minimum_access_level_execute", MinimumAccessLevelExecute);
+            writer.WriteIntValue("minimum_access_level_execute_async", MinimumAccessLevelExecuteAsync);
+            writer.WriteIntValue("minimum_access_level_manage", MinimumAccessLevelManage);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCa36C5857EaaAiSettingsAttributesPromptInjectionProtectionLevel>("prompt_injection_protection_level", PromptInjectionProtectionLevel);
             writer.WriteBoolValue("web_search_enabled", WebSearchEnabled);
             writer.WriteAdditionalData(AdditionalData);
         }

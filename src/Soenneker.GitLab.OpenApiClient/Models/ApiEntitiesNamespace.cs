@@ -29,6 +29,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>The billable_members_count property</summary>
         public int? BillableMembersCount { get; set; }
+        /// <summary>The ci_minutes_usage property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiMinutesUsage? CiMinutesUsage { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiMinutesUsage CiMinutesUsage { get; set; }
+#endif
         /// <summary>The end_date property</summary>
         public Date? EndDate { get; set; }
         /// <summary>The extra_shared_runners_minutes_limit property</summary>
@@ -132,6 +140,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "additional_purchased_storage_size", n => { AdditionalPurchasedStorageSize = n.GetIntValue(); } },
                 { "avatar_url", n => { AvatarUrl = n.GetStringValue(); } },
                 { "billable_members_count", n => { BillableMembersCount = n.GetIntValue(); } },
+                { "ci_minutes_usage", n => { CiMinutesUsage = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiMinutesUsage>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiMinutesUsage.CreateFromDiscriminatorValue); } },
                 { "end_date", n => { EndDate = n.GetDateValue(); } },
                 { "extra_shared_runners_minutes_limit", n => { ExtraSharedRunnersMinutesLimit = n.GetIntValue(); } },
                 { "full_path", n => { FullPath = n.GetStringValue(); } },
@@ -164,6 +173,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("additional_purchased_storage_size", AdditionalPurchasedStorageSize);
             writer.WriteStringValue("avatar_url", AvatarUrl);
             writer.WriteIntValue("billable_members_count", BillableMembersCount);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiMinutesUsage>("ci_minutes_usage", CiMinutesUsage);
             writer.WriteDateValue("end_date", EndDate);
             writer.WriteIntValue("extra_shared_runners_minutes_limit", ExtraSharedRunnersMinutesLimit);
             writer.WriteStringValue("full_path", FullPath);
