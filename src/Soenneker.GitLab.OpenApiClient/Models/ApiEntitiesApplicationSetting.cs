@@ -506,6 +506,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string CiTelemetryOtelEndpoint { get; set; }
 #endif
+        /// <summary>The code_dropdown_custom_clients property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CodeDropdownCustomClients { get; set; }
+#nullable restore
+#else
+        public string CodeDropdownCustomClients { get; set; }
+#endif
         /// <summary>The code_suggestions_api_rate_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -4308,6 +4316,30 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ThrottleAuthenticatedApiRequestsPerPeriod { get; set; }
 #endif
+        /// <summary>The throttle_authenticated_dependency_proxy_enabled property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ThrottleAuthenticatedDependencyProxyEnabled { get; set; }
+#nullable restore
+#else
+        public string ThrottleAuthenticatedDependencyProxyEnabled { get; set; }
+#endif
+        /// <summary>The throttle_authenticated_dependency_proxy_period_in_seconds property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ThrottleAuthenticatedDependencyProxyPeriodInSeconds { get; set; }
+#nullable restore
+#else
+        public string ThrottleAuthenticatedDependencyProxyPeriodInSeconds { get; set; }
+#endif
+        /// <summary>The throttle_authenticated_dependency_proxy_requests_per_period property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ThrottleAuthenticatedDependencyProxyRequestsPerPeriod { get; set; }
+#nullable restore
+#else
+        public string ThrottleAuthenticatedDependencyProxyRequestsPerPeriod { get; set; }
+#endif
         /// <summary>The throttle_authenticated_deprecated_api_enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -5278,6 +5310,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "ci_max_total_yaml_size_bytes", n => { CiMaxTotalYamlSizeBytes = n.GetStringValue(); } },
                 { "ci_partitions_in_seconds_limit_human_readable", n => { CiPartitionsInSecondsLimitHumanReadable = n.GetStringValue(); } },
                 { "ci_telemetry_otel_endpoint", n => { CiTelemetryOtelEndpoint = n.GetStringValue(); } },
+                { "code_dropdown_custom_clients", n => { CodeDropdownCustomClients = n.GetStringValue(); } },
                 { "code_suggestions_api_rate_limit", n => { CodeSuggestionsApiRateLimit = n.GetStringValue(); } },
                 { "commit_email_hostname", n => { CommitEmailHostname = n.GetStringValue(); } },
                 { "concurrent_bitbucket_import_jobs_limit", n => { ConcurrentBitbucketImportJobsLimit = n.GetStringValue(); } },
@@ -5760,6 +5793,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "throttle_authenticated_api_enabled", n => { ThrottleAuthenticatedApiEnabled = n.GetStringValue(); } },
                 { "throttle_authenticated_api_period_in_seconds", n => { ThrottleAuthenticatedApiPeriodInSeconds = n.GetStringValue(); } },
                 { "throttle_authenticated_api_requests_per_period", n => { ThrottleAuthenticatedApiRequestsPerPeriod = n.GetStringValue(); } },
+                { "throttle_authenticated_dependency_proxy_enabled", n => { ThrottleAuthenticatedDependencyProxyEnabled = n.GetStringValue(); } },
+                { "throttle_authenticated_dependency_proxy_period_in_seconds", n => { ThrottleAuthenticatedDependencyProxyPeriodInSeconds = n.GetStringValue(); } },
+                { "throttle_authenticated_dependency_proxy_requests_per_period", n => { ThrottleAuthenticatedDependencyProxyRequestsPerPeriod = n.GetStringValue(); } },
                 { "throttle_authenticated_deprecated_api_enabled", n => { ThrottleAuthenticatedDeprecatedApiEnabled = n.GetStringValue(); } },
                 { "throttle_authenticated_deprecated_api_period_in_seconds", n => { ThrottleAuthenticatedDeprecatedApiPeriodInSeconds = n.GetStringValue(); } },
                 { "throttle_authenticated_deprecated_api_requests_per_period", n => { ThrottleAuthenticatedDeprecatedApiRequestsPerPeriod = n.GetStringValue(); } },
@@ -5943,6 +5979,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("ci_max_total_yaml_size_bytes", CiMaxTotalYamlSizeBytes);
             writer.WriteStringValue("ci_partitions_in_seconds_limit_human_readable", CiPartitionsInSecondsLimitHumanReadable);
             writer.WriteStringValue("ci_telemetry_otel_endpoint", CiTelemetryOtelEndpoint);
+            writer.WriteStringValue("code_dropdown_custom_clients", CodeDropdownCustomClients);
             writer.WriteStringValue("code_suggestions_api_rate_limit", CodeSuggestionsApiRateLimit);
             writer.WriteStringValue("commit_email_hostname", CommitEmailHostname);
             writer.WriteStringValue("concurrent_bitbucket_import_jobs_limit", ConcurrentBitbucketImportJobsLimit);
@@ -6425,6 +6462,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("throttle_authenticated_api_enabled", ThrottleAuthenticatedApiEnabled);
             writer.WriteStringValue("throttle_authenticated_api_period_in_seconds", ThrottleAuthenticatedApiPeriodInSeconds);
             writer.WriteStringValue("throttle_authenticated_api_requests_per_period", ThrottleAuthenticatedApiRequestsPerPeriod);
+            writer.WriteStringValue("throttle_authenticated_dependency_proxy_enabled", ThrottleAuthenticatedDependencyProxyEnabled);
+            writer.WriteStringValue("throttle_authenticated_dependency_proxy_period_in_seconds", ThrottleAuthenticatedDependencyProxyPeriodInSeconds);
+            writer.WriteStringValue("throttle_authenticated_dependency_proxy_requests_per_period", ThrottleAuthenticatedDependencyProxyRequestsPerPeriod);
             writer.WriteStringValue("throttle_authenticated_deprecated_api_enabled", ThrottleAuthenticatedDeprecatedApiEnabled);
             writer.WriteStringValue("throttle_authenticated_deprecated_api_period_in_seconds", ThrottleAuthenticatedDeprecatedApiPeriodInSeconds);
             writer.WriteStringValue("throttle_authenticated_deprecated_api_requests_per_period", ThrottleAuthenticatedDeprecatedApiRequestsPerPeriod);

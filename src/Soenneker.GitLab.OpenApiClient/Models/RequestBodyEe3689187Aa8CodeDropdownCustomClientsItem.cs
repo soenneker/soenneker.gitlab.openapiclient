@@ -9,43 +9,51 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class RequestBody8A91Eaf1B58CDuoNamespaceAccessRulesItem : IAdditionalDataHolder, IParsable
+    public partial class RequestBodyEe3689187Aa8CodeDropdownCustomClientsItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>List of accessible features</summary>
+        /// <summary>URL template opened for the HTTPS clone URL. Must contain {url} exactly once</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Features { get; set; }
+        public string? HttpUrlTemplate { get; set; }
 #nullable restore
 #else
-        public List<string> Features { get; set; }
+        public string HttpUrlTemplate { get; set; }
 #endif
-        /// <summary>Object containing through namespace information</summary>
+        /// <summary>Name shown to users in the Code dropdown list</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8A91Eaf1B58CDuoNamespaceAccessRulesItemThroughNamespace? ThroughNamespace { get; set; }
+        public string? Name { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8A91Eaf1B58CDuoNamespaceAccessRulesItemThroughNamespace ThroughNamespace { get; set; }
+        public string Name { get; set; }
+#endif
+        /// <summary>URL template opened for the SSH clone URL. Must contain {url} exactly once</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? SshUrlTemplate { get; set; }
+#nullable restore
+#else
+        public string SshUrlTemplate { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8A91Eaf1B58CDuoNamespaceAccessRulesItem"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyEe3689187Aa8CodeDropdownCustomClientsItem"/> and sets the default values.
         /// </summary>
-        public RequestBody8A91Eaf1B58CDuoNamespaceAccessRulesItem()
+        public RequestBodyEe3689187Aa8CodeDropdownCustomClientsItem()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8A91Eaf1B58CDuoNamespaceAccessRulesItem"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyEe3689187Aa8CodeDropdownCustomClientsItem"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8A91Eaf1B58CDuoNamespaceAccessRulesItem CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyEe3689187Aa8CodeDropdownCustomClientsItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8A91Eaf1B58CDuoNamespaceAccessRulesItem();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyEe3689187Aa8CodeDropdownCustomClientsItem();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -55,8 +63,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "features", n => { Features = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "through_namespace", n => { ThroughNamespace = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8A91Eaf1B58CDuoNamespaceAccessRulesItemThroughNamespace>(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8A91Eaf1B58CDuoNamespaceAccessRulesItemThroughNamespace.CreateFromDiscriminatorValue); } },
+                { "http_url_template", n => { HttpUrlTemplate = n.GetStringValue(); } },
+                { "name", n => { Name = n.GetStringValue(); } },
+                { "ssh_url_template", n => { SshUrlTemplate = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -66,8 +75,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfPrimitiveValues<string>("features", Features);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8A91Eaf1B58CDuoNamespaceAccessRulesItemThroughNamespace>("through_namespace", ThroughNamespace);
+            writer.WriteStringValue("http_url_template", HttpUrlTemplate);
+            writer.WriteStringValue("name", Name);
+            writer.WriteStringValue("ssh_url_template", SshUrlTemplate);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
