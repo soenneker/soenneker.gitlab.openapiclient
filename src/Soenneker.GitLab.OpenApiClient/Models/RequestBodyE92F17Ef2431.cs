@@ -9,24 +9,22 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class RequestBodyB85115Ec6B7F : IAdditionalDataHolder, IParsable
+    public partial class RequestBodyE92F17Ef2431 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Maximum time (in seconds) for blob downloads during Geo sync. Defaults to 28800 (8 hours). Maximum is 86400 (24 hours).</summary>
-        public int? BlobDownloadTimeout { get; set; }
-        /// <summary>The number of consecutive checksum mismatches on a secondary before it reports the resource to the primary for self-heal re-verification. Read from the secondary site; has no effect when set on the primary.</summary>
+        /// <summary>The number of consecutive checksum mismatches on a secondary before it reports the resource to the primary for self-heal re-verification. Read from the secondary node; has no effect when set on the primary.</summary>
         public int? ChecksumMismatchReportThreshold { get; set; }
         /// <summary>The minimum time (in minutes) between self-heal re-verification triggers for the same resource. Both the primary and each secondary use their own value: secondaries use it to throttle re-reporting the same resource, and the primary uses it to throttle re-verifying an already-verified resource.</summary>
         public int? ChecksumMismatchSelfHealCooldownMinutes { get; set; }
-        /// <summary>Control the maximum concurrency of container repository sync for this site. Defaults to 10.</summary>
+        /// <summary>Control the maximum concurrency of container repository sync for this node</summary>
         public int? ContainerRepositoriesMaxCapacity { get; set; }
-        /// <summary>Specifying whether this site will be enabled. Defaults to true.</summary>
+        /// <summary>Flag indicating if the Geo node is enabled</summary>
         public bool? Enabled { get; set; }
-        /// <summary>Control the maximum concurrency of LFS/attachment backfill for this secondary site. Defaults to 10.</summary>
+        /// <summary>Control the maximum concurrency of LFS/attachment backfill for this secondary node</summary>
         public int? FilesMaxCapacity { get; set; }
-        /// <summary>The URL defined on the primary site that secondary site should use to contact it. Returns `url` if not set.</summary>
+        /// <summary>The URL defined on the primary node that secondary nodes should use to contact it. Returns `url` if not set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? InternalUrl { get; set; }
@@ -34,9 +32,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string InternalUrl { get; set; }
 #endif
-        /// <summary>The interval (in days) in which the repository verification is valid. Once expired, it will be reverified. This has no effect when set on a secondary site.</summary>
+        /// <summary>The interval (in days) in which the repository verification is valid. Once expired, it will be reverified. This has no effect when set on a secondary node.</summary>
         public int? MinimumReverificationInterval { get; set; }
-        /// <summary>The unique identifier for the Geo site. Must match `geo_node_name` if it is set in `gitlab.rb`, otherwise it must match `external_url`</summary>
+        /// <summary>The unique identifier for the Geo node. Must match `geo_node_name` if it is set in gitlab.rb, otherwise it must match `external_url`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -44,9 +42,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>Specifying whether this site will be primary. Defaults to false.</summary>
-        public bool? Primary { get; set; }
-        /// <summary>Control the maximum concurrency of repository backfill for this secondary site. Defaults to 25.</summary>
+        /// <summary>Control the maximum concurrency of repository backfill for this secondary node</summary>
         public int? ReposMaxCapacity { get; set; }
         /// <summary>The IDs of groups that should be synced, if `selective_sync_type` == `namespaces`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -80,9 +76,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string SelectiveSyncType { get; set; }
 #endif
-        /// <summary>Flag indicating if the secondary Geo site will replicate blobs in Object Storage. Defaults to false.</summary>
+        /// <summary>Flag indicating if the secondary Geo node will replicate blobs in Object Storage</summary>
         public bool? SyncObjectStorage { get; set; }
-        /// <summary>The user-facing URL for the Geo site</summary>
+        /// <summary>The user-facing URL of the Geo node</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Url { get; set; }
@@ -90,24 +86,24 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Url { get; set; }
 #endif
-        /// <summary>Control the maximum concurrency of repository verification for this site. Defaults to 100.</summary>
+        /// <summary>Control the maximum concurrency of repository verification for this node</summary>
         public int? VerificationMaxCapacity { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB85115Ec6B7F"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE92F17Ef2431"/> and sets the default values.
         /// </summary>
-        public RequestBodyB85115Ec6B7F()
+        public RequestBodyE92F17Ef2431()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB85115Ec6B7F"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE92F17Ef2431"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB85115Ec6B7F CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE92F17Ef2431 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB85115Ec6B7F();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyE92F17Ef2431();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -117,7 +113,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "blob_download_timeout", n => { BlobDownloadTimeout = n.GetIntValue(); } },
                 { "checksum_mismatch_report_threshold", n => { ChecksumMismatchReportThreshold = n.GetIntValue(); } },
                 { "checksum_mismatch_self_heal_cooldown_minutes", n => { ChecksumMismatchSelfHealCooldownMinutes = n.GetIntValue(); } },
                 { "container_repositories_max_capacity", n => { ContainerRepositoriesMaxCapacity = n.GetIntValue(); } },
@@ -126,7 +121,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "internal_url", n => { InternalUrl = n.GetStringValue(); } },
                 { "minimum_reverification_interval", n => { MinimumReverificationInterval = n.GetIntValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "primary", n => { Primary = n.GetBoolValue(); } },
                 { "repos_max_capacity", n => { ReposMaxCapacity = n.GetIntValue(); } },
                 { "selective_sync_namespace_ids", n => { SelectiveSyncNamespaceIds = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
                 { "selective_sync_organization_ids", n => { SelectiveSyncOrganizationIds = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
@@ -144,7 +138,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("blob_download_timeout", BlobDownloadTimeout);
             writer.WriteIntValue("checksum_mismatch_report_threshold", ChecksumMismatchReportThreshold);
             writer.WriteIntValue("checksum_mismatch_self_heal_cooldown_minutes", ChecksumMismatchSelfHealCooldownMinutes);
             writer.WriteIntValue("container_repositories_max_capacity", ContainerRepositoriesMaxCapacity);
@@ -153,7 +146,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("internal_url", InternalUrl);
             writer.WriteIntValue("minimum_reverification_interval", MinimumReverificationInterval);
             writer.WriteStringValue("name", Name);
-            writer.WriteBoolValue("primary", Primary);
             writer.WriteIntValue("repos_max_capacity", ReposMaxCapacity);
             writer.WriteCollectionOfPrimitiveValues<int?>("selective_sync_namespace_ids", SelectiveSyncNamespaceIds);
             writer.WriteCollectionOfPrimitiveValues<int?>("selective_sync_organization_ids", SelectiveSyncOrganizationIds);
