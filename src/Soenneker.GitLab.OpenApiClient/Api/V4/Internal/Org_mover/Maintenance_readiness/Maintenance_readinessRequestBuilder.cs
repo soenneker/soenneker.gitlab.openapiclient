@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Org_mover.Maintenance_r
         {
         }
         /// <summary>
-        /// Reports whether an organization is drained and safe to enter maintenance.
+        /// Reports whether an organization is drained and safe to enter maintenance, and what is blocking it when not.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Org_mover.Maintenance_r
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Reports whether an organization is drained and safe to enter maintenance.
+        /// Reports whether an organization is drained and safe to enter maintenance, and what is blocking it when not.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -78,7 +78,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Org_mover.Maintenance_r
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Org_mover.Maintenance_readiness.Maintenance_readinessRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Reports whether an organization is drained and safe to enter maintenance.
+        /// Reports whether an organization is drained and safe to enter maintenance, and what is blocking it when not.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Maintenance_readinessRequestBuilderGetQueryParameters 
