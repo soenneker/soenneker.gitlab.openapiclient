@@ -1154,6 +1154,22 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string DuoAgentPlatformEnabled { get; set; }
 #endif
+        /// <summary>The duo_auto_mode_availability property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DuoAutoModeAvailability { get; set; }
+#nullable restore
+#else
+        public string DuoAutoModeAvailability { get; set; }
+#endif
+        /// <summary>The duo_auto_mode_enabled property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DuoAutoModeEnabled { get; set; }
+#nullable restore
+#else
+        public string DuoAutoModeEnabled { get; set; }
+#endif
         /// <summary>The duo_availability property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -5423,6 +5439,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "downstream_pipeline_trigger_limit_per_project_user_sha", n => { DownstreamPipelineTriggerLimitPerProjectUserSha = n.GetStringValue(); } },
                 { "dsa_key_restriction", n => { DsaKeyRestriction = n.GetStringValue(); } },
                 { "duo_agent_platform_enabled", n => { DuoAgentPlatformEnabled = n.GetStringValue(); } },
+                { "duo_auto_mode_availability", n => { DuoAutoModeAvailability = n.GetStringValue(); } },
+                { "duo_auto_mode_enabled", n => { DuoAutoModeEnabled = n.GetStringValue(); } },
                 { "duo_availability", n => { DuoAvailability = n.GetStringValue(); } },
                 { "duo_chat_expiration_column", n => { DuoChatExpirationColumn = n.GetStringValue(); } },
                 { "duo_chat_expiration_days", n => { DuoChatExpirationDays = n.GetStringValue(); } },
@@ -6096,6 +6114,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("downstream_pipeline_trigger_limit_per_project_user_sha", DownstreamPipelineTriggerLimitPerProjectUserSha);
             writer.WriteStringValue("dsa_key_restriction", DsaKeyRestriction);
             writer.WriteStringValue("duo_agent_platform_enabled", DuoAgentPlatformEnabled);
+            writer.WriteStringValue("duo_auto_mode_availability", DuoAutoModeAvailability);
+            writer.WriteStringValue("duo_auto_mode_enabled", DuoAutoModeEnabled);
             writer.WriteStringValue("duo_availability", DuoAvailability);
             writer.WriteStringValue("duo_chat_expiration_column", DuoChatExpirationColumn);
             writer.WriteStringValue("duo_chat_expiration_days", DuoChatExpirationDays);

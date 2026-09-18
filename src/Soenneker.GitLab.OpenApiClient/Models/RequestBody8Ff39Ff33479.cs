@@ -9,7 +9,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class RequestBodyEd4B8B8E97Cd : IAdditionalDataHolder, IParsable
+    public partial class RequestBody8Ff39Ff33479 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -32,7 +32,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>Enables pull mirroring in a project</summary>
         public bool? Enabled { get; set; }
-        /// <summary>Only mirror branches with names that match this regex. Mutually exclusive with `only_protected_branches`.</summary>
+        /// <summary>Only mirror branches with names that match this regex. Mutually exclusive with `only_mirror_protected_branches`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MirrorBranchRegex { get; set; }
@@ -44,16 +44,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public bool? MirrorOverwritesDivergedBranches { get; set; }
         /// <summary>Pull mirroring triggers builds</summary>
         public bool? MirrorTriggerBuilds { get; set; }
-        /// <summary>Only mirror protected branches</summary>
+        /// <summary>Only mirror protected branches. Mutually exclusive with `mirror_branch_regex`.</summary>
         public bool? OnlyMirrorProtectedBranches { get; set; }
-        /// <summary>Mutually exclusive with `mirror_branch_regex`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? OnlyProtectedBranches { get; set; }
-#nullable restore
-#else
-        public string OnlyProtectedBranches { get; set; }
-#endif
         /// <summary>URL of the project to pull mirror</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -63,21 +55,21 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Url { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyEd4B8B8E97Cd"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8Ff39Ff33479"/> and sets the default values.
         /// </summary>
-        public RequestBodyEd4B8B8E97Cd()
+        public RequestBody8Ff39Ff33479()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyEd4B8B8E97Cd"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8Ff39Ff33479"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyEd4B8B8E97Cd CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8Ff39Ff33479 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyEd4B8B8E97Cd();
+            return new global::Soenneker.GitLab.OpenApiClient.Models.RequestBody8Ff39Ff33479();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -94,7 +86,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "mirror_overwrites_diverged_branches", n => { MirrorOverwritesDivergedBranches = n.GetBoolValue(); } },
                 { "mirror_trigger_builds", n => { MirrorTriggerBuilds = n.GetBoolValue(); } },
                 { "only_mirror_protected_branches", n => { OnlyMirrorProtectedBranches = n.GetBoolValue(); } },
-                { "only_protected_branches", n => { OnlyProtectedBranches = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }
@@ -112,7 +103,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("mirror_overwrites_diverged_branches", MirrorOverwritesDivergedBranches);
             writer.WriteBoolValue("mirror_trigger_builds", MirrorTriggerBuilds);
             writer.WriteBoolValue("only_mirror_protected_branches", OnlyMirrorProtectedBranches);
-            writer.WriteStringValue("only_protected_branches", OnlyProtectedBranches);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);
         }

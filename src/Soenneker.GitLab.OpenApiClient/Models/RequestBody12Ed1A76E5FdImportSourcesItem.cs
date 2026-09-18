@@ -5,7 +5,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public enum RequestBody5482Fda793E3ImportSourcesItem
+    public enum RequestBody12Ed1A76E5FdImportSourcesItem
     #pragma warning restore CS1591
     {
         [EnumMember(Value = "github")]

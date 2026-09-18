@@ -16,6 +16,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The created_at property</summary>
         public DateTimeOffset? CreatedAt { get; set; }
+        /// <summary>SHA256 fingerprint of the SSH certificate authority public key</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Fingerprint { get; set; }
+#nullable restore
+#else
+        public string Fingerprint { get; set; }
+#endif
         /// <summary>The id property</summary>
         public long? Id { get; set; }
         /// <summary>The key property</summary>
@@ -60,6 +68,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
+                { "fingerprint", n => { Fingerprint = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetLongValue(); } },
                 { "key", n => { Key = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
@@ -73,6 +82,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
+            writer.WriteStringValue("fingerprint", Fingerprint);
             writer.WriteLongValue("id", Id);
             writer.WriteStringValue("key", Key);
             writer.WriteStringValue("title", Title);
