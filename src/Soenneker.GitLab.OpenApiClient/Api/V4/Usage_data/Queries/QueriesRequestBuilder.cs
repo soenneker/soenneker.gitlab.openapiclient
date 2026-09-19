@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Usage_data.Queries
         {
         }
         /// <summary>
-        /// Lists all raw SQL queries used to compute Service Ping. This action is behind the `usage_data_queries_api` feature flag. Administrators only.
+        /// Lists all raw SQL queries used to compute Service Ping. Administrators only.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Usage_data.Queries
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Lists all raw SQL queries used to compute Service Ping. This action is behind the `usage_data_queries_api` feature flag. Administrators only.
+        /// Lists all raw SQL queries used to compute Service Ping. Administrators only.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

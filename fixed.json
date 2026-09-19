@@ -38204,7 +38204,7 @@
           "Usage data"
         ],
         "summary": "List all Service Ping SQL queries",
-        "description": "Lists all raw SQL queries used to compute Service Ping. This action is behind the \u0060usage_data_queries_api\u0060 feature flag. Administrators only.",
+        "description": "Lists all raw SQL queries used to compute Service Ping. Administrators only.",
         "operationId": "GetApiV4UsageDataQueries",
         "responses": {
           "200": {
