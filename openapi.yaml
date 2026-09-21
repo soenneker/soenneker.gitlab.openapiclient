@@ -821,12 +821,15 @@ tags:
   description: |-
     Use this API to retrieve information about [SSH keys](https://docs.gitlab.com/user/ssh/), manage a
     user's SSH and [GPG keys](https://docs.gitlab.com/user/project/repository/signed_commits/gpg/),
-    and manage [SSH certificates for top-level groups](https://docs.gitlab.com/user/group/ssh_certificates/).
+    and manage SSH certificates for [top-level groups](https://docs.gitlab.com/user/group/ssh_certificates/)
+    and [the instance](https://docs.gitlab.com/api/instance_ssh_certificates/).
 
     Queries about deploy key fingerprints also retrieve information about the projects using that key.
     If you use a SHA256 fingerprint in an API call, URL-encode the fingerprint.
 
     Managing group SSH certificates requires the Owner role for a top-level group.
+
+    Managing instance SSH certificates requires administrator access.
   x-displayName: Keys
   externalDocs:
     url: https://docs.gitlab.com/api/user_keys/
@@ -19866,7 +19869,7 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/RequestBody_12ed1a76e5fd"
+              "$ref": "#/components/schemas/RequestBody_c47606fab71c"
   "/api/v4/service_accounts":
     post:
       operationId: postApiV4ServiceAccounts
@@ -82311,6 +82314,10 @@ components:
               for tools execution.
             mcp_orbit: Grants access to the Orbit Knowledge Graph MCP server for graph
               queries and schema retrieval.
+    apiKey:
+      type: apiKey
+      name: PRIVATE-TOKEN
+      in: header
   schemas:
     APIEntitiesGitlabSubscription:
       type: object
@@ -106613,7 +106620,7 @@ components:
           description: Scopes available to the application. Separate multiple scopes
             with a space.
           nullable: true
-    RequestBody_12ed1a76e5fd:
+    RequestBody_c47606fab71c:
       type: object
       properties:
         admin_mode:
@@ -109679,6 +109686,9 @@ components:
           type: string
           nullable: true
         dependency_scanning_sbom_scan_api_download_limit:
+          type: string
+          nullable: true
+        auto_duo_code_review_on_push_enabled:
           type: string
           nullable: true
     RequestBody_4d6a710f0d2d:
@@ -125205,3 +125215,4 @@ components:
 security:
 - http: []
 - oauth2: []
+- apiKey: []

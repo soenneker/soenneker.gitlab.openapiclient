@@ -613,7 +613,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "beta"
       }
     },
     "/api/v4/orbit/query/{name}": {
@@ -654,7 +655,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "beta"
       }
     },
     "/api/v4/orbit/query/templates": {
@@ -672,7 +674,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "beta"
       }
     },
     "/api/v4/orbit/schema": {
@@ -709,7 +712,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "beta"
       }
     },
     "/api/v4/orbit/status": {
@@ -737,7 +741,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "beta"
       }
     },
     "/api/v4/orbit/tools": {
@@ -755,7 +760,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "beta"
       }
     },
     "/api/v4/jobs/{id}/sbom_scans/authorize": {
@@ -1095,7 +1101,8 @@
           "404": {
             "description": "Not Found"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/duo_code_review/evaluations": {
@@ -1185,7 +1192,8 @@
           "403": {
             "description": "Forbidden"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/code_suggestions/completions": {
@@ -1417,7 +1425,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "beta"
       }
     },
     "/api/v4/ai/third_party_agents/direct_access": {
@@ -1444,7 +1453,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/projects/{id}/ai_agent/sessions": {
@@ -1511,7 +1521,8 @@
           "429": {
             "description": "Too many requests"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       },
       "get": {
         "tags": [
@@ -1619,7 +1630,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/projects/{id}/ai_agent/sessions/{sessionId}": {
@@ -1692,7 +1704,8 @@
           "404": {
             "description": "Not found"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/projects/{id}/ai_agent/identities": {
@@ -1756,7 +1769,8 @@
           "404": {
             "description": "Not found"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/projects/{id}/ai_agent/audit_events": {
@@ -1816,7 +1830,8 @@
           "429": {
             "description": "Too many requests"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/ai/duo_workflows/workflows/{id}/audit_events": {
@@ -1895,7 +1910,8 @@
           "404": {
             "description": "Not found"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/ai/duo_workflows/code_review/add_comments": {
@@ -1932,7 +1948,8 @@
           "404": {
             "description": "Not found"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/ai/duo_workflows/code_review/custom_instructions": {
@@ -1981,7 +1998,8 @@
           "404": {
             "description": "Not found"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/ai/duo_workflows/agent_workflows": {
@@ -2017,7 +2035,8 @@
           "404": {
             "description": "Not found"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/ai/duo_workflows/revoke_token": {
@@ -2524,7 +2543,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/ai/duo_workflows/list_tools": {
@@ -2565,7 +2585,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/ai/duo_workflows/ws": {
@@ -2603,7 +2624,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/ai/duo_workflows/workflows/{workflowId}/trace.jsonl": {
@@ -2662,7 +2684,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/ai/duo_workflows/workflows": {
@@ -2698,7 +2721,8 @@
           "404": {
             "description": "Not found"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/ai/duo_workflows/workflows/agent_privileges": {
@@ -2768,7 +2792,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/ai/duo_workflows/workflows/{workflowId}/resume": {
@@ -7009,7 +7034,8 @@
           "404": {
             "description": "Not Found"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/vulnerabilities/{id}": {
@@ -7048,7 +7074,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/vulnerabilities/{id}/resolve": {
@@ -7416,7 +7443,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/projects/{id}/google_cloud/setup/runner_deployment_project.sh": {
@@ -7473,7 +7501,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/projects/{id}/approvals": {
@@ -11356,7 +11385,8 @@
           "404": {
             "description": "Not Found"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       },
       "get": {
         "tags": [
@@ -13982,7 +14012,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "post": {
         "tags": [
@@ -16533,7 +16564,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       },
       "post": {
         "tags": [
@@ -16582,7 +16614,8 @@
           "404": {
             "description": "Not found"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/runner_controllers/{runnerControllerId}/tokens/{id}": {
@@ -16633,7 +16666,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       },
       "delete": {
         "tags": [
@@ -16675,7 +16709,8 @@
           "404": {
             "description": "Not found"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/runner_controllers/{runnerControllerId}/tokens/{id}/rotate": {
@@ -16726,7 +16761,8 @@
           "404": {
             "description": "Not found"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/runner_controllers/{id}/scopes": {
@@ -16761,7 +16797,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/runner_controllers/{id}/scopes/instance": {
@@ -16988,7 +17025,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       },
       "post": {
         "tags": [
@@ -17023,7 +17061,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/runner_controllers/{id}": {
@@ -17065,7 +17104,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       },
       "put": {
         "tags": [
@@ -17114,7 +17154,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       },
       "delete": {
         "tags": [
@@ -17154,7 +17195,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/audit_events": {
@@ -17355,7 +17397,8 @@
           "429": {
             "description": "Too many requests"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/admin/data_management/{modelName}/{recordIdentifier}": {
@@ -17418,7 +17461,8 @@
           "404": {
             "description": "404 Model Not Found"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/admin/data_management/{modelName}/{recordIdentifier}/checksum": {
@@ -17474,7 +17518,8 @@
           "404": {
             "description": "404 Model Not Found"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/admin/data_management/{modelName}": {
@@ -17589,7 +17634,8 @@
           "404": {
             "description": "404 Model Not Found"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/admin/data_management/{modelName}/checksum": {
@@ -17645,7 +17691,8 @@
           "404": {
             "description": "404 Model Not Found"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/admin/security/compliance_policy_settings": {
@@ -26054,7 +26101,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody12Ed1A76E5Fd"
+                "$ref": "#/components/schemas/RequestBodyC47606Fab71C"
               }
             }
           }
@@ -44658,7 +44705,8 @@
           "404": {
             "description": "Not Found"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "beta"
       }
     },
     "/api/v4/projects/{id}/repository/changed_paths": {
@@ -44767,7 +44815,8 @@
           "429": {
             "description": "Too Many Requests"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "beta"
       }
     },
     "/api/v4/projects/{id}/repository/diverging_commits": {
@@ -44857,7 +44906,8 @@
           "429": {
             "description": "Too many requests"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/projects/{id}/repository/diff_stats": {
@@ -44957,7 +45007,8 @@
           "429": {
             "description": "Too many requests"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "beta"
       }
     },
     "/api/v4/projects/{id}/repository/changelog": {
@@ -57636,7 +57687,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/organizations/{id}": {
@@ -57674,7 +57726,8 @@
           "404": {
             "description": "Not found"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/offline_exports": {
@@ -72867,7 +72920,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       },
       "get": {
         "tags": [
@@ -72890,7 +72944,8 @@
           "401": {
             "description": "Unauthorized"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/integrations/jira_forge/subscriptions/{id}": {
@@ -72938,7 +72993,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/integrations/jira_forge/installation": {
@@ -72981,7 +73037,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/integrations/jira_forge/installation/forge_token": {
@@ -73012,7 +73069,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/integrations/jira_connect/subscriptions": {
@@ -108971,7 +109029,8 @@
           "422": {
             "description": "Unprocessable entity"
           }
-        }
+        },
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/groups/{id}/share": {
@@ -146901,7 +146960,7 @@
           }
         }
       },
-      "RequestBody12Ed1A76E5Fd": {
+      "RequestBodyC47606Fab71C": {
         "type": "object",
         "properties": {
           "admin_mode": {
@@ -147001,19 +147060,19 @@
             "nullable": true
           },
           "default_project_creation": {
-            "$ref": "#/components/schemas/RequestBody12Ed1A76E5FdDefaultProjectCreation"
+            "$ref": "#/components/schemas/RequestBodyC47606Fab71CDefaultProjectCreation"
           },
           "default_branch_protection": {
-            "$ref": "#/components/schemas/RequestBody12Ed1A76E5FdDefaultBranchProtection"
+            "$ref": "#/components/schemas/RequestBodyC47606Fab71CDefaultBranchProtection"
           },
           "default_branch_protection_defaults": {
-            "$ref": "#/components/schemas/RequestBody12Ed1A76E5FdDefaultBranchProtectionDefaults"
+            "$ref": "#/components/schemas/RequestBodyC47606Fab71CDefaultBranchProtectionDefaults"
           },
           "default_group_visibility": {
-            "$ref": "#/components/schemas/RequestBody12Ed1A76E5FdDefaultGroupVisibility"
+            "$ref": "#/components/schemas/RequestBodyC47606Fab71CDefaultGroupVisibility"
           },
           "default_project_visibility": {
-            "$ref": "#/components/schemas/RequestBody12Ed1A76E5FdDefaultProjectVisibility"
+            "$ref": "#/components/schemas/RequestBodyC47606Fab71CDefaultProjectVisibility"
           },
           "default_projects_limit": {
             "type": "integer",
@@ -147021,10 +147080,10 @@
             "nullable": true
           },
           "default_snippet_visibility": {
-            "$ref": "#/components/schemas/RequestBody12Ed1A76E5FdDefaultSnippetVisibility"
+            "$ref": "#/components/schemas/RequestBodyC47606Fab71CDefaultSnippetVisibility"
           },
           "dependency_management_settings": {
-            "$ref": "#/components/schemas/RequestBody12Ed1A76E5FdDependencyManagementSettings"
+            "$ref": "#/components/schemas/RequestBodyC47606Fab71CDependencyManagementSettings"
           },
           "disable_admin_oauth_scopes": {
             "type": "boolean",
@@ -147122,10 +147181,10 @@
             "nullable": true
           },
           "email_confirmation_setting": {
-            "$ref": "#/components/schemas/RequestBody12Ed1A76E5FdEmailConfirmationSetting"
+            "$ref": "#/components/schemas/RequestBodyC47606Fab71CEmailConfirmationSetting"
           },
           "enabled_git_access_protocol": {
-            "$ref": "#/components/schemas/RequestBody12Ed1A76E5FdEnabledGitAccessProtocol"
+            "$ref": "#/components/schemas/RequestBodyC47606Fab71CEnabledGitAccessProtocol"
           },
           "gitpod_enabled": {
             "type": "boolean",
@@ -147225,7 +147284,7 @@
           "import_sources": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBody12Ed1A76E5FdImportSourcesItem"
+              "$ref": "#/components/schemas/RequestBodyC47606Fab71CImportSourcesItem"
             },
             "description": "Enabled sources for code import during project creation. OmniAuth must be configured for GitHub, Bitbucket, and GitLab.com",
             "nullable": true
@@ -147421,7 +147480,7 @@
             "nullable": true
           },
           "repository_storages_weighted": {
-            "$ref": "#/components/schemas/RequestBody12Ed1A76E5FdRepositoryStoragesWeightedProperty"
+            "$ref": "#/components/schemas/RequestBodyC47606Fab71CRepositoryStoragesWeightedProperty"
           },
           "require_two_factor_authentication": {
             "type": "boolean",
@@ -147585,7 +147644,7 @@
             "nullable": true
           },
           "whats_new_variant": {
-            "$ref": "#/components/schemas/RequestBody12Ed1A76E5FdWhatsNewVariant"
+            "$ref": "#/components/schemas/RequestBodyC47606Fab71CWhatsNewVariant"
           },
           "floc_enabled": {
             "type": "boolean",
@@ -147798,18 +147857,18 @@
             "nullable": true
           },
           "resource_usage_limits": {
-            "$ref": "#/components/schemas/RequestBody12Ed1A76E5FdResourceUsageLimitsProperty"
+            "$ref": "#/components/schemas/RequestBodyC47606Fab71CResourceUsageLimitsProperty"
           },
           "code_dropdown_custom_clients": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBody12Ed1A76E5FdCodeDropdownCustomClientsItem"
+              "$ref": "#/components/schemas/RequestBodyC47606Fab71CCodeDropdownCustomClientsItem"
             },
             "description": "Custom \u0022Open with\u0022 clients shown in the project Code dropdown list",
             "nullable": true
           },
           "vscode_extension_marketplace": {
-            "$ref": "#/components/schemas/RequestBody12Ed1A76E5FdVscodeExtensionMarketplace"
+            "$ref": "#/components/schemas/RequestBodyC47606Fab71CVscodeExtensionMarketplace"
           },
           "enable_language_server_restrictions": {
             "type": "boolean",
@@ -147827,28 +147886,28 @@
             "nullable": true
           },
           "logging_field_schema_version": {
-            "$ref": "#/components/schemas/RequestBody12Ed1A76E5FdLoggingFieldSchemaVersion"
+            "$ref": "#/components/schemas/RequestBodyC47606Fab71CLoggingFieldSchemaVersion"
           },
           "logging_field_dual_emit_target": {
-            "$ref": "#/components/schemas/RequestBody12Ed1A76E5FdLoggingFieldDualEmitTarget"
+            "$ref": "#/components/schemas/RequestBodyC47606Fab71CLoggingFieldDualEmitTarget"
           },
           "rsa_key_restriction": {
-            "$ref": "#/components/schemas/RequestBody12Ed1A76E5FdRsaKeyRestriction"
+            "$ref": "#/components/schemas/RequestBodyC47606Fab71CRsaKeyRestriction"
           },
           "dsa_key_restriction": {
-            "$ref": "#/components/schemas/RequestBody12Ed1A76E5FdDsaKeyRestriction"
+            "$ref": "#/components/schemas/RequestBodyC47606Fab71CDsaKeyRestriction"
           },
           "ecdsa_key_restriction": {
-            "$ref": "#/components/schemas/RequestBody12Ed1A76E5FdEcdsaKeyRestriction"
+            "$ref": "#/components/schemas/RequestBodyC47606Fab71CEcdsaKeyRestriction"
           },
           "ed25519_key_restriction": {
-            "$ref": "#/components/schemas/RequestBody12Ed1A76E5FdEd25519KeyRestriction"
+            "$ref": "#/components/schemas/RequestBodyC47606Fab71CEd25519KeyRestriction"
           },
           "ecdsa_sk_key_restriction": {
-            "$ref": "#/components/schemas/RequestBody12Ed1A76E5FdEcdsaSkKeyRestriction"
+            "$ref": "#/components/schemas/RequestBodyC47606Fab71CEcdsaSkKeyRestriction"
           },
           "ed25519_sk_key_restriction": {
-            "$ref": "#/components/schemas/RequestBody12Ed1A76E5FdEd25519SkKeyRestriction"
+            "$ref": "#/components/schemas/RequestBodyC47606Fab71CEd25519SkKeyRestriction"
           },
           "allow_account_deletion": {
             "type": "string",
@@ -149005,7 +149064,7 @@
           "duo_namespace_access_rules": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBody12Ed1A76E5FdDuoNamespaceAccessRulesItem"
+              "$ref": "#/components/schemas/RequestBodyC47606Fab71CDuoNamespaceAccessRulesItem"
             },
             "description": "AI entity access rules for controlling Duo feature access",
             "nullable": true
@@ -150022,6 +150081,10 @@
             "nullable": true
           },
           "dependency_scanning_sbom_scan_api_download_limit": {
+            "type": "string",
+            "nullable": true
+          },
+          "auto_duo_code_review_on_push_enabled": {
             "type": "string",
             "nullable": true
           }
@@ -164823,13 +164886,13 @@
           }
         }
       },
-      "RequestBody12Ed1A76E5FdDefaultBranchProtectionDefaults": {
+      "RequestBodyC47606Fab71CDefaultBranchProtectionDefaults": {
         "type": "object",
         "properties": {
           "allowed_to_push": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBody12Ed1A76E5FdDefaultBranchProtectionDefaultsAllowedToPushItem"
+              "$ref": "#/components/schemas/RequestBodyC47606Fab71CDefaultBranchProtectionDefaultsAllowedToPushItem"
             },
             "description": "An array of access levels allowed to push",
             "nullable": true
@@ -164842,7 +164905,7 @@
           "allowed_to_merge": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBody12Ed1A76E5FdDefaultBranchProtectionDefaultsAllowedToMergeItem"
+              "$ref": "#/components/schemas/RequestBodyC47606Fab71CDefaultBranchProtectionDefaultsAllowedToMergeItem"
             },
             "description": "An array of access levels allowed to merge",
             "nullable": true
@@ -164861,7 +164924,7 @@
         "description": "Determine if developers can push to default branch",
         "nullable": true
       },
-      "RequestBody12Ed1A76E5FdDependencyManagementSettings": {
+      "RequestBodyC47606Fab71CDependencyManagementSettings": {
         "type": "object",
         "properties": {
           "security_update_scheduler_max_concurrency": {
@@ -164873,7 +164936,7 @@
         "description": "Dependency management settings",
         "nullable": true
       },
-      "RequestBody12Ed1A76E5FdRepositoryStoragesWeighted": {
+      "RequestBodyC47606Fab71CRepositoryStoragesWeighted": {
         "type": "object",
         "additionalProperties": {
           "type": "integer"
@@ -164881,12 +164944,12 @@
         "description": "Storage paths for new projects with a weighted value ranging from 0 to 100",
         "nullable": true
       },
-      "RequestBody12Ed1A76E5FdResourceUsageLimits": {
+      "RequestBodyC47606Fab71CResourceUsageLimits": {
         "type": "object",
         "description": "Definition for resource usage limits enforced in Sidekiq workers",
         "nullable": true
       },
-      "RequestBody12Ed1A76E5FdCodeDropdownCustomClientsItem": {
+      "RequestBodyC47606Fab71CCodeDropdownCustomClientsItem": {
         "required": [
           "name"
         ],
@@ -164909,7 +164972,7 @@
           }
         }
       },
-      "RequestBody12Ed1A76E5FdVscodeExtensionMarketplace": {
+      "RequestBodyC47606Fab71CVscodeExtensionMarketplace": {
         "type": "object",
         "properties": {
           "enabled": {
@@ -164923,20 +164986,20 @@
             "nullable": true
           },
           "custom_values": {
-            "$ref": "#/components/schemas/RequestBody12Ed1A76E5FdVscodeExtensionMarketplaceCustomValuesProperty"
+            "$ref": "#/components/schemas/RequestBodyC47606Fab71CVscodeExtensionMarketplaceCustomValuesProperty"
           }
         },
         "description": "Settings for VS Code Extension Marketplace",
         "nullable": true
       },
-      "RequestBody12Ed1A76E5FdDuoNamespaceAccessRulesItem": {
+      "RequestBodyC47606Fab71CDuoNamespaceAccessRulesItem": {
         "required": [
           "features"
         ],
         "type": "object",
         "properties": {
           "through_namespace": {
-            "$ref": "#/components/schemas/RequestBody12Ed1A76E5FdDuoNamespaceAccessRulesItemThroughNamespace"
+            "$ref": "#/components/schemas/RequestBodyC47606Fab71CDuoNamespaceAccessRulesItemThroughNamespace"
           },
           "features": {
             "type": "array",
@@ -168381,34 +168444,34 @@
         "description": "Data for rendering the vulnerabilities by severity count in PDF reports",
         "nullable": true
       },
-      "RequestBody12Ed1A76E5FdDefaultBranchProtectionDefaultsAllowedToPushItem": {
+      "RequestBodyC47606Fab71CDefaultBranchProtectionDefaultsAllowedToPushItem": {
         "required": [
           "access_level"
         ],
         "type": "object",
         "properties": {
           "access_level": {
-            "$ref": "#/components/schemas/RequestBody12Ed1A76E5FdDefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyC47606Fab71CDefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel"
           }
         }
       },
-      "RequestBody12Ed1A76E5FdDefaultBranchProtectionDefaultsAllowedToMergeItem": {
+      "RequestBodyC47606Fab71CDefaultBranchProtectionDefaultsAllowedToMergeItem": {
         "required": [
           "access_level"
         ],
         "type": "object",
         "properties": {
           "access_level": {
-            "$ref": "#/components/schemas/RequestBody12Ed1A76E5FdDefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyC47606Fab71CDefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel"
           }
         }
       },
-      "RequestBody12Ed1A76E5FdVscodeExtensionMarketplaceCustomValues": {
+      "RequestBodyC47606Fab71CVscodeExtensionMarketplaceCustomValues": {
         "type": "object",
         "description": "VS Code Extension Marketplace URL\u0027s when preset is \u0027custom\u0027",
         "nullable": true
       },
-      "RequestBody12Ed1A76E5FdDuoNamespaceAccessRulesItemThroughNamespace": {
+      "RequestBodyC47606Fab71CDuoNamespaceAccessRulesItemThroughNamespace": {
         "required": [
           "id"
         ],
@@ -170439,14 +170502,14 @@
         "type": "object",
         "description": "Context parameters (user, namespace, project). An actor context is resolved from the user. Defaults to current user."
       },
-      "RequestBody12Ed1A76E5FdRepositoryStoragesWeightedProperty": {
+      "RequestBodyC47606Fab71CRepositoryStoragesWeightedProperty": {
         "type": "object",
         "additionalProperties": {
           "type": "integer"
         },
         "description": "Storage paths for new projects with a weighted value ranging from 0 to 100"
       },
-      "RequestBody12Ed1A76E5FdResourceUsageLimitsProperty": {
+      "RequestBodyC47606Fab71CResourceUsageLimitsProperty": {
         "type": "object",
         "description": "Definition for resource usage limits enforced in Sidekiq workers"
       },
@@ -170552,7 +170615,7 @@
         "type": "object",
         "description": "Data for rendering the vulnerabilities by age in PDF reports"
       },
-      "RequestBody12Ed1A76E5FdVscodeExtensionMarketplaceCustomValuesProperty": {
+      "RequestBodyC47606Fab71CVscodeExtensionMarketplaceCustomValuesProperty": {
         "type": "object",
         "description": "VS Code Extension Marketplace URL\u0027s when preset is \u0027custom\u0027"
       },
@@ -172726,7 +172789,7 @@
           ]
         }
       },
-      "RequestBody12Ed1A76E5FdDefaultProjectCreation": {
+      "RequestBodyC47606Fab71CDefaultProjectCreation": {
         "enum": [
           0,
           3,
@@ -172739,7 +172802,7 @@
         "description": "Determine if developers can create projects in the group",
         "nullable": true
       },
-      "RequestBody12Ed1A76E5FdDefaultBranchProtection": {
+      "RequestBodyC47606Fab71CDefaultBranchProtection": {
         "enum": [
           0,
           3,
@@ -172752,7 +172815,7 @@
         "description": "Determine if developers can push to default branch",
         "nullable": true
       },
-      "RequestBody12Ed1A76E5FdDefaultGroupVisibility": {
+      "RequestBodyC47606Fab71CDefaultGroupVisibility": {
         "enum": [
           "private",
           "internal",
@@ -172763,7 +172826,7 @@
         "description": "The default group visibility",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody12Ed1A76E5FdDefaultGroupVisibility",
+          "name": "RequestBodyC47606Fab71CDefaultGroupVisibility",
           "modelAsString": false,
           "values": [
             {
@@ -172781,7 +172844,7 @@
           ]
         }
       },
-      "RequestBody12Ed1A76E5FdDefaultProjectVisibility": {
+      "RequestBodyC47606Fab71CDefaultProjectVisibility": {
         "enum": [
           "private",
           "internal",
@@ -172792,7 +172855,7 @@
         "description": "The default project visibility",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody12Ed1A76E5FdDefaultProjectVisibility",
+          "name": "RequestBodyC47606Fab71CDefaultProjectVisibility",
           "modelAsString": false,
           "values": [
             {
@@ -172810,7 +172873,7 @@
           ]
         }
       },
-      "RequestBody12Ed1A76E5FdDefaultSnippetVisibility": {
+      "RequestBodyC47606Fab71CDefaultSnippetVisibility": {
         "enum": [
           "private",
           "internal",
@@ -172821,7 +172884,7 @@
         "description": "The default snippet visibility",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody12Ed1A76E5FdDefaultSnippetVisibility",
+          "name": "RequestBodyC47606Fab71CDefaultSnippetVisibility",
           "modelAsString": false,
           "values": [
             {
@@ -172839,7 +172902,7 @@
           ]
         }
       },
-      "RequestBody12Ed1A76E5FdEmailConfirmationSetting": {
+      "RequestBodyC47606Fab71CEmailConfirmationSetting": {
         "enum": [
           "off",
           "soft",
@@ -172850,7 +172913,7 @@
         "description": "Email confirmation setting, possible values: \u0060off\u0060, \u0060soft\u0060, and \u0060hard\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody12Ed1A76E5FdEmailConfirmationSetting",
+          "name": "RequestBodyC47606Fab71CEmailConfirmationSetting",
           "modelAsString": false,
           "values": [
             {
@@ -172868,7 +172931,7 @@
           ]
         }
       },
-      "RequestBody12Ed1A76E5FdEnabledGitAccessProtocol": {
+      "RequestBodyC47606Fab71CEnabledGitAccessProtocol": {
         "enum": [
           "ssh",
           "http",
@@ -172879,7 +172942,7 @@
         "description": "Allow only the selected protocols to be used for Git access.",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody12Ed1A76E5FdEnabledGitAccessProtocol",
+          "name": "RequestBodyC47606Fab71CEnabledGitAccessProtocol",
           "modelAsString": false,
           "values": [
             {
@@ -172897,7 +172960,7 @@
           ]
         }
       },
-      "RequestBody12Ed1A76E5FdImportSourcesItem": {
+      "RequestBodyC47606Fab71CImportSourcesItem": {
         "enum": [
           "github",
           "bitbucket",
@@ -172911,7 +172974,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "RequestBody12Ed1A76E5FdImportSourcesItem",
+          "name": "RequestBodyC47606Fab71CImportSourcesItem",
           "modelAsString": false,
           "values": [
             {
@@ -172949,7 +173012,7 @@
           ]
         }
       },
-      "RequestBody12Ed1A76E5FdWhatsNewVariant": {
+      "RequestBodyC47606Fab71CWhatsNewVariant": {
         "enum": [
           "all_tiers",
           "current_tier",
@@ -172960,7 +173023,7 @@
         "description": "What\u0027s new variant, possible values: \u0060all_tiers\u0060, \u0060current_tier\u0060, and \u0060disabled\u0060.",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody12Ed1A76E5FdWhatsNewVariant",
+          "name": "RequestBodyC47606Fab71CWhatsNewVariant",
           "modelAsString": false,
           "values": [
             {
@@ -172978,7 +173041,7 @@
           ]
         }
       },
-      "RequestBody12Ed1A76E5FdLoggingFieldSchemaVersion": {
+      "RequestBodyC47606Fab71CLoggingFieldSchemaVersion": {
         "enum": [
           0,
           1
@@ -172988,7 +173051,7 @@
         "description": "Logging field schema version (v0, v1, \u2026). Cannot be downgraded.",
         "nullable": true
       },
-      "RequestBody12Ed1A76E5FdLoggingFieldDualEmitTarget": {
+      "RequestBodyC47606Fab71CLoggingFieldDualEmitTarget": {
         "enum": [
           1
         ],
@@ -172997,7 +173060,7 @@
         "description": "Version to dual-emit alongside schema_version. Must be strictly greater than schema_version, or omit/null to disable.",
         "nullable": true
       },
-      "RequestBody12Ed1A76E5FdRsaKeyRestriction": {
+      "RequestBodyC47606Fab71CRsaKeyRestriction": {
         "enum": [
           0,
           1024,
@@ -173011,7 +173074,7 @@
         "description": "Restrictions on the complexity of uploaded RSA keys. A value of -1 disables all RSA keys.",
         "nullable": true
       },
-      "RequestBody12Ed1A76E5FdDsaKeyRestriction": {
+      "RequestBodyC47606Fab71CDsaKeyRestriction": {
         "enum": [
           0,
           1024,
@@ -173024,7 +173087,7 @@
         "description": "Restrictions on the complexity of uploaded DSA keys. A value of -1 disables all DSA keys.",
         "nullable": true
       },
-      "RequestBody12Ed1A76E5FdEcdsaKeyRestriction": {
+      "RequestBodyC47606Fab71CEcdsaKeyRestriction": {
         "enum": [
           0,
           256,
@@ -173037,7 +173100,7 @@
         "description": "Restrictions on the complexity of uploaded ECDSA keys. A value of -1 disables all ECDSA keys.",
         "nullable": true
       },
-      "RequestBody12Ed1A76E5FdEd25519KeyRestriction": {
+      "RequestBodyC47606Fab71CEd25519KeyRestriction": {
         "enum": [
           0,
           256,
@@ -173048,7 +173111,7 @@
         "description": "Restrictions on the complexity of uploaded ED25519 keys. A value of -1 disables all ED25519 keys.",
         "nullable": true
       },
-      "RequestBody12Ed1A76E5FdEcdsaSkKeyRestriction": {
+      "RequestBodyC47606Fab71CEcdsaSkKeyRestriction": {
         "enum": [
           0,
           256,
@@ -173059,7 +173122,7 @@
         "description": "Restrictions on the complexity of uploaded ECDSA_SK keys. A value of -1 disables all ECDSA_SK keys.",
         "nullable": true
       },
-      "RequestBody12Ed1A76E5FdEd25519SkKeyRestriction": {
+      "RequestBodyC47606Fab71CEd25519SkKeyRestriction": {
         "enum": [
           0,
           256,
@@ -182786,7 +182849,7 @@
           ]
         }
       },
-      "RequestBody12Ed1A76E5FdDefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel": {
+      "RequestBodyC47606Fab71CDefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel": {
         "enum": [
           30,
           40,
@@ -182797,7 +182860,7 @@
         "additionalProperties": false,
         "description": "A valid access level"
       },
-      "RequestBody12Ed1A76E5FdDefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel": {
+      "RequestBodyC47606Fab71CDefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel": {
         "enum": [
           30,
           40,
@@ -195748,6 +195811,11 @@
             }
           }
         }
+      },
+      "apiKey": {
+        "type": "apiKey",
+        "name": "PRIVATE-TOKEN",
+        "in": "header"
       }
     }
   },
@@ -195757,6 +195825,9 @@
     },
     {
       "oauth2": []
+    },
+    {
+      "apiKey": []
     }
   ],
   "tags": [
@@ -196373,7 +196444,7 @@
     },
     {
       "name": "Keys",
-      "description": "Use this API to retrieve information about [SSH keys](https://docs.gitlab.com/user/ssh/), manage a\nuser\u0027s SSH and [GPG keys](https://docs.gitlab.com/user/project/repository/signed_commits/gpg/),\nand manage [SSH certificates for top-level groups](https://docs.gitlab.com/user/group/ssh_certificates/).\n\nQueries about deploy key fingerprints also retrieve information about the projects using that key.\nIf you use a SHA256 fingerprint in an API call, URL-encode the fingerprint.\n\nManaging group SSH certificates requires the Owner role for a top-level group.",
+      "description": "Use this API to retrieve information about [SSH keys](https://docs.gitlab.com/user/ssh/), manage a\nuser\u0027s SSH and [GPG keys](https://docs.gitlab.com/user/project/repository/signed_commits/gpg/),\nand manage SSH certificates for [top-level groups](https://docs.gitlab.com/user/group/ssh_certificates/)\nand [the instance](https://docs.gitlab.com/api/instance_ssh_certificates/).\n\nQueries about deploy key fingerprints also retrieve information about the projects using that key.\nIf you use a SHA256 fingerprint in an API call, URL-encode the fingerprint.\n\nManaging group SSH certificates requires the Owner role for a top-level group.\n\nManaging instance SSH certificates requires administrator access.",
       "externalDocs": {
         "url": "https://docs.gitlab.com/api/user_keys/"
       },
