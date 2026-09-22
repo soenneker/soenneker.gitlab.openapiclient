@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.GitLab.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -86,36 +87,22 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Dora.Metrics
             /// <summary>Date range to end at. ISO 8601 Date format, for example `2021-03-01`. Default is the current date</summary>
             [QueryParameter("end_date")]
             public Date? EndDate { get; set; }
-            /// <summary>The tiers of the environments. Default is `production`</summary>
+            /// <summary>The tiers of the environments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("environment_tiers")]
-            public string[]? EnvironmentTiers { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdDoraMetricsEnvironmentTiersParameterItem[]? EnvironmentTiers { get; set; }
 #nullable restore
 #else
             [QueryParameter("environment_tiers")]
-            public string[] EnvironmentTiers { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdDoraMetricsEnvironmentTiersParameterItem[] EnvironmentTiers { get; set; }
 #endif
-            /// <summary>The bucketing interval. One of `all`, `monthly` or `daily`. Default is `daily`</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
+            /// <summary>The bucketing interval.</summary>
             [QueryParameter("interval")]
-            public string? Interval { get; set; }
-#nullable restore
-#else
-            [QueryParameter("interval")]
-            public string Interval { get; set; }
-#endif
-            /// <summary>One of `deployment_frequency`, `lead_time_for_changes`, `time_to_restore_service` or `change_failure_rate`</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdDoraMetricsIntervalParameter? Interval { get; set; }
+            /// <summary>The DORA metric to fetch.</summary>
             [QueryParameter("metric")]
-            public string? Metric { get; set; }
-#nullable restore
-#else
-            [QueryParameter("metric")]
-            public string Metric { get; set; }
-#endif
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdDoraMetricsMetricParameter? Metric { get; set; }
             /// <summary>Date range to start from. ISO 8601 Date format, for example `2021-03-01`. Default is 3 months ago</summary>
             [QueryParameter("start_date")]
             public Date? StartDate { get; set; }

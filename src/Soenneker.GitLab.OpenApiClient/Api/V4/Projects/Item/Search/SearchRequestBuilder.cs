@@ -28,7 +28,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Search
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SearchRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/search?scope={scope}&search={search}{&confidential*,fields,num_context_lines*,page*,per_page*,ref*,regex*,state*,type}", pathParameters)
+        public SearchRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/search?scope={scope}&search={search}{&author_username*,confidential*,fields,label_name,not*,not%5Bauthor_username%5D*,not%5Bsource_branch%5D*,not%5Btarget_branch%5D*,num_context_lines*,page*,per_page*,ref*,regex*,source_branch*,state*,target_branch*,type}", pathParameters)
         {
         }
         /// <summary>
@@ -36,7 +36,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Search
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SearchRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/search?scope={scope}&search={search}{&confidential*,fields,num_context_lines*,page*,per_page*,ref*,regex*,state*,type}", rawUrl)
+        public SearchRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/search?scope={scope}&search={search}{&author_username*,confidential*,fields,label_name,not*,not%5Bauthor_username%5D*,not%5Bsource_branch%5D*,not%5Btarget_branch%5D*,num_context_lines*,page*,per_page*,ref*,regex*,source_branch*,state*,target_branch*,type}", rawUrl)
         {
         }
         /// <summary>
@@ -90,6 +90,16 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Search
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class SearchRequestBuilderGetQueryParameters 
         {
+            /// <summary>Filter by author username. A username that matches no user is ignored. Available with advanced search and the issues, merge_requests and work_items scopes.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("author_username")]
+            public string? AuthorUsername { get; set; }
+#nullable restore
+#else
+            [QueryParameter("author_username")]
+            public string AuthorUsername { get; set; }
+#endif
             /// <summary>Filter results by confidentiality</summary>
             [QueryParameter("confidential")]
             public bool? Confidential { get; set; }
@@ -102,6 +112,56 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Search
 #else
             [QueryParameter("fields")]
             public global::Soenneker.GitLab.OpenApiClient.Models.TitleItem[] Fields { get; set; }
+#endif
+            /// <summary>Filter by label name. A result must carry every name that resolves to an existing label; names that match no label are ignored. Maximum 30 names. Available with advanced search and the issues, merge_requests and work_items scopes.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("label_name")]
+            public string[]? LabelName { get; set; }
+#nullable restore
+#else
+            [QueryParameter("label_name")]
+            public string[] LabelName { get; set; }
+#endif
+            /// <summary>Filter out results matching the parameters supplied. Supplying a filter together with its negation matches either condition, which widens the result set.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("not")]
+            public string? Not { get; set; }
+#nullable restore
+#else
+            [QueryParameter("not")]
+            public string Not { get; set; }
+#endif
+            /// <summary>Exclude results authored by this username</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("not%5Bauthor_username%5D")]
+            public string? NotauthorUsername { get; set; }
+#nullable restore
+#else
+            [QueryParameter("not%5Bauthor_username%5D")]
+            public string NotauthorUsername { get; set; }
+#endif
+            /// <summary>Exclude merge requests with this source branch</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("not%5Bsource_branch%5D")]
+            public string? NotsourceBranch { get; set; }
+#nullable restore
+#else
+            [QueryParameter("not%5Bsource_branch%5D")]
+            public string NotsourceBranch { get; set; }
+#endif
+            /// <summary>Exclude merge requests with this target branch</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("not%5Btarget_branch%5D")]
+            public string? NottargetBranch { get; set; }
+#nullable restore
+#else
+            [QueryParameter("not%5Btarget_branch%5D")]
+            public string NottargetBranch { get; set; }
 #endif
             /// <summary>Number of context lines around each match. Available with advanced and exact code search. Introduced in GitLab 18.11.</summary>
             [QueryParameter("num_context_lines")]
@@ -138,9 +198,29 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Search
             [QueryParameter("search")]
             public string Search { get; set; }
 #endif
+            /// <summary>Filter merge requests by source branch. Available with advanced search and the merge_requests scope.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("source_branch")]
+            public string? SourceBranch { get; set; }
+#nullable restore
+#else
+            [QueryParameter("source_branch")]
+            public string SourceBranch { get; set; }
+#endif
             /// <summary>Filter results by state</summary>
             [QueryParameter("state")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdDashSearchStateParameter? State { get; set; }
+            /// <summary>Filter merge requests by target branch. Available with advanced search and the merge_requests scope.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("target_branch")]
+            public string? TargetBranch { get; set; }
+#nullable restore
+#else
+            [QueryParameter("target_branch")]
+            public string TargetBranch { get; set; }
+#endif
             /// <summary>Filter work items by type. Only applies to work_items scope. Available types: issue, task, epic, incident, test_case, requirement, objective, key_result, ticket.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

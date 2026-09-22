@@ -1167,7 +1167,7 @@
           "Token exchange"
         ],
         "summary": "Issue a short-lived JWT for a single modular-service audience",
-        "description": "Issues a short-lived RS256 JWT scoped to one modular-service audience (such as the Artifact Registry). Claims include the requesting user id (sub), organization id, and deployment realm (saas / self-managed). Presented to the corresponding backend and verified against the instance JWKS.",
+        "description": "Issues a short-lived RS256 JWT scoped to one modular-service audience (such as the Artifact Registry). Claims include the requesting user (sub) and the organization it acts in. When called with a CI job token, the claims also carry the job project id and commit SHA as build provenance. Presented to the corresponding backend and verified against the instance JWKS.",
         "operationId": "PostApiV4TokenExchange",
         "requestBody": {
           "content": {
@@ -5289,7 +5289,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody43Af6C439096"
+                "$ref": "#/components/schemas/RequestBody730D646234A1"
               }
             }
           },
@@ -5306,6 +5306,9 @@
               }
             }
           },
+          "400": {
+            "description": "Bad request"
+          },
           "409": {
             "description": "Conflict"
           },
@@ -5314,9 +5317,6 @@
           },
           "422": {
             "description": "Unprocessable entity"
-          },
-          "400": {
-            "description": "Bad Request"
           }
         }
       }
@@ -5349,10 +5349,10 @@
           {
             "name": "name",
             "in": "path",
-            "description": "The deployment tier of the protected environment. One of \u0060production\u0060, \u0060staging\u0060, \u0060testing\u0060, \u0060development\u0060, or \u0060other\u0060",
+            "description": "The deployment tier of the protected environment.",
             "required": true,
             "schema": {
-              "type": "string"
+              "$ref": "#/components/schemas/GetApiV4GroupsIdProtectedEnvironmentsNameNameParameter"
             }
           }
         ],
@@ -5367,11 +5367,11 @@
               }
             }
           },
+          "400": {
+            "description": "Bad request"
+          },
           "404": {
             "description": "Not found"
-          },
-          "400": {
-            "description": "Bad Request"
           }
         }
       },
@@ -5402,10 +5402,10 @@
           {
             "name": "name",
             "in": "path",
-            "description": "The deployment tier of the protected environment. One of production, staging, testing, development, or other",
+            "description": "The deployment tier of the protected environment.",
             "required": true,
             "schema": {
-              "type": "string"
+              "$ref": "#/components/schemas/PutApiV4GroupsIdProtectedEnvironmentsNameNameParameter"
             }
           }
         ],
@@ -5429,14 +5429,14 @@
               }
             }
           },
+          "400": {
+            "description": "Bad request"
+          },
           "404": {
             "description": "Not found"
           },
           "422": {
             "description": "Unprocessable entity"
-          },
-          "400": {
-            "description": "Bad Request"
           }
         }
       },
@@ -14919,11 +14919,10 @@
           {
             "name": "metric",
             "in": "query",
-            "description": "One of \u0060deployment_frequency\u0060, \u0060lead_time_for_changes\u0060, \u0060time_to_restore_service\u0060 or \u0060change_failure_rate\u0060",
+            "description": "The DORA metric to fetch.",
             "required": true,
             "schema": {
-              "type": "string",
-              "nullable": true
+              "$ref": "#/components/schemas/GetApiV4ProjectsIdDoraMetricsMetricParameter"
             }
           },
           {
@@ -14949,22 +14948,23 @@
           {
             "name": "interval",
             "in": "query",
-            "description": "The bucketing interval. One of \u0060all\u0060, \u0060monthly\u0060 or \u0060daily\u0060. Default is \u0060daily\u0060",
+            "description": "The bucketing interval.",
             "schema": {
-              "type": "string",
-              "nullable": true
+              "$ref": "#/components/schemas/GetApiV4ProjectsIdDoraMetricsIntervalParameter"
             }
           },
           {
             "name": "environment_tiers",
             "in": "query",
-            "description": "The tiers of the environments. Default is \u0060production\u0060",
+            "description": "The tiers of the environments.",
             "schema": {
               "type": "array",
               "items": {
-                "type": "string"
+                "$ref": "#/components/schemas/GetApiV4ProjectsIdDoraMetricsEnvironmentTiersParameterItem"
               },
-              "nullable": true
+              "default": [
+                "production"
+              ]
             }
           }
         ],
@@ -15005,11 +15005,10 @@
           {
             "name": "metric",
             "in": "query",
-            "description": "One of \u0060deployment_frequency\u0060, \u0060lead_time_for_changes\u0060, \u0060time_to_restore_service\u0060 or \u0060change_failure_rate\u0060",
+            "description": "The DORA metric to fetch.",
             "required": true,
             "schema": {
-              "type": "string",
-              "nullable": true
+              "$ref": "#/components/schemas/GetApiV4GroupsIdDoraMetricsMetricParameter"
             }
           },
           {
@@ -15035,22 +15034,23 @@
           {
             "name": "interval",
             "in": "query",
-            "description": "The bucketing interval. One of \u0060all\u0060, \u0060monthly\u0060 or \u0060daily\u0060. Default is \u0060daily\u0060",
+            "description": "The bucketing interval.",
             "schema": {
-              "type": "string",
-              "nullable": true
+              "$ref": "#/components/schemas/GetApiV4GroupsIdDoraMetricsIntervalParameter"
             }
           },
           {
             "name": "environment_tiers",
             "in": "query",
-            "description": "The tiers of the environments. Default is \u0060production\u0060",
+            "description": "The tiers of the environments.",
             "schema": {
               "type": "array",
               "items": {
-                "type": "string"
+                "$ref": "#/components/schemas/GetApiV4GroupsIdDoraMetricsEnvironmentTiersParameterItem"
               },
-              "nullable": true
+              "default": [
+                "production"
+              ]
             }
           }
         ],
@@ -26101,7 +26101,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyC47606Fab71C"
+                "$ref": "#/components/schemas/RequestBodyAff2E18E4B2E"
               }
             }
           }
@@ -39125,7 +39125,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody1C287Db32396"
+                "$ref": "#/components/schemas/RequestBodyCb605A1A7550"
               }
             }
           },
@@ -41994,6 +41994,82 @@
             }
           },
           {
+            "name": "source_branch",
+            "in": "query",
+            "description": "Filter merge requests by source branch. Available with advanced search and the merge_requests scope.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "target_branch",
+            "in": "query",
+            "description": "Filter merge requests by target branch. Available with advanced search and the merge_requests scope.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "author_username",
+            "in": "query",
+            "description": "Filter by author username. A username that matches no user is ignored. Available with advanced search and the issues, merge_requests and work_items scopes.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "label_name",
+            "in": "query",
+            "description": "Filter by label name. A result must carry every name that resolves to an existing label; names that match no label are ignored. Maximum 30 names. Available with advanced search and the issues, merge_requests and work_items scopes.",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "nullable": true
+            }
+          },
+          {
+            "name": "not",
+            "in": "query",
+            "description": "Filter out results matching the parameters supplied. Supplying a filter together with its negation matches either condition, which widens the result set.",
+            "schema": {
+              "type": "object",
+              "nullable": true
+            }
+          },
+          {
+            "name": "not[source_branch]",
+            "in": "query",
+            "description": "Exclude merge requests with this source branch",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "not[target_branch]",
+            "in": "query",
+            "description": "Exclude merge requests with this target branch",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "not[author_username]",
+            "in": "query",
+            "description": "Exclude results authored by this username",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
             "name": "page",
             "in": "query",
             "description": "Current page number",
@@ -42150,6 +42226,82 @@
             }
           },
           {
+            "name": "source_branch",
+            "in": "query",
+            "description": "Filter merge requests by source branch. Available with advanced search and the merge_requests scope.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "target_branch",
+            "in": "query",
+            "description": "Filter merge requests by target branch. Available with advanced search and the merge_requests scope.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "author_username",
+            "in": "query",
+            "description": "Filter by author username. A username that matches no user is ignored. Available with advanced search and the issues, merge_requests and work_items scopes.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "label_name",
+            "in": "query",
+            "description": "Filter by label name. A result must carry every name that resolves to an existing label; names that match no label are ignored. Maximum 30 names. Available with advanced search and the issues, merge_requests and work_items scopes.",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "nullable": true
+            }
+          },
+          {
+            "name": "not",
+            "in": "query",
+            "description": "Filter out results matching the parameters supplied. Supplying a filter together with its negation matches either condition, which widens the result set.",
+            "schema": {
+              "type": "object",
+              "nullable": true
+            }
+          },
+          {
+            "name": "not[source_branch]",
+            "in": "query",
+            "description": "Exclude merge requests with this source branch",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "not[target_branch]",
+            "in": "query",
+            "description": "Exclude merge requests with this target branch",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "not[author_username]",
+            "in": "query",
+            "description": "Exclude results authored by this username",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
             "name": "page",
             "in": "query",
             "description": "Current page number",
@@ -42297,6 +42449,82 @@
             "description": "Performs a regex code search. Available with exact code search. Introduced in GitLab 18.9",
             "schema": {
               "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "source_branch",
+            "in": "query",
+            "description": "Filter merge requests by source branch. Available with advanced search and the merge_requests scope.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "target_branch",
+            "in": "query",
+            "description": "Filter merge requests by target branch. Available with advanced search and the merge_requests scope.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "author_username",
+            "in": "query",
+            "description": "Filter by author username. A username that matches no user is ignored. Available with advanced search and the issues, merge_requests and work_items scopes.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "label_name",
+            "in": "query",
+            "description": "Filter by label name. A result must carry every name that resolves to an existing label; names that match no label are ignored. Maximum 30 names. Available with advanced search and the issues, merge_requests and work_items scopes.",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "nullable": true
+            }
+          },
+          {
+            "name": "not",
+            "in": "query",
+            "description": "Filter out results matching the parameters supplied. Supplying a filter together with its negation matches either condition, which widens the result set.",
+            "schema": {
+              "type": "object",
+              "nullable": true
+            }
+          },
+          {
+            "name": "not[source_branch]",
+            "in": "query",
+            "description": "Exclude merge requests with this source branch",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "not[target_branch]",
+            "in": "query",
+            "description": "Exclude merge requests with this target branch",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "not[author_username]",
+            "in": "query",
+            "description": "Exclude results authored by this username",
+            "schema": {
+              "type": "string",
               "nullable": true
             }
           },
@@ -46153,7 +46381,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyE90C1C6D2220"
+                "$ref": "#/components/schemas/RequestBodyF4B628Cf1938"
               }
             }
           },
@@ -104155,6 +104383,9 @@
           "404": {
             "description": "Not found"
           },
+          "429": {
+            "description": "Too Many Requests"
+          },
           "400": {
             "description": "Bad Request"
           }
@@ -129434,6 +129665,9 @@
           "downstream_pipeline_trigger_limit_per_project_user_sha": {
             "type": "string"
           },
+          "pipeline_cancel_limit_per_user_project": {
+            "type": "string"
+          },
           "asciidoc_max_includes": {
             "type": "string"
           },
@@ -142914,7 +143148,7 @@
           }
         }
       },
-      "RequestBody43Af6C439096": {
+      "RequestBody730D646234A1": {
         "required": [
           "name",
           "deploy_access_levels"
@@ -142922,9 +143156,7 @@
         "type": "object",
         "properties": {
           "name": {
-            "type": "string",
-            "description": "The deployment tier of the protected environment. One of \u0060production\u0060, \u0060staging\u0060, \u0060testing\u0060, \u0060development\u0060, or \u0060other\u0060",
-            "nullable": true
+            "$ref": "#/components/schemas/RequestBody730D646234A1Name"
           },
           "required_approval_count": {
             "type": "integer",
@@ -142934,7 +143166,7 @@
           "deploy_access_levels": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBody43Af6C439096DeployAccessLevelsItem"
+              "$ref": "#/components/schemas/RequestBody730D646234A1DeployAccessLevelsItem"
             },
             "description": "Array of access levels allowed to deploy, with each described by a hash. One of \u0060user_id\u0060, \u0060group_id\u0060 or \u0060access_level\u0060. They take the form of \u0060{user_id: integer}\u0060, \u0060{group_id: integer}\u0060 or \u0060{access_level: integer}\u0060 respectively.",
             "nullable": true
@@ -142942,7 +143174,7 @@
           "approval_rules": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBody43Af6C439096ApprovalRulesItem"
+              "$ref": "#/components/schemas/RequestBody730D646234A1ApprovalRulesItem"
             },
             "description": "Array of access levels allowed to approve, with each described by a hash. One of \u0060user_id\u0060, \u0060group_id\u0060 or \u0060access_level\u0060. They take the form of \u0060{user_id: integer}\u0060, \u0060{group_id: integer}\u0060 or \u0060{access_level: integer}\u0060 respectively. You can also specify the number of required approvals from the specified entity with \u0060required_approvals\u0060 field.",
             "nullable": true
@@ -146960,7 +147192,7 @@
           }
         }
       },
-      "RequestBodyC47606Fab71C": {
+      "RequestBodyAff2E18E4B2E": {
         "type": "object",
         "properties": {
           "admin_mode": {
@@ -147060,19 +147292,19 @@
             "nullable": true
           },
           "default_project_creation": {
-            "$ref": "#/components/schemas/RequestBodyC47606Fab71CDefaultProjectCreation"
+            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EDefaultProjectCreation"
           },
           "default_branch_protection": {
-            "$ref": "#/components/schemas/RequestBodyC47606Fab71CDefaultBranchProtection"
+            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EDefaultBranchProtection"
           },
           "default_branch_protection_defaults": {
-            "$ref": "#/components/schemas/RequestBodyC47606Fab71CDefaultBranchProtectionDefaults"
+            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EDefaultBranchProtectionDefaults"
           },
           "default_group_visibility": {
-            "$ref": "#/components/schemas/RequestBodyC47606Fab71CDefaultGroupVisibility"
+            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EDefaultGroupVisibility"
           },
           "default_project_visibility": {
-            "$ref": "#/components/schemas/RequestBodyC47606Fab71CDefaultProjectVisibility"
+            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EDefaultProjectVisibility"
           },
           "default_projects_limit": {
             "type": "integer",
@@ -147080,10 +147312,10 @@
             "nullable": true
           },
           "default_snippet_visibility": {
-            "$ref": "#/components/schemas/RequestBodyC47606Fab71CDefaultSnippetVisibility"
+            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EDefaultSnippetVisibility"
           },
           "dependency_management_settings": {
-            "$ref": "#/components/schemas/RequestBodyC47606Fab71CDependencyManagementSettings"
+            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EDependencyManagementSettings"
           },
           "disable_admin_oauth_scopes": {
             "type": "boolean",
@@ -147147,12 +147379,12 @@
             "items": {
               "type": "string"
             },
-            "description": "Allowed iframe src host[:port] entries. Enter multiple entries separated by commas or on separate lines.",
+            "description": "IDs of embed providers users can embed content from. Enter multiple entries separated by commas or on separate lines.",
             "nullable": true
           },
           "iframe_rendering_allowlist_raw": {
             "type": "string",
-            "description": "Raw newline- or comma-separated list of allowed iframe src host[:port] entries.",
+            "description": "Raw newline- or comma-separated list of IDs of embed providers users can embed content from.",
             "nullable": true
           },
           "eks_integration_enabled": {
@@ -147181,10 +147413,10 @@
             "nullable": true
           },
           "email_confirmation_setting": {
-            "$ref": "#/components/schemas/RequestBodyC47606Fab71CEmailConfirmationSetting"
+            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EEmailConfirmationSetting"
           },
           "enabled_git_access_protocol": {
-            "$ref": "#/components/schemas/RequestBodyC47606Fab71CEnabledGitAccessProtocol"
+            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EEnabledGitAccessProtocol"
           },
           "gitpod_enabled": {
             "type": "boolean",
@@ -147284,7 +147516,7 @@
           "import_sources": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBodyC47606Fab71CImportSourcesItem"
+              "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EImportSourcesItem"
             },
             "description": "Enabled sources for code import during project creation. OmniAuth must be configured for GitHub, Bitbucket, and GitLab.com",
             "nullable": true
@@ -147480,7 +147712,7 @@
             "nullable": true
           },
           "repository_storages_weighted": {
-            "$ref": "#/components/schemas/RequestBodyC47606Fab71CRepositoryStoragesWeightedProperty"
+            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2ERepositoryStoragesWeightedProperty"
           },
           "require_two_factor_authentication": {
             "type": "boolean",
@@ -147644,7 +147876,7 @@
             "nullable": true
           },
           "whats_new_variant": {
-            "$ref": "#/components/schemas/RequestBodyC47606Fab71CWhatsNewVariant"
+            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EWhatsNewVariant"
           },
           "floc_enabled": {
             "type": "boolean",
@@ -147846,6 +148078,11 @@
             "description": "Maximum number of downstream pipelines that can be triggered per minute (for a given project, user, and commit).",
             "nullable": true
           },
+          "pipeline_cancel_limit_per_user_project": {
+            "type": "integer",
+            "description": "Maximum number of pipeline cancellations allowed per minute for a given project.",
+            "nullable": true
+          },
           "ai_action_api_rate_limit": {
             "type": "integer",
             "description": "Maximum requests a user can make per 8 hours to aiAction endpoint",
@@ -147857,18 +148094,18 @@
             "nullable": true
           },
           "resource_usage_limits": {
-            "$ref": "#/components/schemas/RequestBodyC47606Fab71CResourceUsageLimitsProperty"
+            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EResourceUsageLimitsProperty"
           },
           "code_dropdown_custom_clients": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBodyC47606Fab71CCodeDropdownCustomClientsItem"
+              "$ref": "#/components/schemas/RequestBodyAff2E18E4B2ECodeDropdownCustomClientsItem"
             },
             "description": "Custom \u0022Open with\u0022 clients shown in the project Code dropdown list",
             "nullable": true
           },
           "vscode_extension_marketplace": {
-            "$ref": "#/components/schemas/RequestBodyC47606Fab71CVscodeExtensionMarketplace"
+            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EVscodeExtensionMarketplace"
           },
           "enable_language_server_restrictions": {
             "type": "boolean",
@@ -147886,28 +148123,28 @@
             "nullable": true
           },
           "logging_field_schema_version": {
-            "$ref": "#/components/schemas/RequestBodyC47606Fab71CLoggingFieldSchemaVersion"
+            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2ELoggingFieldSchemaVersion"
           },
           "logging_field_dual_emit_target": {
-            "$ref": "#/components/schemas/RequestBodyC47606Fab71CLoggingFieldDualEmitTarget"
+            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2ELoggingFieldDualEmitTarget"
           },
           "rsa_key_restriction": {
-            "$ref": "#/components/schemas/RequestBodyC47606Fab71CRsaKeyRestriction"
+            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2ERsaKeyRestriction"
           },
           "dsa_key_restriction": {
-            "$ref": "#/components/schemas/RequestBodyC47606Fab71CDsaKeyRestriction"
+            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EDsaKeyRestriction"
           },
           "ecdsa_key_restriction": {
-            "$ref": "#/components/schemas/RequestBodyC47606Fab71CEcdsaKeyRestriction"
+            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EEcdsaKeyRestriction"
           },
           "ed25519_key_restriction": {
-            "$ref": "#/components/schemas/RequestBodyC47606Fab71CEd25519KeyRestriction"
+            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EEd25519KeyRestriction"
           },
           "ecdsa_sk_key_restriction": {
-            "$ref": "#/components/schemas/RequestBodyC47606Fab71CEcdsaSkKeyRestriction"
+            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EEcdsaSkKeyRestriction"
           },
           "ed25519_sk_key_restriction": {
-            "$ref": "#/components/schemas/RequestBodyC47606Fab71CEd25519SkKeyRestriction"
+            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EEd25519SkKeyRestriction"
           },
           "allow_account_deletion": {
             "type": "string",
@@ -149064,7 +149301,7 @@
           "duo_namespace_access_rules": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBodyC47606Fab71CDuoNamespaceAccessRulesItem"
+              "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EDuoNamespaceAccessRulesItem"
             },
             "description": "AI entity access rules for controlling Duo feature access",
             "nullable": true
@@ -151221,7 +151458,7 @@
           }
         }
       },
-      "RequestBody1C287Db32396": {
+      "RequestBodyCb605A1A7550": {
         "required": [
           "state_name",
           "minimum_access_level_for_write"
@@ -151235,10 +151472,10 @@
             "nullable": true
           },
           "minimum_access_level_for_write": {
-            "$ref": "#/components/schemas/RequestBody1C287Db32396MinimumAccessLevelForWrite"
+            "$ref": "#/components/schemas/RequestBodyCb605A1A7550MinimumAccessLevelForWrite"
           },
           "allowed_from": {
-            "$ref": "#/components/schemas/RequestBody1C287Db32396AllowedFrom"
+            "$ref": "#/components/schemas/RequestBodyCb605A1A7550AllowedFrom"
           }
         }
       },
@@ -151951,7 +152188,7 @@
           }
         }
       },
-      "RequestBodyE90C1C6D2220": {
+      "RequestBodyF4B628Cf1938": {
         "required": [
           "tag_name"
         ],
@@ -151983,7 +152220,7 @@
             "nullable": true
           },
           "assets": {
-            "$ref": "#/components/schemas/RequestBodyE90C1C6D2220Assets"
+            "$ref": "#/components/schemas/RequestBodyF4B628Cf1938Assets"
           },
           "milestones": {
             "type": "array",
@@ -151994,7 +152231,7 @@
             "nullable": true
           },
           "milestone_ids": {
-            "$ref": "#/components/schemas/RequestBodyE90C1C6D2220MilestoneIds"
+            "$ref": "#/components/schemas/RequestBodyF4B628Cf1938MilestoneIds"
           },
           "released_at": {
             "type": "string",
@@ -162509,7 +162746,7 @@
         },
         "description": "Object or array that contains parameters passed to the specified JSON-RPC method"
       },
-      "RequestBodyE90C1C6D2220MilestoneIds": {
+      "RequestBodyF4B628Cf1938MilestoneIds": {
         "type": "object",
         "oneOf": [
           {
@@ -164364,7 +164601,7 @@
           }
         }
       },
-      "RequestBody43Af6C439096DeployAccessLevelsItem": {
+      "RequestBody730D646234A1DeployAccessLevelsItem": {
         "type": "object",
         "properties": {
           "user_id": {
@@ -164378,14 +164615,14 @@
             "nullable": true
           },
           "group_inheritance_type": {
-            "$ref": "#/components/schemas/RequestBody43Af6C439096DeployAccessLevelsItemGroupInheritanceType"
+            "$ref": "#/components/schemas/RequestBody730D646234A1DeployAccessLevelsItemGroupInheritanceType"
           },
           "access_level": {
-            "$ref": "#/components/schemas/RequestBody43Af6C439096DeployAccessLevelsItemAccessLevel"
+            "$ref": "#/components/schemas/RequestBody730D646234A1DeployAccessLevelsItemAccessLevel"
           }
         }
       },
-      "RequestBody43Af6C439096ApprovalRulesItem": {
+      "RequestBody730D646234A1ApprovalRulesItem": {
         "type": "object",
         "properties": {
           "user_id": {
@@ -164399,7 +164636,7 @@
             "nullable": true
           },
           "group_inheritance_type": {
-            "$ref": "#/components/schemas/RequestBody43Af6C439096ApprovalRulesItemGroupInheritanceType"
+            "$ref": "#/components/schemas/RequestBody730D646234A1ApprovalRulesItemGroupInheritanceType"
           },
           "id": {
             "type": "integer",
@@ -164412,7 +164649,7 @@
             "nullable": true
           },
           "access_level": {
-            "$ref": "#/components/schemas/RequestBody43Af6C439096ApprovalRulesItemAccessLevel"
+            "$ref": "#/components/schemas/RequestBody730D646234A1ApprovalRulesItemAccessLevel"
           },
           "required_approvals": {
             "type": "integer",
@@ -164886,13 +165123,13 @@
           }
         }
       },
-      "RequestBodyC47606Fab71CDefaultBranchProtectionDefaults": {
+      "RequestBodyAff2E18E4B2EDefaultBranchProtectionDefaults": {
         "type": "object",
         "properties": {
           "allowed_to_push": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBodyC47606Fab71CDefaultBranchProtectionDefaultsAllowedToPushItem"
+              "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EDefaultBranchProtectionDefaultsAllowedToPushItem"
             },
             "description": "An array of access levels allowed to push",
             "nullable": true
@@ -164905,7 +165142,7 @@
           "allowed_to_merge": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBodyC47606Fab71CDefaultBranchProtectionDefaultsAllowedToMergeItem"
+              "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EDefaultBranchProtectionDefaultsAllowedToMergeItem"
             },
             "description": "An array of access levels allowed to merge",
             "nullable": true
@@ -164924,7 +165161,7 @@
         "description": "Determine if developers can push to default branch",
         "nullable": true
       },
-      "RequestBodyC47606Fab71CDependencyManagementSettings": {
+      "RequestBodyAff2E18E4B2EDependencyManagementSettings": {
         "type": "object",
         "properties": {
           "security_update_scheduler_max_concurrency": {
@@ -164936,7 +165173,7 @@
         "description": "Dependency management settings",
         "nullable": true
       },
-      "RequestBodyC47606Fab71CRepositoryStoragesWeighted": {
+      "RequestBodyAff2E18E4B2ERepositoryStoragesWeighted": {
         "type": "object",
         "additionalProperties": {
           "type": "integer"
@@ -164944,12 +165181,12 @@
         "description": "Storage paths for new projects with a weighted value ranging from 0 to 100",
         "nullable": true
       },
-      "RequestBodyC47606Fab71CResourceUsageLimits": {
+      "RequestBodyAff2E18E4B2EResourceUsageLimits": {
         "type": "object",
         "description": "Definition for resource usage limits enforced in Sidekiq workers",
         "nullable": true
       },
-      "RequestBodyC47606Fab71CCodeDropdownCustomClientsItem": {
+      "RequestBodyAff2E18E4B2ECodeDropdownCustomClientsItem": {
         "required": [
           "name"
         ],
@@ -164972,7 +165209,7 @@
           }
         }
       },
-      "RequestBodyC47606Fab71CVscodeExtensionMarketplace": {
+      "RequestBodyAff2E18E4B2EVscodeExtensionMarketplace": {
         "type": "object",
         "properties": {
           "enabled": {
@@ -164986,20 +165223,20 @@
             "nullable": true
           },
           "custom_values": {
-            "$ref": "#/components/schemas/RequestBodyC47606Fab71CVscodeExtensionMarketplaceCustomValuesProperty"
+            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EVscodeExtensionMarketplaceCustomValuesProperty"
           }
         },
         "description": "Settings for VS Code Extension Marketplace",
         "nullable": true
       },
-      "RequestBodyC47606Fab71CDuoNamespaceAccessRulesItem": {
+      "RequestBodyAff2E18E4B2EDuoNamespaceAccessRulesItem": {
         "required": [
           "features"
         ],
         "type": "object",
         "properties": {
           "through_namespace": {
-            "$ref": "#/components/schemas/RequestBodyC47606Fab71CDuoNamespaceAccessRulesItemThroughNamespace"
+            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EDuoNamespaceAccessRulesItemThroughNamespace"
           },
           "features": {
             "type": "array",
@@ -165332,13 +165569,13 @@
           }
         }
       },
-      "RequestBodyE90C1C6D2220Assets": {
+      "RequestBodyF4B628Cf1938Assets": {
         "type": "object",
         "properties": {
           "links": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBodyE90C1C6D2220AssetsLinksItem"
+              "$ref": "#/components/schemas/RequestBodyF4B628Cf1938AssetsLinksItem"
             },
             "description": "Link information about the release",
             "nullable": true
@@ -168444,34 +168681,34 @@
         "description": "Data for rendering the vulnerabilities by severity count in PDF reports",
         "nullable": true
       },
-      "RequestBodyC47606Fab71CDefaultBranchProtectionDefaultsAllowedToPushItem": {
+      "RequestBodyAff2E18E4B2EDefaultBranchProtectionDefaultsAllowedToPushItem": {
         "required": [
           "access_level"
         ],
         "type": "object",
         "properties": {
           "access_level": {
-            "$ref": "#/components/schemas/RequestBodyC47606Fab71CDefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EDefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel"
           }
         }
       },
-      "RequestBodyC47606Fab71CDefaultBranchProtectionDefaultsAllowedToMergeItem": {
+      "RequestBodyAff2E18E4B2EDefaultBranchProtectionDefaultsAllowedToMergeItem": {
         "required": [
           "access_level"
         ],
         "type": "object",
         "properties": {
           "access_level": {
-            "$ref": "#/components/schemas/RequestBodyC47606Fab71CDefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EDefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel"
           }
         }
       },
-      "RequestBodyC47606Fab71CVscodeExtensionMarketplaceCustomValues": {
+      "RequestBodyAff2E18E4B2EVscodeExtensionMarketplaceCustomValues": {
         "type": "object",
         "description": "VS Code Extension Marketplace URL\u0027s when preset is \u0027custom\u0027",
         "nullable": true
       },
-      "RequestBodyC47606Fab71CDuoNamespaceAccessRulesItemThroughNamespace": {
+      "RequestBodyAff2E18E4B2EDuoNamespaceAccessRulesItemThroughNamespace": {
         "required": [
           "id"
         ],
@@ -168509,7 +168746,7 @@
         "description": "Multi-line start and end",
         "nullable": true
       },
-      "RequestBodyE90C1C6D2220AssetsLinksItem": {
+      "RequestBodyF4B628Cf1938AssetsLinksItem": {
         "required": [
           "name",
           "url"
@@ -168537,9 +168774,7 @@
             "nullable": true
           },
           "link_type": {
-            "type": "string",
-            "description": "The type of the link: \u0060other\u0060, \u0060runbook\u0060, \u0060image\u0060, \u0060package\u0060. Defaults to \u0060other\u0060",
-            "nullable": true
+            "$ref": "#/components/schemas/RequestBodyF4B628Cf1938AssetsLinksItemLinkType"
           }
         }
       },
@@ -170502,14 +170737,14 @@
         "type": "object",
         "description": "Context parameters (user, namespace, project). An actor context is resolved from the user. Defaults to current user."
       },
-      "RequestBodyC47606Fab71CRepositoryStoragesWeightedProperty": {
+      "RequestBodyAff2E18E4B2ERepositoryStoragesWeightedProperty": {
         "type": "object",
         "additionalProperties": {
           "type": "integer"
         },
         "description": "Storage paths for new projects with a weighted value ranging from 0 to 100"
       },
-      "RequestBodyC47606Fab71CResourceUsageLimitsProperty": {
+      "RequestBodyAff2E18E4B2EResourceUsageLimitsProperty": {
         "type": "object",
         "description": "Definition for resource usage limits enforced in Sidekiq workers"
       },
@@ -170615,7 +170850,7 @@
         "type": "object",
         "description": "Data for rendering the vulnerabilities by age in PDF reports"
       },
-      "RequestBodyC47606Fab71CVscodeExtensionMarketplaceCustomValuesProperty": {
+      "RequestBodyAff2E18E4B2EVscodeExtensionMarketplaceCustomValuesProperty": {
         "type": "object",
         "description": "VS Code Extension Marketplace URL\u0027s when preset is \u0027custom\u0027"
       },
@@ -172003,6 +172238,45 @@
         "additionalProperties": false,
         "description": "Level of permissions for the linked SA group"
       },
+      "RequestBody730D646234A1Name": {
+        "minLength": 1,
+        "enum": [
+          "production",
+          "staging",
+          "testing",
+          "development",
+          "other"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "The deployment tier of the protected environment.",
+        "x-ms-enum": {
+          "name": "RequestBody730D646234A1Name",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "production",
+              "name": "Production"
+            },
+            {
+              "value": "staging",
+              "name": "Staging"
+            },
+            {
+              "value": "testing",
+              "name": "Testing"
+            },
+            {
+              "value": "development",
+              "name": "Development"
+            },
+            {
+              "value": "other",
+              "name": "Other"
+            }
+          ]
+        }
+      },
       "RequestBody06A0Cb5A3Ce3ExportFormat": {
         "enum": [
           "csv",
@@ -172789,7 +173063,7 @@
           ]
         }
       },
-      "RequestBodyC47606Fab71CDefaultProjectCreation": {
+      "RequestBodyAff2E18E4B2EDefaultProjectCreation": {
         "enum": [
           0,
           3,
@@ -172802,7 +173076,7 @@
         "description": "Determine if developers can create projects in the group",
         "nullable": true
       },
-      "RequestBodyC47606Fab71CDefaultBranchProtection": {
+      "RequestBodyAff2E18E4B2EDefaultBranchProtection": {
         "enum": [
           0,
           3,
@@ -172815,7 +173089,7 @@
         "description": "Determine if developers can push to default branch",
         "nullable": true
       },
-      "RequestBodyC47606Fab71CDefaultGroupVisibility": {
+      "RequestBodyAff2E18E4B2EDefaultGroupVisibility": {
         "enum": [
           "private",
           "internal",
@@ -172826,7 +173100,7 @@
         "description": "The default group visibility",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyC47606Fab71CDefaultGroupVisibility",
+          "name": "RequestBodyAff2E18E4B2EDefaultGroupVisibility",
           "modelAsString": false,
           "values": [
             {
@@ -172844,7 +173118,7 @@
           ]
         }
       },
-      "RequestBodyC47606Fab71CDefaultProjectVisibility": {
+      "RequestBodyAff2E18E4B2EDefaultProjectVisibility": {
         "enum": [
           "private",
           "internal",
@@ -172855,7 +173129,7 @@
         "description": "The default project visibility",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyC47606Fab71CDefaultProjectVisibility",
+          "name": "RequestBodyAff2E18E4B2EDefaultProjectVisibility",
           "modelAsString": false,
           "values": [
             {
@@ -172873,7 +173147,7 @@
           ]
         }
       },
-      "RequestBodyC47606Fab71CDefaultSnippetVisibility": {
+      "RequestBodyAff2E18E4B2EDefaultSnippetVisibility": {
         "enum": [
           "private",
           "internal",
@@ -172884,7 +173158,7 @@
         "description": "The default snippet visibility",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyC47606Fab71CDefaultSnippetVisibility",
+          "name": "RequestBodyAff2E18E4B2EDefaultSnippetVisibility",
           "modelAsString": false,
           "values": [
             {
@@ -172902,7 +173176,7 @@
           ]
         }
       },
-      "RequestBodyC47606Fab71CEmailConfirmationSetting": {
+      "RequestBodyAff2E18E4B2EEmailConfirmationSetting": {
         "enum": [
           "off",
           "soft",
@@ -172913,7 +173187,7 @@
         "description": "Email confirmation setting, possible values: \u0060off\u0060, \u0060soft\u0060, and \u0060hard\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyC47606Fab71CEmailConfirmationSetting",
+          "name": "RequestBodyAff2E18E4B2EEmailConfirmationSetting",
           "modelAsString": false,
           "values": [
             {
@@ -172931,7 +173205,7 @@
           ]
         }
       },
-      "RequestBodyC47606Fab71CEnabledGitAccessProtocol": {
+      "RequestBodyAff2E18E4B2EEnabledGitAccessProtocol": {
         "enum": [
           "ssh",
           "http",
@@ -172942,7 +173216,7 @@
         "description": "Allow only the selected protocols to be used for Git access.",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyC47606Fab71CEnabledGitAccessProtocol",
+          "name": "RequestBodyAff2E18E4B2EEnabledGitAccessProtocol",
           "modelAsString": false,
           "values": [
             {
@@ -172960,7 +173234,7 @@
           ]
         }
       },
-      "RequestBodyC47606Fab71CImportSourcesItem": {
+      "RequestBodyAff2E18E4B2EImportSourcesItem": {
         "enum": [
           "github",
           "bitbucket",
@@ -172974,7 +173248,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "RequestBodyC47606Fab71CImportSourcesItem",
+          "name": "RequestBodyAff2E18E4B2EImportSourcesItem",
           "modelAsString": false,
           "values": [
             {
@@ -173012,7 +173286,7 @@
           ]
         }
       },
-      "RequestBodyC47606Fab71CWhatsNewVariant": {
+      "RequestBodyAff2E18E4B2EWhatsNewVariant": {
         "enum": [
           "all_tiers",
           "current_tier",
@@ -173023,7 +173297,7 @@
         "description": "What\u0027s new variant, possible values: \u0060all_tiers\u0060, \u0060current_tier\u0060, and \u0060disabled\u0060.",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyC47606Fab71CWhatsNewVariant",
+          "name": "RequestBodyAff2E18E4B2EWhatsNewVariant",
           "modelAsString": false,
           "values": [
             {
@@ -173041,7 +173315,7 @@
           ]
         }
       },
-      "RequestBodyC47606Fab71CLoggingFieldSchemaVersion": {
+      "RequestBodyAff2E18E4B2ELoggingFieldSchemaVersion": {
         "enum": [
           0,
           1
@@ -173051,7 +173325,7 @@
         "description": "Logging field schema version (v0, v1, \u2026). Cannot be downgraded.",
         "nullable": true
       },
-      "RequestBodyC47606Fab71CLoggingFieldDualEmitTarget": {
+      "RequestBodyAff2E18E4B2ELoggingFieldDualEmitTarget": {
         "enum": [
           1
         ],
@@ -173060,7 +173334,7 @@
         "description": "Version to dual-emit alongside schema_version. Must be strictly greater than schema_version, or omit/null to disable.",
         "nullable": true
       },
-      "RequestBodyC47606Fab71CRsaKeyRestriction": {
+      "RequestBodyAff2E18E4B2ERsaKeyRestriction": {
         "enum": [
           0,
           1024,
@@ -173074,7 +173348,7 @@
         "description": "Restrictions on the complexity of uploaded RSA keys. A value of -1 disables all RSA keys.",
         "nullable": true
       },
-      "RequestBodyC47606Fab71CDsaKeyRestriction": {
+      "RequestBodyAff2E18E4B2EDsaKeyRestriction": {
         "enum": [
           0,
           1024,
@@ -173087,7 +173361,7 @@
         "description": "Restrictions on the complexity of uploaded DSA keys. A value of -1 disables all DSA keys.",
         "nullable": true
       },
-      "RequestBodyC47606Fab71CEcdsaKeyRestriction": {
+      "RequestBodyAff2E18E4B2EEcdsaKeyRestriction": {
         "enum": [
           0,
           256,
@@ -173100,7 +173374,7 @@
         "description": "Restrictions on the complexity of uploaded ECDSA keys. A value of -1 disables all ECDSA keys.",
         "nullable": true
       },
-      "RequestBodyC47606Fab71CEd25519KeyRestriction": {
+      "RequestBodyAff2E18E4B2EEd25519KeyRestriction": {
         "enum": [
           0,
           256,
@@ -173111,7 +173385,7 @@
         "description": "Restrictions on the complexity of uploaded ED25519 keys. A value of -1 disables all ED25519 keys.",
         "nullable": true
       },
-      "RequestBodyC47606Fab71CEcdsaSkKeyRestriction": {
+      "RequestBodyAff2E18E4B2EEcdsaSkKeyRestriction": {
         "enum": [
           0,
           256,
@@ -173122,7 +173396,7 @@
         "description": "Restrictions on the complexity of uploaded ECDSA_SK keys. A value of -1 disables all ECDSA_SK keys.",
         "nullable": true
       },
-      "RequestBodyC47606Fab71CEd25519SkKeyRestriction": {
+      "RequestBodyAff2E18E4B2EEd25519SkKeyRestriction": {
         "enum": [
           0,
           256,
@@ -173295,7 +173569,7 @@
           ]
         }
       },
-      "RequestBody1C287Db32396MinimumAccessLevelForWrite": {
+      "RequestBodyCb605A1A7550MinimumAccessLevelForWrite": {
         "minLength": 1,
         "enum": [
           "developer",
@@ -173307,7 +173581,7 @@
         "additionalProperties": false,
         "description": "Minimum GitLab access level required to write to the Terraform state. Valid values: developer, maintainer, owner, admin.",
         "x-ms-enum": {
-          "name": "RequestBody1C287Db32396MinimumAccessLevelForWrite",
+          "name": "RequestBodyCb605A1A7550MinimumAccessLevelForWrite",
           "modelAsString": false,
           "values": [
             {
@@ -173329,7 +173603,7 @@
           ]
         }
       },
-      "RequestBody1C287Db32396AllowedFrom": {
+      "RequestBodyCb605A1A7550AllowedFrom": {
         "enum": [
           "anywhere",
           "ci_only",
@@ -173337,10 +173611,9 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "description": "Source restriction for write requests. Default: anywhere. Valid values: anywhere, ci_only, ci_on_protected_branch_only.",
-        "nullable": true,
+        "description": "Source restriction for write requests. Valid values: anywhere, ci_only, ci_on_protected_branch_only.",
         "x-ms-enum": {
-          "name": "RequestBody1C287Db32396AllowedFrom",
+          "name": "RequestBodyCb605A1A7550AllowedFrom",
           "modelAsString": false,
           "values": [
             {
@@ -179736,7 +180009,7 @@
         "description": "The access levels allowed to approve",
         "nullable": true
       },
-      "RequestBody43Af6C439096DeployAccessLevelsItemGroupInheritanceType": {
+      "RequestBody730D646234A1DeployAccessLevelsItemGroupInheritanceType": {
         "enum": [
           0,
           1
@@ -179746,7 +180019,7 @@
         "description": "Specify whether to take inherited group membership into account. Use \u00600\u0060 for direct group membership or \u00601\u0060 for all inherited groups. Default is \u00600\u0060",
         "nullable": true
       },
-      "RequestBody43Af6C439096DeployAccessLevelsItemAccessLevel": {
+      "RequestBody730D646234A1DeployAccessLevelsItemAccessLevel": {
         "enum": [
           40,
           30,
@@ -179758,7 +180031,7 @@
         "description": "The access levels allowed to deploy",
         "nullable": true
       },
-      "RequestBody43Af6C439096ApprovalRulesItemGroupInheritanceType": {
+      "RequestBody730D646234A1ApprovalRulesItemGroupInheritanceType": {
         "enum": [
           0,
           1
@@ -179768,7 +180041,7 @@
         "description": "Specify whether to take inherited group membership into account. Use \u00600\u0060 for direct group membership or \u00601\u0060 for all inherited groups. Default is \u00600\u0060",
         "nullable": true
       },
-      "RequestBody43Af6C439096ApprovalRulesItemAccessLevel": {
+      "RequestBody730D646234A1ApprovalRulesItemAccessLevel": {
         "enum": [
           40,
           30,
@@ -182849,7 +183122,7 @@
           ]
         }
       },
-      "RequestBodyC47606Fab71CDefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel": {
+      "RequestBodyAff2E18E4B2EDefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel": {
         "enum": [
           30,
           40,
@@ -182860,7 +183133,7 @@
         "additionalProperties": false,
         "description": "A valid access level"
       },
-      "RequestBodyC47606Fab71CDefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel": {
+      "RequestBodyAff2E18E4B2EDefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel": {
         "enum": [
           30,
           40,
@@ -182870,6 +183143,39 @@
         "type": "integer",
         "additionalProperties": false,
         "description": "A valid access level"
+      },
+      "RequestBodyF4B628Cf1938AssetsLinksItemLinkType": {
+        "enum": [
+          "other",
+          "runbook",
+          "package",
+          "image"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "The type of the link.",
+        "x-ms-enum": {
+          "name": "RequestBodyF4B628Cf1938AssetsLinksItemLinkType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "other",
+              "name": "Other"
+            },
+            {
+              "value": "runbook",
+              "name": "Runbook"
+            },
+            {
+              "value": "package",
+              "name": "Package"
+            },
+            {
+              "value": "image",
+              "name": "Image"
+            }
+          ]
+        }
       },
       "RequestBody44F3C209C81DDefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel": {
         "enum": [
@@ -183144,6 +183450,82 @@
             {
               "value": "cadence_title",
               "name": "CadenceTitle"
+            }
+          ]
+        }
+      },
+      "GetApiV4GroupsIdProtectedEnvironmentsNameNameParameter": {
+        "minLength": 1,
+        "enum": [
+          "production",
+          "staging",
+          "testing",
+          "development",
+          "other"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "GetApiV4GroupsIdProtectedEnvironmentsNameNameParameter",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "production",
+              "name": "Production"
+            },
+            {
+              "value": "staging",
+              "name": "Staging"
+            },
+            {
+              "value": "testing",
+              "name": "Testing"
+            },
+            {
+              "value": "development",
+              "name": "Development"
+            },
+            {
+              "value": "other",
+              "name": "Other"
+            }
+          ]
+        }
+      },
+      "PutApiV4GroupsIdProtectedEnvironmentsNameNameParameter": {
+        "minLength": 1,
+        "enum": [
+          "production",
+          "staging",
+          "testing",
+          "development",
+          "other"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "PutApiV4GroupsIdProtectedEnvironmentsNameNameParameter",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "production",
+              "name": "Production"
+            },
+            {
+              "value": "staging",
+              "name": "Staging"
+            },
+            {
+              "value": "testing",
+              "name": "Testing"
+            },
+            {
+              "value": "development",
+              "name": "Development"
+            },
+            {
+              "value": "other",
+              "name": "Other"
             }
           ]
         }
@@ -184072,6 +184454,200 @@
             {
               "value": "all",
               "name": "All"
+            }
+          ]
+        }
+      },
+      "GetApiV4ProjectsIdDoraMetricsMetricParameter": {
+        "minLength": 1,
+        "enum": [
+          "deployment_frequency",
+          "lead_time_for_changes",
+          "time_to_restore_service",
+          "change_failure_rate"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "GetApiV4ProjectsIdDoraMetricsMetricParameter",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "deployment_frequency",
+              "name": "DeploymentFrequency"
+            },
+            {
+              "value": "lead_time_for_changes",
+              "name": "LeadTimeForChanges"
+            },
+            {
+              "value": "time_to_restore_service",
+              "name": "TimeToRestoreService"
+            },
+            {
+              "value": "change_failure_rate",
+              "name": "ChangeFailureRate"
+            }
+          ]
+        }
+      },
+      "GetApiV4ProjectsIdDoraMetricsIntervalParameter": {
+        "enum": [
+          "all",
+          "monthly",
+          "daily"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "GetApiV4ProjectsIdDoraMetricsIntervalParameter",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "all",
+              "name": "All"
+            },
+            {
+              "value": "monthly",
+              "name": "Monthly"
+            },
+            {
+              "value": "daily",
+              "name": "Daily"
+            }
+          ]
+        }
+      },
+      "GetApiV4ProjectsIdDoraMetricsEnvironmentTiersParameterItem": {
+        "enum": [
+          "production",
+          "staging",
+          "testing",
+          "development",
+          "other"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "GetApiV4ProjectsIdDoraMetricsEnvironmentTiersParameterItem",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "production",
+              "name": "Production"
+            },
+            {
+              "value": "staging",
+              "name": "Staging"
+            },
+            {
+              "value": "testing",
+              "name": "Testing"
+            },
+            {
+              "value": "development",
+              "name": "Development"
+            },
+            {
+              "value": "other",
+              "name": "Other"
+            }
+          ]
+        }
+      },
+      "GetApiV4GroupsIdDoraMetricsMetricParameter": {
+        "minLength": 1,
+        "enum": [
+          "deployment_frequency",
+          "lead_time_for_changes",
+          "time_to_restore_service",
+          "change_failure_rate"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "GetApiV4GroupsIdDoraMetricsMetricParameter",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "deployment_frequency",
+              "name": "DeploymentFrequency"
+            },
+            {
+              "value": "lead_time_for_changes",
+              "name": "LeadTimeForChanges"
+            },
+            {
+              "value": "time_to_restore_service",
+              "name": "TimeToRestoreService"
+            },
+            {
+              "value": "change_failure_rate",
+              "name": "ChangeFailureRate"
+            }
+          ]
+        }
+      },
+      "GetApiV4GroupsIdDoraMetricsIntervalParameter": {
+        "enum": [
+          "all",
+          "monthly",
+          "daily"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "GetApiV4GroupsIdDoraMetricsIntervalParameter",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "all",
+              "name": "All"
+            },
+            {
+              "value": "monthly",
+              "name": "Monthly"
+            },
+            {
+              "value": "daily",
+              "name": "Daily"
+            }
+          ]
+        }
+      },
+      "GetApiV4GroupsIdDoraMetricsEnvironmentTiersParameterItem": {
+        "enum": [
+          "production",
+          "staging",
+          "testing",
+          "development",
+          "other"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "GetApiV4GroupsIdDoraMetricsEnvironmentTiersParameterItem",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "production",
+              "name": "Production"
+            },
+            {
+              "value": "staging",
+              "name": "Staging"
+            },
+            {
+              "value": "testing",
+              "name": "Testing"
+            },
+            {
+              "value": "development",
+              "name": "Development"
+            },
+            {
+              "value": "other",
+              "name": "Other"
             }
           ]
         }
@@ -195795,9 +196371,9 @@
         "type": "oauth2",
         "flows": {
           "authorizationCode": {
-            "authorizationUrl": "https://gitlab.com/api/oauth/authorize",
-            "tokenUrl": "https://gitlab.com/api/oauth/token",
-            "refreshUrl": "https://gitlab.com/api/oauth/refresh",
+            "authorizationUrl": "https://gitlab.com/oauth/authorize",
+            "tokenUrl": "https://gitlab.com/oauth/token",
+            "refreshUrl": "https://gitlab.com/oauth/token",
             "scopes": {
               "api": "Grants complete read/write access to the API, including all groups and projects, the container registry, the dependency proxy, and the package registry.",
               "read_api": "Grants read access to the API, including all groups and projects, the container registry, and the package registry.",
