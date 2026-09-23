@@ -1173,7 +1173,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyA85Ec726F82E"
+                "$ref": "#/components/schemas/RequestBodyE4B2Ec1A2C1E"
               }
             }
           },
@@ -6736,6 +6736,7 @@
           "Vulnerabilities"
         ],
         "summary": "Get related issues for a vulnerability",
+        "description": "Lists related issues for a vulnerability.",
         "operationId": "GetApiV4VulnerabilitiesIdIssueLinks",
         "parameters": [
           {
@@ -6772,6 +6773,7 @@
           "Vulnerabilities"
         ],
         "summary": "Relate an issue to a vulnerability",
+        "description": "Relates an issue to a vulnerability.",
         "operationId": "PostApiV4VulnerabilitiesIdIssueLinks",
         "parameters": [
           {
@@ -6820,6 +6822,7 @@
           "Vulnerabilities"
         ],
         "summary": "Delete a link between an issue and a vulnerability",
+        "description": "Deletes a link between an issue and a vulnerability.",
         "operationId": "DeleteApiV4VulnerabilitiesIdIssueLinksIssueLinkId",
         "parameters": [
           {
@@ -14229,6 +14232,7 @@
           "Epics"
         ],
         "summary": "Get related epics",
+        "description": "Lists all child epics of an epic.",
         "operationId": "GetApiV4GroupsIdDashEpicsEpicIidEpics",
         "parameters": [
           {
@@ -14282,6 +14286,7 @@
           "Epics"
         ],
         "summary": "Create and relate epic to a parent",
+        "description": "Creates a new epic and associates it with the provided parent epic.",
         "operationId": "PostApiV4GroupsIdDashEpicsEpicIidEpics",
         "parameters": [
           {
@@ -14350,6 +14355,7 @@
           "Epics"
         ],
         "summary": "Relate epics",
+        "description": "Creates an association between two epics, designating one as the parent epic and the other as the child epic.",
         "operationId": "PostApiV4GroupsIdDashEpicsEpicIidEpicsChildEpicId",
         "parameters": [
           {
@@ -14416,6 +14422,7 @@
           "Epics"
         ],
         "summary": "Remove epics relation",
+        "description": "Unassigns a child epic from a parent epic.",
         "operationId": "DeleteApiV4GroupsIdDashEpicsEpicIidEpicsChildEpicId",
         "parameters": [
           {
@@ -14476,6 +14483,7 @@
           "Epics"
         ],
         "summary": "Reorder child epics",
+        "description": "Reorders a child epic.",
         "operationId": "PutApiV4GroupsIdDashEpicsEpicIidEpicsChildEpicId",
         "parameters": [
           {
@@ -15801,6 +15809,7 @@
           "Approval rules"
         ],
         "summary": "Update group approval rule",
+        "description": "Updates an approval rule for a group.",
         "operationId": "PutApiV4GroupsIdApprovalRulesApprovalRuleId",
         "parameters": [
           {
@@ -26101,7 +26110,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyAff2E18E4B2E"
+                "$ref": "#/components/schemas/RequestBody02F7C66B6A32"
               }
             }
           }
@@ -29064,7 +29073,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyAc6F9367F3De"
+                "$ref": "#/components/schemas/RequestBodyBc09Ed866646"
               }
             }
           },
@@ -29388,7 +29397,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyAc6F9367F3De"
+                "$ref": "#/components/schemas/RequestBodyBc09Ed866646"
               }
             }
           },
@@ -29712,7 +29721,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyAc6F9367F3De"
+                "$ref": "#/components/schemas/RequestBodyBc09Ed866646"
               }
             }
           },
@@ -30036,7 +30045,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyAc6F9367F3De"
+                "$ref": "#/components/schemas/RequestBodyBc09Ed866646"
               }
             }
           },
@@ -30360,7 +30369,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyAc6F9367F3De"
+                "$ref": "#/components/schemas/RequestBodyBc09Ed866646"
               }
             }
           },
@@ -30684,7 +30693,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyAc6F9367F3De"
+                "$ref": "#/components/schemas/RequestBodyBc09Ed866646"
               }
             }
           },
@@ -31008,7 +31017,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyAc6F9367F3De"
+                "$ref": "#/components/schemas/RequestBodyBc09Ed866646"
               }
             }
           },
@@ -53451,7 +53460,7 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyAe072Ba82Cae"
+                "$ref": "#/components/schemas/RequestBody49F7157F4078"
               }
             }
           },
@@ -68194,7 +68203,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody1Fe5C49Bd5C3"
+                "$ref": "#/components/schemas/RequestBody1387B5F6Be72"
               }
             }
           },
@@ -72495,7 +72504,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody09329Db5E867"
+                "$ref": "#/components/schemas/RequestBody4090E131595A"
               }
             }
           },
@@ -86168,6 +86177,7 @@
           "Geo"
         ],
         "summary": "Returns a Geo proxy response",
+        "description": "Determines if the current Geo site should proxy requests.",
         "operationId": "GetApiV4GeoProxy",
         "responses": {
           "200": {
@@ -106119,6 +106129,60 @@
         }
       }
     },
+    "/api/v4/jobs/{id}/runtime_environment_key": {
+      "get": {
+        "tags": [
+          "Jobs"
+        ],
+        "summary": "Get the runtime environment key for a job",
+        "description": "Retrieves the runtime environment key linked to a job, if the job is resuming a suspended environment.",
+        "operationId": "GetApiV4JobsIdRuntimeEnvironmentKey",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Job\u0027s ID",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "token",
+            "in": "query",
+            "description": "Job\u0027s authentication token",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesCiRuntimeEnvironmentKey"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "429": {
+            "description": "Too Many Requests"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
     "/api/v4/jobs/{id}/trace": {
       "patch": {
         "tags": [
@@ -106819,69 +106883,6 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ApiEntitiesCiJob"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not found"
-          },
-          "400": {
-            "description": "Bad Request"
-          }
-        }
-      }
-    },
-    "/api/v4/projects/{id}/jobs/{jobId}/runtime_environment_key": {
-      "get": {
-        "tags": [
-          "CI jobs"
-        ],
-        "summary": "Get the runtime environment key for a job",
-        "description": "Retrieves the runtime environment key linked to a job, if the job is resuming a suspended environment.",
-        "operationId": "GetApiV4ProjectsIdJobsJobIdRuntimeEnvironmentKey",
-        "parameters": [
-          {
-            "name": "jobId",
-            "in": "path",
-            "description": "The ID of a job",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "example": 88
-          },
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The ID or URL-encoded path of the project",
-            "required": true,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "integer"
-                },
-                {
-                  "type": "string"
-                }
-              ]
-            },
-            "example": 1
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesCiRuntimeEnvironmentKey"
                 }
               }
             }
@@ -118551,9 +118552,7 @@
             "$ref": "#/components/schemas/ApiEntitiesUserBasic"
           },
           "type": {
-            "type": "string",
-            "description": "One of [\u0022ISSUE\u0022, \u0022INCIDENT\u0022, \u0022TEST_CASE\u0022, \u0022REQUIREMENT\u0022, \u0022TASK\u0022, \u0022TICKET\u0022]",
-            "example": "ISSUE"
+            "$ref": "#/components/schemas/ApiEntitiesVulnerabilityRelatedIssueType"
           },
           "assignee": {
             "$ref": "#/components/schemas/ApiEntitiesUserBasic"
@@ -118807,9 +118806,7 @@
             "$ref": "#/components/schemas/ApiEntitiesUserBasic"
           },
           "type": {
-            "type": "string",
-            "description": "One of [\u0022ISSUE\u0022, \u0022INCIDENT\u0022, \u0022TEST_CASE\u0022, \u0022REQUIREMENT\u0022, \u0022TASK\u0022, \u0022TICKET\u0022]",
-            "example": "ISSUE"
+            "$ref": "#/components/schemas/ApiEntitiesIssueBasicType"
           },
           "assignee": {
             "$ref": "#/components/schemas/ApiEntitiesUserBasic"
@@ -119583,6 +119580,57 @@
           }
         }
       },
+      "ApiEntitiesMergeRequestAuthor": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64",
+            "example": 1
+          },
+          "username": {
+            "type": "string",
+            "example": "admin"
+          },
+          "public_email": {
+            "type": "string",
+            "example": "john@example.com"
+          },
+          "name": {
+            "type": "string",
+            "example": "Administrator"
+          },
+          "state": {
+            "type": "string",
+            "example": "active"
+          },
+          "locked": {
+            "type": "boolean"
+          },
+          "avatar_url": {
+            "type": "string",
+            "example": "https://gravatar.com/avatar/1"
+          },
+          "avatar_path": {
+            "type": "string",
+            "example": "/user/avatar/28/The-Big-Lebowski-400-400.png"
+          },
+          "custom_attributes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesCustomAttribute"
+            }
+          },
+          "web_url": {
+            "type": "string",
+            "example": "https://gitlab.example.com/root"
+          },
+          "bot": {
+            "type": "boolean",
+            "example": false
+          }
+        }
+      },
       "ApiEntitiesIssuableReferences": {
         "type": "object",
         "properties": {
@@ -119680,7 +119728,7 @@
             "type": "integer"
           },
           "author": {
-            "$ref": "#/components/schemas/ApiEntitiesUserBasic"
+            "$ref": "#/components/schemas/ApiEntitiesMergeRequestAuthor"
           },
           "assignees": {
             "$ref": "#/components/schemas/ApiEntitiesUserBasic"
@@ -125226,9 +125274,7 @@
             "$ref": "#/components/schemas/ApiEntitiesUserBasic"
           },
           "type": {
-            "type": "string",
-            "description": "One of [\u0022ISSUE\u0022, \u0022INCIDENT\u0022, \u0022TEST_CASE\u0022, \u0022REQUIREMENT\u0022, \u0022TASK\u0022, \u0022TICKET\u0022]",
-            "example": "ISSUE"
+            "$ref": "#/components/schemas/ApiEntitiesEpicIssueType"
           },
           "assignee": {
             "$ref": "#/components/schemas/ApiEntitiesUserBasic"
@@ -125298,8 +125344,7 @@
             "$ref": "#/components/schemas/ApiEntitiesIssuableReferences"
           },
           "severity": {
-            "type": "string",
-            "description": "One of [\u0022UNKNOWN\u0022, \u0022LOW\u0022, \u0022MEDIUM\u0022, \u0022HIGH\u0022, \u0022CRITICAL\u0022]"
+            "$ref": "#/components/schemas/ApiEntitiesEpicIssueSeverity"
           },
           "subscribed": {
             "type": "boolean",
@@ -125767,7 +125812,7 @@
             "type": "integer"
           },
           "author": {
-            "$ref": "#/components/schemas/ApiEntitiesUserBasic"
+            "$ref": "#/components/schemas/ApiEntitiesMergeRequestAuthor"
           },
           "assignees": {
             "$ref": "#/components/schemas/ApiEntitiesUserBasic"
@@ -128129,9 +128174,7 @@
             "$ref": "#/components/schemas/ApiEntitiesUserBasic"
           },
           "type": {
-            "type": "string",
-            "description": "One of [\u0022ISSUE\u0022, \u0022INCIDENT\u0022, \u0022TEST_CASE\u0022, \u0022REQUIREMENT\u0022, \u0022TASK\u0022, \u0022TICKET\u0022]",
-            "example": "ISSUE"
+            "$ref": "#/components/schemas/ApiEntitiesIssueType"
           },
           "assignee": {
             "$ref": "#/components/schemas/ApiEntitiesUserBasic"
@@ -128201,8 +128244,7 @@
             "$ref": "#/components/schemas/ApiEntitiesIssuableReferences"
           },
           "severity": {
-            "type": "string",
-            "description": "One of [\u0022UNKNOWN\u0022, \u0022LOW\u0022, \u0022MEDIUM\u0022, \u0022HIGH\u0022, \u0022CRITICAL\u0022]"
+            "$ref": "#/components/schemas/ApiEntitiesIssueSeverity"
           },
           "subscribed": {
             "type": "boolean",
@@ -136670,7 +136712,7 @@
             "type": "integer"
           },
           "author": {
-            "$ref": "#/components/schemas/ApiEntitiesUserBasic"
+            "$ref": "#/components/schemas/ApiEntitiesMergeRequestAuthor"
           },
           "assignees": {
             "$ref": "#/components/schemas/ApiEntitiesUserBasic"
@@ -137261,9 +137303,7 @@
             "$ref": "#/components/schemas/ApiEntitiesUserBasic"
           },
           "type": {
-            "type": "string",
-            "description": "One of [\u0022ISSUE\u0022, \u0022INCIDENT\u0022, \u0022TEST_CASE\u0022, \u0022REQUIREMENT\u0022, \u0022TASK\u0022, \u0022TICKET\u0022]",
-            "example": "ISSUE"
+            "$ref": "#/components/schemas/ApiEntitiesRelatedIssueType"
           },
           "assignee": {
             "$ref": "#/components/schemas/ApiEntitiesUserBasic"
@@ -137333,8 +137373,7 @@
             "$ref": "#/components/schemas/ApiEntitiesIssuableReferences"
           },
           "severity": {
-            "type": "string",
-            "description": "One of [\u0022UNKNOWN\u0022, \u0022LOW\u0022, \u0022MEDIUM\u0022, \u0022HIGH\u0022, \u0022CRITICAL\u0022]"
+            "$ref": "#/components/schemas/ApiEntitiesRelatedIssueSeverity"
           },
           "subscribed": {
             "type": "boolean",
@@ -140513,6 +140552,15 @@
           }
         }
       },
+      "ApiEntitiesCiRuntimeEnvironmentKey": {
+        "type": "object",
+        "properties": {
+          "runtime_environment_key": {
+            "type": "string",
+            "example": "42/s_machineid/data"
+          }
+        }
+      },
       "ApiEntitiesCiResourceGroup": {
         "type": "object",
         "properties": {
@@ -140627,15 +140675,6 @@
           },
           "project": {
             "$ref": "#/components/schemas/ApiEntitiesCiJobBasicProject"
-          }
-        }
-      },
-      "ApiEntitiesCiRuntimeEnvironmentKey": {
-        "type": "object",
-        "properties": {
-          "runtime_environment_key": {
-            "type": "string",
-            "example": "42/s_machineid/data"
           }
         }
       },
@@ -142128,7 +142167,7 @@
           }
         }
       },
-      "RequestBodyA85Ec726F82E": {
+      "RequestBodyE4B2Ec1A2C1E": {
         "required": [
           "audience"
         ],
@@ -142141,8 +142180,8 @@
             "maximum": 43200,
             "minimum": 1,
             "type": "integer",
-            "description": "Requested token lifetime in seconds, from 1 up to 43200. Defaults to 300. The granted lifetime may be shorter than requested depending on the authentication method used to call this endpoint.",
-            "nullable": true
+            "description": "Requested token lifetime in seconds. The granted lifetime may be shorter than requested depending on the authentication method used to call this endpoint.",
+            "default": 300
           }
         }
       },
@@ -147192,7 +147231,7 @@
           }
         }
       },
-      "RequestBodyAff2E18E4B2E": {
+      "RequestBody02F7C66B6A32": {
         "type": "object",
         "properties": {
           "admin_mode": {
@@ -147292,19 +147331,19 @@
             "nullable": true
           },
           "default_project_creation": {
-            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EDefaultProjectCreation"
+            "$ref": "#/components/schemas/RequestBody02F7C66B6A32DefaultProjectCreation"
           },
           "default_branch_protection": {
-            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EDefaultBranchProtection"
+            "$ref": "#/components/schemas/RequestBody02F7C66B6A32DefaultBranchProtection"
           },
           "default_branch_protection_defaults": {
-            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EDefaultBranchProtectionDefaults"
+            "$ref": "#/components/schemas/RequestBody02F7C66B6A32DefaultBranchProtectionDefaults"
           },
           "default_group_visibility": {
-            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EDefaultGroupVisibility"
+            "$ref": "#/components/schemas/RequestBody02F7C66B6A32DefaultGroupVisibility"
           },
           "default_project_visibility": {
-            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EDefaultProjectVisibility"
+            "$ref": "#/components/schemas/RequestBody02F7C66B6A32DefaultProjectVisibility"
           },
           "default_projects_limit": {
             "type": "integer",
@@ -147312,10 +147351,10 @@
             "nullable": true
           },
           "default_snippet_visibility": {
-            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EDefaultSnippetVisibility"
+            "$ref": "#/components/schemas/RequestBody02F7C66B6A32DefaultSnippetVisibility"
           },
           "dependency_management_settings": {
-            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EDependencyManagementSettings"
+            "$ref": "#/components/schemas/RequestBody02F7C66B6A32DependencyManagementSettings"
           },
           "disable_admin_oauth_scopes": {
             "type": "boolean",
@@ -147413,10 +147452,10 @@
             "nullable": true
           },
           "email_confirmation_setting": {
-            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EEmailConfirmationSetting"
+            "$ref": "#/components/schemas/RequestBody02F7C66B6A32EmailConfirmationSetting"
           },
           "enabled_git_access_protocol": {
-            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EEnabledGitAccessProtocol"
+            "$ref": "#/components/schemas/RequestBody02F7C66B6A32EnabledGitAccessProtocol"
           },
           "gitpod_enabled": {
             "type": "boolean",
@@ -147516,7 +147555,7 @@
           "import_sources": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EImportSourcesItem"
+              "$ref": "#/components/schemas/RequestBody02F7C66B6A32ImportSourcesItem"
             },
             "description": "Enabled sources for code import during project creation. OmniAuth must be configured for GitHub, Bitbucket, and GitLab.com",
             "nullable": true
@@ -147712,7 +147751,7 @@
             "nullable": true
           },
           "repository_storages_weighted": {
-            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2ERepositoryStoragesWeightedProperty"
+            "$ref": "#/components/schemas/RequestBody02F7C66B6A32RepositoryStoragesWeightedProperty"
           },
           "require_two_factor_authentication": {
             "type": "boolean",
@@ -147876,7 +147915,7 @@
             "nullable": true
           },
           "whats_new_variant": {
-            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EWhatsNewVariant"
+            "$ref": "#/components/schemas/RequestBody02F7C66B6A32WhatsNewVariant"
           },
           "floc_enabled": {
             "type": "boolean",
@@ -148094,18 +148133,18 @@
             "nullable": true
           },
           "resource_usage_limits": {
-            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EResourceUsageLimitsProperty"
+            "$ref": "#/components/schemas/RequestBody02F7C66B6A32ResourceUsageLimitsProperty"
           },
           "code_dropdown_custom_clients": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBodyAff2E18E4B2ECodeDropdownCustomClientsItem"
+              "$ref": "#/components/schemas/RequestBody02F7C66B6A32CodeDropdownCustomClientsItem"
             },
             "description": "Custom \u0022Open with\u0022 clients shown in the project Code dropdown list",
             "nullable": true
           },
           "vscode_extension_marketplace": {
-            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EVscodeExtensionMarketplace"
+            "$ref": "#/components/schemas/RequestBody02F7C66B6A32VscodeExtensionMarketplace"
           },
           "enable_language_server_restrictions": {
             "type": "boolean",
@@ -148123,28 +148162,28 @@
             "nullable": true
           },
           "logging_field_schema_version": {
-            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2ELoggingFieldSchemaVersion"
+            "$ref": "#/components/schemas/RequestBody02F7C66B6A32LoggingFieldSchemaVersion"
           },
           "logging_field_dual_emit_target": {
-            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2ELoggingFieldDualEmitTarget"
+            "$ref": "#/components/schemas/RequestBody02F7C66B6A32LoggingFieldDualEmitTarget"
           },
           "rsa_key_restriction": {
-            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2ERsaKeyRestriction"
+            "$ref": "#/components/schemas/RequestBody02F7C66B6A32RsaKeyRestriction"
           },
           "dsa_key_restriction": {
-            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EDsaKeyRestriction"
+            "$ref": "#/components/schemas/RequestBody02F7C66B6A32DsaKeyRestriction"
           },
           "ecdsa_key_restriction": {
-            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EEcdsaKeyRestriction"
+            "$ref": "#/components/schemas/RequestBody02F7C66B6A32EcdsaKeyRestriction"
           },
           "ed25519_key_restriction": {
-            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EEd25519KeyRestriction"
+            "$ref": "#/components/schemas/RequestBody02F7C66B6A32Ed25519KeyRestriction"
           },
           "ecdsa_sk_key_restriction": {
-            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EEcdsaSkKeyRestriction"
+            "$ref": "#/components/schemas/RequestBody02F7C66B6A32EcdsaSkKeyRestriction"
           },
           "ed25519_sk_key_restriction": {
-            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EEd25519SkKeyRestriction"
+            "$ref": "#/components/schemas/RequestBody02F7C66B6A32Ed25519SkKeyRestriction"
           },
           "allow_account_deletion": {
             "type": "string",
@@ -148667,9 +148706,7 @@
             "nullable": true
           },
           "sidekiq_job_limiter_mode": {
-            "type": "string",
-            "description": "\u0060track\u0060 or \u0060compress\u0060. Sets the behavior for Sidekiq job size limits. Default: \u0027compress\u0027.",
-            "nullable": true
+            "$ref": "#/components/schemas/RequestBody02F7C66B6A32SidekiqJobLimiterMode"
           },
           "sidekiq_timezone_override": {
             "type": "string",
@@ -149301,7 +149338,7 @@
           "duo_namespace_access_rules": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EDuoNamespaceAccessRulesItem"
+              "$ref": "#/components/schemas/RequestBody02F7C66B6A32DuoNamespaceAccessRulesItem"
             },
             "description": "AI entity access rules for controlling Duo feature access",
             "nullable": true
@@ -150788,7 +150825,7 @@
           }
         }
       },
-      "RequestBodyAc6F9367F3De": {
+      "RequestBodyBc09Ed866646": {
         "required": [
           "body"
         ],
@@ -150806,8 +150843,8 @@
           },
           "internal": {
             "type": "boolean",
-            "description": "Internal note flag, default is false",
-            "nullable": true
+            "description": "Internal note flag.",
+            "default": false
           },
           "created_at": {
             "type": "string",
@@ -154264,7 +154301,7 @@
           }
         }
       },
-      "RequestBodyAe072Ba82Cae": {
+      "RequestBody49F7157F4078": {
         "required": [
           "path",
           "file",
@@ -154284,9 +154321,7 @@
             "nullable": true
           },
           "relation": {
-            "type": "string",
-            "description": "The relation to import. Must be one of issues, merge_requests, ci_pipelines, or milestones.",
-            "nullable": true
+            "$ref": "#/components/schemas/RequestBody49F7157F4078Relation"
           },
           "file.path": {
             "type": "string",
@@ -155825,7 +155860,7 @@
           }
         }
       },
-      "RequestBody1Fe5C49Bd5C3": {
+      "RequestBody1387B5F6Be72": {
         "required": [
           "text"
         ],
@@ -155838,8 +155873,8 @@
           },
           "gfm": {
             "type": "boolean",
-            "description": "Render text using GitLab Flavored Markdown. Default is false",
-            "nullable": true
+            "description": "Render text using GitLab Flavored Markdown.",
+            "default": false
           },
           "project": {
             "type": "string",
@@ -156206,7 +156241,7 @@
           }
         }
       },
-      "RequestBody09329Db5E867": {
+      "RequestBody4090E131595A": {
         "required": [
           "target_project_id",
           "target_issue_iid"
@@ -156214,13 +156249,13 @@
         "type": "object",
         "properties": {
           "target_project_id": {
-            "$ref": "#/components/schemas/RequestBody09329Db5E867TargetProjectId"
+            "$ref": "#/components/schemas/RequestBody4090E131595ATargetProjectId"
           },
           "target_issue_iid": {
-            "$ref": "#/components/schemas/RequestBody09329Db5E867TargetIssueIid"
+            "$ref": "#/components/schemas/RequestBody4090E131595ATargetIssueIid"
           },
           "link_type": {
-            "$ref": "#/components/schemas/RequestBody09329Db5E867LinkType"
+            "$ref": "#/components/schemas/RequestBody4090E131595ALinkType"
           }
         }
       },
@@ -162848,7 +162883,7 @@
         ],
         "description": "The user ID of the new member or multiple IDs separated by commas. Mutually exclusive with \u0060username\u0060."
       },
-      "RequestBody09329Db5E867TargetProjectId": {
+      "RequestBody4090E131595ATargetProjectId": {
         "type": "object",
         "oneOf": [
           {
@@ -162862,7 +162897,7 @@
         ],
         "description": "The ID or URL-encoded path of a target project"
       },
-      "RequestBody09329Db5E867TargetIssueIid": {
+      "RequestBody4090E131595ATargetIssueIid": {
         "type": "object",
         "oneOf": [
           {
@@ -165123,13 +165158,13 @@
           }
         }
       },
-      "RequestBodyAff2E18E4B2EDefaultBranchProtectionDefaults": {
+      "RequestBody02F7C66B6A32DefaultBranchProtectionDefaults": {
         "type": "object",
         "properties": {
           "allowed_to_push": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EDefaultBranchProtectionDefaultsAllowedToPushItem"
+              "$ref": "#/components/schemas/RequestBody02F7C66B6A32DefaultBranchProtectionDefaultsAllowedToPushItem"
             },
             "description": "An array of access levels allowed to push",
             "nullable": true
@@ -165142,7 +165177,7 @@
           "allowed_to_merge": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EDefaultBranchProtectionDefaultsAllowedToMergeItem"
+              "$ref": "#/components/schemas/RequestBody02F7C66B6A32DefaultBranchProtectionDefaultsAllowedToMergeItem"
             },
             "description": "An array of access levels allowed to merge",
             "nullable": true
@@ -165161,7 +165196,7 @@
         "description": "Determine if developers can push to default branch",
         "nullable": true
       },
-      "RequestBodyAff2E18E4B2EDependencyManagementSettings": {
+      "RequestBody02F7C66B6A32DependencyManagementSettings": {
         "type": "object",
         "properties": {
           "security_update_scheduler_max_concurrency": {
@@ -165173,7 +165208,7 @@
         "description": "Dependency management settings",
         "nullable": true
       },
-      "RequestBodyAff2E18E4B2ERepositoryStoragesWeighted": {
+      "RequestBody02F7C66B6A32RepositoryStoragesWeighted": {
         "type": "object",
         "additionalProperties": {
           "type": "integer"
@@ -165181,12 +165216,12 @@
         "description": "Storage paths for new projects with a weighted value ranging from 0 to 100",
         "nullable": true
       },
-      "RequestBodyAff2E18E4B2EResourceUsageLimits": {
+      "RequestBody02F7C66B6A32ResourceUsageLimits": {
         "type": "object",
         "description": "Definition for resource usage limits enforced in Sidekiq workers",
         "nullable": true
       },
-      "RequestBodyAff2E18E4B2ECodeDropdownCustomClientsItem": {
+      "RequestBody02F7C66B6A32CodeDropdownCustomClientsItem": {
         "required": [
           "name"
         ],
@@ -165209,7 +165244,7 @@
           }
         }
       },
-      "RequestBodyAff2E18E4B2EVscodeExtensionMarketplace": {
+      "RequestBody02F7C66B6A32VscodeExtensionMarketplace": {
         "type": "object",
         "properties": {
           "enabled": {
@@ -165223,20 +165258,20 @@
             "nullable": true
           },
           "custom_values": {
-            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EVscodeExtensionMarketplaceCustomValuesProperty"
+            "$ref": "#/components/schemas/RequestBody02F7C66B6A32VscodeExtensionMarketplaceCustomValuesProperty"
           }
         },
         "description": "Settings for VS Code Extension Marketplace",
         "nullable": true
       },
-      "RequestBodyAff2E18E4B2EDuoNamespaceAccessRulesItem": {
+      "RequestBody02F7C66B6A32DuoNamespaceAccessRulesItem": {
         "required": [
           "features"
         ],
         "type": "object",
         "properties": {
           "through_namespace": {
-            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EDuoNamespaceAccessRulesItemThroughNamespace"
+            "$ref": "#/components/schemas/RequestBody02F7C66B6A32DuoNamespaceAccessRulesItemThroughNamespace"
           },
           "features": {
             "type": "array",
@@ -168681,34 +168716,34 @@
         "description": "Data for rendering the vulnerabilities by severity count in PDF reports",
         "nullable": true
       },
-      "RequestBodyAff2E18E4B2EDefaultBranchProtectionDefaultsAllowedToPushItem": {
+      "RequestBody02F7C66B6A32DefaultBranchProtectionDefaultsAllowedToPushItem": {
         "required": [
           "access_level"
         ],
         "type": "object",
         "properties": {
           "access_level": {
-            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EDefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel"
+            "$ref": "#/components/schemas/RequestBody02F7C66B6A32DefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel"
           }
         }
       },
-      "RequestBodyAff2E18E4B2EDefaultBranchProtectionDefaultsAllowedToMergeItem": {
+      "RequestBody02F7C66B6A32DefaultBranchProtectionDefaultsAllowedToMergeItem": {
         "required": [
           "access_level"
         ],
         "type": "object",
         "properties": {
           "access_level": {
-            "$ref": "#/components/schemas/RequestBodyAff2E18E4B2EDefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel"
+            "$ref": "#/components/schemas/RequestBody02F7C66B6A32DefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel"
           }
         }
       },
-      "RequestBodyAff2E18E4B2EVscodeExtensionMarketplaceCustomValues": {
+      "RequestBody02F7C66B6A32VscodeExtensionMarketplaceCustomValues": {
         "type": "object",
         "description": "VS Code Extension Marketplace URL\u0027s when preset is \u0027custom\u0027",
         "nullable": true
       },
-      "RequestBodyAff2E18E4B2EDuoNamespaceAccessRulesItemThroughNamespace": {
+      "RequestBody02F7C66B6A32DuoNamespaceAccessRulesItemThroughNamespace": {
         "required": [
           "id"
         ],
@@ -170737,14 +170772,14 @@
         "type": "object",
         "description": "Context parameters (user, namespace, project). An actor context is resolved from the user. Defaults to current user."
       },
-      "RequestBodyAff2E18E4B2ERepositoryStoragesWeightedProperty": {
+      "RequestBody02F7C66B6A32RepositoryStoragesWeightedProperty": {
         "type": "object",
         "additionalProperties": {
           "type": "integer"
         },
         "description": "Storage paths for new projects with a weighted value ranging from 0 to 100"
       },
-      "RequestBodyAff2E18E4B2EResourceUsageLimitsProperty": {
+      "RequestBody02F7C66B6A32ResourceUsageLimitsProperty": {
         "type": "object",
         "description": "Definition for resource usage limits enforced in Sidekiq workers"
       },
@@ -170850,7 +170885,7 @@
         "type": "object",
         "description": "Data for rendering the vulnerabilities by age in PDF reports"
       },
-      "RequestBodyAff2E18E4B2EVscodeExtensionMarketplaceCustomValuesProperty": {
+      "RequestBody02F7C66B6A32VscodeExtensionMarketplaceCustomValuesProperty": {
         "type": "object",
         "description": "VS Code Extension Marketplace URL\u0027s when preset is \u0027custom\u0027"
       },
@@ -170873,6 +170908,94 @@
       "RequestBodyD37B666C4842InfoLabelsProperty": {
         "type": "object",
         "description": "Runner\u0027s labels"
+      },
+      "ApiEntitiesVulnerabilityRelatedIssueType": {
+        "enum": [
+          "ISSUE",
+          "INCIDENT",
+          "TEST_CASE",
+          "REQUIREMENT",
+          "TASK",
+          "TICKET"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "The type of the issue.",
+        "example": "ISSUE",
+        "x-ms-enum": {
+          "name": "ApiEntitiesVulnerabilityRelatedIssueType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "ISSUE",
+              "name": "Issue"
+            },
+            {
+              "value": "INCIDENT",
+              "name": "Incident"
+            },
+            {
+              "value": "TEST_CASE",
+              "name": "TestCase"
+            },
+            {
+              "value": "REQUIREMENT",
+              "name": "Requirement"
+            },
+            {
+              "value": "TASK",
+              "name": "Task"
+            },
+            {
+              "value": "TICKET",
+              "name": "Ticket"
+            }
+          ]
+        }
+      },
+      "ApiEntitiesIssueBasicType": {
+        "enum": [
+          "ISSUE",
+          "INCIDENT",
+          "TEST_CASE",
+          "REQUIREMENT",
+          "TASK",
+          "TICKET"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "The type of the issue.",
+        "example": "ISSUE",
+        "x-ms-enum": {
+          "name": "ApiEntitiesIssueBasicType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "ISSUE",
+              "name": "Issue"
+            },
+            {
+              "value": "INCIDENT",
+              "name": "Incident"
+            },
+            {
+              "value": "TEST_CASE",
+              "name": "TestCase"
+            },
+            {
+              "value": "REQUIREMENT",
+              "name": "Requirement"
+            },
+            {
+              "value": "TASK",
+              "name": "Task"
+            },
+            {
+              "value": "TICKET",
+              "name": "Ticket"
+            }
+          ]
+        }
       },
       "ApiEntitiesMemberRoleBaseAccessLevel": {
         "enum": [
@@ -170927,6 +171050,170 @@
             {
               "value": "skip_merged",
               "name": "SkipMerged"
+            }
+          ]
+        }
+      },
+      "ApiEntitiesEpicIssueType": {
+        "enum": [
+          "ISSUE",
+          "INCIDENT",
+          "TEST_CASE",
+          "REQUIREMENT",
+          "TASK",
+          "TICKET"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "The type of the issue.",
+        "example": "ISSUE",
+        "x-ms-enum": {
+          "name": "ApiEntitiesEpicIssueType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "ISSUE",
+              "name": "Issue"
+            },
+            {
+              "value": "INCIDENT",
+              "name": "Incident"
+            },
+            {
+              "value": "TEST_CASE",
+              "name": "TestCase"
+            },
+            {
+              "value": "REQUIREMENT",
+              "name": "Requirement"
+            },
+            {
+              "value": "TASK",
+              "name": "Task"
+            },
+            {
+              "value": "TICKET",
+              "name": "Ticket"
+            }
+          ]
+        }
+      },
+      "ApiEntitiesEpicIssueSeverity": {
+        "enum": [
+          "UNKNOWN",
+          "LOW",
+          "MEDIUM",
+          "HIGH",
+          "CRITICAL"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "The severity of the issue.",
+        "x-ms-enum": {
+          "name": "ApiEntitiesEpicIssueSeverity",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "UNKNOWN",
+              "name": "Unknown"
+            },
+            {
+              "value": "LOW",
+              "name": "Low"
+            },
+            {
+              "value": "MEDIUM",
+              "name": "Medium"
+            },
+            {
+              "value": "HIGH",
+              "name": "High"
+            },
+            {
+              "value": "CRITICAL",
+              "name": "Critical"
+            }
+          ]
+        }
+      },
+      "ApiEntitiesIssueType": {
+        "enum": [
+          "ISSUE",
+          "INCIDENT",
+          "TEST_CASE",
+          "REQUIREMENT",
+          "TASK",
+          "TICKET"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "The type of the issue.",
+        "example": "ISSUE",
+        "x-ms-enum": {
+          "name": "ApiEntitiesIssueType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "ISSUE",
+              "name": "Issue"
+            },
+            {
+              "value": "INCIDENT",
+              "name": "Incident"
+            },
+            {
+              "value": "TEST_CASE",
+              "name": "TestCase"
+            },
+            {
+              "value": "REQUIREMENT",
+              "name": "Requirement"
+            },
+            {
+              "value": "TASK",
+              "name": "Task"
+            },
+            {
+              "value": "TICKET",
+              "name": "Ticket"
+            }
+          ]
+        }
+      },
+      "ApiEntitiesIssueSeverity": {
+        "enum": [
+          "UNKNOWN",
+          "LOW",
+          "MEDIUM",
+          "HIGH",
+          "CRITICAL"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "The severity of the issue.",
+        "x-ms-enum": {
+          "name": "ApiEntitiesIssueSeverity",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "UNKNOWN",
+              "name": "Unknown"
+            },
+            {
+              "value": "LOW",
+              "name": "Low"
+            },
+            {
+              "value": "MEDIUM",
+              "name": "Medium"
+            },
+            {
+              "value": "HIGH",
+              "name": "High"
+            },
+            {
+              "value": "CRITICAL",
+              "name": "Critical"
             }
           ]
         }
@@ -171129,6 +171416,88 @@
             {
               "value": "failed",
               "name": "Failed"
+            }
+          ]
+        }
+      },
+      "ApiEntitiesRelatedIssueType": {
+        "enum": [
+          "ISSUE",
+          "INCIDENT",
+          "TEST_CASE",
+          "REQUIREMENT",
+          "TASK",
+          "TICKET"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "The type of the issue.",
+        "example": "ISSUE",
+        "x-ms-enum": {
+          "name": "ApiEntitiesRelatedIssueType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "ISSUE",
+              "name": "Issue"
+            },
+            {
+              "value": "INCIDENT",
+              "name": "Incident"
+            },
+            {
+              "value": "TEST_CASE",
+              "name": "TestCase"
+            },
+            {
+              "value": "REQUIREMENT",
+              "name": "Requirement"
+            },
+            {
+              "value": "TASK",
+              "name": "Task"
+            },
+            {
+              "value": "TICKET",
+              "name": "Ticket"
+            }
+          ]
+        }
+      },
+      "ApiEntitiesRelatedIssueSeverity": {
+        "enum": [
+          "UNKNOWN",
+          "LOW",
+          "MEDIUM",
+          "HIGH",
+          "CRITICAL"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "The severity of the issue.",
+        "x-ms-enum": {
+          "name": "ApiEntitiesRelatedIssueSeverity",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "UNKNOWN",
+              "name": "Unknown"
+            },
+            {
+              "value": "LOW",
+              "name": "Low"
+            },
+            {
+              "value": "MEDIUM",
+              "name": "Medium"
+            },
+            {
+              "value": "HIGH",
+              "name": "High"
+            },
+            {
+              "value": "CRITICAL",
+              "name": "Critical"
             }
           ]
         }
@@ -173063,7 +173432,7 @@
           ]
         }
       },
-      "RequestBodyAff2E18E4B2EDefaultProjectCreation": {
+      "RequestBody02F7C66B6A32DefaultProjectCreation": {
         "enum": [
           0,
           3,
@@ -173076,7 +173445,7 @@
         "description": "Determine if developers can create projects in the group",
         "nullable": true
       },
-      "RequestBodyAff2E18E4B2EDefaultBranchProtection": {
+      "RequestBody02F7C66B6A32DefaultBranchProtection": {
         "enum": [
           0,
           3,
@@ -173089,7 +173458,7 @@
         "description": "Determine if developers can push to default branch",
         "nullable": true
       },
-      "RequestBodyAff2E18E4B2EDefaultGroupVisibility": {
+      "RequestBody02F7C66B6A32DefaultGroupVisibility": {
         "enum": [
           "private",
           "internal",
@@ -173100,7 +173469,7 @@
         "description": "The default group visibility",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyAff2E18E4B2EDefaultGroupVisibility",
+          "name": "RequestBody02F7C66B6A32DefaultGroupVisibility",
           "modelAsString": false,
           "values": [
             {
@@ -173118,7 +173487,7 @@
           ]
         }
       },
-      "RequestBodyAff2E18E4B2EDefaultProjectVisibility": {
+      "RequestBody02F7C66B6A32DefaultProjectVisibility": {
         "enum": [
           "private",
           "internal",
@@ -173129,7 +173498,7 @@
         "description": "The default project visibility",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyAff2E18E4B2EDefaultProjectVisibility",
+          "name": "RequestBody02F7C66B6A32DefaultProjectVisibility",
           "modelAsString": false,
           "values": [
             {
@@ -173147,7 +173516,7 @@
           ]
         }
       },
-      "RequestBodyAff2E18E4B2EDefaultSnippetVisibility": {
+      "RequestBody02F7C66B6A32DefaultSnippetVisibility": {
         "enum": [
           "private",
           "internal",
@@ -173158,7 +173527,7 @@
         "description": "The default snippet visibility",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyAff2E18E4B2EDefaultSnippetVisibility",
+          "name": "RequestBody02F7C66B6A32DefaultSnippetVisibility",
           "modelAsString": false,
           "values": [
             {
@@ -173176,7 +173545,7 @@
           ]
         }
       },
-      "RequestBodyAff2E18E4B2EEmailConfirmationSetting": {
+      "RequestBody02F7C66B6A32EmailConfirmationSetting": {
         "enum": [
           "off",
           "soft",
@@ -173187,7 +173556,7 @@
         "description": "Email confirmation setting, possible values: \u0060off\u0060, \u0060soft\u0060, and \u0060hard\u0060",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyAff2E18E4B2EEmailConfirmationSetting",
+          "name": "RequestBody02F7C66B6A32EmailConfirmationSetting",
           "modelAsString": false,
           "values": [
             {
@@ -173205,7 +173574,7 @@
           ]
         }
       },
-      "RequestBodyAff2E18E4B2EEnabledGitAccessProtocol": {
+      "RequestBody02F7C66B6A32EnabledGitAccessProtocol": {
         "enum": [
           "ssh",
           "http",
@@ -173216,7 +173585,7 @@
         "description": "Allow only the selected protocols to be used for Git access.",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyAff2E18E4B2EEnabledGitAccessProtocol",
+          "name": "RequestBody02F7C66B6A32EnabledGitAccessProtocol",
           "modelAsString": false,
           "values": [
             {
@@ -173234,7 +173603,7 @@
           ]
         }
       },
-      "RequestBodyAff2E18E4B2EImportSourcesItem": {
+      "RequestBody02F7C66B6A32ImportSourcesItem": {
         "enum": [
           "github",
           "bitbucket",
@@ -173248,7 +173617,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "RequestBodyAff2E18E4B2EImportSourcesItem",
+          "name": "RequestBody02F7C66B6A32ImportSourcesItem",
           "modelAsString": false,
           "values": [
             {
@@ -173286,7 +173655,7 @@
           ]
         }
       },
-      "RequestBodyAff2E18E4B2EWhatsNewVariant": {
+      "RequestBody02F7C66B6A32WhatsNewVariant": {
         "enum": [
           "all_tiers",
           "current_tier",
@@ -173297,7 +173666,7 @@
         "description": "What\u0027s new variant, possible values: \u0060all_tiers\u0060, \u0060current_tier\u0060, and \u0060disabled\u0060.",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyAff2E18E4B2EWhatsNewVariant",
+          "name": "RequestBody02F7C66B6A32WhatsNewVariant",
           "modelAsString": false,
           "values": [
             {
@@ -173315,7 +173684,7 @@
           ]
         }
       },
-      "RequestBodyAff2E18E4B2ELoggingFieldSchemaVersion": {
+      "RequestBody02F7C66B6A32LoggingFieldSchemaVersion": {
         "enum": [
           0,
           1
@@ -173325,7 +173694,7 @@
         "description": "Logging field schema version (v0, v1, \u2026). Cannot be downgraded.",
         "nullable": true
       },
-      "RequestBodyAff2E18E4B2ELoggingFieldDualEmitTarget": {
+      "RequestBody02F7C66B6A32LoggingFieldDualEmitTarget": {
         "enum": [
           1
         ],
@@ -173334,7 +173703,7 @@
         "description": "Version to dual-emit alongside schema_version. Must be strictly greater than schema_version, or omit/null to disable.",
         "nullable": true
       },
-      "RequestBodyAff2E18E4B2ERsaKeyRestriction": {
+      "RequestBody02F7C66B6A32RsaKeyRestriction": {
         "enum": [
           0,
           1024,
@@ -173348,7 +173717,7 @@
         "description": "Restrictions on the complexity of uploaded RSA keys. A value of -1 disables all RSA keys.",
         "nullable": true
       },
-      "RequestBodyAff2E18E4B2EDsaKeyRestriction": {
+      "RequestBody02F7C66B6A32DsaKeyRestriction": {
         "enum": [
           0,
           1024,
@@ -173361,7 +173730,7 @@
         "description": "Restrictions on the complexity of uploaded DSA keys. A value of -1 disables all DSA keys.",
         "nullable": true
       },
-      "RequestBodyAff2E18E4B2EEcdsaKeyRestriction": {
+      "RequestBody02F7C66B6A32EcdsaKeyRestriction": {
         "enum": [
           0,
           256,
@@ -173374,7 +173743,7 @@
         "description": "Restrictions on the complexity of uploaded ECDSA keys. A value of -1 disables all ECDSA keys.",
         "nullable": true
       },
-      "RequestBodyAff2E18E4B2EEd25519KeyRestriction": {
+      "RequestBody02F7C66B6A32Ed25519KeyRestriction": {
         "enum": [
           0,
           256,
@@ -173385,7 +173754,7 @@
         "description": "Restrictions on the complexity of uploaded ED25519 keys. A value of -1 disables all ED25519 keys.",
         "nullable": true
       },
-      "RequestBodyAff2E18E4B2EEcdsaSkKeyRestriction": {
+      "RequestBody02F7C66B6A32EcdsaSkKeyRestriction": {
         "enum": [
           0,
           256,
@@ -173396,7 +173765,7 @@
         "description": "Restrictions on the complexity of uploaded ECDSA_SK keys. A value of -1 disables all ECDSA_SK keys.",
         "nullable": true
       },
-      "RequestBodyAff2E18E4B2EEd25519SkKeyRestriction": {
+      "RequestBody02F7C66B6A32Ed25519SkKeyRestriction": {
         "enum": [
           0,
           256,
@@ -173406,6 +173775,30 @@
         "additionalProperties": false,
         "description": "Restrictions on the complexity of uploaded ED25519_SK keys. A value of -1 disables all ED25519_SK keys.",
         "nullable": true
+      },
+      "RequestBody02F7C66B6A32SidekiqJobLimiterMode": {
+        "enum": [
+          "track",
+          "compress"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "Sets the behavior for Sidekiq job size limits. Default: \u0027compress\u0027.",
+        "nullable": true,
+        "x-ms-enum": {
+          "name": "RequestBody02F7C66B6A32SidekiqJobLimiterMode",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "track",
+              "name": "Track"
+            },
+            {
+              "value": "compress",
+              "name": "Compress"
+            }
+          ]
+        }
       },
       "RequestBodyF36339D4Af0BStateEvent": {
         "enum": [
@@ -177021,6 +177414,40 @@
           ]
         }
       },
+      "RequestBody49F7157F4078Relation": {
+        "minLength": 1,
+        "enum": [
+          "issues",
+          "merge_requests",
+          "milestones",
+          "ci_pipelines"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "The relation to import.",
+        "x-ms-enum": {
+          "name": "RequestBody49F7157F4078Relation",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "issues",
+              "name": "Issues"
+            },
+            {
+              "value": "merge_requests",
+              "name": "MergeRequests"
+            },
+            {
+              "value": "milestones",
+              "name": "Milestones"
+            },
+            {
+              "value": "ci_pipelines",
+              "name": "CiPipelines"
+            }
+          ]
+        }
+      },
       "RequestBody4B4287109Dd0BranchFilterStrategy": {
         "enum": [
           "wildcard",
@@ -177696,7 +178123,7 @@
           ]
         }
       },
-      "RequestBody09329Db5E867LinkType": {
+      "RequestBody4090E131595ALinkType": {
         "enum": [
           "relates_to",
           "blocks",
@@ -177704,10 +178131,9 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "description": "The type of the relation (\u201Crelates_to\u201D, \u201Cblocks\u201D, \u201Cis_blocked_by\u201D),defaults to \u201Crelates_to\u201D)",
-        "nullable": true,
+        "description": "The type of the relation.",
         "x-ms-enum": {
-          "name": "RequestBody09329Db5E867LinkType",
+          "name": "RequestBody4090E131595ALinkType",
           "modelAsString": false,
           "values": [
             {
@@ -183122,7 +183548,7 @@
           ]
         }
       },
-      "RequestBodyAff2E18E4B2EDefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel": {
+      "RequestBody02F7C66B6A32DefaultBranchProtectionDefaultsAllowedToPushItemAccessLevel": {
         "enum": [
           30,
           40,
@@ -183133,7 +183559,7 @@
         "additionalProperties": false,
         "description": "A valid access level"
       },
-      "RequestBodyAff2E18E4B2EDefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel": {
+      "RequestBody02F7C66B6A32DefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel": {
         "enum": [
           30,
           40,

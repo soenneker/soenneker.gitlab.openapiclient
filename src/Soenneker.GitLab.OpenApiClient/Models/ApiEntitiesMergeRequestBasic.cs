@@ -39,10 +39,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The author property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic? Author { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestAuthor? Author { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic Author { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestAuthor Author { get; set; }
 #endif
         /// <summary>The blocking_discussions_resolved property</summary>
         public bool? BlockingDiscussionsResolved { get; set; }
@@ -316,7 +316,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "approvals_before_merge", n => { ApprovalsBeforeMerge = n.GetIntValue(); } },
                 { "assignee", n => { Assignee = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic.CreateFromDiscriminatorValue); } },
                 { "assignees", n => { Assignees = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic.CreateFromDiscriminatorValue); } },
-                { "author", n => { Author = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic.CreateFromDiscriminatorValue); } },
+                { "author", n => { Author = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestAuthor>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestAuthor.CreateFromDiscriminatorValue); } },
                 { "blocking_discussions_resolved", n => { BlockingDiscussionsResolved = n.GetBoolValue(); } },
                 { "closed_at", n => { ClosedAt = n.GetDateTimeOffsetValue(); } },
                 { "closed_by", n => { ClosedBy = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic.CreateFromDiscriminatorValue); } },
@@ -380,7 +380,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("approvals_before_merge", ApprovalsBeforeMerge);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic>("assignee", Assignee);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic>("assignees", Assignees);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic>("author", Author);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestAuthor>("author", Author);
             writer.WriteBoolValue("blocking_discussions_resolved", BlockingDiscussionsResolved);
             writer.WriteDateTimeOffsetValue("closed_at", ClosedAt);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic>("closed_by", ClosedBy);

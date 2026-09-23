@@ -4,6 +4,7 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Artifacts;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Runtime_environment_key;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Sbom_scans;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Trace;
 using Soenneker.GitLab.OpenApiClient.Models;
@@ -24,6 +25,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Artifacts.ArtifactsRequestBuilder Artifacts
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Artifacts.ArtifactsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The runtime_environment_key property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Runtime_environment_key.Runtime_environment_keyRequestBuilder Runtime_environment_key
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Runtime_environment_key.Runtime_environment_keyRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The sbom_scans property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Sbom_scans.Sbom_scansRequestBuilder Sbom_scans

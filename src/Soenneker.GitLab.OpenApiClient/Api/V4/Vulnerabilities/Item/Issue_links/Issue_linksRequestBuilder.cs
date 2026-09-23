@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Vulnerabilities.Item.Issue_links
         {
         }
         /// <summary>
-        /// Get related issues for a vulnerability
+        /// Lists related issues for a vulnerability.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesVulnerabilityRelatedIssue"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Vulnerabilities.Item.Issue_links
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesVulnerabilityRelatedIssue>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesVulnerabilityRelatedIssue.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Relate an issue to a vulnerability
+        /// Relates an issue to a vulnerability.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesVulnerabilityIssueLink"/></returns>
         /// <param name="body">The request body</param>
@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Vulnerabilities.Item.Issue_links
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesVulnerabilityIssueLink>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesVulnerabilityIssueLink.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get related issues for a vulnerability
+        /// Lists related issues for a vulnerability.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -104,7 +104,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Vulnerabilities.Item.Issue_links
             return requestInfo;
         }
         /// <summary>
-        /// Relate an issue to a vulnerability
+        /// Relates an issue to a vulnerability.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

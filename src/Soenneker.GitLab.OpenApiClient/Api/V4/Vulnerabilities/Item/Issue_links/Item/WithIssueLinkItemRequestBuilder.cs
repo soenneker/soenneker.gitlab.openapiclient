@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Vulnerabilities.Item.Issue_links
         {
         }
         /// <summary>
-        /// Delete a link between an issue and a vulnerability
+        /// Deletes a link between an issue and a vulnerability.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesVulnerabilityIssueLink"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Vulnerabilities.Item.Issue_links
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesVulnerabilityIssueLink>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesVulnerabilityIssueLink.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Delete a link between an issue and a vulnerability
+        /// Deletes a link between an issue and a vulnerability.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

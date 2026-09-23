@@ -171,14 +171,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ServiceDeskReplyTo { get; set; }
 #endif
-        /// <summary>One of [&quot;UNKNOWN&quot;, &quot;LOW&quot;, &quot;MEDIUM&quot;, &quot;HIGH&quot;, &quot;CRITICAL&quot;]</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Severity { get; set; }
-#nullable restore
-#else
-        public string Severity { get; set; }
-#endif
+        /// <summary>The severity of the issue.</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssueSeverity? Severity { get; set; }
         /// <summary>The start_date property</summary>
         public Date? StartDate { get; set; }
         /// <summary>The state property</summary>
@@ -223,14 +217,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Title { get; set; }
 #endif
-        /// <summary>One of [&quot;ISSUE&quot;, &quot;INCIDENT&quot;, &quot;TEST_CASE&quot;, &quot;REQUIREMENT&quot;, &quot;TASK&quot;, &quot;TICKET&quot;]</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
+        /// <summary>The type of the issue.</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssueType? Type { get; set; }
         /// <summary>The updated_at property</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>The upvotes property</summary>
@@ -302,7 +290,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "project_id", n => { ProjectId = n.GetLongValue(); } },
                 { "references", n => { References = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssuableReferences>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssuableReferences.CreateFromDiscriminatorValue); } },
                 { "service_desk_reply_to", n => { ServiceDeskReplyTo = n.GetStringValue(); } },
-                { "severity", n => { Severity = n.GetStringValue(); } },
+                { "severity", n => { Severity = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssueSeverity>(); } },
                 { "start_date", n => { StartDate = n.GetDateValue(); } },
                 { "state", n => { State = n.GetStringValue(); } },
                 { "subscribed", n => { Subscribed = n.GetBoolValue(); } },
@@ -310,7 +298,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "task_status", n => { TaskStatus = n.GetStringValue(); } },
                 { "time_stats", n => { TimeStats = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssuableTimeStats>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssuableTimeStats.CreateFromDiscriminatorValue); } },
                 { "title", n => { Title = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssueType>(); } },
                 { "updated_at", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
                 { "upvotes", n => { Upvotes = n.GetIntValue(); } },
                 { "user_notes_count", n => { UserNotesCount = n.GetIntValue(); } },
@@ -355,7 +343,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteLongValue("project_id", ProjectId);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssuableReferences>("references", References);
             writer.WriteStringValue("service_desk_reply_to", ServiceDeskReplyTo);
-            writer.WriteStringValue("severity", Severity);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssueSeverity>("severity", Severity);
             writer.WriteDateValue("start_date", StartDate);
             writer.WriteStringValue("state", State);
             writer.WriteBoolValue("subscribed", Subscribed);
@@ -363,7 +351,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("task_status", TaskStatus);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssuableTimeStats>("time_stats", TimeStats);
             writer.WriteStringValue("title", Title);
-            writer.WriteStringValue("type", Type);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssueType>("type", Type);
             writer.WriteDateTimeOffsetValue("updated_at", UpdatedAt);
             writer.WriteIntValue("upvotes", Upvotes);
             writer.WriteIntValue("user_notes_count", UserNotesCount);
