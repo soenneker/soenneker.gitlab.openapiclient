@@ -19920,7 +19920,7 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/RequestBody_02f7c66b6a32"
+              "$ref": "#/components/schemas/RequestBody_8a71f6a2efea"
   "/api/v4/service_accounts":
     post:
       operationId: postApiV4ServiceAccounts
@@ -73485,8 +73485,7 @@ paths:
     get:
       operationId: getApiV4ProjectsIdPipelinesPipelineIdVariables
       summary: List all pipeline variables
-      description: Lists all pipeline variables for a specified pipeline. Use the
-        `page` and `per_page` pagination parameters to control the pagination of results.
+      description: Lists all pipeline variables for a specified pipeline.
       tags:
       - Pipelines
       responses:
@@ -73658,6 +73657,8 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        '429':
+          description: Too Many Requests
         '400':
           description: Bad Request
       parameters:
@@ -75214,6 +75215,17 @@ paths:
         schema:
           type: boolean
           default: false
+        in: query
+      - name: download_mode
+        required: false
+        description: Requested download transfer mode (`proxy` or `direct`). Only
+          honored when allowed by the object storage configuration.
+        schema:
+          type: string
+          enum:
+          - proxy
+          - direct
+          nullable: true
         in: query
   "/api/v4/projects/{id}/resource_groups":
     get:
@@ -84853,7 +84865,7 @@ components:
           example: 1
         alert_status:
           type: string
-          example: :executable
+          example: executable
         disabled_until:
           type: string
           format: date-time
@@ -91467,6 +91479,12 @@ components:
           type: string
         throttle_authenticated_web_requests_per_period:
           type: string
+        throttle_authenticated_mcp_enabled:
+          type: string
+        throttle_authenticated_mcp_period_in_seconds:
+          type: string
+        throttle_authenticated_mcp_requests_per_period:
+          type: string
         throttle_authenticated_packages_api_enabled:
           type: string
         throttle_authenticated_packages_api_period_in_seconds:
@@ -91821,6 +91839,8 @@ components:
           type: string
         pipeline_cancel_limit_per_user_project:
           type: string
+        pipeline_retry_limit_per_user_project:
+          type: string
         asciidoc_max_includes:
           type: string
         ai_action_api_rate_limit:
@@ -92138,6 +92158,8 @@ components:
         zoekt_max_restarts_15m:
           type: string
         orbit_auto_index_root_namespace:
+          type: string
+        orbit_dap_enabled_by_default:
           type: string
         duo_workflow_oauth_application_id:
           type: string
@@ -92933,7 +92955,7 @@ components:
           example: 1
         alert_status:
           type: string
-          example: :executable
+          example: executable
         disabled_until:
           type: string
           format: date-time
@@ -95741,7 +95763,7 @@ components:
           example: 1
         alert_status:
           type: string
-          example: :executable
+          example: executable
         disabled_until:
           type: string
           format: date-time
@@ -106970,7 +106992,7 @@ components:
           description: Scopes available to the application. Separate multiple scopes
             with a space.
           nullable: true
-    RequestBody_02f7c66b6a32:
+    RequestBody_8a71f6a2efea:
       type: object
       properties:
         admin_mode:
@@ -107886,6 +107908,11 @@ components:
           description: Maximum number of pipeline cancellations allowed per minute
             for a given project.
           nullable: true
+        pipeline_retry_limit_per_user_project:
+          type: integer
+          description: Maximum number of pipeline retries allowed per minute for a
+            given project.
+          nullable: true
         ai_action_api_rate_limit:
           type: integer
           description: Maximum requests a user can make per 8 hours to aiAction endpoint
@@ -108644,6 +108671,21 @@ components:
           type: string
           description: 'Maximum requests per period per user. `throttle_authenticated_git_http_enabled`
             must be `true`. Default value: `3600`.'
+          nullable: true
+        throttle_authenticated_mcp_enabled:
+          type: string
+          description: 'If `true`, enforces the MCP Server request rate limit. Default
+            value: `false`.'
+          nullable: true
+        throttle_authenticated_mcp_period_in_seconds:
+          type: string
+          description: 'Rate limit period in seconds. `throttle_authenticated_mcp_enabled`
+            must be `true`. Default value: `60`.'
+          nullable: true
+        throttle_authenticated_mcp_requests_per_period:
+          type: string
+          description: 'Maximum requests per period per user. `throttle_authenticated_mcp_enabled`
+            must be `true`. Default value: `600`.'
           nullable: true
         throttle_authenticated_dependency_proxy_enabled:
           type: string
@@ -109980,6 +110022,9 @@ components:
           type: string
           nullable: true
         orbit_auto_index_root_namespace:
+          type: string
+          nullable: true
+        orbit_dap_enabled_by_default:
           type: string
           nullable: true
         duo_workflow_oauth_application_id:

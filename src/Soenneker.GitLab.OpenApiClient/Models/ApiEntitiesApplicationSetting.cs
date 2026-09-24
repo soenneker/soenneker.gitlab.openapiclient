@@ -3124,6 +3124,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string OrbitAutoIndexRootNamespace { get; set; }
 #endif
+        /// <summary>The orbit_dap_enabled_by_default property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? OrbitDapEnabledByDefault { get; set; }
+#nullable restore
+#else
+        public string OrbitDapEnabledByDefault { get; set; }
+#endif
         /// <summary>The organization_cluster_agent_authorization_enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -3315,6 +3323,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #nullable restore
 #else
         public string PipelineLimitPerUser { get; set; }
+#endif
+        /// <summary>The pipeline_retry_limit_per_user_project property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PipelineRetryLimitPerUserProject { get; set; }
+#nullable restore
+#else
+        public string PipelineRetryLimitPerUserProject { get; set; }
 #endif
         /// <summary>The plantuml_diagram_proxy_enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -4491,6 +4507,30 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #nullable restore
 #else
         public string ThrottleAuthenticatedGitLfsRequestsPerPeriod { get; set; }
+#endif
+        /// <summary>The throttle_authenticated_mcp_enabled property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ThrottleAuthenticatedMcpEnabled { get; set; }
+#nullable restore
+#else
+        public string ThrottleAuthenticatedMcpEnabled { get; set; }
+#endif
+        /// <summary>The throttle_authenticated_mcp_period_in_seconds property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ThrottleAuthenticatedMcpPeriodInSeconds { get; set; }
+#nullable restore
+#else
+        public string ThrottleAuthenticatedMcpPeriodInSeconds { get; set; }
+#endif
+        /// <summary>The throttle_authenticated_mcp_requests_per_period property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ThrottleAuthenticatedMcpRequestsPerPeriod { get; set; }
+#nullable restore
+#else
+        public string ThrottleAuthenticatedMcpRequestsPerPeriod { get; set; }
 #endif
         /// <summary>The throttle_authenticated_packages_api_enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -5700,6 +5740,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "offline_transfer_exports_enabled", n => { OfflineTransferExportsEnabled = n.GetStringValue(); } },
                 { "offline_transfer_imports_enabled", n => { OfflineTransferImportsEnabled = n.GetStringValue(); } },
                 { "orbit_auto_index_root_namespace", n => { OrbitAutoIndexRootNamespace = n.GetStringValue(); } },
+                { "orbit_dap_enabled_by_default", n => { OrbitDapEnabledByDefault = n.GetStringValue(); } },
                 { "organization_cluster_agent_authorization_enabled", n => { OrganizationClusterAgentAuthorizationEnabled = n.GetStringValue(); } },
                 { "outbound_local_requests_allowlist_raw", n => { OutboundLocalRequestsAllowlistRaw = n.GetStringValue(); } },
                 { "outbound_local_requests_whitelist", n => { OutboundLocalRequestsWhitelist = n.GetStringValue(); } },
@@ -5724,6 +5765,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "pipeline_execution_policies_per_configuration_limit", n => { PipelineExecutionPoliciesPerConfigurationLimit = n.GetStringValue(); } },
                 { "pipeline_limit_per_project_user_sha", n => { PipelineLimitPerProjectUserSha = n.GetStringValue(); } },
                 { "pipeline_limit_per_user", n => { PipelineLimitPerUser = n.GetStringValue(); } },
+                { "pipeline_retry_limit_per_user_project", n => { PipelineRetryLimitPerUserProject = n.GetStringValue(); } },
                 { "plantuml_diagram_proxy_enabled", n => { PlantumlDiagramProxyEnabled = n.GetStringValue(); } },
                 { "plantuml_enabled", n => { PlantumlEnabled = n.GetStringValue(); } },
                 { "plantuml_url", n => { PlantumlUrl = n.GetStringValue(); } },
@@ -5871,6 +5913,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "throttle_authenticated_git_lfs_enabled", n => { ThrottleAuthenticatedGitLfsEnabled = n.GetStringValue(); } },
                 { "throttle_authenticated_git_lfs_period_in_seconds", n => { ThrottleAuthenticatedGitLfsPeriodInSeconds = n.GetStringValue(); } },
                 { "throttle_authenticated_git_lfs_requests_per_period", n => { ThrottleAuthenticatedGitLfsRequestsPerPeriod = n.GetStringValue(); } },
+                { "throttle_authenticated_mcp_enabled", n => { ThrottleAuthenticatedMcpEnabled = n.GetStringValue(); } },
+                { "throttle_authenticated_mcp_period_in_seconds", n => { ThrottleAuthenticatedMcpPeriodInSeconds = n.GetStringValue(); } },
+                { "throttle_authenticated_mcp_requests_per_period", n => { ThrottleAuthenticatedMcpRequestsPerPeriod = n.GetStringValue(); } },
                 { "throttle_authenticated_packages_api_enabled", n => { ThrottleAuthenticatedPackagesApiEnabled = n.GetStringValue(); } },
                 { "throttle_authenticated_packages_api_period_in_seconds", n => { ThrottleAuthenticatedPackagesApiPeriodInSeconds = n.GetStringValue(); } },
                 { "throttle_authenticated_packages_api_requests_per_period", n => { ThrottleAuthenticatedPackagesApiRequestsPerPeriod = n.GetStringValue(); } },
@@ -6376,6 +6421,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("offline_transfer_exports_enabled", OfflineTransferExportsEnabled);
             writer.WriteStringValue("offline_transfer_imports_enabled", OfflineTransferImportsEnabled);
             writer.WriteStringValue("orbit_auto_index_root_namespace", OrbitAutoIndexRootNamespace);
+            writer.WriteStringValue("orbit_dap_enabled_by_default", OrbitDapEnabledByDefault);
             writer.WriteStringValue("organization_cluster_agent_authorization_enabled", OrganizationClusterAgentAuthorizationEnabled);
             writer.WriteStringValue("outbound_local_requests_allowlist_raw", OutboundLocalRequestsAllowlistRaw);
             writer.WriteStringValue("outbound_local_requests_whitelist", OutboundLocalRequestsWhitelist);
@@ -6400,6 +6446,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("pipeline_execution_policies_per_configuration_limit", PipelineExecutionPoliciesPerConfigurationLimit);
             writer.WriteStringValue("pipeline_limit_per_project_user_sha", PipelineLimitPerProjectUserSha);
             writer.WriteStringValue("pipeline_limit_per_user", PipelineLimitPerUser);
+            writer.WriteStringValue("pipeline_retry_limit_per_user_project", PipelineRetryLimitPerUserProject);
             writer.WriteStringValue("plantuml_diagram_proxy_enabled", PlantumlDiagramProxyEnabled);
             writer.WriteStringValue("plantuml_enabled", PlantumlEnabled);
             writer.WriteStringValue("plantuml_url", PlantumlUrl);
@@ -6547,6 +6594,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("throttle_authenticated_git_lfs_enabled", ThrottleAuthenticatedGitLfsEnabled);
             writer.WriteStringValue("throttle_authenticated_git_lfs_period_in_seconds", ThrottleAuthenticatedGitLfsPeriodInSeconds);
             writer.WriteStringValue("throttle_authenticated_git_lfs_requests_per_period", ThrottleAuthenticatedGitLfsRequestsPerPeriod);
+            writer.WriteStringValue("throttle_authenticated_mcp_enabled", ThrottleAuthenticatedMcpEnabled);
+            writer.WriteStringValue("throttle_authenticated_mcp_period_in_seconds", ThrottleAuthenticatedMcpPeriodInSeconds);
+            writer.WriteStringValue("throttle_authenticated_mcp_requests_per_period", ThrottleAuthenticatedMcpRequestsPerPeriod);
             writer.WriteStringValue("throttle_authenticated_packages_api_enabled", ThrottleAuthenticatedPackagesApiEnabled);
             writer.WriteStringValue("throttle_authenticated_packages_api_period_in_seconds", ThrottleAuthenticatedPackagesApiPeriodInSeconds);
             writer.WriteStringValue("throttle_authenticated_packages_api_requests_per_period", ThrottleAuthenticatedPackagesApiRequestsPerPeriod);

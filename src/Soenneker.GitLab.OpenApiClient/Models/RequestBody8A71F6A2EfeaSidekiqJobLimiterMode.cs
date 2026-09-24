@@ -5,7 +5,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>Sets the behavior for Sidekiq job size limits. Default: &apos;compress&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum RequestBody02F7C66B6A32SidekiqJobLimiterMode
+    public enum RequestBody8A71F6A2EfeaSidekiqJobLimiterMode
     {
         [EnumMember(Value = "track")]
         #pragma warning disable CS1591

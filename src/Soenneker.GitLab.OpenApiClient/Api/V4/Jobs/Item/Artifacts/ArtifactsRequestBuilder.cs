@@ -4,6 +4,7 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Artifacts.Authorize;
+using Soenneker.GitLab.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -27,7 +28,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Artifacts
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ArtifactsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/jobs/{id}/artifacts{?direct_download*,token*}", pathParameters)
+        public ArtifactsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/jobs/{id}/artifacts{?direct_download*,download_mode*,token*}", pathParameters)
         {
         }
         /// <summary>
@@ -35,7 +36,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Artifacts
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ArtifactsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/jobs/{id}/artifacts{?direct_download*,token*}", rawUrl)
+        public ArtifactsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/jobs/{id}/artifacts{?direct_download*,download_mode*,token*}", rawUrl)
         {
         }
         /// <summary>
@@ -133,6 +134,9 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Artifacts
             /// <summary>Perform direct download from remote storage instead of proxying artifacts</summary>
             [QueryParameter("direct_download")]
             public bool? DirectDownload { get; set; }
+            /// <summary>Requested download transfer mode (`proxy` or `direct`). Only honored when allowed by the object storage configuration.</summary>
+            [QueryParameter("download_mode")]
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4JobsIdArtifactsDownloadModeParameter? DownloadMode { get; set; }
             /// <summary>Job&apos;s authentication token</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
