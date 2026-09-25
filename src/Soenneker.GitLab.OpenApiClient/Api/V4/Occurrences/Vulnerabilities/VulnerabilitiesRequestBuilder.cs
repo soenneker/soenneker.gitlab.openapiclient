@@ -83,7 +83,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Occurrences.Vulnerabilities
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class VulnerabilitiesRequestBuilderGetQueryParameters 
         {
-            /// <summary>The ID of the occurrence</summary>
+            /// <summary>ID of the occurrence.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("id")]

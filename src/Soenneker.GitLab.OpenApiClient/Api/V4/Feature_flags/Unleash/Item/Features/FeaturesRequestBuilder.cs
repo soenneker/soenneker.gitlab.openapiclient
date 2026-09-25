@@ -86,7 +86,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Feature_flags.Unleash.Item.Featu
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class FeaturesRequestBuilderGetQueryParameters 
         {
-            /// <summary>The application name of Unleash Client</summary>
+            /// <summary>Application name of Unleash Client.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("app_name")]
@@ -96,7 +96,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Feature_flags.Unleash.Item.Featu
             [QueryParameter("app_name")]
             public string AppName { get; set; }
 #endif
-            /// <summary>The instance ID of Unleash Client</summary>
+            /// <summary>Instance ID of Unleash Client.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("instance_id")]

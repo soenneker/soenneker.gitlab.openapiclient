@@ -91,7 +91,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Approval_settings
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Approval_settingsRequestBuilderGetQueryParameters 
         {
-            /// <summary>Branch that scoped approval rules apply to</summary>
+            /// <summary>Branch that scoped approval rules apply to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("target_branch")]

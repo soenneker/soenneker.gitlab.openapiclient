@@ -83,10 +83,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Agents.Agentw.Authorize
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Authorize_user_accessRequestBuilderGetQueryParameters 
         {
-            /// <summary>User ID of the user accessing the workspace</summary>
+            /// <summary>ID of the user accessing the workspace.</summary>
             [QueryParameter("user_id")]
             public int? UserId { get; set; }
-            /// <summary>Host of the workspace being accessed</summary>
+            /// <summary>Host of the workspace being accessed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("workspace_host")]

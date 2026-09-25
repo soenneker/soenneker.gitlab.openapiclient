@@ -146,7 +146,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users
             /// <summary>Filters only admin users</summary>
             [QueryParameter("admins")]
             public bool? Admins { get; set; }
-            /// <summary>Filters only auditor users</summary>
+            /// <summary>If `true`, returns only auditor users.</summary>
             [QueryParameter("auditors")]
             public bool? Auditors { get; set; }
             /// <summary>Filters only blocked users</summary>
@@ -235,7 +235,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users
             [QueryParameter("search")]
             public string Search { get; set; }
 #endif
-            /// <summary>Skip LDAP users</summary>
+            /// <summary>If `true`, excludes LDAP users from the results.</summary>
             [QueryParameter("skip_ldap")]
             public bool? SkipLdap { get; set; }
             /// <summary>Return users sorted in ascending and descending order</summary>

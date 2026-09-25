@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Terraform.Modules.V1
     public partial class V1RequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.packages.terraform.modules.v1.item collection</summary>
-        /// <param name="position">Group&apos;s ID or slug</param>
+        /// <param name="position">Group&apos;s ID or slug.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Terraform.Modules.V1.Item.WithModuleNamespaceItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Terraform.Modules.V1.Item.WithModuleNamespaceItemRequestBuilder this[string position]
         {

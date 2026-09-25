@@ -84,7 +84,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Usage_data.Metric_definitions
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Metric_definitionsRequestBuilderGetQueryParameters 
         {
-            /// <summary>Include file paths in the metric definitions</summary>
+            /// <summary>If `true`, includes file paths in the metric definitions.</summary>
             [QueryParameter("include_paths")]
             public bool? IncludePaths { get; set; }
         }

@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Terraform.State.It
     public partial class VersionsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.terraform.state.item.versions.item collection</summary>
-        /// <param name="position">The version number of the state</param>
+        /// <param name="position">Version number of the Terraform state.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Terraform.State.Item.Versions.Item.WithSerialItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Terraform.State.Item.Versions.Item.WithSerialItemRequestBuilder this[int position]
         {

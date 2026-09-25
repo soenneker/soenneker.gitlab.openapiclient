@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Feature_flags.Unleash
     public partial class UnleashRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.feature_flags.unleash.item collection</summary>
-        /// <param name="position">The ID of a project</param>
+        /// <param name="position">ID of the project.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Feature_flags.Unleash.Item.WithProjectItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Feature_flags.Unleash.Item.WithProjectItemRequestBuilder this[string position]
         {

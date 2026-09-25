@@ -172,7 +172,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Projects
             /// <summary>Limit by enabled merge requests feature</summary>
             [QueryParameter("with_merge_requests_enabled")]
             public bool? WithMergeRequestsEnabled { get; set; }
-            /// <summary>Return only projects having security report artifacts present</summary>
+            /// <summary>If `true`, returns only projects that have security report artifacts present in any of their builds. Ultimate only.</summary>
             [QueryParameter("with_security_reports")]
             public bool? WithSecurityReports { get; set; }
             /// <summary>Include projects shared to this group</summary>

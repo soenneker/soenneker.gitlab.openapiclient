@@ -145,7 +145,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class NoteableItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>Include commit stats</summary>
+            /// <summary>If `true`, includes commit statistics in the response.</summary>
             [QueryParameter("stats")]
             public bool? Stats { get; set; }
         }

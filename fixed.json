@@ -600,7 +600,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyCbff8Babb92E"
+                "$ref": "#/components/schemas/RequestBodyC8D16Cfa818F"
               }
             }
           },
@@ -737,6 +737,136 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        },
+        "x-gitlab-lifecycle": "beta"
+      }
+    },
+    "/api/v4/orbit/skills": {
+      "get": {
+        "tags": [
+          "Orbit"
+        ],
+        "summary": "List deployed Orbit skills",
+        "description": "Lists the Orbit skills deployed with the connected knowledge graph service.",
+        "operationId": "GetApiV4OrbitSkills",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesOrbitSkillCollection"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "x-gitlab-lifecycle": "beta"
+      }
+    },
+    "/api/v4/orbit/skills/{name}": {
+      "get": {
+        "tags": [
+          "Orbit"
+        ],
+        "summary": "Retrieve a deployed Orbit skill",
+        "description": "Retrieves a complete deployed Orbit skill tree. HEAD requests retrieve only skill metadata.",
+        "operationId": "GetApiV4OrbitSkillsName",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "description": "Deployed skill name",
+            "required": true,
+            "schema": {
+              "pattern": "^[a-z0-9][a-z0-9\\-]*$",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesOrbitSkill"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Skill not found"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        },
+        "x-gitlab-lifecycle": "beta"
+      }
+    },
+    "/api/v4/orbit/skills/{name}/{path}": {
+      "get": {
+        "tags": [
+          "Orbit"
+        ],
+        "summary": "Retrieve a deployed Orbit skill file",
+        "description": "Retrieves a UTF-8 file from a deployed Orbit skill as raw text.",
+        "operationId": "GetApiV4OrbitSkillsNamePath",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "description": "Deployed skill name",
+            "required": true,
+            "schema": {
+              "pattern": "^[a-z0-9][a-z0-9\\-]*$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "path",
+            "in": "path",
+            "description": "File path relative to the skill root",
+            "required": true,
+            "schema": {
+              "pattern": "^[^\\/]\u002B(?:\\/[^\\/]\u002B)*$",
+              "type": "string"
+            },
+            "example": "references/usage.md"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/markdown": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApiV4OrbitSkillsNamePath200MarkdownResponseSchema"
+                }
+              },
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApiV4OrbitSkillsNamePath200PlainResponseSchema"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Skill file not found"
           },
           "400": {
             "description": "Bad Request"
@@ -1740,7 +1870,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody80C272D831B7"
+                "$ref": "#/components/schemas/RequestBody127Fab987046"
               }
             }
           },
@@ -2904,7 +3034,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyEf2061658F9E"
+                "$ref": "#/components/schemas/RequestBody5Ea5039A429E"
               }
             }
           },
@@ -4344,7 +4474,7 @@
           {
             "name": "id",
             "in": "query",
-            "description": "The ID of the occurrence",
+            "description": "ID of the occurrence.",
             "required": true,
             "schema": {
               "type": "string",
@@ -5583,7 +5713,7 @@
           {
             "name": "group_path",
             "in": "query",
-            "description": "Group path",
+            "description": "Group path.",
             "required": true,
             "schema": {
               "type": "string",
@@ -5620,7 +5750,7 @@
           {
             "name": "group_path",
             "in": "query",
-            "description": "Group path",
+            "description": "Group path.",
             "required": true,
             "schema": {
               "type": "string",
@@ -5657,7 +5787,7 @@
           {
             "name": "group_path",
             "in": "query",
-            "description": "Group path",
+            "description": "Group path.",
             "required": true,
             "schema": {
               "type": "string",
@@ -5812,7 +5942,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -5828,7 +5958,7 @@
           {
             "name": "package_manager",
             "in": "query",
-            "description": "Returns dependencies belonging to specified package managers: bundler, yarn, npm, pnpm, bun, maven, composer, pip, conan, go, nuget, sbt, gradle, pipenv, poetry, setuptools, apk, conda, pub, cargo.",
+            "description": "Filter results by the specified package manager.",
             "explode": false,
             "schema": {
               "type": "array",
@@ -5949,7 +6079,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyA188D7937E44"
+                "$ref": "#/components/schemas/RequestBody1Daa2F40139E"
               }
             }
           },
@@ -5990,7 +6120,7 @@
           {
             "name": "name",
             "in": "path",
-            "description": "The alias of the project",
+            "description": "Name of the alias. Must be unique.",
             "required": true,
             "schema": {
               "type": "string"
@@ -6030,7 +6160,7 @@
           {
             "name": "name",
             "in": "path",
-            "description": "The alias of the project",
+            "description": "Name of the alias. Must be unique.",
             "required": true,
             "schema": {
               "type": "string"
@@ -11042,7 +11172,7 @@
           {
             "name": "workspace_host",
             "in": "query",
-            "description": "Host of the workspace being accessed",
+            "description": "Host of the workspace being accessed.",
             "required": true,
             "schema": {
               "type": "string",
@@ -11052,7 +11182,7 @@
           {
             "name": "user_id",
             "in": "query",
-            "description": "User ID of the user accessing the workspace",
+            "description": "ID of the user accessing the workspace.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -11474,7 +11604,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody90C26864A87C"
+                "$ref": "#/components/schemas/RequestBody67A88A6636B1"
               }
             }
           },
@@ -11530,7 +11660,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "ID of the GitLab license",
+            "description": "ID of the GitLab license.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -11573,7 +11703,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "ID of the GitLab license",
+            "description": "ID of the GitLab license.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -11605,7 +11735,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "ID of the GitLab license",
+            "description": "ID of the GitLab license.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -11948,7 +12078,7 @@
           {
             "name": "search",
             "in": "query",
-            "description": "Search for a specific LDAP group",
+            "description": "Search for a specific LDAP group.",
             "schema": {
               "type": "string",
               "default": ""
@@ -11984,7 +12114,7 @@
           {
             "name": "provider",
             "in": "path",
-            "description": "The LDAP provider name",
+            "description": "Name of the LDAP provider.",
             "required": true,
             "schema": {
               "type": "string"
@@ -11993,7 +12123,7 @@
           {
             "name": "search",
             "in": "query",
-            "description": "Search for a specific LDAP group",
+            "description": "Search for a specific LDAP group.",
             "schema": {
               "type": "string",
               "default": ""
@@ -13007,7 +13137,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody5C6D6Eacec15"
+                "$ref": "#/components/schemas/RequestBodyFe7B07E787F5"
               }
             }
           },
@@ -13035,7 +13165,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody5C6D6Eacec15"
+                "$ref": "#/components/schemas/RequestBodyFe7B07E787F5"
               }
             }
           },
@@ -15090,7 +15220,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -15106,7 +15236,7 @@
           {
             "name": "target_branch",
             "in": "query",
-            "description": "Branch that scoped approval rules apply to",
+            "description": "Branch that scoped approval rules apply to.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -15145,7 +15275,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -15201,7 +15331,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -15263,7 +15393,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -16006,7 +16136,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -16070,7 +16200,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -16126,7 +16256,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -16142,7 +16272,7 @@
           {
             "name": "approvalRuleId",
             "in": "path",
-            "description": "The ID of an approval rule",
+            "description": "ID of the approval rule.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -16179,7 +16309,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -16241,7 +16371,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -16786,7 +16916,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "ID of the runner controller",
+            "description": "ID of the runner controller.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -16822,7 +16952,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "ID of the runner controller",
+            "description": "ID of the runner controller.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -16865,7 +16995,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "ID of the runner controller",
+            "description": "ID of the runner controller.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -16900,7 +17030,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "ID of the runner controller",
+            "description": "ID of the runner controller.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -16909,7 +17039,7 @@
           {
             "name": "runnerId",
             "in": "path",
-            "description": "ID of the runner",
+            "description": "ID of the runner.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -16955,7 +17085,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "ID of the runner controller",
+            "description": "ID of the runner controller.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -16964,7 +17094,7 @@
           {
             "name": "runnerId",
             "in": "path",
-            "description": "ID of the runner",
+            "description": "ID of the runner.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -17745,7 +17875,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyC608Fe7206Af"
+                "$ref": "#/components/schemas/RequestBody1290D9F73168"
               }
             }
           },
@@ -18645,7 +18775,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID of a group",
+            "description": "ID or URL-encoded path of the group.",
             "required": true,
             "schema": {
               "type": "string"
@@ -18656,7 +18786,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyFe9841796934"
+                "$ref": "#/components/schemas/RequestBody41568E59F327"
               }
             }
           },
@@ -18751,7 +18881,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID of a group",
+            "description": "ID or URL-encoded path of the group.",
             "required": true,
             "schema": {
               "type": "string"
@@ -20913,7 +21043,7 @@
           {
             "name": "settingsContextHash",
             "in": "path",
-            "description": "The settings context hash",
+            "description": "Settings context hash.",
             "required": true,
             "schema": {
               "type": "string"
@@ -20954,7 +21084,7 @@
           {
             "name": "resourceName",
             "in": "path",
-            "description": "Name of the resource such as settings",
+            "description": "Name of the resource such as settings.",
             "required": true,
             "schema": {
               "$ref": "#/components/schemas/GetApiV4VscodeSettingsSyncV1ResourceResourceNameIdResourceNameParameter"
@@ -20963,7 +21093,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "ID of the resource to retrieve",
+            "description": "ID of the resource to retrieve.",
             "required": true,
             "schema": {
               "type": "string"
@@ -21007,7 +21137,7 @@
           {
             "name": "settingsContextHash",
             "in": "path",
-            "description": "The settings context hash",
+            "description": "Settings context hash.",
             "required": true,
             "schema": {
               "type": "string"
@@ -21016,7 +21146,7 @@
           {
             "name": "resourceName",
             "in": "path",
-            "description": "Name of the resource such as settings",
+            "description": "Name of the resource such as settings.",
             "required": true,
             "schema": {
               "$ref": "#/components/schemas/GetApiV4VscodeSettingsSyncSettingsContextHashV1ResourceResourceNameIdResourceNameParameter"
@@ -21025,7 +21155,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "ID of the resource to retrieve",
+            "description": "ID of the resource to retrieve.",
             "required": true,
             "schema": {
               "type": "string"
@@ -21069,7 +21199,7 @@
           {
             "name": "resourceName",
             "in": "path",
-            "description": "Name of the resource such as settings",
+            "description": "Name of the resource such as settings.",
             "required": true,
             "schema": {
               "$ref": "#/components/schemas/GetApiV4VscodeSettingsSyncV1ResourceResourceNameResourceNameParameter"
@@ -21108,7 +21238,7 @@
           {
             "name": "resourceName",
             "in": "path",
-            "description": "Name of the resource such as settings",
+            "description": "Name of the resource such as settings.",
             "required": true,
             "schema": {
               "$ref": "#/components/schemas/PostApiV4VscodeSettingsSyncV1ResourceResourceNameResourceNameParameter"
@@ -21142,7 +21272,7 @@
           {
             "name": "settingsContextHash",
             "in": "path",
-            "description": "The settings context hash",
+            "description": "Settings context hash.",
             "required": true,
             "schema": {
               "type": "string"
@@ -21151,7 +21281,7 @@
           {
             "name": "resourceName",
             "in": "path",
-            "description": "Name of the resource such as settings",
+            "description": "Name of the resource such as settings.",
             "required": true,
             "schema": {
               "$ref": "#/components/schemas/GetApiV4VscodeSettingsSyncSettingsContextHashV1ResourceResourceNameResourceNameParameter"
@@ -21190,7 +21320,7 @@
           {
             "name": "settingsContextHash",
             "in": "path",
-            "description": "The settings context hash",
+            "description": "Settings context hash.",
             "required": true,
             "schema": {
               "type": "string"
@@ -21199,7 +21329,7 @@
           {
             "name": "resourceName",
             "in": "path",
-            "description": "Name of the resource such as settings",
+            "description": "Name of the resource such as settings.",
             "required": true,
             "schema": {
               "$ref": "#/components/schemas/PostApiV4VscodeSettingsSyncSettingsContextHashV1ResourceResourceNameResourceNameParameter"
@@ -21256,7 +21386,7 @@
           {
             "name": "settingsContextHash",
             "in": "path",
-            "description": "The settings context hash",
+            "description": "Settings context hash.",
             "required": true,
             "schema": {
               "type": "string"
@@ -21799,7 +21929,7 @@
           {
             "name": "skip_ldap",
             "in": "query",
-            "description": "Skip LDAP users",
+            "description": "If \u0060true\u0060, excludes LDAP users from the results.",
             "schema": {
               "type": "boolean",
               "default": false
@@ -21808,7 +21938,7 @@
           {
             "name": "auditors",
             "in": "query",
-            "description": "Filters only auditor users",
+            "description": "If \u0060true\u0060, returns only auditor users.",
             "schema": {
               "type": "boolean",
               "default": false
@@ -24932,7 +25062,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the group owned by the authenticated user",
+            "description": "ID or URL-encoded path of the group.",
             "required": true,
             "schema": {
               "type": "string"
@@ -24941,7 +25071,7 @@
           {
             "name": "epicIid",
             "in": "path",
-            "description": "The internal ID of a group\u2019s epic",
+            "description": "Internal ID of the epic.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -28673,7 +28803,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -32486,7 +32616,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID of a group",
+            "description": "ID or URL-encoded path of the group.",
             "required": true,
             "schema": {
               "type": "string"
@@ -37184,7 +37314,7 @@
           {
             "name": "queueName",
             "in": "path",
-            "description": "The Sidekiq queue name",
+            "description": "Name of the queue to delete jobs from.",
             "required": true,
             "schema": {
               "type": "string"
@@ -38203,7 +38333,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody1F1C1894D905"
+                "$ref": "#/components/schemas/RequestBody1B5Bf1D7A2F9"
               }
             }
           },
@@ -38314,7 +38444,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody2Eb3F076A74E"
+                "$ref": "#/components/schemas/RequestBody9527C171Cd9B"
               }
             }
           },
@@ -38347,7 +38477,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody2Eb3F076A74E"
+                "$ref": "#/components/schemas/RequestBody9527C171Cd9B"
               }
             }
           },
@@ -38381,7 +38511,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyF7A70312C3Cf"
+                "$ref": "#/components/schemas/RequestBody73E9A9A18525"
               }
             }
           },
@@ -38412,7 +38542,7 @@
           {
             "name": "include_paths",
             "in": "query",
-            "description": "Include file paths in the metric definitions",
+            "description": "If \u0060true\u0060, includes file paths in the metric definitions.",
             "schema": {
               "type": "boolean",
               "nullable": true
@@ -38454,7 +38584,7 @@
           {
             "name": "projectId",
             "in": "path",
-            "description": "The ID of a project",
+            "description": "ID of the project.",
             "required": true,
             "schema": {
               "type": "string"
@@ -38463,7 +38593,7 @@
           {
             "name": "instance_id",
             "in": "query",
-            "description": "The instance ID of Unleash Client",
+            "description": "Instance ID of Unleash Client.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -38472,7 +38602,7 @@
           {
             "name": "app_name",
             "in": "query",
-            "description": "The application name of Unleash Client",
+            "description": "Application name of Unleash Client.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -38504,7 +38634,7 @@
           {
             "name": "projectId",
             "in": "path",
-            "description": "The ID of a project",
+            "description": "ID of the project.",
             "required": true,
             "schema": {
               "type": "string"
@@ -38513,7 +38643,7 @@
           {
             "name": "instance_id",
             "in": "query",
-            "description": "The instance ID of Unleash Client",
+            "description": "Instance ID of Unleash Client.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -38522,7 +38652,7 @@
           {
             "name": "app_name",
             "in": "query",
-            "description": "The application name of Unleash Client",
+            "description": "Application name of Unleash Client.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -38554,7 +38684,7 @@
           {
             "name": "projectId",
             "in": "path",
-            "description": "The ID of a project",
+            "description": "ID of the project.",
             "required": true,
             "schema": {
               "type": "string"
@@ -38563,7 +38693,7 @@
           {
             "name": "instance_id",
             "in": "query",
-            "description": "The instance ID of Unleash Client",
+            "description": "Instance ID of Unleash Client.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -38572,7 +38702,7 @@
           {
             "name": "app_name",
             "in": "query",
-            "description": "The application name of Unleash Client",
+            "description": "Application name of Unleash Client.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -38603,7 +38733,7 @@
           {
             "name": "projectId",
             "in": "path",
-            "description": "The ID of a project",
+            "description": "ID of the project.",
             "required": true,
             "schema": {
               "type": "string"
@@ -38614,7 +38744,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyE90Aaad40751"
+                "$ref": "#/components/schemas/RequestBody9898D466447B"
               }
             }
           }
@@ -38643,7 +38773,7 @@
           {
             "name": "projectId",
             "in": "path",
-            "description": "The ID of a project",
+            "description": "ID of the project.",
             "required": true,
             "schema": {
               "type": "string"
@@ -38654,7 +38784,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyE90Aaad40751"
+                "$ref": "#/components/schemas/RequestBody9898D466447B"
               }
             }
           }
@@ -38941,7 +39071,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -38957,7 +39087,7 @@
           {
             "name": "name",
             "in": "path",
-            "description": "The name of a Terraform state",
+            "description": "Name of the Terraform state.",
             "required": true,
             "schema": {
               "type": "string"
@@ -38966,7 +39096,7 @@
           {
             "name": "serial",
             "in": "path",
-            "description": "The version number of the state",
+            "description": "Version number of the Terraform state.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -39006,7 +39136,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -39022,7 +39152,7 @@
           {
             "name": "name",
             "in": "path",
-            "description": "The name of a Terraform state",
+            "description": "Name of the Terraform state.",
             "required": true,
             "schema": {
               "type": "string"
@@ -39031,7 +39161,7 @@
           {
             "name": "serial",
             "in": "path",
-            "description": "The version number of the state",
+            "description": "Version number of the Terraform state.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -39989,7 +40119,7 @@
           {
             "name": "moduleNamespace",
             "in": "path",
-            "description": "Group\u0027s ID or slug",
+            "description": "Group\u0027s ID or slug.",
             "required": true,
             "schema": {
               "type": "string"
@@ -39998,7 +40128,7 @@
           {
             "name": "moduleName",
             "in": "path",
-            "description": "The module name",
+            "description": "Name of the module.",
             "required": true,
             "schema": {
               "type": "string"
@@ -40007,7 +40137,7 @@
           {
             "name": "moduleSystem",
             "in": "path",
-            "description": "The module system (provider)",
+            "description": "Name of the module system, or [provider](https://www.terraform.io/registry/providers).",
             "required": true,
             "schema": {
               "type": "string"
@@ -40049,7 +40179,7 @@
           {
             "name": "moduleNamespace",
             "in": "path",
-            "description": "Group\u0027s ID or slug",
+            "description": "Group\u0027s ID or slug.",
             "required": true,
             "schema": {
               "type": "string"
@@ -40058,7 +40188,7 @@
           {
             "name": "moduleName",
             "in": "path",
-            "description": "The module name",
+            "description": "Name of the module.",
             "required": true,
             "schema": {
               "type": "string"
@@ -40067,7 +40197,7 @@
           {
             "name": "moduleSystem",
             "in": "path",
-            "description": "The module system (provider)",
+            "description": "Name of the module system, or [provider](https://www.terraform.io/registry/providers).",
             "required": true,
             "schema": {
               "type": "string"
@@ -40102,7 +40232,7 @@
           {
             "name": "moduleNamespace",
             "in": "path",
-            "description": "Group\u0027s ID or slug",
+            "description": "Group\u0027s ID or slug.",
             "required": true,
             "schema": {
               "type": "string"
@@ -40111,7 +40241,7 @@
           {
             "name": "moduleName",
             "in": "path",
-            "description": "The module name",
+            "description": "Name of the module.",
             "required": true,
             "schema": {
               "type": "string"
@@ -40120,7 +40250,7 @@
           {
             "name": "moduleSystem",
             "in": "path",
-            "description": "The module system (provider)",
+            "description": "Name of the module system, or [provider](https://www.terraform.io/registry/providers).",
             "required": true,
             "schema": {
               "type": "string"
@@ -40162,7 +40292,7 @@
           {
             "name": "moduleNamespace",
             "in": "path",
-            "description": "Group\u0027s ID or slug",
+            "description": "Group\u0027s ID or slug.",
             "required": true,
             "schema": {
               "type": "string"
@@ -40171,7 +40301,7 @@
           {
             "name": "moduleName",
             "in": "path",
-            "description": "The module name",
+            "description": "Name of the module.",
             "required": true,
             "schema": {
               "type": "string"
@@ -40180,7 +40310,7 @@
           {
             "name": "moduleSystem",
             "in": "path",
-            "description": "The module system (provider)",
+            "description": "Name of the module system, or [provider](https://www.terraform.io/registry/providers).",
             "required": true,
             "schema": {
               "type": "string"
@@ -40224,7 +40354,7 @@
           {
             "name": "moduleNamespace",
             "in": "path",
-            "description": "Group\u0027s ID or slug",
+            "description": "Group\u0027s ID or slug.",
             "required": true,
             "schema": {
               "type": "string"
@@ -40233,7 +40363,7 @@
           {
             "name": "moduleName",
             "in": "path",
-            "description": "The module name",
+            "description": "Name of the module.",
             "required": true,
             "schema": {
               "type": "string"
@@ -40242,7 +40372,7 @@
           {
             "name": "moduleSystem",
             "in": "path",
-            "description": "The module system (provider)",
+            "description": "Name of the module system, or [provider](https://www.terraform.io/registry/providers).",
             "required": true,
             "schema": {
               "type": "string"
@@ -40293,7 +40423,7 @@
           {
             "name": "moduleNamespace",
             "in": "path",
-            "description": "Group\u0027s ID or slug",
+            "description": "Group\u0027s ID or slug.",
             "required": true,
             "schema": {
               "type": "string"
@@ -40302,7 +40432,7 @@
           {
             "name": "moduleName",
             "in": "path",
-            "description": "The module name",
+            "description": "Name of the module.",
             "required": true,
             "schema": {
               "type": "string"
@@ -40311,7 +40441,7 @@
           {
             "name": "moduleSystem",
             "in": "path",
-            "description": "The module system (provider)",
+            "description": "Name of the module system, or [provider](https://www.terraform.io/registry/providers).",
             "required": true,
             "schema": {
               "type": "string"
@@ -41620,7 +41750,7 @@
           {
             "name": "repository_storage",
             "in": "query",
-            "description": "Filter by repository storage used by the snippet",
+            "description": "Filter by repository storage used by the snippet. Administrators only.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -44641,7 +44771,7 @@
           {
             "name": "unidiff",
             "in": "query",
-            "description": "A diff in a Unified diff format",
+            "description": "If \u0060true\u0060, presents diffs in the [unified diff](https://www.gnu.org/software/diffutils/manual/html_node/Detailed-Unified.html) format.",
             "schema": {
               "type": "boolean",
               "default": false
@@ -46787,7 +46917,7 @@
           {
             "name": "tagName",
             "in": "path",
-            "description": "The Git tag the release is associated with",
+            "description": "Git tag the release is associated with.",
             "required": true,
             "schema": {
               "type": "string"
@@ -53860,7 +53990,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -53924,7 +54054,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -53942,7 +54072,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody4B4287109Dd0"
+                "$ref": "#/components/schemas/RequestBody189100F1Ae0E"
               }
             }
           },
@@ -53983,7 +54113,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -53999,7 +54129,7 @@
           {
             "name": "hookId",
             "in": "path",
-            "description": "The ID of a project hook",
+            "description": "ID of the project webhook.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -54036,7 +54166,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -54052,7 +54182,7 @@
           {
             "name": "hookId",
             "in": "path",
-            "description": "The ID of the project hook",
+            "description": "ID of the project webhook.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -54063,7 +54193,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyA04091578D2E"
+                "$ref": "#/components/schemas/RequestBody1197D07Af02C"
               }
             }
           }
@@ -54101,7 +54231,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -54117,7 +54247,7 @@
           {
             "name": "hookId",
             "in": "path",
-            "description": "The ID of the project hook",
+            "description": "ID of the project webhook.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -61811,7 +61941,7 @@
           {
             "name": "unidiff",
             "in": "query",
-            "description": "A diff in a Unified diff format",
+            "description": "If \u0060true\u0060, presents diffs in the [unified diff](https://www.gnu.org/software/diffutils/manual/html_node/Detailed-Unified.html) format.",
             "schema": {
               "type": "boolean",
               "default": false
@@ -61996,7 +62126,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody91027C1C0327"
+                "$ref": "#/components/schemas/RequestBodyDdbbd88Abf6D"
               }
             }
           }
@@ -64926,7 +65056,7 @@
           {
             "name": "unidiff",
             "in": "query",
-            "description": "A diff in a Unified diff format",
+            "description": "If \u0060true\u0060, presents diffs in the [unified diff](https://www.gnu.org/software/diffutils/manual/html_node/Detailed-Unified.html) format.",
             "schema": {
               "type": "boolean",
               "default": false
@@ -65019,7 +65149,7 @@
           {
             "name": "unidiff",
             "in": "query",
-            "description": "A diff in a Unified diff format",
+            "description": "If \u0060true\u0060, presents diffs in the [unified diff](https://www.gnu.org/software/diffutils/manual/html_node/Detailed-Unified.html) format.",
             "schema": {
               "type": "boolean",
               "default": false
@@ -72702,7 +72832,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyDab5B408C1Fd"
+                "$ref": "#/components/schemas/RequestBodyE1387Efe65Cb"
               }
             }
           },
@@ -72826,7 +72956,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody769D8373D726"
+                "$ref": "#/components/schemas/RequestBody4A0786Fcd7Ca"
               }
             }
           }
@@ -72919,7 +73049,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBodyDab5B408C1Fd"
+                "$ref": "#/components/schemas/RequestBodyE1387Efe65Cb"
               }
             }
           },
@@ -73043,7 +73173,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody769D8373D726"
+                "$ref": "#/components/schemas/RequestBody4A0786Fcd7Ca"
               }
             }
           }
@@ -84411,7 +84541,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID of a group",
+            "description": "ID or URL-encoded path of the group.",
             "required": true,
             "schema": {
               "type": "string"
@@ -84448,7 +84578,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID of a group",
+            "description": "ID or URL-encoded path of the group.",
             "required": true,
             "schema": {
               "type": "string"
@@ -84490,7 +84620,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID of a group",
+            "description": "ID or URL-encoded path of the group.",
             "required": true,
             "schema": {
               "type": "string"
@@ -84992,7 +85122,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the group",
+            "description": "ID or URL-encoded path of the group.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -85052,7 +85182,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the group",
+            "description": "ID or URL-encoded path of the group.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -85231,7 +85361,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the group",
+            "description": "ID or URL-encoded path of the group.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -85292,7 +85422,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the group",
+            "description": "ID or URL-encoded path of the group.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -85362,7 +85492,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the group",
+            "description": "ID or URL-encoded path of the group.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -85514,7 +85644,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the group",
+            "description": "ID or URL-encoded path of the group.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -85577,7 +85707,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the group accessible by the authenticated user",
+            "description": "ID or URL-encoded path of the group.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -85918,7 +86048,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID of the group",
+            "description": "ID or URL-encoded path of the group.",
             "required": true,
             "schema": {
               "type": "string"
@@ -92194,7 +92324,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the group owned by the authenticated user",
+            "description": "ID or URL-encoded path of the group.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -95889,7 +96019,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -95931,7 +96061,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -95973,7 +96103,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -96033,7 +96163,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -96118,7 +96248,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -96157,7 +96287,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -96256,7 +96386,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -96343,7 +96473,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -96425,7 +96555,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -96524,7 +96654,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -96613,7 +96743,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -96712,7 +96842,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -96801,7 +96931,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -96900,7 +97030,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -96989,7 +97119,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -97089,7 +97219,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -97204,7 +97334,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -97309,7 +97439,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -97429,7 +97559,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -97564,7 +97694,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -99694,7 +99824,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -99710,7 +99840,7 @@
           {
             "name": "ref_name",
             "in": "query",
-            "description": "The name of a repository branch or tag, if not given the default branch is used",
+            "description": "Name of a repository branch, tag, or revision range. Uses the default branch if not given.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -99720,7 +99850,7 @@
           {
             "name": "since",
             "in": "query",
-            "description": "Only commits after or on this date will be returned",
+            "description": "Only commits after or on this date are returned.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -99731,7 +99861,7 @@
           {
             "name": "until",
             "in": "query",
-            "description": "Only commits before or on this date will be returned",
+            "description": "Only commits before or on this date are returned.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -99742,7 +99872,7 @@
           {
             "name": "path",
             "in": "query",
-            "description": "The file path",
+            "description": "File path relative to the repository.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -99752,7 +99882,7 @@
           {
             "name": "follow",
             "in": "query",
-            "description": "Follow file renames when filtering by path",
+            "description": "If \u0060true\u0060, follows file renames when filtering commits by \u0060path\u0060 and returns commits for the file even if it was renamed. If \u0060false\u0060, returns only commits where the file existed at its current path. Used only when \u0060path\u0060 specifies a single file.",
             "schema": {
               "type": "boolean",
               "nullable": true
@@ -99761,7 +99891,7 @@
           {
             "name": "author",
             "in": "query",
-            "description": "Search commits by commit author",
+            "description": "Filter commits by commit author.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -99771,7 +99901,7 @@
           {
             "name": "all",
             "in": "query",
-            "description": "Every commit will be returned",
+            "description": "If \u0060true\u0060, retrieves every commit from the repository and ignores the \u0060ref_name\u0060 parameter.",
             "schema": {
               "type": "boolean",
               "nullable": true
@@ -99780,7 +99910,7 @@
           {
             "name": "with_stats",
             "in": "query",
-            "description": "Stats about each commit will be added to the response",
+            "description": "If \u0060true\u0060, includes statistics for each commit in the response.",
             "schema": {
               "type": "boolean",
               "nullable": true
@@ -99789,7 +99919,7 @@
           {
             "name": "first_parent",
             "in": "query",
-            "description": "Only include the first parent of merges",
+            "description": "If \u0060true\u0060, follows only the first parent commit upon seeing a merge commit.",
             "schema": {
               "type": "boolean",
               "nullable": true
@@ -99798,7 +99928,7 @@
           {
             "name": "order",
             "in": "query",
-            "description": "List commits in order",
+            "description": "Order in which to list commits, either reverse chronological or [topological](https://git-scm.com/docs/git-log#Documentation/git-log.txt---topo-order).",
             "schema": {
               "$ref": "#/components/schemas/GetApiV4ProjectsIdRepositoryCommitsOrderParameter"
             }
@@ -99806,7 +99936,7 @@
           {
             "name": "trailers",
             "in": "query",
-            "description": "Parse and include Git trailers for every commit",
+            "description": "If \u0060true\u0060, parses and includes [Git trailers](https://git-scm.com/docs/git-interpret-trailers) for every commit.",
             "schema": {
               "type": "boolean",
               "default": false
@@ -99835,7 +99965,7 @@
           {
             "name": "pagination",
             "in": "query",
-            "description": "Specify the pagination method",
+            "description": "Specify the pagination method.",
             "schema": {
               "$ref": "#/components/schemas/GetApiV4ProjectsIdRepositoryCommitsPaginationParameter"
             }
@@ -99843,7 +99973,7 @@
           {
             "name": "page_token",
             "in": "query",
-            "description": "Record from which to start the keyset pagination",
+            "description": "Record from which to start the keyset pagination.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -99883,7 +100013,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -99945,7 +100075,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -99961,7 +100091,7 @@
           {
             "name": "sha",
             "in": "path",
-            "description": "A commit sha, or the name of a branch or tag",
+            "description": "Commit SHA or name of a repository branch or tag.",
             "required": true,
             "schema": {
               "type": "string"
@@ -99970,7 +100100,7 @@
           {
             "name": "stats",
             "in": "query",
-            "description": "Include commit stats",
+            "description": "If \u0060true\u0060, includes commit statistics in the response.",
             "schema": {
               "type": "boolean",
               "default": true
@@ -100009,7 +100139,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -100025,7 +100155,7 @@
           {
             "name": "sha",
             "in": "path",
-            "description": "A commit sha, or the name of a branch or tag",
+            "description": "Commit SHA or name of a repository branch or tag.",
             "required": true,
             "schema": {
               "type": "string"
@@ -100054,7 +100184,7 @@
           {
             "name": "unidiff",
             "in": "query",
-            "description": "A diff in a Unified diff format",
+            "description": "If \u0060true\u0060, presents diffs in the [unified diff](https://www.gnu.org/software/diffutils/manual/html_node/Detailed-Unified.html) format.",
             "schema": {
               "type": "boolean",
               "default": false
@@ -100093,7 +100223,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -100129,7 +100259,7 @@
           {
             "name": "sha",
             "in": "path",
-            "description": "A commit sha, or the name of a branch or tag",
+            "description": "Commit SHA or name of a repository branch or tag.",
             "required": true,
             "schema": {
               "type": "string"
@@ -100166,7 +100296,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -100182,7 +100312,7 @@
           {
             "name": "sha",
             "in": "path",
-            "description": "A commit sha, or the name of a branch or tag on which to post a comment",
+            "description": "Commit SHA or name of a repository branch or tag.",
             "required": true,
             "schema": {
               "type": "string"
@@ -100193,7 +100323,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody61C505Dac8Bc"
+                "$ref": "#/components/schemas/RequestBody3Be31Bc0Ca07"
               }
             }
           },
@@ -100231,7 +100361,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -100247,7 +100377,7 @@
           {
             "name": "sha",
             "in": "path",
-            "description": "A commit SHA",
+            "description": "Commit SHA.",
             "required": true,
             "schema": {
               "type": "string"
@@ -100256,7 +100386,7 @@
           {
             "name": "first_parent",
             "in": "query",
-            "description": "Only include the first parent of merges",
+            "description": "If \u0060true\u0060, follows only the first parent commit upon seeing a merge commit.",
             "schema": {
               "type": "boolean",
               "default": false
@@ -100295,7 +100425,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -100311,7 +100441,7 @@
           {
             "name": "sha",
             "in": "path",
-            "description": "A commit sha, or the name of a branch or tag to be cherry-picked",
+            "description": "Commit SHA, or name of a repository branch or tag, to cherry-pick.",
             "required": true,
             "schema": {
               "type": "string"
@@ -100322,7 +100452,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody55D9A3C34Efb"
+                "$ref": "#/components/schemas/RequestBodyDb5626E8D17C"
               }
             }
           },
@@ -100360,7 +100490,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -100376,7 +100506,7 @@
           {
             "name": "sha",
             "in": "path",
-            "description": "Commit SHA to revert",
+            "description": "Commit SHA to revert.",
             "required": true,
             "schema": {
               "type": "string"
@@ -100387,7 +100517,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RequestBody8E366F151024"
+                "$ref": "#/components/schemas/RequestBody7430F3Dd907E"
               }
             }
           },
@@ -100425,7 +100555,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -100441,7 +100571,7 @@
           {
             "name": "sha",
             "in": "path",
-            "description": "A commit sha",
+            "description": "Commit SHA.",
             "required": true,
             "schema": {
               "type": "string"
@@ -100450,7 +100580,7 @@
           {
             "name": "type",
             "in": "query",
-            "description": "Scope",
+            "description": "Type of references to return for the commit.",
             "schema": {
               "$ref": "#/components/schemas/GetApiV4ProjectsIdRepositoryCommitsShaRefsTypeParameter"
             }
@@ -100508,7 +100638,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -100524,7 +100654,7 @@
           {
             "name": "sha",
             "in": "path",
-            "description": "A commit sha, or the name of a branch or tag on which to find Merge Requests",
+            "description": "Commit SHA or name of a repository branch or tag.",
             "required": true,
             "schema": {
               "type": "string"
@@ -100533,7 +100663,7 @@
           {
             "name": "state",
             "in": "query",
-            "description": "Filter merge-requests by state",
+            "description": "Filter merge requests by state: \u0060opened\u0060, \u0060closed\u0060, \u0060locked\u0060, or \u0060merged\u0060. If omitted, merge requests of all states are returned. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/191169) in GitLab 18.2.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -100593,7 +100723,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -100609,7 +100739,7 @@
           {
             "name": "sha",
             "in": "path",
-            "description": "A commit sha, or the name of a branch or tag",
+            "description": "Commit SHA or name of a repository branch or tag.",
             "required": true,
             "schema": {
               "type": "string"
@@ -101512,7 +101642,7 @@
           {
             "name": "group_id",
             "in": "query",
-            "description": "The group ID to find all certificate-based clusters in the hierarchy",
+            "description": "ID of the group to find all certificate-based clusters in the hierarchy.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -107682,7 +107812,7 @@
           {
             "name": "repository_storage",
             "in": "query",
-            "description": "Filter by repository storage used by the group",
+            "description": "Filter by repository storage used by the group. Administrators only. Premium and Ultimate only.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -108463,7 +108593,7 @@
           {
             "name": "with_security_reports",
             "in": "query",
-            "description": "Return only projects having security report artifacts present",
+            "description": "If \u0060true\u0060, returns only projects that have security report artifacts present in any of their builds. Ultimate only.",
             "schema": {
               "type": "boolean",
               "default": false
@@ -108792,7 +108922,7 @@
           {
             "name": "repository_storage",
             "in": "query",
-            "description": "Filter by repository storage used by the group",
+            "description": "Filter by repository storage used by the group. Administrators only. Premium and Ultimate only.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -108996,7 +109126,7 @@
           {
             "name": "repository_storage",
             "in": "query",
-            "description": "Filter by repository storage used by the group",
+            "description": "Filter by repository storage used by the group. Administrators only. Premium and Ultimate only.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -115497,7 +115627,7 @@
           {
             "name": "databaseName",
             "in": "path",
-            "description": "The database name",
+            "description": "Name of the database.",
             "required": true,
             "schema": {
               "$ref": "#/components/schemas/GetApiV4AdminDatabasesDatabaseNameDictionaryTablesTableNameDatabaseNameParameter"
@@ -115506,7 +115636,7 @@
           {
             "name": "tableName",
             "in": "path",
-            "description": "The table name",
+            "description": "Name of the table.",
             "required": true,
             "schema": {
               "type": "string"
@@ -117059,6 +117189,86 @@
             "type": "string",
             "format": "date-time",
             "example": "2026-07-22T11:42:00Z"
+          }
+        }
+      },
+      "ApiEntitiesOrbitSkillSummary": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "orbit"
+          },
+          "version": {
+            "type": "string",
+            "example": "0.29.0"
+          },
+          "compatibility": {
+            "type": "string",
+            "example": "Orbit CLI"
+          },
+          "description": {
+            "type": "string",
+            "example": "Use the glab orbit CLI."
+          }
+        }
+      },
+      "ApiEntitiesOrbitSkillCollection": {
+        "type": "object",
+        "properties": {
+          "skills": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesOrbitSkillSummary"
+            }
+          },
+          "server_version": {
+            "type": "string",
+            "example": "0.31.0"
+          }
+        }
+      },
+      "ApiEntitiesOrbitSkillFile": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "example": "SKILL.md"
+          },
+          "sha256": {
+            "type": "string",
+            "example": "abc123"
+          },
+          "content": {
+            "type": "string",
+            "example": "# Orbit skill"
+          }
+        }
+      },
+      "ApiEntitiesOrbitSkill": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "orbit"
+          },
+          "version": {
+            "type": "string",
+            "example": "0.29.0"
+          },
+          "compatibility": {
+            "type": "string",
+            "example": "Orbit CLI"
+          },
+          "server_version": {
+            "type": "string",
+            "example": "0.31.0"
+          },
+          "files": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesOrbitSkillFile"
+            }
           }
         }
       },
@@ -142004,17 +142214,17 @@
           }
         }
       },
-      "RequestBodyCbff8Babb92E": {
+      "RequestBodyC8D16Cfa818F": {
         "required": [
           "query"
         ],
         "type": "object",
         "properties": {
           "query": {
-            "$ref": "#/components/schemas/RequestBodyCbff8Babb92EQueryProperty"
+            "$ref": "#/components/schemas/RequestBodyC8D16Cfa818FQuery"
           },
           "response_format": {
-            "$ref": "#/components/schemas/RequestBodyCbff8Babb92EResponseFormat"
+            "$ref": "#/components/schemas/RequestBodyC8D16Cfa818FResponseFormat"
           },
           "source_type": {
             "type": "string",
@@ -142339,7 +142549,7 @@
           }
         }
       },
-      "RequestBody80C272D831B7": {
+      "RequestBody127Fab987046": {
         "required": [
           "agent_type",
           "machine_fingerprint"
@@ -142347,7 +142557,7 @@
         "type": "object",
         "properties": {
           "agent_type": {
-            "$ref": "#/components/schemas/RequestBody80C272D831B7AgentType"
+            "$ref": "#/components/schemas/RequestBody127Fab987046AgentType"
           },
           "machine_fingerprint": {
             "maxLength": 64,
@@ -142920,7 +143130,7 @@
           }
         }
       },
-      "RequestBodyEf2061658F9E": {
+      "RequestBody5Ea5039A429E": {
         "required": [
           "prompt"
         ],
@@ -142928,7 +143138,7 @@
         "properties": {
           "prompt": {
             "type": "string",
-            "description": "Prompt used to generate the Git commands",
+            "description": "Prompt used to generate the Git commands.",
             "nullable": true
           }
         }
@@ -143272,7 +143482,7 @@
           }
         }
       },
-      "RequestBodyA188D7937E44": {
+      "RequestBody1Daa2F40139E": {
         "required": [
           "project_id",
           "name"
@@ -143281,13 +143491,13 @@
         "properties": {
           "project_id": {
             "type": "string",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "nullable": true,
             "example": "gitlab-org/gitlab"
           },
           "name": {
             "type": "string",
-            "description": "The alias of the project",
+            "description": "Name of the alias. Must be unique.",
             "nullable": true,
             "example": "gitlab"
           }
@@ -144596,7 +144806,7 @@
           }
         }
       },
-      "RequestBody90C26864A87C": {
+      "RequestBody67A88A6636B1": {
         "required": [
           "license"
         ],
@@ -144604,7 +144814,7 @@
         "properties": {
           "license": {
             "type": "string",
-            "description": "The license string",
+            "description": "License string.",
             "nullable": true
           }
         }
@@ -145081,7 +145291,7 @@
           }
         }
       },
-      "RequestBody5C6D6Eacec15": {
+      "RequestBodyFe7B07E787F5": {
         "required": [
           "percentage",
           "plan"
@@ -145092,10 +145302,10 @@
             "maximum": 100,
             "minimum": 0,
             "type": "integer",
-            "description": "Percentage of namespaces to rollout Elasticsearch for"
+            "description": "Percentage of namespaces to enable or disable Elasticsearch indexing for."
           },
           "plan": {
-            "$ref": "#/components/schemas/RequestBody5C6D6Eacec15Plan"
+            "$ref": "#/components/schemas/RequestBodyFe7B07E787F5Plan"
           }
         }
       },
@@ -145902,7 +146112,7 @@
           }
         }
       },
-      "RequestBodyC608Fe7206Af": {
+      "RequestBody1290D9F73168": {
         "required": [
           "csp_namespace_id"
         ],
@@ -145910,7 +146120,7 @@
         "properties": {
           "csp_namespace_id": {
             "type": "integer",
-            "description": "ID of the group designated to centrally manage security policies and compliance frameworks.",
+            "description": "ID of the group designated to centrally manage security policies and compliance frameworks. Must be a top-level group. Set to \u0060null\u0060 to clear the setting.",
             "nullable": true
           }
         }
@@ -146057,7 +146267,7 @@
           }
         }
       },
-      "RequestBodyFe9841796934": {
+      "RequestBody41568E59F327": {
         "required": [
           "name"
         ],
@@ -146065,7 +146275,7 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "The board name",
+            "description": "Name of the board.",
             "nullable": true
           }
         }
@@ -151278,6 +151488,19 @@
           }
         }
       },
+      "RequestBodyFe9841796934": {
+        "required": [
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The board name",
+            "nullable": true
+          }
+        }
+      },
       "RequestBody4439A3Ef1900": {
         "required": [
           "title",
@@ -151343,7 +151566,7 @@
           }
         }
       },
-      "RequestBody1F1C1894D905": {
+      "RequestBody1B5Bf1D7A2F9": {
         "required": [
           "runner_type",
           "group_id",
@@ -151352,7 +151575,7 @@
         "type": "object",
         "properties": {
           "runner_type": {
-            "$ref": "#/components/schemas/RequestBody1F1C1894D905RunnerType"
+            "$ref": "#/components/schemas/RequestBody1B5Bf1D7A2F9RunnerType"
           },
           "group_id": {
             "type": "integer",
@@ -151387,7 +151610,7 @@
             "default": false
           },
           "access_level": {
-            "$ref": "#/components/schemas/RequestBody1F1C1894D905AccessLevel"
+            "$ref": "#/components/schemas/RequestBody1B5Bf1D7A2F9AccessLevel"
           },
           "run_untagged": {
             "type": "boolean",
@@ -151409,19 +151632,19 @@
           },
           "token_expires_at": {
             "type": "string",
-            "description": "The expiration time for the runner authentication token (ISO 8601 format). Must be between 5 minutes and 15 days in the future, and cannot exceed instance/group/project limits.",
+            "description": "Expiration time for the runner authentication token in ISO 8601 format. Must be between 5 minutes and 15 days in the future and cannot exceed instance, group, or project-level limits. Only applies to the initial token. Rotated tokens use the computed expiry from settings. Premium and Ultimate only.",
             "format": "date-time",
             "nullable": true
           },
           "token_rotation_deadline": {
             "type": "string",
-            "description": "The deadline for token rotation (ISO 8601 format). Must be specified with token_expires_at and be \u003C= token_expires_at.",
+            "description": "Deadline after which token rotation requests are rejected. Requires \u0060token_expires_at\u0060 and must be less than or equal to it. Setting both to the same value disables token rotation. Cleared on successful rotation. Premium and Ultimate only.",
             "format": "date-time",
             "nullable": true
           }
         }
       },
-      "RequestBody2Eb3F076A74E": {
+      "RequestBody9527C171Cd9B": {
         "required": [
           "event"
         ],
@@ -151429,13 +151652,13 @@
         "properties": {
           "event": {
             "type": "string",
-            "description": "The event name that should be tracked",
+            "description": "Event name that should be tracked.",
             "nullable": true,
             "example": "i_quickactions_page"
           }
         }
       },
-      "RequestBodyF7A70312C3Cf": {
+      "RequestBody73E9A9A18525": {
         "required": [
           "events"
         ],
@@ -151444,24 +151667,24 @@
           "events": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBodyF7A70312C3CfEventsItemProperty"
+              "$ref": "#/components/schemas/RequestBody73E9A9A18525EventsItemProperty"
             },
-            "description": "An array of internal events. Maximum 50 events allowed.",
+            "description": "Array of internal events to track. Maximum of 50 events.",
             "nullable": true
           }
         }
       },
-      "RequestBodyE90Aaad40751": {
+      "RequestBody9898D466447B": {
         "type": "object",
         "properties": {
           "instance_id": {
             "type": "string",
-            "description": "The instance ID of Unleash Client",
+            "description": "Instance ID of Unleash Client.",
             "nullable": true
           },
           "app_name": {
             "type": "string",
-            "description": "The application name of Unleash Client",
+            "description": "Application name of Unleash Client.",
             "nullable": true
           }
         }
@@ -154498,7 +154721,7 @@
           }
         }
       },
-      "RequestBody4B4287109Dd0": {
+      "RequestBody189100F1Ae0E": {
         "required": [
           "url"
         ],
@@ -154512,141 +154735,141 @@
           },
           "name": {
             "type": "string",
-            "description": "Name of the hook",
+            "description": "Name of the project webhook. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/460887) in GitLab 17.1.",
             "nullable": true
           },
           "description": {
             "type": "string",
-            "description": "Description of the hook",
+            "description": "Description of the project webhook. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/460887) in GitLab 17.1.",
             "nullable": true
           },
           "push_events": {
             "type": "boolean",
-            "description": "Trigger hook on push events",
+            "description": "If \u0060true\u0060, triggers the project webhook on push events.",
             "nullable": true
           },
           "issues_events": {
             "type": "boolean",
-            "description": "Trigger hook on issues events",
+            "description": "If \u0060true\u0060, triggers the project webhook on issue events.",
             "nullable": true
           },
           "confidential_issues_events": {
             "type": "boolean",
-            "description": "Trigger hook on confidential issues events",
+            "description": "If \u0060true\u0060, triggers the project webhook on confidential issue events.",
             "nullable": true
           },
           "merge_requests_events": {
             "type": "boolean",
-            "description": "Trigger hook on merge request events",
+            "description": "If \u0060true\u0060, triggers the project webhook on merge request events.",
             "nullable": true
           },
           "tag_push_events": {
             "type": "boolean",
-            "description": "Trigger hook on tag push events",
+            "description": "If \u0060true\u0060, triggers the project webhook on tag push events.",
             "nullable": true
           },
           "note_events": {
             "type": "boolean",
-            "description": "Trigger hook on note (comment) events",
+            "description": "If \u0060true\u0060, triggers the project webhook on note events.",
             "nullable": true
           },
           "confidential_note_events": {
             "type": "boolean",
-            "description": "Trigger hook on confidential note (comment) events",
+            "description": "If \u0060true\u0060, triggers the project webhook on confidential note events.",
             "nullable": true
           },
           "job_events": {
             "type": "boolean",
-            "description": "Trigger hook on job events",
+            "description": "If \u0060true\u0060, triggers the project webhook on job events.",
             "nullable": true
           },
           "pipeline_events": {
             "type": "boolean",
-            "description": "Trigger hook on pipeline events",
+            "description": "If \u0060true\u0060, triggers the project webhook on pipeline events.",
             "nullable": true
           },
           "wiki_page_events": {
             "type": "boolean",
-            "description": "Trigger hook on wiki events",
+            "description": "If \u0060true\u0060, triggers the project webhook on wiki page events.",
             "nullable": true
           },
           "deployment_events": {
             "type": "boolean",
-            "description": "Trigger hook on deployment events",
+            "description": "If \u0060true\u0060, triggers the project webhook on deployment events.",
             "nullable": true
           },
           "feature_flag_events": {
             "type": "boolean",
-            "description": "Trigger hook on feature flag events",
+            "description": "If \u0060true\u0060, triggers the project webhook on feature flag events.",
             "nullable": true
           },
           "releases_events": {
             "type": "boolean",
-            "description": "Trigger hook on release events",
+            "description": "If \u0060true\u0060, triggers the project webhook on release events.",
             "nullable": true
           },
           "milestone_events": {
             "type": "boolean",
-            "description": "Trigger hook on milestone events",
+            "description": "If \u0060true\u0060, triggers the project webhook on milestone events.",
             "nullable": true
           },
           "emoji_events": {
             "type": "boolean",
-            "description": "Trigger hook on emoji events",
+            "description": "If \u0060true\u0060, triggers the project webhook on emoji events.",
             "nullable": true
           },
           "resource_access_token_events": {
             "type": "boolean",
-            "description": "Trigger hook on project access token expiry events",
+            "description": "If \u0060true\u0060, triggers the project webhook on project access token expiry events.",
             "nullable": true
           },
           "resource_deploy_token_events": {
             "type": "boolean",
-            "description": "Trigger hook on deploy token expiry events",
+            "description": "If \u0060true\u0060, triggers the project webhook on project deploy token expiry events.",
             "nullable": true
           },
           "enable_ssl_verification": {
             "type": "boolean",
-            "description": "Do SSL verification when triggering the hook",
+            "description": "If \u0060true\u0060, verifies the SSL certificate when the webhook is triggered.",
             "nullable": true
           },
           "token": {
             "type": "string",
-            "description": "Secret token to validate received payloads; this will not be returned in the response",
+            "description": "Secret token used to validate received payloads. Not returned in the response, and changing the webhook URL resets it.",
             "nullable": true
           },
           "signing_token": {
             "type": "string",
-            "description": "HMAC signing token used to compute the webhook-signature header. Must be in whsec_\u003Cbase64\u003E format encoding a 32-byte key. Not returned in the response",
+            "description": "HMAC signing token used to compute the \u0060webhook-signature\u0060 header. Must be in \u0060whsec_\u003Cbase64\u003E\u0060 format encoding a 32-byte key, and is not returned in the response. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/231325) in GitLab 19.0.",
             "nullable": true
           },
           "push_events_branch_filter": {
             "type": "string",
-            "description": "Trigger hook on specified branch only",
+            "description": "Filter push events by branch name.",
             "nullable": true
           },
           "custom_webhook_template": {
             "type": "string",
-            "description": "Custom template for the request payload",
+            "description": "Custom template for the webhook request payload.",
             "nullable": true
           },
           "branch_filter_strategy": {
-            "$ref": "#/components/schemas/RequestBody4B4287109Dd0BranchFilterStrategy"
+            "$ref": "#/components/schemas/RequestBody189100F1Ae0EBranchFilterStrategy"
           },
           "vulnerability_events": {
             "type": "boolean",
-            "description": "Trigger hook on vulnerability events",
+            "description": "If \u0060true\u0060, triggers the project webhook on vulnerability events.",
             "nullable": true
           },
           "duo_flow_callback_enabled": {
             "type": "boolean",
-            "description": "Allow Duo Agent Platform flows to send lifecycle and progress events to this webhook. A flow must reference this webhook\u0027s ID as callback_hook_id when it starts",
+            "description": "If \u0060true\u0060, allows Duo Agent Platform flows to send lifecycle and progress events to this project webhook. A flow must reference the webhook\u0027s ID as \u0060callback_hook_id\u0060 when it starts. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/249149) in GitLab 19.4 [with a feature flag](https://docs.gitlab.com/administration/feature_flags/) named \u0060duo_flow_callback_hooks\u0060. Disabled by default.",
             "nullable": true
           },
           "url_variables": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBody4B4287109Dd0UrlVariablesItem"
+              "$ref": "#/components/schemas/RequestBody189100F1Ae0EUrlVariablesItem"
             },
             "description": "URL variables for interpolation",
             "nullable": true
@@ -154654,14 +154877,14 @@
           "custom_headers": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBody4B4287109Dd0CustomHeadersItem"
+              "$ref": "#/components/schemas/RequestBody189100F1Ae0ECustomHeadersItem"
             },
             "description": "Custom headers",
             "nullable": true
           }
         }
       },
-      "RequestBodyA04091578D2E": {
+      "RequestBody1197D07Af02C": {
         "type": "object",
         "properties": {
           "url": {
@@ -154671,141 +154894,141 @@
           },
           "name": {
             "type": "string",
-            "description": "Name of the hook",
+            "description": "Name of the project webhook. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/460887) in GitLab 17.1.",
             "nullable": true
           },
           "description": {
             "type": "string",
-            "description": "Description of the hook",
+            "description": "Description of the project webhook. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/460887) in GitLab 17.1.",
             "nullable": true
           },
           "push_events": {
             "type": "boolean",
-            "description": "Trigger hook on push events",
+            "description": "If \u0060true\u0060, triggers the project webhook on push events.",
             "nullable": true
           },
           "issues_events": {
             "type": "boolean",
-            "description": "Trigger hook on issues events",
+            "description": "If \u0060true\u0060, triggers the project webhook on issue events.",
             "nullable": true
           },
           "confidential_issues_events": {
             "type": "boolean",
-            "description": "Trigger hook on confidential issues events",
+            "description": "If \u0060true\u0060, triggers the project webhook on confidential issue events.",
             "nullable": true
           },
           "merge_requests_events": {
             "type": "boolean",
-            "description": "Trigger hook on merge request events",
+            "description": "If \u0060true\u0060, triggers the project webhook on merge request events.",
             "nullable": true
           },
           "tag_push_events": {
             "type": "boolean",
-            "description": "Trigger hook on tag push events",
+            "description": "If \u0060true\u0060, triggers the project webhook on tag push events.",
             "nullable": true
           },
           "note_events": {
             "type": "boolean",
-            "description": "Trigger hook on note (comment) events",
+            "description": "If \u0060true\u0060, triggers the project webhook on note events.",
             "nullable": true
           },
           "confidential_note_events": {
             "type": "boolean",
-            "description": "Trigger hook on confidential note (comment) events",
+            "description": "If \u0060true\u0060, triggers the project webhook on confidential note events.",
             "nullable": true
           },
           "job_events": {
             "type": "boolean",
-            "description": "Trigger hook on job events",
+            "description": "If \u0060true\u0060, triggers the project webhook on job events.",
             "nullable": true
           },
           "pipeline_events": {
             "type": "boolean",
-            "description": "Trigger hook on pipeline events",
+            "description": "If \u0060true\u0060, triggers the project webhook on pipeline events.",
             "nullable": true
           },
           "wiki_page_events": {
             "type": "boolean",
-            "description": "Trigger hook on wiki events",
+            "description": "If \u0060true\u0060, triggers the project webhook on wiki page events.",
             "nullable": true
           },
           "deployment_events": {
             "type": "boolean",
-            "description": "Trigger hook on deployment events",
+            "description": "If \u0060true\u0060, triggers the project webhook on deployment events.",
             "nullable": true
           },
           "feature_flag_events": {
             "type": "boolean",
-            "description": "Trigger hook on feature flag events",
+            "description": "If \u0060true\u0060, triggers the project webhook on feature flag events.",
             "nullable": true
           },
           "releases_events": {
             "type": "boolean",
-            "description": "Trigger hook on release events",
+            "description": "If \u0060true\u0060, triggers the project webhook on release events.",
             "nullable": true
           },
           "milestone_events": {
             "type": "boolean",
-            "description": "Trigger hook on milestone events",
+            "description": "If \u0060true\u0060, triggers the project webhook on milestone events.",
             "nullable": true
           },
           "emoji_events": {
             "type": "boolean",
-            "description": "Trigger hook on emoji events",
+            "description": "If \u0060true\u0060, triggers the project webhook on emoji events.",
             "nullable": true
           },
           "resource_access_token_events": {
             "type": "boolean",
-            "description": "Trigger hook on project access token expiry events",
+            "description": "If \u0060true\u0060, triggers the project webhook on project access token expiry events.",
             "nullable": true
           },
           "resource_deploy_token_events": {
             "type": "boolean",
-            "description": "Trigger hook on deploy token expiry events",
+            "description": "If \u0060true\u0060, triggers the project webhook on project deploy token expiry events.",
             "nullable": true
           },
           "enable_ssl_verification": {
             "type": "boolean",
-            "description": "Do SSL verification when triggering the hook",
+            "description": "If \u0060true\u0060, verifies the SSL certificate when the webhook is triggered.",
             "nullable": true
           },
           "token": {
             "type": "string",
-            "description": "Secret token to validate received payloads; this will not be returned in the response",
+            "description": "Secret token used to validate received payloads. Not returned in the response, and changing the webhook URL resets it.",
             "nullable": true
           },
           "signing_token": {
             "type": "string",
-            "description": "HMAC signing token used to compute the webhook-signature header. Must be in whsec_\u003Cbase64\u003E format encoding a 32-byte key. Not returned in the response",
+            "description": "HMAC signing token used to compute the \u0060webhook-signature\u0060 header. Must be in \u0060whsec_\u003Cbase64\u003E\u0060 format encoding a 32-byte key, and is not returned in the response. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/231325) in GitLab 19.0.",
             "nullable": true
           },
           "push_events_branch_filter": {
             "type": "string",
-            "description": "Trigger hook on specified branch only",
+            "description": "Filter push events by branch name.",
             "nullable": true
           },
           "custom_webhook_template": {
             "type": "string",
-            "description": "Custom template for the request payload",
+            "description": "Custom template for the webhook request payload.",
             "nullable": true
           },
           "branch_filter_strategy": {
-            "$ref": "#/components/schemas/RequestBodyA04091578D2EBranchFilterStrategy"
+            "$ref": "#/components/schemas/RequestBody1197D07Af02CBranchFilterStrategy"
           },
           "vulnerability_events": {
             "type": "boolean",
-            "description": "Trigger hook on vulnerability events",
+            "description": "If \u0060true\u0060, triggers the project webhook on vulnerability events.",
             "nullable": true
           },
           "duo_flow_callback_enabled": {
             "type": "boolean",
-            "description": "Allow Duo Agent Platform flows to send lifecycle and progress events to this webhook. A flow must reference this webhook\u0027s ID as callback_hook_id when it starts",
+            "description": "If \u0060true\u0060, allows Duo Agent Platform flows to send lifecycle and progress events to this project webhook. A flow must reference the webhook\u0027s ID as \u0060callback_hook_id\u0060 when it starts. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/249149) in GitLab 19.4 [with a feature flag](https://docs.gitlab.com/administration/feature_flags/) named \u0060duo_flow_callback_hooks\u0060. Disabled by default.",
             "nullable": true
           },
           "url_variables": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBodyA04091578D2EUrlVariablesItem"
+              "$ref": "#/components/schemas/RequestBody1197D07Af02CUrlVariablesItem"
             },
             "description": "URL variables for interpolation",
             "nullable": true
@@ -154813,7 +155036,7 @@
           "custom_headers": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RequestBodyA04091578D2ECustomHeadersItem"
+              "$ref": "#/components/schemas/RequestBody1197D07Af02CCustomHeadersItem"
             },
             "description": "Custom headers",
             "nullable": true
@@ -155451,7 +155674,7 @@
           }
         }
       },
-      "RequestBody91027C1C0327": {
+      "RequestBodyDdbbd88Abf6D": {
         "type": "object",
         "properties": {
           "sha": {
@@ -155466,7 +155689,7 @@
           },
           "approval_password": {
             "type": "string",
-            "description": "Current user\u0027s password if project is set to require explicit auth on approval",
+            "description": "Current user\u0027s password, needed if [user re-authentication to approve](https://docs.gitlab.com/user/project/merge_requests/approvals/settings/#require-user-re-authentication-to-approve) is enabled in the project settings. Always fails if the group or GitLab Self-Managed instance is configured to force SAML authentication.",
             "nullable": true,
             "example": "secret"
           }
@@ -156309,14 +156532,14 @@
           }
         }
       },
-      "RequestBodyDab5B408C1Fd": {
+      "RequestBodyE1387Efe65Cb": {
         "required": [
           "access_level"
         ],
         "type": "object",
         "properties": {
           "access_level": {
-            "$ref": "#/components/schemas/RequestBodyDab5B408C1FdAccessLevel"
+            "$ref": "#/components/schemas/RequestBodyE1387Efe65CbAccessLevel"
           },
           "email": {
             "type": "array",
@@ -156347,16 +156570,16 @@
           },
           "member_role_id": {
             "type": "integer",
-            "description": "The ID of a member role for the invited user",
+            "description": "ID of a member role to assign to the invited user. Ultimate only.",
             "nullable": true
           }
         }
       },
-      "RequestBody769D8373D726": {
+      "RequestBody4A0786Fcd7Ca": {
         "type": "object",
         "properties": {
           "access_level": {
-            "$ref": "#/components/schemas/RequestBody769D8373D726AccessLevel"
+            "$ref": "#/components/schemas/RequestBody4A0786Fcd7CaAccessLevel"
           },
           "expires_at": {
             "type": "string",
@@ -156366,7 +156589,7 @@
           },
           "member_role_id": {
             "type": "integer",
-            "description": "The ID of a member role for the invited user",
+            "description": "ID of a member role to assign to the invited user. Ultimate only.",
             "nullable": true
           }
         }
@@ -160514,7 +160737,7 @@
           }
         }
       },
-      "RequestBody61C505Dac8Bc": {
+      "RequestBody3Be31Bc0Ca07": {
         "required": [
           "note",
           "line",
@@ -160524,28 +160747,28 @@
         "properties": {
           "note": {
             "type": "string",
-            "description": "The text of the comment",
+            "description": "Text of the comment.",
             "nullable": true,
             "example": "Nice code!"
           },
           "path": {
             "type": "string",
-            "description": "The file path",
+            "description": "File path relative to the repository.",
             "nullable": true,
             "example": "doc/update/5.4-to-6.0.md"
           },
           "line": {
             "type": "integer",
-            "description": "The line number",
+            "description": "Line number where the comment should be placed.",
             "nullable": true,
             "example": 11
           },
           "line_type": {
-            "$ref": "#/components/schemas/RequestBody61C505Dac8BcLineType"
+            "$ref": "#/components/schemas/RequestBody3Be31Bc0Ca07LineType"
           }
         }
       },
-      "RequestBody55D9A3C34Efb": {
+      "RequestBodyDb5626E8D17C": {
         "required": [
           "branch"
         ],
@@ -160553,24 +160776,24 @@
         "properties": {
           "branch": {
             "type": "string",
-            "description": "The name of the branch",
+            "description": "Name of the branch.",
             "nullable": true,
             "example": "master"
           },
           "dry_run": {
             "type": "boolean",
-            "description": "Does not commit any changes",
+            "description": "If \u0060true\u0060, does not commit any changes.",
             "default": false
           },
           "message": {
             "type": "string",
-            "description": "A custom commit message to use for the picked commit",
+            "description": "Custom commit message to use for the new commit.",
             "nullable": true,
             "example": "Initial commit"
           }
         }
       },
-      "RequestBody8E366F151024": {
+      "RequestBody7430F3Dd907E": {
         "required": [
           "branch"
         ],
@@ -160578,13 +160801,13 @@
         "properties": {
           "branch": {
             "type": "string",
-            "description": "Target branch name",
+            "description": "Name of the target branch.",
             "nullable": true,
             "example": "master"
           },
           "dry_run": {
             "type": "boolean",
-            "description": "Does not commit any changes",
+            "description": "If \u0060true\u0060, does not commit any changes.",
             "default": false
           }
         }
@@ -162708,6 +162931,25 @@
           }
         }
       },
+      "RequestBodyC8D16Cfa818FQuery": {
+        "type": "object",
+        "oneOf": [
+          {
+            "type": "object",
+            "nullable": true
+          },
+          {
+            "$ref": "#/components/schemas/RequestBodyC8D16Cfa818FQueryBranch2"
+          }
+        ],
+        "properties": {
+          "value": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "description": "JSON query object, or GQL text when enabled for the current user"
+      },
       "RequestBodyF583F2Fa127FResourceId": {
         "type": "object",
         "oneOf": [
@@ -164200,11 +164442,6 @@
           }
         }
       },
-      "RequestBodyCbff8Babb92EQuery": {
-        "type": "object",
-        "description": "Query DSL object",
-        "nullable": true
-      },
       "RequestBodyC1F8Fb649B03Parameters": {
         "type": "object",
         "description": "Named query parameters"
@@ -165502,7 +165739,7 @@
         "description": "Object that contains YAML frontmatter",
         "nullable": true
       },
-      "RequestBodyF7A70312C3CfEventsItem": {
+      "RequestBody73E9A9A18525EventsItem": {
         "type": "object"
       },
       "RequestBodyDbe04Ff1D37DUrlVariablesItem": {
@@ -166980,7 +167217,7 @@
         "description": "New project params to override values in the export",
         "nullable": true
       },
-      "RequestBody4B4287109Dd0UrlVariablesItem": {
+      "RequestBody189100F1Ae0EUrlVariablesItem": {
         "required": [
           "key",
           "value"
@@ -167001,7 +167238,7 @@
           }
         }
       },
-      "RequestBody4B4287109Dd0CustomHeadersItem": {
+      "RequestBody189100F1Ae0ECustomHeadersItem": {
         "required": [
           "key",
           "value"
@@ -167022,7 +167259,7 @@
           }
         }
       },
-      "RequestBodyA04091578D2EUrlVariablesItem": {
+      "RequestBody1197D07Af02CUrlVariablesItem": {
         "required": [
           "key",
           "value"
@@ -167043,7 +167280,7 @@
           }
         }
       },
-      "RequestBodyA04091578D2ECustomHeadersItem": {
+      "RequestBody1197D07Af02CCustomHeadersItem": {
         "required": [
           "key",
           "value"
@@ -170252,6 +170489,12 @@
         "description": "End line for a multi-line note",
         "nullable": true
       },
+      "GetApiV4OrbitSkillsNamePath200MarkdownResponse": {
+        "type": "string"
+      },
+      "GetApiV4OrbitSkillsNamePath200PlainResponse": {
+        "type": "string"
+      },
       "GetApiV4DependencyListExportsExportIdDownload200OctetStreamResponse": {
         "type": "string",
         "format": "binary"
@@ -170412,6 +170655,18 @@
         "type": "object",
         "description": "Placeholder schema for path example refs"
       },
+      "RequestBodyC8D16Cfa818FQueryBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
       "RequestBody1Aabda1Af7F0ParamsBranch2": {
         "required": [
           "value"
@@ -170423,6 +170678,12 @@
             "nullable": true
           }
         }
+      },
+      "GetApiV4OrbitSkillsNamePath200MarkdownResponseSchema": {
+        "type": "string"
+      },
+      "GetApiV4OrbitSkillsNamePath200PlainResponseSchema": {
+        "type": "string"
       },
       "GetApiV4DependencyListExportsExportIdDownload200OctetStreamResponseSchema": {
         "type": "string",
@@ -170780,10 +171041,6 @@
         "type": "object",
         "description": "AutoFlow Value (protojson), decoded into the same topic/type/data shape as \u0060data\u0060 above"
       },
-      "RequestBodyCbff8Babb92EQueryProperty": {
-        "type": "object",
-        "description": "Query DSL object"
-      },
       "RequestBodyC1F8Fb649B03ParametersProperty": {
         "type": "object",
         "description": "Named query parameters"
@@ -170833,7 +171090,7 @@
         "type": "object",
         "description": "Definition for resource usage limits enforced in Sidekiq workers"
       },
-      "RequestBodyF7A70312C3CfEventsItemProperty": {
+      "RequestBody73E9A9A18525EventsItemProperty": {
         "type": "object"
       },
       "RequestBody586Dac379Fa0AllowedToCreateItemProperty": {
@@ -172004,7 +172261,7 @@
           ]
         }
       },
-      "RequestBodyCbff8Babb92EResponseFormat": {
+      "RequestBodyC8D16Cfa818FResponseFormat": {
         "enum": [
           "raw",
           "llm"
@@ -172013,7 +172270,7 @@
         "additionalProperties": false,
         "description": "Response format: raw or llm",
         "x-ms-enum": {
-          "name": "RequestBodyCbff8Babb92EResponseFormat",
+          "name": "RequestBodyC8D16Cfa818FResponseFormat",
           "modelAsString": false,
           "values": [
             {
@@ -172278,7 +172535,7 @@
           ]
         }
       },
-      "RequestBody80C272D831B7AgentType": {
+      "RequestBody127Fab987046AgentType": {
         "minLength": 1,
         "enum": [
           "claude-code",
@@ -172286,9 +172543,9 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "description": "The type of agent being registered.",
+        "description": "Type of agent being registered.",
         "x-ms-enum": {
-          "name": "RequestBody80C272D831B7AgentType",
+          "name": "RequestBody127Fab987046AgentType",
           "modelAsString": false,
           "values": [
             {
@@ -172918,7 +173175,7 @@
         "additionalProperties": false,
         "description": "Access level for members of the LDAP group"
       },
-      "RequestBody5C6D6Eacec15Plan": {
+      "RequestBodyFe7B07E787F5Plan": {
         "minLength": 1,
         "enum": [
           "bronze",
@@ -172933,9 +173190,9 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "description": "Subscription tier to rollout Elasticsearch for",
+        "description": "Subscription tier to rollout Elasticsearch for.",
         "x-ms-enum": {
-          "name": "RequestBody5C6D6Eacec15Plan",
+          "name": "RequestBodyFe7B07E787F5Plan",
           "modelAsString": false,
           "values": [
             {
@@ -173959,7 +174216,7 @@
           ]
         }
       },
-      "RequestBody1F1C1894D905RunnerType": {
+      "RequestBody1B5Bf1D7A2F9RunnerType": {
         "minLength": 1,
         "enum": [
           "instance_type",
@@ -173970,7 +174227,7 @@
         "additionalProperties": false,
         "description": "Specifies the scope of the runner",
         "x-ms-enum": {
-          "name": "RequestBody1F1C1894D905RunnerType",
+          "name": "RequestBody1B5Bf1D7A2F9RunnerType",
           "modelAsString": false,
           "values": [
             {
@@ -173988,7 +174245,7 @@
           ]
         }
       },
-      "RequestBody1F1C1894D905AccessLevel": {
+      "RequestBody1B5Bf1D7A2F9AccessLevel": {
         "enum": [
           "not_protected",
           "ref_protected"
@@ -173998,7 +174255,7 @@
         "description": "The access level of the runner",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody1F1C1894D905AccessLevel",
+          "name": "RequestBody1B5Bf1D7A2F9AccessLevel",
           "modelAsString": false,
           "values": [
             {
@@ -177498,7 +177755,7 @@
           ]
         }
       },
-      "RequestBody4B4287109Dd0BranchFilterStrategy": {
+      "RequestBody189100F1Ae0EBranchFilterStrategy": {
         "enum": [
           "wildcard",
           "regex",
@@ -177506,10 +177763,10 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "description": "Filter push events by branch. Possible values are \u0060wildcard\u0060 (default), \u0060regex\u0060, and \u0060all_branches\u0060",
+        "description": "Filter push events by branch. Defaults to \u0060wildcard\u0060.",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBody4B4287109Dd0BranchFilterStrategy",
+          "name": "RequestBody189100F1Ae0EBranchFilterStrategy",
           "modelAsString": false,
           "values": [
             {
@@ -177527,7 +177784,7 @@
           ]
         }
       },
-      "RequestBodyA04091578D2EBranchFilterStrategy": {
+      "RequestBody1197D07Af02CBranchFilterStrategy": {
         "enum": [
           "wildcard",
           "regex",
@@ -177535,10 +177792,10 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "description": "Filter push events by branch. Possible values are \u0060wildcard\u0060 (default), \u0060regex\u0060, and \u0060all_branches\u0060",
+        "description": "Filter push events by branch. Defaults to \u0060wildcard\u0060.",
         "nullable": true,
         "x-ms-enum": {
-          "name": "RequestBodyA04091578D2EBranchFilterStrategy",
+          "name": "RequestBody1197D07Af02CBranchFilterStrategy",
           "modelAsString": false,
           "values": [
             {
@@ -178201,7 +178458,7 @@
           ]
         }
       },
-      "RequestBodyDab5B408C1FdAccessLevel": {
+      "RequestBodyE1387Efe65CbAccessLevel": {
         "enum": [
           10,
           15,
@@ -178216,7 +178473,7 @@
         "additionalProperties": false,
         "description": "A valid access level (defaults: \u006030\u0060, developer access level)"
       },
-      "RequestBody769D8373D726AccessLevel": {
+      "RequestBody4A0786Fcd7CaAccessLevel": {
         "enum": [
           10,
           15,
@@ -178783,7 +179040,7 @@
           ]
         }
       },
-      "RequestBody61C505Dac8BcLineType": {
+      "RequestBody3Be31Bc0Ca07LineType": {
         "minLength": 1,
         "enum": [
           "new",
@@ -178791,9 +179048,9 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "description": "The type of the line",
+        "description": "Line type.",
         "x-ms-enum": {
-          "name": "RequestBody61C505Dac8BcLineType",
+          "name": "RequestBody3Be31Bc0Ca07LineType",
           "modelAsString": false,
           "values": [
             {

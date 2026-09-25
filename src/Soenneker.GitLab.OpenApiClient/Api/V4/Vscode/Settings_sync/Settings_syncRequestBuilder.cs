@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.V1.V1RequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.vscode.settings_sync.item collection</summary>
-        /// <param name="position">The settings context hash</param>
+        /// <param name="position">Settings context hash.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.Item.WithSettingsContextHashItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.Item.WithSettingsContextHashItemRequestBuilder this[string position]
         {

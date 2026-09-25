@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits
     public partial class CommitsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.repository.commits.item collection</summary>
-        /// <param name="position">A commit sha, or the name of a branch or tag</param>
+        /// <param name="position">Commit SHA or name of a repository branch or tag.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits.Item.NoteableItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits.Item.NoteableItemRequestBuilder this[string position]
         {
@@ -140,10 +140,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class CommitsRequestBuilderGetQueryParameters 
         {
-            /// <summary>Every commit will be returned</summary>
+            /// <summary>If `true`, retrieves every commit from the repository and ignores the `ref_name` parameter.</summary>
             [QueryParameter("all")]
             public bool? All { get; set; }
-            /// <summary>Search commits by commit author</summary>
+            /// <summary>Filter commits by commit author.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("author")]
@@ -153,19 +153,19 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits
             [QueryParameter("author")]
             public string Author { get; set; }
 #endif
-            /// <summary>Only include the first parent of merges</summary>
+            /// <summary>If `true`, follows only the first parent commit upon seeing a merge commit.</summary>
             [QueryParameter("first_parent")]
             public bool? FirstParent { get; set; }
-            /// <summary>Follow file renames when filtering by path</summary>
+            /// <summary>If `true`, follows file renames when filtering commits by `path` and returns commits for the file even if it was renamed. If `false`, returns only commits where the file existed at its current path. Used only when `path` specifies a single file.</summary>
             [QueryParameter("follow")]
             public bool? Follow { get; set; }
-            /// <summary>List commits in order</summary>
+            /// <summary>Order in which to list commits, either reverse chronological or [topological](https://git-scm.com/docs/git-log#Documentation/git-log.txt---topo-order).</summary>
             [QueryParameter("order")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdRepositoryCommitsOrderParameter? Order { get; set; }
             /// <summary>Current page number</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>Record from which to start the keyset pagination</summary>
+            /// <summary>Record from which to start the keyset pagination.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("page_token")]
@@ -175,10 +175,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits
             [QueryParameter("page_token")]
             public string PageToken { get; set; }
 #endif
-            /// <summary>Specify the pagination method</summary>
+            /// <summary>Specify the pagination method.</summary>
             [QueryParameter("pagination")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdRepositoryCommitsPaginationParameter? Pagination { get; set; }
-            /// <summary>The file path</summary>
+            /// <summary>File path relative to the repository.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("path")]
@@ -191,7 +191,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits
             /// <summary>Number of items per page</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>The name of a repository branch or tag, if not given the default branch is used</summary>
+            /// <summary>Name of a repository branch, tag, or revision range. Uses the default branch if not given.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("ref_name")]
@@ -201,16 +201,16 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits
             [QueryParameter("ref_name")]
             public string RefName { get; set; }
 #endif
-            /// <summary>Only commits after or on this date will be returned</summary>
+            /// <summary>Only commits after or on this date are returned.</summary>
             [QueryParameter("since")]
             public DateTimeOffset? Since { get; set; }
-            /// <summary>Parse and include Git trailers for every commit</summary>
+            /// <summary>If `true`, parses and includes [Git trailers](https://git-scm.com/docs/git-interpret-trailers) for every commit.</summary>
             [QueryParameter("trailers")]
             public bool? Trailers { get; set; }
-            /// <summary>Only commits before or on this date will be returned</summary>
+            /// <summary>Only commits before or on this date are returned.</summary>
             [QueryParameter("until")]
             public DateTimeOffset? Until { get; set; }
-            /// <summary>Stats about each commit will be added to the response</summary>
+            /// <summary>If `true`, includes statistics for each commit in the response.</summary>
             [QueryParameter("with_stats")]
             public bool? WithStats { get; set; }
         }

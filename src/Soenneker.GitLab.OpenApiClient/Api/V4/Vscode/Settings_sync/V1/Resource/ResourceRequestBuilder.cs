@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.V1.Resource
     public partial class ResourceRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.vscode.settings_sync.v1.resource.item collection</summary>
-        /// <param name="position">Name of the resource such as settings</param>
+        /// <param name="position">Name of the resource such as settings.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.V1.Resource.Item.WithResourceNameItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.V1.Resource.Item.WithResourceNameItemRequestBuilder this[string position]
         {

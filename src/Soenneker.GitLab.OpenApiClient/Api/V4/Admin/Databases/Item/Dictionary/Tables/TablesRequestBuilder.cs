@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Databases.Item.Dictionary.
     public partial class TablesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.admin.databases.item.dictionary.tables.item collection</summary>
-        /// <param name="position">The table name</param>
+        /// <param name="position">Name of the table.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Databases.Item.Dictionary.Tables.Item.WithTableNameItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Databases.Item.Dictionary.Tables.Item.WithTableNameItemRequestBuilder this[string position]
         {

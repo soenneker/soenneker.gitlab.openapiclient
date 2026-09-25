@@ -111,7 +111,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Compare
             [QueryParameter("to")]
             public string To { get; set; }
 #endif
-            /// <summary>A diff in a Unified diff format</summary>
+            /// <summary>If `true`, presents diffs in the [unified diff](https://www.gnu.org/software/diffutils/manual/html_node/Detailed-Unified.html) format.</summary>
             [QueryParameter("unidiff")]
             public bool? Unidiff { get; set; }
         }

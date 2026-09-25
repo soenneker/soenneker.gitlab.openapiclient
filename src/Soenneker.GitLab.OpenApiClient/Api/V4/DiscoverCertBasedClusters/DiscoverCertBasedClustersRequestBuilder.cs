@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.DiscoverCertBasedClusters
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class DiscoverCertBasedClustersRequestBuilderGetQueryParameters 
         {
-            /// <summary>The group ID to find all certificate-based clusters in the hierarchy</summary>
+            /// <summary>ID of the group to find all certificate-based clusters in the hierarchy.</summary>
             [QueryParameter("group_id")]
             public int? GroupId { get; set; }
         }

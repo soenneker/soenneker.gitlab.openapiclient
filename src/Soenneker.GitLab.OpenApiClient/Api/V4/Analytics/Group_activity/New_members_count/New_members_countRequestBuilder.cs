@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Analytics.Group_activity.New_mem
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class New_members_countRequestBuilderGetQueryParameters 
         {
-            /// <summary>Group path</summary>
+            /// <summary>Group path.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("group_path")]

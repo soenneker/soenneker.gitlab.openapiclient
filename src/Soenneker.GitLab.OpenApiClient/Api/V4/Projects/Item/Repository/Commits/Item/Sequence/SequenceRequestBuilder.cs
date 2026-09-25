@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class SequenceRequestBuilderGetQueryParameters 
         {
-            /// <summary>Only include the first parent of merges</summary>
+            /// <summary>If `true`, follows only the first parent commit upon seeing a merge commit.</summary>
             [QueryParameter("first_parent")]
             public bool? FirstParent { get; set; }
         }

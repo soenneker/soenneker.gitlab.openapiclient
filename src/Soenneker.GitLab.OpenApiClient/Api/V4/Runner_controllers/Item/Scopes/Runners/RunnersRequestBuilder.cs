@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runner_controllers.Item.Scopes.R
     public partial class RunnersRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.runner_controllers.item.scopes.runners.item collection</summary>
-        /// <param name="position">ID of the runner</param>
+        /// <param name="position">ID of the runner.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Runner_controllers.Item.Scopes.Runners.Item.WithRunnerItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Runner_controllers.Item.Scopes.Runners.Item.WithRunnerItemRequestBuilder this[int position]
         {

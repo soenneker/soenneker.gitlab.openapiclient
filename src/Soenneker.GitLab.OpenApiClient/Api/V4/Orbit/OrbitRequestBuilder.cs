@@ -4,6 +4,7 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Query;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Schema;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Skills;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Status;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Tools;
 using System.Collections.Generic;
@@ -27,6 +28,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Orbit
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Schema.SchemaRequestBuilder Schema
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Schema.SchemaRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The skills property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Skills.SkillsRequestBuilder Skills
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Skills.SkillsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The status property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Status.StatusRequestBuilder Status
