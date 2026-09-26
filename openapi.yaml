@@ -20005,7 +20005,7 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/RequestBody_8a71f6a2efea"
+              "$ref": "#/components/schemas/RequestBody_89f350c1ba64"
   "/api/v4/service_accounts":
     post:
       operationId: postApiV4ServiceAccounts
@@ -75781,6 +75781,8 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        '429':
+          description: Too Many Requests
         '400':
           description: Bad Request
       parameters:
@@ -75871,6 +75873,8 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        '429':
+          description: Too Many Requests
       parameters:
       - name: job_id
         required: true
@@ -91239,6 +91243,10 @@ components:
           type: string
         ci_job_live_trace_enabled:
           type: string
+        ci_job_trace_update_interval:
+          type: integer
+        ci_job_trace_update_interval_when_being_watched:
+          type: integer
         ci_partitions_in_seconds_limit_human_readable:
           type: string
         code_dropdown_custom_clients:
@@ -91998,6 +92006,10 @@ components:
         pipeline_cancel_limit_per_user_project:
           type: string
         pipeline_retry_limit_per_user_project:
+          type: string
+        job_retry_limit_per_user_project:
+          type: string
+        job_play_limit_per_user_project:
           type: string
         asciidoc_max_includes:
           type: string
@@ -107156,7 +107168,7 @@ components:
           description: Scopes available to the application. Separate multiple scopes
             with a space.
           nullable: true
-    RequestBody_8a71f6a2efea:
+    RequestBody_89f350c1ba64:
       type: object
       properties:
         admin_mode:
@@ -108016,6 +108028,14 @@ components:
           type: boolean
           description: Turn on incremental logging for job logs.
           nullable: true
+        ci_job_trace_update_interval:
+          type: integer
+          description: Job log update interval when the job log is not open, in seconds.
+          nullable: true
+        ci_job_trace_update_interval_when_being_watched:
+          type: integer
+          description: Job log update interval when the job log is open, in seconds.
+          nullable: true
         git_push_pipeline_limit:
           type: integer
           description: Set the limit for pipelines and branches that can be triggered
@@ -108075,6 +108095,16 @@ components:
         pipeline_retry_limit_per_user_project:
           type: integer
           description: Maximum number of pipeline retries allowed per minute for a
+            given project.
+          nullable: true
+        job_retry_limit_per_user_project:
+          type: integer
+          description: Maximum number of job retries allowed per minute for a given
+            project.
+          nullable: true
+        job_play_limit_per_user_project:
+          type: integer
+          description: Maximum number of manual job runs allowed per minute for a
             given project.
           nullable: true
         ai_action_api_rate_limit:

@@ -458,6 +458,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string CiJobTelemetrySamplingRate { get; set; }
 #endif
+        /// <summary>The ci_job_trace_update_interval property</summary>
+        public int? CiJobTraceUpdateInterval { get; set; }
+        /// <summary>The ci_job_trace_update_interval_when_being_watched property</summary>
+        public int? CiJobTraceUpdateIntervalWhenBeingWatched { get; set; }
         /// <summary>The ci_lint_limit_per_user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -2583,6 +2587,22 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #nullable restore
 #else
         public string JiraForgeAppId { get; set; }
+#endif
+        /// <summary>The job_play_limit_per_user_project property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? JobPlayLimitPerUserProject { get; set; }
+#nullable restore
+#else
+        public string JobPlayLimitPerUserProject { get; set; }
+#endif
+        /// <summary>The job_retry_limit_per_user_project property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? JobRetryLimitPerUserProject { get; set; }
+#nullable restore
+#else
+        public string JobRetryLimitPerUserProject { get; set; }
 #endif
         /// <summary>The keep_latest_artifact property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -5400,6 +5420,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "ci_delete_pipelines_in_seconds_limit_human_readable", n => { CiDeletePipelinesInSecondsLimitHumanReadable = n.GetStringValue(); } },
                 { "ci_job_live_trace_enabled", n => { CiJobLiveTraceEnabled = n.GetStringValue(); } },
                 { "ci_job_telemetry_sampling_rate", n => { CiJobTelemetrySamplingRate = n.GetStringValue(); } },
+                { "ci_job_trace_update_interval", n => { CiJobTraceUpdateInterval = n.GetIntValue(); } },
+                { "ci_job_trace_update_interval_when_being_watched", n => { CiJobTraceUpdateIntervalWhenBeingWatched = n.GetIntValue(); } },
                 { "ci_lint_limit_per_user", n => { CiLintLimitPerUser = n.GetStringValue(); } },
                 { "ci_max_caches_per_job", n => { CiMaxCachesPerJob = n.GetStringValue(); } },
                 { "ci_max_includes", n => { CiMaxIncludes = n.GetStringValue(); } },
@@ -5668,6 +5690,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "jira_connect_proxy_url", n => { JiraConnectProxyUrl = n.GetStringValue(); } },
                 { "jira_connect_public_key_storage_enabled", n => { JiraConnectPublicKeyStorageEnabled = n.GetStringValue(); } },
                 { "jira_forge_app_id", n => { JiraForgeAppId = n.GetStringValue(); } },
+                { "job_play_limit_per_user_project", n => { JobPlayLimitPerUserProject = n.GetStringValue(); } },
+                { "job_retry_limit_per_user_project", n => { JobRetryLimitPerUserProject = n.GetStringValue(); } },
                 { "keep_latest_artifact", n => { KeepLatestArtifact = n.GetStringValue(); } },
                 { "kroki_diagram_proxy_enabled", n => { KrokiDiagramProxyEnabled = n.GetStringValue(); } },
                 { "kroki_enabled", n => { KrokiEnabled = n.GetStringValue(); } },
@@ -6081,6 +6105,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("ci_delete_pipelines_in_seconds_limit_human_readable", CiDeletePipelinesInSecondsLimitHumanReadable);
             writer.WriteStringValue("ci_job_live_trace_enabled", CiJobLiveTraceEnabled);
             writer.WriteStringValue("ci_job_telemetry_sampling_rate", CiJobTelemetrySamplingRate);
+            writer.WriteIntValue("ci_job_trace_update_interval", CiJobTraceUpdateInterval);
+            writer.WriteIntValue("ci_job_trace_update_interval_when_being_watched", CiJobTraceUpdateIntervalWhenBeingWatched);
             writer.WriteStringValue("ci_lint_limit_per_user", CiLintLimitPerUser);
             writer.WriteStringValue("ci_max_caches_per_job", CiMaxCachesPerJob);
             writer.WriteStringValue("ci_max_includes", CiMaxIncludes);
@@ -6349,6 +6375,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("jira_connect_proxy_url", JiraConnectProxyUrl);
             writer.WriteStringValue("jira_connect_public_key_storage_enabled", JiraConnectPublicKeyStorageEnabled);
             writer.WriteStringValue("jira_forge_app_id", JiraForgeAppId);
+            writer.WriteStringValue("job_play_limit_per_user_project", JobPlayLimitPerUserProject);
+            writer.WriteStringValue("job_retry_limit_per_user_project", JobRetryLimitPerUserProject);
             writer.WriteStringValue("keep_latest_artifact", KeepLatestArtifact);
             writer.WriteStringValue("kroki_diagram_proxy_enabled", KrokiDiagramProxyEnabled);
             writer.WriteStringValue("kroki_enabled", KrokiEnabled);
