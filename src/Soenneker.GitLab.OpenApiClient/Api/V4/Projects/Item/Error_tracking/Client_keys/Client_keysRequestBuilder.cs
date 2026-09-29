@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Error_tracking.Cli
     public partial class Client_keysRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.error_tracking.client_keys.item collection</summary>
-        /// <param name="position">The ID of the client key</param>
+        /// <param name="position">ID of the client key.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Error_tracking.Client_keys.Item.WithKeyItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Error_tracking.Client_keys.Item.WithKeyItemRequestBuilder this[int position]
         {

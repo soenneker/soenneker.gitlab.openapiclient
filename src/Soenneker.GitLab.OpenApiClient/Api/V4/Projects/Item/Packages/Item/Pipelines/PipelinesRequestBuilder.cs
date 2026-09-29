@@ -95,7 +95,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Item.Pipe
             [QueryParameter("cursor")]
             public string Cursor { get; set; }
 #endif
-            /// <summary>Current page number</summary>
+            /// <summary>Page number of results to retrieve.</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
             /// <summary>Number of items per page</summary>

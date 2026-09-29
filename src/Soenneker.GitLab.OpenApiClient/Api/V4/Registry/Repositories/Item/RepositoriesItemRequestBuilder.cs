@@ -85,13 +85,13 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Registry.Repositories.Item
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class RepositoriesItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>Determines if the size should be included</summary>
+            /// <summary>If `true`, response includes the deduplicated size of all images in the repository. Only available on GitLab.com for repositories created after `2021-11-04`.</summary>
             [QueryParameter("size")]
             public bool? Size { get; set; }
-            /// <summary>Determines if tags should be included</summary>
+            /// <summary>If `true`, includes an array of `tags` in the response.</summary>
             [QueryParameter("tags")]
             public bool? Tags { get; set; }
-            /// <summary>Determines if the tags count should be included</summary>
+            /// <summary>If `true`, includes `tags_count` in the response.</summary>
             [QueryParameter("tags_count")]
             public bool? TagsCount { get; set; }
         }

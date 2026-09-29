@@ -88,10 +88,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.Item.Job
             /// <summary>Includes retried jobs</summary>
             [QueryParameter("include_retried")]
             public bool? IncludeRetried { get; set; }
-            /// <summary>Current page number</summary>
+            /// <summary>Page number of results to retrieve.</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>Number of items per page</summary>
+            /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
             /// <summary>The scope of builds to show</summary>

@@ -127,10 +127,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Starred_projects
             /// <summary>Limit by owned by authenticated user</summary>
             [QueryParameter("owned")]
             public bool? Owned { get; set; }
-            /// <summary>Current page number</summary>
+            /// <summary>Page number of results to retrieve.</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>Number of items per page</summary>
+            /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
             /// <summary>Limit by projects where repository checksum is failed</summary>

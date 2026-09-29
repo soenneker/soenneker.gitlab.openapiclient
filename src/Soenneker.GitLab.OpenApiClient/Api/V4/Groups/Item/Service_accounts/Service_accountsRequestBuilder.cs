@@ -143,10 +143,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Service_accounts
             /// <summary>Attribute to sort by</summary>
             [QueryParameter("order_by")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdServiceAccountsOrderByParameter? OrderBy { get; set; }
-            /// <summary>Current page number</summary>
+            /// <summary>Page number of results to retrieve.</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>Number of items per page</summary>
+            /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
             /// <summary>Order of sorting</summary>

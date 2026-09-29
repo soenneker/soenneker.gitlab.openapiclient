@@ -110,10 +110,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces
             /// <summary>In GitLab 14.2 and later, returns a list of owned namespaces only</summary>
             [QueryParameter("owned_only")]
             public bool? OwnedOnly { get; set; }
-            /// <summary>Current page number</summary>
+            /// <summary>Page number of results to retrieve.</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>Number of items per page</summary>
+            /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
             /// <summary>Name of the hosted plan requested by the customer</summary>

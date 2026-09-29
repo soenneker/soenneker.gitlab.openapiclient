@@ -88,10 +88,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Contributed_projects
             /// <summary>Return projects ordered by field. storage_size, repository_size, wiki_size, packages_size are only available to admins. Similarity is available when searching and is limited to projects the user has access to.</summary>
             [QueryParameter("order_by")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4UsersUserIdContributedProjectsOrderByParameter? OrderBy { get; set; }
-            /// <summary>Current page number</summary>
+            /// <summary>Page number of results to retrieve.</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>Number of items per page</summary>
+            /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
             /// <summary>Return only the ID, URL, name, and path of each project</summary>

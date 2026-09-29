@@ -110,10 +110,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Ssh_keys
             /// <summary>Filter ssh keys which expire before given datetime</summary>
             [QueryParameter("expires_before")]
             public DateTimeOffset? ExpiresBefore { get; set; }
-            /// <summary>Current page number</summary>
+            /// <summary>Page number of results to retrieve.</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>Number of items per page</summary>
+            /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
         }

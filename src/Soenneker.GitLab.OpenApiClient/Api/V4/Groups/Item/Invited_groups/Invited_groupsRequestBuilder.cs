@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Invited_groups
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Invited_groupsRequestBuilderGetQueryParameters 
         {
-            /// <summary>Filter with custom attributes</summary>
+            /// <summary>Filter by [custom attributes](https://docs.gitlab.com/api/custom_attributes/) that match all of the specified key and value pairs. Administrators only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("custom_attributes")]
@@ -98,10 +98,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Invited_groups
             /// <summary>Minimum access level of authenticated user</summary>
             [QueryParameter("min_access_level")]
             public int? MinAccessLevel { get; set; }
-            /// <summary>Current page number</summary>
+            /// <summary>Page number of results to retrieve.</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>Number of items per page</summary>
+            /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
             /// <summary>Include group relations</summary>
@@ -124,7 +124,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Invited_groups
             [QueryParameter("search")]
             public string Search { get; set; }
 #endif
-            /// <summary>Include custom attributes in the response</summary>
+            /// <summary>If `true`, includes [custom attributes](https://docs.gitlab.com/api/custom_attributes/) in the response. Administrators only.</summary>
             [QueryParameter("with_custom_attributes")]
             public bool? WithCustomAttributes { get; set; }
         }

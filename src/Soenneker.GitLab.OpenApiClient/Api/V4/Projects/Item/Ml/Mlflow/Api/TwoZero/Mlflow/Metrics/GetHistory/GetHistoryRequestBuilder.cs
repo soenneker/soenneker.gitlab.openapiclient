@@ -85,10 +85,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ml.Mlflow.Api.TwoZ
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class GetHistoryRequestBuilderGetQueryParameters 
         {
-            /// <summary>Maximum number of metrics to return. Default is 1000.</summary>
+            /// <summary>Maximum number of metrics to return.</summary>
             [QueryParameter("max_results")]
             public int? MaxResults { get; set; }
-            /// <summary>Name of the metric</summary>
+            /// <summary>Name of the metric.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("metric_key")]
@@ -98,7 +98,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ml.Mlflow.Api.TwoZ
             [QueryParameter("metric_key")]
             public string MetricKey { get; set; }
 #endif
-            /// <summary>Token for pagination</summary>
+            /// <summary>Token for pagination.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("page_token")]
@@ -108,7 +108,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ml.Mlflow.Api.TwoZ
             [QueryParameter("page_token")]
             public string PageToken { get; set; }
 #endif
-            /// <summary>UUID of the run</summary>
+            /// <summary>UUID of the run.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("run_id")]

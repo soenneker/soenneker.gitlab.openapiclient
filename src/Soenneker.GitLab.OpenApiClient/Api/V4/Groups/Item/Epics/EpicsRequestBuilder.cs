@@ -224,10 +224,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics
             /// <summary>Return epics ordered by `created_at`, `updated_at` or `title` fields.</summary>
             [QueryParameter("order_by")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdEpicsOrderByParameter? OrderBy { get; set; }
-            /// <summary>Current page number</summary>
+            /// <summary>Page number of results to retrieve.</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>Number of items per page</summary>
+            /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
             /// <summary>Search epics for text present in the title or description</summary>

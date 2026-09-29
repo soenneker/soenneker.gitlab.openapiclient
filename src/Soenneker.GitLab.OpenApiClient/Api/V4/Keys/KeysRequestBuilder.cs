@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Keys
     public partial class KeysRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.keys.item collection</summary>
-        /// <param name="position">The ID of an SSH key</param>
+        /// <param name="position">ID of the SSH key.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Keys.Item.KeysItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Keys.Item.KeysItemRequestBuilder this[string position]
         {
@@ -98,7 +98,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Keys
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class KeysRequestBuilderGetQueryParameters 
         {
-            /// <summary>The fingerprint of an SSH key</summary>
+            /// <summary>Fingerprint of an SSH key.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fingerprint")]

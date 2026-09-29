@@ -27,7 +27,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Npm
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Npm.Package.PackageRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.packages.npm.item collection</summary>
-        /// <param name="position">Package name</param>
+        /// <param name="position">Name of the package.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Npm.Item.WithPackageNameItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Npm.Item.WithPackageNameItemRequestBuilder this[string position]
         {

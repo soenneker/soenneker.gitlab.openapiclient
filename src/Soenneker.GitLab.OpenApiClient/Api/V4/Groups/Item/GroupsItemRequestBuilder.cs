@@ -600,7 +600,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class GroupsItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>Filter with custom attributes</summary>
+            /// <summary>Filter by [custom attributes](https://docs.gitlab.com/api/custom_attributes/) that match all of the specified key and value pairs. Administrators only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("custom_attributes")]
@@ -610,7 +610,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item
             [QueryParameter("custom_attributes")]
             public string CustomAttributes { get; set; }
 #endif
-            /// <summary>Include custom attributes in the response</summary>
+            /// <summary>If `true`, includes [custom attributes](https://docs.gitlab.com/api/custom_attributes/) in the response. Administrators only.</summary>
             [QueryParameter("with_custom_attributes")]
             public bool? WithCustomAttributes { get; set; }
             /// <summary>Omit project details</summary>

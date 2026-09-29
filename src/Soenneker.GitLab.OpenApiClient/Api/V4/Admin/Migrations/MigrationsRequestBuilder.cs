@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Migrations
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Migrations.Pending.PendingRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.admin.migrations.item collection</summary>
-        /// <param name="position">The migration version timestamp</param>
+        /// <param name="position">Version timestamp of the migration.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Migrations.Item.WithTimestampItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Migrations.Item.WithTimestampItemRequestBuilder this[int position]
         {

@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Databases
     public partial class DatabasesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.databases.item collection</summary>
-        /// <param name="position">The database name</param>
+        /// <param name="position">Name of the database.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Databases.Item.WithDatabaseNameItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Databases.Item.WithDatabaseNameItemRequestBuilder this[string position]
         {

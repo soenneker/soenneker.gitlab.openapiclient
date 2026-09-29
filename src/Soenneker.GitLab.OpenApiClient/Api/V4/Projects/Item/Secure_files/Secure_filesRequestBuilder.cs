@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Secure_files
     public partial class Secure_filesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.secure_files.item collection</summary>
-        /// <param name="position">The ID of a secure file</param>
+        /// <param name="position">ID of the secure file.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Secure_files.Item.WithSecureFileItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Secure_files.Item.WithSecureFileItemRequestBuilder this[int position]
         {
@@ -140,10 +140,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Secure_files
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Secure_filesRequestBuilderGetQueryParameters 
         {
-            /// <summary>Current page number</summary>
+            /// <summary>Page number of results to retrieve.</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>Number of items per page</summary>
+            /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
         }

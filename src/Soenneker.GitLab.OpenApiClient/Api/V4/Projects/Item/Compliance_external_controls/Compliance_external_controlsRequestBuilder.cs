@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Compliance_externa
     public partial class Compliance_external_controlsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.compliance_external_controls.item collection</summary>
-        /// <param name="position">The ID of the control</param>
+        /// <param name="position">ID of the control.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Compliance_external_controls.Item.WithControlItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Compliance_external_controls.Item.WithControlItemRequestBuilder this[int position]
         {

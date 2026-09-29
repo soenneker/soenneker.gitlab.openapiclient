@@ -101,13 +101,13 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Events
             /// <summary>Include only events created before this date</summary>
             [QueryParameter("before")]
             public Date? Before { get; set; }
-            /// <summary>Current page number</summary>
+            /// <summary>Page number of results to retrieve.</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>Number of items per page</summary>
+            /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Include all events across a user’s projects</summary>
+            /// <summary>Include all events across the user&apos;s projects.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("scope")]

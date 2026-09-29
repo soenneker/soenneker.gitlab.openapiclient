@@ -156,10 +156,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Badges
             [QueryParameter("name")]
             public string Name { get; set; }
 #endif
-            /// <summary>Current page number</summary>
+            /// <summary>Page number of results to retrieve.</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>Number of items per page</summary>
+            /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
         }

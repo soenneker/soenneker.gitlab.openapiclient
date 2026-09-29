@@ -84,7 +84,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Migrations.Pending
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class PendingRequestBuilderGetQueryParameters 
         {
-            /// <summary>The name of the database</summary>
+            /// <summary>Database name to query.</summary>
             [QueryParameter("database")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4AdminMigrationsPendingDatabaseParameter? Database { get; set; }
         }

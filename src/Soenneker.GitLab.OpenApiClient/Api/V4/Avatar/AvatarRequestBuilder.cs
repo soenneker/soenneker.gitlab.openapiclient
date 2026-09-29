@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Avatar
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class AvatarRequestBuilderGetQueryParameters 
         {
-            /// <summary>Public email address of the user</summary>
+            /// <summary>Public email address of the user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("email")]
@@ -95,7 +95,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Avatar
             [QueryParameter("email")]
             public string Email { get; set; }
 #endif
-            /// <summary>Single pixel dimension for Gravatar images</summary>
+            /// <summary>Single pixel dimension for the avatar image. Only used for avatar lookups at Gravatar or a configured Libravatar server.</summary>
             [QueryParameter("size")]
             public int? Size { get; set; }
         }

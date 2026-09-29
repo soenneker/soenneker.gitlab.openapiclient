@@ -11,6 +11,7 @@ using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Ap
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Award_emoji;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Blockees;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Blocks;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Cancel_auto_merge;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Cancel_merge_when_pipeline_succeeds;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Changes;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Closes_issues;
@@ -97,6 +98,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Blocks.BlocksRequestBuilder Blocks
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Blocks.BlocksRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The cancel_auto_merge property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Cancel_auto_merge.Cancel_auto_mergeRequestBuilder Cancel_auto_merge
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Cancel_auto_merge.Cancel_auto_mergeRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The cancel_merge_when_pipeline_succeeds property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Cancel_merge_when_pipeline_succeeds.Cancel_merge_when_pipeline_succeedsRequestBuilder Cancel_merge_when_pipeline_succeeds

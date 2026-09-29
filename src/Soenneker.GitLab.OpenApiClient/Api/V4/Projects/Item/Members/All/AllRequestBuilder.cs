@@ -98,10 +98,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Members.All
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class AllRequestBuilderGetQueryParameters 
         {
-            /// <summary>Current page number</summary>
+            /// <summary>Page number of results to retrieve.</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>Number of items per page</summary>
+            /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
             /// <summary>A query string to search for members</summary>
@@ -117,7 +117,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Members.All
             /// <summary>Show seat information for members</summary>
             [QueryParameter("show_seat_info")]
             public bool? ShowSeatInfo { get; set; }
-            /// <summary>Filter results by member state</summary>
+            /// <summary>Filter results by member state. Premium and Ultimate only.</summary>
             [QueryParameter("state")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdMembersAllStateParameter? State { get; set; }
             /// <summary>Array of user ids to look up for membership</summary>

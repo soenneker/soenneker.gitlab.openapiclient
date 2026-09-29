@@ -89,7 +89,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Terraform
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithModuleVersionItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>Terraform get redirection flag</summary>
+            /// <summary>Terraform get redirection flag.</summary>
             [QueryParameter("terraform%2Dget")]
             public global::Soenneker.GitLab.OpenApiClient.Models.Value1TerraformGet? TerraformGet { get; set; }
         }

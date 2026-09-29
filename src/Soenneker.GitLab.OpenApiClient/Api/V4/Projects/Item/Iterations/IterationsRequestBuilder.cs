@@ -101,10 +101,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Iterations
             /// <summary>Include iterations from parent and its descendants</summary>
             [QueryParameter("include_descendants")]
             public bool? IncludeDescendants { get; set; }
-            /// <summary>Current page number</summary>
+            /// <summary>Page number of results to retrieve.</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>Number of items per page</summary>
+            /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
             /// <summary>The search criteria for the title of the iteration</summary>

@@ -152,10 +152,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Members
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class MembersRequestBuilderGetQueryParameters 
         {
-            /// <summary>Current page number</summary>
+            /// <summary>Page number of results to retrieve.</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>Number of items per page</summary>
+            /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
             /// <summary>A query string to search for members</summary>
@@ -191,7 +191,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Members
             [QueryParameter("user_ids")]
             public int?[] UserIds { get; set; }
 #endif
-            /// <summary>List only members with linked SAML identity</summary>
+            /// <summary>If `true`, returns only members with a linked SAML identity.</summary>
             [QueryParameter("with_saml_identity")]
             public bool? WithSamlIdentity { get; set; }
         }

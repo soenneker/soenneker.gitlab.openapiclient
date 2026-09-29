@@ -149,10 +149,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Topics
             /// <summary>The organization id for the topics</summary>
             [QueryParameter("organization_id")]
             public int? OrganizationId { get; set; }
-            /// <summary>Current page number</summary>
+            /// <summary>Page number of results to retrieve.</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>Number of items per page</summary>
+            /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
             /// <summary>Return list of topics matching the search criteria</summary>

@@ -98,10 +98,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Changed
             [QueryParameter("from")]
             public string From { get; set; }
 #endif
-            /// <summary>Current page number</summary>
+            /// <summary>Page number of results to retrieve.</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>Number of items per page</summary>
+            /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
             /// <summary>The commit SHA or branch/tag to compare to</summary>

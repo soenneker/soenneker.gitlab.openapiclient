@@ -84,7 +84,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Snapshot
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class SnapshotRequestBuilderGetQueryParameters 
         {
-            /// <summary>Set to true to receive the wiki repository</summary>
+            /// <summary>If `true`, downloads the wiki repository instead of the project repository.</summary>
             [QueryParameter("wiki")]
             public bool? Wiki { get; set; }
         }

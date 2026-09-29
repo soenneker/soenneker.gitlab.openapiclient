@@ -18,7 +18,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Search.Migrations
     public partial class MigrationsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.admin.search.migrations.item collection</summary>
-        /// <param name="position">The version or name of the search migration</param>
+        /// <param name="position">Version or name of the search migration.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Search.Migrations.Item.WithMigrationItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Search.Migrations.Item.WithMigrationItemRequestBuilder this[string position]
         {

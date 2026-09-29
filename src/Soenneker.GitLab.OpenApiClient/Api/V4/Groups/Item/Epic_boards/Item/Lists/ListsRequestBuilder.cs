@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epic_boards.Item.Lis
     public partial class ListsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.epic_boards.item.lists.item collection</summary>
-        /// <param name="position">The ID of a list</param>
+        /// <param name="position">ID of the epic board&apos;s list.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epic_boards.Item.Lists.Item.WithListItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epic_boards.Item.Lists.Item.WithListItemRequestBuilder this[int position]
         {
@@ -98,10 +98,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epic_boards.Item.Lis
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ListsRequestBuilderGetQueryParameters 
         {
-            /// <summary>Current page number</summary>
+            /// <summary>Page number of results to retrieve.</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>Number of items per page</summary>
+            /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
         }

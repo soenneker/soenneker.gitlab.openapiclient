@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Terraform.State
     public partial class StateRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.terraform.state.item collection</summary>
-        /// <param name="position">The name of a Terraform state</param>
+        /// <param name="position">Name of the Terraform state.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Terraform.State.Item.WithNameItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Terraform.State.Item.WithNameItemRequestBuilder this[string position]
         {

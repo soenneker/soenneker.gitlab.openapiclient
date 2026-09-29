@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Databases.Item.Dictionary.Tables
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class TablesRequestBuilderGetQueryParameters 
         {
-            /// <summary>Filter by table size classification</summary>
+            /// <summary>Filter by table size classification.</summary>
             [QueryParameter("table_size")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4DatabasesDatabaseNameDictionaryTablesTableSizeParameter? TableSize { get; set; }
         }

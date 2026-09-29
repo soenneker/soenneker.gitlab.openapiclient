@@ -155,7 +155,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups
             /// <summary>Limit by archived status</summary>
             [QueryParameter("archived")]
             public bool? Archived { get; set; }
-            /// <summary>Filter with custom attributes</summary>
+            /// <summary>Filter by [custom attributes](https://docs.gitlab.com/api/custom_attributes/) that match all of the specified key and value pairs. Administrators only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("custom_attributes")]
@@ -177,10 +177,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups
             /// <summary>Limit by owned by authenticated user</summary>
             [QueryParameter("owned")]
             public bool? Owned { get; set; }
-            /// <summary>Current page number</summary>
+            /// <summary>Page number of results to retrieve.</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>Number of items per page</summary>
+            /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
             /// <summary>Filter by repository storage used by the group. Administrators only. Premium and Ultimate only.</summary>
@@ -225,7 +225,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups
             /// <summary>Limit by visibility</summary>
             [QueryParameter("visibility")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsVisibilityParameter? Visibility { get; set; }
-            /// <summary>Include custom attributes in the response</summary>
+            /// <summary>If `true`, includes [custom attributes](https://docs.gitlab.com/api/custom_attributes/) in the response. Administrators only.</summary>
             [QueryParameter("with_custom_attributes")]
             public bool? WithCustomAttributes { get; set; }
         }

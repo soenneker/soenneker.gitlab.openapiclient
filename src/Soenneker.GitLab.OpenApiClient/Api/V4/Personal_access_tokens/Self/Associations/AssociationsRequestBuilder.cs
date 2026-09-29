@@ -88,10 +88,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Personal_access_tokens.Self.Asso
             /// <summary>Limit by minimum access level of authenticated user</summary>
             [QueryParameter("min_access_level")]
             public int? MinAccessLevel { get; set; }
-            /// <summary>Current page number</summary>
+            /// <summary>Page number of results to retrieve.</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>Number of items per page</summary>
+            /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
         }

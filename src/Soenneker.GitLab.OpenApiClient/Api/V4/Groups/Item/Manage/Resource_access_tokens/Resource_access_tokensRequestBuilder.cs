@@ -115,10 +115,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Resource_acce
             /// <summary>Filter tokens which were used before given datetime</summary>
             [QueryParameter("last_used_before")]
             public DateTimeOffset? LastUsedBefore { get; set; }
-            /// <summary>Current page number</summary>
+            /// <summary>Page number of results to retrieve.</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>Number of items per page</summary>
+            /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
             /// <summary>Filter tokens where revoked state matches parameter</summary>

@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Terraform
     public partial class ModulesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.packages.terraform.modules.item collection</summary>
-        /// <param name="position">Module name</param>
+        /// <param name="position">Module name.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Terraform.Modules.Item.WithModuleNameItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Terraform.Modules.Item.WithModuleNameItemRequestBuilder this[string position]
         {

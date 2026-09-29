@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Hooks.Item.Test
     public partial class TestRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.hooks.item.test.item collection</summary>
-        /// <param name="position">The type of trigger hook</param>
+        /// <param name="position">Type of webhook event to test.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Hooks.Item.Test.Item.WithTriggerItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Hooks.Item.Test.Item.WithTriggerItemRequestBuilder this[string position]
         {

@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Registry.Repositories
     public partial class RepositoriesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.registry.repositories.item collection</summary>
-        /// <param name="position">The ID of the repository</param>
+        /// <param name="position">ID of the repository.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Registry.Repositories.Item.RepositoriesItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Registry.Repositories.Item.RepositoriesItemRequestBuilder this[string position]
         {

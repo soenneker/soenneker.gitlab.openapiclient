@@ -162,7 +162,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits
             /// <summary>Order in which to list commits, either reverse chronological or [topological](https://git-scm.com/docs/git-log#Documentation/git-log.txt---topo-order).</summary>
             [QueryParameter("order")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdRepositoryCommitsOrderParameter? Order { get; set; }
-            /// <summary>Current page number</summary>
+            /// <summary>Page number of results to retrieve.</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
             /// <summary>Record from which to start the keyset pagination.</summary>
@@ -188,7 +188,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits
             [QueryParameter("path")]
             public string Path { get; set; }
 #endif
-            /// <summary>Number of items per page</summary>
+            /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
             /// <summary>Name of a repository branch, tag, or revision range. Uses the default branch if not given.</summary>

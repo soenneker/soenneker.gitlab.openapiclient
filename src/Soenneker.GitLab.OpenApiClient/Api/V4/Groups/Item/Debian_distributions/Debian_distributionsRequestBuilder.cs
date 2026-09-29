@@ -200,10 +200,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Debian_distributions
             [QueryParameter("origin")]
             public string Origin { get; set; }
 #endif
-            /// <summary>Current page number</summary>
+            /// <summary>Page number of results to retrieve.</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>Number of items per page</summary>
+            /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
             /// <summary>The Debian Suite</summary>

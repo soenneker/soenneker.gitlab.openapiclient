@@ -162,10 +162,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Environments
             [QueryParameter("name")]
             public string Name { get; set; }
 #endif
-            /// <summary>Current page number</summary>
+            /// <summary>Page number of results to retrieve.</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>Number of items per page</summary>
+            /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
             /// <summary>Return list of environments matching the search criteria. Must be at least 3 characters. Mutually exclusive with `name`.</summary>

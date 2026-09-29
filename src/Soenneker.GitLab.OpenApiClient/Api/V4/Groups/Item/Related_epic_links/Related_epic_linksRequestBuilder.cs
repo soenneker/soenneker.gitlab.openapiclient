@@ -91,10 +91,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Related_epic_links
             /// <summary>Return related epic links created before the specified time</summary>
             [QueryParameter("created_before")]
             public DateTimeOffset? CreatedBefore { get; set; }
-            /// <summary>Current page number</summary>
+            /// <summary>Page number of results to retrieve.</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>Number of items per page</summary>
+            /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
             /// <summary>Return related epic links updated after the specified time</summary>

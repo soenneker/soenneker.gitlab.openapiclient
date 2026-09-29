@@ -166,10 +166,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Search
             /// <summary>Number of context lines around each match. Available with advanced and exact code search. Introduced in GitLab 18.11.</summary>
             [QueryParameter("num_context_lines")]
             public int? NumContextLines { get; set; }
-            /// <summary>Current page number</summary>
+            /// <summary>Page number of results to retrieve.</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>Number of items per page</summary>
+            /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
             /// <summary>The name of a repository branch or tag. If not given, the default branch is used</summary>

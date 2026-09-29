@@ -88,10 +88,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Deploy_tokens
             /// <summary>Limit by active status</summary>
             [QueryParameter("active")]
             public bool? Active { get; set; }
-            /// <summary>Current page number</summary>
+            /// <summary>Page number of results to retrieve.</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>Number of items per page</summary>
+            /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
         }

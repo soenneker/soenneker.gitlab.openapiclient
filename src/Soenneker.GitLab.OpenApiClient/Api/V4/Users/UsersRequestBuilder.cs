@@ -158,7 +158,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users
             /// <summary>Return users created before the specified time</summary>
             [QueryParameter("created_before")]
             public DateTimeOffset? CreatedBefore { get; set; }
-            /// <summary>Filter with custom attributes</summary>
+            /// <summary>Filter by [custom attributes](https://docs.gitlab.com/api/custom_attributes/) that match all of the specified key and value pairs. Administrators only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("custom_attributes")]
@@ -199,10 +199,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users
             /// <summary>Return users ordered by a field</summary>
             [QueryParameter("order_by")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4UsersOrderByParameter? OrderBy { get; set; }
-            /// <summary>Current page number</summary>
+            /// <summary>Page number of results to retrieve.</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>Number of items per page</summary>
+            /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
             /// <summary>The external provider</summary>
@@ -261,7 +261,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users
             [QueryParameter("username")]
             public string Username { get; set; }
 #endif
-            /// <summary>Include custom attributes in the response</summary>
+            /// <summary>If `true`, includes [custom attributes](https://docs.gitlab.com/api/custom_attributes/) in the response. Administrators only.</summary>
             [QueryParameter("with_custom_attributes")]
             public bool? WithCustomAttributes { get; set; }
             /// <summary>Filters users without project bots</summary>

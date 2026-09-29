@@ -101,10 +101,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Events
             /// <summary>Include only events created before this date</summary>
             [QueryParameter("before")]
             public Date? Before { get; set; }
-            /// <summary>Current page number</summary>
+            /// <summary>Page number of results to retrieve.</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>Number of items per page</summary>
+            /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
             /// <summary>Return events sorted in ascending and descending order</summary>
