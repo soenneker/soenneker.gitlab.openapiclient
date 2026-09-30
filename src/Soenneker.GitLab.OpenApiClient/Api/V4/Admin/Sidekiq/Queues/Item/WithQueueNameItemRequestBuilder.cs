@@ -82,7 +82,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithQueueNameItemRequestBuilderDeleteQueryParameters 
         {
-            /// <summary>Metadata key to match</summary>
+            /// <summary>Metadata key to match. At least one of `organization_id`, `user`, `user_id`, `gl_user_id`, `scoped_user`, `scoped_user_id`, `project`, `root_namespace`, `gl_root_namespace_id`, `client_id`, `caller_id`, `remote_ip`, `job_id`, `pipeline_id`, `related_class`, `feature_category`, `artifact_size`, `artifact_used_cdn`, `artifacts_dependencies_size`, `artifacts_dependencies_count`, `root_caller_id`, `merge_action_status`, `bulk_import_entity_id`, `sidekiq_destination_shard_redis`, `kubernetes_agent_id`, `mvcc_manifest`, `subscription_plan`, `ai_resource`, `worker_class` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("ai_resource")]
@@ -92,7 +92,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             [QueryParameter("ai_resource")]
             public string AiResource { get; set; }
 #endif
-            /// <summary>Metadata key to match</summary>
+            /// <summary>Metadata key to match. At least one of `organization_id`, `user`, `user_id`, `gl_user_id`, `scoped_user`, `scoped_user_id`, `project`, `root_namespace`, `gl_root_namespace_id`, `client_id`, `caller_id`, `remote_ip`, `job_id`, `pipeline_id`, `related_class`, `feature_category`, `artifact_size`, `artifact_used_cdn`, `artifacts_dependencies_size`, `artifacts_dependencies_count`, `root_caller_id`, `merge_action_status`, `bulk_import_entity_id`, `sidekiq_destination_shard_redis`, `kubernetes_agent_id`, `mvcc_manifest`, `subscription_plan`, `ai_resource`, `worker_class` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("artifacts_dependencies_count")]
@@ -102,7 +102,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             [QueryParameter("artifacts_dependencies_count")]
             public string ArtifactsDependenciesCount { get; set; }
 #endif
-            /// <summary>Metadata key to match</summary>
+            /// <summary>Metadata key to match. At least one of `organization_id`, `user`, `user_id`, `gl_user_id`, `scoped_user`, `scoped_user_id`, `project`, `root_namespace`, `gl_root_namespace_id`, `client_id`, `caller_id`, `remote_ip`, `job_id`, `pipeline_id`, `related_class`, `feature_category`, `artifact_size`, `artifact_used_cdn`, `artifacts_dependencies_size`, `artifacts_dependencies_count`, `root_caller_id`, `merge_action_status`, `bulk_import_entity_id`, `sidekiq_destination_shard_redis`, `kubernetes_agent_id`, `mvcc_manifest`, `subscription_plan`, `ai_resource`, `worker_class` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("artifacts_dependencies_size")]
@@ -112,7 +112,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             [QueryParameter("artifacts_dependencies_size")]
             public string ArtifactsDependenciesSize { get; set; }
 #endif
-            /// <summary>Metadata key to match</summary>
+            /// <summary>Metadata key to match. At least one of `organization_id`, `user`, `user_id`, `gl_user_id`, `scoped_user`, `scoped_user_id`, `project`, `root_namespace`, `gl_root_namespace_id`, `client_id`, `caller_id`, `remote_ip`, `job_id`, `pipeline_id`, `related_class`, `feature_category`, `artifact_size`, `artifact_used_cdn`, `artifacts_dependencies_size`, `artifacts_dependencies_count`, `root_caller_id`, `merge_action_status`, `bulk_import_entity_id`, `sidekiq_destination_shard_redis`, `kubernetes_agent_id`, `mvcc_manifest`, `subscription_plan`, `ai_resource`, `worker_class` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("artifact_size")]
@@ -122,7 +122,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             [QueryParameter("artifact_size")]
             public string ArtifactSize { get; set; }
 #endif
-            /// <summary>Metadata key to match</summary>
+            /// <summary>Metadata key to match. At least one of `organization_id`, `user`, `user_id`, `gl_user_id`, `scoped_user`, `scoped_user_id`, `project`, `root_namespace`, `gl_root_namespace_id`, `client_id`, `caller_id`, `remote_ip`, `job_id`, `pipeline_id`, `related_class`, `feature_category`, `artifact_size`, `artifact_used_cdn`, `artifacts_dependencies_size`, `artifacts_dependencies_count`, `root_caller_id`, `merge_action_status`, `bulk_import_entity_id`, `sidekiq_destination_shard_redis`, `kubernetes_agent_id`, `mvcc_manifest`, `subscription_plan`, `ai_resource`, `worker_class` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("artifact_used_cdn")]
@@ -132,7 +132,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             [QueryParameter("artifact_used_cdn")]
             public string ArtifactUsedCdn { get; set; }
 #endif
-            /// <summary>Metadata key to match</summary>
+            /// <summary>Metadata key to match. At least one of `organization_id`, `user`, `user_id`, `gl_user_id`, `scoped_user`, `scoped_user_id`, `project`, `root_namespace`, `gl_root_namespace_id`, `client_id`, `caller_id`, `remote_ip`, `job_id`, `pipeline_id`, `related_class`, `feature_category`, `artifact_size`, `artifact_used_cdn`, `artifacts_dependencies_size`, `artifacts_dependencies_count`, `root_caller_id`, `merge_action_status`, `bulk_import_entity_id`, `sidekiq_destination_shard_redis`, `kubernetes_agent_id`, `mvcc_manifest`, `subscription_plan`, `ai_resource`, `worker_class` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("bulk_import_entity_id")]
@@ -142,7 +142,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             [QueryParameter("bulk_import_entity_id")]
             public string BulkImportEntityId { get; set; }
 #endif
-            /// <summary>Metadata key to match</summary>
+            /// <summary>Metadata key to match. At least one of `organization_id`, `user`, `user_id`, `gl_user_id`, `scoped_user`, `scoped_user_id`, `project`, `root_namespace`, `gl_root_namespace_id`, `client_id`, `caller_id`, `remote_ip`, `job_id`, `pipeline_id`, `related_class`, `feature_category`, `artifact_size`, `artifact_used_cdn`, `artifacts_dependencies_size`, `artifacts_dependencies_count`, `root_caller_id`, `merge_action_status`, `bulk_import_entity_id`, `sidekiq_destination_shard_redis`, `kubernetes_agent_id`, `mvcc_manifest`, `subscription_plan`, `ai_resource`, `worker_class` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("caller_id")]
@@ -152,7 +152,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             [QueryParameter("caller_id")]
             public string CallerId { get; set; }
 #endif
-            /// <summary>Metadata key to match</summary>
+            /// <summary>Metadata key to match. At least one of `organization_id`, `user`, `user_id`, `gl_user_id`, `scoped_user`, `scoped_user_id`, `project`, `root_namespace`, `gl_root_namespace_id`, `client_id`, `caller_id`, `remote_ip`, `job_id`, `pipeline_id`, `related_class`, `feature_category`, `artifact_size`, `artifact_used_cdn`, `artifacts_dependencies_size`, `artifacts_dependencies_count`, `root_caller_id`, `merge_action_status`, `bulk_import_entity_id`, `sidekiq_destination_shard_redis`, `kubernetes_agent_id`, `mvcc_manifest`, `subscription_plan`, `ai_resource`, `worker_class` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("client_id")]
@@ -162,7 +162,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             [QueryParameter("client_id")]
             public string ClientId { get; set; }
 #endif
-            /// <summary>Metadata key to match</summary>
+            /// <summary>Metadata key to match. At least one of `organization_id`, `user`, `user_id`, `gl_user_id`, `scoped_user`, `scoped_user_id`, `project`, `root_namespace`, `gl_root_namespace_id`, `client_id`, `caller_id`, `remote_ip`, `job_id`, `pipeline_id`, `related_class`, `feature_category`, `artifact_size`, `artifact_used_cdn`, `artifacts_dependencies_size`, `artifacts_dependencies_count`, `root_caller_id`, `merge_action_status`, `bulk_import_entity_id`, `sidekiq_destination_shard_redis`, `kubernetes_agent_id`, `mvcc_manifest`, `subscription_plan`, `ai_resource`, `worker_class` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("feature_category")]
@@ -172,7 +172,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             [QueryParameter("feature_category")]
             public string FeatureCategory { get; set; }
 #endif
-            /// <summary>Metadata key to match</summary>
+            /// <summary>Metadata key to match. At least one of `organization_id`, `user`, `user_id`, `gl_user_id`, `scoped_user`, `scoped_user_id`, `project`, `root_namespace`, `gl_root_namespace_id`, `client_id`, `caller_id`, `remote_ip`, `job_id`, `pipeline_id`, `related_class`, `feature_category`, `artifact_size`, `artifact_used_cdn`, `artifacts_dependencies_size`, `artifacts_dependencies_count`, `root_caller_id`, `merge_action_status`, `bulk_import_entity_id`, `sidekiq_destination_shard_redis`, `kubernetes_agent_id`, `mvcc_manifest`, `subscription_plan`, `ai_resource`, `worker_class` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("gl_root_namespace_id")]
@@ -182,7 +182,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             [QueryParameter("gl_root_namespace_id")]
             public string GlRootNamespaceId { get; set; }
 #endif
-            /// <summary>Metadata key to match</summary>
+            /// <summary>Metadata key to match. At least one of `organization_id`, `user`, `user_id`, `gl_user_id`, `scoped_user`, `scoped_user_id`, `project`, `root_namespace`, `gl_root_namespace_id`, `client_id`, `caller_id`, `remote_ip`, `job_id`, `pipeline_id`, `related_class`, `feature_category`, `artifact_size`, `artifact_used_cdn`, `artifacts_dependencies_size`, `artifacts_dependencies_count`, `root_caller_id`, `merge_action_status`, `bulk_import_entity_id`, `sidekiq_destination_shard_redis`, `kubernetes_agent_id`, `mvcc_manifest`, `subscription_plan`, `ai_resource`, `worker_class` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("gl_user_id")]
@@ -192,7 +192,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             [QueryParameter("gl_user_id")]
             public string GlUserId { get; set; }
 #endif
-            /// <summary>Metadata key to match</summary>
+            /// <summary>Metadata key to match. At least one of `organization_id`, `user`, `user_id`, `gl_user_id`, `scoped_user`, `scoped_user_id`, `project`, `root_namespace`, `gl_root_namespace_id`, `client_id`, `caller_id`, `remote_ip`, `job_id`, `pipeline_id`, `related_class`, `feature_category`, `artifact_size`, `artifact_used_cdn`, `artifacts_dependencies_size`, `artifacts_dependencies_count`, `root_caller_id`, `merge_action_status`, `bulk_import_entity_id`, `sidekiq_destination_shard_redis`, `kubernetes_agent_id`, `mvcc_manifest`, `subscription_plan`, `ai_resource`, `worker_class` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("job_id")]
@@ -202,7 +202,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             [QueryParameter("job_id")]
             public string JobId { get; set; }
 #endif
-            /// <summary>Metadata key to match</summary>
+            /// <summary>Metadata key to match. At least one of `organization_id`, `user`, `user_id`, `gl_user_id`, `scoped_user`, `scoped_user_id`, `project`, `root_namespace`, `gl_root_namespace_id`, `client_id`, `caller_id`, `remote_ip`, `job_id`, `pipeline_id`, `related_class`, `feature_category`, `artifact_size`, `artifact_used_cdn`, `artifacts_dependencies_size`, `artifacts_dependencies_count`, `root_caller_id`, `merge_action_status`, `bulk_import_entity_id`, `sidekiq_destination_shard_redis`, `kubernetes_agent_id`, `mvcc_manifest`, `subscription_plan`, `ai_resource`, `worker_class` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("kubernetes_agent_id")]
@@ -212,7 +212,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             [QueryParameter("kubernetes_agent_id")]
             public string KubernetesAgentId { get; set; }
 #endif
-            /// <summary>Metadata key to match</summary>
+            /// <summary>Metadata key to match. At least one of `organization_id`, `user`, `user_id`, `gl_user_id`, `scoped_user`, `scoped_user_id`, `project`, `root_namespace`, `gl_root_namespace_id`, `client_id`, `caller_id`, `remote_ip`, `job_id`, `pipeline_id`, `related_class`, `feature_category`, `artifact_size`, `artifact_used_cdn`, `artifacts_dependencies_size`, `artifacts_dependencies_count`, `root_caller_id`, `merge_action_status`, `bulk_import_entity_id`, `sidekiq_destination_shard_redis`, `kubernetes_agent_id`, `mvcc_manifest`, `subscription_plan`, `ai_resource`, `worker_class` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("merge_action_status")]
@@ -222,7 +222,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             [QueryParameter("merge_action_status")]
             public string MergeActionStatus { get; set; }
 #endif
-            /// <summary>Metadata key to match</summary>
+            /// <summary>Metadata key to match. At least one of `organization_id`, `user`, `user_id`, `gl_user_id`, `scoped_user`, `scoped_user_id`, `project`, `root_namespace`, `gl_root_namespace_id`, `client_id`, `caller_id`, `remote_ip`, `job_id`, `pipeline_id`, `related_class`, `feature_category`, `artifact_size`, `artifact_used_cdn`, `artifacts_dependencies_size`, `artifacts_dependencies_count`, `root_caller_id`, `merge_action_status`, `bulk_import_entity_id`, `sidekiq_destination_shard_redis`, `kubernetes_agent_id`, `mvcc_manifest`, `subscription_plan`, `ai_resource`, `worker_class` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("mvcc_manifest")]
@@ -232,7 +232,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             [QueryParameter("mvcc_manifest")]
             public string MvccManifest { get; set; }
 #endif
-            /// <summary>Metadata key to match</summary>
+            /// <summary>Metadata key to match. At least one of `organization_id`, `user`, `user_id`, `gl_user_id`, `scoped_user`, `scoped_user_id`, `project`, `root_namespace`, `gl_root_namespace_id`, `client_id`, `caller_id`, `remote_ip`, `job_id`, `pipeline_id`, `related_class`, `feature_category`, `artifact_size`, `artifact_used_cdn`, `artifacts_dependencies_size`, `artifacts_dependencies_count`, `root_caller_id`, `merge_action_status`, `bulk_import_entity_id`, `sidekiq_destination_shard_redis`, `kubernetes_agent_id`, `mvcc_manifest`, `subscription_plan`, `ai_resource`, `worker_class` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("organization_id")]
@@ -242,7 +242,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             [QueryParameter("organization_id")]
             public string OrganizationId { get; set; }
 #endif
-            /// <summary>Metadata key to match</summary>
+            /// <summary>Metadata key to match. At least one of `organization_id`, `user`, `user_id`, `gl_user_id`, `scoped_user`, `scoped_user_id`, `project`, `root_namespace`, `gl_root_namespace_id`, `client_id`, `caller_id`, `remote_ip`, `job_id`, `pipeline_id`, `related_class`, `feature_category`, `artifact_size`, `artifact_used_cdn`, `artifacts_dependencies_size`, `artifacts_dependencies_count`, `root_caller_id`, `merge_action_status`, `bulk_import_entity_id`, `sidekiq_destination_shard_redis`, `kubernetes_agent_id`, `mvcc_manifest`, `subscription_plan`, `ai_resource`, `worker_class` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("pipeline_id")]
@@ -252,7 +252,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             [QueryParameter("pipeline_id")]
             public string PipelineId { get; set; }
 #endif
-            /// <summary>Metadata key to match</summary>
+            /// <summary>Metadata key to match. At least one of `organization_id`, `user`, `user_id`, `gl_user_id`, `scoped_user`, `scoped_user_id`, `project`, `root_namespace`, `gl_root_namespace_id`, `client_id`, `caller_id`, `remote_ip`, `job_id`, `pipeline_id`, `related_class`, `feature_category`, `artifact_size`, `artifact_used_cdn`, `artifacts_dependencies_size`, `artifacts_dependencies_count`, `root_caller_id`, `merge_action_status`, `bulk_import_entity_id`, `sidekiq_destination_shard_redis`, `kubernetes_agent_id`, `mvcc_manifest`, `subscription_plan`, `ai_resource`, `worker_class` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("project")]
@@ -262,7 +262,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             [QueryParameter("project")]
             public string Project { get; set; }
 #endif
-            /// <summary>Metadata key to match</summary>
+            /// <summary>Metadata key to match. At least one of `organization_id`, `user`, `user_id`, `gl_user_id`, `scoped_user`, `scoped_user_id`, `project`, `root_namespace`, `gl_root_namespace_id`, `client_id`, `caller_id`, `remote_ip`, `job_id`, `pipeline_id`, `related_class`, `feature_category`, `artifact_size`, `artifact_used_cdn`, `artifacts_dependencies_size`, `artifacts_dependencies_count`, `root_caller_id`, `merge_action_status`, `bulk_import_entity_id`, `sidekiq_destination_shard_redis`, `kubernetes_agent_id`, `mvcc_manifest`, `subscription_plan`, `ai_resource`, `worker_class` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("related_class")]
@@ -272,7 +272,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             [QueryParameter("related_class")]
             public string RelatedClass { get; set; }
 #endif
-            /// <summary>Metadata key to match</summary>
+            /// <summary>Metadata key to match. At least one of `organization_id`, `user`, `user_id`, `gl_user_id`, `scoped_user`, `scoped_user_id`, `project`, `root_namespace`, `gl_root_namespace_id`, `client_id`, `caller_id`, `remote_ip`, `job_id`, `pipeline_id`, `related_class`, `feature_category`, `artifact_size`, `artifact_used_cdn`, `artifacts_dependencies_size`, `artifacts_dependencies_count`, `root_caller_id`, `merge_action_status`, `bulk_import_entity_id`, `sidekiq_destination_shard_redis`, `kubernetes_agent_id`, `mvcc_manifest`, `subscription_plan`, `ai_resource`, `worker_class` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("remote_ip")]
@@ -282,7 +282,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             [QueryParameter("remote_ip")]
             public string RemoteIp { get; set; }
 #endif
-            /// <summary>Metadata key to match</summary>
+            /// <summary>Metadata key to match. At least one of `organization_id`, `user`, `user_id`, `gl_user_id`, `scoped_user`, `scoped_user_id`, `project`, `root_namespace`, `gl_root_namespace_id`, `client_id`, `caller_id`, `remote_ip`, `job_id`, `pipeline_id`, `related_class`, `feature_category`, `artifact_size`, `artifact_used_cdn`, `artifacts_dependencies_size`, `artifacts_dependencies_count`, `root_caller_id`, `merge_action_status`, `bulk_import_entity_id`, `sidekiq_destination_shard_redis`, `kubernetes_agent_id`, `mvcc_manifest`, `subscription_plan`, `ai_resource`, `worker_class` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("root_caller_id")]
@@ -292,7 +292,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             [QueryParameter("root_caller_id")]
             public string RootCallerId { get; set; }
 #endif
-            /// <summary>Metadata key to match</summary>
+            /// <summary>Metadata key to match. At least one of `organization_id`, `user`, `user_id`, `gl_user_id`, `scoped_user`, `scoped_user_id`, `project`, `root_namespace`, `gl_root_namespace_id`, `client_id`, `caller_id`, `remote_ip`, `job_id`, `pipeline_id`, `related_class`, `feature_category`, `artifact_size`, `artifact_used_cdn`, `artifacts_dependencies_size`, `artifacts_dependencies_count`, `root_caller_id`, `merge_action_status`, `bulk_import_entity_id`, `sidekiq_destination_shard_redis`, `kubernetes_agent_id`, `mvcc_manifest`, `subscription_plan`, `ai_resource`, `worker_class` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("root_namespace")]
@@ -302,7 +302,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             [QueryParameter("root_namespace")]
             public string RootNamespace { get; set; }
 #endif
-            /// <summary>Metadata key to match</summary>
+            /// <summary>Metadata key to match. At least one of `organization_id`, `user`, `user_id`, `gl_user_id`, `scoped_user`, `scoped_user_id`, `project`, `root_namespace`, `gl_root_namespace_id`, `client_id`, `caller_id`, `remote_ip`, `job_id`, `pipeline_id`, `related_class`, `feature_category`, `artifact_size`, `artifact_used_cdn`, `artifacts_dependencies_size`, `artifacts_dependencies_count`, `root_caller_id`, `merge_action_status`, `bulk_import_entity_id`, `sidekiq_destination_shard_redis`, `kubernetes_agent_id`, `mvcc_manifest`, `subscription_plan`, `ai_resource`, `worker_class` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("scoped_user")]
@@ -312,7 +312,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             [QueryParameter("scoped_user")]
             public string ScopedUser { get; set; }
 #endif
-            /// <summary>Metadata key to match</summary>
+            /// <summary>Metadata key to match. At least one of `organization_id`, `user`, `user_id`, `gl_user_id`, `scoped_user`, `scoped_user_id`, `project`, `root_namespace`, `gl_root_namespace_id`, `client_id`, `caller_id`, `remote_ip`, `job_id`, `pipeline_id`, `related_class`, `feature_category`, `artifact_size`, `artifact_used_cdn`, `artifacts_dependencies_size`, `artifacts_dependencies_count`, `root_caller_id`, `merge_action_status`, `bulk_import_entity_id`, `sidekiq_destination_shard_redis`, `kubernetes_agent_id`, `mvcc_manifest`, `subscription_plan`, `ai_resource`, `worker_class` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("scoped_user_id")]
@@ -322,7 +322,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             [QueryParameter("scoped_user_id")]
             public string ScopedUserId { get; set; }
 #endif
-            /// <summary>Metadata key to match</summary>
+            /// <summary>Metadata key to match. At least one of `organization_id`, `user`, `user_id`, `gl_user_id`, `scoped_user`, `scoped_user_id`, `project`, `root_namespace`, `gl_root_namespace_id`, `client_id`, `caller_id`, `remote_ip`, `job_id`, `pipeline_id`, `related_class`, `feature_category`, `artifact_size`, `artifact_used_cdn`, `artifacts_dependencies_size`, `artifacts_dependencies_count`, `root_caller_id`, `merge_action_status`, `bulk_import_entity_id`, `sidekiq_destination_shard_redis`, `kubernetes_agent_id`, `mvcc_manifest`, `subscription_plan`, `ai_resource`, `worker_class` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("sidekiq_destination_shard_redis")]
@@ -332,7 +332,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             [QueryParameter("sidekiq_destination_shard_redis")]
             public string SidekiqDestinationShardRedis { get; set; }
 #endif
-            /// <summary>Metadata key to match</summary>
+            /// <summary>Metadata key to match. At least one of `organization_id`, `user`, `user_id`, `gl_user_id`, `scoped_user`, `scoped_user_id`, `project`, `root_namespace`, `gl_root_namespace_id`, `client_id`, `caller_id`, `remote_ip`, `job_id`, `pipeline_id`, `related_class`, `feature_category`, `artifact_size`, `artifact_used_cdn`, `artifacts_dependencies_size`, `artifacts_dependencies_count`, `root_caller_id`, `merge_action_status`, `bulk_import_entity_id`, `sidekiq_destination_shard_redis`, `kubernetes_agent_id`, `mvcc_manifest`, `subscription_plan`, `ai_resource`, `worker_class` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("subscription_plan")]
@@ -342,7 +342,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             [QueryParameter("subscription_plan")]
             public string SubscriptionPlan { get; set; }
 #endif
-            /// <summary>Metadata key to match</summary>
+            /// <summary>Metadata key to match. At least one of `organization_id`, `user`, `user_id`, `gl_user_id`, `scoped_user`, `scoped_user_id`, `project`, `root_namespace`, `gl_root_namespace_id`, `client_id`, `caller_id`, `remote_ip`, `job_id`, `pipeline_id`, `related_class`, `feature_category`, `artifact_size`, `artifact_used_cdn`, `artifacts_dependencies_size`, `artifacts_dependencies_count`, `root_caller_id`, `merge_action_status`, `bulk_import_entity_id`, `sidekiq_destination_shard_redis`, `kubernetes_agent_id`, `mvcc_manifest`, `subscription_plan`, `ai_resource`, `worker_class` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("user")]
@@ -352,7 +352,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             [QueryParameter("user")]
             public string User { get; set; }
 #endif
-            /// <summary>Metadata key to match</summary>
+            /// <summary>Metadata key to match. At least one of `organization_id`, `user`, `user_id`, `gl_user_id`, `scoped_user`, `scoped_user_id`, `project`, `root_namespace`, `gl_root_namespace_id`, `client_id`, `caller_id`, `remote_ip`, `job_id`, `pipeline_id`, `related_class`, `feature_category`, `artifact_size`, `artifact_used_cdn`, `artifacts_dependencies_size`, `artifacts_dependencies_count`, `root_caller_id`, `merge_action_status`, `bulk_import_entity_id`, `sidekiq_destination_shard_redis`, `kubernetes_agent_id`, `mvcc_manifest`, `subscription_plan`, `ai_resource`, `worker_class` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("user_id")]
@@ -362,7 +362,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             [QueryParameter("user_id")]
             public string UserId { get; set; }
 #endif
-            /// <summary>Metadata key to match</summary>
+            /// <summary>Metadata key to match. At least one of `organization_id`, `user`, `user_id`, `gl_user_id`, `scoped_user`, `scoped_user_id`, `project`, `root_namespace`, `gl_root_namespace_id`, `client_id`, `caller_id`, `remote_ip`, `job_id`, `pipeline_id`, `related_class`, `feature_category`, `artifact_size`, `artifact_used_cdn`, `artifacts_dependencies_size`, `artifacts_dependencies_count`, `root_caller_id`, `merge_action_status`, `bulk_import_entity_id`, `sidekiq_destination_shard_redis`, `kubernetes_agent_id`, `mvcc_manifest`, `subscription_plan`, `ai_resource`, `worker_class` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("worker_class")]

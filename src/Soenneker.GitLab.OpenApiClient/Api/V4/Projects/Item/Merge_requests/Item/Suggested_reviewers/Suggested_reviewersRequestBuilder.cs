@@ -36,22 +36,23 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
         /// <summary>
         /// Replaces the AI-recommended reviewers persisted for a specified merge request. Available only when the recommend reviewers flow is enabled for the project.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSuggestedReviewer"/></returns>
+        /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSuggestedReviewer&gt;</returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSuggestedReviewer?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAd699F18A0B7 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSuggestedReviewer>?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAd699F18A0B7 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSuggestedReviewer> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAd699F18A0B7 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSuggestedReviewer>> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyAd699F18A0B7 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSuggestedReviewer>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSuggestedReviewer.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSuggestedReviewer>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSuggestedReviewer.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return collectionResult?.AsList();
         }
         /// <summary>
         /// Replaces the AI-recommended reviewers persisted for a specified merge request. Available only when the recommend reviewers flow is enabled for the project.

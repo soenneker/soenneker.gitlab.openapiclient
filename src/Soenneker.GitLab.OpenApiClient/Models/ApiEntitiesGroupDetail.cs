@@ -244,6 +244,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>The lock_math_rendering_limits_enabled property</summary>
         public bool? LockMathRenderingLimitsEnabled { get; set; }
+        /// <summary>The lock_require_sha_for_merge property</summary>
+        public bool? LockRequireShaForMerge { get; set; }
         /// <summary>The lock_resource_access_token_notify_inherited property</summary>
         public bool? LockResourceAccessTokenNotifyInherited { get; set; }
         /// <summary>The marked_for_deletion_on property</summary>
@@ -352,6 +354,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>The request_access_enabled property</summary>
         public bool? RequestAccessEnabled { get; set; }
+        /// <summary>The require_sha_for_merge property</summary>
+        public bool? RequireShaForMerge { get; set; }
         /// <summary>The require_two_factor_authentication property</summary>
         public bool? RequireTwoFactorAuthentication { get; set; }
         /// <summary>The resource_access_token_notify_inherited property</summary>
@@ -576,6 +580,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "lock_built_in_project_templates_enabled", n => { LockBuiltInProjectTemplatesEnabled = n.GetBoolValue(); } },
                 { "lock_duo_features_enabled", n => { LockDuoFeaturesEnabled = n.GetStringValue(); } },
                 { "lock_math_rendering_limits_enabled", n => { LockMathRenderingLimitsEnabled = n.GetBoolValue(); } },
+                { "lock_require_sha_for_merge", n => { LockRequireShaForMerge = n.GetBoolValue(); } },
                 { "lock_resource_access_token_notify_inherited", n => { LockResourceAccessTokenNotifyInherited = n.GetBoolValue(); } },
                 { "marked_for_deletion_on", n => { MarkedForDeletionOn = n.GetStringValue(); } },
                 { "math_rendering_limits_enabled", n => { MathRenderingLimitsEnabled = n.GetBoolValue(); } },
@@ -594,6 +599,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "projects", n => { Projects = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject.CreateFromDiscriminatorValue); } },
                 { "repository_storage", n => { RepositoryStorage = n.GetStringValue(); } },
                 { "request_access_enabled", n => { RequestAccessEnabled = n.GetBoolValue(); } },
+                { "require_sha_for_merge", n => { RequireShaForMerge = n.GetBoolValue(); } },
                 { "require_two_factor_authentication", n => { RequireTwoFactorAuthentication = n.GetBoolValue(); } },
                 { "resource_access_token_notify_inherited", n => { ResourceAccessTokenNotifyInherited = n.GetBoolValue(); } },
                 { "root_storage_statistics", n => { RootStorageStatistics = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNamespaceRootStorageStatistics>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNamespaceRootStorageStatistics.CreateFromDiscriminatorValue); } },
@@ -664,6 +670,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("lock_built_in_project_templates_enabled", LockBuiltInProjectTemplatesEnabled);
             writer.WriteStringValue("lock_duo_features_enabled", LockDuoFeaturesEnabled);
             writer.WriteBoolValue("lock_math_rendering_limits_enabled", LockMathRenderingLimitsEnabled);
+            writer.WriteBoolValue("lock_require_sha_for_merge", LockRequireShaForMerge);
             writer.WriteBoolValue("lock_resource_access_token_notify_inherited", LockResourceAccessTokenNotifyInherited);
             writer.WriteStringValue("marked_for_deletion_on", MarkedForDeletionOn);
             writer.WriteBoolValue("math_rendering_limits_enabled", MathRenderingLimitsEnabled);
@@ -682,6 +689,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject>("projects", Projects);
             writer.WriteStringValue("repository_storage", RepositoryStorage);
             writer.WriteBoolValue("request_access_enabled", RequestAccessEnabled);
+            writer.WriteBoolValue("require_sha_for_merge", RequireShaForMerge);
             writer.WriteBoolValue("require_two_factor_authentication", RequireTwoFactorAuthentication);
             writer.WriteBoolValue("resource_access_token_notify_inherited", ResourceAccessTokenNotifyInherited);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNamespaceRootStorageStatistics>("root_storage_statistics", RootStorageStatistics);

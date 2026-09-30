@@ -66,20 +66,21 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Ldap_group_links
         /// <summary>
         /// Lists all LDAP group links.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink"/></returns>
+        /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink>?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink>> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return collectionResult?.AsList();
         }
         /// <summary>
         /// Adds an LDAP group link using a CN or filter.Adding a group link by filter is only supported in the Premium tier and above.
@@ -90,11 +91,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Ldap_group_links
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0Fe3E489E52E body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBac678197583 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0Fe3E489E52E body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBac678197583 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -146,11 +147,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Ldap_group_links
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0Fe3E489E52E body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBac678197583 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0Fe3E489E52E body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBac678197583 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -175,7 +176,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Ldap_group_links
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Ldap_group_linksRequestBuilderDeleteQueryParameters 
         {
-            /// <summary>The CN of a LDAP group</summary>
+            /// <summary>The CN of a LDAP group. Exactly one of `cn`, `filter` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("cn")]
@@ -185,7 +186,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Ldap_group_links
             [QueryParameter("cn")]
             public string Cn { get; set; }
 #endif
-            /// <summary>The LDAP filter for the group</summary>
+            /// <summary>The LDAP filter for the group. Exactly one of `cn`, `filter` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("filter")]

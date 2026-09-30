@@ -41,7 +41,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CheckpointsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/ai/duo_workflows/workflows/{%2Did}/checkpoints{?accept_compressed*,checkpoint_ns*}", pathParameters)
+        public CheckpointsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/ai/duo_workflows/workflows/{%2Did}/checkpoints{?accept_compressed*,channels,checkpoint_ns*}", pathParameters)
         {
         }
         /// <summary>
@@ -49,7 +49,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CheckpointsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/ai/duo_workflows/workflows/{%2Did}/checkpoints{?accept_compressed*,checkpoint_ns*}", rawUrl)
+        public CheckpointsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/ai/duo_workflows/workflows/{%2Did}/checkpoints{?accept_compressed*,channels,checkpoint_ns*}", rawUrl)
         {
         }
         /// <summary>
@@ -146,6 +146,16 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.
             /// <summary>Return compressed checkpoints</summary>
             [QueryParameter("accept_compressed")]
             public bool? AcceptCompressed { get; set; }
+            /// <summary>Comma-separated channels to return in each checkpoint&apos;s channel_values, at most 100, each 1 to 255 characters. Omit to return every channel.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("channels")]
+            public string[]? Channels { get; set; }
+#nullable restore
+#else
+            [QueryParameter("channels")]
+            public string[] Channels { get; set; }
+#endif
             /// <summary>Only return checkpoints belonging to this LangGraph checkpoint namespace (the flow&apos;s own top-level lineage if omitted or blank). Unset (the default): return checkpoints from every lineage, unfiltered, preserving prior behavior.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

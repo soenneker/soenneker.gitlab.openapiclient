@@ -777,7 +777,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectsWithAccessAndCatalogSetting>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectsWithAccessAndCatalogSetting.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Updates an existing project. If your HTTP repository is not publicly accessible, add authentication information to the URL `https://username:password@gitlab.company.com/group/project.git`, where `password` is a public access key with the `api` scope.
+        /// Updates an existing project. If your HTTP repository is not publicly accessible, add authentication information to the URL `https://username:password@gitlab.company.com/group/project.git`, where `password` is a public access key with the `api` scope. At least one of 121 related parameters must be provided.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectsWithCatalogSetting"/></returns>
         /// <param name="body">The request body</param>
@@ -834,7 +834,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item
             return requestInfo;
         }
         /// <summary>
-        /// Updates an existing project. If your HTTP repository is not publicly accessible, add authentication information to the URL `https://username:password@gitlab.company.com/group/project.git`, where `password` is a public access key with the `api` scope.
+        /// Updates an existing project. If your HTTP repository is not publicly accessible, add authentication information to the URL `https://username:password@gitlab.company.com/group/project.git`, where `password` is a public access key with the `api` scope. At least one of 121 related parameters must be provided.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
