@@ -86,10 +86,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Snippets.Public
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class PublicRequestBuilderGetQueryParameters 
         {
-            /// <summary>Return snippets created after the specified time</summary>
+            /// <summary>Return snippets created on or after the specified time.</summary>
             [QueryParameter("created_after")]
             public DateTimeOffset? CreatedAfter { get; set; }
-            /// <summary>Return snippets created before the specified time</summary>
+            /// <summary>Return snippets created on or before the specified time.</summary>
             [QueryParameter("created_before")]
             public DateTimeOffset? CreatedBefore { get; set; }
             /// <summary>Page number of results to retrieve.</summary>

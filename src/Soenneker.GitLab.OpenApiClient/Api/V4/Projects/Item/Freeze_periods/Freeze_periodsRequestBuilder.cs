@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Freeze_periods
     public partial class Freeze_periodsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.freeze_periods.item collection</summary>
-        /// <param name="position">The ID of the freeze period</param>
+        /// <param name="position">ID of the freeze period.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Freeze_periods.Item.WithFreezePeriodItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Freeze_periods.Item.WithFreezePeriodItemRequestBuilder this[int position]
         {
@@ -74,11 +74,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Freeze_periods
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFreezePeriod?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCe92A2241E86 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFreezePeriod?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody94B2Eb05Ba20 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFreezePeriod> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCe92A2241E86 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFreezePeriod> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody94B2Eb05Ba20 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -112,11 +112,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Freeze_periods
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCe92A2241E86 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody94B2Eb05Ba20 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyCe92A2241E86 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody94B2Eb05Ba20 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

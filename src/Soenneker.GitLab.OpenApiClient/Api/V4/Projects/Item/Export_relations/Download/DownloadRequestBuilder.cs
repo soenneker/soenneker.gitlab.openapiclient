@@ -87,10 +87,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Export_relations.D
             /// <summary>Whether to download in batches</summary>
             [QueryParameter("batched")]
             public bool? Batched { get; set; }
-            /// <summary>Batch number to download</summary>
+            /// <summary>Number of the export batch to download.</summary>
             [QueryParameter("batch_number")]
             public int? BatchNumber { get; set; }
-            /// <summary>Project relation name</summary>
+            /// <summary>Name of the project top-level relation to download or view.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("relation")]

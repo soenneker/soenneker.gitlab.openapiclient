@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.Item.Exists
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ExistsRequestBuilderGetQueryParameters 
         {
-            /// <summary>The ID of the parent namespace. If no ID is specified, only top-level namespaces are considered.</summary>
+            /// <summary>ID of the parent namespace. If omitted, only top-level namespaces are considered.</summary>
             [QueryParameter("parent_id")]
             public int? ParentId { get; set; }
         }

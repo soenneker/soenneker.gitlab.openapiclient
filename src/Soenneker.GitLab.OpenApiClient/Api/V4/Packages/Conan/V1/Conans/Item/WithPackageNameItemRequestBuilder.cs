@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Conan.V1.Conans.Item
     public partial class WithPackageNameItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.packages.conan.v1.conans.item.item collection</summary>
-        /// <param name="position">Package version</param>
+        /// <param name="position">Version of the package.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Conan.V1.Conans.Item.Item.WithPackageVersionItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Conan.V1.Conans.Item.Item.WithPackageVersionItemRequestBuilder this[string position]
         {

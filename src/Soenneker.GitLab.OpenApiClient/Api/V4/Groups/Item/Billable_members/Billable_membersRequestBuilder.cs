@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Billable_members
     public partial class Billable_membersRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.billable_members.item collection</summary>
-        /// <param name="position">The user ID of the member</param>
+        /// <param name="position">ID of the user.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Billable_members.Item.WithUserItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Billable_members.Item.WithUserItemRequestBuilder this[int position]
         {
@@ -104,7 +104,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Billable_members
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>The exact name of the subscribed member</summary>
+            /// <summary>Query string to search for group members by name, username, or public email.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("search")]
@@ -114,7 +114,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Billable_members
             [QueryParameter("search")]
             public string Search { get; set; }
 #endif
-            /// <summary>The sorting option</summary>
+            /// <summary>Sort results by the specified field and direction.</summary>
             [QueryParameter("sort")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdBillableMembersSortParameter? Sort { get; set; }
         }

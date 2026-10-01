@@ -2,6 +2,7 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Cargo.Api;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Cargo.ConfigJson;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Cargo.Item;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Cargo.One;
@@ -19,6 +20,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Cargo
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CargoRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The api property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Cargo.Api.ApiRequestBuilder Api
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Cargo.Api.ApiRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The configJson property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Cargo.ConfigJson.ConfigJsonRequestBuilder ConfigJson
         {

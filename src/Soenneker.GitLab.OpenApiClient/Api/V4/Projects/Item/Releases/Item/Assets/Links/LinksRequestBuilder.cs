@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item.Asse
     public partial class LinksRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.releases.item.assets.links.item collection</summary>
-        /// <param name="position">The ID of the link</param>
+        /// <param name="position">ID of the link.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item.Assets.Links.Item.WithLinkItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item.Assets.Links.Item.WithLinkItemRequestBuilder this[int position]
         {
@@ -74,11 +74,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item.Asse
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesLink?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody946A7Ef3D069 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesLink?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyDcefc8400542 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesLink> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody946A7Ef3D069 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesLink> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyDcefc8400542 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -112,11 +112,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item.Asse
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody946A7Ef3D069 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyDcefc8400542 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody946A7Ef3D069 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyDcefc8400542 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

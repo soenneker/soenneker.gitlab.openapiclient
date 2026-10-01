@@ -105,10 +105,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class NamespacesRequestBuilderGetQueryParameters 
         {
-            /// <summary>If `true`, the `search` parameter is matched against the full path of the namespaces</summary>
+            /// <summary>If `true`, the `search` parameter is matched against the full path of the namespaces.</summary>
             [QueryParameter("full_path_search")]
             public bool? FullPathSearch { get; set; }
-            /// <summary>In GitLab 14.2 and later, returns a list of owned namespaces only</summary>
+            /// <summary>If `true`, returns only namespaces owned by the current user.</summary>
             [QueryParameter("owned_only")]
             public bool? OwnedOnly { get; set; }
             /// <summary>Page number of results to retrieve.</summary>
@@ -127,7 +127,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces
             [QueryParameter("requested_hosted_plan")]
             public string RequestedHostedPlan { get; set; }
 #endif
-            /// <summary>Returns a list of namespaces the user is authorized to view based on the search criteria</summary>
+            /// <summary>Return only namespaces that contain the specified value in their name or path.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("search")]
@@ -137,7 +137,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces
             [QueryParameter("search")]
             public string Search { get; set; }
 #endif
-            /// <summary>Only include top level namespaces</summary>
+            /// <summary>If `true`, returns only top-level namespaces.</summary>
             [QueryParameter("top_level_only")]
             public bool? TopLevelOnly { get; set; }
         }

@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Conan.V1.Files.Item.Ite
     public partial class WithPackageUsernameItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.packages.conan.v1.files.item.item.item.item collection</summary>
-        /// <param name="position">Package channel</param>
+        /// <param name="position">Channel of the package.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Conan.V1.Files.Item.Item.Item.Item.WithPackageChannelItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Conan.V1.Files.Item.Item.Item.Item.WithPackageChannelItemRequestBuilder this[string position]
         {

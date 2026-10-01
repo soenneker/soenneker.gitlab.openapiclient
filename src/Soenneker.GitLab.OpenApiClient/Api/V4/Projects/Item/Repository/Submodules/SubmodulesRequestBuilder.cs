@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Submodu
     public partial class SubmodulesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.repository.submodules.item collection</summary>
-        /// <param name="position">URL-encoded full path to submodule.</param>
+        /// <param name="position">URL-encoded full path to the submodule, for example `lib%2Fclass%2Erb`.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Submodules.Item.WithSubmoduleItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Submodules.Item.WithSubmoduleItemRequestBuilder this[string position]
         {

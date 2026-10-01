@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Scim
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Scim.Identities.IdentitiesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.scim.item collection</summary>
-        /// <param name="position">External UID of the user</param>
+        /// <param name="position">External UID of the user.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Scim.Item.WithUItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Scim.Item.WithUItemRequestBuilder this[string position]
         {

@@ -77,11 +77,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Experiments.Item.Assignments
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesExperimentsAssignment?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBddd5De04Ffa body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesExperimentsAssignment?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0306Ca3A05Cf body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesExperimentsAssignment> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBddd5De04Ffa body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesExperimentsAssignment> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0306Ca3A05Cf body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -133,11 +133,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Experiments.Item.Assignments
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBddd5De04Ffa body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0306Ca3A05Cf body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyBddd5De04Ffa body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0306Ca3A05Cf body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -179,7 +179,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Experiments.Item.Assignments
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class AssignmentsRequestBuilderGetQueryParameters 
         {
-            /// <summary>Context parameters (user, namespace, project). Pass every key the experiment declares in `context_keys`; experiments can declare multiple keys. An actor context is resolved from the user. The user defaults to the current user.</summary>
+            /// <summary>Context parameters (user, namespace, project). Pass every key the experiment declares in `context_keys`. Experiments can declare multiple keys. An actor context is resolved from the user. The user defaults to the current user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("context")]

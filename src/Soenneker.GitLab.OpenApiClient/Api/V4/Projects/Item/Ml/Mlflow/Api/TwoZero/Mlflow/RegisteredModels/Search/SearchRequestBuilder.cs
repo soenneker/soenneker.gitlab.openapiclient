@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ml.Mlflow.Api.TwoZ
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class SearchRequestBuilderGetQueryParameters 
         {
-            /// <summary>Filter to search models. must be in the format `name=&apos;value&apos;`. Only filtering by name is supported</summary>
+            /// <summary>Filter for the model search, in the format `name=&apos;value&apos;`. Only filtering by name is supported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("filter")]
@@ -95,7 +95,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ml.Mlflow.Api.TwoZ
             [QueryParameter("filter")]
             public string Filter { get; set; }
 #endif
-            /// <summary>Maximum number of models desired. Default is 200. Max threshold is 1000.</summary>
+            /// <summary>Maximum number of models to fetch in a page. The maximum is 1000.</summary>
             [QueryParameter("max_results")]
             public int? MaxResults { get; set; }
             /// <summary>Order criteria. Can be by name or last_updated_timestamp, with optional DESC or ASC (default)Valid examples: `name`, `name DESC`, `last_updated_timestamp DESC`Sorting by model metadata is not supported.</summary>
@@ -108,7 +108,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ml.Mlflow.Api.TwoZ
             [QueryParameter("order_by")]
             public string OrderBy { get; set; }
 #endif
-            /// <summary>Token for pagination</summary>
+            /// <summary>Token for pagination.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("page_token")]

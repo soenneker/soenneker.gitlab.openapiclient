@@ -83,10 +83,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Conan.V1.Conans.Search
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class SearchRequestBuilderGetQueryParameters 
         {
-            /// <summary>Ignore case when searching (case-insensitive search)</summary>
+            /// <summary>If `true`, ignores case when searching.</summary>
             [QueryParameter("ignorecase")]
             public bool? Ignorecase { get; set; }
-            /// <summary>Search query</summary>
+            /// <summary>Search query. Use `*` as a wildcard.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("q")]

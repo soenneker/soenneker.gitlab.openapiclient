@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositor
     public partial class RepositoriesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.registry.repositories.item collection</summary>
-        /// <param name="position">The ID of the repository</param>
+        /// <param name="position">ID of the container registry repository.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositories.Item.WithRepositoryItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositories.Item.WithRepositoryItemRequestBuilder this[int position]
         {
@@ -105,10 +105,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositor
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Determines if tags should be included</summary>
+            /// <summary>If `true`, includes an array of `tags` in the response.</summary>
             [QueryParameter("tags")]
             public bool? Tags { get; set; }
-            /// <summary>Determines if the tags count should be included</summary>
+            /// <summary>If `true`, includes `tags_count` in the response.</summary>
             [QueryParameter("tags_count")]
             public bool? TagsCount { get; set; }
         }

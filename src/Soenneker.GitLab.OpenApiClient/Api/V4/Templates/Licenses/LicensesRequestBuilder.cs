@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Templates.Licenses
     public partial class LicensesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.templates.licenses.item collection</summary>
-        /// <param name="position">The name of the license template</param>
+        /// <param name="position">Name of the license template.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Templates.Licenses.Item.WithNameItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Templates.Licenses.Item.WithNameItemRequestBuilder this[string position]
         {
@@ -104,7 +104,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Templates.Licenses
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>If passed, returns only popular licenses</summary>
+            /// <summary>If `true`, returns only popular licenses. If `false`, returns only licenses that aren&apos;t popular.</summary>
             [QueryParameter("popular")]
             public bool? Popular { get; set; }
         }

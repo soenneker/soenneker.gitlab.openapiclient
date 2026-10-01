@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Protectio
     public partial class RulesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.registry.protection.tag.rules.item collection</summary>
-        /// <param name="position">The ID of the container protection tag rule.</param>
+        /// <param name="position">ID of the container registry protection tag rule.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Protection.Tag.Rules.Item.WithProtectionRuleItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Protection.Tag.Rules.Item.WithProtectionRuleItemRequestBuilder this[int position]
         {
@@ -74,11 +74,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Protectio
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectsContainerRegistryProtectionTagRule?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4B5547B1A746 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectsContainerRegistryProtectionTagRule?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody45328Bbec03D body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectsContainerRegistryProtectionTagRule> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4B5547B1A746 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectsContainerRegistryProtectionTagRule> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody45328Bbec03D body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -112,11 +112,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Protectio
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4B5547B1A746 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody45328Bbec03D body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4B5547B1A746 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody45328Bbec03D body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

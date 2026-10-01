@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files
     public partial class FilesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.repository.files.item collection</summary>
-        /// <param name="position">The URL-encoded path to the file.</param>
+        /// <param name="position">URL-encoded full path to the file, for example `lib%2Fclass%2Erb`.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.Item.WithFilePathItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.Item.WithFilePathItemRequestBuilder this[string position]
         {

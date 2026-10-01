@@ -97,10 +97,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Search
             /// <summary>Filter results by confidentiality</summary>
             [QueryParameter("confidential")]
             public bool? Confidential { get; set; }
-            /// <summary>Excludes forked projects in the search. Available with exact code search. Introduced in GitLab 18.9.</summary>
+            /// <summary>If `true`, excludes forked projects from the search. If omitted, forks are excluded. Available for exact code search. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/493281) in GitLab 18.7.</summary>
             [QueryParameter("exclude_forks")]
             public bool? ExcludeForks { get; set; }
-            /// <summary>Array of fields you wish to search. Available with advanced search.</summary>
+            /// <summary>Fields to search. Supports only `issues` and `merge_requests` scopes. Premium and Ultimate only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fields")]
@@ -163,7 +163,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Search
             [QueryParameter("not%5Btarget_branch%5D")]
             public string NottargetBranch { get; set; }
 #endif
-            /// <summary>Number of context lines around each match. Available with advanced and exact code search. Introduced in GitLab 18.11.</summary>
+            /// <summary>Number of context lines to include around each match in the results. Available for advanced and exact code search only. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/583217) in GitLab 18.11.</summary>
             [QueryParameter("num_context_lines")]
             public int? NumContextLines { get; set; }
             /// <summary>Page number of results to retrieve.</summary>
@@ -172,7 +172,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Search
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Performs a regex code search. Available with exact code search. Introduced in GitLab 18.9</summary>
+            /// <summary>If `true`, uses regular expressions to search for code. If omitted, regular expressions are used. Available for exact code search. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/521686) in GitLab 18.9.</summary>
             [QueryParameter("regex")]
             public bool? Regex { get; set; }
             /// <summary>The scope of the search</summary>

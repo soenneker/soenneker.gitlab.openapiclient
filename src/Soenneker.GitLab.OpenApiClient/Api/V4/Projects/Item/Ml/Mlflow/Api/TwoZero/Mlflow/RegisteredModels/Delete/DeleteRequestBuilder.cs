@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ml.Mlflow.Api.TwoZ
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class DeleteRequestBuilderDeleteQueryParameters 
         {
-            /// <summary>Registered model unique name identifier, in reference to the project</summary>
+            /// <summary>Name of the registered model.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("name")]

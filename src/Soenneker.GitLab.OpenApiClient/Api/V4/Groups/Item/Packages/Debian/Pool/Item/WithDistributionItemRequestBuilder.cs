@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Debian.Pool
     public partial class WithDistributionItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.packages.debian.pool.item.item collection</summary>
-        /// <param name="position">The Project Id</param>
+        /// <param name="position">ID of the project.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Debian.Pool.Item.Item.WithProjectItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.Debian.Pool.Item.Item.WithProjectItemRequestBuilder this[int position]
         {

@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Conan.V1.Conans
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Conan.V1.Conans.Search.SearchRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.packages.conan.v1.conans.item collection</summary>
-        /// <param name="position">Package name</param>
+        /// <param name="position">Name of the package.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Conan.V1.Conans.Item.WithPackageNameItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Conan.V1.Conans.Item.WithPackageNameItemRequestBuilder this[string position]
         {

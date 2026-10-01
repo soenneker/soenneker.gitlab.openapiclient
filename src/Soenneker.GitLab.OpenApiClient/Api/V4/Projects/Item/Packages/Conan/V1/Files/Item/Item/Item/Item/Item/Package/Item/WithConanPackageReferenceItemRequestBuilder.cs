@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Conan.V1.
     public partial class WithConanPackageReferenceItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.packages.conan.v1.files.item.item.item.item.item.package.item.item collection</summary>
-        /// <param name="position">Conan Package Revision</param>
+        /// <param name="position">Revision of the package. GitLab does not yet support Conan revisions, so the default value of `0` is always used.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Conan.V1.Files.Item.Item.Item.Item.Item.Package.Item.Item.WithPackageRevisionItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Conan.V1.Files.Item.Item.Item.Item.Item.Package.Item.Item.WithPackageRevisionItemRequestBuilder this[string position]
         {

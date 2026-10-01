@@ -83,11 +83,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Enterprise_users.Ite
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserPublic?> PatchAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD1Cef409Add2 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserPublic?> PatchAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody89Dfcbd3D85A body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserPublic> PatchAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD1Cef409Add2 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserPublic> PatchAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody89Dfcbd3D85A body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -139,11 +139,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Enterprise_users.Ite
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD1Cef409Add2 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody89Dfcbd3D85A body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPatchRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD1Cef409Add2 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody89Dfcbd3D85A body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -168,7 +168,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Enterprise_users.Ite
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithUserItemRequestBuilderDeleteQueryParameters 
         {
-            /// <summary>If `false`, deletes the user and moves their contributions to a system-wide &quot;Ghost User&quot;. If `true`, deletes the user, their associated contributions, and any groups owned solely by the user. Default value: `false`.</summary>
+            /// <summary>If `true`, deletes the user, their associated contributions, and any groups owned solely by the user. If `false`, deletes the user and moves their contributions to a [ghost user](https://docs.gitlab.com/user/profile/account/delete_account/#associated-records).</summary>
             [QueryParameter("hard_delete")]
             public bool? HardDelete { get; set; }
         }

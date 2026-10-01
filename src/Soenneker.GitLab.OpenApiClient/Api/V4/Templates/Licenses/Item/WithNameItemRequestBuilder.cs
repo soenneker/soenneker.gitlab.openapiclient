@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Templates.Licenses.Item
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithNameItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>The full-name of the copyright holder</summary>
+            /// <summary>Full name of the copyright holder.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fullname")]
@@ -95,7 +95,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Templates.Licenses.Item
             [QueryParameter("fullname")]
             public string Fullname { get; set; }
 #endif
-            /// <summary>The copyrighted project name</summary>
+            /// <summary>Name of the copyrighted project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("project")]

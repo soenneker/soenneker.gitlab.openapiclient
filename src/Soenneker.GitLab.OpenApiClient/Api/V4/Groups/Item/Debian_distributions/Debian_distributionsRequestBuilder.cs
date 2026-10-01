@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Debian_distributions
     public partial class Debian_distributionsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.debian_distributions.item collection</summary>
-        /// <param name="position">The Debian Codename</param>
+        /// <param name="position">Codename of the Debian distribution.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Debian_distributions.Item.WithCodenameItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Debian_distributions.Item.WithCodenameItemRequestBuilder this[string position]
         {
@@ -73,11 +73,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Debian_distributions
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesDebianDistribution?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody240Ff1Bbe3F5 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesDebianDistribution?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyF75B9C237Fc0 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesDebianDistribution> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody240Ff1Bbe3F5 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesDebianDistribution> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyF75B9C237Fc0 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -111,11 +111,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Debian_distributions
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody240Ff1Bbe3F5 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyF75B9C237Fc0 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody240Ff1Bbe3F5 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyF75B9C237Fc0 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -140,7 +140,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Debian_distributions
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Debian_distributionsRequestBuilderGetQueryParameters 
         {
-            /// <summary>The list of Architectures</summary>
+            /// <summary>List of architectures of the Debian distribution.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("architectures")]
@@ -150,7 +150,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Debian_distributions
             [QueryParameter("architectures")]
             public string[] Architectures { get; set; }
 #endif
-            /// <summary>The Debian Codename</summary>
+            /// <summary>Codename of the Debian distribution.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("codename")]
@@ -160,7 +160,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Debian_distributions
             [QueryParameter("codename")]
             public string Codename { get; set; }
 #endif
-            /// <summary>The list of Components</summary>
+            /// <summary>List of components of the Debian distribution.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("components")]
@@ -170,7 +170,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Debian_distributions
             [QueryParameter("components")]
             public string[] Components { get; set; }
 #endif
-            /// <summary>The Debian Description</summary>
+            /// <summary>Description of the Debian distribution.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("description")]
@@ -180,7 +180,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Debian_distributions
             [QueryParameter("description")]
             public string Description { get; set; }
 #endif
-            /// <summary>The Debian Label</summary>
+            /// <summary>Label of the Debian distribution.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("label")]
@@ -190,7 +190,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Debian_distributions
             [QueryParameter("label")]
             public string Label { get; set; }
 #endif
-            /// <summary>The Debian Origin</summary>
+            /// <summary>Origin of the Debian distribution.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("origin")]
@@ -206,7 +206,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Debian_distributions
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>The Debian Suite</summary>
+            /// <summary>Suite of the Debian distribution.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("suite")]
@@ -216,10 +216,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Debian_distributions
             [QueryParameter("suite")]
             public string Suite { get; set; }
 #endif
-            /// <summary>The duration before the Release file should be considered expired by the client</summary>
+            /// <summary>Duration, in seconds, before the Release file is considered expired by the client.</summary>
             [QueryParameter("valid_time_duration_seconds")]
             public int? ValidTimeDurationSeconds { get; set; }
-            /// <summary>The Debian Version</summary>
+            /// <summary>Version of the Debian distribution.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("version")]

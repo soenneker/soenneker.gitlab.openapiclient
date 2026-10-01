@@ -31,7 +31,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Snippets
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Snippets.Public.PublicRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.snippets.item collection</summary>
-        /// <param name="position">The ID of a snippet</param>
+        /// <param name="position">ID of the snippet.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Snippets.Item.SnippetsItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Snippets.Item.SnippetsItemRequestBuilder this[int position]
         {
@@ -86,11 +86,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Snippets
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalSnippet?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody074E174F2206 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalSnippet?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0375094C0235 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalSnippet> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody074E174F2206 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalSnippet> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0375094C0235 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -124,11 +124,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Snippets
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody074E174F2206 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0375094C0235 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody074E174F2206 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody0375094C0235 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -153,10 +153,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Snippets
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class SnippetsRequestBuilderGetQueryParameters 
         {
-            /// <summary>Return snippets created after the specified time</summary>
+            /// <summary>Return snippets created on or after the specified time.</summary>
             [QueryParameter("created_after")]
             public DateTimeOffset? CreatedAfter { get; set; }
-            /// <summary>Return snippets created before the specified time</summary>
+            /// <summary>Return snippets created on or before the specified time.</summary>
             [QueryParameter("created_before")]
             public DateTimeOffset? CreatedBefore { get; set; }
             /// <summary>Page number of results to retrieve.</summary>

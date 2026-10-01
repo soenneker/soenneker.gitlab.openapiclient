@@ -18,7 +18,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Uploads.Item
     public partial class SecretItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.uploads.item.item collection</summary>
-        /// <param name="position">The filename of a group upload</param>
+        /// <param name="position">Filename of the upload.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Uploads.Item.Item.WithFilenameItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Uploads.Item.Item.WithFilenameItemRequestBuilder this[string position]
         {

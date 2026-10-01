@@ -86,7 +86,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Merge_requestsRequestBuilderGetQueryParameters 
         {
-            /// <summary>Return merge requests which have been approved by the specified users with the given IDs. Mutually exclusive with `approved_by_usernames`.</summary>
+            /// <summary>Return merge requests approved by all the users with the given `id`, up to 5 users. `None` returns merge requests with no approvals, and `Any` returns merge requests with an approval. Mutually exclusive with `approved_by_usernames`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("approved_by_ids")]
@@ -96,7 +96,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests
             [QueryParameter("approved_by_ids")]
             public string ApprovedByIds { get; set; }
 #endif
-            /// <summary>Return merge requests which have been approved by the specified users with the given            usernames. Mutually exclusive with `approved_by_ids`.</summary>
+            /// <summary>Return merge requests approved by all the users with the given `username`, up to 5 users. `None` returns merge requests with no approvals, and `Any` returns merge requests with an approval. Mutually exclusive with `approved_by_ids`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("approved_by_usernames")]
@@ -106,7 +106,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests
             [QueryParameter("approved_by_usernames")]
             public string ApprovedByUsernames { get; set; }
 #endif
-            /// <summary>Return merge requests which have specified the users with the given IDs as an individual approver</summary>
+            /// <summary>Return merge requests that have all specified users as eligible approvers according to the approval rules. `None` returns merge requests with no eligible approvers, and `Any` returns merge requests with at least one eligible approver. Premium and Ultimate only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("approver_ids")]

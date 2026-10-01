@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Tags
     public partial class TagsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.repository.tags.item collection</summary>
-        /// <param name="position">The name of the tag</param>
+        /// <param name="position">Name of the tag.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Tags.Item.WithTagNameItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Tags.Item.WithTagNameItemRequestBuilder this[string position]
         {
@@ -74,11 +74,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Tags
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTag?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB1F0313D6756 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTag?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody831B0C4B546C body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTag> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB1F0313D6756 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTag> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody831B0C4B546C body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -112,11 +112,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Tags
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB1F0313D6756 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody831B0C4B546C body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyB1F0313D6756 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody831B0C4B546C body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -141,13 +141,13 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Tags
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class TagsRequestBuilderGetQueryParameters 
         {
-            /// <summary>Return tags ordered by `name`, `updated`, `version` fields.</summary>
+            /// <summary>Sort results by the specified field. Sorting by version uses the semantic version number.</summary>
             [QueryParameter("order_by")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdRepositoryTagsOrderByParameter? OrderBy { get; set; }
             /// <summary>Page number of results to retrieve.</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>Name of tag to start the pagination from</summary>
+            /// <summary>Name of the tag to start the pagination from. Used for keyset pagination.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("page_token")]
@@ -160,7 +160,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Tags
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Return list of tags matching the search criteria</summary>
+            /// <summary>Return only tags matching the search criteria. Use `^term` to find tags that begin with `term`, and `term$` to find tags that end with `term`. No other regular expressions are supported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("search")]
@@ -170,7 +170,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Tags
             [QueryParameter("search")]
             public string Search { get; set; }
 #endif
-            /// <summary>Return tags sorted in updated by `asc` or `desc` order.</summary>
+            /// <summary>Sort results in ascending or descending order.</summary>
             [QueryParameter("sort")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdRepositoryTagsSortParameter? Sort { get; set; }
         }

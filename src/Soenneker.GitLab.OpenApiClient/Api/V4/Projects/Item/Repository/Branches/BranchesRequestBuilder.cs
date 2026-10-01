@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Branche
     public partial class BranchesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.repository.branches.item collection</summary>
-        /// <param name="position">The name of the branch</param>
+        /// <param name="position">Name of the branch.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Branches.Item.WithBranchItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Branches.Item.WithBranchItemRequestBuilder this[string position]
         {
@@ -74,11 +74,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Branche
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBranch?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD82Cfa919C7E body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBranch?> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4B00Ccc66329 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBranch> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD82Cfa919C7E body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBranch> PostAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4B00Ccc66329 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -112,11 +112,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Branche
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD82Cfa919C7E body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4B00Ccc66329 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBodyD82Cfa919C7E body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody4B00Ccc66329 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -144,7 +144,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Branche
             /// <summary>Page number of results to retrieve.</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>Name of branch to start the pagination from</summary>
+            /// <summary>Name of the branch to start the pagination from. Used for keyset pagination.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("page_token")]
@@ -157,7 +157,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Branche
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Return list of branches matching the regex</summary>
+            /// <summary>Return branches with names matching an [RE2](https://github.com/google/re2/wiki/Syntax) regular expression. Cannot be used together with `search`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("regex")]
@@ -167,7 +167,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Branche
             [QueryParameter("regex")]
             public string Regex { get; set; }
 #endif
-            /// <summary>Return list of branches matching the search criteria</summary>
+            /// <summary>Return branches containing the search string. Use `^term` to find branches that begin with `term`, and `term$` to find branches that end with `term`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("search")]
@@ -177,7 +177,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Branche
             [QueryParameter("search")]
             public string Search { get; set; }
 #endif
-            /// <summary>Return list of branches sorted by the given field</summary>
+            /// <summary>Sort results by the specified field and direction.</summary>
             [QueryParameter("sort")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdRepositoryBranchesSortParameter? Sort { get; set; }
         }

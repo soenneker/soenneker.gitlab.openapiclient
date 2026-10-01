@@ -28,7 +28,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Debian
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Debian.Pool.PoolRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.packages.debian.item collection</summary>
-        /// <param name="position">The filename</param>
+        /// <param name="position">Name of the package file.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Debian.Item.WithFileNameItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Debian.Item.WithFileNameItemRequestBuilder this[string position]
         {

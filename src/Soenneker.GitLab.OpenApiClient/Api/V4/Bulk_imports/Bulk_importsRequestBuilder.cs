@@ -25,7 +25,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Bulk_imports
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Bulk_imports.Entities.EntitiesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.bulk_imports.item collection</summary>
-        /// <param name="position">The ID of user&apos;s GitLab Migration</param>
+        /// <param name="position">ID of the GitLab Migration.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Bulk_imports.Item.WithImportItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Bulk_imports.Item.WithImportItemRequestBuilder this[int position]
         {
@@ -153,10 +153,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Bulk_imports
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Return GitLab Migrations sorted in created by `asc` or `desc` order.</summary>
+            /// <summary>Sort results in ascending or descending order by creation date.</summary>
             [QueryParameter("sort")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4BulkImportsSortParameter? Sort { get; set; }
-            /// <summary>Return GitLab Migrations with specified status</summary>
+            /// <summary>Filter migrations by import status.</summary>
             [QueryParameter("status")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4BulkImportsStatusParameter? Status { get; set; }
         }

@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Milestones
     public partial class MilestonesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.milestones.item collection</summary>
-        /// <param name="position">The ID of a project milestone</param>
+        /// <param name="position">ID of the project milestone.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Milestones.Item.WithMilestoneItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Milestones.Item.WithMilestoneItemRequestBuilder this[int position]
         {

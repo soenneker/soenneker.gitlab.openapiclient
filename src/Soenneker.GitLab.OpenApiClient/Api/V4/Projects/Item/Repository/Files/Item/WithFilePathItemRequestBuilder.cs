@@ -89,11 +89,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.I
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<Stream?> HeadAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9B6075B1F0E7 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream?> HeadAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody063C5Eb3Bcef body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<Stream> HeadAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9B6075B1F0E7 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream> HeadAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody063C5Eb3Bcef body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -183,11 +183,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.I
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToHeadRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9B6075B1F0E7 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToHeadRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody063C5Eb3Bcef body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToHeadRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9B6075B1F0E7 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToHeadRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody063C5Eb3Bcef body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -253,7 +253,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.I
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithFilePathItemRequestBuilderDeleteQueryParameters 
         {
-            /// <summary>The email of the author</summary>
+            /// <summary>Email address of the commit author.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("author_email")]
@@ -263,7 +263,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.I
             [QueryParameter("author_email")]
             public string AuthorEmail { get; set; }
 #endif
-            /// <summary>The name of the author</summary>
+            /// <summary>Name of the commit author.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("author_name")]
@@ -273,7 +273,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.I
             [QueryParameter("author_name")]
             public string AuthorName { get; set; }
 #endif
-            /// <summary>Name of the branch to commit into. To create a new branch, also provide `start_branch`.</summary>
+            /// <summary>Name of the branch to commit the deletion into. Combine with `start_branch` to create a new branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("branch")]
@@ -283,7 +283,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.I
             [QueryParameter("branch")]
             public string Branch { get; set; }
 #endif
-            /// <summary>Commit message</summary>
+            /// <summary>Commit message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("commit_message")]
@@ -293,7 +293,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.I
             [QueryParameter("commit_message")]
             public string CommitMessage { get; set; }
 #endif
-            /// <summary>Last known file commit id</summary>
+            /// <summary>Last known file commit ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("last_commit_id")]
@@ -303,7 +303,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.I
             [QueryParameter("last_commit_id")]
             public string LastCommitId { get; set; }
 #endif
-            /// <summary>Name of the branch to start the new commit from</summary>
+            /// <summary>Name of the base branch to create the branch from.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("start_branch")]
@@ -320,7 +320,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.I
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithFilePathItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>The name of branch, tag or commit</summary>
+            /// <summary>Commit SHA or name of a repository branch or tag.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("ref")]

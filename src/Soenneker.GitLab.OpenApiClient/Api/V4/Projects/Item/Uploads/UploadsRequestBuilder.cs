@@ -25,7 +25,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Uploads
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Uploads.Authorize.AuthorizeRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.uploads.item collection</summary>
-        /// <param name="position">The ID of a project upload</param>
+        /// <param name="position">ID of the upload.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Uploads.Item.SecretItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Uploads.Item.SecretItemRequestBuilder this[int position]
         {

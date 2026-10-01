@@ -83,7 +83,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ml.Mlflow.Api.TwoZ
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class AliasRequestBuilderGetQueryParameters 
         {
-            /// <summary>The alias of the model, e.g. the Semantic Version `1.0.0`</summary>
+            /// <summary>Alias of the model version, for example `1.0.0`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("alias")]
@@ -93,7 +93,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ml.Mlflow.Api.TwoZ
             [QueryParameter("alias")]
             public string Alias { get; set; }
 #endif
-            /// <summary>The name of the model</summary>
+            /// <summary>Name of the registered model.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("name")]

@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Item.Pack
     public partial class Package_filesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.packages.item.package_files.item collection</summary>
-        /// <param name="position">ID of a package file</param>
+        /// <param name="position">ID of the package file.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Item.Package_files.Item.WithPackageFileItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Item.Package_files.Item.WithPackageFileItemRequestBuilder this[int position]
         {
@@ -99,7 +99,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Item.Pack
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Package_filesRequestBuilderGetQueryParameters 
         {
-            /// <summary>Return package files ordered by `id`, `created_at` or `file_name`</summary>
+            /// <summary>Sort results by the specified field.</summary>
             [QueryParameter("order_by")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdPackagesPackageIdPackageFilesOrderByParameter? OrderBy { get; set; }
             /// <summary>Page number of results to retrieve.</summary>
@@ -108,7 +108,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Item.Pack
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Return package files sorted in `asc` or `desc` order.</summary>
+            /// <summary>Sort results in ascending or descending order.</summary>
             [QueryParameter("sort")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdPackagesPackageIdPackageFilesSortParameter? Sort { get; set; }
         }

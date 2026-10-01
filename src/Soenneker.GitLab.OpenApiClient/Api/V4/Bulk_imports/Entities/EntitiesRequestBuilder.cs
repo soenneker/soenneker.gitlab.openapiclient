@@ -92,10 +92,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Bulk_imports.Entities
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Return GitLab Migrations sorted in created by `asc` or `desc` order.</summary>
+            /// <summary>Sort results in ascending or descending order by creation date.</summary>
             [QueryParameter("sort")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4BulkImportsEntitiesSortParameter? Sort { get; set; }
-            /// <summary>Return all GitLab Migrations&apos; entities with specified status</summary>
+            /// <summary>Filter entities by import status.</summary>
             [QueryParameter("status")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4BulkImportsEntitiesStatusParameter? Status { get; set; }
         }

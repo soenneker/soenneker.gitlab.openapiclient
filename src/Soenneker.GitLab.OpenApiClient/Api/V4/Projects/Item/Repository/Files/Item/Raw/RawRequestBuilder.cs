@@ -84,10 +84,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.I
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class RawRequestBuilderGetQueryParameters 
         {
-            /// <summary>Retrieve binary data for a file that is an lfs pointer</summary>
+            /// <summary>If `true`, returns the Git LFS file contents instead of the pointer. Ignored if the file isn&apos;t tracked by Git LFS.</summary>
             [QueryParameter("lfs")]
             public bool? Lfs { get; set; }
-            /// <summary>The name of branch, tag or commit</summary>
+            /// <summary>Commit SHA or name of a repository branch or tag.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("ref")]

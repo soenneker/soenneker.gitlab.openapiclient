@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Conan.V1.
     public partial class PackagesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.packages.conan.v1.conans.item.item.item.item.packages.item collection</summary>
-        /// <param name="position">Conan package ID</param>
+        /// <param name="position">Reference hash of the Conan package. Conan generates this value.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Conan.V1.Conans.Item.Item.Item.Item.Packages.Item.WithConanPackageReferenceItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Conan.V1.Conans.Item.Item.Item.Item.Packages.Item.WithConanPackageReferenceItemRequestBuilder this[string position]
         {

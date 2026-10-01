@@ -25,7 +25,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Metric
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Metric_images.Authorize.AuthorizeRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.issues.item.metric_images.item collection</summary>
-        /// <param name="position">The ID of metric image</param>
+        /// <param name="position">ID of the metric image.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Metric_images.Item.WithMetricImageItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Metric_images.Item.WithMetricImageItemRequestBuilder this[int position]
         {

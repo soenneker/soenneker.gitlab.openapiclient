@@ -86,7 +86,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Deploy_tokens
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Deploy_tokensRequestBuilderGetQueryParameters 
         {
-            /// <summary>Limit by active status</summary>
+            /// <summary>If `true`, returns only active deploy tokens.</summary>
             [QueryParameter("active")]
             public bool? Active { get; set; }
             /// <summary>Page number of results to retrieve.</summary>

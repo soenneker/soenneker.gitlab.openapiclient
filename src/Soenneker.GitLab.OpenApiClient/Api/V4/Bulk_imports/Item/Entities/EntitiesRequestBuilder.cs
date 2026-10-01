@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Bulk_imports.Item.Entities
     public partial class EntitiesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.bulk_imports.item.entities.item collection</summary>
-        /// <param name="position">The ID of GitLab Migration entity</param>
+        /// <param name="position">ID of the GitLab Migration entity.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Bulk_imports.Item.Entities.Item.WithEntityItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Bulk_imports.Item.Entities.Item.WithEntityItemRequestBuilder this[int position]
         {
@@ -105,7 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Bulk_imports.Item.Entities
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Return import entities with specified status</summary>
+            /// <summary>Filter entities by import status.</summary>
             [QueryParameter("status")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4BulkImportsImportIdEntitiesStatusParameter? Status { get; set; }
         }

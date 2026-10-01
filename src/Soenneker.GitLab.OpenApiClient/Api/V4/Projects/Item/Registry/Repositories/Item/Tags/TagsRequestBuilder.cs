@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositor
     public partial class TagsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.registry.repositories.item.tags.item collection</summary>
-        /// <param name="position">The name of the tag</param>
+        /// <param name="position">Name of the tag.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositories.Item.Tags.Item.WithTagNameItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositories.Item.Tags.Item.WithTagNameItemRequestBuilder this[string position]
         {
@@ -134,10 +134,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositor
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class TagsRequestBuilderDeleteQueryParameters 
         {
-            /// <summary>Keep n of latest tags with matching name</summary>
+            /// <summary>Number of most recent tags with a matching name to keep.</summary>
             [QueryParameter("keep_n")]
             public int? KeepN { get; set; }
-            /// <summary>The tag name regexp to delete, specify .* to delete all. At least one of `name_regex`, `name_regex_delete` must be provided.</summary>
+            /// <summary>[RE2](https://github.com/google/re2/wiki/Syntax) regular expression of the tag names to delete. Specify `.*` to delete all tags. Deprecated. Use `name_regex_delete` instead. At least one of `name_regex`, `name_regex_delete` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("name_regex")]
@@ -147,7 +147,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositor
             [QueryParameter("name_regex")]
             public string NameRegex { get; set; }
 #endif
-            /// <summary>The tag name regexp to delete, specify .* to delete all. At least one of `name_regex`, `name_regex_delete` must be provided.</summary>
+            /// <summary>[RE2](https://github.com/google/re2/wiki/Syntax) regular expression of the tag names to delete. Specify `.*` to delete all tags. At least one of `name_regex`, `name_regex_delete` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("name_regex_delete")]
@@ -157,7 +157,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositor
             [QueryParameter("name_regex_delete")]
             public string NameRegexDelete { get; set; }
 #endif
-            /// <summary>The tag name regexp to retain</summary>
+            /// <summary>[RE2](https://github.com/google/re2/wiki/Syntax) regular expression of the tag names to keep. Overrides any matches from `name_regex_delete`. Setting to `.*` results in a no-op.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("name_regex_keep")]
@@ -167,7 +167,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositor
             [QueryParameter("name_regex_keep")]
             public string NameRegexKeep { get; set; }
 #endif
-            /// <summary>Delete older than: 1h, 1d, 1month</summary>
+            /// <summary>Delete tags older than this age, such as `1h`, `1d`, or `1month`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("older_than")]

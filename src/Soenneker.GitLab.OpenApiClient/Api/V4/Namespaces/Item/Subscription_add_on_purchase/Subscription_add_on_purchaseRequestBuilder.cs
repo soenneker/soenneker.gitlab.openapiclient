@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.Item.Subscription_add
     public partial class Subscription_add_on_purchaseRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.namespaces.item.subscription_add_on_purchase.item collection</summary>
-        /// <param name="position">The name of the add-on</param>
+        /// <param name="position">Name of the add-on.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.Item.Subscription_add_on_purchase.Item.WithAddOnNameItemRequestBuilder"/></returns>
         [Obsolete("")]
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.Item.Subscription_add_on_purchase.Item.WithAddOnNameItemRequestBuilder this[string position]

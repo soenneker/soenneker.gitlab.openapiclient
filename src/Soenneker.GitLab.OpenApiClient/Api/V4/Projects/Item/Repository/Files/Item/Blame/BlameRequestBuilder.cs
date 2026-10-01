@@ -60,11 +60,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.I
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<Stream?> HeadAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9B6075B1F0E7 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream?> HeadAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody063C5Eb3Bcef body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<Stream> HeadAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9B6075B1F0E7 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream> HeadAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody063C5Eb3Bcef body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -98,11 +98,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.I
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToHeadRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9B6075B1F0E7 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToHeadRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody063C5Eb3Bcef body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToHeadRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody9B6075B1F0E7 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToHeadRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody063C5Eb3Bcef body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -126,7 +126,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.I
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class BlameRequestBuilderGetQueryParameters 
         {
-            /// <summary>Object that contains the blame range</summary>
+            /// <summary>Range of lines to return blame information for.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("range")]
@@ -136,13 +136,13 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.I
             [QueryParameter("range")]
             public string Range { get; set; }
 #endif
-            /// <summary>The last line of the range to blame</summary>
+            /// <summary>Last line number of the range to blame.</summary>
             [QueryParameter("range%5Bend%5D")]
             public int? Rangeend { get; set; }
-            /// <summary>The first line of the range to blame</summary>
+            /// <summary>First line number of the range to blame.</summary>
             [QueryParameter("range%5Bstart%5D")]
             public int? Rangestart { get; set; }
-            /// <summary>The name of branch, tag or commit</summary>
+            /// <summary>Commit SHA or name of a repository branch or tag.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("ref")]

@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Conan.V1.Files.Item.Ite
     public partial class ExportRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.packages.conan.v1.files.item.item.item.item.item.export.item collection</summary>
-        /// <param name="position">Package file name</param>
+        /// <param name="position">Name of the package file.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Conan.V1.Files.Item.Item.Item.Item.Item.Export.Item.WithFileNameItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Conan.V1.Files.Item.Item.Item.Item.Item.Export.Item.WithFileNameItemRequestBuilder this[string position]
         {
