@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Shards.Item.Indexed_
         {
         }
         /// <summary>
-        /// Remove a namespace from a node for Zoekt indexing
+        /// Removes a namespace from a Zoekt node, deleting its indexed data and disabling search.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Shards.Item.Indexed_
             await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Add a namespace to a node for Zoekt indexing
+        /// Enables and assigns a namespace to a specific Zoekt node for code search indexing.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSearchZoektIndexedNamespace"/></returns>
         /// <param name="body">The request body</param>
@@ -59,11 +59,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Shards.Item.Indexed_
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSearchZoektIndexedNamespace?> PutAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody82Ddbfeeac46 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSearchZoektIndexedNamespace?> PutAsync(global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminZoektShardsNodeIdIndexedNamespacesNamespaceIdRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSearchZoektIndexedNamespace> PutAsync(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody82Ddbfeeac46 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSearchZoektIndexedNamespace> PutAsync(global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminZoektShardsNodeIdIndexedNamespacesNamespaceIdRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -71,7 +71,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Shards.Item.Indexed_
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSearchZoektIndexedNamespace>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSearchZoektIndexedNamespace.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Remove a namespace from a node for Zoekt indexing
+        /// Removes a namespace from a Zoekt node, deleting its indexed data and disabling search.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -89,18 +89,18 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Shards.Item.Indexed_
             return requestInfo;
         }
         /// <summary>
-        /// Add a namespace to a node for Zoekt indexing
+        /// Enables and assigns a namespace to a specific Zoekt node for code search indexing.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPutRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody82Ddbfeeac46 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminZoektShardsNodeIdIndexedNamespacesNamespaceIdRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPutRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.RequestBody82Ddbfeeac46 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminZoektShardsNodeIdIndexedNamespacesNamespaceIdRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

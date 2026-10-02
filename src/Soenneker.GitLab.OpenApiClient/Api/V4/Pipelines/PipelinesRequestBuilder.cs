@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Pipelines
     public partial class PipelinesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.pipelines.item collection</summary>
-        /// <param name="position">The ID of the pipeline</param>
+        /// <param name="position">ID of the pipeline.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Pipelines.Item.PipelinesItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Pipelines.Item.PipelinesItemRequestBuilder this[string position]
         {

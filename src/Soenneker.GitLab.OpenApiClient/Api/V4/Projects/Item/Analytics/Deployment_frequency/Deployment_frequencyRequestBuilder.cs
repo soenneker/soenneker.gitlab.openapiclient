@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Analytics.Deployme
         {
         }
         /// <summary>
-        /// List deployment frequencies for the project
+        /// Retrieves deployment frequency analytics data for a specific project.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAnalyticsDeploymentFrequency&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Analytics.Deployme
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// List deployment frequencies for the project
+        /// Retrieves deployment frequency analytics data for a specific project.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -81,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Analytics.Deployme
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Analytics.Deployment_frequency.Deployment_frequencyRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// List deployment frequencies for the project
+        /// Retrieves deployment frequency analytics data for a specific project.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Deployment_frequencyRequestBuilderGetQueryParameters 

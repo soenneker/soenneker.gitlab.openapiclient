@@ -5274,6 +5274,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ZoektIndexingTimeout { get; set; }
 #endif
+        /// <summary>The zoekt_initial_indexing_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ZoektInitialIndexingLimit { get; set; }
+#nullable restore
+#else
+        public string ZoektInitialIndexingLimit { get; set; }
+#endif
         /// <summary>The zoekt_lost_node_threshold property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -6031,6 +6039,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "zoekt_indexing_parallelism", n => { ZoektIndexingParallelism = n.GetStringValue(); } },
                 { "zoekt_indexing_paused", n => { ZoektIndexingPaused = n.GetStringValue(); } },
                 { "zoekt_indexing_timeout", n => { ZoektIndexingTimeout = n.GetStringValue(); } },
+                { "zoekt_initial_indexing_limit", n => { ZoektInitialIndexingLimit = n.GetStringValue(); } },
                 { "zoekt_lost_node_threshold", n => { ZoektLostNodeThreshold = n.GetStringValue(); } },
                 { "zoekt_max_projects_for_legacy_search", n => { ZoektMaxProjectsForLegacySearch = n.GetStringValue(); } },
                 { "zoekt_max_restarts_15m", n => { ZoektMaxRestarts15m = n.GetStringValue(); } },
@@ -6716,6 +6725,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("zoekt_indexing_parallelism", ZoektIndexingParallelism);
             writer.WriteStringValue("zoekt_indexing_paused", ZoektIndexingPaused);
             writer.WriteStringValue("zoekt_indexing_timeout", ZoektIndexingTimeout);
+            writer.WriteStringValue("zoekt_initial_indexing_limit", ZoektInitialIndexingLimit);
             writer.WriteStringValue("zoekt_lost_node_threshold", ZoektLostNodeThreshold);
             writer.WriteStringValue("zoekt_maximum_files", ZoektMaximumFiles);
             writer.WriteStringValue("zoekt_max_projects_for_legacy_search", ZoektMaxProjectsForLegacySearch);

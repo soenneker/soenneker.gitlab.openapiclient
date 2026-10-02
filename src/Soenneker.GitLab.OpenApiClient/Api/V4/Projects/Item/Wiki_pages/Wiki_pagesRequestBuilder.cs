@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Wiki_pages
     public partial class Wiki_pagesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.wiki_pages.item collection</summary>
-        /// <param name="position">The ID of the noteable</param>
+        /// <param name="position">ID of the resource the note is attached to.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Wiki_pages.Item.WithNoteableItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Wiki_pages.Item.WithNoteableItemRequestBuilder this[int position]
         {

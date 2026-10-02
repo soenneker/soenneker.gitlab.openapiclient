@@ -84,7 +84,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Runner_deployment_projectShRequestBuilderGetQueryParameters 
         {
-            /// <summary>ID of the Google Cloud project</summary>
+            /// <summary>ID of the Google Cloud project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("google_cloud_project_id")]

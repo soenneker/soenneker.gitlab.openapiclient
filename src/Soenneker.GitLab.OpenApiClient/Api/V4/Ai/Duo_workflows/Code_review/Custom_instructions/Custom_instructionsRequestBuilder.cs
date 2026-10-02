@@ -83,10 +83,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Code_review.Cus
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Custom_instructionsRequestBuilderGetQueryParameters 
         {
-            /// <summary>The IID of the merge request</summary>
+            /// <summary>Internal ID of the merge request.</summary>
             [QueryParameter("merge_request_iid")]
             public int? MergeRequestIid { get; set; }
-            /// <summary>The ID or path of the project</summary>
+            /// <summary>ID or URL-encoded path of the project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("project_id")]

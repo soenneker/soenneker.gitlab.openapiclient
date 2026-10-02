@@ -184,7 +184,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users
             /// <summary>Filters only external users</summary>
             [QueryParameter("external")]
             public bool? External { get; set; }
-            /// <summary>Get a single user with a specific external authentication provider UID</summary>
+            /// <summary>Get a single user with a specific external authentication provider UID. All or none of `extern_uid`, `provider` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("extern_uid")]
@@ -206,7 +206,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>The external provider</summary>
+            /// <summary>The external provider. All or none of `extern_uid`, `provider` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("provider")]

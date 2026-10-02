@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.
         {
         }
         /// <summary>
-        /// Get a workflow checkpoint reconstructed from incremental blobs
+        /// Retrieves a full workflow checkpoint reconstructed from incremental data blobs.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get a workflow checkpoint reconstructed from incremental blobs
+        /// Retrieves a full workflow checkpoint reconstructed from incremental data blobs.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -78,7 +78,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.Checkpoints.By_thread_ts.By_thread_tsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get a workflow checkpoint reconstructed from incremental blobs
+        /// Retrieves a full workflow checkpoint reconstructed from incremental data blobs.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class By_thread_tsRequestBuilderGetQueryParameters 

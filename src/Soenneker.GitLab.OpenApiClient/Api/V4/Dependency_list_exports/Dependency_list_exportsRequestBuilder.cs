@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Dependency_list_exports
     public partial class Dependency_list_exportsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.dependency_list_exports.item collection</summary>
-        /// <param name="position">The ID of the dependency list export</param>
+        /// <param name="position">ID of the dependency list export.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Dependency_list_exports.Item.WithExportItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Dependency_list_exports.Item.WithExportItemRequestBuilder this[string position]
         {

@@ -84,10 +84,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Export_relations.D
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class DownloadRequestBuilderGetQueryParameters 
         {
-            /// <summary>Whether to download in batches</summary>
+            /// <summary>Whether to download in batches. All or none of `batched`, `batch_number` must be provided.</summary>
             [QueryParameter("batched")]
             public bool? Batched { get; set; }
-            /// <summary>Number of the export batch to download.</summary>
+            /// <summary>Number of the export batch to download. All or none of `batched`, `batch_number` must be provided.</summary>
             [QueryParameter("batch_number")]
             public int? BatchNumber { get; set; }
             /// <summary>Name of the project top-level relation to download or view.</summary>

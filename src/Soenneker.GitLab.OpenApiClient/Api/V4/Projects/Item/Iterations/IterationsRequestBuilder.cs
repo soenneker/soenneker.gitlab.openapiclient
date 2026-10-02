@@ -86,7 +86,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Iterations
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class IterationsRequestBuilderGetQueryParameters 
         {
-            /// <summary>Fields in which fuzzy search should be performed with the query given in the argument `search`. The available options are `title` and `cadence_title`. Defaults to `[title]`</summary>
+            /// <summary>Fields to search with the `search` query. Possible values are `title` and `cadence_title`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("in")]
@@ -96,10 +96,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Iterations
             [QueryParameter("in")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdIterationsInParameterItem[] In { get; set; }
 #endif
-            /// <summary>Include iterations from parent and its ancestors</summary>
+            /// <summary>If `true`, includes iterations for the parent group and its ancestors.</summary>
             [QueryParameter("include_ancestors")]
             public bool? IncludeAncestors { get; set; }
-            /// <summary>Include iterations from parent and its descendants</summary>
+            /// <summary>If `true`, includes iterations for the parent group and its descendants.</summary>
             [QueryParameter("include_descendants")]
             public bool? IncludeDescendants { get; set; }
             /// <summary>Page number of results to retrieve.</summary>
@@ -108,7 +108,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Iterations
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>The search criteria for the title of the iteration</summary>
+            /// <summary>Return only iterations with a title matching the provided string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("search")]
@@ -118,7 +118,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Iterations
             [QueryParameter("search")]
             public string Search { get; set; }
 #endif
-            /// <summary>Return &quot;opened&quot;, &quot;upcoming&quot;, &quot;current (previously started)&quot;, &quot;closed&quot;, or &quot;all&quot; iterations. Filtering by `started` state is deprecated starting with 14.1, please use `current` instead.</summary>
+            /// <summary>Filter iterations by state. Filtering by `started` is deprecated. Use `current` instead.</summary>
             [QueryParameter("state")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdIterationsStateParameter? State { get; set; }
             /// <summary>Return milestones updated after the specified datetime. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ</summary>
