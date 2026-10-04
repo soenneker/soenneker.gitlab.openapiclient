@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Application.Settings
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSetting>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSetting.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Updates the current application settings for this GitLab instance. At least one of 679 related parameters must be provided.
+        /// Updates the current application settings for this GitLab instance. At least one of 680 related parameters must be provided.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSetting"/></returns>
         /// <param name="body">The request body</param>
@@ -91,7 +91,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Application.Settings
             return requestInfo;
         }
         /// <summary>
-        /// Updates the current application settings for this GitLab instance. At least one of 679 related parameters must be provided.
+        /// Updates the current application settings for this GitLab instance. At least one of 680 related parameters must be provided.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

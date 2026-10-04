@@ -3320,6 +3320,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string PipelineCancelLimitPerUserProject { get; set; }
 #endif
+        /// <summary>The pipeline_delete_limit_per_user_project property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PipelineDeleteLimitPerUserProject { get; set; }
+#nullable restore
+#else
+        public string PipelineDeleteLimitPerUserProject { get; set; }
+#endif
         /// <summary>The pipeline_execution_policies_per_configuration_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -5794,6 +5802,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "pg_ash_sample_interval_seconds", n => { PgAshSampleIntervalSeconds = n.GetStringValue(); } },
                 { "pg_ash_sampling_enabled", n => { PgAshSamplingEnabled = n.GetStringValue(); } },
                 { "pipeline_cancel_limit_per_user_project", n => { PipelineCancelLimitPerUserProject = n.GetStringValue(); } },
+                { "pipeline_delete_limit_per_user_project", n => { PipelineDeleteLimitPerUserProject = n.GetStringValue(); } },
                 { "pipeline_execution_policies_per_configuration_limit", n => { PipelineExecutionPoliciesPerConfigurationLimit = n.GetStringValue(); } },
                 { "pipeline_limit_per_project_user_sha", n => { PipelineLimitPerProjectUserSha = n.GetStringValue(); } },
                 { "pipeline_limit_per_user", n => { PipelineLimitPerUser = n.GetStringValue(); } },
@@ -6480,6 +6489,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("pg_ash_sample_interval_seconds", PgAshSampleIntervalSeconds);
             writer.WriteStringValue("pg_ash_sampling_enabled", PgAshSamplingEnabled);
             writer.WriteStringValue("pipeline_cancel_limit_per_user_project", PipelineCancelLimitPerUserProject);
+            writer.WriteStringValue("pipeline_delete_limit_per_user_project", PipelineDeleteLimitPerUserProject);
             writer.WriteStringValue("pipeline_execution_policies_per_configuration_limit", PipelineExecutionPoliciesPerConfigurationLimit);
             writer.WriteStringValue("pipeline_limit_per_project_user_sha", PipelineLimitPerProjectUserSha);
             writer.WriteStringValue("pipeline_limit_per_user", PipelineLimitPerUser);
