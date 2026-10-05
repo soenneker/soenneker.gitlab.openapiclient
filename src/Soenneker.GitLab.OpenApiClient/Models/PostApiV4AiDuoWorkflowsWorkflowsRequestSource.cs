@@ -51,5 +51,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         #pragma warning disable CS1591
         IdeExtension,
         #pragma warning restore CS1591
+        [EnumMember(Value = "work_item_plan_to_merge_request")]
+        #pragma warning disable CS1591
+        WorkItemPlanToMergeRequest,
+        #pragma warning restore CS1591
     }
 }

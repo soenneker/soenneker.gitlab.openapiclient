@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ai_agent.Sessions.
         {
         }
         /// <summary>
-        /// Marks a session as completed or failed. The authenticated user must be the creator of the session. Returns the existing record unchanged if jsonl_sha256 matches the stored value.
+        /// Marks a session as completed or failed. The authenticated user must be the creator of the session.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiExternalAgentsSession"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ai_agent.Sessions.
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiExternalAgentsSession>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiExternalAgentsSession.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Marks a session as completed or failed. The authenticated user must be the creator of the session. Returns the existing record unchanged if jsonl_sha256 matches the stored value.
+        /// Marks a session as completed or failed. The authenticated user must be the creator of the session.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

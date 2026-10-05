@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Cargo.Ite
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Cargo.Item.Item.Download.DownloadRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.packages.cargo.item.item.item collection</summary>
-        /// <param name="position">The cargo package name</param>
+        /// <param name="position">Name of the Cargo package.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Cargo.Item.Item.Item.WithPackageNameItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Cargo.Item.Item.Item.WithPackageNameItemRequestBuilder this[string position]
         {

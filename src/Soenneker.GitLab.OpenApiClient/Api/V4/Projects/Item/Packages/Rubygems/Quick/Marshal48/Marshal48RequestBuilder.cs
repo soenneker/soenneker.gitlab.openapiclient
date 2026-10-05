@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Rubygems.
     public partial class Marshal48RequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.packages.rubygems.quick.Marshal48.item collection</summary>
-        /// <param name="position">Gemspec file name</param>
+        /// <param name="position">Name of the gemspec file, in the format `&lt;gem_name&gt;-&lt;version&gt;.gemspec.rz`.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Rubygems.Quick.Marshal48.Item.WithFileNameItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Rubygems.Quick.Marshal48.Item.WithFileNameItemRequestBuilder this[string position]
         {

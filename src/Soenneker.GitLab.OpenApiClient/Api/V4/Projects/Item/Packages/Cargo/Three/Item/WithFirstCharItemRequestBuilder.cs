@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Cargo.Thr
     public partial class WithFirstCharItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.packages.cargo.Three.item.item collection</summary>
-        /// <param name="position">The cargo package name</param>
+        /// <param name="position">Name of the Cargo package.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Cargo.Three.Item.Item.WithPackageNameItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Cargo.Three.Item.Item.WithPackageNameItemRequestBuilder this[string position]
         {

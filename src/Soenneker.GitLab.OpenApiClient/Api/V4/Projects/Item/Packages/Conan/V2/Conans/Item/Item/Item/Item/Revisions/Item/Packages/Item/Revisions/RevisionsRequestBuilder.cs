@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Conan.V2.
     public partial class RevisionsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.packages.conan.v2.conans.item.item.item.item.revisions.item.packages.item.revisions.item collection</summary>
-        /// <param name="position">Package revision</param>
+        /// <param name="position">Revision of the package.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Conan.V2.Conans.Item.Item.Item.Item.Revisions.Item.Packages.Item.Revisions.Item.WithPackageRevisionItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Conan.V2.Conans.Item.Item.Item.Item.Revisions.Item.Packages.Item.Revisions.Item.WithPackageRevisionItemRequestBuilder this[string position]
         {

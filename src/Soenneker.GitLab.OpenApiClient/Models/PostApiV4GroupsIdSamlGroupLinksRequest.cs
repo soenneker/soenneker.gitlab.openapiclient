@@ -12,13 +12,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     public partial class PostApiV4GroupsIdSamlGroupLinksRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>Level of permissions for the linked SA group</summary>
+        /// <summary>Default access level for members of the SAML group.</summary>
         public int? AccessLevel { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The ID of the Member Role for the linked SA group</summary>
+        /// <summary>ID of the member role for members of the SAML group.</summary>
         public int? MemberRoleId { get; set; }
-        /// <summary>Provider string that must match for this group link to be applied</summary>
+        /// <summary>Unique [provider name](https://docs.gitlab.com/integration/saml/#configure-saml-support-in-gitlab) that must match for this group link to be applied.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Provider { get; set; }
@@ -26,7 +26,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Provider { get; set; }
 #endif
-        /// <summary>The name of a SAML group</summary>
+        /// <summary>Name of the SAML group.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SamlGroupName { get; set; }

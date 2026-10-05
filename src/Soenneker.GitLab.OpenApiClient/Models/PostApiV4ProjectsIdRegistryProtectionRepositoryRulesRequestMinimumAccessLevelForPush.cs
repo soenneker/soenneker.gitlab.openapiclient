@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>Minimum GitLab access level to allow to push container images to the container registry.            For example maintainer, owner or admin. At least one of `minimum_access_level_for_push`, `minimum_access_level_for_delete` must be provided.</summary>
+    /// <summary>Minimum GitLab access level required to push container images to the container registry. Must be provided when `minimum_access_level_for_delete` is not set. At least one of `minimum_access_level_for_push`, `minimum_access_level_for_delete` must be provided.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PostApiV4ProjectsIdRegistryProtectionRepositoryRulesRequestMinimumAccessLevelForPush
     {

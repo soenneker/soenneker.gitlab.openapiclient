@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>The intent of the completion request, current options are &quot;completion&quot; or &quot;generation&quot;</summary>
+    /// <summary>Intent of the completion request.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PostApiV4CodeSuggestionsCompletionsRequestIntent
     {

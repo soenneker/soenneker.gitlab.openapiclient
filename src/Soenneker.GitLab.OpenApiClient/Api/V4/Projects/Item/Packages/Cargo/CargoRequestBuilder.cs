@@ -46,7 +46,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Cargo
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Cargo.Two.TwoRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.packages.cargo.item collection</summary>
-        /// <param name="position">The cargo package name</param>
+        /// <param name="position">Name of the Cargo package.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Cargo.Item.PackageNameItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Cargo.Item.PackageNameItemRequestBuilder this[string position]
         {

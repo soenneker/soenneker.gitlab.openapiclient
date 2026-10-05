@@ -38,13 +38,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GroupsIdProtectedBranchesRequestAllowedToUnprotectItemProperty> AllowedToUnprotect { get; set; }
 #endif
-        /// <summary>Allow force push for all users with push access.</summary>
+        /// <summary>If `true`, members who can push to this branch can also force push.</summary>
         public bool? AllowForcePush { get; set; }
         /// <summary>Prevent pushes to this branch if it matches an item in CODEOWNERS</summary>
         public bool? CodeOwnerApprovalRequired { get; set; }
-        /// <summary>Access levels allowed to merge (defaults: `40`, maintainer access level)</summary>
+        /// <summary>Access level allowed to merge. Defaults to `40` (Maintainer role). Does not support custom roles. Use `allowed_to_merge` with `member_role_id` instead.</summary>
         public int? MergeAccessLevel { get; set; }
-        /// <summary>The name of the protected branch</summary>
+        /// <summary>Name of the branch or wildcard.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>Access levels allowed to push (defaults: `40`, maintainer access level)</summary>
+        /// <summary>Access level allowed to push. Defaults to `40` (Maintainer role). Does not support custom roles. Use `allowed_to_push` with `member_role_id` instead.</summary>
         public int? PushAccessLevel { get; set; }
         /// <summary>Access levels allowed to unprotect (defaults: `40`, maintainer access level)</summary>
         public int? UnprotectAccessLevel { get; set; }

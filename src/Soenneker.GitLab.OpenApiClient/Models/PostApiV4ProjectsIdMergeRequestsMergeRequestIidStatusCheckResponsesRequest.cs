@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>ID of an external status check</summary>
         public int? ExternalStatusCheckId { get; set; }
-        /// <summary>SHA at HEAD of the source branch</summary>
+        /// <summary>SHA at `HEAD` of the source branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Sha { get; set; }
@@ -24,7 +24,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Sha { get; set; }
 #endif
-        /// <summary>Set to `pending` to mark the check as pending, `passed` to pass the check, or `failed` to fail it</summary>
+        /// <summary>Status of the check.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMergeRequestsMergeRequestIidStatusCheckResponsesRequestStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMergeRequestsMergeRequestIidStatusCheckResponsesRequest"/> and sets the default values.

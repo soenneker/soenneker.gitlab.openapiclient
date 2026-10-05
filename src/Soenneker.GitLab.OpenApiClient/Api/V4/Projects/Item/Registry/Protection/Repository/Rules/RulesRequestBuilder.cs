@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Protectio
     public partial class RulesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.registry.protection.repository.rules.item collection</summary>
-        /// <param name="position">The ID of the container protection rule</param>
+        /// <param name="position">ID of the container repository protection rule.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Protection.Repository.Rules.Item.WithProtectionRuleItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Protection.Repository.Rules.Item.WithProtectionRuleItemRequestBuilder this[int position]
         {

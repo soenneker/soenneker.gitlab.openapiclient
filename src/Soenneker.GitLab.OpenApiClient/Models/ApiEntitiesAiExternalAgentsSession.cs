@@ -14,8 +14,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The agent_identity_id property</summary>
-        public int? AgentIdentityId { get; set; }
         /// <summary>The agent_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -32,16 +30,40 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string CreatedAt { get; set; }
 #endif
-        /// <summary>The goal property</summary>
+        /// <summary>The external_xid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Goal { get; set; }
+        public string? ExternalXid { get; set; }
 #nullable restore
 #else
-        public string Goal { get; set; }
+        public string ExternalXid { get; set; }
+#endif
+        /// <summary>The flow_type property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? FlowType { get; set; }
+#nullable restore
+#else
+        public string FlowType { get; set; }
 #endif
         /// <summary>The id property</summary>
         public int? Id { get; set; }
+        /// <summary>The session_finished_at property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? SessionFinishedAt { get; set; }
+#nullable restore
+#else
+        public string SessionFinishedAt { get; set; }
+#endif
+        /// <summary>The session_started_at property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? SessionStartedAt { get; set; }
+#nullable restore
+#else
+        public string SessionStartedAt { get; set; }
+#endif
         /// <summary>The status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -49,14 +71,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #nullable restore
 #else
         public string Status { get; set; }
-#endif
-        /// <summary>The sync_type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? SyncType { get; set; }
-#nullable restore
-#else
-        public string SyncType { get; set; }
 #endif
         /// <summary>The updated_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -93,13 +107,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "agent_identity_id", n => { AgentIdentityId = n.GetIntValue(); } },
                 { "agent_type", n => { AgentType = n.GetStringValue(); } },
                 { "created_at", n => { CreatedAt = n.GetStringValue(); } },
-                { "goal", n => { Goal = n.GetStringValue(); } },
+                { "external_xid", n => { ExternalXid = n.GetStringValue(); } },
+                { "flow_type", n => { FlowType = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
+                { "session_finished_at", n => { SessionFinishedAt = n.GetStringValue(); } },
+                { "session_started_at", n => { SessionStartedAt = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
-                { "sync_type", n => { SyncType = n.GetStringValue(); } },
                 { "updated_at", n => { UpdatedAt = n.GetStringValue(); } },
                 { "user_id", n => { UserId = n.GetIntValue(); } },
             };
@@ -111,13 +126,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("agent_identity_id", AgentIdentityId);
             writer.WriteStringValue("agent_type", AgentType);
             writer.WriteStringValue("created_at", CreatedAt);
-            writer.WriteStringValue("goal", Goal);
+            writer.WriteStringValue("external_xid", ExternalXid);
+            writer.WriteStringValue("flow_type", FlowType);
             writer.WriteIntValue("id", Id);
+            writer.WriteStringValue("session_finished_at", SessionFinishedAt);
+            writer.WriteStringValue("session_started_at", SessionStartedAt);
             writer.WriteStringValue("status", Status);
-            writer.WriteStringValue("sync_type", SyncType);
             writer.WriteStringValue("updated_at", UpdatedAt);
             writer.WriteIntValue("user_id", UserId);
             writer.WriteAdditionalData(AdditionalData);

@@ -8,14 +8,14 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// Object that contains information about the current file
+    /// Attributes of the file that suggestions are generated for.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostApiV4CodeSuggestionsCompletionsRequestCurrentFile : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The content above cursor</summary>
+        /// <summary>Content above cursor.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ContentAboveCursor { get; set; }
@@ -23,7 +23,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ContentAboveCursor { get; set; }
 #endif
-        /// <summary>The content below cursor</summary>
+        /// <summary>Content below cursor.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ContentBelowCursor { get; set; }
@@ -31,7 +31,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ContentBelowCursor { get; set; }
 #endif
-        /// <summary>The name of the current file</summary>
+        /// <summary>Name of the current file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FileName { get; set; }

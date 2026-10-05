@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Boards
     public partial class BoardsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.boards.item collection</summary>
-        /// <param name="position">The ID of a board</param>
+        /// <param name="position">ID of the board.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Boards.Item.WithBoardItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Boards.Item.WithBoardItemRequestBuilder this[int position]
         {

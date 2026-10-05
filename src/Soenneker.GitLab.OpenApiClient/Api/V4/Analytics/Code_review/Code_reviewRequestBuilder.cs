@@ -105,7 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Analytics.Code_review
             [QueryParameter("milestone_title")]
             public string MilestoneTitle { get; set; }
 #endif
-            /// <summary>Filters by the specified parameters</summary>
+            /// <summary>Return merge requests that do not match the specified parameters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("not")]
@@ -141,7 +141,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Analytics.Code_review
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Project ID</summary>
+            /// <summary>ID of the project.</summary>
             [QueryParameter("project_id")]
             public int? ProjectId { get; set; }
         }

@@ -14,11 +14,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Minimum GitLab access level to allow to delete container images in the container registry.              For example maintainer, owner or admin. To unset the value, use an empty string `&quot;&quot;`.</summary>
+        /// <summary>Minimum GitLab access level required to delete container images in the container registry. At least one of `minimum_access_level_for_push` or `minimum_access_level_for_delete` must stay set. To unset the value, use an empty string (`&quot;&quot;`).</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4ProjectsIdRegistryProtectionRepositoryRulesProtectionRuleIdRequestMinimumAccessLevelForDelete? MinimumAccessLevelForDelete { get; set; }
-        /// <summary>Minimum GitLab access level to allow to push container images to the container registry.              For example maintainer, owner or admin. To unset the value, use an empty string `&quot;&quot;`.</summary>
+        /// <summary>Minimum GitLab access level required to push container images to the container registry. At least one of `minimum_access_level_for_push` or `minimum_access_level_for_delete` must stay set. To unset the value, use an empty string (`&quot;&quot;`).</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4ProjectsIdRegistryProtectionRepositoryRulesProtectionRuleIdRequestMinimumAccessLevelForPush? MinimumAccessLevelForPush { get; set; }
-        /// <summary>Container repository path pattern protected by the protection rule.              For example `flight/flight-*`. Wildcard character `*` allowed.</summary>
+        /// <summary>Container repository path pattern protected by the protection rule, for example `flight/flight-*`. Wildcard character `*` is allowed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RepositoryPathPattern { get; set; }

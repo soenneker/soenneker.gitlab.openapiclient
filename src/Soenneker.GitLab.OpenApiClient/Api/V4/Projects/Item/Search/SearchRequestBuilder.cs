@@ -100,7 +100,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Search
             [QueryParameter("author_username")]
             public string AuthorUsername { get; set; }
 #endif
-            /// <summary>Filter results by confidentiality</summary>
+            /// <summary>If `true`, returns only confidential results. If `false`, returns only non-confidential results. Applies only to the `issues` and `work_items` scopes.</summary>
             [QueryParameter("confidential")]
             public bool? Confidential { get; set; }
             /// <summary>Fields to search. Supports only `issues` and `merge_requests` scopes. Premium and Ultimate only.</summary>
@@ -172,7 +172,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Search
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>The name of a repository branch or tag. If not given, the default branch is used</summary>
+            /// <summary>Name of the repository branch or tag. If omitted, uses the default branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("ref")]
@@ -185,10 +185,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Search
             /// <summary>If `true`, uses regular expressions to search for code. If omitted, regular expressions are used. Available for exact code search. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/521686) in GitLab 18.9.</summary>
             [QueryParameter("regex")]
             public bool? Regex { get; set; }
-            /// <summary>The scope of the search</summary>
+            /// <summary>Scope of the search.</summary>
             [QueryParameter("scope")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdDashSearchScopeParameter? Scope { get; set; }
-            /// <summary>The expression it should be searched for</summary>
+            /// <summary>Search query.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("search")]
@@ -208,7 +208,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Search
             [QueryParameter("source_branch")]
             public string SourceBranch { get; set; }
 #endif
-            /// <summary>Filter results by state</summary>
+            /// <summary>Filter results by state. Applies only to the `issues`, `work_items`, and `merge_requests` scopes.</summary>
             [QueryParameter("state")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdDashSearchStateParameter? State { get; set; }
             /// <summary>Filter merge requests by target branch. Available with advanced search and the merge_requests scope.</summary>

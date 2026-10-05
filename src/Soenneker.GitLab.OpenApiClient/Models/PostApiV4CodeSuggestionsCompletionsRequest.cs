@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>List of related context parts</summary>
+        /// <summary>Additional context to use for Code Suggestions. [Generally available](https://gitlab.com/gitlab-org/gitlab/-/issues/462750) in GitLab 18.6. Feature flag `code_suggestions_context` removed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4CodeSuggestionsCompletionsRequestContextItem>? Context { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4CodeSuggestionsCompletionsRequestContextItem> Context { get; set; }
 #endif
-        /// <summary>Object that contains information about the current file</summary>
+        /// <summary>Attributes of the file that suggestions are generated for.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4CodeSuggestionsCompletionsRequestCurrentFile? CurrentFile { get; set; }
@@ -30,11 +30,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4CodeSuggestionsCompletionsRequestCurrentFile CurrentFile { get; set; }
 #endif
-        /// <summary>The type of generation request</summary>
+        /// <summary>Type of event for generation requests.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4CodeSuggestionsCompletionsRequestGenerationType? GenerationType { get; set; }
-        /// <summary>The intent of the completion request, current options are &quot;completion&quot; or &quot;generation&quot;</summary>
+        /// <summary>Intent of the completion request.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4CodeSuggestionsCompletionsRequestIntent? Intent { get; set; }
-        /// <summary>The path of the project</summary>
+        /// <summary>Path of the project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ProjectPath { get; set; }
@@ -42,9 +42,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ProjectPath { get; set; }
 #endif
-        /// <summary>The option to stream code completion response</summary>
+        /// <summary>If `true`, streams the response as smaller chunks as they are ready, if applicable.</summary>
         public bool? Stream { get; set; }
-        /// <summary>Additional instructions provided by a user</summary>
+        /// <summary>User&apos;s instructions for Code Suggestions. [Generally available](https://gitlab.com/gitlab-org/gitlab/-/issues/462750) in GitLab 18.6. Feature flag `code_suggestions_context` removed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UserInstruction { get; set; }

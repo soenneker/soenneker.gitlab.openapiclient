@@ -766,6 +766,9 @@
           },
           "401": {
             "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Skills are not available"
           }
         },
         "x-gitlab-lifecycle": "beta"
@@ -806,7 +809,7 @@
             "description": "Unauthorized"
           },
           "404": {
-            "description": "Skill not found"
+            "description": "Skill not found or skills are not available"
           },
           "400": {
             "description": "Bad Request"
@@ -866,7 +869,7 @@
             "description": "Unauthorized"
           },
           "404": {
-            "description": "Skill file not found"
+            "description": "Skill file not found or skills are not available"
           },
           "400": {
             "description": "Bad Request"
@@ -1771,7 +1774,7 @@
           "Ai agent sessions"
         ],
         "summary": "Complete or fail an external agent session.",
-        "description": "Marks a session as completed or failed. The authenticated user must be the creator of the session. Returns the existing record unchanged if jsonl_sha256 matches the stored value.",
+        "description": "Marks a session as completed or failed. The authenticated user must be the creator of the session.",
         "operationId": "PatchApiV4ProjectsIdAiAgentSessionsSessionId",
         "parameters": [
           {
@@ -3668,7 +3671,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of a group",
+            "description": "ID or URL-encoded path of the group.",
             "required": true,
             "schema": {
               "type": "string"
@@ -3697,7 +3700,7 @@
           {
             "name": "search",
             "in": "query",
-            "description": "Search for a protected branch by name",
+            "description": "Name or part of the name of protected branches to search for.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -3738,7 +3741,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of a group",
+            "description": "ID or URL-encoded path of the group.",
             "required": true,
             "schema": {
               "type": "string"
@@ -3796,7 +3799,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of a group",
+            "description": "ID or URL-encoded path of the group.",
             "required": true,
             "schema": {
               "type": "string"
@@ -3805,7 +3808,7 @@
           {
             "name": "name",
             "in": "path",
-            "description": "The name of the branch or wildcard",
+            "description": "Name of the branch or wildcard.",
             "required": true,
             "schema": {
               "type": "string"
@@ -3846,7 +3849,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of a group",
+            "description": "ID or URL-encoded path of the group.",
             "required": true,
             "schema": {
               "type": "string"
@@ -3855,7 +3858,7 @@
           {
             "name": "name",
             "in": "path",
-            "description": "The name of the branch",
+            "description": "Name of the branch or wildcard.",
             "required": true,
             "schema": {
               "type": "string"
@@ -3908,7 +3911,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of a group",
+            "description": "ID or URL-encoded path of the group.",
             "required": true,
             "schema": {
               "type": "string"
@@ -3917,7 +3920,7 @@
           {
             "name": "name",
             "in": "path",
-            "description": "The name of the protected branch",
+            "description": "Name of the branch or wildcard.",
             "required": true,
             "schema": {
               "type": "string"
@@ -4533,7 +4536,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "ID or URL-encoded path of the group",
+            "description": "ID or URL-encoded path of the group.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -4577,7 +4580,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "ID or URL-encoded path of the group",
+            "description": "ID or URL-encoded path of the group.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -4636,7 +4639,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "ID or URL-encoded path of the group",
+            "description": "ID or URL-encoded path of the group.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -4652,7 +4655,7 @@
           {
             "name": "samlGroupName",
             "in": "path",
-            "description": "Name of an SAML group",
+            "description": "Name of the SAML group.",
             "required": true,
             "schema": {
               "type": "string"
@@ -4661,7 +4664,7 @@
           {
             "name": "provider",
             "in": "query",
-            "description": "Provider string to disambiguate when multiple links exist with same name",
+            "description": "Unique [provider name](https://docs.gitlab.com/integration/saml/#configure-saml-support-in-gitlab) used to disambiguate when multiple links exist with the same name. Required when multiple links exist with the same \u0060saml_group_name\u0060.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -4701,7 +4704,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "ID or URL-encoded path of the group",
+            "description": "ID or URL-encoded path of the group.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -4717,7 +4720,7 @@
           {
             "name": "samlGroupName",
             "in": "path",
-            "description": "Name of a SAML group",
+            "description": "Name of the SAML group.",
             "required": true,
             "schema": {
               "type": "string"
@@ -4726,7 +4729,7 @@
           {
             "name": "provider",
             "in": "query",
-            "description": "Provider string to disambiguate when multiple links exist with same name",
+            "description": "Unique [provider name](https://docs.gitlab.com/integration/saml/#configure-saml-support-in-gitlab) used to disambiguate when multiple links exist with the same name. Required when multiple links exist with the same \u0060saml_group_name\u0060.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -5854,7 +5857,7 @@
           {
             "name": "project_id",
             "in": "query",
-            "description": "Project ID",
+            "description": "ID of the project.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -5911,7 +5914,7 @@
           {
             "name": "not",
             "in": "query",
-            "description": "Filters by the specified parameters",
+            "description": "Return merge requests that do not match the specified parameters.",
             "schema": {
               "type": "object",
               "nullable": true
@@ -6226,7 +6229,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -6242,7 +6245,7 @@
           {
             "name": "mergeRequestIid",
             "in": "path",
-            "description": "The IID of a merge request",
+            "description": "Internal ID of the merge request.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -6299,7 +6302,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -6315,7 +6318,7 @@
           {
             "name": "mergeRequestIid",
             "in": "path",
-            "description": "The IID of a merge request",
+            "description": "Internal ID of the merge request.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -6364,7 +6367,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -6380,7 +6383,7 @@
           {
             "name": "mergeRequestIid",
             "in": "path",
-            "description": "The IID of a merge request",
+            "description": "Internal ID of the merge request.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -6389,7 +6392,7 @@
           {
             "name": "approvalRuleId",
             "in": "path",
-            "description": "The ID of a merge request approval rule",
+            "description": "ID of the merge request approval rule.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -6426,7 +6429,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -6442,7 +6445,7 @@
           {
             "name": "mergeRequestIid",
             "in": "path",
-            "description": "The IID of a merge request",
+            "description": "Internal ID of the merge request.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -6451,7 +6454,7 @@
           {
             "name": "approvalRuleId",
             "in": "path",
-            "description": "The ID of a merge request approval rule",
+            "description": "ID of the merge request approval rule.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -6497,7 +6500,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -6513,7 +6516,7 @@
           {
             "name": "mergeRequestIid",
             "in": "path",
-            "description": "The IID of a merge request",
+            "description": "Internal ID of the merge request.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -6522,7 +6525,7 @@
           {
             "name": "approvalRuleId",
             "in": "path",
-            "description": "The ID of a merge request approval rule",
+            "description": "ID of the merge request approval rule.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -7165,7 +7168,7 @@
           {
             "name": "vulnerabilityId",
             "in": "path",
-            "description": "The ID of a vulnerability",
+            "description": "ID of the vulnerability.",
             "required": true,
             "schema": {
               "type": "string"
@@ -15472,7 +15475,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -15526,7 +15529,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -15592,7 +15595,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -15655,7 +15658,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -15703,7 +15706,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "ID of a project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "type": "string"
@@ -15713,7 +15716,7 @@
           {
             "name": "mergeRequestIid",
             "in": "path",
-            "description": "IID of a merge request",
+            "description": "Internal ID of the merge request.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -15763,7 +15766,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -15779,7 +15782,7 @@
           {
             "name": "mergeRequestIid",
             "in": "path",
-            "description": "The IID of the merge request",
+            "description": "Internal ID of the merge request.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -15818,7 +15821,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "ID of a project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "type": "string"
@@ -15828,7 +15831,7 @@
           {
             "name": "mergeRequestIid",
             "in": "path",
-            "description": "IID of a merge request",
+            "description": "Internal ID of the merge request.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -20410,7 +20413,7 @@
           {
             "name": "name",
             "in": "query",
-            "description": "Model version name",
+            "description": "Name of the registered model.",
             "required": true,
             "schema": {
               "type": "string",
@@ -20420,7 +20423,7 @@
           {
             "name": "version",
             "in": "query",
-            "description": "Model version ID",
+            "description": "ID of the model version.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -20477,7 +20480,7 @@
           {
             "name": "name",
             "in": "query",
-            "description": "Model version name",
+            "description": "Name of the registered model.",
             "required": true,
             "schema": {
               "type": "string",
@@ -20487,7 +20490,7 @@
           {
             "name": "version",
             "in": "query",
-            "description": "Model version number",
+            "description": "Version of the model.",
             "required": true,
             "schema": {
               "type": "string",
@@ -26274,7 +26277,7 @@
           "Instance"
         ],
         "summary": "Update application settings",
-        "description": "Updates the current application settings for this GitLab instance. At least one of 680 related parameters must be provided.",
+        "description": "Updates the current application settings for this GitLab instance. At least one setting must be updated.",
         "operationId": "PutApiV4ApplicationSettings",
         "requestBody": {
           "content": {
@@ -36729,7 +36732,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -36793,7 +36796,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -36849,7 +36852,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -36865,7 +36868,7 @@
           {
             "name": "boardId",
             "in": "path",
-            "description": "The ID of a board",
+            "description": "ID of the board.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -36902,7 +36905,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -36918,7 +36921,7 @@
           {
             "name": "boardId",
             "in": "path",
-            "description": "The ID of a board",
+            "description": "ID of the board.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -36964,7 +36967,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -36980,7 +36983,7 @@
           {
             "name": "boardId",
             "in": "path",
-            "description": "The ID of a board",
+            "description": "ID of the board.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -37019,7 +37022,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -37035,7 +37038,7 @@
           {
             "name": "boardId",
             "in": "path",
-            "description": "The ID of a board",
+            "description": "ID of the board.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -37092,7 +37095,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -37108,7 +37111,7 @@
           {
             "name": "boardId",
             "in": "path",
-            "description": "The ID of a board",
+            "description": "ID of the board.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -37156,7 +37159,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -37172,7 +37175,7 @@
           {
             "name": "boardId",
             "in": "path",
-            "description": "The ID of a board",
+            "description": "ID of the board.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -37181,7 +37184,7 @@
           {
             "name": "listId",
             "in": "path",
-            "description": "The ID of a list",
+            "description": "ID of the board\u0027s list.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -37218,7 +37221,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -37234,7 +37237,7 @@
           {
             "name": "boardId",
             "in": "path",
-            "description": "The ID of a board",
+            "description": "ID of the board.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -37243,7 +37246,7 @@
           {
             "name": "listId",
             "in": "path",
-            "description": "The ID of a list",
+            "description": "ID of the board\u0027s list.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -37290,7 +37293,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -37306,7 +37309,7 @@
           {
             "name": "boardId",
             "in": "path",
-            "description": "The ID of a board",
+            "description": "ID of the board.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -37315,7 +37318,7 @@
           {
             "name": "listId",
             "in": "path",
-            "description": "The ID of a board list",
+            "description": "ID of the board\u0027s list.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -42075,7 +42078,7 @@
           {
             "name": "search",
             "in": "query",
-            "description": "The expression it should be searched for",
+            "description": "Search query.",
             "required": true,
             "schema": {
               "type": "string",
@@ -42085,7 +42088,7 @@
           {
             "name": "scope",
             "in": "query",
-            "description": "The scope of the search",
+            "description": "Scope of the search.",
             "required": true,
             "schema": {
               "$ref": "#/components/schemas/GetApiV4SearchScopeParameter"
@@ -42094,7 +42097,7 @@
           {
             "name": "state",
             "in": "query",
-            "description": "Filter results by state",
+            "description": "Filter results by state. Applies only to the \u0060issues\u0060, \u0060work_items\u0060, and \u0060merge_requests\u0060 scopes.",
             "schema": {
               "$ref": "#/components/schemas/GetApiV4SearchStateParameter"
             }
@@ -42102,7 +42105,7 @@
           {
             "name": "confidential",
             "in": "query",
-            "description": "Filter results by confidentiality",
+            "description": "If \u0060true\u0060, returns only confidential results. If \u0060false\u0060, returns only non-confidential results. Applies only to the \u0060issues\u0060 and \u0060work_items\u0060 scopes.",
             "schema": {
               "type": "boolean",
               "nullable": true
@@ -42124,7 +42127,7 @@
           {
             "name": "include_archived",
             "in": "query",
-            "description": "Includes archived projects in the search. Introduced in GitLab 18.9.",
+            "description": "If \u0060true\u0060, includes archived projects in the search. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/493281) in GitLab 18.7.",
             "schema": {
               "type": "boolean",
               "default": false
@@ -42291,7 +42294,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the group",
+            "description": "ID or URL-encoded path of the group.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -42307,7 +42310,7 @@
           {
             "name": "search",
             "in": "query",
-            "description": "The expression it should be searched for",
+            "description": "Search query.",
             "required": true,
             "schema": {
               "type": "string",
@@ -42317,7 +42320,7 @@
           {
             "name": "scope",
             "in": "query",
-            "description": "The scope of the search",
+            "description": "Scope of the search.",
             "required": true,
             "schema": {
               "$ref": "#/components/schemas/GetApiV4GroupsIdDashSearchScopeParameter"
@@ -42326,7 +42329,7 @@
           {
             "name": "state",
             "in": "query",
-            "description": "Filter results by state",
+            "description": "Filter results by state. Applies only to the \u0060issues\u0060, \u0060work_items\u0060, and \u0060merge_requests\u0060 scopes.",
             "schema": {
               "$ref": "#/components/schemas/GetApiV4GroupsIdDashSearchStateParameter"
             }
@@ -42334,7 +42337,7 @@
           {
             "name": "confidential",
             "in": "query",
-            "description": "Filter results by confidentiality",
+            "description": "If \u0060true\u0060, returns only confidential results. If \u0060false\u0060, returns only non-confidential results. Applies only to the \u0060issues\u0060 and \u0060work_items\u0060 scopes.",
             "schema": {
               "type": "boolean",
               "nullable": true
@@ -42356,7 +42359,7 @@
           {
             "name": "include_archived",
             "in": "query",
-            "description": "Includes archived projects in the search. Introduced in GitLab 18.9.",
+            "description": "If \u0060true\u0060, includes archived projects in the search. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/493281) in GitLab 18.7.",
             "schema": {
               "type": "boolean",
               "default": false
@@ -42527,7 +42530,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -42543,7 +42546,7 @@
           {
             "name": "search",
             "in": "query",
-            "description": "The expression it should be searched for",
+            "description": "Search query.",
             "required": true,
             "schema": {
               "type": "string",
@@ -42553,7 +42556,7 @@
           {
             "name": "scope",
             "in": "query",
-            "description": "The scope of the search",
+            "description": "Scope of the search.",
             "required": true,
             "schema": {
               "$ref": "#/components/schemas/GetApiV4ProjectsIdDashSearchScopeParameter"
@@ -42562,7 +42565,7 @@
           {
             "name": "ref",
             "in": "query",
-            "description": "The name of a repository branch or tag. If not given, the default branch is used",
+            "description": "Name of the repository branch or tag. If omitted, uses the default branch.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -42571,7 +42574,7 @@
           {
             "name": "state",
             "in": "query",
-            "description": "Filter results by state",
+            "description": "Filter results by state. Applies only to the \u0060issues\u0060, \u0060work_items\u0060, and \u0060merge_requests\u0060 scopes.",
             "schema": {
               "$ref": "#/components/schemas/GetApiV4ProjectsIdDashSearchStateParameter"
             }
@@ -42579,7 +42582,7 @@
           {
             "name": "confidential",
             "in": "query",
-            "description": "Filter results by confidentiality",
+            "description": "If \u0060true\u0060, returns only confidential results. If \u0060false\u0060, returns only non-confidential results. Applies only to the \u0060issues\u0060 and \u0060work_items\u0060 scopes.",
             "schema": {
               "type": "boolean",
               "nullable": true
@@ -42753,7 +42756,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -42769,7 +42772,7 @@
           {
             "name": "fileName",
             "in": "path",
-            "description": "Spec file name",
+            "description": "Name of the spec file.",
             "required": true,
             "schema": {
               "$ref": "#/components/schemas/GetApiV4ProjectsIdPackagesRubygemsFileNameFileNameParameter"
@@ -42814,7 +42817,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -42830,7 +42833,7 @@
           {
             "name": "fileName",
             "in": "path",
-            "description": "Gemspec file name",
+            "description": "Name of the gemspec file, in the format \u0060\u003Cgem_name\u003E-\u003Cversion\u003E.gemspec.rz\u0060.",
             "required": true,
             "schema": {
               "type": "string"
@@ -42875,7 +42878,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -42891,7 +42894,7 @@
           {
             "name": "fileName",
             "in": "path",
-            "description": "Package file name",
+            "description": "Name of the \u0060.gem\u0060 file.",
             "required": true,
             "schema": {
               "type": "string"
@@ -42936,7 +42939,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -42981,7 +42984,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -43036,7 +43039,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -43052,7 +43055,7 @@
           {
             "name": "gems",
             "in": "query",
-            "description": "Comma delimited gem names",
+            "description": "Comma-separated list of gems to fetch dependencies for.",
             "explode": false,
             "schema": {
               "type": "array",
@@ -49689,7 +49692,7 @@
           "Projects"
         ],
         "summary": "Update a project",
-        "description": "Updates an existing project. If your HTTP repository is not publicly accessible, add authentication information to the URL \u0060https://username:password@gitlab.company.com/group/project.git\u0060, where \u0060password\u0060 is a public access key with the \u0060api\u0060 scope. At least one of 121 related parameters must be provided.",
+        "description": "Updates an existing project. If your HTTP repository is not publicly accessible, add authentication information to the URL \u0060https://username:password@gitlab.company.com/group/project.git\u0060, where \u0060password\u0060 is a public access key with the \u0060api\u0060 scope. At least one project attribute must be updated.",
         "operationId": "PutApiV4ProjectsId",
         "parameters": [
           {
@@ -55860,7 +55863,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -55910,7 +55913,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -55975,7 +55978,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -55991,7 +55994,7 @@
           {
             "name": "protectionRuleId",
             "in": "path",
-            "description": "The ID of the container protection rule",
+            "description": "ID of the container repository protection rule.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -56046,7 +56049,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -56062,7 +56065,7 @@
           {
             "name": "protectionRuleId",
             "in": "path",
-            "description": "The ID of the container protection rule",
+            "description": "ID of the container repository protection rule.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -58711,7 +58714,7 @@
           {
             "name": "q",
             "in": "query",
-            "description": "The search term",
+            "description": "Search term.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -58721,7 +58724,7 @@
           {
             "name": "skip",
             "in": "query",
-            "description": "The number of results to skip",
+            "description": "Number of results to skip.",
             "schema": {
               "type": "integer",
               "default": 0
@@ -58731,7 +58734,7 @@
           {
             "name": "take",
             "in": "query",
-            "description": "The number of results to return",
+            "description": "Number of results to return.",
             "schema": {
               "type": "integer",
               "default": 20
@@ -58741,7 +58744,7 @@
           {
             "name": "prerelease",
             "in": "query",
-            "description": "Include prerelease versions",
+            "description": "If \u0060true\u0060, includes prerelease versions in the results.",
             "schema": {
               "type": "boolean",
               "default": true
@@ -59748,7 +59751,7 @@
           {
             "name": "q",
             "in": "query",
-            "description": "The search term",
+            "description": "Search term.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -59758,7 +59761,7 @@
           {
             "name": "skip",
             "in": "query",
-            "description": "The number of results to skip",
+            "description": "Number of results to skip.",
             "schema": {
               "type": "integer",
               "default": 0
@@ -59768,7 +59771,7 @@
           {
             "name": "take",
             "in": "query",
-            "description": "The number of results to return",
+            "description": "Number of results to return.",
             "schema": {
               "type": "integer",
               "default": 20
@@ -59778,7 +59781,7 @@
           {
             "name": "prerelease",
             "in": "query",
-            "description": "Include prerelease versions",
+            "description": "If \u0060true\u0060, includes prerelease versions in the results.",
             "schema": {
               "type": "boolean",
               "default": true
@@ -64657,7 +64660,7 @@
           {
             "name": "mergeRequestIid",
             "in": "path",
-            "description": "The IID of a merge request",
+            "description": "Internal ID of the merge request.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -64727,7 +64730,7 @@
           {
             "name": "mergeRequestIid",
             "in": "path",
-            "description": "The IID of a merge request",
+            "description": "Internal ID of the merge request.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -64782,7 +64785,7 @@
           {
             "name": "mergeRequestIid",
             "in": "path",
-            "description": "The IID of a merge request",
+            "description": "Internal ID of the merge request.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -64912,7 +64915,7 @@
           {
             "name": "mergeRequestIid",
             "in": "path",
-            "description": "The IID of a merge request",
+            "description": "Internal ID of the merge request.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -64965,7 +64968,7 @@
           {
             "name": "mergeRequestIid",
             "in": "path",
-            "description": "The IID of a merge request",
+            "description": "Internal ID of the merge request.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -65045,7 +65048,7 @@
           {
             "name": "mergeRequestIid",
             "in": "path",
-            "description": "The IID of a merge request",
+            "description": "Internal ID of the merge request.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -65105,7 +65108,7 @@
           {
             "name": "mergeRequestIid",
             "in": "path",
-            "description": "The IID of a merge request",
+            "description": "Internal ID of the merge request.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -65247,7 +65250,7 @@
           {
             "name": "mergeRequestIid",
             "in": "path",
-            "description": "The IID of a merge request",
+            "description": "Internal ID of the merge request.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -65351,7 +65354,7 @@
           {
             "name": "mergeRequestIid",
             "in": "path",
-            "description": "The IID of a merge request",
+            "description": "Internal ID of the merge request.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -65418,7 +65421,7 @@
           {
             "name": "mergeRequestIid",
             "in": "path",
-            "description": "The IID of a merge request",
+            "description": "Internal ID of the merge request.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -65494,7 +65497,7 @@
           {
             "name": "mergeRequestIid",
             "in": "path",
-            "description": "The IID of a merge request",
+            "description": "Internal ID of the merge request.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -65542,7 +65545,7 @@
           {
             "name": "mergeRequestIid",
             "in": "path",
-            "description": "The IID of a merge request",
+            "description": "Internal ID of the merge request.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -65597,7 +65600,7 @@
           {
             "name": "mergeRequestIid",
             "in": "path",
-            "description": "The IID of a merge request",
+            "description": "Internal ID of the merge request.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -65658,7 +65661,7 @@
           {
             "name": "mergeRequestIid",
             "in": "path",
-            "description": "The IID of a merge request",
+            "description": "Internal ID of the merge request.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -65741,7 +65744,7 @@
           {
             "name": "mergeRequestIid",
             "in": "path",
-            "description": "The IID of a merge request",
+            "description": "Internal ID of the merge request.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -65819,7 +65822,7 @@
           {
             "name": "mergeRequestIid",
             "in": "path",
-            "description": "The IID of a merge request",
+            "description": "Internal ID of the merge request.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -94239,7 +94242,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -94281,7 +94284,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -94323,7 +94326,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -94383,7 +94386,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -94468,7 +94471,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -94484,7 +94487,7 @@
           {
             "name": "packageName",
             "in": "path",
-            "description": "Package name",
+            "description": "Name of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -94494,7 +94497,7 @@
           {
             "name": "packageVersion",
             "in": "path",
-            "description": "Package version",
+            "description": "Version of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -94504,7 +94507,7 @@
           {
             "name": "packageUsername",
             "in": "path",
-            "description": "Package username",
+            "description": "Conan username of the package. This is the \u0060\u002B\u0060-separated full path of the project.",
             "required": true,
             "schema": {
               "type": "string"
@@ -94514,7 +94517,7 @@
           {
             "name": "packageChannel",
             "in": "path",
-            "description": "Package channel",
+            "description": "Channel of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -94560,7 +94563,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -94576,7 +94579,7 @@
           {
             "name": "packageName",
             "in": "path",
-            "description": "Package name",
+            "description": "Name of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -94586,7 +94589,7 @@
           {
             "name": "packageVersion",
             "in": "path",
-            "description": "Package version",
+            "description": "Version of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -94596,7 +94599,7 @@
           {
             "name": "packageUsername",
             "in": "path",
-            "description": "Package username",
+            "description": "Conan username of the package. This is the \u0060\u002B\u0060-separated full path of the project.",
             "required": true,
             "schema": {
               "type": "string"
@@ -94606,7 +94609,7 @@
           {
             "name": "packageChannel",
             "in": "path",
-            "description": "Package channel",
+            "description": "Channel of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -94652,7 +94655,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -94668,7 +94671,7 @@
           {
             "name": "packageName",
             "in": "path",
-            "description": "Package name",
+            "description": "Name of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -94678,7 +94681,7 @@
           {
             "name": "packageVersion",
             "in": "path",
-            "description": "Package version",
+            "description": "Version of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -94688,7 +94691,7 @@
           {
             "name": "packageUsername",
             "in": "path",
-            "description": "Package username",
+            "description": "Conan username of the package. This is the \u0060\u002B\u0060-separated full path of the project.",
             "required": true,
             "schema": {
               "type": "string"
@@ -94698,7 +94701,7 @@
           {
             "name": "packageChannel",
             "in": "path",
-            "description": "Package channel",
+            "description": "Channel of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -94708,7 +94711,7 @@
           {
             "name": "recipeRevision",
             "in": "path",
-            "description": "Recipe revision",
+            "description": "Revision of the recipe.",
             "required": true,
             "schema": {
               "type": "string"
@@ -94747,7 +94750,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -94763,7 +94766,7 @@
           {
             "name": "packageName",
             "in": "path",
-            "description": "Package name",
+            "description": "Name of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -94773,7 +94776,7 @@
           {
             "name": "packageVersion",
             "in": "path",
-            "description": "Package version",
+            "description": "Version of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -94783,7 +94786,7 @@
           {
             "name": "packageUsername",
             "in": "path",
-            "description": "Package username",
+            "description": "Conan username of the package. This is the \u0060\u002B\u0060-separated full path of the project.",
             "required": true,
             "schema": {
               "type": "string"
@@ -94793,7 +94796,7 @@
           {
             "name": "packageChannel",
             "in": "path",
-            "description": "Package channel",
+            "description": "Channel of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -94803,7 +94806,7 @@
           {
             "name": "recipeRevision",
             "in": "path",
-            "description": "Recipe revision",
+            "description": "Revision of the recipe.",
             "required": true,
             "schema": {
               "type": "string"
@@ -94849,7 +94852,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -94865,7 +94868,7 @@
           {
             "name": "packageName",
             "in": "path",
-            "description": "Package name",
+            "description": "Name of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -94875,7 +94878,7 @@
           {
             "name": "packageVersion",
             "in": "path",
-            "description": "Package version",
+            "description": "Version of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -94885,7 +94888,7 @@
           {
             "name": "packageUsername",
             "in": "path",
-            "description": "Package username",
+            "description": "Conan username of the package. This is the \u0060\u002B\u0060-separated full path of the project.",
             "required": true,
             "schema": {
               "type": "string"
@@ -94895,7 +94898,7 @@
           {
             "name": "packageChannel",
             "in": "path",
-            "description": "Package channel",
+            "description": "Channel of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -94905,7 +94908,7 @@
           {
             "name": "recipeRevision",
             "in": "path",
-            "description": "Recipe revision",
+            "description": "Revision of the recipe.",
             "required": true,
             "schema": {
               "type": "string"
@@ -94915,7 +94918,7 @@
           {
             "name": "fileName",
             "in": "path",
-            "description": "Package file name",
+            "description": "Name of the package file.",
             "required": true,
             "schema": {
               "$ref": "#/components/schemas/GetApiV4ProjectsIdPackagesConanV2ConansPackageNamePackageVersionPackageUsernamePackageChannelRevisionsRecipeRevisionFilesFileNameFileNameParameter"
@@ -94952,7 +94955,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -94968,7 +94971,7 @@
           {
             "name": "packageName",
             "in": "path",
-            "description": "Package name",
+            "description": "Name of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -94978,7 +94981,7 @@
           {
             "name": "packageVersion",
             "in": "path",
-            "description": "Package version",
+            "description": "Version of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -94988,7 +94991,7 @@
           {
             "name": "packageUsername",
             "in": "path",
-            "description": "Package username",
+            "description": "Conan username of the package. This is the \u0060\u002B\u0060-separated full path of the project.",
             "required": true,
             "schema": {
               "type": "string"
@@ -94998,7 +95001,7 @@
           {
             "name": "packageChannel",
             "in": "path",
-            "description": "Package channel",
+            "description": "Channel of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95008,7 +95011,7 @@
           {
             "name": "recipeRevision",
             "in": "path",
-            "description": "Recipe revision",
+            "description": "Revision of the recipe.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95018,7 +95021,7 @@
           {
             "name": "fileName",
             "in": "path",
-            "description": "Package file name",
+            "description": "Name of the package file.",
             "required": true,
             "schema": {
               "$ref": "#/components/schemas/PutApiV4ProjectsIdPackagesConanV2ConansPackageNamePackageVersionPackageUsernamePackageChannelRevisionsRecipeRevisionFilesFileNameFileNameParameter"
@@ -95067,7 +95070,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -95083,7 +95086,7 @@
           {
             "name": "packageName",
             "in": "path",
-            "description": "Package name",
+            "description": "Name of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95093,7 +95096,7 @@
           {
             "name": "packageVersion",
             "in": "path",
-            "description": "Package version",
+            "description": "Version of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95103,7 +95106,7 @@
           {
             "name": "packageUsername",
             "in": "path",
-            "description": "Package username",
+            "description": "Conan username of the package. This is the \u0060\u002B\u0060-separated full path of the project.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95113,7 +95116,7 @@
           {
             "name": "packageChannel",
             "in": "path",
-            "description": "Package channel",
+            "description": "Channel of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95123,7 +95126,7 @@
           {
             "name": "recipeRevision",
             "in": "path",
-            "description": "Recipe revision",
+            "description": "Revision of the recipe.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95133,7 +95136,7 @@
           {
             "name": "fileName",
             "in": "path",
-            "description": "Package file name",
+            "description": "Name of the package file.",
             "required": true,
             "schema": {
               "$ref": "#/components/schemas/PutApiV4ProjectsIdPackagesConanV2ConansPackageNamePackageVersionPackageUsernamePackageChannelRevisionsRecipeRevisionFilesFileNameAuthorizeFileNameParameter"
@@ -95172,7 +95175,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -95188,7 +95191,7 @@
           {
             "name": "packageName",
             "in": "path",
-            "description": "Package name",
+            "description": "Name of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95198,7 +95201,7 @@
           {
             "name": "packageVersion",
             "in": "path",
-            "description": "Package version",
+            "description": "Version of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95208,7 +95211,7 @@
           {
             "name": "packageUsername",
             "in": "path",
-            "description": "Package username",
+            "description": "Conan username of the package. This is the \u0060\u002B\u0060-separated full path of the project.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95218,7 +95221,7 @@
           {
             "name": "packageChannel",
             "in": "path",
-            "description": "Package channel",
+            "description": "Channel of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95228,7 +95231,7 @@
           {
             "name": "recipeRevision",
             "in": "path",
-            "description": "Recipe revision",
+            "description": "Revision of the recipe.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95267,7 +95270,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -95283,7 +95286,7 @@
           {
             "name": "packageName",
             "in": "path",
-            "description": "Package name",
+            "description": "Name of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95293,7 +95296,7 @@
           {
             "name": "packageVersion",
             "in": "path",
-            "description": "Package version",
+            "description": "Version of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95303,7 +95306,7 @@
           {
             "name": "packageUsername",
             "in": "path",
-            "description": "Package username",
+            "description": "Conan username of the package. This is the \u0060\u002B\u0060-separated full path of the project.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95313,7 +95316,7 @@
           {
             "name": "packageChannel",
             "in": "path",
-            "description": "Package channel",
+            "description": "Channel of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95323,7 +95326,7 @@
           {
             "name": "recipeRevision",
             "in": "path",
-            "description": "Recipe revision",
+            "description": "Revision of the recipe.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95333,7 +95336,7 @@
           {
             "name": "conanPackageReference",
             "in": "path",
-            "description": "Package reference",
+            "description": "Reference hash of the Conan package. Conan generates this value.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95379,7 +95382,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -95395,7 +95398,7 @@
           {
             "name": "packageName",
             "in": "path",
-            "description": "Package name",
+            "description": "Name of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95405,7 +95408,7 @@
           {
             "name": "packageVersion",
             "in": "path",
-            "description": "Package version",
+            "description": "Version of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95415,7 +95418,7 @@
           {
             "name": "packageUsername",
             "in": "path",
-            "description": "Package username",
+            "description": "Conan username of the package. This is the \u0060\u002B\u0060-separated full path of the project.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95425,7 +95428,7 @@
           {
             "name": "packageChannel",
             "in": "path",
-            "description": "Package channel",
+            "description": "Channel of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95435,7 +95438,7 @@
           {
             "name": "recipeRevision",
             "in": "path",
-            "description": "Recipe revision",
+            "description": "Revision of the recipe.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95445,7 +95448,7 @@
           {
             "name": "conanPackageReference",
             "in": "path",
-            "description": "Package reference",
+            "description": "Reference hash of the Conan package. Conan generates this value.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95491,7 +95494,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -95507,7 +95510,7 @@
           {
             "name": "packageName",
             "in": "path",
-            "description": "Package name",
+            "description": "Name of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95517,7 +95520,7 @@
           {
             "name": "packageVersion",
             "in": "path",
-            "description": "Package version",
+            "description": "Version of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95527,7 +95530,7 @@
           {
             "name": "packageUsername",
             "in": "path",
-            "description": "Package username",
+            "description": "Conan username of the package. This is the \u0060\u002B\u0060-separated full path of the project.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95537,7 +95540,7 @@
           {
             "name": "packageChannel",
             "in": "path",
-            "description": "Package channel",
+            "description": "Channel of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95547,7 +95550,7 @@
           {
             "name": "recipeRevision",
             "in": "path",
-            "description": "Recipe revision",
+            "description": "Revision of the recipe.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95557,7 +95560,7 @@
           {
             "name": "conanPackageReference",
             "in": "path",
-            "description": "Package reference",
+            "description": "Reference hash of the Conan package. Conan generates this value.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95567,7 +95570,7 @@
           {
             "name": "packageRevision",
             "in": "path",
-            "description": "Package revision",
+            "description": "Revision of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95606,7 +95609,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -95622,7 +95625,7 @@
           {
             "name": "packageName",
             "in": "path",
-            "description": "Package name",
+            "description": "Name of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95632,7 +95635,7 @@
           {
             "name": "packageVersion",
             "in": "path",
-            "description": "Package version",
+            "description": "Version of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95642,7 +95645,7 @@
           {
             "name": "packageUsername",
             "in": "path",
-            "description": "Package username",
+            "description": "Conan username of the package. This is the \u0060\u002B\u0060-separated full path of the project.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95652,7 +95655,7 @@
           {
             "name": "packageChannel",
             "in": "path",
-            "description": "Package channel",
+            "description": "Channel of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95662,7 +95665,7 @@
           {
             "name": "recipeRevision",
             "in": "path",
-            "description": "Recipe revision",
+            "description": "Revision of the recipe.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95672,7 +95675,7 @@
           {
             "name": "conanPackageReference",
             "in": "path",
-            "description": "Package reference",
+            "description": "Reference hash of the Conan package. Conan generates this value.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95682,7 +95685,7 @@
           {
             "name": "packageRevision",
             "in": "path",
-            "description": "Package revision",
+            "description": "Revision of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95728,7 +95731,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -95744,7 +95747,7 @@
           {
             "name": "packageName",
             "in": "path",
-            "description": "Package name",
+            "description": "Name of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95754,7 +95757,7 @@
           {
             "name": "packageVersion",
             "in": "path",
-            "description": "Package version",
+            "description": "Version of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95764,7 +95767,7 @@
           {
             "name": "packageUsername",
             "in": "path",
-            "description": "Package username",
+            "description": "Conan username of the package. This is the \u0060\u002B\u0060-separated full path of the project.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95774,7 +95777,7 @@
           {
             "name": "packageChannel",
             "in": "path",
-            "description": "Package channel",
+            "description": "Channel of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95784,7 +95787,7 @@
           {
             "name": "recipeRevision",
             "in": "path",
-            "description": "Recipe revision",
+            "description": "Revision of the recipe.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95794,7 +95797,7 @@
           {
             "name": "conanPackageReference",
             "in": "path",
-            "description": "Package reference",
+            "description": "Reference hash of the Conan package. Conan generates this value.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95804,7 +95807,7 @@
           {
             "name": "packageRevision",
             "in": "path",
-            "description": "Package revision",
+            "description": "Revision of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95814,7 +95817,7 @@
           {
             "name": "fileName",
             "in": "path",
-            "description": "Package file name",
+            "description": "Name of the package file.",
             "required": true,
             "schema": {
               "$ref": "#/components/schemas/GetApiV4ProjectsIdPackagesConanV2ConansPackageNamePackageVersionPackageUsernamePackageChannelRevisionsRecipeRevisionPackagesConanPackageReferenceRevisionsPackageRevisionFilesFileNameFileNameParameter"
@@ -95851,7 +95854,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -95867,7 +95870,7 @@
           {
             "name": "packageName",
             "in": "path",
-            "description": "Package name",
+            "description": "Name of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95877,7 +95880,7 @@
           {
             "name": "packageVersion",
             "in": "path",
-            "description": "Package version",
+            "description": "Version of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95887,7 +95890,7 @@
           {
             "name": "packageUsername",
             "in": "path",
-            "description": "Package username",
+            "description": "Conan username of the package. This is the \u0060\u002B\u0060-separated full path of the project.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95897,7 +95900,7 @@
           {
             "name": "packageChannel",
             "in": "path",
-            "description": "Package channel",
+            "description": "Channel of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95907,7 +95910,7 @@
           {
             "name": "recipeRevision",
             "in": "path",
-            "description": "Recipe revision",
+            "description": "Revision of the recipe.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95917,7 +95920,7 @@
           {
             "name": "conanPackageReference",
             "in": "path",
-            "description": "Package reference",
+            "description": "Reference hash of the Conan package. Conan generates this value.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95927,7 +95930,7 @@
           {
             "name": "packageRevision",
             "in": "path",
-            "description": "Package revision",
+            "description": "Revision of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -95937,7 +95940,7 @@
           {
             "name": "fileName",
             "in": "path",
-            "description": "Package file name",
+            "description": "Name of the package file.",
             "required": true,
             "schema": {
               "$ref": "#/components/schemas/PutApiV4ProjectsIdPackagesConanV2ConansPackageNamePackageVersionPackageUsernamePackageChannelRevisionsRecipeRevisionPackagesConanPackageReferenceRevisionsPackageRevisionFilesFileNameFileNameParameter"
@@ -95986,7 +95989,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -96002,7 +96005,7 @@
           {
             "name": "packageName",
             "in": "path",
-            "description": "Package name",
+            "description": "Name of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -96012,7 +96015,7 @@
           {
             "name": "packageVersion",
             "in": "path",
-            "description": "Package version",
+            "description": "Version of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -96022,7 +96025,7 @@
           {
             "name": "packageUsername",
             "in": "path",
-            "description": "Package username",
+            "description": "Conan username of the package. This is the \u0060\u002B\u0060-separated full path of the project.",
             "required": true,
             "schema": {
               "type": "string"
@@ -96032,7 +96035,7 @@
           {
             "name": "packageChannel",
             "in": "path",
-            "description": "Package channel",
+            "description": "Channel of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -96042,7 +96045,7 @@
           {
             "name": "recipeRevision",
             "in": "path",
-            "description": "Recipe revision",
+            "description": "Revision of the recipe.",
             "required": true,
             "schema": {
               "type": "string"
@@ -96052,7 +96055,7 @@
           {
             "name": "conanPackageReference",
             "in": "path",
-            "description": "Package reference",
+            "description": "Reference hash of the Conan package. Conan generates this value.",
             "required": true,
             "schema": {
               "type": "string"
@@ -96062,7 +96065,7 @@
           {
             "name": "packageRevision",
             "in": "path",
-            "description": "Package revision",
+            "description": "Revision of the package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -96072,7 +96075,7 @@
           {
             "name": "fileName",
             "in": "path",
-            "description": "Package file name",
+            "description": "Name of the package file.",
             "required": true,
             "schema": {
               "$ref": "#/components/schemas/PutApiV4ProjectsIdPackagesConanV2ConansPackageNamePackageVersionPackageUsernamePackageChannelRevisionsRecipeRevisionPackagesConanPackageReferenceRevisionsPackageRevisionFilesFileNameAuthorizeFileNameParameter"
@@ -100870,7 +100873,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -100915,7 +100918,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -100931,7 +100934,7 @@
           {
             "name": "packageName",
             "in": "path",
-            "description": "The cargo package name",
+            "description": "Name of the Cargo package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -100976,7 +100979,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -100992,7 +100995,7 @@
           {
             "name": "packageName",
             "in": "path",
-            "description": "The cargo package name",
+            "description": "Name of the Cargo package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -101037,7 +101040,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -101053,7 +101056,7 @@
           {
             "name": "firstChar",
             "in": "path",
-            "description": "First character of the cargo package name",
+            "description": "First character of the Cargo package name.",
             "required": true,
             "schema": {
               "type": "string"
@@ -101062,7 +101065,7 @@
           {
             "name": "packageName",
             "in": "path",
-            "description": "The cargo package name",
+            "description": "Name of the Cargo package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -101107,7 +101110,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -101123,7 +101126,7 @@
           {
             "name": "prefix1",
             "in": "path",
-            "description": "First two characters of the cargo package name",
+            "description": "First two characters of the Cargo package name.",
             "required": true,
             "schema": {
               "type": "string"
@@ -101132,7 +101135,7 @@
           {
             "name": "prefix2",
             "in": "path",
-            "description": "Next two characters of the cargo package name",
+            "description": "Next two characters of the Cargo package name.",
             "required": true,
             "schema": {
               "type": "string"
@@ -101141,7 +101144,7 @@
           {
             "name": "packageName",
             "in": "path",
-            "description": "The cargo package name",
+            "description": "Name of the Cargo package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -101186,7 +101189,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -101202,7 +101205,7 @@
           {
             "name": "packageName",
             "in": "path",
-            "description": "The cargo package name",
+            "description": "Name of the Cargo package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -101211,7 +101214,7 @@
           {
             "name": "packageVersion",
             "in": "path",
-            "description": "The cargo package version",
+            "description": "Version of the Cargo package.",
             "required": true,
             "schema": {
               "type": "string"
@@ -101256,7 +101259,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "The ID or URL-encoded path of the project",
+            "description": "ID or URL-encoded path of the project.",
             "required": true,
             "schema": {
               "anyOf": [
@@ -113214,7 +113217,7 @@
           {
             "name": "mergeRequestIid",
             "in": "path",
-            "description": "The IID of a merge request",
+            "description": "Internal ID of the merge request.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -113289,7 +113292,7 @@
           {
             "name": "mergeRequestIid",
             "in": "path",
-            "description": "The IID of a merge request",
+            "description": "Internal ID of the merge request.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -113352,7 +113355,7 @@
           {
             "name": "mergeRequestIid",
             "in": "path",
-            "description": "The IID of a merge request",
+            "description": "Internal ID of the merge request.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -113433,7 +113436,7 @@
           {
             "name": "mergeRequestIid",
             "in": "path",
-            "description": "The IID of a merge request",
+            "description": "Internal ID of the merge request.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -113487,7 +113490,7 @@
           {
             "name": "mergeRequestIid",
             "in": "path",
-            "description": "The IID of a merge request",
+            "description": "Internal ID of the merge request.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -113571,7 +113574,7 @@
           {
             "name": "mergeRequestIid",
             "in": "path",
-            "description": "The IID of a merge request",
+            "description": "Internal ID of the merge request.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -113643,7 +113646,7 @@
           {
             "name": "mergeRequestIid",
             "in": "path",
-            "description": "The IID of a merge request",
+            "description": "Internal ID of the merge request.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -117523,25 +117526,29 @@
             "type": "string",
             "example": "claude-code"
           },
-          "agent_identity_id": {
-            "type": "integer",
-            "example": 1
-          },
           "user_id": {
             "type": "integer",
             "example": 1
-          },
-          "sync_type": {
-            "type": "string",
-            "example": "hook"
           },
           "status": {
             "type": "string",
             "example": "running"
           },
-          "goal": {
+          "flow_type": {
             "type": "string",
-            "example": "Implement the login feature"
+            "example": "external_agent"
+          },
+          "external_xid": {
+            "type": "string",
+            "example": "uuid"
+          },
+          "session_started_at": {
+            "type": "string",
+            "example": "2026-06-17T00:00:00.000Z"
+          },
+          "session_finished_at": {
+            "type": "string",
+            "example": "2026-06-17T00:00:00.000Z"
           },
           "created_at": {
             "type": "string",
@@ -142618,19 +142625,19 @@
           },
           "stream": {
             "type": "boolean",
-            "description": "The option to stream code completion response",
+            "description": "If \u0060true\u0060, streams the response as smaller chunks as they are ready, if applicable.",
             "default": false
           },
           "project_path": {
             "type": "string",
-            "description": "The path of the project",
+            "description": "Path of the project.",
             "nullable": true,
             "example": "namespace/project"
           },
           "user_instruction": {
             "maxLength": 600000,
             "type": "string",
-            "description": "Additional instructions provided by a user",
+            "description": "User\u0027s instructions for Code Suggestions. [Generally available](https://gitlab.com/gitlab-org/gitlab/-/issues/462750) in GitLab 18.6. Feature flag \u0060code_suggestions_context\u0060 removed.",
             "nullable": true
           },
           "context": {
@@ -142638,7 +142645,7 @@
             "items": {
               "$ref": "#/components/schemas/PostApiV4CodeSuggestionsCompletionsRequestContextItem"
             },
-            "description": "List of related context parts",
+            "description": "Additional context to use for Code Suggestions. [Generally available](https://gitlab.com/gitlab-org/gitlab/-/issues/462750) in GitLab 18.6. Feature flag \u0060code_suggestions_context\u0060 removed.",
             "nullable": true
           }
         }
@@ -142648,7 +142655,7 @@
         "properties": {
           "project_path": {
             "type": "string",
-            "description": "The path of the project",
+            "description": "Path of the project.",
             "nullable": true,
             "example": "namespace/project"
           }
@@ -142662,7 +142669,7 @@
         "properties": {
           "project_path": {
             "type": "string",
-            "description": "The path of the project",
+            "description": "Path of the project.",
             "nullable": true,
             "example": "namespace/project"
           }
@@ -143383,7 +143390,7 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "The name of the protected branch",
+            "description": "Name of the branch or wildcard.",
             "nullable": true,
             "example": "main"
           },
@@ -143395,7 +143402,7 @@
           },
           "allow_force_push": {
             "type": "boolean",
-            "description": "Allow force push for all users with push access.",
+            "description": "If \u0060true\u0060, members who can push to this branch can also force push.",
             "default": false
           },
           "unprotect_access_level": {
@@ -143437,7 +143444,7 @@
         "properties": {
           "allow_force_push": {
             "type": "boolean",
-            "description": "Allow force push for all users with push access.",
+            "description": "If \u0060true\u0060, members who can push to this branch can also force push.",
             "nullable": true
           },
           "unprotect_access_level": {
@@ -143511,7 +143518,7 @@
         "properties": {
           "saml_group_name": {
             "type": "string",
-            "description": "The name of a SAML group",
+            "description": "Name of the SAML group.",
             "nullable": true
           },
           "access_level": {
@@ -143519,12 +143526,12 @@
           },
           "member_role_id": {
             "type": "integer",
-            "description": "The ID of the Member Role for the linked SA group",
+            "description": "ID of the member role for members of the SAML group.",
             "nullable": true
           },
           "provider": {
             "type": "string",
-            "description": "Provider string that must match for this group link to be applied",
+            "description": "Unique [provider name](https://docs.gitlab.com/integration/saml/#configure-saml-support-in-gitlab) that must match for this group link to be applied.",
             "nullable": true
           }
         }
@@ -143679,17 +143686,17 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "The name of the approval rule",
+            "description": "Name of the approval rule. Limited to 1024 characters.",
             "nullable": true
           },
           "approvals_required": {
             "type": "integer",
-            "description": "The number of required approvals for this rule",
+            "description": "Number of required approvals for the rule.",
             "nullable": true
           },
           "approval_project_rule_id": {
             "type": "integer",
-            "description": "The ID of a project-level approval rule",
+            "description": "ID of a project-level approval rule.",
             "nullable": true
           },
           "user_ids": {
@@ -143697,7 +143704,7 @@
             "items": {
               "type": "integer"
             },
-            "description": "The user ids for this rule",
+            "description": "IDs of users to add as approvers. If used with \u0060usernames\u0060, adds both lists of users.",
             "nullable": true
           },
           "group_ids": {
@@ -143705,7 +143712,7 @@
             "items": {
               "type": "integer"
             },
-            "description": "The group ids for this rule",
+            "description": "IDs of groups to add as approvers.",
             "nullable": true
           },
           "usernames": {
@@ -143713,7 +143720,7 @@
             "items": {
               "type": "string"
             },
-            "description": "The usernames for this rule",
+            "description": "Usernames of users to add as approvers. If used with \u0060user_ids\u0060, adds both lists of users.",
             "nullable": true
           }
         }
@@ -143723,12 +143730,12 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "The name of the approval rule",
+            "description": "Name of the approval rule. Limited to 1024 characters.",
             "nullable": true
           },
           "approvals_required": {
             "type": "integer",
-            "description": "The number of required approvals for this rule",
+            "description": "Number of required approvals for the rule.",
             "nullable": true
           },
           "user_ids": {
@@ -143736,7 +143743,7 @@
             "items": {
               "type": "integer"
             },
-            "description": "The user ids for this rule",
+            "description": "IDs of users to add as approvers. If used with \u0060usernames\u0060, adds both lists of users.",
             "nullable": true
           },
           "group_ids": {
@@ -143744,7 +143751,7 @@
             "items": {
               "type": "integer"
             },
-            "description": "The group ids for this rule",
+            "description": "IDs of groups to add as approvers.",
             "nullable": true
           },
           "usernames": {
@@ -143752,12 +143759,12 @@
             "items": {
               "type": "string"
             },
-            "description": "The group ids for this rule",
+            "description": "Usernames of users to add as approvers. If used with \u0060user_ids\u0060, adds both lists of users.",
             "nullable": true
           },
           "remove_hidden_groups": {
             "type": "boolean",
-            "description": "Whether hidden groups should be removed",
+            "description": "If \u0060true\u0060, removes hidden groups.",
             "nullable": true
           }
         }
@@ -143868,17 +143875,17 @@
             "maximum": 100,
             "minimum": 0,
             "type": "integer",
-            "description": "Confidence score from 0-100"
+            "description": "Confidence score for the AI-detected vulnerability flag."
           },
           "description": {
             "type": "string",
-            "description": "Explanation for the detection result",
+            "description": "Explanation for the detection result.",
             "nullable": true
           },
           "origin": {
             "pattern": "^(?:[\\uD800-\\uDBFF][\\uDC00-\\uDFFF]|[^\\n\\uD800-\\uDFFF]){1,255}$",
             "type": "string",
-            "description": "Origin of the AI detection",
+            "description": "Origin of the AI detection.",
             "nullable": true
           }
         }
@@ -146481,19 +146488,19 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "Display name of external status check",
+            "description": "Display name of the external status check service.",
             "nullable": true,
             "example": "QA"
           },
           "shared_secret": {
             "type": "string",
-            "description": "HMAC shared secret",
+            "description": "HMAC secret for the external status check.",
             "nullable": true,
             "example": "hmac-sha256"
           },
           "external_url": {
             "type": "string",
-            "description": "URL of external status check resource",
+            "description": "URL of the external status check service.",
             "nullable": true,
             "example": "https://www.example.com"
           },
@@ -146502,7 +146509,7 @@
             "items": {
               "type": "integer"
             },
-            "description": "IDs of protected branches to scope the rule by",
+            "description": "IDs of protected branches to scope the rule by.",
             "nullable": true
           }
         }
@@ -146512,19 +146519,19 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "Display name of external status check",
+            "description": "Display name of the external status check service.",
             "nullable": true,
             "example": "QA"
           },
           "shared_secret": {
             "type": "string",
-            "description": "HMAC shared secret",
+            "description": "HMAC secret for the external status check.",
             "nullable": true,
             "example": "hmac-sha256"
           },
           "external_url": {
             "type": "string",
-            "description": "URL of external status check resource",
+            "description": "URL of the external status check service.",
             "nullable": true,
             "example": "https://www.example.com"
           },
@@ -146533,7 +146540,7 @@
             "items": {
               "type": "integer"
             },
-            "description": "IDs of protected branches to scope the rule by",
+            "description": "IDs of protected branches to scope the rule by.",
             "nullable": true
           }
         }
@@ -146554,7 +146561,7 @@
           },
           "sha": {
             "type": "string",
-            "description": "SHA at HEAD of the source branch",
+            "description": "SHA at \u0060HEAD\u0060 of the source branch.",
             "nullable": true,
             "example": "5957a570eee0ac4580ec027fb874ad7514d1e576"
           },
@@ -147530,12 +147537,12 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "Register model under this name This field is required.",
+            "description": "Name of the registered model to create the version for. Required.",
             "nullable": true
           },
           "description": {
             "type": "string",
-            "description": "Optional description for model version.",
+            "description": "Description of the model version.",
             "nullable": true
           },
           "tags": {
@@ -147545,7 +147552,7 @@
           },
           "run_id": {
             "type": "string",
-            "description": "Run ID of the candidate to be promoted to a model version",
+            "description": "Run ID of the candidate to be promoted to a model version.",
             "nullable": true
           }
         }
@@ -147555,12 +147562,12 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "Model version name",
+            "description": "Name of the registered model.",
             "nullable": true
           },
           "description": {
             "type": "string",
-            "description": "Model version description",
+            "description": "Description of the model version.",
             "nullable": true
           }
         }
@@ -153390,7 +153397,7 @@
         "properties": {
           "position": {
             "type": "integer",
-            "description": "The position of the list",
+            "description": "Position of the list.",
             "nullable": true
           }
         }
@@ -153591,7 +153598,7 @@
           },
           "token_expires_at": {
             "type": "string",
-            "description": "Expiration time for the runner authentication token in ISO 8601 format. Must be between 5 minutes and 15 days in the future and cannot exceed instance, group, or project-level limits. Only applies to the initial token. Rotated tokens use the computed expiry from settings. Premium and Ultimate only.",
+            "description": "Expiration time for the runner authentication token in ISO 8601 format. Must be between 5 minutes and 21 days in the future and cannot exceed instance, group, or project-level limits. Only applies to the initial token. Rotated tokens use the computed expiry from settings. Premium and Ultimate only.",
             "format": "date-time",
             "nullable": true
           },
@@ -157465,7 +157472,7 @@
         "properties": {
           "repository_path_pattern": {
             "type": "string",
-            "description": "Container repository path pattern protected by the protection rule.\n            For example \u0060flight/flight-*\u0060. Wildcard character \u0060*\u0060 allowed.",
+            "description": "Container repository path pattern protected by the protection rule, for example \u0060flight/flight-*\u0060. Wildcard character \u0060*\u0060 is allowed.",
             "nullable": true
           },
           "minimum_access_level_for_push": {
@@ -157481,7 +157488,7 @@
         "properties": {
           "repository_path_pattern": {
             "type": "string",
-            "description": "Container repository path pattern protected by the protection rule.\n              For example \u0060flight/flight-*\u0060. Wildcard character \u0060*\u0060 allowed.",
+            "description": "Container repository path pattern protected by the protection rule, for example \u0060flight/flight-*\u0060. Wildcard character \u0060*\u0060 is allowed.",
             "nullable": true
           },
           "minimum_access_level_for_push": {
@@ -171796,25 +171803,25 @@
         "properties": {
           "event": {
             "type": "string",
-            "description": "The event name that should be tracked",
+            "description": "Name of the event to track.",
             "nullable": true,
             "example": "i_quickactions_page"
           },
           "namespace_id": {
             "type": "integer",
-            "description": "Namespace ID",
+            "description": "ID of the namespace associated with the event.",
             "nullable": true,
             "example": 1234
           },
           "project_id": {
             "type": "integer",
-            "description": "Project ID. Mutually exclusive with \u0060project_path\u0060.",
+            "description": "ID of the project. Mutually exclusive with \u0060project_path\u0060.",
             "nullable": true,
             "example": 1234
           },
           "project_path": {
             "type": "string",
-            "description": "Project path (used to resolve project_id if not provided). Mutually exclusive with \u0060project_id\u0060.",
+            "description": "Path of the project. Used to find \u0060project_id\u0060 when it is not provided. Mutually exclusive with \u0060project_id\u0060.",
             "nullable": true,
             "example": "namespace/project"
           },
@@ -171823,7 +171830,7 @@
           },
           "send_to_snowplow": {
             "type": "boolean",
-            "description": "Send the tracked event to Snowplow",
+            "description": "If \u0060true\u0060, sends the tracked event to Snowplow.",
             "nullable": true,
             "example": true
           }
@@ -173432,23 +173439,23 @@
           "file_name": {
             "maxLength": 255,
             "type": "string",
-            "description": "The name of the current file",
+            "description": "Name of the current file.",
             "nullable": true
           },
           "content_above_cursor": {
             "maxLength": 400000,
             "type": "string",
-            "description": "The content above cursor",
+            "description": "Content above cursor.",
             "nullable": true
           },
           "content_below_cursor": {
             "maxLength": 400000,
             "type": "string",
-            "description": "The content below cursor",
+            "description": "Content below cursor.",
             "nullable": true
           }
         },
-        "description": "Object that contains information about the current file",
+        "description": "Attributes of the file that suggestions are generated for.",
         "nullable": true
       },
       "PostApiV4CodeSuggestionsCompletionsRequestContextItem": {
@@ -173465,13 +173472,13 @@
           "name": {
             "maxLength": 255,
             "type": "string",
-            "description": "The name of a related part of context",
+            "description": "Name of the context part.",
             "nullable": true
           },
           "content": {
             "maxLength": 600000,
             "type": "string",
-            "description": "The content of a part of context",
+            "description": "Content of the context part.",
             "nullable": true
           }
         }
@@ -177874,7 +177881,7 @@
       },
       "PostApiV4UsageDataTrackEventRequestAdditionalProperties": {
         "type": "object",
-        "description": "Additional properties to be tracked",
+        "description": "Additional properties to be tracked.",
         "nullable": true,
         "example": {
           "label": "login_button",
@@ -182714,7 +182721,7 @@
       },
       "PostApiV4UsageDataTrackEventRequestAdditionalPropertiesProperty": {
         "type": "object",
-        "description": "Additional properties to be tracked"
+        "description": "Additional properties to be tracked."
       },
       "PostApiV4ChatCompletionsRequestAdditionalContextItemMetadataProperty": {
         "type": "object",
@@ -183996,7 +184003,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "description": "The intent of the completion request, current options are \u0022completion\u0022 or \u0022generation\u0022",
+        "description": "Intent of the completion request.",
         "nullable": true,
         "x-ms-enum": {
           "name": "PostApiV4CodeSuggestionsCompletionsRequestIntent",
@@ -184021,7 +184028,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "description": "The type of generation request",
+        "description": "Type of event for generation requests.",
         "nullable": true,
         "x-ms-enum": {
           "name": "PostApiV4CodeSuggestionsCompletionsRequestGenerationType",
@@ -184306,7 +184313,8 @@
           "duo_cli_interactive",
           "duo_cli_run",
           "duo_cli_acp",
-          "ide_extension"
+          "ide_extension",
+          "work_item_plan_to_merge_request"
         ],
         "type": "string",
         "additionalProperties": false,
@@ -184359,6 +184367,10 @@
             {
               "value": "ide_extension",
               "name": "IdeExtension"
+            },
+            {
+              "value": "work_item_plan_to_merge_request",
+              "name": "WorkItemPlanToMergeRequest"
             }
           ]
         }
@@ -184441,7 +184453,7 @@
         ],
         "type": "integer",
         "additionalProperties": false,
-        "description": "Access levels allowed to push (defaults: \u006040\u0060, maintainer access level)",
+        "description": "Access level allowed to push. Defaults to \u006040\u0060 (Maintainer role). Does not support custom roles. Use \u0060allowed_to_push\u0060 with \u0060member_role_id\u0060 instead.",
         "nullable": true
       },
       "PostApiV4GroupsIdProtectedBranchesRequestMergeAccessLevel": {
@@ -184453,7 +184465,7 @@
         ],
         "type": "integer",
         "additionalProperties": false,
-        "description": "Access levels allowed to merge (defaults: \u006040\u0060, maintainer access level)",
+        "description": "Access level allowed to merge. Defaults to \u006040\u0060 (Maintainer role). Does not support custom roles. Use \u0060allowed_to_merge\u0060 with \u0060member_role_id\u0060 instead.",
         "nullable": true
       },
       "PostApiV4GroupsIdProtectedBranchesRequestUnprotectAccessLevel": {
@@ -184491,7 +184503,7 @@
         ],
         "type": "integer",
         "additionalProperties": false,
-        "description": "Level of permissions for the linked SA group"
+        "description": "Default access level for members of the SAML group."
       },
       "PostApiV4GroupsIdProtectedEnvironmentsRequestName": {
         "minLength": 1,
@@ -184967,7 +184979,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "description": "Set to \u0060pending\u0060 to mark the check as pending, \u0060passed\u0060 to pass the check, or \u0060failed\u0060 to fail it",
+        "description": "Status of the check.",
         "x-ms-enum": {
           "name": "PostApiV4ProjectsIdMergeRequestsMergeRequestIidStatusCheckResponsesRequestStatus",
           "modelAsString": false,
@@ -190028,7 +190040,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "description": "Minimum GitLab access level to allow to push container images to the container registry.\n            For example maintainer, owner or admin. At least one of \u0060minimum_access_level_for_push\u0060, \u0060minimum_access_level_for_delete\u0060 must be provided.",
+        "description": "Minimum GitLab access level required to push container images to the container registry. Must be provided when \u0060minimum_access_level_for_delete\u0060 is not set. At least one of \u0060minimum_access_level_for_push\u0060, \u0060minimum_access_level_for_delete\u0060 must be provided.",
         "nullable": true,
         "x-ms-enum": {
           "name": "PostApiV4ProjectsIdRegistryProtectionRepositoryRulesRequestMinimumAccessLevelForPush",
@@ -190057,7 +190069,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "description": "Minimum GitLab access level to allow to delete container images in the container registry.\n            For example maintainer, owner or admin. At least one of \u0060minimum_access_level_for_push\u0060, \u0060minimum_access_level_for_delete\u0060 must be provided.",
+        "description": "Minimum GitLab access level required to delete container images in the container registry. Must be provided when \u0060minimum_access_level_for_push\u0060 is not set. At least one of \u0060minimum_access_level_for_push\u0060, \u0060minimum_access_level_for_delete\u0060 must be provided.",
         "nullable": true,
         "x-ms-enum": {
           "name": "PostApiV4ProjectsIdRegistryProtectionRepositoryRulesRequestMinimumAccessLevelForDelete",
@@ -190087,7 +190099,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "description": "Minimum GitLab access level to allow to push container images to the container registry.\n              For example maintainer, owner or admin. To unset the value, use an empty string \u0060\u0022\u0022\u0060.",
+        "description": "Minimum GitLab access level required to push container images to the container registry. At least one of \u0060minimum_access_level_for_push\u0060 or \u0060minimum_access_level_for_delete\u0060 must stay set. To unset the value, use an empty string (\u0060\u0022\u0022\u0060).",
         "nullable": true,
         "x-ms-enum": {
           "name": "PatchApiV4ProjectsIdRegistryProtectionRepositoryRulesProtectionRuleIdRequestMinimumAccessLevelForPush",
@@ -190117,7 +190129,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "description": "Minimum GitLab access level to allow to delete container images in the container registry.\n              For example maintainer, owner or admin. To unset the value, use an empty string \u0060\u0022\u0022\u0060.",
+        "description": "Minimum GitLab access level required to delete container images in the container registry. At least one of \u0060minimum_access_level_for_push\u0060 or \u0060minimum_access_level_for_delete\u0060 must stay set. To unset the value, use an empty string (\u0060\u0022\u0022\u0060).",
         "nullable": true,
         "x-ms-enum": {
           "name": "PatchApiV4ProjectsIdRegistryProtectionRepositoryRulesProtectionRuleIdRequestMinimumAccessLevelForDelete",
@@ -193029,7 +193041,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "description": "The type of a related part of context",
+        "description": "Type of the context part.",
         "x-ms-enum": {
           "name": "PostApiV4CodeSuggestionsCompletionsRequestContextItemType",
           "modelAsString": false,

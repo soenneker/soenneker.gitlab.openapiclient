@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Additional properties to be tracked</summary>
+        /// <summary>Additional properties to be tracked.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UsageDataTrackEventRequestAdditionalPropertiesProperty? AdditionalProperties { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UsageDataTrackEventRequestAdditionalPropertiesProperty AdditionalProperties { get; set; }
 #endif
-        /// <summary>The event name that should be tracked</summary>
+        /// <summary>Name of the event to track.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Event { get; set; }
@@ -30,11 +30,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Event { get; set; }
 #endif
-        /// <summary>Namespace ID</summary>
+        /// <summary>ID of the namespace associated with the event.</summary>
         public int? NamespaceId { get; set; }
-        /// <summary>Project ID. Mutually exclusive with `project_path`.</summary>
+        /// <summary>ID of the project. Mutually exclusive with `project_path`.</summary>
         public int? ProjectId { get; set; }
-        /// <summary>Project path (used to resolve project_id if not provided). Mutually exclusive with `project_id`.</summary>
+        /// <summary>Path of the project. Used to find `project_id` when it is not provided. Mutually exclusive with `project_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ProjectPath { get; set; }
@@ -42,7 +42,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ProjectPath { get; set; }
 #endif
-        /// <summary>Send the tracked event to Snowplow</summary>
+        /// <summary>If `true`, sends the tracked event to Snowplow.</summary>
         public bool? SendToSnowplow { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UsageDataTrackEventRequest"/> and sets the default values.

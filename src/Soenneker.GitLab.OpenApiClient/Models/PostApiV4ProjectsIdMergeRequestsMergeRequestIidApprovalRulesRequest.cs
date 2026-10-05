@@ -14,11 +14,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The ID of a project-level approval rule</summary>
+        /// <summary>ID of a project-level approval rule.</summary>
         public int? ApprovalProjectRuleId { get; set; }
-        /// <summary>The number of required approvals for this rule</summary>
+        /// <summary>Number of required approvals for the rule.</summary>
         public int? ApprovalsRequired { get; set; }
-        /// <summary>The group ids for this rule</summary>
+        /// <summary>IDs of groups to add as approvers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<int?>? GroupIds { get; set; }
@@ -26,7 +26,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<int?> GroupIds { get; set; }
 #endif
-        /// <summary>The name of the approval rule</summary>
+        /// <summary>Name of the approval rule. Limited to 1024 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>The user ids for this rule</summary>
+        /// <summary>IDs of users to add as approvers. If used with `usernames`, adds both lists of users.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<int?>? UserIds { get; set; }
@@ -42,7 +42,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<int?> UserIds { get; set; }
 #endif
-        /// <summary>The usernames for this rule</summary>
+        /// <summary>Usernames of users to add as approvers. If used with `user_ids`, adds both lists of users.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Usernames { get; set; }

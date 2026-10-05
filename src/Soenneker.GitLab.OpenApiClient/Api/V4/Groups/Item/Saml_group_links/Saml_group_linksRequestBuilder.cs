@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Saml_group_links
     public partial class Saml_group_linksRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.saml_group_links.item collection</summary>
-        /// <param name="position">Name of an SAML group</param>
+        /// <param name="position">Name of the SAML group.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Saml_group_links.Item.WithSamlGroupNameItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Saml_group_links.Item.WithSamlGroupNameItemRequestBuilder this[string position]
         {

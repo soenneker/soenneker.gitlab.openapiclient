@@ -38,7 +38,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4GroupsIdProtectedBranchesNameRequestAllowedToUnprotectItemProperty> AllowedToUnprotect { get; set; }
 #endif
-        /// <summary>Allow force push for all users with push access.</summary>
+        /// <summary>If `true`, members who can push to this branch can also force push.</summary>
         public bool? AllowForcePush { get; set; }
         /// <summary>Prevent pushes to this branch if it matches an item in CODEOWNERS</summary>
         public bool? CodeOwnerApprovalRequired { get; set; }

@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>Minimum GitLab access level to allow to delete container images in the container registry.              For example maintainer, owner or admin. To unset the value, use an empty string `&quot;&quot;`.</summary>
+    /// <summary>Minimum GitLab access level required to delete container images in the container registry. At least one of `minimum_access_level_for_push` or `minimum_access_level_for_delete` must stay set. To unset the value, use an empty string (`&quot;&quot;`).</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PatchApiV4ProjectsIdRegistryProtectionRepositoryRulesProtectionRuleIdRequestMinimumAccessLevelForDelete
     {

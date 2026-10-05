@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>Set to `pending` to mark the check as pending, `passed` to pass the check, or `failed` to fail it</summary>
+    /// <summary>Status of the check.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PostApiV4ProjectsIdMergeRequestsMergeRequestIidStatusCheckResponsesRequestStatus
     {

@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Rubygems.
     public partial class GemsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.packages.rubygems.gems.item collection</summary>
-        /// <param name="position">Package file name</param>
+        /// <param name="position">Name of the `.gem` file.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Rubygems.Gems.Item.WithFileNameItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Rubygems.Gems.Item.WithFileNameItemRequestBuilder this[string position]
         {

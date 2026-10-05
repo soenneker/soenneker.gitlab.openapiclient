@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// Additional properties to be tracked
+    /// Additional properties to be tracked.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostApiV4UsageDataTrackEventRequestAdditionalPropertiesProperty : IAdditionalDataHolder, IParsable

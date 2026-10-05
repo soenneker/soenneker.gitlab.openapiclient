@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Rubygems
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Rubygems.Quick.QuickRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.packages.rubygems.item collection</summary>
-        /// <param name="position">Spec file name</param>
+        /// <param name="position">Name of the spec file.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Rubygems.Item.WithFileNameItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Rubygems.Item.WithFileNameItemRequestBuilder this[string position]
         {

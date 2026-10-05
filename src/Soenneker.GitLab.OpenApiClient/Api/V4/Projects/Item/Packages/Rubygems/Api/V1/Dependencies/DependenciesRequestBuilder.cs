@@ -84,7 +84,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Rubygems.
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class DependenciesRequestBuilderGetQueryParameters 
         {
-            /// <summary>Comma delimited gem names</summary>
+            /// <summary>Comma-separated list of gems to fetch dependencies for.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("gems")]

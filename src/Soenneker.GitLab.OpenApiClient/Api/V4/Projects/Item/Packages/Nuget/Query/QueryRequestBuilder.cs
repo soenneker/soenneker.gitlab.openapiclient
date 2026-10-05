@@ -85,10 +85,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget.Que
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class QueryRequestBuilderGetQueryParameters 
         {
-            /// <summary>Include prerelease versions</summary>
+            /// <summary>If `true`, includes prerelease versions in the results.</summary>
             [QueryParameter("prerelease")]
             public bool? Prerelease { get; set; }
-            /// <summary>The search term</summary>
+            /// <summary>Search term.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("q")]
@@ -98,10 +98,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget.Que
             [QueryParameter("q")]
             public string Q { get; set; }
 #endif
-            /// <summary>The number of results to skip</summary>
+            /// <summary>Number of results to skip.</summary>
             [QueryParameter("skip")]
             public int? Skip { get; set; }
-            /// <summary>The number of results to return</summary>
+            /// <summary>Number of results to return.</summary>
             [QueryParameter("take")]
             public int? Take { get; set; }
         }

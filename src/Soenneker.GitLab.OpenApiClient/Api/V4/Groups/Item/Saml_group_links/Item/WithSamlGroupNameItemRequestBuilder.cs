@@ -122,7 +122,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Saml_group_links.Ite
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithSamlGroupNameItemRequestBuilderDeleteQueryParameters 
         {
-            /// <summary>Provider string to disambiguate when multiple links exist with same name</summary>
+            /// <summary>Unique [provider name](https://docs.gitlab.com/integration/saml/#configure-saml-support-in-gitlab) used to disambiguate when multiple links exist with the same name. Required when multiple links exist with the same `saml_group_name`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("provider")]
@@ -139,7 +139,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Saml_group_links.Ite
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithSamlGroupNameItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>Provider string to disambiguate when multiple links exist with same name</summary>
+            /// <summary>Unique [provider name](https://docs.gitlab.com/integration/saml/#configure-saml-support-in-gitlab) used to disambiguate when multiple links exist with the same name. Required when multiple links exist with the same `saml_group_name`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("provider")]

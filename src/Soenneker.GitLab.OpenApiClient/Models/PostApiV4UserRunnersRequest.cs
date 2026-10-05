@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<string> TagList { get; set; }
 #endif
-        /// <summary>Expiration time for the runner authentication token in ISO 8601 format. Must be between 5 minutes and 15 days in the future and cannot exceed instance, group, or project-level limits. Only applies to the initial token. Rotated tokens use the computed expiry from settings. Premium and Ultimate only.</summary>
+        /// <summary>Expiration time for the runner authentication token in ISO 8601 format. Must be between 5 minutes and 21 days in the future and cannot exceed instance, group, or project-level limits. Only applies to the initial token. Rotated tokens use the computed expiry from settings. Premium and Ultimate only.</summary>
         public DateTimeOffset? TokenExpiresAt { get; set; }
         /// <summary>Deadline after which token rotation requests are rejected. Requires `token_expires_at` and must be less than or equal to it. Setting both to the same value disables token rotation. Cleared on successful rotation. Premium and Ultimate only.</summary>
         public DateTimeOffset? TokenRotationDeadline { get; set; }
