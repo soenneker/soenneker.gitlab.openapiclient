@@ -84,7 +84,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Dora.Metrics
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class MetricsRequestBuilderGetQueryParameters 
         {
-            /// <summary>Date range to end at. ISO 8601 Date format, for example `2021-03-01`. Default is the current date</summary>
+            /// <summary>End date of the date range. Defaults to the current date.</summary>
             [QueryParameter("end_date")]
             public Date? EndDate { get; set; }
             /// <summary>The tiers of the environments.</summary>
@@ -103,7 +103,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Dora.Metrics
             /// <summary>The DORA metric to fetch.</summary>
             [QueryParameter("metric")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdDoraMetricsMetricParameter? Metric { get; set; }
-            /// <summary>Date range to start from. ISO 8601 Date format, for example `2021-03-01`. Default is 3 months ago</summary>
+            /// <summary>Start date of the date range. Defaults to 3 months ago.</summary>
             [QueryParameter("start_date")]
             public Date? StartDate { get; set; }
         }

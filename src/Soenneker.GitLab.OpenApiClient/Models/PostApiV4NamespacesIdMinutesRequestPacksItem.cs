@@ -15,11 +15,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The expiry date for the purchase</summary>
+        /// <summary>Date when the purchase expires.</summary>
         public Date? ExpiresAt { get; set; }
-        /// <summary>Number of additional minutes purchased</summary>
+        /// <summary>Number of additional minutes purchased.</summary>
         public int? NumberOfMinutes { get; set; }
-        /// <summary>Purchase ID for the additional minutes</summary>
+        /// <summary>Purchase ID for the additional minutes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PurchaseXid { get; set; }

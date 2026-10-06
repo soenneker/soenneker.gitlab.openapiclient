@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The CN of a LDAP group. Exactly one of `cn`, `filter` must be provided.</summary>
+        /// <summary>CN of an LDAP group. Exactly one of `cn`, `filter` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Cn { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Cn { get; set; }
 #endif
-        /// <summary>The LDAP filter for the group. Exactly one of `cn`, `filter` must be provided.</summary>
+        /// <summary>LDAP filter for the group. Exactly one of `cn`, `filter` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Filter { get; set; }
@@ -30,11 +30,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Filter { get; set; }
 #endif
-        /// <summary>Access level for members of the LDAP group</summary>
+        /// <summary>Default access level for members of the LDAP group.</summary>
         public int? GroupAccess { get; set; }
-        /// <summary>The ID of the Member Role for members of the LDAP group</summary>
+        /// <summary>ID of the member role for members of the LDAP group. Ultimate only.</summary>
         public int? MemberRoleId { get; set; }
-        /// <summary>LDAP provider for the LDAP group link</summary>
+        /// <summary>Name of the provider for the LDAP group link.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Provider { get; set; }

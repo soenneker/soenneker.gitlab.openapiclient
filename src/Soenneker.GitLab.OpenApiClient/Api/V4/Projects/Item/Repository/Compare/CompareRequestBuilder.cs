@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Compare
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class CompareRequestBuilderGetQueryParameters 
         {
-            /// <summary>The commit, branch name, or tag name to start comparison</summary>
+            /// <summary>Ref to compare from. Accepts a commit SHA, branch name, or tag name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("from")]
@@ -95,13 +95,13 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Compare
             [QueryParameter("from")]
             public string From { get; set; }
 #endif
-            /// <summary>The project to compare from</summary>
+            /// <summary>ID of the project to compare from.</summary>
             [QueryParameter("from_project_id")]
             public int? FromProjectId { get; set; }
-            /// <summary>Comparison method, `true` for direct comparison between `from` and `to` (`from`..`to`), `false` to compare using merge base (`from`...`to`)</summary>
+            /// <summary>If `true`, comparison method is direct comparison between `from` and `to` (`from`..`to`). If `false`, compares using merge base (`from`...`to`).</summary>
             [QueryParameter("straight")]
             public bool? Straight { get; set; }
-            /// <summary>The commit, branch name, or tag name to stop comparison</summary>
+            /// <summary>Ref to compare to. Accepts a commit SHA, branch name, or tag name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("to")]

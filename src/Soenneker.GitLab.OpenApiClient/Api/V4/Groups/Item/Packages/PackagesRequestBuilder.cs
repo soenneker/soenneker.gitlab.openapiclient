@@ -116,16 +116,16 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class PackagesRequestBuilderGetQueryParameters 
         {
-            /// <summary>Determines if subgroups should be excluded</summary>
+            /// <summary>If `true`, excludes packages from subgroup projects.</summary>
             [QueryParameter("exclude_subgroups")]
             public bool? ExcludeSubgroups { get; set; }
-            /// <summary>Returns packages without a version</summary>
+            /// <summary>If `true`, includes versionless packages in the response.</summary>
             [QueryParameter("include_versionless")]
             public bool? IncludeVersionless { get; set; }
-            /// <summary>Return packages ordered by `created_at`, `name`, `version` or `type` fields.</summary>
+            /// <summary>Sort results by the specified field.</summary>
             [QueryParameter("order_by")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdPackagesOrderByParameter? OrderBy { get; set; }
-            /// <summary>Return packages with this name</summary>
+            /// <summary>Filter packages by name, using a fuzzy search.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("package_name")]
@@ -135,10 +135,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages
             [QueryParameter("package_name")]
             public string PackageName { get; set; }
 #endif
-            /// <summary>Return packages of a certain type</summary>
+            /// <summary>Filter packages by type.</summary>
             [QueryParameter("package_type")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdPackagesPackageTypeParameter? PackageType { get; set; }
-            /// <summary>Return packages with this version</summary>
+            /// <summary>Filter packages by version. When used together with `include_versionless`, versionless packages are not returned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("package_version")]
@@ -154,10 +154,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Return packages sorted in `asc` or `desc` order.</summary>
+            /// <summary>Sort results in ascending or descending order.</summary>
             [QueryParameter("sort")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdPackagesSortParameter? Sort { get; set; }
-            /// <summary>Return packages with specified status</summary>
+            /// <summary>Filter packages by status.</summary>
             [QueryParameter("status")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdPackagesStatusParameter? Status { get; set; }
         }

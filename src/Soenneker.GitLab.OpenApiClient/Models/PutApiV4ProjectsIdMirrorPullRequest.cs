@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The password used for authentication of a project to pull mirror or a personal access token with the api scope enabled. At least one of `enabled`, `url`, `auth_user`, `auth_password`, `mirror_overwrites_diverged_branches`, `mirror_trigger_builds`, `only_mirror_protected_branches`, `mirror_branch_regex` must be provided.</summary>
+        /// <summary>Password used to authenticate a project pull mirror, or a personal access token with the `api` scope enabled. At least one of `enabled`, `url`, `auth_user`, `auth_password`, `mirror_overwrites_diverged_branches`, `mirror_trigger_builds`, `only_mirror_protected_branches`, `mirror_branch_regex` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AuthPassword { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string AuthPassword { get; set; }
 #endif
-        /// <summary>The username used for authentication of a project to pull mirror. At least one of `enabled`, `url`, `auth_user`, `auth_password`, `mirror_overwrites_diverged_branches`, `mirror_trigger_builds`, `only_mirror_protected_branches`, `mirror_branch_regex` must be provided.</summary>
+        /// <summary>Username used to authenticate a project pull mirror. At least one of `enabled`, `url`, `auth_user`, `auth_password`, `mirror_overwrites_diverged_branches`, `mirror_trigger_builds`, `only_mirror_protected_branches`, `mirror_branch_regex` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AuthUser { get; set; }
@@ -30,9 +30,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string AuthUser { get; set; }
 #endif
-        /// <summary>Enables pull mirroring in a project. At least one of `enabled`, `url`, `auth_user`, `auth_password`, `mirror_overwrites_diverged_branches`, `mirror_trigger_builds`, `only_mirror_protected_branches`, `mirror_branch_regex` must be provided.</summary>
+        /// <summary>If `true`, enables pull mirroring on the project. At least one of `enabled`, `url`, `auth_user`, `auth_password`, `mirror_overwrites_diverged_branches`, `mirror_trigger_builds`, `only_mirror_protected_branches`, `mirror_branch_regex` must be provided.</summary>
         public bool? Enabled { get; set; }
-        /// <summary>Only mirror branches with names that match this regex. Mutually exclusive with `only_mirror_protected_branches`. At least one of `enabled`, `url`, `auth_user`, `auth_password`, `mirror_overwrites_diverged_branches`, `mirror_trigger_builds`, `only_mirror_protected_branches`, `mirror_branch_regex` must be provided.</summary>
+        /// <summary>Regular expression for branch names to mirror. Only branches with names matching the regex are mirrored. Requires `only_mirror_protected_branches` to be disabled. Mutually exclusive with `only_mirror_protected_branches`. At least one of `enabled`, `url`, `auth_user`, `auth_password`, `mirror_overwrites_diverged_branches`, `mirror_trigger_builds`, `only_mirror_protected_branches`, `mirror_branch_regex` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MirrorBranchRegex { get; set; }
@@ -40,13 +40,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string MirrorBranchRegex { get; set; }
 #endif
-        /// <summary>Pull mirror overwrites diverged branches. At least one of `enabled`, `url`, `auth_user`, `auth_password`, `mirror_overwrites_diverged_branches`, `mirror_trigger_builds`, `only_mirror_protected_branches`, `mirror_branch_regex` must be provided.</summary>
+        /// <summary>If `true`, overwrites diverged branches. At least one of `enabled`, `url`, `auth_user`, `auth_password`, `mirror_overwrites_diverged_branches`, `mirror_trigger_builds`, `only_mirror_protected_branches`, `mirror_branch_regex` must be provided.</summary>
         public bool? MirrorOverwritesDivergedBranches { get; set; }
-        /// <summary>Pull mirroring triggers builds. At least one of `enabled`, `url`, `auth_user`, `auth_password`, `mirror_overwrites_diverged_branches`, `mirror_trigger_builds`, `only_mirror_protected_branches`, `mirror_branch_regex` must be provided.</summary>
+        /// <summary>If `true`, triggers pipelines for mirror updates. At least one of `enabled`, `url`, `auth_user`, `auth_password`, `mirror_overwrites_diverged_branches`, `mirror_trigger_builds`, `only_mirror_protected_branches`, `mirror_branch_regex` must be provided.</summary>
         public bool? MirrorTriggerBuilds { get; set; }
-        /// <summary>Only mirror protected branches. Mutually exclusive with `mirror_branch_regex`. At least one of `enabled`, `url`, `auth_user`, `auth_password`, `mirror_overwrites_diverged_branches`, `mirror_trigger_builds`, `only_mirror_protected_branches`, `mirror_branch_regex` must be provided.</summary>
+        /// <summary>If `true`, limits mirroring to only protected branches. Mutually exclusive with `mirror_branch_regex`. At least one of `enabled`, `url`, `auth_user`, `auth_password`, `mirror_overwrites_diverged_branches`, `mirror_trigger_builds`, `only_mirror_protected_branches`, `mirror_branch_regex` must be provided.</summary>
         public bool? OnlyMirrorProtectedBranches { get; set; }
-        /// <summary>URL of the project to pull mirror. At least one of `enabled`, `url`, `auth_user`, `auth_password`, `mirror_overwrites_diverged_branches`, `mirror_trigger_builds`, `only_mirror_protected_branches`, `mirror_branch_regex` must be provided.</summary>
+        /// <summary>URL of the remote repository being mirrored. At least one of `enabled`, `url`, `auth_user`, `auth_password`, `mirror_overwrites_diverged_branches`, `mirror_trigger_builds`, `only_mirror_protected_branches`, `mirror_branch_regex` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Url { get; set; }

@@ -41,7 +41,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>The array of scopes of the personal access token. Exactly one of `scopes`, `granular_scopes` must be provided.</summary>
+        /// <summary>Array of approved scopes. For a list of possible values, see [access token scopes](https://docs.gitlab.com/security/tokens/access_token_scopes/). Exactly one of `scopes`, `granular_scopes` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserPersonalAccessTokensRequestScopesItem?>? Scopes { get; set; }

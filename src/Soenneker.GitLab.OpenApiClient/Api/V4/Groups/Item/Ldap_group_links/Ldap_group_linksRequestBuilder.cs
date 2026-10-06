@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Ldap_group_links
     public partial class Ldap_group_linksRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.ldap_group_links.item collection</summary>
-        /// <param name="position">The CN of a LDAP group</param>
+        /// <param name="position">CN of an LDAP group.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Ldap_group_links.Item.CnItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Ldap_group_links.Item.CnItemRequestBuilder this[string position]
         {
@@ -176,7 +176,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Ldap_group_links
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Ldap_group_linksRequestBuilderDeleteQueryParameters 
         {
-            /// <summary>The CN of a LDAP group. Exactly one of `cn`, `filter` must be provided.</summary>
+            /// <summary>CN of an LDAP group. Exactly one of `cn`, `filter` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("cn")]
@@ -186,7 +186,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Ldap_group_links
             [QueryParameter("cn")]
             public string Cn { get; set; }
 #endif
-            /// <summary>The LDAP filter for the group. Exactly one of `cn`, `filter` must be provided.</summary>
+            /// <summary>LDAP filter for the group. Exactly one of `cn`, `filter` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("filter")]
@@ -196,7 +196,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Ldap_group_links
             [QueryParameter("filter")]
             public string Filter { get; set; }
 #endif
-            /// <summary>LDAP provider for the LDAP group link</summary>
+            /// <summary>Name of the provider for the LDAP group link.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("provider")]

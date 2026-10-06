@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// Optional stages of import to be performed
+    /// Additional items to import. For a list of items, see [select additional items to import](https://docs.gitlab.com/user/project/import/github/#select-additional-items-to-import).
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostApiV4ImportGithubRequestOptionalStagesProperty : IAdditionalDataHolder, IParsable

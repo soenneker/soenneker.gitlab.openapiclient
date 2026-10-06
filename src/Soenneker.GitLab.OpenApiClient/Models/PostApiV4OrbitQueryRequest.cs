@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OrbitQueryRequestQuery Query { get; set; }
 #endif
-        /// <summary>Response format: raw or llm</summary>
+        /// <summary>Response format: raw, llm, or gql</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OrbitQueryRequestResponseFormat? ResponseFormat { get; set; }
         /// <summary>Optional frontend source subtype (e.g. code_intelligence)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

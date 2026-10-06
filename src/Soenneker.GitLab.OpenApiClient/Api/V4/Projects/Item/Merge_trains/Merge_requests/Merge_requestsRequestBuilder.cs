@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_trains.Merge
     public partial class Merge_requestsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.merge_trains.merge_requests.item collection</summary>
-        /// <param name="position">The IID of the merge request</param>
+        /// <param name="position">Internal ID of the merge request.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_trains.Merge_requests.Item.WithMergeRequestIItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_trains.Merge_requests.Item.WithMergeRequestIItemRequestBuilder this[int position]
         {

@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Render text using GitLab Flavored Markdown.</summary>
         public bool? Gfm { get; set; }
-        /// <summary>Use project as a context when creating references using GitLab Flavored Markdown</summary>
+        /// <summary>Project used as context when creating references with GitLab Flavored Markdown.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Project { get; set; }
@@ -24,7 +24,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Project { get; set; }
 #endif
-        /// <summary>The Markdown text to render</summary>
+        /// <summary>Markdown text to render.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Text { get; set; }

@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Fork
     public partial class ForkRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.fork.item collection</summary>
-        /// <param name="position">The ID of the project it was forked from</param>
+        /// <param name="position">ID of the project that was forked from.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Fork.Item.WithForkedFromItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Fork.Item.WithForkedFromItemRequestBuilder this[string position]
         {

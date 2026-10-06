@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.User
     public partial class UserRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.user.item collection</summary>
-        /// <param name="position">The ID of a user</param>
+        /// <param name="position">ID of the user to assign as the project owner.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.User.Item.WithUserItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.User.Item.WithUserItemRequestBuilder this[int position]
         {

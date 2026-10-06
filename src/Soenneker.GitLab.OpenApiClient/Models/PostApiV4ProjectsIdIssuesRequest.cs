@@ -62,9 +62,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string DueDate { get; set; }
 #endif
-        /// <summary>The ID of an epic to associate the issue with. Mutually exclusive with `epic_iid`.</summary>
+        /// <summary>ID of an epic to associate the issue with. Must be `0` or greater. Premium and Ultimate only. Mutually exclusive with `epic_iid`.</summary>
         public int? EpicId { get; set; }
-        /// <summary>The IID of an epic to associate the issue with (deprecated). Mutually exclusive with `epic_id`.</summary>
+        /// <summary>Internal ID of an epic to associate the issue with. Must be `0` or greater. Deprecated and [scheduled for removal](https://gitlab.com/gitlab-org/gitlab/-/issues/35157) in API version 5. Premium and Ultimate only. Mutually exclusive with `epic_id`.</summary>
         public int? EpicIid { get; set; }
         /// <summary>The internal ID of a project issue. Available only for admins and project owners.</summary>
         public int? Iid { get; set; }

@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics.Item.Discussio
     public partial class DiscussionsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.epics.item.discussions.item collection</summary>
-        /// <param name="position">The ID of a discussion</param>
+        /// <param name="position">ID of the discussion.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics.Item.Discussions.Item.WithDiscussionItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics.Item.Discussions.Item.WithDiscussionItemRequestBuilder this[string position]
         {

@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Templates
     public partial class TemplatesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.templates.item collection</summary>
-        /// <param name="position">The type (dockerfiles|gitignores|gitlab_ci_ymls|licenses|issues|merge_requests) of the template</param>
+        /// <param name="position">Type of the template.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Templates.Item.WithTypeItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Templates.Item.WithTypeItemRequestBuilder this[string position]
         {

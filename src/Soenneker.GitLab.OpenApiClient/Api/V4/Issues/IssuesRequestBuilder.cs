@@ -139,7 +139,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Issues
             /// <summary>Return issues that have no due date (`0`), or whose due date is this week, this month, between two weeks ago and next month, or which are overdue. Accepts: `overdue`, `week`, `month`, `next_month_and_previous_two_weeks`, `0`</summary>
             [QueryParameter("due_date")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4IssuesDueDateParameter? DueDate { get; set; }
-            /// <summary>The ID of an epic associated with the issues</summary>
+            /// <summary>Return issues associated with the epic with the given ID. `None` returns issues that are not associated with an epic. `Any` returns issues that are associated with an epic. Premium and Ultimate only.</summary>
             [QueryParameter("epic_id")]
             public int? EpicId { get; set; }
             /// <summary>The health status of the issue. Must be one of: on_track, needs_attention, at_risk, none, any</summary>
@@ -168,10 +168,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Issues
             /// <summary>The type of the issue. Accepts: issue, incident, test_case, requirement, task, ticket</summary>
             [QueryParameter("issue_type")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4IssuesIssueTypeParameter? IssueType { get; set; }
-            /// <summary>Return issues which are assigned to the iteration with the given ID. Mutually exclusive with `iteration_title`.</summary>
+            /// <summary>Return issues assigned to the iteration with the given ID. `None` returns issues that do not belong to an iteration. `Any` returns issues that belong to an iteration. Premium and Ultimate only. Mutually exclusive with `iteration_title`.</summary>
             [QueryParameter("iteration_id")]
             public int? IterationId { get; set; }
-            /// <summary>Return issues which are assigned to the iteration with the given title. Mutually exclusive with `iteration_id`.</summary>
+            /// <summary>Return issues assigned to the iteration with the given title. Premium and Ultimate only. Mutually exclusive with `iteration_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("iteration_title")]

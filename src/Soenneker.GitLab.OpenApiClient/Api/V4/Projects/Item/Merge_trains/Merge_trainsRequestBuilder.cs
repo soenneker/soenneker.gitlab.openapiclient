@@ -25,7 +25,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_trains
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_trains.Merge_requests.Merge_requestsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.merge_trains.item collection</summary>
-        /// <param name="position">The target branch of the merge request</param>
+        /// <param name="position">Target branch of the merge train.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_trains.Item.WithTargetBranchItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_trains.Item.WithTargetBranchItemRequestBuilder this[string position]
         {
@@ -111,10 +111,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_trains
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>The scope of merge trains</summary>
+            /// <summary>Filter merge trains by scope.</summary>
             [QueryParameter("scope")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdMergeTrainsScopeParameter? Scope { get; set; }
-            /// <summary>Sort by asc (ascending) or desc (descending)</summary>
+            /// <summary>Sort results in ascending or descending order by `id`. A lower `id` value means the merge request was added to the train earlier.</summary>
             [QueryParameter("sort")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdMergeTrainsSortParameter? Sort { get; set; }
         }

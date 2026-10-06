@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>The due date of the milestone. The ISO 8601 date format (%Y-%m-%d)</summary>
+        /// <summary>Due date of the milestone, in ISO 8601 format (`YYYY-MM-DD`).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DueDate { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string DueDate { get; set; }
 #endif
-        /// <summary>The start date of the milestone. The ISO 8601 date format (%Y-%m-%d)</summary>
+        /// <summary>Start date of the milestone, in ISO 8601 format (`YYYY-MM-DD`).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? StartDate { get; set; }

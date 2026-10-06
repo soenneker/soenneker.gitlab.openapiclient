@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>Response format: raw or llm</summary>
+    /// <summary>Response format: raw, llm, or gql</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PostApiV4OrbitQueryNameRequestResponseFormat
     {
@@ -14,6 +14,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         [EnumMember(Value = "llm")]
         #pragma warning disable CS1591
         Llm,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "gql")]
+        #pragma warning disable CS1591
+        Gql,
         #pragma warning restore CS1591
     }
 }

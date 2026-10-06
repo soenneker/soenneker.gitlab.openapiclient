@@ -86,10 +86,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Related_epic_links
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Related_epic_linksRequestBuilderGetQueryParameters 
         {
-            /// <summary>Return related epic links created after the specified time</summary>
+            /// <summary>Return related epic links created on or after the specified time.</summary>
             [QueryParameter("created_after")]
             public DateTimeOffset? CreatedAfter { get; set; }
-            /// <summary>Return related epic links created before the specified time</summary>
+            /// <summary>Return related epic links created on or before the specified time.</summary>
             [QueryParameter("created_before")]
             public DateTimeOffset? CreatedBefore { get; set; }
             /// <summary>Page number of results to retrieve.</summary>
@@ -98,10 +98,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Related_epic_links
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Return related epic links updated after the specified time</summary>
+            /// <summary>Return related epic links updated on or after the specified time.</summary>
             [QueryParameter("updated_after")]
             public DateTimeOffset? UpdatedAfter { get; set; }
-            /// <summary>Return related epic links updated before the specified time</summary>
+            /// <summary>Return related epic links updated on or before the specified time.</summary>
             [QueryParameter("updated_before")]
             public DateTimeOffset? UpdatedBefore { get; set; }
         }

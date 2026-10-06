@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Templates.Item.Ite
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithNameItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>The full name of the copyright holder to use when expanding placeholders in the template. Only affects licenses</summary>
+            /// <summary>Full name of the copyright holder to use when expanding placeholders in the template. Affects only licenses.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fullname")]
@@ -95,7 +95,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Templates.Item.Ite
             [QueryParameter("fullname")]
             public string Fullname { get; set; }
 #endif
-            /// <summary>The project name to use when expanding placeholders in the template. Only affects licenses</summary>
+            /// <summary>Project name to use when expanding placeholders in the template. Affects only licenses.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("project")]
@@ -105,7 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Templates.Item.Ite
             [QueryParameter("project")]
             public string Project { get; set; }
 #endif
-            /// <summary>The project id where a given template is being stored. This is useful when multiple templates from different projects have the same name</summary>
+            /// <summary>ID of the project where the template is stored. Useful when multiple templates from different projects have the same name. If omitted, the match from the closest ancestor is returned.</summary>
             [QueryParameter("source_template_project_id")]
             public int? SourceTemplateProjectId { get; set; }
         }

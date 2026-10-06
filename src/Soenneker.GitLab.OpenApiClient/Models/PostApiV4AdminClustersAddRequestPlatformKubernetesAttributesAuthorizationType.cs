@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>Cluster authorization type, defaults to RBAC</summary>
+    /// <summary>Cluster authorization type.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PostApiV4AdminClustersAddRequestPlatformKubernetesAttributesAuthorizationType
     {

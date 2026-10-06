@@ -126,7 +126,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Changel
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ChangelogRequestBuilderGetQueryParameters 
         {
-            /// <summary>The file path to the configuration file as stored in the project&apos;s Git repository. Defaults to &apos;.gitlab/changelog_config.yml&apos;</summary>
+            /// <summary>Path to the changelog configuration file in the project&apos;s Git repository. If omitted, uses `.gitlab/changelog_config.yml`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("config_file")]
@@ -136,7 +136,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Changel
             [QueryParameter("config_file")]
             public string ConfigFile { get; set; }
 #endif
-            /// <summary>The git reference (for example, branch) where the changelog configuration file is defined. Defaults to the default repository branch.</summary>
+            /// <summary>Git reference, for example a branch, where the changelog configuration file is defined. Defaults to the default branch of the repository.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("config_file_ref")]
@@ -146,10 +146,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Changel
             [QueryParameter("config_file_ref")]
             public string ConfigFileRef { get; set; }
 #endif
-            /// <summary>The date and time of the release</summary>
+            /// <summary>Date and time of the release. Defaults to the current time.</summary>
             [QueryParameter("date")]
             public DateTimeOffset? Date { get; set; }
-            /// <summary>The first commit in the range of commits to use for the changelog</summary>
+            /// <summary>First commit in the range of commits, as a SHA, to use for the changelog. This commit is not included in the changelog. If omitted, the most recent stable version tag before `version` is used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("from")]
@@ -159,7 +159,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Changel
             [QueryParameter("from")]
             public string From { get; set; }
 #endif
-            /// <summary>The last commit in the range of commits to use for the changelog</summary>
+            /// <summary>Last commit in the range of commits, as a SHA, to use for the changelog. This commit is included in the changelog. If omitted, uses the latest commit on the default branch. For the Add changelog data to file operation, uses the latest commit on `branch` instead. The range can contain at most 15,000 commits.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("to")]
@@ -169,7 +169,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Changel
             [QueryParameter("to")]
             public string To { get; set; }
 #endif
-            /// <summary>The Git trailer to use for determining if commits are to be included in the changelog</summary>
+            /// <summary>Git trailer to use for including commits. Case-sensitive: `Example` does not match `example` or `eXaMpLE`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("trailer")]
@@ -179,7 +179,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Changel
             [QueryParameter("trailer")]
             public string Trailer { get; set; }
 #endif
-            /// <summary>The version of the release, using the semantic versioning format</summary>
+            /// <summary>Version to generate the changelog for. Must follow [semantic versioning](https://semver.org/) format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("version")]

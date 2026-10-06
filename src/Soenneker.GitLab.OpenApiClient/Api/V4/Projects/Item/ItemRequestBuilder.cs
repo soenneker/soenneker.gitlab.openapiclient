@@ -45,6 +45,7 @@ using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags_user_lis
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Fork;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Forks;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Freeze_periods;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Github;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Groups;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Hooks;
@@ -344,6 +345,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Freeze_periods.Freeze_periodsRequestBuilder Freeze_periods
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Freeze_periods.Freeze_periodsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The github property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Github.GithubRequestBuilder Github
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Github.GithubRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The google_cloud property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Google_cloudRequestBuilder Google_cloud
@@ -880,10 +886,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item
             [QueryParameter("custom_attributes")]
             public string CustomAttributes { get; set; }
 #endif
-            /// <summary>Include project license data</summary>
+            /// <summary>If `true`, includes the project license data in the response.</summary>
             [QueryParameter("license")]
             public bool? License { get; set; }
-            /// <summary>Include project statistics</summary>
+            /// <summary>If `true`, includes project statistics. Available only to users with the Reporter, Developer, Maintainer, or Owner role.</summary>
             [QueryParameter("statistics")]
             public bool? Statistics { get; set; }
             /// <summary>If `true`, includes [custom attributes](https://docs.gitlab.com/api/custom_attributes/) in the response. Administrators only.</summary>

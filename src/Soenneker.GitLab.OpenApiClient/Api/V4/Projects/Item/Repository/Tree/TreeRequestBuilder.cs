@@ -88,7 +88,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Tree
             /// <summary>Page number of results to retrieve.</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>Record from which to start the keyset pagination</summary>
+            /// <summary>Tree record ID at which to fetch the next page. Used only with keyset pagination.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("page_token")]
@@ -98,10 +98,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Tree
             [QueryParameter("page_token")]
             public string PageToken { get; set; }
 #endif
-            /// <summary>Specify the pagination method (&quot;none&quot; is only valid if &quot;recursive&quot; is true)</summary>
+            /// <summary>Pagination method. `keyset` uses the [keyset-based pagination method](https://docs.gitlab.com/api/rest/#keyset-based-pagination). `none` is valid only if `recursive` is `true`.</summary>
             [QueryParameter("pagination")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdRepositoryTreePaginationParameter? Pagination { get; set; }
-            /// <summary>The path of the tree</summary>
+            /// <summary>Path inside the repository, used to get the contents of subdirectories.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("path")]
@@ -114,10 +114,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Tree
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Used to get a recursive tree</summary>
+            /// <summary>If `true`, returns a recursive tree.</summary>
             [QueryParameter("recursive")]
             public bool? Recursive { get; set; }
-            /// <summary>The name of a repository branch or tag, if not given the default branch is used</summary>
+            /// <summary>Name of a repository branch or tag. If omitted, uses the default branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("ref")]
@@ -127,7 +127,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Tree
             [QueryParameter("ref")]
             public string Ref { get; set; }
 #endif
-            /// <summary>Include the last commit for each tree entry. Cannot be combined with &quot;recursive&quot;</summary>
+            /// <summary>If `true`, includes the last commit for each tree entry. Cannot be combined with `recursive`. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/234455) in GitLab 19.3.</summary>
             [QueryParameter("with_last_commit")]
             public bool? WithLastCommit { get; set; }
         }

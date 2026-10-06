@@ -4,6 +4,7 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Integrations.Jira_forge.Installation;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Integrations.Jira_forge.Subscriptions;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Integrations.Jira_forge.User_delegation;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -25,6 +26,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Integrations.Jira_forge
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Integrations.Jira_forge.Subscriptions.SubscriptionsRequestBuilder Subscriptions
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Integrations.Jira_forge.Subscriptions.SubscriptionsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The user_delegation property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Integrations.Jira_forge.User_delegation.User_delegationRequestBuilder User_delegation
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Integrations.Jira_forge.User_delegation.User_delegationRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Integrations.Jira_forge.Jira_forgeRequestBuilder"/> and sets the default values.

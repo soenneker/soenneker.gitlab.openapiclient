@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.Item.Minutes.Move
     public partial class MoveRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.namespaces.item.minutes.move.item collection</summary>
-        /// <param name="position">The ID of the namespace for the packs to transfer to</param>
+        /// <param name="position">ID of the namespace for the packs to transfer to.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.Item.Minutes.Move.Item.WithTargetItemRequestBuilder"/></returns>
         [Obsolete("")]
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.Item.Minutes.Move.Item.WithTargetItemRequestBuilder this[string position]

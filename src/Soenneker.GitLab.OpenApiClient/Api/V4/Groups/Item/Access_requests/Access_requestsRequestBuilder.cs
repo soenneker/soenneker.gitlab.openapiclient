@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Access_requests
     public partial class Access_requestsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.access_requests.item collection</summary>
-        /// <param name="position">The user ID of the access requester</param>
+        /// <param name="position">ID of the user requesting access.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Access_requests.Item.WithUserItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Access_requests.Item.WithUserItemRequestBuilder this[int position]
         {

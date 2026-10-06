@@ -92,10 +92,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_trains.Item
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>The scope of merge trains</summary>
+            /// <summary>Filter merge trains by scope.</summary>
             [QueryParameter("scope")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdMergeTrainsTargetBranchScopeParameter? Scope { get; set; }
-            /// <summary>Sort by asc (ascending) or desc (descending)</summary>
+            /// <summary>Sort results in ascending or descending order by `id`. A lower `id` value means the merge request was added to the train earlier.</summary>
             [QueryParameter("sort")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdMergeTrainsTargetBranchSortParameter? Sort { get; set; }
         }

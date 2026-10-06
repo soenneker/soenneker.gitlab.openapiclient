@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Job_token_scope.Al
     public partial class AllowlistRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.job_token_scope.allowlist.item collection</summary>
-        /// <param name="position">ID of the project to be removed from the allowlist</param>
+        /// <param name="position">ID of the project to remove from the CI/CD job token inbound allowlist.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Job_token_scope.Allowlist.Item.WithTargetProjectItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Job_token_scope.Allowlist.Item.WithTargetProjectItemRequestBuilder this[int position]
         {

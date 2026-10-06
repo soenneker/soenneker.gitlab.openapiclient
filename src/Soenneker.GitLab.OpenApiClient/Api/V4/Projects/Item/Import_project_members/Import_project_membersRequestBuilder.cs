@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Import_project_mem
     public partial class Import_project_membersRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.import_project_members.item collection</summary>
-        /// <param name="position">The ID of the source project to import the members from.</param>
+        /// <param name="position">ID of the source project to import the members from.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Import_project_members.Item.WithProjectItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Import_project_members.Item.WithProjectItemRequestBuilder this[int position]
         {

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// The list of variables to be injected into build
+    /// Map of pipeline variables, as key-value pairs, for example `{ VAR1: &quot;value1&quot;, VAR2: &quot;value2&quot; }`.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostApiV4ProjectsIdRefRefTriggerPipelineRequestVariablesProperty : IAdditionalDataHolder, IParsable

@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The description of the variable</summary>
+        /// <summary>Description of the variable. Limited to 255 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get; set; }
@@ -22,13 +22,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>Whether the variable is masked</summary>
+        /// <summary>If `true`, the variable is masked.</summary>
         public bool? Masked { get; set; }
-        /// <summary>Whether the variable is protected</summary>
+        /// <summary>If `true`, the variable is protected.</summary>
         public bool? Protected { get; set; }
-        /// <summary>Whether the variable will be expanded</summary>
+        /// <summary>If `true`, the variable is treated as a raw string. If `false`, the value is [expanded](https://docs.gitlab.com/ci/variables/#allow-cicd-variable-expansion).</summary>
         public bool? Raw { get; set; }
-        /// <summary>The value of a variable</summary>
+        /// <summary>Value of the variable. Limited to 10,000 characters, or 50,000 characters for `file` variables.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Value { get; set; }

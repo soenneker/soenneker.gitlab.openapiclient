@@ -18,7 +18,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Ldap_group_links.Ite
     public partial class CnItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.ldap_group_links.item.item collection</summary>
-        /// <param name="position">The CN of a LDAP group</param>
+        /// <param name="position">CN of an LDAP group.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Ldap_group_links.Item.Item.WithCnItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Ldap_group_links.Item.Item.WithCnItemRequestBuilder this[string position]
         {

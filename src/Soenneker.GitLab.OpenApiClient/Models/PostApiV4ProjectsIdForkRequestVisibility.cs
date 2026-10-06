@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>The visibility of the fork</summary>
+    /// <summary>[Visibility level](https://docs.gitlab.com/api/projects/#project-visibility-level) assigned to the new project after forking.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PostApiV4ProjectsIdForkRequestVisibility
     {

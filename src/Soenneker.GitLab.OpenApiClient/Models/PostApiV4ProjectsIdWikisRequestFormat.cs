@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>Format of a wiki page. Available formats are markdown, rdoc, asciidoc and org</summary>
+    /// <summary>Format of the wiki page.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PostApiV4ProjectsIdWikisRequestFormat
     {

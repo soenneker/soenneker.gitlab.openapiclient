@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ref
     public partial class RefRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.ref.item collection</summary>
-        /// <param name="position">The commit sha or name of a branch or tag</param>
+        /// <param name="position">Name of the branch or tag to run the pipeline on.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ref.Item.WithRefValueItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ref.Item.WithRefValueItemRequestBuilder this[string position]
         {

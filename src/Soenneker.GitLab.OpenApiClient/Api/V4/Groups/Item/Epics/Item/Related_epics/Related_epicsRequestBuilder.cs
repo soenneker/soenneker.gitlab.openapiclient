@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics.Item.Related_e
     public partial class Related_epicsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.epics.item.related_epics.item collection</summary>
-        /// <param name="position">Internal ID of a related epic link</param>
+        /// <param name="position">ID of the related epic link.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics.Item.Related_epics.Item.WithRelatedEpicLinkItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics.Item.Related_epics.Item.WithRelatedEpicLinkItemRequestBuilder this[int position]
         {

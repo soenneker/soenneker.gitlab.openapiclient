@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Identities
     public partial class IdentitiesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.users.item.identities.item collection</summary>
-        /// <param name="position">The external provider</param>
+        /// <param name="position">Name of the external authentication provider.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Identities.Item.WithProviderItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Identities.Item.WithProviderItemRequestBuilder this[string position]
         {

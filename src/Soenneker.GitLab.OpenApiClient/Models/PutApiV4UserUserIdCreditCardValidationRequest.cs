@@ -14,11 +14,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The month the credit card expires</summary>
+        /// <summary>Month the credit card expires.</summary>
         public int? CreditCardExpirationMonth { get; set; }
-        /// <summary>The year the credit card expires</summary>
+        /// <summary>Year the credit card expires.</summary>
         public int? CreditCardExpirationYear { get; set; }
-        /// <summary>The credit card holder name</summary>
+        /// <summary>Name of the credit card holder.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CreditCardHolderName { get; set; }
@@ -26,7 +26,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string CreditCardHolderName { get; set; }
 #endif
-        /// <summary>The last 4 digits of credit card number</summary>
+        /// <summary>Last 4 digits of the credit card number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CreditCardMaskNumber { get; set; }
@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string CreditCardMaskNumber { get; set; }
 #endif
-        /// <summary>The credit card network name</summary>
+        /// <summary>Name of the credit card network.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CreditCardType { get; set; }
@@ -42,9 +42,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string CreditCardType { get; set; }
 #endif
-        /// <summary>The time when the user&apos;s credit card was validated</summary>
+        /// <summary>Time when the user&apos;s credit card was validated.</summary>
         public DateTimeOffset? CreditCardValidatedAt { get; set; }
-        /// <summary>The Stripe credit card fingerprint</summary>
+        /// <summary>Stripe credit card fingerprint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? StripeCardFingerprint { get; set; }
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string StripeCardFingerprint { get; set; }
 #endif
-        /// <summary>The Stripe payment method ID</summary>
+        /// <summary>ID of the Stripe payment method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? StripePaymentMethodXid { get; set; }
@@ -60,7 +60,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string StripePaymentMethodXid { get; set; }
 #endif
-        /// <summary>The Stripe setup intent ID</summary>
+        /// <summary>ID of the Stripe setup intent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? StripeSetupIntentXid { get; set; }
@@ -68,7 +68,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string StripeSetupIntentXid { get; set; }
 #endif
-        /// <summary>The Zuora payment method ID</summary>
+        /// <summary>ID of the Zuora payment method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ZuoraPaymentMethodXid { get; set; }

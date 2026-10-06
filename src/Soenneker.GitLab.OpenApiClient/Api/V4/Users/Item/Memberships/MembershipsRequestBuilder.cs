@@ -92,7 +92,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Memberships
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Filter memberships by type</summary>
+            /// <summary>Filter memberships by type.</summary>
             [QueryParameter("type")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4UsersUserIdMembershipsTypeParameter? Type { get; set; }
         }

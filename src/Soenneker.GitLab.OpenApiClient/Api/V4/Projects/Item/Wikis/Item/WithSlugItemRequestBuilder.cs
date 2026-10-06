@@ -162,10 +162,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Wikis.Item
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithSlugItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>Render content to HTML</summary>
+            /// <summary>If `true`, returns the rendered HTML of the wiki page.</summary>
             [QueryParameter("render_html")]
             public bool? RenderHtml { get; set; }
-            /// <summary>The version hash of a wiki page</summary>
+            /// <summary>Version SHA of the wiki page.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("version")]

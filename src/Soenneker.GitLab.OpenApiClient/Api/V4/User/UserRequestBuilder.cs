@@ -91,7 +91,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.User.Support_pin.Support_pinRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.user.item collection</summary>
-        /// <param name="position">The ID or username of the user</param>
+        /// <param name="position">ID or username of the user.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.User.Item.WithUserItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.User.Item.WithUserItemRequestBuilder this[string position]
         {

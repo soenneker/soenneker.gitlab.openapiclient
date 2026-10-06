@@ -96,7 +96,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Invited_groups
             [QueryParameter("custom_attributes")]
             public string CustomAttributes { get; set; }
 #endif
-            /// <summary>Limit by minimum access level of authenticated user</summary>
+            /// <summary>Return results where the current user has at least the specified access level. For a list of values, see [roles](https://docs.gitlab.com/user/permissions/#default-roles).</summary>
             [QueryParameter("min_access_level")]
             public int? MinAccessLevel { get; set; }
             /// <summary>Page number of results to retrieve.</summary>
@@ -105,7 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Invited_groups
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Filter by group relation</summary>
+            /// <summary>Filter groups by relation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("relation")]
@@ -115,7 +115,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Invited_groups
             [QueryParameter("relation")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdInvitedGroupsRelationParameterItem[] Relation { get; set; }
 #endif
-            /// <summary>Search for a specific group</summary>
+            /// <summary>Return the list of authorized groups matching the search criteria.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("search")]

@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A caller_id identifying a code path, for example `GET /api/v4/projects/:id` or `ProjectsController#show`. Use comma to separate multiple endpoint paths. Mutually exclusive with `key`.</summary>
+        /// <summary>Caller ID identifying a code path, for example `GET /api/v4/projects/:id` or `ProjectsController#show`. Use a comma to separate multiple endpoint paths. Mutually exclusive with `key`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Endpoint { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Endpoint { get; set; }
 #endif
-        /// <summary>A Feature group name. Mutually exclusive with `key`.</summary>
+        /// <summary>Name of the feature group. Mutually exclusive with `key`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FeatureGroup { get; set; }
@@ -30,9 +30,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string FeatureGroup { get; set; }
 #endif
-        /// <summary>Skip feature flag validation checks, such as a YAML definition</summary>
+        /// <summary>If `true`, skips feature flag validation checks, such as a YAML definition.</summary>
         public bool? Force { get; set; }
-        /// <summary>A GitLab group&apos;s path, for example `gitlab-org`, or comma-separated multiple group paths. Mutually exclusive with `key`.</summary>
+        /// <summary>GitLab group path, for example `gitlab-org`, or a comma-separated list of group paths. Mutually exclusive with `key`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Group { get; set; }
@@ -42,7 +42,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>Rollout strategy for a percentage `value`. Omit it to apply the percentage to time. Mutually exclusive with `feature_group`, `user`, `group`, `namespace`, `project`, `organization`, `repository`, `runner`, `endpoint`.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4FeaturesNameRequestKey? Key { get; set; }
-        /// <summary>A GitLab group or user namespace&apos;s path, for example `john-doe`, or comma-separated multiple namespace paths. Introduced in GitLab 15.0. Mutually exclusive with `key`.</summary>
+        /// <summary>GitLab group or user namespace path, for example `john-doe`, or a comma-separated list of namespace paths. Introduced in GitLab 15.0. Mutually exclusive with `key`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Namespace { get; set; }
@@ -50,7 +50,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Namespace { get; set; }
 #endif
-        /// <summary>An organization ID or path, for example `1` or `default`, or comma-separated multiple organization IDs or paths. Mutually exclusive with `key`.</summary>
+        /// <summary>Organization ID or path, for example `1` or `default`, or a comma-separated list of organization IDs or paths. Mutually exclusive with `key`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Organization { get; set; }
@@ -58,7 +58,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Organization { get; set; }
 #endif
-        /// <summary>A projects path, for example `gitlab-org/gitlab-foss`, or comma-separated multiple project paths. Mutually exclusive with `key`.</summary>
+        /// <summary>Project path, for example `gitlab-org/gitlab-foss`, or a comma-separated list of project paths. Mutually exclusive with `key`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Project { get; set; }
@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Project { get; set; }
 #endif
-        /// <summary>A repository path, for example `gitlab-org/gitlab-test.git`, `gitlab-org/gitlab-test.wiki.git`, `snippets/21.git`, to name a few. Use comma to separate multiple repository paths. Mutually exclusive with `key`.</summary>
+        /// <summary>Repository path, for example `gitlab-org/gitlab-test.git`, `gitlab-org/gitlab-test.wiki.git`, or `snippets/21.git`. Use commas to separate multiple repository paths. Mutually exclusive with `key`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Repository { get; set; }
@@ -74,7 +74,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Repository { get; set; }
 #endif
-        /// <summary>A runner ID, or comma-separated list of runner IDs. Mutually exclusive with `key`.</summary>
+        /// <summary>Runner ID or a comma-separated list of runner IDs. Mutually exclusive with `key`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Runner { get; set; }
@@ -82,7 +82,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Runner { get; set; }
 #endif
-        /// <summary>A GitLab username or comma-separated multiple usernames. Mutually exclusive with `key`.</summary>
+        /// <summary>GitLab username or a comma-separated list of usernames. Mutually exclusive with `key`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? User { get; set; }
@@ -90,7 +90,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string User { get; set; }
 #endif
-        /// <summary>`true` or `false` to enable/disable, or an integer for percentage of time</summary>
+        /// <summary>Value to set for the feature flag. Use `true` or `false` to enable or disable it, or an integer for the percentage of time it should be enabled.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4FeaturesNameRequestValue? Value { get; set; }

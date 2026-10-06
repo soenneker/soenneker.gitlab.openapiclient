@@ -40,6 +40,24 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Integrations.Jira_forge.Installa
         {
         }
         /// <summary>
+        /// Called by the Forge app preUninstall hook. A pure-native install fires no Connect uninstalled event, so this is what removes the installation, its subscriptions, and deactivates the linked jira_cloud_app integrations. FIT authentication carries the same trust as the signed Connect lifecycle event, so no Jira admin check is needed. Succeeds with no change when the installation is already gone.
+        /// </summary>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicSuccess"/></returns>
+        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
+        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicSuccess?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        {
+#nullable restore
+#else
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicSuccess> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        {
+#endif
+            var requestInfo = ToDeleteRequestInformation(requestConfiguration);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicSuccess>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicSuccess.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+        }
+        /// <summary>
         /// Sets the GitLab instance the installation points at. Omit instance_url (or send null) for GitLab.com. Requires a Jira site or organization admin.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicSuccess"/></returns>
@@ -58,6 +76,25 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Integrations.Jira_forge.Installa
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicSuccess>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicSuccess.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+        }
+        /// <summary>
+        /// Called by the Forge app preUninstall hook. A pure-native install fires no Connect uninstalled event, so this is what removes the installation, its subscriptions, and deactivates the linked jira_cloud_app integrations. FIT authentication carries the same trust as the signed Connect lifecycle event, so no Jira admin check is needed. Succeeds with no change when the installation is already gone.
+        /// </summary>
+        /// <returns>A <see cref="RequestInformation"/></returns>
+        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        {
+#nullable restore
+#else
+        public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        {
+#endif
+            var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
+            requestInfo.Configure(requestConfiguration);
+            requestInfo.Headers.TryAdd("Accept", "application/json");
+            return requestInfo;
         }
         /// <summary>
         /// Sets the GitLab instance the installation points at. Omit instance_url (or send null) for GitLab.com. Requires a Jira site or organization admin.

@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Health
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class HealthRequestBuilderGetQueryParameters 
         {
-            /// <summary>Triggers a new health report to be generated</summary>
+            /// <summary>If `true`, generates a new health report. Set this if the endpoint returns `404`.</summary>
             [QueryParameter("generate")]
             public bool? Generate { get; set; }
         }

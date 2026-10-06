@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users
     public partial class UsersRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.users.item collection</summary>
-        /// <param name="position">The ID of the user</param>
+        /// <param name="position">ID of the user.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.ItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.ItemRequestBuilder this[int position]
         {
@@ -141,22 +141,22 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class UsersRequestBuilderGetQueryParameters 
         {
-            /// <summary>Filters only active users</summary>
+            /// <summary>If `true`, returns only active users.</summary>
             [QueryParameter("active")]
             public bool? Active { get; set; }
-            /// <summary>Filters only admin users</summary>
+            /// <summary>If `true`, returns only administrators.</summary>
             [QueryParameter("admins")]
             public bool? Admins { get; set; }
             /// <summary>If `true`, returns only auditor users.</summary>
             [QueryParameter("auditors")]
             public bool? Auditors { get; set; }
-            /// <summary>Filters only blocked users</summary>
+            /// <summary>If `true`, returns only blocked users.</summary>
             [QueryParameter("blocked")]
             public bool? Blocked { get; set; }
-            /// <summary>Return users created after the specified time</summary>
+            /// <summary>Return users created on or after the specified time.</summary>
             [QueryParameter("created_after")]
             public DateTimeOffset? CreatedAfter { get; set; }
-            /// <summary>Return users created before the specified time</summary>
+            /// <summary>Return users created on or before the specified time.</summary>
             [QueryParameter("created_before")]
             public DateTimeOffset? CreatedBefore { get; set; }
             /// <summary>Filter by [custom attributes](https://docs.gitlab.com/api/custom_attributes/) that match all of the specified key and value pairs. Administrators only.</summary>
@@ -169,22 +169,22 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users
             [QueryParameter("custom_attributes")]
             public string CustomAttributes { get; set; }
 #endif
-            /// <summary>Filters only non active users</summary>
+            /// <summary>If `true`, returns only users that are not active.</summary>
             [QueryParameter("exclude_active")]
             public bool? ExcludeActive { get; set; }
-            /// <summary>Filters only non external users</summary>
+            /// <summary>If `true`, returns only users that are not external.</summary>
             [QueryParameter("exclude_external")]
             public bool? ExcludeExternal { get; set; }
-            /// <summary>Filters only non human users</summary>
+            /// <summary>If `true`, returns only bot or internal users.</summary>
             [QueryParameter("exclude_humans")]
             public bool? ExcludeHumans { get; set; }
-            /// <summary>Filters only non internal users</summary>
+            /// <summary>If `true`, returns only users that are not internal.</summary>
             [QueryParameter("exclude_internal")]
             public bool? ExcludeInternal { get; set; }
-            /// <summary>Filters only external users</summary>
+            /// <summary>If `true`, returns only external users.</summary>
             [QueryParameter("external")]
             public bool? External { get; set; }
-            /// <summary>Get a single user with a specific external authentication provider UID. All or none of `extern_uid`, `provider` must be provided.</summary>
+            /// <summary>Return a single user with the specified external authentication provider UID. Use with `provider`. Administrators only. All or none of `extern_uid`, `provider` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("extern_uid")]
@@ -194,10 +194,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users
             [QueryParameter("extern_uid")]
             public string ExternUid { get; set; }
 #endif
-            /// <summary>Filters only human users</summary>
+            /// <summary>If `true`, returns only regular users that are not bot or internal users.</summary>
             [QueryParameter("humans")]
             public bool? Humans { get; set; }
-            /// <summary>Return users ordered by a field</summary>
+            /// <summary>Sort results by the specified field.</summary>
             [QueryParameter("order_by")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4UsersOrderByParameter? OrderBy { get; set; }
             /// <summary>Page number of results to retrieve.</summary>
@@ -206,7 +206,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>The external provider. All or none of `extern_uid`, `provider` must be provided.</summary>
+            /// <summary>Name of the external authentication provider. All or none of `extern_uid`, `provider` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("provider")]
@@ -216,7 +216,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users
             [QueryParameter("provider")]
             public string Provider { get; set; }
 #endif
-            /// <summary>Get a single user with a specific public email</summary>
+            /// <summary>Return a single user with the specified public email.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("public_email")]
@@ -226,7 +226,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users
             [QueryParameter("public_email")]
             public string PublicEmail { get; set; }
 #endif
-            /// <summary>Search for a username</summary>
+            /// <summary>Search for users by name, username, or public email.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("search")]
@@ -239,7 +239,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users
             /// <summary>If `true`, excludes LDAP users from the results.</summary>
             [QueryParameter("skip_ldap")]
             public bool? SkipLdap { get; set; }
-            /// <summary>Return users sorted in ascending and descending order</summary>
+            /// <summary>Sort results in ascending or descending order.</summary>
             [QueryParameter("sort")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4UsersSortParameter? Sort { get; set; }
             /// <summary>Filter users by Two-factor authentication.</summary>
@@ -252,7 +252,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users
             [QueryParameter("two_factor")]
             public string TwoFactor { get; set; }
 #endif
-            /// <summary>Get a single user with a specific username</summary>
+            /// <summary>Return a single user with the specified username.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("username")]
@@ -265,10 +265,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users
             /// <summary>If `true`, includes [custom attributes](https://docs.gitlab.com/api/custom_attributes/) in the response. Administrators only.</summary>
             [QueryParameter("with_custom_attributes")]
             public bool? WithCustomAttributes { get; set; }
-            /// <summary>Filters users without project bots</summary>
+            /// <summary>If `true`, excludes project bot users from the results.</summary>
             [QueryParameter("without_project_bots")]
             public bool? WithoutProjectBots { get; set; }
-            /// <summary>Filters only users without projects</summary>
+            /// <summary>If `true`, returns only users that do not have any projects.</summary>
             [QueryParameter("without_projects")]
             public bool? WithoutProjects { get; set; }
         }

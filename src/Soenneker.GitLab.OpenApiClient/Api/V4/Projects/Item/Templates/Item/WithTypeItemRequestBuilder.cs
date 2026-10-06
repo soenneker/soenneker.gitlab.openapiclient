@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Templates.Item
     public partial class WithTypeItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.templates.item.item collection</summary>
-        /// <param name="position">The key of the template, as obtained from the collection endpoint.</param>
+        /// <param name="position">Key of the template, as obtained from the collection endpoint.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Templates.Item.Item.WithNameItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Templates.Item.Item.WithNameItemRequestBuilder this[string position]
         {

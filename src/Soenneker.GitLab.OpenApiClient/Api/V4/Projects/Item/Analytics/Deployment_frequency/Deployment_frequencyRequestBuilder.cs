@@ -86,7 +86,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Analytics.Deployme
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Deployment_frequencyRequestBuilderGetQueryParameters 
         {
-            /// <summary>Name of the environment to filter by</summary>
+            /// <summary>Name of the environment to filter by.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("environment")]
@@ -96,13 +96,13 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Analytics.Deployme
             [QueryParameter("environment")]
             public string Environment { get; set; }
 #endif
-            /// <summary>Datetime to start from, inclusive</summary>
+            /// <summary>Datetime to start from, inclusive.</summary>
             [QueryParameter("from")]
             public DateTimeOffset? From { get; set; }
-            /// <summary>Interval to roll-up data by</summary>
+            /// <summary>Interval to roll up data by. If omitted, defaults to `all`.</summary>
             [QueryParameter("interval")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdAnalyticsDeploymentFrequencyIntervalParameter? Interval { get; set; }
-            /// <summary>Datetime to end at, exclusive</summary>
+            /// <summary>Datetime to end at, exclusive. If omitted, defaults to the current time.</summary>
             [QueryParameter("to")]
             public DateTimeOffset? To { get; set; }
         }

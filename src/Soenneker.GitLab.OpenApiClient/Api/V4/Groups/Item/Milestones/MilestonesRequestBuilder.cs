@@ -140,7 +140,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Milestones
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class MilestonesRequestBuilderGetQueryParameters 
         {
-            /// <summary>The IIDs of the milestones</summary>
+            /// <summary>Return only the milestones having the given `iid`. Ignored if `include_ancestors` is `true`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("iids")]
@@ -156,7 +156,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Milestones
             /// <summary>If `true`, includes milestones for the group and its descendants.</summary>
             [QueryParameter("include_descendants")]
             public bool? IncludeDescendants { get; set; }
-            /// <summary>Deprecated: see `include_ancestors`. Mutually exclusive with `include_ancestors`.</summary>
+            /// <summary>If `true`, includes milestones from all parent groups. [Deprecated](https://gitlab.com/gitlab-org/gitlab/-/issues/433298). Use `include_ancestors` instead. Mutually exclusive with `include_ancestors`.</summary>
             [QueryParameter("include_parent_milestones")]
             public bool? IncludeParentMilestones { get; set; }
             /// <summary>Page number of results to retrieve.</summary>

@@ -119,7 +119,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues_statistics
             /// <summary>Return issues created before the specified time</summary>
             [QueryParameter("created_before")]
             public DateTimeOffset? CreatedBefore { get; set; }
-            /// <summary>The ID of an epic associated with the issues</summary>
+            /// <summary>Return issues associated with the epic with the given ID. `None` returns issues that are not associated with an epic. `Any` returns issues that are associated with an epic. Premium and Ultimate only.</summary>
             [QueryParameter("epic_id")]
             public int? EpicId { get; set; }
             /// <summary>The health status of the issue. Must be one of: on_track, needs_attention, at_risk, none, any</summary>
@@ -145,10 +145,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues_statistics
             [QueryParameter("in")]
             public string In { get; set; }
 #endif
-            /// <summary>Return issues which are assigned to the iteration with the given ID. Mutually exclusive with `iteration_title`.</summary>
+            /// <summary>Return issues assigned to the iteration with the given ID. `None` returns issues that do not belong to an iteration. `Any` returns issues that belong to an iteration. Premium and Ultimate only. Mutually exclusive with `iteration_title`.</summary>
             [QueryParameter("iteration_id")]
             public int? IterationId { get; set; }
-            /// <summary>Return issues which are assigned to the iteration with the given title. Mutually exclusive with `iteration_id`.</summary>
+            /// <summary>Return issues assigned to the iteration with the given title. Premium and Ultimate only. Mutually exclusive with `iteration_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("iteration_title")]

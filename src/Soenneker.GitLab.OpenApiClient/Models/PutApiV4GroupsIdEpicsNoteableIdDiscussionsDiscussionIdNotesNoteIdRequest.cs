@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The content of a note. Exactly one of `body`, `resolved` must be provided.</summary>
+        /// <summary>Content of the note or reply. Exactly one of `body`, `resolved` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Body { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Body { get; set; }
 #endif
-        /// <summary>Mark note resolved/unresolved. Exactly one of `body`, `resolved` must be provided.</summary>
+        /// <summary>If `true`, resolves the note. If `false`, reopens the note. Exactly one of `body`, `resolved` must be provided.</summary>
         public bool? Resolved { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdEpicsNoteableIdDiscussionsDiscussionIdNotesNoteIdRequest"/> and sets the default values.

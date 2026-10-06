@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Vulnerabilities
     public partial class VulnerabilitiesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.vulnerabilities.item collection</summary>
-        /// <param name="position">The ID of a vulnerability</param>
+        /// <param name="position">ID of the vulnerability.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Vulnerabilities.Item.ItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Vulnerabilities.Item.ItemRequestBuilder this[string position]
         {

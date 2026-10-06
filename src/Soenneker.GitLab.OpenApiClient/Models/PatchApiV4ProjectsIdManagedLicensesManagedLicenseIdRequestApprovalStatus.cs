@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>The approval status of the license.</summary>
+    /// <summary>Approval status of the license.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PatchApiV4ProjectsIdManagedLicensesManagedLicenseIdRequestApprovalStatus
     {

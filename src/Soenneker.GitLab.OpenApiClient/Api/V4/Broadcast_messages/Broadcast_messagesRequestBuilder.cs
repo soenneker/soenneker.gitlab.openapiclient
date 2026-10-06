@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Broadcast_messages
     public partial class Broadcast_messagesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.broadcast_messages.item collection</summary>
-        /// <param name="position">Broadcast message ID</param>
+        /// <param name="position">ID of the broadcast message.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Broadcast_messages.Item.Broadcast_messagesItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Broadcast_messages.Item.Broadcast_messagesItemRequestBuilder this[int position]
         {

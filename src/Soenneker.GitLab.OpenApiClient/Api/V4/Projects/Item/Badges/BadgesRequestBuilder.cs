@@ -25,7 +25,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Badges
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Badges.Render.RenderRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.badges.item collection</summary>
-        /// <param name="position">The badge ID</param>
+        /// <param name="position">ID of the badge.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Badges.Item.WithBadgeItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Badges.Item.WithBadgeItemRequestBuilder this[int position]
         {
@@ -147,7 +147,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Badges
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class BadgesRequestBuilderGetQueryParameters 
         {
-            /// <summary>Name for the badge</summary>
+            /// <summary>Name of the badge.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("name")]

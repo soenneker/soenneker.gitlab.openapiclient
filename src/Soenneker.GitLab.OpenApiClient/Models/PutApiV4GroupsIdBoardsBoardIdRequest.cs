@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The ID of a user to associate with board</summary>
+        /// <summary>ID of the assignee to scope the board to. Premium and Ultimate only.</summary>
         public int? AssigneeId { get; set; }
         /// <summary>Hide the Open list</summary>
         public bool? HideBacklogList { get; set; }

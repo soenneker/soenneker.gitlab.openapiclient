@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Snippets.Item.Disc
     public partial class NotesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.snippets.item.discussions.item.notes.item collection</summary>
-        /// <param name="position">The ID of a note</param>
+        /// <param name="position">ID of the discussion note.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Snippets.Item.Discussions.Item.Notes.Item.WithNoteItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Snippets.Item.Discussions.Item.Notes.Item.WithNoteItemRequestBuilder this[int position]
         {

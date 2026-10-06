@@ -84,7 +84,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Archive
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ArchiveRequestBuilderGetQueryParameters 
         {
-            /// <summary>Comma-separated list of paths to exclude from the archive</summary>
+            /// <summary>Comma-separated list of paths to exclude from the archive.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("exclude_paths")]
@@ -94,7 +94,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Archive
             [QueryParameter("exclude_paths")]
             public string[] ExcludePaths { get; set; }
 #endif
-            /// <summary>The archive format</summary>
+            /// <summary>Archive format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("format")]
@@ -104,10 +104,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Archive
             [QueryParameter("format")]
             public string Format { get; set; }
 #endif
-            /// <summary>Used to exclude LFS objects from archive</summary>
+            /// <summary>If `true`, LFS objects are included in the archive. When set to `false`, LFS objects are excluded.</summary>
             [QueryParameter("include_lfs_blobs")]
             public bool? IncludeLfsBlobs { get; set; }
-            /// <summary>Subfolder of the repository to be downloaded</summary>
+            /// <summary>Subpath of the repository to download. An empty string returns the whole repository.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("path")]
@@ -117,10 +117,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Archive
             [QueryParameter("path")]
             public string Path { get; set; }
 #endif
-            /// <summary>Type of ref in sha, heads (branch) or tags (tag)</summary>
+            /// <summary>Type of ref in `sha`. Use to select the correct ref when a branch and tag share a name.</summary>
             [QueryParameter("ref_type")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdRepositoryArchiveRefTypeParameter? RefType { get; set; }
-            /// <summary>The commit sha of the archive to be downloaded</summary>
+            /// <summary>Commit SHA to download. Accepts a tag, branch reference, or SHA. If omitted, defaults to the tip of the default branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("sha")]

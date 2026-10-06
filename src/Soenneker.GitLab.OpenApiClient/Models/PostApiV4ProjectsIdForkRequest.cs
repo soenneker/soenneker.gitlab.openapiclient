@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Branches to fork</summary>
+        /// <summary>Branches to fork. Leave empty to fork all branches.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Branches { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Branches { get; set; }
 #endif
-        /// <summary>The description that will be assigned to the fork</summary>
+        /// <summary>Description assigned to the new project after forking.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get; set; }
@@ -30,9 +30,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>Merge requests of this forked project targets itself by default</summary>
+        /// <summary>If `true`, merge requests from the forked project target this project. If `false`, they target the upstream project.</summary>
         public bool? MrDefaultTargetSelf { get; set; }
-        /// <summary>The name that will be assigned to the fork</summary>
+        /// <summary>Name assigned to the new project after forking.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -40,7 +40,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>(deprecated) The ID or name of the namespace that the project will be forked into</summary>
+        /// <summary>ID or path of the namespace to fork the new project into. Deprecated. Use `namespace_id` or `namespace_path` instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Namespace { get; set; }
@@ -48,9 +48,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Namespace { get; set; }
 #endif
-        /// <summary>The ID of the namespace that the project will be forked into</summary>
+        /// <summary>ID of the namespace to fork the new project into.</summary>
         public int? NamespaceId { get; set; }
-        /// <summary>The path of the namespace that the project will be forked into</summary>
+        /// <summary>Path of the namespace to fork the new project into.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? NamespacePath { get; set; }
@@ -58,7 +58,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string NamespacePath { get; set; }
 #endif
-        /// <summary>The path that will be assigned to the fork</summary>
+        /// <summary>Path assigned to the new project after forking.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Path { get; set; }
@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Path { get; set; }
 #endif
-        /// <summary>The visibility of the fork</summary>
+        /// <summary>[Visibility level](https://docs.gitlab.com/api/projects/#project-visibility-level) assigned to the new project after forking.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdForkRequestVisibility? Visibility { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdForkRequest"/> and sets the default values.

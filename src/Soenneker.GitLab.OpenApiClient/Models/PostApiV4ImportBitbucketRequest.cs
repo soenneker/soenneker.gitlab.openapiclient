@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>BitBucket API token</summary>
+        /// <summary>Bitbucket Cloud API token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? BitbucketApiToken { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string BitbucketApiToken { get; set; }
 #endif
-        /// <summary>BitBucket email</summary>
+        /// <summary>Bitbucket Cloud email.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? BitbucketEmail { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string BitbucketEmail { get; set; }
 #endif
-        /// <summary>New repository name</summary>
+        /// <summary>Name of the new project. Also used as the new path, so it must not start or end with a special character and must not contain consecutive special characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? NewName { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string NewName { get; set; }
 #endif
-        /// <summary>Repository path</summary>
+        /// <summary>Path to the repository.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RepoPath { get; set; }
@@ -46,7 +46,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string RepoPath { get; set; }
 #endif
-        /// <summary>Target namespace</summary>
+        /// <summary>Namespace to import the repository into. Supports subgroups, for example `/namespace/subgroup`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TargetNamespace { get; set; }

@@ -49,7 +49,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.User.UserRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item collection</summary>
-        /// <param name="position">The ID or URL-encoded path of the project</param>
+        /// <param name="position">ID or URL-encoded path of the project.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.ItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.ItemRequestBuilder this[string position]
         {
@@ -77,7 +77,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects
         {
         }
         /// <summary>
-        /// Lists all projects. Unauthenticated requests return only public projects with a limited subset of attributes. You can filter responses by custom attributes.
+        /// Lists all projects. Unauthenticated requests return only public projects with a limited subset of attributes. You can filter responses by custom attributes. To use the `updated_after` or `updated_before` filters, you must also set `order_by` to `updated_at`.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicProjectDetails&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -116,7 +116,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Lists all projects. Unauthenticated requests return only public projects with a limited subset of attributes. You can filter responses by custom attributes.
+        /// Lists all projects. Unauthenticated requests return only public projects with a limited subset of attributes. You can filter responses by custom attributes. To use the `updated_after` or `updated_before` filters, you must also set `order_by` to `updated_at`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -166,15 +166,15 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.ProjectsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all projects. Unauthenticated requests return only public projects with a limited subset of attributes. You can filter responses by custom attributes.
+        /// Lists all projects. Unauthenticated requests return only public projects with a limited subset of attributes. You can filter responses by custom attributes. To use the `updated_after` or `updated_before` filters, you must also set `order_by` to `updated_at`.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ProjectsRequestBuilderGetQueryParameters 
         {
-            /// <summary>Limit by projects that are not archived and not marked for deletion</summary>
+            /// <summary>If `true`, returns only projects that are not archived and not marked for deletion.</summary>
             [QueryParameter("active")]
             public bool? Active { get; set; }
-            /// <summary>Limit by archived status</summary>
+            /// <summary>If `true`, returns only archived projects.</summary>
             [QueryParameter("archived")]
             public bool? Archived { get; set; }
             /// <summary>Filter by [custom attributes](https://docs.gitlab.com/api/custom_attributes/) that match all of the specified key and value pairs. Administrators only.</summary>
@@ -187,40 +187,40 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects
             [QueryParameter("custom_attributes")]
             public string CustomAttributes { get; set; }
 #endif
-            /// <summary>Limit results to projects with IDs greater than the specified ID</summary>
+            /// <summary>Return projects with IDs greater than the specified ID.</summary>
             [QueryParameter("id_after")]
             public int? IdAfter { get; set; }
-            /// <summary>Limit results to projects with IDs less than the specified ID</summary>
+            /// <summary>Return projects with IDs less than the specified ID.</summary>
             [QueryParameter("id_before")]
             public int? IdBefore { get; set; }
-            /// <summary>Limit by imported by authenticated user</summary>
+            /// <summary>If `true`, returns only projects that were imported from external systems by the authenticated user.</summary>
             [QueryParameter("imported")]
             public bool? Imported { get; set; }
-            /// <summary>Include hidden projects. Can only be set by admins</summary>
+            /// <summary>If `true`, includes hidden projects. Administrators only. Premium and Ultimate only.</summary>
             [QueryParameter("include_hidden")]
             public bool? IncludeHidden { get; set; }
-            /// <summary>Include projects in pending delete state. Can only be set by admins</summary>
+            /// <summary>If `true`, includes projects that are pending deletion in the response. Administrators only.</summary>
             [QueryParameter("include_pending_delete")]
             public bool? IncludePendingDelete { get; set; }
-            /// <summary>Limit results to projects with last_activity after specified time. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ</summary>
+            /// <summary>Return projects with last activity after the specified time.</summary>
             [QueryParameter("last_activity_after")]
             public DateTimeOffset? LastActivityAfter { get; set; }
-            /// <summary>Limit results to projects with last_activity before specified time. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ</summary>
+            /// <summary>Return projects with last activity before the specified time.</summary>
             [QueryParameter("last_activity_before")]
             public DateTimeOffset? LastActivityBefore { get; set; }
-            /// <summary>Date when the project was marked for deletion</summary>
+            /// <summary>Return projects that are marked for deletion on this date. Premium and Ultimate only. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/463939) in GitLab 17.1.</summary>
             [QueryParameter("marked_for_deletion_on")]
             public Date? MarkedForDeletionOn { get; set; }
-            /// <summary>Limit by projects that the current user is a member of</summary>
+            /// <summary>If `true`, returns only projects that the current user is a member of.</summary>
             [QueryParameter("membership")]
             public bool? Membership { get; set; }
-            /// <summary>Limit by minimum access level of authenticated user</summary>
+            /// <summary>Return results where the current user has at least the specified access level. For a list of values, see [roles](https://docs.gitlab.com/user/permissions/#default-roles).</summary>
             [QueryParameter("min_access_level")]
             public int? MinAccessLevel { get; set; }
             /// <summary>Return projects ordered by field. storage_size, repository_size, wiki_size, packages_size are only available to admins. Similarity is available when searching and is limited to projects the user has access to.</summary>
             [QueryParameter("order_by")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsOrderByParameter? OrderBy { get; set; }
-            /// <summary>Limit by owned by authenticated user</summary>
+            /// <summary>If `true`, returns only projects explicitly owned by the current user.</summary>
             [QueryParameter("owned")]
             public bool? Owned { get; set; }
             /// <summary>Page number of results to retrieve.</summary>
@@ -229,10 +229,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Limit by projects where repository checksum is failed</summary>
+            /// <summary>If `true`, returns only projects whose repository checksum calculation failed. Premium and Ultimate only.</summary>
             [QueryParameter("repository_checksum_failed")]
             public bool? RepositoryChecksumFailed { get; set; }
-            /// <summary>Which storage shard the repository is on. Available only to admins</summary>
+            /// <summary>Return projects stored on the specified repository storage shard. Administrators only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("repository_storage")]
@@ -242,7 +242,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects
             [QueryParameter("repository_storage")]
             public string RepositoryStorage { get; set; }
 #endif
-            /// <summary>Return list of projects matching the search criteria</summary>
+            /// <summary>Return a list of projects with a `path`, `name`, or `description` matching the search criteria (case-insensitive, substring match). Multiple terms can be provided, separated by an escaped space, either `+` or `%20`, and are ANDed together. Example: `one+two` matches substrings `one` and `two` (in any order).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("search")]
@@ -252,22 +252,22 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects
             [QueryParameter("search")]
             public string Search { get; set; }
 #endif
-            /// <summary>Include ancestor namespaces when matching search criteria</summary>
+            /// <summary>If `true`, includes ancestor namespaces when matching search criteria.</summary>
             [QueryParameter("search_namespaces")]
             public bool? SearchNamespaces { get; set; }
-            /// <summary>Return only the ID, URL, name, and path of each project</summary>
+            /// <summary>If `true`, returns only limited fields for each project. Without authentication, only limited fields are returned regardless of this setting.</summary>
             [QueryParameter("simple")]
             public bool? Simple { get; set; }
-            /// <summary>Return projects sorted in ascending and descending order</summary>
+            /// <summary>Sort results in ascending or descending order.</summary>
             [QueryParameter("sort")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsSortParameter? Sort { get; set; }
-            /// <summary>Limit by starred status</summary>
+            /// <summary>If `true`, returns only projects starred by the current user.</summary>
             [QueryParameter("starred")]
             public bool? Starred { get; set; }
-            /// <summary>Include project statistics</summary>
+            /// <summary>If `true`, includes project statistics. Available only to users with the Reporter, Developer, Maintainer, or Owner role.</summary>
             [QueryParameter("statistics")]
             public bool? Statistics { get; set; }
-            /// <summary>Comma-separated list of topics. Limit results to projects having all topics</summary>
+            /// <summary>Comma-separated list of topics. Return projects having all topics.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("topic")]
@@ -277,31 +277,31 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects
             [QueryParameter("topic")]
             public string[] Topic { get; set; }
 #endif
-            /// <summary>Limit results to projects with the assigned topic given by the topic ID</summary>
+            /// <summary>Filter projects by the given topic ID.</summary>
             [QueryParameter("topic_id")]
             public int? TopicId { get; set; }
-            /// <summary>Return projects updated after the specified datetime. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ</summary>
+            /// <summary>Return projects last updated on or after the specified time.</summary>
             [QueryParameter("updated_after")]
             public DateTimeOffset? UpdatedAfter { get; set; }
-            /// <summary>Return projects updated before the specified datetime. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ</summary>
+            /// <summary>Return projects last updated on or before the specified time.</summary>
             [QueryParameter("updated_before")]
             public DateTimeOffset? UpdatedBefore { get; set; }
-            /// <summary>Limit by visibility</summary>
+            /// <summary>Return projects with the specified visibility.</summary>
             [QueryParameter("visibility")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsVisibilityParameter? Visibility { get; set; }
-            /// <summary>Limit by projects where wiki checksum is failed</summary>
+            /// <summary>If `true`, returns only projects whose wiki checksum calculation failed. Premium and Ultimate only.</summary>
             [QueryParameter("wiki_checksum_failed")]
             public bool? WikiChecksumFailed { get; set; }
             /// <summary>If `true`, includes [custom attributes](https://docs.gitlab.com/api/custom_attributes/) in the response. Administrators only.</summary>
             [QueryParameter("with_custom_attributes")]
             public bool? WithCustomAttributes { get; set; }
-            /// <summary>Limit by enabled issues feature</summary>
+            /// <summary>If `true`, returns only projects that have the issues feature enabled.</summary>
             [QueryParameter("with_issues_enabled")]
             public bool? WithIssuesEnabled { get; set; }
-            /// <summary>Limit by enabled merge requests feature</summary>
+            /// <summary>If `true`, returns only projects that have the merge requests feature enabled.</summary>
             [QueryParameter("with_merge_requests_enabled")]
             public bool? WithMergeRequestsEnabled { get; set; }
-            /// <summary>Limit to repositories which use the given programming language</summary>
+            /// <summary>Return projects that use the given programming language.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("with_programming_language")]

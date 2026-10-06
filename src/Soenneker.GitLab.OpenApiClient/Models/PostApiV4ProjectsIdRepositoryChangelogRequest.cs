@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The branch to commit the changelog changes to</summary>
+        /// <summary>Name of the branch to commit the changelog changes to. If omitted, defaults to the project&apos;s default branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Branch { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Branch { get; set; }
 #endif
-        /// <summary>The file path to the configuration file as stored in the project&apos;s Git repository. Defaults to &apos;.gitlab/changelog_config.yml&apos;</summary>
+        /// <summary>Path to the changelog configuration file in the project&apos;s Git repository. If omitted, uses `.gitlab/changelog_config.yml`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ConfigFile { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ConfigFile { get; set; }
 #endif
-        /// <summary>The git reference (for example, branch) where the changelog configuration file is defined. Defaults to the default repository branch.</summary>
+        /// <summary>Git reference, for example a branch, where the changelog configuration file is defined. Defaults to the default branch of the repository.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ConfigFileRef { get; set; }
@@ -38,9 +38,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ConfigFileRef { get; set; }
 #endif
-        /// <summary>The date and time of the release</summary>
+        /// <summary>Date and time of the release. Defaults to the current time.</summary>
         public DateTimeOffset? Date { get; set; }
-        /// <summary>The file to commit the changelog changes to</summary>
+        /// <summary>File to commit the changes to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? File { get; set; }
@@ -48,7 +48,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string File { get; set; }
 #endif
-        /// <summary>The first commit in the range of commits to use for the changelog</summary>
+        /// <summary>First commit in the range of commits, as a SHA, to use for the changelog. This commit is not included in the changelog. If omitted, the most recent stable version tag before `version` is used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? From { get; set; }
@@ -56,7 +56,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string From { get; set; }
 #endif
-        /// <summary>The commit message to use when committing the changelog</summary>
+        /// <summary>Commit message to use when committing the changelog changes. If omitted, defaults to `Add changelog for version X`, where `X` is the value of the `version` parameter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Message { get; set; }
@@ -64,7 +64,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Message { get; set; }
 #endif
-        /// <summary>The last commit in the range of commits to use for the changelog</summary>
+        /// <summary>Last commit in the range of commits, as a SHA, to use for the changelog. This commit is included in the changelog. If omitted, uses the latest commit on the default branch. For the Add changelog data to file operation, uses the latest commit on `branch` instead. The range can contain at most 15,000 commits.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? To { get; set; }
@@ -72,7 +72,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string To { get; set; }
 #endif
-        /// <summary>The Git trailer to use for determining if commits are to be included in the changelog</summary>
+        /// <summary>Git trailer to use for including commits. Case-sensitive: `Example` does not match `example` or `eXaMpLE`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Trailer { get; set; }

@@ -14,9 +14,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>When true, this merge request will be set to auto merge</summary>
+        /// <summary>If `true`, the merge request is added to the merge train when checks pass. If `false` or unspecified, it is added to the merge train immediately.</summary>
         public bool? AutoMerge { get; set; }
-        /// <summary>If present, then the SHA must match the HEAD of the source branch, otherwise the merge fails.</summary>
+        /// <summary>SHA that must match the `HEAD` of the source branch, otherwise the merge fails.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Sha { get; set; }
@@ -24,9 +24,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Sha { get; set; }
 #endif
-        /// <summary>When true, the commits will be squashed into a single commit on merge</summary>
+        /// <summary>If `true`, the commits are squashed into a single commit on merge.</summary>
         public bool? Squash { get; set; }
-        /// <summary>Deprecated. Use the auto_merge parameter instead.</summary>
+        /// <summary>[Deprecated](https://gitlab.com/gitlab-org/gitlab/-/issues/521290) in GitLab 17.11. Use `auto_merge` instead.</summary>
         public bool? WhenPipelineSucceeds { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMergeTrainsMergeRequestsMergeRequestIidRequest"/> and sets the default values.

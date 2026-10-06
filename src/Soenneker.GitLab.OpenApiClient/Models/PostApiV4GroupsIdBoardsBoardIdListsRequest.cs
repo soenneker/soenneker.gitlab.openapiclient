@@ -14,11 +14,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The ID of an assignee. Exactly one of `label_id`, `milestone_id`, `iteration_id`, `assignee_id` must be provided.</summary>
+        /// <summary>ID of the user. Premium and Ultimate only. Exactly one of `label_id`, `milestone_id`, `iteration_id`, `assignee_id` must be provided.</summary>
         public int? AssigneeId { get; set; }
-        /// <summary>The ID of an assignee iteration. Exactly one of `label_id`, `milestone_id`, `iteration_id`, `assignee_id` must be provided.</summary>
+        /// <summary>ID of the iteration. Premium and Ultimate only. Exactly one of `label_id`, `milestone_id`, `iteration_id`, `assignee_id` must be provided.</summary>
         public int? IterationId { get; set; }
-        /// <summary>The ID of an existing label. Exactly one of `label_id`, `milestone_id`, `iteration_id`, `assignee_id` must be provided.</summary>
+        /// <summary>ID of the label. Exactly one of `label_id`, `milestone_id`, `iteration_id`, `assignee_id` must be provided.</summary>
         public int? LabelId { get; set; }
         /// <summary>The ID of an existing milestone. Exactly one of `label_id`, `milestone_id`, `iteration_id`, `assignee_id` must be provided.</summary>
         public int? MilestoneId { get; set; }

@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>Automatically clear emoji, message and availability fields after a certain time</summary>
+    /// <summary>Time after which the status is cleared automatically.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PatchApiV4UserStatusRequestClearStatusAfter
     {

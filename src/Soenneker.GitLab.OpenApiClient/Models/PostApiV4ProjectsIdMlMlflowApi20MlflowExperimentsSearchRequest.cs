@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>This parameter is ignored</summary>
+        /// <summary>Ignored. Accepted for MLflow API compatibility.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Filter { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Filter { get; set; }
 #endif
-        /// <summary>Maximum number of experiments to fetch in a page. Default is 200, maximum is 1000.</summary>
+        /// <summary>Maximum number of experiments to fetch in a page. The maximum is 1000.</summary>
         public int? MaxResults { get; set; }
         /// <summary>Order criteria. Can be by a column of the experiment (created_at, name).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -32,7 +32,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string OrderBy { get; set; }
 #endif
-        /// <summary>Token for pagination</summary>
+        /// <summary>Token for pagination.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PageToken { get; set; }

@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Custom email address for the user</summary>
+        /// <summary>Email address of the user account. If omitted when creating a new service account, generates an email address prefixed with `service_account_group_`. Custom email addresses require confirmation, unless the group has a matching [verified domain](https://docs.gitlab.com/user/enterprise_user/#manage-group-domains) or email confirmation settings are [turned off](https://docs.gitlab.com/administration/settings/sign_up_restrictions/#confirm-user-email).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Email { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Email { get; set; }
 #endif
-        /// <summary>Name of the user</summary>
+        /// <summary>Name of the user. If omitted when creating a new service account, uses `Service account user`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>Username of the user</summary>
+        /// <summary>Username of the user account. If omitted when creating a new service account, generates a username prefixed with `service_account_group_`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Username { get; set; }

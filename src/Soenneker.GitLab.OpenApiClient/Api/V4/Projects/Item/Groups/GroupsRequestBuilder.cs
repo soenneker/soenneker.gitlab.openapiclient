@@ -92,7 +92,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Groups
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Return list of groups matching the search criteria</summary>
+            /// <summary>Return groups matching the search criteria.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("search")]
@@ -102,13 +102,13 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Groups
             [QueryParameter("search")]
             public string Search { get; set; }
 #endif
-            /// <summary>Limit returned shared groups by minimum access level to the project</summary>
+            /// <summary>Return shared groups with at least the specified access level. For a list of values, see [roles](https://docs.gitlab.com/user/permissions/#default-roles).</summary>
             [QueryParameter("shared_min_access_level")]
             public int? SharedMinAccessLevel { get; set; }
-            /// <summary>Limit to shared groups user has access to</summary>
+            /// <summary>If `true`, returns only shared groups the authenticated user can access.</summary>
             [QueryParameter("shared_visible_only")]
             public bool? SharedVisibleOnly { get; set; }
-            /// <summary>Array of group ids to exclude from list</summary>
+            /// <summary>Skip the specified group IDs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("skip_groups")]
@@ -118,7 +118,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Groups
             [QueryParameter("skip_groups")]
             public int?[] SkipGroups { get; set; }
 #endif
-            /// <summary>Include shared groups</summary>
+            /// <summary>If `true`, includes groups the project is shared with.</summary>
             [QueryParameter("with_shared")]
             public bool? WithShared { get; set; }
         }

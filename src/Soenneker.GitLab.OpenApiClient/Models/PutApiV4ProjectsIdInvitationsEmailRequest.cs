@@ -12,11 +12,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     public partial class PutApiV4ProjectsIdInvitationsEmailRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>A valid access level (defaults: `30`, developer access level)</summary>
+        /// <summary>Access level to grant to the invited user. For a list of values, see [roles](https://docs.gitlab.com/user/permissions/#default-roles).</summary>
         public int? AccessLevel { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Date string in ISO 8601 format (`YYYY-MM-DDTHH:MM:SSZ`)</summary>
+        /// <summary>Date when the invitation expires.</summary>
         public DateTimeOffset? ExpiresAt { get; set; }
         /// <summary>ID of a member role to assign to the invited user. Ultimate only.</summary>
         public int? MemberRoleId { get; set; }

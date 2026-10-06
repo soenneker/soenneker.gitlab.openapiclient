@@ -14,9 +14,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The expiration date of the SSH key in ISO 8601 format (YYYY-MM-DDTHH:MM:SSZ)</summary>
+        /// <summary>Date when the SSH key expires.</summary>
         public DateTimeOffset? ExpiresAt { get; set; }
-        /// <summary>The new SSH key</summary>
+        /// <summary>Public key value of the SSH key.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Key { get; set; }
@@ -24,7 +24,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Key { get; set; }
 #endif
-        /// <summary>The title of the new SSH key</summary>
+        /// <summary>Title of the SSH key.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Title { get; set; }
@@ -32,7 +32,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Title { get; set; }
 #endif
-        /// <summary>Scope of usage for the SSH key</summary>
+        /// <summary>Usage scope for the key.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UsersUserIdKeysRequestUsageType? UsageType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UsersUserIdKeysRequest"/> and sets the default values.

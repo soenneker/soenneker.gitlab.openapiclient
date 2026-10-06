@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Job_token_scope.Gr
     public partial class Groups_allowlistRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.job_token_scope.groups_allowlist.item collection</summary>
-        /// <param name="position">ID of the group to be removed from the allowlist</param>
+        /// <param name="position">ID of the group to remove from the CI/CD job token groups allowlist.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Job_token_scope.Groups_allowlist.Item.WithTargetGroupItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Job_token_scope.Groups_allowlist.Item.WithTargetGroupItemRequestBuilder this[int position]
         {

@@ -12,7 +12,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     public partial class PutApiV4ProjectsIdAccessRequestsUserIdApproveRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>A valid access level (defaults: `30`, the Developer role)</summary>
+        /// <summary>Access level to grant to the approved user. For a list of values, see [roles](https://docs.gitlab.com/user/permissions/#default-roles).</summary>
         public int? AccessLevel { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }

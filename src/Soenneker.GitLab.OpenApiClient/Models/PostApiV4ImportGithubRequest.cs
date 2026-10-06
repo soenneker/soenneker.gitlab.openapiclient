@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Custom GitHub enterprise hostname. For example: https://github.example.com. From GitLab 16.5 to GitLab 17.1, you must include the path `/api/v3`.</summary>
+        /// <summary>Custom GitHub Enterprise hostname. Do not set for GitHub.com. From GitLab 16.5 to GitLab 17.1, you must include the path `/api/v3`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? GithubHostname { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string GithubHostname { get; set; }
 #endif
-        /// <summary>New repo name</summary>
+        /// <summary>Name of the new project. Also used as the new path, so it must not start or end with a special character and must not contain consecutive special characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? NewName { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string NewName { get; set; }
 #endif
-        /// <summary>Optional stages of import to be performed</summary>
+        /// <summary>Additional items to import. For a list of items, see [select additional items to import](https://docs.gitlab.com/user/project/import/github/#select-additional-items-to-import).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ImportGithubRequestOptionalStagesProperty? OptionalStages { get; set; }
@@ -38,9 +38,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ImportGithubRequestOptionalStagesProperty OptionalStages { get; set; }
 #endif
-        /// <summary>Pagination limit</summary>
+        /// <summary>Number of items retrieved per API request to GitHub. If omitted, defaults to `100`. Use a lower number for large repositories to reduce the risk of GitHub API errors, though this increases migration time.</summary>
         public int? PaginationLimit { get; set; }
-        /// <summary>GitHub personal access token</summary>
+        /// <summary>GitHub personal access token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PersonalAccessToken { get; set; }
@@ -48,9 +48,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string PersonalAccessToken { get; set; }
 #endif
-        /// <summary>GitHub repository ID</summary>
+        /// <summary>GitHub repository ID.</summary>
         public int? RepoId { get; set; }
-        /// <summary>Namespace or group to import repository into</summary>
+        /// <summary>Namespace to import the repository into. Supports subgroups, for example `/namespace/subgroup`. Must not be blank.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TargetNamespace { get; set; }
@@ -58,7 +58,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string TargetNamespace { get; set; }
 #endif
-        /// <summary>Strategy for behavior on timeouts</summary>
+        /// <summary>Strategy for handling import timeouts. `optimistic` continues to the next stage of the import. `pessimistic` fails the import immediately. Defaults to `pessimistic`.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ImportGithubRequestTimeoutStrategy? TimeoutStrategy { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ImportGithubRequest"/> and sets the default values.

@@ -8,14 +8,14 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// Object containing through namespace information
+    /// Group whose members can access the listed features.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PutApiV4ApplicationSettingsRequestDuoNamespaceAccessRulesItemThroughNamespace : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Full path of the through namespace</summary>
+        /// <summary>Full path of the group.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FullPath { get; set; }
@@ -23,9 +23,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string FullPath { get; set; }
 #endif
-        /// <summary>ID of the through namespace</summary>
+        /// <summary>ID of the group.</summary>
         public int? Id { get; set; }
-        /// <summary>Name of the through namespace</summary>
+        /// <summary>Name of the group.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }

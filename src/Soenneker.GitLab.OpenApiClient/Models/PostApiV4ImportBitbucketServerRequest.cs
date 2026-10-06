@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>BitBucket Server Project Key</summary>
+        /// <summary>Key of the Bitbucket Server project. Must contain only letters, numbers, hyphens, underscores, periods, or whitespace characters. Personal project keys start with `~`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? BitbucketServerProject { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string BitbucketServerProject { get; set; }
 #endif
-        /// <summary>BitBucket Server Repository Name</summary>
+        /// <summary>Name of the Bitbucket Server repository. Must contain only letters, numbers, hyphens, underscores, periods, or whitespace characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? BitbucketServerRepo { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string BitbucketServerRepo { get; set; }
 #endif
-        /// <summary>Bitbucket Server URL</summary>
+        /// <summary>URL of the Bitbucket Server instance.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? BitbucketServerUrl { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string BitbucketServerUrl { get; set; }
 #endif
-        /// <summary>BitBucket Server Username</summary>
+        /// <summary>Bitbucket Server username.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? BitbucketServerUsername { get; set; }
@@ -46,7 +46,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string BitbucketServerUsername { get; set; }
 #endif
-        /// <summary>New repo name</summary>
+        /// <summary>Name of the new project. Also used as the new path, so it must not start or end with a special character and must not contain consecutive special characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? NewName { get; set; }
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string NewName { get; set; }
 #endif
-        /// <summary>Namespace to import repo into</summary>
+        /// <summary>Namespace to import the repository into.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? NewNamespace { get; set; }
@@ -62,7 +62,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string NewNamespace { get; set; }
 #endif
-        /// <summary>BitBucket Server personal access token/password</summary>
+        /// <summary>Bitbucket Server personal access token or password.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PersonalAccessToken { get; set; }
@@ -70,7 +70,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string PersonalAccessToken { get; set; }
 #endif
-        /// <summary>Strategy for behavior on timeouts</summary>
+        /// <summary>Strategy for handling import timeouts. `optimistic` continues to the next stage of the import. `pessimistic` fails the import immediately. Defaults to `pessimistic`.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ImportBitbucketServerRequestTimeoutStrategy? TimeoutStrategy { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ImportBitbucketServerRequest"/> and sets the default values.

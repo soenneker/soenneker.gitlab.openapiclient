@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Emails
     public partial class EmailsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.users.item.emails.item collection</summary>
-        /// <param name="position">The ID of the email</param>
+        /// <param name="position">ID of the email.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Emails.Item.WithEmailItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Emails.Item.WithEmailItemRequestBuilder this[int position]
         {

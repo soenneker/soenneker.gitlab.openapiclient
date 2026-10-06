@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The availability of user to set</summary>
+        /// <summary>Availability of the user. Possible values are `busy` and `not_set`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Availability { get; set; }
@@ -22,9 +22,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Availability { get; set; }
 #endif
-        /// <summary>Automatically clear emoji, message and availability fields after a certain time</summary>
+        /// <summary>Time after which the status is cleared automatically.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4UserStatusRequestClearStatusAfter? ClearStatusAfter { get; set; }
-        /// <summary>The emoji to set on the status</summary>
+        /// <summary>Name of the emoji to use as a status. If omitted, `speech_balloon` is used. Must be one of the names in the [Gemojione index](https://github.com/bonusly/gemojione/blob/master/config/index.json).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Emoji { get; set; }
@@ -32,7 +32,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Emoji { get; set; }
 #endif
-        /// <summary>The status message to set</summary>
+        /// <summary>Message to set as a status. Can contain emoji codes. Maximum of 100 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Message { get; set; }

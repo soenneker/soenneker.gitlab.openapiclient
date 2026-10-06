@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>The state event of the milestone. At least one of `title`, `description`, `start_date`, `due_date`, `state_event` must be provided.</summary>
+    /// <summary>State event of the milestone. At least one of `title`, `description`, `start_date`, `due_date`, `state_event` must be provided.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PutApiV4ProjectsIdMilestonesMilestoneIdRequestStateEvent
     {

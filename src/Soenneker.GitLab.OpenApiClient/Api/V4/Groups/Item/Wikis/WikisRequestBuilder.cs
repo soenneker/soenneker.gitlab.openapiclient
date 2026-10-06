@@ -25,7 +25,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Wikis
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Wikis.Attachments.AttachmentsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.wikis.item collection</summary>
-        /// <param name="position">The slug of a wiki page</param>
+        /// <param name="position">URL-encoded slug of the wiki page, a unique string such as `dir%2Fpage_name`.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Wikis.Item.WithSlugItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Wikis.Item.WithSlugItemRequestBuilder this[string position]
         {
@@ -147,7 +147,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Wikis
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WikisRequestBuilderGetQueryParameters 
         {
-            /// <summary>Include pages&apos; content</summary>
+            /// <summary>If `true`, includes the content of each wiki page.</summary>
             [QueryParameter("with_content")]
             public bool? WithContent { get; set; }
         }

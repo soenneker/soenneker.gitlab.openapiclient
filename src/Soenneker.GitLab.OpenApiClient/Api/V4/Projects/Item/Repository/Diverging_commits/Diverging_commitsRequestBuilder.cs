@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Divergi
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Diverging_commitsRequestBuilderGetQueryParameters 
         {
-            /// <summary>The ref to compare from</summary>
+            /// <summary>Ref to compare from. Accepts a commit SHA, branch name, or tag name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("from")]
@@ -95,10 +95,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Divergi
             [QueryParameter("from")]
             public string From { get; set; }
 #endif
-            /// <summary>Maximum number of commits to count. 0 for unlimited</summary>
+            /// <summary>Maximum number of commits to count. Use `0` for unlimited.</summary>
             [QueryParameter("max_count")]
             public int? MaxCount { get; set; }
-            /// <summary>The ref to compare to</summary>
+            /// <summary>Ref to compare to. Accepts a commit SHA, branch name, or tag name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("to")]

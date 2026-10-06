@@ -14,11 +14,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The type of the relation</summary>
+        /// <summary>Type of the relation. Defaults to `relates_to`.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GroupsIdEpicsEpicIidRelatedEpicsRequestLinkType? LinkType { get; set; }
-        /// <summary>Internal ID of a target group&apos;s epic</summary>
+        /// <summary>Internal ID of the target group&apos;s epic.</summary>
         public int? TargetEpicIid { get; set; }
-        /// <summary>ID or URL-encoded path of the target group</summary>
+        /// <summary>ID or URL-encoded path of the target group.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TargetGroupId { get; set; }

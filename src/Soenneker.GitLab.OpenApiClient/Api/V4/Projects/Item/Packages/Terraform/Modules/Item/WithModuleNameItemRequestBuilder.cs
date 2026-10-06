@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Terraform
     public partial class WithModuleNameItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.packages.terraform.modules.item.item collection</summary>
-        /// <param name="position">Name of the module system, or [provider](https://www.terraform.io/registry/providers).</param>
+        /// <param name="position">Name of the module system, or [provider](https://developer.hashicorp.com/terraform/registry/providers).</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Terraform.Modules.Item.Item.WithModuleSystemItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Terraform.Modules.Item.Item.WithModuleSystemItemRequestBuilder this[string position]
         {

@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>Broadcast type. Defaults to banner</summary>
+    /// <summary>Appearance type of the broadcast message.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PostApiV4BroadcastMessagesRequestBroadcastType
     {

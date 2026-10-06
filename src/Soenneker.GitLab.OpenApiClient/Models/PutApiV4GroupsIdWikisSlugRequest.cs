@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Content of a wiki page. At least one of `content`, `title`, `format` must be provided.</summary>
+        /// <summary>Content of the wiki page. At least one of `content`, `title`, `format` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Content { get; set; }
@@ -22,9 +22,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Content { get; set; }
 #endif
-        /// <summary>Format of a wiki page. Available formats are markdown, rdoc, asciidoc and org. At least one of `content`, `title`, `format` must be provided.</summary>
+        /// <summary>Format of the wiki page. At least one of `content`, `title`, `format` must be provided.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdWikisSlugRequestFormat? Format { get; set; }
-        /// <summary>Object that contains YAML frontmatter</summary>
+        /// <summary>YAML front matter of the wiki page.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdWikisSlugRequestFrontMatter? FrontMatter { get; set; }
@@ -32,7 +32,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdWikisSlugRequestFrontMatter FrontMatter { get; set; }
 #endif
-        /// <summary>Title of a wiki page. At least one of `content`, `title`, `format` must be provided.</summary>
+        /// <summary>Title of the wiki page. At least one of `content`, `title`, `format` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Title { get; set; }

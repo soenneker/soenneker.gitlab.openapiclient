@@ -12,7 +12,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     public partial class PostApiV4ProjectsIdMirrorPullRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>Pull Request action</summary>
+        /// <summary>Action of the GitHub pull request event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Action { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Reset the mirror if it is in a hard-failed state and retry the update</summary>
+        /// <summary>If `true`, resets a hard-failed mirror and retries the update. Ignored for requests authenticated with a GitHub webhook signature.</summary>
         public bool? Force { get; set; }
         /// <summary>Target branch</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

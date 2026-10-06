@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>The due date of the milestone. The ISO 8601 date format (%Y-%m-%d). At least one of `title`, `description`, `start_date`, `due_date`, `state_event` must be provided.</summary>
+        /// <summary>Due date of the milestone, in ISO 8601 format (`YYYY-MM-DD`). At least one of `title`, `description`, `start_date`, `due_date`, `state_event` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DueDate { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string DueDate { get; set; }
 #endif
-        /// <summary>The start date of the milestone. The ISO 8601 date format (%Y-%m-%d). At least one of `title`, `description`, `start_date`, `due_date`, `state_event` must be provided.</summary>
+        /// <summary>Start date of the milestone, in ISO 8601 format (`YYYY-MM-DD`). At least one of `title`, `description`, `start_date`, `due_date`, `state_event` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? StartDate { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string StartDate { get; set; }
 #endif
-        /// <summary>The state event of the milestone. At least one of `title`, `description`, `start_date`, `due_date`, `state_event` must be provided.</summary>
+        /// <summary>State event of the milestone. At least one of `title`, `description`, `start_date`, `due_date`, `state_event` must be provided.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdMilestonesMilestoneIdRequestStateEvent? StateEvent { get; set; }
         /// <summary>The title of the milestone. At least one of `title`, `description`, `start_date`, `due_date`, `state_event` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

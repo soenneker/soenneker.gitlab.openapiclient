@@ -65,7 +65,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Integrations.Jira_forge.Subscrip
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.JiraConnectSubscriptionEntity>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.JiraConnectSubscriptionEntity.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Subscribes a GitLab namespace to the Forge installation so its development data syncs to Jira. Authenticated as the GitLab user (OAuth); the Jira installation and user are resolved from the Forge invocation context.
+        /// Subscribes a GitLab namespace to the Forge installation so its development data syncs to Jira. Authenticated by the Forge Invocation Token (app-context call); the GitLab user is bound via the signed delegation token from the user_delegation endpoint, and the Jira site-admin check runs against Jira with the app system token riding the call.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicSuccess"/></returns>
         /// <param name="body">The request body</param>
@@ -104,7 +104,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Integrations.Jira_forge.Subscrip
             return requestInfo;
         }
         /// <summary>
-        /// Subscribes a GitLab namespace to the Forge installation so its development data syncs to Jira. Authenticated as the GitLab user (OAuth); the Jira installation and user are resolved from the Forge invocation context.
+        /// Subscribes a GitLab namespace to the Forge installation so its development data syncs to Jira. Authenticated by the Forge Invocation Token (app-context call); the GitLab user is bound via the signed delegation token from the user_delegation endpoint, and the Jira site-admin check runs against Jira with the app system token riding the call.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

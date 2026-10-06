@@ -12,7 +12,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     public partial class PostApiV4GroupsIdInvitationsRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>A valid access level (defaults: `30`, developer access level)</summary>
+        /// <summary>Access level to grant to the invited user. For a list of values, see [roles](https://docs.gitlab.com/user/permissions/#default-roles).</summary>
         public int? AccessLevel { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -24,9 +24,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<string> Email { get; set; }
 #endif
-        /// <summary>Date string in the format YEAR-MONTH-DAY</summary>
+        /// <summary>Date when the invitation expires.</summary>
         public DateTimeOffset? ExpiresAt { get; set; }
-        /// <summary>Source that triggered the member creation process</summary>
+        /// <summary>Source of the invitation that starts the member creation process.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? InviteSource { get; set; }
@@ -36,7 +36,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>ID of a member role to assign to the invited user. Ultimate only.</summary>
         public int? MemberRoleId { get; set; }
-        /// <summary>The user ID of the new member or multiple IDs separated by commas.</summary>
+        /// <summary>ID of the user to invite, or multiple IDs separated by commas. Required if `email` is not provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? UserId { get; set; }

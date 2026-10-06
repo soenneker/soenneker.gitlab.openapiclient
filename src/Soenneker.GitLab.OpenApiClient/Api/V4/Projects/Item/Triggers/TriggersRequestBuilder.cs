@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Triggers
     public partial class TriggersRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.triggers.item collection</summary>
-        /// <param name="position">The trigger token ID</param>
+        /// <param name="position">ID of the trigger token.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Triggers.Item.WithTriggerItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Triggers.Item.WithTriggerItemRequestBuilder this[int position]
         {

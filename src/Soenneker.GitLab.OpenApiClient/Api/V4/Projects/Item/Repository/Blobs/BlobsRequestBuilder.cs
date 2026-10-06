@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Blobs
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Blobs.Batch.BatchRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.repository.blobs.item collection</summary>
-        /// <param name="position">The commit hash</param>
+        /// <param name="position">SHA of the blob.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Blobs.Item.WithShaItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Blobs.Item.WithShaItemRequestBuilder this[string position]
         {

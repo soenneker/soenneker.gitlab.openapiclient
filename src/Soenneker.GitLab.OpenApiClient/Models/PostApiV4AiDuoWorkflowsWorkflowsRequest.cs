@@ -84,7 +84,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>Where the session was triggered from</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsRequestSource? Source { get; set; }
-        /// <summary>Source branch for the flow. Uses the default branch when not specified. Applies only when the flow runs in a CI pipeline.</summary>
+        /// <summary>Source branch for the flow. When not specified, a flow whose goal names a pipeline or merge request, such as fix_pipeline/v1, uses its branch, and other flows use the default branch. Applies only when the flow runs in a CI pipeline.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SourceBranch { get; set; }

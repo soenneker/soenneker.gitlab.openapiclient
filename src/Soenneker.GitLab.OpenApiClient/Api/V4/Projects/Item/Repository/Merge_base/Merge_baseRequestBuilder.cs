@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Merge_b
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Merge_baseRequestBuilderGetQueryParameters 
         {
-            /// <summary>The refs to find the common ancestor of, multiple refs can be passed</summary>
+            /// <summary>Refs to find the common ancestor of. Accepts multiple refs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("refs")]

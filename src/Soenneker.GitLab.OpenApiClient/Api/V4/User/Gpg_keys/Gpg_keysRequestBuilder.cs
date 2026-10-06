@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User.Gpg_keys
     public partial class Gpg_keysRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.user.gpg_keys.item collection</summary>
-        /// <param name="position">The ID of the GPG key</param>
+        /// <param name="position">ID of the GPG key.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.User.Gpg_keys.Item.WithKeyItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.User.Gpg_keys.Item.WithKeyItemRequestBuilder this[int position]
         {

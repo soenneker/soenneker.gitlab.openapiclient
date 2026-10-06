@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Impersonation_tokens
     public partial class Impersonation_tokensRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.users.item.impersonation_tokens.item collection</summary>
-        /// <param name="position">The ID of the impersonation token</param>
+        /// <param name="position">ID of the impersonation token.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Impersonation_tokens.Item.WithImpersonationTokenItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Impersonation_tokens.Item.WithImpersonationTokenItemRequestBuilder this[int position]
         {
@@ -147,7 +147,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Impersonation_tokens
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Filters (all|active|inactive) impersonation_tokens</summary>
+            /// <summary>Filter tokens by state.</summary>
             [QueryParameter("state")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4UsersUserIdImpersonationTokensStateParameter? State { get; set; }
         }

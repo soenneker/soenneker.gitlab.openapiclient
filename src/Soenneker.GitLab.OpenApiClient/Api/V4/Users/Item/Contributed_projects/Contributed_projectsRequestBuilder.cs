@@ -95,10 +95,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Contributed_projects
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Return only the ID, URL, name, and path of each project</summary>
+            /// <summary>If `true`, returns only limited fields for each project. Without authentication, only limited fields are returned regardless of this setting.</summary>
             [QueryParameter("simple")]
             public bool? Simple { get; set; }
-            /// <summary>Return projects sorted in ascending and descending order</summary>
+            /// <summary>Sort results in ascending or descending order.</summary>
             [QueryParameter("sort")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4UsersUserIdContributedProjectsSortParameter? Sort { get; set; }
         }

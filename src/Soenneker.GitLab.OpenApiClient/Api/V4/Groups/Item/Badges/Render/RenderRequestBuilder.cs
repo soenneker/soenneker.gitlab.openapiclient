@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Badges.Render
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class RenderRequestBuilderGetQueryParameters 
         {
-            /// <summary>URL of the badge image</summary>
+            /// <summary>URL of the badge image.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("image_url")]
@@ -95,7 +95,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Badges.Render
             [QueryParameter("image_url")]
             public string ImageUrl { get; set; }
 #endif
-            /// <summary>URL of the badge link</summary>
+            /// <summary>URL of the badge link.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("link_url")]

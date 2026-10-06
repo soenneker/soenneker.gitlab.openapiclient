@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Mark discussion resolved/unresolved</summary>
+        /// <summary>If `true`, resolves the discussion. If `false`, reopens the discussion.</summary>
         public bool? Resolved { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdMergeRequestsNoteableIdDiscussionsDiscussionIdRequest"/> and sets the default values.

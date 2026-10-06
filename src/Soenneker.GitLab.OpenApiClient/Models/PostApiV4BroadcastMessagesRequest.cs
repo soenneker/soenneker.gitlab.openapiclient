@@ -14,9 +14,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Broadcast type. Defaults to banner</summary>
+        /// <summary>Appearance type of the broadcast message.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4BroadcastMessagesRequestBroadcastType? BroadcastType { get; set; }
-        /// <summary>Background color (Deprecated. Use &quot;theme&quot; instead.)</summary>
+        /// <summary>Background color hex code. Deprecated. Use `theme` instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Color { get; set; }
@@ -24,11 +24,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Color { get; set; }
 #endif
-        /// <summary>Is dismissable</summary>
+        /// <summary>If `true`, the user can dismiss the message.</summary>
         public bool? Dismissable { get; set; }
-        /// <summary>Ending time</summary>
+        /// <summary>Ending time, in UTC. When creating a message, defaults to one hour after the current time.</summary>
         public DateTimeOffset? EndsAt { get; set; }
-        /// <summary>Foreground color (Deprecated. Use &quot;theme&quot; instead.)</summary>
+        /// <summary>Foreground color hex code. Deprecated. Use `theme` instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Font { get; set; }
@@ -36,7 +36,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Font { get; set; }
 #endif
-        /// <summary>Message to display</summary>
+        /// <summary>Message to display.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Message { get; set; }
@@ -44,9 +44,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Message { get; set; }
 #endif
-        /// <summary>Starting time</summary>
+        /// <summary>Starting time, in UTC. When creating a message, defaults to the current time.</summary>
         public DateTimeOffset? StartsAt { get; set; }
-        /// <summary>Target user roles</summary>
+        /// <summary>Target access levels (roles) of the broadcast message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<int?>? TargetAccessLevels { get; set; }
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<int?> TargetAccessLevels { get; set; }
 #endif
-        /// <summary>Target path</summary>
+        /// <summary>Target path of the broadcast message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TargetPath { get; set; }
@@ -62,7 +62,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string TargetPath { get; set; }
 #endif
-        /// <summary>The theme for the message</summary>
+        /// <summary>Color theme for the broadcast message. Applies only to banners.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4BroadcastMessagesRequestTheme? Theme { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4BroadcastMessagesRequest"/> and sets the default values.

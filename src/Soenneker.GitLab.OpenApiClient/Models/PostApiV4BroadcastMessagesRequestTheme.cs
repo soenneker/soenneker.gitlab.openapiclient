@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>The theme for the message</summary>
+    /// <summary>Color theme for the broadcast message. Applies only to banners.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PostApiV4BroadcastMessagesRequestTheme
     {
