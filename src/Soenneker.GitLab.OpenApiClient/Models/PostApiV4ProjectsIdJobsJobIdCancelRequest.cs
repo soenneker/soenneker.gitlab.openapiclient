@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Force cancellation for a job with a state of `canceling`</summary>
+        /// <summary>If `true`, [forces cancellation](https://docs.gitlab.com/ci/jobs/#force-cancel-a-job) of a job in `canceling` state.</summary>
         public bool? Force { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdJobsJobIdCancelRequest"/> and sets the default values.

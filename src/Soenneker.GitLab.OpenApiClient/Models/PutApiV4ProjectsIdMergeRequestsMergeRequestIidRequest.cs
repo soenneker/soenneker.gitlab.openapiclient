@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Comma-separated label names to add to a merge request. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
+        /// <summary>Comma-separated label names to add to the merge request. If a label does not already exist, this creates a new project label and assigns it to the merge request. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? AddLabels { get; set; }
@@ -22,15 +22,15 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<string> AddLabels { get; set; }
 #endif
-        /// <summary>Allow commits from members who can merge to the target branch. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
+        /// <summary>If `true`, allows commits from members who can merge to the target branch. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
         public bool? AllowCollaboration { get; set; }
-        /// <summary>[deprecated] See allow_collaboration. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
+        /// <summary>If `true`, allows commits from members who can merge to the target branch. Deprecated. Use `allow_collaboration` instead. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
         public bool? AllowMaintainerToPush { get; set; }
         /// <summary>Number of approvals required before the merge request can be merged. [Deprecated](https://gitlab.com/gitlab-org/gitlab/-/issues/353097) in GitLab 16.0. Premium and Ultimate only.</summary>
         public int? ApprovalsBeforeMerge { get; set; }
-        /// <summary>Assignee user ID. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
+        /// <summary>ID of the user to assign to the merge request. Set to `0` or leave empty to unassign all assignees. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
         public int? AssigneeId { get; set; }
-        /// <summary>The IDs of the users to assign the merge request to, as a comma-separated list. Set to 0 or provide an empty value to unassign all assignees. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
+        /// <summary>IDs of the users to assign to the merge request, as a comma-separated list. Set to `0` or leave empty to unassign all assignees. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<int?>? AssigneeIds { get; set; }
@@ -46,9 +46,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>Flag indicating if the merge request’s discussion is locked. If the discussion is locked only project members can add, edit or resolve comments. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
+        /// <summary>If `true`, locks the merge request&apos;s discussion so only project members can add, edit, or resolve comments. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
         public bool? DiscussionLocked { get; set; }
-        /// <summary>Comma-separated label names for a merge request. Set to an empty string to unassign all labels. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
+        /// <summary>Comma-separated label names for the merge request. If a label does not already exist, this creates a new project label and assigns it to the merge request. Set to an empty string to unassign all labels. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Labels { get; set; }
@@ -56,7 +56,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<string> Labels { get; set; }
 #endif
-        /// <summary>Date after which the merge request can be merged. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
+        /// <summary>Date after which the merge request can be merged. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/510992) in GitLab 17.8. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MergeAfter { get; set; }
@@ -72,9 +72,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Milestone { get; set; }
 #endif
-        /// <summary>The global ID of a milestone to assign the merge request to. Mutually exclusive with `milestone`. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
+        /// <summary>Global ID of a milestone to assign to the merge request. Set to `0` or leave empty to unassign the milestone. Mutually exclusive with `milestone`. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
         public int? MilestoneId { get; set; }
-        /// <summary>Comma-separated label names to remove from a merge request. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
+        /// <summary>Comma-separated label names to remove from the merge request. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? RemoveLabels { get; set; }
@@ -82,9 +82,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<string> RemoveLabels { get; set; }
 #endif
-        /// <summary>Flag indicating if a merge request should remove the source branch when merging. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
+        /// <summary>If `true`, the source branch is removed when the merge request merges. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
         public bool? RemoveSourceBranch { get; set; }
-        /// <summary>The IDs of the users to review the merge request, as a comma-separated list. Set to 0 or provide an empty value to unassign all reviewers. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
+        /// <summary>IDs of the users to set as reviewers of the merge request, as a comma-separated list. If set to `0` or left empty, no reviewers are set. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<int?>? ReviewerIds { get; set; }
@@ -92,11 +92,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<int?> ReviewerIds { get; set; }
 #endif
-        /// <summary>Squash commits into a single commit when merging. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
+        /// <summary>If `true`, squashes all commits into a single commit on merge. When omitted, defaults to the [project&apos;s squash option setting](https://docs.gitlab.com/user/project/merge_requests/squash_and_merge/#configure-squash-options-for-a-project), which can override this value at merge time. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
         public bool? Squash { get; set; }
-        /// <summary>New state (close/reopen). At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
+        /// <summary>Event to change the state of the merge request. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdMergeRequestsMergeRequestIidRequestStateEvent? StateEvent { get; set; }
-        /// <summary>The target branch. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
+        /// <summary>Target branch. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TargetBranch { get; set; }
@@ -104,7 +104,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string TargetBranch { get; set; }
 #endif
-        /// <summary>The title of the merge request. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
+        /// <summary>Title of the merge request. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Title { get; set; }

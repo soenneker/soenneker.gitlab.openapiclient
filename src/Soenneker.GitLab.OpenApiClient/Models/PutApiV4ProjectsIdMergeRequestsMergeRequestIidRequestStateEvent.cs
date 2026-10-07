@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>New state (close/reopen). At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
+    /// <summary>Event to change the state of the merge request. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PutApiV4ProjectsIdMergeRequestsMergeRequestIidRequestStateEvent
     {

@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>State event for an epic. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
+    /// <summary>Event to change the state of the epic. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PutApiV4GroupsIdDashEpicsEpicIidRequestStateEvent
     {

@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners.Item.Jobs
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class JobsRequestBuilderGetQueryParameters 
         {
-            /// <summary>Cursor for obtaining the next set of records</summary>
+            /// <summary>Cursor for obtaining the next set of records.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("cursor")]
@@ -95,7 +95,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners.Item.Jobs
             [QueryParameter("cursor")]
             public string Cursor { get; set; }
 #endif
-            /// <summary>Order by `id`</summary>
+            /// <summary>Sort results by the specified field.</summary>
             [QueryParameter("order_by")]
             public global::Soenneker.GitLab.OpenApiClient.Models.IdOrderBy? OrderBy { get; set; }
             /// <summary>Page number of results to retrieve.</summary>
@@ -104,13 +104,13 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners.Item.Jobs
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Sort by `asc` or `desc` order. Specify `order_by` as well, including for `id`</summary>
+            /// <summary>Sort results in ascending or descending order. Specify `order_by` as well, including for `id`.</summary>
             [QueryParameter("sort")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4RunnersIdJobsSortParameter? Sort { get; set; }
-            /// <summary>Status of the job</summary>
+            /// <summary>Status of the job.</summary>
             [QueryParameter("status")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4RunnersIdJobsStatusParameter? Status { get; set; }
-            /// <summary>System ID associated with the runner manager</summary>
+            /// <summary>System ID associated with the runner manager.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("system_id")]

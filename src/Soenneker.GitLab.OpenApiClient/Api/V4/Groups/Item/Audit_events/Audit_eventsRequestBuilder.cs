@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Audit_events
     public partial class Audit_eventsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.audit_events.item collection</summary>
-        /// <param name="position">The ID of the audit event</param>
+        /// <param name="position">ID of the audit event.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Audit_events.Item.WithAuditEventItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Audit_events.Item.WithAuditEventItemRequestBuilder this[int position]
         {
@@ -99,10 +99,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Audit_events
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Audit_eventsRequestBuilderGetQueryParameters 
         {
-            /// <summary>Return audit events created after the specified time</summary>
+            /// <summary>Return group audit events created on or after the specified time.</summary>
             [QueryParameter("created_after")]
             public DateTimeOffset? CreatedAfter { get; set; }
-            /// <summary>Return audit events created before the specified time</summary>
+            /// <summary>Return group audit events created on or before the specified time.</summary>
             [QueryParameter("created_before")]
             public DateTimeOffset? CreatedBefore { get; set; }
             /// <summary>Page number of results to retrieve.</summary>

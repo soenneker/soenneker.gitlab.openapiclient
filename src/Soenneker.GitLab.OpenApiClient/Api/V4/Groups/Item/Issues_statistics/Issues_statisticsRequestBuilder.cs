@@ -84,10 +84,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Issues_statisticsRequestBuilderGetQueryParameters 
         {
-            /// <summary>Return issues which are assigned to the user with the given ID. Mutually exclusive with `assignee_username`.</summary>
+            /// <summary>Return issues assigned to the given user `id`. `None` returns unassigned issues and `Any` returns issues with an assignee. Mutually exclusive with `assignee_username`.</summary>
             [QueryParameter("assignee_id")]
             public int? AssigneeId { get; set; }
-            /// <summary>Return issues which are assigned to the user with the given username. Mutually exclusive with `assignee_id`.</summary>
+            /// <summary>Return issues assigned to the given username. In GitLab Community Edition, only a single value is accepted. Otherwise, an invalid parameter error is returned. When multiple usernames are given, only issues assigned to all of them are returned. Mutually exclusive with `assignee_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("assignee_username")]
@@ -97,10 +97,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics
             [QueryParameter("assignee_username")]
             public string[] AssigneeUsername { get; set; }
 #endif
-            /// <summary>Return issues which are authored by the user with the given ID. Mutually exclusive with `author_username`.</summary>
+            /// <summary>Return issues created by the given user ID. Combine with `scope=all` or `scope=assigned_to_me`. Mutually exclusive with `author_username`.</summary>
             [QueryParameter("author_id")]
             public int? AuthorId { get; set; }
-            /// <summary>Return issues which are authored by the user with the given username. Mutually exclusive with `author_id`.</summary>
+            /// <summary>Return issues created by the given `username`. Mutually exclusive with `author_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("author_username")]
@@ -110,13 +110,13 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics
             [QueryParameter("author_username")]
             public string AuthorUsername { get; set; }
 #endif
-            /// <summary>Filter confidential or public issues</summary>
+            /// <summary>If `true`, returns only confidential issues. If `false`, returns only public issues.</summary>
             [QueryParameter("confidential")]
             public bool? Confidential { get; set; }
-            /// <summary>Return issues created after the specified time</summary>
+            /// <summary>Return issues created on or after the specified time.</summary>
             [QueryParameter("created_after")]
             public DateTimeOffset? CreatedAfter { get; set; }
-            /// <summary>Return issues created before the specified time</summary>
+            /// <summary>Return issues created on or before the specified time.</summary>
             [QueryParameter("created_before")]
             public DateTimeOffset? CreatedBefore { get; set; }
             /// <summary>Return issues associated with the epic with the given ID. `None` returns issues that are not associated with an epic. `Any` returns issues that are associated with an epic. Premium and Ultimate only.</summary>
@@ -125,7 +125,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics
             /// <summary>The health status of the issue. Must be one of: on_track, needs_attention, at_risk, none, any</summary>
             [QueryParameter("health_status")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdIssuesStatisticsHealthStatusParameter? HealthStatus { get; set; }
-            /// <summary>The IID array of issues</summary>
+            /// <summary>Return only the issues having the given `iid`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("iids")]
@@ -135,7 +135,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics
             [QueryParameter("iids")]
             public int?[] Iids { get; set; }
 #endif
-            /// <summary>`title`, `description`, or a string joining them with comma</summary>
+            /// <summary>Modify the scope of the `search` attribute to `title`, `description`, or `title,description`. If omitted, defaults to `title,description`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("in")]
@@ -158,7 +158,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics
             [QueryParameter("iteration_title")]
             public string IterationTitle { get; set; }
 #endif
-            /// <summary>Comma-separated list of label names</summary>
+            /// <summary>Comma-separated list of label names. `None` means no labels are assigned. `Any` means at least one label is assigned. `No+Label` (deprecated) means no labels are assigned. Set to an empty string to unassign all labels. If a label does not already exist, this creates a new project label and assigns it to the issue. Predefined names are case-insensitive.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("labels")]
@@ -168,7 +168,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics
             [QueryParameter("labels")]
             public string[] Labels { get; set; }
 #endif
-            /// <summary>Milestone title. Mutually exclusive with `milestone_id`.</summary>
+            /// <summary>Milestone title. `None` lists all issues with no milestone. `Any` lists all issues that have an assigned milestone. Support for `None` and `Any` is [planned for removal](https://gitlab.com/gitlab-org/gitlab/-/issues/336044). Use the `milestone_id` attribute instead. Mutually exclusive with `milestone_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("milestone")]
@@ -178,10 +178,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics
             [QueryParameter("milestone")]
             public string Milestone { get; set; }
 #endif
-            /// <summary>Return issues assigned to milestones with the specified timebox value (&quot;Any&quot;, &quot;None&quot;, &quot;Upcoming&quot; or &quot;Started&quot;). Mutually exclusive with `milestone`.</summary>
+            /// <summary>Return issues assigned to milestones with a given timebox value. `None` lists all issues with no milestone. `Any` lists all issues that have an assigned milestone. `Upcoming` lists all issues assigned to milestones due in the future. `Started` lists all issues assigned to open, started milestones. The logic for `Upcoming` and `Started` differs from the logic used in the [GraphQL API](https://docs.gitlab.com/user/project/milestones/#special-milestone-filters). Mutually exclusive with `milestone`.</summary>
             [QueryParameter("milestone_id")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdIssuesStatisticsMilestoneIdParameter? MilestoneId { get; set; }
-            /// <summary>Return issues reacted by the authenticated user by the given emoji</summary>
+            /// <summary>Return issues reacted to by the authenticated user with the given `emoji`. `None` returns issues with no reaction and `Any` returns issues with at least one reaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("my_reaction_emoji")]
@@ -191,7 +191,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics
             [QueryParameter("my_reaction_emoji")]
             public string MyReactionEmoji { get; set; }
 #endif
-            /// <summary>Filters by the specified parameters</summary>
+            /// <summary>Return issues that do not match the specified parameters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("not")]
@@ -201,10 +201,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics
             [QueryParameter("not")]
             public string Not { get; set; }
 #endif
-            /// <summary>Return issues which are not assigned to the user with the given ID. Mutually exclusive with `not[assignee_username]`.</summary>
+            /// <summary>Return issues not assigned to the user with the given ID. Mutually exclusive with `not[assignee_username]`.</summary>
             [QueryParameter("not%5Bassignee_id%5D")]
             public int? NotassigneeId { get; set; }
-            /// <summary>Return issues which are not assigned to the user with the given username. Mutually exclusive with `not[assignee_id]`.</summary>
+            /// <summary>Return issues not assigned to the user with the given username. Mutually exclusive with `not[assignee_id]`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("not%5Bassignee_username%5D")]
@@ -214,10 +214,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics
             [QueryParameter("not%5Bassignee_username%5D")]
             public string[] NotassigneeUsername { get; set; }
 #endif
-            /// <summary>Return issues which are not authored by the user with the given ID. Mutually exclusive with `not[author_username]`.</summary>
+            /// <summary>Return issues not authored by the user with the given ID. Mutually exclusive with `not[author_username]`.</summary>
             [QueryParameter("not%5Bauthor_id%5D")]
             public int? NotauthorId { get; set; }
-            /// <summary>Return issues which are not authored by the user with the given username. Mutually exclusive with `not[author_id]`.</summary>
+            /// <summary>Return issues not authored by the user with the given username. Mutually exclusive with `not[author_id]`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("not%5Bauthor_username%5D")]
@@ -227,7 +227,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics
             [QueryParameter("not%5Bauthor_username%5D")]
             public string NotauthorUsername { get; set; }
 #endif
-            /// <summary>The IID array of issues</summary>
+            /// <summary>Internal IDs of issues to exclude.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("not%5Biids%5D")]
@@ -237,10 +237,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics
             [QueryParameter("not%5Biids%5D")]
             public int?[] Notiids { get; set; }
 #endif
-            /// <summary>Return issues which are not assigned to the iteration with the given ID. Mutually exclusive with `not[iteration_title]`.</summary>
+            /// <summary>Return issues not assigned to the iteration with the given ID. Mutually exclusive with `not[iteration_title]`.</summary>
             [QueryParameter("not%5Biteration_id%5D")]
             public int? NotiterationId { get; set; }
-            /// <summary>Return issues which are not assigned to the iteration with the given title. Mutually exclusive with `not[iteration_id]`.</summary>
+            /// <summary>Return issues not assigned to the iteration with the given title. Mutually exclusive with `not[iteration_id]`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("not%5Biteration_title%5D")]
@@ -250,7 +250,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics
             [QueryParameter("not%5Biteration_title%5D")]
             public string NotiterationTitle { get; set; }
 #endif
-            /// <summary>Comma-separated list of label names</summary>
+            /// <summary>Comma-separated list of label names.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("not%5Blabels%5D")]
@@ -270,16 +270,16 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics
             [QueryParameter("not%5Bmilestone%5D")]
             public string Notmilestone { get; set; }
 #endif
-            /// <summary>Return issues assigned to milestones without the specified timebox value (&quot;Any&quot;, &quot;None&quot;, &quot;Upcoming&quot; or &quot;Started&quot;). Mutually exclusive with `not[milestone]`.</summary>
+            /// <summary>Return issues assigned to milestones without the specified timebox value. Mutually exclusive with `not[milestone]`.</summary>
             [QueryParameter("not%5Bmilestone_id%5D")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdIssuesStatisticsNotMilestoneIdParameter? NotmilestoneId { get; set; }
-            /// <summary>Return issues without the specified weight</summary>
+            /// <summary>Return issues that do not have the specified weight.</summary>
             [QueryParameter("not%5Bweight%5D")]
             public int? Notweight { get; set; }
-            /// <summary>Return issues for the given scope: `created_by_me`, `assigned_to_me` or `all`</summary>
+            /// <summary>Return issues for the given scope.</summary>
             [QueryParameter("scope")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdIssuesStatisticsScopeParameter? Scope { get; set; }
-            /// <summary>Search issues for text present in the title, description, or any combination of these</summary>
+            /// <summary>Search issues against their `title` and `description`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("search")]
@@ -289,10 +289,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Issues_statistics
             [QueryParameter("search")]
             public string Search { get; set; }
 #endif
-            /// <summary>Return issues updated after the specified time</summary>
+            /// <summary>Return issues updated on or after the specified time.</summary>
             [QueryParameter("updated_after")]
             public DateTimeOffset? UpdatedAfter { get; set; }
-            /// <summary>Return issues updated before the specified time</summary>
+            /// <summary>Return issues updated on or before the specified time.</summary>
             [QueryParameter("updated_before")]
             public DateTimeOffset? UpdatedBefore { get; set; }
             /// <summary>The weight of the issue</summary>

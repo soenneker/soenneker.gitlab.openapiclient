@@ -14,9 +14,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The ID of the issue we want to be after. At least one of `move_after_id`, `move_before_id` must be provided.</summary>
+        /// <summary>Global ID of the project issue to place this issue after. At least one of `move_after_id`, `move_before_id` must be provided.</summary>
         public int? MoveAfterId { get; set; }
-        /// <summary>The ID of the issue we want to be before. At least one of `move_after_id`, `move_before_id` must be provided.</summary>
+        /// <summary>Global ID of the project issue to place this issue before. At least one of `move_after_id`, `move_before_id` must be provided.</summary>
         public int? MoveBeforeId { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdIssuesIssueIidReorderRequest"/> and sets the default values.

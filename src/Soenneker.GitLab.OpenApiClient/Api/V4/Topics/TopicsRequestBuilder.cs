@@ -25,7 +25,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Topics
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Topics.Merge.MergeRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.topics.item collection</summary>
-        /// <param name="position">ID of project topic</param>
+        /// <param name="position">ID of the project topic.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Topics.Item.TopicsItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Topics.Item.TopicsItemRequestBuilder this[int position]
         {
@@ -146,7 +146,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Topics
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class TopicsRequestBuilderGetQueryParameters 
         {
-            /// <summary>The organization id for the topics</summary>
+            /// <summary>Filter topics by organization ID.</summary>
             [QueryParameter("organization_id")]
             public int? OrganizationId { get; set; }
             /// <summary>Page number of results to retrieve.</summary>
@@ -155,7 +155,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Topics
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Return list of topics matching the search criteria</summary>
+            /// <summary>Search topics against their `name`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("search")]
@@ -165,7 +165,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Topics
             [QueryParameter("search")]
             public string Search { get; set; }
 #endif
-            /// <summary>Return list of topics without assigned projects</summary>
+            /// <summary>If `true`, returns only topics that have no assigned projects.</summary>
             [QueryParameter("without_projects")]
             public bool? WithoutProjects { get; set; }
         }

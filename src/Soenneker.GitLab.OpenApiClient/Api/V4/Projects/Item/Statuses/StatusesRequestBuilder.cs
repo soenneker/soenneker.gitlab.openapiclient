@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Statuses
     public partial class StatusesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.statuses.item collection</summary>
-        /// <param name="position">The commit hash</param>
+        /// <param name="position">Commit SHA.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Statuses.Item.WithShaItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Statuses.Item.WithShaItemRequestBuilder this[string position]
         {

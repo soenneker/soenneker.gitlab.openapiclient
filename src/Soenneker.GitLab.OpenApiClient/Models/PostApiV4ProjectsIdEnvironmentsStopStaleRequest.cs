@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Stop all environments that were last modified or deployed to before this date.</summary>
+        /// <summary>Stop environments that were modified or deployed to before the specified date. Valid inputs are between 10 years ago and 1 week ago.</summary>
         public DateTimeOffset? Before { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdEnvironmentsStopStaleRequest"/> and sets the default values.

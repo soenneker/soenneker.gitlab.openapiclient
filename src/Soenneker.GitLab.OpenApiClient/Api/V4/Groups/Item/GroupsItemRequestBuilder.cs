@@ -613,7 +613,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item
             /// <summary>If `true`, includes [custom attributes](https://docs.gitlab.com/api/custom_attributes/) in the response. Administrators only.</summary>
             [QueryParameter("with_custom_attributes")]
             public bool? WithCustomAttributes { get; set; }
-            /// <summary>Omit project details</summary>
+            /// <summary>If `true`, includes details of the projects that belong to the group. Deprecated and [scheduled for removal in API v5](https://gitlab.com/gitlab-org/gitlab/-/issues/213797). To list the projects in a group, use the List all projects in a group operation instead.</summary>
             [QueryParameter("with_projects")]
             public bool? WithProjects { get; set; }
         }

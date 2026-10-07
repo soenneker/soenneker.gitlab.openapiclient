@@ -85,13 +85,13 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Environments.Revie
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Review_appsRequestBuilderDeleteQueryParameters 
         {
-            /// <summary>The date before which environments can be deleted. Defaults to 30 days ago. Expected in ISO 8601 format (`YYYY-MM-DDTHH:MM:SSZ`)</summary>
+            /// <summary>Date before which environments can be deleted. Defaults to 30 days ago.</summary>
             [QueryParameter("before")]
             public DateTimeOffset? Before { get; set; }
-            /// <summary>Defaults to true for safety reasons. It performs a dry run where no actual deletion will be performed. Set to false to actually delete the environment</summary>
+            /// <summary>If `true`, performs a dry run where no deletion is actually performed. If `false`, deletes the environment.</summary>
             [QueryParameter("dry_run")]
             public bool? DryRun { get; set; }
-            /// <summary>Maximum number of environments to delete. Defaults to 100</summary>
+            /// <summary>Maximum number of environments to delete.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
         }

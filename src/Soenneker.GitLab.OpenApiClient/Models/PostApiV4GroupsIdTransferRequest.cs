@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The ID of the target group to which the group needs to be transferred to.If not provided, the source group will be promoted to a top-level group.</summary>
+        /// <summary>ID of the new parent group. If omitted, the group becomes a top-level group.</summary>
         public int? GroupId { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GroupsIdTransferRequest"/> and sets the default values.

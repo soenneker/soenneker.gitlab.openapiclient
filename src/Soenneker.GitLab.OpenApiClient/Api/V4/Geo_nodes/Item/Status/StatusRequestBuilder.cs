@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Geo_nodes.Item.Status
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class StatusRequestBuilderGetQueryParameters 
         {
-            /// <summary>Attempt to fetch the latest status from the Geo node directly, ignoring the cache</summary>
+            /// <summary>If `true`, fetches the latest status from the Geo node directly, ignoring the cache.</summary>
             [QueryParameter("refresh")]
             public bool? Refresh { get; set; }
         }

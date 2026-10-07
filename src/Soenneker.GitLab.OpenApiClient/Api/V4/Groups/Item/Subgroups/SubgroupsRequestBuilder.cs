@@ -86,13 +86,13 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Subgroups
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class SubgroupsRequestBuilderGetQueryParameters 
         {
-            /// <summary>Limit by groups that are not archived and not marked for deletion</summary>
+            /// <summary>If `true`, returns only groups that are not archived and not marked for deletion.</summary>
             [QueryParameter("active")]
             public bool? Active { get; set; }
-            /// <summary>When `true`, returns all accessible groups. When `false`, returns only groups where the user is a member.</summary>
+            /// <summary>If `true`, returns all accessible groups. If `false`, returns only groups where the user is a member. When omitted, administrators receive all groups and other authenticated users receive only their own. Unauthenticated requests always return all public groups. The `owned` and `min_access_level` attributes take precedence.</summary>
             [QueryParameter("all_available")]
             public bool? AllAvailable { get; set; }
-            /// <summary>Limit by archived status</summary>
+            /// <summary>If `true`, returns only archived groups or projects.</summary>
             [QueryParameter("archived")]
             public bool? Archived { get; set; }
             /// <summary>Filter by [custom attributes](https://docs.gitlab.com/api/custom_attributes/) that match all of the specified key and value pairs. Administrators only.</summary>
@@ -105,16 +105,16 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Subgroups
             [QueryParameter("custom_attributes")]
             public string CustomAttributes { get; set; }
 #endif
-            /// <summary>Return groups that are marked for deletion on this date</summary>
+            /// <summary>Return groups that are marked for deletion on this date. Premium and Ultimate only. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/429315) in GitLab 17.1.</summary>
             [QueryParameter("marked_for_deletion_on")]
             public Date? MarkedForDeletionOn { get; set; }
-            /// <summary>Minimum access level of authenticated user</summary>
+            /// <summary>Return groups where the current user has at least the specified access level. For a list of values, see [roles](https://docs.gitlab.com/user/permissions/#default-roles).</summary>
             [QueryParameter("min_access_level")]
             public int? MinAccessLevel { get; set; }
-            /// <summary>Order by name, path, id or similarity if searching</summary>
+            /// <summary>Sort results by the specified field.</summary>
             [QueryParameter("order_by")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdSubgroupsOrderByParameter? OrderBy { get; set; }
-            /// <summary>Limit by owned by authenticated user</summary>
+            /// <summary>If `true`, returns only groups explicitly owned by the current user.</summary>
             [QueryParameter("owned")]
             public bool? Owned { get; set; }
             /// <summary>Page number of results to retrieve.</summary>
@@ -133,7 +133,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Subgroups
             [QueryParameter("repository_storage")]
             public string RepositoryStorage { get; set; }
 #endif
-            /// <summary>Search for a specific group</summary>
+            /// <summary>Return the list of authorized groups matching the search criteria.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("search")]
@@ -143,7 +143,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Subgroups
             [QueryParameter("search")]
             public string Search { get; set; }
 #endif
-            /// <summary>Array of group ids to exclude from list</summary>
+            /// <summary>Skip the specified group IDs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("skip_groups")]
@@ -153,16 +153,16 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Subgroups
             [QueryParameter("skip_groups")]
             public int?[] SkipGroups { get; set; }
 #endif
-            /// <summary>Sort by asc (ascending) or desc (descending)</summary>
+            /// <summary>Sort results in ascending or descending order.</summary>
             [QueryParameter("sort")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdSubgroupsSortParameter? Sort { get; set; }
-            /// <summary>Include project statistics</summary>
+            /// <summary>If `true`, includes group statistics. Administrators only.</summary>
             [QueryParameter("statistics")]
             public bool? Statistics { get; set; }
-            /// <summary>Only include top-level groups</summary>
+            /// <summary>If `true`, returns only top-level groups, excluding subgroups.</summary>
             [QueryParameter("top_level_only")]
             public bool? TopLevelOnly { get; set; }
-            /// <summary>Limit by visibility</summary>
+            /// <summary>Return groups with the specified visibility.</summary>
             [QueryParameter("visibility")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdSubgroupsVisibilityParameter? Visibility { get; set; }
             /// <summary>If `true`, includes [custom attributes](https://docs.gitlab.com/api/custom_attributes/) in the response. Administrators only.</summary>

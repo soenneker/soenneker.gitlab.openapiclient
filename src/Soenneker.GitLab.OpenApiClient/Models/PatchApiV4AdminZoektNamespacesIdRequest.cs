@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The number of replicas override to set (nil to unset)</summary>
+        /// <summary>Number of replicas override to set. Set to `null` to unset the override.</summary>
         public int? NumberOfReplicasOverride { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4AdminZoektNamespacesIdRequest"/> and sets the default values.

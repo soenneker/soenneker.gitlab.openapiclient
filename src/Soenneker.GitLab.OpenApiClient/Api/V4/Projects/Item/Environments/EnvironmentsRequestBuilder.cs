@@ -31,7 +31,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Environments
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Environments.Stop_stale.Stop_staleRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.environments.item collection</summary>
-        /// <param name="position">The ID of the environment</param>
+        /// <param name="position">ID of the environment.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Environments.Item.WithEnvironmentItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Environments.Item.WithEnvironmentItemRequestBuilder this[int position]
         {
@@ -179,7 +179,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Environments
             [QueryParameter("search")]
             public string Search { get; set; }
 #endif
-            /// <summary>List all environments that match a specific state. Accepted values: `available`, `stopping`, or `stopped`. If no state value given, returns all environments</summary>
+            /// <summary>Filter environments by state. If omitted, returns all environments.</summary>
             [QueryParameter("states")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdEnvironmentsStatesParameter? States { get; set; }
         }

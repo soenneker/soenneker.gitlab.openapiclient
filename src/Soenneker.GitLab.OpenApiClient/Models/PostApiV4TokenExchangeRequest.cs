@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Target service audience (e.g. gitlab-artifact-registry)</summary>
+        /// <summary>Target service audience.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.GitlabArtifactRegistryAudience? Audience { get; set; }
         /// <summary>Requested token lifetime in seconds. The granted lifetime may be shorter than requested depending on the authentication method used to call this endpoint.</summary>
         public int? ExpiresIn { get; set; }

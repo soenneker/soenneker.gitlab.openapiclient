@@ -12,11 +12,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     public partial class PutApiV4ProjectsIdPipelineSchedulesPipelineScheduleIdRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The activation of pipeline schedule</summary>
+        /// <summary>If `true`, activates the pipeline schedule. If `false`, the pipeline schedule is initially deactivated.</summary>
         public bool? Active { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The cron</summary>
+        /// <summary>Cron schedule, for example `0 1 * * *`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Cron { get; set; }
@@ -24,7 +24,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Cron { get; set; }
 #endif
-        /// <summary>The timezone</summary>
+        /// <summary>Time zone supported by `ActiveSupport::TimeZone`, for example `Pacific Time (US &amp; Canada)`, or `TZInfo::Timezone`, for example `America/Los_Angeles`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CronTimezone { get; set; }
@@ -32,7 +32,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string CronTimezone { get; set; }
 #endif
-        /// <summary>The description of pipeline schedule</summary>
+        /// <summary>Description of the pipeline schedule.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get; set; }
@@ -40,7 +40,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>Inputs for the pipeline schedule</summary>
+        /// <summary>Array of inputs to pass to the pipeline schedule. Each input has a `name` and a `value`, which can be a string, array, number, or boolean. To delete an existing input, include the `name` field and set `destroy` to `true`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdPipelineSchedulesPipelineScheduleIdRequestInputsItem>? Inputs { get; set; }
@@ -48,7 +48,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdPipelineSchedulesPipelineScheduleIdRequestInputsItem> Inputs { get; set; }
 #endif
-        /// <summary>The branch/tag name will be triggered</summary>
+        /// <summary>Branch or tag name that triggers the pipeline. Accepts either short refs (`main`) or full refs (`refs/heads/main` or `refs/tags/main`). Short refs are automatically expanded to full refs, unless the value could match either a branch or a tag.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Ref { get; set; }

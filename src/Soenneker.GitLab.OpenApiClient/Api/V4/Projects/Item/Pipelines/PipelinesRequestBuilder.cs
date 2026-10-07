@@ -25,7 +25,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.Latest.LatestRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.pipelines.item collection</summary>
-        /// <param name="position">The pipeline ID</param>
+        /// <param name="position">ID of the pipeline.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.Item.WithPipelineItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.Item.WithPipelineItemRequestBuilder this[int position]
         {
@@ -105,13 +105,13 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class PipelinesRequestBuilderGetQueryParameters 
         {
-            /// <summary>Return pipelines created after the specified datetime. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ</summary>
+            /// <summary>Return pipelines created on or after the specified time.</summary>
             [QueryParameter("created_after")]
             public DateTimeOffset? CreatedAfter { get; set; }
-            /// <summary>Return pipelines created before the specified datetime. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ</summary>
+            /// <summary>Return pipelines created on or before the specified time.</summary>
             [QueryParameter("created_before")]
             public DateTimeOffset? CreatedBefore { get; set; }
-            /// <summary>Filter pipelines by name</summary>
+            /// <summary>Return pipelines with the specified name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("name")]
@@ -121,7 +121,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines
             [QueryParameter("name")]
             public string Name { get; set; }
 #endif
-            /// <summary>Order pipelines</summary>
+            /// <summary>Sort results by the specified field.</summary>
             [QueryParameter("order_by")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdPipelinesOrderByParameter? OrderBy { get; set; }
             /// <summary>Page number of results to retrieve.</summary>
@@ -130,7 +130,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>The ref of pipelines</summary>
+            /// <summary>Return pipelines for the specified branch or tag.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("ref")]
@@ -140,10 +140,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines
             [QueryParameter("ref")]
             public string Ref { get; set; }
 #endif
-            /// <summary>The scope of pipelines</summary>
+            /// <summary>Return pipelines in the specified scope.</summary>
             [QueryParameter("scope")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdPipelinesScopeParameter? Scope { get; set; }
-            /// <summary>The sha of pipelines</summary>
+            /// <summary>Return pipelines for the specified commit SHA.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("sha")]
@@ -153,22 +153,22 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines
             [QueryParameter("sha")]
             public string Sha { get; set; }
 #endif
-            /// <summary>Sort pipelines</summary>
+            /// <summary>Sort results in ascending or descending order.</summary>
             [QueryParameter("sort")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdPipelinesSortParameter? Sort { get; set; }
             /// <summary>The source of pipelines</summary>
             [QueryParameter("source")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdPipelinesSourceParameter? Source { get; set; }
-            /// <summary>The status of pipelines</summary>
+            /// <summary>Return pipelines with the specified status.</summary>
             [QueryParameter("status")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdPipelinesStatusParameter? Status { get; set; }
-            /// <summary>Return pipelines updated after the specified datetime. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ</summary>
+            /// <summary>Return pipelines updated on or after the specified time.</summary>
             [QueryParameter("updated_after")]
             public DateTimeOffset? UpdatedAfter { get; set; }
-            /// <summary>Return pipelines updated before the specified datetime. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ</summary>
+            /// <summary>Return pipelines updated on or before the specified time.</summary>
             [QueryParameter("updated_before")]
             public DateTimeOffset? UpdatedBefore { get; set; }
-            /// <summary>The username of the user who triggered pipelines</summary>
+            /// <summary>Return pipelines triggered by the specified username.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("username")]
@@ -178,7 +178,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines
             [QueryParameter("username")]
             public string Username { get; set; }
 #endif
-            /// <summary>Returns pipelines with invalid configurations</summary>
+            /// <summary>If `true`, returns only pipelines with invalid configurations.</summary>
             [QueryParameter("yaml_errors")]
             public bool? YamlErrors { get; set; }
         }

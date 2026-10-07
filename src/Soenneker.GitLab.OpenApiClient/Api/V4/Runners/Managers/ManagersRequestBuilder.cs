@@ -82,7 +82,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners.Managers
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ManagersRequestBuilderDeleteQueryParameters 
         {
-            /// <summary>The runner&apos;s system identifier.</summary>
+            /// <summary>System identifier of the runner.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("system_id")]
@@ -92,7 +92,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners.Managers
             [QueryParameter("system_id")]
             public string SystemId { get; set; }
 #endif
-            /// <summary>The runner&apos;s authentication token</summary>
+            /// <summary>Authentication token of the runner.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("token")]

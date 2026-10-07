@@ -131,13 +131,13 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Artifacts
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ArtifactsRequestBuilderGetQueryParameters 
         {
-            /// <summary>Perform direct download from remote storage instead of proxying artifacts</summary>
+            /// <summary>If `true`, performs a direct download of artifacts from remote storage instead of proxying them.</summary>
             [QueryParameter("direct_download")]
             public bool? DirectDownload { get; set; }
             /// <summary>Requested download transfer mode (`proxy` or `direct`). Only honored when allowed by the object storage configuration.</summary>
             [QueryParameter("download_mode")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4JobsIdArtifactsDownloadModeParameter? DownloadMode { get; set; }
-            /// <summary>Job&apos;s authentication token</summary>
+            /// <summary>Authentication token of the job.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("token")]

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// Input values for the job
+    /// Hash of [job input](https://docs.gitlab.com/ci/jobs/job_inputs/) values to use when playing the job. [Introduced](https://gitlab.com/groups/gitlab-org/-/work_items/17833) in GitLab 18.10.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostApiV4ProjectsIdJobsJobIdPlayRequestJobInputsProperty : IAdditionalDataHolder, IParsable

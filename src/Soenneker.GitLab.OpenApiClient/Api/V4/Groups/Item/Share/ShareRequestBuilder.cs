@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Share
     public partial class ShareRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.share.item collection</summary>
-        /// <param name="position">The ID of the shared group</param>
+        /// <param name="position">ID of the shared group.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Share.Item.WithGroupItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Share.Item.WithGroupItemRequestBuilder this[int position]
         {

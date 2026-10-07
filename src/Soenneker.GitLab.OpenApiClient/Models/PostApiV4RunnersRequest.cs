@@ -12,13 +12,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     public partial class PostApiV4RunnersRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The access level of the runner</summary>
+        /// <summary>Access level of the runner.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4RunnersRequestAccessLevel? AccessLevel { get; set; }
-        /// <summary>Deprecated: Use `paused` instead. Specifies if the runner is allowed to receive new jobs. Mutually exclusive with `paused`.</summary>
+        /// <summary>If `true`, the runner is allowed to receive new jobs. Deprecated. Use `paused` instead. Mutually exclusive with `paused`.</summary>
         public bool? Active { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Description of the runner</summary>
+        /// <summary>Description of the runner.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get; set; }
@@ -34,9 +34,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4RunnersRequestInfo Info { get; set; }
 #endif
-        /// <summary>Specifies if the runner should be locked for the current project</summary>
+        /// <summary>If `true`, the runner is locked for the current project.</summary>
         public bool? Locked { get; set; }
-        /// <summary>Deprecated: see `maintenance_note`. Mutually exclusive with `maintenance_note`.</summary>
+        /// <summary>Free-form maintenance notes for the runner. Deprecated. Use `maintenance_note` instead. Mutually exclusive with `maintenance_note`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MaintainerNote { get; set; }
@@ -52,13 +52,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string MaintenanceNote { get; set; }
 #endif
-        /// <summary>Maximum timeout that limits the amount of time (in seconds) that runners can run jobs</summary>
+        /// <summary>Maximum time, in seconds, that runners can spend running a job.</summary>
         public int? MaximumTimeout { get; set; }
-        /// <summary>Specifies if the runner should ignore new jobs. Mutually exclusive with `active`.</summary>
+        /// <summary>If `true`, the runner ignores new jobs. Mutually exclusive with `active`.</summary>
         public bool? Paused { get; set; }
-        /// <summary>Specifies if the runner should handle untagged jobs</summary>
+        /// <summary>If `true`, the runner handles untagged jobs.</summary>
         public bool? RunUntagged { get; set; }
-        /// <summary>A list of runner tags</summary>
+        /// <summary>List of runner tags.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? TagList { get; set; }
@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<string> TagList { get; set; }
 #endif
-        /// <summary>Registration token</summary>
+        /// <summary>Registration token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Token { get; set; }

@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>State of the issue. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
+    /// <summary>Event to change the state of the issue. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PutApiV4ProjectsIdIssuesIssueIidRequestStateEvent
     {

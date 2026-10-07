@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Projects
     public partial class ProjectsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.admin.zoekt.projects.item collection</summary>
-        /// <param name="position">The id of the project you want to index</param>
+        /// <param name="position">ID of the project to index.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Projects.Item.WithProjectItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Projects.Item.WithProjectItemRequestBuilder this[int position]
         {

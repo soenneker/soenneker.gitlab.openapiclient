@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The key of the variable</summary>
+        /// <summary>Key of the pipeline schedule variable. Must be 255 characters or fewer and contain only `A-Z`, `a-z`, `0-9`, and `_`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Key { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Key { get; set; }
 #endif
-        /// <summary>The value of the variable</summary>
+        /// <summary>Value of the variable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Value { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Value { get; set; }
 #endif
-        /// <summary>The type of variable, must be one of env_var or file. Defaults to env_var</summary>
+        /// <summary>Type of the variable. Defaults to `env_var`.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdPipelineSchedulesPipelineScheduleIdVariablesRequestVariableType? VariableType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdPipelineSchedulesPipelineScheduleIdVariablesRequest"/> and sets the default values.

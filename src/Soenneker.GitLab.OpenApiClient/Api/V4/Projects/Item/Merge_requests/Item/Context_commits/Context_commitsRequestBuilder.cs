@@ -164,7 +164,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Context_commitsRequestBuilderDeleteQueryParameters 
         {
-            /// <summary>The context commits’ SHA.</summary>
+            /// <summary>Context commits&apos; SHAs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("commits")]

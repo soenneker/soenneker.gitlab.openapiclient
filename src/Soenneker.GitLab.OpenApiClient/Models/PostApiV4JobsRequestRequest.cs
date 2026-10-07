@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4JobsRequestRequestInfo Info { get; set; }
 #endif
-        /// <summary>Runner&apos;s queue last_update token</summary>
+        /// <summary>`last_update` token of the runner queue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? LastUpdate { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string LastUpdate { get; set; }
 #endif
-        /// <summary>Runner&apos;s session data</summary>
+        /// <summary>Session data of the runner.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4JobsRequestRequestSession? Session { get; set; }

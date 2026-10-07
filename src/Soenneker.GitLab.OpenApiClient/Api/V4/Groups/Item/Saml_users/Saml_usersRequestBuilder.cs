@@ -86,16 +86,16 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Saml_users
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Saml_usersRequestBuilderGetQueryParameters 
         {
-            /// <summary>Return only active users.</summary>
+            /// <summary>If `true`, returns only active users.</summary>
             [QueryParameter("active")]
             public bool? Active { get; set; }
-            /// <summary>Return only blocked users.</summary>
+            /// <summary>If `true`, returns only blocked users.</summary>
             [QueryParameter("blocked")]
             public bool? Blocked { get; set; }
-            /// <summary>Return users created after the specified time.</summary>
+            /// <summary>Return users created on or after the specified time.</summary>
             [QueryParameter("created_after")]
             public DateTimeOffset? CreatedAfter { get; set; }
-            /// <summary>Return users created before the specified time.</summary>
+            /// <summary>Return users created on or before the specified time.</summary>
             [QueryParameter("created_before")]
             public DateTimeOffset? CreatedBefore { get; set; }
             /// <summary>Page number of results to retrieve.</summary>
@@ -104,7 +104,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Saml_users
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Search users by name, email, username.</summary>
+            /// <summary>Return users with a matching name, email, or username. Use partial values to increase results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("search")]
@@ -114,7 +114,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Saml_users
             [QueryParameter("search")]
             public string Search { get; set; }
 #endif
-            /// <summary>Return single user with a specific username.</summary>
+            /// <summary>Return a user with the given username.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("username")]

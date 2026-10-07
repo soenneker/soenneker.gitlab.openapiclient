@@ -83,7 +83,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Artifact
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithArtifactPathItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>To be used with triggers for multi-project pipelines, available only on Premium and Ultimate tiers.</summary>
+            /// <summary>CI/CD job token for multi-project pipelines. Premium and Ultimate only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("job_token")]

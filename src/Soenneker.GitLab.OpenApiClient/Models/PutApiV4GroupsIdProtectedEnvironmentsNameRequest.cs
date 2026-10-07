@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Array of access levels allowed to approve, with each described by a hash. One of `user_id`, `group_id` or `access_level`. They take the form of `{user_id: integer}`, `{group_id: integer}` or `{access_level: integer}` respectively. You can also specify the number of required approvals from the specified entity with `required_approvals` field.</summary>
+        /// <summary>Array of access levels allowed to approve deployments to the environment, with each entry specifying a user, group, or access level. Use `required_approvals` to set the number of approvals required from each entry.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdProtectedEnvironmentsNameRequestApprovalRulesItem>? ApprovalRules { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdProtectedEnvironmentsNameRequestApprovalRulesItem> ApprovalRules { get; set; }
 #endif
-        /// <summary>An array of users/groups allowed to deploy environment</summary>
+        /// <summary>Array of access levels allowed to deploy to the environment, with each entry specifying a user, group, or access level.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdProtectedEnvironmentsNameRequestDeployAccessLevelsItem>? DeployAccessLevels { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdProtectedEnvironmentsNameRequestDeployAccessLevelsItem> DeployAccessLevels { get; set; }
 #endif
-        /// <summary>[DEPRECATED] The number of approvals required to deploy to this environment</summary>
+        /// <summary>Number of approvals required to deploy to the environment. Values greater than `0` are rejected. Deprecated. Use `approval_rules` instead.</summary>
         public int? RequiredApprovalCount { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdProtectedEnvironmentsNameRequest"/> and sets the default values.

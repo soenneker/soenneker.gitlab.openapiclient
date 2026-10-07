@@ -8,16 +8,16 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// Build log state
+    /// Build log state.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PutApiV4JobsIdRequestOutput : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Job&apos;s trace size in bytes</summary>
+        /// <summary>Size of the job&apos;s trace output, in bytes.</summary>
         public int? Bytesize { get; set; }
-        /// <summary>Job&apos;s trace CRC32 checksum</summary>
+        /// <summary>CRC32 checksum of the job trace.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Checksum { get; set; }

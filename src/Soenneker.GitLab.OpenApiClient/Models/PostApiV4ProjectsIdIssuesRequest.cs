@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Comma-separated list of label names</summary>
+        /// <summary>Comma-separated label names to add to the issue. If a label does not already exist, this creates a new project label and assigns it to the issue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? AddLabels { get; set; }
@@ -22,9 +22,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<string> AddLabels { get; set; }
 #endif
-        /// <summary>[Deprecated] The ID of a user to assign issue</summary>
+        /// <summary>ID of the user to assign the issue to. Available only on GitLab Free. Deprecated. Use `assignee_ids` instead.</summary>
         public int? AssigneeId { get; set; }
-        /// <summary>The array of user IDs to assign issue</summary>
+        /// <summary>IDs of the users to assign to the issue. Set to `0` or leave empty to unassign all assignees. Assigning more than one user is Premium and Ultimate only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<int?>? AssigneeIds { get; set; }
@@ -32,11 +32,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<int?> AssigneeIds { get; set; }
 #endif
-        /// <summary>Boolean parameter if the issue should be confidential</summary>
+        /// <summary>If `true`, the issue is confidential.</summary>
         public bool? Confidential { get; set; }
-        /// <summary>Date time when the issue was created. Available only for admins and project owners.</summary>
+        /// <summary>Date and time the issue was created. Requires administrator or project/group owner rights.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
-        /// <summary>The description of an issue</summary>
+        /// <summary>Description of the issue. Limited to 1,048,576 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get; set; }
@@ -44,9 +44,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary> Boolean parameter indicating if the issue&apos;s discussion is locked</summary>
+        /// <summary>If `true`, locks the issue&apos;s discussion so only project members can add or edit comments.</summary>
         public bool? DiscussionLocked { get; set; }
-        /// <summary>The ID of a discussion to resolve, also pass `merge_request_to_resolve_discussions_of`</summary>
+        /// <summary>ID of a discussion to resolve. Use in combination with `merge_request_to_resolve_discussions_of`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DiscussionToResolve { get; set; }
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string DiscussionToResolve { get; set; }
 #endif
-        /// <summary>Date string in the format YEAR-MONTH-DAY</summary>
+        /// <summary>Due date, in the format `YYYY-MM-DD`, for example `2016-03-11`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DueDate { get; set; }
@@ -66,11 +66,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public int? EpicId { get; set; }
         /// <summary>Internal ID of an epic to associate the issue with. Must be `0` or greater. Deprecated and [scheduled for removal](https://gitlab.com/gitlab-org/gitlab/-/issues/35157) in API version 5. Premium and Ultimate only. Mutually exclusive with `epic_id`.</summary>
         public int? EpicIid { get; set; }
-        /// <summary>The internal ID of a project issue. Available only for admins and project owners.</summary>
+        /// <summary>Internal ID to assign to the new issue. Administrators or project owners only.</summary>
         public int? Iid { get; set; }
         /// <summary>The type of the issue. Accepts: issue, incident, test_case, requirement, task, ticket</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdIssuesRequestIssueType? IssueType { get; set; }
-        /// <summary>Comma-separated list of label names</summary>
+        /// <summary>Comma-separated list of label names. `None` means no labels are assigned. `Any` means at least one label is assigned. `No+Label` (deprecated) means no labels are assigned. Set to an empty string to unassign all labels. If a label does not already exist, this creates a new project label and assigns it to the issue. Predefined names are case-insensitive.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Labels { get; set; }
@@ -78,7 +78,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<string> Labels { get; set; }
 #endif
-        /// <summary>The IID of a merge request for which to resolve discussions</summary>
+        /// <summary>Internal ID of a merge request for which to resolve discussions. This fills the issue with a default description and marks all discussions as resolved, unless a title or description is provided.</summary>
         public int? MergeRequestToResolveDiscussionsOf { get; set; }
         /// <summary>The title of a project or ancestor-group milestone to assign the issue to. Mutually exclusive with `milestone_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -88,9 +88,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Milestone { get; set; }
 #endif
-        /// <summary>The ID of a milestone to assign issue. Mutually exclusive with `milestone`.</summary>
+        /// <summary>Global ID of a milestone to assign to the issue. Set to `0` or leave empty to unassign the milestone. Mutually exclusive with `milestone`.</summary>
         public int? MilestoneId { get; set; }
-        /// <summary>Comma-separated list of label names</summary>
+        /// <summary>Comma-separated label names to remove from the issue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? RemoveLabels { get; set; }
@@ -100,7 +100,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>The severity of the issue. Only applies to incidents. Accepts: unknown, low, medium, high, critical</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdIssuesRequestSeverity? Severity { get; set; }
-        /// <summary>Date string in the format YEAR-MONTH-DAY</summary>
+        /// <summary>Start date, in the format `YYYY-MM-DD`, for example `2016-03-11`. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/238041) in GitLab 19.1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? StartDate { get; set; }
@@ -108,7 +108,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string StartDate { get; set; }
 #endif
-        /// <summary>The title of an issue</summary>
+        /// <summary>Title of the issue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Title { get; set; }

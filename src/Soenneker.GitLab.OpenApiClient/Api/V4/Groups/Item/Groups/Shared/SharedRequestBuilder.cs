@@ -96,10 +96,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Groups.Shared
             [QueryParameter("custom_attributes")]
             public string CustomAttributes { get; set; }
 #endif
-            /// <summary>Minimum access level of authenticated user</summary>
+            /// <summary>Return groups where the current user has at least the specified access level. For a list of values, see [roles](https://docs.gitlab.com/user/permissions/#default-roles).</summary>
             [QueryParameter("min_access_level")]
             public int? MinAccessLevel { get; set; }
-            /// <summary>Order by name, path, id or similarity if searching</summary>
+            /// <summary>Sort results by the specified field.</summary>
             [QueryParameter("order_by")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdGroupsSharedOrderByParameter? OrderBy { get; set; }
             /// <summary>Page number of results to retrieve.</summary>
@@ -108,7 +108,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Groups.Shared
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Search for a specific group</summary>
+            /// <summary>Return the list of authorized groups matching the search criteria.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("search")]
@@ -118,7 +118,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Groups.Shared
             [QueryParameter("search")]
             public string Search { get; set; }
 #endif
-            /// <summary>Array of group ids to exclude from list</summary>
+            /// <summary>Skip the specified group IDs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("skip_groups")]
@@ -128,10 +128,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Groups.Shared
             [QueryParameter("skip_groups")]
             public int?[] SkipGroups { get; set; }
 #endif
-            /// <summary>Sort by asc (ascending) or desc (descending)</summary>
+            /// <summary>Sort results in ascending or descending order.</summary>
             [QueryParameter("sort")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdGroupsSharedSortParameter? Sort { get; set; }
-            /// <summary>Limit by visibility</summary>
+            /// <summary>Return groups with the specified visibility.</summary>
             [QueryParameter("visibility")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdGroupsSharedVisibilityParameter? Visibility { get; set; }
             /// <summary>If `true`, includes [custom attributes](https://docs.gitlab.com/api/custom_attributes/) in the response. Administrators only.</summary>

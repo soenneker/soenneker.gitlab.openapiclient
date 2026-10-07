@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Shards
     public partial class ShardsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.admin.zoekt.shards.item collection</summary>
-        /// <param name="position">The id of the Search::Zoekt::Node</param>
+        /// <param name="position">ID of the Zoekt node.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Shards.Item.WithNodeItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Shards.Item.WithNodeItemRequestBuilder this[int position]
         {

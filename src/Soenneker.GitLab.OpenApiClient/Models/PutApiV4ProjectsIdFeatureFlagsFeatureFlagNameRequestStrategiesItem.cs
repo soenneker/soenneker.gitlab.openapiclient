@@ -14,11 +14,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Delete the strategy when true</summary>
+        /// <summary>If `true`, deletes the strategy.</summary>
         public bool? Destroy { get; set; }
-        /// <summary>The feature flag strategy ID</summary>
+        /// <summary>ID of the feature flag strategy.</summary>
         public int? Id { get; set; }
-        /// <summary>The strategy name</summary>
+        /// <summary>Name of the strategy.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -26,7 +26,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>The strategy parameters as a JSON-formatted string e.g. `{&quot;userIds&quot;:&quot;user1&quot;}`</summary>
+        /// <summary>Strategy parameters as a JSON-formatted string, for example `{&quot;userIds&quot;:&quot;user1&quot;}`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdFeatureFlagsFeatureFlagNameRequestStrategiesItemParametersProperty? Parameters { get; set; }
@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdFeatureFlagsFeatureFlagNameRequestStrategiesItemParametersProperty Parameters { get; set; }
 #endif
-        /// <summary>Array of scopes for the strategy</summary>
+        /// <summary>Array of scopes for the strategy.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdFeatureFlagsFeatureFlagNameRequestStrategiesItemScopesItem>? Scopes { get; set; }
@@ -42,7 +42,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdFeatureFlagsFeatureFlagNameRequestStrategiesItemScopesItem> Scopes { get; set; }
 #endif
-        /// <summary>The ID of the feature flag user list</summary>
+        /// <summary>ID of the feature flag user list. Applies only if the strategy is `gitlabUserList`.</summary>
         public int? UserListId { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdFeatureFlagsFeatureFlagNameRequestStrategiesItem"/> and sets the default values.

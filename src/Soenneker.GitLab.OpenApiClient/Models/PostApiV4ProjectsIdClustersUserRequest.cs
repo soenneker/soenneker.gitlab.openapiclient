@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Cluster base domain</summary>
+        /// <summary>[Base domain](https://docs.gitlab.com/user/project/clusters/gitlab_managed_clusters/#base-domain) of the cluster.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Domain { get; set; }
@@ -22,9 +22,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Domain { get; set; }
 #endif
-        /// <summary>Determines if cluster is active or not, defaults to true</summary>
+        /// <summary>If `true`, the cluster is active and GitLab&apos;s connection to the Kubernetes cluster is enabled.</summary>
         public bool? Enabled { get; set; }
-        /// <summary>The associated environment to the cluster</summary>
+        /// <summary>Associated environment to the cluster. Premium and Ultimate only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EnvironmentScope { get; set; }
@@ -32,11 +32,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string EnvironmentScope { get; set; }
 #endif
-        /// <summary>Determines if GitLab will manage namespaces and service accounts for this cluster, defaults to true</summary>
+        /// <summary>If `true`, GitLab manages namespaces and service accounts for this cluster.</summary>
         public bool? Managed { get; set; }
-        /// <summary>The ID of the management project</summary>
+        /// <summary>ID of the [management project](https://docs.gitlab.com/user/clusters/management_project/) for the cluster.</summary>
         public int? ManagementProjectId { get; set; }
-        /// <summary>Cluster name</summary>
+        /// <summary>Name of the cluster.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -44,9 +44,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>Deploy each environment to a separate Kubernetes namespace</summary>
+        /// <summary>If `true`, deploys each environment to a separate Kubernetes namespace.</summary>
         public bool? NamespacePerEnvironment { get; set; }
-        /// <summary>Platform Kubernetes data</summary>
+        /// <summary>Platform Kubernetes data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdClustersUserRequestPlatformKubernetesAttributes? PlatformKubernetesAttributes { get; set; }

@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Artifacts
     public partial class ArtifactsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.jobs.artifacts.item collection</summary>
-        /// <param name="position">Branch or tag name in repository. `HEAD` or `SHA` references are not supported.</param>
+        /// <param name="position">Branch or tag name in the repository. `HEAD` or SHA references are not supported. For merge request pipelines, use `refs/merge-requests/:iid/head` instead of the branch name.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Artifacts.Item.WithRefNameItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Artifacts.Item.WithRefNameItemRequestBuilder this[string position]
         {

@@ -12,13 +12,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     public partial class PutApiV4RunnersIdRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The access level of the runner. At least one of `description`, `active`, `paused`, `tag_list`, `run_untagged`, `locked`, `access_level`, `maximum_timeout`, `maintenance_note` must be provided.</summary>
+        /// <summary>Access level of the runner. At least one of `description`, `active`, `paused`, `tag_list`, `run_untagged`, `locked`, `access_level`, `maximum_timeout`, `maintenance_note` must be provided.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4RunnersIdRequestAccessLevel? AccessLevel { get; set; }
-        /// <summary>Deprecated: Use `paused` instead. Flag indicating whether the runner is allowed to receive jobs. Mutually exclusive with `paused`. At least one of `description`, `active`, `paused`, `tag_list`, `run_untagged`, `locked`, `access_level`, `maximum_timeout`, `maintenance_note` must be provided.</summary>
+        /// <summary>If `true`, the runner is allowed to receive jobs. Deprecated. Use `paused` instead. Mutually exclusive with `paused`. At least one of `description`, `active`, `paused`, `tag_list`, `run_untagged`, `locked`, `access_level`, `maximum_timeout`, `maintenance_note` must be provided.</summary>
         public bool? Active { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The description of the runner. At least one of `description`, `active`, `paused`, `tag_list`, `run_untagged`, `locked`, `access_level`, `maximum_timeout`, `maintenance_note` must be provided.</summary>
+        /// <summary>Description of the runner. At least one of `description`, `active`, `paused`, `tag_list`, `run_untagged`, `locked`, `access_level`, `maximum_timeout`, `maintenance_note` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get; set; }
@@ -26,9 +26,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>Specifies if the runner is locked. At least one of `description`, `active`, `paused`, `tag_list`, `run_untagged`, `locked`, `access_level`, `maximum_timeout`, `maintenance_note` must be provided.</summary>
+        /// <summary>If `true`, the runner is locked. At least one of `description`, `active`, `paused`, `tag_list`, `run_untagged`, `locked`, `access_level`, `maximum_timeout`, `maintenance_note` must be provided.</summary>
         public bool? Locked { get; set; }
-        /// <summary>Free-form maintenance notes for the runner (1024 characters). At least one of `description`, `active`, `paused`, `tag_list`, `run_untagged`, `locked`, `access_level`, `maximum_timeout`, `maintenance_note` must be provided.</summary>
+        /// <summary>Free-form maintenance notes for the runner. Limited to 1024 characters. At least one of `description`, `active`, `paused`, `tag_list`, `run_untagged`, `locked`, `access_level`, `maximum_timeout`, `maintenance_note` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MaintenanceNote { get; set; }
@@ -36,13 +36,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string MaintenanceNote { get; set; }
 #endif
-        /// <summary>Maximum timeout that limits the amount of time (in seconds) that runners can run jobs. At least one of `description`, `active`, `paused`, `tag_list`, `run_untagged`, `locked`, `access_level`, `maximum_timeout`, `maintenance_note` must be provided.</summary>
+        /// <summary>Maximum time, in seconds, that runners can spend running a job. At least one of `description`, `active`, `paused`, `tag_list`, `run_untagged`, `locked`, `access_level`, `maximum_timeout`, `maintenance_note` must be provided.</summary>
         public int? MaximumTimeout { get; set; }
-        /// <summary>Specifies if the runner should ignore new jobs. Mutually exclusive with `active`. At least one of `description`, `active`, `paused`, `tag_list`, `run_untagged`, `locked`, `access_level`, `maximum_timeout`, `maintenance_note` must be provided.</summary>
+        /// <summary>If `true`, the runner ignores new jobs. Mutually exclusive with `active`. At least one of `description`, `active`, `paused`, `tag_list`, `run_untagged`, `locked`, `access_level`, `maximum_timeout`, `maintenance_note` must be provided.</summary>
         public bool? Paused { get; set; }
-        /// <summary>Specifies if the runner can execute untagged jobs. At least one of `description`, `active`, `paused`, `tag_list`, `run_untagged`, `locked`, `access_level`, `maximum_timeout`, `maintenance_note` must be provided.</summary>
+        /// <summary>If `true`, the runner can execute untagged jobs. At least one of `description`, `active`, `paused`, `tag_list`, `run_untagged`, `locked`, `access_level`, `maximum_timeout`, `maintenance_note` must be provided.</summary>
         public bool? RunUntagged { get; set; }
-        /// <summary>The list of tags for a runner. At least one of `description`, `active`, `paused`, `tag_list`, `run_untagged`, `locked`, `access_level`, `maximum_timeout`, `maintenance_note` must be provided.</summary>
+        /// <summary>List of tags for the runner. At least one of `description`, `active`, `paused`, `tag_list`, `run_untagged`, `locked`, `access_level`, `maximum_timeout`, `maintenance_note` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? TagList { get; set; }

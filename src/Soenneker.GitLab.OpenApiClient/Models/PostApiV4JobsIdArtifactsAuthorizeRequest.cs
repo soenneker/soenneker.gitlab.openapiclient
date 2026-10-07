@@ -14,11 +14,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The type of artifact</summary>
+        /// <summary>Type of artifact.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4JobsIdArtifactsAuthorizeRequestArtifactType? ArtifactType { get; set; }
-        /// <summary>Size of artifact file</summary>
+        /// <summary>Size of the artifact file.</summary>
         public int? Filesize { get; set; }
-        /// <summary>Job&apos;s authentication token</summary>
+        /// <summary>Authentication token of the job.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Token { get; set; }

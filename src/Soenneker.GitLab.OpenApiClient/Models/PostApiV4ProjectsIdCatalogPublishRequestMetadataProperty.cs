@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// The metadata for the release
+    /// Metadata for the release.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostApiV4ProjectsIdCatalogPublishRequestMetadataProperty : IAdditionalDataHolder, IParsable

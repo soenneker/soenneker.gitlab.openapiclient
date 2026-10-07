@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Job&apos;s trace CRC32 checksum</summary>
+        /// <summary>CRC32 checksum of the job trace.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Checksum { get; set; }
@@ -22,9 +22,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Checksum { get; set; }
 #endif
-        /// <summary>Job&apos;s exit code</summary>
+        /// <summary>Exit code of the job.</summary>
         public int? ExitCode { get; set; }
-        /// <summary>Job&apos;s failure_reason</summary>
+        /// <summary>Failure reason of the job.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FailureReason { get; set; }
@@ -32,7 +32,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string FailureReason { get; set; }
 #endif
-        /// <summary>Build log state</summary>
+        /// <summary>Build log state.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4JobsIdRequestOutput? Output { get; set; }
@@ -48,7 +48,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string RuntimeEnvironmentKey { get; set; }
 #endif
-        /// <summary>Job&apos;s status: running, success, failed</summary>
+        /// <summary>Status of the job: `running`, `success`, or `failed`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? State { get; set; }
@@ -56,7 +56,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string State { get; set; }
 #endif
-        /// <summary>Job&apos;s authentication token</summary>
+        /// <summary>Authentication token of the job.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Token { get; set; }

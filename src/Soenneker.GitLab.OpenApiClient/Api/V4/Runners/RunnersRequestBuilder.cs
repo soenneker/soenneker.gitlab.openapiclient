@@ -55,7 +55,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Runners.Verify.VerifyRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.runners.item collection</summary>
-        /// <param name="position">The ID of a runner</param>
+        /// <param name="position">ID of the runner.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Runners.Item.RunnersItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Runners.Item.RunnersItemRequestBuilder this[int position]
         {
@@ -211,7 +211,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class RunnersRequestBuilderDeleteQueryParameters 
         {
-            /// <summary>The runner&apos;s authentication token</summary>
+            /// <summary>Authentication token of the runner.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("token")]
@@ -231,19 +231,19 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners
             /// <summary>Page number of results to retrieve.</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>Whether to include only runners that are accepting or ignoring new jobs</summary>
+            /// <summary>If `true`, returns only runners that are ignoring new jobs. If `false`, returns only runners that are accepting new jobs.</summary>
             [QueryParameter("paused")]
             public bool? Paused { get; set; }
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Deprecated: Use `type` or `status` instead. The scope of runners to return</summary>
+            /// <summary>Scope of runners to return. Deprecated. Use `type` or `status` instead.</summary>
             [QueryParameter("scope")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4RunnersScopeParameter? Scope { get; set; }
-            /// <summary>The status of runners to return</summary>
+            /// <summary>Status of runners to return.</summary>
             [QueryParameter("status")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4RunnersStatusParameter? Status { get; set; }
-            /// <summary>A list of runner tags</summary>
+            /// <summary>List of runner tags.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("tag_list")]
@@ -253,10 +253,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners
             [QueryParameter("tag_list")]
             public string[] TagList { get; set; }
 #endif
-            /// <summary>The type of runners to return</summary>
+            /// <summary>Type of runners to return.</summary>
             [QueryParameter("type")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4RunnersTypeParameter? Type { get; set; }
-            /// <summary>The version prefix of runners to return</summary>
+            /// <summary>Version prefix of runners to return.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("version_prefix")]

@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Force environment to stop without executing `on_stop` actions</summary>
+        /// <summary>If `true`, stops the environment without executing `on_stop` actions.</summary>
         public bool? Force { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdEnvironmentsEnvironmentIdStopRequest"/> and sets the default values.

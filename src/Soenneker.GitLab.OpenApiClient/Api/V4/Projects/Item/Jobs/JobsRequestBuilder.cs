@@ -25,7 +25,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Artifacts.ArtifactsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.jobs.item collection</summary>
-        /// <param name="position">The ID of a job</param>
+        /// <param name="position">ID of the job.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.WithJobItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.WithJobItemRequestBuilder this[int position]
         {
@@ -111,7 +111,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>The branch name (ref) to filter jobs by</summary>
+            /// <summary>Branch name (ref) to filter jobs by.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("ref")]
@@ -121,7 +121,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs
             [QueryParameter("ref")]
             public string Ref { get; set; }
 #endif
-            /// <summary>The scope of builds to show</summary>
+            /// <summary>Filter jobs by status. Accepts a single value or an array of values. If omitted, returns all jobs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("scope")]

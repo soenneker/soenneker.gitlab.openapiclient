@@ -86,10 +86,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class StatusesRequestBuilderGetQueryParameters 
         {
-            /// <summary>Include all statuses instead of latest only. Default is `false`.</summary>
+            /// <summary>If `true`, includes all statuses instead of only the latest.</summary>
             [QueryParameter("all")]
             public bool? All { get; set; }
-            /// <summary>Filter statuses by job name.</summary>
+            /// <summary>Filter statuses by [job name](https://docs.gitlab.com/ci/yaml/#job-keywords).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("name")]
@@ -99,7 +99,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits
             [QueryParameter("name")]
             public string Name { get; set; }
 #endif
-            /// <summary>Values for sorting statuses. Valid values are `id` and `pipeline_id`. Default is `id`.</summary>
+            /// <summary>Sort results by the specified field.</summary>
             [QueryParameter("order_by")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdRepositoryCommitsShaStatusesOrderByParameter? OrderBy { get; set; }
             /// <summary>Page number of results to retrieve.</summary>
@@ -111,7 +111,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits
             /// <summary>Filter statuses by pipeline ID.</summary>
             [QueryParameter("pipeline_id")]
             public int? PipelineId { get; set; }
-            /// <summary>Name of the branch or tag. Default is the default branch.</summary>
+            /// <summary>Name of the branch or tag. Defaults to the default branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("ref")]
@@ -121,10 +121,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits
             [QueryParameter("ref")]
             public string Ref { get; set; }
 #endif
-            /// <summary>Sort statuses in ascending or descending order. Valid values are `asc` and `desc`. Default is `asc`.</summary>
+            /// <summary>Sort statuses in ascending or descending order. Defaults to `asc`.</summary>
             [QueryParameter("sort")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdRepositoryCommitsShaStatusesSortParameter? Sort { get; set; }
-            /// <summary>Filter statuses by build stage.</summary>
+            /// <summary>Filter statuses by [build stage](https://docs.gitlab.com/ci/yaml/#stages). For example, `test`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("stage")]

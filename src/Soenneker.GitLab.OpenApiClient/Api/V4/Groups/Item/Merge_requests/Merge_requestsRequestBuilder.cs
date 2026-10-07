@@ -142,22 +142,22 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests
             [QueryParameter("author_username")]
             public string AuthorUsername { get; set; }
 #endif
-            /// <summary>Returns merge requests created on or after the given time. Expected in ISO 8601 format.</summary>
+            /// <summary>Return merge requests created on or after the specified time.</summary>
             [QueryParameter("created_after")]
             public DateTimeOffset? CreatedAfter { get; set; }
-            /// <summary>Returns merge requests created on or before the given time. Expected in ISO 8601 format.</summary>
+            /// <summary>Return merge requests created on or before the specified time.</summary>
             [QueryParameter("created_before")]
             public DateTimeOffset? CreatedBefore { get; set; }
-            /// <summary>Returns merge requests deployed after the given date/time. Expected in ISO 8601 format</summary>
+            /// <summary>Return merge requests deployed after the specified time.</summary>
             [QueryParameter("deployed_after")]
             public DateTimeOffset? DeployedAfter { get; set; }
-            /// <summary>Returns merge requests deployed before the given date/time. Expected in ISO 8601 format.</summary>
+            /// <summary>Return merge requests deployed before the specified time.</summary>
             [QueryParameter("deployed_before")]
             public DateTimeOffset? DeployedBefore { get; set; }
-            /// <summary>Filter merge requests against their `draft` status. `true` to return only draft merge requests, `false` to return non-draft merge requests. Mutually exclusive with `wip`.</summary>
+            /// <summary>If `true`, returns only draft merge requests. If `false`, returns only non-draft merge requests. Mutually exclusive with `wip`.</summary>
             [QueryParameter("draft")]
             public bool? Draft { get; set; }
-            /// <summary>Returns merge requests deployed to the given environment</summary>
+            /// <summary>Return merge requests deployed to the given environment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("environment")]
@@ -167,7 +167,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests
             [QueryParameter("environment")]
             public string Environment { get; set; }
 #endif
-            /// <summary>Modify the scope of the search attribute. `title`, `description`, or a string joining them with comma.</summary>
+            /// <summary>Modify the scope of the `search` attribute to `title`, `description`, or `title,description`. If omitted, defaults to `title,description`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("in")]
@@ -187,10 +187,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests
             [QueryParameter("labels")]
             public string[] Labels { get; set; }
 #endif
-            /// <summary>Returns merge requests merged on or after the given time. Expected in ISO 8601 format.</summary>
+            /// <summary>Return merge requests merged on or after the specified time.</summary>
             [QueryParameter("merged_after")]
             public DateTimeOffset? MergedAfter { get; set; }
-            /// <summary>Returns merge requests merged on or before the given time. Expected in ISO 8601 format.</summary>
+            /// <summary>Return merge requests merged on or before the specified time.</summary>
             [QueryParameter("merged_before")]
             public DateTimeOffset? MergedBefore { get; set; }
             /// <summary>Returns merge requests which have been merged by the user with the given user `id`. Mutually exclusive with `merge_user_username`.</summary>
@@ -226,10 +226,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests
             [QueryParameter("my_reaction_emoji")]
             public string MyReactionEmoji { get; set; }
 #endif
-            /// <summary>Returns merge requests from non archived projects only.</summary>
+            /// <summary>If `true`, returns merge requests from non-archived projects only.</summary>
             [QueryParameter("non_archived")]
             public bool? NonArchived { get; set; }
-            /// <summary>Returns merge requests that do not match the parameters supplied</summary>
+            /// <summary>Return merge requests that do not match the parameters supplied. Accepts: `labels`, `milestone`, `author_id`, `author_username`, `assignee_id`, `assignee_username`, `reviewer_id`, `reviewer_username`, `my_reaction_emoji`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("not")]
@@ -330,10 +330,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests
             [QueryParameter("reviewer_username")]
             public string ReviewerUsername { get; set; }
 #endif
-            /// <summary>Returns merge requests for the given scope: `created_by_me`, `assigned_to_me`, `reviews_for_me` or `all`</summary>
+            /// <summary>Return merge requests for the given scope. `reviews_for_me` returns merge requests where the current user is assigned as a reviewer.</summary>
             [QueryParameter("scope")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdMergeRequestsScopeParameter? Scope { get; set; }
-            /// <summary>Search merge requests against their `title` and `description`.</summary>
+            /// <summary>Search merge requests against their `title` and `description`. Combine with the `in` attribute.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("search")]
@@ -343,10 +343,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests
             [QueryParameter("search")]
             public string Search { get; set; }
 #endif
-            /// <summary>Returns merge requests sorted in `asc` or `desc` order.</summary>
+            /// <summary>Sort results in ascending or descending order.</summary>
             [QueryParameter("sort")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdMergeRequestsSortParameter? Sort { get; set; }
-            /// <summary>Returns merge requests with the given source branch</summary>
+            /// <summary>Return merge requests with the given source branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("source_branch")]
@@ -356,13 +356,13 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests
             [QueryParameter("source_branch")]
             public string SourceBranch { get; set; }
 #endif
-            /// <summary>Returns merge requests with the given source project id</summary>
+            /// <summary>Return merge requests with the given source project ID.</summary>
             [QueryParameter("source_project_id")]
             public int? SourceProjectId { get; set; }
-            /// <summary>Returns `all` merge requests or just those that are `opened`, `closed`, `locked`, or `merged`.</summary>
+            /// <summary>Filter merge requests by state.</summary>
             [QueryParameter("state")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdMergeRequestsStateParameter? State { get; set; }
-            /// <summary>Returns merge requests with the given target branch</summary>
+            /// <summary>Return merge requests with the given target branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("target_branch")]
@@ -372,22 +372,22 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests
             [QueryParameter("target_branch")]
             public string TargetBranch { get; set; }
 #endif
-            /// <summary>Returns merge requests updated on or after the given time. Expected in ISO 8601 format.</summary>
+            /// <summary>Return merge requests updated on or after the specified time.</summary>
             [QueryParameter("updated_after")]
             public DateTimeOffset? UpdatedAfter { get; set; }
-            /// <summary>Returns merge requests updated on or before the given time. Expected in ISO 8601 format.</summary>
+            /// <summary>Return merge requests updated on or before the specified time.</summary>
             [QueryParameter("updated_before")]
             public DateTimeOffset? UpdatedBefore { get; set; }
-            /// <summary>If simple, returns the `iid`, URL, title, description, and basic state of merge request</summary>
+            /// <summary>If `simple`, returns the `iid`, URL, title, description, and basic state of merge request.</summary>
             [QueryParameter("view")]
             public global::Soenneker.GitLab.OpenApiClient.Models.SimpleView? View { get; set; }
-            /// <summary>Deprecated. Use `draft` instead. Filter merge requests against their `wip` status. `yes` to return only draft merge requests, `no` to return non-draft merge requests. Mutually exclusive with `draft`.</summary>
+            /// <summary>Filter merge requests by their `wip` status. `yes` returns only draft merge requests, `no` returns non-draft merge requests. [Deprecated](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/234098) in GitLab 19.0. Use `draft` instead. Mutually exclusive with `draft`.</summary>
             [QueryParameter("wip")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdMergeRequestsWipParameter? Wip { get; set; }
-            /// <summary>If `true`, response returns more details for each label in labels field: `:name`,`:color`, `:description`, `:description_html`, `:text_color`</summary>
+            /// <summary>If `true`, the response returns more details for each label in the labels field: `name`, `color`, `description`, `description_html`, `text_color`.</summary>
             [QueryParameter("with_labels_details")]
             public bool? WithLabelsDetails { get; set; }
-            /// <summary>If `true`, this projection requests (but does not guarantee) that the `merge_status` field be recalculated asynchronously. Introduced in GitLab 13.0.</summary>
+            /// <summary>If `true`, this projection requests (but does not guarantee) an asynchronous recalculation of the `merge_status` field. Enable the `restrict_merge_status_recheck` [feature flag](https://docs.gitlab.com/administration/feature_flags/) to ignore this attribute when requested by users without the Developer, Maintainer, or Owner role.</summary>
             [QueryParameter("with_merge_status_recheck")]
             public bool? WithMergeStatusRecheck { get; set; }
         }

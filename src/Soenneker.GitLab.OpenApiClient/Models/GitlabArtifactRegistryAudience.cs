@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>Target service audience (e.g. gitlab-artifact-registry)</summary>
+    /// <summary>Target service audience.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum GitlabArtifactRegistryAudience
     {

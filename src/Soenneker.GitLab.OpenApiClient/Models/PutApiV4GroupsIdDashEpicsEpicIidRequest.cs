@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Comma-separated label names to add to an issue. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
+        /// <summary>Comma-separated label names to add to the epic. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? AddLabels { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<string> AddLabels { get; set; }
 #endif
-        /// <summary>The color of an epic. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
+        /// <summary>Color of the epic. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Color { get; set; }
@@ -30,9 +30,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Color { get; set; }
 #endif
-        /// <summary>Indicates if the epic is confidential. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
+        /// <summary>If `true`, the epic is confidential. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
         public bool? Confidential { get; set; }
-        /// <summary>The description of an epic. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
+        /// <summary>Description of the epic. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get; set; }
@@ -40,7 +40,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>The due date of an epic. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
+        /// <summary>Due date of the epic. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DueDateFixed { get; set; }
@@ -48,9 +48,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string DueDateFixed { get; set; }
 #endif
-        /// <summary>Indicates due date should be sourced from due_date_fixed field not the issue milestones. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
+        /// <summary>If `true`, sources the due date from the `due_date_fixed` field instead of the issue milestones. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
         public bool? DueDateIsFixed { get; set; }
-        /// <summary>Deprecated: use due_date_fixed instead. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
+        /// <summary>Due date of the epic. Deprecated. Use `due_date_fixed` instead. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EndDate { get; set; }
@@ -58,7 +58,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string EndDate { get; set; }
 #endif
-        /// <summary>Comma-separated label names for an issue. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
+        /// <summary>Comma-separated label names for the epic. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Labels { get; set; }
@@ -66,9 +66,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<string> Labels { get; set; }
 #endif
-        /// <summary>The ID of a parent epic. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
+        /// <summary>ID of the parent epic. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
         public int? ParentId { get; set; }
-        /// <summary>Comma-separated label names to remove from an issue. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
+        /// <summary>Comma-separated label names to remove from the epic. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? RemoveLabels { get; set; }
@@ -76,7 +76,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<string> RemoveLabels { get; set; }
 #endif
-        /// <summary>Deprecated: use start_date_fixed instead. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
+        /// <summary>Start date of the epic. Deprecated. Use `start_date_fixed` instead. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? StartDate { get; set; }
@@ -84,7 +84,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string StartDate { get; set; }
 #endif
-        /// <summary>The start date of an epic. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
+        /// <summary>Start date of the epic. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? StartDateFixed { get; set; }
@@ -92,11 +92,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string StartDateFixed { get; set; }
 #endif
-        /// <summary>Indicates start date should be sourced from start_date_fixed field not the issue milestones. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
+        /// <summary>If `true`, sources the start date from the `start_date_fixed` field instead of the issue milestones. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
         public bool? StartDateIsFixed { get; set; }
-        /// <summary>State event for an epic. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
+        /// <summary>Event to change the state of the epic. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidRequestStateEvent? StateEvent { get; set; }
-        /// <summary>The title of an epic. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
+        /// <summary>Title of the epic. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Title { get; set; }
@@ -104,7 +104,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Title { get; set; }
 #endif
-        /// <summary>Date time when the epic was updated. Available only for admins and project owners</summary>
+        /// <summary>Date and time the epic was updated. Available only for administrators and project owners.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidRequest"/> and sets the default values.

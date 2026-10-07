@@ -86,10 +86,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipeline_schedules
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class PipelinesRequestBuilderGetQueryParameters 
         {
-            /// <summary>Return pipelines created after the specified datetime. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ</summary>
+            /// <summary>Return pipelines created after the specified time.</summary>
             [QueryParameter("created_after")]
             public DateTimeOffset? CreatedAfter { get; set; }
-            /// <summary>Return pipelines created before the specified datetime. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ</summary>
+            /// <summary>Return pipelines created before the specified time.</summary>
             [QueryParameter("created_before")]
             public DateTimeOffset? CreatedBefore { get; set; }
             /// <summary>Page number of results to retrieve.</summary>
@@ -98,19 +98,19 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipeline_schedules
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>The scope of pipelines</summary>
+            /// <summary>Return pipelines in the specified scope.</summary>
             [QueryParameter("scope")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdPipelineSchedulesPipelineScheduleIdPipelinesScopeParameter? Scope { get; set; }
-            /// <summary>Sort pipelines</summary>
+            /// <summary>Sort results in ascending or descending order.</summary>
             [QueryParameter("sort")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdPipelineSchedulesPipelineScheduleIdPipelinesSortParameter? Sort { get; set; }
-            /// <summary>The status of pipelines</summary>
+            /// <summary>Return pipelines with the specified status.</summary>
             [QueryParameter("status")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdPipelineSchedulesPipelineScheduleIdPipelinesStatusParameter? Status { get; set; }
-            /// <summary>Return pipelines updated after the specified datetime. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ</summary>
+            /// <summary>Return pipelines updated on or after the specified time.</summary>
             [QueryParameter("updated_after")]
             public DateTimeOffset? UpdatedAfter { get; set; }
-            /// <summary>Return pipelines updated before the specified datetime. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ</summary>
+            /// <summary>Return pipelines updated on or before the specified time.</summary>
             [QueryParameter("updated_before")]
             public DateTimeOffset? UpdatedBefore { get; set; }
         }

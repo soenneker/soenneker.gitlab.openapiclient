@@ -86,7 +86,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.Item.Job
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class JobsRequestBuilderGetQueryParameters 
         {
-            /// <summary>Includes retried jobs</summary>
+            /// <summary>If `true`, includes retried jobs in the response.</summary>
             [QueryParameter("include_retried")]
             public bool? IncludeRetried { get; set; }
             /// <summary>Page number of results to retrieve.</summary>

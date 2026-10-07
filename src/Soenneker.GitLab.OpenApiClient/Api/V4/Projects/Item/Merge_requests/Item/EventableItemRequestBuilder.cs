@@ -414,13 +414,13 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class EventableItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>If `true`, response includes the commits behind the target branch.</summary>
+            /// <summary>If `true`, the response includes the commits behind the target branch.</summary>
             [QueryParameter("include_diverged_commits_count")]
             public bool? IncludeDivergedCommitsCount { get; set; }
-            /// <summary>If `true`, response includes whether a rebase operation is in progress.</summary>
+            /// <summary>If `true`, the response includes whether a rebase operation is in progress.</summary>
             [QueryParameter("include_rebase_in_progress")]
             public bool? IncludeRebaseInProgress { get; set; }
-            /// <summary>If `true`, response includes rendered HTML for title and description.</summary>
+            /// <summary>If `true`, the response includes rendered HTML for title and description.</summary>
             [QueryParameter("render_html")]
             public bool? RenderHtml { get; set; }
         }

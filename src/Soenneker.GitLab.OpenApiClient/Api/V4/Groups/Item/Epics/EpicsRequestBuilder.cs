@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics
     public partial class EpicsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.epics.item collection</summary>
-        /// <param name="position">The internal ID of an epic</param>
+        /// <param name="position">Internal ID of the epic.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics.Item.EpicIItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics.Item.EpicIItemRequestBuilder this[int position]
         {
@@ -141,10 +141,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class EpicsRequestBuilderGetQueryParameters 
         {
-            /// <summary>Return epics which are authored by the user with the given ID. Mutually exclusive with `author_username`.</summary>
+            /// <summary>Return epics authored by the user with the given ID. Mutually exclusive with `author_username`.</summary>
             [QueryParameter("author_id")]
             public int? AuthorId { get; set; }
-            /// <summary>Return epics which are authored by the given username. Mutually exclusive with `author_id`.</summary>
+            /// <summary>Return epics authored by the given username. Mutually exclusive with `author_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("author_username")]
@@ -154,22 +154,22 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics
             [QueryParameter("author_username")]
             public string AuthorUsername { get; set; }
 #endif
-            /// <summary>Return epics with given confidentiality</summary>
+            /// <summary>If `true`, returns only confidential epics. If `false`, returns only non-confidential epics.</summary>
             [QueryParameter("confidential")]
             public bool? Confidential { get; set; }
-            /// <summary>Return epics created after the specified time</summary>
+            /// <summary>Return epics created on or after the specified time.</summary>
             [QueryParameter("created_after")]
             public DateTimeOffset? CreatedAfter { get; set; }
-            /// <summary>Return epics created before the specified time</summary>
+            /// <summary>Return epics created on or before the specified time.</summary>
             [QueryParameter("created_before")]
             public DateTimeOffset? CreatedBefore { get; set; }
-            /// <summary>Include epics from ancestor groups</summary>
+            /// <summary>If `true`, includes epics from the requested group&apos;s ancestors.</summary>
             [QueryParameter("include_ancestor_groups")]
             public bool? IncludeAncestorGroups { get; set; }
-            /// <summary>Include epics from descendant groups</summary>
+            /// <summary>If `true`, includes epics from the requested group&apos;s descendants.</summary>
             [QueryParameter("include_descendant_groups")]
             public bool? IncludeDescendantGroups { get; set; }
-            /// <summary>Comma-separated list of label names</summary>
+            /// <summary>Comma-separated list of label names. Label names from the epic group or a parent group can be used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("labels")]
@@ -179,7 +179,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics
             [QueryParameter("labels")]
             public string[] Labels { get; set; }
 #endif
-            /// <summary>Return epics reacted by the authenticated user by the given emoji</summary>
+            /// <summary>Return epics reacted to by the authenticated user with the given emoji. `None` returns epics with no reaction and `Any` returns epics with at least one reaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("my_reaction_emoji")]
@@ -189,7 +189,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics
             [QueryParameter("my_reaction_emoji")]
             public string MyReactionEmoji { get; set; }
 #endif
-            /// <summary>Object that contains filters</summary>
+            /// <summary>Return epics that do not match the specified parameters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("not")]
@@ -199,10 +199,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics
             [QueryParameter("not")]
             public string Not { get; set; }
 #endif
-            /// <summary>Return epics which are not authored by the user with the given ID. Mutually exclusive with `not[author_username]`.</summary>
+            /// <summary>Return epics not authored by the user with the given ID. Mutually exclusive with `not[author_username]`.</summary>
             [QueryParameter("not%5Bauthor_id%5D")]
             public int? NotauthorId { get; set; }
-            /// <summary>Return epics which are not authored by the given username. Mutually exclusive with `not[author_id]`.</summary>
+            /// <summary>Return epics not authored by the given username. Mutually exclusive with `not[author_id]`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("not%5Bauthor_username%5D")]
@@ -212,7 +212,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics
             [QueryParameter("not%5Bauthor_username%5D")]
             public string NotauthorUsername { get; set; }
 #endif
-            /// <summary>Comma-separated list of label names</summary>
+            /// <summary>Comma-separated list of label names.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("not%5Blabels%5D")]
@@ -222,7 +222,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics
             [QueryParameter("not%5Blabels%5D")]
             public string[] Notlabels { get; set; }
 #endif
-            /// <summary>Return epics ordered by `created_at`, `updated_at` or `title` fields.</summary>
+            /// <summary>Sort results by the specified field.</summary>
             [QueryParameter("order_by")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdEpicsOrderByParameter? OrderBy { get; set; }
             /// <summary>Page number of results to retrieve.</summary>
@@ -231,7 +231,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Search epics for text present in the title or description</summary>
+            /// <summary>Search epics for text present in the title or description.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("search")]
@@ -241,19 +241,19 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics
             [QueryParameter("search")]
             public string Search { get; set; }
 #endif
-            /// <summary>Return epics sorted in `asc` or `desc` order.</summary>
+            /// <summary>Sort results in ascending or descending order.</summary>
             [QueryParameter("sort")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdEpicsSortParameter? Sort { get; set; }
-            /// <summary>Return opened, closed, or all epics</summary>
+            /// <summary>Filter epics by state.</summary>
             [QueryParameter("state")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdEpicsStateParameter? State { get; set; }
-            /// <summary>Return epics updated after the specified time</summary>
+            /// <summary>Return epics updated on or after the specified time.</summary>
             [QueryParameter("updated_after")]
             public DateTimeOffset? UpdatedAfter { get; set; }
-            /// <summary>Return epics updated before the specified time</summary>
+            /// <summary>Return epics updated on or before the specified time.</summary>
             [QueryParameter("updated_before")]
             public DateTimeOffset? UpdatedBefore { get; set; }
-            /// <summary>Return titles of labels and other details</summary>
+            /// <summary>If `true`, the response returns more details for each label in the labels field: `name`, `color`, `description`, `description_html`, `text_color`.</summary>
             [QueryParameter("with_labels_details")]
             public bool? WithLabelsDetails { get; set; }
         }

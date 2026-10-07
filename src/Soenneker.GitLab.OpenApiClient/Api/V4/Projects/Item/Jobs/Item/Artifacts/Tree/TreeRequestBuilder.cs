@@ -99,7 +99,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Artifact
             /// <summary>Page number of results to retrieve.</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>Path to browse in the artifacts archive. Defaults to root directory.</summary>
+            /// <summary>Path to browse in the artifacts archive. Defaults to the root directory.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("path")]
@@ -112,7 +112,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Artifact
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>If `true`, return all entries recursively.</summary>
+            /// <summary>If `true`, returns all entries recursively.</summary>
             [QueryParameter("recursive")]
             public bool? Recursive { get; set; }
         }

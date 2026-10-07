@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Shared_projects
     public partial class Shared_projectsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.shared_projects.item collection</summary>
-        /// <param name="position">The ID of the shared project</param>
+        /// <param name="position">ID of the shared project.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Shared_projects.Item.WithProjectItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Shared_projects.Item.WithProjectItemRequestBuilder this[int position]
         {

@@ -85,10 +85,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Trace
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class TraceRequestBuilderGetQueryParameters 
         {
-            /// <summary>Maximum number of bytes to return</summary>
+            /// <summary>Maximum number of bytes to return.</summary>
             [QueryParameter("byte_limit")]
             public int? ByteLimit { get; set; }
-            /// <summary>Byte offset to start reading from</summary>
+            /// <summary>Byte offset to start reading the trace from.</summary>
             [QueryParameter("byte_offset")]
             public int? ByteOffset { get; set; }
         }

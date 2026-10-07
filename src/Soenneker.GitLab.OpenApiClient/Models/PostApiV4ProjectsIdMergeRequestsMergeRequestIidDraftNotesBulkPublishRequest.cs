@@ -14,9 +14,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>If true, the summary note is internal</summary>
+        /// <summary>If `true`, the summary note is internal.</summary>
         public bool? Internal { get; set; }
-        /// <summary>Summary note body to post on the merge request</summary>
+        /// <summary>Text of the summary note to add to the merge request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Note { get; set; }
@@ -24,7 +24,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Note { get; set; }
 #endif
-        /// <summary>Set reviewer review state after publishing. Does not record a formal approval</summary>
+        /// <summary>Sets the review state after publishing. Does not record a formal approval.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMergeRequestsMergeRequestIidDraftNotesBulkPublishRequestReviewerState? ReviewerState { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMergeRequestsMergeRequestIidDraftNotesBulkPublishRequest"/> and sets the default values.

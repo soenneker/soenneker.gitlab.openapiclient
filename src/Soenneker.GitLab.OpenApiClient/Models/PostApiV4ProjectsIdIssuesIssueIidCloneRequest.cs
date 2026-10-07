@@ -14,9 +14,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The ID of the new project</summary>
+        /// <summary>ID of the new project.</summary>
         public int? ToProjectId { get; set; }
-        /// <summary>Clone issue with notes</summary>
+        /// <summary>If `true`, clones the issue with its [notes](https://docs.gitlab.com/api/notes/).</summary>
         public bool? WithNotes { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdIssuesIssueIidCloneRequest"/> and sets the default values.

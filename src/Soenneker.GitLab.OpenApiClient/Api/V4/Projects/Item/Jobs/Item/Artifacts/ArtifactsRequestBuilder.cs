@@ -148,10 +148,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Artifact
             /// <summary>Requested download transfer mode (`proxy` or `direct`). Only honored when allowed by the object storage configuration.</summary>
             [QueryParameter("download_mode")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdJobsJobIdArtifactsDownloadModeParameter? DownloadMode { get; set; }
-            /// <summary>The type of artifact to download. Defaults to the job artifacts archive.</summary>
+            /// <summary>Type of artifact to download. Set a specific report type to download that report file directly instead of the full artifacts archive. `performance` and `browser_performance` share a report group. If the job uploaded both, the requested type is returned, and if it uploaded only one, that artifact is returned whichever type was requested. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/35805) in GitLab 19.4.</summary>
             [QueryParameter("file_type")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdJobsJobIdArtifactsFileTypeParameter? FileType { get; set; }
-            /// <summary>To be used with triggers for multi-project pipelines, available only on Premium and Ultimate tiers.</summary>
+            /// <summary>CI/CD job token for multi-project pipelines. Premium and Ultimate only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("job_token")]

@@ -12,21 +12,21 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     public partial class PutApiV4ProjectsIdProtectedEnvironmentsNameRequestApprovalRulesItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The access levels allowed to approve</summary>
+        /// <summary>Access level allowed to approve deployments to the environment.</summary>
         public int? AccessLevel { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Deletes the object when true</summary>
+        /// <summary>If `true`, deletes the object.</summary>
         public bool? Destroy { get; set; }
-        /// <summary>The ID of a group with access to the project</summary>
+        /// <summary>ID of the group to grant access to.</summary>
         public int? GroupId { get; set; }
-        /// <summary>Specify whether to take inherited group membership into account. Use `0` for direct group membership or `1` for all inherited groups. Default is `0`</summary>
+        /// <summary>Whether to include inherited group membership. Use `0` for direct group membership only, or `1` to include inherited groups. Defaults to `0`.</summary>
         public int? GroupInheritanceType { get; set; }
-        /// <summary>The ID of the approval rule to update</summary>
+        /// <summary>ID of an existing entry to update.</summary>
         public int? Id { get; set; }
-        /// <summary>The number of approvals required for this rule</summary>
+        /// <summary>Number of approvals required for this rule.</summary>
         public int? RequiredApprovals { get; set; }
-        /// <summary>The ID of a user with access to the project</summary>
+        /// <summary>ID of the user to grant access to.</summary>
         public int? UserId { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdProtectedEnvironmentsNameRequestApprovalRulesItem"/> and sets the default values.

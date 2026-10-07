@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Approval_settings.
     public partial class RulesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.approval_settings.rules.item collection</summary>
-        /// <param name="position">The ID of an approval_rule</param>
+        /// <param name="position">ID of the approval rule.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Approval_settings.Rules.Item.WithApprovalRuleItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Approval_settings.Rules.Item.WithApprovalRuleItemRequestBuilder this[int position]
         {

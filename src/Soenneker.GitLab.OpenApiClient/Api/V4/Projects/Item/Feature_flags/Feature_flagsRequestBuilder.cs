@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags
     public partial class Feature_flagsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.feature_flags.item collection</summary>
-        /// <param name="position">The name of the feature flag</param>
+        /// <param name="position">Name of the feature flag.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags.Item.WithFeatureFlagNameItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags.Item.WithFeatureFlagNameItemRequestBuilder this[string position]
         {
@@ -147,7 +147,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>The scope of feature flags, one of: `enabled`, `disabled`</summary>
+            /// <summary>Filter feature flags by condition.</summary>
             [QueryParameter("scope")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdFeatureFlagsScopeParameter? Scope { get; set; }
         }

@@ -15,13 +15,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Share expiration date</summary>
+        /// <summary>Date when the share expires.</summary>
         public Date? ExpiresAt { get; set; }
-        /// <summary>The group access level</summary>
+        /// <summary>Access level to grant to the invited group. For a list of values, see [roles](https://docs.gitlab.com/user/permissions/#default-roles).</summary>
         public int? GroupAccess { get; set; }
-        /// <summary>The ID of the group to share</summary>
+        /// <summary>ID of the group to invite.</summary>
         public int? GroupId { get; set; }
-        /// <summary>The ID of the Member Role to be assigned to the group</summary>
+        /// <summary>ID of a [custom role](https://docs.gitlab.com/user/custom_roles/#assign-a-custom-role-to-an-invited-group) to assign to the invited group. If set, `group_access` must match the base role used to create the custom role.</summary>
         public int? MemberRoleId { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GroupsIdShareRequest"/> and sets the default values.

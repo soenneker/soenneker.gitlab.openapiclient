@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Comma-separated label names to add to a merge request.</summary>
+        /// <summary>Comma-separated label names to add to the merge request. If a label does not already exist, this creates a new project label and assigns it to the merge request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? AddLabels { get; set; }
@@ -22,15 +22,15 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<string> AddLabels { get; set; }
 #endif
-        /// <summary>Allow commits from members who can merge to the target branch.</summary>
+        /// <summary>If `true`, allows commits from members who can merge to the target branch.</summary>
         public bool? AllowCollaboration { get; set; }
-        /// <summary>[deprecated] See allow_collaboration</summary>
+        /// <summary>If `true`, allows commits from members who can merge to the target branch. Deprecated. Use `allow_collaboration` instead.</summary>
         public bool? AllowMaintainerToPush { get; set; }
         /// <summary>Number of approvals required before the merge request can be merged. [Deprecated](https://gitlab.com/gitlab-org/gitlab/-/issues/353097) in GitLab 16.0. Premium and Ultimate only.</summary>
         public int? ApprovalsBeforeMerge { get; set; }
-        /// <summary>Assignee user ID.</summary>
+        /// <summary>ID of the user to assign to the merge request. Set to `0` or leave empty to unassign all assignees.</summary>
         public int? AssigneeId { get; set; }
-        /// <summary>The IDs of the users to assign the merge request to, as a comma-separated list. Set to 0 or provide an empty value to unassign all assignees.</summary>
+        /// <summary>IDs of the users to assign to the merge request, as a comma-separated list. Set to `0` or leave empty to unassign all assignees.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<int?>? AssigneeIds { get; set; }
@@ -46,7 +46,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>Comma-separated label names for a merge request. Set to an empty string to unassign all labels.</summary>
+        /// <summary>Comma-separated label names for the merge request. If a label does not already exist, this creates a new project label and assigns it to the merge request. Set to an empty string to unassign all labels.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Labels { get; set; }
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<string> Labels { get; set; }
 #endif
-        /// <summary>Date after which the merge request can be merged.</summary>
+        /// <summary>Date after which the merge request can be merged. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/510992) in GitLab 17.8.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MergeAfter { get; set; }
@@ -70,9 +70,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Milestone { get; set; }
 #endif
-        /// <summary>The global ID of a milestone to assign the merge request to. Mutually exclusive with `milestone`.</summary>
+        /// <summary>Global ID of a milestone to assign to the merge request. Set to `0` or leave empty to unassign the milestone. Mutually exclusive with `milestone`.</summary>
         public int? MilestoneId { get; set; }
-        /// <summary>Comma-separated label names to remove from a merge request.</summary>
+        /// <summary>Comma-separated label names to remove from the merge request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? RemoveLabels { get; set; }
@@ -80,9 +80,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<string> RemoveLabels { get; set; }
 #endif
-        /// <summary>Flag indicating if a merge request should remove the source branch when merging.</summary>
+        /// <summary>If `true`, the source branch is removed when the merge request merges.</summary>
         public bool? RemoveSourceBranch { get; set; }
-        /// <summary>The IDs of the users to review the merge request, as a comma-separated list. Set to 0 or provide an empty value to unassign all reviewers.</summary>
+        /// <summary>IDs of the users to set as reviewers of the merge request, as a comma-separated list. If set to `0` or left empty, no reviewers are set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<int?>? ReviewerIds { get; set; }
@@ -90,7 +90,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<int?> ReviewerIds { get; set; }
 #endif
-        /// <summary>The source branch.</summary>
+        /// <summary>Source branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SourceBranch { get; set; }
@@ -98,9 +98,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string SourceBranch { get; set; }
 #endif
-        /// <summary>Squash commits into a single commit when merging.</summary>
+        /// <summary>If `true`, squashes all commits into a single commit on merge. When omitted, defaults to the [project&apos;s squash option setting](https://docs.gitlab.com/user/project/merge_requests/squash_and_merge/#configure-squash-options-for-a-project), which can override this value at merge time.</summary>
         public bool? Squash { get; set; }
-        /// <summary>The target branch.</summary>
+        /// <summary>Target branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TargetBranch { get; set; }
@@ -108,9 +108,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string TargetBranch { get; set; }
 #endif
-        /// <summary>The target project of the merge request defaults to the :id of the project.</summary>
+        /// <summary>ID of the target project for the merge request. If omitted, defaults to the source project.</summary>
         public int? TargetProjectId { get; set; }
-        /// <summary>The title of the merge request.</summary>
+        /// <summary>Title of the merge request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Title { get; set; }

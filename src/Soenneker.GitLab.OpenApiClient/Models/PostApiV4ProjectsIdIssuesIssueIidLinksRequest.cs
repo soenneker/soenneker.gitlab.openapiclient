@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The type of the relation.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdIssuesIssueIidLinksRequestLinkType? LinkType { get; set; }
-        /// <summary>The internal ID of a target project’s issue</summary>
+        /// <summary>Internal ID of the issue in the target project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdIssuesIssueIidLinksRequestTargetIssueIid? TargetIssueIid { get; set; }
@@ -24,7 +24,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdIssuesIssueIidLinksRequestTargetIssueIid TargetIssueIid { get; set; }
 #endif
-        /// <summary>The ID or URL-encoded path of a target project</summary>
+        /// <summary>ID or URL-encoded path of the target project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdIssuesIssueIidLinksRequestTargetProjectId? TargetProjectId { get; set; }

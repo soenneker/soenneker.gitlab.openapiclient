@@ -86,7 +86,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Projects.Shared
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class SharedRequestBuilderGetQueryParameters 
         {
-            /// <summary>Limit by archived status</summary>
+            /// <summary>If `true`, returns only archived groups or projects.</summary>
             [QueryParameter("archived")]
             public bool? Archived { get; set; }
             /// <summary>Filter by [custom attributes](https://docs.gitlab.com/api/custom_attributes/) that match all of the specified key and value pairs. Administrators only.</summary>
@@ -99,10 +99,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Projects.Shared
             [QueryParameter("custom_attributes")]
             public string CustomAttributes { get; set; }
 #endif
-            /// <summary>Limit by minimum access level of authenticated user on projects</summary>
+            /// <summary>Return projects where the current user has at least the specified access level. For a list of values, see [roles](https://docs.gitlab.com/user/permissions/#default-roles).</summary>
             [QueryParameter("min_access_level")]
             public int? MinAccessLevel { get; set; }
-            /// <summary>Return projects ordered by field</summary>
+            /// <summary>Sort results by the specified field.</summary>
             [QueryParameter("order_by")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdProjectsSharedOrderByParameter? OrderBy { get; set; }
             /// <summary>Page number of results to retrieve.</summary>
@@ -111,7 +111,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Projects.Shared
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Return list of authorized projects matching the search criteria</summary>
+            /// <summary>Return the list of authorized projects matching the search criteria.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("search")]
@@ -121,25 +121,25 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Projects.Shared
             [QueryParameter("search")]
             public string Search { get; set; }
 #endif
-            /// <summary>Return only the ID, URL, name, and path of each project</summary>
+            /// <summary>If `true`, returns only limited fields for each project. Without authentication, only limited fields are returned regardless of this setting.</summary>
             [QueryParameter("simple")]
             public bool? Simple { get; set; }
-            /// <summary>Return projects sorted in ascending and descending order</summary>
+            /// <summary>Sort results in ascending or descending order.</summary>
             [QueryParameter("sort")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdProjectsSharedSortParameter? Sort { get; set; }
-            /// <summary>Limit by starred status</summary>
+            /// <summary>If `true`, returns only projects starred by the current user.</summary>
             [QueryParameter("starred")]
             public bool? Starred { get; set; }
-            /// <summary>Limit by visibility</summary>
+            /// <summary>Return groups with the specified visibility.</summary>
             [QueryParameter("visibility")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdProjectsSharedVisibilityParameter? Visibility { get; set; }
             /// <summary>If `true`, includes [custom attributes](https://docs.gitlab.com/api/custom_attributes/) in the response. Administrators only.</summary>
             [QueryParameter("with_custom_attributes")]
             public bool? WithCustomAttributes { get; set; }
-            /// <summary>Limit by enabled issues feature</summary>
+            /// <summary>If `true`, returns only projects that have the issues feature enabled.</summary>
             [QueryParameter("with_issues_enabled")]
             public bool? WithIssuesEnabled { get; set; }
-            /// <summary>Limit by enabled merge requests feature</summary>
+            /// <summary>If `true`, returns only projects that have the merge requests feature enabled.</summary>
             [QueryParameter("with_merge_requests_enabled")]
             public bool? WithMergeRequestsEnabled { get; set; }
         }

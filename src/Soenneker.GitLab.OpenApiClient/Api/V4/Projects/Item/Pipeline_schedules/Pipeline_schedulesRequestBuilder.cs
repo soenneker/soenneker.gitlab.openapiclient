@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipeline_schedules
     public partial class Pipeline_schedulesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.pipeline_schedules.item collection</summary>
-        /// <param name="position">The pipeline schedule id</param>
+        /// <param name="position">ID of the pipeline schedule.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipeline_schedules.Item.WithPipelineScheduleItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipeline_schedules.Item.WithPipelineScheduleItemRequestBuilder this[int position]
         {
@@ -147,7 +147,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipeline_schedules
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>The scope of pipeline schedules</summary>
+            /// <summary>Scope of pipeline schedules.</summary>
             [QueryParameter("scope")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdPipelineSchedulesScopeParameter? Scope { get; set; }
         }

@@ -12,11 +12,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     public partial class PostApiV4ProjectsIdFeatureFlagsRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The active state of the flag. Supported in GitLab 13.3 and later</summary>
+        /// <summary>If `true`, the feature flag is active.</summary>
         public bool? Active { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The description of the feature flag</summary>
+        /// <summary>Description of the feature flag.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get; set; }
@@ -24,7 +24,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>The name of the feature flag</summary>
+        /// <summary>Name of the feature flag.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -32,7 +32,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>Array of feature flag strategies</summary>
+        /// <summary>Array of feature flag [strategies](https://docs.gitlab.com/operations/feature_flags/#feature-flag-strategies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdFeatureFlagsRequestStrategiesItem>? Strategies { get; set; }

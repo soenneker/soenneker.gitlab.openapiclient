@@ -14,9 +14,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The ID of the epic that should be positioned after the child epic</summary>
+        /// <summary>ID of the epic to position after the child epic.</summary>
         public int? MoveAfterId { get; set; }
-        /// <summary>The ID of the epic that should be positioned before the child epic</summary>
+        /// <summary>ID of the epic to position before the child epic.</summary>
         public int? MoveBeforeId { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidEpicsChildEpicIdRequest"/> and sets the default values.

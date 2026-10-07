@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Protected_environm
     public partial class Protected_environmentsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.protected_environments.item collection</summary>
-        /// <param name="position">The name of the protected environment</param>
+        /// <param name="position">Name of the protected environment.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Protected_environments.Item.WithNameItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Protected_environments.Item.WithNameItemRequestBuilder this[string position]
         {

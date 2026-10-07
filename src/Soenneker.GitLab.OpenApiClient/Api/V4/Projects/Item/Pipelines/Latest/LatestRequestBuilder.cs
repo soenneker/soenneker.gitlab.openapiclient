@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.Latest
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class LatestRequestBuilderGetQueryParameters 
         {
-            /// <summary>Branch ref of pipeline. Uses project default branch if not specified.</summary>
+            /// <summary>Branch or tag to check for the latest pipeline. If omitted, uses the default branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("ref")]

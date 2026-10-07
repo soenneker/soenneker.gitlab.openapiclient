@@ -8,14 +8,14 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// Runner&apos;s session data
+    /// Session data of the runner.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostApiV4JobsRequestRequestSession : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Session&apos;s authorization</summary>
+        /// <summary>Authorization of the session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Authorization { get; set; }
@@ -23,7 +23,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Authorization { get; set; }
 #endif
-        /// <summary>Session&apos;s certificate</summary>
+        /// <summary>Certificate of the session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Certificate { get; set; }
@@ -31,7 +31,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Certificate { get; set; }
 #endif
-        /// <summary>Session&apos;s url</summary>
+        /// <summary>URL of the session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Url { get; set; }

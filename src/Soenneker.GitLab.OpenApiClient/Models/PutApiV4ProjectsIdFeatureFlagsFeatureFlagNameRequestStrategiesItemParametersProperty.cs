@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// The strategy parameters as a JSON-formatted string e.g. `{&quot;userIds&quot;:&quot;user1&quot;}`
+    /// Strategy parameters as a JSON-formatted string, for example `{&quot;userIds&quot;:&quot;user1&quot;}`.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PutApiV4ProjectsIdFeatureFlagsFeatureFlagNameRequestStrategiesItemParametersProperty : IAdditionalDataHolder, IParsable

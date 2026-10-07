@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>The type of the report required when rule type equals to report_approver</summary>
+    /// <summary>Type of the report required when `rule_type` is set to `report_approver`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum CodeCoverageReportType
     {

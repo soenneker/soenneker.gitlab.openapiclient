@@ -14,9 +14,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Whether the epic should be confidential. Parameter is ignored if `confidential_epics`` feature flag is disabled. Defaults to the confidentiality state of the parent epic.</summary>
+        /// <summary>If `true`, marks the epic as confidential. Ignored if the `confidential_epics` feature flag is disabled. Defaults to the confidentiality state of the parent epic.</summary>
         public bool? Confidential { get; set; }
-        /// <summary>The title of a child epic</summary>
+        /// <summary>Title of the child epic.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Title { get; set; }

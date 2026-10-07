@@ -25,7 +25,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Clusters
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Clusters.User.UserRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.clusters.item collection</summary>
-        /// <param name="position">The cluster ID</param>
+        /// <param name="position">ID of the cluster.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Clusters.Item.WithClusterItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Clusters.Item.WithClusterItemRequestBuilder this[int position]
         {

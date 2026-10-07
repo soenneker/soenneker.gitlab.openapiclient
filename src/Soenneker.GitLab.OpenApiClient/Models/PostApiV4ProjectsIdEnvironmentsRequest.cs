@@ -14,11 +14,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The auto stop setting for the environment. Allowed values are `always` and `with_action`</summary>
+        /// <summary>Auto stop setting for the environment.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdEnvironmentsRequestAutoStopSetting? AutoStopSetting { get; set; }
-        /// <summary>The ID of the Cluster Agent to associate with this environment</summary>
+        /// <summary>ID of the cluster agent to associate with the environment. When updating an environment, set to `null` to remove it.</summary>
         public int? ClusterAgentId { get; set; }
-        /// <summary>The description of the environment</summary>
+        /// <summary>Description of the environment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get; set; }
@@ -26,7 +26,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>Place to link to for this environment</summary>
+        /// <summary>URL to link to for the environment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ExternalUrl { get; set; }
@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ExternalUrl { get; set; }
 #endif
-        /// <summary>The Flux resource path to associate with this environment</summary>
+        /// <summary>Flux resource path to associate with the environment, for example `helm.toolkit.fluxcd.io/v2/namespaces/gitlab-agent/helmreleases/gitlab-agent`. When updating an environment, set to `null` to remove it.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FluxResourcePath { get; set; }
@@ -42,7 +42,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string FluxResourcePath { get; set; }
 #endif
-        /// <summary>The Kubernetes namespace to associate with this environment</summary>
+        /// <summary>Kubernetes namespace to associate with the environment. When updating an environment, set to `null` to remove it.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? KubernetesNamespace { get; set; }
@@ -50,7 +50,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string KubernetesNamespace { get; set; }
 #endif
-        /// <summary>The name of the environment</summary>
+        /// <summary>Name of the environment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -58,7 +58,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>The tier of the new environment. Allowed values are `production`, `staging`, `testing`, `development`, and `other`</summary>
+        /// <summary>Tier of the environment.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdEnvironmentsRequestTier? Tier { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdEnvironmentsRequest"/> and sets the default values.

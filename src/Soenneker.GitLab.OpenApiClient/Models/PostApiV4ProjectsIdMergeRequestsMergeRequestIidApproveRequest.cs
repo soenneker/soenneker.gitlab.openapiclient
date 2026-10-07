@@ -22,9 +22,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ApprovalPassword { get; set; }
 #endif
-        /// <summary>When `true` submits pending review comments</summary>
+        /// <summary>If `true`, submits pending review comments.</summary>
         public bool? PublishReview { get; set; }
-        /// <summary>When present, must have the HEAD SHA of the source branch</summary>
+        /// <summary>SHA at `HEAD` of the source branch of the merge request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Sha { get; set; }

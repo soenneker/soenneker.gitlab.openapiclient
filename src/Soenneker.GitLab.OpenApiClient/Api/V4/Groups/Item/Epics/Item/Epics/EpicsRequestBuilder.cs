@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics.Item.Epics
     public partial class EpicsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.epics.item.epics.item collection</summary>
-        /// <param name="position">The global ID of the child epic. Internal ID can&apos;t be used because they can conflict with epics from other groups.</param>
+        /// <param name="position">Global ID of the child epic. The internal ID can&apos;t be used because internal IDs can conflict with epics from other groups.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics.Item.Epics.Item.WithChildEpicItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics.Item.Epics.Item.WithChildEpicItemRequestBuilder this[int position]
         {

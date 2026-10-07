@@ -14,9 +14,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Delete the scope when true</summary>
+        /// <summary>If `true`, deletes the scope.</summary>
         public bool? Destroy { get; set; }
-        /// <summary>The environment scope of the scope</summary>
+        /// <summary>Environment scope of the scope.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EnvironmentScope { get; set; }
@@ -24,7 +24,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string EnvironmentScope { get; set; }
 #endif
-        /// <summary>The scope id</summary>
+        /// <summary>ID of the scope.</summary>
         public int? Id { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdFeatureFlagsFeatureFlagNameRequestStrategiesItemScopesItem"/> and sets the default values.

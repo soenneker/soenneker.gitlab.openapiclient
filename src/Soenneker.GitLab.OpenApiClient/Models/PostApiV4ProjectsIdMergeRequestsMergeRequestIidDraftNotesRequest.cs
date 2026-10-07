@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The sha of a commit to associate the draft note to.</summary>
+        /// <summary>SHA of the commit to associate the draft note with.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CommitId { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string CommitId { get; set; }
 #endif
-        /// <summary>The ID of a discussion the draft note replies to.</summary>
+        /// <summary>ID of the discussion the draft note replies to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? InReplyToDiscussionId { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string InReplyToDiscussionId { get; set; }
 #endif
-        /// <summary>The content of a note.</summary>
+        /// <summary>Content of the note.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Note { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Note { get; set; }
 #endif
-        /// <summary>Position when creating a note</summary>
+        /// <summary>Position when creating a diff note. If omitted, creates a regular discussion note.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMergeRequestsMergeRequestIidDraftNotesRequestPosition? Position { get; set; }
@@ -46,7 +46,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMergeRequestsMergeRequestIidDraftNotesRequestPosition Position { get; set; }
 #endif
-        /// <summary>The associated discussion should be resolved.</summary>
+        /// <summary>If `true`, resolves the associated discussion.</summary>
         public bool? ResolveDiscussion { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMergeRequestsMergeRequestIidDraftNotesRequest"/> and sets the default values.

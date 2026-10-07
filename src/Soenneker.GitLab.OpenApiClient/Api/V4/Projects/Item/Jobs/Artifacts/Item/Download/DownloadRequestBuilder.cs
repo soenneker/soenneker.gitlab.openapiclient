@@ -88,7 +88,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Artifacts.Ite
             /// <summary>Requested download transfer mode (`proxy` or `direct`). Only honored when allowed by the object storage configuration.</summary>
             [QueryParameter("download_mode")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdJobsArtifactsRefNameDownloadDownloadModeParameter? DownloadMode { get; set; }
-            /// <summary>The name of the job.</summary>
+            /// <summary>Name of the job.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("job")]
@@ -98,7 +98,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Artifacts.Ite
             [QueryParameter("job")]
             public string Job { get; set; }
 #endif
-            /// <summary>To be used with triggers for multi-project pipelines, available only on Premium and Ultimate tiers.</summary>
+            /// <summary>CI/CD job token for multi-project pipelines. Premium and Ultimate only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("job_token")]
@@ -108,7 +108,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Artifacts.Ite
             [QueryParameter("job_token")]
             public string JobToken { get; set; }
 #endif
-            /// <summary>Search across recent successful pipelines instead of just the latest one.</summary>
+            /// <summary>If `true`, searches across recent successful pipelines instead of just the latest one. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/515864) in GitLab 18.7 [with a feature flag](https://docs.gitlab.com/administration/feature_flags/) named `ci_search_recent_successful_pipelines`. Disabled by default.</summary>
             [QueryParameter("search_recent_successful_pipelines")]
             public bool? SearchRecentSuccessfulPipelines { get; set; }
         }

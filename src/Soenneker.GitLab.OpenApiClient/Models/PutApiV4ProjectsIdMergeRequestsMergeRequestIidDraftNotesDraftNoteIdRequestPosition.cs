@@ -8,14 +8,14 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// Position when creating a note
+    /// Position when creating a diff note. If omitted, creates a regular discussion note.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PutApiV4ProjectsIdMergeRequestsMergeRequestIidDraftNotesDraftNoteIdRequestPosition : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Base commit SHA in the source branch</summary>
+        /// <summary>Base commit SHA of the diff.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? BaseSha { get; set; }
@@ -23,7 +23,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string BaseSha { get; set; }
 #endif
-        /// <summary>SHA referencing HEAD of this merge request</summary>
+        /// <summary>SHA of the latest commit in the source branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? HeadSha { get; set; }
@@ -31,9 +31,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string HeadSha { get; set; }
 #endif
-        /// <summary>Height of the image</summary>
+        /// <summary>Height of the image.</summary>
         public int? Height { get; set; }
-        /// <summary>Line range for a multi-line note</summary>
+        /// <summary>Line range for a multi-line note.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdMergeRequestsMergeRequestIidDraftNotesDraftNoteIdRequestPositionLineRange? LineRange { get; set; }
@@ -41,9 +41,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdMergeRequestsMergeRequestIidDraftNotesDraftNoteIdRequestPositionLineRange LineRange { get; set; }
 #endif
-        /// <summary>Line number after change</summary>
+        /// <summary>Line number after the change.</summary>
         public int? NewLine { get; set; }
-        /// <summary>File path after change</summary>
+        /// <summary>File path after the change.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? NewPath { get; set; }
@@ -51,9 +51,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string NewPath { get; set; }
 #endif
-        /// <summary>Line number before change</summary>
+        /// <summary>Line number before the change.</summary>
         public int? OldLine { get; set; }
-        /// <summary>File path before change</summary>
+        /// <summary>File path before the change.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OldPath { get; set; }
@@ -61,9 +61,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string OldPath { get; set; }
 #endif
-        /// <summary>Type of the position reference</summary>
+        /// <summary>Type of the position reference.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdMergeRequestsMergeRequestIidDraftNotesDraftNoteIdRequestPositionPositionType? PositionType { get; set; }
-        /// <summary>SHA referencing commit in target branch</summary>
+        /// <summary>SHA of the latest commit in the target branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? StartSha { get; set; }
@@ -71,11 +71,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string StartSha { get; set; }
 #endif
-        /// <summary>Width of the image</summary>
+        /// <summary>Width of the image.</summary>
         public int? Width { get; set; }
-        /// <summary>X coordinate in the image</summary>
+        /// <summary>X coordinate in the image.</summary>
         public int? X { get; set; }
-        /// <summary>Y coordinate in the image</summary>
+        /// <summary>Y coordinate in the image.</summary>
         public int? Y { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdMergeRequestsMergeRequestIidDraftNotesDraftNoteIdRequestPosition"/> and sets the default values.

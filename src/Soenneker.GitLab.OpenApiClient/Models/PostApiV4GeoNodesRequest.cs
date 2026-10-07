@@ -14,9 +14,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The number of consecutive checksum mismatches on a secondary before it reports the resource to the primary for self-heal re-verification. Read from the secondary node; has no effect when set on the primary.</summary>
+        /// <summary>Number of consecutive checksum mismatches on a secondary node before it reports the resource to the primary for self-heal re-verification. Read from the secondary node, and has no effect when set on the primary.</summary>
         public int? ChecksumMismatchReportThreshold { get; set; }
-        /// <summary>The minimum time (in minutes) between self-heal re-verification triggers for the same resource. Both the primary and each secondary use their own value: secondaries use it to throttle re-reporting the same resource, and the primary uses it to throttle re-verifying an already-verified resource.</summary>
+        /// <summary>Minimum time, in minutes, between self-heal re-verification triggers for the same resource. The primary and each secondary node use their own value. Secondary nodes use it to throttle re-reporting the same resource, and the primary uses it to throttle re-verifying an already-verified resource.</summary>
         public int? ChecksumMismatchSelfHealCooldownMinutes { get; set; }
         /// <summary>Control the maximum concurrency of container repository sync for this node.</summary>
         public int? ContainerRepositoriesMaxCapacity { get; set; }
@@ -24,7 +24,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public bool? Enabled { get; set; }
         /// <summary>Control the maximum concurrency of LFS/attachment backfill for this secondary node.</summary>
         public int? FilesMaxCapacity { get; set; }
-        /// <summary>The URL defined on the primary node that secondary nodes should use to contact it. Returns `url` if not set.</summary>
+        /// <summary>URL defined on the primary node that secondary nodes use to contact it. Returns `url` if not set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? InternalUrl { get; set; }
@@ -32,9 +32,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string InternalUrl { get; set; }
 #endif
-        /// <summary>The interval (in days) in which the repository verification is valid. Once expired, it will be reverified. This has no effect when set on a secondary node.</summary>
+        /// <summary>Interval, in days, after which repository verification expires and is repeated. Has no effect when set on a secondary node.</summary>
         public int? MinimumReverificationInterval { get; set; }
-        /// <summary>The unique identifier for the Geo node. Must match `geo_node_name` if it is set in `gitlab.rb`, otherwise it must match `external_url`</summary>
+        /// <summary>Unique identifier for the Geo node. Must match `geo_node_name` if it is set in `gitlab.rb`, otherwise it must match `external_url`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -46,7 +46,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public bool? Primary { get; set; }
         /// <summary>Control the maximum concurrency of repository backfill for this secondary node.</summary>
         public int? ReposMaxCapacity { get; set; }
-        /// <summary>The IDs of groups that should be synced, if `selective_sync_type` == `namespaces`</summary>
+        /// <summary>IDs of groups to sync if `selective_sync_type` is `namespaces`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<int?>? SelectiveSyncNamespaceIds { get; set; }
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<int?> SelectiveSyncNamespaceIds { get; set; }
 #endif
-        /// <summary>The IDs of organizations that should be synced, if `selective_sync_type` == `organizations`</summary>
+        /// <summary>IDs of organizations to sync if `selective_sync_type` is `organizations`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<int?>? SelectiveSyncOrganizationIds { get; set; }
@@ -62,7 +62,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<int?> SelectiveSyncOrganizationIds { get; set; }
 #endif
-        /// <summary>The repository storages whose projects should be synced, if `selective_sync_type` == `shards`</summary>
+        /// <summary>Repository storages to sync projects from if `selective_sync_type` is `shards`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? SelectiveSyncShards { get; set; }
@@ -70,7 +70,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<string> SelectiveSyncShards { get; set; }
 #endif
-        /// <summary>Limit syncing to only specific groups, or shards. Valid values: `&quot;namespaces&quot;`, `&quot;shards&quot;`, or `null`</summary>
+        /// <summary>Limit syncing to only specific groups or shards. Possible values are `namespaces`, `shards`, and `null`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SelectiveSyncType { get; set; }
@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>Flag indicating if the secondary Geo node will replicate blobs in Object Storage.</summary>
         public bool? SyncObjectStorage { get; set; }
-        /// <summary>The user-facing URL for the Geo node</summary>
+        /// <summary>User-facing URL of the Geo node.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Url { get; set; }

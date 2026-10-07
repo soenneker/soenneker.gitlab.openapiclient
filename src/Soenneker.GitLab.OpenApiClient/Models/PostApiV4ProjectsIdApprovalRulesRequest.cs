@@ -14,13 +14,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Apply this rule to all protected branches within the project</summary>
+        /// <summary>If `true`, applies the rule to all protected branches and ignores the `protected_branch_ids` attribute.</summary>
         public bool? AppliesToAllProtectedBranches { get; set; }
-        /// <summary>The number of required approvals for this rule</summary>
+        /// <summary>Number of required approvals for the rule.</summary>
         public int? ApprovalsRequired { get; set; }
-        /// <summary>Minimum code coverage threshold (0-100). If coverage falls below this threshold, approval is required.</summary>
+        /// <summary>Minimum code coverage percentage for the rule, from 0 to 100. If coverage falls below this threshold, approval is required.</summary>
         public double? CoverageMinimumThreshold { get; set; }
-        /// <summary>The group ids for this rule</summary>
+        /// <summary>IDs of groups to add as approvers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<int?>? GroupIds { get; set; }
@@ -28,7 +28,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<int?> GroupIds { get; set; }
 #endif
-        /// <summary>Deprecated: The group ids for this rule</summary>
+        /// <summary>IDs of groups to add as approvers. Deprecated. Use `group_ids` instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<int?>? Groups { get; set; }
@@ -36,7 +36,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<int?> Groups { get; set; }
 #endif
-        /// <summary>The name of the approval rule</summary>
+        /// <summary>Name of the approval rule. Limited to 1024 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -44,7 +44,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>The protected branch ids for this rule</summary>
+        /// <summary>IDs of protected branches to scope the rule by.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<int?>? ProtectedBranchIds { get; set; }
@@ -52,9 +52,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<int?> ProtectedBranchIds { get; set; }
 #endif
-        /// <summary>The type of the report required when rule type equals to report_approver</summary>
+        /// <summary>Type of the report required when `rule_type` is set to `report_approver`.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.CodeCoverageReportType? ReportType { get; set; }
-        /// <summary>The type of approval rule</summary>
+        /// <summary>Type of the approval rule. Possible values are `regular`, `report_approver`, and `any_approver`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RuleType { get; set; }
@@ -62,7 +62,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string RuleType { get; set; }
 #endif
-        /// <summary>The security scanners to be considered by the approval rule</summary>
+        /// <summary>Security scanners to be considered by the approval rule.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Scanners { get; set; }
@@ -70,7 +70,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<string> Scanners { get; set; }
 #endif
-        /// <summary>The security levels to be considered by the approval rule</summary>
+        /// <summary>Security levels to be considered by the approval rule.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? SeverityLevels { get; set; }
@@ -78,7 +78,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<string> SeverityLevels { get; set; }
 #endif
-        /// <summary>The user ids for this rule</summary>
+        /// <summary>IDs of users to add as approvers. When used with `usernames`, both lists of users are added.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<int?>? UserIds { get; set; }
@@ -86,7 +86,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<int?> UserIds { get; set; }
 #endif
-        /// <summary>The usernames for this rule</summary>
+        /// <summary>Usernames of approvers. If used with `user_ids`, adds both lists of users.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Usernames { get; set; }
@@ -94,7 +94,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<string> Usernames { get; set; }
 #endif
-        /// <summary>Deprecated: The user ids for this rule</summary>
+        /// <summary>IDs of users to add as approvers. Deprecated. Use `user_ids` instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<int?>? Users { get; set; }
@@ -102,9 +102,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<int?> Users { get; set; }
 #endif
-        /// <summary>The number of vulnerabilities allowed for this rule</summary>
+        /// <summary>Number of vulnerabilities allowed for the rule.</summary>
         public int? VulnerabilitiesAllowed { get; set; }
-        /// <summary>The vulnerability states to be considered by the approval rule</summary>
+        /// <summary>Vulnerability states to be considered by the approval rule.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? VulnerabilityStates { get; set; }

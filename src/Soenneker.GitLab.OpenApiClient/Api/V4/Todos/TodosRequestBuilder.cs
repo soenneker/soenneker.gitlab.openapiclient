@@ -25,7 +25,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Todos
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Todos.Mark_as_done.Mark_as_doneRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.todos.item collection</summary>
-        /// <param name="position">The ID of to-do item</param>
+        /// <param name="position">ID of the to-do item.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Todos.Item.TodosItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Todos.Item.TodosItemRequestBuilder this[int position]
         {
@@ -104,13 +104,13 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Todos
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class TodosRequestBuilderGetQueryParameters 
         {
-            /// <summary>The action to be filtered</summary>
+            /// <summary>Filter to-do items by action.</summary>
             [QueryParameter("action")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4TodosActionParameter? Action { get; set; }
-            /// <summary>The ID of an author</summary>
+            /// <summary>Filter to-do items by author ID.</summary>
             [QueryParameter("author_id")]
             public int? AuthorId { get; set; }
-            /// <summary>The ID of a group</summary>
+            /// <summary>Filter to-do items by group ID.</summary>
             [QueryParameter("group_id")]
             public int? GroupId { get; set; }
             /// <summary>Page number of results to retrieve.</summary>
@@ -119,13 +119,13 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Todos
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>The ID of a project</summary>
+            /// <summary>Filter to-do items by project ID.</summary>
             [QueryParameter("project_id")]
             public int? ProjectId { get; set; }
-            /// <summary>The state of the to-do item</summary>
+            /// <summary>Filter to-do items by state.</summary>
             [QueryParameter("state")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4TodosStateParameter? State { get; set; }
-            /// <summary>The type of to-do item</summary>
+            /// <summary>Filter to-do items by type.</summary>
             [QueryParameter("type")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4TodosTypeParameter? Type { get; set; }
         }

@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>The auto stop setting for the environment. Allowed values are `always` and `with_action`</summary>
+    /// <summary>Auto stop setting for the environment.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PostApiV4ProjectsIdEnvironmentsRequestAutoStopSetting
     {

@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Comma-separated list of label names. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
+        /// <summary>Comma-separated label names to add to the issue. If a label does not already exist, this creates a new project label and assigns it to the issue. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? AddLabels { get; set; }
@@ -22,9 +22,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<string> AddLabels { get; set; }
 #endif
-        /// <summary>[Deprecated] The ID of a user to assign issue. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
+        /// <summary>ID of the user to assign the issue to. Available only on GitLab Free. Deprecated. Use `assignee_ids` instead. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
         public int? AssigneeId { get; set; }
-        /// <summary>The array of user IDs to assign issue. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
+        /// <summary>IDs of the users to assign to the issue. Set to `0` or leave empty to unassign all assignees. Assigning more than one user is Premium and Ultimate only. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<int?>? AssigneeIds { get; set; }
@@ -32,7 +32,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<int?> AssigneeIds { get; set; }
 #endif
-        /// <summary>Boolean parameter if the issue should be confidential. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
+        /// <summary>If `true`, the issue is confidential. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
         public bool? Confidential { get; set; }
         /// <summary>At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -42,7 +42,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string CreatedAt { get; set; }
 #endif
-        /// <summary>The description of an issue. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
+        /// <summary>Description of the issue. Limited to 1,048,576 characters. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get; set; }
@@ -50,9 +50,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>Boolean parameter indicating if the issue&apos;s discussion is locked. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
+        /// <summary>If `true`, locks the issue&apos;s discussion so only project members can add or edit comments. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
         public bool? DiscussionLocked { get; set; }
-        /// <summary>Date string in the format YEAR-MONTH-DAY. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
+        /// <summary>Due date, in the format `YYYY-MM-DD`, for example `2016-03-11`. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DueDate { get; set; }
@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public int? EpicIid { get; set; }
         /// <summary>The type of the issue. Accepts: issue, incident, test_case, requirement, task, ticket. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdIssuesIssueIidRequestIssueType? IssueType { get; set; }
-        /// <summary>Comma-separated list of label names. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
+        /// <summary>Comma-separated list of label names. `None` means no labels are assigned. `Any` means at least one label is assigned. `No+Label` (deprecated) means no labels are assigned. Set to an empty string to unassign all labels. If a label does not already exist, this creates a new project label and assigns it to the issue. Predefined names are case-insensitive. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Labels { get; set; }
@@ -82,9 +82,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Milestone { get; set; }
 #endif
-        /// <summary>The ID of a milestone to assign issue. Mutually exclusive with `milestone`. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
+        /// <summary>Global ID of a milestone to assign to the issue. Set to `0` or leave empty to unassign the milestone. Mutually exclusive with `milestone`. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
         public int? MilestoneId { get; set; }
-        /// <summary>Comma-separated list of label names. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
+        /// <summary>Comma-separated label names to remove from the issue. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? RemoveLabels { get; set; }
@@ -94,7 +94,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>The severity of the issue. Only applies to incidents. Accepts: unknown, low, medium, high, critical. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdIssuesIssueIidRequestSeverity? Severity { get; set; }
-        /// <summary>Date string in the format YEAR-MONTH-DAY. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
+        /// <summary>Start date, in the format `YYYY-MM-DD`, for example `2016-03-11`. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/238041) in GitLab 19.1. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? StartDate { get; set; }
@@ -102,9 +102,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string StartDate { get; set; }
 #endif
-        /// <summary>State of the issue. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
+        /// <summary>Event to change the state of the issue. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdIssuesIssueIidRequestStateEvent? StateEvent { get; set; }
-        /// <summary>The title of an issue. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
+        /// <summary>Title of the issue. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Title { get; set; }
@@ -112,7 +112,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Title { get; set; }
 #endif
-        /// <summary>Date time when the issue was updated. Available only for admins and project owners.</summary>
+        /// <summary>Date and time the issue was updated. Administrators or project owners only. Empty or null values are not accepted.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>The weight of the issue. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
         public int? Weight { get; set; }

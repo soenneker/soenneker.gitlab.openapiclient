@@ -8,14 +8,14 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// End line for a multi-line note
+    /// End line for a multi-line note.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PutApiV4ProjectsIdMergeRequestsMergeRequestIidDraftNotesDraftNoteIdRequestPositionLineRangeEnd : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>End line code for multi-line note</summary>
+        /// <summary>End line code for a multi-line note.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? LineCode { get; set; }
@@ -23,11 +23,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string LineCode { get; set; }
 #endif
-        /// <summary>End new_line line number</summary>
+        /// <summary>Line number after the change at the end of the line range.</summary>
         public int? NewLine { get; set; }
-        /// <summary>End old_line line number</summary>
+        /// <summary>Line number before the change at the end of the line range.</summary>
         public int? OldLine { get; set; }
-        /// <summary>End line type for multi-line note</summary>
+        /// <summary>End line type for a multi-line note.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }

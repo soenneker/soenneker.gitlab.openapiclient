@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>If `true`, the merge request is set to auto merge.</summary>
+        /// <summary>If `true`, the merge request merges when checks pass.</summary>
         public bool? AutoMerge { get; set; }
         /// <summary>Custom merge commit message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -24,9 +24,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string MergeCommitMessage { get; set; }
 #endif
-        /// <summary>Deprecated: Use auto_merge instead.</summary>
+        /// <summary>If `true`, merges the merge request automatically once the pipeline succeeds. [Deprecated](https://gitlab.com/gitlab-org/gitlab/-/issues/521291) in GitLab 17.11. Use `auto_merge` instead.</summary>
         public bool? MergeWhenPipelineSucceeds { get; set; }
-        /// <summary>If present, then this SHA must match the HEAD of the source branch, otherwise the merge fails.</summary>
+        /// <summary>SHA that must match the HEAD of the source branch, otherwise the merge fails. Use to ensure that only reviewed commits are merged. Required if the [require a commit SHA on the merge requests API](https://docs.gitlab.com/user/group/manage/#require-a-commit-sha-on-the-merge-requests-api) setting is enabled for the group or instance.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Sha { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public bool? ShouldRemoveSourceBranch { get; set; }
         /// <summary>If `true`, skips the merge train restart when merging immediately in a project configured for merge trains.</summary>
         public bool? SkipMergeTrain { get; set; }
-        /// <summary>If `true`, the commits are squashed into a single commit on merge.</summary>
+        /// <summary>If `true`, squashes all commits into a single commit on merge.</summary>
         public bool? Squash { get; set; }
         /// <summary>Custom squash commit message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

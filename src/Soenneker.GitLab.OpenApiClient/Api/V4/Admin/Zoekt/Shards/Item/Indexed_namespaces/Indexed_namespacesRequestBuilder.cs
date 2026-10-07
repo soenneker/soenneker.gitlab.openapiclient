@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Shards.Item.Indexed_
     public partial class Indexed_namespacesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.admin.zoekt.shards.item.indexed_namespaces.item collection</summary>
-        /// <param name="position">The id of the namespace you want to index in this node</param>
+        /// <param name="position">ID of the namespace to index on the node.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Shards.Item.Indexed_namespaces.Item.WithNamespaceItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.Shards.Item.Indexed_namespaces.Item.WithNamespaceItemRequestBuilder this[int position]
         {

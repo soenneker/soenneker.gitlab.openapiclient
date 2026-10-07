@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Ssh_certificates
     public partial class Ssh_certificatesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.ssh_certificates.item collection</summary>
-        /// <param name="position">The ID of a group SSH certificate</param>
+        /// <param name="position">ID of the group SSH certificate.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Ssh_certificates.Item.WithSshCertificatesItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Ssh_certificates.Item.WithSshCertificatesItemRequestBuilder this[int position]
         {

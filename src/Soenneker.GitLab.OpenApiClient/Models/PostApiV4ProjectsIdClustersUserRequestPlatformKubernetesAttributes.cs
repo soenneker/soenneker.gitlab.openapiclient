@@ -8,14 +8,14 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// Platform Kubernetes data
+    /// Platform Kubernetes data.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostApiV4ProjectsIdClustersUserRequestPlatformKubernetesAttributes : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>URL to access the Kubernetes API</summary>
+        /// <summary>URL to access the Kubernetes API.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ApiUrl { get; set; }
@@ -23,9 +23,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ApiUrl { get; set; }
 #endif
-        /// <summary>Cluster authorization type, defaults to RBAC</summary>
+        /// <summary>Cluster authorization type.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdClustersUserRequestPlatformKubernetesAttributesAuthorizationType? AuthorizationType { get; set; }
-        /// <summary>TLS certificate (needed if API is using a self-signed TLS certificate)</summary>
+        /// <summary>TLS certificate (needed if API is using a self-signed TLS certificate).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CaCert { get; set; }
@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string CaCert { get; set; }
 #endif
-        /// <summary>Unique namespace related to Project</summary>
+        /// <summary>Kubernetes namespace that environments deploy to. If `managed` and `namespace_per_environment` are `true`, the environment slug is appended.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Namespace { get; set; }
@@ -41,7 +41,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Namespace { get; set; }
 #endif
-        /// <summary>Token to authenticate against Kubernetes</summary>
+        /// <summary>Token to authenticate against Kubernetes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Token { get; set; }

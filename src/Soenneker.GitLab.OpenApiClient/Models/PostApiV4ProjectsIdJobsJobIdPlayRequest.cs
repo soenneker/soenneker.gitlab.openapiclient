@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Input values for the job</summary>
+        /// <summary>Hash of [job input](https://docs.gitlab.com/ci/jobs/job_inputs/) values to use when playing the job. [Introduced](https://gitlab.com/groups/gitlab-org/-/work_items/17833) in GitLab 18.10.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdJobsJobIdPlayRequestJobInputsProperty? JobInputs { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdJobsJobIdPlayRequestJobInputsProperty JobInputs { get; set; }
 #endif
-        /// <summary>User defined variables that will be included when running the job</summary>
+        /// <summary>User-defined variables to include when running the job.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdJobsJobIdPlayRequestJobVariablesAttributesItem>? JobVariablesAttributes { get; set; }

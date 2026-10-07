@@ -188,7 +188,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners.Item
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class RunnersItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>Include projects in the response. Set to false to improve performance for runners with many projects.</summary>
+            /// <summary>If `true`, includes projects in the response. If `false`, improves performance for runners with many projects.</summary>
             [QueryParameter("include_projects")]
             public bool? IncludeProjects { get; set; }
         }

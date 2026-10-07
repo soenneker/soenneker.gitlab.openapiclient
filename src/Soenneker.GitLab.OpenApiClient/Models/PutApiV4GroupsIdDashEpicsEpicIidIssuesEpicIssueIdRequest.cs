@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The ID of the epic-issue association that should be positioned after the actual issue</summary>
+        /// <summary>ID of the epic-issue association to position after the issue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueIdRequestMoveAfterId? MoveAfterId { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueIdRequestMoveAfterId MoveAfterId { get; set; }
 #endif
-        /// <summary>The ID of the epic-issue association that should be positioned before the actual issue</summary>
+        /// <summary>ID of the epic-issue association to position before the issue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueIdRequestMoveBeforeId? MoveBeforeId { get; set; }

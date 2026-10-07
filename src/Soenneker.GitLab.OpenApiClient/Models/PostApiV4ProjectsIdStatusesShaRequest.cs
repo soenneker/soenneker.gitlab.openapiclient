@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A string label to differentiate this status from the status of other systems</summary>
+        /// <summary>String label to differentiate this status from the status of other systems.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Context { get; set; }
@@ -22,9 +22,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Context { get; set; }
 #endif
-        /// <summary>The total code coverage</summary>
+        /// <summary>Total code coverage.</summary>
         public double? Coverage { get; set; }
-        /// <summary>A short description of the status</summary>
+        /// <summary>Short description of the status. Must be 255 characters or fewer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get; set; }
@@ -32,7 +32,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>A string label to differentiate this status from the status of other systems</summary>
+        /// <summary>String label to differentiate this status from the status of other systems.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -40,9 +40,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>An existing pipeline ID, when multiple pipelines on the same commit SHA have been triggered</summary>
+        /// <summary>ID of the pipeline to set the status for. Use when multiple pipelines exist for the same commit SHA.</summary>
         public int? PipelineId { get; set; }
-        /// <summary>The ref</summary>
+        /// <summary>Branch or tag that the status refers to. Must be 255 characters or fewer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Ref { get; set; }
@@ -50,9 +50,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Ref { get; set; }
 #endif
-        /// <summary>The state of the status</summary>
+        /// <summary>State of the status.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdStatusesShaRequestState? State { get; set; }
-        /// <summary>The target URL to associate with this status</summary>
+        /// <summary>Target URL to associate with this status. Must be 255 characters or fewer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TargetUrl { get; set; }
