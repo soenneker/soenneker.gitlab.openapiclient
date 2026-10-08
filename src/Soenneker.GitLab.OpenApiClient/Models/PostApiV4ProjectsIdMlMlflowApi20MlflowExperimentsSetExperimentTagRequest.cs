@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ExperimentId { get; set; }
 #endif
-        /// <summary>Name for the tag.</summary>
+        /// <summary>Name of the tag.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Key { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Key { get; set; }
 #endif
-        /// <summary>Value for the tag.</summary>
+        /// <summary>Value of the tag.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Value { get; set; }

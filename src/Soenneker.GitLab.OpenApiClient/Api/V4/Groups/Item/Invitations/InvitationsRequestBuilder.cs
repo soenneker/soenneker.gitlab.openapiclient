@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Invitations
     public partial class InvitationsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.invitations.item collection</summary>
-        /// <param name="position">The email address of the invitation</param>
+        /// <param name="position">Email address the invitation was previously sent to.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Invitations.Item.WithEmailItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Invitations.Item.WithEmailItemRequestBuilder this[string position]
         {

@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.External_status_ch
     public partial class External_status_checksRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.external_status_checks.item collection</summary>
-        /// <param name="position">ID of an external status check</param>
+        /// <param name="position">ID of the external status check.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.External_status_checks.Item.WithCheckItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.External_status_checks.Item.WithCheckItemRequestBuilder this[int position]
         {

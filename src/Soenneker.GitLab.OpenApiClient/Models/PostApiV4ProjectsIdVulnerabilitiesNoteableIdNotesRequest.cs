@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Body { get; set; }
 #endif
-        /// <summary>[Deprecated in 15.5] Renamed to internal</summary>
+        /// <summary>If `true`, marks the note as internal. Deprecated. Use `internal` instead.</summary>
         public bool? Confidential { get; set; }
         /// <summary>Date and time the note was created, in ISO 8601 format such as `2016-03-11T03:45:40Z`. Requires administrator or project/group owner rights.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

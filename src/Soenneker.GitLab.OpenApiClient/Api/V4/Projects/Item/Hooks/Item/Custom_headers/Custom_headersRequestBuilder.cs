@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Hooks.Item.Custom_
     public partial class Custom_headersRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.hooks.item.custom_headers.item collection</summary>
-        /// <param name="position">The name of the custom header</param>
+        /// <param name="position">Name of the custom header.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Hooks.Item.Custom_headers.Item.WithKeyItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Hooks.Item.Custom_headers.Item.WithKeyItemRequestBuilder this[string position]
         {

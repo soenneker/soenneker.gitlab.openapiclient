@@ -83,7 +83,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitaly.Object_pool_memb
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Object_pool_membersRequestBuilderGetQueryParameters 
         {
-            /// <summary>The on-disk paths of the pool repositories. Limited to 500</summary>
+            /// <summary>On-disk paths of the pool repositories. Limited to 500.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("disk_paths")]
@@ -93,7 +93,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitaly.Object_pool_memb
             [QueryParameter("disk_paths")]
             public string[] DiskPaths { get; set; }
 #endif
-            /// <summary>The storage shard name</summary>
+            /// <summary>Name of the storage shard.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("storage")]
@@ -103,7 +103,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitaly.Object_pool_memb
             [QueryParameter("storage")]
             public string Storage { get; set; }
 #endif
-            /// <summary>Return only the upstream repository</summary>
+            /// <summary>If `true`, returns only the upstream repository.</summary>
             [QueryParameter("upstream_only")]
             public bool? UpstreamOnly { get; set; }
         }

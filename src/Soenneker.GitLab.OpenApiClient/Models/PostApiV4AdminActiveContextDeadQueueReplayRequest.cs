@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Target queue name (e.g. retry_queue, second_retry_queue, code, code_backfill)</summary>
+        /// <summary>Name of the target queue, for example `retry_queue`, `second_retry_queue`, `code`, or `code_backfill`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Queue { get; set; }

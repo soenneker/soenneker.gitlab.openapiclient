@@ -32,7 +32,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Method { get; set; }
 #endif
-        /// <summary>Object or array that contains parameters passed to the specified JSON-RPC method</summary>
+        /// <summary>Parameters for the JSON-RPC method specified in `method`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4McpRequestParams? Params { get; set; }

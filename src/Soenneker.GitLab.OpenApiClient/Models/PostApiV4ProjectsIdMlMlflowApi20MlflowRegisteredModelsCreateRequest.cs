@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>Register models under this name.</summary>
+        /// <summary>Name of the registered model.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }

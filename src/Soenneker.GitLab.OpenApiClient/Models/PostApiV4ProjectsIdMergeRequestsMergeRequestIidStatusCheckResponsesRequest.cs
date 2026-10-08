@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>ID of an external status check</summary>
+        /// <summary>ID of the external status check.</summary>
         public int? ExternalStatusCheckId { get; set; }
         /// <summary>SHA at `HEAD` of the source branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

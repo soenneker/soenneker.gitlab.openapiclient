@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Whether to export in batches</summary>
+        /// <summary>If `true`, exports in batches.</summary>
         public bool? Batched { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdExportRelationsRequest"/> and sets the default values.

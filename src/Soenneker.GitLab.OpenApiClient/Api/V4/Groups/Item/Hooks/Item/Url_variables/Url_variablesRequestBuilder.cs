@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Hooks.Item.Url_varia
     public partial class Url_variablesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.hooks.item.url_variables.item collection</summary>
-        /// <param name="position">The key of the variable</param>
+        /// <param name="position">Key of the URL variable.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Hooks.Item.Url_variables.Item.WithKeyItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Hooks.Item.Url_variables.Item.WithKeyItemRequestBuilder this[string position]
         {

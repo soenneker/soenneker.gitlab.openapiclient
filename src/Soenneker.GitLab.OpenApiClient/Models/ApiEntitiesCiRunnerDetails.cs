@@ -166,6 +166,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string TagList { get; set; }
 #endif
+        /// <summary>The token_expires_at property</summary>
+        public DateTimeOffset? TokenExpiresAt { get; set; }
         /// <summary>The version property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -224,6 +226,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "runner_type", n => { RunnerType = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerDetailsRunnerType>(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
                 { "tag_list", n => { TagList = n.GetStringValue(); } },
+                { "token_expires_at", n => { TokenExpiresAt = n.GetDateTimeOffsetValue(); } },
                 { "version", n => { Version = n.GetStringValue(); } },
             };
         }
@@ -259,6 +262,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("run_untagged", RunUntagged);
             writer.WriteStringValue("status", Status);
             writer.WriteStringValue("tag_list", TagList);
+            writer.WriteDateTimeOffsetValue("token_expires_at", TokenExpiresAt);
             writer.WriteStringValue("version", Version);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -98,7 +98,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ml.Mlflow.Api.TwoZ
             /// <summary>Maximum number of models to fetch in a page. The maximum is 1000.</summary>
             [QueryParameter("max_results")]
             public int? MaxResults { get; set; }
-            /// <summary>Order criteria. Can be by name or last_updated_timestamp, with optional DESC or ASC (default)Valid examples: `name`, `name DESC`, `last_updated_timestamp DESC`Sorting by model metadata is not supported.</summary>
+            /// <summary>Column and direction to sort registered models by, for example `name`, `name DESC`, or `last_updated_timestamp DESC`. Supported columns are `name` and `last_updated_timestamp`. Sorting by model metadata is not supported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("order_by")]

@@ -24,7 +24,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>Maximum number of experiments to fetch in a page. The maximum is 1000.</summary>
         public int? MaxResults { get; set; }
-        /// <summary>Order criteria. Can be by a column of the experiment (created_at, name).</summary>
+        /// <summary>Column and direction to sort experiments by, for example `created_at DESC` or `name`. Supported columns are `created_at` and `name`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OrderBy { get; set; }

@@ -84,7 +84,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Export_relations.D
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class DownloadRequestBuilderGetQueryParameters 
         {
-            /// <summary>Whether to download in batches. All or none of `batched`, `batch_number` must be provided.</summary>
+            /// <summary>If `true`, downloads the batch specified by `batch_number`. Set to `true` only for batched exports. All or none of `batched`, `batch_number` must be provided.</summary>
             [QueryParameter("batched")]
             public bool? Batched { get; set; }
             /// <summary>Number of the export batch to download. All or none of `batched`, `batch_number` must be provided.</summary>

@@ -14,9 +14,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Connection ID (defaults to active connection)</summary>
+        /// <summary>ID of the connection. If omitted, defaults to the active connection.</summary>
         public int? ConnectionId { get; set; }
-        /// <summary>Namespace path or ID</summary>
+        /// <summary>ID or path of the namespace.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminActiveContextCodeEnabledNamespacesRequestNamespaceId? NamespaceId { get; set; }
@@ -24,7 +24,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminActiveContextCodeEnabledNamespacesRequestNamespaceId NamespaceId { get; set; }
 #endif
-        /// <summary>State (pending or ready)</summary>
+        /// <summary>Indexing state to transition the enabled namespace to.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminActiveContextCodeEnabledNamespacesRequestState? State { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminActiveContextCodeEnabledNamespacesRequest"/> and sets the default values.

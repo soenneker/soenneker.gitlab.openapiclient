@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// Object or array that contains parameters passed to the specified JSON-RPC method
+    /// Parameters for the JSON-RPC method specified in `method`.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostApiV4McpRequestParams : IAdditionalDataHolder, IParsable

@@ -24,7 +24,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>Indicates the deploy token scopes. Must be at least one of `read_repository`, `read_registry`, `write_registry`, `read_package_registry`, or `write_package_registry`</summary>
+        /// <summary>Scopes of the deploy token. Must include at least one scope.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GroupsIdDeployTokensRequestScopesItem?>? Scopes { get; set; }

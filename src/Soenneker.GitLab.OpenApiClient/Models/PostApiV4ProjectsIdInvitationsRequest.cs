@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public int? AccessLevel { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The email address to invite, or multiple emails separated by comma</summary>
+        /// <summary>Email address of the member to invite, or multiple email addresses separated by commas. Required if `user_id` is not provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Email { get; set; }

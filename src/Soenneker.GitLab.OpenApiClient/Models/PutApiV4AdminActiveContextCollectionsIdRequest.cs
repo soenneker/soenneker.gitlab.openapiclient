@@ -14,11 +14,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Connection ID (defaults to active connection)</summary>
+        /// <summary>ID of the connection. If omitted, defaults to the active connection.</summary>
         public int? ConnectionId { get; set; }
         /// <summary>Number of queue shards. At least one of `queue_shard_count`, `queue_shard_limit` must be provided.</summary>
         public int? QueueShardCount { get; set; }
-        /// <summary>Queue shard limit. At least one of `queue_shard_count`, `queue_shard_limit` must be provided.</summary>
+        /// <summary>Maximum number of queued items processed from each queue shard at a time. At least one of `queue_shard_count`, `queue_shard_limit` must be provided.</summary>
         public int? QueueShardLimit { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminActiveContextCollectionsIdRequest"/> and sets the default values.

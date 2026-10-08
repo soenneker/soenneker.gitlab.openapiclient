@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
     public partial class Status_checksRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.merge_requests.item.status_checks.item collection</summary>
-        /// <param name="position">ID of a failed external status check</param>
+        /// <param name="position">ID of the failed external status check.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Status_checks.Item.WithExternalStatusCheckItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Status_checks.Item.WithExternalStatusCheckItemRequestBuilder this[int position]
         {

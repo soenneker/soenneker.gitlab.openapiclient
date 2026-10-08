@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>State (pending or ready)</summary>
+    /// <summary>Indexing state to transition the enabled namespace to.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PutApiV4AdminActiveContextCodeEnabledNamespacesRequestState
     {

@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Body { get; set; }
 #endif
-        /// <summary>[Deprecated in 14.10] No longer allowed to update confidentiality of notes</summary>
+        /// <summary>If `true`, the note must already be confidential. If `false`, it must not be. Confidentiality cannot be changed after a note is created. Deprecated.</summary>
         public bool? Confidential { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdMergeRequestsNoteableIdNotesNoteIdRequest"/> and sets the default values.
