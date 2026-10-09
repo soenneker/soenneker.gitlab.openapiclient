@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The process mode of the resource group</summary>
+        /// <summary>Process mode of the resource group. Read [process modes](https://docs.gitlab.com/ci/resource_groups/#process-modes) for more information.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdResourceGroupsKeyRequestProcessMode? ProcessMode { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdResourceGroupsKeyRequest"/> and sets the default values.

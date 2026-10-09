@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>The process mode of the resource group</summary>
+    /// <summary>Process mode of the resource group. Read [process modes](https://docs.gitlab.com/ci/resource_groups/#process-modes) for more information.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PutApiV4ProjectsIdResourceGroupsKeyRequestProcessMode
     {

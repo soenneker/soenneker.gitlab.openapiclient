@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// Settings for VS Code Extension Marketplace
+    /// Settings for VS Code Extension Marketplace.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PutApiV4ApplicationSettingsRequestVscodeExtensionMarketplace : IAdditionalDataHolder, IParsable
@@ -23,7 +23,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestVscodeExtensionMarketplaceCustomValuesProperty CustomValues { get; set; }
 #endif
-        /// <summary>Enables VS Code Extension Marketplace for Web IDE and Workspaces</summary>
+        /// <summary>If `true`, enables the VS Code extension marketplace for the Web IDE and Workspaces.</summary>
         public bool? Enabled { get; set; }
         /// <summary>The preset configuration of URL&apos;s for the VS Code Extension Marketplace</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

@@ -15,5 +15,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         #pragma warning disable CS1591
         Opencode,
         #pragma warning restore CS1591
+        [EnumMember(Value = "cursor")]
+        #pragma warning disable CS1591
+        Cursor,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "codex")]
+        #pragma warning disable CS1591
+        Codex,
+        #pragma warning restore CS1591
     }
 }

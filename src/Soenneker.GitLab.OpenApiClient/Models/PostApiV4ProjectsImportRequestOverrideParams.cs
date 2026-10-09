@@ -75,6 +75,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
+        /// <summary>Enable approval and change requests by GitLab Duo on merge requests</summary>
+        public bool? DuoCodeReviewDecisionsEnabled { get; set; }
         /// <summary>Turn on Agentic Breaking Change Resolution for this project</summary>
         public bool? DuoDependencyBumpBreakingChangesEnabled { get; set; }
         /// <summary>Enable GitLab Duo remote flows for this project</summary>
@@ -318,6 +320,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "container_registry_access_level", n => { ContainerRegistryAccessLevel = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsContainerRegistryAccessLevel>(); } },
                 { "container_registry_enabled", n => { ContainerRegistryEnabled = n.GetBoolValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
+                { "duo_code_review_decisions_enabled", n => { DuoCodeReviewDecisionsEnabled = n.GetBoolValue(); } },
                 { "duo_dependency_bump_breaking_changes_enabled", n => { DuoDependencyBumpBreakingChangesEnabled = n.GetBoolValue(); } },
                 { "duo_remote_flows_enabled", n => { DuoRemoteFlowsEnabled = n.GetBoolValue(); } },
                 { "duo_sast_fp_detection_enabled", n => { DuoSastFpDetectionEnabled = n.GetBoolValue(); } },
@@ -412,6 +415,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsContainerRegistryAccessLevel>("container_registry_access_level", ContainerRegistryAccessLevel);
             writer.WriteBoolValue("container_registry_enabled", ContainerRegistryEnabled);
             writer.WriteStringValue("description", Description);
+            writer.WriteBoolValue("duo_code_review_decisions_enabled", DuoCodeReviewDecisionsEnabled);
             writer.WriteBoolValue("duo_dependency_bump_breaking_changes_enabled", DuoDependencyBumpBreakingChangesEnabled);
             writer.WriteBoolValue("duo_remote_flows_enabled", DuoRemoteFlowsEnabled);
             writer.WriteBoolValue("duo_sast_fp_detection_enabled", DuoSastFpDetectionEnabled);

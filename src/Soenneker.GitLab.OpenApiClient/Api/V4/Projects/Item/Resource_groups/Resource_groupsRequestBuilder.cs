@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Resource_groups
     public partial class Resource_groupsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.resource_groups.item collection</summary>
-        /// <param name="position">The key of the resource group</param>
+        /// <param name="position">URL-encoded key of the resource group, for example `resource%5Fa` instead of `resource_a`.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Resource_groups.Item.WithKeyItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Resource_groups.Item.WithKeyItemRequestBuilder this[string position]
         {

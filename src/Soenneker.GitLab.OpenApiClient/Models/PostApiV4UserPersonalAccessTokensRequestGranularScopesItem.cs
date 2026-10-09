@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserPersonalAccessTokensRequestGranularScopesItemAccess? Access { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>IDs of groups to associate with the granular scope, when access is `selected_memberships`</summary>
+        /// <summary>IDs of groups to associate with the granular scope, when access is `selected_memberships`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<int?>? GroupIds { get; set; }
@@ -24,7 +24,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<int?> GroupIds { get; set; }
 #endif
-        /// <summary>List of permissions for the granular scope</summary>
+        /// <summary>List of permissions for the granular scope.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Permissions { get; set; }
@@ -32,7 +32,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<string> Permissions { get; set; }
 #endif
-        /// <summary>IDs of projects to associate with the granular scope, when access is `selected_memberships`</summary>
+        /// <summary>IDs of projects to associate with the granular scope, when access is `selected_memberships`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<int?>? ProjectIds { get; set; }

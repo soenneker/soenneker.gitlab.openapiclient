@@ -140,22 +140,22 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Service_accounts.Ite
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Personal_access_tokensRequestBuilderGetQueryParameters 
         {
-            /// <summary>Filter tokens which were created after given datetime</summary>
+            /// <summary>Return tokens created on or after the specified time.</summary>
             [QueryParameter("created_after")]
             public DateTimeOffset? CreatedAfter { get; set; }
-            /// <summary>Filter tokens which were created before given datetime</summary>
+            /// <summary>Return tokens created on or before the specified time.</summary>
             [QueryParameter("created_before")]
             public DateTimeOffset? CreatedBefore { get; set; }
-            /// <summary>Filter tokens which expire after given datetime</summary>
+            /// <summary>Return tokens that expire on or after the specified date.</summary>
             [QueryParameter("expires_after")]
             public Date? ExpiresAfter { get; set; }
-            /// <summary>Filter tokens which expire before given datetime</summary>
+            /// <summary>Return tokens that expire before the specified date.</summary>
             [QueryParameter("expires_before")]
             public Date? ExpiresBefore { get; set; }
-            /// <summary>Filter tokens which were used after given datetime</summary>
+            /// <summary>Return tokens last used on or after the specified time.</summary>
             [QueryParameter("last_used_after")]
             public DateTimeOffset? LastUsedAfter { get; set; }
-            /// <summary>Filter tokens which were used before given datetime</summary>
+            /// <summary>Return tokens last used on or before the specified time.</summary>
             [QueryParameter("last_used_before")]
             public DateTimeOffset? LastUsedBefore { get; set; }
             /// <summary>Page number of results to retrieve.</summary>
@@ -164,10 +164,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Service_accounts.Ite
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Filter tokens where revoked state matches parameter</summary>
+            /// <summary>If `true`, only returns revoked tokens. If `false`, only returns tokens that are not revoked.</summary>
             [QueryParameter("revoked")]
             public bool? Revoked { get; set; }
-            /// <summary>Filters tokens by name</summary>
+            /// <summary>Return tokens that include the specified value in their name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("search")]
@@ -177,7 +177,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Service_accounts.Ite
             [QueryParameter("search")]
             public string Search { get; set; }
 #endif
-            /// <summary>Sort tokens</summary>
+            /// <summary>Sort results by the specified field and direction. Possible values are `created_asc`, `created_desc`, `expires_asc`, `expires_desc`, `last_used_asc`, `last_used_desc`, `name_asc`, and `name_desc`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("sort")]
@@ -187,7 +187,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Service_accounts.Ite
             [QueryParameter("sort")]
             public string Sort { get; set; }
 #endif
-            /// <summary>Filter tokens which are either active or not</summary>
+            /// <summary>Return tokens with the specified state.</summary>
             [QueryParameter("state")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdServiceAccountsUserIdPersonalAccessTokensStateParameter? State { get; set; }
         }

@@ -12,7 +12,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     public partial class PutApiV4ApplicationSettingsRequestDefaultBranchProtectionDefaultsAllowedToMergeItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>A valid access level</summary>
+        /// <summary>Access level allowed to merge into the default branch.</summary>
         public int? AccessLevel { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }

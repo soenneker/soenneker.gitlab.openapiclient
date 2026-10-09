@@ -1206,6 +1206,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string DuoCliEnabled { get; set; }
 #endif
+        /// <summary>The duo_code_review_decisions_enabled property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DuoCodeReviewDecisionsEnabled { get; set; }
+#nullable restore
+#else
+        public string DuoCodeReviewDecisionsEnabled { get; set; }
+#endif
         /// <summary>The duo_custom_agents_availability property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -2587,6 +2595,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #nullable restore
 #else
         public string JiraForgeAppId { get; set; }
+#endif
+        /// <summary>The job_erase_limit_per_user_project property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? JobEraseLimitPerUserProject { get; set; }
+#nullable restore
+#else
+        public string JobEraseLimitPerUserProject { get; set; }
 #endif
         /// <summary>The job_play_limit_per_user_project property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -5531,6 +5547,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "duo_chat_expiration_column", n => { DuoChatExpirationColumn = n.GetStringValue(); } },
                 { "duo_chat_expiration_days", n => { DuoChatExpirationDays = n.GetStringValue(); } },
                 { "duo_cli_enabled", n => { DuoCliEnabled = n.GetStringValue(); } },
+                { "duo_code_review_decisions_enabled", n => { DuoCodeReviewDecisionsEnabled = n.GetStringValue(); } },
                 { "duo_custom_agents_availability", n => { DuoCustomAgentsAvailability = n.GetStringValue(); } },
                 { "duo_custom_agents_enabled", n => { DuoCustomAgentsEnabled = n.GetBoolValue(); } },
                 { "duo_custom_flows_availability", n => { DuoCustomFlowsAvailability = n.GetStringValue(); } },
@@ -5706,6 +5723,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "jira_connect_proxy_url", n => { JiraConnectProxyUrl = n.GetStringValue(); } },
                 { "jira_connect_public_key_storage_enabled", n => { JiraConnectPublicKeyStorageEnabled = n.GetStringValue(); } },
                 { "jira_forge_app_id", n => { JiraForgeAppId = n.GetStringValue(); } },
+                { "job_erase_limit_per_user_project", n => { JobEraseLimitPerUserProject = n.GetStringValue(); } },
                 { "job_play_limit_per_user_project", n => { JobPlayLimitPerUserProject = n.GetStringValue(); } },
                 { "job_retry_limit_per_user_project", n => { JobRetryLimitPerUserProject = n.GetStringValue(); } },
                 { "keep_latest_artifact", n => { KeepLatestArtifact = n.GetStringValue(); } },
@@ -6218,6 +6236,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("duo_chat_expiration_column", DuoChatExpirationColumn);
             writer.WriteStringValue("duo_chat_expiration_days", DuoChatExpirationDays);
             writer.WriteStringValue("duo_cli_enabled", DuoCliEnabled);
+            writer.WriteStringValue("duo_code_review_decisions_enabled", DuoCodeReviewDecisionsEnabled);
             writer.WriteStringValue("duo_custom_agents_availability", DuoCustomAgentsAvailability);
             writer.WriteBoolValue("duo_custom_agents_enabled", DuoCustomAgentsEnabled);
             writer.WriteStringValue("duo_custom_flows_availability", DuoCustomFlowsAvailability);
@@ -6393,6 +6412,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("jira_connect_proxy_url", JiraConnectProxyUrl);
             writer.WriteStringValue("jira_connect_public_key_storage_enabled", JiraConnectPublicKeyStorageEnabled);
             writer.WriteStringValue("jira_forge_app_id", JiraForgeAppId);
+            writer.WriteStringValue("job_erase_limit_per_user_project", JobEraseLimitPerUserProject);
             writer.WriteStringValue("job_play_limit_per_user_project", JobPlayLimitPerUserProject);
             writer.WriteStringValue("job_retry_limit_per_user_project", JobRetryLimitPerUserProject);
             writer.WriteStringValue("keep_latest_artifact", KeepLatestArtifact);

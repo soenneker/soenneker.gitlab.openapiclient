@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>The default project visibility</summary>
+    /// <summary>What visibility level new projects receive. Default is `private`. Cannot be set to any levels in `restricted_visibility_levels`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PutApiV4ApplicationSettingsRequestDefaultProjectVisibility
     {

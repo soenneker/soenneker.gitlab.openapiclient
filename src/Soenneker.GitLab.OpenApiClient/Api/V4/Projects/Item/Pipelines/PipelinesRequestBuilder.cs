@@ -105,10 +105,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class PipelinesRequestBuilderGetQueryParameters 
         {
-            /// <summary>Return pipelines created on or after the specified time.</summary>
+            /// <summary>Return pipelines created after the specified time.</summary>
             [QueryParameter("created_after")]
             public DateTimeOffset? CreatedAfter { get; set; }
-            /// <summary>Return pipelines created on or before the specified time.</summary>
+            /// <summary>Return pipelines created before the specified time.</summary>
             [QueryParameter("created_before")]
             public DateTimeOffset? CreatedBefore { get; set; }
             /// <summary>Return pipelines with the specified name.</summary>

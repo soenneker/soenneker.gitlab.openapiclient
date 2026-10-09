@@ -12,7 +12,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     public partial class PutApiV4ApplicationSettingsRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>Abuse reports will be sent to this address if it is set. Abuse reports are always available in the admin area.</summary>
+        /// <summary>If set, [abuse reports](https://docs.gitlab.com/administration/review_abuse_reports/) are sent to this address. Abuse reports are always available in the **Admin** area.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AbuseNotificationEmail { get; set; }
@@ -24,9 +24,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public bool? ActiveContextPauseIndexing { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Require admin users to re-authenticate for administrative (i.e. potentially dangerous) operations</summary>
+        /// <summary>If `true`, requires administrators to re-authenticate before performing potentially dangerous administrative operations.</summary>
         public bool? AdminMode { get; set; }
-        /// <summary>Deprecated: Use :abuse_notification_email instead. Abuse reports will be sent to this address if it is set. Abuse reports are always available in the admin area.</summary>
+        /// <summary>If set, [abuse reports](https://docs.gitlab.com/administration/review_abuse_reports/) are sent to this address. Abuse reports are always available in the **Admin** area. Deprecated. Use `abuse_notification_email` instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AdminNotificationEmail { get; set; }
@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string AdminNotificationEmail { get; set; }
 #endif
-        /// <summary>We will redirect users to this page after they sign out</summary>
+        /// <summary>Users are redirected to this page after they sign out.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AfterSignOutPath { get; set; }
@@ -42,7 +42,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string AfterSignOutPath { get; set; }
 #endif
-        /// <summary>Text shown after sign up</summary>
+        /// <summary>Text shown after sign up.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AfterSignUpText { get; set; }
@@ -68,9 +68,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string AkismetApiKey { get; set; }
 #endif
-        /// <summary>Helps prevent bots from creating issues</summary>
+        /// <summary>If `true`, helps prevent bots from creating issues. Requires `akismet_api_key`.</summary>
         public bool? AkismetEnabled { get; set; }
-        /// <summary>Set to `true` to allow users to delete their accounts. Premium and Ultimate only.</summary>
+        /// <summary>If `true`, allows users to delete their accounts. Premium and Ultimate only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AllowAccountDeletion { get; set; }
@@ -86,7 +86,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string AllowAllIntegrations { get; set; }
 #endif
-        /// <summary>Allow Google Cloud Application Default Credentials for offline transfer. Even when enabled, only administrators can use these credentials, and the bucket name must start with `gitlab-offline-transfer-`. Has no effect on GitLab.com. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/602489) in GitLab 19.3.</summary>
+        /// <summary>If `true`, allows Google Cloud Application Default Credentials for offline transfer. Even when enabled, only administrators can use these credentials, and the bucket name must start with `gitlab-offline-transfer-`. Has no effect on GitLab.com. For more information, see [Allow application default credentials for offline transfer](https://docs.gitlab.com/administration/settings/import_and_export_settings/#allow-application-default-credentials-for-offline-transfer). [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/602489) in GitLab 19.3.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AllowApplicationDefaultCredentialsForOfflineTransfer { get; set; }
@@ -94,7 +94,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string AllowApplicationDefaultCredentialsForOfflineTransfer { get; set; }
 #endif
-        /// <summary>Skip confirmation when administrators reassign placeholder users. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/534330) in GitLab 18.0.</summary>
+        /// <summary>If `true`, skips confirmation when administrators reassign placeholder users. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/534330) in GitLab 18.0.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AllowBypassPlaceholderConfirmation { get; set; }
@@ -134,9 +134,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string AllowGroupOwnersToManageLdap { get; set; }
 #endif
-        /// <summary>Deprecated: Use :allow_local_requests_from_web_hooks_and_services instead. Allow requests to the local network from hooks and services.</summary>
+        /// <summary>If `true`, allows requests to the local network from webhooks and integrations. Deprecated. Use `allow_local_requests_from_web_hooks_and_services` instead.</summary>
         public bool? AllowLocalRequestsFromHooksAndServices { get; set; }
-        /// <summary>Allow requests to the local network from system hooks.</summary>
+        /// <summary>If `true`, allows requests to the local network from system hooks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AllowLocalRequestsFromSystemHooks { get; set; }
@@ -144,7 +144,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string AllowLocalRequestsFromSystemHooks { get; set; }
 #endif
-        /// <summary>Allow requests to the local network from webhooks and integrations.</summary>
+        /// <summary>If `true`, allows requests to the local network from webhooks and integrations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AllowLocalRequestsFromWebHooksAndServices { get; set; }
@@ -160,7 +160,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string AllowPossibleSpam { get; set; }
 #endif
-        /// <summary>Indicates whether users assigned up to the Guest role can create groups and personal projects. Defaults to `true`.</summary>
+        /// <summary>If `true`, users assigned up to the Guest role can create groups and personal projects. Defaults to `true`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AllowProjectCreationForGuestAndBelow { get; set; }
@@ -168,9 +168,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string AllowProjectCreationForGuestAndBelow { get; set; }
 #endif
-        /// <summary>Allow registering runners using a registration token</summary>
+        /// <summary>If `true`, allows using a registration token to create a runner. Defaults to `true`.</summary>
         public bool? AllowRunnerRegistrationToken { get; set; }
-        /// <summary>Allow S3-compatible object storage for offline transfer. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/579705) in GitLab 18.9.</summary>
+        /// <summary>If `true`, allows S3-compatible object storage for offline transfer. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/579705) in GitLab 18.9.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AllowS3CompatibleStorageForOfflineTransfer { get; set; }
@@ -202,7 +202,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ArchiveBuildsInHumanReadable { get; set; }
 #endif
-        /// <summary>Maximum limit of AsciiDoc include directives being processed in any one document. Default: 32. Maximum: 64.</summary>
+        /// <summary>Maximum number of AsciiDoc include directives processed in any one document. Default: `32`. Maximum: `64`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AsciidocMaxIncludes { get; set; }
@@ -210,7 +210,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string AsciidocMaxIncludes { get; set; }
 #endif
-        /// <summary>Assets that match these domain(s) will NOT be proxied. Wildcards allowed. Your GitLab installation URL is automatically allowed.</summary>
+        /// <summary>Assets that match these domains are not proxied. Wildcards allowed. Your GitLab installation URL is automatically allowlisted. GitLab restart is required to apply changes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? AssetProxyAllowlist { get; set; }
@@ -236,7 +236,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string AssetProxyUrl { get; set; }
 #endif
-        /// <summary>Deprecated: Use :asset_proxy_allowlist instead. Assets that match these domain(s) will NOT be proxied. Wildcards allowed. Your GitLab installation URL is automatically whitelisted.</summary>
+        /// <summary>Assets that match these domains are not proxied. Wildcards allowed. Your GitLab installation URL is automatically allowlisted. GitLab restart is required to apply changes. Deprecated. Use `asset_proxy_allowlist` instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? AssetProxyWhitelist { get; set; }
@@ -246,9 +246,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>Maximum number of requests per minute per user to the instance audit events API.</summary>
         public int? AuditEventsApiLimit { get; set; }
-        /// <summary>Enable authentication data retention cleanup workers to enforce retention policies</summary>
+        /// <summary>If `true`, runs cleanup workers that permanently delete authentication login history older than one year, and previously revoked OAuth access tokens and grants older than one month. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/579002) in GitLab 18.7.</summary>
         public bool? AuthnDataRetentionCleanupEnabled { get; set; }
-        /// <summary>By default, the `authorized_keys` file supports Git over SSH without additional configuration. GitLab can be optimized to authenticate SSH keys via the database file. Only disable this if you have configured your OpenSSH server to use the AuthorizedKeysCommand.</summary>
+        /// <summary>If `true`, GitLab uses the `authorized_keys` file to authenticate SSH keys, which supports Git over SSH without additional configuration. Disable only if you have configured your OpenSSH server to use `AuthorizedKeysCommand`. Defaults to `true`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AuthorizedKeysEnabled { get; set; }
@@ -266,9 +266,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>If `true`, automatically bans users from the application when they download more than the maximum number of unique projects in the time period specified by `max_number_of_repository_downloads` and `max_number_of_repository_downloads_within_time_period`. GitLab Self-Managed, Ultimate only.</summary>
         public bool? AutoBanUserOnExcessiveProjectsDownload { get; set; }
-        /// <summary>Rate limit for authenticated requests to users autocomplete endpoint</summary>
+        /// <summary>Maximum number of authenticated requests per minute per user to the users autocomplete endpoint.</summary>
         public int? AutocompleteUsersLimit { get; set; }
-        /// <summary>Rate limit for authenticated requests to users autocomplete endpoint</summary>
+        /// <summary>Maximum number of unauthenticated requests per minute per IP address to the users autocomplete endpoint.</summary>
         public int? AutocompleteUsersUnauthenticatedLimit { get; set; }
         /// <summary>Specify a domain to use by default for every project&apos;s Auto Review Apps and Auto Deploy stages.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -278,7 +278,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string AutoDevopsDomain { get; set; }
 #endif
-        /// <summary>Enable Auto DevOps for projects by default. It automatically builds, tests, and deploys applications based on a predefined CI/CD configuration.</summary>
+        /// <summary>If `true`, enables Auto DevOps for projects by default. Auto DevOps automatically builds, tests, and deploys applications based on a predefined CI/CD configuration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AutoDevopsEnabled { get; set; }
@@ -322,11 +322,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>If `true`, enables built-in project templates when users create projects. Premium and Ultimate only. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/235284) in GitLab 19.0 [with a feature flag](https://docs.gitlab.com/administration/feature_flags/) named `use_built_in_project_templates_enabled`. [Generally available](https://gitlab.com/gitlab-org/gitlab/-/work_items/593623) in GitLab 19.2. Feature flag `use_built_in_project_templates_enabled` removed.</summary>
         public bool? BuiltInProjectTemplatesEnabled { get; set; }
-        /// <summary>Maximum simultaneous direct transfer batch exports to process.</summary>
+        /// <summary>Maximum number of simultaneous direct transfer batch exports to process.</summary>
         public int? BulkImportConcurrentPipelineBatchLimit { get; set; }
-        /// <summary>Enable migrating GitLab groups and projects by direct transfer</summary>
+        /// <summary>If `true`, enables migrating GitLab groups and projects by direct transfer.</summary>
         public bool? BulkImportEnabled { get; set; }
-        /// <summary>Maximum download file size in MB when importing from source GitLab instances by direct transfer</summary>
+        /// <summary>Maximum download file size, in MB, when importing from source GitLab instances by direct transfer.</summary>
         public int? BulkImportMaxDownloadFile { get; set; }
         /// <summary>Maximum download file size when importing from source GitLab instances by direct transfer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -336,7 +336,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string BulkImportMaxDownloadFileSize { get; set; }
 #endif
-        /// <summary>Indicates whether users can create top-level groups. Defaults to `true`.</summary>
+        /// <summary>If `true`, users can create top-level groups. Defaults to `true`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CanCreateGroup { get; set; }
@@ -384,7 +384,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string CiDeletePipelinesInSecondsLimitHumanReadable { get; set; }
 #endif
-        /// <summary>Turn on incremental logging for job logs.</summary>
+        /// <summary>If `true`, turns on incremental logging for job logs. Archived job logs are incrementally uploaded to object storage, which must be configured.</summary>
         public bool? CiJobLiveTraceEnabled { get; set; }
         /// <summary>Sampling rate for CI job telemetry, ranging from 0.0 to 1.0.</summary>
         public double? CiJobTelemetrySamplingRate { get; set; }
@@ -392,13 +392,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public int? CiJobTraceUpdateInterval { get; set; }
         /// <summary>Job log update interval when the job log is open, in seconds.</summary>
         public int? CiJobTraceUpdateIntervalWhenBeingWatched { get; set; }
-        /// <summary>Maximum number of CI Lint requests allowed per minute per user. Set to 0 for unlimited requests per minute.</summary>
+        /// <summary>Maximum number of CI Lint requests per minute per user. Set to `0` for unlimited requests. Disabled by default.</summary>
         public int? CiLintLimitPerUser { get; set; }
-        /// <summary>Maximum number of caches that can be defined in a single CI/CD job</summary>
+        /// <summary>Maximum number of caches that can be defined in a single CI/CD job.</summary>
         public int? CiMaxCachesPerJob { get; set; }
-        /// <summary>Maximum number of includes per pipeline</summary>
+        /// <summary>[Maximum number of includes](https://docs.gitlab.com/administration/cicd/limits/#maximum-number-of-includes) per pipeline. Default is `150`.</summary>
         public int? CiMaxIncludes { get; set; }
-        /// <summary>The maximum amount of memory, in bytes, that can be allocated for the pipeline configuration, with all included YAML configuration files.</summary>
+        /// <summary>Maximum amount of memory, in bytes, that can be allocated for the pipeline configuration, with all included YAML configuration files.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CiMaxTotalYamlSizeBytes { get; set; }
@@ -406,7 +406,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string CiMaxTotalYamlSizeBytes { get; set; }
 #endif
-        /// <summary>The time window, in seconds, before new CI partitions are created and the system switches to the next set of partitions. Must be between 1 month and 6 months. Default is 1 month (`2592000`). Write-only. Not returned in GET responses. Deprecated in favor of `ci_partitions_in_seconds_limit_human_readable` and is scheduled for removal in API v5.</summary>
+        /// <summary>Time window, in seconds, before new CI partitions are created and the system switches to the next set of partitions. Must be between 1 month and 6 months. Default is 1 month (`2592000`). Write-only. Not returned in GET responses. Deprecated. Use `ci_partitions_in_seconds_limit_human_readable` instead. Scheduled for removal in API v5.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CiPartitionsInSecondsLimit { get; set; }
@@ -414,7 +414,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string CiPartitionsInSecondsLimit { get; set; }
 #endif
-        /// <summary>The time window before new CI partitions are created and the system switches to the next set of partitions. Must be between `1 month` and `6 months`. Defaults to `1 month`.</summary>
+        /// <summary>Time window before new CI partitions are created and the system switches to the next set of partitions. Must be between `1 month` and `6 months`. Defaults to `1 month`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CiPartitionsInSecondsLimitHumanReadable { get; set; }
@@ -438,7 +438,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestCodeDropdownCustomClientsItem> CodeDropdownCustomClients { get; set; }
 #endif
-        /// <summary>Maximum requests a user can make per minute to code suggestions endpoint</summary>
+        /// <summary>Maximum number of requests a user can make to the code suggestions endpoint per minute.</summary>
         public int? CodeSuggestionsApiRateLimit { get; set; }
         /// <summary>Custom hostname (for private commit emails).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -448,13 +448,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string CommitEmailHostname { get; set; }
 #endif
-        /// <summary>Bitbucket Cloud Importer maximum number of simultaneous import jobs</summary>
+        /// <summary>Maximum number of simultaneous import jobs for the Bitbucket Cloud importer. Default is `100`.</summary>
         public int? ConcurrentBitbucketImportJobsLimit { get; set; }
-        /// <summary>Bitbucket Server Importer maximum number of simultaneous import jobs</summary>
+        /// <summary>Maximum number of simultaneous import jobs for the Bitbucket Server importer. Default is `100`.</summary>
         public int? ConcurrentBitbucketServerImportJobsLimit { get; set; }
-        /// <summary>Github Importer maximum number of simultaneous import jobs</summary>
+        /// <summary>Maximum number of simultaneous import jobs for the GitHub importer. Default is `1000`.</summary>
         public int? ConcurrentGithubImportJobsLimit { get; set; }
-        /// <summary>Maximum number of simultaneous pull request import jobs for the GitHub, Bitbucket Cloud, and Bitbucket Server importers</summary>
+        /// <summary>Maximum number of simultaneous pull request import jobs for the GitHub, Bitbucket Cloud, and Bitbucket Server importers. Default is `200`.</summary>
         public int? ConcurrentPullRequestImportJobsLimit { get; set; }
         /// <summary>Maximum number of simultaneous batch export jobs to process.</summary>
         public int? ConcurrentRelationBatchExportLimit { get; set; }
@@ -466,7 +466,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ConcurrentRelationExportLimit { get; set; }
 #endif
-        /// <summary>Enable cleanup policies for all projects.</summary>
+        /// <summary>If `true`, enables [cleanup policies](https://docs.gitlab.com/user/packages/container_registry/reduce_container_registry_storage/#enable-the-cleanup-policy) for all projects.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ContainerExpirationPoliciesEnableHistoricEntries { get; set; }
@@ -474,7 +474,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ContainerExpirationPoliciesEnableHistoricEntries { get; set; }
 #endif
-        /// <summary>The maximum number of tags that can be deleted in a single execution of cleanup policies.</summary>
+        /// <summary>Maximum number of tags that can be deleted in a single execution of [cleanup policies](https://docs.gitlab.com/user/packages/container_registry/reduce_container_registry_storage/#set-cleanup-limits-to-conserve-resources).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ContainerRegistryCleanupTagsServiceMaxListSize { get; set; }
@@ -482,7 +482,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ContainerRegistryCleanupTagsServiceMaxListSize { get; set; }
 #endif
-        /// <summary>The maximum time, in seconds, that the cleanup process can take to delete a batch of tags for cleanup policies.</summary>
+        /// <summary>Maximum time, in seconds, that the cleanup process can take to delete a batch of tags for [cleanup policies](https://docs.gitlab.com/user/packages/container_registry/reduce_container_registry_storage/#set-cleanup-limits-to-conserve-resources).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ContainerRegistryDeleteTagsServiceTimeout { get; set; }
@@ -490,7 +490,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ContainerRegistryDeleteTagsServiceTimeout { get; set; }
 #endif
-        /// <summary>Caching during the execution of cleanup policies.</summary>
+        /// <summary>If `true`, enables caching during the execution of [cleanup policies](https://docs.gitlab.com/user/packages/container_registry/reduce_container_registry_storage/#set-cleanup-limits-to-conserve-resources).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ContainerRegistryExpirationPoliciesCaching { get; set; }
@@ -498,7 +498,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ContainerRegistryExpirationPoliciesCaching { get; set; }
 #endif
-        /// <summary>Number of workers for cleanup policies.</summary>
+        /// <summary>Number of workers for [cleanup policies](https://docs.gitlab.com/user/packages/container_registry/reduce_container_registry_storage/#set-cleanup-limits-to-conserve-resources).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ContainerRegistryExpirationPoliciesWorkerCapacity { get; set; }
@@ -506,7 +506,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ContainerRegistryExpirationPoliciesWorkerCapacity { get; set; }
 #endif
-        /// <summary>Authorization token duration (minutes)</summary>
+        /// <summary>Duration, in minutes, that container registry authorization tokens remain valid.</summary>
         public int? ContainerRegistryTokenExpireDelay { get; set; }
         /// <summary>The create_organization_api_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -564,9 +564,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string DeactivationEmailAdditionalText { get; set; }
 #endif
-        /// <summary>Default timeout for decompressing archived files, in seconds. Set to 0 to disable timeouts.</summary>
+        /// <summary>Timeout for decompressing archived files, in seconds. Set to `0` to disable the timeout.</summary>
         public int? DecompressArchiveFileTimeout { get; set; }
-        /// <summary>Set the default expiration time for each job&apos;s artifacts</summary>
+        /// <summary>Set the default expiration time for each job&apos;s artifacts.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DefaultArtifactsExpireIn { get; set; }
@@ -574,7 +574,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string DefaultArtifactsExpireIn { get; set; }
 #endif
-        /// <summary>Set the initial branch name for all projects in an instance.</summary>
+        /// <summary>[Set the initial branch name](https://docs.gitlab.com/user/project/repository/branches/default/#change-the-default-branch-name-for-new-projects-in-an-instance) for all projects in an instance.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DefaultBranchName { get; set; }
@@ -582,9 +582,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string DefaultBranchName { get; set; }
 #endif
-        /// <summary>Determine if developers can push to default branch</summary>
+        /// <summary>Level of protection for the default branch. [Deprecated](https://gitlab.com/gitlab-org/gitlab/-/issues/408314) in GitLab 17.0. Use `default_branch_protection_defaults` instead.</summary>
         public int? DefaultBranchProtection { get; set; }
-        /// <summary>Determine if developers can push to default branch</summary>
+        /// <summary>Default branch protection settings. For available options, see [Options for `default_branch_protection_defaults`](https://docs.gitlab.com/api/groups/#options-for-default_branch_protection_defaults). [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/408314) in GitLab 17.0.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestDefaultBranchProtectionDefaults? DefaultBranchProtectionDefaults { get; set; }
@@ -592,7 +592,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestDefaultBranchProtectionDefaults DefaultBranchProtectionDefaults { get; set; }
 #endif
-        /// <summary>The instance default CI/CD configuration file and path for new projects</summary>
+        /// <summary>Default CI/CD configuration file and path for new projects. If empty, new projects use `.gitlab-ci.yml`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DefaultCiConfigPath { get; set; }
@@ -608,7 +608,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string DefaultDarkSyntaxHighlightingTheme { get; set; }
 #endif
-        /// <summary>The default group visibility</summary>
+        /// <summary>What visibility level new groups receive. Default is `private`. Cannot be set to any levels in `restricted_visibility_levels`.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestDefaultGroupVisibility? DefaultGroupVisibility { get; set; }
         /// <summary>Default preferred language for users who are not logged in.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -618,13 +618,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string DefaultPreferredLanguage { get; set; }
 #endif
-        /// <summary>Determine if developers can create projects in the group</summary>
+        /// <summary>Default minimum role required to create projects. Can take: `0` _(No one)_, `1` _(Maintainers)_, `2` _(Developers)_, `3` _(Administrators)_, or `4` _(Owners)_.</summary>
         public int? DefaultProjectCreation { get; set; }
         /// <summary>If `true`, enables default project deletion protection so only administrators can delete projects. GitLab Self-Managed, Premium and Ultimate only.</summary>
         public bool? DefaultProjectDeletionProtection { get; set; }
-        /// <summary>The maximum number of personal projects</summary>
+        /// <summary>Maximum number of personal projects per user. Default is `100000`.</summary>
         public int? DefaultProjectsLimit { get; set; }
-        /// <summary>The default project visibility</summary>
+        /// <summary>What visibility level new projects receive. Default is `private`. Cannot be set to any levels in `restricted_visibility_levels`.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestDefaultProjectVisibility? DefaultProjectVisibility { get; set; }
         /// <summary>The default_search_scope property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -634,7 +634,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string DefaultSearchScope { get; set; }
 #endif
-        /// <summary>The default snippet visibility</summary>
+        /// <summary>What visibility level new snippets receive. Default is `private`.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestDefaultSnippetVisibility? DefaultSnippetVisibility { get; set; }
         /// <summary>Default syntax highlighting theme for users who are new or not signed in. See [IDs of available themes](https://gitlab.com/gitlab-org/gitlab/blob/master/lib/gitlab/themes.rb#L16).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -692,7 +692,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string DependencyFirewallPoliciesPerConfigurationLimit { get; set; }
 #endif
-        /// <summary>Dependency management settings</summary>
+        /// <summary>Dependency management settings. Set `security_update_scheduler_max_concurrency` (integer) to cap the number of security update scheduler jobs that run concurrently across the Sidekiq fleet. Default: `30`. Capped at `200`. Set to `0` to remove the concurrency limit. Ultimate only. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/239173) in GitLab 19.1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestDependencyManagementSettings? DependencyManagementSettings { get; set; }
@@ -718,7 +718,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>Maximum work item, merge request, and vulnerability description and comment content size in bytes.</summary>
         public int? DescriptionAndNoteMaxSize { get; set; }
-        /// <summary>Enable Diagrams.net</summary>
+        /// <summary>If `true`, enables [Diagrams.net integration](https://docs.gitlab.com/administration/integration/diagrams_net/). Requires `diagramsnet_url`. Defaults to `true`.</summary>
         public bool? DiagramsnetEnabled { get; set; }
         /// <summary>The Diagrams.net server URL</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -728,7 +728,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string DiagramsnetUrl { get; set; }
 #endif
-        /// <summary>Maximum number of diff commits per merge request.</summary>
+        /// <summary>Maximum number of [diff commits](https://docs.gitlab.com/administration/diff_limits/) per merge request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DiffMaxCommits { get; set; }
@@ -736,7 +736,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string DiffMaxCommits { get; set; }
 #endif
-        /// <summary>Maximum files in a diff.</summary>
+        /// <summary>Maximum number of [files in a diff](https://docs.gitlab.com/administration/diff_limits/).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DiffMaxFiles { get; set; }
@@ -744,7 +744,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string DiffMaxFiles { get; set; }
 #endif
-        /// <summary>Maximum lines in a diff.</summary>
+        /// <summary>Maximum number of [lines in a diff](https://docs.gitlab.com/administration/diff_limits/).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DiffMaxLines { get; set; }
@@ -752,7 +752,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string DiffMaxLines { get; set; }
 #endif
-        /// <summary>Maximum diff patch size, in bytes.</summary>
+        /// <summary>Maximum [diff patch size](https://docs.gitlab.com/administration/diff_limits/), in bytes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DiffMaxPatchBytes { get; set; }
@@ -760,7 +760,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string DiffMaxPatchBytes { get; set; }
 #endif
-        /// <summary>Maximum number of diff versions per merge request.</summary>
+        /// <summary>Maximum number of [diff versions](https://docs.gitlab.com/administration/diff_limits/) per merge request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DiffMaxVersions { get; set; }
@@ -772,7 +772,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public bool? DisableAdminOauthScopes { get; set; }
         /// <summary>If `true`, disables direct connections for Code Suggestions for users.</summary>
         public bool? DisabledDirectCodeSuggestions { get; set; }
-        /// <summary>Disable certain OAuth sign-in sources</summary>
+        /// <summary>OAuth sign-in sources to disable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? DisabledOauthSignInSources { get; set; }
@@ -810,7 +810,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string DisplayGitlabCreditsUserData { get; set; }
 #endif
-        /// <summary>Enforce DNS-rebinding attack protection.</summary>
+        /// <summary>If `true`, enforces DNS-rebinding attack protection.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DnsRebindingProtectionEnabled { get; set; }
@@ -818,7 +818,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string DnsRebindingProtectionEnabled { get; set; }
 #endif
-        /// <summary>ONLY users with e-mail addresses that match these domain(s) will be able to sign-up. Wildcards allowed. Enter multiple entries on separate lines. Ex: domain.com, *.domain.com</summary>
+        /// <summary>Only users with email addresses that match these domains can sign up. Wildcards allowed. For example, `domain.com` or `*.domain.com`. If empty, all domains are allowed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? DomainAllowlist { get; set; }
@@ -842,7 +842,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<string> DomainDenylist { get; set; }
 #endif
-        /// <summary>Enable domain denylist for sign ups</summary>
+        /// <summary>If `true`, enables the domain denylist for sign-ups. Requires `domain_denylist`.</summary>
         public bool? DomainDenylistEnabled { get; set; }
         /// <summary>The domain_denylist_raw property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -852,7 +852,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string DomainDenylistRaw { get; set; }
 #endif
-        /// <summary>Maximum number of downstream pipelines that can be triggered per minute (for a given project, user, and commit).</summary>
+        /// <summary>[Maximum number of downstream pipelines](https://docs.gitlab.com/administration/cicd/limits/#limit-downstream-pipeline-trigger-rate) that can be triggered per minute for a given project, user, and commit. Default: `0` (no restriction).</summary>
         public int? DownstreamPipelineTriggerLimitPerProjectUserSha { get; set; }
         /// <summary>Restrictions on the complexity of uploaded DSA keys. A value of -1 disables all DSA keys.</summary>
         public int? DsaKeyRestriction { get; set; }
@@ -912,6 +912,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string DuoCliEnabled { get; set; }
 #endif
+        /// <summary>If `true`, GitLab Duo can approve and request changes on merge requests.</summary>
+        public bool? DuoCodeReviewDecisionsEnabled { get; set; }
         /// <summary>The duo_custom_agents_availability property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -1012,7 +1014,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public int? Ed25519KeyRestriction { get; set; }
         /// <summary>Restrictions on the complexity of uploaded ED25519_SK keys. A value of -1 disables all ED25519_SK keys.</summary>
         public int? Ed25519SkKeyRestriction { get; set; }
-        /// <summary>Access key ID for the EKS integration IAM user</summary>
+        /// <summary>Access key ID for the EKS integration IAM user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EksAccessKeyId { get; set; }
@@ -1020,7 +1022,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string EksAccessKeyId { get; set; }
 #endif
-        /// <summary>Amazon account ID for EKS integration</summary>
+        /// <summary>Amazon account ID for EKS integration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EksAccountId { get; set; }
@@ -1030,7 +1032,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>Enable integration with Amazon EKS</summary>
         public bool? EksIntegrationEnabled { get; set; }
-        /// <summary>Secret access key for the EKS integration IAM user</summary>
+        /// <summary>Secret access key for the EKS integration IAM user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EksSecretAccessKey { get; set; }
@@ -1282,11 +1284,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string EmailAdditionalText { get; set; }
 #endif
-        /// <summary>Some email servers do not support overriding the email sender name. Enable this option to include the name of the author of the issue, merge request or comment in the email body instead.</summary>
+        /// <summary>If `true`, includes the name of the issue, merge request, or comment author in the email body. Useful when email servers do not support overriding the sender name.</summary>
         public bool? EmailAuthorInBody { get; set; }
-        /// <summary>Email confirmation setting, possible values: `off`, `soft`, and `hard`</summary>
+        /// <summary>Specifies whether users must confirm their email address before signing in. `off` does not require confirmation, `soft` allows sign-in during a confirmation period, and `hard` requires confirmation before sign-in.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestEmailConfirmationSetting? EmailConfirmationSetting { get; set; }
-        /// <summary>Enable Email-based one-time passwords (OTP) as a multi-factor authentication method.</summary>
+        /// <summary>If `true`, enables email-based one-time passwords (OTP) as a multi-factor authentication method. Requires `require_email_verification_on_account_locked` to be `true`.</summary>
         public bool? EmailOtpEnabled { get; set; }
         /// <summary>Regular expression that is checked against the email used during registration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -1296,7 +1298,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string EmailRestrictions { get; set; }
 #endif
-        /// <summary>Prevent new users from creating an account by email.</summary>
+        /// <summary>If `true`, prevents new users from signing up with an email address that matches the `email_restrictions` regular expression.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EmailRestrictionsEnabled { get; set; }
@@ -1304,7 +1306,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string EmailRestrictionsEnabled { get; set; }
 #endif
-        /// <summary>Show the external redirect page that warns you about user-generated content in GitLab Pages</summary>
+        /// <summary>If `true`, shows the external redirect page that warns about user-generated content in GitLab Pages.</summary>
         public bool? EnableArtifactExternalRedirectWarningPage { get; set; }
         /// <summary>The enabled_expanded_logging property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -1314,7 +1316,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string EnabledExpandedLogging { get; set; }
 #endif
-        /// <summary>Allow only the selected protocols to be used for Git access.</summary>
+        /// <summary>Protocol allowed for Git access. Set to `all` to allow both SSH and HTTP(S).</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestEnabledGitAccessProtocol? EnabledGitAccessProtocol { get; set; }
         /// <summary>Enables enforcing language server restrictions</summary>
         public bool? EnableLanguageServerRestrictions { get; set; }
@@ -1366,7 +1368,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string EnforcePiplCompliance { get; set; }
 #endif
-        /// <summary>(**If enabled, requires**: `terms`) Enforce application ToS to all users.</summary>
+        /// <summary>If `true`, enforces the application terms of service for all users. Requires `terms`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EnforceTerms { get; set; }
@@ -1390,7 +1392,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ErrorTrackingEnabled { get; set; }
 #endif
-        /// <summary>(**If enabled, requires**: `external_auth_client_key`) The certificate to use to authenticate with the external authorization service.</summary>
+        /// <summary>Certificate to use to authenticate with the external authorization service. Requires `external_auth_client_key`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ExternalAuthClientCert { get; set; }
@@ -1398,7 +1400,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ExternalAuthClientCert { get; set; }
 #endif
-        /// <summary>Private key for the certificate when authentication is required for the external authorization service, this is encrypted when stored.</summary>
+        /// <summary>Private key for the certificate when authentication is required for the external authorization service. Encrypted when stored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ExternalAuthClientKey { get; set; }
@@ -1406,7 +1408,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ExternalAuthClientKey { get; set; }
 #endif
-        /// <summary>Passphrase to use for the private key when authenticating with the external service this is encrypted when stored.</summary>
+        /// <summary>Passphrase to use for the private key when authenticating with the external authorization service. Encrypted when stored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ExternalAuthClientKeyPass { get; set; }
@@ -1414,7 +1416,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ExternalAuthClientKeyPass { get; set; }
 #endif
-        /// <summary>The default classification label to use when requesting authorization and no classification label has been specified on the project.</summary>
+        /// <summary>Default classification label to use when requesting authorization and no classification label has been specified on the project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ExternalAuthorizationServiceDefaultLabel { get; set; }
@@ -1422,7 +1424,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ExternalAuthorizationServiceDefaultLabel { get; set; }
 #endif
-        /// <summary>(**If enabled, requires**: `external_authorization_service_default_label`, `external_authorization_service_timeout`, and `external_authorization_service_url`) Enable using an external authorization service for accessing projects.</summary>
+        /// <summary>If `true`, uses an external authorization service for accessing projects. Requires `external_authorization_service_default_label`, `external_authorization_service_timeout`, and `external_authorization_service_url`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ExternalAuthorizationServiceEnabled { get; set; }
@@ -1446,7 +1448,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ExternalAuthorizationServiceUrl { get; set; }
 #endif
-        /// <summary>How long to wait for a response from the pipeline validation service. Assumes `OK` if it times out.</summary>
+        /// <summary>Time to wait for a response from the pipeline validation service, in seconds. Assumes `OK` if it times out.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ExternalPipelineValidationServiceTimeout { get; set; }
@@ -1454,7 +1456,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ExternalPipelineValidationServiceTimeout { get; set; }
 #endif
-        /// <summary>Optional. Token to include as the `X-Gitlab-Token` header in requests to the URL in `external_pipeline_validation_service_url`.</summary>
+        /// <summary>Token to include as the `X-Gitlab-Token` header in requests to the URL in `external_pipeline_validation_service_url`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ExternalPipelineValidationServiceToken { get; set; }
@@ -1496,7 +1498,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string FirstDayOfWeek { get; set; }
 #endif
-        /// <summary>Enable FloC (Federated Learning of Cohorts)</summary>
+        /// <summary>If `true`, enables FloC (Federated Learning of Cohorts).</summary>
         public bool? FlocEnabled { get; set; }
         /// <summary>The force_pages_access_control property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -1538,13 +1540,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string GeoStatusTimeout { get; set; }
 #endif
-        /// <summary>Default Gitaly timeout, in seconds. Set to 0 to disable timeouts.</summary>
+        /// <summary>Default Gitaly timeout, in seconds. Set to `0` to disable timeouts.</summary>
         public int? GitalyTimeoutDefault { get; set; }
         /// <summary>Gitaly fast operation timeout, in seconds. Set to 0 to disable timeouts.</summary>
         public int? GitalyTimeoutFast { get; set; }
         /// <summary>Medium Gitaly timeout, in seconds. Set to 0 to disable timeouts.</summary>
         public int? GitalyTimeoutMedium { get; set; }
-        /// <summary>Indicates whether the instance was provisioned for GitLab Dedicated.</summary>
+        /// <summary>If `true`, the instance was provisioned for GitLab Dedicated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? GitlabDedicatedInstance { get; set; }
@@ -1552,7 +1554,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string GitlabDedicatedInstance { get; set; }
 #endif
-        /// <summary>Indicates whether the instance was provisioned with the GitLab Environment Toolkit for Service Ping reporting.</summary>
+        /// <summary>If `true`, the instance was provisioned with the GitLab Environment Toolkit for Service Ping reporting.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? GitlabEnvironmentToolkitInstance { get; set; }
@@ -1560,7 +1562,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string GitlabEnvironmentToolkitInstance { get; set; }
 #endif
-        /// <summary>Indicates if product usage data collection is enabled. When the `GITLAB_PRODUCT_USAGE_DATA_ENABLED` environment variable is set, the API returns the effective value from the environment variable.</summary>
+        /// <summary>If `true`, product usage data collection is enabled. When the `GITLAB_PRODUCT_USAGE_DATA_ENABLED` environment variable is set, the API returns the effective value from the environment variable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? GitlabProductUsageDataEnabled { get; set; }
@@ -1576,9 +1578,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string GitlabShellOperationLimit { get; set; }
 #endif
-        /// <summary>Enable Gitpod</summary>
+        /// <summary>If `true`, enables [Ona integration](https://docs.gitlab.com/integration/gitpod/). Requires `gitpod_url`.</summary>
         public bool? GitpodEnabled { get; set; }
-        /// <summary>The configured Gitpod instance URL</summary>
+        /// <summary>Ona instance URL for the integration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? GitpodUrl { get; set; }
@@ -1586,7 +1588,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string GitpodUrl { get; set; }
 #endif
-        /// <summary>Set the limit for pipelines and branches that can be triggered when creating a Git push. Set to 0 to disable the limit</summary>
+        /// <summary>Maximum number of branch or tag pipelines that can be triggered by a single Git push. Set to `0` to disable the limit.</summary>
         public int? GitPushPipelineLimit { get; set; }
         /// <summary>List of user IDs that are emailed when the Git abuse rate limit is exceeded. Default: `[]`, Maximum: 100 user IDs. GitLab Self-Managed, Ultimate only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -1694,9 +1696,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string GlobalSearchWorkItemsEnabled { get; set; }
 #endif
-        /// <summary>Enable Grafana</summary>
+        /// <summary>If `true`, enables Grafana.</summary>
         public bool? GrafanaEnabled { get; set; }
-        /// <summary>Grafana URL</summary>
+        /// <summary>Grafana URL.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? GrafanaUrl { get; set; }
@@ -1712,7 +1714,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string GranularTokensEnforcedAfter { get; set; }
 #endif
-        /// <summary>Flag indicating if the Gravatar service is enabled</summary>
+        /// <summary>If `true`, enables the Gravatar service.</summary>
         public bool? GravatarEnabled { get; set; }
         /// <summary>The group_api_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -1782,7 +1784,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string GroupProjectsApiLimit { get; set; }
 #endif
-        /// <summary>Token expiration interval for group runners, in seconds</summary>
+        /// <summary>Set the expiration time (in seconds) of authentication tokens of newly registered group runners. Minimum value is 7200 seconds. For more information, see [Automatically rotate authentication tokens](https://docs.gitlab.com/ci/runners/configure_runners/#automatically-rotate-runner-authentication-tokens).</summary>
         public int? GroupRunnerTokenExpirationInterval { get; set; }
         /// <summary>The groups_api_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -1824,7 +1826,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string HelmMaxPackagesCount { get; set; }
 #endif
-        /// <summary>Alternate documentation pages URL</summary>
+        /// <summary>Alternate documentation pages URL.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? HelpPageDocumentationBaseUrl { get; set; }
@@ -1832,9 +1834,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string HelpPageDocumentationBaseUrl { get; set; }
 #endif
-        /// <summary>Hide marketing-related entries from help</summary>
+        /// <summary>If `true`, hides marketing-related entries from help.</summary>
         public bool? HelpPageHideCommercialContent { get; set; }
-        /// <summary>Alternate support URL for help page and help dropdown</summary>
+        /// <summary>Alternate support URL for help page and help dropdown.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? HelpPageSupportUrl { get; set; }
@@ -1842,7 +1844,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string HelpPageSupportUrl { get; set; }
 #endif
-        /// <summary>Custom text displayed on the help page</summary>
+        /// <summary>Custom text displayed on the help page.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? HelpPageText { get; set; }
@@ -1850,7 +1852,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string HelpPageText { get; set; }
 #endif
-        /// <summary>Do not display offers from third parties in GitLab.</summary>
+        /// <summary>If `true`, hides offers from third parties in GitLab.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? HideThirdPartyOffers { get; set; }
@@ -1858,7 +1860,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string HideThirdPartyOffers { get; set; }
 #endif
-        /// <summary>We will redirect non-logged in users to this page</summary>
+        /// <summary>Users who are not signed in are redirected to this page.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? HomePageUrl { get; set; }
@@ -1868,15 +1870,15 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>Enable automatic repository housekeeping (git repack, git gc)</summary>
         public bool? HousekeepingEnabled { get; set; }
-        /// <summary>Number of Git pushes after which a full &apos;git repack&apos; is run. All or none of `housekeeping_full_repack_period`, `housekeeping_gc_period`, `housekeeping_incremental_repack_period` must be provided.</summary>
+        /// <summary>Number of Git pushes after which a full `git repack` is run. Deprecated. Use `housekeeping_optimize_repository_period` instead. All or none of `housekeeping_full_repack_period`, `housekeeping_gc_period`, `housekeeping_incremental_repack_period` must be provided.</summary>
         public int? HousekeepingFullRepackPeriod { get; set; }
-        /// <summary>Number of Git pushes after which &apos;git gc&apos; is run. All or none of `housekeeping_full_repack_period`, `housekeeping_gc_period`, `housekeeping_incremental_repack_period` must be provided.</summary>
+        /// <summary>Number of Git pushes after which `git gc` is run. Deprecated. Use `housekeeping_optimize_repository_period` instead. All or none of `housekeeping_full_repack_period`, `housekeeping_gc_period`, `housekeeping_incremental_repack_period` must be provided.</summary>
         public int? HousekeepingGcPeriod { get; set; }
-        /// <summary>Number of Git pushes after which an incremental &apos;git repack&apos; is run. Exactly one of `housekeeping_incremental_repack_period`, `housekeeping_optimize_repository_period` must be provided. All or none of `housekeeping_full_repack_period`, `housekeeping_gc_period`, `housekeeping_incremental_repack_period` must be provided.</summary>
+        /// <summary>Number of Git pushes after which an incremental `git repack` is run. Deprecated. Use `housekeeping_optimize_repository_period` instead. Exactly one of `housekeeping_incremental_repack_period`, `housekeeping_optimize_repository_period` must be provided. All or none of `housekeeping_full_repack_period`, `housekeeping_gc_period`, `housekeeping_incremental_repack_period` must be provided.</summary>
         public int? HousekeepingIncrementalRepackPeriod { get; set; }
         /// <summary>Number of Git pushes after which Gitaly is asked to optimize a repository. Exactly one of `housekeeping_incremental_repack_period`, `housekeeping_optimize_repository_period` must be provided.</summary>
         public int? HousekeepingOptimizeRepositoryPeriod { get; set; }
-        /// <summary>By default GitLab sends emails in HTML and plain text formats so mail clients can choose what format to use. Disable this option if you only want to send emails in plain text format.</summary>
+        /// <summary>If `true`, sends emails in both HTML and plain text formats. If `false`, sends emails in plain text only. Defaults to `true`.</summary>
         public bool? HtmlEmailsEnabled { get; set; }
         /// <summary>IDs of embed providers users can embed content from. Enter multiple entries separated by commas or on separate lines.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -1894,7 +1896,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string IframeRenderingAllowlistRaw { get; set; }
 #endif
-        /// <summary>Allow rendering of iframes in Markdown.</summary>
+        /// <summary>If `true`, allows rendering of iframes in Markdown.</summary>
         public bool? IframeRenderingEnabled { get; set; }
         /// <summary>The import_jobs_concurrency_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -1904,7 +1906,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ImportJobsConcurrencyLimit { get; set; }
 #endif
-        /// <summary>Enabled sources for code import during project creation. OmniAuth must be configured for GitHub, Bitbucket, and GitLab.com</summary>
+        /// <summary>Sources to allow project import from. OmniAuth must be configured for GitHub, Bitbucket, and GitLab.com.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestImportSourcesItem?>? ImportSources { get; set; }
@@ -1920,7 +1922,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string InactiveProjectsDeleteAfterMonths { get; set; }
 #endif
-        /// <summary>If `delete_inactive_projects` is `true`, the minimum repository size for projects to be checked for inactivity. Default is `0`.</summary>
+        /// <summary>If `delete_inactive_projects` is `true`, the minimum repository size, in MB, for projects to be checked for inactivity. Default is `0`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? InactiveProjectsMinSizeMb { get; set; }
@@ -1944,7 +1946,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string InactiveResourceAccessTokensDeleteAfterDays { get; set; }
 #endif
-        /// <summary>Whether or not optional metrics are enabled in Service Ping.</summary>
+        /// <summary>If `true`, enables optional metrics in Service Ping.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? IncludeOptionalMetricsInServicePing { get; set; }
@@ -1968,7 +1970,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string InstanceTokenPrefix { get; set; }
 #endif
-        /// <summary>Enable Invisible Captcha spam detection during signup.</summary>
+        /// <summary>If `true`, enables Invisible CAPTCHA spam detection during account creation.</summary>
         public bool? InvisibleCaptchaEnabled { get; set; }
         /// <summary>The invitation_flow_enforcement property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -2004,7 +2006,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string JiraConnectProxyUrl { get; set; }
 #endif
-        /// <summary>Enable public key storage for the GitLab for Jira Cloud app.</summary>
+        /// <summary>If `true`, enables public key storage for the GitLab for Jira Cloud app.</summary>
         public bool? JiraConnectPublicKeyStorageEnabled { get; set; }
         /// <summary>Atlassian Forge app ID (ARI) of the GitLab for Jira Cloud app, used to verify inbound Forge Invocation Tokens.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -2014,11 +2016,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string JiraForgeAppId { get; set; }
 #endif
+        /// <summary>Maximum number of job erasures allowed per minute for a given project.</summary>
+        public int? JobEraseLimitPerUserProject { get; set; }
         /// <summary>Maximum number of manual job runs allowed per minute for a given project.</summary>
         public int? JobPlayLimitPerUserProject { get; set; }
         /// <summary>Maximum number of job retries allowed per minute for a given project.</summary>
         public int? JobRetryLimitPerUserProject { get; set; }
-        /// <summary>Prevent the deletion of the artifacts from the most recent successful jobs, regardless of the expiry time. Enabled by default.</summary>
+        /// <summary>If `true`, prevents the deletion of the artifacts from the most recent successful jobs, regardless of the expiry time. Defaults to `true`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? KeepLatestArtifact { get; set; }
@@ -2034,7 +2038,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string KrokiDiagramProxyEnabled { get; set; }
 #endif
-        /// <summary>Enable Kroki</summary>
+        /// <summary>If `true`, enables [Kroki integration](https://docs.gitlab.com/administration/integration/kroki/). Requires `kroki_url`.</summary>
         public bool? KrokiEnabled { get; set; }
         /// <summary>Additional formats supported by the Kroki instance. Possible values are `true` or `false` for formats `bpmn`, `blockdiag`, `excalidraw`, and `mermaid` in the format `&lt;format&gt;: true` or `&lt;format&gt;: false`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -2044,7 +2048,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string KrokiFormats { get; set; }
 #endif
-        /// <summary>The Kroki server URL</summary>
+        /// <summary>Kroki server URL.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? KrokiUrl { get; set; }
@@ -2052,7 +2056,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string KrokiUrl { get; set; }
 #endif
-        /// <summary>Local markdown version, increase this value when any cached markdown should be invalidated</summary>
+        /// <summary>Local Markdown version. Increase this value to invalidate all cached Markdown.</summary>
         public int? LocalMarkdownVersion { get; set; }
         /// <summary>If `true`, enforces the `built_in_project_templates_enabled` setting for all groups. Premium and Ultimate only. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/235284) in GitLab 19.0 [with a feature flag](https://docs.gitlab.com/administration/feature_flags/) named `use_built_in_project_templates_enabled`. [Generally available](https://gitlab.com/gitlab-org/gitlab/-/work_items/593623) in GitLab 19.2. Feature flag `use_built_in_project_templates_enabled` removed.</summary>
         public bool? LockBuiltInProjectTemplatesEnabled { get; set; }
@@ -2090,7 +2094,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string LockModelPromptCacheEnabled { get; set; }
 #endif
-        /// <summary>Enforce the `require_sha_for_merge` setting for all groups on the instance. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/236732) in GitLab 19.2.</summary>
+        /// <summary>If `true`, enforces the `require_sha_for_merge` setting for all groups on the instance. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/236732) in GitLab 19.2.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? LockRequireShaForMerge { get; set; }
@@ -2114,7 +2118,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public bool? LoginRecaptchaProtectionEnabled { get; set; }
         /// <summary>Enable Mailgun event receiver</summary>
         public bool? MailgunEventsEnabled { get; set; }
-        /// <summary>The Mailgun HTTP webhook signing key for receiving events from webhook</summary>
+        /// <summary>Mailgun HTTP webhook signing key for receiving events from webhook.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MailgunSigningKey { get; set; }
@@ -2152,19 +2156,19 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string MaxArtifactsContentIncludeSize { get; set; }
 #endif
-        /// <summary>Set the maximum file size for each job&apos;s artifacts</summary>
+        /// <summary>Maximum file size, in MB, for each job&apos;s artifacts.</summary>
         public int? MaxArtifactsSize { get; set; }
-        /// <summary>Maximum attachment size in MB</summary>
+        /// <summary>Maximum attachment size in MB.</summary>
         public int? MaxAttachmentSize { get; set; }
-        /// <summary>Maximum decompressed size in MB</summary>
+        /// <summary>Maximum decompressed file size for imported archives in MB. Set to `0` for unlimited. Default is `25600`.</summary>
         public int? MaxDecompressedArchiveSize { get; set; }
         /// <summary>Maximum export size in MB</summary>
         public int? MaxExportSize { get; set; }
-        /// <summary>Maximum allowed object count for GitHub API responses. 0 for unlimited. Count is an estimate based on the number of : , { and [ occurrences in the response.</summary>
+        /// <summary>Maximum object count for GitHub API responses. Set to `0` for unlimited. The count is an estimate based on the number of `:`, `,`, `{`, and `[` characters in the response.</summary>
         public int? MaxGithubResponseJsonValueCount { get; set; }
-        /// <summary>Maximum allowed size in MB for GitHub API responses. 0 for unlimited.</summary>
+        /// <summary>Maximum size in MB for GitHub API responses. Set to `0` for unlimited size.</summary>
         public int? MaxGithubResponseSizeLimit { get; set; }
-        /// <summary>Maximum allowed size in MiB for Gzip-compressed HTTP responses from outbound requests after decompression. 0 for unlimited.</summary>
+        /// <summary>Maximum allowed size in MiB for Gzip-compressed HTTP responses from outbound requests after decompression. Set to `0` for unlimited.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MaxHttpDecompressedSize { get; set; }
@@ -2196,7 +2200,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string MaxHttpResponseJsonStructuralChars { get; set; }
 #endif
-        /// <summary>Maximum allowed size in MiB for HTTP responses from outbound requests. 0 for unlimited. Applicable for integrations, importers, and webhooks. Introduced in GitLab 18.4.</summary>
+        /// <summary>Maximum allowed size in MiB for HTTP responses from outbound requests. Set to `0` for unlimited. Applicable for integrations, importers, and webhooks. Introduced in GitLab 18.4.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MaxHttpResponseSizeLimit { get; set; }
@@ -2230,7 +2234,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public int? MaxNumberOfRepositoryDownloadsWithinTimePeriod { get; set; }
         /// <summary>Maximum number of GitLab Pages custom domains per project</summary>
         public int? MaxPagesCustomDomainsPerProject { get; set; }
-        /// <summary>Maximum size of pages in MB</summary>
+        /// <summary>Maximum size of each GitLab Pages site in MB. Set to `0` to allow up to 1 TB.</summary>
         public int? MaxPagesSize { get; set; }
         /// <summary>Maximum allowable lifetime for access tokens in days. When left blank, default value of 365 is applied. When set, value must be 365 or less. When changed, existing access tokens with an expiration date beyond the maximum allowable lifetime are revoked. GitLab Self-Managed, Ultimate only. In GitLab 17.6 or later, the maximum lifetime limit can be [extended to 400 days](https://gitlab.com/gitlab-org/gitlab/-/issues/461901) by enabling a [feature flag](https://docs.gitlab.com/administration/feature_flags/) named `buffered_token_expiration_limit`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -2248,9 +2252,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string MaxSshKeyLifetime { get; set; }
 #endif
-        /// <summary>Maximum size in bytes of the Terraform state file. Set this to 0 for unlimited file size.</summary>
+        /// <summary>Maximum size of the Terraform state file in bytes. Set to `0` for unlimited size.</summary>
         public int? MaxTerraformStateSizeBytes { get; set; }
-        /// <summary>The maximum depth of nested CI/CD configuration added with the `include` keyword. Default: `100`.</summary>
+        /// <summary>Maximum depth of nested CI/CD configuration added with the [`include` keyword](https://docs.gitlab.com/ci/yaml/#include). Default: `100`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MaxYamlDepth { get; set; }
@@ -2258,7 +2262,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string MaxYamlDepth { get; set; }
 #endif
-        /// <summary>The maximum size in bytes of a single CI/CD configuration file. Default: `2097152`.</summary>
+        /// <summary>Maximum size in bytes of a single CI/CD configuration file. Default: `2097152`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MaxYamlSizeBytes { get; set; }
@@ -2282,9 +2286,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string MembersDeleteLimit { get; set; }
 #endif
-        /// <summary>A method call is only tracked when it takes longer to complete than the given amount of milliseconds.</summary>
+        /// <summary>Method call is only tracked if it takes longer than this threshold, in milliseconds.</summary>
         public int? MetricsMethodCallThreshold { get; set; }
-        /// <summary>The minimum language server version to accept requests from</summary>
+        /// <summary>Minimum language server version to accept requests from.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MinimumLanguageServerVersion { get; set; }
@@ -2300,7 +2304,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string MinimumPasswordLength { get; set; }
 #endif
-        /// <summary>Allow repository mirroring to configured by project Maintainers. If disabled, only Administrators can configure repository mirroring.</summary>
+        /// <summary>If `true`, project Maintainers can configure repository mirroring. If `false`, only administrators can configure repository mirroring.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MirrorAvailable { get; set; }
@@ -2340,7 +2344,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ModelPromptCacheEnabled { get; set; }
 #endif
-        /// <summary>Maximum duration (in seconds) between refreshes of namespace statistics (Default: 300)</summary>
+        /// <summary>Maximum duration, in seconds, between refreshes of namespace statistics. Defaults to `300`.</summary>
         public int? NamespaceAggregationScheduleLeaseDurationInSeconds { get; set; }
         /// <summary>The notes_create_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -2358,7 +2362,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string NotesCreateLimitAllowlistRaw { get; set; }
 #endif
-        /// <summary>Enable sending notification if sign in from unknown IP address happens.</summary>
+        /// <summary>If `true`, sends a notification when a sign-in from an unknown IP address occurs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? NotifyOnUnknownSignIn { get; set; }
@@ -2376,7 +2380,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string NugetSkipMetadataUrlValidation { get; set; }
 #endif
-        /// <summary>Lifetime of OAuth access tokens in seconds.</summary>
+        /// <summary>Maximum lifetime in seconds of all new OAuth access tokens issued by the instance. Minimum value: `300` (5 minutes). Default value: `7200` (2 hours). If blank or `null`, uses default value. Does not affect existing OAuth access tokens.</summary>
         public int? OauthAccessTokenExpiresIn { get; set; }
         /// <summary>The observability_backend_ssl_verification_enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -2386,7 +2390,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ObservabilityBackendSslVerificationEnabled { get; set; }
 #endif
-        /// <summary>Enable exporting GitLab groups and projects by offline transfer. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/588971) in GitLab 19.3.</summary>
+        /// <summary>If `true`, enables exporting GitLab groups and projects by offline transfer. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/588971) in GitLab 19.3.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OfflineTransferExportsEnabled { get; set; }
@@ -2394,7 +2398,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string OfflineTransferExportsEnabled { get; set; }
 #endif
-        /// <summary>Enable importing GitLab groups and projects by offline transfer. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/588971) in GitLab 19.3.</summary>
+        /// <summary>If `true`, enables importing GitLab groups and projects by offline transfer. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/588971) in GitLab 19.3.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OfflineTransferImportsEnabled { get; set; }
@@ -2450,7 +2454,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string PackageMetadataPurlTypes { get; set; }
 #endif
-        /// <summary>Enable to allow anyone to pull from package registry visible and changeable.</summary>
+        /// <summary>If `true`, makes the option to [allow anyone to pull from the package registry](https://docs.gitlab.com/user/packages/package_registry/#allow-anyone-to-pull-from-package-registry) visible and changeable in project settings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PackageRegistryAllowAnyoneToPullOption { get; set; }
@@ -2466,7 +2470,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string PackageRegistryCleanupPoliciesWorkerCapacity { get; set; }
 #endif
-        /// <summary>Require users to prove ownership of custom domains. Domain verification is an essential security measure for public GitLab sites. Users are required to demonstrate they control a domain before it is enabled.</summary>
+        /// <summary>If `true`, requires users to prove ownership of custom domains. Domain verification is an essential security measure for public GitLab sites. Users are required to demonstrate they control a domain before it is enabled.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PagesDomainVerificationEnabled { get; set; }
@@ -2482,7 +2486,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string PagesExtraDeploymentsDefaultExpirySeconds { get; set; }
 #endif
-        /// <summary>Enable unique domains by default for Pages sites to avoid cookie sharing between sites under a given namespace. Default is `true`.</summary>
+        /// <summary>If `true`, enables unique domains by default for Pages sites to avoid cookie sharing between sites under a given namespace. Defaults to `true`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PagesUniqueDomainDefaultEnabled { get; set; }
@@ -2492,9 +2496,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>Flag indicating if password authentication is enabled for the web interface. Mutually exclusive with `password_authentication_enabled_for_web`, `signin_enabled`.</summary>
         public bool? PasswordAuthenticationEnabled { get; set; }
-        /// <summary>Flag indicating if password authentication is enabled for Git over HTTP(S)</summary>
+        /// <summary>If `true`, enables authentication for Git over HTTP(S) via a GitLab account password. Defaults to `true`.</summary>
         public bool? PasswordAuthenticationEnabledForGit { get; set; }
-        /// <summary>Flag indicating if password authentication is enabled for the web interface. Mutually exclusive with `password_authentication_enabled`, `signin_enabled`.</summary>
+        /// <summary>If `true`, enables authentication for the web interface via a GitLab account password. Defaults to `true`. Mutually exclusive with `password_authentication_enabled`, `signin_enabled`.</summary>
         public bool? PasswordAuthenticationEnabledForWeb { get; set; }
         /// <summary>If `true`, passwords require at least one lowercase letter. Premium and Ultimate only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -2528,7 +2532,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string PasswordUppercaseRequired { get; set; }
 #endif
-        /// <summary>Deprecated: Use :performance_bar_allowed_group_path instead. Path of the group that is allowed to toggle the performance bar.</summary>
+        /// <summary>Path of the group that is allowed to toggle the performance bar. Deprecated. Use `performance_bar_allowed_group_path` instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PerformanceBarAllowedGroupId { get; set; }
@@ -2552,7 +2556,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string PerformanceBarEnabled { get; set; }
 #endif
-        /// <summary>Prefix to prepend to all personal access tokens</summary>
+        /// <summary>Prefix to prepend to all personal access tokens.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PersonalAccessTokenPrefix { get; set; }
@@ -2588,9 +2592,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string PipelineExecutionPoliciesPerConfigurationLimit { get; set; }
 #endif
-        /// <summary>Maximum number of pipeline creation requests allowed per minute per user and commit. Set to 0 for unlimited requests per minute.</summary>
+        /// <summary>Maximum number of pipeline creation requests per minute per user and commit. Set to `0` for unlimited requests. Disabled by default.</summary>
         public int? PipelineLimitPerProjectUserSha { get; set; }
-        /// <summary>Maximum number of pipeline creation requests allowed per minute per user. Set to 0 for unlimited requests per minute.</summary>
+        /// <summary>Maximum number of pipeline creation requests allowed per minute per user. Set to `0` for unlimited requests.</summary>
         public int? PipelineLimitPerUser { get; set; }
         /// <summary>Maximum number of pipeline retries allowed per minute for a given project.</summary>
         public int? PipelineRetryLimitPerUserProject { get; set; }
@@ -2602,7 +2606,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string PlantumlDiagramProxyEnabled { get; set; }
 #endif
-        /// <summary>Enable PlantUML</summary>
+        /// <summary>If `true`, enables [PlantUML integration](https://docs.gitlab.com/administration/integration/plantuml/). Requires `plantuml_url`.</summary>
         public bool? PlantumlEnabled { get; set; }
         /// <summary>The PlantUML server URL</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -2620,7 +2624,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string PolicyStoreExperimentEnabled { get; set; }
 #endif
-        /// <summary>Interval multiplier used by endpoints that perform polling. Set to 0 to disable polling.</summary>
+        /// <summary>Interval multiplier used by endpoints that perform polling. Set to `0` to disable polling.</summary>
         public double? PollingIntervalMultiplier { get; set; }
         /// <summary>If `true`, prevents merge request authors from approving their own merge requests.</summary>
         public bool? PreventMergeRequestsAuthorApproval { get; set; }
@@ -2676,7 +2680,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ProjectDownloadExportLimit { get; set; }
 #endif
-        /// <summary>Enable project export</summary>
+        /// <summary>If `true`, enables project export.</summary>
         public bool? ProjectExportEnabled { get; set; }
         /// <summary>The project_export_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -2720,7 +2724,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ProjectRepositoriesBlobsBatchLimit { get; set; }
 #endif
-        /// <summary>Token expiration interval for project runners, in seconds</summary>
+        /// <summary>Set the expiration time (in seconds) of authentication tokens of newly registered project runners. Minimum value is 7200 seconds. For more information, see [Automatically rotate authentication tokens](https://docs.gitlab.com/ci/runners/configure_runners/#automatically-rotate-runner-authentication-tokens).</summary>
         public int? ProjectRunnerTokenExpirationInterval { get; set; }
         /// <summary>The projects_api_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -2730,7 +2734,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ProjectsApiLimit { get; set; }
 #endif
-        /// <summary>Maximum number of requests per 10 minutes per IP address for unauthenticated requests to the list all projects API. Default: 400. To disable throttling, set to 0.</summary>
+        /// <summary>Maximum number of requests per 10 minutes per IP address for unauthenticated requests to the [list all projects API](https://docs.gitlab.com/api/projects/#list-all-projects). Default: `400`. To disable throttling, set to `0`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ProjectsApiRateLimitUnauthenticated { get; set; }
@@ -2746,9 +2750,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ProjectSecretsLimit { get; set; }
 #endif
-        /// <summary>Enable Prometheus metrics</summary>
+        /// <summary>If `true`, enables Prometheus metrics.</summary>
         public bool? PrometheusMetricsEnabled { get; set; }
-        /// <summary>CI/CD variables are protected by default.</summary>
+        /// <summary>If `true`, CI/CD variables are protected by default.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ProtectedCiVariables { get; set; }
@@ -2774,11 +2778,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>Maximum number of changes (branches or tags) in a single push above which a bulk push event is created. Setting to `0` does not disable throttling.</summary>
         public int? PushEventActivitiesLimit { get; set; }
-        /// <summary>Maximum number of changes (branches or tags) in a single push above which webhooks and integrations are not triggered. Setting to `0` does not disable throttling.</summary>
+        /// <summary>Maximum number of changes (branches or tags) in a single push above which webhooks and integrations are not triggered. Setting to `0` does not disable throttling. Default: `3`.</summary>
         public int? PushEventHooksLimit { get; set; }
         /// <summary>If `true`, forwards PyPI package requests to `pypi.org` when not found in the GitLab package registry. Premium and Ultimate only.</summary>
         public bool? PypiPackageRequestsForwarding { get; set; }
-        /// <summary>When rate limiting is enabled via the `throttle_*` settings, send this plain text response when a rate limit is exceeded. &apos;Retry later&apos; is sent if this is blank.</summary>
+        /// <summary>When rate limiting is enabled via the `throttle_*` settings, send this plain text response when a rate limit is exceeded. `Retry later` is sent if this is blank.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RateLimitingResponseText { get; set; }
@@ -2786,11 +2790,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string RateLimitingResponseText { get; set; }
 #endif
-        /// <summary>Maximum number of requests per minute for each raw path. Set to 0 for unlimited requests per minute.</summary>
+        /// <summary>Maximum number of requests per minute for each raw path (default is `300`). Set to `0` to disable throttling.</summary>
         public int? RawBlobRequestLimit { get; set; }
-        /// <summary>Maximum number of requests per minute for a raw blob for unauthenticated requests. Set to 0 for unlimited requests per minute.</summary>
+        /// <summary>Maximum number of unauthenticated requests per minute across all raw paths in a project (default is `800`). Set to `0` to disable throttling.</summary>
         public int? RawBlobRequestLimitUnauthenticated { get; set; }
-        /// <summary>Helps prevent bots from creating accounts</summary>
+        /// <summary>If `true`, enables reCAPTCHA. Requires `recaptcha_private_key` and `recaptcha_site_key`.</summary>
         public bool? RecaptchaEnabled { get; set; }
         /// <summary>Generate private key at http://www.google.com/recaptcha</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -2834,7 +2838,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ReindexingMinimumRelativeBloatSize { get; set; }
 #endif
-        /// <summary>The size of each batch when exporting batched relations. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/194607) in GitLab 18.2.</summary>
+        /// <summary>Size of each batch when exporting batched relations. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/194607) in GitLab 18.2.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RelationExportBatchSize { get; set; }
@@ -2842,7 +2846,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string RelationExportBatchSize { get; set; }
 #endif
-        /// <summary>Enable **Remember me** setting.</summary>
+        /// <summary>If `true`, enables the [**Remember me** setting](https://docs.gitlab.com/administration/settings/account_and_limit_settings/#configure-the-remember-me-option).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RememberMeEnabled { get; set; }
@@ -2850,11 +2854,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string RememberMeEnabled { get; set; }
 #endif
-        /// <summary>GitLab will periodically run &apos;git fsck&apos; in all project and wiki repositories to look for silent disk corruption issues.</summary>
+        /// <summary>If `true`, GitLab periodically runs `git fsck` in all project and wiki repositories to look for silent disk corruption issues.</summary>
         public bool? RepositoryChecksEnabled { get; set; }
         /// <summary>Size limit per repository (MB). Premium and Ultimate only.</summary>
         public int? RepositorySizeLimit { get; set; }
-        /// <summary>Storage paths for new projects with a weighted value ranging from 0 to 100</summary>
+        /// <summary>Hash of names of storages taken from `gitlab.yml` to [weights](https://docs.gitlab.com/administration/repository_storage_paths/#configure-where-new-repositories-are-stored) ranging from 0 to 100. New projects are created in one of these stores, chosen by a weighted random selection.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestRepositoryStoragesWeightedProperty? RepositoryStoragesWeighted { get; set; }
@@ -2862,7 +2866,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestRepositoryStoragesWeightedProperty RepositoryStoragesWeighted { get; set; }
 #endif
-        /// <summary>Require explicit admin approval for new signups</summary>
+        /// <summary>If `true`, requires explicit administrator approval for new signups.</summary>
         public bool? RequireAdminApprovalAfterUserSignup { get; set; }
         /// <summary>Allow administrators to require 2FA for all administrators on the instance.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -2880,9 +2884,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string RequireEmailVerificationOnAccountLocked { get; set; }
 #endif
-        /// <summary>Flag indicating if Personal / Group / Project access token expiry is required</summary>
+        /// <summary>If `true`, requires an expiration date on group and project access tokens, and on personal access tokens not owned by service accounts.</summary>
         public bool? RequirePersonalAccessTokenExpiry { get; set; }
-        /// <summary>Instance default that requires a valid commit `sha` for calls to the merge a merge request endpoint. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/236732) in GitLab 19.2.</summary>
+        /// <summary>If `true`, requires a valid commit `sha` for calls to the [merge a merge request](https://docs.gitlab.com/api/merge_requests/#merge-a-merge-request) endpoint. Sets the instance default. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/236732) in GitLab 19.2.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RequireShaForMerge { get; set; }
@@ -2890,7 +2894,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string RequireShaForMerge { get; set; }
 #endif
-        /// <summary>Require all users to set up Two-factor authentication</summary>
+        /// <summary>If `true`, requires all users to set up two-factor authentication. Requires `two_factor_grace_period`.</summary>
         public bool? RequireTwoFactorAuthentication { get; set; }
         /// <summary>The resource_access_token_notify_inherited property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -2900,7 +2904,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ResourceAccessTokenNotifyInherited { get; set; }
 #endif
-        /// <summary>Definition for resource usage limits enforced in Sidekiq workers</summary>
+        /// <summary>Definition for resource usage limits enforced in Sidekiq workers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestResourceUsageLimitsProperty? ResourceUsageLimits { get; set; }
@@ -2908,7 +2912,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestResourceUsageLimitsProperty ResourceUsageLimits { get; set; }
 #endif
-        /// <summary>Selected levels cannot be used by non-admin users for groups, projects or snippets. If the public level is restricted, user profiles are only visible to logged in users.</summary>
+        /// <summary>Selected levels cannot be used by non-administrator users for groups, projects, or snippets. Can take `private`, `internal`, and `public` as a parameter. If the `public` level is restricted, user profiles are only visible to signed-in users. If empty, no levels are restricted. Cannot select levels that are set as `default_project_visibility` and `default_group_visibility`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? RestrictedVisibilityLevels { get; set; }
@@ -2928,7 +2932,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public int? RsaKeyRestriction { get; set; }
         /// <summary>If `true`, forwards RubyGems package requests to `rubygems.org` when not found in the GitLab package registry. Premium and Ultimate only.</summary>
         public bool? RubygemsPackageRequestsForwarding { get; set; }
-        /// <summary>Maximum number of requests per minute per job token for requests to `/jobs/*` requests to the runner jobs API endpoints. Default: 200. To disable throttling, set to 0. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/462537) in GitLab 18.5.</summary>
+        /// <summary>Maximum number of requests per minute per job token for requests to the `/jobs/*` runner jobs API endpoints. Default: `200`. To disable throttling, set to `0`. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/462537) in GitLab 18.5.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RunnerJobsEndpointsApiLimit { get; set; }
@@ -2944,7 +2948,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string RunnerJobsPatchTraceApiLimit { get; set; }
 #endif
-        /// <summary>Maximum number of requests per minute per runner token for requests to the `/jobs/request` runner jobs API endpoint. Default: 2000. To disable throttling, set to 0. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/462537) in GitLab 18.5.</summary>
+        /// <summary>Maximum number of requests per minute per runner token for requests to the `/jobs/request` runner jobs API endpoint. Default: `2000`. To disable throttling, set to `0`. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/462537) in GitLab 18.5.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RunnerJobsRequestApiLimit { get; set; }
@@ -2952,7 +2956,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string RunnerJobsRequestApiLimit { get; set; }
 #endif
-        /// <summary>Token expiration interval for shared runners, in seconds</summary>
+        /// <summary>Set the expiration time (in seconds) of authentication tokens of newly registered instance runners. Minimum value is 7200 seconds. For more information, see [Automatically rotate authentication tokens](https://docs.gitlab.com/ci/runners/configure_runners/#automatically-rotate-runner-authentication-tokens).</summary>
         public int? RunnerTokenExpirationInterval { get; set; }
         /// <summary>Maximum number of `actions` per scan execution policy. Defaults to `0` and cannot be set above `20`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -3002,7 +3006,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string SearchMinDocsBeforeRollover { get; set; }
 #endif
-        /// <summary>Maximum number of requests per minute for performing a search while authenticated. Default: 30. To disable throttling, set to 0.</summary>
+        /// <summary>Maximum number of requests per minute for performing a search while authenticated. Default: `30`. To disable throttling, set to `0`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SearchRateLimit { get; set; }
@@ -3018,7 +3022,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string SearchRateLimitAllowlistRaw { get; set; }
 #endif
-        /// <summary>Maximum number of requests per minute for performing a search while unauthenticated. Default: 10. To disable throttling, set to 0.</summary>
+        /// <summary>Maximum number of requests per minute for performing a search while unauthenticated. Default: `10`. To disable throttling, set to `0`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SearchRateLimitUnauthenticated { get; set; }
@@ -3092,11 +3096,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string SecurityMrReportCacheLifetimeMinutes { get; set; }
 #endif
-        /// <summary>Query scan result policy approval groups globally</summary>
+        /// <summary>If `true`, looks up merge request approval policy approval groups globally. If `false`, looks them up within project hierarchies.</summary>
         public bool? SecurityPolicyGlobalGroupApproversEnabled { get; set; }
         /// <summary>Number of days to retain security scan data before purging. Must be between 7 and 90 days. Default: 30 days for GitLab.com, 90 days for GitLab Self-Managed. Premium and Ultimate only. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/222998) in GitLab 18.9.</summary>
         public int? SecurityScanStaleAfterDays { get; set; }
-        /// <summary>Public security contact information made available at https://gitlab.example.com/.well-known/security.txt</summary>
+        /// <summary>Public security contact information made available at https://gitlab.example.com/.well-known/security.txt.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SecurityTxtContent { get; set; }
@@ -3146,9 +3150,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>If `true`, enforces token expiration for service account users. Premium and Ultimate only.</summary>
         public bool? ServiceAccessTokensExpirationEnforced { get; set; }
-        /// <summary>Session duration in minutes. GitLab restart is required to apply changes.</summary>
+        /// <summary>Session duration in minutes. Requires a GitLab restart to apply changes.</summary>
         public int? SessionExpireDelay { get; set; }
-        /// <summary>Expires sessions based off the creation date rather than last activity</summary>
+        /// <summary>If `true`, sessions expire a number of minutes after the session was created rather than after the last activity. The session lifetime is defined by `session_expire_delay`.</summary>
         public bool? SessionExpireFromInit { get; set; }
         /// <summary>Enable shared runners for new projects</summary>
         public bool? SharedRunnersEnabled { get; set; }
@@ -3168,9 +3172,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string SharedRunnersText { get; set; }
 #endif
-        /// <summary>Enable Jenkins migration banner</summary>
+        /// <summary>If `true`, shows the Jenkins migration banner.</summary>
         public bool? ShowMigrateFromJenkinsBanner { get; set; }
-        /// <summary>The threshold in bytes at which Sidekiq jobs are compressed before being stored in Redis. Default: 100,000 bytes (100 KB).</summary>
+        /// <summary>Threshold in bytes at which Sidekiq jobs are compressed before being stored in Redis. Default: 100,000 bytes (100 KB).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SidekiqJobLimiterCompressionThresholdBytes { get; set; }
@@ -3178,7 +3182,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string SidekiqJobLimiterCompressionThresholdBytes { get; set; }
 #endif
-        /// <summary>The threshold in bytes at which Sidekiq jobs are rejected. Default: 0 bytes (doesn&apos;t reject any job).</summary>
+        /// <summary>Threshold in bytes at which Sidekiq jobs are rejected. Default: 0 bytes (doesn&apos;t reject any job).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SidekiqJobLimiterLimitBytes { get; set; }
@@ -3196,7 +3200,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string SidekiqTimezoneOverride { get; set; }
 #endif
-        /// <summary>Flag indicating if password authentication is enabled for the web interface. Mutually exclusive with `password_authentication_enabled_for_web`, `password_authentication_enabled`.</summary>
+        /// <summary>If `true`, enables password authentication for the web interface. Deprecated. Use `password_authentication_enabled_for_web` instead. Mutually exclusive with `password_authentication_enabled_for_web`, `password_authentication_enabled`.</summary>
         public bool? SigninEnabled { get; set; }
         /// <summary>Application sign in restrictions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -3206,9 +3210,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string SignInRestrictions { get; set; }
 #endif
-        /// <summary>Flag indicating if sign up is enabled</summary>
+        /// <summary>If `true`, enables registration. Defaults to `true`.</summary>
         public bool? SignupEnabled { get; set; }
-        /// <summary>Enable Silent admin exports. Default is `false`.</summary>
+        /// <summary>If `true`, enables [Silent administrator exports](https://docs.gitlab.com/administration/settings/import_and_export_settings/#enable-silent-admin-exports). Default is `false`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SilentAdminExportsEnabled { get; set; }
@@ -3216,7 +3220,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string SilentAdminExportsEnabled { get; set; }
 #endif
-        /// <summary>Enable Silent mode. Default is `false`.</summary>
+        /// <summary>If `true`, enables [Silent mode](https://docs.gitlab.com/administration/silent_mode/). Default is `false`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SilentModeEnabled { get; set; }
@@ -3224,9 +3228,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string SilentModeEnabled { get; set; }
 #endif
-        /// <summary>Enable the GitLab for Slack app</summary>
+        /// <summary>If `true`, enables the GitLab for Slack app. Requires `slack_app_id`, `slack_app_secret`, `slack_app_signing_secret`, and `slack_app_verification_token`.</summary>
         public bool? SlackAppEnabled { get; set; }
-        /// <summary>The client ID of the GitLab for Slack app</summary>
+        /// <summary>Client ID of the GitLab for Slack app.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SlackAppId { get; set; }
@@ -3234,7 +3238,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string SlackAppId { get; set; }
 #endif
-        /// <summary>The client secret of the GitLab for Slack app. Used for authenticating OAuth requests from the app</summary>
+        /// <summary>Client secret of the GitLab for Slack app. Used for authenticating OAuth requests from the app.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SlackAppSecret { get; set; }
@@ -3242,7 +3246,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string SlackAppSecret { get; set; }
 #endif
-        /// <summary>The signing secret of the GitLab for Slack app. Used for authenticating API requests from the app</summary>
+        /// <summary>Signing secret of the GitLab for Slack app. Used for authenticating API requests from the app.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SlackAppSigningSecret { get; set; }
@@ -3250,7 +3254,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string SlackAppSigningSecret { get; set; }
 #endif
-        /// <summary>The verification token of the GitLab for Slack app. This method of authentication is deprecated by Slack and used only for authenticating slash commands from the app</summary>
+        /// <summary>Verification token of the GitLab for Slack app. This method of authentication is deprecated by Slack and used only for authenticating slash commands from the app.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SlackAppVerificationToken { get; set; }
@@ -3258,7 +3262,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string SlackAppVerificationToken { get; set; }
 #endif
-        /// <summary>Maximum snippet content size in **bytes**. Default: 52428800 Bytes (50 MB).</summary>
+        /// <summary>Maximum snippet content size in bytes. Default: 52428800 bytes (50 MB).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SnippetSizeLimit { get; set; }
@@ -3266,7 +3270,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string SnippetSizeLimit { get; set; }
 #endif
-        /// <summary>The Snowplow site name / application id</summary>
+        /// <summary>Snowplow site name or application ID, for example `gitlab`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SnowplowAppId { get; set; }
@@ -3282,7 +3286,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string SnowplowCollectorHostname { get; set; }
 #endif
-        /// <summary>The Snowplow cookie domain</summary>
+        /// <summary>Snowplow cookie domain, for example `.gitlab.com`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SnowplowCookieDomain { get; set; }
@@ -3300,11 +3304,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>Enable Snowplow tracking</summary>
         public bool? SnowplowEnabled { get; set; }
-        /// <summary>Enable Sourcegraph</summary>
+        /// <summary>If `true`, enables Sourcegraph integration. Requires `sourcegraph_url`.</summary>
         public bool? SourcegraphEnabled { get; set; }
-        /// <summary>Only allow public projects to communicate with Sourcegraph</summary>
+        /// <summary>If `true`, blocks Sourcegraph from being loaded on private and internal projects. Defaults to `true`.</summary>
         public bool? SourcegraphPublicOnly { get; set; }
-        /// <summary>The configured Sourcegraph instance URL</summary>
+        /// <summary>Configured Sourcegraph instance URL.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SourcegraphUrl { get; set; }
@@ -3322,7 +3326,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>Enable Spam Check via external API endpoint</summary>
         public bool? SpamCheckEndpointEnabled { get; set; }
-        /// <summary>The URL of the external Spam Check service endpoint</summary>
+        /// <summary>URL of the external Spamcheck service endpoint. Valid URI schemes are `grpc` or `tls`. Specifying `tls` forces communication to be encrypted.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SpamCheckEndpointUrl { get; set; }
@@ -3354,7 +3358,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string TagsCreateLimit { get; set; }
 #endif
-        /// <summary>Maximum time for web terminal websocket connection (in seconds). Set to 0 for unlimited time.</summary>
+        /// <summary>Maximum time for a web terminal WebSocket connection, in seconds. Set to `0` for unlimited time.</summary>
         public int? TerminalMaxSessionTime { get; set; }
         /// <summary>(**Required by**: `enforce_terms`) Markdown content for the ToS.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -3366,7 +3370,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>Enable encryption for Terraform state files</summary>
         public bool? TerraformStateEncryptionEnabled { get; set; }
-        /// <summary>(**If enabled, requires**: `throttle_authenticated_api_period_in_seconds` and `throttle_authenticated_api_requests_per_period`) Enable authenticated API request rate limit. Helps reduce request volume (for example, from crawlers or abusive bots).</summary>
+        /// <summary>If `true`, enables the authenticated API request rate limit. Helps reduce request volume (for example, from crawlers or abusive bots). Requires `throttle_authenticated_api_period_in_seconds` and `throttle_authenticated_api_requests_per_period`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ThrottleAuthenticatedApiEnabled { get; set; }
@@ -3374,7 +3378,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ThrottleAuthenticatedApiEnabled { get; set; }
 #endif
-        /// <summary>Rate limit period (in seconds).</summary>
+        /// <summary>Rate limit period in seconds.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ThrottleAuthenticatedApiPeriodInSeconds { get; set; }
@@ -3534,7 +3538,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ThrottleAuthenticatedMcpRequestsPerPeriod { get; set; }
 #endif
-        /// <summary>(**If enabled, requires**: `throttle_authenticated_packages_api_period_in_seconds` and `throttle_authenticated_packages_api_requests_per_period`) Enable authenticated API request rate limit. Helps reduce request volume (for example, from crawlers or abusive bots).</summary>
+        /// <summary>If `true`, enables the authenticated package registry API request rate limit. Helps reduce request volume (for example, from crawlers or abusive bots). View [package registry rate limits](https://docs.gitlab.com/rate_limits/api/package-registry/) for more details. Requires `throttle_authenticated_packages_api_period_in_seconds` and `throttle_authenticated_packages_api_requests_per_period`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ThrottleAuthenticatedPackagesApiEnabled { get; set; }
@@ -3542,7 +3546,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ThrottleAuthenticatedPackagesApiEnabled { get; set; }
 #endif
-        /// <summary>Rate limit period (in seconds).</summary>
+        /// <summary>Rate limit period in seconds. View [package registry rate limits](https://docs.gitlab.com/rate_limits/api/package-registry/) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ThrottleAuthenticatedPackagesApiPeriodInSeconds { get; set; }
@@ -3550,7 +3554,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ThrottleAuthenticatedPackagesApiPeriodInSeconds { get; set; }
 #endif
-        /// <summary>Maximum requests per period per user.</summary>
+        /// <summary>Maximum requests per period per user. View [package registry rate limits](https://docs.gitlab.com/rate_limits/api/package-registry/) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ThrottleAuthenticatedPackagesApiRequestsPerPeriod { get; set; }
@@ -3558,7 +3562,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ThrottleAuthenticatedPackagesApiRequestsPerPeriod { get; set; }
 #endif
-        /// <summary>(**If enabled, requires**: `throttle_authenticated_web_period_in_seconds` and `throttle_authenticated_web_requests_per_period`) Enable authenticated web request rate limit. Helps reduce request volume (for example, from crawlers or abusive bots).</summary>
+        /// <summary>If `true`, enables the authenticated web request rate limit. Helps reduce request volume (for example, from crawlers or abusive bots). Requires `throttle_authenticated_web_period_in_seconds` and `throttle_authenticated_web_requests_per_period`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ThrottleAuthenticatedWebEnabled { get; set; }
@@ -3566,7 +3570,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ThrottleAuthenticatedWebEnabled { get; set; }
 #endif
-        /// <summary>Rate limit period (in seconds).</summary>
+        /// <summary>Rate limit period in seconds.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ThrottleAuthenticatedWebPeriodInSeconds { get; set; }
@@ -3630,7 +3634,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ThrottleProtectedPathsRequestsPerPeriod { get; set; }
 #endif
-        /// <summary>(**If enabled, requires**: `throttle_unauthenticated_api_period_in_seconds` and `throttle_unauthenticated_api_requests_per_period`) Enable unauthenticated API request rate limit. Helps reduce request volume (for example, from crawlers or abusive bots).</summary>
+        /// <summary>If `true`, enables the unauthenticated API request rate limit. Helps reduce request volume (for example, from crawlers or abusive bots). Requires `throttle_unauthenticated_api_period_in_seconds` and `throttle_unauthenticated_api_requests_per_period`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ThrottleUnauthenticatedApiEnabled { get; set; }
@@ -3678,7 +3682,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ThrottleUnauthenticatedDeprecatedApiRequestsPerPeriod { get; set; }
 #endif
-        /// <summary>([Deprecated](https://gitlab.com/gitlab-org/gitlab/-/issues/335300) in GitLab 14.3. Use `throttle_unauthenticated_web_enabled` or `throttle_unauthenticated_api_enabled` instead.) (**If enabled, requires**: `throttle_unauthenticated_period_in_seconds` and `throttle_unauthenticated_requests_per_period`) Enable unauthenticated web request rate limit. Helps reduce request volume (for example, from crawlers or abusive bots).</summary>
+        /// <summary>If `true`, enables the unauthenticated web request rate limit. Helps reduce request volume (for example, from crawlers or abusive bots). Requires `throttle_unauthenticated_period_in_seconds` and `throttle_unauthenticated_requests_per_period`. [Deprecated](https://gitlab.com/gitlab-org/gitlab/-/issues/335300) in GitLab 14.3. Use `throttle_unauthenticated_web_enabled` or `throttle_unauthenticated_api_enabled` instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ThrottleUnauthenticatedEnabled { get; set; }
@@ -3734,7 +3738,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ThrottleUnauthenticatedGitHttpRequestsPerPeriod { get; set; }
 #endif
-        /// <summary>(**If enabled, requires**: `throttle_unauthenticated_packages_api_period_in_seconds` and `throttle_unauthenticated_packages_api_requests_per_period`) Enable unauthenticated API request rate limit. Helps reduce request volume (for example, from crawlers or abusive bots).</summary>
+        /// <summary>If `true`, enables the unauthenticated package registry API request rate limit. Helps reduce request volume (for example, from crawlers or abusive bots). View [package registry rate limits](https://docs.gitlab.com/rate_limits/api/package-registry/) for more details. Requires `throttle_unauthenticated_packages_api_period_in_seconds` and `throttle_unauthenticated_packages_api_requests_per_period`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ThrottleUnauthenticatedPackagesApiEnabled { get; set; }
@@ -3742,7 +3746,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ThrottleUnauthenticatedPackagesApiEnabled { get; set; }
 #endif
-        /// <summary>Rate limit period (in seconds).</summary>
+        /// <summary>Rate limit period in seconds. View [package registry rate limits](https://docs.gitlab.com/rate_limits/api/package-registry/) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ThrottleUnauthenticatedPackagesApiPeriodInSeconds { get; set; }
@@ -3750,7 +3754,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ThrottleUnauthenticatedPackagesApiPeriodInSeconds { get; set; }
 #endif
-        /// <summary>Maximum requests per period per user.</summary>
+        /// <summary>Maximum requests per period per IP. View [package registry rate limits](https://docs.gitlab.com/rate_limits/api/package-registry/) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ThrottleUnauthenticatedPackagesApiRequestsPerPeriod { get; set; }
@@ -3758,7 +3762,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ThrottleUnauthenticatedPackagesApiRequestsPerPeriod { get; set; }
 #endif
-        /// <summary>([Deprecated](https://gitlab.com/gitlab-org/gitlab/-/issues/335300) in GitLab 14.3. Use `throttle_unauthenticated_web_period_in_seconds` or `throttle_unauthenticated_api_period_in_seconds` instead.) Rate limit period in seconds.</summary>
+        /// <summary>Rate limit period in seconds. [Deprecated](https://gitlab.com/gitlab-org/gitlab/-/issues/335300) in GitLab 14.3. Use `throttle_unauthenticated_web_period_in_seconds` or `throttle_unauthenticated_api_period_in_seconds` instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ThrottleUnauthenticatedPeriodInSeconds { get; set; }
@@ -3766,7 +3770,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ThrottleUnauthenticatedPeriodInSeconds { get; set; }
 #endif
-        /// <summary>([Deprecated](https://gitlab.com/gitlab-org/gitlab/-/issues/335300) in GitLab 14.3. Use `throttle_unauthenticated_web_requests_per_period` or `throttle_unauthenticated_api_requests_per_period` instead.) Maximum requests per period per IP.</summary>
+        /// <summary>Maximum requests per period per IP. [Deprecated](https://gitlab.com/gitlab-org/gitlab/-/issues/335300) in GitLab 14.3. Use `throttle_unauthenticated_web_requests_per_period` or `throttle_unauthenticated_api_requests_per_period` instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ThrottleUnauthenticatedRequestsPerPeriod { get; set; }
@@ -3774,7 +3778,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ThrottleUnauthenticatedRequestsPerPeriod { get; set; }
 #endif
-        /// <summary>(**If enabled, requires**: `throttle_unauthenticated_web_period_in_seconds` and `throttle_unauthenticated_web_requests_per_period`) Enable unauthenticated web request rate limit. Helps reduce request volume (for example, from crawlers or abusive bots).</summary>
+        /// <summary>If `true`, enables the unauthenticated web request rate limit. Helps reduce request volume (for example, from crawlers or abusive bots). Requires `throttle_unauthenticated_web_period_in_seconds` and `throttle_unauthenticated_web_requests_per_period`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ThrottleUnauthenticatedWebEnabled { get; set; }
@@ -3798,7 +3802,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ThrottleUnauthenticatedWebRequestsPerPeriod { get; set; }
 #endif
-        /// <summary>Limit display of time tracking units to hours. Default is `false`.</summary>
+        /// <summary>If `true`, limits display of time tracking units to hours. Default is `false`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TimeTrackingLimitToHours { get; set; }
@@ -3822,7 +3826,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ToolApprovalForSessionEnabled { get; set; }
 #endif
-        /// <summary>Allows a user to create top-level-groups. Default is `true`.</summary>
+        /// <summary>If `true`, users can create top-level groups with the API. Defaults to `true`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TopLevelGroupCreationEnabled { get; set; }
@@ -3830,7 +3834,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string TopLevelGroupCreationEnabled { get; set; }
 #endif
-        /// <summary>Amount of time (in hours) that users are allowed to skip forced configuration of two-factor authentication</summary>
+        /// <summary>Amount of time, in hours, that users can skip enforced two-factor authentication setup.</summary>
         public int? TwoFactorGracePeriod { get; set; }
         /// <summary>Specifies how many days after account creation to delete users who have not confirmed their email. Only applicable if `delete_unconfirmed_users` is set to `true`. Must be `1` or greater. Default is `7`. GitLab Self-Managed, Premium and Ultimate only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -3840,7 +3844,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string UnconfirmedUsersDeleteAfterDays { get; set; }
 #endif
-        /// <summary>(**If enabled, requires**: `unique_ips_limit_per_user` and `unique_ips_limit_time_window`) Limit sign in from multiple IPs.</summary>
+        /// <summary>If `true`, limits sign-ins from multiple IP addresses. Requires `unique_ips_limit_per_user` and `unique_ips_limit_time_window`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UniqueIpsLimitEnabled { get; set; }
@@ -3864,7 +3868,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string UniqueIpsLimitTimeWindow { get; set; }
 #endif
-        /// <summary>Fetch GitLab Runner release version data from GitLab.com.</summary>
+        /// <summary>If `true`, fetches GitLab Runner release version data from GitLab.com. For more information, see how to [determine which runners need to be upgraded](https://docs.gitlab.com/ci/runners/runners_scope/#determine-which-runners-need-to-be-upgraded).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UpdateRunnerVersionsEnabled { get; set; }
@@ -3892,7 +3896,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string UsagePingGenerationEnabled { get; set; }
 #endif
-        /// <summary>Enables ClickHouse as a data source for analytics reports. ClickHouse must be configured for this setting to take effect. Available on Premium and Ultimate only.</summary>
+        /// <summary>If `true`, enables ClickHouse as a data source for analytics reports. ClickHouse must be configured for this setting to take effect. Premium and Ultimate only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UseClickhouseForAnalytics { get; set; }
@@ -3910,9 +3914,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string UserContributedProjectsApiLimit { get; set; }
 #endif
-        /// <summary>Send emails to users upon account deactivation</summary>
+        /// <summary>If `true`, sends emails to users when their account is deactivated.</summary>
         public bool? UserDeactivationEmailsEnabled { get; set; }
-        /// <summary>Newly registered users are external by default.</summary>
+        /// <summary>If `true`, newly registered users are external by default.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UserDefaultExternal { get; set; }
@@ -3928,7 +3932,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string UserDefaultInternalRegex { get; set; }
 #endif
-        /// <summary>Newly created users have private profile by default. Defaults to `false`.</summary>
+        /// <summary>If `true`, newly created users have a private profile by default. Defaults to `false`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UserDefaultsToPrivateProfile { get; set; }
@@ -3936,7 +3940,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string UserDefaultsToPrivateProfile { get; set; }
 #endif
-        /// <summary>Allow users to register any application to use GitLab as an OAuth provider. This setting does not affect group-level OAuth applications.</summary>
+        /// <summary>If `true`, allows users to register any application to use GitLab as an OAuth provider. This setting does not affect group-level OAuth applications.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UserOauthApplications { get; set; }
@@ -4008,7 +4012,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string UsersApiLimitStatus { get; set; }
 #endif
-        /// <summary>Maximum number of calls to the /users/:id API per 10 minutes per user. Set to 0 for unlimited requests.</summary>
+        /// <summary>Maximum number of calls to the `/users/:id` API per 10 minutes per user. Set to `0` for unlimited requests.</summary>
         public int? UsersGetByIdLimit { get; set; }
         /// <summary>The users_get_by_id_limit_allowlist_raw property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -4042,7 +4046,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string VacProjectIdsRaw { get; set; }
 #endif
-        /// <summary>List of types which are allowed to register a GitLab runner</summary>
+        /// <summary>List of types which are allowed to register a GitLab Runner. Can be `[]`, `[&apos;group&apos;]`, `[&apos;project&apos;]`, or `[&apos;group&apos;, &apos;project&apos;]`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? ValidRunnerRegistrars { get; set; }
@@ -4050,7 +4054,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<string> ValidRunnerRegistrars { get; set; }
 #endif
-        /// <summary>Let GitLab inform you when an update is available.</summary>
+        /// <summary>If `true`, GitLab informs you when an update is available.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? VersionCheckEnabled { get; set; }
@@ -4060,7 +4064,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>Maximum number of requests on virtual registries endpoints, per IP address, per 15 seconds. Default: 4000. To disable limits, set to `0`. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/521692) in GitLab 17.11.</summary>
         public int? VirtualRegistriesEndpointsApiLimit { get; set; }
-        /// <summary>Settings for VS Code Extension Marketplace</summary>
+        /// <summary>Settings for VS Code Extension Marketplace.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestVscodeExtensionMarketplace? VscodeExtensionMarketplace { get; set; }
@@ -4100,7 +4104,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string VulnerabilityManagementPoliciesPerConfigurationLimit { get; set; }
 #endif
-        /// <summary>Maximum number of webhook event resend requests per minute, per user, for a given project or group. Default: 5. Set to `0` to disable limits. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/587887) in GitLab 19.3.</summary>
+        /// <summary>Maximum number of webhook event resend requests per minute, per user, for a given project or group. Default: `5`. Set to `0` to disable limits. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/587887) in GitLab 19.3.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? WebHookEventResendLimit { get; set; }
@@ -4108,7 +4112,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string WebHookEventResendLimit { get; set; }
 #endif
-        /// <summary>Maximum number of webhook test requests per minute, per user, for a given project or group. Default: 5. Set to `0` to disable limits. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/587887) in GitLab 19.3.</summary>
+        /// <summary>Maximum number of webhook test requests per minute, per user, for a given project or group. Default: `5`. Set to `0` to disable limits. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/587887) in GitLab 19.3.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? WebHookTestLimit { get; set; }
@@ -4116,11 +4120,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string WebHookTestLimit { get; set; }
 #endif
-        /// <summary>What&apos;s new variant, possible values: `all_tiers`, `current_tier`, and `disabled`.</summary>
+        /// <summary>Which features [What&apos;s new](https://docs.gitlab.com/administration/whats-new/) shows. `all_tiers` shows features for all tiers, `current_tier` shows only features for the instance&apos;s tier, and `disabled` hides What&apos;s new.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestWhatsNewVariant? WhatsNewVariant { get; set; }
-        /// <summary>Allow URI includes for AsciiDoc wiki pages</summary>
+        /// <summary>If `true`, allows URI includes for AsciiDoc wiki pages.</summary>
         public bool? WikiAsciidocAllowUriIncludes { get; set; }
-        /// <summary>Maximum wiki page content size in bytes</summary>
+        /// <summary>Maximum wiki page content size in bytes. Default: 5242880 bytes (5 MB). The minimum value is 1024 bytes.</summary>
         public int? WikiPageMaxContentBytes { get; set; }
         /// <summary>The zoekt_auto_index_root_namespace property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -4448,6 +4452,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "duo_chat_expiration_column", n => { DuoChatExpirationColumn = n.GetStringValue(); } },
                 { "duo_chat_expiration_days", n => { DuoChatExpirationDays = n.GetStringValue(); } },
                 { "duo_cli_enabled", n => { DuoCliEnabled = n.GetStringValue(); } },
+                { "duo_code_review_decisions_enabled", n => { DuoCodeReviewDecisionsEnabled = n.GetBoolValue(); } },
                 { "duo_custom_agents_availability", n => { DuoCustomAgentsAvailability = n.GetStringValue(); } },
                 { "duo_custom_agents_enabled", n => { DuoCustomAgentsEnabled = n.GetBoolValue(); } },
                 { "duo_custom_flows_availability", n => { DuoCustomFlowsAvailability = n.GetStringValue(); } },
@@ -4621,6 +4626,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "jira_connect_proxy_url", n => { JiraConnectProxyUrl = n.GetStringValue(); } },
                 { "jira_connect_public_key_storage_enabled", n => { JiraConnectPublicKeyStorageEnabled = n.GetBoolValue(); } },
                 { "jira_forge_app_id", n => { JiraForgeAppId = n.GetStringValue(); } },
+                { "job_erase_limit_per_user_project", n => { JobEraseLimitPerUserProject = n.GetIntValue(); } },
                 { "job_play_limit_per_user_project", n => { JobPlayLimitPerUserProject = n.GetIntValue(); } },
                 { "job_retry_limit_per_user_project", n => { JobRetryLimitPerUserProject = n.GetIntValue(); } },
                 { "keep_latest_artifact", n => { KeepLatestArtifact = n.GetStringValue(); } },
@@ -5132,6 +5138,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("duo_chat_expiration_column", DuoChatExpirationColumn);
             writer.WriteStringValue("duo_chat_expiration_days", DuoChatExpirationDays);
             writer.WriteStringValue("duo_cli_enabled", DuoCliEnabled);
+            writer.WriteBoolValue("duo_code_review_decisions_enabled", DuoCodeReviewDecisionsEnabled);
             writer.WriteStringValue("duo_custom_agents_availability", DuoCustomAgentsAvailability);
             writer.WriteBoolValue("duo_custom_agents_enabled", DuoCustomAgentsEnabled);
             writer.WriteStringValue("duo_custom_flows_availability", DuoCustomFlowsAvailability);
@@ -5305,6 +5312,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("jira_connect_proxy_url", JiraConnectProxyUrl);
             writer.WriteBoolValue("jira_connect_public_key_storage_enabled", JiraConnectPublicKeyStorageEnabled);
             writer.WriteStringValue("jira_forge_app_id", JiraForgeAppId);
+            writer.WriteIntValue("job_erase_limit_per_user_project", JobEraseLimitPerUserProject);
             writer.WriteIntValue("job_play_limit_per_user_project", JobPlayLimitPerUserProject);
             writer.WriteIntValue("job_retry_limit_per_user_project", JobRetryLimitPerUserProject);
             writer.WriteStringValue("keep_latest_artifact", KeepLatestArtifact);

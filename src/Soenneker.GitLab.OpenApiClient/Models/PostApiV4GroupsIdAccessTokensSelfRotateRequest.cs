@@ -15,7 +15,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The expiration date of the token</summary>
+        /// <summary>Date when the access token expires. If omitted, the new token expires one week after rotation when [token expiry is enforced](https://docs.gitlab.com/user/profile/personal_access_tokens/#access-token-expiration), and does not expire otherwise.</summary>
         public Date? ExpiresAt { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GroupsIdAccessTokensSelfRotateRequest"/> and sets the default values.

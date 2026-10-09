@@ -17,7 +17,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public int? AccessLevel { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The description of the access token</summary>
+        /// <summary>Description of the access token. Limited to 255 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get; set; }
@@ -27,7 +27,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>Date when the access token expires. If omitted, the token does not expire, which is accepted only when [token expiry is not enforced](https://docs.gitlab.com/user/profile/personal_access_tokens/#access-token-expiration).</summary>
         public Date? ExpiresAt { get; set; }
-        /// <summary>The name of the access token</summary>
+        /// <summary>Name of the access token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }

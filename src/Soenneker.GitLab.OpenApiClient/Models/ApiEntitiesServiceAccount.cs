@@ -22,6 +22,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Email { get; set; }
 #endif
+        /// <summary>The external property</summary>
+        public bool? External { get; set; }
         /// <summary>The id property</summary>
         public long? Id { get; set; }
         /// <summary>The name property</summary>
@@ -82,6 +84,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "email", n => { Email = n.GetStringValue(); } },
+                { "external", n => { External = n.GetBoolValue(); } },
                 { "id", n => { Id = n.GetLongValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "public_email", n => { PublicEmail = n.GetStringValue(); } },
@@ -97,6 +100,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("email", Email);
+            writer.WriteBoolValue("external", External);
             writer.WriteLongValue("id", Id);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("public_email", PublicEmail);

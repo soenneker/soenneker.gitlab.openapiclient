@@ -8,14 +8,14 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// Determine if developers can push to default branch
+    /// Default branch protection settings. For available options, see [Options for `default_branch_protection_defaults`](https://docs.gitlab.com/api/groups/#options-for-default_branch_protection_defaults). [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/408314) in GitLab 17.0.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PutApiV4ApplicationSettingsRequestDefaultBranchProtectionDefaults : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>An array of access levels allowed to merge</summary>
+        /// <summary>Array of access levels allowed to merge into the default branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestDefaultBranchProtectionDefaultsAllowedToMergeItem>? AllowedToMerge { get; set; }
@@ -23,7 +23,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestDefaultBranchProtectionDefaultsAllowedToMergeItem> AllowedToMerge { get; set; }
 #endif
-        /// <summary>An array of access levels allowed to push</summary>
+        /// <summary>Array of access levels allowed to push to the default branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestDefaultBranchProtectionDefaultsAllowedToPushItem>? AllowedToPush { get; set; }
@@ -31,11 +31,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestDefaultBranchProtectionDefaultsAllowedToPushItem> AllowedToPush { get; set; }
 #endif
-        /// <summary>Allow force push for all users with push access.</summary>
+        /// <summary>If `true`, allows force push for all users with push access.</summary>
         public bool? AllowForcePush { get; set; }
         /// <summary>Require approval from code owners</summary>
         public bool? CodeOwnerApprovalRequired { get; set; }
-        /// <summary>Allow developers to initial push</summary>
+        /// <summary>If `true`, allows developers to make the initial push.</summary>
         public bool? DeveloperCanInitialPush { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestDefaultBranchProtectionDefaults"/> and sets the default values.

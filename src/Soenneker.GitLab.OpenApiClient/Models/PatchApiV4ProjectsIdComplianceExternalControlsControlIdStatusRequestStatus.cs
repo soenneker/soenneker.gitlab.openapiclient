@@ -15,5 +15,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         #pragma warning disable CS1591
         Fail,
         #pragma warning restore CS1591
+        [EnumMember(Value = "not_applicable")]
+        #pragma warning disable CS1591
+        NotApplicable,
+        #pragma warning restore CS1591
     }
 }

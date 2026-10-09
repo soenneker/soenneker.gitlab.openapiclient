@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>What&apos;s new variant, possible values: `all_tiers`, `current_tier`, and `disabled`.</summary>
+    /// <summary>Which features [What&apos;s new](https://docs.gitlab.com/administration/whats-new/) shows. `all_tiers` shows features for all tiers, `current_tier` shows only features for the instance&apos;s tier, and `disabled` hides What&apos;s new.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PutApiV4ApplicationSettingsRequestWhatsNewVariant
     {

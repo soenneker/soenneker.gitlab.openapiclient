@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Personal_access_tokens.Self.Asso
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class AssociationsRequestBuilderGetQueryParameters 
         {
-            /// <summary>Limit by minimum access level of authenticated user</summary>
+            /// <summary>Return groups and projects where the current user has at least the specified access level. For a list of values, see [roles](https://docs.gitlab.com/user/permissions/#default-roles).</summary>
             [QueryParameter("min_access_level")]
             public int? MinAccessLevel { get; set; }
             /// <summary>Page number of results to retrieve.</summary>

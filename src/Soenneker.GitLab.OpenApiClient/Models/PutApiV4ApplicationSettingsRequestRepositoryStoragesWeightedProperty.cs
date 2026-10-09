@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// Storage paths for new projects with a weighted value ranging from 0 to 100
+    /// Hash of names of storages taken from `gitlab.yml` to [weights](https://docs.gitlab.com/administration/repository_storage_paths/#configure-where-new-repositories-are-stored) ranging from 0 to 100. New projects are created in one of these stores, chosen by a weighted random selection.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PutApiV4ApplicationSettingsRequestRepositoryStoragesWeightedProperty : IAdditionalDataHolder, IParsable

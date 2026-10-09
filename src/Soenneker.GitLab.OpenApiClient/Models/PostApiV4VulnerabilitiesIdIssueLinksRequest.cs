@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string LinkType { get; set; }
 #endif
-        /// <summary>The IID of an issue to relate to</summary>
+        /// <summary>Internal ID of the issue to relate to the vulnerability.</summary>
         public int? TargetIssueIid { get; set; }
         /// <summary>The ID of the target project</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

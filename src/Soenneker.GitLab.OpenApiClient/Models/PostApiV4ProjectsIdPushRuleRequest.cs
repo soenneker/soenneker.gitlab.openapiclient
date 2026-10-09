@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>All commit author emails must match this. At least one of `deny_delete_tag`, `member_check`, `prevent_secrets`, `commit_message_regex`, `commit_message_negative_regex`, `branch_name_regex`, `author_email_regex`, `file_name_regex`, `max_file_size`, `commit_committer_check`, `commit_committer_name_check`, `reject_unsigned_commits`, `reject_non_dco_commits` must be provided.</summary>
+        /// <summary>Regular expression that commit author emails must match, for example `@my-company.com$`. At least one of `deny_delete_tag`, `member_check`, `prevent_secrets`, `commit_message_regex`, `commit_message_negative_regex`, `branch_name_regex`, `author_email_regex`, `file_name_regex`, `max_file_size`, `commit_committer_check`, `commit_committer_name_check`, `reject_unsigned_commits`, `reject_non_dco_commits` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AuthorEmailRegex { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string AuthorEmailRegex { get; set; }
 #endif
-        /// <summary>All branches names must match this. At least one of `deny_delete_tag`, `member_check`, `prevent_secrets`, `commit_message_regex`, `commit_message_negative_regex`, `branch_name_regex`, `author_email_regex`, `file_name_regex`, `max_file_size`, `commit_committer_check`, `commit_committer_name_check`, `reject_unsigned_commits`, `reject_non_dco_commits` must be provided.</summary>
+        /// <summary>Regular expression that branch names must match. At least one of `deny_delete_tag`, `member_check`, `prevent_secrets`, `commit_message_regex`, `commit_message_negative_regex`, `branch_name_regex`, `author_email_regex`, `file_name_regex`, `max_file_size`, `commit_committer_check`, `commit_committer_name_check`, `reject_unsigned_commits`, `reject_non_dco_commits` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? BranchNameRegex { get; set; }
@@ -30,11 +30,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string BranchNameRegex { get; set; }
 #endif
-        /// <summary>Users can only push commits to this repository if the committer email is one of their own verified emails. At least one of `deny_delete_tag`, `member_check`, `prevent_secrets`, `commit_message_regex`, `commit_message_negative_regex`, `branch_name_regex`, `author_email_regex`, `file_name_regex`, `max_file_size`, `commit_committer_check`, `commit_committer_name_check`, `reject_unsigned_commits`, `reject_non_dco_commits` must be provided.</summary>
+        /// <summary>If `true`, users can push commits only if the committer email is one of their own verified emails. At least one of `deny_delete_tag`, `member_check`, `prevent_secrets`, `commit_message_regex`, `commit_message_negative_regex`, `branch_name_regex`, `author_email_regex`, `file_name_regex`, `max_file_size`, `commit_committer_check`, `commit_committer_name_check`, `reject_unsigned_commits`, `reject_non_dco_commits` must be provided.</summary>
         public bool? CommitCommitterCheck { get; set; }
-        /// <summary>Users can only push commits to this repository if the commit author name is consistent with their GitLab account name. At least one of `deny_delete_tag`, `member_check`, `prevent_secrets`, `commit_message_regex`, `commit_message_negative_regex`, `branch_name_regex`, `author_email_regex`, `file_name_regex`, `max_file_size`, `commit_committer_check`, `commit_committer_name_check`, `reject_unsigned_commits`, `reject_non_dco_commits` must be provided.</summary>
+        /// <summary>If `true`, users can push commits only if the commit author name is consistent with their GitLab account name. At least one of `deny_delete_tag`, `member_check`, `prevent_secrets`, `commit_message_regex`, `commit_message_negative_regex`, `branch_name_regex`, `author_email_regex`, `file_name_regex`, `max_file_size`, `commit_committer_check`, `commit_committer_name_check`, `reject_unsigned_commits`, `reject_non_dco_commits` must be provided.</summary>
         public bool? CommitCommitterNameCheck { get; set; }
-        /// <summary>No commit message is allowed to match this. At least one of `deny_delete_tag`, `member_check`, `prevent_secrets`, `commit_message_regex`, `commit_message_negative_regex`, `branch_name_regex`, `author_email_regex`, `file_name_regex`, `max_file_size`, `commit_committer_check`, `commit_committer_name_check`, `reject_unsigned_commits`, `reject_non_dco_commits` must be provided.</summary>
+        /// <summary>Regular expression that commit messages must not match. At least one of `deny_delete_tag`, `member_check`, `prevent_secrets`, `commit_message_regex`, `commit_message_negative_regex`, `branch_name_regex`, `author_email_regex`, `file_name_regex`, `max_file_size`, `commit_committer_check`, `commit_committer_name_check`, `reject_unsigned_commits`, `reject_non_dco_commits` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CommitMessageNegativeRegex { get; set; }
@@ -42,7 +42,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string CommitMessageNegativeRegex { get; set; }
 #endif
-        /// <summary>All commit messages must match this. At least one of `deny_delete_tag`, `member_check`, `prevent_secrets`, `commit_message_regex`, `commit_message_negative_regex`, `branch_name_regex`, `author_email_regex`, `file_name_regex`, `max_file_size`, `commit_committer_check`, `commit_committer_name_check`, `reject_unsigned_commits`, `reject_non_dco_commits` must be provided.</summary>
+        /// <summary>Regular expression that commit messages must match, for example `Fixed \d+\..*`. At least one of `deny_delete_tag`, `member_check`, `prevent_secrets`, `commit_message_regex`, `commit_message_negative_regex`, `branch_name_regex`, `author_email_regex`, `file_name_regex`, `max_file_size`, `commit_committer_check`, `commit_committer_name_check`, `reject_unsigned_commits`, `reject_non_dco_commits` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CommitMessageRegex { get; set; }
@@ -50,9 +50,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string CommitMessageRegex { get; set; }
 #endif
-        /// <summary>Deny deleting a tag. At least one of `deny_delete_tag`, `member_check`, `prevent_secrets`, `commit_message_regex`, `commit_message_negative_regex`, `branch_name_regex`, `author_email_regex`, `file_name_regex`, `max_file_size`, `commit_committer_check`, `commit_committer_name_check`, `reject_unsigned_commits`, `reject_non_dco_commits` must be provided.</summary>
+        /// <summary>If `true`, denies deleting a tag. At least one of `deny_delete_tag`, `member_check`, `prevent_secrets`, `commit_message_regex`, `commit_message_negative_regex`, `branch_name_regex`, `author_email_regex`, `file_name_regex`, `max_file_size`, `commit_committer_check`, `commit_committer_name_check`, `reject_unsigned_commits`, `reject_non_dco_commits` must be provided.</summary>
         public bool? DenyDeleteTag { get; set; }
-        /// <summary>All committed filenames must not match this. At least one of `deny_delete_tag`, `member_check`, `prevent_secrets`, `commit_message_regex`, `commit_message_negative_regex`, `branch_name_regex`, `author_email_regex`, `file_name_regex`, `max_file_size`, `commit_committer_check`, `commit_committer_name_check`, `reject_unsigned_commits`, `reject_non_dco_commits` must be provided.</summary>
+        /// <summary>Regular expression that committed filenames must not match. At least one of `deny_delete_tag`, `member_check`, `prevent_secrets`, `commit_message_regex`, `commit_message_negative_regex`, `branch_name_regex`, `author_email_regex`, `file_name_regex`, `max_file_size`, `commit_committer_check`, `commit_committer_name_check`, `reject_unsigned_commits`, `reject_non_dco_commits` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FileNameRegex { get; set; }
@@ -60,15 +60,15 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string FileNameRegex { get; set; }
 #endif
-        /// <summary>Maximum file size (MB). At least one of `deny_delete_tag`, `member_check`, `prevent_secrets`, `commit_message_regex`, `commit_message_negative_regex`, `branch_name_regex`, `author_email_regex`, `file_name_regex`, `max_file_size`, `commit_committer_check`, `commit_committer_name_check`, `reject_unsigned_commits`, `reject_non_dco_commits` must be provided.</summary>
+        /// <summary>Maximum file size allowed, in MB. At least one of `deny_delete_tag`, `member_check`, `prevent_secrets`, `commit_message_regex`, `commit_message_negative_regex`, `branch_name_regex`, `author_email_regex`, `file_name_regex`, `max_file_size`, `commit_committer_check`, `commit_committer_name_check`, `reject_unsigned_commits`, `reject_non_dco_commits` must be provided.</summary>
         public int? MaxFileSize { get; set; }
-        /// <summary>Restrict commits by author (email) to existing GitLab users. At least one of `deny_delete_tag`, `member_check`, `prevent_secrets`, `commit_message_regex`, `commit_message_negative_regex`, `branch_name_regex`, `author_email_regex`, `file_name_regex`, `max_file_size`, `commit_committer_check`, `commit_committer_name_check`, `reject_unsigned_commits`, `reject_non_dco_commits` must be provided.</summary>
+        /// <summary>If `true`, restricts commits by author email to existing GitLab users. At least one of `deny_delete_tag`, `member_check`, `prevent_secrets`, `commit_message_regex`, `commit_message_negative_regex`, `branch_name_regex`, `author_email_regex`, `file_name_regex`, `max_file_size`, `commit_committer_check`, `commit_committer_name_check`, `reject_unsigned_commits`, `reject_non_dco_commits` must be provided.</summary>
         public bool? MemberCheck { get; set; }
-        /// <summary>GitLab will reject any files that are likely to contain secrets. At least one of `deny_delete_tag`, `member_check`, `prevent_secrets`, `commit_message_regex`, `commit_message_negative_regex`, `branch_name_regex`, `author_email_regex`, `file_name_regex`, `max_file_size`, `commit_committer_check`, `commit_committer_name_check`, `reject_unsigned_commits`, `reject_non_dco_commits` must be provided.</summary>
+        /// <summary>If `true`, rejects files that are likely to [contain secrets](https://gitlab.com/gitlab-org/gitlab/-/blob/master/ee/lib/gitlab/checks/files_denylist.yml). At least one of `deny_delete_tag`, `member_check`, `prevent_secrets`, `commit_message_regex`, `commit_message_negative_regex`, `branch_name_regex`, `author_email_regex`, `file_name_regex`, `max_file_size`, `commit_committer_check`, `commit_committer_name_check`, `reject_unsigned_commits`, `reject_non_dco_commits` must be provided.</summary>
         public bool? PreventSecrets { get; set; }
-        /// <summary>Reject commit when it’s not DCO certified. At least one of `deny_delete_tag`, `member_check`, `prevent_secrets`, `commit_message_regex`, `commit_message_negative_regex`, `branch_name_regex`, `author_email_regex`, `file_name_regex`, `max_file_size`, `commit_committer_check`, `commit_committer_name_check`, `reject_unsigned_commits`, `reject_non_dco_commits` must be provided.</summary>
+        /// <summary>If `true`, rejects commits that are not DCO certified. At least one of `deny_delete_tag`, `member_check`, `prevent_secrets`, `commit_message_regex`, `commit_message_negative_regex`, `branch_name_regex`, `author_email_regex`, `file_name_regex`, `max_file_size`, `commit_committer_check`, `commit_committer_name_check`, `reject_unsigned_commits`, `reject_non_dco_commits` must be provided.</summary>
         public bool? RejectNonDcoCommits { get; set; }
-        /// <summary>Reject commit when it’s not signed. At least one of `deny_delete_tag`, `member_check`, `prevent_secrets`, `commit_message_regex`, `commit_message_negative_regex`, `branch_name_regex`, `author_email_regex`, `file_name_regex`, `max_file_size`, `commit_committer_check`, `commit_committer_name_check`, `reject_unsigned_commits`, `reject_non_dco_commits` must be provided.</summary>
+        /// <summary>If `true`, rejects commits that are not signed. At least one of `deny_delete_tag`, `member_check`, `prevent_secrets`, `commit_message_regex`, `commit_message_negative_regex`, `branch_name_regex`, `author_email_regex`, `file_name_regex`, `max_file_size`, `commit_committer_check`, `commit_committer_name_check`, `reject_unsigned_commits`, `reject_non_dco_commits` must be provided.</summary>
         public bool? RejectUnsignedCommits { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdPushRuleRequest"/> and sets the default values.

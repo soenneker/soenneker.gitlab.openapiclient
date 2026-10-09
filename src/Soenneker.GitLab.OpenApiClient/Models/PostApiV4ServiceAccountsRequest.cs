@@ -22,6 +22,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Email { get; set; }
 #endif
+        /// <summary>Flag indicating the user is an external user</summary>
+        public bool? External { get; set; }
         /// <summary>Name of the user</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -64,6 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "email", n => { Email = n.GetStringValue(); } },
+                { "external", n => { External = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "username", n => { Username = n.GetStringValue(); } },
             };
@@ -76,6 +79,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("email", Email);
+            writer.WriteBoolValue("external", External);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("username", Username);
             writer.WriteAdditionalData(AdditionalData);

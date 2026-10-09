@@ -94,6 +94,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
+        /// <summary>The duo_code_review_decisions_enabled property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DuoCodeReviewDecisionsEnabled { get; set; }
+#nullable restore
+#else
+        public string DuoCodeReviewDecisionsEnabled { get; set; }
+#endif
         /// <summary>[Experimental] Indicates whether GitLab Duo Core features are enabled for the group</summary>
         public bool? DuoCoreFeaturesEnabled { get; set; }
         /// <summary>The duo_features_enabled property</summary>
@@ -366,6 +374,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "default_branch_protection", n => { DefaultBranchProtection = n.GetIntValue(); } },
                 { "default_branch_protection_defaults", n => { DefaultBranchProtectionDefaults = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
+                { "duo_code_review_decisions_enabled", n => { DuoCodeReviewDecisionsEnabled = n.GetStringValue(); } },
                 { "duo_core_features_enabled", n => { DuoCoreFeaturesEnabled = n.GetBoolValue(); } },
                 { "duo_features_enabled", n => { DuoFeaturesEnabled = n.GetStringValue(); } },
                 { "duo_namespace_access_rules", n => { DuoNamespaceAccessRules = n.GetStringValue(); } },
@@ -430,6 +439,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("default_branch_protection", DefaultBranchProtection);
             writer.WriteStringValue("default_branch_protection_defaults", DefaultBranchProtectionDefaults);
             writer.WriteStringValue("description", Description);
+            writer.WriteStringValue("duo_code_review_decisions_enabled", DuoCodeReviewDecisionsEnabled);
             writer.WriteBoolValue("duo_core_features_enabled", DuoCoreFeaturesEnabled);
             writer.WriteStringValue("duo_features_enabled", DuoFeaturesEnabled);
             writer.WriteStringValue("duo_namespace_access_rules", DuoNamespaceAccessRules);

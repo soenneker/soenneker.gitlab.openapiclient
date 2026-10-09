@@ -218,6 +218,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string DescriptionHtml { get; set; }
 #endif
+        /// <summary>The duo_code_review_decisions_enabled property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DuoCodeReviewDecisionsEnabled { get; set; }
+#nullable restore
+#else
+        public string DuoCodeReviewDecisionsEnabled { get; set; }
+#endif
         /// <summary>The duo_dependency_bump_breaking_changes_enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -999,6 +1007,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "default_branch", n => { DefaultBranch = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "description_html", n => { DescriptionHtml = n.GetStringValue(); } },
+                { "duo_code_review_decisions_enabled", n => { DuoCodeReviewDecisionsEnabled = n.GetStringValue(); } },
                 { "duo_dependency_bump_breaking_changes_enabled", n => { DuoDependencyBumpBreakingChangesEnabled = n.GetStringValue(); } },
                 { "duo_foundational_flows_enabled", n => { DuoFoundationalFlowsEnabled = n.GetStringValue(); } },
                 { "duo_remote_flows_enabled", n => { DuoRemoteFlowsEnabled = n.GetStringValue(); } },
@@ -1170,6 +1179,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("default_branch", DefaultBranch);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("description_html", DescriptionHtml);
+            writer.WriteStringValue("duo_code_review_decisions_enabled", DuoCodeReviewDecisionsEnabled);
             writer.WriteStringValue("duo_dependency_bump_breaking_changes_enabled", DuoDependencyBumpBreakingChangesEnabled);
             writer.WriteStringValue("duo_foundational_flows_enabled", DuoFoundationalFlowsEnabled);
             writer.WriteStringValue("duo_remote_flows_enabled", DuoRemoteFlowsEnabled);

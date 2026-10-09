@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Security.Groups
     public partial class GroupsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.security.groups.item collection</summary>
-        /// <param name="position">The ID of a group</param>
+        /// <param name="position">ID or URL-encoded path of the group.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Security.Groups.Item.GroupsItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Security.Groups.Item.GroupsItemRequestBuilder this[string position]
         {
