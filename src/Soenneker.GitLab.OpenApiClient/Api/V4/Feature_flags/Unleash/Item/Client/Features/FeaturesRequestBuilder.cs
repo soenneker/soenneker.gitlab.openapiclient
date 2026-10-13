@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Feature_flags.Unleash.Item.Clien
         {
         }
         /// <summary>
-        /// Get a list of features
+        /// Returns feature flags in the Unleash client features format used by GitLab feature flag clients.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Feature_flags.Unleash.Item.Clien
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get a list of features
+        /// Returns feature flags in the Unleash client features format used by GitLab feature flag clients.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -78,7 +78,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Feature_flags.Unleash.Item.Clien
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Feature_flags.Unleash.Item.Client.Features.FeaturesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get a list of features
+        /// Returns feature flags in the Unleash client features format used by GitLab feature flag clients.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class FeaturesRequestBuilderGetQueryParameters 

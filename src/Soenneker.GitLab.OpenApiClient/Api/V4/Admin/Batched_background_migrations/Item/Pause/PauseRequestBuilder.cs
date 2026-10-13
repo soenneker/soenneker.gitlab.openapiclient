@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Batched_background_migrati
         {
         }
         /// <summary>
-        /// Pause a batched background migration
+        /// Pauses an active batched background migration temporarily.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBatchedBackgroundMigration"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Batched_background_migrati
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBatchedBackgroundMigration>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBatchedBackgroundMigration.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Pause a batched background migration
+        /// Pauses an active batched background migration temporarily.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

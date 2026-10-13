@@ -45,7 +45,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Feature_flags.Unleash.Item
         {
         }
         /// <summary>
-        /// Get Unleash features
+        /// This endpoint is a no-op and always returns a 200 OK response.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -63,7 +63,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Feature_flags.Unleash.Item
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get Unleash features
+        /// This endpoint is a no-op and always returns a 200 OK response.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -90,7 +90,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Feature_flags.Unleash.Item
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Feature_flags.Unleash.Item.WithProjectItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get Unleash features
+        /// This endpoint is a no-op and always returns a 200 OK response.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithProjectItemRequestBuilderGetQueryParameters 

@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Batched_background_migrati
         {
         }
         /// <summary>
-        /// Get the list of batched background migrations
+        /// Lists all batched background migrations with optional filters for database and job class name.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBatchedBackgroundMigration&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Batched_background_migrati
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Get the list of batched background migrations
+        /// Lists all batched background migrations with optional filters for database and job class name.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -94,7 +94,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Batched_background_migrati
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Batched_background_migrations.Batched_background_migrationsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get the list of batched background migrations
+        /// Lists all batched background migrations with optional filters for database and job class name.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Batched_background_migrationsRequestBuilderGetQueryParameters 

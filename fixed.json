@@ -18079,6 +18079,9 @@
           },
           "404": {
             "description": "404 Not found"
+          },
+          "503": {
+            "description": "503 Service Unavailable"
           }
         }
       },
@@ -38736,6 +38739,7 @@
           "Unleash"
         ],
         "summary": "Get Unleash features",
+        "description": "This endpoint is a no-op and always returns a 200 OK response.",
         "operationId": "GetApiV4FeatureFlagsUnleashProjectId",
         "parameters": [
           {
@@ -38836,6 +38840,7 @@
           "Unleash"
         ],
         "summary": "Get a list of features",
+        "description": "Returns feature flags in the Unleash client features format used by GitLab feature flag clients.",
         "operationId": "GetApiV4FeatureFlagsUnleashProjectIdClientFeatures",
         "parameters": [
           {
@@ -38885,6 +38890,7 @@
           "Unleash"
         ],
         "summary": "Register Unleash client",
+        "description": "This endpoint is a no-op and always returns a 200 OK response.",
         "operationId": "PostApiV4FeatureFlagsUnleashProjectIdClientRegister",
         "parameters": [
           {
@@ -38925,6 +38931,7 @@
           "Unleash"
         ],
         "summary": "Report Unleash client metrics",
+        "description": "This endpoint is a no-op and always returns a 200 OK response.",
         "operationId": "PostApiV4FeatureFlagsUnleashProjectIdClientMetrics",
         "parameters": [
           {
@@ -115050,6 +115057,7 @@
           "Avatars"
         ],
         "summary": "Return avatar url for a user",
+        "description": "Returns the Gravatar URL for the user with the given public email address.",
         "operationId": "GetApiV4Avatar",
         "parameters": [
           {
@@ -115266,6 +115274,7 @@
           "Instance"
         ],
         "summary": "Get the current appearance",
+        "description": "Retrieves the instance\u0027s branding and appearance configuration including logos, colors, and custom headers.",
         "operationId": "GetApiV4ApplicationAppearance",
         "responses": {
           "200": {
@@ -115291,6 +115300,7 @@
           "Instance"
         ],
         "summary": "Modify appearance",
+        "description": "Updates instance appearance settings like branding, logos, headers, and footer messages.",
         "operationId": "PutApiV4ApplicationAppearance",
         "requestBody": {
           "content": {
@@ -115330,6 +115340,7 @@
           "Alert management"
         ],
         "summary": "Workhorse authorize metric image file upload",
+        "description": "Pre-upload authorization endpoint for metric images attached to alerts. Called by GitLab Workhorse.",
         "operationId": "PostApiV4ProjectsIdAlertManagementAlertsAlertIidMetricImagesAuthorize",
         "parameters": [
           {
@@ -116021,6 +116032,7 @@
           "Database dictionary"
         ],
         "summary": "Retrieve dictionary details",
+        "description": "Provides table schema and column information from the GitLab database dictionary.",
         "operationId": "GetApiV4AdminDatabasesDatabaseNameDictionaryTablesTableName",
         "parameters": [
           {
@@ -116695,6 +116707,7 @@
           "Batched background migrations"
         ],
         "summary": "Retrieve a batched background migration",
+        "description": "Fetches details of a specific batched migration, with optional filtering by database target.",
         "operationId": "GetApiV4AdminBatchedBackgroundMigrationsId",
         "parameters": [
           {
@@ -116747,6 +116760,7 @@
           "Batched background migrations"
         ],
         "summary": "Get the list of batched background migrations",
+        "description": "Lists all batched background migrations with optional filters for database and job class name.",
         "operationId": "GetApiV4AdminBatchedBackgroundMigrations",
         "parameters": [
           {
@@ -116796,6 +116810,7 @@
           "Batched background migrations"
         ],
         "summary": "Resume a batched background migration",
+        "description": "Resumes execution of a previously paused batched background migration.",
         "operationId": "PutApiV4AdminBatchedBackgroundMigrationsIdResume",
         "parameters": [
           {
@@ -116852,6 +116867,7 @@
           "Batched background migrations"
         ],
         "summary": "Pause a batched background migration",
+        "description": "Pauses an active batched background migration temporarily.",
         "operationId": "PutApiV4AdminBatchedBackgroundMigrationsIdPause",
         "parameters": [
           {
@@ -130731,6 +130747,9 @@
             "type": "string"
           },
           "ai_audit_events_streaming_enabled": {
+            "type": "boolean"
+          },
+          "duo_token_usage_tracking_enabled": {
             "type": "boolean"
           },
           "duo_namespace_access_rules": {
@@ -148558,7 +148577,7 @@
             "items": {
               "$ref": "#/components/schemas/PostApiV4UsersUserIdImpersonationTokensRequestGranularScopesItem"
             },
-            "description": "List of granular scopes to assign to the token. Mutually exclusive with \u0060scopes\u0060.",
+            "description": "List of granular scopes to assign. Mutually exclusive with \u0060scopes\u0060.",
             "nullable": true
           }
         }
@@ -148831,7 +148850,7 @@
             "items": {
               "$ref": "#/components/schemas/PostApiV4UserPersonalAccessTokensRequestGranularScopesItem"
             },
-            "description": "List of granular scopes to assign to the token. Exactly one of \u0060scopes\u0060, \u0060granular_scopes\u0060 must be provided.",
+            "description": "List of granular scopes to assign. Exactly one of \u0060scopes\u0060, \u0060granular_scopes\u0060 must be provided.",
             "nullable": true
           },
           "scopes": {
@@ -151886,6 +151905,10 @@
             "nullable": true
           },
           "ai_audit_events_streaming_enabled": {
+            "type": "string",
+            "nullable": true
+          },
+          "duo_token_usage_tracking_enabled": {
             "type": "string",
             "nullable": true
           },
@@ -162013,7 +162036,7 @@
         "properties": {
           "hostname": {
             "type": "string",
-            "description": "Custom hostname of the Telegram API. The default value is \u0060https://api.telegram.org\u0060.",
+            "description": "URL of the Telegram API server, including \u0060http://\u0060 or \u0060https://\u0060. The default value is \u0060https://api.telegram.org\u0060.",
             "nullable": true
           },
           "token": {
@@ -164876,7 +164899,7 @@
         "properties": {
           "hostname": {
             "type": "string",
-            "description": "Custom hostname of the Telegram API. The default value is \u0060https://api.telegram.org\u0060.",
+            "description": "URL of the Telegram API server, including \u0060http://\u0060 or \u0060https://\u0060. The default value is \u0060https://api.telegram.org\u0060.",
             "nullable": true
           },
           "token": {
@@ -167739,7 +167762,7 @@
         "properties": {
           "hostname": {
             "type": "string",
-            "description": "Custom hostname of the Telegram API. The default value is \u0060https://api.telegram.org\u0060.",
+            "description": "URL of the Telegram API server, including \u0060http://\u0060 or \u0060https://\u0060. The default value is \u0060https://api.telegram.org\u0060.",
             "nullable": true
           },
           "token": {

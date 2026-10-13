@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Databases.Item.Dictionary.
         {
         }
         /// <summary>
-        /// Retrieve dictionary details
+        /// Provides table schema and column information from the GitLab database dictionary.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDictionaryTable"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Databases.Item.Dictionary.
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDictionaryTable>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDictionaryTable.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieve dictionary details
+        /// Provides table schema and column information from the GitLab database dictionary.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

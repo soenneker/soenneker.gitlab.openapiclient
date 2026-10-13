@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Alert_management_a
         {
         }
         /// <summary>
-        /// Workhorse authorize metric image file upload
+        /// Pre-upload authorization endpoint for metric images attached to alerts. Called by GitLab Workhorse.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Alert_management_a
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Workhorse authorize metric image file upload
+        /// Pre-upload authorization endpoint for metric images attached to alerts. Called by GitLab Workhorse.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Feature_flags.Unleash.Item.Clien
         {
         }
         /// <summary>
-        /// Register Unleash client
+        /// This endpoint is a no-op and always returns a 200 OK response.
         /// </summary>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Feature_flags.Unleash.Item.Clien
             await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Register Unleash client
+        /// This endpoint is a no-op and always returns a 200 OK response.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

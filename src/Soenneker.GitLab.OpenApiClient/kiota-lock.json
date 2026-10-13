@@ -1,8 +1,8 @@
 {
-  "descriptionHash": "013FE8C6643C5EFBF98F60522B7373C231E7DA010C8E526A846D9B29AF0FAA69D3297A398610F2C2D8EA1A249AC3B36FC2B12C8135ADF9962CDECBBDA25DC2D8",
+  "descriptionHash": "76EDC3E3D3F88338FCD1E18F4E67A09C2744358110F9E7B289DA91527970975CB637B66677D0B64624552D90757F968DFFF7AB5050E05C3C571E0674C9347658",
   "descriptionLocation": "../../fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.36.0",
+  "kiotaVersion": "1.36.1",
   "clientClassName": "GitLabOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.GitLab.OpenApiClient",

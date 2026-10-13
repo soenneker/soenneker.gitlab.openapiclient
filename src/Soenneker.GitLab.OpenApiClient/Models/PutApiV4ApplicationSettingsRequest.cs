@@ -982,6 +982,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public bool? DuoRemoteFlowsEnabled { get; set; }
         /// <summary>ID of the project to use as the Duo Code Review custom instructions template for this instance.</summary>
         public int? DuoTemplateProjectId { get; set; }
+        /// <summary>The duo_token_usage_tracking_enabled property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DuoTokenUsageTrackingEnabled { get; set; }
+#nullable restore
+#else
+        public string DuoTokenUsageTrackingEnabled { get; set; }
+#endif
         /// <summary>The duo_workflow_oauth_application_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -4466,6 +4474,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "duo_remote_flows_availability", n => { DuoRemoteFlowsAvailability = n.GetStringValue(); } },
                 { "duo_remote_flows_enabled", n => { DuoRemoteFlowsEnabled = n.GetBoolValue(); } },
                 { "duo_template_project_id", n => { DuoTemplateProjectId = n.GetIntValue(); } },
+                { "duo_token_usage_tracking_enabled", n => { DuoTokenUsageTrackingEnabled = n.GetStringValue(); } },
                 { "duo_workflow_oauth_application_id", n => { DuoWorkflowOauthApplicationId = n.GetStringValue(); } },
                 { "duo_workflows_default_image_registry", n => { DuoWorkflowsDefaultImageRegistry = n.GetStringValue(); } },
                 { "dynamic_client_registration_enabled", n => { DynamicClientRegistrationEnabled = n.GetStringValue(); } },
@@ -5152,6 +5161,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("duo_remote_flows_availability", DuoRemoteFlowsAvailability);
             writer.WriteBoolValue("duo_remote_flows_enabled", DuoRemoteFlowsEnabled);
             writer.WriteIntValue("duo_template_project_id", DuoTemplateProjectId);
+            writer.WriteStringValue("duo_token_usage_tracking_enabled", DuoTokenUsageTrackingEnabled);
             writer.WriteStringValue("duo_workflow_oauth_application_id", DuoWorkflowOauthApplicationId);
             writer.WriteStringValue("duo_workflows_default_image_registry", DuoWorkflowsDefaultImageRegistry);
             writer.WriteStringValue("dynamic_client_registration_enabled", DynamicClientRegistrationEnabled);

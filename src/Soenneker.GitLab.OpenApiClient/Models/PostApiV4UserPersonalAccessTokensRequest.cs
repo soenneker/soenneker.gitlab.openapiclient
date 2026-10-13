@@ -25,7 +25,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>Expiration date of the access token in ISO format (YYYY-MM-DD). If undefined, the date is set to the maximum allowable lifetime limit.</summary>
         public Date? ExpiresAt { get; set; }
-        /// <summary>List of granular scopes to assign to the token. Exactly one of `scopes`, `granular_scopes` must be provided.</summary>
+        /// <summary>List of granular scopes to assign. Exactly one of `scopes`, `granular_scopes` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserPersonalAccessTokensRequestGranularScopesItem>? GranularScopes { get; set; }

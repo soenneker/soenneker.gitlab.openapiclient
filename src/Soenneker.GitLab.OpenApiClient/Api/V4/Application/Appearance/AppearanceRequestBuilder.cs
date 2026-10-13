@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Application.Appearance
         {
         }
         /// <summary>
-        /// Get the current appearance
+        /// Retrieves the instance&apos;s branding and appearance configuration including logos, colors, and custom headers.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAppearance"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Application.Appearance
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAppearance>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAppearance.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Modify appearance
+        /// Updates instance appearance settings like branding, logos, headers, and footer messages.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAppearance"/></returns>
         /// <param name="body">The request body</param>
@@ -72,7 +72,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Application.Appearance
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAppearance>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAppearance.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get the current appearance
+        /// Retrieves the instance&apos;s branding and appearance configuration including logos, colors, and custom headers.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -91,7 +91,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Application.Appearance
             return requestInfo;
         }
         /// <summary>
-        /// Modify appearance
+        /// Updates instance appearance settings like branding, logos, headers, and footer messages.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

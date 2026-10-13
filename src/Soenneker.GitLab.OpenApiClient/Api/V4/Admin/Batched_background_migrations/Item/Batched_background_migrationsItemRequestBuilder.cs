@@ -46,7 +46,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Batched_background_migrati
         {
         }
         /// <summary>
-        /// Retrieve a batched background migration
+        /// Fetches details of a specific batched migration, with optional filtering by database target.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBatchedBackgroundMigration"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -64,7 +64,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Batched_background_migrati
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBatchedBackgroundMigration>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBatchedBackgroundMigration.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieve a batched background migration
+        /// Fetches details of a specific batched migration, with optional filtering by database target.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -92,7 +92,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Batched_background_migrati
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Batched_background_migrations.Item.Batched_background_migrationsItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Retrieve a batched background migration
+        /// Fetches details of a specific batched migration, with optional filtering by database target.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Batched_background_migrationsItemRequestBuilderGetQueryParameters 

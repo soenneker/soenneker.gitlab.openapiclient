@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Avatar
         {
         }
         /// <summary>
-        /// Return avatar url for a user
+        /// Returns the Gravatar URL for the user with the given public email address.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAvatar"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Avatar
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAvatar>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAvatar.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Return avatar url for a user
+        /// Returns the Gravatar URL for the user with the given public email address.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Avatar
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Avatar.AvatarRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Return avatar url for a user
+        /// Returns the Gravatar URL for the user with the given public email address.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class AvatarRequestBuilderGetQueryParameters 

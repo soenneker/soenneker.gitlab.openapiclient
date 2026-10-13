@@ -1300,6 +1300,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string DuoTemplateProjectId { get; set; }
 #endif
+        /// <summary>The duo_token_usage_tracking_enabled property</summary>
+        public bool? DuoTokenUsageTrackingEnabled { get; set; }
         /// <summary>The duo_workflow_oauth_application_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -5561,6 +5563,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "duo_remote_flows_availability", n => { DuoRemoteFlowsAvailability = n.GetStringValue(); } },
                 { "duo_remote_flows_enabled", n => { DuoRemoteFlowsEnabled = n.GetStringValue(); } },
                 { "duo_template_project_id", n => { DuoTemplateProjectId = n.GetStringValue(); } },
+                { "duo_token_usage_tracking_enabled", n => { DuoTokenUsageTrackingEnabled = n.GetBoolValue(); } },
                 { "duo_workflow_oauth_application_id", n => { DuoWorkflowOauthApplicationId = n.GetStringValue(); } },
                 { "duo_workflows_default_image_registry", n => { DuoWorkflowsDefaultImageRegistry = n.GetStringValue(); } },
                 { "dynamic_client_registration_enabled", n => { DynamicClientRegistrationEnabled = n.GetStringValue(); } },
@@ -6250,6 +6253,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("duo_remote_flows_availability", DuoRemoteFlowsAvailability);
             writer.WriteStringValue("duo_remote_flows_enabled", DuoRemoteFlowsEnabled);
             writer.WriteStringValue("duo_template_project_id", DuoTemplateProjectId);
+            writer.WriteBoolValue("duo_token_usage_tracking_enabled", DuoTokenUsageTrackingEnabled);
             writer.WriteStringValue("duo_workflow_oauth_application_id", DuoWorkflowOauthApplicationId);
             writer.WriteStringValue("duo_workflows_default_image_registry", DuoWorkflowsDefaultImageRegistry);
             writer.WriteStringValue("dynamic_client_registration_enabled", DynamicClientRegistrationEnabled);
