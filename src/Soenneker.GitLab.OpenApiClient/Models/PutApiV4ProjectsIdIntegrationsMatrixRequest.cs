@@ -28,7 +28,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public bool? ConfidentialNoteEvents { get; set; }
         /// <summary>The confidential_work_item_events property</summary>
         public bool? ConfidentialWorkItemEvents { get; set; }
-        /// <summary>Custom hostname of the Matrix server. The default value is `https://matrix-client.matrix.org`.</summary>
+        /// <summary>URL of the Matrix server, including `http://` or `https://`. The default value is `https://matrix-client.matrix.org`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Hostname { get; set; }

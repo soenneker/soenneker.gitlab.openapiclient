@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Applications
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// This feature was introduced in GitLab 10.5
+        /// This feature was introduced in GitLab 10.5. The granular_scopes parameter requires the granular_oauth_tokens feature flag.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationWithSecret"/></returns>
         /// <param name="body">The request body</param>
@@ -105,7 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Applications
             return requestInfo;
         }
         /// <summary>
-        /// This feature was introduced in GitLab 10.5
+        /// This feature was introduced in GitLab 10.5. The granular_scopes parameter requires the granular_oauth_tokens feature flag.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

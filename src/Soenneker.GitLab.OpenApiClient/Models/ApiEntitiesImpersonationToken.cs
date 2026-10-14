@@ -33,10 +33,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The granular_scopes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalAccessTokenGranularScope>? GranularScopes { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGranularScope>? GranularScopes { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalAccessTokenGranularScope> GranularScopes { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGranularScope> GranularScopes { get; set; }
 #endif
         /// <summary>The id property</summary>
         public long? Id { get; set; }
@@ -108,7 +108,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "expires_at", n => { ExpiresAt = n.GetDateTimeOffsetValue(); } },
                 { "granular", n => { Granular = n.GetBoolValue(); } },
-                { "granular_scopes", n => { GranularScopes = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalAccessTokenGranularScope>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalAccessTokenGranularScope.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "granular_scopes", n => { GranularScopes = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGranularScope>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGranularScope.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "id", n => { Id = n.GetLongValue(); } },
                 { "impersonation", n => { Impersonation = n.GetStringValue(); } },
                 { "last_used_at", n => { LastUsedAt = n.GetDateTimeOffsetValue(); } },
@@ -131,7 +131,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteDateTimeOffsetValue("expires_at", ExpiresAt);
             writer.WriteBoolValue("granular", Granular);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalAccessTokenGranularScope>("granular_scopes", GranularScopes);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGranularScope>("granular_scopes", GranularScopes);
             writer.WriteLongValue("id", Id);
             writer.WriteStringValue("impersonation", Impersonation);
             writer.WriteDateTimeOffsetValue("last_used_at", LastUsedAt);

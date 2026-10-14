@@ -2174,6 +2174,7 @@ paths:
           application/json:
             schema:
               "$ref": "#/components/schemas/postApiV4OrbitQueryRequest"
+      x-gitlab-tier: premium
       x-gitlab-lifecycle: beta
   "/api/v4/orbit/query/{name}":
     post:
@@ -2204,6 +2205,7 @@ paths:
           application/json:
             schema:
               "$ref": "#/components/schemas/postApiV4OrbitQueryNameRequest"
+      x-gitlab-tier: premium
       x-gitlab-lifecycle: beta
   "/api/v4/orbit/query/templates":
     get:
@@ -2218,6 +2220,7 @@ paths:
           description: OK
         '400':
           description: Bad Request
+      x-gitlab-tier: premium
       x-gitlab-lifecycle: beta
   "/api/v4/orbit/schema":
     get:
@@ -2249,6 +2252,7 @@ paths:
           - llm
           default: raw
         in: query
+      x-gitlab-tier: premium
       x-gitlab-lifecycle: beta
   "/api/v4/orbit/status":
     get:
@@ -2377,6 +2381,7 @@ paths:
           description: OK
         '400':
           description: Bad Request
+      x-gitlab-tier: premium
       x-gitlab-lifecycle: beta
   "/api/v4/jobs/{id}/sbom_scans/authorize":
     post:
@@ -2410,6 +2415,7 @@ paths:
           application/json:
             schema:
               "$ref": "#/components/schemas/postApiV4JobsIdSbomScansAuthorizeRequest"
+      x-gitlab-tier: ultimate
   "/api/v4/jobs/{id}/sbom_scans":
     post:
       operationId: postApiV4JobsIdSbomScans
@@ -2445,6 +2451,7 @@ paths:
           multipart/form-data:
             schema:
               "$ref": "#/components/schemas/postApiV4JobsIdSbomScansRequest"
+      x-gitlab-tier: ultimate
   "/api/v4/jobs/{id}/sbom_scans/{sbom_digest}":
     post:
       operationId: postApiV4JobsIdSbomScansSbomDigest
@@ -2487,6 +2494,7 @@ paths:
           application/json:
             schema:
               "$ref": "#/components/schemas/postApiV4JobsIdSbomScansSbomDigestRequest"
+      x-gitlab-tier: ultimate
     get:
       operationId: getApiV4JobsIdSbomScansSbomScanId
       summary: Download an SBOM scan result
@@ -2525,6 +2533,7 @@ paths:
         schema:
           type: integer
         in: path
+      x-gitlab-tier: ultimate
   "/api/v4/projects/{id}/compliance_external_controls/{control_id}/status":
     patch:
       operationId: patchApiV4ProjectsIdComplianceExternalControlsControlIdStatus
@@ -2601,6 +2610,7 @@ paths:
             schema:
               "$ref": "#/components/schemas/postApiV4ProjectsIdSecurityScansSastSastEndpointRequest"
       x-gitlab-lifecycle: experiment
+      x-gitlab-tier: ultimate
   "/api/v4/duo_code_review/evaluations":
     post:
       operationId: postApiV4DuoCodeReviewEvaluations
@@ -2915,6 +2925,7 @@ paths:
             schema:
               "$ref": "#/components/schemas/postApiV4ProjectsIdAiAgentSessionsRequest"
       x-gitlab-lifecycle: experiment
+      x-gitlab-tier: premium
     get:
       operationId: getApiV4ProjectsIdAiAgentSessions
       summary: List external agent sessions for a project.
@@ -3005,6 +3016,7 @@ paths:
         in: path
         example: 1
       x-gitlab-lifecycle: experiment
+      x-gitlab-tier: premium
   "/api/v4/projects/{id}/ai_agent/sessions/{session_id}":
     patch:
       operationId: patchApiV4ProjectsIdAiAgentSessionsSessionId
@@ -3052,6 +3064,7 @@ paths:
             schema:
               "$ref": "#/components/schemas/patchApiV4ProjectsIdAiAgentSessionsSessionIdRequest"
       x-gitlab-lifecycle: experiment
+      x-gitlab-tier: premium
   "/api/v4/projects/{id}/ai_agent/identities":
     post:
       operationId: postApiV4ProjectsIdAiAgentIdentities
@@ -3094,6 +3107,7 @@ paths:
             schema:
               "$ref": "#/components/schemas/postApiV4ProjectsIdAiAgentIdentitiesRequest"
       x-gitlab-lifecycle: experiment
+      x-gitlab-tier: premium
   "/api/v4/projects/{id}/ai_agent/audit_events":
     post:
       operationId: postApiV4ProjectsIdAiAgentAuditEvents
@@ -3134,6 +3148,7 @@ paths:
             schema:
               "$ref": "#/components/schemas/postApiV4ProjectsIdAiAgentAuditEventsRequest"
       x-gitlab-lifecycle: experiment
+      x-gitlab-tier: premium
   "/api/v4/ai/duo_workflows/workflows/{id}/audit_events":
     post:
       operationId: postApiV4AiDuoWorkflowsWorkflowsIdAuditEvents
@@ -4196,6 +4211,7 @@ paths:
           application/json:
             schema:
               "$ref": "#/components/schemas/postApiV4ProjectsIdDependencyListExportsRequest"
+      x-gitlab-tier: ultimate
   "/api/v4/groups/{id}/dependency_list_exports":
     post:
       operationId: postApiV4GroupsIdDependencyListExports
@@ -4227,6 +4243,7 @@ paths:
           application/json:
             schema:
               "$ref": "#/components/schemas/postApiV4GroupsIdDependencyListExportsRequest"
+      x-gitlab-tier: ultimate
   "/api/v4/pipelines/{id}/dependency_list_exports":
     post:
       operationId: postApiV4PipelinesIdDependencyListExports
@@ -4258,6 +4275,7 @@ paths:
           application/json:
             schema:
               "$ref": "#/components/schemas/postApiV4PipelinesIdDependencyListExportsRequest"
+      x-gitlab-tier: ultimate
   "/api/v4/dependency_list_exports/{export_id}":
     get:
       operationId: getApiV4DependencyListExportsExportId
@@ -4281,6 +4299,7 @@ paths:
           - type: integer
           - type: string
         in: path
+      x-gitlab-tier: ultimate
   "/api/v4/dependency_list_exports/{export_id}/download":
     get:
       operationId: getApiV4DependencyListExportsExportIdDownload
@@ -4307,6 +4326,7 @@ paths:
           - type: integer
           - type: string
         in: path
+      x-gitlab-tier: ultimate
   "/api/v4/groups/{id}/protected_branches":
     get:
       operationId: getApiV4GroupsIdProtectedBranches
@@ -4816,6 +4836,7 @@ paths:
           default: 20
         in: query
         example: 20
+      x-gitlab-tier: premium
   "/api/v4/groups/{id}/iterations":
     get:
       operationId: getApiV4GroupsIdIterations
@@ -4940,6 +4961,7 @@ paths:
           default: 20
         in: query
         example: 20
+      x-gitlab-tier: premium
   "/api/v4/occurrences/vulnerabilities":
     get:
       operationId: getApiV4OccurrencesVulnerabilities
@@ -4960,6 +4982,7 @@ paths:
           type: string
           nullable: true
         in: query
+      x-gitlab-tier: ultimate
   "/api/v4/groups/{id}/saml_group_links":
     get:
       operationId: getApiV4GroupsIdSamlGroupLinks
@@ -5167,6 +5190,7 @@ paths:
           default: 20
         in: query
         example: 20
+      x-gitlab-tier: premium
   "/api/v4/projects/{id}/issues/{eventable_id}/resource_iteration_events/{event_id}":
     get:
       operationId: getApiV4ProjectsIdIssuesEventableIdResourceIterationEventsEventId
@@ -5208,6 +5232,7 @@ paths:
           - type: integer
           - type: string
         in: path
+      x-gitlab-tier: premium
   "/api/v4/projects/{id}/issues/{eventable_id}/resource_weight_events":
     get:
       operationId: getApiV4ProjectsIdIssuesEventableIdResourceWeightEvents
@@ -5261,6 +5286,7 @@ paths:
           default: 20
         in: query
         example: 20
+      x-gitlab-tier: premium
   "/api/v4/projects/{id}/issues/{eventable_id}/resource_weight_events/{event_id}":
     get:
       operationId: getApiV4ProjectsIdIssuesEventableIdResourceWeightEventsEventId
@@ -5302,6 +5328,7 @@ paths:
           - type: integer
           - type: string
         in: path
+      x-gitlab-tier: premium
   "/api/v4/projects/{id}/protected_environments":
     get:
       operationId: getApiV4ProjectsIdProtectedEnvironments
@@ -5746,6 +5773,7 @@ paths:
           - daily
           nullable: true
         in: query
+      x-gitlab-tier: ultimate
   "/api/v4/analytics/group_activity/issues_count":
     get:
       operationId: getApiV4AnalyticsGroupActivityIssuesCount
@@ -5771,6 +5799,7 @@ paths:
           type: string
           nullable: true
         in: query
+      x-gitlab-tier: premium
   "/api/v4/analytics/group_activity/merge_requests_count":
     get:
       operationId: getApiV4AnalyticsGroupActivityMergeRequestsCount
@@ -5796,6 +5825,7 @@ paths:
           type: string
           nullable: true
         in: query
+      x-gitlab-tier: premium
   "/api/v4/analytics/group_activity/new_members_count":
     get:
       operationId: getApiV4AnalyticsGroupActivityNewMembersCount
@@ -5820,6 +5850,7 @@ paths:
           type: string
           nullable: true
         in: query
+      x-gitlab-tier: premium
   "/api/v4/analytics/code_review":
     get:
       operationId: getApiV4AnalyticsCodeReview
@@ -5909,6 +5940,7 @@ paths:
           nullable: true
         in: query
         example: '1.6'
+      x-gitlab-tier: premium
   "/api/v4/projects/{id}/dependencies":
     get:
       operationId: getApiV4ProjectsIdDependencies
@@ -5992,6 +6024,7 @@ paths:
           default: 20
         in: query
         example: 20
+      x-gitlab-tier: ultimate
   "/api/v4/project_aliases":
     get:
       operationId: getApiV4ProjectAliases
@@ -6350,6 +6383,7 @@ paths:
           application/json:
             schema:
               "$ref": "#/components/schemas/postApiV4SecurityProjectsIdVulnerabilityExportsRequest"
+      x-gitlab-tier: ultimate
   "/api/v4/security/groups/{id}/vulnerability_exports":
     post:
       operationId: postApiV4SecurityGroupsIdVulnerabilityExports
@@ -6382,6 +6416,7 @@ paths:
           application/json:
             schema:
               "$ref": "#/components/schemas/postApiV4SecurityGroupsIdVulnerabilityExportsRequest"
+      x-gitlab-tier: ultimate
   "/api/v4/security/vulnerability_exports":
     post:
       operationId: postApiV4SecurityVulnerabilityExports
@@ -6406,6 +6441,7 @@ paths:
           application/json:
             schema:
               "$ref": "#/components/schemas/postApiV4SecurityVulnerabilityExportsRequest"
+      x-gitlab-tier: ultimate
   "/api/v4/security/vulnerability_exports/{id}":
     get:
       operationId: getApiV4SecurityVulnerabilityExportsId
@@ -6431,6 +6467,7 @@ paths:
         schema:
           type: integer
         in: path
+      x-gitlab-tier: ultimate
   "/api/v4/security/vulnerability_exports/{id}/download":
     get:
       operationId: getApiV4SecurityVulnerabilityExportsIdDownload
@@ -6457,6 +6494,7 @@ paths:
         schema:
           type: integer
         in: path
+      x-gitlab-tier: ultimate
   "/api/v4/security/projects/{id}/vulnerability_archive_exports":
     post:
       operationId: postApiV4SecurityProjectsIdVulnerabilityArchiveExports
@@ -6492,6 +6530,7 @@ paths:
           application/json:
             schema:
               "$ref": "#/components/schemas/postApiV4SecurityProjectsIdVulnerabilityArchiveExportsRequest"
+      x-gitlab-tier: ultimate
   "/api/v4/security/vulnerability_archive_exports/{id}":
     get:
       operationId: getApiV4SecurityVulnerabilityArchiveExportsId
@@ -6521,6 +6560,7 @@ paths:
         schema:
           type: integer
         in: path
+      x-gitlab-tier: ultimate
   "/api/v4/security/vulnerability_archive_exports/{id}/download":
     get:
       operationId: getApiV4SecurityVulnerabilityArchiveExportsIdDownload
@@ -6547,6 +6587,7 @@ paths:
         schema:
           type: integer
         in: path
+      x-gitlab-tier: ultimate
   "/api/v4/vulnerabilities/{id}/issue_links":
     get:
       operationId: getApiV4VulnerabilitiesIdIssueLinks
@@ -6574,6 +6615,7 @@ paths:
         schema:
           type: integer
         in: path
+      x-gitlab-tier: ultimate
     post:
       operationId: postApiV4VulnerabilitiesIdIssueLinks
       summary: Relate an issue to a vulnerability
@@ -6604,6 +6646,7 @@ paths:
           application/json:
             schema:
               "$ref": "#/components/schemas/postApiV4VulnerabilitiesIdIssueLinksRequest"
+      x-gitlab-tier: ultimate
   "/api/v4/vulnerabilities/{id}/issue_links/{issue_link_id}":
     delete:
       operationId: deleteApiV4VulnerabilitiesIdIssueLinksIssueLinkId
@@ -6635,6 +6678,7 @@ paths:
         schema:
           type: integer
         in: path
+      x-gitlab-tier: ultimate
   "/api/v4/projects/{id}/vulnerability_findings":
     get:
       operationId: getApiV4ProjectsIdVulnerabilityFindings
@@ -6758,6 +6802,7 @@ paths:
           default: 20
         in: query
         example: 20
+      x-gitlab-tier: ultimate
   "/api/v4/vulnerabilities/{vulnerability_id}/flags/ai_detection":
     post:
       operationId: postApiV4VulnerabilitiesVulnerabilityIdFlagsAiDetection
@@ -6791,6 +6836,7 @@ paths:
             schema:
               "$ref": "#/components/schemas/postApiV4VulnerabilitiesVulnerabilityIdFlagsAiDetectionRequest"
       x-gitlab-lifecycle: experiment
+      x-gitlab-tier: ultimate
   "/api/v4/vulnerabilities/{id}":
     get:
       operationId: getApiV4VulnerabilitiesId
@@ -6850,6 +6896,7 @@ paths:
           application/json:
             schema:
               "$ref": "#/components/schemas/postApiV4VulnerabilitiesIdResolveRequest"
+      x-gitlab-tier: ultimate
   "/api/v4/vulnerabilities/{id}/dismiss":
     post:
       operationId: postApiV4VulnerabilitiesIdDismiss
@@ -6877,6 +6924,7 @@ paths:
         schema:
           type: string
         in: path
+      x-gitlab-tier: ultimate
   "/api/v4/vulnerabilities/{id}/confirm":
     post:
       operationId: postApiV4VulnerabilitiesIdConfirm
@@ -6911,6 +6959,7 @@ paths:
           application/json:
             schema:
               "$ref": "#/components/schemas/postApiV4VulnerabilitiesIdConfirmRequest"
+      x-gitlab-tier: ultimate
   "/api/v4/vulnerabilities/{id}/revert":
     post:
       operationId: postApiV4VulnerabilitiesIdRevert
@@ -6945,6 +6994,7 @@ paths:
           application/json:
             schema:
               "$ref": "#/components/schemas/postApiV4VulnerabilitiesIdRevertRequest"
+      x-gitlab-tier: ultimate
   "/api/v4/projects/{id}/vulnerabilities":
     get:
       operationId: getApiV4ProjectsIdVulnerabilities
@@ -6988,6 +7038,7 @@ paths:
           default: 20
         in: query
         example: 20
+      x-gitlab-tier: ultimate
     post:
       operationId: postApiV4ProjectsIdVulnerabilities
       summary: Create a new vulnerability
@@ -7020,6 +7071,7 @@ paths:
           application/json:
             schema:
               "$ref": "#/components/schemas/postApiV4ProjectsIdVulnerabilitiesRequest"
+      x-gitlab-tier: ultimate
   "/api/v4/projects/{id}/google_cloud/setup/integrations.sh":
     get:
       operationId: getApiV4ProjectsIdGoogleCloudSetupIntegrationsSh
@@ -11029,6 +11081,7 @@ paths:
           default: 20
         in: query
         example: 20
+      x-gitlab-tier: premium
   "/api/v4/groups/{id}/epics/{epic_iid}/related_epics":
     get:
       operationId: getApiV4GroupsIdEpicsEpicIidRelatedEpics
@@ -11068,6 +11121,7 @@ paths:
           type: integer
         in: path
         example: 1
+      x-gitlab-tier: premium
     post:
       operationId: postApiV4GroupsIdEpicsEpicIidRelatedEpics
       summary: Create a related epic link
@@ -11114,6 +11168,7 @@ paths:
           application/json:
             schema:
               "$ref": "#/components/schemas/postApiV4GroupsIdEpicsEpicIidRelatedEpicsRequest"
+      x-gitlab-tier: premium
   "/api/v4/groups/{id}/epics/{epic_iid}/related_epics/{related_epic_link_id}":
     delete:
       operationId: deleteApiV4GroupsIdEpicsEpicIidRelatedEpicsRelatedEpicLinkId
@@ -11160,6 +11215,7 @@ paths:
           type: integer
         in: path
         example: 1
+      x-gitlab-tier: premium
   "/api/v4/projects/{id}/dependency_proxy/packages/npm/{package_name}/-/{file_name}":
     get:
       operationId: getApiV4ProjectsIdDependencyProxyPackagesNpmPackageNameDashFileName
@@ -11293,6 +11349,7 @@ paths:
           default: 20
         in: query
         example: 20
+      x-gitlab-tier: premium
   "/api/v4/groups/{id}/epic_boards/{board_id}":
     get:
       operationId: getApiV4GroupsIdEpicBoardsBoardId
@@ -11331,6 +11388,7 @@ paths:
           type: integer
         in: path
         example: 1
+      x-gitlab-tier: premium
   "/api/v4/groups/{id}/epic_boards/{board_id}/lists":
     get:
       operationId: getApiV4GroupsIdEpicBoardsBoardIdLists
@@ -11387,6 +11445,7 @@ paths:
           default: 20
         in: query
         example: 20
+      x-gitlab-tier: premium
   "/api/v4/groups/{id}/epic_boards/{board_id}/lists/{list_id}":
     get:
       operationId: getApiV4GroupsIdEpicBoardsBoardIdListsListId
@@ -11432,6 +11491,7 @@ paths:
           type: integer
         in: path
         example: 1
+      x-gitlab-tier: premium
   "/api/v4/groups/{id}/epics":
     get:
       operationId: getApiV4GroupsIdEpics
@@ -11938,6 +11998,7 @@ paths:
           type: integer
         in: path
         example: 5
+      x-gitlab-tier: premium
   "/api/v4/groups/{id}/-/epics/{epic_iid}":
     get:
       operationId: getApiV4GroupsIdDashEpicsEpicIid
@@ -11972,6 +12033,7 @@ paths:
           type: integer
         in: path
         example: 5
+      x-gitlab-tier: premium
   "/api/v4/groups/{id}/(-/)epics":
     post:
       operationId: postApiV4GroupsIdDashEpics
@@ -12007,6 +12069,7 @@ paths:
           application/json:
             schema:
               "$ref": "#/components/schemas/postApiV4GroupsIdDashEpicsRequest"
+      x-gitlab-tier: premium
   "/api/v4/groups/{id}/(-/)epics/{epic_iid}":
     put:
       operationId: putApiV4GroupsIdDashEpicsEpicIid
@@ -12047,6 +12110,7 @@ paths:
           application/json:
             schema:
               "$ref": "#/components/schemas/putApiV4GroupsIdDashEpicsEpicIidRequest"
+      x-gitlab-tier: premium
     delete:
       operationId: deleteApiV4GroupsIdDashEpicsEpicIid
       summary: Destroy an epic
@@ -12076,6 +12140,7 @@ paths:
           type: integer
         in: path
         example: 5
+      x-gitlab-tier: premium
   "/api/v4/groups/{id}/(-/)epics/{epic_iid}/epics":
     get:
       operationId: getApiV4GroupsIdDashEpicsEpicIidEpics
@@ -12115,6 +12180,7 @@ paths:
           type: integer
         in: path
         example: 1
+      x-gitlab-tier: ultimate
     post:
       operationId: postApiV4GroupsIdDashEpicsEpicIidEpics
       summary: Create and relate epic to a parent
@@ -12159,6 +12225,7 @@ paths:
           application/json:
             schema:
               "$ref": "#/components/schemas/postApiV4GroupsIdDashEpicsEpicIidEpicsRequest"
+      x-gitlab-tier: ultimate
   "/api/v4/groups/{id}/(-/)epics/{epic_iid}/epics/{child_epic_id}":
     post:
       operationId: postApiV4GroupsIdDashEpicsEpicIidEpicsChildEpicId
@@ -12207,6 +12274,7 @@ paths:
           type: integer
         in: path
         example: 1
+      x-gitlab-tier: ultimate
     delete:
       operationId: deleteApiV4GroupsIdDashEpicsEpicIidEpicsChildEpicId
       summary: Remove epics relation
@@ -12249,6 +12317,7 @@ paths:
           type: integer
         in: path
         example: 1
+      x-gitlab-tier: ultimate
     put:
       operationId: putApiV4GroupsIdDashEpicsEpicIidEpicsChildEpicId
       summary: Reorder child epics
@@ -12297,6 +12366,7 @@ paths:
           application/json:
             schema:
               "$ref": "#/components/schemas/putApiV4GroupsIdDashEpicsEpicIidEpicsChildEpicIdRequest"
+      x-gitlab-tier: ultimate
   "/api/v4/groups/{id}/(-/)epics/{epic_iid}/issues/{epic_issue_id}":
     put:
       operationId: putApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueId
@@ -12355,6 +12425,7 @@ paths:
           application/json:
             schema:
               "$ref": "#/components/schemas/putApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueIdRequest"
+      x-gitlab-tier: premium
     post:
       operationId: postApiV4GroupsIdDashEpicsEpicIidIssuesIssueId
       summary: Add an issue to an epic
@@ -12407,6 +12478,7 @@ paths:
           - type: string
         in: path
         example: 55
+      x-gitlab-tier: premium
     delete:
       operationId: deleteApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueId
       summary: Remove an issue from the epic
@@ -12456,6 +12528,7 @@ paths:
           - type: string
         in: path
         example: 11
+      x-gitlab-tier: premium
   "/api/v4/groups/{id}/epics/{epic_iid}/issues":
     get:
       operationId: getApiV4GroupsIdEpicsEpicIidIssues
@@ -12517,6 +12590,7 @@ paths:
           default: 20
         in: query
         example: 20
+      x-gitlab-tier: premium
   "/api/v4/groups/{id}/-/epics/{epic_iid}/issues":
     get:
       operationId: getApiV4GroupsIdDashEpicsEpicIidIssues
@@ -12578,6 +12652,7 @@ paths:
           default: 20
         in: query
         example: 20
+      x-gitlab-tier: premium
   "/api/v4/projects/{id}/dora/metrics":
     get:
       operationId: getApiV4ProjectsIdDoraMetrics
@@ -12658,6 +12733,7 @@ paths:
           default:
           - production
         in: query
+      x-gitlab-tier: ultimate
   "/api/v4/groups/{id}/dora/metrics":
     get:
       operationId: getApiV4GroupsIdDoraMetrics
@@ -12736,6 +12812,7 @@ paths:
           default:
           - production
         in: query
+      x-gitlab-tier: ultimate
   "/api/v4/projects/{id}/approval_settings":
     get:
       operationId: getApiV4ProjectsIdApprovalSettings
@@ -12903,6 +12980,7 @@ paths:
           application/json:
             schema:
               "$ref": "#/components/schemas/postApiV4ProjectsIdExternalStatusChecksRequest"
+      x-gitlab-tier: ultimate
     get:
       operationId: getApiV4ProjectsIdExternalStatusChecks
       summary: Retrieve project external status check services
@@ -12947,6 +13025,7 @@ paths:
           default: 20
         in: query
         example: 20
+      x-gitlab-tier: ultimate
   "/api/v4/projects/{id}/external_status_checks/{check_id}":
     put:
       operationId: putApiV4ProjectsIdExternalStatusChecksCheckId
@@ -12987,6 +13066,7 @@ paths:
           application/json:
             schema:
               "$ref": "#/components/schemas/putApiV4ProjectsIdExternalStatusChecksCheckIdRequest"
+      x-gitlab-tier: ultimate
     delete:
       operationId: deleteApiV4ProjectsIdExternalStatusChecksCheckId
       summary: Delete external status check service
@@ -13015,6 +13095,7 @@ paths:
         schema:
           type: integer
         in: path
+      x-gitlab-tier: ultimate
   "/api/v4/projects/{id}/merge_requests/{merge_request_iid}/status_check_responses":
     post:
       operationId: postApiV4ProjectsIdMergeRequestsMergeRequestIidStatusCheckResponses
@@ -13059,6 +13140,7 @@ paths:
           application/json:
             schema:
               "$ref": "#/components/schemas/postApiV4ProjectsIdMergeRequestsMergeRequestIidStatusCheckResponsesRequest"
+      x-gitlab-tier: ultimate
   "/api/v4/projects/{id}/merge_requests/{merge_request_iid}/status_checks":
     get:
       operationId: getApiV4ProjectsIdMergeRequestsMergeRequestIidStatusChecks
@@ -13095,6 +13177,7 @@ paths:
         schema:
           type: integer
         in: path
+      x-gitlab-tier: ultimate
   "/api/v4/projects/{id}/merge_requests/{merge_request_iid}/status_checks/{external_status_check_id}/retry":
     post:
       operationId: postApiV4ProjectsIdMergeRequestsMergeRequestIidStatusChecksExternalStatusCheckIdRetry
@@ -13132,6 +13215,7 @@ paths:
         schema:
           type: integer
         in: path
+      x-gitlab-tier: ultimate
   "/api/v4/groups/{id}/approval_rules":
     get:
       operationId: getApiV4GroupsIdApprovalRules
@@ -13275,6 +13359,7 @@ paths:
           application/json:
             schema:
               "$ref": "#/components/schemas/putApiV4GroupsIdSecuritySettingsRequest"
+      x-gitlab-tier: ultimate
   "/api/v4/projects/{id}/security_settings":
     get:
       operationId: getApiV4ProjectsIdSecuritySettings
@@ -13299,6 +13384,7 @@ paths:
           - type: string
           - type: integer
         in: path
+      x-gitlab-tier: ultimate
     put:
       operationId: putApiV4ProjectsIdSecuritySettings
       summary: Update project security settings
@@ -13328,6 +13414,7 @@ paths:
           application/json:
             schema:
               "$ref": "#/components/schemas/putApiV4ProjectsIdSecuritySettingsRequest"
+      x-gitlab-tier: ultimate
   "/api/v4/projects/{id}/approval_rules":
     get:
       operationId: getApiV4ProjectsIdApprovalRules
@@ -14209,6 +14296,7 @@ paths:
           default: 20
         in: query
         example: 20
+      x-gitlab-tier: premium
   "/api/v4/audit_events/{id}":
     get:
       operationId: getApiV4AuditEventsId
@@ -14234,6 +14322,7 @@ paths:
         schema:
           type: integer
         in: path
+      x-gitlab-tier: premium
   "/api/v4/projects/{id}/merge_requests/{merge_request_iid}/suggested_reviewers":
     post:
       operationId: postApiV4ProjectsIdMergeRequestsMergeRequestIidSuggestedReviewers
@@ -14527,6 +14616,7 @@ paths:
           description: 403 Forbidden
         '400':
           description: 400 Bad Request
+      x-gitlab-tier: ultimate
     put:
       operationId: putApiV4AdminSecurityCompliancePolicySettings
       summary: Update security policy settings
@@ -14554,6 +14644,7 @@ paths:
           application/json:
             schema:
               "$ref": "#/components/schemas/putApiV4AdminSecurityCompliancePolicySettingsRequest"
+      x-gitlab-tier: ultimate
   "/api/v4/admin/knowledge_graph/namespaces":
     get:
       operationId: getApiV4AdminKnowledgeGraphNamespaces
@@ -14575,6 +14666,7 @@ paths:
           description: 401 Unauthorized
         '403':
           description: 403 Forbidden
+      x-gitlab-tier: premium
   "/api/v4/admin/knowledge_graph/namespaces/{id}":
     put:
       operationId: putApiV4AdminKnowledgeGraphNamespacesId
@@ -14608,6 +14700,7 @@ paths:
           - type: string
           - type: integer
         in: path
+      x-gitlab-tier: premium
     delete:
       operationId: deleteApiV4AdminKnowledgeGraphNamespacesId
       summary: Disable a namespace for Knowledge Graph
@@ -14634,6 +14727,7 @@ paths:
           - type: string
           - type: integer
         in: path
+      x-gitlab-tier: premium
   "/api/v4/admin/search/migrations":
     get:
       operationId: getApiV4AdminSearchMigrations
@@ -14650,6 +14744,7 @@ paths:
           description: 403 Forbidden
         '404':
           description: 404 Not found
+      x-gitlab-tier: premium
   "/api/v4/admin/search/migrations/{migration_id}":
     get:
       operationId: getApiV4AdminSearchMigrationsMigrationId
@@ -14682,6 +14777,7 @@ paths:
           - type: integer
           - type: string
         in: path
+      x-gitlab-tier: premium
   "/api/v4/admin/zoekt/projects/{project_id}/index":
     put:
       operationId: putApiV4AdminZoektProjectsProjectIdIndex
@@ -15154,6 +15250,7 @@ paths:
           application/json:
             schema:
               "$ref": "#/components/schemas/postApiV4GroupsIdBoardsRequest"
+      x-gitlab-tier: premium
     get:
       operationId: getApiV4GroupsIdBoards
       summary: List all group issue boards in a group
@@ -15225,6 +15322,7 @@ paths:
         schema:
           type: integer
         in: path
+      x-gitlab-tier: premium
     get:
       operationId: getApiV4GroupsIdBoardsBoardId
       summary: Retrieve a group issue board
@@ -19557,6 +19655,7 @@ paths:
         schema:
           type: integer
         in: path
+      x-gitlab-tier: premium
   "/api/v4/templates/licenses":
     get:
       operationId: getApiV4TemplatesLicenses
@@ -22090,6 +22189,7 @@ paths:
         schema:
           type: integer
         in: path
+      x-gitlab-tier: premium
   "/api/v4/notification_settings":
     get:
       operationId: getApiV4NotificationSettings
@@ -24769,6 +24869,7 @@ paths:
         schema:
           type: integer
         in: path
+      x-gitlab-tier: premium
   "/api/v4/projects/{id}/labels":
     get:
       operationId: getApiV4ProjectsIdLabels
@@ -37925,6 +38026,7 @@ paths:
           - type: integer
         in: path
         example: 1
+      x-gitlab-tier: premium
   "/api/v4/projects/{id}/audit_events/{audit_event_id}":
     get:
       operationId: getApiV4ProjectsIdAuditEventsAuditEventId
@@ -37960,6 +38062,7 @@ paths:
           - type: integer
         in: path
         example: 1
+      x-gitlab-tier: premium
   "/api/v4/projects/{id}/templates/{type}":
     get:
       operationId: getApiV4ProjectsIdTemplatesType
@@ -82262,7 +82365,8 @@ paths:
     post:
       operationId: postApiV4Applications
       summary: Create a new application
-      description: This feature was introduced in GitLab 10.5
+      description: This feature was introduced in GitLab 10.5. The granular_scopes
+        parameter requires the granular_oauth_tokens feature flag.
       tags:
       - Applications
       responses:
@@ -82278,6 +82382,8 @@ paths:
           description: Unauthorized
         '403':
           description: Forbidden
+        '404':
+          description: Not found
       requestBody:
         required: true
         content:
@@ -85865,7 +85971,7 @@ components:
           type: string
         approval_status:
           type: string
-    APIEntitiesPersonalAccessTokenGranularScope:
+    APIEntitiesGranularScope:
       type: object
       properties:
         access:
@@ -85927,7 +86033,7 @@ components:
         granular_scopes:
           type: array
           items:
-            "$ref": "#/components/schemas/APIEntitiesPersonalAccessTokenGranularScope"
+            "$ref": "#/components/schemas/APIEntitiesGranularScope"
         active:
           type: boolean
         granular:
@@ -91824,7 +91930,7 @@ components:
         granular_scopes:
           type: array
           items:
-            "$ref": "#/components/schemas/APIEntitiesPersonalAccessTokenGranularScope"
+            "$ref": "#/components/schemas/APIEntitiesGranularScope"
         active:
           type: boolean
         granular:
@@ -91879,7 +91985,7 @@ components:
         granular_scopes:
           type: array
           items:
-            "$ref": "#/components/schemas/APIEntitiesPersonalAccessTokenGranularScope"
+            "$ref": "#/components/schemas/APIEntitiesGranularScope"
         active:
           type: boolean
         granular:
@@ -91952,9 +92058,19 @@ components:
           example:
           - api
           - read_user
+        granular_scopes:
+          type: array
+          items:
+            "$ref": "#/components/schemas/APIEntitiesGranularScope"
         secret:
           type: string
           example: ee1dd64b6adc89cf7e2c23099301ccc2c61b441064e9324d963c46902a85ec34
+        warnings:
+          type: array
+          example:
+          - Tokens cannot use the MCP server without a user-level scope granting execute_mcp_tool.
+          items:
+            type: string
     APIEntitiesApplication:
       type: object
       properties:
@@ -91979,6 +92095,10 @@ components:
           example:
           - api
           - read_user
+        granular_scopes:
+          type: array
+          items:
+            "$ref": "#/components/schemas/APIEntitiesGranularScope"
     APIEntitiesTodo:
       type: object
       properties:
@@ -93887,7 +94007,7 @@ components:
         granular_scopes:
           type: array
           items:
-            "$ref": "#/components/schemas/APIEntitiesPersonalAccessTokenGranularScope"
+            "$ref": "#/components/schemas/APIEntitiesGranularScope"
         active:
           type: boolean
         granular:
@@ -94757,7 +94877,7 @@ components:
         granular_scopes:
           type: array
           items:
-            "$ref": "#/components/schemas/APIEntitiesPersonalAccessTokenGranularScope"
+            "$ref": "#/components/schemas/APIEntitiesGranularScope"
         active:
           type: boolean
         granular:
@@ -94830,7 +94950,7 @@ components:
         granular_scopes:
           type: array
           items:
-            "$ref": "#/components/schemas/APIEntitiesPersonalAccessTokenGranularScope"
+            "$ref": "#/components/schemas/APIEntitiesGranularScope"
         active:
           type: boolean
         granular:
@@ -120891,7 +121011,7 @@ components:
           items:
             type: string
           description: Project relation names to exclude from the export, for example
-            `merge_requests` and `issues`.
+            `merge_requests`, `issues`, `ci_pipelines`, `uploads`, and `lfs_objects`.
           nullable: true
     postApiV4ProjectsIdExportRelationsRequest:
       type: object
@@ -124342,8 +124462,8 @@ components:
       properties:
         hostname:
           type: string
-          description: Custom hostname of the Matrix server. The default value is
-            `https://matrix-client.matrix.org`.
+          description: URL of the Matrix server, including `http://` or `https://`.
+            The default value is `https://matrix-client.matrix.org`.
           nullable: true
         token:
           type: string
@@ -126732,8 +126852,8 @@ components:
       properties:
         hostname:
           type: string
-          description: Custom hostname of the Matrix server. The default value is
-            `https://matrix-client.matrix.org`.
+          description: URL of the Matrix server, including `http://` or `https://`.
+            The default value is `https://matrix-client.matrix.org`.
           nullable: true
         token:
           type: string
@@ -129122,8 +129242,8 @@ components:
       properties:
         hostname:
           type: string
-          description: Custom hostname of the Matrix server. The default value is
-            `https://matrix-client.matrix.org`.
+          description: URL of the Matrix server, including `http://` or `https://`.
+            The default value is `https://matrix-client.matrix.org`.
           nullable: true
         token:
           type: string
@@ -135199,6 +135319,46 @@ components:
             The application is used where the client secret can be kept confidential. Native mobile apps \
                                     and Single Page Apps are considered non-confidential. Defaults to true if not supplied
           default: true
+        granular_scopes:
+          type: array
+          description: List of granular scopes to assign.
+          items:
+            type: object
+            properties:
+              access:
+                type: string
+                enum:
+                - personal_projects
+                - all_memberships
+                - selected_memberships
+                - user
+                - instance
+                description: Access to configure for the granular scope.
+                minLength: 1
+              permissions:
+                type: array
+                items:
+                  type: string
+                description: List of permissions for the granular scope.
+                nullable: true
+              project_ids:
+                type: array
+                items:
+                  type: integer
+                description: IDs of projects to associate with the granular scope,
+                  when access is `selected_memberships`.
+                nullable: true
+              group_ids:
+                type: array
+                items:
+                  type: integer
+                description: IDs of groups to associate with the granular scope, when
+                  access is `selected_memberships`.
+                nullable: true
+            required:
+            - access
+            - permissions
+          nullable: true
       required:
       - name
       - redirect_uri

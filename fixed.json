@@ -614,6 +614,7 @@
             "description": "Bad Request"
           }
         },
+        "x-gitlab-tier": "premium",
         "x-gitlab-lifecycle": "beta"
       }
     },
@@ -656,6 +657,7 @@
             "description": "Bad Request"
           }
         },
+        "x-gitlab-tier": "premium",
         "x-gitlab-lifecycle": "beta"
       }
     },
@@ -675,6 +677,7 @@
             "description": "Bad Request"
           }
         },
+        "x-gitlab-tier": "premium",
         "x-gitlab-lifecycle": "beta"
       }
     },
@@ -713,6 +716,7 @@
             "description": "Bad Request"
           }
         },
+        "x-gitlab-tier": "premium",
         "x-gitlab-lifecycle": "beta"
       }
     },
@@ -894,6 +898,7 @@
             "description": "Bad Request"
           }
         },
+        "x-gitlab-tier": "premium",
         "x-gitlab-lifecycle": "beta"
       }
     },
@@ -941,7 +946,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/jobs/{id}/sbom_scans": {
@@ -996,7 +1002,8 @@
           "404": {
             "description": "Not Found"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/jobs/{id}/sbom_scans/{sbomDigest}": {
@@ -1060,7 +1067,8 @@
           "410": {
             "description": "Result no longer available"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       },
       "get": {
         "tags": [
@@ -1114,7 +1122,8 @@
           "404": {
             "description": "Not Found"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/projects/{id}/compliance_external_controls/{controlId}/status": {
@@ -1235,7 +1244,8 @@
             "description": "Not Found"
           }
         },
-        "x-gitlab-lifecycle": "experiment"
+        "x-gitlab-lifecycle": "experiment",
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/duo_code_review/evaluations": {
@@ -1655,7 +1665,8 @@
             "description": "Too many requests"
           }
         },
-        "x-gitlab-lifecycle": "experiment"
+        "x-gitlab-lifecycle": "experiment",
+        "x-gitlab-tier": "premium"
       },
       "get": {
         "tags": [
@@ -1764,7 +1775,8 @@
             "description": "Bad Request"
           }
         },
-        "x-gitlab-lifecycle": "experiment"
+        "x-gitlab-lifecycle": "experiment",
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/projects/{id}/ai_agent/sessions/{sessionId}": {
@@ -1838,7 +1850,8 @@
             "description": "Not found"
           }
         },
-        "x-gitlab-lifecycle": "experiment"
+        "x-gitlab-lifecycle": "experiment",
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/projects/{id}/ai_agent/identities": {
@@ -1903,7 +1916,8 @@
             "description": "Not found"
           }
         },
-        "x-gitlab-lifecycle": "experiment"
+        "x-gitlab-lifecycle": "experiment",
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/projects/{id}/ai_agent/audit_events": {
@@ -1964,7 +1978,8 @@
             "description": "Too many requests"
           }
         },
-        "x-gitlab-lifecycle": "experiment"
+        "x-gitlab-lifecycle": "experiment",
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/ai/duo_workflows/workflows/{id}/audit_events": {
@@ -3494,7 +3509,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/groups/{id}/dependency_list_exports": {
@@ -3542,7 +3558,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/pipelines/{id}/dependency_list_exports": {
@@ -3590,7 +3607,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/dependency_list_exports/{exportId}": {
@@ -3629,7 +3647,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/dependency_list_exports/{exportId}/download": {
@@ -3672,7 +3691,8 @@
           "404": {
             "description": "Not Found"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/groups/{id}/protected_branches": {
@@ -4368,7 +4388,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/groups/{id}/iterations": {
@@ -4507,7 +4528,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/occurrences/vulnerabilities": {
@@ -4537,7 +4559,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/groups/{id}/saml_group_links": {
@@ -4858,7 +4881,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/projects/{id}/issues/{eventableId}/resource_iteration_events/{eventId}": {
@@ -4929,7 +4953,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/projects/{id}/issues/{eventableId}/resource_weight_events": {
@@ -5011,7 +5036,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/projects/{id}/issues/{eventableId}/resource_weight_events/{eventId}": {
@@ -5082,7 +5108,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/projects/{id}/protected_environments": {
@@ -5751,7 +5778,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/analytics/group_activity/issues_count": {
@@ -5788,7 +5816,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/analytics/group_activity/merge_requests_count": {
@@ -5825,7 +5854,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/analytics/group_activity/new_members_count": {
@@ -5862,7 +5892,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/analytics/code_review": {
@@ -5981,7 +6012,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/projects/{id}/dependencies": {
@@ -6067,7 +6099,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/project_aliases": {
@@ -6617,7 +6650,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/security/groups/{id}/vulnerability_exports": {
@@ -6665,7 +6699,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/security/vulnerability_exports": {
@@ -6699,7 +6734,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/security/vulnerability_exports/{id}": {
@@ -6738,7 +6774,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/security/vulnerability_exports/{id}/download": {
@@ -6777,7 +6814,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/security/projects/{id}/vulnerability_archive_exports": {
@@ -6833,7 +6871,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/security/vulnerability_archive_exports/{id}": {
@@ -6872,7 +6911,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/security/vulnerability_archive_exports/{id}/download": {
@@ -6911,7 +6951,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/vulnerabilities/{id}/issue_links": {
@@ -6950,7 +6991,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       },
       "post": {
         "tags": [
@@ -6997,7 +7039,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/vulnerabilities/{id}/issue_links/{issueLinkId}": {
@@ -7045,7 +7088,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/projects/{id}/vulnerability_findings": {
@@ -7173,7 +7217,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/vulnerabilities/{vulnerabilityId}/flags/ai_detection": {
@@ -7222,7 +7267,8 @@
             "description": "Not Found"
           }
         },
-        "x-gitlab-lifecycle": "experiment"
+        "x-gitlab-lifecycle": "experiment",
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/vulnerabilities/{id}": {
@@ -7310,7 +7356,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/vulnerabilities/{id}/dismiss": {
@@ -7349,7 +7396,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/vulnerabilities/{id}/confirm": {
@@ -7397,7 +7445,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/vulnerabilities/{id}/revert": {
@@ -7445,7 +7494,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/projects/{id}/vulnerabilities": {
@@ -7511,7 +7561,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       },
       "post": {
         "tags": [
@@ -7565,7 +7616,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/projects/{id}/google_cloud/setup/integrations.sh": {
@@ -13381,7 +13433,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/groups/{id}/epics/{epicIid}/related_epics": {
@@ -13437,7 +13490,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "post": {
         "tags": [
@@ -13504,7 +13558,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/groups/{id}/epics/{epicIid}/related_epics/{relatedEpicLinkId}": {
@@ -13570,7 +13625,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/projects/{id}/dependency_proxy/packages/npm/{packageName}/{fileName}": {
@@ -13769,7 +13825,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/groups/{id}/epic_boards/{boardId}": {
@@ -13825,7 +13882,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/groups/{id}/epic_boards/{boardId}/lists": {
@@ -13901,7 +13959,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/groups/{id}/epic_boards/{boardId}/lists/{listId}": {
@@ -13967,7 +14026,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/groups/{id}/epics": {
@@ -14292,7 +14352,8 @@
           "429": {
             "description": "Too many requests"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/groups/{id}/epics/{epicIid}": {
@@ -14344,7 +14405,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "put": {
         "tags": [
@@ -14403,7 +14465,8 @@
           "404": {
             "description": "Not found"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "delete": {
         "tags": [
@@ -14446,7 +14509,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/groups/{id}/epics/{epicIid}/epics": {
@@ -14502,7 +14566,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       },
       "post": {
         "tags": [
@@ -14569,7 +14634,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/groups/{id}/epics/{epicIid}/epics/{childEpicId}": {
@@ -14638,7 +14704,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       },
       "delete": {
         "tags": [
@@ -14699,7 +14766,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       },
       "put": {
         "tags": [
@@ -14769,7 +14837,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/groups/{id}/epics/{epicIid}/issues/{epicIssueId}": {
@@ -14865,7 +14934,8 @@
           "404": {
             "description": "Not found"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "post": {
         "tags": [
@@ -14944,7 +15014,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "delete": {
         "tags": [
@@ -15029,7 +15100,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/groups/{id}/epics/{epicIid}/issues": {
@@ -15119,7 +15191,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/projects/{id}/dora/metrics": {
@@ -15212,7 +15285,8 @@
           "404": {
             "description": "Not Found"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/groups/{id}/dora/metrics": {
@@ -15298,7 +15372,8 @@
           "404": {
             "description": "Not Found"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/projects/{id}/approval_settings": {
@@ -15575,7 +15650,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       },
       "get": {
         "tags": [
@@ -15639,7 +15715,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/projects/{id}/external_status_checks/{checkId}": {
@@ -15704,7 +15781,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       },
       "delete": {
         "tags": [
@@ -15750,7 +15828,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/projects/{id}/merge_requests/{mergeRequestIid}/status_check_responses": {
@@ -15810,7 +15889,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/projects/{id}/merge_requests/{mergeRequestIid}/status_checks": {
@@ -15865,7 +15945,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/projects/{id}/merge_requests/{mergeRequestIid}/status_checks/{externalStatusCheckId}/retry": {
@@ -15917,7 +15998,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/groups/{id}/approval_rules": {
@@ -16129,7 +16211,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/projects/{id}/security_settings": {
@@ -16168,7 +16251,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       },
       "put": {
         "tags": [
@@ -16214,7 +16298,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/projects/{id}/approval_rules": {
@@ -17515,7 +17600,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/audit_events/{id}": {
@@ -17554,7 +17640,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/projects/{id}/merge_requests/{mergeRequestIid}/suggested_reviewers": {
@@ -17955,7 +18042,8 @@
           "400": {
             "description": "400 Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       },
       "put": {
         "tags": [
@@ -17997,7 +18085,8 @@
           "422": {
             "description": "422 Unprocessable Entity"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/admin/knowledge_graph/namespaces": {
@@ -18028,7 +18117,8 @@
           "403": {
             "description": "403 Forbidden"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/admin/knowledge_graph/namespaces/{id}": {
@@ -18083,7 +18173,8 @@
           "503": {
             "description": "503 Service Unavailable"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "delete": {
         "tags": [
@@ -18126,7 +18217,8 @@
           "404": {
             "description": "404 Not found"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/admin/search/migrations": {
@@ -18150,7 +18242,8 @@
           "404": {
             "description": "404 Not found"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/admin/search/migrations/{migrationId}": {
@@ -18202,7 +18295,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/admin/zoekt/projects/{projectId}/index": {
@@ -18917,7 +19011,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "get": {
         "tags": [
@@ -19022,7 +19117,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "get": {
         "tags": [
@@ -25300,7 +25396,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/templates/licenses": {
@@ -29045,7 +29142,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/notification_settings": {
@@ -32866,7 +32964,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/projects/{id}/labels": {
@@ -51741,7 +51840,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/projects/{id}/audit_events/{auditEventId}": {
@@ -51797,7 +51897,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/projects/{id}/templates/{type}": {
@@ -115221,7 +115322,7 @@
           "Applications"
         ],
         "summary": "Create a new application",
-        "description": "This feature was introduced in GitLab 10.5",
+        "description": "This feature was introduced in GitLab 10.5. The granular_scopes parameter requires the granular_oauth_tokens feature flag.",
         "operationId": "PostApiV4Applications",
         "requestBody": {
           "content": {
@@ -115252,6 +115353,9 @@
           },
           "403": {
             "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       },
@@ -120187,7 +120291,7 @@
           }
         }
       },
-      "ApiEntitiesPersonalAccessTokenGranularScope": {
+      "ApiEntitiesGranularScope": {
         "type": "object",
         "properties": {
           "access": {
@@ -120263,7 +120367,7 @@
           "granular_scopes": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/ApiEntitiesPersonalAccessTokenGranularScope"
+              "$ref": "#/components/schemas/ApiEntitiesGranularScope"
             }
           },
           "active": {
@@ -128504,7 +128608,7 @@
           "granular_scopes": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/ApiEntitiesPersonalAccessTokenGranularScope"
+              "$ref": "#/components/schemas/ApiEntitiesGranularScope"
             }
           },
           "active": {
@@ -128573,7 +128677,7 @@
           "granular_scopes": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/ApiEntitiesPersonalAccessTokenGranularScope"
+              "$ref": "#/components/schemas/ApiEntitiesGranularScope"
             }
           },
           "active": {
@@ -128682,9 +128786,21 @@
               "description": "Fallback array item schema"
             }
           },
+          "granular_scopes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesGranularScope"
+            }
+          },
           "secret": {
             "type": "string",
             "example": "ee1dd64b6adc89cf7e2c23099301ccc2c61b441064e9324d963c46902a85ec34"
+          },
+          "warnings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       },
@@ -128717,6 +128833,12 @@
             "items": {
               "type": "object",
               "description": "Fallback array item schema"
+            }
+          },
+          "granular_scopes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesGranularScope"
             }
           }
         }
@@ -131448,7 +131570,7 @@
           "granular_scopes": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/ApiEntitiesPersonalAccessTokenGranularScope"
+              "$ref": "#/components/schemas/ApiEntitiesGranularScope"
             }
           },
           "active": {
@@ -132581,7 +132703,7 @@
           "granular_scopes": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/ApiEntitiesPersonalAccessTokenGranularScope"
+              "$ref": "#/components/schemas/ApiEntitiesGranularScope"
             }
           },
           "active": {
@@ -132660,7 +132782,7 @@
           "granular_scopes": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/ApiEntitiesPersonalAccessTokenGranularScope"
+              "$ref": "#/components/schemas/ApiEntitiesGranularScope"
             }
           },
           "active": {
@@ -157893,7 +158015,7 @@
             "items": {
               "type": "string"
             },
-            "description": "Project relation names to exclude from the export, for example \u0060merge_requests\u0060 and \u0060issues\u0060.",
+            "description": "Project relation names to exclude from the export, for example \u0060merge_requests\u0060, \u0060issues\u0060, \u0060ci_pipelines\u0060, \u0060uploads\u0060, and \u0060lfs_objects\u0060.",
             "nullable": true
           }
         }
@@ -161097,7 +161219,7 @@
         "properties": {
           "hostname": {
             "type": "string",
-            "description": "Custom hostname of the Matrix server. The default value is \u0060https://matrix-client.matrix.org\u0060.",
+            "description": "URL of the Matrix server, including \u0060http://\u0060 or \u0060https://\u0060. The default value is \u0060https://matrix-client.matrix.org\u0060.",
             "nullable": true
           },
           "token": {
@@ -163960,7 +164082,7 @@
         "properties": {
           "hostname": {
             "type": "string",
-            "description": "Custom hostname of the Matrix server. The default value is \u0060https://matrix-client.matrix.org\u0060.",
+            "description": "URL of the Matrix server, including \u0060http://\u0060 or \u0060https://\u0060. The default value is \u0060https://matrix-client.matrix.org\u0060.",
             "nullable": true
           },
           "token": {
@@ -166823,7 +166945,7 @@
         "properties": {
           "hostname": {
             "type": "string",
-            "description": "Custom hostname of the Matrix server. The default value is \u0060https://matrix-client.matrix.org\u0060.",
+            "description": "URL of the Matrix server, including \u0060http://\u0060 or \u0060https://\u0060. The default value is \u0060https://matrix-client.matrix.org\u0060.",
             "nullable": true
           },
           "token": {
@@ -171781,6 +171903,14 @@
             "type": "boolean",
             "description": "The application is used where the client secret can be kept confidential. Native mobile apps \\\n                        and Single Page Apps are considered non-confidential. Defaults to true if not supplied",
             "default": true
+          },
+          "granular_scopes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PostApiV4ApplicationsRequestGranularScopesItem"
+            },
+            "description": "List of granular scopes to assign.",
+            "nullable": true
           }
         }
       },
@@ -178506,6 +178636,42 @@
             "type": "boolean",
             "description": "The option to migrate memberships or not",
             "default": true
+          }
+        }
+      },
+      "PostApiV4ApplicationsRequestGranularScopesItem": {
+        "required": [
+          "access",
+          "permissions"
+        ],
+        "type": "object",
+        "properties": {
+          "access": {
+            "$ref": "#/components/schemas/PostApiV4ApplicationsRequestGranularScopesItemAccess"
+          },
+          "permissions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of permissions for the granular scope.",
+            "nullable": true
+          },
+          "project_ids": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            },
+            "description": "IDs of projects to associate with the granular scope, when access is \u0060selected_memberships\u0060.",
+            "nullable": true
+          },
+          "group_ids": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            },
+            "description": "IDs of groups to associate with the granular scope, when access is \u0060selected_memberships\u0060.",
+            "nullable": true
           }
         }
       },
@@ -197049,6 +197215,45 @@
             {
               "value": "project_entity",
               "name": "ProjectEntity"
+            }
+          ]
+        }
+      },
+      "PostApiV4ApplicationsRequestGranularScopesItemAccess": {
+        "minLength": 1,
+        "enum": [
+          "personal_projects",
+          "all_memberships",
+          "selected_memberships",
+          "user",
+          "instance"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "Access to configure for the granular scope.",
+        "x-ms-enum": {
+          "name": "PostApiV4ApplicationsRequestGranularScopesItemAccess",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "personal_projects",
+              "name": "PersonalProjects"
+            },
+            {
+              "value": "all_memberships",
+              "name": "AllMemberships"
+            },
+            {
+              "value": "selected_memberships",
+              "name": "SelectedMemberships"
+            },
+            {
+              "value": "user",
+              "name": "User"
+            },
+            {
+              "value": "instance",
+              "name": "Instance"
             }
           ]
         }

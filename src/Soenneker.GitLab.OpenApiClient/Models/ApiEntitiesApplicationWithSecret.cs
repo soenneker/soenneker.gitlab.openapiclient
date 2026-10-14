@@ -40,6 +40,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>The confidential property</summary>
         public bool? Confidential { get; set; }
+        /// <summary>The granular_scopes property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGranularScope>? GranularScopes { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGranularScope> GranularScopes { get; set; }
+#endif
         /// <summary>The id property</summary>
         public long? Id { get; set; }
         /// <summary>The scopes property</summary>
@@ -57,6 +65,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #nullable restore
 #else
         public string Secret { get; set; }
+#endif
+        /// <summary>The warnings property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? Warnings { get; set; }
+#nullable restore
+#else
+        public List<string> Warnings { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationWithSecret"/> and sets the default values.
@@ -87,9 +103,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "application_name", n => { ApplicationName = n.GetStringValue(); } },
                 { "callback_url", n => { CallbackUrl = n.GetStringValue(); } },
                 { "confidential", n => { Confidential = n.GetBoolValue(); } },
+                { "granular_scopes", n => { GranularScopes = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGranularScope>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGranularScope.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "id", n => { Id = n.GetLongValue(); } },
                 { "scopes", n => { Scopes = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationWithSecret_scopes>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationWithSecret_scopes.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "secret", n => { Secret = n.GetStringValue(); } },
+                { "warnings", n => { Warnings = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -103,9 +121,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("application_name", ApplicationName);
             writer.WriteStringValue("callback_url", CallbackUrl);
             writer.WriteBoolValue("confidential", Confidential);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGranularScope>("granular_scopes", GranularScopes);
             writer.WriteLongValue("id", Id);
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationWithSecret_scopes>("scopes", Scopes);
             writer.WriteStringValue("secret", Secret);
+            writer.WriteCollectionOfPrimitiveValues<string>("warnings", Warnings);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

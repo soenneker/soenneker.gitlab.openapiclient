@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>Project relation names to exclude from the export, for example `merge_requests` and `issues`.</summary>
+        /// <summary>Project relation names to exclude from the export, for example `merge_requests`, `issues`, `ci_pipelines`, `uploads`, and `lfs_objects`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? ExcludedRelations { get; set; }

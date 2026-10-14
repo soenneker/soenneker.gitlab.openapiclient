@@ -16,6 +16,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The application is used where the client secret can be kept confidential. Native mobile apps \                        and Single Page Apps are considered non-confidential. Defaults to true if not supplied</summary>
         public bool? Confidential { get; set; }
+        /// <summary>List of granular scopes to assign.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ApplicationsRequestGranularScopesItem>? GranularScopes { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ApplicationsRequestGranularScopesItem> GranularScopes { get; set; }
+#endif
         /// <summary>Name of the application.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -67,6 +75,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "confidential", n => { Confidential = n.GetBoolValue(); } },
+                { "granular_scopes", n => { GranularScopes = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ApplicationsRequestGranularScopesItem>(global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ApplicationsRequestGranularScopesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "redirect_uri", n => { RedirectUri = n.GetStringValue(); } },
                 { "scopes", n => { Scopes = n.GetStringValue(); } },
@@ -80,6 +89,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("confidential", Confidential);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ApplicationsRequestGranularScopesItem>("granular_scopes", GranularScopes);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("redirect_uri", RedirectUri);
             writer.WriteStringValue("scopes", Scopes);
