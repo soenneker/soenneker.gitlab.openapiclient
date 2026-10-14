@@ -25,6 +25,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>Expiration date of the access token in ISO format (YYYY-MM-DD). If undefined, the date is set to the maximum allowable lifetime limit.</summary>
         public Date? ExpiresAt { get; set; }
+        /// <summary>List of granular scopes to assign. Exactly one of `scopes`, `granular_scopes` must be provided.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UsersUserIdPersonalAccessTokensRequestGranularScopesItem>? GranularScopes { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UsersUserIdPersonalAccessTokensRequestGranularScopesItem> GranularScopes { get; set; }
+#endif
         /// <summary>Name of the access token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -33,7 +41,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>Array of approved scopes. For a list of possible values, see [access token scopes](https://docs.gitlab.com/security/tokens/access_token_scopes/).</summary>
+        /// <summary>Array of approved scopes. For a list of possible values, see [access token scopes](https://docs.gitlab.com/security/tokens/access_token_scopes/). Exactly one of `scopes`, `granular_scopes` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UsersUserIdPersonalAccessTokensRequestScopesItem?>? Scopes { get; set; }
@@ -68,6 +76,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             {
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "expires_at", n => { ExpiresAt = n.GetDateValue(); } },
+                { "granular_scopes", n => { GranularScopes = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UsersUserIdPersonalAccessTokensRequestGranularScopesItem>(global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UsersUserIdPersonalAccessTokensRequestGranularScopesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "scopes", n => { Scopes = n.GetCollectionOfEnumValues<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UsersUserIdPersonalAccessTokensRequestScopesItem>()?.AsList(); } },
             };
@@ -81,6 +90,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("description", Description);
             writer.WriteDateValue("expires_at", ExpiresAt);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UsersUserIdPersonalAccessTokensRequestGranularScopesItem>("granular_scopes", GranularScopes);
             writer.WriteStringValue("name", Name);
             writer.WriteCollectionOfEnumValues<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UsersUserIdPersonalAccessTokensRequestScopesItem>("scopes", Scopes);
             writer.WriteAdditionalData(AdditionalData);

@@ -8,6 +8,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     public enum GetApiV4GroupsIdServiceAccountsUserIdPersonalAccessTokensStateParameter
     #pragma warning restore CS1591
     {
+        [EnumMember(Value = "all")]
+        #pragma warning disable CS1591
+        All,
+        #pragma warning restore CS1591
         [EnumMember(Value = "active")]
         #pragma warning disable CS1591
         Active,

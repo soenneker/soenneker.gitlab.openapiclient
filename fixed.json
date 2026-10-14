@@ -23622,12 +23622,109 @@
             "example": 20
           },
           {
+            "name": "revoked",
+            "in": "query",
+            "description": "If \u0060true\u0060, only returns revoked tokens. If \u0060false\u0060, only returns tokens that are not revoked.",
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            },
+            "example": false
+          },
+          {
             "name": "state",
             "in": "query",
-            "description": "Filter tokens by state.",
+            "description": "Return tokens with the specified state.",
             "schema": {
               "$ref": "#/components/schemas/GetApiV4UsersUserIdImpersonationTokensStateParameter"
-            }
+            },
+            "example": "active"
+          },
+          {
+            "name": "created_before",
+            "in": "query",
+            "description": "Return tokens created on or before the specified time.",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            },
+            "example": "2022-01-01T00:00:00Z"
+          },
+          {
+            "name": "created_after",
+            "in": "query",
+            "description": "Return tokens created on or after the specified time.",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            },
+            "example": "2021-01-01T00:00:00Z"
+          },
+          {
+            "name": "last_used_before",
+            "in": "query",
+            "description": "Return tokens last used on or before the specified time.",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            },
+            "example": "2021-01-01T00:00:00Z"
+          },
+          {
+            "name": "last_used_after",
+            "in": "query",
+            "description": "Return tokens last used on or after the specified time.",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            },
+            "example": "2022-01-01T00:00:00Z"
+          },
+          {
+            "name": "expires_before",
+            "in": "query",
+            "description": "Return tokens that expire before the specified date.",
+            "schema": {
+              "type": "string",
+              "format": "date",
+              "nullable": true
+            },
+            "example": "2022-01-01"
+          },
+          {
+            "name": "expires_after",
+            "in": "query",
+            "description": "Return tokens that expire on or after the specified date.",
+            "schema": {
+              "type": "string",
+              "format": "date",
+              "nullable": true
+            },
+            "example": "2021-01-01"
+          },
+          {
+            "name": "search",
+            "in": "query",
+            "description": "Return tokens that include the specified value in their name.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "example": "token"
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sort results by the specified field and direction. Possible values are \u0060created_asc\u0060, \u0060created_desc\u0060, \u0060expires_asc\u0060, \u0060expires_desc\u0060, \u0060last_used_asc\u0060, \u0060last_used_desc\u0060, \u0060name_asc\u0060, and \u0060name_desc\u0060.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "example": "created_desc"
           }
         ],
         "responses": {
@@ -23790,7 +23887,7 @@
           "Access tokens"
         ],
         "summary": "Create a personal access token for a user",
-        "description": "Creates a personal access token for a user. Token values are included with the response, but cannot be retrieved later. Administrators only.",
+        "description": "Creates a personal access token for a user. To create a fine-grained personal access token, use \u0060granular_scopes\u0060 instead of \u0060scopes\u0060. Token values are included with the response, but cannot be retrieved later. Administrators only.",
         "operationId": "PostApiV4UsersUserIdPersonalAccessTokens",
         "parameters": [
           {
@@ -148584,8 +148681,7 @@
       },
       "PostApiV4UsersUserIdPersonalAccessTokensRequest": {
         "required": [
-          "name",
-          "scopes"
+          "name"
         ],
         "type": "object",
         "properties": {
@@ -148613,7 +148709,16 @@
             "items": {
               "$ref": "#/components/schemas/PostApiV4UsersUserIdPersonalAccessTokensRequestScopesItem"
             },
-            "description": "Array of approved scopes. For a list of possible values, see [access token scopes](https://docs.gitlab.com/security/tokens/access_token_scopes/)."
+            "description": "Array of approved scopes. For a list of possible values, see [access token scopes](https://docs.gitlab.com/security/tokens/access_token_scopes/). Exactly one of \u0060scopes\u0060, \u0060granular_scopes\u0060 must be provided.",
+            "nullable": true
+          },
+          "granular_scopes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PostApiV4UsersUserIdPersonalAccessTokensRequestGranularScopesItem"
+            },
+            "description": "List of granular scopes to assign. Exactly one of \u0060scopes\u0060, \u0060granular_scopes\u0060 must be provided.",
+            "nullable": true
           }
         }
       },
@@ -174863,6 +174968,42 @@
           }
         }
       },
+      "PostApiV4UsersUserIdPersonalAccessTokensRequestGranularScopesItem": {
+        "required": [
+          "access",
+          "permissions"
+        ],
+        "type": "object",
+        "properties": {
+          "access": {
+            "$ref": "#/components/schemas/PostApiV4UsersUserIdPersonalAccessTokensRequestGranularScopesItemAccess"
+          },
+          "permissions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of permissions for the granular scope.",
+            "nullable": true
+          },
+          "project_ids": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            },
+            "description": "IDs of projects to associate with the granular scope, when access is \u0060selected_memberships\u0060.",
+            "nullable": true
+          },
+          "group_ids": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            },
+            "description": "IDs of groups to associate with the granular scope, when access is \u0060selected_memberships\u0060.",
+            "nullable": true
+          }
+        }
+      },
       "PostApiV4UserPersonalAccessTokensRequestGranularScopesItem": {
         "required": [
           "access",
@@ -193969,6 +194110,45 @@
           ]
         }
       },
+      "PostApiV4UsersUserIdPersonalAccessTokensRequestGranularScopesItemAccess": {
+        "minLength": 1,
+        "enum": [
+          "personal_projects",
+          "all_memberships",
+          "selected_memberships",
+          "user",
+          "instance"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "Access to configure for the granular scope.",
+        "x-ms-enum": {
+          "name": "PostApiV4UsersUserIdPersonalAccessTokensRequestGranularScopesItemAccess",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "personal_projects",
+              "name": "PersonalProjects"
+            },
+            {
+              "value": "all_memberships",
+              "name": "AllMemberships"
+            },
+            {
+              "value": "selected_memberships",
+              "name": "SelectedMemberships"
+            },
+            {
+              "value": "user",
+              "name": "User"
+            },
+            {
+              "value": "instance",
+              "name": "Instance"
+            }
+          ]
+        }
+      },
       "PostApiV4UserPersonalAccessTokensRequestGranularScopesItemAccess": {
         "minLength": 1,
         "enum": [
@@ -197592,6 +197772,7 @@
       },
       "GetApiV4GroupsIdManagePersonalAccessTokensStateParameter": {
         "enum": [
+          "all",
           "active",
           "inactive"
         ],
@@ -197602,6 +197783,10 @@
           "name": "GetApiV4GroupsIdManagePersonalAccessTokensStateParameter",
           "modelAsString": false,
           "values": [
+            {
+              "value": "all",
+              "name": "All"
+            },
             {
               "value": "active",
               "name": "Active"
@@ -197615,6 +197800,7 @@
       },
       "GetApiV4GroupsIdManageResourceAccessTokensStateParameter": {
         "enum": [
+          "all",
           "active",
           "inactive"
         ],
@@ -197625,6 +197811,10 @@
           "name": "GetApiV4GroupsIdManageResourceAccessTokensStateParameter",
           "modelAsString": false,
           "values": [
+            {
+              "value": "all",
+              "name": "All"
+            },
             {
               "value": "active",
               "name": "Active"
@@ -198928,6 +199118,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
+        "nullable": true,
         "x-ms-enum": {
           "name": "GetApiV4UsersUserIdImpersonationTokensStateParameter",
           "modelAsString": false,
@@ -199225,6 +199416,7 @@
       },
       "GetApiV4ProjectsIdServiceAccountsUserIdPersonalAccessTokensStateParameter": {
         "enum": [
+          "all",
           "active",
           "inactive"
         ],
@@ -199235,6 +199427,10 @@
           "name": "GetApiV4ProjectsIdServiceAccountsUserIdPersonalAccessTokensStateParameter",
           "modelAsString": false,
           "values": [
+            {
+              "value": "all",
+              "name": "All"
+            },
             {
               "value": "active",
               "name": "Active"
@@ -199816,6 +200012,7 @@
       },
       "GetApiV4GroupsIdServiceAccountsUserIdPersonalAccessTokensStateParameter": {
         "enum": [
+          "all",
           "active",
           "inactive"
         ],
@@ -199826,6 +200023,10 @@
           "name": "GetApiV4GroupsIdServiceAccountsUserIdPersonalAccessTokensStateParameter",
           "modelAsString": false,
           "values": [
+            {
+              "value": "all",
+              "name": "All"
+            },
             {
               "value": "active",
               "name": "Active"
@@ -200276,6 +200477,7 @@
       },
       "GetApiV4ProjectsIdAccessTokensStateParameter": {
         "enum": [
+          "all",
           "active",
           "inactive"
         ],
@@ -200286,6 +200488,10 @@
           "name": "GetApiV4ProjectsIdAccessTokensStateParameter",
           "modelAsString": false,
           "values": [
+            {
+              "value": "all",
+              "name": "All"
+            },
             {
               "value": "active",
               "name": "Active"
@@ -200299,6 +200505,7 @@
       },
       "GetApiV4GroupsIdAccessTokensStateParameter": {
         "enum": [
+          "all",
           "active",
           "inactive"
         ],
@@ -200309,6 +200516,10 @@
           "name": "GetApiV4GroupsIdAccessTokensStateParameter",
           "modelAsString": false,
           "values": [
+            {
+              "value": "all",
+              "name": "All"
+            },
             {
               "value": "active",
               "name": "Active"
@@ -201985,6 +202196,7 @@
       },
       "GetApiV4PersonalAccessTokensStateParameter": {
         "enum": [
+          "all",
           "active",
           "inactive"
         ],
@@ -201995,6 +202207,10 @@
           "name": "GetApiV4PersonalAccessTokensStateParameter",
           "modelAsString": false,
           "values": [
+            {
+              "value": "all",
+              "name": "All"
+            },
             {
               "value": "active",
               "name": "Active"

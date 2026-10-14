@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Personal_access_token
         {
         }
         /// <summary>
-        /// Creates a personal access token for a user. Token values are included with the response, but cannot be retrieved later. Administrators only.
+        /// Creates a personal access token for a user. To create a fine-grained personal access token, use `granular_scopes` instead of `scopes`. Token values are included with the response, but cannot be retrieved later. Administrators only.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalAccessTokenWithToken"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Personal_access_token
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalAccessTokenWithToken>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalAccessTokenWithToken.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Creates a personal access token for a user. Token values are included with the response, but cannot be retrieved later. Administrators only.
+        /// Creates a personal access token for a user. To create a fine-grained personal access token, use `granular_scopes` instead of `scopes`. Token values are included with the response, but cannot be retrieved later. Administrators only.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

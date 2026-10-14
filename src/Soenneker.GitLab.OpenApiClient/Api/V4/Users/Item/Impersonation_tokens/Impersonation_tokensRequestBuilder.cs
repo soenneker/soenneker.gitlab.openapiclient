@@ -35,7 +35,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Impersonation_tokens
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Impersonation_tokensRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/users/{%2Did}/impersonation_tokens{?page*,per_page*,state*}", pathParameters)
+        public Impersonation_tokensRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/users/{%2Did}/impersonation_tokens{?created_after*,created_before*,expires_after*,expires_before*,last_used_after*,last_used_before*,page*,per_page*,revoked*,search*,sort*,state*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Impersonation_tokens
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Impersonation_tokensRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/users/{%2Did}/impersonation_tokens{?page*,per_page*,state*}", rawUrl)
+        public Impersonation_tokensRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/users/{%2Did}/impersonation_tokens{?created_after*,created_before*,expires_after*,expires_before*,last_used_after*,last_used_before*,page*,per_page*,revoked*,search*,sort*,state*}", rawUrl)
         {
         }
         /// <summary>
@@ -141,13 +141,54 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Impersonation_tokens
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Impersonation_tokensRequestBuilderGetQueryParameters 
         {
+            /// <summary>Return tokens created on or after the specified time.</summary>
+            [QueryParameter("created_after")]
+            public DateTimeOffset? CreatedAfter { get; set; }
+            /// <summary>Return tokens created on or before the specified time.</summary>
+            [QueryParameter("created_before")]
+            public DateTimeOffset? CreatedBefore { get; set; }
+            /// <summary>Return tokens that expire on or after the specified date.</summary>
+            [QueryParameter("expires_after")]
+            public Date? ExpiresAfter { get; set; }
+            /// <summary>Return tokens that expire before the specified date.</summary>
+            [QueryParameter("expires_before")]
+            public Date? ExpiresBefore { get; set; }
+            /// <summary>Return tokens last used on or after the specified time.</summary>
+            [QueryParameter("last_used_after")]
+            public DateTimeOffset? LastUsedAfter { get; set; }
+            /// <summary>Return tokens last used on or before the specified time.</summary>
+            [QueryParameter("last_used_before")]
+            public DateTimeOffset? LastUsedBefore { get; set; }
             /// <summary>Page number of results to retrieve.</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Filter tokens by state.</summary>
+            /// <summary>If `true`, only returns revoked tokens. If `false`, only returns tokens that are not revoked.</summary>
+            [QueryParameter("revoked")]
+            public bool? Revoked { get; set; }
+            /// <summary>Return tokens that include the specified value in their name.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("search")]
+            public string? Search { get; set; }
+#nullable restore
+#else
+            [QueryParameter("search")]
+            public string Search { get; set; }
+#endif
+            /// <summary>Sort results by the specified field and direction. Possible values are `created_asc`, `created_desc`, `expires_asc`, `expires_desc`, `last_used_asc`, `last_used_desc`, `name_asc`, and `name_desc`.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("sort")]
+            public string? Sort { get; set; }
+#nullable restore
+#else
+            [QueryParameter("sort")]
+            public string Sort { get; set; }
+#endif
+            /// <summary>Return tokens with the specified state.</summary>
             [QueryParameter("state")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4UsersUserIdImpersonationTokensStateParameter? State { get; set; }
         }
