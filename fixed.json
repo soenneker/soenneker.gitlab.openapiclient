@@ -3764,7 +3764,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "post": {
         "tags": [
@@ -3820,7 +3821,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/groups/{id}/protected_branches/{name}": {
@@ -3872,7 +3874,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "patch": {
         "tags": [
@@ -3934,7 +3937,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "delete": {
         "tags": [
@@ -3977,7 +3981,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/group_repository_storage_moves": {
@@ -4024,7 +4029,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "post": {
         "tags": [
@@ -4050,7 +4056,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/group_repository_storage_moves/{repositoryStorageMoveId}": {
@@ -4089,7 +4096,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/groups/{id}/repository_storage_moves": {
@@ -4148,7 +4156,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "post": {
         "tags": [
@@ -4194,7 +4203,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/groups/{id}/repository_storage_moves/{repositoryStorageMoveId}": {
@@ -4242,7 +4252,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/projects/{id}/iterations": {
@@ -5175,7 +5186,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "post": {
         "tags": [
@@ -5235,7 +5247,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/projects/{id}/protected_environments/{name}": {
@@ -5290,7 +5303,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "put": {
         "tags": [
@@ -5355,7 +5369,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "delete": {
         "tags": [
@@ -5401,7 +5416,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/groups/{id}/protected_environments": {
@@ -5467,7 +5483,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "post": {
         "tags": [
@@ -5527,7 +5544,8 @@
           "422": {
             "description": "Unprocessable entity"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/groups/{id}/protected_environments/{name}": {
@@ -5582,7 +5600,8 @@
           "404": {
             "description": "Not found"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "put": {
         "tags": [
@@ -5647,7 +5666,8 @@
           "422": {
             "description": "Unprocessable entity"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "delete": {
         "tags": [
@@ -5693,7 +5713,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/projects/{id}/analytics/deployment_frequency": {
@@ -6153,7 +6174,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "post": {
         "tags": [
@@ -6192,7 +6214,8 @@
           "404": {
             "description": "Not found"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/project_aliases/{name}": {
@@ -6234,7 +6257,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "delete": {
         "tags": [
@@ -6267,7 +6291,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/projects/{id}/merge_requests/{mergeRequestIid}/approval_rules": {
@@ -6342,7 +6367,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "post": {
         "tags": [
@@ -6405,7 +6431,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/projects/{id}/merge_requests/{mergeRequestIid}/approval_rules/{approvalRuleId}": {
@@ -6469,7 +6496,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "put": {
         "tags": [
@@ -6540,7 +6568,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "delete": {
         "tags": [
@@ -6595,7 +6624,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/security/projects/{id}/vulnerability_exports": {
@@ -7787,7 +7817,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "post": {
         "tags": [
@@ -7840,7 +7871,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/projects/{id}/managed_licenses": {
@@ -9220,7 +9252,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "put": {
         "tags": [
@@ -9276,7 +9309,8 @@
           "404": {
             "description": "Not Found"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/groups/{id}/merge_request_approval_setting": {
@@ -9318,7 +9352,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "put": {
         "tags": [
@@ -9367,7 +9402,8 @@
           "404": {
             "description": "Not Found"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/groups/{id}/hooks": {
@@ -10866,7 +10902,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/projects/{id}/merge_trains/{targetBranch}": {
@@ -10966,7 +11003,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/projects/{id}/merge_trains/merge_requests/{mergeRequestIid}": {
@@ -11028,7 +11066,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "post": {
         "tags": [
@@ -11110,7 +11149,8 @@
           "403": {
             "description": "Forbidden"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/groups/{id}/push_rule": {
@@ -11149,7 +11189,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "post": {
         "tags": [
@@ -11198,7 +11239,8 @@
           "422": {
             "description": "Unprocessable entity"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "put": {
         "tags": [
@@ -11247,7 +11289,8 @@
           "422": {
             "description": "Unprocessable entity"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "delete": {
         "tags": [
@@ -11277,7 +11320,8 @@
           "404": {
             "description": "Not found"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/internal/agents/agentw/agent_info": {
@@ -11402,7 +11446,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "post": {
         "tags": [
@@ -11458,7 +11503,8 @@
           "422": {
             "description": "Unprocessable entity"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "put": {
         "tags": [
@@ -11514,7 +11560,8 @@
           "422": {
             "description": "Unprocessable entity"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "delete": {
         "tags": [
@@ -11551,7 +11598,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/projects/{id}/mirror/pull": {
@@ -11605,7 +11653,8 @@
           "404": {
             "description": "Not Found"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "put": {
         "tags": [
@@ -11659,6 +11708,7 @@
             "description": "Not Found"
           }
         },
+        "x-gitlab-tier": "premium",
         "x-gitlab-lifecycle": "experiment"
       },
       "get": {
@@ -11703,7 +11753,8 @@
           "404": {
             "description": "Not Found"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/license": {
@@ -12333,7 +12384,8 @@
           "403": {
             "description": "403 Forbidden"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "get": {
         "tags": [
@@ -12384,7 +12436,8 @@
           "403": {
             "description": "403 Forbidden"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/geo_sites/status": {
@@ -12437,7 +12490,8 @@
           "403": {
             "description": "403 Forbidden"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/geo_sites/{id}": {
@@ -12482,7 +12536,8 @@
           "404": {
             "description": "404 GeoSite Not Found"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "put": {
         "tags": [
@@ -12534,7 +12589,8 @@
           "404": {
             "description": "404 GeoSite Not Found"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "delete": {
         "tags": [
@@ -12570,7 +12626,8 @@
           "404": {
             "description": "404 GeoSite Not Found"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/geo_sites/{id}/status": {
@@ -12624,7 +12681,8 @@
           "404": {
             "description": "404 GeoSite Not Found"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/geo_sites/{id}/repair": {
@@ -12669,7 +12727,8 @@
           "404": {
             "description": "404 GeoSite Not Found"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/geo_nodes": {
@@ -12710,7 +12769,8 @@
           "403": {
             "description": "403 Forbidden"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "get": {
         "tags": [
@@ -12761,7 +12821,8 @@
           "403": {
             "description": "403 Forbidden"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/geo_nodes/status": {
@@ -12814,7 +12875,8 @@
           "403": {
             "description": "403 Forbidden"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/geo_nodes/{id}": {
@@ -12859,7 +12921,8 @@
           "404": {
             "description": "404 GeoNode Not Found"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "put": {
         "tags": [
@@ -12911,7 +12974,8 @@
           "404": {
             "description": "404 GeoNode Not Found"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "delete": {
         "tags": [
@@ -12947,7 +13011,8 @@
           "404": {
             "description": "404 GeoNode Not Found"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/geo_nodes/{id}/status": {
@@ -13001,7 +13066,8 @@
           "404": {
             "description": "404 GeoNode Not Found"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/geo_nodes/{id}/repair": {
@@ -13046,7 +13112,8 @@
           "404": {
             "description": "404 GeoNode Not Found"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/experiments": {
@@ -13687,7 +13754,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/projects/{id}/dependency_proxy/packages/maven/{path}/{fileName}": {
@@ -13759,7 +13827,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/groups/{id}/epic_boards": {
@@ -15428,7 +15497,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/projects/{id}/approval_settings/rules": {
@@ -15484,7 +15554,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/projects/{id}/approval_settings/rules/{approvalRuleId}": {
@@ -15548,7 +15619,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "delete": {
         "tags": [
@@ -15594,7 +15666,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/projects/{id}/external_status_checks": {
@@ -16058,7 +16131,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "post": {
         "tags": [
@@ -16105,7 +16179,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/groups/{id}/approval_rules/{approvalRuleId}": {
@@ -16162,7 +16237,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/groups/{id}/security_settings": {
@@ -16365,7 +16441,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "post": {
         "tags": [
@@ -16419,7 +16496,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/projects/{id}/approval_rules/{approvalRuleId}": {
@@ -16474,7 +16552,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "put": {
         "tags": [
@@ -16536,7 +16615,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       },
       "delete": {
         "tags": [
@@ -16582,7 +16662,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/projects/{id}/cluster_agents/{agentId}/url_configurations": {
@@ -16637,7 +16718,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       },
       "post": {
         "tags": [
@@ -16700,7 +16782,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/projects/{id}/cluster_agents/{agentId}/url_configurations/{urlConfigurationId}": {
@@ -16764,7 +16847,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       },
       "delete": {
         "tags": [
@@ -16819,7 +16903,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/runner_controllers/{runnerControllerId}/tokens": {
@@ -16882,7 +16967,8 @@
             "description": "Bad Request"
           }
         },
-        "x-gitlab-lifecycle": "experiment"
+        "x-gitlab-lifecycle": "experiment",
+        "x-gitlab-tier": "ultimate"
       },
       "post": {
         "tags": [
@@ -16932,7 +17018,8 @@
             "description": "Not found"
           }
         },
-        "x-gitlab-lifecycle": "experiment"
+        "x-gitlab-lifecycle": "experiment",
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/runner_controllers/{runnerControllerId}/tokens/{id}": {
@@ -16984,7 +17071,8 @@
             "description": "Bad Request"
           }
         },
-        "x-gitlab-lifecycle": "experiment"
+        "x-gitlab-lifecycle": "experiment",
+        "x-gitlab-tier": "ultimate"
       },
       "delete": {
         "tags": [
@@ -17027,7 +17115,8 @@
             "description": "Not found"
           }
         },
-        "x-gitlab-lifecycle": "experiment"
+        "x-gitlab-lifecycle": "experiment",
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/runner_controllers/{runnerControllerId}/tokens/{id}/rotate": {
@@ -17079,7 +17168,8 @@
             "description": "Not found"
           }
         },
-        "x-gitlab-lifecycle": "experiment"
+        "x-gitlab-lifecycle": "experiment",
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/runner_controllers/{id}/scopes": {
@@ -17115,7 +17205,8 @@
             "description": "Bad Request"
           }
         },
-        "x-gitlab-lifecycle": "experiment"
+        "x-gitlab-lifecycle": "experiment",
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/runner_controllers/{id}/scopes/instance": {
@@ -17160,7 +17251,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       },
       "delete": {
         "tags": [
@@ -17193,7 +17285,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/runner_controllers/{id}/scopes/runners/{runnerId}": {
@@ -17250,7 +17343,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       },
       "delete": {
         "tags": [
@@ -17292,7 +17386,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/runner_controllers": {
@@ -17343,7 +17438,8 @@
             "description": "Bad Request"
           }
         },
-        "x-gitlab-lifecycle": "experiment"
+        "x-gitlab-lifecycle": "experiment",
+        "x-gitlab-tier": "ultimate"
       },
       "post": {
         "tags": [
@@ -17379,7 +17475,8 @@
             "description": "Bad Request"
           }
         },
-        "x-gitlab-lifecycle": "experiment"
+        "x-gitlab-lifecycle": "experiment",
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/runner_controllers/{id}": {
@@ -17422,7 +17519,8 @@
             "description": "Bad Request"
           }
         },
-        "x-gitlab-lifecycle": "experiment"
+        "x-gitlab-lifecycle": "experiment",
+        "x-gitlab-tier": "ultimate"
       },
       "put": {
         "tags": [
@@ -17472,7 +17570,8 @@
             "description": "Bad Request"
           }
         },
-        "x-gitlab-lifecycle": "experiment"
+        "x-gitlab-lifecycle": "experiment",
+        "x-gitlab-tier": "ultimate"
       },
       "delete": {
         "tags": [
@@ -17513,7 +17612,8 @@
             "description": "Bad Request"
           }
         },
-        "x-gitlab-lifecycle": "experiment"
+        "x-gitlab-lifecycle": "experiment",
+        "x-gitlab-tier": "ultimate"
       }
     },
     "/api/v4/audit_events": {
@@ -17781,7 +17881,8 @@
             "description": "404 Model Not Found"
           }
         },
-        "x-gitlab-lifecycle": "experiment"
+        "x-gitlab-lifecycle": "experiment",
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/admin/data_management/{modelName}/{recordIdentifier}/checksum": {
@@ -17838,7 +17939,8 @@
             "description": "404 Model Not Found"
           }
         },
-        "x-gitlab-lifecycle": "experiment"
+        "x-gitlab-lifecycle": "experiment",
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/admin/data_management/{modelName}": {
@@ -17954,7 +18056,8 @@
             "description": "404 Model Not Found"
           }
         },
-        "x-gitlab-lifecycle": "experiment"
+        "x-gitlab-lifecycle": "experiment",
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/admin/data_management/{modelName}/checksum": {
@@ -18011,7 +18114,8 @@
             "description": "404 Model Not Found"
           }
         },
-        "x-gitlab-lifecycle": "experiment"
+        "x-gitlab-lifecycle": "experiment",
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/admin/security/compliance_policy_settings": {
@@ -58459,6 +58563,52 @@
         "x-gitlab-lifecycle": "experiment"
       }
     },
+    "/api/v4/organizations/{id}/restore": {
+      "post": {
+        "tags": [
+          "Organizations"
+        ],
+        "summary": "Restore a soft-deleted organization",
+        "description": "Restores a soft-deleted organization. This feature was introduced in GitLab 19.6.",
+        "operationId": "PostApiV4OrganizationsIdRestore",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID of the organization.",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesOrganizationsOrganization"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          }
+        },
+        "x-gitlab-lifecycle": "experiment"
+      }
+    },
     "/api/v4/offline_exports": {
       "post": {
         "tags": [
@@ -62446,7 +62596,8 @@
             "description": "Bad Request"
           }
         },
-        "deprecated": true
+        "deprecated": true,
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/projects/{id}/merge_requests/{mergeRequestIid}/approve": {
@@ -62677,7 +62828,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/projects/{id}/create_ci_config": {
@@ -87142,7 +87294,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/projects/{id}/packages/generic/{packageName}/{packageVersion}/{fileName}/authorize": {
@@ -91815,7 +91968,8 @@
           "400": {
             "description": "Bad Request"
           }
-        }
+        },
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/deploy_tokens": {

@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Organizations.Item.Restore;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -16,6 +17,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Organizations.Item
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class OrganizationsItemRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The restore property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Organizations.Item.Restore.RestoreRequestBuilder Restore
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Organizations.Item.Restore.RestoreRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Organizations.Item.OrganizationsItemRequestBuilder"/> and sets the default values.
         /// </summary>
