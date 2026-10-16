@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Resour
     public partial class Resource_milestone_eventsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.issues.item.resource_milestone_events.item collection</summary>
-        /// <param name="position">The ID of a resource milestone event</param>
+        /// <param name="position">ID of the resource milestone event.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Resource_milestone_events.Item.WithEventItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Resource_milestone_events.Item.WithEventItemRequestBuilder this[string position]
         {

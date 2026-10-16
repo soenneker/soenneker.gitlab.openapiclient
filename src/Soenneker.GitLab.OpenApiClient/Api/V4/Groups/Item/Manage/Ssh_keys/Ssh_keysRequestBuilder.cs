@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Ssh_keys
     public partial class Ssh_keysRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.manage.ssh_keys.item collection</summary>
-        /// <param name="position">The ID of the SSH key</param>
+        /// <param name="position">ID of the SSH key.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Ssh_keys.Item.WithKeyItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Ssh_keys.Item.WithKeyItemRequestBuilder this[int position]
         {
@@ -98,16 +98,16 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Ssh_keys
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Ssh_keysRequestBuilderGetQueryParameters 
         {
-            /// <summary>Filter ssh keys which were created after given datetime</summary>
+            /// <summary>Return SSH keys created on or after the specified time.</summary>
             [QueryParameter("created_after")]
             public DateTimeOffset? CreatedAfter { get; set; }
-            /// <summary>Filter ssh keys which were created before given datetime</summary>
+            /// <summary>Return SSH keys created on or before the specified time.</summary>
             [QueryParameter("created_before")]
             public DateTimeOffset? CreatedBefore { get; set; }
-            /// <summary>Filter ssh keys which expire after given datetime</summary>
+            /// <summary>Return SSH keys that expire on or after the specified time.</summary>
             [QueryParameter("expires_after")]
             public DateTimeOffset? ExpiresAfter { get; set; }
-            /// <summary>Filter ssh keys which expire before given datetime</summary>
+            /// <summary>Return SSH keys that expire on or before the specified time.</summary>
             [QueryParameter("expires_before")]
             public DateTimeOffset? ExpiresBefore { get; set; }
             /// <summary>Page number of results to retrieve.</summary>

@@ -35,7 +35,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Helm.Item
         /// Builds and executes requests for operations under \api\v4\projects\{-id}\packages\helm\{channel}\charts\{fileName}.tgz
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Helm.Item.Charts.WithFileNameTgz.WithFileNameTgzRequestBuilder"/></returns>
-        /// <param name="fileName">Helm package file name</param>
+        /// <param name="fileName">Name of the chart file.</param>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Helm.Item.Charts.WithFileNameTgz.WithFileNameTgzRequestBuilder WithFileNameTgz(string fileName)
         {
             if(string.IsNullOrEmpty(fileName)) throw new ArgumentNullException(nameof(fileName));

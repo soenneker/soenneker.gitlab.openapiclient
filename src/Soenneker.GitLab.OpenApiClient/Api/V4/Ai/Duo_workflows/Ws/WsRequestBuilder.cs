@@ -93,7 +93,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Ws
             [QueryParameter("environment")]
             public string Environment { get; set; }
 #endif
-            /// <summary>The ID of an existing workflow. When provided and the workflow has a stored model selection, that selection is reused to ensure provider stickiness.</summary>
+            /// <summary>ID of the existing workflow. When provided and the workflow has a stored model selection, that selection is reused to ensure provider stickiness.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("workflow_id")]

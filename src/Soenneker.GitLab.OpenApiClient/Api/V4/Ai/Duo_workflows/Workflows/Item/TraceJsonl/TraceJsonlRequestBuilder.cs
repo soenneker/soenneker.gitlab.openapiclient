@@ -83,10 +83,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class TraceJsonlRequestBuilderGetQueryParameters 
         {
-            /// <summary>Include internal channels (conversation history, handover, etc). Restricted to the workflow owner; non-owners receive a 403.</summary>
+            /// <summary>If `true`, includes internal channels such as conversation history and handover. Restricted to the workflow owner. Non-owners receive a `403`.</summary>
             [QueryParameter("full")]
             public bool? Full { get; set; }
-            /// <summary>Which thread to return: omit for the full cross-thread trace (default), &apos;latest&apos; for the latest thread only, or a current_thread id for that thread only. Only applies on the blob-read path.</summary>
+            /// <summary>Thread to return. Omit for the full trace across all threads. Use `latest` for the most recent thread, or a thread ID for a specific thread. Has no effect on workflows that do not use incremental checkpoint storage.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("thread")]

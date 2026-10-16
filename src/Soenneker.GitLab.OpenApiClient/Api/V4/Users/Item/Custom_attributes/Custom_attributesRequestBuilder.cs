@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Custom_attributes
     public partial class Custom_attributesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.users.item.custom_attributes.item collection</summary>
-        /// <param name="position">The key of the custom attribute</param>
+        /// <param name="position">Key of the custom attribute.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Custom_attributes.Item.WithKeyItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Custom_attributes.Item.WithKeyItemRequestBuilder this[string position]
         {

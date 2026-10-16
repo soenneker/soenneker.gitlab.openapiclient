@@ -24,7 +24,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ClientType { get; set; }
 #endif
-        /// <summary>The ID or path of the workflow namespace</summary>
+        /// <summary>ID or path of the namespace to associate the flow with.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? NamespaceId { get; set; }
@@ -32,7 +32,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string NamespaceId { get; set; }
 #endif
-        /// <summary>The ID or path of the workflow project</summary>
+        /// <summary>ID or path of the project to associate the flow with.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ProjectId { get; set; }

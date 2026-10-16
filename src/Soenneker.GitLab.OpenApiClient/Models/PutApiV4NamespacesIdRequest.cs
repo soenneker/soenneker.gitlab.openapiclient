@@ -15,13 +15,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>End of subscription of the additional purchased storage</summary>
+        /// <summary>End of subscription of the additional purchased storage.</summary>
         public Date? AdditionalPurchasedStorageEndsOn { get; set; }
-        /// <summary>Additional storage size for this namespace</summary>
+        /// <summary>Additional storage size purchased for the namespace.</summary>
         public int? AdditionalPurchasedStorageSize { get; set; }
-        /// <summary>Extra compute minutes for this namespace</summary>
+        /// <summary>Extra compute minutes quota for the namespace.</summary>
         public int? ExtraSharedRunnersMinutesLimit { get; set; }
-        /// <summary>Object that contains information on the GitLab subscription</summary>
+        /// <summary>Object that contains information on the GitLab subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4NamespacesIdRequestGitlabSubscriptionAttributes? GitlabSubscriptionAttributes { get; set; }
@@ -29,7 +29,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4NamespacesIdRequestGitlabSubscriptionAttributes GitlabSubscriptionAttributes { get; set; }
 #endif
-        /// <summary>Compute minutes quota for this namespace</summary>
+        /// <summary>Compute minutes quota for the namespace.</summary>
         public int? SharedRunnersMinutesLimit { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4NamespacesIdRequest"/> and sets the default values.

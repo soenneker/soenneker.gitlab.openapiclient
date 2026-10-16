@@ -95,7 +95,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ml.Mlflow.Api.TwoZ
             [QueryParameter("run_id")]
             public string RunId { get; set; }
 #endif
-            /// <summary>This parameter is ignored</summary>
+            /// <summary>Any value provided is ignored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("run_uuid")]

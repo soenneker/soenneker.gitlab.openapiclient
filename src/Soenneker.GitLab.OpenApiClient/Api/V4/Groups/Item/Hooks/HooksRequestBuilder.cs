@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Hooks
     public partial class HooksRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.hooks.item collection</summary>
-        /// <param name="position">The ID of a group hook</param>
+        /// <param name="position">ID of the group webhook.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Hooks.Item.WithHookItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Hooks.Item.WithHookItemRequestBuilder this[int position]
         {

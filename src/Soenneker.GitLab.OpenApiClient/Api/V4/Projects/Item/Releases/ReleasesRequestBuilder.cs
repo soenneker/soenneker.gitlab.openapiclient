@@ -25,7 +25,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Permalink.PermalinkRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.releases.item collection</summary>
-        /// <param name="position">The Git tag the release is associated with</param>
+        /// <param name="position">Git tag the release is associated with.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item.WithTagNameItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item.WithTagNameItemRequestBuilder this[string position]
         {
@@ -147,10 +147,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ReleasesRequestBuilderGetQueryParameters 
         {
-            /// <summary>If `true`, a response includes HTML rendered markdown of the release description</summary>
+            /// <summary>If `true`, the response includes HTML-rendered Markdown of the release description.</summary>
             [QueryParameter("include_html_description")]
             public bool? IncludeHtmlDescription { get; set; }
-            /// <summary>The field to use as order. Either `released_at` (default) or `created_at`</summary>
+            /// <summary>Sort results by the specified field.</summary>
             [QueryParameter("order_by")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdReleasesOrderByParameter? OrderBy { get; set; }
             /// <summary>Page number of results to retrieve.</summary>
@@ -159,13 +159,13 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>The direction of the order. Either `desc` (default) for descending order or `asc` for ascending order</summary>
+            /// <summary>Sort results in ascending or descending order.</summary>
             [QueryParameter("sort")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdReleasesSortParameter? Sort { get; set; }
-            /// <summary>Return releases updated after the specified datetime. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ</summary>
+            /// <summary>Return releases updated on or after the specified time.</summary>
             [QueryParameter("updated_after")]
             public DateTimeOffset? UpdatedAfter { get; set; }
-            /// <summary>Return releases updated before the specified datetime. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ</summary>
+            /// <summary>Return releases updated on or before the specified time.</summary>
             [QueryParameter("updated_before")]
             public DateTimeOffset? UpdatedBefore { get; set; }
         }

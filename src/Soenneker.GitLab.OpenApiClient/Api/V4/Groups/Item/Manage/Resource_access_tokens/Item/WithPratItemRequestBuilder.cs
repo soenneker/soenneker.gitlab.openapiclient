@@ -88,7 +88,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Resource_acce
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithPratItemRequestBuilderDeleteQueryParameters 
         {
-            /// <summary>The expiration date of the token</summary>
+            /// <summary>Date when the access token expires. If omitted, the new token expires one week after rotation when [token expiry is enforced](https://docs.gitlab.com/user/profile/personal_access_tokens/#access-token-expiration), and does not expire otherwise. When expiry is enforced, the date must be no more than one year after rotation.</summary>
             [QueryParameter("expires_at")]
             public Date? ExpiresAt { get; set; }
         }

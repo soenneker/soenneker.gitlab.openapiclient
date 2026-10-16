@@ -97,7 +97,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Batched_background_operati
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Batched_background_operationsItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>The name of the database</summary>
+            /// <summary>Name of the database.</summary>
             [QueryParameter("database")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4AdminBatchedBackgroundOperationsIdDatabaseParameter? Database { get; set; }
         }

@@ -9,20 +9,20 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// Object that contains information on the GitLab subscription
+    /// Object that contains information on the GitLab subscription.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PutApiV4NamespacesIdRequestGitlabSubscriptionAttributes : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Whether subscription will auto renew on end date</summary>
+        /// <summary>If `true`, the subscription renews automatically on the end date.</summary>
         public bool? AutoRenew { get; set; }
-        /// <summary>End date of subscription</summary>
+        /// <summary>End date of the subscription.</summary>
         public Date? EndDate { get; set; }
-        /// <summary>Highest number of active users in the last month</summary>
+        /// <summary>Highest number of active users in the last month.</summary>
         public int? MaxSeatsUsed { get; set; }
-        /// <summary>Subscription tier code</summary>
+        /// <summary>Subscription tier code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PlanCode { get; set; }
@@ -30,17 +30,17 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string PlanCode { get; set; }
 #endif
-        /// <summary>Number of seats in subscription</summary>
+        /// <summary>Number of seats in the subscription.</summary>
         public int? Seats { get; set; }
-        /// <summary>Start date of subscription</summary>
+        /// <summary>Start date of the subscription.</summary>
         public Date? StartDate { get; set; }
-        /// <summary>Whether the subscription is a trial</summary>
+        /// <summary>If `true`, the subscription is a trial.</summary>
         public bool? Trial { get; set; }
-        /// <summary>End date of trial</summary>
+        /// <summary>End date of the trial.</summary>
         public Date? TrialEndsOn { get; set; }
-        /// <summary>Whether subscription is an extended or reactivated trial</summary>
+        /// <summary>Type of trial extension applied to the subscription. `1` means extended, `2` means reactivated.</summary>
         public int? TrialExtensionType { get; set; }
-        /// <summary>Start date of trial</summary>
+        /// <summary>Start date of the trial.</summary>
         public Date? TrialStartsOn { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4NamespacesIdRequestGitlabSubscriptionAttributes"/> and sets the default values.

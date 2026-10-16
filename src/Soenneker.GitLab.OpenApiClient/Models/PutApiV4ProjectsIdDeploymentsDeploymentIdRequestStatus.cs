@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>The new status of the deployment. One of `running`, `success`, `failed`, or `canceled`</summary>
+    /// <summary>New status of the deployment.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PutApiV4ProjectsIdDeploymentsDeploymentIdRequestStatus
     {

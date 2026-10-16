@@ -14,11 +14,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Filter push events by branch. Possible values are `wildcard` (default), `regex`, and `all_branches`</summary>
+        /// <summary>Filter push events by branch. Defaults to `wildcard`.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdHooksHookIdRequestBranchFilterStrategy? BranchFilterStrategy { get; set; }
-        /// <summary>Trigger hook on confidential issues events</summary>
+        /// <summary>If `true`, triggers the group webhook on confidential issue events.</summary>
         public bool? ConfidentialIssuesEvents { get; set; }
-        /// <summary>Trigger hook on confidential note(comment) events</summary>
+        /// <summary>If `true`, triggers the group webhook on confidential note events.</summary>
         public bool? ConfidentialNoteEvents { get; set; }
         /// <summary>Custom headers for the hook.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -28,7 +28,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdHooksHookIdRequestCustomHeadersItem> CustomHeaders { get; set; }
 #endif
-        /// <summary>Custom template for the request payload</summary>
+        /// <summary>Custom template for the group webhook request payload.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CustomWebhookTemplate { get; set; }
@@ -36,9 +36,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string CustomWebhookTemplate { get; set; }
 #endif
-        /// <summary>Trigger hook on deployment events</summary>
+        /// <summary>If `true`, triggers the group webhook on deployment events.</summary>
         public bool? DeploymentEvents { get; set; }
-        /// <summary>Description of the hook</summary>
+        /// <summary>Description of the group webhook. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/460887) in GitLab 17.1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get; set; }
@@ -46,25 +46,25 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>Allow Duo Agent Platform flows to send lifecycle and progress events to this webhook. A flow must reference this webhook&apos;s ID as callback_hook_id when it starts</summary>
+        /// <summary>If `true`, allows Duo Agent Platform flows to send lifecycle and progress events to this group webhook. A flow must reference the webhook&apos;s ID as `callback_hook_id` when it starts. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/249149) in GitLab 19.4 [with a feature flag](https://docs.gitlab.com/administration/feature_flags/) named `duo_flow_callback_hooks`. Disabled by default.</summary>
         public bool? DuoFlowCallbackEnabled { get; set; }
-        /// <summary>Trigger hook on emoji events</summary>
+        /// <summary>If `true`, triggers the group webhook on emoji events.</summary>
         public bool? EmojiEvents { get; set; }
-        /// <summary>Do SSL verification when triggering the hook</summary>
+        /// <summary>If `true`, verifies the SSL certificate when the group webhook is triggered.</summary>
         public bool? EnableSslVerification { get; set; }
-        /// <summary>Trigger hook on feature flag events</summary>
+        /// <summary>If `true`, triggers the group webhook on feature flag events.</summary>
         public bool? FeatureFlagEvents { get; set; }
-        /// <summary>Trigger hook on issues events</summary>
+        /// <summary>If `true`, triggers the group webhook on issue events.</summary>
         public bool? IssuesEvents { get; set; }
-        /// <summary>Trigger hook on job events</summary>
+        /// <summary>If `true`, triggers the group webhook on job events.</summary>
         public bool? JobEvents { get; set; }
-        /// <summary>Trigger hook on member events</summary>
+        /// <summary>If `true`, triggers the group webhook on member events.</summary>
         public bool? MemberEvents { get; set; }
-        /// <summary>Trigger hook on merge request events</summary>
+        /// <summary>If `true`, triggers the group webhook on merge request events.</summary>
         public bool? MergeRequestsEvents { get; set; }
-        /// <summary>Trigger hook on milestone events</summary>
+        /// <summary>If `true`, triggers the group webhook on milestone events.</summary>
         public bool? MilestoneEvents { get; set; }
-        /// <summary>Name of the hook</summary>
+        /// <summary>Name of the group webhook. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/460887) in GitLab 17.1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -72,15 +72,15 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>Trigger hook on note(comment) events</summary>
+        /// <summary>If `true`, triggers the group webhook on note events.</summary>
         public bool? NoteEvents { get; set; }
-        /// <summary>Trigger hook on pipeline events</summary>
+        /// <summary>If `true`, triggers the group webhook on pipeline events.</summary>
         public bool? PipelineEvents { get; set; }
-        /// <summary>Trigger hook on project events</summary>
+        /// <summary>If `true`, triggers the group webhook on project events.</summary>
         public bool? ProjectEvents { get; set; }
-        /// <summary>Trigger hook on push events</summary>
+        /// <summary>If `true`, triggers the group webhook on push events.</summary>
         public bool? PushEvents { get; set; }
-        /// <summary>Respond to push events only on branches that match this filter</summary>
+        /// <summary>Filter push events by branch name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PushEventsBranchFilter { get; set; }
@@ -88,11 +88,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string PushEventsBranchFilter { get; set; }
 #endif
-        /// <summary>Trigger hook on release events</summary>
+        /// <summary>If `true`, triggers the group webhook on release events.</summary>
         public bool? ReleasesEvents { get; set; }
-        /// <summary>Trigger hook on group access token expiry events</summary>
+        /// <summary>If `true`, triggers the group webhook on group and project access token expiry events.</summary>
         public bool? ResourceAccessTokenEvents { get; set; }
-        /// <summary>HMAC signing token used to compute the webhook-signature header. Must be in whsec_&lt;base64&gt; format encoding a 32-byte key. Not returned in the response</summary>
+        /// <summary>HMAC signing token used to compute the `webhook-signature` header. Must be in `whsec_&lt;base64&gt;` format encoding a 32-byte key, and is not returned in the response. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/231325) in GitLab 19.0.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SigningToken { get; set; }
@@ -100,11 +100,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string SigningToken { get; set; }
 #endif
-        /// <summary>Trigger hook on subgroup events</summary>
+        /// <summary>If `true`, triggers the group webhook on subgroup events.</summary>
         public bool? SubgroupEvents { get; set; }
-        /// <summary>Trigger hook on tag push events</summary>
+        /// <summary>If `true`, triggers the group webhook on tag push events.</summary>
         public bool? TagPushEvents { get; set; }
-        /// <summary>Secret token to validate received payloads; this will not be returned in the response</summary>
+        /// <summary>Secret token used to validate received payloads. Not returned in the response, and changing the webhook URL resets it.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Token { get; set; }
@@ -128,9 +128,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdHooksHookIdRequestUrlVariablesItem> UrlVariables { get; set; }
 #endif
-        /// <summary>Trigger hook on vulnerability events</summary>
+        /// <summary>If `true`, triggers the group webhook on vulnerability events.</summary>
         public bool? VulnerabilityEvents { get; set; }
-        /// <summary>Trigger hook on wiki events</summary>
+        /// <summary>If `true`, triggers the group webhook on wiki page events.</summary>
         public bool? WikiPageEvents { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdHooksHookIdRequest"/> and sets the default values.

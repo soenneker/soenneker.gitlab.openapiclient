@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Batched_background_migrati
     public partial class Batched_background_migrationsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.admin.batched_background_migrations.item collection</summary>
-        /// <param name="position">The batched background migration id</param>
+        /// <param name="position">ID of the batched background migration.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Batched_background_migrations.Item.Batched_background_migrationsItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Batched_background_migrations.Item.Batched_background_migrationsItemRequestBuilder this[int position]
         {
@@ -99,7 +99,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Batched_background_migrati
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Batched_background_migrationsRequestBuilderGetQueryParameters 
         {
-            /// <summary>The name of the database, the default `main`</summary>
+            /// <summary>Name of the database.</summary>
             [QueryParameter("database")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4AdminBatchedBackgroundMigrationsDatabaseParameter? Database { get; set; }
             /// <summary>Filter migrations by job class name.</summary>

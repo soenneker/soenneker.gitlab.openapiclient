@@ -180,7 +180,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Members.Item
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class MemberItemRequestBuilderDeleteQueryParameters 
         {
-            /// <summary>If `true`, the member retains any direct memberships in subgroups or projects.</summary>
+            /// <summary>If `true`, skips deleting direct memberships of the removed member in subgroups and projects.</summary>
             [QueryParameter("skip_subresources")]
             public bool? SkipSubresources { get; set; }
             /// <summary>If `true`, unassigns the member from any issues or merge requests in the group.</summary>

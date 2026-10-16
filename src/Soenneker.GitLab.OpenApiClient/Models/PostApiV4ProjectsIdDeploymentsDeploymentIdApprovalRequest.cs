@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A comment to go with the approval</summary>
+        /// <summary>Comment to go with the approval.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Comment { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Comment { get; set; }
 #endif
-        /// <summary>The name of the User/Group/Role to use for the approval, when the user belongs to multiple approval rules</summary>
+        /// <summary>Name of the user, group, or role to use for the approval when the user belongs to [multiple approval rules](https://docs.gitlab.com/ci/environments/deployment_approvals/#add-multiple-approval-rules).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RepresentedAs { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string RepresentedAs { get; set; }
 #endif
-        /// <summary>The status of the approval (either `approved` or `rejected`)</summary>
+        /// <summary>Status of the approval.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdDeploymentsDeploymentIdApprovalRequestStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdDeploymentsDeploymentIdApprovalRequest"/> and sets the default values.

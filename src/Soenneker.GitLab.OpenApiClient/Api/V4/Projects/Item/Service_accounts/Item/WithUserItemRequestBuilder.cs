@@ -168,7 +168,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Service_accounts.I
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithUserItemRequestBuilderDeleteQueryParameters 
         {
-            /// <summary>Whether to remove a user&apos;s contributions</summary>
+            /// <summary>If `true`, contributions that would usually be [moved to a ghost user](https://docs.gitlab.com/user/profile/account/delete_account/#associated-records) are deleted instead, along with groups owned solely by this service account.</summary>
             [QueryParameter("hard_delete")]
             public bool? HardDelete { get; set; }
         }

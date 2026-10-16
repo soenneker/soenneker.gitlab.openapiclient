@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Cluster_agents.Ite
     public partial class TokensRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.cluster_agents.item.tokens.item collection</summary>
-        /// <param name="position">The ID of the agent token</param>
+        /// <param name="position">ID of the agent token.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Cluster_agents.Item.Tokens.Item.WithTokenItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Cluster_agents.Item.Tokens.Item.WithTokenItemRequestBuilder this[int position]
         {

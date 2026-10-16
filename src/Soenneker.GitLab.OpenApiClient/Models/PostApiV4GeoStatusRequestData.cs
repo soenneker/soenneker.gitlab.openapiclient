@@ -8,34 +8,34 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// Object that contains status information              and replication metrics for the Geo node
+    /// Object that contains status information and replication metrics for the Geo node.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostApiV4GeoStatusRequestData : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Cursor last event date</summary>
+        /// <summary>Date of the last event processed by the cursor.</summary>
         public DateTimeOffset? CursorLastEventDate { get; set; }
-        /// <summary>Cursor last event ID</summary>
+        /// <summary>ID of the last event processed by the cursor.</summary>
         public int? CursorLastEventId { get; set; }
-        /// <summary>DB replication lag in seconds</summary>
+        /// <summary>Database replication lag, in seconds.</summary>
         public int? DbReplicationLagSeconds { get; set; }
-        /// <summary>Geo Node ID to look up its status</summary>
+        /// <summary>ID of the Geo node the status applies to.</summary>
         public int? GeoNodeId { get; set; }
-        /// <summary>Last event date</summary>
+        /// <summary>Last event date.</summary>
         public DateTimeOffset? LastEventDate { get; set; }
-        /// <summary>Last event ID</summary>
+        /// <summary>ID of the last event.</summary>
         public int? LastEventId { get; set; }
-        /// <summary>Last successful status check date</summary>
+        /// <summary>Last successful status check date.</summary>
         public DateTimeOffset? LastSuccessfulStatusCheckAt { get; set; }
-        /// <summary>Replication slots count</summary>
+        /// <summary>Number of replication slots.</summary>
         public int? ReplicationSlotsCount { get; set; }
-        /// <summary>Maximum number of bytes retained in the WAL on the primary</summary>
+        /// <summary>Maximum number of bytes retained in the WAL on the primary.</summary>
         public int? ReplicationSlotsMaxRetainedWalBytes { get; set; }
-        /// <summary>Replication slots used count</summary>
+        /// <summary>Number of replication slots in use.</summary>
         public int? ReplicationSlotsUsedCount { get; set; }
-        /// <summary>Gitlab revision</summary>
+        /// <summary>GitLab revision.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Revision { get; set; }
@@ -43,7 +43,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Revision { get; set; }
 #endif
-        /// <summary>Object that contains information on replication and verification                status metrics for GitLab resources on Geo nodes</summary>
+        /// <summary>Object that contains information on replication and verification status metrics for GitLab resources on Geo nodes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GeoStatusRequestDataStatus? Status { get; set; }
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GeoStatusRequestDataStatus Status { get; set; }
 #endif
-        /// <summary>Status message</summary>
+        /// <summary>Status message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? StatusMessage { get; set; }
@@ -59,7 +59,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string StatusMessage { get; set; }
 #endif
-        /// <summary>Gitlab version</summary>
+        /// <summary>GitLab version.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Version { get; set; }

@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The status of the event</summary>
+        /// <summary>Status of the event.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AiDuoWorkflowsWorkflowsIdEventsEventIdRequestEventStatus? EventStatus { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AiDuoWorkflowsWorkflowsIdEventsEventIdRequest"/> and sets the default values.

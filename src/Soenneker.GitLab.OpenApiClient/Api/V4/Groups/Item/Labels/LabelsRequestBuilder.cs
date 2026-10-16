@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Labels
     public partial class LabelsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.labels.item collection</summary>
-        /// <param name="position">The ID or name of a label</param>
+        /// <param name="position">ID or name of the label.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Labels.Item.NameItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Labels.Item.NameItemRequestBuilder this[string position]
         {
@@ -219,7 +219,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Labels
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class LabelsRequestBuilderDeleteQueryParameters 
         {
-            /// <summary>The name of the label to be deleted</summary>
+            /// <summary>Name of the label to delete.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("name")]
@@ -236,16 +236,16 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Labels
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class LabelsRequestBuilderGetQueryParameters 
         {
-            /// <summary>Filter by archived status. This feature was added in GitLab 18.10</summary>
+            /// <summary>If `true`, returns only archived labels. If `false`, returns only non-archived labels. If omitted, returns all labels. Introduced in GitLab 18.10.</summary>
             [QueryParameter("archived")]
             public bool? Archived { get; set; }
-            /// <summary>Include ancestor groups</summary>
+            /// <summary>If `true`, includes ancestor groups.</summary>
             [QueryParameter("include_ancestor_groups")]
             public bool? IncludeAncestorGroups { get; set; }
-            /// <summary>Include descendant groups. This feature was added in GitLab 13.6</summary>
+            /// <summary>If `true`, includes descendant groups.</summary>
             [QueryParameter("include_descendant_groups")]
             public bool? IncludeDescendantGroups { get; set; }
-            /// <summary>Toggle to include only group labels or also project labels. This feature was added in GitLab 13.6</summary>
+            /// <summary>If `true`, returns only group labels. If `false`, also returns project labels.</summary>
             [QueryParameter("only_group_labels")]
             public bool? OnlyGroupLabels { get; set; }
             /// <summary>Page number of results to retrieve.</summary>
@@ -254,7 +254,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Labels
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Keyword to filter labels by. This feature was added in GitLab 13.6</summary>
+            /// <summary>Keyword to filter labels by.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("search")]
@@ -264,7 +264,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Labels
             [QueryParameter("search")]
             public string Search { get; set; }
 #endif
-            /// <summary>Include issue and merge request counts</summary>
+            /// <summary>If `true`, includes issue and merge request counts.</summary>
             [QueryParameter("with_counts")]
             public bool? WithCounts { get; set; }
         }

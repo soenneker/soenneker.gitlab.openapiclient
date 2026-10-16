@@ -182,7 +182,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithTagNameItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>If `true`, a response includes HTML rendered markdown of the release description</summary>
+            /// <summary>If `true`, the response includes HTML-rendered Markdown of the release description.</summary>
             [QueryParameter("include_html_description")]
             public bool? IncludeHtmlDescription { get; set; }
         }

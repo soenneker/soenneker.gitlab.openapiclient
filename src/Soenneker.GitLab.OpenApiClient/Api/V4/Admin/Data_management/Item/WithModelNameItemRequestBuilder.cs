@@ -25,7 +25,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Data_management.Item
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Data_management.Item.Checksum.ChecksumRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.admin.data_management.item.item collection</summary>
-        /// <param name="position">The identifier of the model record</param>
+        /// <param name="position">Unique identifier of the record. Can be an integer or a Base64-encoded string, as returned by the list endpoint.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Data_management.Item.Item.WithRecordIdentifierItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Data_management.Item.Item.WithRecordIdentifierItemRequestBuilder this[string position]
         {
@@ -105,10 +105,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Data_management.Item
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithModelNameItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>The checksum status of the records to filter by</summary>
+            /// <summary>Filter by checksum status.</summary>
             [QueryParameter("checksum_state")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4AdminDataManagementModelNameChecksumStateParameter? ChecksumState { get; set; }
-            /// <summary>Cursor for obtaining the next set of records</summary>
+            /// <summary>Cursor for obtaining the next set of records.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("cursor")]
@@ -118,7 +118,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Data_management.Item
             [QueryParameter("cursor")]
             public string Cursor { get; set; }
 #endif
-            /// <summary>The record identifiers to filter by</summary>
+            /// <summary>Filter results with an array of unique identifiers of the requested model, which can be integers or base64 encoded strings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("identifiers")]
@@ -134,7 +134,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Data_management.Item
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Order of sorting</summary>
+            /// <summary>Sort results in ascending or descending order.</summary>
             [QueryParameter("sort")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4AdminDataManagementModelNameSortParameter? Sort { get; set; }
         }

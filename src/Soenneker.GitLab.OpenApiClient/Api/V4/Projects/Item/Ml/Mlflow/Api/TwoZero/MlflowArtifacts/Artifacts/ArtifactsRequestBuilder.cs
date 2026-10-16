@@ -96,7 +96,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ml.Mlflow.Api.TwoZ
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ArtifactsRequestBuilderGetQueryParameters 
         {
-            /// <summary>Path to the artifact, model version id, optionally followed by path. E.g. 15/MLmodel</summary>
+            /// <summary>Model version ID, optionally followed by `/` and the path to the artifact, for example `15/MLmodel`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("path")]

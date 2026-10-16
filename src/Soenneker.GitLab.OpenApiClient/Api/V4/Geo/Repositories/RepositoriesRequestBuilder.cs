@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Repositories
     public partial class RepositoriesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.geo.repositories.item collection</summary>
-        /// <param name="position">The repository to check</param>
+        /// <param name="position">Repository to check.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Repositories.Item.WithGlRepositoryItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Repositories.Item.WithGlRepositoryItemRequestBuilder this[string position]
         {

@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Terraform.State_pr
     public partial class State_protection_rulesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.terraform.state_protection_rules.item collection</summary>
-        /// <param name="position">The ID of the Terraform state protection rule</param>
+        /// <param name="position">ID of the Terraform state protection rule.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Terraform.State_protection_rules.Item.WithTerraformStateProtectionRuleItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Terraform.State_protection_rules.Item.WithTerraformStateProtectionRuleItemRequestBuilder this[int position]
         {

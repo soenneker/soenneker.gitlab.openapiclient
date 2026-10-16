@@ -15,7 +15,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>S3-compatible access key ID</summary>
+        /// <summary>S3-compatible access key ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AwsAccessKeyId { get; set; }
@@ -23,7 +23,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string AwsAccessKeyId { get; set; }
 #endif
-        /// <summary>S3-compatible secret access key</summary>
+        /// <summary>S3-compatible secret access key.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AwsSecretAccessKey { get; set; }
@@ -31,7 +31,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string AwsSecretAccessKey { get; set; }
 #endif
-        /// <summary>Object storage location endpoint</summary>
+        /// <summary>Object storage location endpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Endpoint { get; set; }
@@ -39,9 +39,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Endpoint { get; set; }
 #endif
-        /// <summary>Use path-style URLs instead of virtual-hosted-style URLs</summary>
+        /// <summary>If `true`, uses path-style URLs instead of virtual-hosted-style URLs.</summary>
         public bool? PathStyle { get; set; }
-        /// <summary>S3-compatible object storage region</summary>
+        /// <summary>S3-compatible object storage region.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Region { get; set; }

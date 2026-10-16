@@ -182,7 +182,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Labels.Item
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class NameItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>Include ancestor groups</summary>
+            /// <summary>If `true`, includes ancestor groups.</summary>
             [QueryParameter("include_ancestor_groups")]
             public bool? IncludeAncestorGroups { get; set; }
         }

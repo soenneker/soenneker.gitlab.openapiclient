@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Object that contains assets for the release</summary>
+        /// <summary>Object that contains assets for the release.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdReleasesRequestAssets? Assets { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdReleasesRequestAssets Assets { get; set; }
 #endif
-        /// <summary>The description of the release. You can use Markdown</summary>
+        /// <summary>Description of the release. You can use [Markdown](https://docs.gitlab.com/user/markdown/).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get; set; }
@@ -30,9 +30,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>If true, the release will be published to the CI catalog. This parameter is for internal use only and will be removed in a future release. If the feature flag ci_release_cli_catalog_publish_option is disabled, this parameter will be ignored and the release will published to the CI catalog as it was before this parameter was introduced.</summary>
+        /// <summary>If `true`, publishes the release to the CI catalog. This parameter is for internal use only and is planned for removal in a future release. If the `ci_release_cli_catalog_publish_option` feature flag is disabled, this parameter is ignored and the release publishes to the CI catalog as before.</summary>
         public bool? LegacyCatalogPublish { get; set; }
-        /// <summary>The ID of each milestone the release is associated with. GitLab Premium customers can specify group milestones. Cannot be combined with `milestones` parameter. Mutually exclusive with `milestones`.</summary>
+        /// <summary>ID of each milestone the release is associated with. GitLab Premium customers can specify group milestones. Cannot be combined with the `milestones` parameter. Mutually exclusive with `milestones`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdReleasesRequestMilestoneIds? MilestoneIds { get; set; }
@@ -40,7 +40,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdReleasesRequestMilestoneIds MilestoneIds { get; set; }
 #endif
-        /// <summary>The title of each milestone the release is associated with. GitLab Premium customers can specify group milestones. Cannot be combined with `milestone_ids` parameter. Mutually exclusive with `milestone_ids`.</summary>
+        /// <summary>Title of each milestone the release is associated with. [GitLab Premium](https://about.gitlab.com/pricing/) customers can specify group milestones. Cannot be combined with the `milestone_ids` parameter. Mutually exclusive with `milestone_ids`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Milestones { get; set; }
@@ -48,7 +48,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<string> Milestones { get; set; }
 #endif
-        /// <summary>The release name</summary>
+        /// <summary>Name of the release.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -56,7 +56,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>If a tag specified in `tag_name` doesn&apos;t exist, the release is created from `ref` and tagged with `tag_name`. It can be a commit SHA, another tag name, or a branch name.</summary>
+        /// <summary>If the tag named in `tag_name` doesn&apos;t exist, the release is created from this ref and tagged with `tag_name`. Can be a commit SHA, another tag name, or a branch name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Ref { get; set; }
@@ -64,9 +64,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Ref { get; set; }
 #endif
-        /// <summary>Date and time for the release. Defaults to the current time. Expected in ISO 8601 format (`2019-03-15T08:00:00Z`). Only provide this field if creating an upcoming or historical release.</summary>
+        /// <summary>Date and time for the release. Defaults to the current time. Only provide this field when creating an [upcoming](https://docs.gitlab.com/user/project/releases/#upcoming-releases) or [historical](https://docs.gitlab.com/user/project/releases/#historical-releases) release.</summary>
         public DateTimeOffset? ReleasedAt { get; set; }
-        /// <summary>Message to use if creating a new annotated tag</summary>
+        /// <summary>Message to use if creating a new annotated tag.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TagMessage { get; set; }
@@ -74,7 +74,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string TagMessage { get; set; }
 #endif
-        /// <summary>The tag where the release is created from</summary>
+        /// <summary>Tag the release is created from.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TagName { get; set; }

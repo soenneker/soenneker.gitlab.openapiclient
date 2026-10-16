@@ -92,10 +92,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Releases
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Return only limited fields for each release</summary>
+            /// <summary>If `true`, only returns limited fields for each release.</summary>
             [QueryParameter("simple")]
             public bool? Simple { get; set; }
-            /// <summary>The direction of the order. Either `desc` (default) for descending order or `asc` for ascending order</summary>
+            /// <summary>Sort results in ascending or descending order.</summary>
             [QueryParameter("sort")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdReleasesSortParameter? Sort { get; set; }
         }

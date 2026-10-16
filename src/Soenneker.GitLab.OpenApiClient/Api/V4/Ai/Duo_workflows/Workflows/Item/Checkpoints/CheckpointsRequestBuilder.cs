@@ -25,7 +25,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.Checkpoints.By_thread_ts.By_thread_tsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.ai.duo_workflows.workflows.item.checkpoints.item collection</summary>
-        /// <param name="position">The ID of the checkpoint</param>
+        /// <param name="position">ID of the checkpoint.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.Checkpoints.Item.WithCheckpointItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.Checkpoints.Item.WithCheckpointItemRequestBuilder this[int position]
         {
@@ -143,7 +143,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class CheckpointsRequestBuilderGetQueryParameters 
         {
-            /// <summary>Return compressed checkpoints</summary>
+            /// <summary>If `true`, returns compressed checkpoints.</summary>
             [QueryParameter("accept_compressed")]
             public bool? AcceptCompressed { get; set; }
             /// <summary>Comma-separated channels to return in each checkpoint&apos;s channel_values, at most 100, each 1 to 255 characters. Omit to return every channel.</summary>

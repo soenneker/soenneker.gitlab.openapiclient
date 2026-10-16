@@ -325,7 +325,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Integrations
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Integrations.Zentao.ZentaoRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.integrations.item collection</summary>
-        /// <param name="position">The name of the integration</param>
+        /// <param name="position">Name of the integration.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Integrations.Item.WithSlugItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Integrations.Item.WithSlugItemRequestBuilder this[string position]
         {

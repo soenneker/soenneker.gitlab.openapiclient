@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>Append or replace signal (conversation or compaction)</summary>
+    /// <summary>Whether the blob is appended to the stored channel data (`conversation`) or replaces it (`compaction`).</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PostApiV4AiDuoWorkflowsWorkflowsIdCheckpointsRequestChannelBlobsItemStepAction
     {

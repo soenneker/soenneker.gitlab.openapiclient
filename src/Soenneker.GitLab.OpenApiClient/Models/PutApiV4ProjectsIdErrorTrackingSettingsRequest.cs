@@ -12,11 +12,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     public partial class PutApiV4ProjectsIdErrorTrackingSettingsRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>Pass true to enable the configured Error Tracking settings or false to disable it.</summary>
+        /// <summary>If `true`, enables the configured error tracking settings. If `false`, disables them.</summary>
         public bool? Active { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Pass true to enable the integrated Error Tracking backend.</summary>
+        /// <summary>If `true`, enables the integrated error tracking backend.</summary>
         public bool? Integrated { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdErrorTrackingSettingsRequest"/> and sets the default values.

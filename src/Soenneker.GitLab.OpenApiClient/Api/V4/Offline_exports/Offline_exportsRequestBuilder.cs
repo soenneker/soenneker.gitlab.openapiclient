@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Offline_exports
     public partial class Offline_exportsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.offline_exports.item collection</summary>
-        /// <param name="position">The ID of user&apos;s offline transfer export</param>
+        /// <param name="position">ID of the offline transfer export.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Offline_exports.Item.Offline_exportsItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Offline_exports.Item.Offline_exportsItemRequestBuilder this[int position]
         {
@@ -143,10 +143,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Offline_exports
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Return offline transfer exports sorted in created by `asc` or `desc` order.</summary>
+            /// <summary>Sort results in ascending or descending order by creation date.</summary>
             [QueryParameter("sort")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4OfflineExportsSortParameter? Sort { get; set; }
-            /// <summary>Return offline transfer exports with specified status</summary>
+            /// <summary>Return offline transfer exports with the specified status.</summary>
             [QueryParameter("status")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4OfflineExportsStatusParameter? Status { get; set; }
         }

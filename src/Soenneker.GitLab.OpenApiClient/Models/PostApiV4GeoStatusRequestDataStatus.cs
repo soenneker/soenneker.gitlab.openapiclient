@@ -8,284 +8,284 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// Object that contains information on replication and verification                status metrics for GitLab resources on Geo nodes
+    /// Object that contains information on replication and verification status metrics for GitLab resources on Geo nodes.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostApiV4GeoStatusRequestDataStatus : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>CI secure files checksum failed count</summary>
+        /// <summary>Number of CI/CD secure files for which checksum calculation failed.</summary>
         public int? CiSecureFilesChecksumFailedCount { get; set; }
-        /// <summary>CI secure files checksummed count</summary>
+        /// <summary>Number of CI/CD secure files that have been checksummed.</summary>
         public int? CiSecureFilesChecksummedCount { get; set; }
-        /// <summary>CI secure files checksum total count</summary>
+        /// <summary>Number of CI/CD secure files available to checksum on the primary site.</summary>
         public int? CiSecureFilesChecksumTotalCount { get; set; }
-        /// <summary>CI secure files count</summary>
+        /// <summary>Number of CI/CD secure files.</summary>
         public int? CiSecureFilesCount { get; set; }
-        /// <summary>CI secure files failed count</summary>
+        /// <summary>Number of CI/CD secure files that failed to sync.</summary>
         public int? CiSecureFilesFailedCount { get; set; }
-        /// <summary>CI secure files registry count</summary>
+        /// <summary>Number of CI/CD secure files tracked in the registry.</summary>
         public int? CiSecureFilesRegistryCount { get; set; }
-        /// <summary>CI secure files synced count</summary>
+        /// <summary>Number of CI/CD secure files synced.</summary>
         public int? CiSecureFilesSyncedCount { get; set; }
-        /// <summary>CI secure files verification failed count</summary>
+        /// <summary>Number of CI/CD secure files for which verification failed.</summary>
         public int? CiSecureFilesVerificationFailedCount { get; set; }
-        /// <summary>CI secure files verification total count</summary>
+        /// <summary>Number of CI/CD secure files available to verify on the secondary site.</summary>
         public int? CiSecureFilesVerificationTotalCount { get; set; }
-        /// <summary>CI secure files verified count</summary>
+        /// <summary>Number of CI/CD secure files verified.</summary>
         public int? CiSecureFilesVerifiedCount { get; set; }
-        /// <summary>Container repositories checksum failed count</summary>
+        /// <summary>Number of container repositories for which checksum calculation failed.</summary>
         public int? ContainerRepositoriesChecksumFailedCount { get; set; }
-        /// <summary>Container repositories checksummed count</summary>
+        /// <summary>Number of container repositories that have been checksummed.</summary>
         public int? ContainerRepositoriesChecksummedCount { get; set; }
-        /// <summary>Container repositories checksum total count</summary>
+        /// <summary>Number of container repositories available to checksum on the primary site.</summary>
         public int? ContainerRepositoriesChecksumTotalCount { get; set; }
-        /// <summary>Container repositories count</summary>
+        /// <summary>Number of container repositories.</summary>
         public int? ContainerRepositoriesCount { get; set; }
-        /// <summary>Container repositories failed count</summary>
+        /// <summary>Number of container repositories that failed to sync.</summary>
         public int? ContainerRepositoriesFailedCount { get; set; }
-        /// <summary>Container repositories registry count</summary>
+        /// <summary>Number of container repositories tracked in the registry.</summary>
         public int? ContainerRepositoriesRegistryCount { get; set; }
-        /// <summary>Container repositories replication enabled</summary>
+        /// <summary>If `true`, container repository replication is enabled.</summary>
         public bool? ContainerRepositoriesReplicationEnabled { get; set; }
-        /// <summary>Container repositories synced count</summary>
+        /// <summary>Number of container repositories synced.</summary>
         public int? ContainerRepositoriesSyncedCount { get; set; }
-        /// <summary>Container repositories verification failed count</summary>
+        /// <summary>Number of container repositories for which verification failed.</summary>
         public int? ContainerRepositoriesVerificationFailedCount { get; set; }
-        /// <summary>Container repositories verification total count</summary>
+        /// <summary>Number of container repositories available to verify on the secondary site.</summary>
         public int? ContainerRepositoriesVerificationTotalCount { get; set; }
-        /// <summary>Container repositories verified count</summary>
+        /// <summary>Number of container repositories verified.</summary>
         public int? ContainerRepositoriesVerifiedCount { get; set; }
-        /// <summary>Git fetch event count weekly</summary>
+        /// <summary>Number of Git fetch events in the past week.</summary>
         public int? GitFetchEventCountWeekly { get; set; }
-        /// <summary>Git push event count weekly</summary>
+        /// <summary>Number of Git push events in the past week.</summary>
         public int? GitPushEventCountWeekly { get; set; }
-        /// <summary>Group wiki repositories checksum failed count</summary>
+        /// <summary>Number of group wiki repositories for which checksum calculation failed.</summary>
         public int? GroupWikiRepositoriesChecksumFailedCount { get; set; }
-        /// <summary>Group wiki repositories checksummed count</summary>
+        /// <summary>Number of group wiki repositories that have been checksummed.</summary>
         public int? GroupWikiRepositoriesChecksummedCount { get; set; }
-        /// <summary>Group wiki repositories checksum total count</summary>
+        /// <summary>Number of group wiki repositories available to checksum on the primary site.</summary>
         public int? GroupWikiRepositoriesChecksumTotalCount { get; set; }
-        /// <summary>Group wiki repositories count</summary>
+        /// <summary>Number of group wiki repositories.</summary>
         public int? GroupWikiRepositoriesCount { get; set; }
-        /// <summary>Group wiki repositories failed count</summary>
+        /// <summary>Number of group wiki repositories that failed to sync.</summary>
         public int? GroupWikiRepositoriesFailedCount { get; set; }
-        /// <summary>Group wiki repositories registry count</summary>
+        /// <summary>Number of group wiki repositories tracked in the registry.</summary>
         public int? GroupWikiRepositoriesRegistryCount { get; set; }
-        /// <summary>Group wiki repositories synced count</summary>
+        /// <summary>Number of group wiki repositories synced.</summary>
         public int? GroupWikiRepositoriesSyncedCount { get; set; }
-        /// <summary>Group wiki repositories verification failed count</summary>
+        /// <summary>Number of group wiki repositories for which verification failed.</summary>
         public int? GroupWikiRepositoriesVerificationFailedCount { get; set; }
-        /// <summary>Group wiki repositories verification total count</summary>
+        /// <summary>Number of group wiki repositories available to verify on the secondary site.</summary>
         public int? GroupWikiRepositoriesVerificationTotalCount { get; set; }
-        /// <summary>Group wiki repositories verified count</summary>
+        /// <summary>Number of group wiki repositories verified.</summary>
         public int? GroupWikiRepositoriesVerifiedCount { get; set; }
-        /// <summary>Job artifacts checksum failed count</summary>
+        /// <summary>Number of job artifacts for which checksum calculation failed.</summary>
         public int? JobArtifactsChecksumFailedCount { get; set; }
-        /// <summary>Job artifacts checksummed count</summary>
+        /// <summary>Number of job artifacts that have been checksummed.</summary>
         public int? JobArtifactsChecksummedCount { get; set; }
-        /// <summary>Job artifacts checksum total count</summary>
+        /// <summary>Number of job artifacts available to checksum on the primary site.</summary>
         public int? JobArtifactsChecksumTotalCount { get; set; }
-        /// <summary>Job artifacts count</summary>
+        /// <summary>Number of job artifacts.</summary>
         public int? JobArtifactsCount { get; set; }
-        /// <summary>Job artifacts failed count</summary>
+        /// <summary>Number of job artifacts that failed to sync.</summary>
         public int? JobArtifactsFailedCount { get; set; }
-        /// <summary>Job artifacts registry count</summary>
+        /// <summary>Number of job artifacts tracked in the registry.</summary>
         public int? JobArtifactsRegistryCount { get; set; }
-        /// <summary>Job artifacts synced count</summary>
+        /// <summary>Number of job artifacts synced.</summary>
         public int? JobArtifactsSyncedCount { get; set; }
-        /// <summary>Job artifacts verification failed count</summary>
+        /// <summary>Number of job artifacts for which verification failed.</summary>
         public int? JobArtifactsVerificationFailedCount { get; set; }
-        /// <summary>Job artifacts verification total count</summary>
+        /// <summary>Number of job artifacts available to verify on the secondary site.</summary>
         public int? JobArtifactsVerificationTotalCount { get; set; }
-        /// <summary>Job artifacts verified count</summary>
+        /// <summary>Number of job artifacts verified.</summary>
         public int? JobArtifactsVerifiedCount { get; set; }
-        /// <summary>LFS objects checksum failed count</summary>
+        /// <summary>Number of LFS objects for which checksum calculation failed.</summary>
         public int? LfsObjectsChecksumFailedCount { get; set; }
-        /// <summary>LFS objects checksummed count</summary>
+        /// <summary>Number of LFS objects that have been checksummed.</summary>
         public int? LfsObjectsChecksummedCount { get; set; }
-        /// <summary>LFS objects checksum total count</summary>
+        /// <summary>Number of LFS objects available to checksum on the primary site.</summary>
         public int? LfsObjectsChecksumTotalCount { get; set; }
-        /// <summary>LFS objects count</summary>
+        /// <summary>Number of LFS objects.</summary>
         public int? LfsObjectsCount { get; set; }
-        /// <summary>LFS objects failed count</summary>
+        /// <summary>Number of LFS objects that failed to sync.</summary>
         public int? LfsObjectsFailedCount { get; set; }
-        /// <summary>LFS objects registry count</summary>
+        /// <summary>Number of LFS objects tracked in the registry.</summary>
         public int? LfsObjectsRegistryCount { get; set; }
-        /// <summary>LFS objects synced count</summary>
+        /// <summary>Number of LFS objects synced.</summary>
         public int? LfsObjectsSyncedCount { get; set; }
-        /// <summary>LFS objects verification failed count</summary>
+        /// <summary>Number of LFS objects for which verification failed.</summary>
         public int? LfsObjectsVerificationFailedCount { get; set; }
-        /// <summary>LFS objects verification total count</summary>
+        /// <summary>Number of LFS objects available to verify on the secondary site.</summary>
         public int? LfsObjectsVerificationTotalCount { get; set; }
-        /// <summary>LFS objects verified count</summary>
+        /// <summary>Number of LFS objects verified.</summary>
         public int? LfsObjectsVerifiedCount { get; set; }
-        /// <summary>Merge request diffs checksum failed count</summary>
+        /// <summary>Number of merge request diffs for which checksum calculation failed.</summary>
         public int? MergeRequestDiffsChecksumFailedCount { get; set; }
-        /// <summary>Merge request diffs checksummed count</summary>
+        /// <summary>Number of merge request diffs that have been checksummed.</summary>
         public int? MergeRequestDiffsChecksummedCount { get; set; }
-        /// <summary>Merge request diffs checksum total count</summary>
+        /// <summary>Number of merge request diffs available to checksum on the primary site.</summary>
         public int? MergeRequestDiffsChecksumTotalCount { get; set; }
-        /// <summary>Merge request diffs count</summary>
+        /// <summary>Number of merge request diffs.</summary>
         public int? MergeRequestDiffsCount { get; set; }
-        /// <summary>Merge request diffs failed count</summary>
+        /// <summary>Number of merge request diffs that failed to sync.</summary>
         public int? MergeRequestDiffsFailedCount { get; set; }
-        /// <summary>Merge request diffs registry count</summary>
+        /// <summary>Number of merge request diffs tracked in the registry.</summary>
         public int? MergeRequestDiffsRegistryCount { get; set; }
-        /// <summary>Merge request diffs synced count</summary>
+        /// <summary>Number of merge request diffs synced.</summary>
         public int? MergeRequestDiffsSyncedCount { get; set; }
-        /// <summary>Merge request diffs verified count</summary>
+        /// <summary>Number of merge request diffs for which verification failed.</summary>
         public int? MergeRequestDiffsVerificationFailedCount { get; set; }
-        /// <summary>Merge request diffs verification total count</summary>
+        /// <summary>Number of merge request diffs available to verify on the secondary site.</summary>
         public int? MergeRequestDiffsVerificationTotalCount { get; set; }
-        /// <summary>Merge request diffs verified count</summary>
+        /// <summary>Number of merge request diffs verified.</summary>
         public int? MergeRequestDiffsVerifiedCount { get; set; }
-        /// <summary>Packages files checksum failed count</summary>
+        /// <summary>Number of package files for which checksum calculation failed.</summary>
         public int? PackageFilesChecksumFailedCount { get; set; }
-        /// <summary>Packages files checksummed count</summary>
+        /// <summary>Number of package files that have been checksummed.</summary>
         public int? PackageFilesChecksummedCount { get; set; }
-        /// <summary>Packages files checksum total count</summary>
+        /// <summary>Number of package files available to checksum on the primary site.</summary>
         public int? PackageFilesChecksumTotalCount { get; set; }
-        /// <summary>Packages files count</summary>
+        /// <summary>Number of package files.</summary>
         public int? PackageFilesCount { get; set; }
-        /// <summary>Packages files failed count</summary>
+        /// <summary>Number of package files that failed to sync.</summary>
         public int? PackageFilesFailedCount { get; set; }
-        /// <summary>Packages files registry count</summary>
+        /// <summary>Number of package files tracked in the registry.</summary>
         public int? PackageFilesRegistryCount { get; set; }
-        /// <summary>Packages files synced count</summary>
+        /// <summary>Number of package files synced.</summary>
         public int? PackageFilesSyncedCount { get; set; }
-        /// <summary>Packages files verification failed count</summary>
+        /// <summary>Number of package files for which verification failed.</summary>
         public int? PackageFilesVerificationFailedCount { get; set; }
-        /// <summary>Packages files verification total count</summary>
+        /// <summary>Number of package files available to verify on the secondary site.</summary>
         public int? PackageFilesVerificationTotalCount { get; set; }
-        /// <summary>Packages files verified count</summary>
+        /// <summary>Number of package files verified.</summary>
         public int? PackageFilesVerifiedCount { get; set; }
-        /// <summary>NuGet symbols checksum failed count</summary>
+        /// <summary>Number of NuGet symbols for which checksum calculation failed.</summary>
         public int? PackagesNugetSymbolsChecksumFailedCount { get; set; }
-        /// <summary>NuGet symbols checksummed count</summary>
+        /// <summary>Number of NuGet symbols that have been checksummed.</summary>
         public int? PackagesNugetSymbolsChecksummedCount { get; set; }
-        /// <summary>NuGet symbols checksum total count</summary>
+        /// <summary>Number of NuGet symbols available to checksum on the primary site.</summary>
         public int? PackagesNugetSymbolsChecksumTotalCount { get; set; }
-        /// <summary>NuGet symbols count</summary>
+        /// <summary>Number of NuGet symbols.</summary>
         public int? PackagesNugetSymbolsCount { get; set; }
-        /// <summary>NuGet symbols failed count</summary>
+        /// <summary>Number of NuGet symbols that failed to sync.</summary>
         public int? PackagesNugetSymbolsFailedCount { get; set; }
-        /// <summary>NuGet symbols registry count</summary>
+        /// <summary>Number of NuGet symbols tracked in the registry.</summary>
         public int? PackagesNugetSymbolsRegistryCount { get; set; }
-        /// <summary>NuGet symbols synced count</summary>
+        /// <summary>Number of NuGet symbols synced.</summary>
         public int? PackagesNugetSymbolsSyncedCount { get; set; }
-        /// <summary>NuGet symbols verification failed count</summary>
+        /// <summary>Number of NuGet symbols for which verification failed.</summary>
         public int? PackagesNugetSymbolsVerificationFailedCount { get; set; }
-        /// <summary>NuGet symbols verification total count</summary>
+        /// <summary>Number of NuGet symbols available to verify on the secondary site.</summary>
         public int? PackagesNugetSymbolsVerificationTotalCount { get; set; }
-        /// <summary>NuGet symbols verified count</summary>
+        /// <summary>Number of NuGet symbols verified.</summary>
         public int? PackagesNugetSymbolsVerifiedCount { get; set; }
-        /// <summary>Pages deployments checksum failed count</summary>
+        /// <summary>Number of Pages deployments for which checksum calculation failed.</summary>
         public int? PagesDeploymentsChecksumFailedCount { get; set; }
-        /// <summary>Pages deployments checksummed count</summary>
+        /// <summary>Number of Pages deployments that have been checksummed.</summary>
         public int? PagesDeploymentsChecksummedCount { get; set; }
-        /// <summary>Pages deployments checksum total count</summary>
+        /// <summary>Number of Pages deployments available to checksum on the primary site.</summary>
         public int? PagesDeploymentsChecksumTotalCount { get; set; }
-        /// <summary>Pages deployments count</summary>
+        /// <summary>Number of Pages deployments.</summary>
         public int? PagesDeploymentsCount { get; set; }
-        /// <summary>Pages deployments failed count</summary>
+        /// <summary>Number of Pages deployments that failed to sync.</summary>
         public int? PagesDeploymentsFailedCount { get; set; }
-        /// <summary>Pages deployments registry count</summary>
+        /// <summary>Number of Pages deployments tracked in the registry.</summary>
         public int? PagesDeploymentsRegistryCount { get; set; }
-        /// <summary>Pages deployments synced count</summary>
+        /// <summary>Number of Pages deployments synced.</summary>
         public int? PagesDeploymentsSyncedCount { get; set; }
-        /// <summary>Pages deployments verification failed count</summary>
+        /// <summary>Number of Pages deployments for which verification failed.</summary>
         public int? PagesDeploymentsVerificationFailedCount { get; set; }
-        /// <summary>Pages deployments verification total count</summary>
+        /// <summary>Number of Pages deployments available to verify on the secondary site.</summary>
         public int? PagesDeploymentsVerificationTotalCount { get; set; }
-        /// <summary>Pages deployments verified count</summary>
+        /// <summary>Number of Pages deployments verified.</summary>
         public int? PagesDeploymentsVerifiedCount { get; set; }
-        /// <summary>Pipeline artifacts checksum failed count</summary>
+        /// <summary>Number of pipeline artifacts for which checksum calculation failed.</summary>
         public int? PipelineArtifactsChecksumFailedCount { get; set; }
-        /// <summary>Pipeline artifacts checksummed count</summary>
+        /// <summary>Number of pipeline artifacts that have been checksummed.</summary>
         public int? PipelineArtifactsChecksummedCount { get; set; }
-        /// <summary>Pipeline artifacts checksum total count</summary>
+        /// <summary>Number of pipeline artifacts available to checksum on the primary site.</summary>
         public int? PipelineArtifactsChecksumTotalCount { get; set; }
-        /// <summary>Pipeline artifacts count</summary>
+        /// <summary>Number of pipeline artifacts.</summary>
         public int? PipelineArtifactsCount { get; set; }
-        /// <summary>Pipeline artifacts failed count</summary>
+        /// <summary>Number of pipeline artifacts that failed to sync.</summary>
         public int? PipelineArtifactsFailedCount { get; set; }
-        /// <summary>Pipeline artifacts registry count</summary>
+        /// <summary>Number of pipeline artifacts tracked in the registry.</summary>
         public int? PipelineArtifactsRegistryCount { get; set; }
-        /// <summary>Pipeline artifacts synced count</summary>
+        /// <summary>Number of pipeline artifacts synced.</summary>
         public int? PipelineArtifactsSyncedCount { get; set; }
-        /// <summary>Pipeline artifacts verification failed count</summary>
+        /// <summary>Number of pipeline artifacts for which verification failed.</summary>
         public int? PipelineArtifactsVerificationFailedCount { get; set; }
-        /// <summary>Pipeline artifacts verification total count</summary>
+        /// <summary>Number of pipeline artifacts available to verify on the secondary site.</summary>
         public int? PipelineArtifactsVerificationTotalCount { get; set; }
-        /// <summary>Pipeline artifacts verified count</summary>
+        /// <summary>Number of pipeline artifacts verified.</summary>
         public int? PipelineArtifactsVerifiedCount { get; set; }
-        /// <summary>Projects count</summary>
+        /// <summary>Number of projects.</summary>
         public int? ProjectsCount { get; set; }
-        /// <summary>Proxy local requests event count weekly</summary>
+        /// <summary>Number of HTTP requests received by the secondary site in the past week.</summary>
         public int? ProxyLocalRequestsEventCountWeekly { get; set; }
-        /// <summary>Proxy remote requests event count weekly</summary>
+        /// <summary>Number of remote requests proxied in the past week.</summary>
         public int? ProxyRemoteRequestsEventCountWeekly { get; set; }
-        /// <summary>Snippet repositories checksum failed count</summary>
+        /// <summary>Number of snippet repositories for which checksum calculation failed.</summary>
         public int? SnippetRepositoriesChecksumFailedCount { get; set; }
-        /// <summary>Snippet repositories checksummed count</summary>
+        /// <summary>Number of snippet repositories that have been checksummed.</summary>
         public int? SnippetRepositoriesChecksummedCount { get; set; }
-        /// <summary>Snippet repositories checksum total count</summary>
+        /// <summary>Number of snippet repositories available to checksum on the primary site.</summary>
         public int? SnippetRepositoriesChecksumTotalCount { get; set; }
-        /// <summary>Snippet repositories count</summary>
+        /// <summary>Number of snippet repositories.</summary>
         public int? SnippetRepositoriesCount { get; set; }
-        /// <summary>Snippet repositories failed count</summary>
+        /// <summary>Number of snippet repositories that failed to sync.</summary>
         public int? SnippetRepositoriesFailedCount { get; set; }
-        /// <summary>Snippet repositories registry count</summary>
+        /// <summary>Number of snippet repositories tracked in the registry.</summary>
         public int? SnippetRepositoriesRegistryCount { get; set; }
-        /// <summary>Snippet repositories synced count</summary>
+        /// <summary>Number of snippet repositories synced.</summary>
         public int? SnippetRepositoriesSyncedCount { get; set; }
-        /// <summary>Snippet repositories verification failed count</summary>
+        /// <summary>Number of snippet repositories for which verification failed.</summary>
         public int? SnippetRepositoriesVerificationFailedCount { get; set; }
-        /// <summary>Snippet repositories verification total count</summary>
+        /// <summary>Number of snippet repositories available to verify on the secondary site.</summary>
         public int? SnippetRepositoriesVerificationTotalCount { get; set; }
-        /// <summary>Snippet repositories verified count</summary>
+        /// <summary>Number of snippet repositories verified.</summary>
         public int? SnippetRepositoriesVerifiedCount { get; set; }
-        /// <summary>Terraform state versions checksum failed count</summary>
+        /// <summary>Number of Terraform state versions for which checksum calculation failed.</summary>
         public int? TerraformStateVersionsChecksumFailedCount { get; set; }
-        /// <summary>Terraform state versions checksummed count</summary>
+        /// <summary>Number of Terraform state versions that have been checksummed.</summary>
         public int? TerraformStateVersionsChecksummedCount { get; set; }
-        /// <summary>Terraform state versions checksum total count</summary>
+        /// <summary>Number of Terraform state versions available to checksum on the primary site.</summary>
         public int? TerraformStateVersionsChecksumTotalCount { get; set; }
-        /// <summary>Terraform state versions count</summary>
+        /// <summary>Number of Terraform state versions.</summary>
         public int? TerraformStateVersionsCount { get; set; }
-        /// <summary>Terraform state versions failed count</summary>
+        /// <summary>Number of Terraform state versions that failed to sync.</summary>
         public int? TerraformStateVersionsFailedCount { get; set; }
-        /// <summary>Terraform state versions registry count</summary>
+        /// <summary>Number of Terraform state versions tracked in the registry.</summary>
         public int? TerraformStateVersionsRegistryCount { get; set; }
-        /// <summary>Terraform state versions synced count</summary>
+        /// <summary>Number of Terraform state versions synced.</summary>
         public int? TerraformStateVersionsSyncedCount { get; set; }
-        /// <summary>Terraform state versions verification failed count</summary>
+        /// <summary>Number of Terraform state versions for which verification failed.</summary>
         public int? TerraformStateVersionsVerificationFailedCount { get; set; }
-        /// <summary>Terraform state versions verification total count</summary>
+        /// <summary>Number of Terraform state versions available to verify on the secondary site.</summary>
         public int? TerraformStateVersionsVerificationTotalCount { get; set; }
-        /// <summary>Terraform state versions verified count</summary>
+        /// <summary>Number of Terraform state versions verified.</summary>
         public int? TerraformStateVersionsVerifiedCount { get; set; }
-        /// <summary>Uploads checksum failed count</summary>
+        /// <summary>Number of uploads for which checksum calculation failed.</summary>
         public int? UploadsChecksumFailedCount { get; set; }
-        /// <summary>Uploads checksummed count</summary>
+        /// <summary>Number of uploads that have been checksummed.</summary>
         public int? UploadsChecksummedCount { get; set; }
-        /// <summary>Uploads checksum total count</summary>
+        /// <summary>Number of uploads available to checksum on the primary site.</summary>
         public int? UploadsChecksumTotalCount { get; set; }
-        /// <summary>Uploads count</summary>
+        /// <summary>Number of uploads.</summary>
         public int? UploadsCount { get; set; }
-        /// <summary>Uploads failed count</summary>
+        /// <summary>Number of uploads that failed to sync.</summary>
         public int? UploadsFailedCount { get; set; }
-        /// <summary>Uploads registry count</summary>
+        /// <summary>Number of uploads tracked in the registry.</summary>
         public int? UploadsRegistryCount { get; set; }
-        /// <summary>Uploads synced count</summary>
+        /// <summary>Number of uploads synced.</summary>
         public int? UploadsSyncedCount { get; set; }
-        /// <summary>Uploads verification failed count</summary>
+        /// <summary>Number of uploads for which verification failed.</summary>
         public int? UploadsVerificationFailedCount { get; set; }
-        /// <summary>Uploads verification total count</summary>
+        /// <summary>Number of uploads available to verify on the secondary site.</summary>
         public int? UploadsVerificationTotalCount { get; set; }
-        /// <summary>Uploads verified count</summary>
+        /// <summary>Number of uploads verified.</summary>
         public int? UploadsVerifiedCount { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GeoStatusRequestDataStatus"/> and sets the default values.

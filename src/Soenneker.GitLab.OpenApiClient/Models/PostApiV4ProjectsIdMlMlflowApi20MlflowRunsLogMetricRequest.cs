@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Name for the metric.</summary>
+        /// <summary>Name of the metric.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Key { get; set; }
@@ -30,9 +30,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string RunId { get; set; }
 #endif
-        /// <summary>Step at which the metric was recorded</summary>
+        /// <summary>Step at which the metric was recorded.</summary>
         public int? Step { get; set; }
-        /// <summary>Unix timestamp in milliseconds when metric was recorded</summary>
+        /// <summary>Unix timestamp, in milliseconds, when the metric was recorded.</summary>
         public int? Timestamp { get; set; }
         /// <summary>Value of the metric.</summary>
         public double? Value { get; set; }

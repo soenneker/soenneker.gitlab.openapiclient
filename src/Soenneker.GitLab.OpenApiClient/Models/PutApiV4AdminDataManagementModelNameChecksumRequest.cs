@@ -14,9 +14,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The checksum status of the records to filter by</summary>
+        /// <summary>Filter by checksum status.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminDataManagementModelNameChecksumRequestChecksumState? ChecksumState { get; set; }
-        /// <summary>The record identifiers to filter by</summary>
+        /// <summary>Filter results with an array of unique identifiers of the requested model, which can be integers or base64 encoded strings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminDataManagementModelNameChecksumRequestIdentifiers? Identifiers { get; set; }

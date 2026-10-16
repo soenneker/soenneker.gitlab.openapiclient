@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Batched_background_operati
     public partial class Batched_background_operationsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.admin.batched_background_operations.item collection</summary>
-        /// <param name="position">The batched background operation id</param>
+        /// <param name="position">ID of the batched background operation.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Batched_background_operations.Item.Batched_background_operationsItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Batched_background_operations.Item.Batched_background_operationsItemRequestBuilder this[int position]
         {
@@ -99,7 +99,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Batched_background_operati
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Batched_background_operationsRequestBuilderGetQueryParameters 
         {
-            /// <summary>The name of the database, the default `main`</summary>
+            /// <summary>Name of the database.</summary>
             [QueryParameter("database")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4AdminBatchedBackgroundOperationsDatabaseParameter? Database { get; set; }
             /// <summary>Filter operations by job class name.</summary>

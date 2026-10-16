@@ -176,13 +176,13 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Labels.Item
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class NameItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>Include ancestor groups</summary>
+            /// <summary>If `true`, includes ancestor groups.</summary>
             [QueryParameter("include_ancestor_groups")]
             public bool? IncludeAncestorGroups { get; set; }
-            /// <summary>Include descendant groups. This feature was added in GitLab 13.6</summary>
+            /// <summary>If `true`, includes descendant groups.</summary>
             [QueryParameter("include_descendant_groups")]
             public bool? IncludeDescendantGroups { get; set; }
-            /// <summary>Toggle to include only group labels or also project labels. This feature was added in GitLab 13.6</summary>
+            /// <summary>If `true`, returns only group labels. If `false`, also returns project labels.</summary>
             [QueryParameter("only_group_labels")]
             public bool? OnlyGroupLabels { get; set; }
         }

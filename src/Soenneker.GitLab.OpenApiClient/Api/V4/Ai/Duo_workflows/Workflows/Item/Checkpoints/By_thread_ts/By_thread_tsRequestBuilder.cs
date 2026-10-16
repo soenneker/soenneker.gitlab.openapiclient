@@ -83,7 +83,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class By_thread_tsRequestBuilderGetQueryParameters 
         {
-            /// <summary>Return compressed checkpoint</summary>
+            /// <summary>If `true`, returns the compressed checkpoint.</summary>
             [QueryParameter("accept_compressed")]
             public bool? AcceptCompressed { get; set; }
             /// <summary>The langgraph thread_ts of the checkpoint</summary>

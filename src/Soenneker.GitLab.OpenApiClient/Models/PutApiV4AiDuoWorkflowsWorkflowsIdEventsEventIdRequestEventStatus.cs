@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>The status of the event</summary>
+    /// <summary>Status of the event.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PutApiV4AiDuoWorkflowsWorkflowsIdEventsEventIdRequestEventStatus
     {

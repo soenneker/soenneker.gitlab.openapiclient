@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>Environment for the workflow.</summary>
+    /// <summary>Execution environment for the workflow.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PostApiV4AiDuoWorkflowsWorkflowsRequestEnvironment
     {

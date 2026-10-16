@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Search.Semantic
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class SemanticRequestBuilderGetQueryParameters 
         {
-            /// <summary>Restrict search to files under this directory path (e.g. &quot;app/services/&quot;). Must be a relative path — no leading slash, no .. segments.</summary>
+            /// <summary>Restrict search to files under this directory path, for example `app/services/`. Must be a relative path with no leading slash and no `..` segments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("directory_path")]
@@ -101,7 +101,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Search.Semantic
             /// <summary>Maximum number of results to return (default: 20).</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
-            /// <summary>Natural language search query (e.g. &quot;authentication middleware&quot;, &quot;rate limiting logic&quot;)</summary>
+            /// <summary>Natural language search query, for example `authentication middleware` or `rate limiting logic`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("q")]

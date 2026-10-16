@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Members.All
     public partial class AllRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.members.all.item collection</summary>
-        /// <param name="position">The user ID of the member</param>
+        /// <param name="position">User ID of the member.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Members.All.Item.WithUserItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Members.All.Item.WithUserItemRequestBuilder this[int position]
         {
@@ -105,7 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Members.All
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>A query string to search for members</summary>
+            /// <summary>Filter results by name, email, or username. Use partial values to widen the scope of the query.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("query")]
@@ -115,13 +115,13 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Members.All
             [QueryParameter("query")]
             public string Query { get; set; }
 #endif
-            /// <summary>Show seat information for members</summary>
+            /// <summary>If `true`, shows seat information for members.</summary>
             [QueryParameter("show_seat_info")]
             public bool? ShowSeatInfo { get; set; }
             /// <summary>Filter results by member state. Premium and Ultimate only.</summary>
             [QueryParameter("state")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdMembersAllStateParameter? State { get; set; }
-            /// <summary>Array of user ids to look up for membership</summary>
+            /// <summary>Filter results by the given user IDs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("user_ids")]

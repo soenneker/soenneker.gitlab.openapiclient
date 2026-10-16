@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The name of the environment to create the deployment for</summary>
+        /// <summary>Name of the [environment](https://docs.gitlab.com/ci/environments/) to create the deployment for.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Environment { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Environment { get; set; }
 #endif
-        /// <summary>The name of the branch or tag that is deployed</summary>
+        /// <summary>Name of the branch or tag that is deployed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Ref { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Ref { get; set; }
 #endif
-        /// <summary>The SHA of the commit that is deployed</summary>
+        /// <summary>SHA of the commit that is deployed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Sha { get; set; }
@@ -38,9 +38,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Sha { get; set; }
 #endif
-        /// <summary>The status of the deployment that is created. One of `running`, `success`, `failed`, or `canceled`</summary>
+        /// <summary>Status of the deployment that is created.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdDeploymentsRequestStatus? Status { get; set; }
-        /// <summary>A boolean that indicates if the deployed ref is a tag (`true`) or not (`false`)</summary>
+        /// <summary>If `true`, the deployed ref is a tag.</summary>
         public bool? Tag { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdDeploymentsRequest"/> and sets the default values.

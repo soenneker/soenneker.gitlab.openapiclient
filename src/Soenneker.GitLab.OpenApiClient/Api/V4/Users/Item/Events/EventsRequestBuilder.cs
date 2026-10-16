@@ -86,7 +86,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Events
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class EventsRequestBuilderGetQueryParameters 
         {
-            /// <summary>Event action to filter on</summary>
+            /// <summary>Filter events by the specified [action type](https://docs.gitlab.com/user/profile/contributions_calendar/#user-contribution-events).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("action")]
@@ -96,10 +96,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Events
             [QueryParameter("action")]
             public string Action { get; set; }
 #endif
-            /// <summary>Include only events created after this date</summary>
+            /// <summary>Return events created after the specified date.</summary>
             [QueryParameter("after")]
             public Date? After { get; set; }
-            /// <summary>Include only events created before this date</summary>
+            /// <summary>Return events created before the specified date.</summary>
             [QueryParameter("before")]
             public Date? Before { get; set; }
             /// <summary>Page number of results to retrieve.</summary>
@@ -108,10 +108,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Events
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Return events sorted in ascending and descending order</summary>
+            /// <summary>Sort results in ascending or descending order by creation date.</summary>
             [QueryParameter("sort")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4UsersIdEventsSortParameter? Sort { get; set; }
-            /// <summary>Event target type to filter on</summary>
+            /// <summary>Filter events by target type.</summary>
             [QueryParameter("target_type")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4UsersIdEventsTargetTypeParameter? TargetType { get; set; }
         }

@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Helm.Item
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Helm.Item.Charts.WithFileNameTgz.WithFileNameTgzRequestBuilder"/> and sets the default values.
         /// </summary>
-        /// <param name="fileName">Helm package file name</param>
+        /// <param name="fileName">Name of the chart file.</param>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
         public WithFileNameTgzRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter, string fileName = "") : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/packages/helm/{channel}/charts/{fileName}.tgz", pathParameters)

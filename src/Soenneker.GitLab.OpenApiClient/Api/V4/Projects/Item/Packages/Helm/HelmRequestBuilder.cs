@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Helm
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Helm.Api.ApiRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.packages.helm.item collection</summary>
-        /// <param name="position">Helm channel</param>
+        /// <param name="position">Helm repository channel.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Helm.Item.WithChannelItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Helm.Item.WithChannelItemRequestBuilder this[string position]
         {

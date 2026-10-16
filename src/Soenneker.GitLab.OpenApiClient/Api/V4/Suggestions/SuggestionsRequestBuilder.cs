@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Suggestions
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Suggestions.Batch_apply.Batch_applyRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.suggestions.item collection</summary>
-        /// <param name="position">The ID of the suggestion</param>
+        /// <param name="position">ID of the suggestion.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Suggestions.Item.SuggestionsItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Suggestions.Item.SuggestionsItemRequestBuilder this[int position]
         {

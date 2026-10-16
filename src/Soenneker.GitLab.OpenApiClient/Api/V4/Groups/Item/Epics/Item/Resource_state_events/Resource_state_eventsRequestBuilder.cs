@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics.Item.Resource_
     public partial class Resource_state_eventsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.epics.item.resource_state_events.item collection</summary>
-        /// <param name="position">The ID of a resource state event</param>
+        /// <param name="position">ID of the resource state event.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics.Item.Resource_state_events.Item.WithEventItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics.Item.Resource_state_events.Item.WithEventItemRequestBuilder this[int position]
         {

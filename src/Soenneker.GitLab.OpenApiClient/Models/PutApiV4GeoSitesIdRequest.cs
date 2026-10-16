@@ -16,17 +16,17 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Maximum time (in seconds) for blob downloads during Geo sync.</summary>
         public int? BlobDownloadTimeout { get; set; }
-        /// <summary>The number of consecutive checksum mismatches on a secondary before it reports the resource to the primary for self-heal re-verification. Read from the secondary site; has no effect when set on the primary.</summary>
+        /// <summary>Number of consecutive checksum mismatches on a secondary site before it reports the resource to the primary for self-heal re-verification. Read from the secondary site, and has no effect when set on the primary.</summary>
         public int? ChecksumMismatchReportThreshold { get; set; }
-        /// <summary>The minimum time (in minutes) between self-heal re-verification triggers for the same resource. Both the primary and each secondary use their own value: secondaries use it to throttle re-reporting the same resource, and the primary uses it to throttle re-verifying an already-verified resource.</summary>
+        /// <summary>Minimum time, in minutes, between self-heal re-verification triggers for the same resource. The primary and each secondary site use their own value. Secondary sites use it to throttle re-reporting the same resource, and the primary uses it to throttle re-verifying an already-verified resource.</summary>
         public int? ChecksumMismatchSelfHealCooldownMinutes { get; set; }
-        /// <summary>Control the maximum concurrency of container repository sync for this site</summary>
+        /// <summary>Maximum concurrency of container repository sync for the site.</summary>
         public int? ContainerRepositoriesMaxCapacity { get; set; }
-        /// <summary>Flag indicating if the Geo site is enabled</summary>
+        /// <summary>If `true`, the Geo site is enabled.</summary>
         public bool? Enabled { get; set; }
-        /// <summary>Control the maximum concurrency of LFS/attachment backfill for this secondary site</summary>
+        /// <summary>Maximum concurrency of LFS and attachment backfill for the secondary site.</summary>
         public int? FilesMaxCapacity { get; set; }
-        /// <summary>The URL defined on the primary site that secondary sites should use to contact it. Returns `url` if not set.</summary>
+        /// <summary>URL defined on the primary site that secondary sites use to contact it. Returns `url` if not set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? InternalUrl { get; set; }
@@ -34,9 +34,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string InternalUrl { get; set; }
 #endif
-        /// <summary>The interval (in days) in which the repository verification is valid. Once expired, it will be reverified. This has no effect when set on a secondary site.</summary>
+        /// <summary>Interval, in days, after which verification expires and is repeated. Has no effect when set on a secondary site.</summary>
         public int? MinimumReverificationInterval { get; set; }
-        /// <summary>The unique identifier for the Geo site. Must match `geo_node_name` if it is set in gitlab.rb, otherwise it must match `external_url`</summary>
+        /// <summary>Unique identifier for the Geo site. Must match `geo_node_name` if it is set in `gitlab.rb`, otherwise it must match `external_url`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -44,9 +44,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>Control the maximum concurrency of repository backfill for this secondary site</summary>
+        /// <summary>Maximum concurrency of repository backfill for the secondary site.</summary>
         public int? ReposMaxCapacity { get; set; }
-        /// <summary>The IDs of groups that should be synced, if `selective_sync_type` == `namespaces`</summary>
+        /// <summary>IDs of groups to sync if `selective_sync_type` is `namespaces`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<int?>? SelectiveSyncNamespaceIds { get; set; }
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<int?> SelectiveSyncNamespaceIds { get; set; }
 #endif
-        /// <summary>The IDs of organizations that should be synced, if `selective_sync_type` == `organizations`</summary>
+        /// <summary>IDs of organizations to sync if `selective_sync_type` is `organizations`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<int?>? SelectiveSyncOrganizationIds { get; set; }
@@ -62,7 +62,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<int?> SelectiveSyncOrganizationIds { get; set; }
 #endif
-        /// <summary>The repository storages whose projects should be synced, if `selective_sync_type` == `shards`</summary>
+        /// <summary>Repository storages to sync projects from if `selective_sync_type` is `shards`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? SelectiveSyncShards { get; set; }
@@ -78,9 +78,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string SelectiveSyncType { get; set; }
 #endif
-        /// <summary>Flag indicating if the secondary Geo site will replicate blobs in Object Storage</summary>
+        /// <summary>If `true`, the secondary Geo site replicates blobs in object storage.</summary>
         public bool? SyncObjectStorage { get; set; }
-        /// <summary>The user-facing URL of the Geo site</summary>
+        /// <summary>User-facing URL of the Geo site.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Url { get; set; }
@@ -88,7 +88,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Url { get; set; }
 #endif
-        /// <summary>Control the maximum concurrency of repository verification for this site</summary>
+        /// <summary>Maximum concurrency of verification for the site.</summary>
         public int? VerificationMaxCapacity { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GeoSitesIdRequest"/> and sets the default values.

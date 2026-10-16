@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Object that contains the payload data for the Geo operation</summary>
+        /// <summary>Object that contains the payload data for the Geo operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GeoProxyGitSshInfoRefsReceivePackRequestData? Data { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GeoProxyGitSshInfoRefsReceivePackRequestData Data { get; set; }
 #endif
-        /// <summary>Secret token used to authenticate requests from gitlab-shell                to Geo proxy endpoints</summary>
+        /// <summary>Secret token used to authenticate requests from GitLab Shell to Geo proxy endpoints.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SecretToken { get; set; }

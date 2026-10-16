@@ -16,9 +16,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>ID of the assignee to scope the board to. Premium and Ultimate only.</summary>
         public int? AssigneeId { get; set; }
-        /// <summary>Hide the Open list</summary>
+        /// <summary>If `true`, hides the Open list.</summary>
         public bool? HideBacklogList { get; set; }
-        /// <summary>Hide the Closed list</summary>
+        /// <summary>If `true`, hides the Closed list.</summary>
         public bool? HideClosedList { get; set; }
         /// <summary>Comma-separated list of label names</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -30,7 +30,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>The ID of a milestone to associate with board</summary>
         public int? MilestoneId { get; set; }
-        /// <summary>The board name</summary>
+        /// <summary>Name of the board.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }

@@ -15,7 +15,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Google Cloud service account JSON key contents</summary>
+        /// <summary>Google Cloud service account JSON key contents.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? GoogleJsonKeyString { get; set; }
@@ -23,7 +23,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string GoogleJsonKeyString { get; set; }
 #endif
-        /// <summary>Google Cloud project ID</summary>
+        /// <summary>Google Cloud project ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? GoogleProject { get; set; }

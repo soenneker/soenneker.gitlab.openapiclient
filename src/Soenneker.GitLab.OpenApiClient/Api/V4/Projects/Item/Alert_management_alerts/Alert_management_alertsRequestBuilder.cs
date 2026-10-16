@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Alert_management_a
     public partial class Alert_management_alertsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.alert_management_alerts.item collection</summary>
-        /// <param name="position">The IID of the Alert</param>
+        /// <param name="position">Internal ID of the alert.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Alert_management_alerts.Item.WithAlertIItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Alert_management_alerts.Item.WithAlertIItemRequestBuilder this[int position]
         {

@@ -12,7 +12,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     public partial class PostApiV4AiDuoWorkflowsWorkflowsRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>Additional Context required by the Flow, in JSON format. Contains an array of context details, where each detail is a Hash with a minimum of &quot;Category&quot; and &quot;Content&quot; keys.</summary>
+        /// <summary>Additional context for the flow. Each element is an object with at least `Category` and `Content` keys. `Content` is a JSON-serialized string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsRequestAdditionalContextItem>? AdditionalContext { get; set; }
@@ -32,13 +32,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>The ID of AI Catalog ItemConsumer that configures which catalog item to execute.</summary>
         public int? AiCatalogItemConsumerId { get; set; }
-        /// <summary>The ID of AI Catalog ItemVersion that sourced flow config used by the workflow.</summary>
+        /// <summary>ID of the AI Catalog item version that sourced the flow configuration used by the workflow.</summary>
         public int? AiCatalogItemVersionId { get; set; }
-        /// <summary>When this is enabled Duo Agent Platform may stop to ask the user questions before proceeding. When it is disabled Duo Agent Platform will always just run through the workflow without ever asking for user input. Defaults to true.</summary>
+        /// <summary>If `true`, the agent may pause to ask the user questions before proceeding. If `false`, the agent runs to completion without user input. Defaults to `true`.</summary>
         public bool? AllowAgentToRequestUser { get; set; }
-        /// <summary>Environment for the workflow.</summary>
+        /// <summary>Execution environment for the workflow.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsRequestEnvironment? Environment { get; set; }
-        /// <summary>Goal of the workflow</summary>
+        /// <summary>Description of the task for the agent to complete, for example `Fix the failing pipeline`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Goal { get; set; }
@@ -54,11 +54,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Image { get; set; }
 #endif
-        /// <summary>IID of the Issue noteable that the workflow is associated with.</summary>
+        /// <summary>Internal ID of the issue to associate the flow with. Requires `project_id`.</summary>
         public int? IssueId { get; set; }
-        /// <summary>IID of the MergeRequest noteable that the workflow is associated with.</summary>
+        /// <summary>Internal ID of the merge request to associate the flow with. Requires `project_id`.</summary>
         public int? MergeRequestId { get; set; }
-        /// <summary>The ID or path of the workflow namespace</summary>
+        /// <summary>ID or path of the namespace to associate the flow with.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? NamespaceId { get; set; }
@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string NamespaceId { get; set; }
 #endif
-        /// <summary>The actions the agent can perform without asking for approval</summary>
+        /// <summary>Privilege IDs the agent can use without asking for user approval. Must be a subset of `agent_privileges`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<int?>? PreApprovedAgentPrivileges { get; set; }
@@ -74,7 +74,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<int?> PreApprovedAgentPrivileges { get; set; }
 #endif
-        /// <summary>The ID or path of the workflow project</summary>
+        /// <summary>ID or path of the project to associate the flow with.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ProjectId { get; set; }
@@ -82,7 +82,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ProjectId { get; set; }
 #endif
-        /// <summary>Where the session was triggered from</summary>
+        /// <summary>Where the session was triggered from in the UI.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsRequestSource? Source { get; set; }
         /// <summary>Source branch for the flow. When not specified, a flow whose goal names a pipeline or merge request, such as fix_pipeline/v1, uses its branch, and other flows use the default branch. Applies only when the flow runs in a CI pipeline.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

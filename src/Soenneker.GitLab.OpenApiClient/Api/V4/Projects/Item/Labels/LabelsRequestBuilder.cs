@@ -25,7 +25,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Labels
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Labels.Promote.PromoteRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.labels.item collection</summary>
-        /// <param name="position">The ID or name of a label</param>
+        /// <param name="position">ID or name of the label.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Labels.Item.NameItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Labels.Item.NameItemRequestBuilder this[string position]
         {
@@ -229,10 +229,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Labels
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class LabelsRequestBuilderDeleteQueryParameters 
         {
-            /// <summary>The ID of the label to be deleted. Exactly one of `label_id`, `name` must be provided.</summary>
+            /// <summary>ID of the label to delete. Exactly one of `label_id`, `name` must be provided.</summary>
             [QueryParameter("label_id")]
             public int? LabelId { get; set; }
-            /// <summary>The name of the label to be deleted. Exactly one of `label_id`, `name` must be provided.</summary>
+            /// <summary>Name of the label to delete. Exactly one of `label_id`, `name` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("name")]
@@ -249,10 +249,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Labels
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class LabelsRequestBuilderGetQueryParameters 
         {
-            /// <summary>Filter by archived status. This feature was added in GitLab 18.10</summary>
+            /// <summary>If `true`, returns only archived labels. If `false`, returns only non-archived labels. If omitted, returns all labels. Introduced in GitLab 18.10.</summary>
             [QueryParameter("archived")]
             public bool? Archived { get; set; }
-            /// <summary>Include ancestor groups</summary>
+            /// <summary>If `true`, includes ancestor groups.</summary>
             [QueryParameter("include_ancestor_groups")]
             public bool? IncludeAncestorGroups { get; set; }
             /// <summary>Page number of results to retrieve.</summary>
@@ -261,7 +261,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Labels
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Keyword to filter labels by. This feature was added in GitLab 13.6</summary>
+            /// <summary>Keyword to filter labels by.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("search")]
@@ -271,7 +271,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Labels
             [QueryParameter("search")]
             public string Search { get; set; }
 #endif
-            /// <summary>Include issue and merge request counts</summary>
+            /// <summary>If `true`, includes issue and merge request counts.</summary>
             [QueryParameter("with_counts")]
             public bool? WithCounts { get; set; }
         }

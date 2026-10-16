@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments
     public partial class DeploymentsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.deployments.item collection</summary>
-        /// <param name="position">The ID of the deployment</param>
+        /// <param name="position">ID of the deployment.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments.Item.WithDeploymentItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments.Item.WithDeploymentItemRequestBuilder this[int position]
         {
@@ -141,7 +141,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class DeploymentsRequestBuilderGetQueryParameters 
         {
-            /// <summary>The name of the environment to filter deployments by</summary>
+            /// <summary>Name of the [environment](https://docs.gitlab.com/ci/environments/) to filter deployments by.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("environment")]
@@ -157,7 +157,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments
             /// <summary>Return deployments finished before the specified date. Expected in ISO 8601 format (`2019-03-15T08:00:00Z`)</summary>
             [QueryParameter("finished_before")]
             public DateTimeOffset? FinishedBefore { get; set; }
-            /// <summary>Return deployments ordered by either one of `id`, `iid`, `created_at`, `updated_at` or `ref` fields. Default is `id`</summary>
+            /// <summary>Sort results by the specified field.</summary>
             [QueryParameter("order_by")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdDeploymentsOrderByParameter? OrderBy { get; set; }
             /// <summary>Page number of results to retrieve.</summary>
@@ -166,10 +166,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Return deployments sorted in `asc` or `desc` order. Default is `asc`</summary>
+            /// <summary>Sort results in ascending or descending order.</summary>
             [QueryParameter("sort")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdDeploymentsSortParameter? Sort { get; set; }
-            /// <summary>The status to filter deployments by. One of `created`, `running`, `success`, `failed`, `canceled`, or `blocked`</summary>
+            /// <summary>Filter deployments by status.</summary>
             [QueryParameter("status")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdDeploymentsStatusParameter? Status { get; set; }
             /// <summary>Return deployments updated after the specified date. Expected in ISO 8601 format (`2019-03-15T08:00:00Z`)</summary>

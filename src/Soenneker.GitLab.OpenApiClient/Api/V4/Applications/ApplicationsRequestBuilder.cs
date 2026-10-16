@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Applications
     public partial class ApplicationsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.applications.item collection</summary>
-        /// <param name="position">The ID of the application (not the application_id)</param>
+        /// <param name="position">ID of the application. Not the `application_id`, which is the OAuth client ID.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Applications.Item.ApplicationsItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Applications.Item.ApplicationsItemRequestBuilder this[int position]
         {

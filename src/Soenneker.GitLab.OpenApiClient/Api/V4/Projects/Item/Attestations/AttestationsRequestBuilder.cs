@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Attestations
     public partial class AttestationsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.attestations.item collection</summary>
-        /// <param name="position">The SHA-256 hash of the artifact</param>
+        /// <param name="position">Hex-encoded SHA-256 hash of the artifact.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Attestations.Item.AttestationIItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Attestations.Item.AttestationIItemRequestBuilder this[string position]
         {

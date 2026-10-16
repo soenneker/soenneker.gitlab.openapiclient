@@ -18,7 +18,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Date string in the format YEAR-MONTH-DAY</summary>
         public DateTimeOffset? ExpiresAt { get; set; }
-        /// <summary>Source that triggered the member creation process</summary>
+        /// <summary>Source of the invitation that starts the member creation process. GitLab team members can view more information in this confidential issue: `https://gitlab.com/gitlab-org/gitlab/-/issues/327120`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? InviteSource { get; set; }
@@ -26,7 +26,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string InviteSource { get; set; }
 #endif
-        /// <summary>The user ID of the new member or multiple IDs separated by commas. Mutually exclusive with `username`. At least one of `user_id`, `username` must be provided.</summary>
+        /// <summary>User ID of the new member, or multiple IDs separated by commas. Required if `username` is not provided. Mutually exclusive with `username`. At least one of `user_id`, `username` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GroupsIdMembersRequestUserId? UserId { get; set; }
@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GroupsIdMembersRequestUserId UserId { get; set; }
 #endif
-        /// <summary>The username of the new member or multiple usernames separated by commas. Mutually exclusive with `user_id`. At least one of `user_id`, `username` must be provided.</summary>
+        /// <summary>Username of the new member, or multiple usernames separated by commas. Required if `user_id` is not provided. Mutually exclusive with `user_id`. At least one of `user_id`, `username` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Username { get; set; }

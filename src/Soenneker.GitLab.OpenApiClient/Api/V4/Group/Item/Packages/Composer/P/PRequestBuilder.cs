@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Group.Item.Packages.Composer.P
     public partial class PRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.group.item.packages.composer.p.item collection</summary>
-        /// <param name="position">Shasum of current json</param>
+        /// <param name="position">Shasum of current json.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Group.Item.Packages.Composer.P.Item.WithShaItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Group.Item.Packages.Composer.P.Item.WithShaItemRequestBuilder this[string position]
         {

@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The name of the database</summary>
+        /// <summary>Name of the database.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminBatchedBackgroundMigrationsIdPauseRequestDatabase? Database { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminBatchedBackgroundMigrationsIdPauseRequest"/> and sets the default values.

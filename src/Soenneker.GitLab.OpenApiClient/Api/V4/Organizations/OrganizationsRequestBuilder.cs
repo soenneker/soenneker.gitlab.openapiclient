@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Organizations
     public partial class OrganizationsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.organizations.item collection</summary>
-        /// <param name="position">The ID of the organization</param>
+        /// <param name="position">ID of the organization.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Organizations.Item.OrganizationsItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Organizations.Item.OrganizationsItemRequestBuilder this[int position]
         {

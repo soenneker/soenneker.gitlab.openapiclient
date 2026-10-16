@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Channel name</summary>
+        /// <summary>Name of the channel.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Channel { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Channel { get; set; }
 #endif
-        /// <summary>Base64-encoded blob bytes</summary>
+        /// <summary>Base64-encoded blob bytes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Data { get; set; }
@@ -30,9 +30,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Data { get; set; }
 #endif
-        /// <summary>Append or replace signal (conversation or compaction)</summary>
+        /// <summary>Whether the blob is appended to the stored channel data (`conversation`) or replaces it (`compaction`).</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsIdCheckpointsRequestChannelBlobsItemStepAction? StepAction { get; set; }
-        /// <summary>Channel version</summary>
+        /// <summary>Version of the channel.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Version { get; set; }

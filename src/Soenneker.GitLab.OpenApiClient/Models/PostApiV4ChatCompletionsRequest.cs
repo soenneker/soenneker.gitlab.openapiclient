@@ -12,7 +12,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     public partial class PostApiV4ChatCompletionsRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>List of additional context to be passed for the chat</summary>
+        /// <summary>Additional context to pass to the chat request. See [Context attributes](https://docs.gitlab.com/api/chat/#context-attributes) for the parameters this attribute accepts.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ChatCompletionsRequestAdditionalContextItem>? AdditionalContext { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Client Subscription ID</summary>
+        /// <summary>Client subscription ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ClientSubscriptionId { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ClientSubscriptionId { get; set; }
 #endif
-        /// <summary>Prompt from user</summary>
+        /// <summary>Question sent to Chat.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Content { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Content { get; set; }
 #endif
-        /// <summary>Object that contains information about the current file</summary>
+        /// <summary>Object that contains information about the current file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ChatCompletionsRequestCurrentFile? CurrentFile { get; set; }
@@ -46,9 +46,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ChatCompletionsRequestCurrentFile CurrentFile { get; set; }
 #endif
-        /// <summary>Project ID. Required if resource_type is a commit.</summary>
+        /// <summary>ID of the project. Required when `resource_type` is `commit`.</summary>
         public int? ProjectId { get; set; }
-        /// <summary>Referer URL</summary>
+        /// <summary>Referer URL.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RefererUrl { get; set; }
@@ -56,7 +56,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string RefererUrl { get; set; }
 #endif
-        /// <summary>ID of resource. Can be a resource ID (integer) or a commit hash (string).</summary>
+        /// <summary>ID of the resource. Can be a numeric ID or a commit SHA.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ChatCompletionsRequestResourceId? ResourceId { get; set; }
@@ -64,9 +64,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ChatCompletionsRequestResourceId ResourceId { get; set; }
 #endif
-        /// <summary>Resource type</summary>
+        /// <summary>Type of resource sent with the chat question.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ChatCompletionsRequestResourceType? ResourceType { get; set; }
-        /// <summary>Indicates if we need to reset the history before and after the request</summary>
+        /// <summary>If `true`, resets history before and after the request.</summary>
         public bool? WithCleanHistory { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ChatCompletionsRequest"/> and sets the default values.

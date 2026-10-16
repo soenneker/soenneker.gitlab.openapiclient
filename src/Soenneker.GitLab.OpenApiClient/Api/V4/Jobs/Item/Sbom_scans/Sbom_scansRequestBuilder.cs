@@ -25,7 +25,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Sbom_scans
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Sbom_scans.Authorize.AuthorizeRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.jobs.item.sbom_scans.item collection</summary>
-        /// <param name="position">The sbom digest that identifies an sbom scan uniquely</param>
+        /// <param name="position">SBOM digest that identifies an SBOM scan uniquely.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Sbom_scans.Item.WithSbomDigestItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Sbom_scans.Item.WithSbomDigestItemRequestBuilder this[string position]
         {

@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OfflineImportsRequestAwsS3Configuration AwsS3Configuration { get; set; }
 #endif
-        /// <summary>Name of the object storage bucket where export data is stored</summary>
+        /// <summary>Name of the object storage bucket where export data is stored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Bucket { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OfflineImportsRequestEntitiesItem> Entities { get; set; }
 #endif
-        /// <summary>Prefix of the export within the bucket</summary>
+        /// <summary>Prefix of the export within the bucket.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ExportPrefix { get; set; }

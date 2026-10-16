@@ -14,9 +14,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>If defined, write requests must be made from the specific source.</summary>
+        /// <summary>Restricts write requests to a specific source.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4ProjectsIdTerraformStateProtectionRulesTerraformStateProtectionRuleIdRequestAllowedFrom? AllowedFrom { get; set; }
-        /// <summary>If defined, sets the minimum GitLab access level required to write to the Terraform state.</summary>
+        /// <summary>Minimum GitLab access level required to write to the Terraform state.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4ProjectsIdTerraformStateProtectionRulesTerraformStateProtectionRuleIdRequestMinimumAccessLevelForWrite? MinimumAccessLevelForWrite { get; set; }
         /// <summary>Terraform state name to protect.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

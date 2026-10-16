@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Retrieve.Item
     public partial class WithReplicableNameItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.geo.retrieve.item.item collection</summary>
-        /// <param name="position">The replicable ID of a replicable instance</param>
+        /// <param name="position">ID of the replicable.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Retrieve.Item.Item.WithReplicableItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Retrieve.Item.Item.WithReplicableItemRequestBuilder this[int position]
         {

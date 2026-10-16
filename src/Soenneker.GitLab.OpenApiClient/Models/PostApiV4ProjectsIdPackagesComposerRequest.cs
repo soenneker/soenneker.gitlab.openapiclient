@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The name of the branch. Exactly one of `tag`, `branch` must be provided.</summary>
+        /// <summary>Name of the branch to target for the package. Exactly one of `tag`, `branch` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Branch { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Branch { get; set; }
 #endif
-        /// <summary>The name of the tag. Exactly one of `tag`, `branch` must be provided.</summary>
+        /// <summary>Name of the tag to target for the package. Exactly one of `tag`, `branch` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Tag { get; set; }

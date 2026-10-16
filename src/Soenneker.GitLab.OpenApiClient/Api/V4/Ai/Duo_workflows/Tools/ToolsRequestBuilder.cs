@@ -2,6 +2,7 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Tools.Risk_assessment;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Tools.Risk_classification;
 using System.Collections.Generic;
 using System.IO;
@@ -15,6 +16,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Tools
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ToolsRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The risk_assessment property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Tools.Risk_assessment.Risk_assessmentRequestBuilder Risk_assessment
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Tools.Risk_assessment.Risk_assessmentRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The risk_classification property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Tools.Risk_classification.Risk_classificationRequestBuilder Risk_classification
         {

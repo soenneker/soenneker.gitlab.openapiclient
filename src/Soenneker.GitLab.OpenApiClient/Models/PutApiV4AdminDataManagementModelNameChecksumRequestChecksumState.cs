@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>The checksum status of the records to filter by</summary>
+    /// <summary>Filter by checksum status.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PutApiV4AdminDataManagementModelNameChecksumRequestChecksumState
     {

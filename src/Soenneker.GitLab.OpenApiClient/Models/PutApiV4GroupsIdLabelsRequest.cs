@@ -32,9 +32,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>The ID of the label to be updated. Exactly one of `label_id`, `name` must be provided.</summary>
+        /// <summary>ID of the label to update. Exactly one of `label_id`, `name` must be provided.</summary>
         public int? LabelId { get; set; }
-        /// <summary>The name of the label to be updated. Exactly one of `label_id`, `name` must be provided.</summary>
+        /// <summary>Name of the label to update. Exactly one of `label_id`, `name` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }

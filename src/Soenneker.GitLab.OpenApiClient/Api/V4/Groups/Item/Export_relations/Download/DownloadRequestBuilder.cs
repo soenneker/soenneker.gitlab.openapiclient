@@ -84,13 +84,13 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Export_relations.Dow
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class DownloadRequestBuilderGetQueryParameters 
         {
-            /// <summary>Whether to download in batches. All or none of `batched`, `batch_number` must be provided.</summary>
+            /// <summary>If `true`, downloads the export in batches. All or none of `batched`, `batch_number` must be provided.</summary>
             [QueryParameter("batched")]
             public bool? Batched { get; set; }
-            /// <summary>Batch number to download. All or none of `batched`, `batch_number` must be provided.</summary>
+            /// <summary>Number of the export batch to download. All or none of `batched`, `batch_number` must be provided.</summary>
             [QueryParameter("batch_number")]
             public int? BatchNumber { get; set; }
-            /// <summary>Group relation name</summary>
+            /// <summary>Name of the group top-level relation to download or view.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("relation")]

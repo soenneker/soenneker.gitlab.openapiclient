@@ -14,65 +14,65 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Maximum Cargo package file size in bytes</summary>
+        /// <summary>Maximum Cargo package file size in bytes. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/33060) in GitLab 19.3.</summary>
         public int? CargoMaxFileSize { get; set; }
-        /// <summary>Total number of jobs in currently active pipelines</summary>
+        /// <summary>Total number of jobs in currently active pipelines.</summary>
         public int? CiActiveJobs { get; set; }
-        /// <summary>Maximum number of Instance-level CI/CD variables that can be defined</summary>
+        /// <summary>Maximum number of instance-level CI/CD variables that can be defined.</summary>
         public int? CiInstanceLevelVariables { get; set; }
-        /// <summary>Maximum number of needs dependencies that a job can have</summary>
+        /// <summary>Maximum number of `needs` dependencies that a job can have.</summary>
         public int? CiNeedsSizeLimit { get; set; }
-        /// <summary>Maximum number of pipeline schedules</summary>
+        /// <summary>Maximum number of pipeline schedules.</summary>
         public int? CiPipelineSchedules { get; set; }
-        /// <summary>Maximum number of jobs in a single pipeline</summary>
+        /// <summary>Maximum number of jobs in a single pipeline.</summary>
         public int? CiPipelineSize { get; set; }
-        /// <summary>Maximum number of pipeline subscriptions to and from a project</summary>
+        /// <summary>Maximum number of pipeline subscriptions to and from a project.</summary>
         public int? CiProjectSubscriptions { get; set; }
-        /// <summary>Maximum number of runners created or active in a group during the past seven days</summary>
+        /// <summary>Maximum number of runners created or active in a group during the past seven days.</summary>
         public int? CiRegisteredGroupRunners { get; set; }
-        /// <summary>Maximum number of runners created or active in a project during the past seven days</summary>
+        /// <summary>Maximum number of runners created or active in a project during the past seven days.</summary>
         public int? CiRegisteredProjectRunners { get; set; }
-        /// <summary>Maximum Conan package file size in bytes</summary>
+        /// <summary>Maximum Conan package file size in bytes.</summary>
         public int? ConanMaxFileSize { get; set; }
-        /// <summary>Maximum size of a dotenv artifact in bytes</summary>
+        /// <summary>Maximum size of a dotenv artifact in bytes. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/432529) in GitLab 17.1.</summary>
         public int? DotenvSize { get; set; }
-        /// <summary>Maximum number of variables in a dotenv artifact</summary>
+        /// <summary>Maximum number of variables in a dotenv artifact. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/432529) in GitLab 17.1.</summary>
         public int? DotenvVariables { get; set; }
-        /// <summary>Maximum storage size for the root namespace enforcement in MiB</summary>
+        /// <summary>Maximum storage size for root namespace limit enforcement, in MiB.</summary>
         public int? EnforcementLimit { get; set; }
-        /// <summary>Maximum generic package file size in bytes</summary>
+        /// <summary>Maximum generic package file size in bytes.</summary>
         public int? GenericPackagesMaxFileSize { get; set; }
-        /// <summary>Maximum Helm chart file size in bytes</summary>
+        /// <summary>Maximum Helm chart file size in bytes.</summary>
         public int? HelmMaxFileSize { get; set; }
-        /// <summary>Maximum Maven package file size in bytes</summary>
+        /// <summary>Maximum Maven package file size in bytes.</summary>
         public int? MavenMaxFileSize { get; set; }
-        /// <summary>Maximum number of parallel pipelines per merge train</summary>
+        /// <summary>Maximum number of parallel pipelines per merge train. The default is `20` and the minimum is `1`. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/374188) in GitLab 19.0.</summary>
         public int? MaxPipelinesPerMergeTrain { get; set; }
-        /// <summary>Maximum storage size for the root namespace notifications in MiB</summary>
+        /// <summary>Maximum storage size for root namespace limit notifications, in MiB.</summary>
         public int? NotificationLimit { get; set; }
-        /// <summary>Maximum NPM package file size in bytes</summary>
+        /// <summary>Maximum npm package file size in bytes.</summary>
         public int? NpmMaxFileSize { get; set; }
-        /// <summary>Maximum NuGet package file size in bytes</summary>
+        /// <summary>Maximum NuGet package file size in bytes.</summary>
         public int? NugetMaxFileSize { get; set; }
-        /// <summary>Maximum number of downstream pipelines in a pipeline&apos;s hierarchy tree</summary>
+        /// <summary>Maximum number of downstream pipelines in a pipeline&apos;s hierarchy tree. The default is `1000`. Higher values are not recommended.</summary>
         public int? PipelineHierarchySize { get; set; }
-        /// <summary>Name of the plan to update</summary>
+        /// <summary>Name of the plan to update.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationPlanLimitsRequestPlanName? PlanName { get; set; }
-        /// <summary>Maximum PyPI package file size in bytes</summary>
+        /// <summary>Maximum PyPI package file size in bytes.</summary>
         public int? PypiMaxFileSize { get; set; }
-        /// <summary>Maximum number of outbound Service Desk emails per day, per top-level namespace. 0 for unlimited.</summary>
+        /// <summary>Maximum number of outbound Service Desk emails per day, per top-level namespace. Set to `0` for unlimited. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/253087) in GitLab 19.4.</summary>
         public int? ServiceDeskOutboundEmailsPerDay { get; set; }
-        /// <summary>Maximum number of outbound Service Desk emails per hour, per top-level namespace. 0 for unlimited.</summary>
+        /// <summary>Maximum number of outbound Service Desk emails per hour, per top-level namespace. Set to `0` for unlimited. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/253087) in GitLab 19.4.</summary>
         public int? ServiceDeskOutboundEmailsPerHour { get; set; }
-        /// <summary>Maximum storage size for the root namespace in MiB</summary>
+        /// <summary>Maximum storage size for the root namespace, in MiB.</summary>
         public int? StorageSizeLimit { get; set; }
-        /// <summary>Maximum Terraform Module package file size in bytes</summary>
+        /// <summary>Maximum Terraform module package file size in bytes.</summary>
         public int? TerraformModuleMaxFileSize { get; set; }
-        /// <summary>Maximum number of times a webhook can be called per minute, per top-level namespace. 0 for unlimited.</summary>
+        /// <summary>Maximum number of times a webhook can be called per minute, per top-level namespace. Set to `0` for unlimited. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/571738) in GitLab 18.5.</summary>
         public int? WebHookCalls { get; set; }
-        /// <summary>Maximum number of times a webhook can be called per minute, per top-level namespace. 0 for unlimited (GitLab.com only).</summary>
+        /// <summary>Maximum number of times a webhook can be called per minute, per top-level namespace. Set to `0` for unlimited. GitLab.com only.</summary>
         public int? WebHookCallsLow { get; set; }
-        /// <summary>Maximum number of times a webhook can be called per minute, per top-level namespace. 0 for unlimited (GitLab.com only).</summary>
+        /// <summary>Maximum number of times a webhook can be called per minute, per top-level namespace. Set to `0` for unlimited. GitLab.com only.</summary>
         public int? WebHookCallsMid { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationPlanLimitsRequest"/> and sets the default values.

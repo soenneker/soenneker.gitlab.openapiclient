@@ -14,9 +14,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Id for the experiment, relative to the project</summary>
+        /// <summary>ID of the experiment, relative to the project.</summary>
         public int? ExperimentId { get; set; }
-        /// <summary>A name for this run</summary>
+        /// <summary>Name of the run.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RunName { get; set; }
@@ -24,9 +24,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string RunName { get; set; }
 #endif
-        /// <summary>Unix timestamp in milliseconds of when the run started.</summary>
+        /// <summary>Unix timestamp, in milliseconds, of when the run started.</summary>
         public int? StartTime { get; set; }
-        /// <summary>Tags are stored, but not displayed</summary>
+        /// <summary>Tags to store with the run. Tags are stored but not displayed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public UntypedNode? Tags { get; set; }
@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public UntypedNode Tags { get; set; }
 #endif
-        /// <summary>This will be ignored</summary>
+        /// <summary>Any value provided is ignored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UserId { get; set; }

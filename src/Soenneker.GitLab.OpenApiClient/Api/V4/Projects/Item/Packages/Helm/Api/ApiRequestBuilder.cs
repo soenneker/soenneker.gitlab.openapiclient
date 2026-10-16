@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Helm.Api
     public partial class ApiRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.packages.helm.api.item collection</summary>
-        /// <param name="position">Helm channel</param>
+        /// <param name="position">Helm repository channel.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Helm.Api.Item.WithChannelItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Helm.Api.Item.WithChannelItemRequestBuilder this[string position]
         {

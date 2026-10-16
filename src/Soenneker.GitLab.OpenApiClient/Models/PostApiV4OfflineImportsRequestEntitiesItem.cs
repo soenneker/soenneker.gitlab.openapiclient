@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Full path of the destination namespace</summary>
+        /// <summary>Full path of the destination namespace.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DestinationNamespace { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string DestinationNamespace { get; set; }
 #endif
-        /// <summary>Destination slug for the imported entity</summary>
+        /// <summary>Destination slug for the imported entity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DestinationSlug { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string DestinationSlug { get; set; }
 #endif
-        /// <summary>Full path of the entity on the source instance</summary>
+        /// <summary>Full path of the entity on the source instance.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SourceFullPath { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string SourceFullPath { get; set; }
 #endif
-        /// <summary>Type of the entity to import</summary>
+        /// <summary>Type of the entity to import.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OfflineImportsRequestEntitiesItemSourceType? SourceType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OfflineImportsRequestEntitiesItem"/> and sets the default values.

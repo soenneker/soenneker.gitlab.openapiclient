@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>If defined, write requests must be made from the specific source.</summary>
+    /// <summary>Restricts write requests to a specific source.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PatchApiV4ProjectsIdTerraformStateProtectionRulesTerraformStateProtectionRuleIdRequestAllowedFrom
     {

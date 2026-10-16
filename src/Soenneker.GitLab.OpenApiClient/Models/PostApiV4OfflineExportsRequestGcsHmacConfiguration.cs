@@ -15,7 +15,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>GCS HMAC access key ID</summary>
+        /// <summary>GCS HMAC access key ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? GoogleStorageAccessKeyId { get; set; }
@@ -23,7 +23,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string GoogleStorageAccessKeyId { get; set; }
 #endif
-        /// <summary>GCS HMAC secret</summary>
+        /// <summary>GCS HMAC secret.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? GoogleStorageSecretAccessKey { get; set; }
@@ -31,9 +31,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string GoogleStorageSecretAccessKey { get; set; }
 #endif
-        /// <summary>Use path-style URLs instead of virtual-hosted-style URLs</summary>
+        /// <summary>If `true`, uses path-style URLs instead of virtual-hosted-style URLs.</summary>
         public bool? PathStyle { get; set; }
-        /// <summary>GCS bucket region</summary>
+        /// <summary>GCS bucket region.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Region { get; set; }

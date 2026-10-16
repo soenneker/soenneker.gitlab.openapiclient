@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Per-channel blobs for incremental checkpoint storage</summary>
+        /// <summary>Per-channel blobs for incremental checkpoint storage.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsIdCheckpointsRequestChannelBlobsItem>? ChannelBlobs { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsIdCheckpointsRequestChannelBlobsItem> ChannelBlobs { get; set; }
 #endif
-        /// <summary>Live channel membership of the checkpoint</summary>
+        /// <summary>Live channel membership of the checkpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? ChannelKeys { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsIdCheckpointsRequestCheckpointProperty Checkpoint { get; set; }
 #endif
-        /// <summary>LangGraph checkpoint namespace this checkpoint belongs to. Omitted (or blank) for the flow&apos;s own top-level checkpoint lineage; set to LangGraph&apos;s namespace string for one nested subgraph invocation, e.g. a delegated subagent dispatched by DelegationNode.</summary>
+        /// <summary>LangGraph checkpoint namespace this checkpoint belongs to. Omitted (or blank) for the flow&apos;s own top-level checkpoint lineage. Set to LangGraph&apos;s namespace string for one nested subgraph invocation, for example a delegated subagent dispatched by `DelegationNode`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CheckpointNs { get; set; }
@@ -54,9 +54,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string CompressedCheckpoint { get; set; }
 #endif
-        /// <summary>Thread grouping hint for blob reconstruction</summary>
+        /// <summary>Hint used to group blobs by thread during checkpoint reconstruction.</summary>
         public int? CurrentThread { get; set; }
-        /// <summary>JSON string of the flow metadata</summary>
+        /// <summary>JSON string of the flow metadata.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FlowMetadataJson { get; set; }
@@ -64,7 +64,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string FlowMetadataJson { get; set; }
 #endif
-        /// <summary>Checkpoint metadata</summary>
+        /// <summary>Checkpoint metadata.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsIdCheckpointsRequestMetadataProperty? Metadata { get; set; }
@@ -72,7 +72,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsIdCheckpointsRequestMetadataProperty Metadata { get; set; }
 #endif
-        /// <summary>JSON string of the model metadata</summary>
+        /// <summary>JSON string of the model metadata.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ModelMetadataJson { get; set; }
@@ -88,7 +88,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ParentTs { get; set; }
 #endif
-        /// <summary>The thread ts</summary>
+        /// <summary>LangGraph `thread_ts` of the checkpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ThreadTs { get; set; }

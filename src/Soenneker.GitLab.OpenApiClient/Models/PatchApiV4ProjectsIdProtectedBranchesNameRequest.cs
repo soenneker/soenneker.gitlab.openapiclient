@@ -42,7 +42,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public bool? AllowForcePush { get; set; }
         /// <summary>Prevent pushes to this branch if it matches an item in CODEOWNERS</summary>
         public bool? CodeOwnerApprovalRequired { get; set; }
-        /// <summary>Access levels allowed to unprotect (defaults: `40`, maintainer access level)</summary>
+        /// <summary>Access level allowed to unprotect. Defaults to `40` (Maintainer role). Does not support custom roles. Use `allowed_to_unprotect` with `member_role_id` instead.</summary>
         public int? UnprotectAccessLevel { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4ProjectsIdProtectedBranchesNameRequest"/> and sets the default values.

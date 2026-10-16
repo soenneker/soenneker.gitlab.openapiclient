@@ -14,7 +14,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The application is used where the client secret can be kept confidential. Native mobile apps \                        and Single Page Apps are considered non-confidential. Defaults to true if not supplied</summary>
+        /// <summary>If `true`, the application can securely store client credentials, such as the client secret. Non-confidential applications (such as native mobile apps and Single Page Apps) might expose client credentials.</summary>
         public bool? Confidential { get; set; }
         /// <summary>List of granular scopes to assign.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -40,7 +40,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string RedirectUri { get; set; }
 #endif
-        /// <summary>Scopes of the application. You can specify multiple scopes by separating\                                 each scope using a space</summary>
+        /// <summary>Scopes available to the application. Separate multiple scopes with a space.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Scopes { get; set; }

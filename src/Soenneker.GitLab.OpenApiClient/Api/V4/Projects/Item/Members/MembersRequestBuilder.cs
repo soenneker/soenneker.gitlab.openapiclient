@@ -25,7 +25,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Members
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Members.All.AllRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.members.item collection</summary>
-        /// <param name="position">The user ID of the member</param>
+        /// <param name="position">User ID of the member.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Members.Item.WithUserItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Members.Item.WithUserItemRequestBuilder this[int position]
         {
@@ -153,7 +153,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Members
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>A query string to search for members</summary>
+            /// <summary>Filter results by name, email, or username. Use partial values to widen the scope of the query.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("query")]
@@ -163,10 +163,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Members
             [QueryParameter("query")]
             public string Query { get; set; }
 #endif
-            /// <summary>Show seat information for members</summary>
+            /// <summary>If `true`, shows seat information for members.</summary>
             [QueryParameter("show_seat_info")]
             public bool? ShowSeatInfo { get; set; }
-            /// <summary>Array of user ids to be skipped for membership</summary>
+            /// <summary>Filter skipped users out of the results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("skip_users")]
@@ -176,7 +176,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Members
             [QueryParameter("skip_users")]
             public int?[] SkipUsers { get; set; }
 #endif
-            /// <summary>Array of user ids to look up for membership</summary>
+            /// <summary>Filter results by the given user IDs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("user_ids")]

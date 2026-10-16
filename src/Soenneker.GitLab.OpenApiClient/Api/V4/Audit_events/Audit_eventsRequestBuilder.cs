@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Audit_events
     public partial class Audit_eventsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.audit_events.item collection</summary>
-        /// <param name="position">The ID of audit event</param>
+        /// <param name="position">ID of the audit event.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Audit_events.Item.Audit_eventsItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Audit_events.Item.Audit_eventsItemRequestBuilder this[int position]
         {
@@ -99,16 +99,16 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Audit_events
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Audit_eventsRequestBuilderGetQueryParameters 
         {
-            /// <summary>Return audit events created after the specified time</summary>
+            /// <summary>Return audit events created on or after the specified time.</summary>
             [QueryParameter("created_after")]
             public DateTimeOffset? CreatedAfter { get; set; }
-            /// <summary>Return audit events created before the specified time</summary>
+            /// <summary>Return audit events created on or before the specified time.</summary>
             [QueryParameter("created_before")]
             public DateTimeOffset? CreatedBefore { get; set; }
-            /// <summary>Return audit events for the specified entity ID. If defined, the request must also include the `entity_type` attribute.</summary>
+            /// <summary>Return audit events for the specified entity ID. Requires the `entity_type` attribute.</summary>
             [QueryParameter("entity_id")]
             public int? EntityId { get; set; }
-            /// <summary>Return audit events for the specified entity type</summary>
+            /// <summary>Return audit events for the specified entity type.</summary>
             [QueryParameter("entity_type")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4AuditEventsEntityTypeParameter? EntityType { get; set; }
             /// <summary>Page number of results to retrieve.</summary>
