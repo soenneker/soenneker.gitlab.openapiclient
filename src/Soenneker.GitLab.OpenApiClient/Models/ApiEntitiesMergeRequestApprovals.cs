@@ -14,16 +14,110 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The approval_rules_left property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalRuleShort>? ApprovalRulesLeft { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalRuleShort> ApprovalRulesLeft { get; set; }
+#endif
+        /// <summary>The approvals_left property</summary>
+        public int? ApprovalsLeft { get; set; }
+        /// <summary>The approvals_required property</summary>
+        public int? ApprovalsRequired { get; set; }
         /// <summary>The approved property</summary>
         public bool? Approved { get; set; }
         /// <summary>The approved_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovals? ApprovedBy { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovals>? ApprovedBy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovals ApprovedBy { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovals> ApprovedBy { get; set; }
 #endif
+        /// <summary>The approver_groups property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestApprovalsApproverGroupsItemProperty>? ApproverGroups { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestApprovalsApproverGroupsItemProperty> ApproverGroups { get; set; }
+#endif
+        /// <summary>The approvers property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestApprovalsApproversItemProperty>? Approvers { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestApprovalsApproversItemProperty> Approvers { get; set; }
+#endif
+        /// <summary>The created_at property</summary>
+        public DateTimeOffset? CreatedAt { get; set; }
+        /// <summary>The description property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Description { get; set; }
+#nullable restore
+#else
+        public string Description { get; set; }
+#endif
+        /// <summary>The has_approval_rules property</summary>
+        public bool? HasApprovalRules { get; set; }
+        /// <summary>The id property</summary>
+        public long? Id { get; set; }
+        /// <summary>The iid property</summary>
+        public int? Iid { get; set; }
+        /// <summary>The invalid_approvers_rules property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalRuleShort>? InvalidApproversRules { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalRuleShort> InvalidApproversRules { get; set; }
+#endif
+        /// <summary>The merge_request_approvers_available property</summary>
+        public bool? MergeRequestApproversAvailable { get; set; }
+        /// <summary>The merge_status property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? MergeStatus { get; set; }
+#nullable restore
+#else
+        public string MergeStatus { get; set; }
+#endif
+        /// <summary>The multiple_approval_rules_available property</summary>
+        public bool? MultipleApprovalRulesAvailable { get; set; }
+        /// <summary>The project_id property</summary>
+        public long? ProjectId { get; set; }
+        /// <summary>The require_password_to_approve property</summary>
+        public bool? RequirePasswordToApprove { get; set; }
+        /// <summary>The state property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? State { get; set; }
+#nullable restore
+#else
+        public string State { get; set; }
+#endif
+        /// <summary>The suggested_approvers property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic>? SuggestedApprovers { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic> SuggestedApprovers { get; set; }
+#endif
+        /// <summary>The title property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Title { get; set; }
+#nullable restore
+#else
+        public string Title { get; set; }
+#endif
+        /// <summary>The updated_at property</summary>
+        public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>The user_can_approve property</summary>
         public bool? UserCanApprove { get; set; }
         /// <summary>The user_has_approved property</summary>
@@ -53,8 +147,28 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "approval_rules_left", n => { ApprovalRulesLeft = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalRuleShort>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalRuleShort.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "approvals_left", n => { ApprovalsLeft = n.GetIntValue(); } },
+                { "approvals_required", n => { ApprovalsRequired = n.GetIntValue(); } },
                 { "approved", n => { Approved = n.GetBoolValue(); } },
-                { "approved_by", n => { ApprovedBy = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovals>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovals.CreateFromDiscriminatorValue); } },
+                { "approved_by", n => { ApprovedBy = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovals>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovals.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "approver_groups", n => { ApproverGroups = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestApprovalsApproverGroupsItemProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestApprovalsApproverGroupsItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "approvers", n => { Approvers = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestApprovalsApproversItemProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestApprovalsApproversItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
+                { "description", n => { Description = n.GetStringValue(); } },
+                { "has_approval_rules", n => { HasApprovalRules = n.GetBoolValue(); } },
+                { "id", n => { Id = n.GetLongValue(); } },
+                { "iid", n => { Iid = n.GetIntValue(); } },
+                { "invalid_approvers_rules", n => { InvalidApproversRules = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalRuleShort>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalRuleShort.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "merge_request_approvers_available", n => { MergeRequestApproversAvailable = n.GetBoolValue(); } },
+                { "merge_status", n => { MergeStatus = n.GetStringValue(); } },
+                { "multiple_approval_rules_available", n => { MultipleApprovalRulesAvailable = n.GetBoolValue(); } },
+                { "project_id", n => { ProjectId = n.GetLongValue(); } },
+                { "require_password_to_approve", n => { RequirePasswordToApprove = n.GetBoolValue(); } },
+                { "state", n => { State = n.GetStringValue(); } },
+                { "suggested_approvers", n => { SuggestedApprovers = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "title", n => { Title = n.GetStringValue(); } },
+                { "updated_at", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
                 { "user_can_approve", n => { UserCanApprove = n.GetBoolValue(); } },
                 { "user_has_approved", n => { UserHasApproved = n.GetBoolValue(); } },
             };
@@ -66,8 +180,28 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalRuleShort>("approval_rules_left", ApprovalRulesLeft);
+            writer.WriteIntValue("approvals_left", ApprovalsLeft);
+            writer.WriteIntValue("approvals_required", ApprovalsRequired);
             writer.WriteBoolValue("approved", Approved);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovals>("approved_by", ApprovedBy);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovals>("approved_by", ApprovedBy);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestApprovalsApproverGroupsItemProperty>("approver_groups", ApproverGroups);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestApprovalsApproversItemProperty>("approvers", Approvers);
+            writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
+            writer.WriteStringValue("description", Description);
+            writer.WriteBoolValue("has_approval_rules", HasApprovalRules);
+            writer.WriteLongValue("id", Id);
+            writer.WriteIntValue("iid", Iid);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalRuleShort>("invalid_approvers_rules", InvalidApproversRules);
+            writer.WriteBoolValue("merge_request_approvers_available", MergeRequestApproversAvailable);
+            writer.WriteStringValue("merge_status", MergeStatus);
+            writer.WriteBoolValue("multiple_approval_rules_available", MultipleApprovalRulesAvailable);
+            writer.WriteLongValue("project_id", ProjectId);
+            writer.WriteBoolValue("require_password_to_approve", RequirePasswordToApprove);
+            writer.WriteStringValue("state", State);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic>("suggested_approvers", SuggestedApprovers);
+            writer.WriteStringValue("title", Title);
+            writer.WriteDateTimeOffsetValue("updated_at", UpdatedAt);
             writer.WriteBoolValue("user_can_approve", UserCanApprove);
             writer.WriteBoolValue("user_has_approved", UserHasApproved);
             writer.WriteAdditionalData(AdditionalData);
