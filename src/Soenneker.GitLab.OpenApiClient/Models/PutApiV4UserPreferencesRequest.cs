@@ -14,13 +14,15 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>If `true`, passes the user&apos;s external identities to CI jobs as part of a JSON web token. This attribute is internal to GitLab and must not be passed to third-party services. For more information, see [Token Payload](https://docs.gitlab.com/ci/secrets/id_token_authentication/#token-payload). At least one of `view_diffs_file_by_file`, `show_whitespace_in_diffs`, `pass_user_identities_to_ci_jwt`, `policy_advanced_editor` must be provided.</summary>
+        /// <summary>Default skin tone for emoji that have skin tone variants. One of `default`, `light`, `medium_light`, `medium`, `medium_dark`, or `dark`. At least one of `view_diffs_file_by_file`, `show_whitespace_in_diffs`, `pass_user_identities_to_ci_jwt`, `policy_advanced_editor`, `emoji_skin_tone` must be provided.</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4UserPreferencesRequestEmojiSkinTone? EmojiSkinTone { get; set; }
+        /// <summary>If `true`, passes the user&apos;s external identities to CI jobs as part of a JSON web token. This attribute is internal to GitLab and must not be passed to third-party services. For more information, see [Token Payload](https://docs.gitlab.com/ci/secrets/id_token_authentication/#token-payload). At least one of `view_diffs_file_by_file`, `show_whitespace_in_diffs`, `pass_user_identities_to_ci_jwt`, `policy_advanced_editor`, `emoji_skin_tone` must be provided.</summary>
         public bool? PassUserIdentitiesToCiJwt { get; set; }
-        /// <summary>If `true`, enables the advanced editor. At least one of `view_diffs_file_by_file`, `show_whitespace_in_diffs`, `pass_user_identities_to_ci_jwt`, `policy_advanced_editor` must be provided.</summary>
+        /// <summary>If `true`, enables the advanced editor. At least one of `view_diffs_file_by_file`, `show_whitespace_in_diffs`, `pass_user_identities_to_ci_jwt`, `policy_advanced_editor`, `emoji_skin_tone` must be provided.</summary>
         public bool? PolicyAdvancedEditor { get; set; }
-        /// <summary>If `true`, the user sees whitespace changes in diffs. At least one of `view_diffs_file_by_file`, `show_whitespace_in_diffs`, `pass_user_identities_to_ci_jwt`, `policy_advanced_editor` must be provided.</summary>
+        /// <summary>If `true`, the user sees whitespace changes in diffs. At least one of `view_diffs_file_by_file`, `show_whitespace_in_diffs`, `pass_user_identities_to_ci_jwt`, `policy_advanced_editor`, `emoji_skin_tone` must be provided.</summary>
         public bool? ShowWhitespaceInDiffs { get; set; }
-        /// <summary>If `true`, the user sees only one file diff per page. At least one of `view_diffs_file_by_file`, `show_whitespace_in_diffs`, `pass_user_identities_to_ci_jwt`, `policy_advanced_editor` must be provided.</summary>
+        /// <summary>If `true`, the user sees only one file diff per page. At least one of `view_diffs_file_by_file`, `show_whitespace_in_diffs`, `pass_user_identities_to_ci_jwt`, `policy_advanced_editor`, `emoji_skin_tone` must be provided.</summary>
         public bool? ViewDiffsFileByFile { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4UserPreferencesRequest"/> and sets the default values.
@@ -47,6 +49,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "emoji_skin_tone", n => { EmojiSkinTone = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4UserPreferencesRequestEmojiSkinTone>(); } },
                 { "pass_user_identities_to_ci_jwt", n => { PassUserIdentitiesToCiJwt = n.GetBoolValue(); } },
                 { "policy_advanced_editor", n => { PolicyAdvancedEditor = n.GetBoolValue(); } },
                 { "show_whitespace_in_diffs", n => { ShowWhitespaceInDiffs = n.GetBoolValue(); } },
@@ -60,6 +63,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4UserPreferencesRequestEmojiSkinTone>("emoji_skin_tone", EmojiSkinTone);
             writer.WriteBoolValue("pass_user_identities_to_ci_jwt", PassUserIdentitiesToCiJwt);
             writer.WriteBoolValue("policy_advanced_editor", PolicyAdvancedEditor);
             writer.WriteBoolValue("show_whitespace_in_diffs", ShowWhitespaceInDiffs);

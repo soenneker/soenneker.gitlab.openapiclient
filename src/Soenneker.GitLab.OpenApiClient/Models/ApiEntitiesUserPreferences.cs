@@ -14,6 +14,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The emoji_skin_tone property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? EmojiSkinTone { get; set; }
+#nullable restore
+#else
+        public string EmojiSkinTone { get; set; }
+#endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -87,6 +95,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "emoji_skin_tone", n => { EmojiSkinTone = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "pass_user_identities_to_ci_jwt", n => { PassUserIdentitiesToCiJwt = n.GetStringValue(); } },
                 { "policy_advanced_editor", n => { PolicyAdvancedEditor = n.GetStringValue(); } },
@@ -102,6 +111,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("emoji_skin_tone", EmojiSkinTone);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("pass_user_identities_to_ci_jwt", PassUserIdentitiesToCiJwt);
             writer.WriteStringValue("policy_advanced_editor", PolicyAdvancedEditor);
