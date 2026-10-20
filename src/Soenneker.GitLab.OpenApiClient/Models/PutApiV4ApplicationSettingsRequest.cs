@@ -626,6 +626,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public int? DefaultProjectsLimit { get; set; }
         /// <summary>What visibility level new projects receive. Default is `private`. Cannot be set to any levels in `restricted_visibility_levels`.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestDefaultProjectVisibility? DefaultProjectVisibility { get; set; }
+        /// <summary>Enable the delete source branch option by default for new projects</summary>
+        public bool? DefaultRemoveSourceBranchAfterMerge { get; set; }
         /// <summary>The default_search_scope property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -4432,6 +4434,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "default_project_deletion_protection", n => { DefaultProjectDeletionProtection = n.GetBoolValue(); } },
                 { "default_project_visibility", n => { DefaultProjectVisibility = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestDefaultProjectVisibility>(); } },
                 { "default_projects_limit", n => { DefaultProjectsLimit = n.GetIntValue(); } },
+                { "default_remove_source_branch_after_merge", n => { DefaultRemoveSourceBranchAfterMerge = n.GetBoolValue(); } },
                 { "default_search_scope", n => { DefaultSearchScope = n.GetStringValue(); } },
                 { "default_snippet_visibility", n => { DefaultSnippetVisibility = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestDefaultSnippetVisibility>(); } },
                 { "default_syntax_highlighting_theme", n => { DefaultSyntaxHighlightingTheme = n.GetStringValue(); } },
@@ -5121,6 +5124,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("default_project_deletion_protection", DefaultProjectDeletionProtection);
             writer.WriteIntValue("default_projects_limit", DefaultProjectsLimit);
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestDefaultProjectVisibility>("default_project_visibility", DefaultProjectVisibility);
+            writer.WriteBoolValue("default_remove_source_branch_after_merge", DefaultRemoveSourceBranchAfterMerge);
             writer.WriteStringValue("default_search_scope", DefaultSearchScope);
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestDefaultSnippetVisibility>("default_snippet_visibility", DefaultSnippetVisibility);
             writer.WriteStringValue("default_syntax_highlighting_theme", DefaultSyntaxHighlightingTheme);

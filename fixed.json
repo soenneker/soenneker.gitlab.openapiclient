@@ -129715,6 +129715,9 @@
           "default_projects_limit": {
             "type": "string"
           },
+          "default_remove_source_branch_after_merge": {
+            "type": "string"
+          },
           "default_snippet_visibility": {
             "type": "string"
           },
@@ -149614,6 +149617,11 @@
           },
           "default_project_creation": {
             "$ref": "#/components/schemas/PutApiV4ApplicationSettingsRequestDefaultProjectCreation"
+          },
+          "default_remove_source_branch_after_merge": {
+            "type": "boolean",
+            "description": "Enable the delete source branch option by default for new projects",
+            "nullable": true
           },
           "default_branch_protection": {
             "$ref": "#/components/schemas/PutApiV4ApplicationSettingsRequestDefaultBranchProtection"
