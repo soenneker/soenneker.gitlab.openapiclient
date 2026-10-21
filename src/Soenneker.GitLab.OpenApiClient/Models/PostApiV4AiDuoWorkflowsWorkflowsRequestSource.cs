@@ -55,5 +55,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         #pragma warning disable CS1591
         WorkItemPlanToMergeRequest,
         #pragma warning restore CS1591
+        [EnumMember(Value = "web_chat")]
+        #pragma warning disable CS1591
+        WebChat,
+        #pragma warning restore CS1591
     }
 }

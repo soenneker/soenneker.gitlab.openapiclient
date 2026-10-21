@@ -55,13 +55,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public List<string> Labels { get; set; }
 #endif
         /// <summary>Date after which the merge request can be merged. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/510992) in GitLab 17.8.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? MergeAfter { get; set; }
-#nullable restore
-#else
-        public string MergeAfter { get; set; }
-#endif
+        public DateTimeOffset? MergeAfter { get; set; }
         /// <summary>The title of a project or ancestor-group milestone to assign the merge request to. Mutually exclusive with `milestone_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -151,7 +145,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "assignee_ids", n => { AssigneeIds = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "labels", n => { Labels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "merge_after", n => { MergeAfter = n.GetStringValue(); } },
+                { "merge_after", n => { MergeAfter = n.GetDateTimeOffsetValue(); } },
                 { "milestone", n => { Milestone = n.GetStringValue(); } },
                 { "milestone_id", n => { MilestoneId = n.GetIntValue(); } },
                 { "remove_labels", n => { RemoveLabels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -179,7 +173,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<int?>("assignee_ids", AssigneeIds);
             writer.WriteStringValue("description", Description);
             writer.WriteCollectionOfPrimitiveValues<string>("labels", Labels);
-            writer.WriteStringValue("merge_after", MergeAfter);
+            writer.WriteDateTimeOffsetValue("merge_after", MergeAfter);
             writer.WriteStringValue("milestone", Milestone);
             writer.WriteIntValue("milestone_id", MilestoneId);
             writer.WriteCollectionOfPrimitiveValues<string>("remove_labels", RemoveLabels);

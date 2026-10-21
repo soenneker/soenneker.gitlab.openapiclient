@@ -2606,6 +2606,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string JiraForgeAppId { get; set; }
 #endif
+        /// <summary>The job_cancel_limit_per_user_project property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? JobCancelLimitPerUserProject { get; set; }
+#nullable restore
+#else
+        public string JobCancelLimitPerUserProject { get; set; }
+#endif
         /// <summary>The job_erase_limit_per_user_project property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -5751,6 +5759,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "jira_connect_proxy_url", n => { JiraConnectProxyUrl = n.GetStringValue(); } },
                 { "jira_connect_public_key_storage_enabled", n => { JiraConnectPublicKeyStorageEnabled = n.GetStringValue(); } },
                 { "jira_forge_app_id", n => { JiraForgeAppId = n.GetStringValue(); } },
+                { "job_cancel_limit_per_user_project", n => { JobCancelLimitPerUserProject = n.GetStringValue(); } },
                 { "job_erase_limit_per_user_project", n => { JobEraseLimitPerUserProject = n.GetStringValue(); } },
                 { "job_play_limit_per_user_project", n => { JobPlayLimitPerUserProject = n.GetStringValue(); } },
                 { "job_retry_limit_per_user_project", n => { JobRetryLimitPerUserProject = n.GetStringValue(); } },
@@ -6444,6 +6453,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("jira_connect_proxy_url", JiraConnectProxyUrl);
             writer.WriteStringValue("jira_connect_public_key_storage_enabled", JiraConnectPublicKeyStorageEnabled);
             writer.WriteStringValue("jira_forge_app_id", JiraForgeAppId);
+            writer.WriteStringValue("job_cancel_limit_per_user_project", JobCancelLimitPerUserProject);
             writer.WriteStringValue("job_erase_limit_per_user_project", JobEraseLimitPerUserProject);
             writer.WriteStringValue("job_play_limit_per_user_project", JobPlayLimitPerUserProject);
             writer.WriteStringValue("job_retry_limit_per_user_project", JobRetryLimitPerUserProject);

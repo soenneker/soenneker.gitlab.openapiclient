@@ -1781,6 +1781,14 @@ tags:
 
     Alongside the work items themselves, you can retrieve their children, linked items, linked resources,
     notes, discussions, emoji reactions, email participants, and the current user's to-do items.
+
+    By default, responses include only the `id`, `iid`, `global_id`, and `title` of each work item.
+    Use the `fields` and `features` parameters to request more attributes.
+
+    > [!note]
+    > The availability of these endpoints is controlled by the `work_item_rest_api` feature flag.
+    > They are available for testing, but not ready for production use. While the flag is disabled,
+    > every endpoint except the list endpoints returns `404 Not Found`.
   x-displayName: Work items
   externalDocs:
     url: https://docs.gitlab.com/user/work_items/
@@ -2207,6 +2215,41 @@ paths:
               "$ref": "#/components/schemas/postApiV4OrbitQueryNameRequest"
       x-gitlab-tier: premium
       x-gitlab-lifecycle: beta
+  "/api/v4/orbit/context":
+    post:
+      operationId: postApiV4OrbitContext
+      summary: Get entity context
+      description: Resolves one Orbit token to a PostgreSQL summary and, optionally,
+        its graph neighborhood. Requests that reach token resolution count against
+        the orbit_query rate limit; with expand, they run at most one billable graph
+        query. Requires a JSON request body.
+      tags:
+      - Orbit
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/APIEntitiesOrbitContext"
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+        '429':
+          description: Too many requests
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              "$ref": "#/components/schemas/postApiV4OrbitContextRequest"
+      x-gitlab-tier: premium
+      x-gitlab-lifecycle: experiment
   "/api/v4/orbit/query/templates":
     get:
       operationId: getApiV4OrbitQueryTemplates
@@ -21995,6 +22038,13 @@ paths:
           type: string
           nullable: true
         in: query
+      - name: search_title
+        required: false
+        description: The search criteria for the title of the milestone
+        schema:
+          type: string
+          nullable: true
+        in: query
       - name: include_parent_milestones
         required: false
         description: If `true`, includes milestones from all parent groups. [Deprecated](https://gitlab.com/gitlab-org/gitlab/-/issues/433298).
@@ -22028,6 +22078,51 @@ paths:
           type: string
           format: date-time
           nullable: true
+        in: query
+      - name: containing_date
+        required: false
+        description: 'Return milestones where start_date <= containing_date <= due_date.
+          Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ'
+        schema:
+          type: string
+          format: date-time
+          nullable: true
+        in: query
+      - name: start_date
+        required: false
+        description: 'Return milestones where due_date >= start_date. Requires end_date.
+          Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ'
+        schema:
+          type: string
+          format: date-time
+          nullable: true
+        in: query
+      - name: end_date
+        required: false
+        description: 'Return milestones where start_date <= end_date. Requires start_date.
+          Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ'
+        schema:
+          type: string
+          format: date-time
+          nullable: true
+        in: query
+      - name: sort
+        required: false
+        description: Return milestones sorted in the given order
+        schema:
+          type: string
+          enum:
+          - due_date_asc
+          - due_date_desc
+          - start_date_asc
+          - start_date_desc
+          - name_asc
+          - name_desc
+          - created_asc
+          - created_desc
+          - updated_asc
+          - updated_desc
+          default: due_date_asc
         in: query
       - name: page
         required: false
@@ -24714,6 +24809,13 @@ paths:
           type: string
           nullable: true
         in: query
+      - name: search_title
+        required: false
+        description: The search criteria for the title of the milestone
+        schema:
+          type: string
+          nullable: true
+        in: query
       - name: include_parent_milestones
         required: false
         description: If `true`, includes milestones from all parent groups. [Deprecated](https://gitlab.com/gitlab-org/gitlab/-/issues/433298).
@@ -24747,6 +24849,51 @@ paths:
           type: string
           format: date-time
           nullable: true
+        in: query
+      - name: containing_date
+        required: false
+        description: 'Return milestones where start_date <= containing_date <= due_date.
+          Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ'
+        schema:
+          type: string
+          format: date-time
+          nullable: true
+        in: query
+      - name: start_date
+        required: false
+        description: 'Return milestones where due_date >= start_date. Requires end_date.
+          Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ'
+        schema:
+          type: string
+          format: date-time
+          nullable: true
+        in: query
+      - name: end_date
+        required: false
+        description: 'Return milestones where start_date <= end_date. Requires start_date.
+          Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ'
+        schema:
+          type: string
+          format: date-time
+          nullable: true
+        in: query
+      - name: sort
+        required: false
+        description: Return milestones sorted in the given order
+        schema:
+          type: string
+          enum:
+          - due_date_asc
+          - due_date_desc
+          - start_date_asc
+          - start_date_desc
+          - name_asc
+          - name_desc
+          - created_asc
+          - created_desc
+          - updated_asc
+          - updated_desc
+          default: due_date_asc
         in: query
       - name: page
         required: false
@@ -40389,6 +40536,8 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        '429':
+          description: Too many requests
         '503':
           description: Service unavailable
       parameters:
@@ -40433,6 +40582,8 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        '429':
+          description: Too many requests
         '500':
           description: Internal Server Error
         '503':
@@ -61495,6 +61646,8 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        '429':
+          description: Too many requests
         '503':
           description: Service unavailable
         '400':
@@ -61533,6 +61686,8 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        '429':
+          description: Too many requests
         '503':
           description: Service unavailable
         '400':
@@ -77069,6 +77224,8 @@ paths:
           description: Forbidden
         '404':
           description: Not found
+        '429':
+          description: Too Many Requests
         '400':
           description: Bad Request
       parameters:
@@ -84333,6 +84490,39 @@ components:
           type: string
           format: date-time
           example: '2026-07-22T11:42:00Z'
+    APIEntitiesOrbitContextEntity:
+      type: object
+      properties:
+        token:
+          type: string
+          example: MergeRequest[123]
+        resolved_token:
+          type: string
+          example: MergeRequest[123]
+        type:
+          type: string
+          example: MergeRequest
+        id:
+          type: string
+          example: '123'
+        found:
+          type: boolean
+        summary:
+          type: object
+        error:
+          type: object
+        expansion:
+          type: object
+    APIEntitiesOrbitContext:
+      type: object
+      properties:
+        version:
+          type: string
+          example: 1.1.0
+        entities:
+          type: array
+          items:
+            "$ref": "#/components/schemas/APIEntitiesOrbitContextEntity"
     APIEntitiesOrbitSkillSummary:
       type: object
       properties:
@@ -93530,6 +93720,8 @@ components:
         pipeline_delete_limit_per_user_project:
           type: string
         job_erase_limit_per_user_project:
+          type: string
+        job_cancel_limit_per_user_project:
           type: string
         asciidoc_max_includes:
           type: string
@@ -103185,6 +103377,30 @@ components:
           type: string
           description: Optional frontend source subtype (e.g. code_intelligence)
           nullable: true
+    postApiV4OrbitContextRequest:
+      type: object
+      properties:
+        tokens:
+          type: array
+          items:
+            type: string
+          description: 'Exactly one token: Type[id], a GID, an instance URL, path!iid,
+            path#iid, or path&iid (epic)'
+          nullable: true
+        expand:
+          oneOf:
+          - type: boolean
+            default: false
+          description: Attach the graph neighborhood of the entity
+        response_format:
+          type: string
+          enum:
+          - raw
+          - llm
+          description: 'Response format: raw or llm'
+          default: raw
+      required:
+      - tokens
     postApiV4JobsIdSbomScansAuthorizeRequest:
       type: object
       properties:
@@ -104262,6 +104478,7 @@ components:
           - duo_cli_acp
           - ide_extension
           - work_item_plan_to_merge_request
+          - web_chat
           description: Where the session was triggered from in the UI.
           nullable: true
     postApiV4AiDuoWorkflowsWorkflowsWorkflowIdExecuteRequest:
@@ -111271,6 +111488,11 @@ components:
           type: integer
           description: Maximum number of job erasures allowed per minute for a given
             project.
+          nullable: true
+        job_cancel_limit_per_user_project:
+          type: integer
+          description: Maximum number of job cancellations allowed per minute for
+            a given project.
           nullable: true
         ai_action_api_rate_limit:
           type: integer
@@ -122602,6 +122824,7 @@ components:
           nullable: true
         merge_after:
           type: string
+          format: date-time
           description: Date after which the merge request can be merged. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/510992)
             in GitLab 17.8.
           nullable: true
@@ -122790,6 +123013,7 @@ components:
           nullable: true
         merge_after:
           type: string
+          format: date-time
           description: Date after which the merge request can be merged. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/510992)
             in GitLab 17.8. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`,
             `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`,

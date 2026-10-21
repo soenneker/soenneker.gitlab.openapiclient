@@ -661,6 +661,55 @@
         "x-gitlab-lifecycle": "beta"
       }
     },
+    "/api/v4/orbit/context": {
+      "post": {
+        "tags": [
+          "Orbit"
+        ],
+        "summary": "Get entity context",
+        "description": "Resolves one Orbit token to a PostgreSQL summary and, optionally, its graph neighborhood. Requests that reach token resolution count against the orbit_query rate limit; with expand, they run at most one billable graph query. Requires a JSON request body.",
+        "operationId": "PostApiV4OrbitContext",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostApiV4OrbitContextRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesOrbitContext"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "429": {
+            "description": "Too many requests"
+          }
+        },
+        "x-gitlab-tier": "premium",
+        "x-gitlab-lifecycle": "experiment"
+      }
+    },
     "/api/v4/orbit/query/templates": {
       "get": {
         "tags": [
@@ -28747,6 +28796,15 @@
             }
           },
           {
+            "name": "search_title",
+            "in": "query",
+            "description": "The search criteria for the title of the milestone",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
             "name": "include_parent_milestones",
             "in": "query",
             "description": "If \u0060true\u0060, includes milestones from all parent groups. [Deprecated](https://gitlab.com/gitlab-org/gitlab/-/issues/433298). Use \u0060include_ancestors\u0060 instead. Mutually exclusive with \u0060include_ancestors\u0060.",
@@ -28782,6 +28840,44 @@
               "type": "string",
               "format": "date-time",
               "nullable": true
+            }
+          },
+          {
+            "name": "containing_date",
+            "in": "query",
+            "description": "Return milestones where start_date \u003C= containing_date \u003C= due_date. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            }
+          },
+          {
+            "name": "start_date",
+            "in": "query",
+            "description": "Return milestones where due_date \u003E= start_date. Requires end_date. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            }
+          },
+          {
+            "name": "end_date",
+            "in": "query",
+            "description": "Return milestones where start_date \u003C= end_date. Requires start_date. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Return milestones sorted in the given order",
+            "schema": {
+              "$ref": "#/components/schemas/GetApiV4ProjectsIdMilestonesSortParameter"
             }
           },
           {
@@ -32657,6 +32753,15 @@
             }
           },
           {
+            "name": "search_title",
+            "in": "query",
+            "description": "The search criteria for the title of the milestone",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
             "name": "include_parent_milestones",
             "in": "query",
             "description": "If \u0060true\u0060, includes milestones from all parent groups. [Deprecated](https://gitlab.com/gitlab-org/gitlab/-/issues/433298). Use \u0060include_ancestors\u0060 instead. Mutually exclusive with \u0060include_ancestors\u0060.",
@@ -32692,6 +32797,44 @@
               "type": "string",
               "format": "date-time",
               "nullable": true
+            }
+          },
+          {
+            "name": "containing_date",
+            "in": "query",
+            "description": "Return milestones where start_date \u003C= containing_date \u003C= due_date. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            }
+          },
+          {
+            "name": "start_date",
+            "in": "query",
+            "description": "Return milestones where due_date \u003E= start_date. Requires end_date. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            }
+          },
+          {
+            "name": "end_date",
+            "in": "query",
+            "description": "Return milestones where start_date \u003C= end_date. Requires start_date. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Return milestones sorted in the given order",
+            "schema": {
+              "$ref": "#/components/schemas/GetApiV4GroupsIdMilestonesSortParameter"
             }
           },
           {
@@ -55216,6 +55359,9 @@
           "404": {
             "description": "Not found"
           },
+          "429": {
+            "description": "Too many requests"
+          },
           "503": {
             "description": "Service unavailable"
           }
@@ -55303,6 +55449,9 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "429": {
+            "description": "Too many requests"
           },
           "500": {
             "description": "Internal Server Error"
@@ -85677,6 +85826,9 @@
           "404": {
             "description": "Not found"
           },
+          "429": {
+            "description": "Too many requests"
+          },
           "503": {
             "description": "Service unavailable"
           },
@@ -85752,6 +85904,9 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "429": {
+            "description": "Too many requests"
           },
           "503": {
             "description": "Service unavailable"
@@ -107969,6 +108124,9 @@
           "404": {
             "description": "Not found"
           },
+          "429": {
+            "description": "Too Many Requests"
+          },
           "400": {
             "description": "Bad Request"
           }
@@ -118001,6 +118159,54 @@
             "type": "string",
             "format": "date-time",
             "example": "2026-07-22T11:42:00Z"
+          }
+        }
+      },
+      "ApiEntitiesOrbitContextEntity": {
+        "type": "object",
+        "properties": {
+          "token": {
+            "type": "string",
+            "example": "MergeRequest[123]"
+          },
+          "resolved_token": {
+            "type": "string",
+            "example": "MergeRequest[123]"
+          },
+          "type": {
+            "type": "string",
+            "example": "MergeRequest"
+          },
+          "id": {
+            "type": "string",
+            "example": "123"
+          },
+          "found": {
+            "type": "boolean"
+          },
+          "summary": {
+            "$ref": "#/components/schemas/ApiEntitiesOrbitContextEntitySummaryProperty"
+          },
+          "error": {
+            "$ref": "#/components/schemas/ApiEntitiesOrbitContextEntityErrorProperty"
+          },
+          "expansion": {
+            "$ref": "#/components/schemas/ApiEntitiesOrbitContextEntityExpansionProperty"
+          }
+        }
+      },
+      "ApiEntitiesOrbitContext": {
+        "type": "object",
+        "properties": {
+          "version": {
+            "type": "string",
+            "example": "1.1.0"
+          },
+          "entities": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesOrbitContextEntity"
+            }
           }
         }
       },
@@ -130810,6 +131016,9 @@
           "job_erase_limit_per_user_project": {
             "type": "string"
           },
+          "job_cancel_limit_per_user_project": {
+            "type": "string"
+          },
           "asciidoc_max_includes": {
             "type": "string"
           },
@@ -143411,6 +143620,28 @@
           }
         }
       },
+      "PostApiV4OrbitContextRequest": {
+        "required": [
+          "tokens"
+        ],
+        "type": "object",
+        "properties": {
+          "tokens": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Exactly one token: Type[id], a GID, an instance URL, path!iid, path#iid, or path\u0026iid (epic)",
+            "nullable": true
+          },
+          "expand": {
+            "$ref": "#/components/schemas/PostApiV4OrbitContextRequestExpand"
+          },
+          "response_format": {
+            "$ref": "#/components/schemas/PostApiV4OrbitContextRequestResponseFormat"
+          }
+        }
+      },
       "PostApiV4JobsIdSbomScansAuthorizeRequest": {
         "type": "object",
         "properties": {
@@ -150445,6 +150676,11 @@
           "job_erase_limit_per_user_project": {
             "type": "integer",
             "description": "Maximum number of job erasures allowed per minute for a given project.",
+            "nullable": true
+          },
+          "job_cancel_limit_per_user_project": {
+            "type": "integer",
+            "description": "Maximum number of job cancellations allowed per minute for a given project.",
             "nullable": true
           },
           "ai_action_api_rate_limit": {
@@ -159247,6 +159483,7 @@
           "merge_after": {
             "type": "string",
             "description": "Date after which the merge request can be merged. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/510992) in GitLab 17.8.",
+            "format": "date-time",
             "nullable": true
           },
           "approvals_before_merge": {
@@ -159361,6 +159598,7 @@
           "merge_after": {
             "type": "string",
             "description": "Date after which the merge request can be merged. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/510992) in GitLab 17.8. At least one of \u0060assignee_id\u0060, \u0060assignee_ids\u0060, \u0060reviewer_ids\u0060, \u0060description\u0060, \u0060labels\u0060, \u0060add_labels\u0060, \u0060remove_labels\u0060, \u0060milestone_id\u0060, \u0060milestone\u0060, \u0060remove_source_branch\u0060, \u0060allow_collaboration\u0060, \u0060allow_maintainer_to_push\u0060, \u0060squash\u0060, \u0060target_branch\u0060, \u0060title\u0060, \u0060state_event\u0060, \u0060discussion_locked\u0060, \u0060merge_after\u0060 must be provided.",
+            "format": "date-time",
             "nullable": true
           },
           "approvals_before_merge": {
@@ -172974,6 +173212,16 @@
         },
         "description": "JSON query object, or GQL text when enabled for the current user"
       },
+      "PostApiV4OrbitContextRequestExpand": {
+        "type": "object",
+        "oneOf": [
+          {
+            "type": "boolean",
+            "default": false
+          }
+        ],
+        "description": "Attach the graph neighborhood of the entity"
+      },
       "PostApiV4ChatCompletionsRequestResourceId": {
         "type": "object",
         "oneOf": [
@@ -173355,6 +173603,15 @@
             "format": "date"
           }
         }
+      },
+      "ApiEntitiesOrbitContextEntitySummary": {
+        "type": "object"
+      },
+      "ApiEntitiesOrbitContextEntityError": {
+        "type": "object"
+      },
+      "ApiEntitiesOrbitContextEntityExpansion": {
+        "type": "object"
       },
       "ApiEntitiesGroupStatistics": {
         "type": "object",
@@ -183661,6 +183918,15 @@
           "$ref": "#/components/schemas/ApiEntitiesBatchedBackgroundMigration"
         }
       },
+      "ApiEntitiesOrbitContextEntitySummaryProperty": {
+        "type": "object"
+      },
+      "ApiEntitiesOrbitContextEntityErrorProperty": {
+        "type": "object"
+      },
+      "ApiEntitiesOrbitContextEntityExpansionProperty": {
+        "type": "object"
+      },
       "ApiEntitiesVulnerabilityFindingProperty": {
         "type": "object"
       },
@@ -185175,6 +185441,29 @@
           ]
         }
       },
+      "PostApiV4OrbitContextRequestResponseFormat": {
+        "enum": [
+          "raw",
+          "llm"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "Response format: raw or llm",
+        "x-ms-enum": {
+          "name": "PostApiV4OrbitContextRequestResponseFormat",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "raw",
+              "name": "Raw"
+            },
+            {
+              "value": "llm",
+              "name": "Llm"
+            }
+          ]
+        }
+      },
       "PatchApiV4ProjectsIdComplianceExternalControlsControlIdStatusRequestStatus": {
         "minLength": 1,
         "enum": [
@@ -185616,7 +185905,8 @@
           "duo_cli_run",
           "duo_cli_acp",
           "ide_extension",
-          "work_item_plan_to_merge_request"
+          "work_item_plan_to_merge_request",
+          "web_chat"
         ],
         "type": "string",
         "additionalProperties": false,
@@ -185673,6 +185963,10 @@
             {
               "value": "work_item_plan_to_merge_request",
               "name": "WorkItemPlanToMergeRequest"
+            },
+            {
+              "value": "web_chat",
+              "name": "WebChat"
             }
           ]
         }
@@ -200122,6 +200416,68 @@
           ]
         }
       },
+      "GetApiV4ProjectsIdMilestonesSortParameter": {
+        "enum": [
+          "due_date_asc",
+          "due_date_desc",
+          "start_date_asc",
+          "start_date_desc",
+          "name_asc",
+          "name_desc",
+          "created_asc",
+          "created_desc",
+          "updated_asc",
+          "updated_desc"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "GetApiV4ProjectsIdMilestonesSortParameter",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "due_date_asc",
+              "name": "DueDateAsc"
+            },
+            {
+              "value": "due_date_desc",
+              "name": "DueDateDesc"
+            },
+            {
+              "value": "start_date_asc",
+              "name": "StartDateAsc"
+            },
+            {
+              "value": "start_date_desc",
+              "name": "StartDateDesc"
+            },
+            {
+              "value": "name_asc",
+              "name": "NameAsc"
+            },
+            {
+              "value": "name_desc",
+              "name": "NameDesc"
+            },
+            {
+              "value": "created_asc",
+              "name": "CreatedAsc"
+            },
+            {
+              "value": "created_desc",
+              "name": "CreatedDesc"
+            },
+            {
+              "value": "updated_asc",
+              "name": "UpdatedAsc"
+            },
+            {
+              "value": "updated_desc",
+              "name": "UpdatedDesc"
+            }
+          ]
+        }
+      },
       "GetApiV4ProjectsIdIssuesNoteableIdNotesOrderByParameter": {
         "enum": [
           "created_at",
@@ -200714,6 +201070,68 @@
             {
               "value": "all",
               "name": "All"
+            }
+          ]
+        }
+      },
+      "GetApiV4GroupsIdMilestonesSortParameter": {
+        "enum": [
+          "due_date_asc",
+          "due_date_desc",
+          "start_date_asc",
+          "start_date_desc",
+          "name_asc",
+          "name_desc",
+          "created_asc",
+          "created_desc",
+          "updated_asc",
+          "updated_desc"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "GetApiV4GroupsIdMilestonesSortParameter",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "due_date_asc",
+              "name": "DueDateAsc"
+            },
+            {
+              "value": "due_date_desc",
+              "name": "DueDateDesc"
+            },
+            {
+              "value": "start_date_asc",
+              "name": "StartDateAsc"
+            },
+            {
+              "value": "start_date_desc",
+              "name": "StartDateDesc"
+            },
+            {
+              "value": "name_asc",
+              "name": "NameAsc"
+            },
+            {
+              "value": "name_desc",
+              "name": "NameDesc"
+            },
+            {
+              "value": "created_asc",
+              "name": "CreatedAsc"
+            },
+            {
+              "value": "created_desc",
+              "name": "CreatedDesc"
+            },
+            {
+              "value": "updated_asc",
+              "name": "UpdatedAsc"
+            },
+            {
+              "value": "updated_desc",
+              "name": "UpdatedDesc"
             }
           ]
         }
@@ -212385,7 +212803,7 @@
     },
     {
       "name": "Work items",
-      "description": "Use this API to manage [work items](https://docs.gitlab.com/user/work_items/) in a project, a group,\nor a namespace. Work items are the core elements for planning and tracking work, and cover\n[types](https://docs.gitlab.com/user/work_items/#work-item-types) such as issues, tasks, and epics.\n\nAlongside the work items themselves, you can retrieve their children, linked items, linked resources,\nnotes, discussions, emoji reactions, email participants, and the current user\u0027s to-do items.",
+      "description": "Use this API to manage [work items](https://docs.gitlab.com/user/work_items/) in a project, a group,\nor a namespace. Work items are the core elements for planning and tracking work, and cover\n[types](https://docs.gitlab.com/user/work_items/#work-item-types) such as issues, tasks, and epics.\n\nAlongside the work items themselves, you can retrieve their children, linked items, linked resources,\nnotes, discussions, emoji reactions, email participants, and the current user\u0027s to-do items.\n\nBy default, responses include only the \u0060id\u0060, \u0060iid\u0060, \u0060global_id\u0060, and \u0060title\u0060 of each work item.\nUse the \u0060fields\u0060 and \u0060features\u0060 parameters to request more attributes.\n\n\u003E [!note]\n\u003E The availability of these endpoints is controlled by the \u0060work_item_rest_api\u0060 feature flag.\n\u003E They are available for testing, but not ready for production use. While the flag is disabled,\n\u003E every endpoint except the list endpoints returns \u0060404 Not Found\u0060.",
       "externalDocs": {
         "url": "https://docs.gitlab.com/user/work_items/"
       },

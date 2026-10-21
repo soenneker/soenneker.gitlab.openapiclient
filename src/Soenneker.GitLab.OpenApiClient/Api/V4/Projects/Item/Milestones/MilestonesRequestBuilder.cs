@@ -35,7 +35,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Milestones
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MilestonesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/milestones{?iids,include_ancestors*,include_parent_milestones*,page*,per_page*,search*,state*,title*,updated_after*,updated_before*}", pathParameters)
+        public MilestonesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/milestones{?containing_date*,end_date*,iids,include_ancestors*,include_parent_milestones*,page*,per_page*,search*,search_title*,sort*,start_date*,state*,title*,updated_after*,updated_before*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Milestones
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MilestonesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/milestones{?iids,include_ancestors*,include_parent_milestones*,page*,per_page*,search*,state*,title*,updated_after*,updated_before*}", rawUrl)
+        public MilestonesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/milestones{?containing_date*,end_date*,iids,include_ancestors*,include_parent_milestones*,page*,per_page*,search*,search_title*,sort*,start_date*,state*,title*,updated_after*,updated_before*}", rawUrl)
         {
         }
         /// <summary>
@@ -140,6 +140,12 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Milestones
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class MilestonesRequestBuilderGetQueryParameters 
         {
+            /// <summary>Return milestones where start_date &lt;= containing_date &lt;= due_date. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ</summary>
+            [QueryParameter("containing_date")]
+            public DateTimeOffset? ContainingDate { get; set; }
+            /// <summary>Return milestones where start_date &lt;= end_date. Requires start_date. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ</summary>
+            [QueryParameter("end_date")]
+            public DateTimeOffset? EndDate { get; set; }
             /// <summary>Return only the milestones having the given `iid`. Ignored if `include_ancestors` is `true`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -172,6 +178,22 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Milestones
             [QueryParameter("search")]
             public string Search { get; set; }
 #endif
+            /// <summary>The search criteria for the title of the milestone</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("search_title")]
+            public string? SearchTitle { get; set; }
+#nullable restore
+#else
+            [QueryParameter("search_title")]
+            public string SearchTitle { get; set; }
+#endif
+            /// <summary>Return milestones sorted in the given order</summary>
+            [QueryParameter("sort")]
+            public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdMilestonesSortParameter? Sort { get; set; }
+            /// <summary>Return milestones where due_date &gt;= start_date. Requires end_date. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ</summary>
+            [QueryParameter("start_date")]
+            public DateTimeOffset? StartDate { get; set; }
             /// <summary>Return &quot;active&quot;, &quot;closed&quot;, or &quot;all&quot; milestones</summary>
             [QueryParameter("state")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdMilestonesStateParameter? State { get; set; }

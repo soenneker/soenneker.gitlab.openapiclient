@@ -57,13 +57,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public List<string> Labels { get; set; }
 #endif
         /// <summary>Date after which the merge request can be merged. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/510992) in GitLab 17.8. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? MergeAfter { get; set; }
-#nullable restore
-#else
-        public string MergeAfter { get; set; }
-#endif
+        public DateTimeOffset? MergeAfter { get; set; }
         /// <summary>The title of a project or ancestor-group milestone to assign the merge request to. Mutually exclusive with `milestone_id`. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -146,7 +140,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "discussion_locked", n => { DiscussionLocked = n.GetBoolValue(); } },
                 { "labels", n => { Labels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "merge_after", n => { MergeAfter = n.GetStringValue(); } },
+                { "merge_after", n => { MergeAfter = n.GetDateTimeOffsetValue(); } },
                 { "milestone", n => { Milestone = n.GetStringValue(); } },
                 { "milestone_id", n => { MilestoneId = n.GetIntValue(); } },
                 { "remove_labels", n => { RemoveLabels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -174,7 +168,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteBoolValue("discussion_locked", DiscussionLocked);
             writer.WriteCollectionOfPrimitiveValues<string>("labels", Labels);
-            writer.WriteStringValue("merge_after", MergeAfter);
+            writer.WriteDateTimeOffsetValue("merge_after", MergeAfter);
             writer.WriteStringValue("milestone", Milestone);
             writer.WriteIntValue("milestone_id", MilestoneId);
             writer.WriteCollectionOfPrimitiveValues<string>("remove_labels", RemoveLabels);

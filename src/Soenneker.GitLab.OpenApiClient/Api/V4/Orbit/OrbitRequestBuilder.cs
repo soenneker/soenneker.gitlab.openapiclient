@@ -2,6 +2,7 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Context;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Query;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Schema;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Skills;
@@ -19,6 +20,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Orbit
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class OrbitRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The context property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Context.ContextRequestBuilder Context
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Context.ContextRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The query property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Query.QueryRequestBuilder Query
         {
