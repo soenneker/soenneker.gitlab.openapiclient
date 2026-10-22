@@ -18,6 +18,22 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public int? AgentIdentityId { get; set; }
         /// <summary>The type of agent.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdAiAgentSessionsRequestAgentType? AgentType { get; set; }
+        /// <summary>Version of the agent that ran the session.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AgentVersion { get; set; }
+#nullable restore
+#else
+        public string AgentVersion { get; set; }
+#endif
+        /// <summary>Version of the glab binary that created the session.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? GlabVersion { get; set; }
+#nullable restore
+#else
+        public string GlabVersion { get; set; }
+#endif
         /// <summary>User-provided session description.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -73,6 +89,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             {
                 { "agent_identity_id", n => { AgentIdentityId = n.GetIntValue(); } },
                 { "agent_type", n => { AgentType = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdAiAgentSessionsRequestAgentType>(); } },
+                { "agent_version", n => { AgentVersion = n.GetStringValue(); } },
+                { "glab_version", n => { GlabVersion = n.GetStringValue(); } },
                 { "goal", n => { Goal = n.GetStringValue(); } },
                 { "idempotency_key", n => { IdempotencyKey = n.GetStringValue(); } },
                 { "started_at", n => { StartedAt = n.GetDateTimeOffsetValue(); } },
@@ -89,6 +107,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("agent_identity_id", AgentIdentityId);
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdAiAgentSessionsRequestAgentType>("agent_type", AgentType);
+            writer.WriteStringValue("agent_version", AgentVersion);
+            writer.WriteStringValue("glab_version", GlabVersion);
             writer.WriteStringValue("goal", Goal);
             writer.WriteStringValue("idempotency_key", IdempotencyKey);
             writer.WriteDateTimeOffsetValue("started_at", StartedAt);

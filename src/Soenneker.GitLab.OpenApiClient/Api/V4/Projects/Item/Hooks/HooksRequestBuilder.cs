@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Hooks
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Adds a webhook to a specified project.
+        /// Adds a webhook to a specified project. This endpoint has a rate limit of five requests per minute for each authenticated user for a given project. On GitLab Self-Managed and GitLab Dedicated, an administrator can change this limit in the application settings.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectHook"/></returns>
         /// <param name="body">The request body</param>
@@ -105,7 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Hooks
             return requestInfo;
         }
         /// <summary>
-        /// Adds a webhook to a specified project.
+        /// Adds a webhook to a specified project. This endpoint has a rate limit of five requests per minute for each authenticated user for a given project. On GitLab Self-Managed and GitLab Dedicated, an administrator can change this limit in the application settings.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

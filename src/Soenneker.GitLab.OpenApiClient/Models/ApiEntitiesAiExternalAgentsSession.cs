@@ -22,6 +22,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string AgentType { get; set; }
 #endif
+        /// <summary>The agent_version property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AgentVersion { get; set; }
+#nullable restore
+#else
+        public string AgentVersion { get; set; }
+#endif
         /// <summary>The created_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -45,6 +53,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #nullable restore
 #else
         public string FlowType { get; set; }
+#endif
+        /// <summary>The glab_version property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? GlabVersion { get; set; }
+#nullable restore
+#else
+        public string GlabVersion { get; set; }
 #endif
         /// <summary>The id property</summary>
         public int? Id { get; set; }
@@ -108,9 +124,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "agent_type", n => { AgentType = n.GetStringValue(); } },
+                { "agent_version", n => { AgentVersion = n.GetStringValue(); } },
                 { "created_at", n => { CreatedAt = n.GetStringValue(); } },
                 { "external_xid", n => { ExternalXid = n.GetStringValue(); } },
                 { "flow_type", n => { FlowType = n.GetStringValue(); } },
+                { "glab_version", n => { GlabVersion = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "session_finished_at", n => { SessionFinishedAt = n.GetStringValue(); } },
                 { "session_started_at", n => { SessionStartedAt = n.GetStringValue(); } },
@@ -127,9 +145,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("agent_type", AgentType);
+            writer.WriteStringValue("agent_version", AgentVersion);
             writer.WriteStringValue("created_at", CreatedAt);
             writer.WriteStringValue("external_xid", ExternalXid);
             writer.WriteStringValue("flow_type", FlowType);
+            writer.WriteStringValue("glab_version", GlabVersion);
             writer.WriteIntValue("id", Id);
             writer.WriteStringValue("session_finished_at", SessionFinishedAt);
             writer.WriteStringValue("session_started_at", SessionStartedAt);

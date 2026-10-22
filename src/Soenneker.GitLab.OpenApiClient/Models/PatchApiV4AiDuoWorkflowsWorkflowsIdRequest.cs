@@ -14,6 +14,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Why the service dropped the session. Ignored unless status_event is drop; a value the service may not name is recorded as api_reported</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DropReason { get; set; }
+#nullable restore
+#else
+        public string DropReason { get; set; }
+#endif
         /// <summary>Status event to apply to the workflow, for example `finish`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -47,6 +55,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "drop_reason", n => { DropReason = n.GetStringValue(); } },
                 { "status_event", n => { StatusEvent = n.GetStringValue(); } },
             };
         }
@@ -57,6 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("drop_reason", DropReason);
             writer.WriteStringValue("status_event", StatusEvent);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -14,14 +14,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>ID of the user. Premium and Ultimate only. Exactly one of `label_id`, `milestone_id`, `iteration_id`, `assignee_id` must be provided.</summary>
+        /// <summary>ID of the user. Premium and Ultimate only. Exactly one of `label_id`, `milestone_id`, `iteration_id`, `assignee_id`, `status_id` must be provided.</summary>
         public int? AssigneeId { get; set; }
-        /// <summary>ID of the iteration. Premium and Ultimate only. Exactly one of `label_id`, `milestone_id`, `iteration_id`, `assignee_id` must be provided.</summary>
+        /// <summary>ID of the iteration. Premium and Ultimate only. Exactly one of `label_id`, `milestone_id`, `iteration_id`, `assignee_id`, `status_id` must be provided.</summary>
         public int? IterationId { get; set; }
-        /// <summary>ID of the label. Exactly one of `label_id`, `milestone_id`, `iteration_id`, `assignee_id` must be provided.</summary>
+        /// <summary>ID of the label. Exactly one of `label_id`, `milestone_id`, `iteration_id`, `assignee_id`, `status_id` must be provided.</summary>
         public int? LabelId { get; set; }
-        /// <summary>The ID of an existing milestone. Exactly one of `label_id`, `milestone_id`, `iteration_id`, `assignee_id` must be provided.</summary>
+        /// <summary>The ID of an existing milestone. Exactly one of `label_id`, `milestone_id`, `iteration_id`, `assignee_id`, `status_id` must be provided.</summary>
         public int? MilestoneId { get; set; }
+        /// <summary>ID of the status. Premium and Ultimate only. Exactly one of `label_id`, `milestone_id`, `iteration_id`, `assignee_id`, `status_id` must be provided.</summary>
+        public int? StatusId { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdBoardsBoardIdListsRequest"/> and sets the default values.
         /// </summary>
@@ -51,6 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "iteration_id", n => { IterationId = n.GetIntValue(); } },
                 { "label_id", n => { LabelId = n.GetIntValue(); } },
                 { "milestone_id", n => { MilestoneId = n.GetIntValue(); } },
+                { "status_id", n => { StatusId = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -64,6 +67,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("iteration_id", IterationId);
             writer.WriteIntValue("label_id", LabelId);
             writer.WriteIntValue("milestone_id", MilestoneId);
+            writer.WriteIntValue("status_id", StatusId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -92,7 +92,7 @@ tags:
   description: |-
     Use this API to interact with metric images for [alerts](https://docs.gitlab.com/operations/incident_management/alerts/).
 
-    Additional endpoints are available with the [GraphQL API](https://docs.gitlab.com/api/graphql/reference/#alertmanagementalert).
+    Additional endpoints are available with the [GraphQL API](https://docs.gitlab.com/api/graphql/reference/objects/#alertmanagementalert).
   x-displayName: Alert management
   externalDocs:
     url: https://docs.gitlab.com/api/alert_management_alerts/
@@ -956,10 +956,10 @@ tags:
     than grouped by train:
 
     - For an exact queue position, sort by `id` in ascending order, or use the GraphQL API
-      [`MergeTrainCar.index`](https://docs.gitlab.com/api/graphql/reference/#mergetraincar-index) field.
+      [`MergeTrainCar.index`](https://docs.gitlab.com/api/graphql/reference/objects/#mergetraincar) field.
     - To group merge requests by train, use the `target_branch` attribute, or query the GraphQL API
-      [`Project.mergeTrains`](https://docs.gitlab.com/api/graphql/reference/#projectmergetrains) and
-      [`MergeTrain.cars`](https://docs.gitlab.com/api/graphql/reference/#mergetraincars) fields.
+      [`Project.mergeTrains`](https://docs.gitlab.com/api/graphql/reference/objects/#project) and
+      [`MergeTrain.cars`](https://docs.gitlab.com/api/graphql/reference/objects/#mergetrain) fields.
   x-displayName: Merge trains
   externalDocs:
     url: https://docs.gitlab.com/api/merge_trains/
@@ -1737,7 +1737,7 @@ tags:
     > [!warning]
     > These endpoints are in the process of being deprecated and are considered unstable.
     > The response payload may be subject to change or breakage across GitLab releases. Use the
-    > [GraphQL API](https://docs.gitlab.com/api/graphql/reference/#queryvulnerabilities) instead.
+    > [GraphQL API](https://docs.gitlab.com/api/graphql/reference/queries/#vulnerabilities) instead.
     > For more information, see [replace vulnerability REST API with GraphQL](https://docs.gitlab.com/api/vulnerabilities/#replace-vulnerability-rest-api-with-graphql).
 
     Use this API to manage [vulnerabilities](https://docs.gitlab.com/user/application_security/vulnerabilities/),
@@ -2728,7 +2728,19 @@ paths:
         '200':
           description: OK
         '400':
-          description: Bad Request
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+        '413':
+          description: Payload too large
+        '422':
+          description: Unprocessable entity
+        '429':
+          description: Too many requests
       requestBody:
         required: true
         content:
@@ -3201,12 +3213,16 @@ paths:
       - GitLab Duo workflows
       - Internal operations
       responses:
-        '201':
-          description: Created
-        '404':
-          description: Not Found
+        '202':
+          description: Accepted
         '400':
-          description: Bad Request
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
       parameters:
       - name: id
         required: true
@@ -3369,14 +3385,14 @@ paths:
       responses:
         '200':
           description: OK
+        '400':
+          description: Bad request
         '401':
           description: Unauthorized
         '403':
           description: Forbidden
         '422':
           description: Unprocessable Entity
-        '400':
-          description: Bad Request
       requestBody:
         required: true
         content:
@@ -3395,10 +3411,18 @@ paths:
       responses:
         '200':
           description: OK
-        '404':
-          description: Not Found
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/APIEntitiesAiDuoWorkflowsWorkflow"
         '400':
-          description: Bad Request
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
       parameters:
       - name: id
         required: true
@@ -3417,10 +3441,14 @@ paths:
       responses:
         '200':
           description: OK
-        '404':
-          description: Not Found
         '400':
-          description: Bad Request
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
       parameters:
       - name: id
         required: true
@@ -3446,10 +3474,18 @@ paths:
       responses:
         '201':
           description: Created
-        '404':
-          description: Not Found
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/APIEntitiesAiDuoWorkflowsBasicCheckpoint"
         '400':
-          description: Bad Request
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
       parameters:
       - name: id
         required: true
@@ -3473,10 +3509,20 @@ paths:
       responses:
         '200':
           description: OK
-        '404':
-          description: Not Found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  "$ref": "#/components/schemas/APIEntitiesAiDuoWorkflowsCheckpoint"
         '400':
-          description: Bad Request
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
       parameters:
       - name: id
         required: true
@@ -3526,10 +3572,18 @@ paths:
       responses:
         '200':
           description: OK
-        '404':
-          description: Not Found
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/APIEntitiesAiDuoWorkflowsCheckpoint"
         '400':
-          description: Bad Request
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
       parameters:
       - name: id
         required: true
@@ -3562,10 +3616,18 @@ paths:
       responses:
         '200':
           description: OK
-        '404':
-          description: Not Found
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/APIEntitiesAiDuoWorkflowsCheckpoint"
         '400':
-          description: Bad Request
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
       parameters:
       - name: id
         required: true
@@ -3596,12 +3658,16 @@ paths:
       - GitLab Duo workflows
       - Internal operations
       responses:
-        '201':
-          description: Created
-        '404':
-          description: Not Found
+        '200':
+          description: OK
         '400':
-          description: Bad Request
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
       parameters:
       - name: id
         required: true
@@ -3626,10 +3692,18 @@ paths:
       responses:
         '201':
           description: Created
-        '404':
-          description: Not Found
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/APIEntitiesAiDuoWorkflowsEvent"
         '400':
-          description: Bad Request
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
       parameters:
       - name: id
         required: true
@@ -3653,10 +3727,20 @@ paths:
       responses:
         '200':
           description: OK
-        '404':
-          description: Not Found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  "$ref": "#/components/schemas/APIEntitiesAiDuoWorkflowsEvent"
         '400':
-          description: Bad Request
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
       parameters:
       - name: id
         required: true
@@ -3675,10 +3759,18 @@ paths:
       responses:
         '200':
           description: OK
-        '404':
-          description: Not Found
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/APIEntitiesAiDuoWorkflowsEvent"
         '400':
-          description: Bad Request
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
       parameters:
       - name: id
         required: true
@@ -24214,8 +24306,10 @@ paths:
       tags:
       - MCP
       responses:
-        '201':
-          description: Created
+        '200':
+          description: OK
+        '202':
+          description: Accepted (JSON-RPC notification)
         '400':
           description: Bad request
         '401':
@@ -24237,14 +24331,12 @@ paths:
       tags:
       - MCP
       responses:
-        '200':
-          description: OK
+        '405':
+          description: Method not allowed
         '401':
           description: Unauthorized
         '403':
           description: Forbidden
-        '405':
-          description: Method not allowed
   "/api/v4/groups/{id}/service_accounts":
     post:
       operationId: postApiV4GroupsIdServiceAccounts
@@ -40039,7 +40131,10 @@ paths:
     post:
       operationId: postApiV4ProjectsIdHooks
       summary: Add a webhook to a project
-      description: Adds a webhook to a specified project.
+      description: Adds a webhook to a specified project. This endpoint has a rate
+        limit of five requests per minute for each authenticated user for a given
+        project. On GitLab Self-Managed and GitLab Dedicated, an administrator can
+        change this limit in the application settings.
       tags:
       - Hooks
       responses:
@@ -40055,6 +40150,8 @@ paths:
           description: Not found
         '422':
           description: Unprocessable entity
+        '429':
+          description: Too many requests
       parameters:
       - name: id
         required: true
@@ -84658,6 +84755,12 @@ components:
         flow_type:
           type: string
           example: external_agent
+        glab_version:
+          type: string
+          example: glab 1.121.0 (abc1234)
+        agent_version:
+          type: string
+          example: 2.1.295
         external_xid:
           type: string
           example: uuid
@@ -84687,6 +84790,114 @@ components:
         created_at:
           type: string
           example: '2026-06-17T00:00:00.000Z'
+    APIEntitiesAiDuoWorkflowsWorkflow:
+      type: object
+      properties:
+        id:
+          type: string
+        web_url:
+          type: string
+          example: https://gitlab.example.com/group/project/-/automate/agent-sessions/42
+        project_id:
+          type: string
+        namespace_id:
+          type: string
+        agent_privileges:
+          type: string
+        agent_privileges_names:
+          type: string
+        pre_approved_agent_privileges:
+          type: string
+        pre_approved_agent_privileges_names:
+          type: string
+        workflow_definition:
+          type: string
+        status:
+          type: string
+        summary:
+          type: string
+        title:
+          type: string
+        allow_agent_to_request_user:
+          type: string
+        image:
+          type: string
+        environment:
+          type: string
+        ai_catalog_item_version_id:
+          type: string
+        workload:
+          type: string
+        mcp_enabled:
+          type: string
+        incremental_checkpoints_enabled:
+          type: string
+        gitlab_url:
+          type: string
+    APIEntitiesAiDuoWorkflowsBasicCheckpoint:
+      type: object
+      properties:
+        id:
+          type: string
+        thread_ts:
+          type: string
+        parent_ts:
+          type: string
+        checkpoint_ns:
+          type: string
+    APIEntitiesAiDuoWorkflowsCheckpointWrite:
+      type: object
+      properties:
+        id:
+          type: string
+        thread_ts:
+          type: string
+        task:
+          type: string
+        idx:
+          type: string
+        channel:
+          type: string
+        write_type:
+          type: string
+        data:
+          type: string
+    APIEntitiesAiDuoWorkflowsCheckpoint:
+      type: object
+      properties:
+        id:
+          type: string
+        thread_ts:
+          type: string
+        parent_ts:
+          type: string
+        checkpoint_ns:
+          type: string
+        checkpoint:
+          type: string
+        compressed_checkpoint:
+          type: string
+        checkpoint_writes:
+          type: array
+          items:
+            "$ref": "#/components/schemas/APIEntitiesAiDuoWorkflowsCheckpointWrite"
+        current_thread:
+          type: string
+        metadata:
+          type: string
+    APIEntitiesAiDuoWorkflowsEvent:
+      type: object
+      properties:
+        id:
+          type: string
+        correlation_id:
+          type: string
+        event_type:
+          type: string
+        event_status:
+          type: string
+        message:
+          type: string
     APIEntitiesCustomAttribute:
       type: object
       properties:
@@ -91570,6 +91781,36 @@ components:
         name:
           type: string
           example: Administrator
+    APIEntitiesWorkItemsStatus:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: ID of the status.
+          example: 1
+        name:
+          type: string
+          description: Name of the status.
+          example: To do
+        icon_name:
+          type: string
+          description: Icon name of the status.
+          example: status-waiting
+        color:
+          type: string
+          description: Color of the status.
+          example: "#737278"
+        position:
+          type: integer
+          description: Position of the status within its category.
+          example: 0
+        description:
+          type: string
+          description: Description of the status.
+        category:
+          type: string
+          description: Category of the status.
+          example: to_do
     APIEntitiesList:
       type: object
       properties:
@@ -91588,6 +91829,8 @@ components:
           "$ref": "#/components/schemas/APIEntitiesIteration"
         assignee:
           "$ref": "#/components/schemas/APIEntitiesUserSafe"
+        status:
+          "$ref": "#/components/schemas/APIEntitiesWorkItemsStatus"
         max_issue_count:
           type: integer
           example: 0
@@ -93523,6 +93766,14 @@ components:
           type: string
         group_download_export_limit:
           type: string
+        project_relations_export_limit:
+          type: string
+        project_relations_export_download_limit:
+          type: string
+        group_relations_export_limit:
+          type: string
+        group_relations_export_download_limit:
+          type: string
         wiki_page_max_content_bytes:
           type: string
         wiki_asciidoc_allow_uri_includes:
@@ -93680,6 +93931,8 @@ components:
         users_api_limit_gpg_key:
           type: string
         tags_create_limit:
+          type: string
+        project_hooks_create_limit:
           type: string
         web_hook_event_resend_limit:
           type: string
@@ -98702,6 +98955,9 @@ components:
               example: 15.0.0
         enterprise:
           type: boolean
+        plan:
+          type: string
+          example: ultimate
     APIEntitiesMergeRequestDiff:
       type: object
       properties:
@@ -103769,6 +104025,16 @@ components:
           type: string
           description: Workflow definition identifier for the session.
           nullable: true
+        glab_version:
+          type: string
+          description: Version of the glab binary that created the session.
+          nullable: true
+          maxLength: 255
+        agent_version:
+          type: string
+          description: Version of the agent that ran the session.
+          nullable: true
+          maxLength: 255
       required:
       - agent_type
       - agent_identity_id
@@ -104151,6 +104417,13 @@ components:
           description: Status event to apply to the workflow, for example `finish`.
           example: finish
           nullable: true
+        drop_reason:
+          type: string
+          description: Why the service dropped the session. Ignored unless status_event
+            is drop; a value the service may not name is recorded as api_reported
+          example: token_rejected
+          nullable: true
+          maxLength: 64
       required:
       - status_event
     postApiV4AiDuoWorkflowsWorkflowsIdCheckpointsRequest:
@@ -111336,6 +111609,30 @@ components:
           type: integer
           description: Maximum number of simultaneous batch export jobs to process.
           nullable: true
+        project_relations_export_limit:
+          type: integer
+          description: Maximum number of project relations export requests per minute
+            per user for each project during direct transfer migrations. Set to `0`
+            to disable the rate limit.
+          nullable: true
+        project_relations_export_download_limit:
+          type: integer
+          description: Maximum number of project relations export downloads per minute
+            per user for each project during direct transfer migrations. Set to `0`
+            to disable the rate limit.
+          nullable: true
+        group_relations_export_limit:
+          type: integer
+          description: Maximum number of group relations export requests per minute
+            per user for each group during direct transfer migrations. Set to `0`
+            to disable the rate limit.
+          nullable: true
+        group_relations_export_download_limit:
+          type: integer
+          description: Maximum number of group relations export downloads per minute
+            per user for each group during direct transfer migrations. Set to `0`
+            to disable the rate limit.
+          nullable: true
         bulk_import_enabled:
           type: boolean
           description: If `true`, enables migrating GitLab groups and projects by
@@ -112101,6 +112398,12 @@ components:
         plantuml_diagram_proxy_enabled:
           type: string
           description: Enable PlantUML diagram proxy. Default is `false`.
+          nullable: true
+        project_hooks_create_limit:
+          type: string
+          description: 'Maximum number of project webhooks a user can create per minute
+            for a given project. Default: `5`. Set to `0` to disable limits. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/605597)
+            in GitLab 19.6.'
           nullable: true
         projects_api_rate_limit_unauthenticated:
           type: string
@@ -114994,22 +115297,29 @@ components:
         label_id:
           type: integer
           description: ID of the label. Exactly one of `label_id`, `milestone_id`,
-            `iteration_id`, `assignee_id` must be provided.
+            `iteration_id`, `assignee_id`, `status_id` must be provided.
           nullable: true
         milestone_id:
           type: integer
           description: The ID of an existing milestone. Exactly one of `label_id`,
-            `milestone_id`, `iteration_id`, `assignee_id` must be provided.
+            `milestone_id`, `iteration_id`, `assignee_id`, `status_id` must be provided.
           nullable: true
         iteration_id:
           type: integer
           description: ID of the iteration. Premium and Ultimate only. Exactly one
-            of `label_id`, `milestone_id`, `iteration_id`, `assignee_id` must be provided.
+            of `label_id`, `milestone_id`, `iteration_id`, `assignee_id`, `status_id`
+            must be provided.
           nullable: true
         assignee_id:
           type: integer
           description: ID of the user. Premium and Ultimate only. Exactly one of `label_id`,
-            `milestone_id`, `iteration_id`, `assignee_id` must be provided.
+            `milestone_id`, `iteration_id`, `assignee_id`, `status_id` must be provided.
+          nullable: true
+        status_id:
+          type: integer
+          description: ID of the status. Premium and Ultimate only. Exactly one of
+            `label_id`, `milestone_id`, `iteration_id`, `assignee_id`, `status_id`
+            must be provided.
           nullable: true
     putApiV4GroupsIdBoardsBoardIdListsListIdRequest:
       type: object
@@ -115483,22 +115793,29 @@ components:
         label_id:
           type: integer
           description: ID of the label. Exactly one of `label_id`, `milestone_id`,
-            `iteration_id`, `assignee_id` must be provided.
+            `iteration_id`, `assignee_id`, `status_id` must be provided.
           nullable: true
         milestone_id:
           type: integer
           description: The ID of an existing milestone. Exactly one of `label_id`,
-            `milestone_id`, `iteration_id`, `assignee_id` must be provided.
+            `milestone_id`, `iteration_id`, `assignee_id`, `status_id` must be provided.
           nullable: true
         iteration_id:
           type: integer
           description: ID of the iteration. Premium and Ultimate only. Exactly one
-            of `label_id`, `milestone_id`, `iteration_id`, `assignee_id` must be provided.
+            of `label_id`, `milestone_id`, `iteration_id`, `assignee_id`, `status_id`
+            must be provided.
           nullable: true
         assignee_id:
           type: integer
           description: ID of the user. Premium and Ultimate only. Exactly one of `label_id`,
-            `milestone_id`, `iteration_id`, `assignee_id` must be provided.
+            `milestone_id`, `iteration_id`, `assignee_id`, `status_id` must be provided.
+          nullable: true
+        status_id:
+          type: integer
+          description: ID of the status. Premium and Ultimate only. Exactly one of
+            `label_id`, `milestone_id`, `iteration_id`, `assignee_id`, `status_id`
+            must be provided.
           nullable: true
     putApiV4ProjectsIdBoardsBoardIdListsListIdRequest:
       type: object

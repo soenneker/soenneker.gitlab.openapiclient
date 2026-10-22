@@ -1794,6 +1794,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string GroupProjectsApiLimit { get; set; }
 #endif
+        /// <summary>Maximum number of group relations export downloads per minute per user for each group during direct transfer migrations. Set to `0` to disable the rate limit.</summary>
+        public int? GroupRelationsExportDownloadLimit { get; set; }
+        /// <summary>Maximum number of group relations export requests per minute per user for each group during direct transfer migrations. Set to `0` to disable the rate limit.</summary>
+        public int? GroupRelationsExportLimit { get; set; }
         /// <summary>Set the expiration time (in seconds) of authentication tokens of newly registered group runners. Minimum value is 7200 seconds. For more information, see [Automatically rotate authentication tokens](https://docs.gitlab.com/ci/runners/configure_runners/#automatically-rotate-runner-authentication-tokens).</summary>
         public int? GroupRunnerTokenExpirationInterval { get; set; }
         /// <summary>The groups_api_limit property</summary>
@@ -2702,6 +2706,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ProjectExportLimit { get; set; }
 #endif
+        /// <summary>Maximum number of project webhooks a user can create per minute for a given project. Default: `5`. Set to `0` to disable limits. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/605597) in GitLab 19.6.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ProjectHooksCreateLimit { get; set; }
+#nullable restore
+#else
+        public string ProjectHooksCreateLimit { get; set; }
+#endif
         /// <summary>The project_import_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -2728,6 +2740,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ProjectMembersApiLimit { get; set; }
 #endif
+        /// <summary>Maximum number of project relations export downloads per minute per user for each project during direct transfer migrations. Set to `0` to disable the rate limit.</summary>
+        public int? ProjectRelationsExportDownloadLimit { get; set; }
+        /// <summary>Maximum number of project relations export requests per minute per user for each project during direct transfer migrations. Set to `0` to disable the rate limit.</summary>
+        public int? ProjectRelationsExportLimit { get; set; }
         /// <summary>The project_repositories_blame_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -4618,6 +4634,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "group_invited_groups_api_limit", n => { GroupInvitedGroupsApiLimit = n.GetStringValue(); } },
                 { "group_owners_can_manage_default_branch_protection", n => { GroupOwnersCanManageDefaultBranchProtection = n.GetBoolValue(); } },
                 { "group_projects_api_limit", n => { GroupProjectsApiLimit = n.GetStringValue(); } },
+                { "group_relations_export_download_limit", n => { GroupRelationsExportDownloadLimit = n.GetIntValue(); } },
+                { "group_relations_export_limit", n => { GroupRelationsExportLimit = n.GetIntValue(); } },
                 { "group_runner_token_expiration_interval", n => { GroupRunnerTokenExpirationInterval = n.GetIntValue(); } },
                 { "group_secrets_limit", n => { GroupSecretsLimit = n.GetStringValue(); } },
                 { "group_shared_groups_api_limit", n => { GroupSharedGroupsApiLimit = n.GetStringValue(); } },
@@ -4778,10 +4796,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "project_download_export_limit", n => { ProjectDownloadExportLimit = n.GetStringValue(); } },
                 { "project_export_enabled", n => { ProjectExportEnabled = n.GetBoolValue(); } },
                 { "project_export_limit", n => { ProjectExportLimit = n.GetStringValue(); } },
+                { "project_hooks_create_limit", n => { ProjectHooksCreateLimit = n.GetStringValue(); } },
                 { "project_import_limit", n => { ProjectImportLimit = n.GetStringValue(); } },
                 { "project_invited_groups_api_limit", n => { ProjectInvitedGroupsApiLimit = n.GetStringValue(); } },
                 { "project_jobs_api_rate_limit", n => { ProjectJobsApiRateLimit = n.GetIntValue(); } },
                 { "project_members_api_limit", n => { ProjectMembersApiLimit = n.GetStringValue(); } },
+                { "project_relations_export_download_limit", n => { ProjectRelationsExportDownloadLimit = n.GetIntValue(); } },
+                { "project_relations_export_limit", n => { ProjectRelationsExportLimit = n.GetIntValue(); } },
                 { "project_repositories_blame_limit", n => { ProjectRepositoriesBlameLimit = n.GetStringValue(); } },
                 { "project_repositories_blame_unauthenticated_limit", n => { ProjectRepositoriesBlameUnauthenticatedLimit = n.GetStringValue(); } },
                 { "project_repositories_blobs_batch_limit", n => { ProjectRepositoriesBlobsBatchLimit = n.GetStringValue(); } },
@@ -5309,6 +5330,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("group_invited_groups_api_limit", GroupInvitedGroupsApiLimit);
             writer.WriteBoolValue("group_owners_can_manage_default_branch_protection", GroupOwnersCanManageDefaultBranchProtection);
             writer.WriteStringValue("group_projects_api_limit", GroupProjectsApiLimit);
+            writer.WriteIntValue("group_relations_export_download_limit", GroupRelationsExportDownloadLimit);
+            writer.WriteIntValue("group_relations_export_limit", GroupRelationsExportLimit);
             writer.WriteIntValue("group_runner_token_expiration_interval", GroupRunnerTokenExpirationInterval);
             writer.WriteStringValue("groups_api_limit", GroupsApiLimit);
             writer.WriteStringValue("group_secrets_limit", GroupSecretsLimit);
@@ -5469,10 +5492,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("project_download_export_limit", ProjectDownloadExportLimit);
             writer.WriteBoolValue("project_export_enabled", ProjectExportEnabled);
             writer.WriteStringValue("project_export_limit", ProjectExportLimit);
+            writer.WriteStringValue("project_hooks_create_limit", ProjectHooksCreateLimit);
             writer.WriteStringValue("project_import_limit", ProjectImportLimit);
             writer.WriteStringValue("project_invited_groups_api_limit", ProjectInvitedGroupsApiLimit);
             writer.WriteIntValue("project_jobs_api_rate_limit", ProjectJobsApiRateLimit);
             writer.WriteStringValue("project_members_api_limit", ProjectMembersApiLimit);
+            writer.WriteIntValue("project_relations_export_download_limit", ProjectRelationsExportDownloadLimit);
+            writer.WriteIntValue("project_relations_export_limit", ProjectRelationsExportLimit);
             writer.WriteStringValue("project_repositories_blame_limit", ProjectRepositoriesBlameLimit);
             writer.WriteStringValue("project_repositories_blame_unauthenticated_limit", ProjectRepositoriesBlameUnauthenticatedLimit);
             writer.WriteStringValue("project_repositories_blobs_batch_limit", ProjectRepositoriesBlobsBatchLimit);

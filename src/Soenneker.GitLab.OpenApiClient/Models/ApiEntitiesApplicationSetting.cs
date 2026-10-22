@@ -2286,6 +2286,22 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string GroupProjectsApiLimit { get; set; }
 #endif
+        /// <summary>The group_relations_export_download_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? GroupRelationsExportDownloadLimit { get; set; }
+#nullable restore
+#else
+        public string GroupRelationsExportDownloadLimit { get; set; }
+#endif
+        /// <summary>The group_relations_export_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? GroupRelationsExportLimit { get; set; }
+#nullable restore
+#else
+        public string GroupRelationsExportLimit { get; set; }
+#endif
         /// <summary>The group_runner_token_expiration_interval property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -3530,6 +3546,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ProjectExportLimit { get; set; }
 #endif
+        /// <summary>The project_hooks_create_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ProjectHooksCreateLimit { get; set; }
+#nullable restore
+#else
+        public string ProjectHooksCreateLimit { get; set; }
+#endif
         /// <summary>The project_import_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -3561,6 +3585,22 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #nullable restore
 #else
         public string ProjectMembersApiLimit { get; set; }
+#endif
+        /// <summary>The project_relations_export_download_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ProjectRelationsExportDownloadLimit { get; set; }
+#nullable restore
+#else
+        public string ProjectRelationsExportDownloadLimit { get; set; }
+#endif
+        /// <summary>The project_relations_export_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ProjectRelationsExportLimit { get; set; }
+#nullable restore
+#else
+        public string ProjectRelationsExportLimit { get; set; }
 #endif
         /// <summary>The project_repositories_blame_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -5719,6 +5759,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "group_invited_groups_api_limit", n => { GroupInvitedGroupsApiLimit = n.GetStringValue(); } },
                 { "group_owners_can_manage_default_branch_protection", n => { GroupOwnersCanManageDefaultBranchProtection = n.GetStringValue(); } },
                 { "group_projects_api_limit", n => { GroupProjectsApiLimit = n.GetStringValue(); } },
+                { "group_relations_export_download_limit", n => { GroupRelationsExportDownloadLimit = n.GetStringValue(); } },
+                { "group_relations_export_limit", n => { GroupRelationsExportLimit = n.GetStringValue(); } },
                 { "group_runner_token_expiration_interval", n => { GroupRunnerTokenExpirationInterval = n.GetStringValue(); } },
                 { "group_secrets_limit", n => { GroupSecretsLimit = n.GetStringValue(); } },
                 { "group_shared_groups_api_limit", n => { GroupSharedGroupsApiLimit = n.GetStringValue(); } },
@@ -5879,10 +5921,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "project_download_export_limit", n => { ProjectDownloadExportLimit = n.GetStringValue(); } },
                 { "project_export_enabled", n => { ProjectExportEnabled = n.GetStringValue(); } },
                 { "project_export_limit", n => { ProjectExportLimit = n.GetStringValue(); } },
+                { "project_hooks_create_limit", n => { ProjectHooksCreateLimit = n.GetStringValue(); } },
                 { "project_import_limit", n => { ProjectImportLimit = n.GetStringValue(); } },
                 { "project_invited_groups_api_limit", n => { ProjectInvitedGroupsApiLimit = n.GetStringValue(); } },
                 { "project_jobs_api_rate_limit", n => { ProjectJobsApiRateLimit = n.GetStringValue(); } },
                 { "project_members_api_limit", n => { ProjectMembersApiLimit = n.GetStringValue(); } },
+                { "project_relations_export_download_limit", n => { ProjectRelationsExportDownloadLimit = n.GetStringValue(); } },
+                { "project_relations_export_limit", n => { ProjectRelationsExportLimit = n.GetStringValue(); } },
                 { "project_repositories_blame_limit", n => { ProjectRepositoriesBlameLimit = n.GetStringValue(); } },
                 { "project_repositories_blame_unauthenticated_limit", n => { ProjectRepositoriesBlameUnauthenticatedLimit = n.GetStringValue(); } },
                 { "project_repositories_blobs_batch_limit", n => { ProjectRepositoriesBlobsBatchLimit = n.GetStringValue(); } },
@@ -6413,6 +6458,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("group_invited_groups_api_limit", GroupInvitedGroupsApiLimit);
             writer.WriteStringValue("group_owners_can_manage_default_branch_protection", GroupOwnersCanManageDefaultBranchProtection);
             writer.WriteStringValue("group_projects_api_limit", GroupProjectsApiLimit);
+            writer.WriteStringValue("group_relations_export_download_limit", GroupRelationsExportDownloadLimit);
+            writer.WriteStringValue("group_relations_export_limit", GroupRelationsExportLimit);
             writer.WriteStringValue("group_runner_token_expiration_interval", GroupRunnerTokenExpirationInterval);
             writer.WriteStringValue("groups_api_limit", GroupsApiLimit);
             writer.WriteStringValue("group_secrets_limit", GroupSecretsLimit);
@@ -6573,10 +6620,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("project_download_export_limit", ProjectDownloadExportLimit);
             writer.WriteStringValue("project_export_enabled", ProjectExportEnabled);
             writer.WriteStringValue("project_export_limit", ProjectExportLimit);
+            writer.WriteStringValue("project_hooks_create_limit", ProjectHooksCreateLimit);
             writer.WriteStringValue("project_import_limit", ProjectImportLimit);
             writer.WriteStringValue("project_invited_groups_api_limit", ProjectInvitedGroupsApiLimit);
             writer.WriteStringValue("project_jobs_api_rate_limit", ProjectJobsApiRateLimit);
             writer.WriteStringValue("project_members_api_limit", ProjectMembersApiLimit);
+            writer.WriteStringValue("project_relations_export_download_limit", ProjectRelationsExportDownloadLimit);
+            writer.WriteStringValue("project_relations_export_limit", ProjectRelationsExportLimit);
             writer.WriteStringValue("project_repositories_blame_limit", ProjectRepositoriesBlameLimit);
             writer.WriteStringValue("project_repositories_blame_unauthenticated_limit", ProjectRepositoriesBlameUnauthenticatedLimit);
             writer.WriteStringValue("project_repositories_blobs_batch_limit", ProjectRepositoriesBlobsBatchLimit);

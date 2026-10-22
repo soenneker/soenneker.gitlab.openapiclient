@@ -24,6 +24,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMetadataKas Kas { get; set; }
 #endif
+        /// <summary>The plan property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Plan { get; set; }
+#nullable restore
+#else
+        public string Plan { get; set; }
+#endif
         /// <summary>The revision property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -67,6 +75,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             {
                 { "enterprise", n => { Enterprise = n.GetBoolValue(); } },
                 { "kas", n => { Kas = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMetadataKas>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMetadataKas.CreateFromDiscriminatorValue); } },
+                { "plan", n => { Plan = n.GetStringValue(); } },
                 { "revision", n => { Revision = n.GetStringValue(); } },
                 { "version", n => { Version = n.GetStringValue(); } },
             };
@@ -80,6 +89,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("enterprise", Enterprise);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMetadataKas>("kas", Kas);
+            writer.WriteStringValue("plan", Plan);
             writer.WriteStringValue("revision", Revision);
             writer.WriteStringValue("version", Version);
             writer.WriteAdditionalData(AdditionalData);

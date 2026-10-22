@@ -62,6 +62,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>The position property</summary>
         public int? Position { get; set; }
+        /// <summary>The status property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesWorkItemsStatus? Status { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesWorkItemsStatus Status { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesList"/> and sets the default values.
         /// </summary>
@@ -96,6 +104,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "max_issue_weight", n => { MaxIssueWeight = n.GetIntValue(); } },
                 { "milestone", n => { Milestone = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMilestone>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMilestone.CreateFromDiscriminatorValue); } },
                 { "position", n => { Position = n.GetIntValue(); } },
+                { "status", n => { Status = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesWorkItemsStatus>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesWorkItemsStatus.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -114,6 +123,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("max_issue_weight", MaxIssueWeight);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMilestone>("milestone", Milestone);
             writer.WriteIntValue("position", Position);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesWorkItemsStatus>("status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

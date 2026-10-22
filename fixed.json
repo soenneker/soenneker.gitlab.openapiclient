@@ -1411,7 +1411,25 @@
             "description": "OK"
           },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "413": {
+            "description": "Payload too large"
+          },
+          "422": {
+            "description": "Unprocessable entity"
+          },
+          "429": {
+            "description": "Too many requests"
           }
         }
       }
@@ -2061,14 +2079,20 @@
           "required": true
         },
         "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "404": {
-            "description": "Not Found"
+          "202": {
+            "description": "Accepted"
           },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       }
@@ -2298,6 +2322,9 @@
           "200": {
             "description": "OK"
           },
+          "400": {
+            "description": "Bad request"
+          },
           "401": {
             "description": "Unauthorized"
           },
@@ -2306,9 +2333,6 @@
           },
           "422": {
             "description": "Unprocessable Entity"
-          },
-          "400": {
-            "description": "Bad Request"
           }
         }
       }
@@ -2336,13 +2360,26 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Not Found"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesAiDuoWorkflowsWorkflow"
+                }
+              }
+            }
           },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       },
@@ -2380,11 +2417,17 @@
           "200": {
             "description": "OK"
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       }
@@ -2421,13 +2464,26 @@
         },
         "responses": {
           "201": {
-            "description": "Created"
-          },
-          "404": {
-            "description": "Not Found"
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesAiDuoWorkflowsBasicCheckpoint"
+                }
+              }
+            }
           },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       },
@@ -2484,13 +2540,26 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Not Found"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApiV4AiDuoWorkflowsWorkflowsIdCheckpoints200ResponseSchema"
+                }
+              }
+            }
           },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       }
@@ -2536,13 +2605,26 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Not Found"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesAiDuoWorkflowsCheckpoint"
+                }
+              }
+            }
           },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       }
@@ -2588,13 +2670,26 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Not Found"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesAiDuoWorkflowsCheckpoint"
+                }
+              }
+            }
           },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       }
@@ -2630,14 +2725,20 @@
           "required": true
         },
         "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "404": {
-            "description": "Not Found"
+          "200": {
+            "description": "OK"
           },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       }
@@ -2674,13 +2775,26 @@
         },
         "responses": {
           "201": {
-            "description": "Created"
-          },
-          "404": {
-            "description": "Not Found"
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesAiDuoWorkflowsEvent"
+                }
+              }
+            }
           },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       },
@@ -2705,13 +2819,26 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Not Found"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApiV4AiDuoWorkflowsWorkflowsIdEvents200ResponseSchema"
+                }
+              }
+            }
           },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       }
@@ -2757,13 +2884,26 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Not Found"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesAiDuoWorkflowsEvent"
+                }
+              }
+            }
           },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       }
@@ -31929,8 +32069,11 @@
           "required": true
         },
         "responses": {
-          "201": {
-            "description": "Created"
+          "200": {
+            "description": "OK"
+          },
+          "202": {
+            "description": "Accepted (JSON-RPC notification)"
           },
           "400": {
             "description": "Bad request"
@@ -31954,17 +32097,14 @@
         "description": "Listens for Model Context Protocol responses",
         "operationId": "GetApiV4Mcp",
         "responses": {
-          "200": {
-            "description": "OK"
+          "405": {
+            "description": "Method not allowed"
           },
           "401": {
             "description": "Unauthorized"
           },
           "403": {
             "description": "Forbidden"
-          },
-          "405": {
-            "description": "Method not allowed"
           }
         }
       }
@@ -54696,7 +54836,7 @@
           "Hooks"
         ],
         "summary": "Add a webhook to a project",
-        "description": "Adds a webhook to a specified project.",
+        "description": "Adds a webhook to a specified project. This endpoint has a rate limit of five requests per minute for each authenticated user for a given project. On GitLab Self-Managed and GitLab Dedicated, an administrator can change this limit in the application settings.",
         "operationId": "PostApiV4ProjectsIdHooks",
         "parameters": [
           {
@@ -54745,6 +54885,9 @@
           },
           "422": {
             "description": "Unprocessable entity"
+          },
+          "429": {
+            "description": "Too many requests"
           }
         }
       }
@@ -118397,6 +118540,14 @@
             "type": "string",
             "example": "external_agent"
           },
+          "glab_version": {
+            "type": "string",
+            "example": "glab 1.121.0 (abc1234)"
+          },
+          "agent_version": {
+            "type": "string",
+            "example": "2.1.295"
+          },
           "external_xid": {
             "type": "string",
             "example": "uuid"
@@ -118436,6 +118587,170 @@
           "created_at": {
             "type": "string",
             "example": "2026-06-17T00:00:00.000Z"
+          }
+        }
+      },
+      "ApiEntitiesAiDuoWorkflowsWorkflow": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "web_url": {
+            "type": "string",
+            "example": "https://gitlab.example.com/group/project/-/automate/agent-sessions/42"
+          },
+          "project_id": {
+            "type": "string"
+          },
+          "namespace_id": {
+            "type": "string"
+          },
+          "agent_privileges": {
+            "type": "string"
+          },
+          "agent_privileges_names": {
+            "type": "string"
+          },
+          "pre_approved_agent_privileges": {
+            "type": "string"
+          },
+          "pre_approved_agent_privileges_names": {
+            "type": "string"
+          },
+          "workflow_definition": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "allow_agent_to_request_user": {
+            "type": "string"
+          },
+          "image": {
+            "type": "string"
+          },
+          "environment": {
+            "type": "string"
+          },
+          "ai_catalog_item_version_id": {
+            "type": "string"
+          },
+          "workload": {
+            "type": "string"
+          },
+          "mcp_enabled": {
+            "type": "string"
+          },
+          "incremental_checkpoints_enabled": {
+            "type": "string"
+          },
+          "gitlab_url": {
+            "type": "string"
+          }
+        }
+      },
+      "ApiEntitiesAiDuoWorkflowsBasicCheckpoint": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "thread_ts": {
+            "type": "string"
+          },
+          "parent_ts": {
+            "type": "string"
+          },
+          "checkpoint_ns": {
+            "type": "string"
+          }
+        }
+      },
+      "ApiEntitiesAiDuoWorkflowsCheckpointWrite": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "thread_ts": {
+            "type": "string"
+          },
+          "task": {
+            "type": "string"
+          },
+          "idx": {
+            "type": "string"
+          },
+          "channel": {
+            "type": "string"
+          },
+          "write_type": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string"
+          }
+        }
+      },
+      "ApiEntitiesAiDuoWorkflowsCheckpoint": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "thread_ts": {
+            "type": "string"
+          },
+          "parent_ts": {
+            "type": "string"
+          },
+          "checkpoint_ns": {
+            "type": "string"
+          },
+          "checkpoint": {
+            "type": "string"
+          },
+          "compressed_checkpoint": {
+            "type": "string"
+          },
+          "checkpoint_writes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesAiDuoWorkflowsCheckpointWrite"
+            }
+          },
+          "current_thread": {
+            "type": "string"
+          },
+          "metadata": {
+            "type": "string"
+          }
+        }
+      },
+      "ApiEntitiesAiDuoWorkflowsEvent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "correlation_id": {
+            "type": "string"
+          },
+          "event_type": {
+            "type": "string"
+          },
+          "event_status": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
           }
         }
       },
@@ -127993,6 +128308,45 @@
           }
         }
       },
+      "ApiEntitiesWorkItemsStatus": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "ID of the status.",
+            "example": 1
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the status.",
+            "example": "To do"
+          },
+          "icon_name": {
+            "type": "string",
+            "description": "Icon name of the status.",
+            "example": "status-waiting"
+          },
+          "color": {
+            "type": "string",
+            "description": "Color of the status.",
+            "example": "#737278"
+          },
+          "position": {
+            "type": "integer",
+            "description": "Position of the status within its category.",
+            "example": 0
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the status."
+          },
+          "category": {
+            "type": "string",
+            "description": "Category of the status.",
+            "example": "to_do"
+          }
+        }
+      },
       "ApiEntitiesList": {
         "type": "object",
         "properties": {
@@ -128016,6 +128370,9 @@
           },
           "assignee": {
             "$ref": "#/components/schemas/ApiEntitiesUserSafe"
+          },
+          "status": {
+            "$ref": "#/components/schemas/ApiEntitiesWorkItemsStatus"
           },
           "max_issue_count": {
             "type": "integer",
@@ -130719,6 +131076,18 @@
           "group_download_export_limit": {
             "type": "string"
           },
+          "project_relations_export_limit": {
+            "type": "string"
+          },
+          "project_relations_export_download_limit": {
+            "type": "string"
+          },
+          "group_relations_export_limit": {
+            "type": "string"
+          },
+          "group_relations_export_download_limit": {
+            "type": "string"
+          },
           "wiki_page_max_content_bytes": {
             "type": "string"
           },
@@ -130954,6 +131323,9 @@
             "type": "string"
           },
           "tags_create_limit": {
+            "type": "string"
+          },
+          "project_hooks_create_limit": {
             "type": "string"
           },
           "web_hook_event_resend_limit": {
@@ -137624,6 +137996,10 @@
           },
           "enterprise": {
             "type": "boolean"
+          },
+          "plan": {
+            "type": "string",
+            "example": "ultimate"
           }
         }
       },
@@ -143921,6 +144297,18 @@
             "type": "string",
             "description": "Workflow definition identifier for the session.",
             "nullable": true
+          },
+          "glab_version": {
+            "maxLength": 255,
+            "type": "string",
+            "description": "Version of the glab binary that created the session.",
+            "nullable": true
+          },
+          "agent_version": {
+            "maxLength": 255,
+            "type": "string",
+            "description": "Version of the agent that ran the session.",
+            "nullable": true
           }
         }
       },
@@ -144234,6 +144622,13 @@
             "description": "Status event to apply to the workflow, for example \u0060finish\u0060.",
             "nullable": true,
             "example": "finish"
+          },
+          "drop_reason": {
+            "maxLength": 64,
+            "type": "string",
+            "description": "Why the service dropped the session. Ignored unless status_event is drop; a value the service may not name is recorded as api_reported",
+            "nullable": true,
+            "example": "token_rejected"
           }
         }
       },
@@ -150523,6 +150918,26 @@
             "description": "Maximum number of simultaneous batch export jobs to process.",
             "nullable": true
           },
+          "project_relations_export_limit": {
+            "type": "integer",
+            "description": "Maximum number of project relations export requests per minute per user for each project during direct transfer migrations. Set to \u00600\u0060 to disable the rate limit.",
+            "nullable": true
+          },
+          "project_relations_export_download_limit": {
+            "type": "integer",
+            "description": "Maximum number of project relations export downloads per minute per user for each project during direct transfer migrations. Set to \u00600\u0060 to disable the rate limit.",
+            "nullable": true
+          },
+          "group_relations_export_limit": {
+            "type": "integer",
+            "description": "Maximum number of group relations export requests per minute per user for each group during direct transfer migrations. Set to \u00600\u0060 to disable the rate limit.",
+            "nullable": true
+          },
+          "group_relations_export_download_limit": {
+            "type": "integer",
+            "description": "Maximum number of group relations export downloads per minute per user for each group during direct transfer migrations. Set to \u00600\u0060 to disable the rate limit.",
+            "nullable": true
+          },
           "bulk_import_enabled": {
             "type": "boolean",
             "description": "If \u0060true\u0060, enables migrating GitLab groups and projects by direct transfer.",
@@ -151184,6 +151599,11 @@
           "plantuml_diagram_proxy_enabled": {
             "type": "string",
             "description": "Enable PlantUML diagram proxy. Default is \u0060false\u0060.",
+            "nullable": true
+          },
+          "project_hooks_create_limit": {
+            "type": "string",
+            "description": "Maximum number of project webhooks a user can create per minute for a given project. Default: \u00605\u0060. Set to \u00600\u0060 to disable limits. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/605597) in GitLab 19.6.",
             "nullable": true
           },
           "projects_api_rate_limit_unauthenticated": {
@@ -154284,22 +154704,27 @@
         "properties": {
           "label_id": {
             "type": "integer",
-            "description": "ID of the label. Exactly one of \u0060label_id\u0060, \u0060milestone_id\u0060, \u0060iteration_id\u0060, \u0060assignee_id\u0060 must be provided.",
+            "description": "ID of the label. Exactly one of \u0060label_id\u0060, \u0060milestone_id\u0060, \u0060iteration_id\u0060, \u0060assignee_id\u0060, \u0060status_id\u0060 must be provided.",
             "nullable": true
           },
           "milestone_id": {
             "type": "integer",
-            "description": "The ID of an existing milestone. Exactly one of \u0060label_id\u0060, \u0060milestone_id\u0060, \u0060iteration_id\u0060, \u0060assignee_id\u0060 must be provided.",
+            "description": "The ID of an existing milestone. Exactly one of \u0060label_id\u0060, \u0060milestone_id\u0060, \u0060iteration_id\u0060, \u0060assignee_id\u0060, \u0060status_id\u0060 must be provided.",
             "nullable": true
           },
           "iteration_id": {
             "type": "integer",
-            "description": "ID of the iteration. Premium and Ultimate only. Exactly one of \u0060label_id\u0060, \u0060milestone_id\u0060, \u0060iteration_id\u0060, \u0060assignee_id\u0060 must be provided.",
+            "description": "ID of the iteration. Premium and Ultimate only. Exactly one of \u0060label_id\u0060, \u0060milestone_id\u0060, \u0060iteration_id\u0060, \u0060assignee_id\u0060, \u0060status_id\u0060 must be provided.",
             "nullable": true
           },
           "assignee_id": {
             "type": "integer",
-            "description": "ID of the user. Premium and Ultimate only. Exactly one of \u0060label_id\u0060, \u0060milestone_id\u0060, \u0060iteration_id\u0060, \u0060assignee_id\u0060 must be provided.",
+            "description": "ID of the user. Premium and Ultimate only. Exactly one of \u0060label_id\u0060, \u0060milestone_id\u0060, \u0060iteration_id\u0060, \u0060assignee_id\u0060, \u0060status_id\u0060 must be provided.",
+            "nullable": true
+          },
+          "status_id": {
+            "type": "integer",
+            "description": "ID of the status. Premium and Ultimate only. Exactly one of \u0060label_id\u0060, \u0060milestone_id\u0060, \u0060iteration_id\u0060, \u0060assignee_id\u0060, \u0060status_id\u0060 must be provided.",
             "nullable": true
           }
         }
@@ -154675,22 +155100,27 @@
         "properties": {
           "label_id": {
             "type": "integer",
-            "description": "ID of the label. Exactly one of \u0060label_id\u0060, \u0060milestone_id\u0060, \u0060iteration_id\u0060, \u0060assignee_id\u0060 must be provided.",
+            "description": "ID of the label. Exactly one of \u0060label_id\u0060, \u0060milestone_id\u0060, \u0060iteration_id\u0060, \u0060assignee_id\u0060, \u0060status_id\u0060 must be provided.",
             "nullable": true
           },
           "milestone_id": {
             "type": "integer",
-            "description": "The ID of an existing milestone. Exactly one of \u0060label_id\u0060, \u0060milestone_id\u0060, \u0060iteration_id\u0060, \u0060assignee_id\u0060 must be provided.",
+            "description": "The ID of an existing milestone. Exactly one of \u0060label_id\u0060, \u0060milestone_id\u0060, \u0060iteration_id\u0060, \u0060assignee_id\u0060, \u0060status_id\u0060 must be provided.",
             "nullable": true
           },
           "iteration_id": {
             "type": "integer",
-            "description": "ID of the iteration. Premium and Ultimate only. Exactly one of \u0060label_id\u0060, \u0060milestone_id\u0060, \u0060iteration_id\u0060, \u0060assignee_id\u0060 must be provided.",
+            "description": "ID of the iteration. Premium and Ultimate only. Exactly one of \u0060label_id\u0060, \u0060milestone_id\u0060, \u0060iteration_id\u0060, \u0060assignee_id\u0060, \u0060status_id\u0060 must be provided.",
             "nullable": true
           },
           "assignee_id": {
             "type": "integer",
-            "description": "ID of the user. Premium and Ultimate only. Exactly one of \u0060label_id\u0060, \u0060milestone_id\u0060, \u0060iteration_id\u0060, \u0060assignee_id\u0060 must be provided.",
+            "description": "ID of the user. Premium and Ultimate only. Exactly one of \u0060label_id\u0060, \u0060milestone_id\u0060, \u0060iteration_id\u0060, \u0060assignee_id\u0060, \u0060status_id\u0060 must be provided.",
+            "nullable": true
+          },
+          "status_id": {
+            "type": "integer",
+            "description": "ID of the status. Premium and Ultimate only. Exactly one of \u0060label_id\u0060, \u0060milestone_id\u0060, \u0060iteration_id\u0060, \u0060assignee_id\u0060, \u0060status_id\u0060 must be provided.",
             "nullable": true
           }
         }
@@ -181028,6 +181458,18 @@
           "$ref": "#/components/schemas/ApiEntitiesSecurityVulnerabilityScanningSbomScan"
         }
       },
+      "GetApiV4AiDuoWorkflowsWorkflowsIdCheckpoints200Response": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ApiEntitiesAiDuoWorkflowsCheckpoint"
+        }
+      },
+      "GetApiV4AiDuoWorkflowsWorkflowsIdEvents200Response": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ApiEntitiesAiDuoWorkflowsEvent"
+        }
+      },
       "GetApiV4GroupsIdEnterpriseUsers200Response": {
         "type": "array",
         "items": {
@@ -182494,6 +182936,18 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ApiEntitiesSecurityVulnerabilityScanningSbomScan"
+        }
+      },
+      "GetApiV4AiDuoWorkflowsWorkflowsIdCheckpoints200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ApiEntitiesAiDuoWorkflowsCheckpoint"
+        }
+      },
+      "GetApiV4AiDuoWorkflowsWorkflowsIdEvents200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ApiEntitiesAiDuoWorkflowsEvent"
         }
       },
       "GetApiV4GroupsIdEnterpriseUsers200ResponseSchema": {
@@ -211571,7 +212025,7 @@
     },
     {
       "name": "Alert management",
-      "description": "Use this API to interact with metric images for [alerts](https://docs.gitlab.com/operations/incident_management/alerts/).\n\nAdditional endpoints are available with the [GraphQL API](https://docs.gitlab.com/api/graphql/reference/#alertmanagementalert).",
+      "description": "Use this API to interact with metric images for [alerts](https://docs.gitlab.com/operations/incident_management/alerts/).\n\nAdditional endpoints are available with the [GraphQL API](https://docs.gitlab.com/api/graphql/reference/objects/#alertmanagementalert).",
       "externalDocs": {
         "url": "https://docs.gitlab.com/api/alert_management_alerts/"
       },
@@ -212218,7 +212672,7 @@
     },
     {
       "name": "Merge trains",
-      "description": "Use this API to retrieve the [merge trains](https://docs.gitlab.com/ci/pipelines/merge_trains/) of a\nproject. These endpoints require the Developer, Maintainer, or Owner role, and support\n[offset-based pagination](https://docs.gitlab.com/api/rest/#offset-based-pagination).\n\nEach object in a response represents one merge request in a train, not an entire train. Requesting\nmerge trains without a target branch can return entries from more than one train in the project.\n\nResponses do not include an explicit queue position, and return merge requests as a flat list rather\nthan grouped by train:\n\n- For an exact queue position, sort by \u0060id\u0060 in ascending order, or use the GraphQL API\n  [\u0060MergeTrainCar.index\u0060](https://docs.gitlab.com/api/graphql/reference/#mergetraincar-index) field.\n- To group merge requests by train, use the \u0060target_branch\u0060 attribute, or query the GraphQL API\n  [\u0060Project.mergeTrains\u0060](https://docs.gitlab.com/api/graphql/reference/#projectmergetrains) and\n  [\u0060MergeTrain.cars\u0060](https://docs.gitlab.com/api/graphql/reference/#mergetraincars) fields.",
+      "description": "Use this API to retrieve the [merge trains](https://docs.gitlab.com/ci/pipelines/merge_trains/) of a\nproject. These endpoints require the Developer, Maintainer, or Owner role, and support\n[offset-based pagination](https://docs.gitlab.com/api/rest/#offset-based-pagination).\n\nEach object in a response represents one merge request in a train, not an entire train. Requesting\nmerge trains without a target branch can return entries from more than one train in the project.\n\nResponses do not include an explicit queue position, and return merge requests as a flat list rather\nthan grouped by train:\n\n- For an exact queue position, sort by \u0060id\u0060 in ascending order, or use the GraphQL API\n  [\u0060MergeTrainCar.index\u0060](https://docs.gitlab.com/api/graphql/reference/objects/#mergetraincar) field.\n- To group merge requests by train, use the \u0060target_branch\u0060 attribute, or query the GraphQL API\n  [\u0060Project.mergeTrains\u0060](https://docs.gitlab.com/api/graphql/reference/objects/#project) and\n  [\u0060MergeTrain.cars\u0060](https://docs.gitlab.com/api/graphql/reference/objects/#mergetrain) fields.",
       "externalDocs": {
         "url": "https://docs.gitlab.com/api/merge_trains/"
       },
@@ -212779,7 +213233,7 @@
     },
     {
       "name": "Vulnerabilities",
-      "description": "\u003E [!warning]\n\u003E These endpoints are in the process of being deprecated and are considered unstable.\n\u003E The response payload may be subject to change or breakage across GitLab releases. Use the\n\u003E [GraphQL API](https://docs.gitlab.com/api/graphql/reference/#queryvulnerabilities) instead.\n\u003E For more information, see [replace vulnerability REST API with GraphQL](https://docs.gitlab.com/api/vulnerabilities/#replace-vulnerability-rest-api-with-graphql).\n\nUse this API to manage [vulnerabilities](https://docs.gitlab.com/user/application_security/vulnerabilities/),\nretrieve vulnerability findings, and export [vulnerability reports](https://docs.gitlab.com/user/application_security/vulnerability_report/)\nfor a project, group, or instance.\n\nEvery call to these endpoints must be [authenticated](https://docs.gitlab.com/api/rest/authentication/).\nIf a user isn\u0027t a member of a private project, requests return a \u0060404 Not Found\u0060 status code. If a\nuser does not have permission to [view the vulnerability report](https://docs.gitlab.com/user/permissions/#project-application-security),\nrequests return a \u0060403 Forbidden\u0060 status code.\n\n\u003E [!note]\n\u003E The former Vulnerabilities API was renamed to the Vulnerability Findings API, and the\n\u003E Vulnerabilities name now serves [vulnerability objects](https://gitlab.com/gitlab-org/gitlab/-/issues/13561).\n\u003E To fix a broken integration with the former API, change the \u0060vulnerabilities\u0060 URL part to\n\u003E \u0060vulnerability_findings\u0060.",
+      "description": "\u003E [!warning]\n\u003E These endpoints are in the process of being deprecated and are considered unstable.\n\u003E The response payload may be subject to change or breakage across GitLab releases. Use the\n\u003E [GraphQL API](https://docs.gitlab.com/api/graphql/reference/queries/#vulnerabilities) instead.\n\u003E For more information, see [replace vulnerability REST API with GraphQL](https://docs.gitlab.com/api/vulnerabilities/#replace-vulnerability-rest-api-with-graphql).\n\nUse this API to manage [vulnerabilities](https://docs.gitlab.com/user/application_security/vulnerabilities/),\nretrieve vulnerability findings, and export [vulnerability reports](https://docs.gitlab.com/user/application_security/vulnerability_report/)\nfor a project, group, or instance.\n\nEvery call to these endpoints must be [authenticated](https://docs.gitlab.com/api/rest/authentication/).\nIf a user isn\u0027t a member of a private project, requests return a \u0060404 Not Found\u0060 status code. If a\nuser does not have permission to [view the vulnerability report](https://docs.gitlab.com/user/permissions/#project-application-security),\nrequests return a \u0060403 Forbidden\u0060 status code.\n\n\u003E [!note]\n\u003E The former Vulnerabilities API was renamed to the Vulnerability Findings API, and the\n\u003E Vulnerabilities name now serves [vulnerability objects](https://gitlab.com/gitlab-org/gitlab/-/issues/13561).\n\u003E To fix a broken integration with the former API, change the \u0060vulnerabilities\u0060 URL part to\n\u003E \u0060vulnerability_findings\u0060.",
       "externalDocs": {
         "url": "https://docs.gitlab.com/api/vulnerabilities/"
       },
