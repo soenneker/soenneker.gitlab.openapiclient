@@ -1556,6 +1556,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public int? GitalyTimeoutFast { get; set; }
         /// <summary>Medium Gitaly timeout, in seconds. Set to 0 to disable timeouts.</summary>
         public int? GitalyTimeoutMedium { get; set; }
+        /// <summary>Maximum number of GitHub gists import requests per minute, per user. Default: `6`. Set to `0` to disable the rate limit.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? GithubGistsImportLimit { get; set; }
+#nullable restore
+#else
+        public string GithubGistsImportLimit { get; set; }
+#endif
         /// <summary>If `true`, the instance was provisioned for GitLab Dedicated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -1767,6 +1775,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #nullable restore
 #else
         public string GroupExportLimit { get; set; }
+#endif
+        /// <summary>Maximum number of group webhooks a user can create per minute for a given group. Default: `10`. Set to `0` to disable limits. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/635281) in GitLab 19.6.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? GroupHooksCreateLimit { get; set; }
+#nullable restore
+#else
+        public string GroupHooksCreateLimit { get; set; }
 #endif
         /// <summary>The group_import_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -3394,6 +3410,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string StaticObjectsExternalStorageUrl { get; set; }
 #endif
+        /// <summary>Maximum number of system hooks a user can create per minute. Default: `5`. Set to `0` to disable limits. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/635281) in GitLab 19.6.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? SystemHooksCreateLimit { get; set; }
+#nullable restore
+#else
+        public string SystemHooksCreateLimit { get; set; }
+#endif
         /// <summary>The tags_create_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -4603,6 +4627,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "gitaly_timeout_default", n => { GitalyTimeoutDefault = n.GetIntValue(); } },
                 { "gitaly_timeout_fast", n => { GitalyTimeoutFast = n.GetIntValue(); } },
                 { "gitaly_timeout_medium", n => { GitalyTimeoutMedium = n.GetIntValue(); } },
+                { "github_gists_import_limit", n => { GithubGistsImportLimit = n.GetStringValue(); } },
                 { "gitlab_dedicated_instance", n => { GitlabDedicatedInstance = n.GetStringValue(); } },
                 { "gitlab_environment_toolkit_instance", n => { GitlabEnvironmentToolkitInstance = n.GetStringValue(); } },
                 { "gitlab_product_usage_data_enabled", n => { GitlabProductUsageDataEnabled = n.GetStringValue(); } },
@@ -4630,6 +4655,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "group_create_limit", n => { GroupCreateLimit = n.GetStringValue(); } },
                 { "group_download_export_limit", n => { GroupDownloadExportLimit = n.GetStringValue(); } },
                 { "group_export_limit", n => { GroupExportLimit = n.GetStringValue(); } },
+                { "group_hooks_create_limit", n => { GroupHooksCreateLimit = n.GetStringValue(); } },
                 { "group_import_limit", n => { GroupImportLimit = n.GetStringValue(); } },
                 { "group_invited_groups_api_limit", n => { GroupInvitedGroupsApiLimit = n.GetStringValue(); } },
                 { "group_owners_can_manage_default_branch_protection", n => { GroupOwnersCanManageDefaultBranchProtection = n.GetBoolValue(); } },
@@ -4909,6 +4935,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "spam_check_endpoint_url", n => { SpamCheckEndpointUrl = n.GetStringValue(); } },
                 { "static_objects_external_storage_auth_token", n => { StaticObjectsExternalStorageAuthToken = n.GetStringValue(); } },
                 { "static_objects_external_storage_url", n => { StaticObjectsExternalStorageUrl = n.GetStringValue(); } },
+                { "system_hooks_create_limit", n => { SystemHooksCreateLimit = n.GetStringValue(); } },
                 { "tags_create_limit", n => { TagsCreateLimit = n.GetStringValue(); } },
                 { "terminal_max_session_time", n => { TerminalMaxSessionTime = n.GetIntValue(); } },
                 { "terms", n => { Terms = n.GetStringValue(); } },
@@ -5295,6 +5322,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("gitaly_timeout_default", GitalyTimeoutDefault);
             writer.WriteIntValue("gitaly_timeout_fast", GitalyTimeoutFast);
             writer.WriteIntValue("gitaly_timeout_medium", GitalyTimeoutMedium);
+            writer.WriteStringValue("github_gists_import_limit", GithubGistsImportLimit);
             writer.WriteStringValue("gitlab_dedicated_instance", GitlabDedicatedInstance);
             writer.WriteStringValue("gitlab_environment_toolkit_instance", GitlabEnvironmentToolkitInstance);
             writer.WriteStringValue("gitlab_product_usage_data_enabled", GitlabProductUsageDataEnabled);
@@ -5326,6 +5354,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("group_create_limit", GroupCreateLimit);
             writer.WriteStringValue("group_download_export_limit", GroupDownloadExportLimit);
             writer.WriteStringValue("group_export_limit", GroupExportLimit);
+            writer.WriteStringValue("group_hooks_create_limit", GroupHooksCreateLimit);
             writer.WriteStringValue("group_import_limit", GroupImportLimit);
             writer.WriteStringValue("group_invited_groups_api_limit", GroupInvitedGroupsApiLimit);
             writer.WriteBoolValue("group_owners_can_manage_default_branch_protection", GroupOwnersCanManageDefaultBranchProtection);
@@ -5605,6 +5634,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("spam_check_endpoint_url", SpamCheckEndpointUrl);
             writer.WriteStringValue("static_objects_external_storage_auth_token", StaticObjectsExternalStorageAuthToken);
             writer.WriteStringValue("static_objects_external_storage_url", StaticObjectsExternalStorageUrl);
+            writer.WriteStringValue("system_hooks_create_limit", SystemHooksCreateLimit);
             writer.WriteStringValue("tags_create_limit", TagsCreateLimit);
             writer.WriteIntValue("terminal_max_session_time", TerminalMaxSessionTime);
             writer.WriteStringValue("terms", Terms);

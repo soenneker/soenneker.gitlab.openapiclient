@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Trace
         {
         }
         /// <summary>
-        /// Append a patch to the job trace
+        /// Updates the trace of a job by appending a chunk of log output. Used by runners while executing a job.
         /// </summary>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Jobs.Item.Trace
             await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Append a patch to the job trace
+        /// Updates the trace of a job by appending a chunk of log output. Used by runners while executing a job.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

@@ -41,6 +41,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public int? MinimumAccessLevelManage { get; set; }
         /// <summary>Prompt injection protection level. One of `no_checks`, `log_only` or `interrupt`</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdRequestAiSettingsAttributesPromptInjectionProtectionLevel? PromptInjectionProtectionLevel { get; set; }
+        /// <summary>Whether flows that run on GitLab Runner fail when the execution environment sandbox is unavailable</summary>
+        public bool? RequireSandbox { get; set; }
         /// <summary>Allow web search in GitLab Duo Chat for this top-level group</summary>
         public bool? WebSearchEnabled { get; set; }
         /// <summary>
@@ -81,6 +83,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "minimum_access_level_execute_async", n => { MinimumAccessLevelExecuteAsync = n.GetIntValue(); } },
                 { "minimum_access_level_manage", n => { MinimumAccessLevelManage = n.GetIntValue(); } },
                 { "prompt_injection_protection_level", n => { PromptInjectionProtectionLevel = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdRequestAiSettingsAttributesPromptInjectionProtectionLevel>(); } },
+                { "require_sandbox", n => { RequireSandbox = n.GetBoolValue(); } },
                 { "web_search_enabled", n => { WebSearchEnabled = n.GetBoolValue(); } },
             };
         }
@@ -104,6 +107,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("minimum_access_level_execute_async", MinimumAccessLevelExecuteAsync);
             writer.WriteIntValue("minimum_access_level_manage", MinimumAccessLevelManage);
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdRequestAiSettingsAttributesPromptInjectionProtectionLevel>("prompt_injection_protection_level", PromptInjectionProtectionLevel);
+            writer.WriteBoolValue("require_sandbox", RequireSandbox);
             writer.WriteBoolValue("web_search_enabled", WebSearchEnabled);
             writer.WriteAdditionalData(AdditionalData);
         }

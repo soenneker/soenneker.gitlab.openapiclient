@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.V1.Resource
         {
         }
         /// <summary>
-        /// Get a specific setting resource
+        /// Retrieves a single VS Code setting resource. Returns 204 when the resource does not exist.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiVsCodeSettingsEntitiesVsCodeSetting"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.V1.Resource
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiVsCodeSettingsEntitiesVsCodeSetting>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiVsCodeSettingsEntitiesVsCodeSetting.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get a specific setting resource
+        /// Retrieves a single VS Code setting resource. Returns 204 when the resource does not exist.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

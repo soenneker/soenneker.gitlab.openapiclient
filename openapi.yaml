@@ -1789,6 +1789,26 @@ tags:
     > The availability of these endpoints is controlled by the `work_item_rest_api` feature flag.
     > They are available for testing, but not ready for production use. While the flag is disabled,
     > every endpoint except the list endpoints returns `404 Not Found`.
+
+    ## History
+
+    - Endpoints to list and get work items introduced in GitLab 18.10
+      [with a feature flag](https://docs.gitlab.com/administration/feature_flags/) named `work_item_rest_api`.
+      Disabled by default.
+    - Endpoints to create and delete work items added in GitLab 18.11.
+    - Endpoint to update work items added in GitLab 19.0.
+    - Endpoint to list work items can also be enabled with the `work_item_rest_api_index` feature flag
+      in GitLab 19.1. Disabled by default.
+    - Endpoints to list emoji reactions, children, email participants, linked items, linked resources,
+      and notes added in GitLab 19.1.
+    - Endpoint to list work items no longer behind a feature flag in GitLab 19.2.
+      Feature flag `work_item_rest_api_index` [removed](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/243015).
+    - Endpoints to list the current user's to-do items and discussions added in GitLab 19.2.
+    - Endpoints to add a child, and to list closing and related merge requests, added in GitLab 19.3.
+    - Endpoints to remove and reorder children, get a discussion, get and create notes, and list related
+      branches added in GitLab 19.4.
+    - Endpoints to create and resolve discussions, and to manage the notes in a discussion, added in GitLab 19.5.
+    - Endpoints to update and delete notes added in GitLab 19.6.
   x-displayName: Work items
   externalDocs:
     url: https://docs.gitlab.com/user/work_items/
@@ -8509,7 +8529,10 @@ paths:
     post:
       operationId: postApiV4GroupsIdHooks
       summary: Create a group hook
-      description: Creates a hook for a specified group.
+      description: Creates a hook for a specified group. This endpoint has a rate
+        limit of 10 requests per minute for each authenticated user for a given group.
+        On GitLab Self-Managed and GitLab Dedicated, an administrator can change this
+        limit in the application settings.
       tags:
       - Hooks
       responses:
@@ -8525,6 +8548,8 @@ paths:
           description: Not found
         '422':
           description: Unprocessable entity
+        '429':
+          description: Too many requests
       parameters:
       - name: id
         required: true
@@ -10275,8 +10300,7 @@ paths:
     post:
       operationId: postApiV4GroupsIdLdapGroupLinks
       summary: Add an LDAP group link with CN or filter
-      description: Adds an LDAP group link using a CN or filter.Adding a group link
-        by filter is only supported in the Premium tier and above.
+      description: Adds an LDAP group link using a CN or filter.
       tags:
       - LDAP
       responses:
@@ -10311,8 +10335,7 @@ paths:
     delete:
       operationId: deleteApiV4GroupsIdLdapGroupLinks
       summary: Delete an LDAP group link with CN or filter
-      description: Deletes an LDAP group link using a CN or filter.Deleting by filter
-        is only supported in the Premium tier and above.
+      description: Deletes an LDAP group link using a CN or filter.
       tags:
       - LDAP
       responses:
@@ -16909,7 +16932,9 @@ paths:
   "/api/v4/vscode/settings_sync/v1/manifest":
     get:
       operationId: getApiV4VscodeSettingsSyncV1Manifest
-      summary: Get the settings manifest for Settings Sync
+      summary: Retrieve the settings manifest for Settings Sync
+      description: Retrieves the manifest of the settings stored for VS Code Settings
+        Sync.
       tags:
       - VSCode
       responses:
@@ -16928,7 +16953,9 @@ paths:
   "/api/v4/vscode/settings_sync/{settings_context_hash}/v1/manifest":
     get:
       operationId: getApiV4VscodeSettingsSyncSettingsContextHashV1Manifest
-      summary: Get the settings manifest for Settings Sync
+      summary: Retrieve the settings manifest for Settings Sync
+      description: Retrieves the manifest of the settings stored for VS Code Settings
+        Sync.
       tags:
       - VSCode
       responses:
@@ -16954,7 +16981,9 @@ paths:
   "/api/v4/vscode/settings_sync/v1/resource/{resource_name}/{id}":
     get:
       operationId: getApiV4VscodeSettingsSyncV1ResourceResourceNameId
-      summary: Get a specific setting resource
+      summary: Retrieve a specific setting resource
+      description: Retrieves a single VS Code setting resource. Returns 204 when the
+        resource does not exist.
       tags:
       - VSCode
       responses:
@@ -16998,7 +17027,9 @@ paths:
   "/api/v4/vscode/settings_sync/{settings_context_hash}/v1/resource/{resource_name}/{id}":
     get:
       operationId: getApiV4VscodeSettingsSyncSettingsContextHashV1ResourceResourceNameId
-      summary: Get a specific setting resource
+      summary: Retrieve a specific setting resource
+      description: Retrieves a single VS Code setting resource. Returns 204 when the
+        resource does not exist.
       tags:
       - VSCode
       responses:
@@ -17048,7 +17079,9 @@ paths:
   "/api/v4/vscode/settings_sync/v1/resource/{resource_name}":
     get:
       operationId: getApiV4VscodeSettingsSyncV1ResourceResourceName
-      summary: Get a list of references to one or more vscode setting resources
+      summary: List all references to a VS Code setting resource
+      description: Lists all references to the stored versions of a VS Code setting
+        resource.
       tags:
       - VSCode
       responses:
@@ -17083,7 +17116,9 @@ paths:
         in: path
     post:
       operationId: postApiV4VscodeSettingsSyncV1ResourceResourceName
-      summary: Creates or updates a specific setting
+      summary: Create or update a specific setting
+      description: Creates a VS Code setting resource, or updates it if it already
+        exists.
       tags:
       - VSCode
       responses:
@@ -17115,7 +17150,9 @@ paths:
   "/api/v4/vscode/settings_sync/{settings_context_hash}/v1/resource/{resource_name}":
     get:
       operationId: getApiV4VscodeSettingsSyncSettingsContextHashV1ResourceResourceName
-      summary: Get a list of references to one or more vscode setting resources
+      summary: List all references to a VS Code setting resource
+      description: Lists all references to the stored versions of a VS Code setting
+        resource.
       tags:
       - VSCode
       responses:
@@ -17156,7 +17193,9 @@ paths:
         in: path
     post:
       operationId: postApiV4VscodeSettingsSyncSettingsContextHashV1ResourceResourceName
-      summary: Creates or updates a specific setting
+      summary: Create or update a specific setting
+      description: Creates a VS Code setting resource, or updates it if it already
+        exists.
       tags:
       - VSCode
       responses:
@@ -17194,7 +17233,8 @@ paths:
   "/api/v4/vscode/settings_sync/v1/collection":
     delete:
       operationId: deleteApiV4VscodeSettingsSyncV1Collection
-      summary: Deletes all user vscode setting resources
+      summary: Delete all VS Code setting resources for a user
+      description: Deletes all VS Code setting resources of the current user.
       tags:
       - VSCode
       responses:
@@ -17209,7 +17249,8 @@ paths:
   "/api/v4/vscode/settings_sync/{settings_context_hash}/v1/collection":
     delete:
       operationId: deleteApiV4VscodeSettingsSyncSettingsContextHashV1Collection
-      summary: Deletes all user vscode setting resources
+      summary: Delete all VS Code setting resources for a user
+      description: Deletes all VS Code setting resources of the current user.
       tags:
       - VSCode
       responses:
@@ -29113,6 +29154,7 @@ paths:
     post:
       operationId: postApiV4UsageDataIncrementUniqueUsers
       summary: Track usage data event for the current user
+      description: Tracks a unique-user event for the current user in Service Ping.
       tags:
       - Usage data
       responses:
@@ -30814,7 +30856,9 @@ paths:
     post:
       operationId: postApiV4Hooks
       summary: Create a system hook
-      description: Creates a system hook.
+      description: Creates a system hook. This endpoint has a rate limit of five requests
+        per minute for each authenticated user. On GitLab Self-Managed and GitLab
+        Dedicated, an administrator can change this limit in the application settings.
       tags:
       - Hooks
       responses:
@@ -30830,6 +30874,8 @@ paths:
           description: Not found
         '422':
           description: Unprocessable entity
+        '429':
+          description: Too many requests
       requestBody:
         required: true
         content:
@@ -33848,6 +33894,8 @@ paths:
     get:
       operationId: getApiV4ProjectsIdRepositoryDivergingCommits
       summary: Retrieve diverging commit counts between two refs
+      description: Retrieves the number of commits by which the `to` ref is ahead
+        of and behind the `from` ref.
       tags:
       - Repositories
       responses:
@@ -37537,7 +37585,9 @@ paths:
   "/api/v4/projects/{id}/pages_access":
     get:
       operationId: getApiV4ProjectsIdPagesAccess
-      summary: Check pages access of this project
+      summary: Verify Pages access to a project
+      description: Verifies if the current user can access GitLab Pages in a specified
+        project.
       tags:
       - Projects
       responses:
@@ -41701,6 +41751,20 @@ paths:
         schema:
           type: integer
         in: path
+      - name: order_by
+        required: false
+        description: Field to order tags by. `published_at` requires keyset pagination.
+        schema:
+          type: string
+          default: name
+        in: query
+      - name: sort
+        required: false
+        description: Direction to sort tags in. Only applies to keyset pagination.
+        schema:
+          type: string
+          default: asc
+        in: query
       - name: page
         required: false
         description: Page number of results to retrieve.
@@ -54380,6 +54444,8 @@ paths:
     post:
       operationId: postApiV4IntegrationsSlackEvents
       summary: Receive Slack events
+      description: Receives and processes events sent by the GitLab for Slack app.
+        Requires a valid Slack signature.
       tags:
       - Integrations
       responses:
@@ -60906,6 +60972,8 @@ paths:
           description: Forbidden
         '422':
           description: Unprocessable entity
+        '429':
+          description: Too many requests
         '503':
           description: Service unavailable
       requestBody:
@@ -60996,6 +61064,8 @@ paths:
           description: Forbidden
         '422':
           description: Unprocessable entity
+        '429':
+          description: Too many requests
         '503':
           description: Service unavailable
       requestBody:
@@ -61028,6 +61098,8 @@ paths:
           description: Forbidden
         '422':
           description: Unprocessable entity
+        '429':
+          description: Too many requests
         '503':
           description: Service unavailable
       requestBody:
@@ -62681,7 +62753,9 @@ paths:
   "/api/v4/geo/retrieve/{replicable_name}/{replicable_id}":
     get:
       operationId: getApiV4GeoRetrieveReplicableNameReplicableId
-      summary: Returns a replicable file from store (via CDN or sendfile)
+      summary: Retrieve a replicable file
+      description: Retrieves a replicable file for a Geo secondary site. Serves the
+        file through a CDN or sendfile.
       tags:
       - Geo
       responses:
@@ -62710,7 +62784,9 @@ paths:
   "/api/v4/geo/repositories/{gl_repository}/pipeline_refs":
     get:
       operationId: getApiV4GeoRepositoriesGlRepositoryPipelineRefs
-      summary: Returns the list of pipeline refs for the project
+      summary: List all pipeline refs for a project
+      description: Lists all pipeline refs for a project. Secondary runners use them
+        to check the site is up to date.
       tags:
       - Geo
       responses:
@@ -62738,7 +62814,9 @@ paths:
   "/api/v4/geo/status":
     post:
       operationId: postApiV4GeoStatus
-      summary: Posts the current node status to the primary site
+      summary: Create a status for a secondary site
+      description: Creates a status for a secondary Geo site on the primary site,
+        including replication metrics.
       tags:
       - Geo
       responses:
@@ -62761,7 +62839,9 @@ paths:
   "/api/v4/geo/failures":
     post:
       operationId: postApiV4GeoFailures
-      summary: Reports resources that persistently fail verification on a secondary
+      summary: Create a report of persistent verification failures
+      description: Creates a report on the primary site of resources that persistently
+        fail verification on a secondary site.
       tags:
       - Geo
       responses:
@@ -62782,9 +62862,9 @@ paths:
   "/api/v4/geo/proxy_git_ssh/info_refs_upload_pack":
     post:
       operationId: postApiV4GeoProxyGitSshInfoRefsUploadPack
-      summary: |-
-        Responsible for making HTTP GET /repo.git/info/refs?service=git-upload-pack
-                          request from secondary gitlab-shell to primary
+      summary: Proxy a git-upload-pack info/refs request to the primary site
+      description: Proxies a git-upload-pack info/refs request from a secondary site
+        to the primary site.
       tags:
       - Geo
       responses:
@@ -62803,9 +62883,9 @@ paths:
   "/api/v4/geo/proxy_git_ssh/upload_pack":
     post:
       operationId: postApiV4GeoProxyGitSshUploadPack
-      summary: |-
-        Responsible for making HTTP POST /repo.git/git-upload-pack
-                          request from secondary gitlab-shell to primary
+      summary: Proxy a git-upload-pack request to the primary site
+      description: Proxies a git-upload-pack request from a secondary site to the
+        primary site.
       tags:
       - Geo
       responses:
@@ -62824,9 +62904,9 @@ paths:
   "/api/v4/geo/proxy_git_ssh/info_refs_receive_pack":
     post:
       operationId: postApiV4GeoProxyGitSshInfoRefsReceivePack
-      summary: |-
-        Responsible for making HTTP GET /repo.git/info/refs?service=git-receive-pack
-                          request from secondary gitlab-shell to primary
+      summary: Proxy a git-receive-pack info/refs request to the primary site
+      description: Proxies a git-receive-pack info/refs request from a secondary site
+        to the primary site.
       tags:
       - Geo
       responses:
@@ -62845,9 +62925,9 @@ paths:
   "/api/v4/geo/proxy_git_ssh/receive_pack":
     post:
       operationId: postApiV4GeoProxyGitSshReceivePack
-      summary: |-
-        Responsible for making HTTP POST /repo.git/info/refs?service=git-receive-pack
-                          request from secondary gitlab-shell to primary
+      summary: Proxy a git-receive-pack request to the primary site
+      description: Proxies a git-receive-pack request from a secondary site to the
+        primary site.
       tags:
       - Geo
       responses:
@@ -62866,7 +62946,8 @@ paths:
   "/api/v4/geo/node_proxy/{id}/graphql":
     post:
       operationId: postApiV4GeoNodeProxyIdGraphql
-      summary: Query the GraphQL endpoint of an existing Geo node
+      summary: Query the GraphQL endpoint of an existing Geo site
+      description: Queries the GraphQL endpoint of an existing Geo site.
       tags:
       - Geo
       responses:
@@ -76537,6 +76618,8 @@ paths:
     delete:
       operationId: deleteApiV4RunnersManagers
       summary: Delete a registered runner manager
+      description: Deletes a runner manager identified by the runner authentication
+        token and system ID.
       tags:
       - CI runners
       responses:
@@ -76671,6 +76754,8 @@ paths:
     put:
       operationId: putApiV4JobsId
       summary: Update a job
+      description: Updates the state and other attributes of a job. Used by runners
+        while executing a job.
       tags:
       - Jobs
       responses:
@@ -76741,7 +76826,9 @@ paths:
   "/api/v4/jobs/{id}/trace":
     patch:
       operationId: patchApiV4JobsIdTrace
-      summary: Append a patch to the job trace
+      summary: Update the trace of a job
+      description: Updates the trace of a job by appending a chunk of log output.
+        Used by runners while executing a job.
       tags:
       - Jobs
       responses:
@@ -79127,6 +79214,8 @@ paths:
     post:
       operationId: postApiV4GroupsIdTransferToOrganization
       summary: Transfer a group to an organization
+      description: Transfers a group to another organization asynchronously. Requires
+        the Owner role.
       tags:
       - Groups
       responses:
@@ -80657,6 +80746,8 @@ paths:
     head:
       operationId: headApiV4ProjectsIdRepositoryBranchesBranch
       summary: Check if a branch exists
+      description: Checks whether a branch exists in the repository, without returning
+        the branch.
       tags:
       - Branches
       responses:
@@ -80745,6 +80836,9 @@ paths:
     put:
       operationId: putApiV4ProjectsIdRepositoryBranchesBranchProtect
       summary: Protect a single branch
+      description: Protects a single branch, or updates its protection if it is already
+        protected. Only users with the Maintainer role can push or merge unless `developers_can_push`
+        or `developers_can_merge` is `true`.
       tags:
       - Branches
       responses:
@@ -80783,6 +80877,7 @@ paths:
     put:
       operationId: putApiV4ProjectsIdRepositoryBranchesBranchUnprotect
       summary: Unprotect a single branch
+      description: Removes the protection from a single protected branch.
       tags:
       - Branches
       responses:
@@ -84761,6 +84856,9 @@ components:
         agent_version:
           type: string
           example: 2.1.295
+        sync_type:
+          type: string
+          example: hook
         external_xid:
           type: string
           example: uuid
@@ -93932,11 +94030,17 @@ components:
           type: string
         tags_create_limit:
           type: string
+        group_hooks_create_limit:
+          type: string
         project_hooks_create_limit:
+          type: string
+        system_hooks_create_limit:
           type: string
         web_hook_event_resend_limit:
           type: string
         web_hook_test_limit:
+          type: string
+        github_gists_import_limit:
           type: string
         gitlab_dedicated_instance:
           type: string
@@ -102533,6 +102637,9 @@ components:
         allow_project_extension:
           type: boolean
           example: true
+        require_sandbox:
+          type: boolean
+          example: false
         minimum_access_level_execute:
           type: string
           example: developer
@@ -104793,6 +104900,12 @@ components:
           example: claude_sonnet_4_5
           nullable: true
           maxLength: 255
+        detached:
+          type: boolean
+          description: When true, asks Workhorse to answer once the run has started
+            and keep it going after the request ends.
+          example: true
+          nullable: true
     postApiV4AiDuoWorkflowsWorkflowsWorkflowIdResumeRequest:
       type: object
       properties:
@@ -112217,6 +112330,11 @@ components:
             Valid values are `0` (default) for Sunday, `1` for Monday, and `6` for
             Saturday.
           nullable: true
+        github_gists_import_limit:
+          type: string
+          description: 'Maximum number of GitHub gists import requests per minute,
+            per user. Default: `6`. Set to `0` to disable the rate limit.'
+          nullable: true
         gitlab_dedicated_instance:
           type: string
           description: If `true`, the instance was provisioned for GitLab Dedicated.
@@ -112236,6 +112354,12 @@ components:
           type: string
           description: 'Maximum number of Git operations per minute a user can perform.
             Default: `600`.'
+          nullable: true
+        group_hooks_create_limit:
+          type: string
+          description: 'Maximum number of group webhooks a user can create per minute
+            for a given group. Default: `10`. Set to `0` to disable limits. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/635281)
+            in GitLab 19.6.'
           nullable: true
         hashed_storage_enabled:
           type: string
@@ -112541,6 +112665,12 @@ components:
         static_objects_external_storage_url:
           type: string
           description: URL to an external storage for repository static objects.
+          nullable: true
+        system_hooks_create_limit:
+          type: string
+          description: 'Maximum number of system hooks a user can create per minute.
+            Default: `5`. Set to `0` to disable limits. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/635281)
+            in GitLab 19.6.'
           nullable: true
         terms:
           type: string
@@ -135342,6 +135472,11 @@ components:
               description: Whether to allow projects to extend the network access
                 domain allowlist
               nullable: true
+            require_sandbox:
+              type: boolean
+              description: Whether flows that run on GitLab Runner fail when the execution
+                environment sandbox is unavailable
+              nullable: true
             minimum_access_level_execute:
               type: integer
               enum:
@@ -135729,6 +135864,11 @@ components:
               type: boolean
               description: Whether to allow projects to extend the network access
                 domain allowlist
+              nullable: true
+            require_sandbox:
+              type: boolean
+              description: Whether flows that run on GitLab Runner fail when the execution
+                environment sandbox is unavailable
               nullable: true
             minimum_access_level_execute:
               type: integer

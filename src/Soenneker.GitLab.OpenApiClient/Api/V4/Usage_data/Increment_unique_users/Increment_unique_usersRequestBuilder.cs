@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Usage_data.Increment_unique_user
         {
         }
         /// <summary>
-        /// Track usage data event for the current user
+        /// Tracks a unique-user event for the current user in Service Ping.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Usage_data.Increment_unique_user
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Track usage data event for the current user
+        /// Tracks a unique-user event for the current user in Service Ping.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

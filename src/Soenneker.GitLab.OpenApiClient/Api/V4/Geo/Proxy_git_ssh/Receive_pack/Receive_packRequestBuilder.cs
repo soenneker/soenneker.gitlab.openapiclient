@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Proxy_git_ssh.Receive_pack
         {
         }
         /// <summary>
-        /// Responsible for making HTTP POST /repo.git/info/refs?service=git-receive-pack                  request from secondary gitlab-shell to primary
+        /// Proxies a git-receive-pack request from a secondary site to the primary site.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Proxy_git_ssh.Receive_pack
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Responsible for making HTTP POST /repo.git/info/refs?service=git-receive-pack                  request from secondary gitlab-shell to primary
+        /// Proxies a git-receive-pack request from a secondary site to the primary site.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

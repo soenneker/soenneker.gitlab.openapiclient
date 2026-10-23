@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Failures
         {
         }
         /// <summary>
-        /// Reports resources that persistently fail verification on a secondary
+        /// Creates a report on the primary site of resources that persistently fail verification on a secondary site.
         /// </summary>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Failures
             await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Reports resources that persistently fail verification on a secondary
+        /// Creates a report on the primary site of resources that persistently fail verification on a secondary site.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

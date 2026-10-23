@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Integrations.Slack.Events
         {
         }
         /// <summary>
-        /// Receive Slack events
+        /// Receives and processes events sent by the GitLab for Slack app. Requires a valid Slack signature.
         /// </summary>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Integrations.Slack.Events
             await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Receive Slack events
+        /// Receives and processes events sent by the GitLab for Slack app. Requires a valid Slack signature.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

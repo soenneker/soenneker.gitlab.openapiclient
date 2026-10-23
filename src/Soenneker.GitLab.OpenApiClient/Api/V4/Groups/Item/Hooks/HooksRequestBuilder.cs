@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Hooks
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Creates a hook for a specified group.
+        /// Creates a hook for a specified group. This endpoint has a rate limit of 10 requests per minute for each authenticated user for a given group. On GitLab Self-Managed and GitLab Dedicated, an administrator can change this limit in the application settings.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupHook"/></returns>
         /// <param name="body">The request body</param>
@@ -105,7 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Hooks
             return requestInfo;
         }
         /// <summary>
-        /// Creates a hook for a specified group.
+        /// Creates a hook for a specified group. This endpoint has a rate limit of 10 requests per minute for each authenticated user for a given group. On GitLab Self-Managed and GitLab Dedicated, an administrator can change this limit in the application settings.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

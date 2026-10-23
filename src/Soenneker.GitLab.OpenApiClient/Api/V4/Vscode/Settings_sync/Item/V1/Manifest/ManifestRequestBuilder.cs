@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.Item.V1.Man
         {
         }
         /// <summary>
-        /// Get the settings manifest for Settings Sync
+        /// Retrieves the manifest of the settings stored for VS Code Settings Sync.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiVsCodeSettingsEntitiesVsCodeManifest"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.Item.V1.Man
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiVsCodeSettingsEntitiesVsCodeManifest>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiVsCodeSettingsEntitiesVsCodeManifest.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get the settings manifest for Settings Sync
+        /// Retrieves the manifest of the settings stored for VS Code Settings Sync.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

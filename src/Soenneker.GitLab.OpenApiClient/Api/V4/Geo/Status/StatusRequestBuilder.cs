@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Status
         {
         }
         /// <summary>
-        /// Posts the current node status to the primary site
+        /// Creates a status for a secondary Geo site on the primary site, including replication metrics.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoNodeStatus"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Status
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoNodeStatus>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoNodeStatus.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Posts the current node status to the primary site
+        /// Creates a status for a secondary Geo site on the primary site, including replication metrics.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

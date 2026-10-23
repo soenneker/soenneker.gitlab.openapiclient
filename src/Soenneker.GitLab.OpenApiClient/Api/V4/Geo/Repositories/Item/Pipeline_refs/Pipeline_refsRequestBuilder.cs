@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Repositories.Item.Pipeline_r
         {
         }
         /// <summary>
-        /// Returns the list of pipeline refs for the project
+        /// Lists all pipeline refs for a project. Secondary runners use them to check the site is up to date.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoPipelineRefs&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Repositories.Item.Pipeline_r
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Returns the list of pipeline refs for the project
+        /// Lists all pipeline refs for a project. Secondary runners use them to check the site is up to date.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

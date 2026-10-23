@@ -88,6 +88,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Status { get; set; }
 #endif
+        /// <summary>The sync_type property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? SyncType { get; set; }
+#nullable restore
+#else
+        public string SyncType { get; set; }
+#endif
         /// <summary>The updated_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -133,6 +141,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "session_finished_at", n => { SessionFinishedAt = n.GetStringValue(); } },
                 { "session_started_at", n => { SessionStartedAt = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
+                { "sync_type", n => { SyncType = n.GetStringValue(); } },
                 { "updated_at", n => { UpdatedAt = n.GetStringValue(); } },
                 { "user_id", n => { UserId = n.GetIntValue(); } },
             };
@@ -154,6 +163,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("session_finished_at", SessionFinishedAt);
             writer.WriteStringValue("session_started_at", SessionStartedAt);
             writer.WriteStringValue("status", Status);
+            writer.WriteStringValue("sync_type", SyncType);
             writer.WriteStringValue("updated_at", UpdatedAt);
             writer.WriteIntValue("user_id", UserId);
             writer.WriteAdditionalData(AdditionalData);

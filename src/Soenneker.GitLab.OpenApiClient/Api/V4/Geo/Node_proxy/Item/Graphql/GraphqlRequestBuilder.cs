@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Node_proxy.Item.Graphql
         {
         }
         /// <summary>
-        /// Query the GraphQL endpoint of an existing Geo node
+        /// Queries the GraphQL endpoint of an existing Geo site.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Node_proxy.Item.Graphql
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Query the GraphQL endpoint of an existing Geo node
+        /// Queries the GraphQL endpoint of an existing Geo site.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

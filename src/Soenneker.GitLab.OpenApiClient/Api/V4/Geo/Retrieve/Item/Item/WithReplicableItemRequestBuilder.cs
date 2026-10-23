@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Retrieve.Item.Item
         {
         }
         /// <summary>
-        /// Returns a replicable file from store (via CDN or sendfile)
+        /// Retrieves a replicable file for a Geo secondary site. Serves the file through a CDN or sendfile.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Retrieve.Item.Item
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Returns a replicable file from store (via CDN or sendfile)
+        /// Retrieves a replicable file for a Geo secondary site. Serves the file through a CDN or sendfile.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

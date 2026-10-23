@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Ldap_group_links
         {
         }
         /// <summary>
-        /// Deletes an LDAP group link using a CN or filter.Deleting by filter is only supported in the Premium tier and above.
+        /// Deletes an LDAP group link using a CN or filter.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -83,7 +83,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Ldap_group_links
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Adds an LDAP group link using a CN or filter.Adding a group link by filter is only supported in the Premium tier and above.
+        /// Adds an LDAP group link using a CN or filter.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink"/></returns>
         /// <param name="body">The request body</param>
@@ -103,7 +103,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Ldap_group_links
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Deletes an LDAP group link using a CN or filter.Deleting by filter is only supported in the Premium tier and above.
+        /// Deletes an LDAP group link using a CN or filter.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -140,7 +140,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Ldap_group_links
             return requestInfo;
         }
         /// <summary>
-        /// Adds an LDAP group link using a CN or filter.Adding a group link by filter is only supported in the Premium tier and above.
+        /// Adds an LDAP group link using a CN or filter.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -171,7 +171,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Ldap_group_links
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Ldap_group_links.Ldap_group_linksRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Deletes an LDAP group link using a CN or filter.Deleting by filter is only supported in the Premium tier and above.
+        /// Deletes an LDAP group link using a CN or filter.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Ldap_group_linksRequestBuilderDeleteQueryParameters 

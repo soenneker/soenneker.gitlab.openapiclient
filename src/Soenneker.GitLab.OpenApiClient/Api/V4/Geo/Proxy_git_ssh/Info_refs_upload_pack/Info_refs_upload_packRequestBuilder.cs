@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Proxy_git_ssh.Info_refs_uplo
         {
         }
         /// <summary>
-        /// Responsible for making HTTP GET /repo.git/info/refs?service=git-upload-pack                  request from secondary gitlab-shell to primary
+        /// Proxies a git-upload-pack info/refs request from a secondary site to the primary site.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Geo.Proxy_git_ssh.Info_refs_uplo
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Responsible for making HTTP GET /repo.git/info/refs?service=git-upload-pack                  request from secondary gitlab-shell to primary
+        /// Proxies a git-upload-pack info/refs request from a secondary site to the primary site.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

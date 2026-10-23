@@ -24,6 +24,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ClientType { get; set; }
 #endif
+        /// <summary>When true, asks Workhorse to answer once the run has started and keep it going after the request ends.</summary>
+        public bool? Detached { get; set; }
         /// <summary>ID or path of the namespace to associate the flow with.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -83,6 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             {
                 { "ai_catalog_item_version_id", n => { AiCatalogItemVersionId = n.GetIntValue(); } },
                 { "client_type", n => { ClientType = n.GetStringValue(); } },
+                { "detached", n => { Detached = n.GetBoolValue(); } },
                 { "namespace_id", n => { NamespaceId = n.GetStringValue(); } },
                 { "project_id", n => { ProjectId = n.GetStringValue(); } },
                 { "root_namespace_id", n => { RootNamespaceId = n.GetStringValue(); } },
@@ -98,6 +101,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("ai_catalog_item_version_id", AiCatalogItemVersionId);
             writer.WriteStringValue("client_type", ClientType);
+            writer.WriteBoolValue("detached", Detached);
             writer.WriteStringValue("namespace_id", NamespaceId);
             writer.WriteStringValue("project_id", ProjectId);
             writer.WriteStringValue("root_namespace_id", RootNamespaceId);

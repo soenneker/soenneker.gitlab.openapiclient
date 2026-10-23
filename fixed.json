@@ -9705,7 +9705,7 @@
           "Hooks"
         ],
         "summary": "Create a group hook",
-        "description": "Creates a hook for a specified group.",
+        "description": "Creates a hook for a specified group. This endpoint has a rate limit of 10 requests per minute for each authenticated user for a given group. On GitLab Self-Managed and GitLab Dedicated, an administrator can change this limit in the application settings.",
         "operationId": "PostApiV4GroupsIdHooks",
         "parameters": [
           {
@@ -9754,6 +9754,9 @@
           },
           "422": {
             "description": "Unprocessable entity"
+          },
+          "429": {
+            "description": "Too many requests"
           }
         },
         "x-gitlab-tier": "premium"
@@ -12263,7 +12266,7 @@
           "LDAP"
         ],
         "summary": "Add an LDAP group link with CN or filter",
-        "description": "Adds an LDAP group link using a CN or filter.Adding a group link by filter is only supported in the Premium tier and above.",
+        "description": "Adds an LDAP group link using a CN or filter.",
         "operationId": "PostApiV4GroupsIdLdapGroupLinks",
         "parameters": [
           {
@@ -12321,7 +12324,7 @@
           "LDAP"
         ],
         "summary": "Delete an LDAP group link with CN or filter",
-        "description": "Deletes an LDAP group link using a CN or filter.Deleting by filter is only supported in the Premium tier and above.",
+        "description": "Deletes an LDAP group link using a CN or filter.",
         "operationId": "DeleteApiV4GroupsIdLdapGroupLinks",
         "parameters": [
           {
@@ -21543,7 +21546,8 @@
         "tags": [
           "VSCode"
         ],
-        "summary": "Get the settings manifest for Settings Sync",
+        "summary": "Retrieve the settings manifest for Settings Sync",
+        "description": "Retrieves the manifest of the settings stored for VS Code Settings Sync.",
         "operationId": "GetApiV4VscodeSettingsSyncV1Manifest",
         "responses": {
           "200": {
@@ -21573,7 +21577,8 @@
         "tags": [
           "VSCode"
         ],
-        "summary": "Get the settings manifest for Settings Sync",
+        "summary": "Retrieve the settings manifest for Settings Sync",
+        "description": "Retrieves the manifest of the settings stored for VS Code Settings Sync.",
         "operationId": "GetApiV4VscodeSettingsSyncSettingsContextHashV1Manifest",
         "parameters": [
           {
@@ -21614,7 +21619,8 @@
         "tags": [
           "VSCode"
         ],
-        "summary": "Get a specific setting resource",
+        "summary": "Retrieve a specific setting resource",
+        "description": "Retrieves a single VS Code setting resource. Returns 204 when the resource does not exist.",
         "operationId": "GetApiV4VscodeSettingsSyncV1ResourceResourceNameId",
         "parameters": [
           {
@@ -21667,7 +21673,8 @@
         "tags": [
           "VSCode"
         ],
-        "summary": "Get a specific setting resource",
+        "summary": "Retrieve a specific setting resource",
+        "description": "Retrieves a single VS Code setting resource. Returns 204 when the resource does not exist.",
         "operationId": "GetApiV4VscodeSettingsSyncSettingsContextHashV1ResourceResourceNameId",
         "parameters": [
           {
@@ -21729,7 +21736,8 @@
         "tags": [
           "VSCode"
         ],
-        "summary": "Get a list of references to one or more vscode setting resources",
+        "summary": "List all references to a VS Code setting resource",
+        "description": "Lists all references to the stored versions of a VS Code setting resource.",
         "operationId": "GetApiV4VscodeSettingsSyncV1ResourceResourceName",
         "parameters": [
           {
@@ -21768,7 +21776,8 @@
         "tags": [
           "VSCode"
         ],
-        "summary": "Creates or updates a specific setting",
+        "summary": "Create or update a specific setting",
+        "description": "Creates a VS Code setting resource, or updates it if it already exists.",
         "operationId": "PostApiV4VscodeSettingsSyncV1ResourceResourceName",
         "parameters": [
           {
@@ -21802,7 +21811,8 @@
         "tags": [
           "VSCode"
         ],
-        "summary": "Get a list of references to one or more vscode setting resources",
+        "summary": "List all references to a VS Code setting resource",
+        "description": "Lists all references to the stored versions of a VS Code setting resource.",
         "operationId": "GetApiV4VscodeSettingsSyncSettingsContextHashV1ResourceResourceName",
         "parameters": [
           {
@@ -21850,7 +21860,8 @@
         "tags": [
           "VSCode"
         ],
-        "summary": "Creates or updates a specific setting",
+        "summary": "Create or update a specific setting",
+        "description": "Creates a VS Code setting resource, or updates it if it already exists.",
         "operationId": "PostApiV4VscodeSettingsSyncSettingsContextHashV1ResourceResourceName",
         "parameters": [
           {
@@ -21893,7 +21904,8 @@
         "tags": [
           "VSCode"
         ],
-        "summary": "Deletes all user vscode setting resources",
+        "summary": "Delete all VS Code setting resources for a user",
+        "description": "Deletes all VS Code setting resources of the current user.",
         "operationId": "DeleteApiV4VscodeSettingsSyncV1Collection",
         "responses": {
           "200": {
@@ -21916,7 +21928,8 @@
         "tags": [
           "VSCode"
         ],
-        "summary": "Deletes all user vscode setting resources",
+        "summary": "Delete all VS Code setting resources for a user",
+        "description": "Deletes all VS Code setting resources of the current user.",
         "operationId": "DeleteApiV4VscodeSettingsSyncSettingsContextHashV1Collection",
         "parameters": [
           {
@@ -39254,6 +39267,7 @@
           "Usage data"
         ],
         "summary": "Track usage data event for the current user",
+        "description": "Tracks a unique-user event for the current user in Service Ping.",
         "operationId": "PostApiV4UsageDataIncrementUniqueUsers",
         "requestBody": {
           "content": {
@@ -41831,7 +41845,7 @@
           "Hooks"
         ],
         "summary": "Create a system hook",
-        "description": "Creates a system hook.",
+        "description": "Creates a system hook. This endpoint has a rate limit of five requests per minute for each authenticated user. On GitLab Self-Managed and GitLab Dedicated, an administrator can change this limit in the application settings.",
         "operationId": "PostApiV4Hooks",
         "requestBody": {
           "content": {
@@ -41862,6 +41876,9 @@
           },
           "422": {
             "description": "Unprocessable entity"
+          },
+          "429": {
+            "description": "Too many requests"
           }
         }
       }
@@ -45978,6 +45995,7 @@
           "Repositories"
         ],
         "summary": "Retrieve diverging commit counts between two refs",
+        "description": "Retrieves the number of commits by which the \u0060to\u0060 ref is ahead of and behind the \u0060from\u0060 ref.",
         "operationId": "GetApiV4ProjectsIdRepositoryDivergingCommits",
         "parameters": [
           {
@@ -50995,7 +51013,8 @@
         "tags": [
           "Projects"
         ],
-        "summary": "Check pages access of this project",
+        "summary": "Verify Pages access to a project",
+        "description": "Verifies if the current user can access GitLab Pages in a specified project.",
         "operationId": "GetApiV4ProjectsIdPagesAccess",
         "parameters": [
           {
@@ -57015,6 +57034,24 @@
             "required": true,
             "schema": {
               "type": "integer"
+            }
+          },
+          {
+            "name": "order_by",
+            "in": "query",
+            "description": "Field to order tags by. \u0060published_at\u0060 requires keyset pagination.",
+            "schema": {
+              "type": "string",
+              "default": "name"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Direction to sort tags in. Only applies to keyset pagination.",
+            "schema": {
+              "type": "string",
+              "default": "asc"
             }
           },
           {
@@ -74491,6 +74528,7 @@
           "Integrations"
         ],
         "summary": "Receive Slack events",
+        "description": "Receives and processes events sent by the GitLab for Slack app. Requires a valid Slack signature.",
         "operationId": "PostApiV4IntegrationsSlackEvents",
         "requestBody": {
           "content": {
@@ -84775,6 +84813,9 @@
           "422": {
             "description": "Unprocessable entity"
           },
+          "429": {
+            "description": "Too many requests"
+          },
           "503": {
             "description": "Service unavailable"
           }
@@ -84906,6 +84947,9 @@
           "422": {
             "description": "Unprocessable entity"
           },
+          "429": {
+            "description": "Too many requests"
+          },
           "503": {
             "description": "Service unavailable"
           }
@@ -84952,6 +84996,9 @@
           },
           "422": {
             "description": "Unprocessable entity"
+          },
+          "429": {
+            "description": "Too many requests"
           },
           "503": {
             "description": "Service unavailable"
@@ -87331,7 +87378,8 @@
         "tags": [
           "Geo"
         ],
-        "summary": "Returns a replicable file from store (via CDN or sendfile)",
+        "summary": "Retrieve a replicable file",
+        "description": "Retrieves a replicable file for a Geo secondary site. Serves the file through a CDN or sendfile.",
         "operationId": "GetApiV4GeoRetrieveReplicableNameReplicableId",
         "parameters": [
           {
@@ -87375,7 +87423,8 @@
         "tags": [
           "Geo"
         ],
-        "summary": "Returns the list of pipeline refs for the project",
+        "summary": "List all pipeline refs for a project",
+        "description": "Lists all pipeline refs for a project. Secondary runners use them to check the site is up to date.",
         "operationId": "GetApiV4GeoRepositoriesGlRepositoryPipelineRefs",
         "parameters": [
           {
@@ -87416,7 +87465,8 @@
         "tags": [
           "Geo"
         ],
-        "summary": "Posts the current node status to the primary site",
+        "summary": "Create a status for a secondary site",
+        "description": "Creates a status for a secondary Geo site on the primary site, including replication metrics.",
         "operationId": "PostApiV4GeoStatus",
         "requestBody": {
           "content": {
@@ -87452,7 +87502,8 @@
         "tags": [
           "Geo"
         ],
-        "summary": "Reports resources that persistently fail verification on a secondary",
+        "summary": "Create a report of persistent verification failures",
+        "description": "Creates a report on the primary site of resources that persistently fail verification on a secondary site.",
         "operationId": "PostApiV4GeoFailures",
         "requestBody": {
           "content": {
@@ -87485,7 +87536,8 @@
         "tags": [
           "Geo"
         ],
-        "summary": "Responsible for making HTTP GET /repo.git/info/refs?service=git-upload-pack\n                  request from secondary gitlab-shell to primary",
+        "summary": "Proxy a git-upload-pack info/refs request to the primary site",
+        "description": "Proxies a git-upload-pack info/refs request from a secondary site to the primary site.",
         "operationId": "PostApiV4GeoProxyGitSshInfoRefsUploadPack",
         "requestBody": {
           "content": {
@@ -87515,7 +87567,8 @@
         "tags": [
           "Geo"
         ],
-        "summary": "Responsible for making HTTP POST /repo.git/git-upload-pack\n                  request from secondary gitlab-shell to primary",
+        "summary": "Proxy a git-upload-pack request to the primary site",
+        "description": "Proxies a git-upload-pack request from a secondary site to the primary site.",
         "operationId": "PostApiV4GeoProxyGitSshUploadPack",
         "requestBody": {
           "content": {
@@ -87545,7 +87598,8 @@
         "tags": [
           "Geo"
         ],
-        "summary": "Responsible for making HTTP GET /repo.git/info/refs?service=git-receive-pack\n                  request from secondary gitlab-shell to primary",
+        "summary": "Proxy a git-receive-pack info/refs request to the primary site",
+        "description": "Proxies a git-receive-pack info/refs request from a secondary site to the primary site.",
         "operationId": "PostApiV4GeoProxyGitSshInfoRefsReceivePack",
         "requestBody": {
           "content": {
@@ -87575,7 +87629,8 @@
         "tags": [
           "Geo"
         ],
-        "summary": "Responsible for making HTTP POST /repo.git/info/refs?service=git-receive-pack\n                  request from secondary gitlab-shell to primary",
+        "summary": "Proxy a git-receive-pack request to the primary site",
+        "description": "Proxies a git-receive-pack request from a secondary site to the primary site.",
         "operationId": "PostApiV4GeoProxyGitSshReceivePack",
         "requestBody": {
           "content": {
@@ -87605,7 +87660,8 @@
         "tags": [
           "Geo"
         ],
-        "summary": "Query the GraphQL endpoint of an existing Geo node",
+        "summary": "Query the GraphQL endpoint of an existing Geo site",
+        "description": "Queries the GraphQL endpoint of an existing Geo site.",
         "operationId": "PostApiV4GeoNodeProxyIdGraphql",
         "parameters": [
           {
@@ -107083,6 +107139,7 @@
           "CI runners"
         ],
         "summary": "Delete a registered runner manager",
+        "description": "Deletes a runner manager identified by the runner authentication token and system ID.",
         "operationId": "DeleteApiV4RunnersManagers",
         "parameters": [
           {
@@ -107288,6 +107345,7 @@
           "Jobs"
         ],
         "summary": "Update a job",
+        "description": "Updates the state and other attributes of a job. Used by runners while executing a job.",
         "operationId": "PutApiV4JobsId",
         "parameters": [
           {
@@ -107394,7 +107452,8 @@
         "tags": [
           "Jobs"
         ],
-        "summary": "Append a patch to the job trace",
+        "summary": "Update the trace of a job",
+        "description": "Updates the trace of a job by appending a chunk of log output. Used by runners while executing a job.",
         "operationId": "PatchApiV4JobsIdTrace",
         "parameters": [
           {
@@ -110439,6 +110498,7 @@
           "Groups"
         ],
         "summary": "Transfer a group to an organization",
+        "description": "Transfers a group to another organization asynchronously. Requires the Owner role.",
         "operationId": "PostApiV4GroupsIdTransferToOrganization",
         "parameters": [
           {
@@ -112558,6 +112618,7 @@
           "Branches"
         ],
         "summary": "Check if a branch exists",
+        "description": "Checks whether a branch exists in the repository, without returning the branch.",
         "operationId": "HeadApiV4ProjectsIdRepositoryBranchesBranch",
         "parameters": [
           {
@@ -112704,6 +112765,7 @@
           "Branches"
         ],
         "summary": "Protect a single branch",
+        "description": "Protects a single branch, or updates its protection if it is already protected. Only users with the Maintainer role can push or merge unless \u0060developers_can_push\u0060 or \u0060developers_can_merge\u0060 is \u0060true\u0060.",
         "operationId": "PutApiV4ProjectsIdRepositoryBranchesBranchProtect",
         "parameters": [
           {
@@ -112767,6 +112829,7 @@
           "Branches"
         ],
         "summary": "Unprotect a single branch",
+        "description": "Removes the protection from a single protected branch.",
         "operationId": "PutApiV4ProjectsIdRepositoryBranchesBranchUnprotect",
         "parameters": [
           {
@@ -118547,6 +118610,10 @@
           "agent_version": {
             "type": "string",
             "example": "2.1.295"
+          },
+          "sync_type": {
+            "type": "string",
+            "example": "hook"
           },
           "external_xid": {
             "type": "string",
@@ -131325,13 +131392,22 @@
           "tags_create_limit": {
             "type": "string"
           },
+          "group_hooks_create_limit": {
+            "type": "string"
+          },
           "project_hooks_create_limit": {
+            "type": "string"
+          },
+          "system_hooks_create_limit": {
             "type": "string"
           },
           "web_hook_event_resend_limit": {
             "type": "string"
           },
           "web_hook_test_limit": {
+            "type": "string"
+          },
+          "github_gists_import_limit": {
             "type": "string"
           },
           "gitlab_dedicated_instance": {
@@ -142695,6 +142771,10 @@
             "type": "boolean",
             "example": true
           },
+          "require_sandbox": {
+            "type": "boolean",
+            "example": false
+          },
           "minimum_access_level_execute": {
             "type": "string",
             "example": "developer"
@@ -144928,6 +145008,12 @@
             "description": "Identifier of the model the user selected for this session",
             "nullable": true,
             "example": "claude_sonnet_4_5"
+          },
+          "detached": {
+            "type": "boolean",
+            "description": "When true, asks Workhorse to answer once the run has started and keep it going after the request ends.",
+            "nullable": true,
+            "example": true
           }
         }
       },
@@ -151431,6 +151517,11 @@
             "description": "Start day of the week for calendar views and date pickers. Valid values are \u00600\u0060 (default) for Sunday, \u00601\u0060 for Monday, and \u00606\u0060 for Saturday.",
             "nullable": true
           },
+          "github_gists_import_limit": {
+            "type": "string",
+            "description": "Maximum number of GitHub gists import requests per minute, per user. Default: \u00606\u0060. Set to \u00600\u0060 to disable the rate limit.",
+            "nullable": true
+          },
           "gitlab_dedicated_instance": {
             "type": "string",
             "description": "If \u0060true\u0060, the instance was provisioned for GitLab Dedicated.",
@@ -151449,6 +151540,11 @@
           "gitlab_shell_operation_limit": {
             "type": "string",
             "description": "Maximum number of Git operations per minute a user can perform. Default: \u0060600\u0060.",
+            "nullable": true
+          },
+          "group_hooks_create_limit": {
+            "type": "string",
+            "description": "Maximum number of group webhooks a user can create per minute for a given group. Default: \u006010\u0060. Set to \u00600\u0060 to disable limits. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/635281) in GitLab 19.6.",
             "nullable": true
           },
           "hashed_storage_enabled": {
@@ -151732,6 +151828,11 @@
           "static_objects_external_storage_url": {
             "type": "string",
             "description": "URL to an external storage for repository static objects.",
+            "nullable": true
+          },
+          "system_hooks_create_limit": {
+            "type": "string",
+            "description": "Maximum number of system hooks a user can create per minute. Default: \u00605\u0060. Set to \u00600\u0060 to disable limits. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/635281) in GitLab 19.6.",
             "nullable": true
           },
           "terms": {
@@ -179492,6 +179593,11 @@
             "description": "Whether to allow projects to extend the network access domain allowlist",
             "nullable": true
           },
+          "require_sandbox": {
+            "type": "boolean",
+            "description": "Whether flows that run on GitLab Runner fail when the execution environment sandbox is unavailable",
+            "nullable": true
+          },
           "minimum_access_level_execute": {
             "$ref": "#/components/schemas/PostApiV4GroupsRequestAiSettingsAttributesMinimumAccessLevelExecute"
           },
@@ -179614,6 +179720,11 @@
           "allow_project_extension": {
             "type": "boolean",
             "description": "Whether to allow projects to extend the network access domain allowlist",
+            "nullable": true
+          },
+          "require_sandbox": {
+            "type": "boolean",
+            "description": "Whether flows that run on GitLab Runner fail when the execution environment sandbox is unavailable",
             "nullable": true
           },
           "minimum_access_level_execute": {
@@ -213257,7 +213368,7 @@
     },
     {
       "name": "Work items",
-      "description": "Use this API to manage [work items](https://docs.gitlab.com/user/work_items/) in a project, a group,\nor a namespace. Work items are the core elements for planning and tracking work, and cover\n[types](https://docs.gitlab.com/user/work_items/#work-item-types) such as issues, tasks, and epics.\n\nAlongside the work items themselves, you can retrieve their children, linked items, linked resources,\nnotes, discussions, emoji reactions, email participants, and the current user\u0027s to-do items.\n\nBy default, responses include only the \u0060id\u0060, \u0060iid\u0060, \u0060global_id\u0060, and \u0060title\u0060 of each work item.\nUse the \u0060fields\u0060 and \u0060features\u0060 parameters to request more attributes.\n\n\u003E [!note]\n\u003E The availability of these endpoints is controlled by the \u0060work_item_rest_api\u0060 feature flag.\n\u003E They are available for testing, but not ready for production use. While the flag is disabled,\n\u003E every endpoint except the list endpoints returns \u0060404 Not Found\u0060.",
+      "description": "Use this API to manage [work items](https://docs.gitlab.com/user/work_items/) in a project, a group,\nor a namespace. Work items are the core elements for planning and tracking work, and cover\n[types](https://docs.gitlab.com/user/work_items/#work-item-types) such as issues, tasks, and epics.\n\nAlongside the work items themselves, you can retrieve their children, linked items, linked resources,\nnotes, discussions, emoji reactions, email participants, and the current user\u0027s to-do items.\n\nBy default, responses include only the \u0060id\u0060, \u0060iid\u0060, \u0060global_id\u0060, and \u0060title\u0060 of each work item.\nUse the \u0060fields\u0060 and \u0060features\u0060 parameters to request more attributes.\n\n\u003E [!note]\n\u003E The availability of these endpoints is controlled by the \u0060work_item_rest_api\u0060 feature flag.\n\u003E They are available for testing, but not ready for production use. While the flag is disabled,\n\u003E every endpoint except the list endpoints returns \u0060404 Not Found\u0060.\n\n## History\n\n- Endpoints to list and get work items introduced in GitLab 18.10\n  [with a feature flag](https://docs.gitlab.com/administration/feature_flags/) named \u0060work_item_rest_api\u0060.\n  Disabled by default.\n- Endpoints to create and delete work items added in GitLab 18.11.\n- Endpoint to update work items added in GitLab 19.0.\n- Endpoint to list work items can also be enabled with the \u0060work_item_rest_api_index\u0060 feature flag\n  in GitLab 19.1. Disabled by default.\n- Endpoints to list emoji reactions, children, email participants, linked items, linked resources,\n  and notes added in GitLab 19.1.\n- Endpoint to list work items no longer behind a feature flag in GitLab 19.2.\n  Feature flag \u0060work_item_rest_api_index\u0060 [removed](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/243015).\n- Endpoints to list the current user\u0027s to-do items and discussions added in GitLab 19.2.\n- Endpoints to add a child, and to list closing and related merge requests, added in GitLab 19.3.\n- Endpoints to remove and reorder children, get a discussion, get and create notes, and list related\n  branches added in GitLab 19.4.\n- Endpoints to create and resolve discussions, and to manage the notes in a discussion, added in GitLab 19.5.\n- Endpoints to update and delete notes added in GitLab 19.6.",
       "externalDocs": {
         "url": "https://docs.gitlab.com/user/work_items/"
       },

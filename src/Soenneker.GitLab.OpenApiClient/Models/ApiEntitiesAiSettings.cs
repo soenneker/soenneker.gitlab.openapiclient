@@ -70,6 +70,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string PromptInjectionProtectionLevel { get; set; }
 #endif
+        /// <summary>The require_sandbox property</summary>
+        public bool? RequireSandbox { get; set; }
         /// <summary>The web_search_enabled property</summary>
         public bool? WebSearchEnabled { get; set; }
         /// <summary>
@@ -110,6 +112,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "minimum_access_level_execute_async", n => { MinimumAccessLevelExecuteAsync = n.GetStringValue(); } },
                 { "minimum_access_level_manage", n => { MinimumAccessLevelManage = n.GetStringValue(); } },
                 { "prompt_injection_protection_level", n => { PromptInjectionProtectionLevel = n.GetStringValue(); } },
+                { "require_sandbox", n => { RequireSandbox = n.GetBoolValue(); } },
                 { "web_search_enabled", n => { WebSearchEnabled = n.GetBoolValue(); } },
             };
         }
@@ -133,6 +136,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("minimum_access_level_execute_async", MinimumAccessLevelExecuteAsync);
             writer.WriteStringValue("minimum_access_level_manage", MinimumAccessLevelManage);
             writer.WriteStringValue("prompt_injection_protection_level", PromptInjectionProtectionLevel);
+            writer.WriteBoolValue("require_sandbox", RequireSandbox);
             writer.WriteBoolValue("web_search_enabled", WebSearchEnabled);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Hooks
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Creates a system hook.
+        /// Creates a system hook. This endpoint has a rate limit of five requests per minute for each authenticated user. On GitLab Self-Managed and GitLab Dedicated, an administrator can change this limit in the application settings.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesHook"/></returns>
         /// <param name="body">The request body</param>
@@ -105,7 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Hooks
             return requestInfo;
         }
         /// <summary>
-        /// Creates a system hook.
+        /// Creates a system hook. This endpoint has a rate limit of five requests per minute for each authenticated user. On GitLab Self-Managed and GitLab Dedicated, an administrator can change this limit in the application settings.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

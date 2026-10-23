@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Transfer_to_organiza
         {
         }
         /// <summary>
-        /// Transfer a group to an organization
+        /// Transfers a group to another organization asynchronously. Requires the Owner role.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupDetail"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Transfer_to_organiza
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupDetail>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupDetail.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Transfer a group to an organization
+        /// Transfers a group to another organization asynchronously. Requires the Owner role.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
