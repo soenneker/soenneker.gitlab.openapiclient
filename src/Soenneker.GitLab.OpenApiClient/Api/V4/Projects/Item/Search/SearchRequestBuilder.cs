@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Search
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\search
+    /// Builds and executes requests for operations under \api\v4\projects\{id}\(-\)search
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SearchRequestBuilder : BaseRequestBuilder
@@ -28,7 +28,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Search
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SearchRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/search?scope={scope}&search={search}{&author_username*,confidential*,fields,label_name,not*,not%5Bauthor_username%5D*,not%5Bsource_branch%5D*,not%5Btarget_branch%5D*,num_context_lines*,page*,per_page*,ref*,regex*,source_branch*,state*,target_branch*,type}", pathParameters)
+        public SearchRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/(-/)search?scope={scope}&search={search}{&author_username*,confidential*,fields,label_name,not*,not%5Bauthor_username%5D*,not%5Bsource_branch%5D*,not%5Btarget_branch%5D*,num_context_lines*,page*,per_page*,ref*,regex*,source_branch*,state*,target_branch*,type}", pathParameters)
         {
         }
         /// <summary>
@@ -36,7 +36,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Search
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SearchRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/search?scope={scope}&search={search}{&author_username*,confidential*,fields,label_name,not*,not%5Bauthor_username%5D*,not%5Bsource_branch%5D*,not%5Btarget_branch%5D*,num_context_lines*,page*,per_page*,ref*,regex*,source_branch*,state*,target_branch*,type}", rawUrl)
+        public SearchRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/(-/)search?scope={scope}&search={search}{&author_username*,confidential*,fields,label_name,not*,not%5Bauthor_username%5D*,not%5Bsource_branch%5D*,not%5Btarget_branch%5D*,num_context_lines*,page*,per_page*,ref*,regex*,source_branch*,state*,target_branch*,type}", rawUrl)
         {
         }
         /// <summary>

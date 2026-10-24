@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Conan.V2.Conans.Item.Item.Item.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\packages\conan\v2\conans\{packageName}\{packageVersion}\{packageUsername}\{packageChannel}
+    /// Builds and executes requests for operations under \api\v4\projects\{id}\packages\conan\v2\conans\{packageName}\{packageVersion}\{packageUsername}\{packageChannel}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithPackageChannelItemRequestBuilder : BaseRequestBuilder
@@ -37,7 +37,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Conan.V2.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithPackageChannelItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/packages/conan/v2/conans/{packageName}/{packageVersion}/{packageUsername}/{packageChannel}", pathParameters)
+        public WithPackageChannelItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/packages/conan/v2/conans/{packageName}/{packageVersion}/{packageUsername}/{packageChannel}", pathParameters)
         {
         }
         /// <summary>
@@ -45,7 +45,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Conan.V2.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithPackageChannelItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/packages/conan/v2/conans/{packageName}/{packageVersion}/{packageUsername}/{packageChannel}", rawUrl)
+        public WithPackageChannelItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/packages/conan/v2/conans/{packageName}/{packageVersion}/{packageUsername}/{packageChannel}", rawUrl)
         {
         }
     }

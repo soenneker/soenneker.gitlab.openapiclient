@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Members.All
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\members\all
+    /// Builds and executes requests for operations under \api\v4\projects\{id}\members\all
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AllRequestBuilder : BaseRequestBuilder
@@ -35,7 +35,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Members.All
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AllRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/members/all{?page*,per_page*,query*,show_seat_info*,state*,user_ids}", pathParameters)
+        public AllRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/members/all{?page*,per_page*,query*,show_seat_info*,state*,user_ids}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Members.All
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AllRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/members/all{?page*,per_page*,query*,show_seat_info*,state*,user_ids}", rawUrl)
+        public AllRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/members/all{?page*,per_page*,query*,show_seat_info*,state*,user_ids}", rawUrl)
         {
         }
         /// <summary>

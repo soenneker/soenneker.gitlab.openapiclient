@@ -11,7 +11,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup.Runner_deployment_projectSh
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\google_cloud\setup\runner_deployment_project.sh
+    /// Builds and executes requests for operations under \api\v4\projects\{id}\google_cloud\setup\runner_deployment_project.sh
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Runner_deployment_projectShRequestBuilder : BaseRequestBuilder
@@ -21,7 +21,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Runner_deployment_projectShRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/google_cloud/setup/runner_deployment_project.sh?google_cloud_project_id={google_cloud_project_id}", pathParameters)
+        public Runner_deployment_projectShRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/google_cloud/setup/runner_deployment_project.sh?google_cloud_project_id={google_cloud_project_id}", pathParameters)
         {
         }
         /// <summary>
@@ -29,7 +29,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Runner_deployment_projectShRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/google_cloud/setup/runner_deployment_project.sh?google_cloud_project_id={google_cloud_project_id}", rawUrl)
+        public Runner_deployment_projectShRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/google_cloud/setup/runner_deployment_project.sh?google_cloud_project_id={google_cloud_project_id}", rawUrl)
         {
         }
         /// <summary>

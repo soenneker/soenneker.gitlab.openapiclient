@@ -11,7 +11,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Npm.Package.Item.DistTags.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\packages\npm\package\{packageName}\dist-tags\{tag}
+    /// Builds and executes requests for operations under \api\v4\packages\npm\-\package\{packageName}\dist-tags\{tag}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithTagItemRequestBuilder : BaseRequestBuilder
@@ -21,7 +21,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Npm.Package.Item.DistTa
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithTagItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/packages/npm/package/{packageName}/dist-tags/{tag}", pathParameters)
+        public WithTagItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/packages/npm/-/package/{packageName}/dist-tags/{tag}", pathParameters)
         {
         }
         /// <summary>
@@ -29,7 +29,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Npm.Package.Item.DistTa
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithTagItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/packages/npm/package/{packageName}/dist-tags/{tag}", rawUrl)
+        public WithTagItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/packages/npm/-/package/{packageName}/dist-tags/{tag}", rawUrl)
         {
         }
         /// <summary>

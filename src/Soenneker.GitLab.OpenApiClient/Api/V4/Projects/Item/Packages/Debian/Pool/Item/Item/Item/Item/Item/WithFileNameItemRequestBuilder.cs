@@ -11,7 +11,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Debian.Pool.Item.Item.Item.Item.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\packages\debian\pool\{distribution}\{letter}\{packageName}\{packageVersion}\{fileName}
+    /// Builds and executes requests for operations under \api\v4\projects\{id}\packages\debian\pool\{distribution}\{letter}\{packageName}\{packageVersion}\{fileName}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithFileNameItemRequestBuilder : BaseRequestBuilder
@@ -21,7 +21,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Debian.Po
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithFileNameItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/packages/debian/pool/{distribution}/{letter}/{packageName}/{packageVersion}/{fileName}", pathParameters)
+        public WithFileNameItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/packages/debian/pool/{distribution}/{letter}/{packageName}/{packageVersion}/{fileName}", pathParameters)
         {
         }
         /// <summary>
@@ -29,7 +29,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Debian.Po
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithFileNameItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/packages/debian/pool/{distribution}/{letter}/{packageName}/{packageVersion}/{fileName}", rawUrl)
+        public WithFileNameItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/packages/debian/pool/{distribution}/{letter}/{packageName}/{packageVersion}/{fileName}", rawUrl)
         {
         }
         /// <summary>

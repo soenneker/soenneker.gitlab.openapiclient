@@ -110447,6 +110447,8 @@ components:
             - granular
             - read_repository
             - write_repository
+            - read_registry
+            - write_registry
             - read_virtual_registry
             - write_virtual_registry
             - read_observability
@@ -114333,6 +114335,8 @@ components:
             - granular
             - read_repository
             - write_repository
+            - read_registry
+            - write_registry
             - read_virtual_registry
             - write_virtual_registry
             - read_observability
@@ -115149,6 +115153,8 @@ components:
             - granular
             - read_repository
             - write_repository
+            - read_registry
+            - write_registry
             - read_virtual_registry
             - write_virtual_registry
             - read_observability
@@ -116910,6 +116916,8 @@ components:
             - granular
             - read_repository
             - write_repository
+            - read_registry
+            - write_registry
             - read_virtual_registry
             - write_virtual_registry
             - read_observability
@@ -116979,6 +116987,8 @@ components:
             - granular
             - read_repository
             - write_repository
+            - read_registry
+            - write_registry
             - read_virtual_registry
             - write_virtual_registry
             - read_observability

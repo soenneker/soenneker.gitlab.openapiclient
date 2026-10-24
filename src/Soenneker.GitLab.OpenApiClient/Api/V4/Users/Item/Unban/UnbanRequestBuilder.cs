@@ -11,7 +11,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Unban
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\users\{-id}\unban
+    /// Builds and executes requests for operations under \api\v4\users\{id}\unban
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UnbanRequestBuilder : BaseRequestBuilder
@@ -21,7 +21,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Unban
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public UnbanRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/users/{%2Did}/unban", pathParameters)
+        public UnbanRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/users/{id}/unban", pathParameters)
         {
         }
         /// <summary>
@@ -29,7 +29,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Unban
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public UnbanRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/users/{%2Did}/unban", rawUrl)
+        public UnbanRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/users/{id}/unban", rawUrl)
         {
         }
         /// <summary>

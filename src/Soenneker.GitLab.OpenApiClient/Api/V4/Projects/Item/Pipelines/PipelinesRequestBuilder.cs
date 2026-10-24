@@ -14,7 +14,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\pipelines
+    /// Builds and executes requests for operations under \api\v4\projects\{id}\pipelines
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PipelinesRequestBuilder : BaseRequestBuilder
@@ -41,7 +41,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PipelinesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/pipelines{?created_after*,created_before*,name*,order_by*,page*,per_page*,ref*,scope*,sha*,sort*,source*,status*,updated_after*,updated_before*,username*,yaml_errors*}", pathParameters)
+        public PipelinesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/pipelines{?created_after*,created_before*,name*,order_by*,page*,per_page*,ref*,scope*,sha*,sort*,source*,status*,updated_after*,updated_before*,username*,yaml_errors*}", pathParameters)
         {
         }
         /// <summary>
@@ -49,7 +49,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PipelinesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/pipelines{?created_after*,created_before*,name*,order_by*,page*,per_page*,ref*,scope*,sha*,sort*,source*,status*,updated_after*,updated_before*,username*,yaml_errors*}", rawUrl)
+        public PipelinesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/pipelines{?created_after*,created_before*,name*,order_by*,page*,per_page*,ref*,scope*,sha*,sort*,source*,status*,updated_after*,updated_before*,username*,yaml_errors*}", rawUrl)
         {
         }
         /// <summary>

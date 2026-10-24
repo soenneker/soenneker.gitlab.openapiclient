@@ -26,14 +26,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Uploads
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.uploads.item collection</summary>
         /// <param name="position">ID of the upload.</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Uploads.Item.SecretItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Uploads.Item.SecretItemRequestBuilder this[int position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Uploads.Item.WithUploadItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Uploads.Item.WithUploadItemRequestBuilder this[int position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("secret%2Did", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Uploads.Item.SecretItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("uploadId", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Uploads.Item.WithUploadItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

@@ -10,7 +10,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Snippets.Item.Files.Item.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\snippets\{noteable-id}\files\{refValue}\{filePath}
+    /// Builds and executes requests for operations under \api\v4\projects\{id}\snippets\{noteableId}\files\{refValue}\{filePath}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithFilePathItemRequestBuilder : BaseRequestBuilder
@@ -25,7 +25,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Snippets.Item.File
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithFilePathItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/snippets/{noteable%2Did}/files/{refValue}/{filePath}", pathParameters)
+        public WithFilePathItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/snippets/{noteableId}/files/{refValue}/{filePath}", pathParameters)
         {
         }
         /// <summary>
@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Snippets.Item.File
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithFilePathItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/snippets/{noteable%2Did}/files/{refValue}/{filePath}", rawUrl)
+        public WithFilePathItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/snippets/{noteableId}/files/{refValue}/{filePath}", rawUrl)
         {
         }
     }

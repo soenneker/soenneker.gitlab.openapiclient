@@ -20,14 +20,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Labels
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.labels.item collection</summary>
         /// <param name="position">ID or name of the label.</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Labels.Item.NameItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Labels.Item.NameItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Labels.Item.WithSubscribableItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Labels.Item.WithSubscribableItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("name%2Did", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Labels.Item.NameItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("subscribableId", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Labels.Item.WithSubscribableItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

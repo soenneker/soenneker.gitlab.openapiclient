@@ -63,26 +63,26 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The selective_sync_namespace_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoSite_selective_sync_namespace_ids>? SelectiveSyncNamespaceIds { get; set; }
+        public UntypedNode? SelectiveSyncNamespaceIds { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoSite_selective_sync_namespace_ids> SelectiveSyncNamespaceIds { get; set; }
+        public UntypedNode SelectiveSyncNamespaceIds { get; set; }
 #endif
         /// <summary>The selective_sync_organization_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoSite_selective_sync_organization_ids>? SelectiveSyncOrganizationIds { get; set; }
+        public UntypedNode? SelectiveSyncOrganizationIds { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoSite_selective_sync_organization_ids> SelectiveSyncOrganizationIds { get; set; }
+        public UntypedNode SelectiveSyncOrganizationIds { get; set; }
 #endif
         /// <summary>The selective_sync_shards property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoSite_selective_sync_shards>? SelectiveSyncShards { get; set; }
+        public UntypedNode? SelectiveSyncShards { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoSite_selective_sync_shards> SelectiveSyncShards { get; set; }
+        public UntypedNode SelectiveSyncShards { get; set; }
 #endif
         /// <summary>The selective_sync_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -159,9 +159,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "primary", n => { Primary = n.GetBoolValue(); } },
                 { "repos_max_capacity", n => { ReposMaxCapacity = n.GetIntValue(); } },
-                { "selective_sync_namespace_ids", n => { SelectiveSyncNamespaceIds = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoSite_selective_sync_namespace_ids>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoSite_selective_sync_namespace_ids.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "selective_sync_organization_ids", n => { SelectiveSyncOrganizationIds = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoSite_selective_sync_organization_ids>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoSite_selective_sync_organization_ids.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "selective_sync_shards", n => { SelectiveSyncShards = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoSite_selective_sync_shards>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoSite_selective_sync_shards.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "selective_sync_namespace_ids", n => { SelectiveSyncNamespaceIds = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "selective_sync_organization_ids", n => { SelectiveSyncOrganizationIds = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "selective_sync_shards", n => { SelectiveSyncShards = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "selective_sync_type", n => { SelectiveSyncType = n.GetStringValue(); } },
                 { "sync_object_storage", n => { SyncObjectStorage = n.GetBoolValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -191,9 +191,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteBoolValue("primary", Primary);
             writer.WriteIntValue("repos_max_capacity", ReposMaxCapacity);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoSite_selective_sync_namespace_ids>("selective_sync_namespace_ids", SelectiveSyncNamespaceIds);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoSite_selective_sync_organization_ids>("selective_sync_organization_ids", SelectiveSyncOrganizationIds);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoSite_selective_sync_shards>("selective_sync_shards", SelectiveSyncShards);
+            writer.WriteObjectValue<UntypedNode>("selective_sync_namespace_ids", SelectiveSyncNamespaceIds);
+            writer.WriteObjectValue<UntypedNode>("selective_sync_organization_ids", SelectiveSyncOrganizationIds);
+            writer.WriteObjectValue<UntypedNode>("selective_sync_shards", SelectiveSyncShards);
             writer.WriteStringValue("selective_sync_type", SelectiveSyncType);
             writer.WriteBoolValue("sync_object_storage", SyncObjectStorage);
             writer.WriteStringValue("url", Url);

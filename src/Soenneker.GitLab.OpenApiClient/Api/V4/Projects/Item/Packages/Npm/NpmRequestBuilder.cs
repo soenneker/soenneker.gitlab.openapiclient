@@ -3,7 +3,6 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Npm.Item;
-using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Npm.Package;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -11,20 +10,15 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Npm
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\packages\npm
+    /// Builds and executes requests for operations under \api\v4\projects\{id}\packages\npm
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class NpmRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The npm property</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Npm.Npm.NpmRequestBuilder Npm
+        /// <summary>The minus property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Npm.Minus_RequestBuilder Minus
         {
-            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Npm.Npm.NpmRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The package property</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Npm.Package.PackageRequestBuilder Package
-        {
-            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Npm.Package.PackageRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Npm.Minus_RequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.packages.npm.item collection</summary>
         /// <param name="position">Name of the package.</param>
@@ -43,7 +37,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Npm
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public NpmRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/packages/npm", pathParameters)
+        public NpmRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/packages/npm", pathParameters)
         {
         }
         /// <summary>
@@ -51,7 +45,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Npm
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public NpmRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/packages/npm", rawUrl)
+        public NpmRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/packages/npm", rawUrl)
         {
         }
     }

@@ -53,10 +53,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The scopes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationWithSecret_scopes>? Scopes { get; set; }
+        public UntypedNode? Scopes { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationWithSecret_scopes> Scopes { get; set; }
+        public UntypedNode Scopes { get; set; }
 #endif
         /// <summary>The secret property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -105,7 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "confidential", n => { Confidential = n.GetBoolValue(); } },
                 { "granular_scopes", n => { GranularScopes = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGranularScope>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGranularScope.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "id", n => { Id = n.GetLongValue(); } },
-                { "scopes", n => { Scopes = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationWithSecret_scopes>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationWithSecret_scopes.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "scopes", n => { Scopes = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "secret", n => { Secret = n.GetStringValue(); } },
                 { "warnings", n => { Warnings = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
@@ -123,7 +123,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("confidential", Confidential);
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGranularScope>("granular_scopes", GranularScopes);
             writer.WriteLongValue("id", Id);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationWithSecret_scopes>("scopes", Scopes);
+            writer.WriteObjectValue<UntypedNode>("scopes", Scopes);
             writer.WriteStringValue("secret", Secret);
             writer.WriteCollectionOfPrimitiveValues<string>("warnings", Warnings);
             writer.WriteAdditionalData(AdditionalData);

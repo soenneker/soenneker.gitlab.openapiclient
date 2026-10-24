@@ -69,10 +69,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The scopes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesResourceAccessTokenWithToken_scopes>? Scopes { get; set; }
+        public UntypedNode? Scopes { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesResourceAccessTokenWithToken_scopes> Scopes { get; set; }
+        public UntypedNode Scopes { get; set; }
 #endif
         /// <summary>The token property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -123,7 +123,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "resource_id", n => { ResourceId = n.GetIntValue(); } },
                 { "resource_type", n => { ResourceType = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesResourceAccessTokenWithTokenResourceType>(); } },
                 { "revoked", n => { Revoked = n.GetBoolValue(); } },
-                { "scopes", n => { Scopes = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesResourceAccessTokenWithToken_scopes>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesResourceAccessTokenWithToken_scopes.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "scopes", n => { Scopes = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "token", n => { Token = n.GetStringValue(); } },
                 { "user_id", n => { UserId = n.GetLongValue(); } },
             };
@@ -149,7 +149,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("resource_id", ResourceId);
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesResourceAccessTokenWithTokenResourceType>("resource_type", ResourceType);
             writer.WriteBoolValue("revoked", Revoked);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesResourceAccessTokenWithToken_scopes>("scopes", Scopes);
+            writer.WriteObjectValue<UntypedNode>("scopes", Scopes);
             writer.WriteStringValue("token", Token);
             writer.WriteLongValue("user_id", UserId);
             writer.WriteAdditionalData(AdditionalData);

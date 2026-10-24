@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositories.Item.Tags
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\registry\repositories\{repositoryId}\tags
+    /// Builds and executes requests for operations under \api\v4\projects\{id}\registry\repositories\{repositoryId}\tags
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TagsRequestBuilder : BaseRequestBuilder
@@ -35,7 +35,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositor
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TagsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/registry/repositories/{repositoryId}/tags{?keep_n*,name_regex*,name_regex_delete*,name_regex_keep*,older_than*,order_by*,page*,per_page*,sort*}", pathParameters)
+        public TagsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/registry/repositories/{repositoryId}/tags{?keep_n*,name_regex*,name_regex_delete*,name_regex_keep*,older_than*,order_by*,page*,per_page*,sort*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositor
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TagsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/registry/repositories/{repositoryId}/tags{?keep_n*,name_regex*,name_regex_delete*,name_regex_keep*,older_than*,order_by*,page*,per_page*,sort*}", rawUrl)
+        public TagsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/registry/repositories/{repositoryId}/tags{?keep_n*,name_regex*,name_regex_delete*,name_regex_keep*,older_than*,order_by*,page*,per_page*,sort*}", rawUrl)
         {
         }
         /// <summary>

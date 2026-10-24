@@ -17,10 +17,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>JSON query object, or GQL text when enabled for the current user</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OrbitQueryRequestQuery? Query { get; set; }
+        public string? Query { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OrbitQueryRequestQuery Query { get; set; }
+        public string Query { get; set; }
 #endif
         /// <summary>Response format: raw, llm, or gql</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OrbitQueryRequestResponseFormat? ResponseFormat { get; set; }
@@ -57,7 +57,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "query", n => { Query = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OrbitQueryRequestQuery>(global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OrbitQueryRequestQuery.CreateFromDiscriminatorValue); } },
+                { "query", n => { Query = n.GetStringValue(); } },
                 { "response_format", n => { ResponseFormat = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OrbitQueryRequestResponseFormat>(); } },
                 { "source_type", n => { SourceType = n.GetStringValue(); } },
             };
@@ -69,7 +69,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OrbitQueryRequestQuery>("query", Query);
+            writer.WriteStringValue("query", Query);
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OrbitQueryRequestResponseFormat>("response_format", ResponseFormat);
             writer.WriteStringValue("source_type", SourceType);
             writer.WriteAdditionalData(AdditionalData);

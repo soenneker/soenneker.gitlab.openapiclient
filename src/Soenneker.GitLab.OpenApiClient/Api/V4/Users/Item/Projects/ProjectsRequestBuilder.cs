@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Projects
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\users\{-id}\projects
+    /// Builds and executes requests for operations under \api\v4\users\{id}\projects
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ProjectsRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Projects
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ProjectsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/users/{%2Did}/projects{?active*,archived*,custom_attributes*,id_after*,id_before*,imported*,include_hidden*,include_pending_delete*,last_activity_after*,last_activity_before*,marked_for_deletion_on*,membership*,min_access_level*,order_by*,owned*,page*,per_page*,repository_checksum_failed*,repository_storage*,search*,search_namespaces*,simple*,sort*,starred*,statistics*,topic,topic_id*,updated_after*,updated_before*,visibility*,wiki_checksum_failed*,with_custom_attributes*,with_issues_enabled*,with_merge_requests_enabled*,with_programming_language*}", pathParameters)
+        public ProjectsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/users/{id}/projects{?active*,archived*,custom_attributes*,id_after*,id_before*,imported*,include_hidden*,include_pending_delete*,last_activity_after*,last_activity_before*,marked_for_deletion_on*,membership*,min_access_level*,order_by*,owned*,page*,per_page*,repository_checksum_failed*,repository_storage*,search*,search_namespaces*,simple*,sort*,starred*,statistics*,topic,topic_id*,updated_after*,updated_before*,visibility*,wiki_checksum_failed*,with_custom_attributes*,with_issues_enabled*,with_merge_requests_enabled*,with_programming_language*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Projects
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ProjectsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/users/{%2Did}/projects{?active*,archived*,custom_attributes*,id_after*,id_before*,imported*,include_hidden*,include_pending_delete*,last_activity_after*,last_activity_before*,marked_for_deletion_on*,membership*,min_access_level*,order_by*,owned*,page*,per_page*,repository_checksum_failed*,repository_storage*,search*,search_namespaces*,simple*,sort*,starred*,statistics*,topic,topic_id*,updated_after*,updated_before*,visibility*,wiki_checksum_failed*,with_custom_attributes*,with_issues_enabled*,with_merge_requests_enabled*,with_programming_language*}", rawUrl)
+        public ProjectsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/users/{id}/projects{?active*,archived*,custom_attributes*,id_after*,id_before*,imported*,include_hidden*,include_pending_delete*,last_activity_after*,last_activity_before*,marked_for_deletion_on*,membership*,min_access_level*,order_by*,owned*,page*,per_page*,repository_checksum_failed*,repository_storage*,search*,search_namespaces*,simple*,sort*,starred*,statistics*,topic,topic_id*,updated_after*,updated_before*,visibility*,wiki_checksum_failed*,with_custom_attributes*,with_issues_enabled*,with_merge_requests_enabled*,with_programming_language*}", rawUrl)
         {
         }
         /// <summary>

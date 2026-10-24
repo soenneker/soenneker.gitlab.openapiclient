@@ -10,7 +10,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Conan.V1.Files.Item.Item.Item.Item.Item.Package.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\packages\conan\v1\files\{packageName}\{packageVersion}\{packageUsername}\{packageChannel}\{recipeRevision}\package\{conanPackageReference}
+    /// Builds and executes requests for operations under \api\v4\projects\{id}\packages\conan\v1\files\{packageName}\{packageVersion}\{packageUsername}\{packageChannel}\{recipeRevision}\package\{conanPackageReference}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithConanPackageReferenceItemRequestBuilder : BaseRequestBuilder
@@ -32,7 +32,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Conan.V1.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithConanPackageReferenceItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/packages/conan/v1/files/{packageName}/{packageVersion}/{packageUsername}/{packageChannel}/{recipeRevision}/package/{conanPackageReference}", pathParameters)
+        public WithConanPackageReferenceItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/packages/conan/v1/files/{packageName}/{packageVersion}/{packageUsername}/{packageChannel}/{recipeRevision}/package/{conanPackageReference}", pathParameters)
         {
         }
         /// <summary>
@@ -40,7 +40,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Conan.V1.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithConanPackageReferenceItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/packages/conan/v1/files/{packageName}/{packageVersion}/{packageUsername}/{packageChannel}/{recipeRevision}/package/{conanPackageReference}", rawUrl)
+        public WithConanPackageReferenceItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/packages/conan/v1/files/{packageName}/{packageVersion}/{packageUsername}/{packageChannel}/{recipeRevision}/package/{conanPackageReference}", rawUrl)
         {
         }
     }

@@ -20,14 +20,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Ldap_group_links
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.ldap_group_links.item collection</summary>
         /// <param name="position">CN of an LDAP group.</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Ldap_group_links.Item.CnItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Ldap_group_links.Item.CnItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Ldap_group_links.Item.WithCnItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Ldap_group_links.Item.WithCnItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("cn%2Did", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Ldap_group_links.Item.CnItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("cn", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Ldap_group_links.Item.WithCnItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

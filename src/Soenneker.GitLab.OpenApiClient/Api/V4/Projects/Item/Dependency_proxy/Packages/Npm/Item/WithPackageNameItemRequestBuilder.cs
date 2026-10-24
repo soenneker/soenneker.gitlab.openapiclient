@@ -2,7 +2,6 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
-using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Dependency_proxy.Packages.Npm.Item.Item;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -10,29 +9,22 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Dependency_proxy.Packages.Npm.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\dependency_proxy\packages\npm\{packageName}
+    /// Builds and executes requests for operations under \api\v4\projects\{id}\dependency_proxy\packages\npm\{packageName}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithPackageNameItemRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.dependency_proxy.packages.npm.item.item collection</summary>
-        /// <param name="position">Package file name</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Dependency_proxy.Packages.Npm.Item.Item.WithFileNameItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Dependency_proxy.Packages.Npm.Item.Item.WithFileNameItemRequestBuilder this[string position]
+        /// <summary>The minus property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Dependency_proxy.Packages.Npm.Item.Minus_RequestBuilder Minus
         {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("fileName", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Dependency_proxy.Packages.Npm.Item.Item.WithFileNameItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Dependency_proxy.Packages.Npm.Item.Minus_RequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Dependency_proxy.Packages.Npm.Item.WithPackageNameItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithPackageNameItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/dependency_proxy/packages/npm/{packageName}", pathParameters)
+        public WithPackageNameItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/dependency_proxy/packages/npm/{packageName}", pathParameters)
         {
         }
         /// <summary>
@@ -40,7 +32,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Dependency_proxy.P
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithPackageNameItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/dependency_proxy/packages/npm/{packageName}", rawUrl)
+        public WithPackageNameItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/dependency_proxy/packages/npm/{packageName}", rawUrl)
         {
         }
     }

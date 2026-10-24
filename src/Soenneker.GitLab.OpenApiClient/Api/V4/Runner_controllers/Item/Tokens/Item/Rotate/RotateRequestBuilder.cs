@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runner_controllers.Item.Tokens.Item.Rotate
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\runner_controllers\{-id}\tokens\{id}\rotate
+    /// Builds and executes requests for operations under \api\v4\runner_controllers\{runnerControllerId}\tokens\{id}\rotate
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RotateRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runner_controllers.Item.Tokens.I
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RotateRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/runner_controllers/{%2Did}/tokens/{id}/rotate", pathParameters)
+        public RotateRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/runner_controllers/{runnerControllerId}/tokens/{id}/rotate", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runner_controllers.Item.Tokens.I
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RotateRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/runner_controllers/{%2Did}/tokens/{id}/rotate", rawUrl)
+        public RotateRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/runner_controllers/{runnerControllerId}/tokens/{id}/rotate", rawUrl)
         {
         }
         /// <summary>

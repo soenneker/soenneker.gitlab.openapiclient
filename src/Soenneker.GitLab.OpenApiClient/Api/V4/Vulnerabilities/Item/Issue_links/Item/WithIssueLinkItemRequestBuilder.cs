@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Vulnerabilities.Item.Issue_links.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\vulnerabilities\{-id}\issue_links\{issueLinkId}
+    /// Builds and executes requests for operations under \api\v4\vulnerabilities\{id}\issue_links\{issueLinkId}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithIssueLinkItemRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Vulnerabilities.Item.Issue_links
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithIssueLinkItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/vulnerabilities/{%2Did}/issue_links/{issueLinkId}", pathParameters)
+        public WithIssueLinkItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/vulnerabilities/{id}/issue_links/{issueLinkId}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Vulnerabilities.Item.Issue_links
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithIssueLinkItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/vulnerabilities/{%2Did}/issue_links/{issueLinkId}", rawUrl)
+        public WithIssueLinkItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/vulnerabilities/{id}/issue_links/{issueLinkId}", rawUrl)
         {
         }
         /// <summary>

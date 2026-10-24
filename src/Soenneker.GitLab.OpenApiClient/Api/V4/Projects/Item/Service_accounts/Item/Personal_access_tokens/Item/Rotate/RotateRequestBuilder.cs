@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Service_accounts.Item.Personal_access_tokens.Item.Rotate
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\service_accounts\{userId}\personal_access_tokens\{tokenId}\rotate
+    /// Builds and executes requests for operations under \api\v4\projects\{id}\service_accounts\{userId}\personal_access_tokens\{tokenId}\rotate
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RotateRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Service_accounts.I
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RotateRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/service_accounts/{userId}/personal_access_tokens/{tokenId}/rotate", pathParameters)
+        public RotateRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/service_accounts/{userId}/personal_access_tokens/{tokenId}/rotate", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Service_accounts.I
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RotateRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/service_accounts/{userId}/personal_access_tokens/{tokenId}/rotate", rawUrl)
+        public RotateRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/service_accounts/{userId}/personal_access_tokens/{tokenId}/rotate", rawUrl)
         {
         }
         /// <summary>

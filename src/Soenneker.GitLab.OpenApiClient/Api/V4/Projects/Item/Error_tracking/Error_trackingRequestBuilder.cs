@@ -11,7 +11,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Error_tracking
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\error_tracking
+    /// Builds and executes requests for operations under \api\v4\projects\{id}\error_tracking
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Error_trackingRequestBuilder : BaseRequestBuilder
@@ -31,7 +31,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Error_tracking
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Error_trackingRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/error_tracking", pathParameters)
+        public Error_trackingRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/error_tracking", pathParameters)
         {
         }
         /// <summary>
@@ -39,7 +39,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Error_tracking
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Error_trackingRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/error_tracking", rawUrl)
+        public Error_trackingRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/error_tracking", rawUrl)
         {
         }
     }

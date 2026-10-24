@@ -59,10 +59,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The target_access_levels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSystemBroadcastMessage_target_access_levels>? TargetAccessLevels { get; set; }
+        public UntypedNode? TargetAccessLevels { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSystemBroadcastMessage_target_access_levels> TargetAccessLevels { get; set; }
+        public UntypedNode TargetAccessLevels { get; set; }
 #endif
         /// <summary>The target_path property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -114,7 +114,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "id", n => { Id = n.GetLongValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "starts_at", n => { StartsAt = n.GetDateTimeOffsetValue(); } },
-                { "target_access_levels", n => { TargetAccessLevels = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSystemBroadcastMessage_target_access_levels>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSystemBroadcastMessage_target_access_levels.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "target_access_levels", n => { TargetAccessLevels = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "target_path", n => { TargetPath = n.GetStringValue(); } },
                 { "theme", n => { Theme = n.GetStringValue(); } },
             };
@@ -135,7 +135,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteLongValue("id", Id);
             writer.WriteStringValue("message", Message);
             writer.WriteDateTimeOffsetValue("starts_at", StartsAt);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSystemBroadcastMessage_target_access_levels>("target_access_levels", TargetAccessLevels);
+            writer.WriteObjectValue<UntypedNode>("target_access_levels", TargetAccessLevels);
             writer.WriteStringValue("target_path", TargetPath);
             writer.WriteStringValue("theme", Theme);
             writer.WriteAdditionalData(AdditionalData);

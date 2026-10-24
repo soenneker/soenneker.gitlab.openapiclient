@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Contributed_projects
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\users\{-id}\contributed_projects
+    /// Builds and executes requests for operations under \api\v4\users\{id}\contributed_projects
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Contributed_projectsRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Contributed_projects
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Contributed_projectsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/users/{%2Did}/contributed_projects{?order_by*,page*,per_page*,simple*,sort*}", pathParameters)
+        public Contributed_projectsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/users/{id}/contributed_projects{?order_by*,page*,per_page*,simple*,sort*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Contributed_projects
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Contributed_projectsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/users/{%2Did}/contributed_projects{?order_by*,page*,per_page*,simple*,sort*}", rawUrl)
+        public Contributed_projectsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/users/{id}/contributed_projects{?order_by*,page*,per_page*,simple*,sort*}", rawUrl)
         {
         }
         /// <summary>

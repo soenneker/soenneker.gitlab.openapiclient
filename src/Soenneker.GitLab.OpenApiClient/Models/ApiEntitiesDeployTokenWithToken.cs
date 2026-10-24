@@ -33,10 +33,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The scopes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeployTokenWithToken_scopes>? Scopes { get; set; }
+        public UntypedNode? Scopes { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeployTokenWithToken_scopes> Scopes { get; set; }
+        public UntypedNode Scopes { get; set; }
 #endif
         /// <summary>The token property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -84,7 +84,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "id", n => { Id = n.GetLongValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "revoked", n => { Revoked = n.GetBoolValue(); } },
-                { "scopes", n => { Scopes = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeployTokenWithToken_scopes>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeployTokenWithToken_scopes.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "scopes", n => { Scopes = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "token", n => { Token = n.GetStringValue(); } },
                 { "username", n => { Username = n.GetStringValue(); } },
             };
@@ -101,7 +101,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteLongValue("id", Id);
             writer.WriteStringValue("name", Name);
             writer.WriteBoolValue("revoked", Revoked);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeployTokenWithToken_scopes>("scopes", Scopes);
+            writer.WriteObjectValue<UntypedNode>("scopes", Scopes);
             writer.WriteStringValue("token", Token);
             writer.WriteStringValue("username", Username);
             writer.WriteAdditionalData(AdditionalData);

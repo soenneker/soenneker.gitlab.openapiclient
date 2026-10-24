@@ -13,21 +13,21 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\issues
+    /// Builds and executes requests for operations under \api\v4\projects\{id}\issues
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IssuesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.issues.item collection</summary>
         /// <param name="position">Internal ID of the issue.</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.EventableItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.EventableItemRequestBuilder this[int position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.WithEventableItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.WithEventableItemRequestBuilder this[int position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("eventable%2Did", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.EventableItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("eventableId", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.WithEventableItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -35,7 +35,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public IssuesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/issues{?assignee_id*,assignee_username*,author_id*,author_username*,closed_by_id*,confidential*,created_after*,created_before*,cursor*,due_date*,epic_id*,health_status*,iids,in*,issue_type*,iteration_id*,iteration_title*,labels,milestone*,milestone_id*,my_reaction_emoji*,not*,not%5Bassignee_id%5D*,not%5Bassignee_username%5D*,not%5Bauthor_id%5D*,not%5Bauthor_username%5D*,not%5Biids%5D*,not%5Biteration_id%5D*,not%5Biteration_title%5D*,not%5Blabels%5D*,not%5Bmilestone%5D*,not%5Bmilestone_id%5D*,not%5Bweight%5D*,order_by*,page*,per_page*,scope*,search*,sort*,state*,updated_after*,updated_before*,weight*,with_labels_details*}", pathParameters)
+        public IssuesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/issues{?assignee_id*,assignee_username*,author_id*,author_username*,closed_by_id*,confidential*,created_after*,created_before*,cursor*,due_date*,epic_id*,health_status*,iids,in*,issue_type*,iteration_id*,iteration_title*,labels,milestone*,milestone_id*,my_reaction_emoji*,not*,not%5Bassignee_id%5D*,not%5Bassignee_username%5D*,not%5Bauthor_id%5D*,not%5Bauthor_username%5D*,not%5Biids%5D*,not%5Biteration_id%5D*,not%5Biteration_title%5D*,not%5Blabels%5D*,not%5Bmilestone%5D*,not%5Bmilestone_id%5D*,not%5Bweight%5D*,order_by*,page*,per_page*,scope*,search*,sort*,state*,updated_after*,updated_before*,weight*,with_labels_details*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public IssuesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/issues{?assignee_id*,assignee_username*,author_id*,author_username*,closed_by_id*,confidential*,created_after*,created_before*,cursor*,due_date*,epic_id*,health_status*,iids,in*,issue_type*,iteration_id*,iteration_title*,labels,milestone*,milestone_id*,my_reaction_emoji*,not*,not%5Bassignee_id%5D*,not%5Bassignee_username%5D*,not%5Bauthor_id%5D*,not%5Bauthor_username%5D*,not%5Biids%5D*,not%5Biteration_id%5D*,not%5Biteration_title%5D*,not%5Blabels%5D*,not%5Bmilestone%5D*,not%5Bmilestone_id%5D*,not%5Bweight%5D*,order_by*,page*,per_page*,scope*,search*,sort*,state*,updated_after*,updated_before*,weight*,with_labels_details*}", rawUrl)
+        public IssuesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/issues{?assignee_id*,assignee_username*,author_id*,author_username*,closed_by_id*,confidential*,created_after*,created_before*,cursor*,due_date*,epic_id*,health_status*,iids,in*,issue_type*,iteration_id*,iteration_title*,labels,milestone*,milestone_id*,my_reaction_emoji*,not*,not%5Bassignee_id%5D*,not%5Bassignee_username%5D*,not%5Bauthor_id%5D*,not%5Bauthor_username%5D*,not%5Biids%5D*,not%5Biteration_id%5D*,not%5Biteration_title%5D*,not%5Blabels%5D*,not%5Bmilestone%5D*,not%5Bmilestone_id%5D*,not%5Bweight%5D*,order_by*,page*,per_page*,scope*,search*,sort*,state*,updated_after*,updated_before*,weight*,with_labels_details*}", rawUrl)
         {
         }
         /// <summary>

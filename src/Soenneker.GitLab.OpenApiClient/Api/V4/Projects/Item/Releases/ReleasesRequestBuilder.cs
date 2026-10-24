@@ -14,7 +14,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\releases
+    /// Builds and executes requests for operations under \api\v4\projects\{id}\releases
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ReleasesRequestBuilder : BaseRequestBuilder
@@ -41,7 +41,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ReleasesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/releases{?include_html_description*,order_by*,page*,per_page*,sort*,updated_after*,updated_before*}", pathParameters)
+        public ReleasesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/releases{?include_html_description*,order_by*,page*,per_page*,sort*,updated_after*,updated_before*}", pathParameters)
         {
         }
         /// <summary>
@@ -49,7 +49,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ReleasesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/releases{?include_html_description*,order_by*,page*,per_page*,sort*,updated_after*,updated_before*}", rawUrl)
+        public ReleasesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/releases{?include_html_description*,order_by*,page*,per_page*,sort*,updated_after*,updated_before*}", rawUrl)
         {
         }
         /// <summary>

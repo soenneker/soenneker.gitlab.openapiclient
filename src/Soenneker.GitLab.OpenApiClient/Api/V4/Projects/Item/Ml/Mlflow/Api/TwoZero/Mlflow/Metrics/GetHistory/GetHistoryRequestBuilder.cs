@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ml.Mlflow.Api.TwoZero.Mlflow.Metrics.GetHistory
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\ml\mlflow\api\2.0\mlflow\metrics\get-history
+    /// Builds and executes requests for operations under \api\v4\projects\{id}\ml\mlflow\api\2.0\mlflow\metrics\get-history
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GetHistoryRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ml.Mlflow.Api.TwoZ
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public GetHistoryRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/ml/mlflow/api/2.0/mlflow/metrics/get-history?metric_key={metric_key}&run_id={run_id}{&max_results*,page_token*}", pathParameters)
+        public GetHistoryRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/ml/mlflow/api/2.0/mlflow/metrics/get-history?metric_key={metric_key}&run_id={run_id}{&max_results*,page_token*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ml.Mlflow.Api.TwoZ
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public GetHistoryRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/ml/mlflow/api/2.0/mlflow/metrics/get-history?metric_key={metric_key}&run_id={run_id}{&max_results*,page_token*}", rawUrl)
+        public GetHistoryRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/ml/mlflow/api/2.0/mlflow/metrics/get-history?metric_key={metric_key}&run_id={run_id}{&max_results*,page_token*}", rawUrl)
         {
         }
         /// <summary>

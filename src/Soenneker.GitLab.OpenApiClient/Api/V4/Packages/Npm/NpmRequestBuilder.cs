@@ -3,7 +3,6 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Npm.Item;
-using Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Npm.Package;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -16,15 +15,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Npm
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class NpmRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The npm property</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Npm.Npm.NpmRequestBuilder Npm
+        /// <summary>The minus property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Npm.Minus_RequestBuilder Minus
         {
-            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Npm.Npm.NpmRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The package property</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Npm.Package.PackageRequestBuilder Package
-        {
-            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Npm.Package.PackageRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Npm.Minus_RequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.packages.npm.item collection</summary>
         /// <param name="position">Package name</param>

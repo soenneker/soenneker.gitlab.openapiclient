@@ -2,7 +2,6 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
-using Soenneker.GitLab.OpenApiClient.Api.V4.Group.Item.Packages;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -15,10 +14,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Group.Item
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GroupItemRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The packages property</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Group.Item.Packages.PackagesRequestBuilder Packages
+        /// <summary>The minus property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Group.Item.Minus_RequestBuilder Minus
         {
-            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Group.Item.Packages.PackagesRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Group.Item.Minus_RequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Group.Item.GroupItemRequestBuilder"/> and sets the default values.

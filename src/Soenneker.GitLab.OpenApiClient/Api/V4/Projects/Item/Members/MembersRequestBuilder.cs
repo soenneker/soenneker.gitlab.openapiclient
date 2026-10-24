@@ -14,7 +14,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Members
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\members
+    /// Builds and executes requests for operations under \api\v4\projects\{id}\members
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class MembersRequestBuilder : BaseRequestBuilder
@@ -41,7 +41,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Members
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MembersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/members{?page*,per_page*,query*,show_seat_info*,skip_users,user_ids,with_saml_identity*}", pathParameters)
+        public MembersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/members{?page*,per_page*,query*,show_seat_info*,skip_users,user_ids,with_saml_identity*}", pathParameters)
         {
         }
         /// <summary>
@@ -49,7 +49,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Members
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MembersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/members{?page*,per_page*,query*,show_seat_info*,skip_users,user_ids,with_saml_identity*}", rawUrl)
+        public MembersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/members{?page*,per_page*,query*,show_seat_info*,skip_users,user_ids,with_saml_identity*}", rawUrl)
         {
         }
         /// <summary>

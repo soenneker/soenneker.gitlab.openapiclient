@@ -35,10 +35,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Parameters for the JSON-RPC method specified in `method`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4McpRequestParams? Params { get; set; }
+        public UntypedNode? Params { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4McpRequestParams Params { get; set; }
+        public UntypedNode Params { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4McpRequest"/> and sets the default values.
@@ -68,7 +68,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "id", n => { Id = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4McpRequestId>(global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4McpRequestId.CreateFromDiscriminatorValue); } },
                 { "jsonrpc", n => { Jsonrpc = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.Value20Jsonrpc>(); } },
                 { "method", n => { Method = n.GetStringValue(); } },
-                { "params", n => { Params = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4McpRequestParams>(global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4McpRequestParams.CreateFromDiscriminatorValue); } },
+                { "params", n => { Params = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -81,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4McpRequestId>("id", Id);
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.Value20Jsonrpc>("jsonrpc", Jsonrpc);
             writer.WriteStringValue("method", Method);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4McpRequestParams>("params", Params);
+            writer.WriteObjectValue<UntypedNode>("params", Params);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

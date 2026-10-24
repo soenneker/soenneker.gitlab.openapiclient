@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Conan.V1.Conans.Item.Item.Item.Item.Download_urls
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\packages\conan\v1\conans\{packageName}\{packageVersion}\{packageUsername}\{packageChannel}\download_urls
+    /// Builds and executes requests for operations under \api\v4\projects\{id}\packages\conan\v1\conans\{packageName}\{packageVersion}\{packageUsername}\{packageChannel}\download_urls
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Download_urlsRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Conan.V1.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Download_urlsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/packages/conan/v1/conans/{packageName}/{packageVersion}/{packageUsername}/{packageChannel}/download_urls", pathParameters)
+        public Download_urlsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/packages/conan/v1/conans/{packageName}/{packageVersion}/{packageUsername}/{packageChannel}/download_urls", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Conan.V1.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Download_urlsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/packages/conan/v1/conans/{packageName}/{packageVersion}/{packageUsername}/{packageChannel}/download_urls", rawUrl)
+        public Download_urlsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/packages/conan/v1/conans/{packageName}/{packageVersion}/{packageUsername}/{packageChannel}/download_urls", rawUrl)
         {
         }
         /// <summary>

@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Approval_settings
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\approval_settings
+    /// Builds and executes requests for operations under \api\v4\projects\{id}\approval_settings
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Approval_settingsRequestBuilder : BaseRequestBuilder
@@ -28,7 +28,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Approval_settings
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Approval_settingsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/approval_settings{?target_branch*}", pathParameters)
+        public Approval_settingsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/approval_settings{?target_branch*}", pathParameters)
         {
         }
         /// <summary>
@@ -36,7 +36,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Approval_settings
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Approval_settingsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/approval_settings{?target_branch*}", rawUrl)
+        public Approval_settingsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/approval_settings{?target_branch*}", rawUrl)
         {
         }
         /// <summary>

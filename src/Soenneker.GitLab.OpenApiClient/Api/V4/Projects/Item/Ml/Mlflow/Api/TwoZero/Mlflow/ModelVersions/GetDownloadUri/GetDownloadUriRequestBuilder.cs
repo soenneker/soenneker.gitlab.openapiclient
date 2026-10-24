@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ml.Mlflow.Api.TwoZero.Mlflow.ModelVersions.GetDownloadUri
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\ml\mlflow\api\2.0\mlflow\model-versions\get-download-uri
+    /// Builds and executes requests for operations under \api\v4\projects\{id}\ml\mlflow\api\2.0\mlflow\model-versions\get-download-uri
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GetDownloadUriRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ml.Mlflow.Api.TwoZ
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public GetDownloadUriRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/ml/mlflow/api/2.0/mlflow/model-versions/get-download-uri?name={name}&version={version}", pathParameters)
+        public GetDownloadUriRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/ml/mlflow/api/2.0/mlflow/model-versions/get-download-uri?name={name}&version={version}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ml.Mlflow.Api.TwoZ
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public GetDownloadUriRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/ml/mlflow/api/2.0/mlflow/model-versions/get-download-uri?name={name}&version={version}", rawUrl)
+        public GetDownloadUriRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/ml/mlflow/api/2.0/mlflow/model-versions/get-download-uri?name={name}&version={version}", rawUrl)
         {
         }
         /// <summary>

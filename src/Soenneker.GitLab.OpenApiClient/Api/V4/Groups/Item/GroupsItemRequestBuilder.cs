@@ -14,7 +14,6 @@ using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Billable_members;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Boards;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Clusters;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Custom_attributes;
-using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Debian_distributions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Dependency_list_exports;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Dependency_proxy;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Deploy_tokens;
@@ -42,6 +41,7 @@ using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Members;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_request_approval_setting;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Milestones;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.MinusEscaped;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Notification_settings;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Pending_members;
@@ -61,7 +61,6 @@ using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Saml;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Saml_group_links;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Saml_users;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Scim;
-using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Search;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Security_settings;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Service_accounts;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Share;
@@ -144,11 +143,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Custom_attributes.Custom_attributesRequestBuilder Custom_attributes
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Custom_attributes.Custom_attributesRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The debian_distributions property</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Debian_distributions.Debian_distributionsRequestBuilder Debian_distributions
-        {
-            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Debian_distributions.Debian_distributionsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The dependency_list_exports property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Dependency_list_exports.Dependency_list_exportsRequestBuilder Dependency_list_exports
@@ -285,6 +279,16 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Milestones.MilestonesRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The minus property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Minus_RequestBuilder Minus
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Minus_RequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The minusEscaped property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.MinusEscaped.MinusEscapedRequestBuilder MinusEscaped
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.MinusEscaped.MinusEscapedRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The notification_settings property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Notification_settings.Notification_settingsRequestBuilder Notification_settings
         {
@@ -379,11 +383,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Scim.ScimRequestBuilder Scim
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Scim.ScimRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The search property</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Search.SearchRequestBuilder Search
-        {
-            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Search.SearchRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The security_settings property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Security_settings.Security_settingsRequestBuilder Security_settings

@@ -19,10 +19,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The list of found items</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Nodes { get; set; }
+        public List<UntypedNode>? Nodes { get; set; }
 #nullable restore
 #else
-        public UntypedNode Nodes { get; set; }
+        public List<UntypedNode> Nodes { get; set; }
 #endif
         /// <summary>The pageInfo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -58,7 +58,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "count", n => { Count = n.GetIntValue(); } },
-                { "nodes", n => { Nodes = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "nodes", n => { Nodes = n.GetCollectionOfPrimitiveValues<UntypedNode>()?.AsList(); } },
                 { "pageInfo", n => { PageInfo = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGlqlPageInfo>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGlqlPageInfo.CreateFromDiscriminatorValue); } },
             };
         }
@@ -70,7 +70,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("count", Count);
-            writer.WriteObjectValue<UntypedNode>("nodes", Nodes);
+            writer.WriteCollectionOfPrimitiveValues<UntypedNode>("nodes", Nodes);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGlqlPageInfo>("pageInfo", PageInfo);
             writer.WriteAdditionalData(AdditionalData);
         }

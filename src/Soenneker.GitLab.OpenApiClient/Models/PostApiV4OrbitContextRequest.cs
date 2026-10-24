@@ -15,13 +15,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Attach the graph neighborhood of the entity</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OrbitContextRequestExpand? Expand { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OrbitContextRequestExpand Expand { get; set; }
-#endif
+        public bool? Expand { get; set; }
         /// <summary>Response format: raw or llm</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OrbitContextRequestResponseFormat? ResponseFormat { get; set; }
         /// <summary>Exactly one token: Type[id], a GID, an instance URL, path!iid, path#iid, or path&amp;iid (epic)</summary>
@@ -38,6 +32,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public PostApiV4OrbitContextRequest()
         {
             AdditionalData = new Dictionary<string, object>();
+            Expand = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -57,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "expand", n => { Expand = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OrbitContextRequestExpand>(global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OrbitContextRequestExpand.CreateFromDiscriminatorValue); } },
+                { "expand", n => { Expand = n.GetBoolValue(); } },
                 { "response_format", n => { ResponseFormat = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OrbitContextRequestResponseFormat>(); } },
                 { "tokens", n => { Tokens = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
@@ -69,7 +64,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OrbitContextRequestExpand>("expand", Expand);
+            writer.WriteBoolValue("expand", Expand);
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OrbitContextRequestResponseFormat>("response_format", ResponseFormat);
             writer.WriteCollectionOfPrimitiveValues<string>("tokens", Tokens);
             writer.WriteAdditionalData(AdditionalData);

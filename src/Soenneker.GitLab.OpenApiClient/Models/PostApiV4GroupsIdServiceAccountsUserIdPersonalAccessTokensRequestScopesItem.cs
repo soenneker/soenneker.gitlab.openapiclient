@@ -56,6 +56,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         #pragma warning disable CS1591
         WriteRepository,
         #pragma warning restore CS1591
+        [EnumMember(Value = "read_registry")]
+        #pragma warning disable CS1591
+        ReadRegistry,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "write_registry")]
+        #pragma warning disable CS1591
+        WriteRegistry,
+        #pragma warning restore CS1591
         [EnumMember(Value = "read_virtual_registry")]
         #pragma warning disable CS1591
         ReadVirtualRegistry,

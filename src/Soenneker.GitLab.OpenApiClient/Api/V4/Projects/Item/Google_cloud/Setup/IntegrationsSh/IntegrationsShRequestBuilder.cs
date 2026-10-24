@@ -11,7 +11,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup.IntegrationsSh
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\google_cloud\setup\integrations.sh
+    /// Builds and executes requests for operations under \api\v4\projects\{id}\google_cloud\setup\integrations.sh
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IntegrationsShRequestBuilder : BaseRequestBuilder
@@ -21,7 +21,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public IntegrationsShRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/google_cloud/setup/integrations.sh{?enable_google_cloud_artifact_registry*,google_cloud_artifact_registry_project_id*}", pathParameters)
+        public IntegrationsShRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/google_cloud/setup/integrations.sh{?enable_google_cloud_artifact_registry*,google_cloud_artifact_registry_project_id*}", pathParameters)
         {
         }
         /// <summary>
@@ -29,7 +29,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public IntegrationsShRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/google_cloud/setup/integrations.sh{?enable_google_cloud_artifact_registry*,google_cloud_artifact_registry_project_id*}", rawUrl)
+        public IntegrationsShRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/google_cloud/setup/integrations.sh{?enable_google_cloud_artifact_registry*,google_cloud_artifact_registry_project_id*}", rawUrl)
         {
         }
         /// <summary>

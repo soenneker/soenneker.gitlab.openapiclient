@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Iterations
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\iterations
+    /// Builds and executes requests for operations under \api\v4\projects\{id}\iterations
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IterationsRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Iterations
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public IterationsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/iterations{?in*,include_ancestors*,include_descendants*,page*,per_page*,search*,state*,updated_after*,updated_before*}", pathParameters)
+        public IterationsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/iterations{?in*,include_ancestors*,include_descendants*,page*,per_page*,search*,state*,updated_after*,updated_before*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Iterations
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public IterationsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/iterations{?in*,include_ancestors*,include_descendants*,page*,per_page*,search*,state*,updated_after*,updated_before*}", rawUrl)
+        public IterationsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/iterations{?in*,include_ancestors*,include_descendants*,page*,per_page*,search*,state*,updated_after*,updated_before*}", rawUrl)
         {
         }
         /// <summary>

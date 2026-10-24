@@ -14,7 +14,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Access_tokens
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\access_tokens
+    /// Builds and executes requests for operations under \api\v4\projects\{id}\access_tokens
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Access_tokensRequestBuilder : BaseRequestBuilder
@@ -41,7 +41,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Access_tokens
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Access_tokensRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/access_tokens{?created_after*,created_before*,expires_after*,expires_before*,last_used_after*,last_used_before*,revoked*,search*,sort*,state*}", pathParameters)
+        public Access_tokensRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/access_tokens{?created_after*,created_before*,expires_after*,expires_before*,last_used_after*,last_used_before*,revoked*,search*,sort*,state*}", pathParameters)
         {
         }
         /// <summary>
@@ -49,7 +49,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Access_tokens
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Access_tokensRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/access_tokens{?created_after*,created_before*,expires_after*,expires_before*,last_used_after*,last_used_before*,revoked*,search*,sort*,state*}", rawUrl)
+        public Access_tokensRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/access_tokens{?created_after*,created_before*,expires_after*,expires_before*,last_used_after*,last_used_before*,revoked*,search*,sort*,state*}", rawUrl)
         {
         }
         /// <summary>

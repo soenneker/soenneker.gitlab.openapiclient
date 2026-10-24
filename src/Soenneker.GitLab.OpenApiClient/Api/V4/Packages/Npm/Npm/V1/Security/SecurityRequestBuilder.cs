@@ -11,7 +11,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Npm.Npm.V1.Security
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\packages\npm\npm\v1\security
+    /// Builds and executes requests for operations under \api\v4\packages\npm\-\npm\v1\security
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SecurityRequestBuilder : BaseRequestBuilder
@@ -31,7 +31,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Npm.Npm.V1.Security
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SecurityRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/packages/npm/npm/v1/security", pathParameters)
+        public SecurityRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/packages/npm/-/npm/v1/security", pathParameters)
         {
         }
         /// <summary>
@@ -39,7 +39,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Npm.Npm.V1.Security
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SecurityRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/packages/npm/npm/v1/security", rawUrl)
+        public SecurityRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/packages/npm/-/npm/v1/security", rawUrl)
         {
         }
     }

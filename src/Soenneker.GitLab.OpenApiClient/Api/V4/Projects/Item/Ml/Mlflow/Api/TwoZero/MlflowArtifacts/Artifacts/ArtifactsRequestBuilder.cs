@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ml.Mlflow.Api.TwoZero.MlflowArtifacts.Artifacts
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\ml\mlflow\api\2.0\mlflow-artifacts\artifacts
+    /// Builds and executes requests for operations under \api\v4\projects\{id}\ml\mlflow\api\2.0\mlflow-artifacts\artifacts
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ArtifactsRequestBuilder : BaseRequestBuilder
@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ml.Mlflow.Api.TwoZ
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ArtifactsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/ml/mlflow/api/2.0/mlflow-artifacts/artifacts{?path*}", pathParameters)
+        public ArtifactsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/ml/mlflow/api/2.0/mlflow-artifacts/artifacts{?path*}", pathParameters)
         {
         }
         /// <summary>
@@ -42,7 +42,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ml.Mlflow.Api.TwoZ
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ArtifactsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/ml/mlflow/api/2.0/mlflow-artifacts/artifacts{?path*}", rawUrl)
+        public ArtifactsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/ml/mlflow/api/2.0/mlflow-artifacts/artifacts{?path*}", rawUrl)
         {
         }
         /// <summary>

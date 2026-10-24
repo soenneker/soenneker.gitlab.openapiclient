@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Vulnerabilities.Item.Flags.Ai_detection
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\vulnerabilities\{-id}\flags\ai_detection
+    /// Builds and executes requests for operations under \api\v4\vulnerabilities\{id}\flags\ai_detection
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Ai_detectionRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Vulnerabilities.Item.Flags.Ai_de
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Ai_detectionRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/vulnerabilities/{%2Did}/flags/ai_detection", pathParameters)
+        public Ai_detectionRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/vulnerabilities/{id}/flags/ai_detection", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Vulnerabilities.Item.Flags.Ai_de
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Ai_detectionRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/vulnerabilities/{%2Did}/flags/ai_detection", rawUrl)
+        public Ai_detectionRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/vulnerabilities/{id}/flags/ai_detection", rawUrl)
         {
         }
         /// <summary>

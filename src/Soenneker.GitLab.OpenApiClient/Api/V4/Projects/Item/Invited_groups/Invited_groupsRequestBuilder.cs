@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Invited_groups
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\invited_groups
+    /// Builds and executes requests for operations under \api\v4\projects\{id}\invited_groups
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Invited_groupsRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Invited_groups
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Invited_groupsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/invited_groups{?custom_attributes*,min_access_level*,page*,per_page*,relation,search*,with_custom_attributes*}", pathParameters)
+        public Invited_groupsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/invited_groups{?custom_attributes*,min_access_level*,page*,per_page*,relation,search*,with_custom_attributes*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Invited_groups
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Invited_groupsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/invited_groups{?custom_attributes*,min_access_level*,page*,per_page*,relation,search*,with_custom_attributes*}", rawUrl)
+        public Invited_groupsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/invited_groups{?custom_attributes*,min_access_level*,page*,per_page*,relation,search*,with_custom_attributes*}", rawUrl)
         {
         }
         /// <summary>

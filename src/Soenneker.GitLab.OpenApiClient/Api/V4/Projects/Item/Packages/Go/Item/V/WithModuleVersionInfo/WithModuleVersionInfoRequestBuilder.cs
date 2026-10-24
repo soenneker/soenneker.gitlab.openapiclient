@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Go.Item.V.WithModuleVersionInfo
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\packages\go\{moduleName}\@v\{moduleVersion}.info
+    /// Builds and executes requests for operations under \api\v4\projects\{id}\packages\go\{moduleName}\@v\{moduleVersion}.info
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithModuleVersionInfoRequestBuilder : BaseRequestBuilder
@@ -23,7 +23,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Go.Item.V
         /// <param name="moduleVersion">The version of the Go module</param>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithModuleVersionInfoRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter, string moduleVersion = "") : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/packages/go/{moduleName}/@v/{moduleVersion}.info", pathParameters)
+        public WithModuleVersionInfoRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter, string moduleVersion = "") : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/packages/go/{moduleName}/@v/{moduleVersion}.info", pathParameters)
         {
             if (!string.IsNullOrWhiteSpace(moduleVersion)) PathParameters.Add("moduleVersion", moduleVersion);
         }
@@ -32,7 +32,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Go.Item.V
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithModuleVersionInfoRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/packages/go/{moduleName}/@v/{moduleVersion}.info", rawUrl)
+        public WithModuleVersionInfoRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/packages/go/{moduleName}/@v/{moduleVersion}.info", rawUrl)
         {
         }
         /// <summary>

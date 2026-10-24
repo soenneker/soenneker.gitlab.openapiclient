@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Go.Item.V
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\packages\go\{moduleName}\@v
+    /// Builds and executes requests for operations under \api\v4\projects\{id}\packages\go\{moduleName}\@v
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class VRequestBuilder : BaseRequestBuilder
@@ -28,7 +28,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Go.Item.V
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public VRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/packages/go/{moduleName}/@v", pathParameters)
+        public VRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/packages/go/{moduleName}/@v", pathParameters)
         {
         }
         /// <summary>
@@ -36,11 +36,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Go.Item.V
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public VRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/packages/go/{moduleName}/@v", rawUrl)
+        public VRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/packages/go/{moduleName}/@v", rawUrl)
         {
         }
         /// <summary>
-        /// Builds and executes requests for operations under \api\v4\projects\{-id}\packages\go\{moduleName}\@v\{moduleVersion}.info
+        /// Builds and executes requests for operations under \api\v4\projects\{id}\packages\go\{moduleName}\@v\{moduleVersion}.info
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Go.Item.V.WithModuleVersionInfo.WithModuleVersionInfoRequestBuilder"/></returns>
         /// <param name="moduleVersion">The version of the Go module</param>
@@ -50,7 +50,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Go.Item.V
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Go.Item.V.WithModuleVersionInfo.WithModuleVersionInfoRequestBuilder(PathParameters, RequestAdapter, moduleVersion);
         }
         /// <summary>
-        /// Builds and executes requests for operations under \api\v4\projects\{-id}\packages\go\{moduleName}\@v\{moduleVersion}.mod
+        /// Builds and executes requests for operations under \api\v4\projects\{id}\packages\go\{moduleName}\@v\{moduleVersion}.mod
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Go.Item.V.WithModuleVersionMod.WithModuleVersionModRequestBuilder"/></returns>
         /// <param name="moduleVersion">The version of the Go module</param>
@@ -60,7 +60,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Go.Item.V
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Go.Item.V.WithModuleVersionMod.WithModuleVersionModRequestBuilder(PathParameters, RequestAdapter, moduleVersion);
         }
         /// <summary>
-        /// Builds and executes requests for operations under \api\v4\projects\{-id}\packages\go\{moduleName}\@v\{moduleVersion}.zip
+        /// Builds and executes requests for operations under \api\v4\projects\{id}\packages\go\{moduleName}\@v\{moduleVersion}.zip
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Go.Item.V.WithModuleVersionZip.WithModuleVersionZipRequestBuilder"/></returns>
         /// <param name="moduleVersion">The version of the Go module</param>

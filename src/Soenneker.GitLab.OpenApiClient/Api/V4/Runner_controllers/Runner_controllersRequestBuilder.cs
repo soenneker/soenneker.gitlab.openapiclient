@@ -20,14 +20,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runner_controllers
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.runner_controllers.item collection</summary>
         /// <param name="position">ID of the runner controller.</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Runner_controllers.Item.ItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Runner_controllers.Item.ItemRequestBuilder this[int position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Runner_controllers.Item.WithRunnerControllerItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Runner_controllers.Item.WithRunnerControllerItemRequestBuilder this[int position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("%2Did", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Runner_controllers.Item.ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("runnerControllerId", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Runner_controllers.Item.WithRunnerControllerItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

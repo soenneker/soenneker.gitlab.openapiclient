@@ -14,7 +14,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\repository\files\{filePath}
+    /// Builds and executes requests for operations under \api\v4\projects\{id}\repository\files\{filePath}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithFilePathItemRequestBuilder : BaseRequestBuilder
@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.I
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithFilePathItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/repository/files/{filePath}{?author_email*,author_name*,last_commit_id*,start_branch*}", pathParameters)
+        public WithFilePathItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/repository/files/{filePath}{?author_email*,author_name*,last_commit_id*,start_branch*}", pathParameters)
         {
         }
         /// <summary>
@@ -42,7 +42,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.I
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithFilePathItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/repository/files/{filePath}{?author_email*,author_name*,last_commit_id*,start_branch*}", rawUrl)
+        public WithFilePathItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/repository/files/{filePath}{?author_email*,author_name*,last_commit_id*,start_branch*}", rawUrl)
         {
         }
         /// <summary>
@@ -152,7 +152,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.I
         public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.Item.WithFilePathItemRequestBuilder.WithFilePathItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/api/v4/projects/{%2Did}/repository/files/{filePath}?branch={branch}&commit_message={commit_message}{&author_email*,author_name*,last_commit_id*,start_branch*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/api/v4/projects/{id}/repository/files/{filePath}?branch={branch}&commit_message={commit_message}{&author_email*,author_name*,last_commit_id*,start_branch*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             return requestInfo;
         }
@@ -170,7 +170,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.I
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.Item.WithFilePathItemRequestBuilder.WithFilePathItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/api/v4/projects/{%2Did}/repository/files/{filePath}?ref={ref}", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/api/v4/projects/{id}/repository/files/{filePath}?ref={ref}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             return requestInfo;
         }

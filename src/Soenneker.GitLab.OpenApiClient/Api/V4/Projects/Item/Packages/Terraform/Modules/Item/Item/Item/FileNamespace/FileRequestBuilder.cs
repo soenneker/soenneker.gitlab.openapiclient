@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Terraform.Modules.Item.Item.Item.FileNamespace
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\packages\terraform\modules\{moduleName}\{moduleSystem}\{moduleVersion}\file
+    /// Builds and executes requests for operations under \api\v4\projects\{id}\packages\terraform\modules\{moduleName}\{moduleSystem}\{moduleVersion}\file
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FileRequestBuilder : BaseRequestBuilder
@@ -27,7 +27,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Terraform
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public FileRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/packages/terraform/modules/{moduleName}/{moduleSystem}/{moduleVersion}/file", pathParameters)
+        public FileRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/packages/terraform/modules/{moduleName}/{moduleSystem}/{moduleVersion}/file", pathParameters)
         {
         }
         /// <summary>
@@ -35,7 +35,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Terraform
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public FileRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/packages/terraform/modules/{moduleName}/{moduleSystem}/{moduleVersion}/file", rawUrl)
+        public FileRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/packages/terraform/modules/{moduleName}/{moduleSystem}/{moduleVersion}/file", rawUrl)
         {
         }
         /// <summary>

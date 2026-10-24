@@ -19,15 +19,15 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Experiments
     public partial class ExperimentsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.experiments.item collection</summary>
-        /// <param name="position">The experiment name</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Experiments.Item.ExperimentNameItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Experiments.Item.ExperimentNameItemRequestBuilder this[string position]
+        /// <param name="position">Cache key of the experiment to clear.</param>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Experiments.Item.WithNameItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Experiments.Item.WithNameItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("experimentName%2Did", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Experiments.Item.ExperimentNameItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("name", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Experiments.Item.WithNameItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

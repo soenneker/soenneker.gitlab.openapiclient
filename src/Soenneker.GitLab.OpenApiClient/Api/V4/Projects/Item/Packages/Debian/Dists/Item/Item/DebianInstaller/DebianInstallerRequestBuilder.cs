@@ -10,13 +10,13 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Debian.Dists.Item.Item.DebianInstaller
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\packages\debian\dists\{distribution}\{component}\debian-installer
+    /// Builds and executes requests for operations under \api\v4\projects\{id}\packages\debian\dists\{distribution}\{component}\debian-installer
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DebianInstallerRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
-        /// Builds and executes requests for operations under \api\v4\projects\{-id}\packages\debian\dists\{distribution}\{component}\debian-installer\binary-{architecture}
+        /// Builds and executes requests for operations under \api\v4\projects\{id}\packages\debian\dists\{distribution}\{component}\debian-installer\binary-{architecture}
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Debian.Dists.Item.Item.DebianInstaller.BinaryWithArchitecture.BinaryWithArchitectureRequestBuilder"/></returns>
         /// <param name="architecture">The Debian Architecture</param>
@@ -30,7 +30,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Debian.Di
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DebianInstallerRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/packages/debian/dists/{distribution}/{component}/debian-installer", pathParameters)
+        public DebianInstallerRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/packages/debian/dists/{distribution}/{component}/debian-installer", pathParameters)
         {
         }
         /// <summary>
@@ -38,7 +38,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Debian.Di
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DebianInstallerRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/packages/debian/dists/{distribution}/{component}/debian-installer", rawUrl)
+        public DebianInstallerRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/packages/debian/dists/{distribution}/{component}/debian-installer", rawUrl)
         {
         }
     }

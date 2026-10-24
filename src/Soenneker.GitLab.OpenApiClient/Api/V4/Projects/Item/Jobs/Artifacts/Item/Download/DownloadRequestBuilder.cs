@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Artifacts.Item.Download
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\jobs\artifacts\{refName}\download
+    /// Builds and executes requests for operations under \api\v4\projects\{id}\jobs\artifacts\{refName}\download
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DownloadRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Artifacts.Ite
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DownloadRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/jobs/artifacts/{refName}/download?job={job}{&download_mode*,job_token*,search_recent_successful_pipelines*}", pathParameters)
+        public DownloadRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/jobs/artifacts/{refName}/download?job={job}{&download_mode*,job_token*,search_recent_successful_pipelines*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Artifacts.Ite
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DownloadRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/jobs/artifacts/{refName}/download?job={job}{&download_mode*,job_token*,search_recent_successful_pipelines*}", rawUrl)
+        public DownloadRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/jobs/artifacts/{refName}/download?job={job}{&download_mode*,job_token*,search_recent_successful_pipelines*}", rawUrl)
         {
         }
         /// <summary>

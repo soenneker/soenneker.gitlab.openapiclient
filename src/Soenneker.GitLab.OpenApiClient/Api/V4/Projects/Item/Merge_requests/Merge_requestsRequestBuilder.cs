@@ -13,21 +13,21 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\merge_requests
+    /// Builds and executes requests for operations under \api\v4\projects\{id}\merge_requests
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Merge_requestsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.merge_requests.item collection</summary>
         /// <param name="position">Internal ID of the merge request.</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.EventableItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.EventableItemRequestBuilder this[int position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.WithMergeRequestIItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.WithMergeRequestIItemRequestBuilder this[int position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("eventable%2Did", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.EventableItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("mergeRequestIid", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.WithMergeRequestIItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -35,7 +35,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Merge_requestsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/merge_requests{?approved_by_ids*,approved_by_usernames*,approver_ids*,assignee_id*,assignee_username*,author_id*,author_username*,created_after*,created_before*,deployed_after*,deployed_before*,draft*,environment*,iids,in*,labels,merge_user_id*,merge_user_username*,merged_after*,merged_before*,milestone*,my_reaction_emoji*,not*,not%5Bassignee_id%5D*,not%5Bassignee_username%5D*,not%5Bauthor_id%5D*,not%5Bauthor_username%5D*,not%5Blabels%5D*,not%5Bmilestone%5D*,not%5Bmy_reaction_emoji%5D*,not%5Breviewer_id%5D*,not%5Breviewer_username%5D*,order_by*,page*,per_page*,reviewer_id*,reviewer_username*,scope*,search*,sort*,source_branch*,source_project_id*,state*,target_branch*,updated_after*,updated_before*,view*,wip*,with_labels_details*,with_merge_status_recheck*}", pathParameters)
+        public Merge_requestsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/merge_requests{?approved_by_ids*,approved_by_usernames*,approver_ids*,assignee_id*,assignee_username*,author_id*,author_username*,created_after*,created_before*,deployed_after*,deployed_before*,draft*,environment*,iids,in*,labels,merge_user_id*,merge_user_username*,merged_after*,merged_before*,milestone*,my_reaction_emoji*,not*,not%5Bassignee_id%5D*,not%5Bassignee_username%5D*,not%5Bauthor_id%5D*,not%5Bauthor_username%5D*,not%5Blabels%5D*,not%5Bmilestone%5D*,not%5Bmy_reaction_emoji%5D*,not%5Breviewer_id%5D*,not%5Breviewer_username%5D*,order_by*,page*,per_page*,reviewer_id*,reviewer_username*,scope*,search*,sort*,source_branch*,source_project_id*,state*,target_branch*,updated_after*,updated_before*,view*,wip*,with_labels_details*,with_merge_status_recheck*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Merge_requestsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/merge_requests{?approved_by_ids*,approved_by_usernames*,approver_ids*,assignee_id*,assignee_username*,author_id*,author_username*,created_after*,created_before*,deployed_after*,deployed_before*,draft*,environment*,iids,in*,labels,merge_user_id*,merge_user_username*,merged_after*,merged_before*,milestone*,my_reaction_emoji*,not*,not%5Bassignee_id%5D*,not%5Bassignee_username%5D*,not%5Bauthor_id%5D*,not%5Bauthor_username%5D*,not%5Blabels%5D*,not%5Bmilestone%5D*,not%5Bmy_reaction_emoji%5D*,not%5Breviewer_id%5D*,not%5Breviewer_username%5D*,order_by*,page*,per_page*,reviewer_id*,reviewer_username*,scope*,search*,sort*,source_branch*,source_project_id*,state*,target_branch*,updated_after*,updated_before*,view*,wip*,with_labels_details*,with_merge_status_recheck*}", rawUrl)
+        public Merge_requestsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/merge_requests{?approved_by_ids*,approved_by_usernames*,approver_ids*,assignee_id*,assignee_username*,author_id*,author_username*,created_after*,created_before*,deployed_after*,deployed_before*,draft*,environment*,iids,in*,labels,merge_user_id*,merge_user_username*,merged_after*,merged_before*,milestone*,my_reaction_emoji*,not*,not%5Bassignee_id%5D*,not%5Bassignee_username%5D*,not%5Bauthor_id%5D*,not%5Bauthor_username%5D*,not%5Blabels%5D*,not%5Bmilestone%5D*,not%5Bmy_reaction_emoji%5D*,not%5Breviewer_id%5D*,not%5Breviewer_username%5D*,order_by*,page*,per_page*,reviewer_id*,reviewer_username*,scope*,search*,sort*,source_branch*,source_project_id*,state*,target_branch*,updated_after*,updated_before*,view*,wip*,with_labels_details*,with_merge_status_recheck*}", rawUrl)
         {
         }
         /// <summary>

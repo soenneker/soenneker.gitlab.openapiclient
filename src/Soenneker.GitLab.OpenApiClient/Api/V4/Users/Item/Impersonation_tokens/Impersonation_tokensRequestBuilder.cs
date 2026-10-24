@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Impersonation_tokens
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\users\{-id}\impersonation_tokens
+    /// Builds and executes requests for operations under \api\v4\users\{id}\impersonation_tokens
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Impersonation_tokensRequestBuilder : BaseRequestBuilder
@@ -35,7 +35,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Impersonation_tokens
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Impersonation_tokensRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/users/{%2Did}/impersonation_tokens{?created_after*,created_before*,expires_after*,expires_before*,last_used_after*,last_used_before*,page*,per_page*,revoked*,search*,sort*,state*}", pathParameters)
+        public Impersonation_tokensRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/users/{id}/impersonation_tokens{?created_after*,created_before*,expires_after*,expires_before*,last_used_after*,last_used_before*,page*,per_page*,revoked*,search*,sort*,state*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Impersonation_tokens
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Impersonation_tokensRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/users/{%2Did}/impersonation_tokens{?created_after*,created_before*,expires_after*,expires_before*,last_used_after*,last_used_before*,page*,per_page*,revoked*,search*,sort*,state*}", rawUrl)
+        public Impersonation_tokensRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/users/{id}/impersonation_tokens{?created_after*,created_before*,expires_after*,expires_before*,last_used_after*,last_used_before*,page*,per_page*,revoked*,search*,sort*,state*}", rawUrl)
         {
         }
         /// <summary>

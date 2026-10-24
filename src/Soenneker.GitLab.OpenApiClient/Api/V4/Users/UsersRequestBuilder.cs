@@ -20,14 +20,14 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.users.item collection</summary>
         /// <param name="position">ID of the user.</param>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.ItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.ItemRequestBuilder this[int position]
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.UsersItemRequestBuilder"/></returns>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.UsersItemRequestBuilder this[int position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("%2Did", position);
-                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("id", position);
+                return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.UsersItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

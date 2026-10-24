@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Milestones
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\milestones
+    /// Builds and executes requests for operations under \api\v4\projects\{id}\milestones
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class MilestonesRequestBuilder : BaseRequestBuilder
@@ -35,7 +35,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Milestones
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MilestonesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/milestones{?containing_date*,end_date*,iids,include_ancestors*,include_parent_milestones*,page*,per_page*,search*,search_title*,sort*,start_date*,state*,title*,updated_after*,updated_before*}", pathParameters)
+        public MilestonesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/milestones{?containing_date*,end_date*,iids,include_ancestors*,include_parent_milestones*,page*,per_page*,search*,search_title*,sort*,start_date*,state*,title*,updated_after*,updated_before*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Milestones
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MilestonesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/milestones{?containing_date*,end_date*,iids,include_ancestors*,include_parent_milestones*,page*,per_page*,search*,search_title*,sort*,start_date*,state*,title*,updated_after*,updated_before*}", rawUrl)
+        public MilestonesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/milestones{?containing_date*,end_date*,iids,include_ancestors*,include_parent_milestones*,page*,per_page*,search*,search_title*,sort*,start_date*,state*,title*,updated_after*,updated_before*}", rawUrl)
         {
         }
         /// <summary>

@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Debian_distributions
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v4\projects\{-id}\debian_distributions
+    /// Builds and executes requests for operations under \api\v4\projects\{id}\debian_distributions
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Debian_distributionsRequestBuilder : BaseRequestBuilder
@@ -35,7 +35,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Debian_distributio
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Debian_distributionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/debian_distributions{?architectures,codename*,components,description*,label*,origin*,page*,per_page*,suite*,valid_time_duration_seconds*,version*}", pathParameters)
+        public Debian_distributionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/debian_distributions{?architectures,codename*,components,description*,label*,origin*,page*,per_page*,suite*,valid_time_duration_seconds*,version*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Debian_distributio
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Debian_distributionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{%2Did}/debian_distributions{?architectures,codename*,components,description*,label*,origin*,page*,per_page*,suite*,valid_time_duration_seconds*,version*}", rawUrl)
+        public Debian_distributionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/debian_distributions{?architectures,codename*,components,description*,label*,origin*,page*,per_page*,suite*,valid_time_duration_seconds*,version*}", rawUrl)
         {
         }
         /// <summary>

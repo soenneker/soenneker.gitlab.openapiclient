@@ -27,10 +27,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The permissions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGranularScope_permissions>? Permissions { get; set; }
+        public UntypedNode? Permissions { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGranularScope_permissions> Permissions { get; set; }
+        public UntypedNode Permissions { get; set; }
 #endif
         /// <summary>The project_id property</summary>
         public long? ProjectId { get; set; }
@@ -61,7 +61,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             {
                 { "access", n => { Access = n.GetStringValue(); } },
                 { "group_id", n => { GroupId = n.GetLongValue(); } },
-                { "permissions", n => { Permissions = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGranularScope_permissions>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGranularScope_permissions.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "permissions", n => { Permissions = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "project_id", n => { ProjectId = n.GetLongValue(); } },
             };
         }
@@ -74,7 +74,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("access", Access);
             writer.WriteLongValue("group_id", GroupId);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGranularScope_permissions>("permissions", Permissions);
+            writer.WriteObjectValue<UntypedNode>("permissions", Permissions);
             writer.WriteLongValue("project_id", ProjectId);
             writer.WriteAdditionalData(AdditionalData);
         }
