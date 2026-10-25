@@ -766,7 +766,7 @@
           }
         },
         "x-gitlab-tier": "premium",
-        "x-gitlab-lifecycle": "beta"
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/orbit/status": {
@@ -948,7 +948,7 @@
           }
         },
         "x-gitlab-tier": "premium",
-        "x-gitlab-lifecycle": "beta"
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/jobs/{id}/sbom_scans/authorize": {
