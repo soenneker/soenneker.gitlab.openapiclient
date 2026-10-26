@@ -5,7 +5,6 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Pypi.Authorize;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Pypi.Files;
-using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Pypi.Forward;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Pypi.Simple;
 using System.Collections.Generic;
 using System.IO;
@@ -29,11 +28,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Pypi
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Pypi.Files.FilesRequestBuilder Files
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Pypi.Files.FilesRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The forward property</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Pypi.Forward.ForwardRequestBuilder Forward
-        {
-            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Pypi.Forward.ForwardRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The simple property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Pypi.Simple.SimpleRequestBuilder Simple

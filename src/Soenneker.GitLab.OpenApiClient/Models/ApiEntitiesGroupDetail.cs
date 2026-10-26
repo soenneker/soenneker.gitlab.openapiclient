@@ -366,6 +366,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public bool? RequireShaForMerge { get; set; }
         /// <summary>The require_two_factor_authentication property</summary>
         public bool? RequireTwoFactorAuthentication { get; set; }
+        /// <summary>Whether an ancestor group requires all users to set up two-factor authentication. Members of this group must then set it up even when require_two_factor_authentication is false.</summary>
+        public bool? RequireTwoFactorAuthenticationFromAncestor { get; set; }
         /// <summary>The resource_access_token_notify_inherited property</summary>
         public bool? ResourceAccessTokenNotifyInherited { get; set; }
         /// <summary>The root_storage_statistics property</summary>
@@ -610,6 +612,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "request_access_enabled", n => { RequestAccessEnabled = n.GetBoolValue(); } },
                 { "require_sha_for_merge", n => { RequireShaForMerge = n.GetBoolValue(); } },
                 { "require_two_factor_authentication", n => { RequireTwoFactorAuthentication = n.GetBoolValue(); } },
+                { "require_two_factor_authentication_from_ancestor", n => { RequireTwoFactorAuthenticationFromAncestor = n.GetBoolValue(); } },
                 { "resource_access_token_notify_inherited", n => { ResourceAccessTokenNotifyInherited = n.GetBoolValue(); } },
                 { "root_storage_statistics", n => { RootStorageStatistics = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNamespaceRootStorageStatistics>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNamespaceRootStorageStatistics.CreateFromDiscriminatorValue); } },
                 { "runners_token", n => { RunnersToken = n.GetStringValue(); } },
@@ -701,6 +704,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("request_access_enabled", RequestAccessEnabled);
             writer.WriteBoolValue("require_sha_for_merge", RequireShaForMerge);
             writer.WriteBoolValue("require_two_factor_authentication", RequireTwoFactorAuthentication);
+            writer.WriteBoolValue("require_two_factor_authentication_from_ancestor", RequireTwoFactorAuthenticationFromAncestor);
             writer.WriteBoolValue("resource_access_token_notify_inherited", ResourceAccessTokenNotifyInherited);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNamespaceRootStorageStatistics>("root_storage_statistics", RootStorageStatistics);
             writer.WriteStringValue("runners_token", RunnersToken);
