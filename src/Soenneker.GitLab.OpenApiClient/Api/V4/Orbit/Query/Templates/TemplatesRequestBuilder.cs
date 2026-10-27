@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Query.Templates
         {
         }
         /// <summary>
-        /// Lists the server-defined named queries with their query DSL rendered for the current user.
+        /// Lists the server-defined named queries with their GQL text rendered for the current user.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Query.Templates
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Lists the server-defined named queries with their query DSL rendered for the current user.
+        /// Lists the server-defined named queries with their GQL text rendered for the current user.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

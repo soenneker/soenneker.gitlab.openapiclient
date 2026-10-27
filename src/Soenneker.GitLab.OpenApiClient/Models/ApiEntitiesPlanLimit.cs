@@ -62,6 +62,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public int? NpmMaxFileSize { get; set; }
         /// <summary>The nuget_max_file_size property</summary>
         public int? NugetMaxFileSize { get; set; }
+        /// <summary>The organization_hooks property</summary>
+        public int? OrganizationHooks { get; set; }
         /// <summary>The pipeline_hierarchy_size property</summary>
         public int? PipelineHierarchySize { get; set; }
         /// <summary>The pypi_max_file_size property</summary>
@@ -126,6 +128,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "notification_limit", n => { NotificationLimit = n.GetIntValue(); } },
                 { "npm_max_file_size", n => { NpmMaxFileSize = n.GetIntValue(); } },
                 { "nuget_max_file_size", n => { NugetMaxFileSize = n.GetIntValue(); } },
+                { "organization_hooks", n => { OrganizationHooks = n.GetIntValue(); } },
                 { "pipeline_hierarchy_size", n => { PipelineHierarchySize = n.GetIntValue(); } },
                 { "pypi_max_file_size", n => { PypiMaxFileSize = n.GetLongValue(); } },
                 { "service_desk_outbound_emails_per_day", n => { ServiceDeskOutboundEmailsPerDay = n.GetIntValue(); } },
@@ -165,6 +168,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("notification_limit", NotificationLimit);
             writer.WriteIntValue("npm_max_file_size", NpmMaxFileSize);
             writer.WriteIntValue("nuget_max_file_size", NugetMaxFileSize);
+            writer.WriteIntValue("organization_hooks", OrganizationHooks);
             writer.WriteIntValue("pipeline_hierarchy_size", PipelineHierarchySize);
             writer.WriteLongValue("pypi_max_file_size", PypiMaxFileSize);
             writer.WriteIntValue("service_desk_outbound_emails_per_day", ServiceDeskOutboundEmailsPerDay);

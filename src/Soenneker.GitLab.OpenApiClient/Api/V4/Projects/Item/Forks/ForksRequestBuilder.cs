@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Forks
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ForksRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/forks{?active*,archived*,custom_attributes*,id_after*,id_before*,imported*,include_hidden*,include_pending_delete*,last_activity_after*,last_activity_before*,marked_for_deletion_on*,membership*,min_access_level*,order_by*,owned*,page*,per_page*,repository_checksum_failed*,repository_storage*,search*,search_namespaces*,simple*,sort*,starred*,topic,topic_id*,updated_after*,updated_before*,visibility*,wiki_checksum_failed*,with_custom_attributes*,with_issues_enabled*,with_merge_requests_enabled*,with_programming_language*}", pathParameters)
+        public ForksRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/forks{?active*,archived*,custom_attributes*,id_after*,id_before*,imported*,include_hidden*,include_pending_delete*,last_activity_after*,last_activity_before*,marked_for_deletion_on*,membership*,min_access_level*,order_by*,owned*,page*,per_page*,repository_checksum_failed*,repository_storage*,search*,search_namespaces*,simple*,sort*,starred*,statistics*,topic,topic_id*,updated_after*,updated_before*,visibility*,wiki_checksum_failed*,with_custom_attributes*,with_issues_enabled*,with_merge_requests_enabled*,with_programming_language*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Forks
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ForksRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/forks{?active*,archived*,custom_attributes*,id_after*,id_before*,imported*,include_hidden*,include_pending_delete*,last_activity_after*,last_activity_before*,marked_for_deletion_on*,membership*,min_access_level*,order_by*,owned*,page*,per_page*,repository_checksum_failed*,repository_storage*,search*,search_namespaces*,simple*,sort*,starred*,topic,topic_id*,updated_after*,updated_before*,visibility*,wiki_checksum_failed*,with_custom_attributes*,with_issues_enabled*,with_merge_requests_enabled*,with_programming_language*}", rawUrl)
+        public ForksRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/forks{?active*,archived*,custom_attributes*,id_after*,id_before*,imported*,include_hidden*,include_pending_delete*,last_activity_after*,last_activity_before*,marked_for_deletion_on*,membership*,min_access_level*,order_by*,owned*,page*,per_page*,repository_checksum_failed*,repository_storage*,search*,search_namespaces*,simple*,sort*,starred*,statistics*,topic,topic_id*,updated_after*,updated_before*,visibility*,wiki_checksum_failed*,with_custom_attributes*,with_issues_enabled*,with_merge_requests_enabled*,with_programming_language*}", rawUrl)
         {
         }
         /// <summary>
@@ -179,6 +179,9 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Forks
             /// <summary>If `true`, returns only projects starred by the current user.</summary>
             [QueryParameter("starred")]
             public bool? Starred { get; set; }
+            /// <summary>If `true`, includes project statistics. Available only to users with the Reporter, Developer, Maintainer, or Owner role.</summary>
+            [QueryParameter("statistics")]
+            public bool? Statistics { get; set; }
             /// <summary>Comma-separated list of topics. Return projects having all topics.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

@@ -54,6 +54,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public int? NpmMaxFileSize { get; set; }
         /// <summary>Maximum NuGet package file size in bytes.</summary>
         public int? NugetMaxFileSize { get; set; }
+        /// <summary>Maximum number of system hooks per organization, for hooks managed by organization administrators. Set to `0` for unlimited. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/632599) in GitLab 19.6.</summary>
+        public int? OrganizationHooks { get; set; }
         /// <summary>Maximum number of downstream pipelines in a pipeline&apos;s hierarchy tree. The default is `1000`. Higher values are not recommended.</summary>
         public int? PipelineHierarchySize { get; set; }
         /// <summary>Name of the plan to update.</summary>
@@ -119,6 +121,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "notification_limit", n => { NotificationLimit = n.GetIntValue(); } },
                 { "npm_max_file_size", n => { NpmMaxFileSize = n.GetIntValue(); } },
                 { "nuget_max_file_size", n => { NugetMaxFileSize = n.GetIntValue(); } },
+                { "organization_hooks", n => { OrganizationHooks = n.GetIntValue(); } },
                 { "pipeline_hierarchy_size", n => { PipelineHierarchySize = n.GetIntValue(); } },
                 { "plan_name", n => { PlanName = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationPlanLimitsRequestPlanName>(); } },
                 { "pypi_max_file_size", n => { PypiMaxFileSize = n.GetIntValue(); } },
@@ -158,6 +161,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("notification_limit", NotificationLimit);
             writer.WriteIntValue("npm_max_file_size", NpmMaxFileSize);
             writer.WriteIntValue("nuget_max_file_size", NugetMaxFileSize);
+            writer.WriteIntValue("organization_hooks", OrganizationHooks);
             writer.WriteIntValue("pipeline_hierarchy_size", PipelineHierarchySize);
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationPlanLimitsRequestPlanName>("plan_name", PlanName);
             writer.WriteIntValue("pypi_max_file_size", PypiMaxFileSize);

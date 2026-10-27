@@ -18,7 +18,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public bool? Expand { get; set; }
         /// <summary>Response format: raw or llm</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OrbitContextRequestResponseFormat? ResponseFormat { get; set; }
-        /// <summary>Exactly one token: Type[id], a GID, an instance URL, path!iid, path#iid, or path&amp;iid (epic)</summary>
+        /// <summary>Exactly one token: Type[id], a GID, an instance URL, path!iid, path#iid, path&amp;iid (epic), or path@ref (branch or commit)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Tokens { get; set; }

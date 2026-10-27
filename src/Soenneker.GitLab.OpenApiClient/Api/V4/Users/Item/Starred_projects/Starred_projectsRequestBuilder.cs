@@ -22,7 +22,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Starred_projects
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Starred_projectsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/users/{id}/starred_projects{?active*,archived*,id_after*,id_before*,imported*,include_hidden*,include_pending_delete*,last_activity_after*,last_activity_before*,marked_for_deletion_on*,membership*,min_access_level*,order_by*,owned*,page*,per_page*,repository_checksum_failed*,repository_storage*,search*,search_namespaces*,simple*,sort*,starred*,statistics*,topic,topic_id*,updated_after*,updated_before*,visibility*,wiki_checksum_failed*,with_issues_enabled*,with_merge_requests_enabled*,with_programming_language*}", pathParameters)
+        public Starred_projectsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/users/{id}/starred_projects{?active*,archived*,custom_attributes*,id_after*,id_before*,imported*,include_hidden*,include_pending_delete*,last_activity_after*,last_activity_before*,marked_for_deletion_on*,membership*,min_access_level*,order_by*,owned*,page*,per_page*,repository_checksum_failed*,repository_storage*,search*,search_namespaces*,simple*,sort*,starred*,statistics*,topic,topic_id*,updated_after*,updated_before*,visibility*,wiki_checksum_failed*,with_custom_attributes*,with_issues_enabled*,with_merge_requests_enabled*,with_programming_language*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Starred_projects
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Starred_projectsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/users/{id}/starred_projects{?active*,archived*,id_after*,id_before*,imported*,include_hidden*,include_pending_delete*,last_activity_after*,last_activity_before*,marked_for_deletion_on*,membership*,min_access_level*,order_by*,owned*,page*,per_page*,repository_checksum_failed*,repository_storage*,search*,search_namespaces*,simple*,sort*,starred*,statistics*,topic,topic_id*,updated_after*,updated_before*,visibility*,wiki_checksum_failed*,with_issues_enabled*,with_merge_requests_enabled*,with_programming_language*}", rawUrl)
+        public Starred_projectsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/users/{id}/starred_projects{?active*,archived*,custom_attributes*,id_after*,id_before*,imported*,include_hidden*,include_pending_delete*,last_activity_after*,last_activity_before*,marked_for_deletion_on*,membership*,min_access_level*,order_by*,owned*,page*,per_page*,repository_checksum_failed*,repository_storage*,search*,search_namespaces*,simple*,sort*,starred*,statistics*,topic,topic_id*,updated_after*,updated_before*,visibility*,wiki_checksum_failed*,with_custom_attributes*,with_issues_enabled*,with_merge_requests_enabled*,with_programming_language*}", rawUrl)
         {
         }
         /// <summary>
@@ -92,6 +92,16 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Starred_projects
             /// <summary>If `true`, returns only archived projects.</summary>
             [QueryParameter("archived")]
             public bool? Archived { get; set; }
+            /// <summary>Filter by [custom attributes](https://docs.gitlab.com/api/custom_attributes/) that match all of the specified key and value pairs. Administrators only.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("custom_attributes")]
+            public string? CustomAttributes { get; set; }
+#nullable restore
+#else
+            [QueryParameter("custom_attributes")]
+            public string CustomAttributes { get; set; }
+#endif
             /// <summary>Return projects with IDs greater than the specified ID.</summary>
             [QueryParameter("id_after")]
             public int? IdAfter { get; set; }
@@ -197,6 +207,9 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Starred_projects
             /// <summary>If `true`, returns only projects whose wiki checksum calculation failed. Premium and Ultimate only.</summary>
             [QueryParameter("wiki_checksum_failed")]
             public bool? WikiChecksumFailed { get; set; }
+            /// <summary>If `true`, includes [custom attributes](https://docs.gitlab.com/api/custom_attributes/) in the response. Administrators only.</summary>
+            [QueryParameter("with_custom_attributes")]
+            public bool? WithCustomAttributes { get; set; }
             /// <summary>If `true`, returns only projects that have the issues feature enabled.</summary>
             [QueryParameter("with_issues_enabled")]
             public bool? WithIssuesEnabled { get; set; }
