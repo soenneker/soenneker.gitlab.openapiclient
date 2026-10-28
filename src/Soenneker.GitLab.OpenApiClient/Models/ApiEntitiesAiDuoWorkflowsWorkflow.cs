@@ -17,35 +17,23 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The agent_privileges property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AgentPrivileges { get; set; }
+        public List<int?>? AgentPrivileges { get; set; }
 #nullable restore
 #else
-        public string AgentPrivileges { get; set; }
+        public List<int?> AgentPrivileges { get; set; }
 #endif
         /// <summary>The agent_privileges_names property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AgentPrivilegesNames { get; set; }
+        public List<string>? AgentPrivilegesNames { get; set; }
 #nullable restore
 #else
-        public string AgentPrivilegesNames { get; set; }
+        public List<string> AgentPrivilegesNames { get; set; }
 #endif
         /// <summary>The ai_catalog_item_version_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? AiCatalogItemVersionId { get; set; }
-#nullable restore
-#else
-        public string AiCatalogItemVersionId { get; set; }
-#endif
+        public int? AiCatalogItemVersionId { get; set; }
         /// <summary>The allow_agent_to_request_user property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? AllowAgentToRequestUser { get; set; }
-#nullable restore
-#else
-        public string AllowAgentToRequestUser { get; set; }
-#endif
+        public bool? AllowAgentToRequestUser { get; set; }
         /// <summary>The environment property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -63,13 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string GitlabUrl { get; set; }
 #endif
         /// <summary>The id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get; set; }
-#nullable restore
-#else
-        public string Id { get; set; }
-#endif
+        public int? Id { get; set; }
         /// <summary>The image property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -79,53 +61,29 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Image { get; set; }
 #endif
         /// <summary>The incremental_checkpoints_enabled property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? IncrementalCheckpointsEnabled { get; set; }
-#nullable restore
-#else
-        public string IncrementalCheckpointsEnabled { get; set; }
-#endif
+        public bool? IncrementalCheckpointsEnabled { get; set; }
         /// <summary>The mcp_enabled property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? McpEnabled { get; set; }
-#nullable restore
-#else
-        public string McpEnabled { get; set; }
-#endif
+        public bool? McpEnabled { get; set; }
         /// <summary>The namespace_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? NamespaceId { get; set; }
-#nullable restore
-#else
-        public string NamespaceId { get; set; }
-#endif
+        public int? NamespaceId { get; set; }
         /// <summary>The pre_approved_agent_privileges property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PreApprovedAgentPrivileges { get; set; }
+        public List<int?>? PreApprovedAgentPrivileges { get; set; }
 #nullable restore
 #else
-        public string PreApprovedAgentPrivileges { get; set; }
+        public List<int?> PreApprovedAgentPrivileges { get; set; }
 #endif
         /// <summary>The pre_approved_agent_privileges_names property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PreApprovedAgentPrivilegesNames { get; set; }
+        public List<string>? PreApprovedAgentPrivilegesNames { get; set; }
 #nullable restore
 #else
-        public string PreApprovedAgentPrivilegesNames { get; set; }
+        public List<string> PreApprovedAgentPrivilegesNames { get; set; }
 #endif
         /// <summary>The project_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ProjectId { get; set; }
-#nullable restore
-#else
-        public string ProjectId { get; set; }
-#endif
+        public int? ProjectId { get; set; }
         /// <summary>The status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -169,10 +127,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The workload property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Workload { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsWorkflowWorkloadProperty? Workload { get; set; }
 #nullable restore
 #else
-        public string Workload { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsWorkflowWorkloadProperty Workload { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsWorkflow"/> and sets the default values.
@@ -199,26 +157,26 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "agent_privileges", n => { AgentPrivileges = n.GetStringValue(); } },
-                { "agent_privileges_names", n => { AgentPrivilegesNames = n.GetStringValue(); } },
-                { "ai_catalog_item_version_id", n => { AiCatalogItemVersionId = n.GetStringValue(); } },
-                { "allow_agent_to_request_user", n => { AllowAgentToRequestUser = n.GetStringValue(); } },
+                { "agent_privileges", n => { AgentPrivileges = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
+                { "agent_privileges_names", n => { AgentPrivilegesNames = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "ai_catalog_item_version_id", n => { AiCatalogItemVersionId = n.GetIntValue(); } },
+                { "allow_agent_to_request_user", n => { AllowAgentToRequestUser = n.GetBoolValue(); } },
                 { "environment", n => { Environment = n.GetStringValue(); } },
                 { "gitlab_url", n => { GitlabUrl = n.GetStringValue(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
+                { "id", n => { Id = n.GetIntValue(); } },
                 { "image", n => { Image = n.GetStringValue(); } },
-                { "incremental_checkpoints_enabled", n => { IncrementalCheckpointsEnabled = n.GetStringValue(); } },
-                { "mcp_enabled", n => { McpEnabled = n.GetStringValue(); } },
-                { "namespace_id", n => { NamespaceId = n.GetStringValue(); } },
-                { "pre_approved_agent_privileges", n => { PreApprovedAgentPrivileges = n.GetStringValue(); } },
-                { "pre_approved_agent_privileges_names", n => { PreApprovedAgentPrivilegesNames = n.GetStringValue(); } },
-                { "project_id", n => { ProjectId = n.GetStringValue(); } },
+                { "incremental_checkpoints_enabled", n => { IncrementalCheckpointsEnabled = n.GetBoolValue(); } },
+                { "mcp_enabled", n => { McpEnabled = n.GetBoolValue(); } },
+                { "namespace_id", n => { NamespaceId = n.GetIntValue(); } },
+                { "pre_approved_agent_privileges", n => { PreApprovedAgentPrivileges = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
+                { "pre_approved_agent_privileges_names", n => { PreApprovedAgentPrivilegesNames = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "project_id", n => { ProjectId = n.GetIntValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
                 { "summary", n => { Summary = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
                 { "web_url", n => { WebUrl = n.GetStringValue(); } },
                 { "workflow_definition", n => { WorkflowDefinition = n.GetStringValue(); } },
-                { "workload", n => { Workload = n.GetStringValue(); } },
+                { "workload", n => { Workload = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsWorkflowWorkloadProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsWorkflowWorkloadProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -228,26 +186,26 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("agent_privileges", AgentPrivileges);
-            writer.WriteStringValue("agent_privileges_names", AgentPrivilegesNames);
-            writer.WriteStringValue("ai_catalog_item_version_id", AiCatalogItemVersionId);
-            writer.WriteStringValue("allow_agent_to_request_user", AllowAgentToRequestUser);
+            writer.WriteCollectionOfPrimitiveValues<int?>("agent_privileges", AgentPrivileges);
+            writer.WriteCollectionOfPrimitiveValues<string>("agent_privileges_names", AgentPrivilegesNames);
+            writer.WriteIntValue("ai_catalog_item_version_id", AiCatalogItemVersionId);
+            writer.WriteBoolValue("allow_agent_to_request_user", AllowAgentToRequestUser);
             writer.WriteStringValue("environment", Environment);
             writer.WriteStringValue("gitlab_url", GitlabUrl);
-            writer.WriteStringValue("id", Id);
+            writer.WriteIntValue("id", Id);
             writer.WriteStringValue("image", Image);
-            writer.WriteStringValue("incremental_checkpoints_enabled", IncrementalCheckpointsEnabled);
-            writer.WriteStringValue("mcp_enabled", McpEnabled);
-            writer.WriteStringValue("namespace_id", NamespaceId);
-            writer.WriteStringValue("pre_approved_agent_privileges", PreApprovedAgentPrivileges);
-            writer.WriteStringValue("pre_approved_agent_privileges_names", PreApprovedAgentPrivilegesNames);
-            writer.WriteStringValue("project_id", ProjectId);
+            writer.WriteBoolValue("incremental_checkpoints_enabled", IncrementalCheckpointsEnabled);
+            writer.WriteBoolValue("mcp_enabled", McpEnabled);
+            writer.WriteIntValue("namespace_id", NamespaceId);
+            writer.WriteCollectionOfPrimitiveValues<int?>("pre_approved_agent_privileges", PreApprovedAgentPrivileges);
+            writer.WriteCollectionOfPrimitiveValues<string>("pre_approved_agent_privileges_names", PreApprovedAgentPrivilegesNames);
+            writer.WriteIntValue("project_id", ProjectId);
             writer.WriteStringValue("status", Status);
             writer.WriteStringValue("summary", Summary);
             writer.WriteStringValue("title", Title);
             writer.WriteStringValue("web_url", WebUrl);
             writer.WriteStringValue("workflow_definition", WorkflowDefinition);
-            writer.WriteStringValue("workload", Workload);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsWorkflowWorkloadProperty>("workload", Workload);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

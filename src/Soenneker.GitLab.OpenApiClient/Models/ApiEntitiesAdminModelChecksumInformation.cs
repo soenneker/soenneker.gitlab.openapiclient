@@ -31,21 +31,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ChecksumFailure { get; set; }
 #endif
         /// <summary>The checksum_retry_at property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ChecksumRetryAt { get; set; }
-#nullable restore
-#else
-        public string ChecksumRetryAt { get; set; }
-#endif
+        public DateTimeOffset? ChecksumRetryAt { get; set; }
         /// <summary>The checksum_retry_count property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ChecksumRetryCount { get; set; }
-#nullable restore
-#else
-        public string ChecksumRetryCount { get; set; }
-#endif
+        public int? ChecksumRetryCount { get; set; }
         /// <summary>The checksum_state property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -55,13 +43,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ChecksumState { get; set; }
 #endif
         /// <summary>The last_checksum property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? LastChecksum { get; set; }
-#nullable restore
-#else
-        public string LastChecksum { get; set; }
-#endif
+        public DateTimeOffset? LastChecksum { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAdminModelChecksumInformation"/> and sets the default values.
         /// </summary>
@@ -89,10 +71,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             {
                 { "checksum", n => { Checksum = n.GetStringValue(); } },
                 { "checksum_failure", n => { ChecksumFailure = n.GetStringValue(); } },
-                { "checksum_retry_at", n => { ChecksumRetryAt = n.GetStringValue(); } },
-                { "checksum_retry_count", n => { ChecksumRetryCount = n.GetStringValue(); } },
+                { "checksum_retry_at", n => { ChecksumRetryAt = n.GetDateTimeOffsetValue(); } },
+                { "checksum_retry_count", n => { ChecksumRetryCount = n.GetIntValue(); } },
                 { "checksum_state", n => { ChecksumState = n.GetStringValue(); } },
-                { "last_checksum", n => { LastChecksum = n.GetStringValue(); } },
+                { "last_checksum", n => { LastChecksum = n.GetDateTimeOffsetValue(); } },
             };
         }
         /// <summary>
@@ -104,10 +86,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("checksum", Checksum);
             writer.WriteStringValue("checksum_failure", ChecksumFailure);
-            writer.WriteStringValue("checksum_retry_at", ChecksumRetryAt);
-            writer.WriteStringValue("checksum_retry_count", ChecksumRetryCount);
+            writer.WriteDateTimeOffsetValue("checksum_retry_at", ChecksumRetryAt);
+            writer.WriteIntValue("checksum_retry_count", ChecksumRetryCount);
             writer.WriteStringValue("checksum_state", ChecksumState);
-            writer.WriteStringValue("last_checksum", LastChecksum);
+            writer.WriteDateTimeOffsetValue("last_checksum", LastChecksum);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

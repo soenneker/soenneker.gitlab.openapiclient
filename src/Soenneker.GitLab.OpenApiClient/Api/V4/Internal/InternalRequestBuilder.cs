@@ -3,7 +3,6 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Agents;
-using Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitaly;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitlab_subscriptions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Org_mover;
 using System.Collections.Generic;
@@ -22,11 +21,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Internal
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Agents.AgentsRequestBuilder Agents
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Agents.AgentsRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The gitaly property</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitaly.GitalyRequestBuilder Gitaly
-        {
-            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitaly.GitalyRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The gitlab_subscriptions property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Gitlab_subscriptions.Gitlab_subscriptionsRequestBuilder Gitlab_subscriptions

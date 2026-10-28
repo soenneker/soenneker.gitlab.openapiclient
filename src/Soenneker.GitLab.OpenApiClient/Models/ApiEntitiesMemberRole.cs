@@ -48,6 +48,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public bool? ApplySecurityScanProfiles { get; set; }
         /// <summary>The archive_project property</summary>
         public bool? ArchiveProject { get; set; }
+        /// <summary>The archive_subgroup property</summary>
+        public bool? ArchiveSubgroup { get; set; }
         /// <summary>The base_access_level property</summary>
         public int? BaseAccessLevel { get; set; }
         /// <summary>The create_security_scan_profiles property</summary>
@@ -149,6 +151,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             AdminWebHook = false;
             ApplySecurityScanProfiles = false;
             ArchiveProject = false;
+            ArchiveSubgroup = false;
             CreateSecurityScanProfiles = false;
             DeleteSecurityScanProfiles = false;
             DestroyPackage = false;
@@ -213,6 +216,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "admin_web_hook", n => { AdminWebHook = n.GetBoolValue(); } },
                 { "apply_security_scan_profiles", n => { ApplySecurityScanProfiles = n.GetBoolValue(); } },
                 { "archive_project", n => { ArchiveProject = n.GetBoolValue(); } },
+                { "archive_subgroup", n => { ArchiveSubgroup = n.GetBoolValue(); } },
                 { "base_access_level", n => { BaseAccessLevel = n.GetIntValue(); } },
                 { "create_security_scan_profiles", n => { CreateSecurityScanProfiles = n.GetBoolValue(); } },
                 { "delete_security_scan_profiles", n => { DeleteSecurityScanProfiles = n.GetBoolValue(); } },
@@ -272,6 +276,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("admin_web_hook", AdminWebHook);
             writer.WriteBoolValue("apply_security_scan_profiles", ApplySecurityScanProfiles);
             writer.WriteBoolValue("archive_project", ArchiveProject);
+            writer.WriteBoolValue("archive_subgroup", ArchiveSubgroup);
             writer.WriteIntValue("base_access_level", BaseAccessLevel);
             writer.WriteBoolValue("create_security_scan_profiles", CreateSecurityScanProfiles);
             writer.WriteBoolValue("delete_security_scan_profiles", DeleteSecurityScanProfiles);

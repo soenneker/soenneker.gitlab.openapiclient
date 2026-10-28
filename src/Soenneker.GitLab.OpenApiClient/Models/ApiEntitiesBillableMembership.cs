@@ -2,6 +2,7 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
+using Microsoft.Kiota.Abstractions;
 using System.Collections.Generic;
 using System.IO;
 using System;
@@ -23,29 +24,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The created_at property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? CreatedAt { get; set; }
-#nullable restore
-#else
-        public string CreatedAt { get; set; }
-#endif
+        public DateTimeOffset? CreatedAt { get; set; }
         /// <summary>The expires_at property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ExpiresAt { get; set; }
-#nullable restore
-#else
-        public string ExpiresAt { get; set; }
-#endif
+        public Date? ExpiresAt { get; set; }
         /// <summary>The id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get; set; }
-#nullable restore
-#else
-        public string Id { get; set; }
-#endif
+        public int? Id { get; set; }
         /// <summary>The source_full_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -55,13 +38,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string SourceFullName { get; set; }
 #endif
         /// <summary>The source_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? SourceId { get; set; }
-#nullable restore
-#else
-        public string SourceId { get; set; }
-#endif
+        public int? SourceId { get; set; }
         /// <summary>The source_members_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -96,11 +73,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "access_level", n => { AccessLevel = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBillableMembershipAccessLevel>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBillableMembershipAccessLevel.CreateFromDiscriminatorValue); } },
-                { "created_at", n => { CreatedAt = n.GetStringValue(); } },
-                { "expires_at", n => { ExpiresAt = n.GetStringValue(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
+                { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
+                { "expires_at", n => { ExpiresAt = n.GetDateValue(); } },
+                { "id", n => { Id = n.GetIntValue(); } },
                 { "source_full_name", n => { SourceFullName = n.GetStringValue(); } },
-                { "source_id", n => { SourceId = n.GetStringValue(); } },
+                { "source_id", n => { SourceId = n.GetIntValue(); } },
                 { "source_members_url", n => { SourceMembersUrl = n.GetStringValue(); } },
             };
         }
@@ -112,11 +89,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBillableMembershipAccessLevel>("access_level", AccessLevel);
-            writer.WriteStringValue("created_at", CreatedAt);
-            writer.WriteStringValue("expires_at", ExpiresAt);
-            writer.WriteStringValue("id", Id);
+            writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
+            writer.WriteDateValue("expires_at", ExpiresAt);
+            writer.WriteIntValue("id", Id);
             writer.WriteStringValue("source_full_name", SourceFullName);
-            writer.WriteStringValue("source_id", SourceId);
+            writer.WriteIntValue("source_id", SourceId);
             writer.WriteStringValue("source_members_url", SourceMembersUrl);
             writer.WriteAdditionalData(AdditionalData);
         }

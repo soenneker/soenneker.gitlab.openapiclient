@@ -982,6 +982,22 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>If `true`, enables GitLab Duo remote flows for the instance.</summary>
         public bool? DuoRemoteFlowsEnabled { get; set; }
+        /// <summary>The duo_scheduled_triggers_availability property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DuoScheduledTriggersAvailability { get; set; }
+#nullable restore
+#else
+        public string DuoScheduledTriggersAvailability { get; set; }
+#endif
+        /// <summary>The duo_scheduled_triggers_enabled property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DuoScheduledTriggersEnabled { get; set; }
+#nullable restore
+#else
+        public string DuoScheduledTriggersEnabled { get; set; }
+#endif
         /// <summary>ID of the project to use as the Duo Code Review custom instructions template for this instance.</summary>
         public int? DuoTemplateProjectId { get; set; }
         /// <summary>The duo_token_usage_tracking_enabled property</summary>
@@ -2453,6 +2469,20 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #nullable restore
 #else
         public string OrbitDapEnabledByDefault { get; set; }
+#endif
+        /// <summary>Maximum number of GitLab Orbit indexing status requests per minute per user. Default: `30`. Set to `0` to disable the rate limit.</summary>
+        public int? OrbitIndexingStatusLimit { get; set; }
+        /// <summary>Maximum number of GitLab Orbit item count requests per minute per user. Default: `30`. Set to `0` to disable the rate limit.</summary>
+        public int? OrbitItemCountsLimit { get; set; }
+        /// <summary>Maximum number of GitLab Orbit queries per minute per user. Default: `60`. Set to `0` to disable the rate limit.</summary>
+        public int? OrbitQueryLimit { get; set; }
+        /// <summary>Raw newline-, comma-, or whitespace-separated list of usernames excluded from the GitLab Orbit rate limits. Maximum: 100 usernames.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? OrbitRateLimitAllowlistRaw { get; set; }
+#nullable restore
+#else
+        public string OrbitRateLimitAllowlistRaw { get; set; }
 #endif
         /// <summary>The organization_cluster_agent_authorization_enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -4534,6 +4564,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "duo_namespace_access_rules", n => { DuoNamespaceAccessRules = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestDuoNamespaceAccessRulesItem>(global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestDuoNamespaceAccessRulesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "duo_remote_flows_availability", n => { DuoRemoteFlowsAvailability = n.GetStringValue(); } },
                 { "duo_remote_flows_enabled", n => { DuoRemoteFlowsEnabled = n.GetBoolValue(); } },
+                { "duo_scheduled_triggers_availability", n => { DuoScheduledTriggersAvailability = n.GetStringValue(); } },
+                { "duo_scheduled_triggers_enabled", n => { DuoScheduledTriggersEnabled = n.GetStringValue(); } },
                 { "duo_template_project_id", n => { DuoTemplateProjectId = n.GetIntValue(); } },
                 { "duo_token_usage_tracking_enabled", n => { DuoTokenUsageTrackingEnabled = n.GetStringValue(); } },
                 { "duo_workflow_oauth_application_id", n => { DuoWorkflowOauthApplicationId = n.GetStringValue(); } },
@@ -4778,6 +4810,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "offline_transfer_imports_enabled", n => { OfflineTransferImportsEnabled = n.GetStringValue(); } },
                 { "orbit_auto_index_root_namespace", n => { OrbitAutoIndexRootNamespace = n.GetStringValue(); } },
                 { "orbit_dap_enabled_by_default", n => { OrbitDapEnabledByDefault = n.GetStringValue(); } },
+                { "orbit_indexing_status_limit", n => { OrbitIndexingStatusLimit = n.GetIntValue(); } },
+                { "orbit_item_counts_limit", n => { OrbitItemCountsLimit = n.GetIntValue(); } },
+                { "orbit_query_limit", n => { OrbitQueryLimit = n.GetIntValue(); } },
+                { "orbit_rate_limit_allowlist_raw", n => { OrbitRateLimitAllowlistRaw = n.GetStringValue(); } },
                 { "organization_cluster_agent_authorization_enabled", n => { OrganizationClusterAgentAuthorizationEnabled = n.GetStringValue(); } },
                 { "outbound_local_requests_allowlist_raw", n => { OutboundLocalRequestsAllowlistRaw = n.GetStringValue(); } },
                 { "outbound_local_requests_whitelist", n => { OutboundLocalRequestsWhitelist = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -5233,6 +5269,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestDuoNamespaceAccessRulesItem>("duo_namespace_access_rules", DuoNamespaceAccessRules);
             writer.WriteStringValue("duo_remote_flows_availability", DuoRemoteFlowsAvailability);
             writer.WriteBoolValue("duo_remote_flows_enabled", DuoRemoteFlowsEnabled);
+            writer.WriteStringValue("duo_scheduled_triggers_availability", DuoScheduledTriggersAvailability);
+            writer.WriteStringValue("duo_scheduled_triggers_enabled", DuoScheduledTriggersEnabled);
             writer.WriteIntValue("duo_template_project_id", DuoTemplateProjectId);
             writer.WriteStringValue("duo_token_usage_tracking_enabled", DuoTokenUsageTrackingEnabled);
             writer.WriteStringValue("duo_workflow_oauth_application_id", DuoWorkflowOauthApplicationId);
@@ -5477,6 +5515,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("offline_transfer_imports_enabled", OfflineTransferImportsEnabled);
             writer.WriteStringValue("orbit_auto_index_root_namespace", OrbitAutoIndexRootNamespace);
             writer.WriteStringValue("orbit_dap_enabled_by_default", OrbitDapEnabledByDefault);
+            writer.WriteIntValue("orbit_indexing_status_limit", OrbitIndexingStatusLimit);
+            writer.WriteIntValue("orbit_item_counts_limit", OrbitItemCountsLimit);
+            writer.WriteIntValue("orbit_query_limit", OrbitQueryLimit);
+            writer.WriteStringValue("orbit_rate_limit_allowlist_raw", OrbitRateLimitAllowlistRaw);
             writer.WriteStringValue("organization_cluster_agent_authorization_enabled", OrganizationClusterAgentAuthorizationEnabled);
             writer.WriteStringValue("outbound_local_requests_allowlist_raw", OutboundLocalRequestsAllowlistRaw);
             writer.WriteCollectionOfPrimitiveValues<string>("outbound_local_requests_whitelist", OutboundLocalRequestsWhitelist);

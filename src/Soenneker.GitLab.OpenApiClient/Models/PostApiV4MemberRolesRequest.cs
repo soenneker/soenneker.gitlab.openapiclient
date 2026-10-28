@@ -48,6 +48,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public bool? ApplySecurityScanProfiles { get; set; }
         /// <summary>Allows archiving of projects.</summary>
         public bool? ArchiveProject { get; set; }
+        /// <summary>Ability to archive or unarchive a subgroup. This ability does not allow archiving top-level groups. Archiving unlinks projects from their fork networks and closes their open cross-fork merge requests, and unarchiving does not restore either.</summary>
+        public bool? ArchiveSubgroup { get; set; }
         /// <summary>Base access level for the custom role.</summary>
         public int? BaseAccessLevel { get; set; }
         /// <summary>Create security scan profiles.</summary>
@@ -145,6 +147,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             AdminWebHook = false;
             ApplySecurityScanProfiles = false;
             ArchiveProject = false;
+            ArchiveSubgroup = false;
             CreateSecurityScanProfiles = false;
             DeleteSecurityScanProfiles = false;
             DestroyPackage = false;
@@ -209,6 +212,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "admin_web_hook", n => { AdminWebHook = n.GetBoolValue(); } },
                 { "apply_security_scan_profiles", n => { ApplySecurityScanProfiles = n.GetBoolValue(); } },
                 { "archive_project", n => { ArchiveProject = n.GetBoolValue(); } },
+                { "archive_subgroup", n => { ArchiveSubgroup = n.GetBoolValue(); } },
                 { "base_access_level", n => { BaseAccessLevel = n.GetIntValue(); } },
                 { "create_security_scan_profiles", n => { CreateSecurityScanProfiles = n.GetBoolValue(); } },
                 { "delete_security_scan_profiles", n => { DeleteSecurityScanProfiles = n.GetBoolValue(); } },
@@ -266,6 +270,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("admin_web_hook", AdminWebHook);
             writer.WriteBoolValue("apply_security_scan_profiles", ApplySecurityScanProfiles);
             writer.WriteBoolValue("archive_project", ArchiveProject);
+            writer.WriteBoolValue("archive_subgroup", ArchiveSubgroup);
             writer.WriteIntValue("base_access_level", BaseAccessLevel);
             writer.WriteBoolValue("create_security_scan_profiles", CreateSecurityScanProfiles);
             writer.WriteBoolValue("delete_security_scan_profiles", DeleteSecurityScanProfiles);

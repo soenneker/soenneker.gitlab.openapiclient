@@ -4,10 +4,7 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Context;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Query;
-using Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Schema;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Skills;
-using Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Status;
-using Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Tools;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -30,25 +27,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Orbit
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Query.QueryRequestBuilder(PathParameters, RequestAdapter);
         }
-        /// <summary>The schema property</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Schema.SchemaRequestBuilder Schema
-        {
-            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Schema.SchemaRequestBuilder(PathParameters, RequestAdapter);
-        }
         /// <summary>The skills property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Skills.SkillsRequestBuilder Skills
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Skills.SkillsRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The status property</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Status.StatusRequestBuilder Status
-        {
-            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Status.StatusRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The tools property</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Tools.ToolsRequestBuilder Tools
-        {
-            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Tools.ToolsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.OrbitRequestBuilder"/> and sets the default values.

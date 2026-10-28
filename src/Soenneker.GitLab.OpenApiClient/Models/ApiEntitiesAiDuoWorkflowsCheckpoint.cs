@@ -17,10 +17,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The checkpoint property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Checkpoint { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsCheckpointCheckpointProperty? Checkpoint { get; set; }
 #nullable restore
 #else
-        public string Checkpoint { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsCheckpointCheckpointProperty Checkpoint { get; set; }
 #endif
         /// <summary>The checkpoint_ns property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -47,28 +47,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string CompressedCheckpoint { get; set; }
 #endif
         /// <summary>The current_thread property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? CurrentThread { get; set; }
-#nullable restore
-#else
-        public string CurrentThread { get; set; }
-#endif
+        public int? CurrentThread { get; set; }
         /// <summary>The id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get; set; }
-#nullable restore
-#else
-        public string Id { get; set; }
-#endif
+        public int? Id { get; set; }
         /// <summary>The metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Metadata { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsCheckpointMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public string Metadata { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsCheckpointMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>The parent_ts property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -111,13 +99,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "checkpoint", n => { Checkpoint = n.GetStringValue(); } },
+                { "checkpoint", n => { Checkpoint = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsCheckpointCheckpointProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsCheckpointCheckpointProperty.CreateFromDiscriminatorValue); } },
                 { "checkpoint_ns", n => { CheckpointNs = n.GetStringValue(); } },
                 { "checkpoint_writes", n => { CheckpointWrites = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsCheckpointWrite>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsCheckpointWrite.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "compressed_checkpoint", n => { CompressedCheckpoint = n.GetStringValue(); } },
-                { "current_thread", n => { CurrentThread = n.GetStringValue(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
-                { "metadata", n => { Metadata = n.GetStringValue(); } },
+                { "current_thread", n => { CurrentThread = n.GetIntValue(); } },
+                { "id", n => { Id = n.GetIntValue(); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsCheckpointMetadataProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsCheckpointMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "parent_ts", n => { ParentTs = n.GetStringValue(); } },
                 { "thread_ts", n => { ThreadTs = n.GetStringValue(); } },
             };
@@ -129,13 +117,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("checkpoint", Checkpoint);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsCheckpointCheckpointProperty>("checkpoint", Checkpoint);
             writer.WriteStringValue("checkpoint_ns", CheckpointNs);
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsCheckpointWrite>("checkpoint_writes", CheckpointWrites);
             writer.WriteStringValue("compressed_checkpoint", CompressedCheckpoint);
-            writer.WriteStringValue("current_thread", CurrentThread);
-            writer.WriteStringValue("id", Id);
-            writer.WriteStringValue("metadata", Metadata);
+            writer.WriteIntValue("current_thread", CurrentThread);
+            writer.WriteIntValue("id", Id);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsCheckpointMetadataProperty>("metadata", Metadata);
             writer.WriteStringValue("parent_ts", ParentTs);
             writer.WriteStringValue("thread_ts", ThreadTs);
             writer.WriteAdditionalData(AdditionalData);

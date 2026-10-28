@@ -77,7 +77,6 @@ using Soenneker.GitLab.OpenApiClient.Api.V4.Slack;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Snippet_repository_storage_moves;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Snippets;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Suggestions;
-using Soenneker.GitLab.OpenApiClient.Api.V4.Swagger_doc;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Templates;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Todos;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Token_exchange;
@@ -476,11 +475,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Suggestions.SuggestionsRequestBuilder Suggestions
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Suggestions.SuggestionsRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The swagger_doc property</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Swagger_doc.Swagger_docRequestBuilder Swagger_doc
-        {
-            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Swagger_doc.Swagger_docRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The templates property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Templates.TemplatesRequestBuilder Templates

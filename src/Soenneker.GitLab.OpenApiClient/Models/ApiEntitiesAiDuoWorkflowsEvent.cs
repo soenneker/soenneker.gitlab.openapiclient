@@ -39,13 +39,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string EventType { get; set; }
 #endif
         /// <summary>The id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get; set; }
-#nullable restore
-#else
-        public string Id { get; set; }
-#endif
+        public int? Id { get; set; }
         /// <summary>The message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -82,7 +76,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "correlation_id", n => { CorrelationId = n.GetStringValue(); } },
                 { "event_status", n => { EventStatus = n.GetStringValue(); } },
                 { "event_type", n => { EventType = n.GetStringValue(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
+                { "id", n => { Id = n.GetIntValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
             };
         }
@@ -96,7 +90,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("correlation_id", CorrelationId);
             writer.WriteStringValue("event_status", EventStatus);
             writer.WriteStringValue("event_type", EventType);
-            writer.WriteStringValue("id", Id);
+            writer.WriteIntValue("id", Id);
             writer.WriteStringValue("message", Message);
             writer.WriteAdditionalData(AdditionalData);
         }

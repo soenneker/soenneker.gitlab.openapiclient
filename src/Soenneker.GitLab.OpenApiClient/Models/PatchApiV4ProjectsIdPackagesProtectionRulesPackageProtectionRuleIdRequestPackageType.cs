@@ -39,6 +39,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         #pragma warning disable CS1591
         Pypi,
         #pragma warning restore CS1591
+        [EnumMember(Value = "rubygems")]
+        #pragma warning disable CS1591
+        Rubygems,
+        #pragma warning restore CS1591
         [EnumMember(Value = "terraform_module")]
         #pragma warning disable CS1591
         TerraformModule,

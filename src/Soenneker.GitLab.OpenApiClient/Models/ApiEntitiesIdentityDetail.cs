@@ -13,13 +13,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning restore CS1591
     {
         /// <summary>The active property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Active { get; set; }
-#nullable restore
-#else
-        public string Active { get; set; }
-#endif
+        public bool? Active { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The extern_uid property</summary>
@@ -31,13 +25,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ExternUid { get; set; }
 #endif
         /// <summary>The user_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? UserId { get; set; }
-#nullable restore
-#else
-        public string UserId { get; set; }
-#endif
+        public int? UserId { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIdentityDetail"/> and sets the default values.
         /// </summary>
@@ -63,9 +51,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "active", n => { Active = n.GetStringValue(); } },
+                { "active", n => { Active = n.GetBoolValue(); } },
                 { "extern_uid", n => { ExternUid = n.GetStringValue(); } },
-                { "user_id", n => { UserId = n.GetStringValue(); } },
+                { "user_id", n => { UserId = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -75,9 +63,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("active", Active);
+            writer.WriteBoolValue("active", Active);
             writer.WriteStringValue("extern_uid", ExternUid);
-            writer.WriteStringValue("user_id", UserId);
+            writer.WriteIntValue("user_id", UserId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

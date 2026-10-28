@@ -43,10 +43,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The diff_stats property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DiffStats { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAnalyticsCodeReviewMergeRequestDiffStatsProperty? DiffStats { get; set; }
 #nullable restore
 #else
-        public string DiffStats { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAnalyticsCodeReviewMergeRequestDiffStatsProperty DiffStats { get; set; }
 #endif
         /// <summary>The id property</summary>
         public long? Id { get; set; }
@@ -121,7 +121,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "author", n => { Author = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic.CreateFromDiscriminatorValue); } },
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "diff_stats", n => { DiffStats = n.GetStringValue(); } },
+                { "diff_stats", n => { DiffStats = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAnalyticsCodeReviewMergeRequestDiffStatsProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAnalyticsCodeReviewMergeRequestDiffStatsProperty.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetLongValue(); } },
                 { "iid", n => { Iid = n.GetIntValue(); } },
                 { "milestone", n => { Milestone = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMilestone>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMilestone.CreateFromDiscriminatorValue); } },
@@ -145,7 +145,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic>("author", Author);
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
             writer.WriteStringValue("description", Description);
-            writer.WriteStringValue("diff_stats", DiffStats);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAnalyticsCodeReviewMergeRequestDiffStatsProperty>("diff_stats", DiffStats);
             writer.WriteLongValue("id", Id);
             writer.WriteIntValue("iid", Iid);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMilestone>("milestone", Milestone);

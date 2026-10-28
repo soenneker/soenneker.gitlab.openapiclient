@@ -4,7 +4,6 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Query.Item;
-using Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Query.Templates;
 using Soenneker.GitLab.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
@@ -19,11 +18,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Query
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class QueryRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The templates property</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Query.Templates.TemplatesRequestBuilder Templates
-        {
-            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Query.Templates.TemplatesRequestBuilder(PathParameters, RequestAdapter);
-        }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.orbit.query.item collection</summary>
         /// <param name="position">Named query identifier</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Query.Item.WithNameItemRequestBuilder"/></returns>

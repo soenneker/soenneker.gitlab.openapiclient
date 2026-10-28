@@ -2270,78 +2270,6 @@ paths:
               "$ref": "#/components/schemas/postApiV4OrbitContextRequest"
       x-gitlab-tier: premium
       x-gitlab-lifecycle: experiment
-  "/api/v4/orbit/query/templates":
-    get:
-      operationId: getApiV4OrbitQueryTemplates
-      summary: List named query templates
-      description: Lists the server-defined named queries with their GQL text rendered
-        for the current user.
-      tags:
-      - Orbit
-      responses:
-        '200':
-          description: OK
-        '400':
-          description: Bad Request
-      x-gitlab-tier: premium
-      x-gitlab-lifecycle: beta
-  "/api/v4/orbit/schema":
-    get:
-      operationId: getApiV4OrbitSchema
-      summary: Retrieve the schema
-      description: Retrieves the Orbit schema.
-      tags:
-      - Orbit
-      responses:
-        '200':
-          description: OK
-        '400':
-          description: Bad Request
-      parameters:
-      - name: expand
-        required: false
-        description: Comma-separated node names to expand
-        schema:
-          type: string
-          nullable: true
-        in: query
-      - name: response_format
-        required: false
-        description: 'Response format: raw or llm'
-        schema:
-          type: string
-          enum:
-          - raw
-          - llm
-          default: raw
-        in: query
-      x-gitlab-tier: premium
-      x-gitlab-lifecycle: experiment
-  "/api/v4/orbit/status":
-    get:
-      operationId: getApiV4OrbitStatus
-      summary: Retrieve access and cluster health
-      description: Returns whether the user can access Orbit, plus cluster health.
-        Always returns 200, regardless of access.
-      tags:
-      - Orbit
-      responses:
-        '200':
-          description: OK
-        '400':
-          description: Bad Request
-      parameters:
-      - name: response_format
-        required: false
-        description: 'Response format: raw or llm'
-        schema:
-          type: string
-          enum:
-          - raw
-          - llm
-          default: raw
-        in: query
-      x-gitlab-lifecycle: beta
   "/api/v4/orbit/skills":
     get:
       operationId: getApiV4OrbitSkills
@@ -2432,20 +2360,6 @@ paths:
         in: path
         example: references/usage.md
       x-gitlab-lifecycle: beta
-  "/api/v4/orbit/tools":
-    get:
-      operationId: getApiV4OrbitTools
-      summary: List all tools
-      description: Lists all available Orbit operations.
-      tags:
-      - Orbit
-      responses:
-        '200':
-          description: OK
-        '400':
-          description: Bad Request
-      x-gitlab-tier: premium
-      x-gitlab-lifecycle: experiment
   "/api/v4/jobs/{id}/sbom_scans/authorize":
     post:
       operationId: postApiV4JobsIdSbomScansAuthorize
@@ -2952,6 +2866,8 @@ paths:
           description: Unauthorized
         '404':
           description: Not found
+        '429':
+          description: Too many requests
         '503':
           description: Service unavailable
         '400':
@@ -15833,39 +15749,6 @@ paths:
           application/json:
             schema:
               "$ref": "#/components/schemas/postApiV4InternalOrgMoverExitMaintenanceRequest"
-  "/api/v4/internal/gitaly/object_pool_members":
-    get:
-      operationId: getApiV4InternalGitalyObjectPoolMembers
-      summary: List Gitaly object pool members
-      responses:
-        '200':
-          description: OK
-        '400':
-          description: Bad Request
-      parameters:
-      - name: disk_paths
-        required: true
-        description: On-disk paths of the pool repositories. Limited to 500.
-        schema:
-          type: array
-          items:
-            type: string
-          nullable: true
-        in: query
-      - name: storage
-        required: true
-        description: Name of the storage shard.
-        schema:
-          type: string
-          nullable: true
-        in: query
-      - name: upstream_only
-        required: false
-        description: If `true`, returns only the upstream repository.
-        schema:
-          type: boolean
-          default: false
-        in: query
   "/api/v4/projects/{id}/ml/mlflow/api/2.0/mlflow-artifacts/artifacts":
     get:
       operationId: getApiV4ProjectsIdMlMlflowApi20MlflowArtifactsArtifacts
@@ -84405,25 +84288,6 @@ paths:
         schema:
           type: integer
         in: path
-  "/api/v4/usage_data/service_ping":
-    get:
-      operationId: getApiV4UsageDataServicePing
-      summary: Retrieve Service Ping payload
-      description: Retrieves the Service Ping payload from the application cache as
-        JSON. If no cached payload is available, returns an empty response. Requires
-        a personal access token with the `read_service_ping` scope. Introduced in
-        GitLab 16.9.
-      tags:
-      - Usage data
-      responses:
-        '200':
-          description: OK
-        '401':
-          description: 401 Unauthorized
-        '403':
-          description: Forbidden
-        '404':
-          description: Not found
   "/api/v4/usage_data/track_event":
     post:
       operationId: postApiV4UsageDataTrackEvent
@@ -84448,38 +84312,25 @@ paths:
           application/json:
             schema:
               "$ref": "#/components/schemas/postApiV4UsageDataTrackEventRequest"
-  "/api/v4/swagger_doc":
+  "/api/v4/usage_data/service_ping":
     get:
-      operationId: getApiV4SwaggerDoc
-      summary: Swagger compatible API description
+      operationId: getApiV4UsageDataServicePing
+      summary: Retrieve Service Ping payload
+      description: Retrieves the Service Ping payload from the application cache as
+        JSON. If no cached payload is available, returns an empty response. Requires
+        a personal access token with the `read_service_ping` scope. Introduced in
+        GitLab 16.9.
+      tags:
+      - Usage data
       responses:
         '200':
           description: OK
-  "/api/v4/swagger_doc/{name}":
-    get:
-      operationId: getApiV4SwaggerDocName
-      summary: Swagger compatible API description for specific API
-      responses:
-        '200':
-          description: OK
+        '401':
+          description: 401 Unauthorized
+        '403':
+          description: Forbidden
         '404':
-          description: Not Found
-        '400':
-          description: Bad Request
-      parameters:
-      - name: name
-        required: true
-        description: Resource name of mounted API
-        schema:
-          type: string
-        in: path
-      - name: locale
-        required: false
-        description: Locale of API documentation
-        schema:
-          type: string
-          nullable: true
-        in: query
+          description: Not found
 components:
   securitySchemes:
     http:
@@ -84874,22 +84725,30 @@ components:
       type: object
       properties:
         id:
-          type: string
+          type: integer
         web_url:
           type: string
           example: https://gitlab.example.com/group/project/-/automate/agent-sessions/42
         project_id:
-          type: string
+          type: integer
         namespace_id:
-          type: string
+          type: integer
         agent_privileges:
-          type: string
+          type: array
+          items:
+            type: integer
         agent_privileges_names:
-          type: string
+          type: array
+          items:
+            type: string
         pre_approved_agent_privileges:
-          type: string
+          type: array
+          items:
+            type: integer
         pre_approved_agent_privileges_names:
-          type: string
+          type: array
+          items:
+            type: string
         workflow_definition:
           type: string
         status:
@@ -84899,26 +84758,26 @@ components:
         title:
           type: string
         allow_agent_to_request_user:
-          type: string
+          type: boolean
         image:
           type: string
         environment:
           type: string
         ai_catalog_item_version_id:
-          type: string
+          type: integer
         workload:
-          type: string
+          type: object
         mcp_enabled:
-          type: string
+          type: boolean
         incremental_checkpoints_enabled:
-          type: string
+          type: boolean
         gitlab_url:
           type: string
     APIEntitiesAiDuoWorkflowsBasicCheckpoint:
       type: object
       properties:
         id:
-          type: string
+          type: integer
         thread_ts:
           type: string
         parent_ts:
@@ -84929,13 +84788,13 @@ components:
       type: object
       properties:
         id:
-          type: string
+          type: integer
         thread_ts:
           type: string
         task:
           type: string
         idx:
-          type: string
+          type: integer
         channel:
           type: string
         write_type:
@@ -84946,7 +84805,7 @@ components:
       type: object
       properties:
         id:
-          type: string
+          type: integer
         thread_ts:
           type: string
         parent_ts:
@@ -84954,7 +84813,7 @@ components:
         checkpoint_ns:
           type: string
         checkpoint:
-          type: string
+          type: object
         compressed_checkpoint:
           type: string
         checkpoint_writes:
@@ -84962,14 +84821,14 @@ components:
           items:
             "$ref": "#/components/schemas/APIEntitiesAiDuoWorkflowsCheckpointWrite"
         current_thread:
-          type: string
+          type: integer
         metadata:
-          type: string
+          type: object
     APIEntitiesAiDuoWorkflowsEvent:
       type: object
       properties:
         id:
-          type: string
+          type: integer
         correlation_id:
           type: string
         event_type:
@@ -85002,9 +84861,9 @@ components:
         extern_uid:
           type: string
         group_id:
-          type: string
+          type: integer
         active:
-          type: string
+          type: boolean
     APIEntitiesUserPublic:
       type: object
       properties:
@@ -85435,11 +85294,13 @@ components:
       type: object
       properties:
         value:
-          type: string
+          type: integer
         from:
           type: string
+          format: date
         to:
           type: string
+          format: date
     APIEntitiesAnalyticsGroupActivityIssuesCount:
       type: object
       properties:
@@ -85541,7 +85402,7 @@ components:
           description: Review time in hours
           example: 6
         diff_stats:
-          type: string
+          type: object
     DependencyEntityVulnerabilityEntity:
       type: object
       properties:
@@ -87082,9 +86943,9 @@ components:
         extern_uid:
           type: string
         user_id:
-          type: string
+          type: integer
         active:
-          type: string
+          type: boolean
     APIEntitiesMemberRole:
       type: object
       properties:
@@ -87120,6 +86981,9 @@ components:
           type: boolean
           default: false
         archive_project:
+          type: boolean
+          default: false
+        archive_subgroup:
           type: boolean
           default: false
         admin_ai_catalog_item_consumer:
@@ -91599,12 +91463,14 @@ components:
               type: string
             last_checksum:
               type: string
+              format: date-time
             checksum_state:
               type: string
             checksum_retry_count:
-              type: string
+              type: integer
             checksum_retry_at:
               type: string
+              format: date-time
             checksum_failure:
               type: string
     APIEntitiesAdminSecurityPolicySetting:
@@ -94318,6 +94184,10 @@ components:
           type: string
         duo_foundational_flows_availability:
           type: string
+        duo_scheduled_triggers_enabled:
+          type: string
+        duo_scheduled_triggers_availability:
+          type: string
         duo_custom_agents_enabled:
           type: boolean
         duo_custom_agents_availability:
@@ -94385,6 +94255,14 @@ components:
         orbit_auto_index_root_namespace:
           type: string
         orbit_dap_enabled_by_default:
+          type: string
+        orbit_query_limit:
+          type: string
+        orbit_indexing_status_limit:
+          type: string
+        orbit_item_counts_limit:
+          type: string
+        orbit_rate_limit_allowlist_raw:
           type: string
         duo_workflow_oauth_application_id:
           type: string
@@ -99740,26 +99618,28 @@ components:
       type: object
       properties:
         id:
-          type: string
+          type: integer
         source_id:
-          type: string
+          type: integer
         source_full_name:
           type: string
         source_members_url:
           type: string
         created_at:
           type: string
+          format: date-time
         expires_at:
           type: string
+          format: date
         access_level:
           type: object
           properties:
             string_value:
               type: string
             integer_value:
-              type: string
+              type: integer
             custom_role:
-              type: string
+              type: object
     APIEntitiesProjectUpload:
       type: object
       properties:
@@ -106872,6 +106752,13 @@ components:
           type: boolean
           description: Allows archiving of projects.
           default: false
+        archive_subgroup:
+          type: boolean
+          description: Ability to archive or unarchive a subgroup. This ability does
+            not allow archiving top-level groups. Archiving unlinks projects from
+            their fork networks and closes their open cross-fork merge requests, and
+            unarchiving does not restore either.
+          default: false
         admin_ai_catalog_item_consumer:
           type: boolean
           description: Enable, disable, and configure custom agents and flows from
@@ -107113,6 +107000,13 @@ components:
         archive_project:
           type: boolean
           description: Allows archiving of projects.
+          default: false
+        archive_subgroup:
+          type: boolean
+          description: Ability to archive or unarchive a subgroup. This ability does
+            not allow archiving top-level groups. Archiving unlinks projects from
+            their fork networks and closes their open cross-fork merge requests, and
+            unarchiving does not restore either.
           default: false
         admin_ai_catalog_item_consumer:
           type: boolean
@@ -113128,6 +113022,26 @@ components:
           description: Maximum number of requests per minute per user per group to
             the group audit events API.
           nullable: true
+        orbit_query_limit:
+          type: integer
+          description: 'Maximum number of GitLab Orbit queries per minute per user.
+            Default: `60`. Set to `0` to disable the rate limit.'
+          nullable: true
+        orbit_indexing_status_limit:
+          type: integer
+          description: 'Maximum number of GitLab Orbit indexing status requests per
+            minute per user. Default: `30`. Set to `0` to disable the rate limit.'
+          nullable: true
+        orbit_item_counts_limit:
+          type: integer
+          description: 'Maximum number of GitLab Orbit item count requests per minute
+            per user. Default: `30`. Set to `0` to disable the rate limit.'
+          nullable: true
+        orbit_rate_limit_allowlist_raw:
+          type: string
+          description: 'Raw newline-, comma-, or whitespace-separated list of usernames
+            excluded from the GitLab Orbit rate limits. Maximum: 100 usernames.'
+          nullable: true
         group_owners_can_manage_default_branch_protection:
           type: boolean
           description: If `true`, allows group owners to manage default branch protection
@@ -114038,6 +113952,12 @@ components:
           type: string
           nullable: true
         duo_foundational_flows_availability:
+          type: string
+          nullable: true
+        duo_scheduled_triggers_enabled:
+          type: string
+          nullable: true
+        duo_scheduled_triggers_availability:
           type: string
           nullable: true
         duo_custom_agents_availability:
@@ -119690,6 +119610,7 @@ components:
           - npm
           - nuget
           - pypi
+          - rubygems
           - terraform_module
           description: Package type protected by the protection rule, for example
             `npm`.
@@ -119740,6 +119661,7 @@ components:
           - npm
           - nuget
           - pypi
+          - rubygems
           - terraform_module
           description: Package type protected by the protection rule, for example
             `npm`.

@@ -31,21 +31,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Data { get; set; }
 #endif
         /// <summary>The id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get; set; }
-#nullable restore
-#else
-        public string Id { get; set; }
-#endif
+        public int? Id { get; set; }
         /// <summary>The idx property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Idx { get; set; }
-#nullable restore
-#else
-        public string Idx { get; set; }
-#endif
+        public int? Idx { get; set; }
         /// <summary>The task property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -97,8 +85,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             {
                 { "channel", n => { Channel = n.GetStringValue(); } },
                 { "data", n => { Data = n.GetStringValue(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
-                { "idx", n => { Idx = n.GetStringValue(); } },
+                { "id", n => { Id = n.GetIntValue(); } },
+                { "idx", n => { Idx = n.GetIntValue(); } },
                 { "task", n => { Task = n.GetStringValue(); } },
                 { "thread_ts", n => { ThreadTs = n.GetStringValue(); } },
                 { "write_type", n => { WriteType = n.GetStringValue(); } },
@@ -113,8 +101,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("channel", Channel);
             writer.WriteStringValue("data", Data);
-            writer.WriteStringValue("id", Id);
-            writer.WriteStringValue("idx", Idx);
+            writer.WriteIntValue("id", Id);
+            writer.WriteIntValue("idx", Idx);
             writer.WriteStringValue("task", Task);
             writer.WriteStringValue("thread_ts", ThreadTs);
             writer.WriteStringValue("write_type", WriteType);

@@ -17,19 +17,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The custom_role property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomRole { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBillableMembershipAccessLevelCustomRoleProperty? CustomRole { get; set; }
 #nullable restore
 #else
-        public string CustomRole { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBillableMembershipAccessLevelCustomRoleProperty CustomRole { get; set; }
 #endif
         /// <summary>The integer_value property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? IntegerValue { get; set; }
-#nullable restore
-#else
-        public string IntegerValue { get; set; }
-#endif
+        public int? IntegerValue { get; set; }
         /// <summary>The string_value property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -63,8 +57,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "custom_role", n => { CustomRole = n.GetStringValue(); } },
-                { "integer_value", n => { IntegerValue = n.GetStringValue(); } },
+                { "custom_role", n => { CustomRole = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBillableMembershipAccessLevelCustomRoleProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBillableMembershipAccessLevelCustomRoleProperty.CreateFromDiscriminatorValue); } },
+                { "integer_value", n => { IntegerValue = n.GetIntValue(); } },
                 { "string_value", n => { StringValue = n.GetStringValue(); } },
             };
         }
@@ -75,8 +69,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("custom_role", CustomRole);
-            writer.WriteStringValue("integer_value", IntegerValue);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBillableMembershipAccessLevelCustomRoleProperty>("custom_role", CustomRole);
+            writer.WriteIntValue("integer_value", IntegerValue);
             writer.WriteStringValue("string_value", StringValue);
             writer.WriteAdditionalData(AdditionalData);
         }

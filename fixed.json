@@ -710,94 +710,6 @@
         "x-gitlab-lifecycle": "experiment"
       }
     },
-    "/api/v4/orbit/query/templates": {
-      "get": {
-        "tags": [
-          "Orbit"
-        ],
-        "summary": "List named query templates",
-        "description": "Lists the server-defined named queries with their GQL text rendered for the current user.",
-        "operationId": "GetApiV4OrbitQueryTemplates",
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
-          }
-        },
-        "x-gitlab-tier": "premium",
-        "x-gitlab-lifecycle": "beta"
-      }
-    },
-    "/api/v4/orbit/schema": {
-      "get": {
-        "tags": [
-          "Orbit"
-        ],
-        "summary": "Retrieve the schema",
-        "description": "Retrieves the Orbit schema.",
-        "operationId": "GetApiV4OrbitSchema",
-        "parameters": [
-          {
-            "name": "expand",
-            "in": "query",
-            "description": "Comma-separated node names to expand",
-            "schema": {
-              "type": "string",
-              "nullable": true
-            }
-          },
-          {
-            "name": "response_format",
-            "in": "query",
-            "description": "Response format: raw or llm",
-            "schema": {
-              "$ref": "#/components/schemas/GetApiV4OrbitSchemaResponseFormatParameter"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
-          }
-        },
-        "x-gitlab-tier": "premium",
-        "x-gitlab-lifecycle": "experiment"
-      }
-    },
-    "/api/v4/orbit/status": {
-      "get": {
-        "tags": [
-          "Orbit"
-        ],
-        "summary": "Retrieve access and cluster health",
-        "description": "Returns whether the user can access Orbit, plus cluster health. Always returns 200, regardless of access.",
-        "operationId": "GetApiV4OrbitStatus",
-        "parameters": [
-          {
-            "name": "response_format",
-            "in": "query",
-            "description": "Response format: raw or llm",
-            "schema": {
-              "$ref": "#/components/schemas/GetApiV4OrbitStatusResponseFormatParameter"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
-          }
-        },
-        "x-gitlab-lifecycle": "beta"
-      }
-    },
     "/api/v4/orbit/skills": {
       "get": {
         "tags": [
@@ -929,26 +841,6 @@
           }
         },
         "x-gitlab-lifecycle": "beta"
-      }
-    },
-    "/api/v4/orbit/tools": {
-      "get": {
-        "tags": [
-          "Orbit"
-        ],
-        "summary": "List all tools",
-        "description": "Lists all available Orbit operations.",
-        "operationId": "GetApiV4OrbitTools",
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
-          }
-        },
-        "x-gitlab-tier": "premium",
-        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/jobs/{id}/sbom_scans/authorize": {
@@ -1656,6 +1548,9 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "429": {
+            "description": "Too many requests"
           },
           "503": {
             "description": "Service unavailable"
@@ -20193,54 +20088,6 @@
           },
           "422": {
             "description": "Unprocessable entity"
-          },
-          "400": {
-            "description": "Bad Request"
-          }
-        }
-      }
-    },
-    "/api/v4/internal/gitaly/object_pool_members": {
-      "get": {
-        "summary": "List Gitaly object pool members",
-        "operationId": "GetApiV4InternalGitalyObjectPoolMembers",
-        "parameters": [
-          {
-            "name": "disk_paths",
-            "in": "query",
-            "description": "On-disk paths of the pool repositories. Limited to 500.",
-            "required": true,
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              },
-              "nullable": true
-            }
-          },
-          {
-            "name": "storage",
-            "in": "query",
-            "description": "Name of the storage shard.",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "nullable": true
-            }
-          },
-          {
-            "name": "upstream_only",
-            "in": "query",
-            "description": "If \u0060true\u0060, returns only the upstream repository.",
-            "schema": {
-              "type": "boolean",
-              "default": false
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
           },
           "400": {
             "description": "Bad Request"
@@ -118480,30 +118327,6 @@
         }
       }
     },
-    "/api/v4/usage_data/service_ping": {
-      "get": {
-        "tags": [
-          "Usage data"
-        ],
-        "summary": "Retrieve Service Ping payload",
-        "description": "Retrieves the Service Ping payload from the application cache as JSON. If no cached payload is available, returns an empty response. Requires a personal access token with the \u0060read_service_ping\u0060 scope. Introduced in GitLab 16.9.",
-        "operationId": "GetApiV4UsageDataServicePing",
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "401": {
-            "description": "401 Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not found"
-          }
-        }
-      }
-    },
     "/api/v4/usage_data/track_event": {
       "post": {
         "tags": [
@@ -118538,50 +118361,26 @@
         }
       }
     },
-    "/api/v4/swagger_doc": {
+    "/api/v4/usage_data/service_ping": {
       "get": {
-        "summary": "Swagger compatible API description",
-        "operationId": "GetApiV4SwaggerDoc",
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/v4/swagger_doc/{name}": {
-      "get": {
-        "summary": "Swagger compatible API description for specific API",
-        "operationId": "GetApiV4SwaggerDocName",
-        "parameters": [
-          {
-            "name": "name",
-            "in": "path",
-            "description": "Resource name of mounted API",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "locale",
-            "in": "query",
-            "description": "Locale of API documentation",
-            "schema": {
-              "type": "string",
-              "nullable": true
-            }
-          }
+        "tags": [
+          "Usage data"
         ],
+        "summary": "Retrieve Service Ping payload",
+        "description": "Retrieves the Service Ping payload from the application cache as JSON. If no cached payload is available, returns an empty response. Requires a personal access token with the \u0060read_service_ping\u0060 scope. Introduced in GitLab 16.9.",
+        "operationId": "GetApiV4UsageDataServicePing",
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "401": {
+            "description": "401 Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
           },
           "404": {
-            "description": "Not Found"
-          },
-          "400": {
-            "description": "Bad Request"
+            "description": "Not found"
           }
         }
       }
@@ -119044,29 +118843,41 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer"
           },
           "web_url": {
             "type": "string",
             "example": "https://gitlab.example.com/group/project/-/automate/agent-sessions/42"
           },
           "project_id": {
-            "type": "string"
+            "type": "integer"
           },
           "namespace_id": {
-            "type": "string"
+            "type": "integer"
           },
           "agent_privileges": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
           },
           "agent_privileges_names": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "pre_approved_agent_privileges": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
           },
           "pre_approved_agent_privileges_names": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "workflow_definition": {
             "type": "string"
@@ -119081,7 +118892,7 @@
             "type": "string"
           },
           "allow_agent_to_request_user": {
-            "type": "string"
+            "type": "boolean"
           },
           "image": {
             "type": "string"
@@ -119090,16 +118901,16 @@
             "type": "string"
           },
           "ai_catalog_item_version_id": {
-            "type": "string"
+            "type": "integer"
           },
           "workload": {
-            "type": "string"
+            "$ref": "#/components/schemas/ApiEntitiesAiDuoWorkflowsWorkflowWorkloadProperty"
           },
           "mcp_enabled": {
-            "type": "string"
+            "type": "boolean"
           },
           "incremental_checkpoints_enabled": {
-            "type": "string"
+            "type": "boolean"
           },
           "gitlab_url": {
             "type": "string"
@@ -119110,7 +118921,7 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer"
           },
           "thread_ts": {
             "type": "string"
@@ -119127,7 +118938,7 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer"
           },
           "thread_ts": {
             "type": "string"
@@ -119136,7 +118947,7 @@
             "type": "string"
           },
           "idx": {
-            "type": "string"
+            "type": "integer"
           },
           "channel": {
             "type": "string"
@@ -119153,7 +118964,7 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer"
           },
           "thread_ts": {
             "type": "string"
@@ -119165,7 +118976,7 @@
             "type": "string"
           },
           "checkpoint": {
-            "type": "string"
+            "$ref": "#/components/schemas/ApiEntitiesAiDuoWorkflowsCheckpointCheckpointProperty"
           },
           "compressed_checkpoint": {
             "type": "string"
@@ -119177,10 +118988,10 @@
             }
           },
           "current_thread": {
-            "type": "string"
+            "type": "integer"
           },
           "metadata": {
-            "type": "string"
+            "$ref": "#/components/schemas/ApiEntitiesAiDuoWorkflowsCheckpointMetadataProperty"
           }
         }
       },
@@ -119188,7 +118999,7 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer"
           },
           "correlation_id": {
             "type": "string"
@@ -119238,10 +119049,10 @@
             "type": "string"
           },
           "group_id": {
-            "type": "string"
+            "type": "integer"
           },
           "active": {
-            "type": "string"
+            "type": "boolean"
           }
         }
       },
@@ -119835,13 +119646,15 @@
         "type": "object",
         "properties": {
           "value": {
-            "type": "string"
+            "type": "integer"
           },
           "from": {
-            "type": "string"
+            "type": "string",
+            "format": "date"
           },
           "to": {
-            "type": "string"
+            "type": "string",
+            "format": "date"
           }
         }
       },
@@ -119984,7 +119797,7 @@
             "example": 6
           },
           "diff_stats": {
-            "type": "string"
+            "$ref": "#/components/schemas/ApiEntitiesAnalyticsCodeReviewMergeRequestDiffStatsProperty"
           }
         }
       },
@@ -122097,10 +121910,10 @@
             "type": "string"
           },
           "user_id": {
-            "type": "string"
+            "type": "integer"
           },
           "active": {
-            "type": "string"
+            "type": "boolean"
           }
         }
       },
@@ -122137,6 +121950,10 @@
             "default": false
           },
           "archive_project": {
+            "type": "boolean",
+            "default": false
+          },
+          "archive_subgroup": {
             "type": "boolean",
             "default": false
           },
@@ -132300,6 +132117,12 @@
           "duo_foundational_flows_availability": {
             "type": "string"
           },
+          "duo_scheduled_triggers_enabled": {
+            "type": "string"
+          },
+          "duo_scheduled_triggers_availability": {
+            "type": "string"
+          },
           "duo_custom_agents_enabled": {
             "type": "boolean"
           },
@@ -132400,6 +132223,18 @@
             "type": "string"
           },
           "orbit_dap_enabled_by_default": {
+            "type": "string"
+          },
+          "orbit_query_limit": {
+            "type": "string"
+          },
+          "orbit_indexing_status_limit": {
+            "type": "string"
+          },
+          "orbit_item_counts_limit": {
+            "type": "string"
+          },
+          "orbit_rate_limit_allowlist_raw": {
             "type": "string"
           },
           "duo_workflow_oauth_application_id": {
@@ -139594,10 +139429,10 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer"
           },
           "source_id": {
-            "type": "string"
+            "type": "integer"
           },
           "source_full_name": {
             "type": "string"
@@ -139606,10 +139441,12 @@
             "type": "string"
           },
           "created_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           "expires_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date"
           },
           "access_level": {
             "$ref": "#/components/schemas/ApiEntitiesBillableMembershipAccessLevel"
@@ -146907,6 +146744,11 @@
             "description": "Allows archiving of projects.",
             "default": false
           },
+          "archive_subgroup": {
+            "type": "boolean",
+            "description": "Ability to archive or unarchive a subgroup. This ability does not allow archiving top-level groups. Archiving unlinks projects from their fork networks and closes their open cross-fork merge requests, and unarchiving does not restore either.",
+            "default": false
+          },
           "admin_ai_catalog_item_consumer": {
             "type": "boolean",
             "description": "Enable, disable, and configure custom agents and flows from the AI catalog for a project.",
@@ -147151,6 +146993,11 @@
           "archive_project": {
             "type": "boolean",
             "description": "Allows archiving of projects.",
+            "default": false
+          },
+          "archive_subgroup": {
+            "type": "boolean",
+            "description": "Ability to archive or unarchive a subgroup. This ability does not allow archiving top-level groups. Archiving unlinks projects from their fork networks and closes their open cross-fork merge requests, and unarchiving does not restore either.",
             "default": false
           },
           "admin_ai_catalog_item_consumer": {
@@ -152900,6 +152747,26 @@
             "description": "Maximum number of requests per minute per user per group to the group audit events API.",
             "nullable": true
           },
+          "orbit_query_limit": {
+            "type": "integer",
+            "description": "Maximum number of GitLab Orbit queries per minute per user. Default: \u006060\u0060. Set to \u00600\u0060 to disable the rate limit.",
+            "nullable": true
+          },
+          "orbit_indexing_status_limit": {
+            "type": "integer",
+            "description": "Maximum number of GitLab Orbit indexing status requests per minute per user. Default: \u006030\u0060. Set to \u00600\u0060 to disable the rate limit.",
+            "nullable": true
+          },
+          "orbit_item_counts_limit": {
+            "type": "integer",
+            "description": "Maximum number of GitLab Orbit item count requests per minute per user. Default: \u006030\u0060. Set to \u00600\u0060 to disable the rate limit.",
+            "nullable": true
+          },
+          "orbit_rate_limit_allowlist_raw": {
+            "type": "string",
+            "description": "Raw newline-, comma-, or whitespace-separated list of usernames excluded from the GitLab Orbit rate limits. Maximum: 100 usernames.",
+            "nullable": true
+          },
           "group_owners_can_manage_default_branch_protection": {
             "type": "boolean",
             "description": "If \u0060true\u0060, allows group owners to manage default branch protection in their groups. If \u0060false\u0060, group owners cannot override the instance default branch protection. GitLab Self-Managed, Premium and Ultimate only.",
@@ -153883,6 +153750,14 @@
             "nullable": true
           },
           "duo_foundational_flows_availability": {
+            "type": "string",
+            "nullable": true
+          },
+          "duo_scheduled_triggers_enabled": {
+            "type": "string",
+            "nullable": true
+          },
+          "duo_scheduled_triggers_availability": {
             "type": "string",
             "nullable": true
           },
@@ -174723,6 +174598,18 @@
       "ApiEntitiesOrbitContextEntityExpansion": {
         "type": "object"
       },
+      "ApiEntitiesAiDuoWorkflowsWorkflowWorkload": {
+        "type": "object"
+      },
+      "ApiEntitiesAiDuoWorkflowsCheckpointCheckpoint": {
+        "type": "object"
+      },
+      "ApiEntitiesAiDuoWorkflowsCheckpointMetadata": {
+        "type": "object"
+      },
+      "ApiEntitiesAnalyticsCodeReviewMergeRequestDiffStats": {
+        "type": "object"
+      },
       "ApiEntitiesGroupStatistics": {
         "type": "object",
         "properties": {
@@ -175033,16 +174920,18 @@
             "type": "string"
           },
           "last_checksum": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           "checksum_state": {
             "type": "string"
           },
           "checksum_retry_count": {
-            "type": "string"
+            "type": "integer"
           },
           "checksum_retry_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           "checksum_failure": {
             "type": "string"
@@ -175518,10 +175407,10 @@
             "type": "string"
           },
           "integer_value": {
-            "type": "string"
+            "type": "integer"
           },
           "custom_role": {
-            "type": "string"
+            "$ref": "#/components/schemas/ApiEntitiesBillableMembershipAccessLevelCustomRoleProperty"
           }
         }
       },
@@ -180520,6 +180409,9 @@
           "value": 1
         }
       },
+      "ApiEntitiesBillableMembershipAccessLevelCustomRole": {
+        "type": "object"
+      },
       "PostApiV4ChatCompletionsRequestAdditionalContextItemMetadata": {
         "type": "object",
         "description": "Metadata of the additional context.",
@@ -185071,6 +184963,18 @@
       "ApiEntitiesOrbitContextEntityExpansionProperty": {
         "type": "object"
       },
+      "ApiEntitiesAiDuoWorkflowsWorkflowWorkloadProperty": {
+        "type": "object"
+      },
+      "ApiEntitiesAiDuoWorkflowsCheckpointCheckpointProperty": {
+        "type": "object"
+      },
+      "ApiEntitiesAiDuoWorkflowsCheckpointMetadataProperty": {
+        "type": "object"
+      },
+      "ApiEntitiesAnalyticsCodeReviewMergeRequestDiffStatsProperty": {
+        "type": "object"
+      },
       "ApiEntitiesVulnerabilityFindingProperty": {
         "type": "object"
       },
@@ -185597,6 +185501,9 @@
           "label": "login_button",
           "value": 1
         }
+      },
+      "ApiEntitiesBillableMembershipAccessLevelCustomRoleProperty": {
+        "type": "object"
       },
       "PostApiV4ChatCompletionsRequestAdditionalContextItemMetadataProperty": {
         "type": "object",
@@ -192435,6 +192342,7 @@
           "npm",
           "nuget",
           "pypi",
+          "rubygems",
           "terraform_module"
         ],
         "type": "string",
@@ -192474,6 +192382,10 @@
             {
               "value": "pypi",
               "name": "Pypi"
+            },
+            {
+              "value": "rubygems",
+              "name": "Rubygems"
             },
             {
               "value": "terraform_module",
@@ -192543,6 +192455,7 @@
           "npm",
           "nuget",
           "pypi",
+          "rubygems",
           "terraform_module"
         ],
         "type": "string",
@@ -192583,6 +192496,10 @@
             {
               "value": "pypi",
               "name": "Pypi"
+            },
+            {
+              "value": "rubygems",
+              "name": "Rubygems"
             },
             {
               "value": "terraform_module",
@@ -199071,48 +198988,6 @@
         ],
         "type": "integer",
         "description": "A valid access level"
-      },
-      "GetApiV4OrbitSchemaResponseFormatParameter": {
-        "enum": [
-          "raw",
-          "llm"
-        ],
-        "type": "string",
-        "x-ms-enum": {
-          "name": "GetApiV4OrbitSchemaResponseFormatParameter",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "raw",
-              "name": "Raw"
-            },
-            {
-              "value": "llm",
-              "name": "Llm"
-            }
-          ]
-        }
-      },
-      "GetApiV4OrbitStatusResponseFormatParameter": {
-        "enum": [
-          "raw",
-          "llm"
-        ],
-        "type": "string",
-        "x-ms-enum": {
-          "name": "GetApiV4OrbitStatusResponseFormatParameter",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "raw",
-              "name": "Raw"
-            },
-            {
-              "value": "llm",
-              "name": "Llm"
-            }
-          ]
-        }
       },
       "GetApiV4ProjectsIdAiAgentSessionsAgentTypeParameter": {
         "enum": [
