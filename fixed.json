@@ -614,8 +614,7 @@
             "description": "Bad Request"
           }
         },
-        "x-gitlab-tier": "premium",
-        "x-gitlab-lifecycle": "beta"
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/orbit/query/{name}": {
@@ -657,8 +656,7 @@
             "description": "Bad Request"
           }
         },
-        "x-gitlab-tier": "premium",
-        "x-gitlab-lifecycle": "beta"
+        "x-gitlab-tier": "premium"
       }
     },
     "/api/v4/orbit/context": {
@@ -735,8 +733,7 @@
           "404": {
             "description": "Skills are not available"
           }
-        },
-        "x-gitlab-lifecycle": "beta"
+        }
       }
     },
     "/api/v4/orbit/skills/{name}": {
@@ -779,8 +776,7 @@
           "400": {
             "description": "Bad Request"
           }
-        },
-        "x-gitlab-lifecycle": "beta"
+        }
       }
     },
     "/api/v4/orbit/skills/{name}/{path}": {
@@ -839,8 +835,7 @@
           "400": {
             "description": "Bad Request"
           }
-        },
-        "x-gitlab-lifecycle": "beta"
+        }
       }
     },
     "/api/v4/jobs/{id}/sbom_scans/authorize": {
@@ -2030,45 +2025,6 @@
         "x-gitlab-lifecycle": "experiment"
       }
     },
-    "/api/v4/ai/duo_workflows/tools/risk_classification/results": {
-      "post": {
-        "tags": [
-          "GitLab Duo workflows"
-        ],
-        "summary": "Submit risk assessment results for a merge request",
-        "description": "Submits the categorical claims and summary produced by the risk assessment tool.",
-        "operationId": "PostApiV4AiDuoWorkflowsToolsRiskClassificationResults",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PostApiV4AiDuoWorkflowsToolsRiskClassificationResultsRequest"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "400": {
-            "description": "Validation failed"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not found"
-          }
-        },
-        "deprecated": true,
-        "x-gitlab-lifecycle": "experiment"
-      }
-    },
     "/api/v4/ai/duo_workflows/code_review/add_comments": {
       "post": {
         "tags": [
@@ -3029,6 +2985,9 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "429": {
+            "description": "Too many requests"
           }
         }
       }
@@ -3152,6 +3111,9 @@
           },
           "422": {
             "description": "Unprocessable entity"
+          },
+          "429": {
+            "description": "Too many requests"
           }
         },
         "x-gitlab-lifecycle": "experiment"
@@ -3198,6 +3160,9 @@
           },
           "422": {
             "description": "Unprocessable entity"
+          },
+          "429": {
+            "description": "Too many requests"
           }
         },
         "x-gitlab-lifecycle": "experiment"
@@ -21557,9 +21522,27 @@
           "MLOps"
         ],
         "summary": "List experiments",
-        "description": "https://www.mlflow.org/docs/2.19.0/rest-api.html#search-experiments",
+        "description": "https://mlflow.org/docs/1.28.0/rest-api.html#list-experiments",
         "operationId": "GetApiV4ProjectsIdMlMlflowApi20MlflowExperimentsList",
         "parameters": [
+          {
+            "name": "max_results",
+            "in": "query",
+            "description": "Maximum number of experiments to fetch in a page. The maximum is 1000.",
+            "schema": {
+              "type": "integer",
+              "default": 1000
+            }
+          },
+          {
+            "name": "page_token",
+            "in": "query",
+            "description": "Token for pagination.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
           {
             "name": "id",
             "in": "path",
@@ -21591,6 +21574,9 @@
           },
           "404": {
             "description": "Not Found"
+          },
+          "400": {
+            "description": "Bad Request"
           }
         }
       }
@@ -118588,7 +118574,7 @@
         "properties": {
           "version": {
             "type": "string",
-            "example": "1.1.0"
+            "example": "1.3.0"
           },
           "entities": {
             "type": "array",
@@ -128972,6 +128958,10 @@
             "items": {
               "$ref": "#/components/schemas/ApiEntitiesMlMlflowExperiment"
             }
+          },
+          "next_page_token": {
+            "type": "string",
+            "description": "Returned when the response is paginated"
           }
         }
       },
@@ -130941,6 +130931,9 @@
           "notify_on_unknown_sign_in": {
             "type": "string"
           },
+          "o11y_provisioner_url": {
+            "type": "string"
+          },
           "organization_cluster_agent_authorization_enabled": {
             "type": "string"
           },
@@ -131382,6 +131375,9 @@
           "notes_create_limit_allowlist_raw": {
             "type": "string"
           },
+          "discussions_resolve_limit": {
+            "type": "string"
+          },
           "members_delete_limit": {
             "type": "string"
           },
@@ -131656,6 +131652,9 @@
             "type": "string"
           },
           "tags_create_limit": {
+            "type": "string"
+          },
+          "todos_list_api_limit": {
             "type": "string"
           },
           "group_hooks_create_limit": {
@@ -144963,53 +144962,6 @@
           }
         }
       },
-      "PostApiV4AiDuoWorkflowsToolsRiskClassificationResultsRequest": {
-        "required": [
-          "project_id",
-          "merge_request_iid",
-          "diff_sha",
-          "workflow_id",
-          "claims"
-        ],
-        "type": "object",
-        "properties": {
-          "project_id": {
-            "type": "string",
-            "description": "The ID or path of the project",
-            "nullable": true
-          },
-          "merge_request_iid": {
-            "type": "integer",
-            "description": "The IID of the merge request",
-            "nullable": true
-          },
-          "diff_sha": {
-            "pattern": "^[0-9a-f]{40}$",
-            "type": "string",
-            "description": "The full SHA of the diff revision the claims were assessed against",
-            "nullable": true
-          },
-          "workflow_id": {
-            "type": "integer",
-            "description": "ID of the Duo workflow session that produced these claims",
-            "nullable": true
-          },
-          "claims": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/PostApiV4AiDuoWorkflowsToolsRiskClassificationResultsRequestClaimsItem"
-            },
-            "description": "Categorical claims about the merge request",
-            "nullable": true
-          },
-          "summary": {
-            "maxLength": 2048,
-            "type": "string",
-            "description": "Plain-language explanation of the change and where its risk lies",
-            "nullable": true
-          }
-        }
-      },
       "PostApiV4AiDuoWorkflowsCodeReviewAddCommentsRequest": {
         "required": [
           "project_id",
@@ -149710,6 +149662,14 @@
             },
             "description": "Array of parameters to record for the run.",
             "default": []
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PostApiV4ProjectsIdMlMlflowApi20MlflowRunsLogBatchRequestTagsItem"
+            },
+            "description": "Array of tags to set on the run.",
+            "default": []
           }
         }
       },
@@ -150836,6 +150796,11 @@
             "description": "OAuth sign-in sources to disable.",
             "nullable": true
           },
+          "discussions_resolve_limit": {
+            "type": "integer",
+            "description": "Maximum number of thread resolve and unresolve requests per minute for each user. Default: \u0060120\u0060. Set to \u00600\u0060 to disable the rate limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/606720) in GitLab 19.6.",
+            "nullable": true
+          },
           "domain_denylist_enabled": {
             "type": "boolean",
             "description": "If \u0060true\u0060, enables the domain denylist for sign-ups. Requires \u0060domain_denylist\u0060.",
@@ -151085,6 +151050,18 @@
           "metrics_method_call_threshold": {
             "type": "integer",
             "description": "Method call is only tracked if it takes longer than this threshold, in milliseconds.",
+            "nullable": true
+          },
+          "o11y_provisioner_api_key": {
+            "maxLength": 510,
+            "type": "string",
+            "description": "API key GitLab sends to the Observability provisioner. GitLab.com only. Not returned in responses.",
+            "nullable": true
+          },
+          "o11y_provisioner_url": {
+            "maxLength": 255,
+            "type": "string",
+            "description": "URL of the Observability provisioner API. GitLab.com only.",
             "nullable": true
           },
           "password_authentication_enabled": {
@@ -153502,6 +153479,10 @@
             "nullable": true
           },
           "tags_create_limit": {
+            "type": "string",
+            "nullable": true
+          },
+          "todos_list_api_limit": {
             "type": "string",
             "nullable": true
           },
@@ -175972,34 +175953,6 @@
           }
         }
       },
-      "PostApiV4AiDuoWorkflowsToolsRiskClassificationResultsRequestClaimsItem": {
-        "required": [
-          "name",
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "name": {
-            "maxLength": 64,
-            "pattern": "^[a-z0-9_]\u002B$",
-            "type": "string",
-            "description": "Name of the claim, for example authorization",
-            "nullable": true
-          },
-          "value": {
-            "maxLength": 256,
-            "type": "string",
-            "description": "Categorical answer, for example true, false, or behavioral. Never a score.",
-            "nullable": true
-          },
-          "evidence": {
-            "maxLength": 256,
-            "type": "string",
-            "description": "Where the claim was observed, as a path:line reference",
-            "nullable": true
-          }
-        }
-      },
       "PostApiV4AiDuoWorkflowsAgentWorkflowsRequestAdditionalContextItem": {
         "required": [
           "Category",
@@ -176712,6 +176665,25 @@
           "value": {
             "type": "string",
             "description": "Value of the parameter.",
+            "nullable": true
+          }
+        }
+      },
+      "PostApiV4ProjectsIdMlMlflowApi20MlflowRunsLogBatchRequestTagsItem": {
+        "required": [
+          "key",
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "description": "Name of the tag.",
+            "nullable": true
+          },
+          "value": {
+            "type": "string",
+            "description": "Value of the tag.",
             "nullable": true
           }
         }
@@ -212878,7 +212850,7 @@
     },
     {
       "name": "Orbit",
-      "description": "Use this API to query [GitLab Orbit](https://docs.gitlab.com/orbit/),\nwhich indexes a group\u0027s software development lifecycle.\n\n\u003E [!note]\n\u003E The availability of these endpoints is controlled by a feature flag, and GitLab Orbit is in beta.",
+      "description": "Use this API to query [GitLab Orbit](https://docs.gitlab.com/orbit/),\nwhich indexes a group\u0027s software development lifecycle.",
       "externalDocs": {
         "url": "https://docs.gitlab.com/api/orbit/"
       },

@@ -38,6 +38,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string RunId { get; set; }
 #endif
+        /// <summary>Array of tags to set on the run.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMlMlflowApi20MlflowRunsLogBatchRequestTagsItem>? Tags { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMlMlflowApi20MlflowRunsLogBatchRequestTagsItem> Tags { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMlMlflowApi20MlflowRunsLogBatchRequest"/> and sets the default values.
         /// </summary>
@@ -66,6 +74,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "metrics", n => { Metrics = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMlMlflowApi20MlflowRunsLogBatchRequestMetricsItem>(global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMlMlflowApi20MlflowRunsLogBatchRequestMetricsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "params", n => { Params = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMlMlflowApi20MlflowRunsLogBatchRequestParamsItem>(global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMlMlflowApi20MlflowRunsLogBatchRequestParamsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "run_id", n => { RunId = n.GetStringValue(); } },
+                { "tags", n => { Tags = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMlMlflowApi20MlflowRunsLogBatchRequestTagsItem>(global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMlMlflowApi20MlflowRunsLogBatchRequestTagsItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -78,6 +87,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMlMlflowApi20MlflowRunsLogBatchRequestMetricsItem>("metrics", Metrics);
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMlMlflowApi20MlflowRunsLogBatchRequestParamsItem>("params", Params);
             writer.WriteStringValue("run_id", RunId);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMlMlflowApi20MlflowRunsLogBatchRequestTagsItem>("tags", Tags);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -22,6 +22,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowExperiment> Experiments { get; set; }
 #endif
+        /// <summary>Returned when the response is paginated</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? NextPageToken { get; set; }
+#nullable restore
+#else
+        public string NextPageToken { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowListExperiment"/> and sets the default values.
         /// </summary>
@@ -48,6 +56,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "experiments", n => { Experiments = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowExperiment>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowExperiment.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "next_page_token", n => { NextPageToken = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -58,6 +67,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowExperiment>("experiments", Experiments);
+            writer.WriteStringValue("next_page_token", NextPageToken);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

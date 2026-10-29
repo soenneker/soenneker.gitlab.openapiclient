@@ -804,6 +804,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>If `true`, disables personal access tokens. GitLab Self-Managed, Premium and Ultimate only. There is no method available to enable a personal access token that&apos;s been disabled through the API. This is a [known issue](https://gitlab.com/gitlab-org/gitlab/-/issues/399233). For more information about available workarounds, see [Workaround](https://gitlab.com/gitlab-org/gitlab/-/issues/399233#workaround).</summary>
         public bool? DisablePersonalAccessTokens { get; set; }
+        /// <summary>Maximum number of thread resolve and unresolve requests per minute for each user. Default: `120`. Set to `0` to disable the rate limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/606720) in GitLab 19.6.</summary>
+        public int? DiscussionsResolveLimit { get; set; }
         /// <summary>The display_gitlab_credits_user_data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -2428,6 +2430,22 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string NugetSkipMetadataUrlValidation { get; set; }
 #endif
+        /// <summary>API key GitLab sends to the Observability provisioner. GitLab.com only. Not returned in responses.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? O11yProvisionerApiKey { get; set; }
+#nullable restore
+#else
+        public string O11yProvisionerApiKey { get; set; }
+#endif
+        /// <summary>URL of the Observability provisioner API. GitLab.com only.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? O11yProvisionerUrl { get; set; }
+#nullable restore
+#else
+        public string O11yProvisionerUrl { get; set; }
+#endif
         /// <summary>Maximum lifetime in seconds of all new OAuth access tokens issued by the instance. Minimum value: `300` (5 minutes). Default value: `7200` (2 hours). If blank or `null`, uses default value. Does not affect existing OAuth access tokens.</summary>
         public int? OauthAccessTokenExpiresIn { get; set; }
         /// <summary>The observability_backend_ssl_verification_enabled property</summary>
@@ -3908,6 +3926,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string TimeTrackingLimitToHours { get; set; }
 #endif
+        /// <summary>The todos_list_api_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? TodosListApiLimit { get; set; }
+#nullable restore
+#else
+        public string TodosListApiLimit { get; set; }
+#endif
         /// <summary>The tool_approval_for_session_availability property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -4535,6 +4561,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "disable_personal_access_tokens", n => { DisablePersonalAccessTokens = n.GetBoolValue(); } },
                 { "disabled_direct_code_suggestions", n => { DisabledDirectCodeSuggestions = n.GetBoolValue(); } },
                 { "disabled_oauth_sign_in_sources", n => { DisabledOauthSignInSources = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "discussions_resolve_limit", n => { DiscussionsResolveLimit = n.GetIntValue(); } },
                 { "display_gitlab_credits_user_data", n => { DisplayGitlabCreditsUserData = n.GetStringValue(); } },
                 { "dns_rebinding_protection_enabled", n => { DnsRebindingProtectionEnabled = n.GetStringValue(); } },
                 { "domain_allowlist", n => { DomainAllowlist = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -4804,6 +4831,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "notify_on_unknown_sign_in", n => { NotifyOnUnknownSignIn = n.GetStringValue(); } },
                 { "npm_package_requests_forwarding", n => { NpmPackageRequestsForwarding = n.GetBoolValue(); } },
                 { "nuget_skip_metadata_url_validation", n => { NugetSkipMetadataUrlValidation = n.GetStringValue(); } },
+                { "o11y_provisioner_api_key", n => { O11yProvisionerApiKey = n.GetStringValue(); } },
+                { "o11y_provisioner_url", n => { O11yProvisionerUrl = n.GetStringValue(); } },
                 { "oauth_access_token_expires_in", n => { OauthAccessTokenExpiresIn = n.GetIntValue(); } },
                 { "observability_backend_ssl_verification_enabled", n => { ObservabilityBackendSslVerificationEnabled = n.GetStringValue(); } },
                 { "offline_transfer_exports_enabled", n => { OfflineTransferExportsEnabled = n.GetStringValue(); } },
@@ -5031,6 +5060,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "throttle_unauthenticated_web_period_in_seconds", n => { ThrottleUnauthenticatedWebPeriodInSeconds = n.GetStringValue(); } },
                 { "throttle_unauthenticated_web_requests_per_period", n => { ThrottleUnauthenticatedWebRequestsPerPeriod = n.GetStringValue(); } },
                 { "time_tracking_limit_to_hours", n => { TimeTrackingLimitToHours = n.GetStringValue(); } },
+                { "todos_list_api_limit", n => { TodosListApiLimit = n.GetStringValue(); } },
                 { "tool_approval_for_session_availability", n => { ToolApprovalForSessionAvailability = n.GetStringValue(); } },
                 { "tool_approval_for_session_enabled", n => { ToolApprovalForSessionEnabled = n.GetStringValue(); } },
                 { "top_level_group_creation_enabled", n => { TopLevelGroupCreationEnabled = n.GetStringValue(); } },
@@ -5240,6 +5270,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("disable_overriding_approvers_per_merge_request", DisableOverridingApproversPerMergeRequest);
             writer.WriteStringValue("disable_password_authentication_for_users_with_sso_identities", DisablePasswordAuthenticationForUsersWithSsoIdentities);
             writer.WriteBoolValue("disable_personal_access_tokens", DisablePersonalAccessTokens);
+            writer.WriteIntValue("discussions_resolve_limit", DiscussionsResolveLimit);
             writer.WriteStringValue("display_gitlab_credits_user_data", DisplayGitlabCreditsUserData);
             writer.WriteStringValue("dns_rebinding_protection_enabled", DnsRebindingProtectionEnabled);
             writer.WriteCollectionOfPrimitiveValues<string>("domain_allowlist", DomainAllowlist);
@@ -5509,6 +5540,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("notify_on_unknown_sign_in", NotifyOnUnknownSignIn);
             writer.WriteBoolValue("npm_package_requests_forwarding", NpmPackageRequestsForwarding);
             writer.WriteStringValue("nuget_skip_metadata_url_validation", NugetSkipMetadataUrlValidation);
+            writer.WriteStringValue("o11y_provisioner_api_key", O11yProvisionerApiKey);
+            writer.WriteStringValue("o11y_provisioner_url", O11yProvisionerUrl);
             writer.WriteIntValue("oauth_access_token_expires_in", OauthAccessTokenExpiresIn);
             writer.WriteStringValue("observability_backend_ssl_verification_enabled", ObservabilityBackendSslVerificationEnabled);
             writer.WriteStringValue("offline_transfer_exports_enabled", OfflineTransferExportsEnabled);
@@ -5736,6 +5769,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("throttle_unauthenticated_web_period_in_seconds", ThrottleUnauthenticatedWebPeriodInSeconds);
             writer.WriteStringValue("throttle_unauthenticated_web_requests_per_period", ThrottleUnauthenticatedWebRequestsPerPeriod);
             writer.WriteStringValue("time_tracking_limit_to_hours", TimeTrackingLimitToHours);
+            writer.WriteStringValue("todos_list_api_limit", TodosListApiLimit);
             writer.WriteStringValue("tool_approval_for_session_availability", ToolApprovalForSessionAvailability);
             writer.WriteStringValue("tool_approval_for_session_enabled", ToolApprovalForSessionEnabled);
             writer.WriteStringValue("top_level_group_creation_enabled", TopLevelGroupCreationEnabled);

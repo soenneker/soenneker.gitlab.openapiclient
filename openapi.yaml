@@ -1055,9 +1055,6 @@ tags:
   description: |-
     Use this API to query [GitLab Orbit](https://docs.gitlab.com/orbit/),
     which indexes a group's software development lifecycle.
-
-    > [!note]
-    > The availability of these endpoints is controlled by a feature flag, and GitLab Orbit is in beta.
   x-displayName: Orbit
   externalDocs:
     url: https://docs.gitlab.com/api/orbit/
@@ -2203,7 +2200,6 @@ paths:
             schema:
               "$ref": "#/components/schemas/postApiV4OrbitQueryRequest"
       x-gitlab-tier: premium
-      x-gitlab-lifecycle: beta
   "/api/v4/orbit/query/{name}":
     post:
       operationId: postApiV4OrbitQueryName
@@ -2234,7 +2230,6 @@ paths:
             schema:
               "$ref": "#/components/schemas/postApiV4OrbitQueryNameRequest"
       x-gitlab-tier: premium
-      x-gitlab-lifecycle: beta
   "/api/v4/orbit/context":
     post:
       operationId: postApiV4OrbitContext
@@ -2289,7 +2284,6 @@ paths:
           description: Unauthorized
         '404':
           description: Skills are not available
-      x-gitlab-lifecycle: beta
   "/api/v4/orbit/skills/{name}":
     get:
       operationId: getApiV4OrbitSkillsName
@@ -2319,7 +2313,6 @@ paths:
           type: string
           pattern: "^[a-z0-9][a-z0-9\\-]*$"
         in: path
-      x-gitlab-lifecycle: beta
   "/api/v4/orbit/skills/{name}/{path}":
     get:
       operationId: getApiV4OrbitSkillsNamePath
@@ -2359,7 +2352,6 @@ paths:
           pattern: "^[^\\/]+(?:\\/[^\\/]+)*$"
         in: path
         example: references/usage.md
-      x-gitlab-lifecycle: beta
   "/api/v4/jobs/{id}/sbom_scans/authorize":
     post:
       operationId: postApiV4JobsIdSbomScansAuthorize
@@ -3198,33 +3190,6 @@ paths:
             schema:
               "$ref": "#/components/schemas/postApiV4AiDuoWorkflowsToolsRiskAssessmentResultsRequest"
       x-gitlab-lifecycle: experiment
-  "/api/v4/ai/duo_workflows/tools/risk_classification/results":
-    post:
-      operationId: postApiV4AiDuoWorkflowsToolsRiskClassificationResults
-      summary: Submit risk assessment results for a merge request
-      description: Submits the categorical claims and summary produced by the risk
-        assessment tool.
-      tags:
-      - GitLab Duo workflows
-      responses:
-        '204':
-          description: No Content
-        '400':
-          description: Validation failed
-        '401':
-          description: Unauthorized
-        '403':
-          description: Forbidden
-        '404':
-          description: Not found
-      deprecated: true
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              "$ref": "#/components/schemas/postApiV4AiDuoWorkflowsToolsRiskClassificationResultsRequest"
-      x-gitlab-lifecycle: experiment
   "/api/v4/ai/duo_workflows/code_review/add_comments":
     post:
       operationId: postApiV4AiDuoWorkflowsCodeReviewAddComments
@@ -3892,6 +3857,8 @@ paths:
           description: 403 Forbidden
         '404':
           description: Not found
+        '429':
+          description: Too many requests
       requestBody:
         required: false
         content:
@@ -3970,6 +3937,8 @@ paths:
           description: Not found
         '422':
           description: Unprocessable entity
+        '429':
+          description: Too many requests
       parameters:
       - name: workflow_id
         required: true
@@ -4009,6 +3978,8 @@ paths:
           description: Conflict
         '422':
           description: Unprocessable entity
+        '429':
+          description: Too many requests
       parameters:
       - name: workflow_id
         required: true
@@ -16662,7 +16633,7 @@ paths:
     get:
       operationId: getApiV4ProjectsIdMlMlflowApi20MlflowExperimentsList
       summary: List experiments
-      description: https://www.mlflow.org/docs/2.19.0/rest-api.html#search-experiments
+      description: https://mlflow.org/docs/1.28.0/rest-api.html#list-experiments
       tags:
       - MLOps
       responses:
@@ -16674,7 +16645,24 @@ paths:
                 "$ref": "#/components/schemas/APIEntitiesMlMlflowListExperiment"
         '404':
           description: Not Found
+        '400':
+          description: Bad Request
       parameters:
+      - name: max_results
+        required: false
+        description: Maximum number of experiments to fetch in a page. The maximum
+          is 1000.
+        schema:
+          type: integer
+          default: 1000
+        in: query
+      - name: page_token
+        required: false
+        description: Token for pagination.
+        schema:
+          type: string
+          nullable: true
+        in: query
       - name: id
         required: true
         description: ID or URL-encoded path of the project.
@@ -84543,7 +84531,7 @@ components:
       properties:
         version:
           type: string
-          example: 1.1.0
+          example: 1.3.0
         entities:
           type: array
           items:
@@ -91993,6 +91981,9 @@ components:
           type: array
           items:
             "$ref": "#/components/schemas/APIEntitiesMlMlflowExperiment"
+        next_page_token:
+          type: string
+          description: Returned when the response is paginated
     APIEntitiesMlMlflowNewExperiment:
       type: object
       properties:
@@ -93400,6 +93391,8 @@ components:
           type: string
         notify_on_unknown_sign_in:
           type: string
+        o11y_provisioner_url:
+          type: string
         organization_cluster_agent_authorization_enabled:
           type: string
         pages_domain_verification_enabled:
@@ -93694,6 +93687,8 @@ components:
           type: string
         notes_create_limit_allowlist_raw:
           type: string
+        discussions_resolve_limit:
+          type: string
         members_delete_limit:
           type: string
         raw_blob_request_limit:
@@ -93877,6 +93872,8 @@ components:
         users_api_limit_gpg_key:
           type: string
         tags_create_limit:
+          type: string
+        todos_list_api_limit:
           type: string
         group_hooks_create_limit:
           type: string
@@ -104187,66 +104184,6 @@ components:
       - diff_sha
       - workflow_id
       - claims
-    postApiV4AiDuoWorkflowsToolsRiskClassificationResultsRequest:
-      type: object
-      properties:
-        project_id:
-          type: string
-          description: The ID or path of the project
-          nullable: true
-        merge_request_iid:
-          type: integer
-          description: The IID of the merge request
-          nullable: true
-        diff_sha:
-          type: string
-          description: The full SHA of the diff revision the claims were assessed
-            against
-          pattern: "^[0-9a-f]{40}$"
-          nullable: true
-        workflow_id:
-          type: integer
-          description: ID of the Duo workflow session that produced these claims
-          nullable: true
-        claims:
-          type: array
-          description: Categorical claims about the merge request
-          items:
-            type: object
-            properties:
-              name:
-                type: string
-                description: Name of the claim, for example authorization
-                pattern: "^[a-z0-9_]+$"
-                nullable: true
-                maxLength: 64
-              value:
-                type: string
-                description: Categorical answer, for example true, false, or behavioral.
-                  Never a score.
-                nullable: true
-                maxLength: 256
-              evidence:
-                type: string
-                description: Where the claim was observed, as a path:line reference
-                nullable: true
-                maxLength: 256
-            required:
-            - name
-            - value
-          nullable: true
-        summary:
-          type: string
-          description: Plain-language explanation of the change and where its risk
-            lies
-          nullable: true
-          maxLength: 2048
-      required:
-      - project_id
-      - merge_request_iid
-      - diff_sha
-      - workflow_id
-      - claims
     postApiV4AiDuoWorkflowsCodeReviewAddCommentsRequest:
       type: object
       properties:
@@ -109761,6 +109698,24 @@ components:
             - key
             - value
           default: []
+        tags:
+          type: array
+          description: Array of tags to set on the run.
+          items:
+            type: object
+            properties:
+              key:
+                type: string
+                description: Name of the tag.
+                nullable: true
+              value:
+                type: string
+                description: Value of the tag.
+                nullable: true
+            required:
+            - key
+            - value
+          default: []
       required:
       - run_id
     postApiV4ProjectsIdMlMlflowApi20MlflowRunsDeleteRequest:
@@ -110969,6 +110924,13 @@ components:
             type: string
           description: OAuth sign-in sources to disable.
           nullable: true
+        discussions_resolve_limit:
+          type: integer
+          description: 'Maximum number of thread resolve and unresolve requests per
+            minute for each user. Default: `120`. Set to `0` to disable the rate limit.
+            [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/606720)
+            in GitLab 19.6.'
+          nullable: true
         domain_denylist_enabled:
           type: boolean
           description: If `true`, enables the domain denylist for sign-ups. Requires
@@ -111229,6 +111191,17 @@ components:
           description: Method call is only tracked if it takes longer than this threshold,
             in milliseconds.
           nullable: true
+        o11y_provisioner_api_key:
+          type: string
+          description: API key GitLab sends to the Observability provisioner. GitLab.com
+            only. Not returned in responses.
+          nullable: true
+          maxLength: 510
+        o11y_provisioner_url:
+          type: string
+          description: URL of the Observability provisioner API. GitLab.com only.
+          nullable: true
+          maxLength: 255
         password_authentication_enabled:
           type: boolean
           description: Flag indicating if password authentication is enabled for the
@@ -113766,6 +113739,9 @@ components:
           type: string
           nullable: true
         tags_create_limit:
+          type: string
+          nullable: true
+        todos_list_api_limit:
           type: string
           nullable: true
         observability_backend_ssl_verification_enabled:
