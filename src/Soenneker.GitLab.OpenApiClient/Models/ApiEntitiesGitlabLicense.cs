@@ -18,18 +18,30 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("add_ons") is { } nullNodeAddOns && nullNodeAddOns.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddOns = null;
-            if (parseNode.GetChildNode("created_at") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
-            if (parseNode.GetChildNode("expired") is { } nullNodeExpired && nullNodeExpired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expired = null;
-            if (parseNode.GetChildNode("expires_at") is { } nullNodeExpiresAt && nullNodeExpiresAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiresAt = null;
-            if (parseNode.GetChildNode("historical_max") is { } nullNodeHistoricalMax && nullNodeHistoricalMax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HistoricalMax = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("licensee") is { } nullNodeLicensee && nullNodeLicensee.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Licensee = null;
-            if (parseNode.GetChildNode("maximum_user_count") is { } nullNodeMaximumUserCount && nullNodeMaximumUserCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaximumUserCount = null;
-            if (parseNode.GetChildNode("overage") is { } nullNodeOverage && nullNodeOverage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Overage = null;
-            if (parseNode.GetChildNode("plan") is { } nullNodePlan && nullNodePlan.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Plan = null;
-            if (parseNode.GetChildNode("starts_at") is { } nullNodeStartsAt && nullNodeStartsAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartsAt = null;
-            if (parseNode.GetChildNode("user_limit") is { } nullNodeUserLimit && nullNodeUserLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserLimit = null;
+            if (parseNode.GetChildNode("add_ons") is null) { _explicitNullValueAddOns = default!; _explicitNullProperties?.Remove("add_ons"); }
+            else if (parseNode.GetChildNode("add_ons") is { } nullNodeAddOns && nullNodeAddOns.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddOns = null;
+            if (parseNode.GetChildNode("created_at") is null) { _explicitNullValueCreatedAt = default!; _explicitNullProperties?.Remove("created_at"); }
+            else if (parseNode.GetChildNode("created_at") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("expired") is null) { _explicitNullValueExpired = default!; _explicitNullProperties?.Remove("expired"); }
+            else if (parseNode.GetChildNode("expired") is { } nullNodeExpired && nullNodeExpired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expired = null;
+            if (parseNode.GetChildNode("expires_at") is null) { _explicitNullValueExpiresAt = default!; _explicitNullProperties?.Remove("expires_at"); }
+            else if (parseNode.GetChildNode("expires_at") is { } nullNodeExpiresAt && nullNodeExpiresAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiresAt = null;
+            if (parseNode.GetChildNode("historical_max") is null) { _explicitNullValueHistoricalMax = default!; _explicitNullProperties?.Remove("historical_max"); }
+            else if (parseNode.GetChildNode("historical_max") is { } nullNodeHistoricalMax && nullNodeHistoricalMax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HistoricalMax = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("licensee") is null) { _explicitNullValueLicensee = default!; _explicitNullProperties?.Remove("licensee"); }
+            else if (parseNode.GetChildNode("licensee") is { } nullNodeLicensee && nullNodeLicensee.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Licensee = null;
+            if (parseNode.GetChildNode("maximum_user_count") is null) { _explicitNullValueMaximumUserCount = default!; _explicitNullProperties?.Remove("maximum_user_count"); }
+            else if (parseNode.GetChildNode("maximum_user_count") is { } nullNodeMaximumUserCount && nullNodeMaximumUserCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaximumUserCount = null;
+            if (parseNode.GetChildNode("overage") is null) { _explicitNullValueOverage = default!; _explicitNullProperties?.Remove("overage"); }
+            else if (parseNode.GetChildNode("overage") is { } nullNodeOverage && nullNodeOverage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Overage = null;
+            if (parseNode.GetChildNode("plan") is null) { _explicitNullValuePlan = default!; _explicitNullProperties?.Remove("plan"); }
+            else if (parseNode.GetChildNode("plan") is { } nullNodePlan && nullNodePlan.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Plan = null;
+            if (parseNode.GetChildNode("starts_at") is null) { _explicitNullValueStartsAt = default!; _explicitNullProperties?.Remove("starts_at"); }
+            else if (parseNode.GetChildNode("starts_at") is { } nullNodeStartsAt && nullNodeStartsAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartsAt = null;
+            if (parseNode.GetChildNode("user_limit") is null) { _explicitNullValueUserLimit = default!; _explicitNullProperties?.Remove("user_limit"); }
+            else if (parseNode.GetChildNode("user_limit") is { } nullNodeUserLimit && nullNodeUserLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserLimit = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -37,59 +49,59 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The add_ons property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabLicenseAddOnsProperty? AddOns { get => _explicitNullValueAddOns; set { _explicitNullValueAddOns = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("add_ons"); else _explicitNullProperties?.Remove("add_ons"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabLicenseAddOnsProperty? AddOns { get => _explicitNullValueAddOns; set { _explicitNullValueAddOns = value; AdditionalData?.Remove("add_ons"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("add_ons"); else _explicitNullProperties?.Remove("add_ons"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabLicenseAddOnsProperty? _explicitNullValueAddOns = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabLicenseAddOnsProperty AddOns { get => _explicitNullValueAddOns; set { _explicitNullValueAddOns = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("add_ons"); else _explicitNullProperties?.Remove("add_ons"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabLicenseAddOnsProperty AddOns { get => _explicitNullValueAddOns; set { _explicitNullValueAddOns = value; AdditionalData?.Remove("add_ons"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("add_ons"); else _explicitNullProperties?.Remove("add_ons"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabLicenseAddOnsProperty _explicitNullValueAddOns = default!;
 #endif
         /// <summary>The created_at property</summary>
-        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
+        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("created_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
         private DateTimeOffset? _explicitNullValueCreatedAt = default!;
         /// <summary>The expired property</summary>
-        public bool? Expired { get => _explicitNullValueExpired; set { _explicitNullValueExpired = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expired"); else _explicitNullProperties?.Remove("expired"); } }
+        public bool? Expired { get => _explicitNullValueExpired; set { _explicitNullValueExpired = value; AdditionalData?.Remove("expired"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expired"); else _explicitNullProperties?.Remove("expired"); } }
         private bool? _explicitNullValueExpired = default!;
         /// <summary>The expires_at property</summary>
-        public Date? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
+        public Date? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; AdditionalData?.Remove("expires_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
         private Date? _explicitNullValueExpiresAt = default!;
         /// <summary>The historical_max property</summary>
-        public int? HistoricalMax { get => _explicitNullValueHistoricalMax; set { _explicitNullValueHistoricalMax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("historical_max"); else _explicitNullProperties?.Remove("historical_max"); } }
+        public int? HistoricalMax { get => _explicitNullValueHistoricalMax; set { _explicitNullValueHistoricalMax = value; AdditionalData?.Remove("historical_max"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("historical_max"); else _explicitNullProperties?.Remove("historical_max"); } }
         private int? _explicitNullValueHistoricalMax = default!;
         /// <summary>The id property</summary>
-        public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private long? _explicitNullValueId = default!;
         /// <summary>The licensee property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabLicenseLicenseeProperty? Licensee { get => _explicitNullValueLicensee; set { _explicitNullValueLicensee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("licensee"); else _explicitNullProperties?.Remove("licensee"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabLicenseLicenseeProperty? Licensee { get => _explicitNullValueLicensee; set { _explicitNullValueLicensee = value; AdditionalData?.Remove("licensee"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("licensee"); else _explicitNullProperties?.Remove("licensee"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabLicenseLicenseeProperty? _explicitNullValueLicensee = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabLicenseLicenseeProperty Licensee { get => _explicitNullValueLicensee; set { _explicitNullValueLicensee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("licensee"); else _explicitNullProperties?.Remove("licensee"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabLicenseLicenseeProperty Licensee { get => _explicitNullValueLicensee; set { _explicitNullValueLicensee = value; AdditionalData?.Remove("licensee"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("licensee"); else _explicitNullProperties?.Remove("licensee"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabLicenseLicenseeProperty _explicitNullValueLicensee = default!;
 #endif
         /// <summary>The maximum_user_count property</summary>
-        public int? MaximumUserCount { get => _explicitNullValueMaximumUserCount; set { _explicitNullValueMaximumUserCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maximum_user_count"); else _explicitNullProperties?.Remove("maximum_user_count"); } }
+        public int? MaximumUserCount { get => _explicitNullValueMaximumUserCount; set { _explicitNullValueMaximumUserCount = value; AdditionalData?.Remove("maximum_user_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maximum_user_count"); else _explicitNullProperties?.Remove("maximum_user_count"); } }
         private int? _explicitNullValueMaximumUserCount = default!;
         /// <summary>Difference between the number of billable users and the number of licensed users. Calculated differently depending on whether the license has expired or not.</summary>
-        public int? Overage { get => _explicitNullValueOverage; set { _explicitNullValueOverage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overage"); else _explicitNullProperties?.Remove("overage"); } }
+        public int? Overage { get => _explicitNullValueOverage; set { _explicitNullValueOverage = value; AdditionalData?.Remove("overage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overage"); else _explicitNullProperties?.Remove("overage"); } }
         private int? _explicitNullValueOverage = default!;
         /// <summary>The plan property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Plan { get => _explicitNullValuePlan; set { _explicitNullValuePlan = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plan"); else _explicitNullProperties?.Remove("plan"); } }
+        public string? Plan { get => _explicitNullValuePlan; set { _explicitNullValuePlan = value; AdditionalData?.Remove("plan"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plan"); else _explicitNullProperties?.Remove("plan"); } }
         private string? _explicitNullValuePlan = default!;
 #nullable restore
 #else
-        public string Plan { get => _explicitNullValuePlan; set { _explicitNullValuePlan = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plan"); else _explicitNullProperties?.Remove("plan"); } }
+        public string Plan { get => _explicitNullValuePlan; set { _explicitNullValuePlan = value; AdditionalData?.Remove("plan"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plan"); else _explicitNullProperties?.Remove("plan"); } }
         private string _explicitNullValuePlan = default!;
 #endif
         /// <summary>The starts_at property</summary>
-        public Date? StartsAt { get => _explicitNullValueStartsAt; set { _explicitNullValueStartsAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("starts_at"); else _explicitNullProperties?.Remove("starts_at"); } }
+        public Date? StartsAt { get => _explicitNullValueStartsAt; set { _explicitNullValueStartsAt = value; AdditionalData?.Remove("starts_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("starts_at"); else _explicitNullProperties?.Remove("starts_at"); } }
         private Date? _explicitNullValueStartsAt = default!;
         /// <summary>The user_limit property</summary>
-        public int? UserLimit { get => _explicitNullValueUserLimit; set { _explicitNullValueUserLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_limit"); else _explicitNullProperties?.Remove("user_limit"); } }
+        public int? UserLimit { get => _explicitNullValueUserLimit; set { _explicitNullValueUserLimit = value; AdditionalData?.Remove("user_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_limit"); else _explicitNullProperties?.Remove("user_limit"); } }
         private int? _explicitNullValueUserLimit = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabLicense"/> and sets the default values.

@@ -17,13 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("issues_count") is { } nullNodeIssuesCount && nullNodeIssuesCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssuesCount = null;
+            if (parseNode.GetChildNode("issues_count") is null) { _explicitNullValueIssuesCount = default!; _explicitNullProperties?.Remove("issues_count"); }
+            else if (parseNode.GetChildNode("issues_count") is { } nullNodeIssuesCount && nullNodeIssuesCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssuesCount = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Number of issues. Limited to 1000</summary>
-        public int? IssuesCount { get => _explicitNullValueIssuesCount; set { _explicitNullValueIssuesCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issues_count"); else _explicitNullProperties?.Remove("issues_count"); } }
+        public int? IssuesCount { get => _explicitNullValueIssuesCount; set { _explicitNullValueIssuesCount = value; AdditionalData?.Remove("issues_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issues_count"); else _explicitNullProperties?.Remove("issues_count"); } }
         private int? _explicitNullValueIssuesCount = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAnalyticsGroupActivityIssuesCount"/> and sets the default values.

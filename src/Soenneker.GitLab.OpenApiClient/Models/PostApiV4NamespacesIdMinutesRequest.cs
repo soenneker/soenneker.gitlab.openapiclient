@@ -17,7 +17,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("packs") is { } nullNodePacks && nullNodePacks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Packs = null;
+            if (parseNode.GetChildNode("packs") is null) { _explicitNullValuePacks = default!; _explicitNullProperties?.Remove("packs"); }
+            else if (parseNode.GetChildNode("packs") is { } nullNodePacks && nullNodePacks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Packs = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Array of additional purchased minute packs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4NamespacesIdMinutesRequestPacksItem>? Packs { get => _explicitNullValuePacks; set { _explicitNullValuePacks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packs"); else _explicitNullProperties?.Remove("packs"); } }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4NamespacesIdMinutesRequestPacksItem>? Packs { get => _explicitNullValuePacks; set { _explicitNullValuePacks = value; AdditionalData?.Remove("packs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packs"); else _explicitNullProperties?.Remove("packs"); } }
         private List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4NamespacesIdMinutesRequestPacksItem>? _explicitNullValuePacks = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4NamespacesIdMinutesRequestPacksItem> Packs { get => _explicitNullValuePacks; set { _explicitNullValuePacks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packs"); else _explicitNullProperties?.Remove("packs"); } }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4NamespacesIdMinutesRequestPacksItem> Packs { get => _explicitNullValuePacks; set { _explicitNullValuePacks = value; AdditionalData?.Remove("packs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packs"); else _explicitNullProperties?.Remove("packs"); } }
         private List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4NamespacesIdMinutesRequestPacksItem> _explicitNullValuePacks = default!;
 #endif
         /// <summary>

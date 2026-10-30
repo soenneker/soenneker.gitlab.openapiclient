@@ -18,9 +18,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("content_above_cursor") is { } nullNodeContentAboveCursor && nullNodeContentAboveCursor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContentAboveCursor = null;
-            if (parseNode.GetChildNode("content_below_cursor") is { } nullNodeContentBelowCursor && nullNodeContentBelowCursor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContentBelowCursor = null;
-            if (parseNode.GetChildNode("file_name") is { } nullNodeFileName && nullNodeFileName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileName = null;
+            if (parseNode.GetChildNode("content_above_cursor") is null) { _explicitNullValueContentAboveCursor = default!; _explicitNullProperties?.Remove("content_above_cursor"); }
+            else if (parseNode.GetChildNode("content_above_cursor") is { } nullNodeContentAboveCursor && nullNodeContentAboveCursor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContentAboveCursor = null;
+            if (parseNode.GetChildNode("content_below_cursor") is null) { _explicitNullValueContentBelowCursor = default!; _explicitNullProperties?.Remove("content_below_cursor"); }
+            else if (parseNode.GetChildNode("content_below_cursor") is { } nullNodeContentBelowCursor && nullNodeContentBelowCursor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContentBelowCursor = null;
+            if (parseNode.GetChildNode("file_name") is null) { _explicitNullValueFileName = default!; _explicitNullProperties?.Remove("file_name"); }
+            else if (parseNode.GetChildNode("file_name") is { } nullNodeFileName && nullNodeFileName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileName = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Content above cursor.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContentAboveCursor { get => _explicitNullValueContentAboveCursor; set { _explicitNullValueContentAboveCursor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content_above_cursor"); else _explicitNullProperties?.Remove("content_above_cursor"); } }
+        public string? ContentAboveCursor { get => _explicitNullValueContentAboveCursor; set { _explicitNullValueContentAboveCursor = value; AdditionalData?.Remove("content_above_cursor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content_above_cursor"); else _explicitNullProperties?.Remove("content_above_cursor"); } }
         private string? _explicitNullValueContentAboveCursor = default!;
 #nullable restore
 #else
-        public string ContentAboveCursor { get => _explicitNullValueContentAboveCursor; set { _explicitNullValueContentAboveCursor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content_above_cursor"); else _explicitNullProperties?.Remove("content_above_cursor"); } }
+        public string ContentAboveCursor { get => _explicitNullValueContentAboveCursor; set { _explicitNullValueContentAboveCursor = value; AdditionalData?.Remove("content_above_cursor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content_above_cursor"); else _explicitNullProperties?.Remove("content_above_cursor"); } }
         private string _explicitNullValueContentAboveCursor = default!;
 #endif
         /// <summary>Content below cursor.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContentBelowCursor { get => _explicitNullValueContentBelowCursor; set { _explicitNullValueContentBelowCursor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content_below_cursor"); else _explicitNullProperties?.Remove("content_below_cursor"); } }
+        public string? ContentBelowCursor { get => _explicitNullValueContentBelowCursor; set { _explicitNullValueContentBelowCursor = value; AdditionalData?.Remove("content_below_cursor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content_below_cursor"); else _explicitNullProperties?.Remove("content_below_cursor"); } }
         private string? _explicitNullValueContentBelowCursor = default!;
 #nullable restore
 #else
-        public string ContentBelowCursor { get => _explicitNullValueContentBelowCursor; set { _explicitNullValueContentBelowCursor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content_below_cursor"); else _explicitNullProperties?.Remove("content_below_cursor"); } }
+        public string ContentBelowCursor { get => _explicitNullValueContentBelowCursor; set { _explicitNullValueContentBelowCursor = value; AdditionalData?.Remove("content_below_cursor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content_below_cursor"); else _explicitNullProperties?.Remove("content_below_cursor"); } }
         private string _explicitNullValueContentBelowCursor = default!;
 #endif
         /// <summary>Name of the current file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FileName { get => _explicitNullValueFileName; set { _explicitNullValueFileName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_name"); else _explicitNullProperties?.Remove("file_name"); } }
+        public string? FileName { get => _explicitNullValueFileName; set { _explicitNullValueFileName = value; AdditionalData?.Remove("file_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_name"); else _explicitNullProperties?.Remove("file_name"); } }
         private string? _explicitNullValueFileName = default!;
 #nullable restore
 #else
-        public string FileName { get => _explicitNullValueFileName; set { _explicitNullValueFileName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_name"); else _explicitNullProperties?.Remove("file_name"); } }
+        public string FileName { get => _explicitNullValueFileName; set { _explicitNullValueFileName = value; AdditionalData?.Remove("file_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_name"); else _explicitNullProperties?.Remove("file_name"); } }
         private string _explicitNullValueFileName = default!;
 #endif
         /// <summary>

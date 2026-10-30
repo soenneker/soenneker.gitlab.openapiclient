@@ -17,23 +17,25 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("exists") is { } nullNodeExists && nullNodeExists.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Exists = null;
-            if (parseNode.GetChildNode("suggests") is { } nullNodeSuggests && nullNodeSuggests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Suggests = null;
+            if (parseNode.GetChildNode("exists") is null) { _explicitNullValueExists = default!; _explicitNullProperties?.Remove("exists"); }
+            else if (parseNode.GetChildNode("exists") is { } nullNodeExists && nullNodeExists.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Exists = null;
+            if (parseNode.GetChildNode("suggests") is null) { _explicitNullValueSuggests = default!; _explicitNullProperties?.Remove("suggests"); }
+            else if (parseNode.GetChildNode("suggests") is { } nullNodeSuggests && nullNodeSuggests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Suggests = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The exists property</summary>
-        public bool? Exists { get => _explicitNullValueExists; set { _explicitNullValueExists = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exists"); else _explicitNullProperties?.Remove("exists"); } }
+        public bool? Exists { get => _explicitNullValueExists; set { _explicitNullValueExists = value; AdditionalData?.Remove("exists"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exists"); else _explicitNullProperties?.Remove("exists"); } }
         private bool? _explicitNullValueExists = default!;
         /// <summary>The suggests property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Suggests { get => _explicitNullValueSuggests; set { _explicitNullValueSuggests = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggests"); else _explicitNullProperties?.Remove("suggests"); } }
+        public List<string>? Suggests { get => _explicitNullValueSuggests; set { _explicitNullValueSuggests = value; AdditionalData?.Remove("suggests"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggests"); else _explicitNullProperties?.Remove("suggests"); } }
         private List<string>? _explicitNullValueSuggests = default!;
 #nullable restore
 #else
-        public List<string> Suggests { get => _explicitNullValueSuggests; set { _explicitNullValueSuggests = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggests"); else _explicitNullProperties?.Remove("suggests"); } }
+        public List<string> Suggests { get => _explicitNullValueSuggests; set { _explicitNullValueSuggests = value; AdditionalData?.Remove("suggests"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggests"); else _explicitNullProperties?.Remove("suggests"); } }
         private List<string> _explicitNullValueSuggests = default!;
 #endif
         /// <summary>

@@ -17,17 +17,19 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ahead") is { } nullNodeAhead && nullNodeAhead.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ahead = null;
-            if (parseNode.GetChildNode("behind") is { } nullNodeBehind && nullNodeBehind.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Behind = null;
+            if (parseNode.GetChildNode("ahead") is null) { _explicitNullValueAhead = default!; _explicitNullProperties?.Remove("ahead"); }
+            else if (parseNode.GetChildNode("ahead") is { } nullNodeAhead && nullNodeAhead.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ahead = null;
+            if (parseNode.GetChildNode("behind") is null) { _explicitNullValueBehind = default!; _explicitNullProperties?.Remove("behind"); }
+            else if (parseNode.GetChildNode("behind") is { } nullNodeBehind && nullNodeBehind.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Behind = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ahead property</summary>
-        public int? Ahead { get => _explicitNullValueAhead; set { _explicitNullValueAhead = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ahead"); else _explicitNullProperties?.Remove("ahead"); } }
+        public int? Ahead { get => _explicitNullValueAhead; set { _explicitNullValueAhead = value; AdditionalData?.Remove("ahead"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ahead"); else _explicitNullProperties?.Remove("ahead"); } }
         private int? _explicitNullValueAhead = default!;
         /// <summary>The behind property</summary>
-        public int? Behind { get => _explicitNullValueBehind; set { _explicitNullValueBehind = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("behind"); else _explicitNullProperties?.Remove("behind"); } }
+        public int? Behind { get => _explicitNullValueBehind; set { _explicitNullValueBehind = value; AdditionalData?.Remove("behind"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("behind"); else _explicitNullProperties?.Remove("behind"); } }
         private int? _explicitNullValueBehind = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDivergingCommitCount"/> and sets the default values.

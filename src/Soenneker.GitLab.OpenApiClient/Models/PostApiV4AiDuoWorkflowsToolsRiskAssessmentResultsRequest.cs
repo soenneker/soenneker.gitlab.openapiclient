@@ -17,12 +17,18 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("claims") is { } nullNodeClaims && nullNodeClaims.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Claims = null;
-            if (parseNode.GetChildNode("diff_sha") is { } nullNodeDiffSha && nullNodeDiffSha.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiffSha = null;
-            if (parseNode.GetChildNode("merge_request_iid") is { } nullNodeMergeRequestIid && nullNodeMergeRequestIid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequestIid = null;
-            if (parseNode.GetChildNode("project_id") is { } nullNodeProjectId && nullNodeProjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectId = null;
-            if (parseNode.GetChildNode("summary") is { } nullNodeSummary && nullNodeSummary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Summary = null;
-            if (parseNode.GetChildNode("workflow_id") is { } nullNodeWorkflowId && nullNodeWorkflowId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowId = null;
+            if (parseNode.GetChildNode("claims") is null) { _explicitNullValueClaims = default!; _explicitNullProperties?.Remove("claims"); }
+            else if (parseNode.GetChildNode("claims") is { } nullNodeClaims && nullNodeClaims.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Claims = null;
+            if (parseNode.GetChildNode("diff_sha") is null) { _explicitNullValueDiffSha = default!; _explicitNullProperties?.Remove("diff_sha"); }
+            else if (parseNode.GetChildNode("diff_sha") is { } nullNodeDiffSha && nullNodeDiffSha.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiffSha = null;
+            if (parseNode.GetChildNode("merge_request_iid") is null) { _explicitNullValueMergeRequestIid = default!; _explicitNullProperties?.Remove("merge_request_iid"); }
+            else if (parseNode.GetChildNode("merge_request_iid") is { } nullNodeMergeRequestIid && nullNodeMergeRequestIid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequestIid = null;
+            if (parseNode.GetChildNode("project_id") is null) { _explicitNullValueProjectId = default!; _explicitNullProperties?.Remove("project_id"); }
+            else if (parseNode.GetChildNode("project_id") is { } nullNodeProjectId && nullNodeProjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectId = null;
+            if (parseNode.GetChildNode("summary") is null) { _explicitNullValueSummary = default!; _explicitNullProperties?.Remove("summary"); }
+            else if (parseNode.GetChildNode("summary") is { } nullNodeSummary && nullNodeSummary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Summary = null;
+            if (parseNode.GetChildNode("workflow_id") is null) { _explicitNullValueWorkflowId = default!; _explicitNullProperties?.Remove("workflow_id"); }
+            else if (parseNode.GetChildNode("workflow_id") is { } nullNodeWorkflowId && nullNodeWorkflowId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,48 +36,48 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Categorical claims about the merge request</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsToolsRiskAssessmentResultsRequestClaimsItem>? Claims { get => _explicitNullValueClaims; set { _explicitNullValueClaims = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("claims"); else _explicitNullProperties?.Remove("claims"); } }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsToolsRiskAssessmentResultsRequestClaimsItem>? Claims { get => _explicitNullValueClaims; set { _explicitNullValueClaims = value; AdditionalData?.Remove("claims"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("claims"); else _explicitNullProperties?.Remove("claims"); } }
         private List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsToolsRiskAssessmentResultsRequestClaimsItem>? _explicitNullValueClaims = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsToolsRiskAssessmentResultsRequestClaimsItem> Claims { get => _explicitNullValueClaims; set { _explicitNullValueClaims = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("claims"); else _explicitNullProperties?.Remove("claims"); } }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsToolsRiskAssessmentResultsRequestClaimsItem> Claims { get => _explicitNullValueClaims; set { _explicitNullValueClaims = value; AdditionalData?.Remove("claims"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("claims"); else _explicitNullProperties?.Remove("claims"); } }
         private List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsToolsRiskAssessmentResultsRequestClaimsItem> _explicitNullValueClaims = default!;
 #endif
         /// <summary>The full SHA of the diff revision the claims were assessed against</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DiffSha { get => _explicitNullValueDiffSha; set { _explicitNullValueDiffSha = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("diff_sha"); else _explicitNullProperties?.Remove("diff_sha"); } }
+        public string? DiffSha { get => _explicitNullValueDiffSha; set { _explicitNullValueDiffSha = value; AdditionalData?.Remove("diff_sha"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("diff_sha"); else _explicitNullProperties?.Remove("diff_sha"); } }
         private string? _explicitNullValueDiffSha = default!;
 #nullable restore
 #else
-        public string DiffSha { get => _explicitNullValueDiffSha; set { _explicitNullValueDiffSha = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("diff_sha"); else _explicitNullProperties?.Remove("diff_sha"); } }
+        public string DiffSha { get => _explicitNullValueDiffSha; set { _explicitNullValueDiffSha = value; AdditionalData?.Remove("diff_sha"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("diff_sha"); else _explicitNullProperties?.Remove("diff_sha"); } }
         private string _explicitNullValueDiffSha = default!;
 #endif
         /// <summary>The IID of the merge request</summary>
-        public int? MergeRequestIid { get => _explicitNullValueMergeRequestIid; set { _explicitNullValueMergeRequestIid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_request_iid"); else _explicitNullProperties?.Remove("merge_request_iid"); } }
+        public int? MergeRequestIid { get => _explicitNullValueMergeRequestIid; set { _explicitNullValueMergeRequestIid = value; AdditionalData?.Remove("merge_request_iid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_request_iid"); else _explicitNullProperties?.Remove("merge_request_iid"); } }
         private int? _explicitNullValueMergeRequestIid = default!;
         /// <summary>The ID or path of the project</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_id"); else _explicitNullProperties?.Remove("project_id"); } }
+        public string? ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; AdditionalData?.Remove("project_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_id"); else _explicitNullProperties?.Remove("project_id"); } }
         private string? _explicitNullValueProjectId = default!;
 #nullable restore
 #else
-        public string ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_id"); else _explicitNullProperties?.Remove("project_id"); } }
+        public string ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; AdditionalData?.Remove("project_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_id"); else _explicitNullProperties?.Remove("project_id"); } }
         private string _explicitNullValueProjectId = default!;
 #endif
         /// <summary>Plain-language explanation of the change and where its risk lies</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Summary { get => _explicitNullValueSummary; set { _explicitNullValueSummary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("summary"); else _explicitNullProperties?.Remove("summary"); } }
+        public string? Summary { get => _explicitNullValueSummary; set { _explicitNullValueSummary = value; AdditionalData?.Remove("summary"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("summary"); else _explicitNullProperties?.Remove("summary"); } }
         private string? _explicitNullValueSummary = default!;
 #nullable restore
 #else
-        public string Summary { get => _explicitNullValueSummary; set { _explicitNullValueSummary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("summary"); else _explicitNullProperties?.Remove("summary"); } }
+        public string Summary { get => _explicitNullValueSummary; set { _explicitNullValueSummary = value; AdditionalData?.Remove("summary"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("summary"); else _explicitNullProperties?.Remove("summary"); } }
         private string _explicitNullValueSummary = default!;
 #endif
         /// <summary>ID of the Duo workflow session that produced these claims</summary>
-        public int? WorkflowId { get => _explicitNullValueWorkflowId; set { _explicitNullValueWorkflowId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_id"); else _explicitNullProperties?.Remove("workflow_id"); } }
+        public int? WorkflowId { get => _explicitNullValueWorkflowId; set { _explicitNullValueWorkflowId = value; AdditionalData?.Remove("workflow_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_id"); else _explicitNullProperties?.Remove("workflow_id"); } }
         private int? _explicitNullValueWorkflowId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsToolsRiskAssessmentResultsRequest"/> and sets the default values.

@@ -17,7 +17,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("personal_access_token") is { } nullNodePersonalAccessToken && nullNodePersonalAccessToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PersonalAccessToken = null;
+            if (parseNode.GetChildNode("personal_access_token") is null) { _explicitNullValuePersonalAccessToken = default!; _explicitNullProperties?.Remove("personal_access_token"); }
+            else if (parseNode.GetChildNode("personal_access_token") is { } nullNodePersonalAccessToken && nullNodePersonalAccessToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PersonalAccessToken = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>GitHub personal access token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PersonalAccessToken { get => _explicitNullValuePersonalAccessToken; set { _explicitNullValuePersonalAccessToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("personal_access_token"); else _explicitNullProperties?.Remove("personal_access_token"); } }
+        public string? PersonalAccessToken { get => _explicitNullValuePersonalAccessToken; set { _explicitNullValuePersonalAccessToken = value; AdditionalData?.Remove("personal_access_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("personal_access_token"); else _explicitNullProperties?.Remove("personal_access_token"); } }
         private string? _explicitNullValuePersonalAccessToken = default!;
 #nullable restore
 #else
-        public string PersonalAccessToken { get => _explicitNullValuePersonalAccessToken; set { _explicitNullValuePersonalAccessToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("personal_access_token"); else _explicitNullProperties?.Remove("personal_access_token"); } }
+        public string PersonalAccessToken { get => _explicitNullValuePersonalAccessToken; set { _explicitNullValuePersonalAccessToken = value; AdditionalData?.Remove("personal_access_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("personal_access_token"); else _explicitNullProperties?.Remove("personal_access_token"); } }
         private string _explicitNullValuePersonalAccessToken = default!;
 #endif
         /// <summary>

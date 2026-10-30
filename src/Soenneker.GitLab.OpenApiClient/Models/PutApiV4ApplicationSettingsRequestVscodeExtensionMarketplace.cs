@@ -18,9 +18,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("custom_values") is { } nullNodeCustomValues && nullNodeCustomValues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomValues = null;
-            if (parseNode.GetChildNode("enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
-            if (parseNode.GetChildNode("preset") is { } nullNodePreset && nullNodePreset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Preset = null;
+            if (parseNode.GetChildNode("custom_values") is null) { _explicitNullValueCustomValues = default!; _explicitNullProperties?.Remove("custom_values"); }
+            else if (parseNode.GetChildNode("custom_values") is { } nullNodeCustomValues && nullNodeCustomValues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomValues = null;
+            if (parseNode.GetChildNode("enabled") is null) { _explicitNullValueEnabled = default!; _explicitNullProperties?.Remove("enabled"); }
+            else if (parseNode.GetChildNode("enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
+            if (parseNode.GetChildNode("preset") is null) { _explicitNullValuePreset = default!; _explicitNullProperties?.Remove("preset"); }
+            else if (parseNode.GetChildNode("preset") is { } nullNodePreset && nullNodePreset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Preset = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,24 +31,24 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>VS Code Extension Marketplace URL&apos;s when preset is &apos;custom&apos;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestVscodeExtensionMarketplaceCustomValuesProperty? CustomValues { get => _explicitNullValueCustomValues; set { _explicitNullValueCustomValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_values"); else _explicitNullProperties?.Remove("custom_values"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestVscodeExtensionMarketplaceCustomValuesProperty? CustomValues { get => _explicitNullValueCustomValues; set { _explicitNullValueCustomValues = value; AdditionalData?.Remove("custom_values"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_values"); else _explicitNullProperties?.Remove("custom_values"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestVscodeExtensionMarketplaceCustomValuesProperty? _explicitNullValueCustomValues = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestVscodeExtensionMarketplaceCustomValuesProperty CustomValues { get => _explicitNullValueCustomValues; set { _explicitNullValueCustomValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_values"); else _explicitNullProperties?.Remove("custom_values"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestVscodeExtensionMarketplaceCustomValuesProperty CustomValues { get => _explicitNullValueCustomValues; set { _explicitNullValueCustomValues = value; AdditionalData?.Remove("custom_values"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_values"); else _explicitNullProperties?.Remove("custom_values"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestVscodeExtensionMarketplaceCustomValuesProperty _explicitNullValueCustomValues = default!;
 #endif
         /// <summary>If `true`, enables the VS Code extension marketplace for the Web IDE and Workspaces.</summary>
-        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
+        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; AdditionalData?.Remove("enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
         private bool? _explicitNullValueEnabled = default!;
         /// <summary>The preset configuration of URL&apos;s for the VS Code Extension Marketplace</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Preset { get => _explicitNullValuePreset; set { _explicitNullValuePreset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preset"); else _explicitNullProperties?.Remove("preset"); } }
+        public string? Preset { get => _explicitNullValuePreset; set { _explicitNullValuePreset = value; AdditionalData?.Remove("preset"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preset"); else _explicitNullProperties?.Remove("preset"); } }
         private string? _explicitNullValuePreset = default!;
 #nullable restore
 #else
-        public string Preset { get => _explicitNullValuePreset; set { _explicitNullValuePreset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preset"); else _explicitNullProperties?.Remove("preset"); } }
+        public string Preset { get => _explicitNullValuePreset; set { _explicitNullValuePreset = value; AdditionalData?.Remove("preset"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preset"); else _explicitNullProperties?.Remove("preset"); } }
         private string _explicitNullValuePreset = default!;
 #endif
         /// <summary>

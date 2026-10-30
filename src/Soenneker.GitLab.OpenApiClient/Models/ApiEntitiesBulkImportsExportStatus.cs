@@ -17,62 +17,70 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("batched") is { } nullNodeBatched && nullNodeBatched.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Batched = null;
-            if (parseNode.GetChildNode("batches") is { } nullNodeBatches && nullNodeBatches.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Batches = null;
-            if (parseNode.GetChildNode("batches_count") is { } nullNodeBatchesCount && nullNodeBatchesCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BatchesCount = null;
-            if (parseNode.GetChildNode("error") is { } nullNodeError && nullNodeError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Error = null;
-            if (parseNode.GetChildNode("relation") is { } nullNodeRelation && nullNodeRelation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Relation = null;
-            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
-            if (parseNode.GetChildNode("total_objects_count") is { } nullNodeTotalObjectsCount && nullNodeTotalObjectsCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalObjectsCount = null;
-            if (parseNode.GetChildNode("updated_at") is { } nullNodeUpdatedAt && nullNodeUpdatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedAt = null;
+            if (parseNode.GetChildNode("batched") is null) { _explicitNullValueBatched = default!; _explicitNullProperties?.Remove("batched"); }
+            else if (parseNode.GetChildNode("batched") is { } nullNodeBatched && nullNodeBatched.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Batched = null;
+            if (parseNode.GetChildNode("batches") is null) { _explicitNullValueBatches = default!; _explicitNullProperties?.Remove("batches"); }
+            else if (parseNode.GetChildNode("batches") is { } nullNodeBatches && nullNodeBatches.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Batches = null;
+            if (parseNode.GetChildNode("batches_count") is null) { _explicitNullValueBatchesCount = default!; _explicitNullProperties?.Remove("batches_count"); }
+            else if (parseNode.GetChildNode("batches_count") is { } nullNodeBatchesCount && nullNodeBatchesCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BatchesCount = null;
+            if (parseNode.GetChildNode("error") is null) { _explicitNullValueError = default!; _explicitNullProperties?.Remove("error"); }
+            else if (parseNode.GetChildNode("error") is { } nullNodeError && nullNodeError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Error = null;
+            if (parseNode.GetChildNode("relation") is null) { _explicitNullValueRelation = default!; _explicitNullProperties?.Remove("relation"); }
+            else if (parseNode.GetChildNode("relation") is { } nullNodeRelation && nullNodeRelation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Relation = null;
+            if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
+            else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("total_objects_count") is null) { _explicitNullValueTotalObjectsCount = default!; _explicitNullProperties?.Remove("total_objects_count"); }
+            else if (parseNode.GetChildNode("total_objects_count") is { } nullNodeTotalObjectsCount && nullNodeTotalObjectsCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalObjectsCount = null;
+            if (parseNode.GetChildNode("updated_at") is null) { _explicitNullValueUpdatedAt = default!; _explicitNullProperties?.Remove("updated_at"); }
+            else if (parseNode.GetChildNode("updated_at") is { } nullNodeUpdatedAt && nullNodeUpdatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedAt = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The batched property</summary>
-        public bool? Batched { get => _explicitNullValueBatched; set { _explicitNullValueBatched = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("batched"); else _explicitNullProperties?.Remove("batched"); } }
+        public bool? Batched { get => _explicitNullValueBatched; set { _explicitNullValueBatched = value; AdditionalData?.Remove("batched"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("batched"); else _explicitNullProperties?.Remove("batched"); } }
         private bool? _explicitNullValueBatched = default!;
         /// <summary>The batches property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsExportBatchStatus? Batches { get => _explicitNullValueBatches; set { _explicitNullValueBatches = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("batches"); else _explicitNullProperties?.Remove("batches"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsExportBatchStatus? Batches { get => _explicitNullValueBatches; set { _explicitNullValueBatches = value; AdditionalData?.Remove("batches"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("batches"); else _explicitNullProperties?.Remove("batches"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsExportBatchStatus? _explicitNullValueBatches = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsExportBatchStatus Batches { get => _explicitNullValueBatches; set { _explicitNullValueBatches = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("batches"); else _explicitNullProperties?.Remove("batches"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsExportBatchStatus Batches { get => _explicitNullValueBatches; set { _explicitNullValueBatches = value; AdditionalData?.Remove("batches"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("batches"); else _explicitNullProperties?.Remove("batches"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsExportBatchStatus _explicitNullValueBatches = default!;
 #endif
         /// <summary>The batches_count property</summary>
-        public int? BatchesCount { get => _explicitNullValueBatchesCount; set { _explicitNullValueBatchesCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("batches_count"); else _explicitNullProperties?.Remove("batches_count"); } }
+        public int? BatchesCount { get => _explicitNullValueBatchesCount; set { _explicitNullValueBatchesCount = value; AdditionalData?.Remove("batches_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("batches_count"); else _explicitNullProperties?.Remove("batches_count"); } }
         private int? _explicitNullValueBatchesCount = default!;
         /// <summary>The error property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Error { get => _explicitNullValueError; set { _explicitNullValueError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
+        public string? Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
         private string? _explicitNullValueError = default!;
 #nullable restore
 #else
-        public string Error { get => _explicitNullValueError; set { _explicitNullValueError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
+        public string Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
         private string _explicitNullValueError = default!;
 #endif
         /// <summary>The relation property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Relation { get => _explicitNullValueRelation; set { _explicitNullValueRelation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("relation"); else _explicitNullProperties?.Remove("relation"); } }
+        public string? Relation { get => _explicitNullValueRelation; set { _explicitNullValueRelation = value; AdditionalData?.Remove("relation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("relation"); else _explicitNullProperties?.Remove("relation"); } }
         private string? _explicitNullValueRelation = default!;
 #nullable restore
 #else
-        public string Relation { get => _explicitNullValueRelation; set { _explicitNullValueRelation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("relation"); else _explicitNullProperties?.Remove("relation"); } }
+        public string Relation { get => _explicitNullValueRelation; set { _explicitNullValueRelation = value; AdditionalData?.Remove("relation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("relation"); else _explicitNullProperties?.Remove("relation"); } }
         private string _explicitNullValueRelation = default!;
 #endif
         /// <summary>The status property</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsExportStatusStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsExportStatusStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsExportStatusStatus? _explicitNullValueStatus = default!;
         /// <summary>The total_objects_count property</summary>
-        public int? TotalObjectsCount { get => _explicitNullValueTotalObjectsCount; set { _explicitNullValueTotalObjectsCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_objects_count"); else _explicitNullProperties?.Remove("total_objects_count"); } }
+        public int? TotalObjectsCount { get => _explicitNullValueTotalObjectsCount; set { _explicitNullValueTotalObjectsCount = value; AdditionalData?.Remove("total_objects_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_objects_count"); else _explicitNullProperties?.Remove("total_objects_count"); } }
         private int? _explicitNullValueTotalObjectsCount = default!;
         /// <summary>The updated_at property</summary>
-        public DateTimeOffset? UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_at"); else _explicitNullProperties?.Remove("updated_at"); } }
+        public DateTimeOffset? UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; AdditionalData?.Remove("updated_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_at"); else _explicitNullProperties?.Remove("updated_at"); } }
         private DateTimeOffset? _explicitNullValueUpdatedAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsExportStatus"/> and sets the default values.
@@ -104,7 +112,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "batches_count", n => { BatchesCount = n.GetIntValue(); } },
                 { "error", n => { Error = n.GetStringValue(); } },
                 { "relation", n => { Relation = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsExportStatusStatus>(); } },
+                { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsExportStatusStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
                 { "total_objects_count", n => { TotalObjectsCount = n.GetIntValue(); } },
                 { "updated_at", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
             };

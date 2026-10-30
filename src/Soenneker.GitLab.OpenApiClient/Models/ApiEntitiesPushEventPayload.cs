@@ -17,82 +17,90 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("action") is { } nullNodeAction && nullNodeAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Action = null;
-            if (parseNode.GetChildNode("commit_count") is { } nullNodeCommitCount && nullNodeCommitCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommitCount = null;
-            if (parseNode.GetChildNode("commit_from") is { } nullNodeCommitFrom && nullNodeCommitFrom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommitFrom = null;
-            if (parseNode.GetChildNode("commit_title") is { } nullNodeCommitTitle && nullNodeCommitTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommitTitle = null;
-            if (parseNode.GetChildNode("commit_to") is { } nullNodeCommitTo && nullNodeCommitTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommitTo = null;
-            if (parseNode.GetChildNode("ref") is { } nullNodeRef && nullNodeRef.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ref = null;
-            if (parseNode.GetChildNode("ref_count") is { } nullNodeRefCount && nullNodeRefCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefCount = null;
-            if (parseNode.GetChildNode("ref_type") is { } nullNodeRefType && nullNodeRefType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefType = null;
+            if (parseNode.GetChildNode("action") is null) { _explicitNullValueAction = default!; _explicitNullProperties?.Remove("action"); }
+            else if (parseNode.GetChildNode("action") is { } nullNodeAction && nullNodeAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Action = null;
+            if (parseNode.GetChildNode("commit_count") is null) { _explicitNullValueCommitCount = default!; _explicitNullProperties?.Remove("commit_count"); }
+            else if (parseNode.GetChildNode("commit_count") is { } nullNodeCommitCount && nullNodeCommitCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommitCount = null;
+            if (parseNode.GetChildNode("commit_from") is null) { _explicitNullValueCommitFrom = default!; _explicitNullProperties?.Remove("commit_from"); }
+            else if (parseNode.GetChildNode("commit_from") is { } nullNodeCommitFrom && nullNodeCommitFrom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommitFrom = null;
+            if (parseNode.GetChildNode("commit_title") is null) { _explicitNullValueCommitTitle = default!; _explicitNullProperties?.Remove("commit_title"); }
+            else if (parseNode.GetChildNode("commit_title") is { } nullNodeCommitTitle && nullNodeCommitTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommitTitle = null;
+            if (parseNode.GetChildNode("commit_to") is null) { _explicitNullValueCommitTo = default!; _explicitNullProperties?.Remove("commit_to"); }
+            else if (parseNode.GetChildNode("commit_to") is { } nullNodeCommitTo && nullNodeCommitTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommitTo = null;
+            if (parseNode.GetChildNode("ref") is null) { _explicitNullValueRef = default!; _explicitNullProperties?.Remove("ref"); }
+            else if (parseNode.GetChildNode("ref") is { } nullNodeRef && nullNodeRef.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ref = null;
+            if (parseNode.GetChildNode("ref_count") is null) { _explicitNullValueRefCount = default!; _explicitNullProperties?.Remove("ref_count"); }
+            else if (parseNode.GetChildNode("ref_count") is { } nullNodeRefCount && nullNodeRefCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefCount = null;
+            if (parseNode.GetChildNode("ref_type") is null) { _explicitNullValueRefType = default!; _explicitNullProperties?.Remove("ref_type"); }
+            else if (parseNode.GetChildNode("ref_type") is { } nullNodeRefType && nullNodeRefType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefType = null;
         }
 
         /// <summary>The action property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Action { get => _explicitNullValueAction; set { _explicitNullValueAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action"); else _explicitNullProperties?.Remove("action"); } }
+        public string? Action { get => _explicitNullValueAction; set { _explicitNullValueAction = value; AdditionalData?.Remove("action"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action"); else _explicitNullProperties?.Remove("action"); } }
         private string? _explicitNullValueAction = default!;
 #nullable restore
 #else
-        public string Action { get => _explicitNullValueAction; set { _explicitNullValueAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action"); else _explicitNullProperties?.Remove("action"); } }
+        public string Action { get => _explicitNullValueAction; set { _explicitNullValueAction = value; AdditionalData?.Remove("action"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action"); else _explicitNullProperties?.Remove("action"); } }
         private string _explicitNullValueAction = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The commit_count property</summary>
-        public int? CommitCount { get => _explicitNullValueCommitCount; set { _explicitNullValueCommitCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_count"); else _explicitNullProperties?.Remove("commit_count"); } }
+        public int? CommitCount { get => _explicitNullValueCommitCount; set { _explicitNullValueCommitCount = value; AdditionalData?.Remove("commit_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_count"); else _explicitNullProperties?.Remove("commit_count"); } }
         private int? _explicitNullValueCommitCount = default!;
         /// <summary>The commit_from property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CommitFrom { get => _explicitNullValueCommitFrom; set { _explicitNullValueCommitFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_from"); else _explicitNullProperties?.Remove("commit_from"); } }
+        public string? CommitFrom { get => _explicitNullValueCommitFrom; set { _explicitNullValueCommitFrom = value; AdditionalData?.Remove("commit_from"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_from"); else _explicitNullProperties?.Remove("commit_from"); } }
         private string? _explicitNullValueCommitFrom = default!;
 #nullable restore
 #else
-        public string CommitFrom { get => _explicitNullValueCommitFrom; set { _explicitNullValueCommitFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_from"); else _explicitNullProperties?.Remove("commit_from"); } }
+        public string CommitFrom { get => _explicitNullValueCommitFrom; set { _explicitNullValueCommitFrom = value; AdditionalData?.Remove("commit_from"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_from"); else _explicitNullProperties?.Remove("commit_from"); } }
         private string _explicitNullValueCommitFrom = default!;
 #endif
         /// <summary>The commit_title property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CommitTitle { get => _explicitNullValueCommitTitle; set { _explicitNullValueCommitTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_title"); else _explicitNullProperties?.Remove("commit_title"); } }
+        public string? CommitTitle { get => _explicitNullValueCommitTitle; set { _explicitNullValueCommitTitle = value; AdditionalData?.Remove("commit_title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_title"); else _explicitNullProperties?.Remove("commit_title"); } }
         private string? _explicitNullValueCommitTitle = default!;
 #nullable restore
 #else
-        public string CommitTitle { get => _explicitNullValueCommitTitle; set { _explicitNullValueCommitTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_title"); else _explicitNullProperties?.Remove("commit_title"); } }
+        public string CommitTitle { get => _explicitNullValueCommitTitle; set { _explicitNullValueCommitTitle = value; AdditionalData?.Remove("commit_title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_title"); else _explicitNullProperties?.Remove("commit_title"); } }
         private string _explicitNullValueCommitTitle = default!;
 #endif
         /// <summary>The commit_to property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CommitTo { get => _explicitNullValueCommitTo; set { _explicitNullValueCommitTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_to"); else _explicitNullProperties?.Remove("commit_to"); } }
+        public string? CommitTo { get => _explicitNullValueCommitTo; set { _explicitNullValueCommitTo = value; AdditionalData?.Remove("commit_to"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_to"); else _explicitNullProperties?.Remove("commit_to"); } }
         private string? _explicitNullValueCommitTo = default!;
 #nullable restore
 #else
-        public string CommitTo { get => _explicitNullValueCommitTo; set { _explicitNullValueCommitTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_to"); else _explicitNullProperties?.Remove("commit_to"); } }
+        public string CommitTo { get => _explicitNullValueCommitTo; set { _explicitNullValueCommitTo = value; AdditionalData?.Remove("commit_to"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_to"); else _explicitNullProperties?.Remove("commit_to"); } }
         private string _explicitNullValueCommitTo = default!;
 #endif
         /// <summary>The ref property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Ref { get => _explicitNullValueRef; set { _explicitNullValueRef = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ref"); else _explicitNullProperties?.Remove("ref"); } }
+        public string? Ref { get => _explicitNullValueRef; set { _explicitNullValueRef = value; AdditionalData?.Remove("ref"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ref"); else _explicitNullProperties?.Remove("ref"); } }
         private string? _explicitNullValueRef = default!;
 #nullable restore
 #else
-        public string Ref { get => _explicitNullValueRef; set { _explicitNullValueRef = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ref"); else _explicitNullProperties?.Remove("ref"); } }
+        public string Ref { get => _explicitNullValueRef; set { _explicitNullValueRef = value; AdditionalData?.Remove("ref"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ref"); else _explicitNullProperties?.Remove("ref"); } }
         private string _explicitNullValueRef = default!;
 #endif
         /// <summary>The ref_count property</summary>
-        public int? RefCount { get => _explicitNullValueRefCount; set { _explicitNullValueRefCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ref_count"); else _explicitNullProperties?.Remove("ref_count"); } }
+        public int? RefCount { get => _explicitNullValueRefCount; set { _explicitNullValueRefCount = value; AdditionalData?.Remove("ref_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ref_count"); else _explicitNullProperties?.Remove("ref_count"); } }
         private int? _explicitNullValueRefCount = default!;
         /// <summary>The ref_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RefType { get => _explicitNullValueRefType; set { _explicitNullValueRefType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ref_type"); else _explicitNullProperties?.Remove("ref_type"); } }
+        public string? RefType { get => _explicitNullValueRefType; set { _explicitNullValueRefType = value; AdditionalData?.Remove("ref_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ref_type"); else _explicitNullProperties?.Remove("ref_type"); } }
         private string? _explicitNullValueRefType = default!;
 #nullable restore
 #else
-        public string RefType { get => _explicitNullValueRefType; set { _explicitNullValueRefType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ref_type"); else _explicitNullProperties?.Remove("ref_type"); } }
+        public string RefType { get => _explicitNullValueRefType; set { _explicitNullValueRefType = value; AdditionalData?.Remove("ref_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ref_type"); else _explicitNullProperties?.Remove("ref_type"); } }
         private string _explicitNullValueRefType = default!;
 #endif
         /// <summary>

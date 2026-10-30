@@ -17,9 +17,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("project_id") is { } nullNodeProjectId && nullNodeProjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectId = null;
-            if (parseNode.GetChildNode("root_namespace_id") is { } nullNodeRootNamespaceId && nullNodeRootNamespaceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RootNamespaceId = null;
-            if (parseNode.GetChildNode("workflow_definition") is { } nullNodeWorkflowDefinition && nullNodeWorkflowDefinition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowDefinition = null;
+            if (parseNode.GetChildNode("project_id") is null) { _explicitNullValueProjectId = default!; _explicitNullProperties?.Remove("project_id"); }
+            else if (parseNode.GetChildNode("project_id") is { } nullNodeProjectId && nullNodeProjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectId = null;
+            if (parseNode.GetChildNode("root_namespace_id") is null) { _explicitNullValueRootNamespaceId = default!; _explicitNullProperties?.Remove("root_namespace_id"); }
+            else if (parseNode.GetChildNode("root_namespace_id") is { } nullNodeRootNamespaceId && nullNodeRootNamespaceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RootNamespaceId = null;
+            if (parseNode.GetChildNode("workflow_definition") is null) { _explicitNullValueWorkflowDefinition = default!; _explicitNullProperties?.Remove("workflow_definition"); }
+            else if (parseNode.GetChildNode("workflow_definition") is { } nullNodeWorkflowDefinition && nullNodeWorkflowDefinition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowDefinition = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>ID or URL-encoded path of the project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_id"); else _explicitNullProperties?.Remove("project_id"); } }
+        public string? ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; AdditionalData?.Remove("project_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_id"); else _explicitNullProperties?.Remove("project_id"); } }
         private string? _explicitNullValueProjectId = default!;
 #nullable restore
 #else
-        public string ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_id"); else _explicitNullProperties?.Remove("project_id"); } }
+        public string ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; AdditionalData?.Remove("project_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_id"); else _explicitNullProperties?.Remove("project_id"); } }
         private string _explicitNullValueProjectId = default!;
 #endif
         /// <summary>ID of the root namespace.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RootNamespaceId { get => _explicitNullValueRootNamespaceId; set { _explicitNullValueRootNamespaceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("root_namespace_id"); else _explicitNullProperties?.Remove("root_namespace_id"); } }
+        public string? RootNamespaceId { get => _explicitNullValueRootNamespaceId; set { _explicitNullValueRootNamespaceId = value; AdditionalData?.Remove("root_namespace_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("root_namespace_id"); else _explicitNullProperties?.Remove("root_namespace_id"); } }
         private string? _explicitNullValueRootNamespaceId = default!;
 #nullable restore
 #else
-        public string RootNamespaceId { get => _explicitNullValueRootNamespaceId; set { _explicitNullValueRootNamespaceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("root_namespace_id"); else _explicitNullProperties?.Remove("root_namespace_id"); } }
+        public string RootNamespaceId { get => _explicitNullValueRootNamespaceId; set { _explicitNullValueRootNamespaceId = value; AdditionalData?.Remove("root_namespace_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("root_namespace_id"); else _explicitNullProperties?.Remove("root_namespace_id"); } }
         private string _explicitNullValueRootNamespaceId = default!;
 #endif
         /// <summary>workflow type based on its capability</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkflowDefinition { get => _explicitNullValueWorkflowDefinition; set { _explicitNullValueWorkflowDefinition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_definition"); else _explicitNullProperties?.Remove("workflow_definition"); } }
+        public string? WorkflowDefinition { get => _explicitNullValueWorkflowDefinition; set { _explicitNullValueWorkflowDefinition = value; AdditionalData?.Remove("workflow_definition"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_definition"); else _explicitNullProperties?.Remove("workflow_definition"); } }
         private string? _explicitNullValueWorkflowDefinition = default!;
 #nullable restore
 #else
-        public string WorkflowDefinition { get => _explicitNullValueWorkflowDefinition; set { _explicitNullValueWorkflowDefinition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_definition"); else _explicitNullProperties?.Remove("workflow_definition"); } }
+        public string WorkflowDefinition { get => _explicitNullValueWorkflowDefinition; set { _explicitNullValueWorkflowDefinition = value; AdditionalData?.Remove("workflow_definition"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_definition"); else _explicitNullProperties?.Remove("workflow_definition"); } }
         private string _explicitNullValueWorkflowDefinition = default!;
 #endif
         /// <summary>

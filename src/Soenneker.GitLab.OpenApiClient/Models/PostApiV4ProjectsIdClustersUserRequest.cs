@@ -17,14 +17,22 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("domain") is { } nullNodeDomain && nullNodeDomain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Domain = null;
-            if (parseNode.GetChildNode("enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
-            if (parseNode.GetChildNode("environment_scope") is { } nullNodeEnvironmentScope && nullNodeEnvironmentScope.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnvironmentScope = null;
-            if (parseNode.GetChildNode("managed") is { } nullNodeManaged && nullNodeManaged.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Managed = null;
-            if (parseNode.GetChildNode("management_project_id") is { } nullNodeManagementProjectId && nullNodeManagementProjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ManagementProjectId = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("namespace_per_environment") is { } nullNodeNamespacePerEnvironment && nullNodeNamespacePerEnvironment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NamespacePerEnvironment = null;
-            if (parseNode.GetChildNode("platform_kubernetes_attributes") is { } nullNodePlatformKubernetesAttributes && nullNodePlatformKubernetesAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlatformKubernetesAttributes = null;
+            if (parseNode.GetChildNode("domain") is null) { _explicitNullValueDomain = default!; _explicitNullProperties?.Remove("domain"); }
+            else if (parseNode.GetChildNode("domain") is { } nullNodeDomain && nullNodeDomain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Domain = null;
+            if (parseNode.GetChildNode("enabled") is null) { _explicitNullValueEnabled = default!; _explicitNullProperties?.Remove("enabled"); }
+            else if (parseNode.GetChildNode("enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
+            if (parseNode.GetChildNode("environment_scope") is null) { _explicitNullValueEnvironmentScope = default!; _explicitNullProperties?.Remove("environment_scope"); }
+            else if (parseNode.GetChildNode("environment_scope") is { } nullNodeEnvironmentScope && nullNodeEnvironmentScope.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnvironmentScope = null;
+            if (parseNode.GetChildNode("managed") is null) { _explicitNullValueManaged = default!; _explicitNullProperties?.Remove("managed"); }
+            else if (parseNode.GetChildNode("managed") is { } nullNodeManaged && nullNodeManaged.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Managed = null;
+            if (parseNode.GetChildNode("management_project_id") is null) { _explicitNullValueManagementProjectId = default!; _explicitNullProperties?.Remove("management_project_id"); }
+            else if (parseNode.GetChildNode("management_project_id") is { } nullNodeManagementProjectId && nullNodeManagementProjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ManagementProjectId = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("namespace_per_environment") is null) { _explicitNullValueNamespacePerEnvironment = default!; _explicitNullProperties?.Remove("namespace_per_environment"); }
+            else if (parseNode.GetChildNode("namespace_per_environment") is { } nullNodeNamespacePerEnvironment && nullNodeNamespacePerEnvironment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NamespacePerEnvironment = null;
+            if (parseNode.GetChildNode("platform_kubernetes_attributes") is null) { _explicitNullValuePlatformKubernetesAttributes = default!; _explicitNullProperties?.Remove("platform_kubernetes_attributes"); }
+            else if (parseNode.GetChildNode("platform_kubernetes_attributes") is { } nullNodePlatformKubernetesAttributes && nullNodePlatformKubernetesAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlatformKubernetesAttributes = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -32,53 +40,53 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>[Base domain](https://docs.gitlab.com/user/project/clusters/gitlab_managed_clusters/#base-domain) of the cluster.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Domain { get => _explicitNullValueDomain; set { _explicitNullValueDomain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain"); else _explicitNullProperties?.Remove("domain"); } }
+        public string? Domain { get => _explicitNullValueDomain; set { _explicitNullValueDomain = value; AdditionalData?.Remove("domain"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain"); else _explicitNullProperties?.Remove("domain"); } }
         private string? _explicitNullValueDomain = default!;
 #nullable restore
 #else
-        public string Domain { get => _explicitNullValueDomain; set { _explicitNullValueDomain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain"); else _explicitNullProperties?.Remove("domain"); } }
+        public string Domain { get => _explicitNullValueDomain; set { _explicitNullValueDomain = value; AdditionalData?.Remove("domain"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain"); else _explicitNullProperties?.Remove("domain"); } }
         private string _explicitNullValueDomain = default!;
 #endif
         /// <summary>If `true`, the cluster is active and GitLab&apos;s connection to the Kubernetes cluster is enabled.</summary>
-        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
+        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; AdditionalData?.Remove("enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
         private bool? _explicitNullValueEnabled = default!;
         /// <summary>Associated environment to the cluster. Premium and Ultimate only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EnvironmentScope { get => _explicitNullValueEnvironmentScope; set { _explicitNullValueEnvironmentScope = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("environment_scope"); else _explicitNullProperties?.Remove("environment_scope"); } }
+        public string? EnvironmentScope { get => _explicitNullValueEnvironmentScope; set { _explicitNullValueEnvironmentScope = value; AdditionalData?.Remove("environment_scope"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("environment_scope"); else _explicitNullProperties?.Remove("environment_scope"); } }
         private string? _explicitNullValueEnvironmentScope = default!;
 #nullable restore
 #else
-        public string EnvironmentScope { get => _explicitNullValueEnvironmentScope; set { _explicitNullValueEnvironmentScope = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("environment_scope"); else _explicitNullProperties?.Remove("environment_scope"); } }
+        public string EnvironmentScope { get => _explicitNullValueEnvironmentScope; set { _explicitNullValueEnvironmentScope = value; AdditionalData?.Remove("environment_scope"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("environment_scope"); else _explicitNullProperties?.Remove("environment_scope"); } }
         private string _explicitNullValueEnvironmentScope = default!;
 #endif
         /// <summary>If `true`, GitLab manages namespaces and service accounts for this cluster.</summary>
-        public bool? Managed { get => _explicitNullValueManaged; set { _explicitNullValueManaged = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("managed"); else _explicitNullProperties?.Remove("managed"); } }
+        public bool? Managed { get => _explicitNullValueManaged; set { _explicitNullValueManaged = value; AdditionalData?.Remove("managed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("managed"); else _explicitNullProperties?.Remove("managed"); } }
         private bool? _explicitNullValueManaged = default!;
         /// <summary>ID of the [management project](https://docs.gitlab.com/user/clusters/management_project/) for the cluster.</summary>
-        public int? ManagementProjectId { get => _explicitNullValueManagementProjectId; set { _explicitNullValueManagementProjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("management_project_id"); else _explicitNullProperties?.Remove("management_project_id"); } }
+        public int? ManagementProjectId { get => _explicitNullValueManagementProjectId; set { _explicitNullValueManagementProjectId = value; AdditionalData?.Remove("management_project_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("management_project_id"); else _explicitNullProperties?.Remove("management_project_id"); } }
         private int? _explicitNullValueManagementProjectId = default!;
         /// <summary>Name of the cluster.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>If `true`, deploys each environment to a separate Kubernetes namespace.</summary>
-        public bool? NamespacePerEnvironment { get => _explicitNullValueNamespacePerEnvironment; set { _explicitNullValueNamespacePerEnvironment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace_per_environment"); else _explicitNullProperties?.Remove("namespace_per_environment"); } }
+        public bool? NamespacePerEnvironment { get => _explicitNullValueNamespacePerEnvironment; set { _explicitNullValueNamespacePerEnvironment = value; AdditionalData?.Remove("namespace_per_environment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace_per_environment"); else _explicitNullProperties?.Remove("namespace_per_environment"); } }
         private bool? _explicitNullValueNamespacePerEnvironment = default!;
         /// <summary>Platform Kubernetes data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdClustersUserRequestPlatformKubernetesAttributes? PlatformKubernetesAttributes { get => _explicitNullValuePlatformKubernetesAttributes; set { _explicitNullValuePlatformKubernetesAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform_kubernetes_attributes"); else _explicitNullProperties?.Remove("platform_kubernetes_attributes"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdClustersUserRequestPlatformKubernetesAttributes? PlatformKubernetesAttributes { get => _explicitNullValuePlatformKubernetesAttributes; set { _explicitNullValuePlatformKubernetesAttributes = value; AdditionalData?.Remove("platform_kubernetes_attributes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform_kubernetes_attributes"); else _explicitNullProperties?.Remove("platform_kubernetes_attributes"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdClustersUserRequestPlatformKubernetesAttributes? _explicitNullValuePlatformKubernetesAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdClustersUserRequestPlatformKubernetesAttributes PlatformKubernetesAttributes { get => _explicitNullValuePlatformKubernetesAttributes; set { _explicitNullValuePlatformKubernetesAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform_kubernetes_attributes"); else _explicitNullProperties?.Remove("platform_kubernetes_attributes"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdClustersUserRequestPlatformKubernetesAttributes PlatformKubernetesAttributes { get => _explicitNullValuePlatformKubernetesAttributes; set { _explicitNullValuePlatformKubernetesAttributes = value; AdditionalData?.Remove("platform_kubernetes_attributes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform_kubernetes_attributes"); else _explicitNullProperties?.Remove("platform_kubernetes_attributes"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdClustersUserRequestPlatformKubernetesAttributes _explicitNullValuePlatformKubernetesAttributes = default!;
 #endif
         /// <summary>

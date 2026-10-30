@@ -17,17 +17,19 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("developers_can_merge") is { } nullNodeDevelopersCanMerge && nullNodeDevelopersCanMerge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DevelopersCanMerge = null;
-            if (parseNode.GetChildNode("developers_can_push") is { } nullNodeDevelopersCanPush && nullNodeDevelopersCanPush.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DevelopersCanPush = null;
+            if (parseNode.GetChildNode("developers_can_merge") is null) { _explicitNullValueDevelopersCanMerge = default!; _explicitNullProperties?.Remove("developers_can_merge"); }
+            else if (parseNode.GetChildNode("developers_can_merge") is { } nullNodeDevelopersCanMerge && nullNodeDevelopersCanMerge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DevelopersCanMerge = null;
+            if (parseNode.GetChildNode("developers_can_push") is null) { _explicitNullValueDevelopersCanPush = default!; _explicitNullProperties?.Remove("developers_can_push"); }
+            else if (parseNode.GetChildNode("developers_can_push") is { } nullNodeDevelopersCanPush && nullNodeDevelopersCanPush.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DevelopersCanPush = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>If `true`, allows developers to merge to the branch.</summary>
-        public bool? DevelopersCanMerge { get => _explicitNullValueDevelopersCanMerge; set { _explicitNullValueDevelopersCanMerge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("developers_can_merge"); else _explicitNullProperties?.Remove("developers_can_merge"); } }
+        public bool? DevelopersCanMerge { get => _explicitNullValueDevelopersCanMerge; set { _explicitNullValueDevelopersCanMerge = value; AdditionalData?.Remove("developers_can_merge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("developers_can_merge"); else _explicitNullProperties?.Remove("developers_can_merge"); } }
         private bool? _explicitNullValueDevelopersCanMerge = default!;
         /// <summary>If `true`, allows developers to push to the branch.</summary>
-        public bool? DevelopersCanPush { get => _explicitNullValueDevelopersCanPush; set { _explicitNullValueDevelopersCanPush = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("developers_can_push"); else _explicitNullProperties?.Remove("developers_can_push"); } }
+        public bool? DevelopersCanPush { get => _explicitNullValueDevelopersCanPush; set { _explicitNullValueDevelopersCanPush = value; AdditionalData?.Remove("developers_can_push"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("developers_can_push"); else _explicitNullProperties?.Remove("developers_can_push"); } }
         private bool? _explicitNullValueDevelopersCanPush = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdRepositoryBranchesBranchProtectRequest"/> and sets the default values.

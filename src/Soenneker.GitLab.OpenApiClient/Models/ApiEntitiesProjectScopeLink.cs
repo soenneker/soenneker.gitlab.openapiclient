@@ -17,17 +17,19 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("source_project_id") is { } nullNodeSourceProjectId && nullNodeSourceProjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceProjectId = null;
-            if (parseNode.GetChildNode("target_project_id") is { } nullNodeTargetProjectId && nullNodeTargetProjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetProjectId = null;
+            if (parseNode.GetChildNode("source_project_id") is null) { _explicitNullValueSourceProjectId = default!; _explicitNullProperties?.Remove("source_project_id"); }
+            else if (parseNode.GetChildNode("source_project_id") is { } nullNodeSourceProjectId && nullNodeSourceProjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceProjectId = null;
+            if (parseNode.GetChildNode("target_project_id") is null) { _explicitNullValueTargetProjectId = default!; _explicitNullProperties?.Remove("target_project_id"); }
+            else if (parseNode.GetChildNode("target_project_id") is { } nullNodeTargetProjectId && nullNodeTargetProjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetProjectId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The source_project_id property</summary>
-        public long? SourceProjectId { get => _explicitNullValueSourceProjectId; set { _explicitNullValueSourceProjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_project_id"); else _explicitNullProperties?.Remove("source_project_id"); } }
+        public long? SourceProjectId { get => _explicitNullValueSourceProjectId; set { _explicitNullValueSourceProjectId = value; AdditionalData?.Remove("source_project_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_project_id"); else _explicitNullProperties?.Remove("source_project_id"); } }
         private long? _explicitNullValueSourceProjectId = default!;
         /// <summary>The target_project_id property</summary>
-        public long? TargetProjectId { get => _explicitNullValueTargetProjectId; set { _explicitNullValueTargetProjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_project_id"); else _explicitNullProperties?.Remove("target_project_id"); } }
+        public long? TargetProjectId { get => _explicitNullValueTargetProjectId; set { _explicitNullValueTargetProjectId = value; AdditionalData?.Remove("target_project_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_project_id"); else _explicitNullProperties?.Remove("target_project_id"); } }
         private long? _explicitNullValueTargetProjectId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectScopeLink"/> and sets the default values.

@@ -17,9 +17,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("cron_timezone") is { } nullNodeCronTimezone && nullNodeCronTimezone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CronTimezone = null;
-            if (parseNode.GetChildNode("freeze_end") is { } nullNodeFreezeEnd && nullNodeFreezeEnd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FreezeEnd = null;
-            if (parseNode.GetChildNode("freeze_start") is { } nullNodeFreezeStart && nullNodeFreezeStart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FreezeStart = null;
+            if (parseNode.GetChildNode("cron_timezone") is null) { _explicitNullValueCronTimezone = default!; _explicitNullProperties?.Remove("cron_timezone"); }
+            else if (parseNode.GetChildNode("cron_timezone") is { } nullNodeCronTimezone && nullNodeCronTimezone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CronTimezone = null;
+            if (parseNode.GetChildNode("freeze_end") is null) { _explicitNullValueFreezeEnd = default!; _explicitNullProperties?.Remove("freeze_end"); }
+            else if (parseNode.GetChildNode("freeze_end") is { } nullNodeFreezeEnd && nullNodeFreezeEnd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FreezeEnd = null;
+            if (parseNode.GetChildNode("freeze_start") is null) { _explicitNullValueFreezeStart = default!; _explicitNullProperties?.Remove("freeze_start"); }
+            else if (parseNode.GetChildNode("freeze_start") is { } nullNodeFreezeStart && nullNodeFreezeStart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FreezeStart = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Time zone for the cron fields.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CronTimezone { get => _explicitNullValueCronTimezone; set { _explicitNullValueCronTimezone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cron_timezone"); else _explicitNullProperties?.Remove("cron_timezone"); } }
+        public string? CronTimezone { get => _explicitNullValueCronTimezone; set { _explicitNullValueCronTimezone = value; AdditionalData?.Remove("cron_timezone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cron_timezone"); else _explicitNullProperties?.Remove("cron_timezone"); } }
         private string? _explicitNullValueCronTimezone = default!;
 #nullable restore
 #else
-        public string CronTimezone { get => _explicitNullValueCronTimezone; set { _explicitNullValueCronTimezone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cron_timezone"); else _explicitNullProperties?.Remove("cron_timezone"); } }
+        public string CronTimezone { get => _explicitNullValueCronTimezone; set { _explicitNullValueCronTimezone = value; AdditionalData?.Remove("cron_timezone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cron_timezone"); else _explicitNullProperties?.Remove("cron_timezone"); } }
         private string _explicitNullValueCronTimezone = default!;
 #endif
         /// <summary>End of the freeze period in [cron](https://crontab.guru/) format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FreezeEnd { get => _explicitNullValueFreezeEnd; set { _explicitNullValueFreezeEnd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("freeze_end"); else _explicitNullProperties?.Remove("freeze_end"); } }
+        public string? FreezeEnd { get => _explicitNullValueFreezeEnd; set { _explicitNullValueFreezeEnd = value; AdditionalData?.Remove("freeze_end"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("freeze_end"); else _explicitNullProperties?.Remove("freeze_end"); } }
         private string? _explicitNullValueFreezeEnd = default!;
 #nullable restore
 #else
-        public string FreezeEnd { get => _explicitNullValueFreezeEnd; set { _explicitNullValueFreezeEnd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("freeze_end"); else _explicitNullProperties?.Remove("freeze_end"); } }
+        public string FreezeEnd { get => _explicitNullValueFreezeEnd; set { _explicitNullValueFreezeEnd = value; AdditionalData?.Remove("freeze_end"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("freeze_end"); else _explicitNullProperties?.Remove("freeze_end"); } }
         private string _explicitNullValueFreezeEnd = default!;
 #endif
         /// <summary>Start of the freeze period in [cron](https://crontab.guru/) format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FreezeStart { get => _explicitNullValueFreezeStart; set { _explicitNullValueFreezeStart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("freeze_start"); else _explicitNullProperties?.Remove("freeze_start"); } }
+        public string? FreezeStart { get => _explicitNullValueFreezeStart; set { _explicitNullValueFreezeStart = value; AdditionalData?.Remove("freeze_start"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("freeze_start"); else _explicitNullProperties?.Remove("freeze_start"); } }
         private string? _explicitNullValueFreezeStart = default!;
 #nullable restore
 #else
-        public string FreezeStart { get => _explicitNullValueFreezeStart; set { _explicitNullValueFreezeStart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("freeze_start"); else _explicitNullProperties?.Remove("freeze_start"); } }
+        public string FreezeStart { get => _explicitNullValueFreezeStart; set { _explicitNullValueFreezeStart = value; AdditionalData?.Remove("freeze_start"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("freeze_start"); else _explicitNullProperties?.Remove("freeze_start"); } }
         private string _explicitNullValueFreezeStart = default!;
 #endif
         /// <summary>

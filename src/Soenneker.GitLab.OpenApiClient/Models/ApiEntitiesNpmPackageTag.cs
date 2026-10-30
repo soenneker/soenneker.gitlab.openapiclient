@@ -17,7 +17,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("dist_tags") is { } nullNodeDistTags && nullNodeDistTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DistTags = null;
+            if (parseNode.GetChildNode("dist_tags") is null) { _explicitNullValueDistTags = default!; _explicitNullProperties?.Remove("dist_tags"); }
+            else if (parseNode.GetChildNode("dist_tags") is { } nullNodeDistTags && nullNodeDistTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DistTags = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The dist_tags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNpmPackageTagDistTagsProperty? DistTags { get => _explicitNullValueDistTags; set { _explicitNullValueDistTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dist_tags"); else _explicitNullProperties?.Remove("dist_tags"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNpmPackageTagDistTagsProperty? DistTags { get => _explicitNullValueDistTags; set { _explicitNullValueDistTags = value; AdditionalData?.Remove("dist_tags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dist_tags"); else _explicitNullProperties?.Remove("dist_tags"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNpmPackageTagDistTagsProperty? _explicitNullValueDistTags = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNpmPackageTagDistTagsProperty DistTags { get => _explicitNullValueDistTags; set { _explicitNullValueDistTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dist_tags"); else _explicitNullProperties?.Remove("dist_tags"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNpmPackageTagDistTagsProperty DistTags { get => _explicitNullValueDistTags; set { _explicitNullValueDistTags = value; AdditionalData?.Remove("dist_tags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dist_tags"); else _explicitNullProperties?.Remove("dist_tags"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNpmPackageTagDistTagsProperty _explicitNullValueDistTags = default!;
 #endif
         /// <summary>

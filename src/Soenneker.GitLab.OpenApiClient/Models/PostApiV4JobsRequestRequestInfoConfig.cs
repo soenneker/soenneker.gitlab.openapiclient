@@ -18,7 +18,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("gpus") is { } nullNodeGpus && nullNodeGpus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Gpus = null;
+            if (parseNode.GetChildNode("gpus") is null) { _explicitNullValueGpus = default!; _explicitNullProperties?.Remove("gpus"); }
+            else if (parseNode.GetChildNode("gpus") is { } nullNodeGpus && nullNodeGpus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Gpus = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>GPUs enabled</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Gpus { get => _explicitNullValueGpus; set { _explicitNullValueGpus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gpus"); else _explicitNullProperties?.Remove("gpus"); } }
+        public string? Gpus { get => _explicitNullValueGpus; set { _explicitNullValueGpus = value; AdditionalData?.Remove("gpus"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gpus"); else _explicitNullProperties?.Remove("gpus"); } }
         private string? _explicitNullValueGpus = default!;
 #nullable restore
 #else
-        public string Gpus { get => _explicitNullValueGpus; set { _explicitNullValueGpus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gpus"); else _explicitNullProperties?.Remove("gpus"); } }
+        public string Gpus { get => _explicitNullValueGpus; set { _explicitNullValueGpus = value; AdditionalData?.Remove("gpus"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gpus"); else _explicitNullProperties?.Remove("gpus"); } }
         private string _explicitNullValueGpus = default!;
 #endif
         /// <summary>

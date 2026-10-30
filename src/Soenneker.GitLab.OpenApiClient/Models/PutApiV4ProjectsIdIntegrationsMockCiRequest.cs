@@ -17,32 +17,36 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("enable_ssl_verification") is { } nullNodeEnableSslVerification && nullNodeEnableSslVerification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableSslVerification = null;
-            if (parseNode.GetChildNode("mock_service_url") is { } nullNodeMockServiceUrl && nullNodeMockServiceUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MockServiceUrl = null;
-            if (parseNode.GetChildNode("push_events") is { } nullNodePushEvents && nullNodePushEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PushEvents = null;
-            if (parseNode.GetChildNode("use_inherited_settings") is { } nullNodeUseInheritedSettings && nullNodeUseInheritedSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseInheritedSettings = null;
+            if (parseNode.GetChildNode("enable_ssl_verification") is null) { _explicitNullValueEnableSslVerification = default!; _explicitNullProperties?.Remove("enable_ssl_verification"); }
+            else if (parseNode.GetChildNode("enable_ssl_verification") is { } nullNodeEnableSslVerification && nullNodeEnableSslVerification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableSslVerification = null;
+            if (parseNode.GetChildNode("mock_service_url") is null) { _explicitNullValueMockServiceUrl = default!; _explicitNullProperties?.Remove("mock_service_url"); }
+            else if (parseNode.GetChildNode("mock_service_url") is { } nullNodeMockServiceUrl && nullNodeMockServiceUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MockServiceUrl = null;
+            if (parseNode.GetChildNode("push_events") is null) { _explicitNullValuePushEvents = default!; _explicitNullProperties?.Remove("push_events"); }
+            else if (parseNode.GetChildNode("push_events") is { } nullNodePushEvents && nullNodePushEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PushEvents = null;
+            if (parseNode.GetChildNode("use_inherited_settings") is null) { _explicitNullValueUseInheritedSettings = default!; _explicitNullProperties?.Remove("use_inherited_settings"); }
+            else if (parseNode.GetChildNode("use_inherited_settings") is { } nullNodeUseInheritedSettings && nullNodeUseInheritedSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseInheritedSettings = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Enable SSL verification. Defaults to `true` (enabled).</summary>
-        public bool? EnableSslVerification { get => _explicitNullValueEnableSslVerification; set { _explicitNullValueEnableSslVerification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enable_ssl_verification"); else _explicitNullProperties?.Remove("enable_ssl_verification"); } }
+        public bool? EnableSslVerification { get => _explicitNullValueEnableSslVerification; set { _explicitNullValueEnableSslVerification = value; AdditionalData?.Remove("enable_ssl_verification"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enable_ssl_verification"); else _explicitNullProperties?.Remove("enable_ssl_verification"); } }
         private bool? _explicitNullValueEnableSslVerification = default!;
         /// <summary>URL of the Mock CI integration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MockServiceUrl { get => _explicitNullValueMockServiceUrl; set { _explicitNullValueMockServiceUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mock_service_url"); else _explicitNullProperties?.Remove("mock_service_url"); } }
+        public string? MockServiceUrl { get => _explicitNullValueMockServiceUrl; set { _explicitNullValueMockServiceUrl = value; AdditionalData?.Remove("mock_service_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mock_service_url"); else _explicitNullProperties?.Remove("mock_service_url"); } }
         private string? _explicitNullValueMockServiceUrl = default!;
 #nullable restore
 #else
-        public string MockServiceUrl { get => _explicitNullValueMockServiceUrl; set { _explicitNullValueMockServiceUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mock_service_url"); else _explicitNullProperties?.Remove("mock_service_url"); } }
+        public string MockServiceUrl { get => _explicitNullValueMockServiceUrl; set { _explicitNullValueMockServiceUrl = value; AdditionalData?.Remove("mock_service_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mock_service_url"); else _explicitNullProperties?.Remove("mock_service_url"); } }
         private string _explicitNullValueMockServiceUrl = default!;
 #endif
         /// <summary>Trigger event for pushes to the repository.</summary>
-        public bool? PushEvents { get => _explicitNullValuePushEvents; set { _explicitNullValuePushEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("push_events"); else _explicitNullProperties?.Remove("push_events"); } }
+        public bool? PushEvents { get => _explicitNullValuePushEvents; set { _explicitNullValuePushEvents = value; AdditionalData?.Remove("push_events"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("push_events"); else _explicitNullProperties?.Remove("push_events"); } }
         private bool? _explicitNullValuePushEvents = default!;
         /// <summary>Indicates whether to inherit the default settings. Defaults to `false`.</summary>
-        public bool? UseInheritedSettings { get => _explicitNullValueUseInheritedSettings; set { _explicitNullValueUseInheritedSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("use_inherited_settings"); else _explicitNullProperties?.Remove("use_inherited_settings"); } }
+        public bool? UseInheritedSettings { get => _explicitNullValueUseInheritedSettings; set { _explicitNullValueUseInheritedSettings = value; AdditionalData?.Remove("use_inherited_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("use_inherited_settings"); else _explicitNullProperties?.Remove("use_inherited_settings"); } }
         private bool? _explicitNullValueUseInheritedSettings = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdIntegrationsMockCiRequest"/> and sets the default values.

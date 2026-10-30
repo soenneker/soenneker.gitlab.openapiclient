@@ -17,13 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("filesize") is { } nullNodeFilesize && nullNodeFilesize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Filesize = null;
+            if (parseNode.GetChildNode("filesize") is null) { _explicitNullValueFilesize = default!; _explicitNullProperties?.Remove("filesize"); }
+            else if (parseNode.GetChildNode("filesize") is { } nullNodeFilesize && nullNodeFilesize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Filesize = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Size of the artifact file.</summary>
-        public int? Filesize { get => _explicitNullValueFilesize; set { _explicitNullValueFilesize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filesize"); else _explicitNullProperties?.Remove("filesize"); } }
+        public int? Filesize { get => _explicitNullValueFilesize; set { _explicitNullValueFilesize = value; AdditionalData?.Remove("filesize"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filesize"); else _explicitNullProperties?.Remove("filesize"); } }
         private int? _explicitNullValueFilesize = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4JobsIdSbomScansAuthorizeRequest"/> and sets the default values.

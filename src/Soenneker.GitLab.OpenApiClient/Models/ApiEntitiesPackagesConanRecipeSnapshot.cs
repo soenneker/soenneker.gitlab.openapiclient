@@ -17,7 +17,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("recipe_snapshot") is { } nullNodeRecipeSnapshot && nullNodeRecipeSnapshot.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecipeSnapshot = null;
+            if (parseNode.GetChildNode("recipe_snapshot") is null) { _explicitNullValueRecipeSnapshot = default!; _explicitNullProperties?.Remove("recipe_snapshot"); }
+            else if (parseNode.GetChildNode("recipe_snapshot") is { } nullNodeRecipeSnapshot && nullNodeRecipeSnapshot.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecipeSnapshot = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The recipe_snapshot property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesConanRecipeSnapshotRecipeSnapshotProperty? RecipeSnapshot { get => _explicitNullValueRecipeSnapshot; set { _explicitNullValueRecipeSnapshot = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipe_snapshot"); else _explicitNullProperties?.Remove("recipe_snapshot"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesConanRecipeSnapshotRecipeSnapshotProperty? RecipeSnapshot { get => _explicitNullValueRecipeSnapshot; set { _explicitNullValueRecipeSnapshot = value; AdditionalData?.Remove("recipe_snapshot"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipe_snapshot"); else _explicitNullProperties?.Remove("recipe_snapshot"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesConanRecipeSnapshotRecipeSnapshotProperty? _explicitNullValueRecipeSnapshot = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesConanRecipeSnapshotRecipeSnapshotProperty RecipeSnapshot { get => _explicitNullValueRecipeSnapshot; set { _explicitNullValueRecipeSnapshot = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipe_snapshot"); else _explicitNullProperties?.Remove("recipe_snapshot"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesConanRecipeSnapshotRecipeSnapshotProperty RecipeSnapshot { get => _explicitNullValueRecipeSnapshot; set { _explicitNullValueRecipeSnapshot = value; AdditionalData?.Remove("recipe_snapshot"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipe_snapshot"); else _explicitNullProperties?.Remove("recipe_snapshot"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesConanRecipeSnapshotRecipeSnapshotProperty _explicitNullValueRecipeSnapshot = default!;
 #endif
         /// <summary>

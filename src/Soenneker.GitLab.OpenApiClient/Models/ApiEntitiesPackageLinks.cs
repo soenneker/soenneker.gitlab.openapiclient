@@ -17,8 +17,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("delete_api_path") is { } nullNodeDeleteApiPath && nullNodeDeleteApiPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeleteApiPath = null;
-            if (parseNode.GetChildNode("web_path") is { } nullNodeWebPath && nullNodeWebPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebPath = null;
+            if (parseNode.GetChildNode("delete_api_path") is null) { _explicitNullValueDeleteApiPath = default!; _explicitNullProperties?.Remove("delete_api_path"); }
+            else if (parseNode.GetChildNode("delete_api_path") is { } nullNodeDeleteApiPath && nullNodeDeleteApiPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeleteApiPath = null;
+            if (parseNode.GetChildNode("web_path") is null) { _explicitNullValueWebPath = default!; _explicitNullProperties?.Remove("web_path"); }
+            else if (parseNode.GetChildNode("web_path") is { } nullNodeWebPath && nullNodeWebPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebPath = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The delete_api_path property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DeleteApiPath { get => _explicitNullValueDeleteApiPath; set { _explicitNullValueDeleteApiPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delete_api_path"); else _explicitNullProperties?.Remove("delete_api_path"); } }
+        public string? DeleteApiPath { get => _explicitNullValueDeleteApiPath; set { _explicitNullValueDeleteApiPath = value; AdditionalData?.Remove("delete_api_path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delete_api_path"); else _explicitNullProperties?.Remove("delete_api_path"); } }
         private string? _explicitNullValueDeleteApiPath = default!;
 #nullable restore
 #else
-        public string DeleteApiPath { get => _explicitNullValueDeleteApiPath; set { _explicitNullValueDeleteApiPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delete_api_path"); else _explicitNullProperties?.Remove("delete_api_path"); } }
+        public string DeleteApiPath { get => _explicitNullValueDeleteApiPath; set { _explicitNullValueDeleteApiPath = value; AdditionalData?.Remove("delete_api_path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delete_api_path"); else _explicitNullProperties?.Remove("delete_api_path"); } }
         private string _explicitNullValueDeleteApiPath = default!;
 #endif
         /// <summary>The web_path property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WebPath { get => _explicitNullValueWebPath; set { _explicitNullValueWebPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_path"); else _explicitNullProperties?.Remove("web_path"); } }
+        public string? WebPath { get => _explicitNullValueWebPath; set { _explicitNullValueWebPath = value; AdditionalData?.Remove("web_path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_path"); else _explicitNullProperties?.Remove("web_path"); } }
         private string? _explicitNullValueWebPath = default!;
 #nullable restore
 #else
-        public string WebPath { get => _explicitNullValueWebPath; set { _explicitNullValueWebPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_path"); else _explicitNullProperties?.Remove("web_path"); } }
+        public string WebPath { get => _explicitNullValueWebPath; set { _explicitNullValueWebPath = value; AdditionalData?.Remove("web_path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_path"); else _explicitNullProperties?.Remove("web_path"); } }
         private string _explicitNullValueWebPath = default!;
 #endif
         /// <summary>

@@ -17,13 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("event_status") is { } nullNodeEventStatus && nullNodeEventStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventStatus = null;
+            if (parseNode.GetChildNode("event_status") is null) { _explicitNullValueEventStatus = default!; _explicitNullProperties?.Remove("event_status"); }
+            else if (parseNode.GetChildNode("event_status") is { } nullNodeEventStatus && nullNodeEventStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventStatus = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Status of the event.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AiDuoWorkflowsWorkflowsIdEventsEventIdRequestEventStatus? EventStatus { get => _explicitNullValueEventStatus; set { _explicitNullValueEventStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_status"); else _explicitNullProperties?.Remove("event_status"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AiDuoWorkflowsWorkflowsIdEventsEventIdRequestEventStatus? EventStatus { get => _explicitNullValueEventStatus; set { _explicitNullValueEventStatus = value; AdditionalData?.Remove("event_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_status"); else _explicitNullProperties?.Remove("event_status"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AiDuoWorkflowsWorkflowsIdEventsEventIdRequestEventStatus? _explicitNullValueEventStatus = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AiDuoWorkflowsWorkflowsIdEventsEventIdRequest"/> and sets the default values.
@@ -50,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "event_status", n => { EventStatus = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AiDuoWorkflowsWorkflowsIdEventsEventIdRequestEventStatus>(); } },
+                { "event_status", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AiDuoWorkflowsWorkflowsIdEventsEventIdRequestEventStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueEventStatus = default; _explicitNullProperties?.Remove("event_status"); AdditionalData["event_status"] = unknown; } else { EventStatus = parsed; AdditionalData.Remove("event_status"); } } },
             };
         }
         /// <summary>

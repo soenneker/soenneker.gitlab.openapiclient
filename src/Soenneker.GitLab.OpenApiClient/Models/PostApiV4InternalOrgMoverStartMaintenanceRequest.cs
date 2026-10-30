@@ -17,17 +17,19 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("maintenance_reason") is { } nullNodeMaintenanceReason && nullNodeMaintenanceReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaintenanceReason = null;
-            if (parseNode.GetChildNode("organization_id") is { } nullNodeOrganizationId && nullNodeOrganizationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrganizationId = null;
+            if (parseNode.GetChildNode("maintenance_reason") is null) { _explicitNullValueMaintenanceReason = default!; _explicitNullProperties?.Remove("maintenance_reason"); }
+            else if (parseNode.GetChildNode("maintenance_reason") is { } nullNodeMaintenanceReason && nullNodeMaintenanceReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaintenanceReason = null;
+            if (parseNode.GetChildNode("organization_id") is null) { _explicitNullValueOrganizationId = default!; _explicitNullProperties?.Remove("organization_id"); }
+            else if (parseNode.GetChildNode("organization_id") is { } nullNodeOrganizationId && nullNodeOrganizationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrganizationId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The reason for entering maintenance</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4InternalOrgMoverStartMaintenanceRequestMaintenanceReason? MaintenanceReason { get => _explicitNullValueMaintenanceReason; set { _explicitNullValueMaintenanceReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maintenance_reason"); else _explicitNullProperties?.Remove("maintenance_reason"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4InternalOrgMoverStartMaintenanceRequestMaintenanceReason? MaintenanceReason { get => _explicitNullValueMaintenanceReason; set { _explicitNullValueMaintenanceReason = value; AdditionalData?.Remove("maintenance_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maintenance_reason"); else _explicitNullProperties?.Remove("maintenance_reason"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4InternalOrgMoverStartMaintenanceRequestMaintenanceReason? _explicitNullValueMaintenanceReason = default!;
         /// <summary>The ID of the organization</summary>
-        public int? OrganizationId { get => _explicitNullValueOrganizationId; set { _explicitNullValueOrganizationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_id"); else _explicitNullProperties?.Remove("organization_id"); } }
+        public int? OrganizationId { get => _explicitNullValueOrganizationId; set { _explicitNullValueOrganizationId = value; AdditionalData?.Remove("organization_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_id"); else _explicitNullProperties?.Remove("organization_id"); } }
         private int? _explicitNullValueOrganizationId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4InternalOrgMoverStartMaintenanceRequest"/> and sets the default values.
@@ -54,7 +56,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "maintenance_reason", n => { MaintenanceReason = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4InternalOrgMoverStartMaintenanceRequestMaintenanceReason>(); } },
+                { "maintenance_reason", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4InternalOrgMoverStartMaintenanceRequestMaintenanceReason>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMaintenanceReason = default; _explicitNullProperties?.Remove("maintenance_reason"); AdditionalData["maintenance_reason"] = unknown; } else { MaintenanceReason = parsed; AdditionalData.Remove("maintenance_reason"); } } },
                 { "organization_id", n => { OrganizationId = n.GetIntValue(); } },
             };
         }

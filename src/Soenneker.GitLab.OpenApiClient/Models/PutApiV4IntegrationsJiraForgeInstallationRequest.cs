@@ -17,7 +17,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("instance_url") is { } nullNodeInstanceUrl && nullNodeInstanceUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InstanceUrl = null;
+            if (parseNode.GetChildNode("instance_url") is null) { _explicitNullValueInstanceUrl = default!; _explicitNullProperties?.Remove("instance_url"); }
+            else if (parseNode.GetChildNode("instance_url") is { } nullNodeInstanceUrl && nullNodeInstanceUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InstanceUrl = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Base URL of the self-managed GitLab instance; null for GitLab.com</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InstanceUrl { get => _explicitNullValueInstanceUrl; set { _explicitNullValueInstanceUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instance_url"); else _explicitNullProperties?.Remove("instance_url"); } }
+        public string? InstanceUrl { get => _explicitNullValueInstanceUrl; set { _explicitNullValueInstanceUrl = value; AdditionalData?.Remove("instance_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instance_url"); else _explicitNullProperties?.Remove("instance_url"); } }
         private string? _explicitNullValueInstanceUrl = default!;
 #nullable restore
 #else
-        public string InstanceUrl { get => _explicitNullValueInstanceUrl; set { _explicitNullValueInstanceUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instance_url"); else _explicitNullProperties?.Remove("instance_url"); } }
+        public string InstanceUrl { get => _explicitNullValueInstanceUrl; set { _explicitNullValueInstanceUrl = value; AdditionalData?.Remove("instance_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instance_url"); else _explicitNullProperties?.Remove("instance_url"); } }
         private string _explicitNullValueInstanceUrl = default!;
 #endif
         /// <summary>

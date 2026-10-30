@@ -17,10 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("artifact_registry_location") is { } nullNodeArtifactRegistryLocation && nullNodeArtifactRegistryLocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ArtifactRegistryLocation = null;
-            if (parseNode.GetChildNode("artifact_registry_project_id") is { } nullNodeArtifactRegistryProjectId && nullNodeArtifactRegistryProjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ArtifactRegistryProjectId = null;
-            if (parseNode.GetChildNode("artifact_registry_repositories") is { } nullNodeArtifactRegistryRepositories && nullNodeArtifactRegistryRepositories.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ArtifactRegistryRepositories = null;
-            if (parseNode.GetChildNode("use_inherited_settings") is { } nullNodeUseInheritedSettings && nullNodeUseInheritedSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseInheritedSettings = null;
+            if (parseNode.GetChildNode("artifact_registry_location") is null) { _explicitNullValueArtifactRegistryLocation = default!; _explicitNullProperties?.Remove("artifact_registry_location"); }
+            else if (parseNode.GetChildNode("artifact_registry_location") is { } nullNodeArtifactRegistryLocation && nullNodeArtifactRegistryLocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ArtifactRegistryLocation = null;
+            if (parseNode.GetChildNode("artifact_registry_project_id") is null) { _explicitNullValueArtifactRegistryProjectId = default!; _explicitNullProperties?.Remove("artifact_registry_project_id"); }
+            else if (parseNode.GetChildNode("artifact_registry_project_id") is { } nullNodeArtifactRegistryProjectId && nullNodeArtifactRegistryProjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ArtifactRegistryProjectId = null;
+            if (parseNode.GetChildNode("artifact_registry_repositories") is null) { _explicitNullValueArtifactRegistryRepositories = default!; _explicitNullProperties?.Remove("artifact_registry_repositories"); }
+            else if (parseNode.GetChildNode("artifact_registry_repositories") is { } nullNodeArtifactRegistryRepositories && nullNodeArtifactRegistryRepositories.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ArtifactRegistryRepositories = null;
+            if (parseNode.GetChildNode("use_inherited_settings") is null) { _explicitNullValueUseInheritedSettings = default!; _explicitNullProperties?.Remove("use_inherited_settings"); }
+            else if (parseNode.GetChildNode("use_inherited_settings") is { } nullNodeUseInheritedSettings && nullNodeUseInheritedSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseInheritedSettings = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,35 +32,35 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Location of the Artifact Registry repository.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ArtifactRegistryLocation { get => _explicitNullValueArtifactRegistryLocation; set { _explicitNullValueArtifactRegistryLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("artifact_registry_location"); else _explicitNullProperties?.Remove("artifact_registry_location"); } }
+        public string? ArtifactRegistryLocation { get => _explicitNullValueArtifactRegistryLocation; set { _explicitNullValueArtifactRegistryLocation = value; AdditionalData?.Remove("artifact_registry_location"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("artifact_registry_location"); else _explicitNullProperties?.Remove("artifact_registry_location"); } }
         private string? _explicitNullValueArtifactRegistryLocation = default!;
 #nullable restore
 #else
-        public string ArtifactRegistryLocation { get => _explicitNullValueArtifactRegistryLocation; set { _explicitNullValueArtifactRegistryLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("artifact_registry_location"); else _explicitNullProperties?.Remove("artifact_registry_location"); } }
+        public string ArtifactRegistryLocation { get => _explicitNullValueArtifactRegistryLocation; set { _explicitNullValueArtifactRegistryLocation = value; AdditionalData?.Remove("artifact_registry_location"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("artifact_registry_location"); else _explicitNullProperties?.Remove("artifact_registry_location"); } }
         private string _explicitNullValueArtifactRegistryLocation = default!;
 #endif
         /// <summary>ID of the Google Cloud project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ArtifactRegistryProjectId { get => _explicitNullValueArtifactRegistryProjectId; set { _explicitNullValueArtifactRegistryProjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("artifact_registry_project_id"); else _explicitNullProperties?.Remove("artifact_registry_project_id"); } }
+        public string? ArtifactRegistryProjectId { get => _explicitNullValueArtifactRegistryProjectId; set { _explicitNullValueArtifactRegistryProjectId = value; AdditionalData?.Remove("artifact_registry_project_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("artifact_registry_project_id"); else _explicitNullProperties?.Remove("artifact_registry_project_id"); } }
         private string? _explicitNullValueArtifactRegistryProjectId = default!;
 #nullable restore
 #else
-        public string ArtifactRegistryProjectId { get => _explicitNullValueArtifactRegistryProjectId; set { _explicitNullValueArtifactRegistryProjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("artifact_registry_project_id"); else _explicitNullProperties?.Remove("artifact_registry_project_id"); } }
+        public string ArtifactRegistryProjectId { get => _explicitNullValueArtifactRegistryProjectId; set { _explicitNullValueArtifactRegistryProjectId = value; AdditionalData?.Remove("artifact_registry_project_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("artifact_registry_project_id"); else _explicitNullProperties?.Remove("artifact_registry_project_id"); } }
         private string _explicitNullValueArtifactRegistryProjectId = default!;
 #endif
         /// <summary>Repository of Artifact Registry.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ArtifactRegistryRepositories { get => _explicitNullValueArtifactRegistryRepositories; set { _explicitNullValueArtifactRegistryRepositories = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("artifact_registry_repositories"); else _explicitNullProperties?.Remove("artifact_registry_repositories"); } }
+        public string? ArtifactRegistryRepositories { get => _explicitNullValueArtifactRegistryRepositories; set { _explicitNullValueArtifactRegistryRepositories = value; AdditionalData?.Remove("artifact_registry_repositories"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("artifact_registry_repositories"); else _explicitNullProperties?.Remove("artifact_registry_repositories"); } }
         private string? _explicitNullValueArtifactRegistryRepositories = default!;
 #nullable restore
 #else
-        public string ArtifactRegistryRepositories { get => _explicitNullValueArtifactRegistryRepositories; set { _explicitNullValueArtifactRegistryRepositories = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("artifact_registry_repositories"); else _explicitNullProperties?.Remove("artifact_registry_repositories"); } }
+        public string ArtifactRegistryRepositories { get => _explicitNullValueArtifactRegistryRepositories; set { _explicitNullValueArtifactRegistryRepositories = value; AdditionalData?.Remove("artifact_registry_repositories"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("artifact_registry_repositories"); else _explicitNullProperties?.Remove("artifact_registry_repositories"); } }
         private string _explicitNullValueArtifactRegistryRepositories = default!;
 #endif
         /// <summary>Indicates whether to inherit the default settings. Defaults to `false`.</summary>
-        public bool? UseInheritedSettings { get => _explicitNullValueUseInheritedSettings; set { _explicitNullValueUseInheritedSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("use_inherited_settings"); else _explicitNullProperties?.Remove("use_inherited_settings"); } }
+        public bool? UseInheritedSettings { get => _explicitNullValueUseInheritedSettings; set { _explicitNullValueUseInheritedSettings = value; AdditionalData?.Remove("use_inherited_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("use_inherited_settings"); else _explicitNullProperties?.Remove("use_inherited_settings"); } }
         private bool? _explicitNullValueUseInheritedSettings = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdServicesGoogleCloudPlatformArtifactRegistryRequest"/> and sets the default values.

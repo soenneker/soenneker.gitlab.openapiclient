@@ -160123,10 +160123,16 @@
             "nullable": true
           },
           "certificate": {
-            "$ref": "#/components/schemas/PostApiV4ProjectsIdPagesDomainsRequestCertificate"
+            "type": "string",
+            "nullable": true,
+            "x-client-inline-scalar": true,
+            "description": "Certificate in PEM format with intermediates following in most specific to least specific order."
           },
           "key": {
-            "$ref": "#/components/schemas/PostApiV4ProjectsIdPagesDomainsRequestKey"
+            "type": "string",
+            "nullable": true,
+            "x-client-inline-scalar": true,
+            "description": "Certificate key in PEM format."
           },
           "auto_ssl_enabled": {
             "type": "boolean",
@@ -160149,10 +160155,16 @@
         "type": "object",
         "properties": {
           "certificate": {
-            "$ref": "#/components/schemas/PutApiV4ProjectsIdPagesDomainsDomainRequestCertificate"
+            "type": "string",
+            "nullable": true,
+            "x-client-inline-scalar": true,
+            "description": "Certificate in PEM format with intermediates following in most specific to least specific order."
           },
           "key": {
-            "$ref": "#/components/schemas/PutApiV4ProjectsIdPagesDomainsDomainRequestKey"
+            "type": "string",
+            "nullable": true,
+            "x-client-inline-scalar": true,
+            "description": "Certificate key in PEM format."
           },
           "auto_ssl_enabled": {
             "type": "boolean",
@@ -160934,7 +160946,7 @@
             "nullable": true
           },
           "user_id": {
-            "$ref": "#/components/schemas/PostApiV4ProjectsIdMembersRequestUserId"
+            "$ref": "#/components/schemas/PostApiV4GroupsIdMembersRequestUserId"
           },
           "username": {
             "type": "string",
@@ -174527,59 +174539,27 @@
         "description": "ID of each milestone the release is associated with. GitLab Premium customers can specify group milestones. Cannot be combined with the \u0060milestones\u0060 parameter. To remove all milestones from the release, specify \u0060[]\u0060. Mutually exclusive with \u0060milestones\u0060."
       },
       "PostApiV4ProjectsIdPagesDomainsRequestCertificate": {
-        "anyOf": [
-          {
-            "type": "string",
-            "format": "binary",
-            "nullable": true
-          },
-          {
-            "type": "string",
-            "nullable": true
-          }
-        ],
+        "type": "string",
+        "nullable": true,
+        "x-client-inline-scalar": true,
         "description": "Certificate in PEM format with intermediates following in most specific to least specific order."
       },
       "PostApiV4ProjectsIdPagesDomainsRequestKey": {
-        "anyOf": [
-          {
-            "type": "string",
-            "format": "binary",
-            "nullable": true
-          },
-          {
-            "type": "string",
-            "nullable": true
-          }
-        ],
+        "type": "string",
+        "nullable": true,
+        "x-client-inline-scalar": true,
         "description": "Certificate key in PEM format."
       },
       "PutApiV4ProjectsIdPagesDomainsDomainRequestCertificate": {
-        "anyOf": [
-          {
-            "type": "string",
-            "format": "binary",
-            "nullable": true
-          },
-          {
-            "type": "string",
-            "nullable": true
-          }
-        ],
+        "type": "string",
+        "nullable": true,
+        "x-client-inline-scalar": true,
         "description": "Certificate in PEM format with intermediates following in most specific to least specific order."
       },
       "PutApiV4ProjectsIdPagesDomainsDomainRequestKey": {
-        "anyOf": [
-          {
-            "type": "string",
-            "format": "binary",
-            "nullable": true
-          },
-          {
-            "type": "string",
-            "nullable": true
-          }
-        ],
+        "type": "string",
+        "nullable": true,
+        "x-client-inline-scalar": true,
         "description": "Certificate key in PEM format."
       },
       "PostApiV4GroupsIdMembersRequestUserId": {
@@ -179918,7 +179898,7 @@
             "nullable": true
           },
           "value": {
-            "$ref": "#/components/schemas/PutApiV4ProjectsIdPipelineSchedulesPipelineScheduleIdRequestInputsItemValue"
+            "$ref": "#/components/schemas/PostApiV4ProjectsIdPipelineSchedulesRequestInputsItemValue"
           }
         }
       },
@@ -192877,6 +192857,10 @@
             {
               "value": "admin",
               "name": "Admin"
+            },
+            {
+              "value": "",
+              "name": "EnumValue"
             }
           ]
         }
@@ -192906,6 +192890,10 @@
             {
               "value": "admin",
               "name": "Admin"
+            },
+            {
+              "value": "",
+              "name": "EnumValue"
             }
           ]
         }
@@ -192991,6 +192979,10 @@
             {
               "value": "admin",
               "name": "Admin"
+            },
+            {
+              "value": "",
+              "name": "EnumValue"
             }
           ]
         }
@@ -193020,6 +193012,10 @@
             {
               "value": "admin",
               "name": "Admin"
+            },
+            {
+              "value": "",
+              "name": "EnumValue"
             }
           ]
         }
@@ -205244,6 +205240,10 @@
             {
               "value": "next_month_and_previous_two_weeks",
               "name": "NextMonthAndPreviousTwoWeeks"
+            },
+            {
+              "value": "",
+              "name": "EnumValue"
             }
           ]
         }
@@ -205540,6 +205540,10 @@
             {
               "value": "next_month_and_previous_two_weeks",
               "name": "NextMonthAndPreviousTwoWeeks"
+            },
+            {
+              "value": "",
+              "name": "EnumValue"
             }
           ]
         }
@@ -205931,6 +205935,10 @@
             {
               "value": "next_month_and_previous_two_weeks",
               "name": "NextMonthAndPreviousTwoWeeks"
+            },
+            {
+              "value": "",
+              "name": "EnumValue"
             }
           ]
         }

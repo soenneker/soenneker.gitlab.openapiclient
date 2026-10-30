@@ -64,7 +64,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Agents.Agentw.Authorize
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Agents.Agentw.Authorize_user_access.Authorize_user_accessRequestBuilder.Authorize_user_accessRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://gitlab.com", "/api/v4/internal/agents/agentw/authorize_user_access", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             return requestInfo;
         }

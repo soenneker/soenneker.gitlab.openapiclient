@@ -17,10 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("endCursor") is { } nullNodeEndCursor && nullNodeEndCursor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndCursor = null;
-            if (parseNode.GetChildNode("hasNextPage") is { } nullNodeHasNextPage && nullNodeHasNextPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasNextPage = null;
-            if (parseNode.GetChildNode("hasPreviousPage") is { } nullNodeHasPreviousPage && nullNodeHasPreviousPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasPreviousPage = null;
-            if (parseNode.GetChildNode("startCursor") is { } nullNodeStartCursor && nullNodeStartCursor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartCursor = null;
+            if (parseNode.GetChildNode("endCursor") is null) { _explicitNullValueEndCursor = default!; _explicitNullProperties?.Remove("endCursor"); }
+            else if (parseNode.GetChildNode("endCursor") is { } nullNodeEndCursor && nullNodeEndCursor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndCursor = null;
+            if (parseNode.GetChildNode("hasNextPage") is null) { _explicitNullValueHasNextPage = default!; _explicitNullProperties?.Remove("hasNextPage"); }
+            else if (parseNode.GetChildNode("hasNextPage") is { } nullNodeHasNextPage && nullNodeHasNextPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasNextPage = null;
+            if (parseNode.GetChildNode("hasPreviousPage") is null) { _explicitNullValueHasPreviousPage = default!; _explicitNullProperties?.Remove("hasPreviousPage"); }
+            else if (parseNode.GetChildNode("hasPreviousPage") is { } nullNodeHasPreviousPage && nullNodeHasPreviousPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasPreviousPage = null;
+            if (parseNode.GetChildNode("startCursor") is null) { _explicitNullValueStartCursor = default!; _explicitNullProperties?.Remove("startCursor"); }
+            else if (parseNode.GetChildNode("startCursor") is { } nullNodeStartCursor && nullNodeStartCursor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartCursor = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,27 +32,27 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Cursor for the last item</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EndCursor { get => _explicitNullValueEndCursor; set { _explicitNullValueEndCursor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endCursor"); else _explicitNullProperties?.Remove("endCursor"); } }
+        public string? EndCursor { get => _explicitNullValueEndCursor; set { _explicitNullValueEndCursor = value; AdditionalData?.Remove("endCursor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endCursor"); else _explicitNullProperties?.Remove("endCursor"); } }
         private string? _explicitNullValueEndCursor = default!;
 #nullable restore
 #else
-        public string EndCursor { get => _explicitNullValueEndCursor; set { _explicitNullValueEndCursor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endCursor"); else _explicitNullProperties?.Remove("endCursor"); } }
+        public string EndCursor { get => _explicitNullValueEndCursor; set { _explicitNullValueEndCursor = value; AdditionalData?.Remove("endCursor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endCursor"); else _explicitNullProperties?.Remove("endCursor"); } }
         private string _explicitNullValueEndCursor = default!;
 #endif
         /// <summary>Whether there are more items</summary>
-        public bool? HasNextPage { get => _explicitNullValueHasNextPage; set { _explicitNullValueHasNextPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hasNextPage"); else _explicitNullProperties?.Remove("hasNextPage"); } }
+        public bool? HasNextPage { get => _explicitNullValueHasNextPage; set { _explicitNullValueHasNextPage = value; AdditionalData?.Remove("hasNextPage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hasNextPage"); else _explicitNullProperties?.Remove("hasNextPage"); } }
         private bool? _explicitNullValueHasNextPage = default!;
         /// <summary>Whether there are previous items</summary>
-        public bool? HasPreviousPage { get => _explicitNullValueHasPreviousPage; set { _explicitNullValueHasPreviousPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hasPreviousPage"); else _explicitNullProperties?.Remove("hasPreviousPage"); } }
+        public bool? HasPreviousPage { get => _explicitNullValueHasPreviousPage; set { _explicitNullValueHasPreviousPage = value; AdditionalData?.Remove("hasPreviousPage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hasPreviousPage"); else _explicitNullProperties?.Remove("hasPreviousPage"); } }
         private bool? _explicitNullValueHasPreviousPage = default!;
         /// <summary>Cursor for the first item</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StartCursor { get => _explicitNullValueStartCursor; set { _explicitNullValueStartCursor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startCursor"); else _explicitNullProperties?.Remove("startCursor"); } }
+        public string? StartCursor { get => _explicitNullValueStartCursor; set { _explicitNullValueStartCursor = value; AdditionalData?.Remove("startCursor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startCursor"); else _explicitNullProperties?.Remove("startCursor"); } }
         private string? _explicitNullValueStartCursor = default!;
 #nullable restore
 #else
-        public string StartCursor { get => _explicitNullValueStartCursor; set { _explicitNullValueStartCursor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startCursor"); else _explicitNullProperties?.Remove("startCursor"); } }
+        public string StartCursor { get => _explicitNullValueStartCursor; set { _explicitNullValueStartCursor = value; AdditionalData?.Remove("startCursor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startCursor"); else _explicitNullProperties?.Remove("startCursor"); } }
         private string _explicitNullValueStartCursor = default!;
 #endif
         /// <summary>

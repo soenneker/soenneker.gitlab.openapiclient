@@ -17,17 +17,19 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("to_project_id") is { } nullNodeToProjectId && nullNodeToProjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToProjectId = null;
-            if (parseNode.GetChildNode("with_notes") is { } nullNodeWithNotes && nullNodeWithNotes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WithNotes = null;
+            if (parseNode.GetChildNode("to_project_id") is null) { _explicitNullValueToProjectId = default!; _explicitNullProperties?.Remove("to_project_id"); }
+            else if (parseNode.GetChildNode("to_project_id") is { } nullNodeToProjectId && nullNodeToProjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToProjectId = null;
+            if (parseNode.GetChildNode("with_notes") is null) { _explicitNullValueWithNotes = default!; _explicitNullProperties?.Remove("with_notes"); }
+            else if (parseNode.GetChildNode("with_notes") is { } nullNodeWithNotes && nullNodeWithNotes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WithNotes = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>ID of the new project.</summary>
-        public int? ToProjectId { get => _explicitNullValueToProjectId; set { _explicitNullValueToProjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to_project_id"); else _explicitNullProperties?.Remove("to_project_id"); } }
+        public int? ToProjectId { get => _explicitNullValueToProjectId; set { _explicitNullValueToProjectId = value; AdditionalData?.Remove("to_project_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to_project_id"); else _explicitNullProperties?.Remove("to_project_id"); } }
         private int? _explicitNullValueToProjectId = default!;
         /// <summary>If `true`, clones the issue with its [notes](https://docs.gitlab.com/api/notes/).</summary>
-        public bool? WithNotes { get => _explicitNullValueWithNotes; set { _explicitNullValueWithNotes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("with_notes"); else _explicitNullProperties?.Remove("with_notes"); } }
+        public bool? WithNotes { get => _explicitNullValueWithNotes; set { _explicitNullValueWithNotes = value; AdditionalData?.Remove("with_notes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("with_notes"); else _explicitNullProperties?.Remove("with_notes"); } }
         private bool? _explicitNullValueWithNotes = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdIssuesIssueIidCloneRequest"/> and sets the default values.

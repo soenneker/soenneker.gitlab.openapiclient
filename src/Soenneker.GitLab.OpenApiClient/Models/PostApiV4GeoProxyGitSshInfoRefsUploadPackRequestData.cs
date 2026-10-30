@@ -18,8 +18,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("gl_id") is { } nullNodeGlId && nullNodeGlId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GlId = null;
-            if (parseNode.GetChildNode("primary_repo") is { } nullNodePrimaryRepo && nullNodePrimaryRepo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryRepo = null;
+            if (parseNode.GetChildNode("gl_id") is null) { _explicitNullValueGlId = default!; _explicitNullProperties?.Remove("gl_id"); }
+            else if (parseNode.GetChildNode("gl_id") is { } nullNodeGlId && nullNodeGlId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GlId = null;
+            if (parseNode.GetChildNode("primary_repo") is null) { _explicitNullValuePrimaryRepo = default!; _explicitNullProperties?.Remove("primary_repo"); }
+            else if (parseNode.GetChildNode("primary_repo") is { } nullNodePrimaryRepo && nullNodePrimaryRepo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryRepo = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>ID of the user performing the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GlId { get => _explicitNullValueGlId; set { _explicitNullValueGlId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gl_id"); else _explicitNullProperties?.Remove("gl_id"); } }
+        public string? GlId { get => _explicitNullValueGlId; set { _explicitNullValueGlId = value; AdditionalData?.Remove("gl_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gl_id"); else _explicitNullProperties?.Remove("gl_id"); } }
         private string? _explicitNullValueGlId = default!;
 #nullable restore
 #else
-        public string GlId { get => _explicitNullValueGlId; set { _explicitNullValueGlId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gl_id"); else _explicitNullProperties?.Remove("gl_id"); } }
+        public string GlId { get => _explicitNullValueGlId; set { _explicitNullValueGlId = value; AdditionalData?.Remove("gl_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gl_id"); else _explicitNullProperties?.Remove("gl_id"); } }
         private string _explicitNullValueGlId = default!;
 #endif
         /// <summary>Primary repository to clone or pull from.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrimaryRepo { get => _explicitNullValuePrimaryRepo; set { _explicitNullValuePrimaryRepo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_repo"); else _explicitNullProperties?.Remove("primary_repo"); } }
+        public string? PrimaryRepo { get => _explicitNullValuePrimaryRepo; set { _explicitNullValuePrimaryRepo = value; AdditionalData?.Remove("primary_repo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_repo"); else _explicitNullProperties?.Remove("primary_repo"); } }
         private string? _explicitNullValuePrimaryRepo = default!;
 #nullable restore
 #else
-        public string PrimaryRepo { get => _explicitNullValuePrimaryRepo; set { _explicitNullValuePrimaryRepo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_repo"); else _explicitNullProperties?.Remove("primary_repo"); } }
+        public string PrimaryRepo { get => _explicitNullValuePrimaryRepo; set { _explicitNullValuePrimaryRepo = value; AdditionalData?.Remove("primary_repo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_repo"); else _explicitNullProperties?.Remove("primary_repo"); } }
         private string _explicitNullValuePrimaryRepo = default!;
 #endif
         /// <summary>

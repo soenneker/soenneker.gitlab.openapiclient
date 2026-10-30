@@ -17,10 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("diffs") is { } nullNodeDiffs && nullNodeDiffs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Diffs = null;
-            if (parseNode.GetChildNode("files_content") is { } nullNodeFilesContent && nullNodeFilesContent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilesContent = null;
-            if (parseNode.GetChildNode("mr_description") is { } nullNodeMrDescription && nullNodeMrDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MrDescription = null;
-            if (parseNode.GetChildNode("mr_title") is { } nullNodeMrTitle && nullNodeMrTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MrTitle = null;
+            if (parseNode.GetChildNode("diffs") is null) { _explicitNullValueDiffs = default!; _explicitNullProperties?.Remove("diffs"); }
+            else if (parseNode.GetChildNode("diffs") is { } nullNodeDiffs && nullNodeDiffs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Diffs = null;
+            if (parseNode.GetChildNode("files_content") is null) { _explicitNullValueFilesContent = default!; _explicitNullProperties?.Remove("files_content"); }
+            else if (parseNode.GetChildNode("files_content") is { } nullNodeFilesContent && nullNodeFilesContent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilesContent = null;
+            if (parseNode.GetChildNode("mr_description") is null) { _explicitNullValueMrDescription = default!; _explicitNullProperties?.Remove("mr_description"); }
+            else if (parseNode.GetChildNode("mr_description") is { } nullNodeMrDescription && nullNodeMrDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MrDescription = null;
+            if (parseNode.GetChildNode("mr_title") is null) { _explicitNullValueMrTitle = default!; _explicitNullProperties?.Remove("mr_title"); }
+            else if (parseNode.GetChildNode("mr_title") is { } nullNodeMrTitle && nullNodeMrTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MrTitle = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,41 +32,41 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Raw diffs to review.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Diffs { get => _explicitNullValueDiffs; set { _explicitNullValueDiffs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("diffs"); else _explicitNullProperties?.Remove("diffs"); } }
+        public string? Diffs { get => _explicitNullValueDiffs; set { _explicitNullValueDiffs = value; AdditionalData?.Remove("diffs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("diffs"); else _explicitNullProperties?.Remove("diffs"); } }
         private string? _explicitNullValueDiffs = default!;
 #nullable restore
 #else
-        public string Diffs { get => _explicitNullValueDiffs; set { _explicitNullValueDiffs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("diffs"); else _explicitNullProperties?.Remove("diffs"); } }
+        public string Diffs { get => _explicitNullValueDiffs; set { _explicitNullValueDiffs = value; AdditionalData?.Remove("diffs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("diffs"); else _explicitNullProperties?.Remove("diffs"); } }
         private string _explicitNullValueDiffs = default!;
 #endif
         /// <summary>Full file contents, where keys are file paths and values are the file contents.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4DuoCodeReviewEvaluationsRequestFilesContentProperty? FilesContent { get => _explicitNullValueFilesContent; set { _explicitNullValueFilesContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files_content"); else _explicitNullProperties?.Remove("files_content"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4DuoCodeReviewEvaluationsRequestFilesContentProperty? FilesContent { get => _explicitNullValueFilesContent; set { _explicitNullValueFilesContent = value; AdditionalData?.Remove("files_content"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files_content"); else _explicitNullProperties?.Remove("files_content"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4DuoCodeReviewEvaluationsRequestFilesContentProperty? _explicitNullValueFilesContent = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4DuoCodeReviewEvaluationsRequestFilesContentProperty FilesContent { get => _explicitNullValueFilesContent; set { _explicitNullValueFilesContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files_content"); else _explicitNullProperties?.Remove("files_content"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4DuoCodeReviewEvaluationsRequestFilesContentProperty FilesContent { get => _explicitNullValueFilesContent; set { _explicitNullValueFilesContent = value; AdditionalData?.Remove("files_content"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files_content"); else _explicitNullProperties?.Remove("files_content"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4DuoCodeReviewEvaluationsRequestFilesContentProperty _explicitNullValueFilesContent = default!;
 #endif
         /// <summary>Description of the merge request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MrDescription { get => _explicitNullValueMrDescription; set { _explicitNullValueMrDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mr_description"); else _explicitNullProperties?.Remove("mr_description"); } }
+        public string? MrDescription { get => _explicitNullValueMrDescription; set { _explicitNullValueMrDescription = value; AdditionalData?.Remove("mr_description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mr_description"); else _explicitNullProperties?.Remove("mr_description"); } }
         private string? _explicitNullValueMrDescription = default!;
 #nullable restore
 #else
-        public string MrDescription { get => _explicitNullValueMrDescription; set { _explicitNullValueMrDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mr_description"); else _explicitNullProperties?.Remove("mr_description"); } }
+        public string MrDescription { get => _explicitNullValueMrDescription; set { _explicitNullValueMrDescription = value; AdditionalData?.Remove("mr_description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mr_description"); else _explicitNullProperties?.Remove("mr_description"); } }
         private string _explicitNullValueMrDescription = default!;
 #endif
         /// <summary>Title of the merge request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MrTitle { get => _explicitNullValueMrTitle; set { _explicitNullValueMrTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mr_title"); else _explicitNullProperties?.Remove("mr_title"); } }
+        public string? MrTitle { get => _explicitNullValueMrTitle; set { _explicitNullValueMrTitle = value; AdditionalData?.Remove("mr_title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mr_title"); else _explicitNullProperties?.Remove("mr_title"); } }
         private string? _explicitNullValueMrTitle = default!;
 #nullable restore
 #else
-        public string MrTitle { get => _explicitNullValueMrTitle; set { _explicitNullValueMrTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mr_title"); else _explicitNullProperties?.Remove("mr_title"); } }
+        public string MrTitle { get => _explicitNullValueMrTitle; set { _explicitNullValueMrTitle = value; AdditionalData?.Remove("mr_title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mr_title"); else _explicitNullProperties?.Remove("mr_title"); } }
         private string _explicitNullValueMrTitle = default!;
 #endif
         /// <summary>

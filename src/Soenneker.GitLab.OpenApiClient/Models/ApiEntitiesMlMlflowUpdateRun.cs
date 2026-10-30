@@ -17,7 +17,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("run_info") is { } nullNodeRunInfo && nullNodeRunInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RunInfo = null;
+            if (parseNode.GetChildNode("run_info") is null) { _explicitNullValueRunInfo = default!; _explicitNullProperties?.Remove("run_info"); }
+            else if (parseNode.GetChildNode("run_info") is { } nullNodeRunInfo && nullNodeRunInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RunInfo = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The run_info property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowRunInfo? RunInfo { get => _explicitNullValueRunInfo; set { _explicitNullValueRunInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("run_info"); else _explicitNullProperties?.Remove("run_info"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowRunInfo? RunInfo { get => _explicitNullValueRunInfo; set { _explicitNullValueRunInfo = value; AdditionalData?.Remove("run_info"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("run_info"); else _explicitNullProperties?.Remove("run_info"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowRunInfo? _explicitNullValueRunInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowRunInfo RunInfo { get => _explicitNullValueRunInfo; set { _explicitNullValueRunInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("run_info"); else _explicitNullProperties?.Remove("run_info"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowRunInfo RunInfo { get => _explicitNullValueRunInfo; set { _explicitNullValueRunInfo = value; AdditionalData?.Remove("run_info"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("run_info"); else _explicitNullProperties?.Remove("run_info"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowRunInfo _explicitNullValueRunInfo = default!;
 #endif
         /// <summary>

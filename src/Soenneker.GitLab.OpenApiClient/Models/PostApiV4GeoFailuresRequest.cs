@@ -17,8 +17,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("failures") is { } nullNodeFailures && nullNodeFailures.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Failures = null;
-            if (parseNode.GetChildNode("geo_node_id") is { } nullNodeGeoNodeId && nullNodeGeoNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GeoNodeId = null;
+            if (parseNode.GetChildNode("failures") is null) { _explicitNullValueFailures = default!; _explicitNullProperties?.Remove("failures"); }
+            else if (parseNode.GetChildNode("failures") is { } nullNodeFailures && nullNodeFailures.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Failures = null;
+            if (parseNode.GetChildNode("geo_node_id") is null) { _explicitNullValueGeoNodeId = default!; _explicitNullProperties?.Remove("geo_node_id"); }
+            else if (parseNode.GetChildNode("geo_node_id") is { } nullNodeGeoNodeId && nullNodeGeoNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GeoNodeId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Persistent verification failures reported by the secondary</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GeoFailuresRequestFailuresItem>? Failures { get => _explicitNullValueFailures; set { _explicitNullValueFailures = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failures"); else _explicitNullProperties?.Remove("failures"); } }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GeoFailuresRequestFailuresItem>? Failures { get => _explicitNullValueFailures; set { _explicitNullValueFailures = value; AdditionalData?.Remove("failures"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failures"); else _explicitNullProperties?.Remove("failures"); } }
         private List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GeoFailuresRequestFailuresItem>? _explicitNullValueFailures = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GeoFailuresRequestFailuresItem> Failures { get => _explicitNullValueFailures; set { _explicitNullValueFailures = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failures"); else _explicitNullProperties?.Remove("failures"); } }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GeoFailuresRequestFailuresItem> Failures { get => _explicitNullValueFailures; set { _explicitNullValueFailures = value; AdditionalData?.Remove("failures"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failures"); else _explicitNullProperties?.Remove("failures"); } }
         private List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GeoFailuresRequestFailuresItem> _explicitNullValueFailures = default!;
 #endif
         /// <summary>The Geo node ID of the reporting secondary</summary>
-        public int? GeoNodeId { get => _explicitNullValueGeoNodeId; set { _explicitNullValueGeoNodeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("geo_node_id"); else _explicitNullProperties?.Remove("geo_node_id"); } }
+        public int? GeoNodeId { get => _explicitNullValueGeoNodeId; set { _explicitNullValueGeoNodeId = value; AdditionalData?.Remove("geo_node_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("geo_node_id"); else _explicitNullProperties?.Remove("geo_node_id"); } }
         private int? _explicitNullValueGeoNodeId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GeoFailuresRequest"/> and sets the default values.

@@ -17,27 +17,30 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("allowed_from") is { } nullNodeAllowedFrom && nullNodeAllowedFrom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedFrom = null;
-            if (parseNode.GetChildNode("minimum_access_level_for_write") is { } nullNodeMinimumAccessLevelForWrite && nullNodeMinimumAccessLevelForWrite.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumAccessLevelForWrite = null;
-            if (parseNode.GetChildNode("state_name") is { } nullNodeStateName && nullNodeStateName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StateName = null;
+            if (parseNode.GetChildNode("allowed_from") is null) { _explicitNullValueAllowedFrom = default!; _explicitNullProperties?.Remove("allowed_from"); }
+            else if (parseNode.GetChildNode("allowed_from") is { } nullNodeAllowedFrom && nullNodeAllowedFrom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedFrom = null;
+            if (parseNode.GetChildNode("minimum_access_level_for_write") is null) { _explicitNullValueMinimumAccessLevelForWrite = default!; _explicitNullProperties?.Remove("minimum_access_level_for_write"); }
+            else if (parseNode.GetChildNode("minimum_access_level_for_write") is { } nullNodeMinimumAccessLevelForWrite && nullNodeMinimumAccessLevelForWrite.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumAccessLevelForWrite = null;
+            if (parseNode.GetChildNode("state_name") is null) { _explicitNullValueStateName = default!; _explicitNullProperties?.Remove("state_name"); }
+            else if (parseNode.GetChildNode("state_name") is { } nullNodeStateName && nullNodeStateName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StateName = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Source restriction for write requests. Valid values: anywhere, ci_only, ci_on_protected_branch_only.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdTerraformStateProtectionRulesRequestAllowedFrom? AllowedFrom { get => _explicitNullValueAllowedFrom; set { _explicitNullValueAllowedFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_from"); else _explicitNullProperties?.Remove("allowed_from"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdTerraformStateProtectionRulesRequestAllowedFrom? AllowedFrom { get => _explicitNullValueAllowedFrom; set { _explicitNullValueAllowedFrom = value; AdditionalData?.Remove("allowed_from"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_from"); else _explicitNullProperties?.Remove("allowed_from"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdTerraformStateProtectionRulesRequestAllowedFrom? _explicitNullValueAllowedFrom = default!;
         /// <summary>Minimum GitLab access level required to write to the Terraform state. Valid values: developer, maintainer, owner, admin.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdTerraformStateProtectionRulesRequestMinimumAccessLevelForWrite? MinimumAccessLevelForWrite { get => _explicitNullValueMinimumAccessLevelForWrite; set { _explicitNullValueMinimumAccessLevelForWrite = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_for_write"); else _explicitNullProperties?.Remove("minimum_access_level_for_write"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdTerraformStateProtectionRulesRequestMinimumAccessLevelForWrite? MinimumAccessLevelForWrite { get => _explicitNullValueMinimumAccessLevelForWrite; set { _explicitNullValueMinimumAccessLevelForWrite = value; AdditionalData?.Remove("minimum_access_level_for_write"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_for_write"); else _explicitNullProperties?.Remove("minimum_access_level_for_write"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdTerraformStateProtectionRulesRequestMinimumAccessLevelForWrite? _explicitNullValueMinimumAccessLevelForWrite = default!;
         /// <summary>Terraform state name to protect. Maximum 255 characters. Must be unique per project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StateName { get => _explicitNullValueStateName; set { _explicitNullValueStateName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state_name"); else _explicitNullProperties?.Remove("state_name"); } }
+        public string? StateName { get => _explicitNullValueStateName; set { _explicitNullValueStateName = value; AdditionalData?.Remove("state_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state_name"); else _explicitNullProperties?.Remove("state_name"); } }
         private string? _explicitNullValueStateName = default!;
 #nullable restore
 #else
-        public string StateName { get => _explicitNullValueStateName; set { _explicitNullValueStateName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state_name"); else _explicitNullProperties?.Remove("state_name"); } }
+        public string StateName { get => _explicitNullValueStateName; set { _explicitNullValueStateName = value; AdditionalData?.Remove("state_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state_name"); else _explicitNullProperties?.Remove("state_name"); } }
         private string _explicitNullValueStateName = default!;
 #endif
         /// <summary>
@@ -65,8 +68,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "allowed_from", n => { AllowedFrom = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdTerraformStateProtectionRulesRequestAllowedFrom>(); } },
-                { "minimum_access_level_for_write", n => { MinimumAccessLevelForWrite = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdTerraformStateProtectionRulesRequestMinimumAccessLevelForWrite>(); } },
+                { "allowed_from", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdTerraformStateProtectionRulesRequestAllowedFrom>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAllowedFrom = default; _explicitNullProperties?.Remove("allowed_from"); AdditionalData["allowed_from"] = unknown; } else { AllowedFrom = parsed; AdditionalData.Remove("allowed_from"); } } },
+                { "minimum_access_level_for_write", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdTerraformStateProtectionRulesRequestMinimumAccessLevelForWrite>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMinimumAccessLevelForWrite = default; _explicitNullProperties?.Remove("minimum_access_level_for_write"); AdditionalData["minimum_access_level_for_write"] = unknown; } else { MinimumAccessLevelForWrite = parsed; AdditionalData.Remove("minimum_access_level_for_write"); } } },
                 { "state_name", n => { StateName = n.GetStringValue(); } },
             };
         }

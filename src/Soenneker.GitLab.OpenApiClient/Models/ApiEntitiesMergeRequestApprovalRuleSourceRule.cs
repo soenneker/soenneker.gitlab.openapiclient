@@ -17,13 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("approvals_required") is { } nullNodeApprovalsRequired && nullNodeApprovalsRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApprovalsRequired = null;
+            if (parseNode.GetChildNode("approvals_required") is null) { _explicitNullValueApprovalsRequired = default!; _explicitNullProperties?.Remove("approvals_required"); }
+            else if (parseNode.GetChildNode("approvals_required") is { } nullNodeApprovalsRequired && nullNodeApprovalsRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApprovalsRequired = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The approvals_required property</summary>
-        public int? ApprovalsRequired { get => _explicitNullValueApprovalsRequired; set { _explicitNullValueApprovalsRequired = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approvals_required"); else _explicitNullProperties?.Remove("approvals_required"); } }
+        public int? ApprovalsRequired { get => _explicitNullValueApprovalsRequired; set { _explicitNullValueApprovalsRequired = value; AdditionalData?.Remove("approvals_required"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approvals_required"); else _explicitNullProperties?.Remove("approvals_required"); } }
         private int? _explicitNullValueApprovalsRequired = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestApprovalRuleSourceRule"/> and sets the default values.

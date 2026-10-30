@@ -17,13 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("can_merge") is { } nullNodeCanMerge && nullNodeCanMerge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanMerge = null;
+            if (parseNode.GetChildNode("can_merge") is null) { _explicitNullValueCanMerge = default!; _explicitNullProperties?.Remove("can_merge"); }
+            else if (parseNode.GetChildNode("can_merge") is { } nullNodeCanMerge && nullNodeCanMerge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanMerge = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The can_merge property</summary>
-        public bool? CanMerge { get => _explicitNullValueCanMerge; set { _explicitNullValueCanMerge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_merge"); else _explicitNullProperties?.Remove("can_merge"); } }
+        public bool? CanMerge { get => _explicitNullValueCanMerge; set { _explicitNullValueCanMerge = value; AdditionalData?.Remove("can_merge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_merge"); else _explicitNullProperties?.Remove("can_merge"); } }
         private bool? _explicitNullValueCanMerge = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestUser"/> and sets the default values.

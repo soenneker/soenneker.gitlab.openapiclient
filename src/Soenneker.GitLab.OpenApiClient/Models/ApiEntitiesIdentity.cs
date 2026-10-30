@@ -17,9 +17,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("extern_uid") is { } nullNodeExternUid && nullNodeExternUid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternUid = null;
-            if (parseNode.GetChildNode("provider") is { } nullNodeProvider && nullNodeProvider.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Provider = null;
-            if (parseNode.GetChildNode("saml_provider_id") is { } nullNodeSamlProviderId && nullNodeSamlProviderId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SamlProviderId = null;
+            if (parseNode.GetChildNode("extern_uid") is null) { _explicitNullValueExternUid = default!; _explicitNullProperties?.Remove("extern_uid"); }
+            else if (parseNode.GetChildNode("extern_uid") is { } nullNodeExternUid && nullNodeExternUid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternUid = null;
+            if (parseNode.GetChildNode("provider") is null) { _explicitNullValueProvider = default!; _explicitNullProperties?.Remove("provider"); }
+            else if (parseNode.GetChildNode("provider") is { } nullNodeProvider && nullNodeProvider.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Provider = null;
+            if (parseNode.GetChildNode("saml_provider_id") is null) { _explicitNullValueSamlProviderId = default!; _explicitNullProperties?.Remove("saml_provider_id"); }
+            else if (parseNode.GetChildNode("saml_provider_id") is { } nullNodeSamlProviderId && nullNodeSamlProviderId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SamlProviderId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The extern_uid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternUid { get => _explicitNullValueExternUid; set { _explicitNullValueExternUid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extern_uid"); else _explicitNullProperties?.Remove("extern_uid"); } }
+        public string? ExternUid { get => _explicitNullValueExternUid; set { _explicitNullValueExternUid = value; AdditionalData?.Remove("extern_uid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extern_uid"); else _explicitNullProperties?.Remove("extern_uid"); } }
         private string? _explicitNullValueExternUid = default!;
 #nullable restore
 #else
-        public string ExternUid { get => _explicitNullValueExternUid; set { _explicitNullValueExternUid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extern_uid"); else _explicitNullProperties?.Remove("extern_uid"); } }
+        public string ExternUid { get => _explicitNullValueExternUid; set { _explicitNullValueExternUid = value; AdditionalData?.Remove("extern_uid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extern_uid"); else _explicitNullProperties?.Remove("extern_uid"); } }
         private string _explicitNullValueExternUid = default!;
 #endif
         /// <summary>The provider property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Provider { get => _explicitNullValueProvider; set { _explicitNullValueProvider = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provider"); else _explicitNullProperties?.Remove("provider"); } }
+        public string? Provider { get => _explicitNullValueProvider; set { _explicitNullValueProvider = value; AdditionalData?.Remove("provider"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provider"); else _explicitNullProperties?.Remove("provider"); } }
         private string? _explicitNullValueProvider = default!;
 #nullable restore
 #else
-        public string Provider { get => _explicitNullValueProvider; set { _explicitNullValueProvider = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provider"); else _explicitNullProperties?.Remove("provider"); } }
+        public string Provider { get => _explicitNullValueProvider; set { _explicitNullValueProvider = value; AdditionalData?.Remove("provider"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provider"); else _explicitNullProperties?.Remove("provider"); } }
         private string _explicitNullValueProvider = default!;
 #endif
         /// <summary>The saml_provider_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SamlProviderId { get => _explicitNullValueSamlProviderId; set { _explicitNullValueSamlProviderId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saml_provider_id"); else _explicitNullProperties?.Remove("saml_provider_id"); } }
+        public string? SamlProviderId { get => _explicitNullValueSamlProviderId; set { _explicitNullValueSamlProviderId = value; AdditionalData?.Remove("saml_provider_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saml_provider_id"); else _explicitNullProperties?.Remove("saml_provider_id"); } }
         private string? _explicitNullValueSamlProviderId = default!;
 #nullable restore
 #else
-        public string SamlProviderId { get => _explicitNullValueSamlProviderId; set { _explicitNullValueSamlProviderId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saml_provider_id"); else _explicitNullProperties?.Remove("saml_provider_id"); } }
+        public string SamlProviderId { get => _explicitNullValueSamlProviderId; set { _explicitNullValueSamlProviderId = value; AdditionalData?.Remove("saml_provider_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saml_provider_id"); else _explicitNullProperties?.Remove("saml_provider_id"); } }
         private string _explicitNullValueSamlProviderId = default!;
 #endif
         /// <summary>

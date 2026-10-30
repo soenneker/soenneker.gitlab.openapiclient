@@ -17,8 +17,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("server_version") is { } nullNodeServerVersion && nullNodeServerVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServerVersion = null;
-            if (parseNode.GetChildNode("skills") is { } nullNodeSkills && nullNodeSkills.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Skills = null;
+            if (parseNode.GetChildNode("server_version") is null) { _explicitNullValueServerVersion = default!; _explicitNullProperties?.Remove("server_version"); }
+            else if (parseNode.GetChildNode("server_version") is { } nullNodeServerVersion && nullNodeServerVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServerVersion = null;
+            if (parseNode.GetChildNode("skills") is null) { _explicitNullValueSkills = default!; _explicitNullProperties?.Remove("skills"); }
+            else if (parseNode.GetChildNode("skills") is { } nullNodeSkills && nullNodeSkills.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Skills = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The server_version property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ServerVersion { get => _explicitNullValueServerVersion; set { _explicitNullValueServerVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("server_version"); else _explicitNullProperties?.Remove("server_version"); } }
+        public string? ServerVersion { get => _explicitNullValueServerVersion; set { _explicitNullValueServerVersion = value; AdditionalData?.Remove("server_version"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("server_version"); else _explicitNullProperties?.Remove("server_version"); } }
         private string? _explicitNullValueServerVersion = default!;
 #nullable restore
 #else
-        public string ServerVersion { get => _explicitNullValueServerVersion; set { _explicitNullValueServerVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("server_version"); else _explicitNullProperties?.Remove("server_version"); } }
+        public string ServerVersion { get => _explicitNullValueServerVersion; set { _explicitNullValueServerVersion = value; AdditionalData?.Remove("server_version"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("server_version"); else _explicitNullProperties?.Remove("server_version"); } }
         private string _explicitNullValueServerVersion = default!;
 #endif
         /// <summary>The skills property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesOrbitSkillSummary>? Skills { get => _explicitNullValueSkills; set { _explicitNullValueSkills = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skills"); else _explicitNullProperties?.Remove("skills"); } }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesOrbitSkillSummary>? Skills { get => _explicitNullValueSkills; set { _explicitNullValueSkills = value; AdditionalData?.Remove("skills"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skills"); else _explicitNullProperties?.Remove("skills"); } }
         private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesOrbitSkillSummary>? _explicitNullValueSkills = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesOrbitSkillSummary> Skills { get => _explicitNullValueSkills; set { _explicitNullValueSkills = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skills"); else _explicitNullProperties?.Remove("skills"); } }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesOrbitSkillSummary> Skills { get => _explicitNullValueSkills; set { _explicitNullValueSkills = value; AdditionalData?.Remove("skills"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skills"); else _explicitNullProperties?.Remove("skills"); } }
         private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesOrbitSkillSummary> _explicitNullValueSkills = default!;
 #endif
         /// <summary>

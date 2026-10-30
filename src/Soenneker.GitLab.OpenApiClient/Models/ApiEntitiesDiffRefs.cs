@@ -17,9 +17,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("base_sha") is { } nullNodeBaseSha && nullNodeBaseSha.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BaseSha = null;
-            if (parseNode.GetChildNode("head_sha") is { } nullNodeHeadSha && nullNodeHeadSha.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HeadSha = null;
-            if (parseNode.GetChildNode("start_sha") is { } nullNodeStartSha && nullNodeStartSha.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartSha = null;
+            if (parseNode.GetChildNode("base_sha") is null) { _explicitNullValueBaseSha = default!; _explicitNullProperties?.Remove("base_sha"); }
+            else if (parseNode.GetChildNode("base_sha") is { } nullNodeBaseSha && nullNodeBaseSha.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BaseSha = null;
+            if (parseNode.GetChildNode("head_sha") is null) { _explicitNullValueHeadSha = default!; _explicitNullProperties?.Remove("head_sha"); }
+            else if (parseNode.GetChildNode("head_sha") is { } nullNodeHeadSha && nullNodeHeadSha.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HeadSha = null;
+            if (parseNode.GetChildNode("start_sha") is null) { _explicitNullValueStartSha = default!; _explicitNullProperties?.Remove("start_sha"); }
+            else if (parseNode.GetChildNode("start_sha") is { } nullNodeStartSha && nullNodeStartSha.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartSha = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The base_sha property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BaseSha { get => _explicitNullValueBaseSha; set { _explicitNullValueBaseSha = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("base_sha"); else _explicitNullProperties?.Remove("base_sha"); } }
+        public string? BaseSha { get => _explicitNullValueBaseSha; set { _explicitNullValueBaseSha = value; AdditionalData?.Remove("base_sha"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("base_sha"); else _explicitNullProperties?.Remove("base_sha"); } }
         private string? _explicitNullValueBaseSha = default!;
 #nullable restore
 #else
-        public string BaseSha { get => _explicitNullValueBaseSha; set { _explicitNullValueBaseSha = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("base_sha"); else _explicitNullProperties?.Remove("base_sha"); } }
+        public string BaseSha { get => _explicitNullValueBaseSha; set { _explicitNullValueBaseSha = value; AdditionalData?.Remove("base_sha"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("base_sha"); else _explicitNullProperties?.Remove("base_sha"); } }
         private string _explicitNullValueBaseSha = default!;
 #endif
         /// <summary>The head_sha property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HeadSha { get => _explicitNullValueHeadSha; set { _explicitNullValueHeadSha = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("head_sha"); else _explicitNullProperties?.Remove("head_sha"); } }
+        public string? HeadSha { get => _explicitNullValueHeadSha; set { _explicitNullValueHeadSha = value; AdditionalData?.Remove("head_sha"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("head_sha"); else _explicitNullProperties?.Remove("head_sha"); } }
         private string? _explicitNullValueHeadSha = default!;
 #nullable restore
 #else
-        public string HeadSha { get => _explicitNullValueHeadSha; set { _explicitNullValueHeadSha = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("head_sha"); else _explicitNullProperties?.Remove("head_sha"); } }
+        public string HeadSha { get => _explicitNullValueHeadSha; set { _explicitNullValueHeadSha = value; AdditionalData?.Remove("head_sha"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("head_sha"); else _explicitNullProperties?.Remove("head_sha"); } }
         private string _explicitNullValueHeadSha = default!;
 #endif
         /// <summary>The start_sha property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StartSha { get => _explicitNullValueStartSha; set { _explicitNullValueStartSha = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_sha"); else _explicitNullProperties?.Remove("start_sha"); } }
+        public string? StartSha { get => _explicitNullValueStartSha; set { _explicitNullValueStartSha = value; AdditionalData?.Remove("start_sha"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_sha"); else _explicitNullProperties?.Remove("start_sha"); } }
         private string? _explicitNullValueStartSha = default!;
 #nullable restore
 #else
-        public string StartSha { get => _explicitNullValueStartSha; set { _explicitNullValueStartSha = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_sha"); else _explicitNullProperties?.Remove("start_sha"); } }
+        public string StartSha { get => _explicitNullValueStartSha; set { _explicitNullValueStartSha = value; AdditionalData?.Remove("start_sha"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_sha"); else _explicitNullProperties?.Remove("start_sha"); } }
         private string _explicitNullValueStartSha = default!;
 #endif
         /// <summary>

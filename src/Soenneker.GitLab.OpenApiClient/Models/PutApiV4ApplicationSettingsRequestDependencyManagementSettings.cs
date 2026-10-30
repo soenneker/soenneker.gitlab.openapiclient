@@ -18,13 +18,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("security_update_scheduler_max_concurrency") is { } nullNodeSecurityUpdateSchedulerMaxConcurrency && nullNodeSecurityUpdateSchedulerMaxConcurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecurityUpdateSchedulerMaxConcurrency = null;
+            if (parseNode.GetChildNode("security_update_scheduler_max_concurrency") is null) { _explicitNullValueSecurityUpdateSchedulerMaxConcurrency = default!; _explicitNullProperties?.Remove("security_update_scheduler_max_concurrency"); }
+            else if (parseNode.GetChildNode("security_update_scheduler_max_concurrency") is { } nullNodeSecurityUpdateSchedulerMaxConcurrency && nullNodeSecurityUpdateSchedulerMaxConcurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecurityUpdateSchedulerMaxConcurrency = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Maximum number of dependency management security update scheduler jobs to run concurrently across the Sidekiq fleet.</summary>
-        public int? SecurityUpdateSchedulerMaxConcurrency { get => _explicitNullValueSecurityUpdateSchedulerMaxConcurrency; set { _explicitNullValueSecurityUpdateSchedulerMaxConcurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("security_update_scheduler_max_concurrency"); else _explicitNullProperties?.Remove("security_update_scheduler_max_concurrency"); } }
+        public int? SecurityUpdateSchedulerMaxConcurrency { get => _explicitNullValueSecurityUpdateSchedulerMaxConcurrency; set { _explicitNullValueSecurityUpdateSchedulerMaxConcurrency = value; AdditionalData?.Remove("security_update_scheduler_max_concurrency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("security_update_scheduler_max_concurrency"); else _explicitNullProperties?.Remove("security_update_scheduler_max_concurrency"); } }
         private int? _explicitNullValueSecurityUpdateSchedulerMaxConcurrency = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestDependencyManagementSettings"/> and sets the default values.

@@ -17,35 +17,38 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("auto_ssl_enabled") is { } nullNodeAutoSslEnabled && nullNodeAutoSslEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoSslEnabled = null;
-            if (parseNode.GetChildNode("certificate") is { } nullNodeCertificate && nullNodeCertificate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Certificate = null;
-            if (parseNode.GetChildNode("key") is { } nullNodeKey && nullNodeKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Key = null;
+            if (parseNode.GetChildNode("auto_ssl_enabled") is null) { _explicitNullValueAutoSslEnabled = default!; _explicitNullProperties?.Remove("auto_ssl_enabled"); }
+            else if (parseNode.GetChildNode("auto_ssl_enabled") is { } nullNodeAutoSslEnabled && nullNodeAutoSslEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoSslEnabled = null;
+            if (parseNode.GetChildNode("certificate") is null) { _explicitNullValueCertificate = default!; _explicitNullProperties?.Remove("certificate"); }
+            else if (parseNode.GetChildNode("certificate") is { } nullNodeCertificate && nullNodeCertificate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Certificate = null;
+            if (parseNode.GetChildNode("key") is null) { _explicitNullValueKey = default!; _explicitNullProperties?.Remove("key"); }
+            else if (parseNode.GetChildNode("key") is { } nullNodeKey && nullNodeKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Key = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>If `true`, enables [automatic generation](https://docs.gitlab.com/user/project/pages/custom_domains_ssl_tls_certification/lets_encrypt_integration/) of SSL certificates issued by Let&apos;s Encrypt for custom domains.</summary>
-        public bool? AutoSslEnabled { get => _explicitNullValueAutoSslEnabled; set { _explicitNullValueAutoSslEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_ssl_enabled"); else _explicitNullProperties?.Remove("auto_ssl_enabled"); } }
+        public bool? AutoSslEnabled { get => _explicitNullValueAutoSslEnabled; set { _explicitNullValueAutoSslEnabled = value; AdditionalData?.Remove("auto_ssl_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_ssl_enabled"); else _explicitNullProperties?.Remove("auto_ssl_enabled"); } }
         private bool? _explicitNullValueAutoSslEnabled = default!;
         /// <summary>Certificate in PEM format with intermediates following in most specific to least specific order.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdPagesDomainsDomainRequestCertificate? Certificate { get => _explicitNullValueCertificate; set { _explicitNullValueCertificate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("certificate"); else _explicitNullProperties?.Remove("certificate"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdPagesDomainsDomainRequestCertificate? _explicitNullValueCertificate = default!;
+        public string? Certificate { get => _explicitNullValueCertificate; set { _explicitNullValueCertificate = value; AdditionalData?.Remove("certificate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("certificate"); else _explicitNullProperties?.Remove("certificate"); } }
+        private string? _explicitNullValueCertificate = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdPagesDomainsDomainRequestCertificate Certificate { get => _explicitNullValueCertificate; set { _explicitNullValueCertificate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("certificate"); else _explicitNullProperties?.Remove("certificate"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdPagesDomainsDomainRequestCertificate _explicitNullValueCertificate = default!;
+        public string Certificate { get => _explicitNullValueCertificate; set { _explicitNullValueCertificate = value; AdditionalData?.Remove("certificate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("certificate"); else _explicitNullProperties?.Remove("certificate"); } }
+        private string _explicitNullValueCertificate = default!;
 #endif
         /// <summary>Certificate key in PEM format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdPagesDomainsDomainRequestKey? Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdPagesDomainsDomainRequestKey? _explicitNullValueKey = default!;
+        public string? Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; AdditionalData?.Remove("key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
+        private string? _explicitNullValueKey = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdPagesDomainsDomainRequestKey Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdPagesDomainsDomainRequestKey _explicitNullValueKey = default!;
+        public string Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; AdditionalData?.Remove("key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
+        private string _explicitNullValueKey = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdPagesDomainsDomainRequest"/> and sets the default values.
@@ -73,8 +76,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "auto_ssl_enabled", n => { AutoSslEnabled = n.GetBoolValue(); } },
-                { "certificate", n => { Certificate = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdPagesDomainsDomainRequestCertificate>(global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdPagesDomainsDomainRequestCertificate.CreateFromDiscriminatorValue); } },
-                { "key", n => { Key = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdPagesDomainsDomainRequestKey>(global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdPagesDomainsDomainRequestKey.CreateFromDiscriminatorValue); } },
+                { "certificate", n => { Certificate = n.GetStringValue(); } },
+                { "key", n => { Key = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -85,8 +88,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("auto_ssl_enabled", AutoSslEnabled);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdPagesDomainsDomainRequestCertificate>("certificate", Certificate);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdPagesDomainsDomainRequestKey>("key", Key);
+            writer.WriteStringValue("certificate", Certificate);
+            writer.WriteStringValue("key", Key);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

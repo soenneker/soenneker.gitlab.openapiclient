@@ -17,93 +17,102 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("authored_date") is { } nullNodeAuthoredDate && nullNodeAuthoredDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthoredDate = null;
-            if (parseNode.GetChildNode("author_email") is { } nullNodeAuthorEmail && nullNodeAuthorEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthorEmail = null;
-            if (parseNode.GetChildNode("author_name") is { } nullNodeAuthorName && nullNodeAuthorName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthorName = null;
-            if (parseNode.GetChildNode("committed_date") is { } nullNodeCommittedDate && nullNodeCommittedDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommittedDate = null;
-            if (parseNode.GetChildNode("committer_email") is { } nullNodeCommitterEmail && nullNodeCommitterEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommitterEmail = null;
-            if (parseNode.GetChildNode("committer_name") is { } nullNodeCommitterName && nullNodeCommitterName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommitterName = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
-            if (parseNode.GetChildNode("parent_ids") is { } nullNodeParentIds && nullNodeParentIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentIds = null;
+            if (parseNode.GetChildNode("authored_date") is null) { _explicitNullValueAuthoredDate = default!; _explicitNullProperties?.Remove("authored_date"); }
+            else if (parseNode.GetChildNode("authored_date") is { } nullNodeAuthoredDate && nullNodeAuthoredDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthoredDate = null;
+            if (parseNode.GetChildNode("author_email") is null) { _explicitNullValueAuthorEmail = default!; _explicitNullProperties?.Remove("author_email"); }
+            else if (parseNode.GetChildNode("author_email") is { } nullNodeAuthorEmail && nullNodeAuthorEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthorEmail = null;
+            if (parseNode.GetChildNode("author_name") is null) { _explicitNullValueAuthorName = default!; _explicitNullProperties?.Remove("author_name"); }
+            else if (parseNode.GetChildNode("author_name") is { } nullNodeAuthorName && nullNodeAuthorName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthorName = null;
+            if (parseNode.GetChildNode("committed_date") is null) { _explicitNullValueCommittedDate = default!; _explicitNullProperties?.Remove("committed_date"); }
+            else if (parseNode.GetChildNode("committed_date") is { } nullNodeCommittedDate && nullNodeCommittedDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommittedDate = null;
+            if (parseNode.GetChildNode("committer_email") is null) { _explicitNullValueCommitterEmail = default!; _explicitNullProperties?.Remove("committer_email"); }
+            else if (parseNode.GetChildNode("committer_email") is { } nullNodeCommitterEmail && nullNodeCommitterEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommitterEmail = null;
+            if (parseNode.GetChildNode("committer_name") is null) { _explicitNullValueCommitterName = default!; _explicitNullProperties?.Remove("committer_name"); }
+            else if (parseNode.GetChildNode("committer_name") is { } nullNodeCommitterName && nullNodeCommitterName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommitterName = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("message") is null) { _explicitNullValueMessage = default!; _explicitNullProperties?.Remove("message"); }
+            else if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
+            if (parseNode.GetChildNode("parent_ids") is null) { _explicitNullValueParentIds = default!; _explicitNullProperties?.Remove("parent_ids"); }
+            else if (parseNode.GetChildNode("parent_ids") is { } nullNodeParentIds && nullNodeParentIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentIds = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The authored_date property</summary>
-        public DateTimeOffset? AuthoredDate { get => _explicitNullValueAuthoredDate; set { _explicitNullValueAuthoredDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authored_date"); else _explicitNullProperties?.Remove("authored_date"); } }
+        public DateTimeOffset? AuthoredDate { get => _explicitNullValueAuthoredDate; set { _explicitNullValueAuthoredDate = value; AdditionalData?.Remove("authored_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authored_date"); else _explicitNullProperties?.Remove("authored_date"); } }
         private DateTimeOffset? _explicitNullValueAuthoredDate = default!;
         /// <summary>The author_email property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AuthorEmail { get => _explicitNullValueAuthorEmail; set { _explicitNullValueAuthorEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author_email"); else _explicitNullProperties?.Remove("author_email"); } }
+        public string? AuthorEmail { get => _explicitNullValueAuthorEmail; set { _explicitNullValueAuthorEmail = value; AdditionalData?.Remove("author_email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author_email"); else _explicitNullProperties?.Remove("author_email"); } }
         private string? _explicitNullValueAuthorEmail = default!;
 #nullable restore
 #else
-        public string AuthorEmail { get => _explicitNullValueAuthorEmail; set { _explicitNullValueAuthorEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author_email"); else _explicitNullProperties?.Remove("author_email"); } }
+        public string AuthorEmail { get => _explicitNullValueAuthorEmail; set { _explicitNullValueAuthorEmail = value; AdditionalData?.Remove("author_email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author_email"); else _explicitNullProperties?.Remove("author_email"); } }
         private string _explicitNullValueAuthorEmail = default!;
 #endif
         /// <summary>The author_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AuthorName { get => _explicitNullValueAuthorName; set { _explicitNullValueAuthorName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author_name"); else _explicitNullProperties?.Remove("author_name"); } }
+        public string? AuthorName { get => _explicitNullValueAuthorName; set { _explicitNullValueAuthorName = value; AdditionalData?.Remove("author_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author_name"); else _explicitNullProperties?.Remove("author_name"); } }
         private string? _explicitNullValueAuthorName = default!;
 #nullable restore
 #else
-        public string AuthorName { get => _explicitNullValueAuthorName; set { _explicitNullValueAuthorName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author_name"); else _explicitNullProperties?.Remove("author_name"); } }
+        public string AuthorName { get => _explicitNullValueAuthorName; set { _explicitNullValueAuthorName = value; AdditionalData?.Remove("author_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author_name"); else _explicitNullProperties?.Remove("author_name"); } }
         private string _explicitNullValueAuthorName = default!;
 #endif
         /// <summary>The committed_date property</summary>
-        public DateTimeOffset? CommittedDate { get => _explicitNullValueCommittedDate; set { _explicitNullValueCommittedDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("committed_date"); else _explicitNullProperties?.Remove("committed_date"); } }
+        public DateTimeOffset? CommittedDate { get => _explicitNullValueCommittedDate; set { _explicitNullValueCommittedDate = value; AdditionalData?.Remove("committed_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("committed_date"); else _explicitNullProperties?.Remove("committed_date"); } }
         private DateTimeOffset? _explicitNullValueCommittedDate = default!;
         /// <summary>The committer_email property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CommitterEmail { get => _explicitNullValueCommitterEmail; set { _explicitNullValueCommitterEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("committer_email"); else _explicitNullProperties?.Remove("committer_email"); } }
+        public string? CommitterEmail { get => _explicitNullValueCommitterEmail; set { _explicitNullValueCommitterEmail = value; AdditionalData?.Remove("committer_email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("committer_email"); else _explicitNullProperties?.Remove("committer_email"); } }
         private string? _explicitNullValueCommitterEmail = default!;
 #nullable restore
 #else
-        public string CommitterEmail { get => _explicitNullValueCommitterEmail; set { _explicitNullValueCommitterEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("committer_email"); else _explicitNullProperties?.Remove("committer_email"); } }
+        public string CommitterEmail { get => _explicitNullValueCommitterEmail; set { _explicitNullValueCommitterEmail = value; AdditionalData?.Remove("committer_email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("committer_email"); else _explicitNullProperties?.Remove("committer_email"); } }
         private string _explicitNullValueCommitterEmail = default!;
 #endif
         /// <summary>The committer_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CommitterName { get => _explicitNullValueCommitterName; set { _explicitNullValueCommitterName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("committer_name"); else _explicitNullProperties?.Remove("committer_name"); } }
+        public string? CommitterName { get => _explicitNullValueCommitterName; set { _explicitNullValueCommitterName = value; AdditionalData?.Remove("committer_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("committer_name"); else _explicitNullProperties?.Remove("committer_name"); } }
         private string? _explicitNullValueCommitterName = default!;
 #nullable restore
 #else
-        public string CommitterName { get => _explicitNullValueCommitterName; set { _explicitNullValueCommitterName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("committer_name"); else _explicitNullProperties?.Remove("committer_name"); } }
+        public string CommitterName { get => _explicitNullValueCommitterName; set { _explicitNullValueCommitterName = value; AdditionalData?.Remove("committer_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("committer_name"); else _explicitNullProperties?.Remove("committer_name"); } }
         private string _explicitNullValueCommitterName = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>The message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        public string? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; AdditionalData?.Remove("message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
         private string? _explicitNullValueMessage = default!;
 #nullable restore
 #else
-        public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; AdditionalData?.Remove("message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
         private string _explicitNullValueMessage = default!;
 #endif
         /// <summary>The parent_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ParentIds { get => _explicitNullValueParentIds; set { _explicitNullValueParentIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_ids"); else _explicitNullProperties?.Remove("parent_ids"); } }
+        public List<string>? ParentIds { get => _explicitNullValueParentIds; set { _explicitNullValueParentIds = value; AdditionalData?.Remove("parent_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_ids"); else _explicitNullProperties?.Remove("parent_ids"); } }
         private List<string>? _explicitNullValueParentIds = default!;
 #nullable restore
 #else
-        public List<string> ParentIds { get => _explicitNullValueParentIds; set { _explicitNullValueParentIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_ids"); else _explicitNullProperties?.Remove("parent_ids"); } }
+        public List<string> ParentIds { get => _explicitNullValueParentIds; set { _explicitNullValueParentIds = value; AdditionalData?.Remove("parent_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_ids"); else _explicitNullProperties?.Remove("parent_ids"); } }
         private List<string> _explicitNullValueParentIds = default!;
 #endif
         /// <summary>

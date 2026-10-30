@@ -17,21 +17,24 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("monthly_minutes_used") is { } nullNodeMonthlyMinutesUsed && nullNodeMonthlyMinutesUsed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyMinutesUsed = null;
-            if (parseNode.GetChildNode("purchased_minutes_used") is { } nullNodePurchasedMinutesUsed && nullNodePurchasedMinutesUsed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PurchasedMinutesUsed = null;
-            if (parseNode.GetChildNode("total_minutes_used") is { } nullNodeTotalMinutesUsed && nullNodeTotalMinutesUsed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalMinutesUsed = null;
+            if (parseNode.GetChildNode("monthly_minutes_used") is null) { _explicitNullValueMonthlyMinutesUsed = default!; _explicitNullProperties?.Remove("monthly_minutes_used"); }
+            else if (parseNode.GetChildNode("monthly_minutes_used") is { } nullNodeMonthlyMinutesUsed && nullNodeMonthlyMinutesUsed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyMinutesUsed = null;
+            if (parseNode.GetChildNode("purchased_minutes_used") is null) { _explicitNullValuePurchasedMinutesUsed = default!; _explicitNullProperties?.Remove("purchased_minutes_used"); }
+            else if (parseNode.GetChildNode("purchased_minutes_used") is { } nullNodePurchasedMinutesUsed && nullNodePurchasedMinutesUsed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PurchasedMinutesUsed = null;
+            if (parseNode.GetChildNode("total_minutes_used") is null) { _explicitNullValueTotalMinutesUsed = default!; _explicitNullProperties?.Remove("total_minutes_used"); }
+            else if (parseNode.GetChildNode("total_minutes_used") is { } nullNodeTotalMinutesUsed && nullNodeTotalMinutesUsed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalMinutesUsed = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The monthly_minutes_used property</summary>
-        public int? MonthlyMinutesUsed { get => _explicitNullValueMonthlyMinutesUsed; set { _explicitNullValueMonthlyMinutesUsed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("monthly_minutes_used"); else _explicitNullProperties?.Remove("monthly_minutes_used"); } }
+        public int? MonthlyMinutesUsed { get => _explicitNullValueMonthlyMinutesUsed; set { _explicitNullValueMonthlyMinutesUsed = value; AdditionalData?.Remove("monthly_minutes_used"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("monthly_minutes_used"); else _explicitNullProperties?.Remove("monthly_minutes_used"); } }
         private int? _explicitNullValueMonthlyMinutesUsed = default!;
         /// <summary>The purchased_minutes_used property</summary>
-        public int? PurchasedMinutesUsed { get => _explicitNullValuePurchasedMinutesUsed; set { _explicitNullValuePurchasedMinutesUsed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchased_minutes_used"); else _explicitNullProperties?.Remove("purchased_minutes_used"); } }
+        public int? PurchasedMinutesUsed { get => _explicitNullValuePurchasedMinutesUsed; set { _explicitNullValuePurchasedMinutesUsed = value; AdditionalData?.Remove("purchased_minutes_used"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchased_minutes_used"); else _explicitNullProperties?.Remove("purchased_minutes_used"); } }
         private int? _explicitNullValuePurchasedMinutesUsed = default!;
         /// <summary>The total_minutes_used property</summary>
-        public int? TotalMinutesUsed { get => _explicitNullValueTotalMinutesUsed; set { _explicitNullValueTotalMinutesUsed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_minutes_used"); else _explicitNullProperties?.Remove("total_minutes_used"); } }
+        public int? TotalMinutesUsed { get => _explicitNullValueTotalMinutesUsed; set { _explicitNullValueTotalMinutesUsed = value; AdditionalData?.Remove("total_minutes_used"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_minutes_used"); else _explicitNullProperties?.Remove("total_minutes_used"); } }
         private int? _explicitNullValueTotalMinutesUsed = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiMinutesUsage"/> and sets the default values.

@@ -17,9 +17,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("comment") is { } nullNodeComment && nullNodeComment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Comment = null;
-            if (parseNode.GetChildNode("comment_author") is { } nullNodeCommentAuthor && nullNodeCommentAuthor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommentAuthor = null;
-            if (parseNode.GetChildNode("comment_timestamp") is { } nullNodeCommentTimestamp && nullNodeCommentTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommentTimestamp = null;
+            if (parseNode.GetChildNode("comment") is null) { _explicitNullValueComment = default!; _explicitNullProperties?.Remove("comment"); }
+            else if (parseNode.GetChildNode("comment") is { } nullNodeComment && nullNodeComment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Comment = null;
+            if (parseNode.GetChildNode("comment_author") is null) { _explicitNullValueCommentAuthor = default!; _explicitNullProperties?.Remove("comment_author"); }
+            else if (parseNode.GetChildNode("comment_author") is { } nullNodeCommentAuthor && nullNodeCommentAuthor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommentAuthor = null;
+            if (parseNode.GetChildNode("comment_timestamp") is null) { _explicitNullValueCommentTimestamp = default!; _explicitNullProperties?.Remove("comment_timestamp"); }
+            else if (parseNode.GetChildNode("comment_timestamp") is { } nullNodeCommentTimestamp && nullNodeCommentTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommentTimestamp = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The comment property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Comment { get => _explicitNullValueComment; set { _explicitNullValueComment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment"); else _explicitNullProperties?.Remove("comment"); } }
+        public string? Comment { get => _explicitNullValueComment; set { _explicitNullValueComment = value; AdditionalData?.Remove("comment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment"); else _explicitNullProperties?.Remove("comment"); } }
         private string? _explicitNullValueComment = default!;
 #nullable restore
 #else
-        public string Comment { get => _explicitNullValueComment; set { _explicitNullValueComment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment"); else _explicitNullProperties?.Remove("comment"); } }
+        public string Comment { get => _explicitNullValueComment; set { _explicitNullValueComment = value; AdditionalData?.Remove("comment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment"); else _explicitNullProperties?.Remove("comment"); } }
         private string _explicitNullValueComment = default!;
 #endif
         /// <summary>The comment_author property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.UserEntity? CommentAuthor { get => _explicitNullValueCommentAuthor; set { _explicitNullValueCommentAuthor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment_author"); else _explicitNullProperties?.Remove("comment_author"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.UserEntity? CommentAuthor { get => _explicitNullValueCommentAuthor; set { _explicitNullValueCommentAuthor = value; AdditionalData?.Remove("comment_author"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment_author"); else _explicitNullProperties?.Remove("comment_author"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.UserEntity? _explicitNullValueCommentAuthor = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.UserEntity CommentAuthor { get => _explicitNullValueCommentAuthor; set { _explicitNullValueCommentAuthor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment_author"); else _explicitNullProperties?.Remove("comment_author"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.UserEntity CommentAuthor { get => _explicitNullValueCommentAuthor; set { _explicitNullValueCommentAuthor = value; AdditionalData?.Remove("comment_author"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment_author"); else _explicitNullProperties?.Remove("comment_author"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.UserEntity _explicitNullValueCommentAuthor = default!;
 #endif
         /// <summary>The comment_timestamp property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CommentTimestamp { get => _explicitNullValueCommentTimestamp; set { _explicitNullValueCommentTimestamp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment_timestamp"); else _explicitNullProperties?.Remove("comment_timestamp"); } }
+        public string? CommentTimestamp { get => _explicitNullValueCommentTimestamp; set { _explicitNullValueCommentTimestamp = value; AdditionalData?.Remove("comment_timestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment_timestamp"); else _explicitNullProperties?.Remove("comment_timestamp"); } }
         private string? _explicitNullValueCommentTimestamp = default!;
 #nullable restore
 #else
-        public string CommentTimestamp { get => _explicitNullValueCommentTimestamp; set { _explicitNullValueCommentTimestamp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment_timestamp"); else _explicitNullProperties?.Remove("comment_timestamp"); } }
+        public string CommentTimestamp { get => _explicitNullValueCommentTimestamp; set { _explicitNullValueCommentTimestamp = value; AdditionalData?.Remove("comment_timestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment_timestamp"); else _explicitNullProperties?.Remove("comment_timestamp"); } }
         private string _explicitNullValueCommentTimestamp = default!;
 #endif
         /// <summary>

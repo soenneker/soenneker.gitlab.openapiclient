@@ -17,9 +17,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("full") is { } nullNodeFull && nullNodeFull.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Full = null;
-            if (parseNode.GetChildNode("relative") is { } nullNodeRelative && nullNodeRelative.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Relative = null;
-            if (parseNode.GetChildNode("short") is { } nullNodeShort && nullNodeShort.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Short = null;
+            if (parseNode.GetChildNode("full") is null) { _explicitNullValueFull = default!; _explicitNullProperties?.Remove("full"); }
+            else if (parseNode.GetChildNode("full") is { } nullNodeFull && nullNodeFull.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Full = null;
+            if (parseNode.GetChildNode("relative") is null) { _explicitNullValueRelative = default!; _explicitNullProperties?.Remove("relative"); }
+            else if (parseNode.GetChildNode("relative") is { } nullNodeRelative && nullNodeRelative.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Relative = null;
+            if (parseNode.GetChildNode("short") is null) { _explicitNullValueShort = default!; _explicitNullProperties?.Remove("short"); }
+            else if (parseNode.GetChildNode("short") is { } nullNodeShort && nullNodeShort.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Short = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The full property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Full { get => _explicitNullValueFull; set { _explicitNullValueFull = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("full"); else _explicitNullProperties?.Remove("full"); } }
+        public string? Full { get => _explicitNullValueFull; set { _explicitNullValueFull = value; AdditionalData?.Remove("full"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("full"); else _explicitNullProperties?.Remove("full"); } }
         private string? _explicitNullValueFull = default!;
 #nullable restore
 #else
-        public string Full { get => _explicitNullValueFull; set { _explicitNullValueFull = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("full"); else _explicitNullProperties?.Remove("full"); } }
+        public string Full { get => _explicitNullValueFull; set { _explicitNullValueFull = value; AdditionalData?.Remove("full"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("full"); else _explicitNullProperties?.Remove("full"); } }
         private string _explicitNullValueFull = default!;
 #endif
         /// <summary>The relative property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Relative { get => _explicitNullValueRelative; set { _explicitNullValueRelative = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("relative"); else _explicitNullProperties?.Remove("relative"); } }
+        public string? Relative { get => _explicitNullValueRelative; set { _explicitNullValueRelative = value; AdditionalData?.Remove("relative"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("relative"); else _explicitNullProperties?.Remove("relative"); } }
         private string? _explicitNullValueRelative = default!;
 #nullable restore
 #else
-        public string Relative { get => _explicitNullValueRelative; set { _explicitNullValueRelative = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("relative"); else _explicitNullProperties?.Remove("relative"); } }
+        public string Relative { get => _explicitNullValueRelative; set { _explicitNullValueRelative = value; AdditionalData?.Remove("relative"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("relative"); else _explicitNullProperties?.Remove("relative"); } }
         private string _explicitNullValueRelative = default!;
 #endif
         /// <summary>The short property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Short { get => _explicitNullValueShort; set { _explicitNullValueShort = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("short"); else _explicitNullProperties?.Remove("short"); } }
+        public string? Short { get => _explicitNullValueShort; set { _explicitNullValueShort = value; AdditionalData?.Remove("short"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("short"); else _explicitNullProperties?.Remove("short"); } }
         private string? _explicitNullValueShort = default!;
 #nullable restore
 #else
-        public string Short { get => _explicitNullValueShort; set { _explicitNullValueShort = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("short"); else _explicitNullProperties?.Remove("short"); } }
+        public string Short { get => _explicitNullValueShort; set { _explicitNullValueShort = value; AdditionalData?.Remove("short"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("short"); else _explicitNullProperties?.Remove("short"); } }
         private string _explicitNullValueShort = default!;
 #endif
         /// <summary>

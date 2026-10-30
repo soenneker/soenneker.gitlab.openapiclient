@@ -17,7 +17,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("project_path") is { } nullNodeProjectPath && nullNodeProjectPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectPath = null;
+            if (parseNode.GetChildNode("project_path") is null) { _explicitNullValueProjectPath = default!; _explicitNullProperties?.Remove("project_path"); }
+            else if (parseNode.GetChildNode("project_path") is { } nullNodeProjectPath && nullNodeProjectPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectPath = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Path of the project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProjectPath { get => _explicitNullValueProjectPath; set { _explicitNullValueProjectPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_path"); else _explicitNullProperties?.Remove("project_path"); } }
+        public string? ProjectPath { get => _explicitNullValueProjectPath; set { _explicitNullValueProjectPath = value; AdditionalData?.Remove("project_path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_path"); else _explicitNullProperties?.Remove("project_path"); } }
         private string? _explicitNullValueProjectPath = default!;
 #nullable restore
 #else
-        public string ProjectPath { get => _explicitNullValueProjectPath; set { _explicitNullValueProjectPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_path"); else _explicitNullProperties?.Remove("project_path"); } }
+        public string ProjectPath { get => _explicitNullValueProjectPath; set { _explicitNullValueProjectPath = value; AdditionalData?.Remove("project_path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_path"); else _explicitNullProperties?.Remove("project_path"); } }
         private string _explicitNullValueProjectPath = default!;
 #endif
         /// <summary>

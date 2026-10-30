@@ -17,17 +17,19 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("source_project_id") is { } nullNodeSourceProjectId && nullNodeSourceProjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceProjectId = null;
-            if (parseNode.GetChildNode("target_group_id") is { } nullNodeTargetGroupId && nullNodeTargetGroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetGroupId = null;
+            if (parseNode.GetChildNode("source_project_id") is null) { _explicitNullValueSourceProjectId = default!; _explicitNullProperties?.Remove("source_project_id"); }
+            else if (parseNode.GetChildNode("source_project_id") is { } nullNodeSourceProjectId && nullNodeSourceProjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceProjectId = null;
+            if (parseNode.GetChildNode("target_group_id") is null) { _explicitNullValueTargetGroupId = default!; _explicitNullProperties?.Remove("target_group_id"); }
+            else if (parseNode.GetChildNode("target_group_id") is { } nullNodeTargetGroupId && nullNodeTargetGroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetGroupId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The source_project_id property</summary>
-        public long? SourceProjectId { get => _explicitNullValueSourceProjectId; set { _explicitNullValueSourceProjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_project_id"); else _explicitNullProperties?.Remove("source_project_id"); } }
+        public long? SourceProjectId { get => _explicitNullValueSourceProjectId; set { _explicitNullValueSourceProjectId = value; AdditionalData?.Remove("source_project_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_project_id"); else _explicitNullProperties?.Remove("source_project_id"); } }
         private long? _explicitNullValueSourceProjectId = default!;
         /// <summary>The target_group_id property</summary>
-        public long? TargetGroupId { get => _explicitNullValueTargetGroupId; set { _explicitNullValueTargetGroupId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_group_id"); else _explicitNullProperties?.Remove("target_group_id"); } }
+        public long? TargetGroupId { get => _explicitNullValueTargetGroupId; set { _explicitNullValueTargetGroupId = value; AdditionalData?.Remove("target_group_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_group_id"); else _explicitNullProperties?.Remove("target_group_id"); } }
         private long? _explicitNullValueTargetGroupId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupScopeLink"/> and sets the default values.

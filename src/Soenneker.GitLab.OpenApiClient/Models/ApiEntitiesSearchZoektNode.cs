@@ -17,34 +17,37 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("index_base_url") is { } nullNodeIndexBaseUrl && nullNodeIndexBaseUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IndexBaseUrl = null;
-            if (parseNode.GetChildNode("search_base_url") is { } nullNodeSearchBaseUrl && nullNodeSearchBaseUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SearchBaseUrl = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("index_base_url") is null) { _explicitNullValueIndexBaseUrl = default!; _explicitNullProperties?.Remove("index_base_url"); }
+            else if (parseNode.GetChildNode("index_base_url") is { } nullNodeIndexBaseUrl && nullNodeIndexBaseUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IndexBaseUrl = null;
+            if (parseNode.GetChildNode("search_base_url") is null) { _explicitNullValueSearchBaseUrl = default!; _explicitNullProperties?.Remove("search_base_url"); }
+            else if (parseNode.GetChildNode("search_base_url") is { } nullNodeSearchBaseUrl && nullNodeSearchBaseUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SearchBaseUrl = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The id property</summary>
-        public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private long? _explicitNullValueId = default!;
         /// <summary>The index_base_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IndexBaseUrl { get => _explicitNullValueIndexBaseUrl; set { _explicitNullValueIndexBaseUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("index_base_url"); else _explicitNullProperties?.Remove("index_base_url"); } }
+        public string? IndexBaseUrl { get => _explicitNullValueIndexBaseUrl; set { _explicitNullValueIndexBaseUrl = value; AdditionalData?.Remove("index_base_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("index_base_url"); else _explicitNullProperties?.Remove("index_base_url"); } }
         private string? _explicitNullValueIndexBaseUrl = default!;
 #nullable restore
 #else
-        public string IndexBaseUrl { get => _explicitNullValueIndexBaseUrl; set { _explicitNullValueIndexBaseUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("index_base_url"); else _explicitNullProperties?.Remove("index_base_url"); } }
+        public string IndexBaseUrl { get => _explicitNullValueIndexBaseUrl; set { _explicitNullValueIndexBaseUrl = value; AdditionalData?.Remove("index_base_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("index_base_url"); else _explicitNullProperties?.Remove("index_base_url"); } }
         private string _explicitNullValueIndexBaseUrl = default!;
 #endif
         /// <summary>The search_base_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SearchBaseUrl { get => _explicitNullValueSearchBaseUrl; set { _explicitNullValueSearchBaseUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("search_base_url"); else _explicitNullProperties?.Remove("search_base_url"); } }
+        public string? SearchBaseUrl { get => _explicitNullValueSearchBaseUrl; set { _explicitNullValueSearchBaseUrl = value; AdditionalData?.Remove("search_base_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("search_base_url"); else _explicitNullProperties?.Remove("search_base_url"); } }
         private string? _explicitNullValueSearchBaseUrl = default!;
 #nullable restore
 #else
-        public string SearchBaseUrl { get => _explicitNullValueSearchBaseUrl; set { _explicitNullValueSearchBaseUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("search_base_url"); else _explicitNullProperties?.Remove("search_base_url"); } }
+        public string SearchBaseUrl { get => _explicitNullValueSearchBaseUrl; set { _explicitNullValueSearchBaseUrl = value; AdditionalData?.Remove("search_base_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("search_base_url"); else _explicitNullProperties?.Remove("search_base_url"); } }
         private string _explicitNullValueSearchBaseUrl = default!;
 #endif
         /// <summary>

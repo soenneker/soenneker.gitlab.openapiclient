@@ -17,13 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("runner_id") is { } nullNodeRunnerId && nullNodeRunnerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RunnerId = null;
+            if (parseNode.GetChildNode("runner_id") is null) { _explicitNullValueRunnerId = default!; _explicitNullProperties?.Remove("runner_id"); }
+            else if (parseNode.GetChildNode("runner_id") is { } nullNodeRunnerId && nullNodeRunnerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RunnerId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>ID of the runner.</summary>
-        public int? RunnerId { get => _explicitNullValueRunnerId; set { _explicitNullValueRunnerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runner_id"); else _explicitNullProperties?.Remove("runner_id"); } }
+        public int? RunnerId { get => _explicitNullValueRunnerId; set { _explicitNullValueRunnerId = value; AdditionalData?.Remove("runner_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runner_id"); else _explicitNullProperties?.Remove("runner_id"); } }
         private int? _explicitNullValueRunnerId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdRunnersRequest"/> and sets the default values.

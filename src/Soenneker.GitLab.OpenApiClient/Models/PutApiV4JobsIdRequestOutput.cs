@@ -18,23 +18,25 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("bytesize") is { } nullNodeBytesize && nullNodeBytesize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bytesize = null;
-            if (parseNode.GetChildNode("checksum") is { } nullNodeChecksum && nullNodeChecksum.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Checksum = null;
+            if (parseNode.GetChildNode("bytesize") is null) { _explicitNullValueBytesize = default!; _explicitNullProperties?.Remove("bytesize"); }
+            else if (parseNode.GetChildNode("bytesize") is { } nullNodeBytesize && nullNodeBytesize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bytesize = null;
+            if (parseNode.GetChildNode("checksum") is null) { _explicitNullValueChecksum = default!; _explicitNullProperties?.Remove("checksum"); }
+            else if (parseNode.GetChildNode("checksum") is { } nullNodeChecksum && nullNodeChecksum.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Checksum = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Size of the job&apos;s trace output, in bytes.</summary>
-        public int? Bytesize { get => _explicitNullValueBytesize; set { _explicitNullValueBytesize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bytesize"); else _explicitNullProperties?.Remove("bytesize"); } }
+        public int? Bytesize { get => _explicitNullValueBytesize; set { _explicitNullValueBytesize = value; AdditionalData?.Remove("bytesize"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bytesize"); else _explicitNullProperties?.Remove("bytesize"); } }
         private int? _explicitNullValueBytesize = default!;
         /// <summary>CRC32 checksum of the job trace.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Checksum { get => _explicitNullValueChecksum; set { _explicitNullValueChecksum = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checksum"); else _explicitNullProperties?.Remove("checksum"); } }
+        public string? Checksum { get => _explicitNullValueChecksum; set { _explicitNullValueChecksum = value; AdditionalData?.Remove("checksum"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checksum"); else _explicitNullProperties?.Remove("checksum"); } }
         private string? _explicitNullValueChecksum = default!;
 #nullable restore
 #else
-        public string Checksum { get => _explicitNullValueChecksum; set { _explicitNullValueChecksum = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checksum"); else _explicitNullProperties?.Remove("checksum"); } }
+        public string Checksum { get => _explicitNullValueChecksum; set { _explicitNullValueChecksum = value; AdditionalData?.Remove("checksum"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checksum"); else _explicitNullProperties?.Remove("checksum"); } }
         private string _explicitNullValueChecksum = default!;
 #endif
         /// <summary>

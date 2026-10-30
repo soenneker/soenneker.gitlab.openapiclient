@@ -17,15 +17,24 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("job_artifacts_size") is { } nullNodeJobArtifactsSize && nullNodeJobArtifactsSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JobArtifactsSize = null;
-            if (parseNode.GetChildNode("lfs_objects_size") is { } nullNodeLfsObjectsSize && nullNodeLfsObjectsSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LfsObjectsSize = null;
-            if (parseNode.GetChildNode("packages_size") is { } nullNodePackagesSize && nullNodePackagesSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackagesSize = null;
-            if (parseNode.GetChildNode("pipeline_artifacts_size") is { } nullNodePipelineArtifactsSize && nullNodePipelineArtifactsSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PipelineArtifactsSize = null;
-            if (parseNode.GetChildNode("repository_size") is { } nullNodeRepositorySize && nullNodeRepositorySize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepositorySize = null;
-            if (parseNode.GetChildNode("snippets_size") is { } nullNodeSnippetsSize && nullNodeSnippetsSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SnippetsSize = null;
-            if (parseNode.GetChildNode("storage_size") is { } nullNodeStorageSize && nullNodeStorageSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StorageSize = null;
-            if (parseNode.GetChildNode("uploads_size") is { } nullNodeUploadsSize && nullNodeUploadsSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UploadsSize = null;
-            if (parseNode.GetChildNode("wiki_size") is { } nullNodeWikiSize && nullNodeWikiSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WikiSize = null;
+            if (parseNode.GetChildNode("job_artifacts_size") is null) { _explicitNullValueJobArtifactsSize = default!; _explicitNullProperties?.Remove("job_artifacts_size"); }
+            else if (parseNode.GetChildNode("job_artifacts_size") is { } nullNodeJobArtifactsSize && nullNodeJobArtifactsSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JobArtifactsSize = null;
+            if (parseNode.GetChildNode("lfs_objects_size") is null) { _explicitNullValueLfsObjectsSize = default!; _explicitNullProperties?.Remove("lfs_objects_size"); }
+            else if (parseNode.GetChildNode("lfs_objects_size") is { } nullNodeLfsObjectsSize && nullNodeLfsObjectsSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LfsObjectsSize = null;
+            if (parseNode.GetChildNode("packages_size") is null) { _explicitNullValuePackagesSize = default!; _explicitNullProperties?.Remove("packages_size"); }
+            else if (parseNode.GetChildNode("packages_size") is { } nullNodePackagesSize && nullNodePackagesSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackagesSize = null;
+            if (parseNode.GetChildNode("pipeline_artifacts_size") is null) { _explicitNullValuePipelineArtifactsSize = default!; _explicitNullProperties?.Remove("pipeline_artifacts_size"); }
+            else if (parseNode.GetChildNode("pipeline_artifacts_size") is { } nullNodePipelineArtifactsSize && nullNodePipelineArtifactsSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PipelineArtifactsSize = null;
+            if (parseNode.GetChildNode("repository_size") is null) { _explicitNullValueRepositorySize = default!; _explicitNullProperties?.Remove("repository_size"); }
+            else if (parseNode.GetChildNode("repository_size") is { } nullNodeRepositorySize && nullNodeRepositorySize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepositorySize = null;
+            if (parseNode.GetChildNode("snippets_size") is null) { _explicitNullValueSnippetsSize = default!; _explicitNullProperties?.Remove("snippets_size"); }
+            else if (parseNode.GetChildNode("snippets_size") is { } nullNodeSnippetsSize && nullNodeSnippetsSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SnippetsSize = null;
+            if (parseNode.GetChildNode("storage_size") is null) { _explicitNullValueStorageSize = default!; _explicitNullProperties?.Remove("storage_size"); }
+            else if (parseNode.GetChildNode("storage_size") is { } nullNodeStorageSize && nullNodeStorageSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StorageSize = null;
+            if (parseNode.GetChildNode("uploads_size") is null) { _explicitNullValueUploadsSize = default!; _explicitNullProperties?.Remove("uploads_size"); }
+            else if (parseNode.GetChildNode("uploads_size") is { } nullNodeUploadsSize && nullNodeUploadsSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UploadsSize = null;
+            if (parseNode.GetChildNode("wiki_size") is null) { _explicitNullValueWikiSize = default!; _explicitNullProperties?.Remove("wiki_size"); }
+            else if (parseNode.GetChildNode("wiki_size") is { } nullNodeWikiSize && nullNodeWikiSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WikiSize = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -33,91 +42,91 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The job_artifacts_size property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? JobArtifactsSize { get => _explicitNullValueJobArtifactsSize; set { _explicitNullValueJobArtifactsSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("job_artifacts_size"); else _explicitNullProperties?.Remove("job_artifacts_size"); } }
+        public string? JobArtifactsSize { get => _explicitNullValueJobArtifactsSize; set { _explicitNullValueJobArtifactsSize = value; AdditionalData?.Remove("job_artifacts_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("job_artifacts_size"); else _explicitNullProperties?.Remove("job_artifacts_size"); } }
         private string? _explicitNullValueJobArtifactsSize = default!;
 #nullable restore
 #else
-        public string JobArtifactsSize { get => _explicitNullValueJobArtifactsSize; set { _explicitNullValueJobArtifactsSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("job_artifacts_size"); else _explicitNullProperties?.Remove("job_artifacts_size"); } }
+        public string JobArtifactsSize { get => _explicitNullValueJobArtifactsSize; set { _explicitNullValueJobArtifactsSize = value; AdditionalData?.Remove("job_artifacts_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("job_artifacts_size"); else _explicitNullProperties?.Remove("job_artifacts_size"); } }
         private string _explicitNullValueJobArtifactsSize = default!;
 #endif
         /// <summary>The lfs_objects_size property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LfsObjectsSize { get => _explicitNullValueLfsObjectsSize; set { _explicitNullValueLfsObjectsSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lfs_objects_size"); else _explicitNullProperties?.Remove("lfs_objects_size"); } }
+        public string? LfsObjectsSize { get => _explicitNullValueLfsObjectsSize; set { _explicitNullValueLfsObjectsSize = value; AdditionalData?.Remove("lfs_objects_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lfs_objects_size"); else _explicitNullProperties?.Remove("lfs_objects_size"); } }
         private string? _explicitNullValueLfsObjectsSize = default!;
 #nullable restore
 #else
-        public string LfsObjectsSize { get => _explicitNullValueLfsObjectsSize; set { _explicitNullValueLfsObjectsSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lfs_objects_size"); else _explicitNullProperties?.Remove("lfs_objects_size"); } }
+        public string LfsObjectsSize { get => _explicitNullValueLfsObjectsSize; set { _explicitNullValueLfsObjectsSize = value; AdditionalData?.Remove("lfs_objects_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lfs_objects_size"); else _explicitNullProperties?.Remove("lfs_objects_size"); } }
         private string _explicitNullValueLfsObjectsSize = default!;
 #endif
         /// <summary>The packages_size property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PackagesSize { get => _explicitNullValuePackagesSize; set { _explicitNullValuePackagesSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packages_size"); else _explicitNullProperties?.Remove("packages_size"); } }
+        public string? PackagesSize { get => _explicitNullValuePackagesSize; set { _explicitNullValuePackagesSize = value; AdditionalData?.Remove("packages_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packages_size"); else _explicitNullProperties?.Remove("packages_size"); } }
         private string? _explicitNullValuePackagesSize = default!;
 #nullable restore
 #else
-        public string PackagesSize { get => _explicitNullValuePackagesSize; set { _explicitNullValuePackagesSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packages_size"); else _explicitNullProperties?.Remove("packages_size"); } }
+        public string PackagesSize { get => _explicitNullValuePackagesSize; set { _explicitNullValuePackagesSize = value; AdditionalData?.Remove("packages_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packages_size"); else _explicitNullProperties?.Remove("packages_size"); } }
         private string _explicitNullValuePackagesSize = default!;
 #endif
         /// <summary>The pipeline_artifacts_size property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PipelineArtifactsSize { get => _explicitNullValuePipelineArtifactsSize; set { _explicitNullValuePipelineArtifactsSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipeline_artifacts_size"); else _explicitNullProperties?.Remove("pipeline_artifacts_size"); } }
+        public string? PipelineArtifactsSize { get => _explicitNullValuePipelineArtifactsSize; set { _explicitNullValuePipelineArtifactsSize = value; AdditionalData?.Remove("pipeline_artifacts_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipeline_artifacts_size"); else _explicitNullProperties?.Remove("pipeline_artifacts_size"); } }
         private string? _explicitNullValuePipelineArtifactsSize = default!;
 #nullable restore
 #else
-        public string PipelineArtifactsSize { get => _explicitNullValuePipelineArtifactsSize; set { _explicitNullValuePipelineArtifactsSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipeline_artifacts_size"); else _explicitNullProperties?.Remove("pipeline_artifacts_size"); } }
+        public string PipelineArtifactsSize { get => _explicitNullValuePipelineArtifactsSize; set { _explicitNullValuePipelineArtifactsSize = value; AdditionalData?.Remove("pipeline_artifacts_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipeline_artifacts_size"); else _explicitNullProperties?.Remove("pipeline_artifacts_size"); } }
         private string _explicitNullValuePipelineArtifactsSize = default!;
 #endif
         /// <summary>The repository_size property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RepositorySize { get => _explicitNullValueRepositorySize; set { _explicitNullValueRepositorySize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repository_size"); else _explicitNullProperties?.Remove("repository_size"); } }
+        public string? RepositorySize { get => _explicitNullValueRepositorySize; set { _explicitNullValueRepositorySize = value; AdditionalData?.Remove("repository_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repository_size"); else _explicitNullProperties?.Remove("repository_size"); } }
         private string? _explicitNullValueRepositorySize = default!;
 #nullable restore
 #else
-        public string RepositorySize { get => _explicitNullValueRepositorySize; set { _explicitNullValueRepositorySize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repository_size"); else _explicitNullProperties?.Remove("repository_size"); } }
+        public string RepositorySize { get => _explicitNullValueRepositorySize; set { _explicitNullValueRepositorySize = value; AdditionalData?.Remove("repository_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repository_size"); else _explicitNullProperties?.Remove("repository_size"); } }
         private string _explicitNullValueRepositorySize = default!;
 #endif
         /// <summary>The snippets_size property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SnippetsSize { get => _explicitNullValueSnippetsSize; set { _explicitNullValueSnippetsSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("snippets_size"); else _explicitNullProperties?.Remove("snippets_size"); } }
+        public string? SnippetsSize { get => _explicitNullValueSnippetsSize; set { _explicitNullValueSnippetsSize = value; AdditionalData?.Remove("snippets_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("snippets_size"); else _explicitNullProperties?.Remove("snippets_size"); } }
         private string? _explicitNullValueSnippetsSize = default!;
 #nullable restore
 #else
-        public string SnippetsSize { get => _explicitNullValueSnippetsSize; set { _explicitNullValueSnippetsSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("snippets_size"); else _explicitNullProperties?.Remove("snippets_size"); } }
+        public string SnippetsSize { get => _explicitNullValueSnippetsSize; set { _explicitNullValueSnippetsSize = value; AdditionalData?.Remove("snippets_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("snippets_size"); else _explicitNullProperties?.Remove("snippets_size"); } }
         private string _explicitNullValueSnippetsSize = default!;
 #endif
         /// <summary>The storage_size property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StorageSize { get => _explicitNullValueStorageSize; set { _explicitNullValueStorageSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("storage_size"); else _explicitNullProperties?.Remove("storage_size"); } }
+        public string? StorageSize { get => _explicitNullValueStorageSize; set { _explicitNullValueStorageSize = value; AdditionalData?.Remove("storage_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("storage_size"); else _explicitNullProperties?.Remove("storage_size"); } }
         private string? _explicitNullValueStorageSize = default!;
 #nullable restore
 #else
-        public string StorageSize { get => _explicitNullValueStorageSize; set { _explicitNullValueStorageSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("storage_size"); else _explicitNullProperties?.Remove("storage_size"); } }
+        public string StorageSize { get => _explicitNullValueStorageSize; set { _explicitNullValueStorageSize = value; AdditionalData?.Remove("storage_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("storage_size"); else _explicitNullProperties?.Remove("storage_size"); } }
         private string _explicitNullValueStorageSize = default!;
 #endif
         /// <summary>The uploads_size property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UploadsSize { get => _explicitNullValueUploadsSize; set { _explicitNullValueUploadsSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploads_size"); else _explicitNullProperties?.Remove("uploads_size"); } }
+        public string? UploadsSize { get => _explicitNullValueUploadsSize; set { _explicitNullValueUploadsSize = value; AdditionalData?.Remove("uploads_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploads_size"); else _explicitNullProperties?.Remove("uploads_size"); } }
         private string? _explicitNullValueUploadsSize = default!;
 #nullable restore
 #else
-        public string UploadsSize { get => _explicitNullValueUploadsSize; set { _explicitNullValueUploadsSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploads_size"); else _explicitNullProperties?.Remove("uploads_size"); } }
+        public string UploadsSize { get => _explicitNullValueUploadsSize; set { _explicitNullValueUploadsSize = value; AdditionalData?.Remove("uploads_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploads_size"); else _explicitNullProperties?.Remove("uploads_size"); } }
         private string _explicitNullValueUploadsSize = default!;
 #endif
         /// <summary>The wiki_size property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WikiSize { get => _explicitNullValueWikiSize; set { _explicitNullValueWikiSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wiki_size"); else _explicitNullProperties?.Remove("wiki_size"); } }
+        public string? WikiSize { get => _explicitNullValueWikiSize; set { _explicitNullValueWikiSize = value; AdditionalData?.Remove("wiki_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wiki_size"); else _explicitNullProperties?.Remove("wiki_size"); } }
         private string? _explicitNullValueWikiSize = default!;
 #nullable restore
 #else
-        public string WikiSize { get => _explicitNullValueWikiSize; set { _explicitNullValueWikiSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wiki_size"); else _explicitNullProperties?.Remove("wiki_size"); } }
+        public string WikiSize { get => _explicitNullValueWikiSize; set { _explicitNullValueWikiSize = value; AdditionalData?.Remove("wiki_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wiki_size"); else _explicitNullProperties?.Remove("wiki_size"); } }
         private string _explicitNullValueWikiSize = default!;
 #endif
         /// <summary>

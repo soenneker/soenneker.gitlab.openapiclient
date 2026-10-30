@@ -17,11 +17,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ca_cert") is { } nullNodeCaCert && nullNodeCaCert.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CaCert = null;
-            if (parseNode.GetChildNode("client_cert") is { } nullNodeClientCert && nullNodeClientCert.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientCert = null;
-            if (parseNode.GetChildNode("client_key") is { } nullNodeClientKey && nullNodeClientKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientKey = null;
-            if (parseNode.GetChildNode("tls_host") is { } nullNodeTlsHost && nullNodeTlsHost.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TlsHost = null;
-            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("ca_cert") is null) { _explicitNullValueCaCert = default!; _explicitNullProperties?.Remove("ca_cert"); }
+            else if (parseNode.GetChildNode("ca_cert") is { } nullNodeCaCert && nullNodeCaCert.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CaCert = null;
+            if (parseNode.GetChildNode("client_cert") is null) { _explicitNullValueClientCert = default!; _explicitNullProperties?.Remove("client_cert"); }
+            else if (parseNode.GetChildNode("client_cert") is { } nullNodeClientCert && nullNodeClientCert.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientCert = null;
+            if (parseNode.GetChildNode("client_key") is null) { _explicitNullValueClientKey = default!; _explicitNullProperties?.Remove("client_key"); }
+            else if (parseNode.GetChildNode("client_key") is { } nullNodeClientKey && nullNodeClientKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientKey = null;
+            if (parseNode.GetChildNode("tls_host") is null) { _explicitNullValueTlsHost = default!; _explicitNullProperties?.Remove("tls_host"); }
+            else if (parseNode.GetChildNode("tls_host") is { } nullNodeTlsHost && nullNodeTlsHost.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TlsHost = null;
+            if (parseNode.GetChildNode("url") is null) { _explicitNullValueUrl = default!; _explicitNullProperties?.Remove("url"); }
+            else if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,51 +34,51 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>CA certificate in PEM format used to verify the agent endpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CaCert { get => _explicitNullValueCaCert; set { _explicitNullValueCaCert = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ca_cert"); else _explicitNullProperties?.Remove("ca_cert"); } }
+        public string? CaCert { get => _explicitNullValueCaCert; set { _explicitNullValueCaCert = value; AdditionalData?.Remove("ca_cert"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ca_cert"); else _explicitNullProperties?.Remove("ca_cert"); } }
         private string? _explicitNullValueCaCert = default!;
 #nullable restore
 #else
-        public string CaCert { get => _explicitNullValueCaCert; set { _explicitNullValueCaCert = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ca_cert"); else _explicitNullProperties?.Remove("ca_cert"); } }
+        public string CaCert { get => _explicitNullValueCaCert; set { _explicitNullValueCaCert = value; AdditionalData?.Remove("ca_cert"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ca_cert"); else _explicitNullProperties?.Remove("ca_cert"); } }
         private string _explicitNullValueCaCert = default!;
 #endif
         /// <summary>Client certificate in PEM format, used for mTLS authentication. Must be provided with `client_key`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClientCert { get => _explicitNullValueClientCert; set { _explicitNullValueClientCert = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_cert"); else _explicitNullProperties?.Remove("client_cert"); } }
+        public string? ClientCert { get => _explicitNullValueClientCert; set { _explicitNullValueClientCert = value; AdditionalData?.Remove("client_cert"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_cert"); else _explicitNullProperties?.Remove("client_cert"); } }
         private string? _explicitNullValueClientCert = default!;
 #nullable restore
 #else
-        public string ClientCert { get => _explicitNullValueClientCert; set { _explicitNullValueClientCert = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_cert"); else _explicitNullProperties?.Remove("client_cert"); } }
+        public string ClientCert { get => _explicitNullValueClientCert; set { _explicitNullValueClientCert = value; AdditionalData?.Remove("client_cert"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_cert"); else _explicitNullProperties?.Remove("client_cert"); } }
         private string _explicitNullValueClientCert = default!;
 #endif
         /// <summary>Client key in PEM format, used for mTLS authentication. Must be provided with `client_cert`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClientKey { get => _explicitNullValueClientKey; set { _explicitNullValueClientKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_key"); else _explicitNullProperties?.Remove("client_key"); } }
+        public string? ClientKey { get => _explicitNullValueClientKey; set { _explicitNullValueClientKey = value; AdditionalData?.Remove("client_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_key"); else _explicitNullProperties?.Remove("client_key"); } }
         private string? _explicitNullValueClientKey = default!;
 #nullable restore
 #else
-        public string ClientKey { get => _explicitNullValueClientKey; set { _explicitNullValueClientKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_key"); else _explicitNullProperties?.Remove("client_key"); } }
+        public string ClientKey { get => _explicitNullValueClientKey; set { _explicitNullValueClientKey = value; AdditionalData?.Remove("client_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_key"); else _explicitNullProperties?.Remove("client_key"); } }
         private string _explicitNullValueClientKey = default!;
 #endif
         /// <summary>TLS host name to verify the server name in the agent endpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TlsHost { get => _explicitNullValueTlsHost; set { _explicitNullValueTlsHost = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tls_host"); else _explicitNullProperties?.Remove("tls_host"); } }
+        public string? TlsHost { get => _explicitNullValueTlsHost; set { _explicitNullValueTlsHost = value; AdditionalData?.Remove("tls_host"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tls_host"); else _explicitNullProperties?.Remove("tls_host"); } }
         private string? _explicitNullValueTlsHost = default!;
 #nullable restore
 #else
-        public string TlsHost { get => _explicitNullValueTlsHost; set { _explicitNullValueTlsHost = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tls_host"); else _explicitNullProperties?.Remove("tls_host"); } }
+        public string TlsHost { get => _explicitNullValueTlsHost; set { _explicitNullValueTlsHost = value; AdditionalData?.Remove("tls_host"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tls_host"); else _explicitNullProperties?.Remove("tls_host"); } }
         private string _explicitNullValueTlsHost = default!;
 #endif
         /// <summary>Agent URL for this URL configuration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>

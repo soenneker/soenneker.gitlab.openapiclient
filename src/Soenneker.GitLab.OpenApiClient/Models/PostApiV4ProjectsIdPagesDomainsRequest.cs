@@ -17,67 +17,73 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("auto_ssl_enabled") is { } nullNodeAutoSslEnabled && nullNodeAutoSslEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoSslEnabled = null;
-            if (parseNode.GetChildNode("certificate") is { } nullNodeCertificate && nullNodeCertificate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Certificate = null;
-            if (parseNode.GetChildNode("domain") is { } nullNodeDomain && nullNodeDomain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Domain = null;
-            if (parseNode.GetChildNode("key") is { } nullNodeKey && nullNodeKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Key = null;
-            if (parseNode.GetChildNode("user_provided_certificate") is { } nullNodeUserProvidedCertificate && nullNodeUserProvidedCertificate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserProvidedCertificate = null;
-            if (parseNode.GetChildNode("user_provided_key") is { } nullNodeUserProvidedKey && nullNodeUserProvidedKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserProvidedKey = null;
+            if (parseNode.GetChildNode("auto_ssl_enabled") is null) { _explicitNullValueAutoSslEnabled = default!; _explicitNullProperties?.Remove("auto_ssl_enabled"); }
+            else if (parseNode.GetChildNode("auto_ssl_enabled") is { } nullNodeAutoSslEnabled && nullNodeAutoSslEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoSslEnabled = null;
+            if (parseNode.GetChildNode("certificate") is null) { _explicitNullValueCertificate = default!; _explicitNullProperties?.Remove("certificate"); }
+            else if (parseNode.GetChildNode("certificate") is { } nullNodeCertificate && nullNodeCertificate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Certificate = null;
+            if (parseNode.GetChildNode("domain") is null) { _explicitNullValueDomain = default!; _explicitNullProperties?.Remove("domain"); }
+            else if (parseNode.GetChildNode("domain") is { } nullNodeDomain && nullNodeDomain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Domain = null;
+            if (parseNode.GetChildNode("key") is null) { _explicitNullValueKey = default!; _explicitNullProperties?.Remove("key"); }
+            else if (parseNode.GetChildNode("key") is { } nullNodeKey && nullNodeKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Key = null;
+            if (parseNode.GetChildNode("user_provided_certificate") is null) { _explicitNullValueUserProvidedCertificate = default!; _explicitNullProperties?.Remove("user_provided_certificate"); }
+            else if (parseNode.GetChildNode("user_provided_certificate") is { } nullNodeUserProvidedCertificate && nullNodeUserProvidedCertificate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserProvidedCertificate = null;
+            if (parseNode.GetChildNode("user_provided_key") is null) { _explicitNullValueUserProvidedKey = default!; _explicitNullProperties?.Remove("user_provided_key"); }
+            else if (parseNode.GetChildNode("user_provided_key") is { } nullNodeUserProvidedKey && nullNodeUserProvidedKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserProvidedKey = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>If `true`, enables [automatic generation](https://docs.gitlab.com/user/project/pages/custom_domains_ssl_tls_certification/lets_encrypt_integration/) of SSL certificates issued by Let&apos;s Encrypt for custom domains.</summary>
-        public bool? AutoSslEnabled { get => _explicitNullValueAutoSslEnabled; set { _explicitNullValueAutoSslEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_ssl_enabled"); else _explicitNullProperties?.Remove("auto_ssl_enabled"); } }
+        public bool? AutoSslEnabled { get => _explicitNullValueAutoSslEnabled; set { _explicitNullValueAutoSslEnabled = value; AdditionalData?.Remove("auto_ssl_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_ssl_enabled"); else _explicitNullProperties?.Remove("auto_ssl_enabled"); } }
         private bool? _explicitNullValueAutoSslEnabled = default!;
         /// <summary>Certificate in PEM format with intermediates following in most specific to least specific order.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdPagesDomainsRequestCertificate? Certificate { get => _explicitNullValueCertificate; set { _explicitNullValueCertificate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("certificate"); else _explicitNullProperties?.Remove("certificate"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdPagesDomainsRequestCertificate? _explicitNullValueCertificate = default!;
+        public string? Certificate { get => _explicitNullValueCertificate; set { _explicitNullValueCertificate = value; AdditionalData?.Remove("certificate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("certificate"); else _explicitNullProperties?.Remove("certificate"); } }
+        private string? _explicitNullValueCertificate = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdPagesDomainsRequestCertificate Certificate { get => _explicitNullValueCertificate; set { _explicitNullValueCertificate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("certificate"); else _explicitNullProperties?.Remove("certificate"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdPagesDomainsRequestCertificate _explicitNullValueCertificate = default!;
+        public string Certificate { get => _explicitNullValueCertificate; set { _explicitNullValueCertificate = value; AdditionalData?.Remove("certificate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("certificate"); else _explicitNullProperties?.Remove("certificate"); } }
+        private string _explicitNullValueCertificate = default!;
 #endif
         /// <summary>Custom domain.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Domain { get => _explicitNullValueDomain; set { _explicitNullValueDomain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain"); else _explicitNullProperties?.Remove("domain"); } }
+        public string? Domain { get => _explicitNullValueDomain; set { _explicitNullValueDomain = value; AdditionalData?.Remove("domain"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain"); else _explicitNullProperties?.Remove("domain"); } }
         private string? _explicitNullValueDomain = default!;
 #nullable restore
 #else
-        public string Domain { get => _explicitNullValueDomain; set { _explicitNullValueDomain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain"); else _explicitNullProperties?.Remove("domain"); } }
+        public string Domain { get => _explicitNullValueDomain; set { _explicitNullValueDomain = value; AdditionalData?.Remove("domain"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain"); else _explicitNullProperties?.Remove("domain"); } }
         private string _explicitNullValueDomain = default!;
 #endif
         /// <summary>Certificate key in PEM format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdPagesDomainsRequestKey? Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdPagesDomainsRequestKey? _explicitNullValueKey = default!;
+        public string? Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; AdditionalData?.Remove("key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
+        private string? _explicitNullValueKey = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdPagesDomainsRequestKey Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdPagesDomainsRequestKey _explicitNullValueKey = default!;
+        public string Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; AdditionalData?.Remove("key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
+        private string _explicitNullValueKey = default!;
 #endif
         /// <summary>All or none of `user_provided_certificate`, `user_provided_key` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserProvidedCertificate { get => _explicitNullValueUserProvidedCertificate; set { _explicitNullValueUserProvidedCertificate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_provided_certificate"); else _explicitNullProperties?.Remove("user_provided_certificate"); } }
+        public string? UserProvidedCertificate { get => _explicitNullValueUserProvidedCertificate; set { _explicitNullValueUserProvidedCertificate = value; AdditionalData?.Remove("user_provided_certificate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_provided_certificate"); else _explicitNullProperties?.Remove("user_provided_certificate"); } }
         private string? _explicitNullValueUserProvidedCertificate = default!;
 #nullable restore
 #else
-        public string UserProvidedCertificate { get => _explicitNullValueUserProvidedCertificate; set { _explicitNullValueUserProvidedCertificate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_provided_certificate"); else _explicitNullProperties?.Remove("user_provided_certificate"); } }
+        public string UserProvidedCertificate { get => _explicitNullValueUserProvidedCertificate; set { _explicitNullValueUserProvidedCertificate = value; AdditionalData?.Remove("user_provided_certificate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_provided_certificate"); else _explicitNullProperties?.Remove("user_provided_certificate"); } }
         private string _explicitNullValueUserProvidedCertificate = default!;
 #endif
         /// <summary>All or none of `user_provided_certificate`, `user_provided_key` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserProvidedKey { get => _explicitNullValueUserProvidedKey; set { _explicitNullValueUserProvidedKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_provided_key"); else _explicitNullProperties?.Remove("user_provided_key"); } }
+        public string? UserProvidedKey { get => _explicitNullValueUserProvidedKey; set { _explicitNullValueUserProvidedKey = value; AdditionalData?.Remove("user_provided_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_provided_key"); else _explicitNullProperties?.Remove("user_provided_key"); } }
         private string? _explicitNullValueUserProvidedKey = default!;
 #nullable restore
 #else
-        public string UserProvidedKey { get => _explicitNullValueUserProvidedKey; set { _explicitNullValueUserProvidedKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_provided_key"); else _explicitNullProperties?.Remove("user_provided_key"); } }
+        public string UserProvidedKey { get => _explicitNullValueUserProvidedKey; set { _explicitNullValueUserProvidedKey = value; AdditionalData?.Remove("user_provided_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_provided_key"); else _explicitNullProperties?.Remove("user_provided_key"); } }
         private string _explicitNullValueUserProvidedKey = default!;
 #endif
         /// <summary>
@@ -107,9 +113,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "auto_ssl_enabled", n => { AutoSslEnabled = n.GetBoolValue(); } },
-                { "certificate", n => { Certificate = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdPagesDomainsRequestCertificate>(global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdPagesDomainsRequestCertificate.CreateFromDiscriminatorValue); } },
+                { "certificate", n => { Certificate = n.GetStringValue(); } },
                 { "domain", n => { Domain = n.GetStringValue(); } },
-                { "key", n => { Key = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdPagesDomainsRequestKey>(global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdPagesDomainsRequestKey.CreateFromDiscriminatorValue); } },
+                { "key", n => { Key = n.GetStringValue(); } },
                 { "user_provided_certificate", n => { UserProvidedCertificate = n.GetStringValue(); } },
                 { "user_provided_key", n => { UserProvidedKey = n.GetStringValue(); } },
             };
@@ -122,9 +128,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("auto_ssl_enabled", AutoSslEnabled);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdPagesDomainsRequestCertificate>("certificate", Certificate);
+            writer.WriteStringValue("certificate", Certificate);
             writer.WriteStringValue("domain", Domain);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdPagesDomainsRequestKey>("key", Key);
+            writer.WriteStringValue("key", Key);
             writer.WriteStringValue("user_provided_certificate", UserProvidedCertificate);
             writer.WriteStringValue("user_provided_key", UserProvidedKey);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

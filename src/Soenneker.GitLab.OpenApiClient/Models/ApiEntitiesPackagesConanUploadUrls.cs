@@ -17,7 +17,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("upload_urls") is { } nullNodeUploadUrls && nullNodeUploadUrls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UploadUrls = null;
+            if (parseNode.GetChildNode("upload_urls") is null) { _explicitNullValueUploadUrls = default!; _explicitNullProperties?.Remove("upload_urls"); }
+            else if (parseNode.GetChildNode("upload_urls") is { } nullNodeUploadUrls && nullNodeUploadUrls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UploadUrls = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The upload_urls property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesConanUploadUrlsUploadUrlsProperty? UploadUrls { get => _explicitNullValueUploadUrls; set { _explicitNullValueUploadUrls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upload_urls"); else _explicitNullProperties?.Remove("upload_urls"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesConanUploadUrlsUploadUrlsProperty? UploadUrls { get => _explicitNullValueUploadUrls; set { _explicitNullValueUploadUrls = value; AdditionalData?.Remove("upload_urls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upload_urls"); else _explicitNullProperties?.Remove("upload_urls"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesConanUploadUrlsUploadUrlsProperty? _explicitNullValueUploadUrls = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesConanUploadUrlsUploadUrlsProperty UploadUrls { get => _explicitNullValueUploadUrls; set { _explicitNullValueUploadUrls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upload_urls"); else _explicitNullProperties?.Remove("upload_urls"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesConanUploadUrlsUploadUrlsProperty UploadUrls { get => _explicitNullValueUploadUrls; set { _explicitNullValueUploadUrls = value; AdditionalData?.Remove("upload_urls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upload_urls"); else _explicitNullProperties?.Remove("upload_urls"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesConanUploadUrlsUploadUrlsProperty _explicitNullValueUploadUrls = default!;
 #endif
         /// <summary>

@@ -17,7 +17,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("pipeline_refs") is { } nullNodePipelineRefs && nullNodePipelineRefs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PipelineRefs = null;
+            if (parseNode.GetChildNode("pipeline_refs") is null) { _explicitNullValuePipelineRefs = default!; _explicitNullProperties?.Remove("pipeline_refs"); }
+            else if (parseNode.GetChildNode("pipeline_refs") is { } nullNodePipelineRefs && nullNodePipelineRefs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PipelineRefs = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The pipeline_refs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? PipelineRefs { get => _explicitNullValuePipelineRefs; set { _explicitNullValuePipelineRefs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipeline_refs"); else _explicitNullProperties?.Remove("pipeline_refs"); } }
+        public List<string>? PipelineRefs { get => _explicitNullValuePipelineRefs; set { _explicitNullValuePipelineRefs = value; AdditionalData?.Remove("pipeline_refs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipeline_refs"); else _explicitNullProperties?.Remove("pipeline_refs"); } }
         private List<string>? _explicitNullValuePipelineRefs = default!;
 #nullable restore
 #else
-        public List<string> PipelineRefs { get => _explicitNullValuePipelineRefs; set { _explicitNullValuePipelineRefs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipeline_refs"); else _explicitNullProperties?.Remove("pipeline_refs"); } }
+        public List<string> PipelineRefs { get => _explicitNullValuePipelineRefs; set { _explicitNullValuePipelineRefs = value; AdditionalData?.Remove("pipeline_refs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipeline_refs"); else _explicitNullProperties?.Remove("pipeline_refs"); } }
         private List<string> _explicitNullValuePipelineRefs = default!;
 #endif
         /// <summary>

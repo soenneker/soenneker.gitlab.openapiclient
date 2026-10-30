@@ -17,8 +17,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("component") is { } nullNodeComponent && nullNodeComponent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Component = null;
-            if (parseNode.GetChildNode("distribution") is { } nullNodeDistribution && nullNodeDistribution.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Distribution = null;
+            if (parseNode.GetChildNode("component") is null) { _explicitNullValueComponent = default!; _explicitNullProperties?.Remove("component"); }
+            else if (parseNode.GetChildNode("component") is { } nullNodeComponent && nullNodeComponent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Component = null;
+            if (parseNode.GetChildNode("distribution") is null) { _explicitNullValueDistribution = default!; _explicitNullProperties?.Remove("distribution"); }
+            else if (parseNode.GetChildNode("distribution") is { } nullNodeDistribution && nullNodeDistribution.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Distribution = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The Debian Component</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Component { get => _explicitNullValueComponent; set { _explicitNullValueComponent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("component"); else _explicitNullProperties?.Remove("component"); } }
+        public string? Component { get => _explicitNullValueComponent; set { _explicitNullValueComponent = value; AdditionalData?.Remove("component"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("component"); else _explicitNullProperties?.Remove("component"); } }
         private string? _explicitNullValueComponent = default!;
 #nullable restore
 #else
-        public string Component { get => _explicitNullValueComponent; set { _explicitNullValueComponent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("component"); else _explicitNullProperties?.Remove("component"); } }
+        public string Component { get => _explicitNullValueComponent; set { _explicitNullValueComponent = value; AdditionalData?.Remove("component"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("component"); else _explicitNullProperties?.Remove("component"); } }
         private string _explicitNullValueComponent = default!;
 #endif
         /// <summary>The Debian Codename or Suite</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Distribution { get => _explicitNullValueDistribution; set { _explicitNullValueDistribution = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("distribution"); else _explicitNullProperties?.Remove("distribution"); } }
+        public string? Distribution { get => _explicitNullValueDistribution; set { _explicitNullValueDistribution = value; AdditionalData?.Remove("distribution"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("distribution"); else _explicitNullProperties?.Remove("distribution"); } }
         private string? _explicitNullValueDistribution = default!;
 #nullable restore
 #else
-        public string Distribution { get => _explicitNullValueDistribution; set { _explicitNullValueDistribution = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("distribution"); else _explicitNullProperties?.Remove("distribution"); } }
+        public string Distribution { get => _explicitNullValueDistribution; set { _explicitNullValueDistribution = value; AdditionalData?.Remove("distribution"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("distribution"); else _explicitNullProperties?.Remove("distribution"); } }
         private string _explicitNullValueDistribution = default!;
 #endif
         /// <summary>

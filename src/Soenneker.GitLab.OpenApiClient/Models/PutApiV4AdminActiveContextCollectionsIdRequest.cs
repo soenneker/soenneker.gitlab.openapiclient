@@ -17,21 +17,24 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("connection_id") is { } nullNodeConnectionId && nullNodeConnectionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConnectionId = null;
-            if (parseNode.GetChildNode("queue_shard_count") is { } nullNodeQueueShardCount && nullNodeQueueShardCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QueueShardCount = null;
-            if (parseNode.GetChildNode("queue_shard_limit") is { } nullNodeQueueShardLimit && nullNodeQueueShardLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QueueShardLimit = null;
+            if (parseNode.GetChildNode("connection_id") is null) { _explicitNullValueConnectionId = default!; _explicitNullProperties?.Remove("connection_id"); }
+            else if (parseNode.GetChildNode("connection_id") is { } nullNodeConnectionId && nullNodeConnectionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConnectionId = null;
+            if (parseNode.GetChildNode("queue_shard_count") is null) { _explicitNullValueQueueShardCount = default!; _explicitNullProperties?.Remove("queue_shard_count"); }
+            else if (parseNode.GetChildNode("queue_shard_count") is { } nullNodeQueueShardCount && nullNodeQueueShardCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QueueShardCount = null;
+            if (parseNode.GetChildNode("queue_shard_limit") is null) { _explicitNullValueQueueShardLimit = default!; _explicitNullProperties?.Remove("queue_shard_limit"); }
+            else if (parseNode.GetChildNode("queue_shard_limit") is { } nullNodeQueueShardLimit && nullNodeQueueShardLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QueueShardLimit = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>ID of the connection. If omitted, defaults to the active connection.</summary>
-        public int? ConnectionId { get => _explicitNullValueConnectionId; set { _explicitNullValueConnectionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connection_id"); else _explicitNullProperties?.Remove("connection_id"); } }
+        public int? ConnectionId { get => _explicitNullValueConnectionId; set { _explicitNullValueConnectionId = value; AdditionalData?.Remove("connection_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connection_id"); else _explicitNullProperties?.Remove("connection_id"); } }
         private int? _explicitNullValueConnectionId = default!;
         /// <summary>Number of queue shards. At least one of `queue_shard_count`, `queue_shard_limit` must be provided.</summary>
-        public int? QueueShardCount { get => _explicitNullValueQueueShardCount; set { _explicitNullValueQueueShardCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queue_shard_count"); else _explicitNullProperties?.Remove("queue_shard_count"); } }
+        public int? QueueShardCount { get => _explicitNullValueQueueShardCount; set { _explicitNullValueQueueShardCount = value; AdditionalData?.Remove("queue_shard_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queue_shard_count"); else _explicitNullProperties?.Remove("queue_shard_count"); } }
         private int? _explicitNullValueQueueShardCount = default!;
         /// <summary>Maximum number of queued items processed from each queue shard at a time. At least one of `queue_shard_count`, `queue_shard_limit` must be provided.</summary>
-        public int? QueueShardLimit { get => _explicitNullValueQueueShardLimit; set { _explicitNullValueQueueShardLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queue_shard_limit"); else _explicitNullProperties?.Remove("queue_shard_limit"); } }
+        public int? QueueShardLimit { get => _explicitNullValueQueueShardLimit; set { _explicitNullValueQueueShardLimit = value; AdditionalData?.Remove("queue_shard_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queue_shard_limit"); else _explicitNullProperties?.Remove("queue_shard_limit"); } }
         private int? _explicitNullValueQueueShardLimit = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminActiveContextCollectionsIdRequest"/> and sets the default values.

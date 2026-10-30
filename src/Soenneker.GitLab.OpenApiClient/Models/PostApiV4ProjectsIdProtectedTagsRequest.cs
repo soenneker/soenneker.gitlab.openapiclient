@@ -17,9 +17,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("allowed_to_create") is { } nullNodeAllowedToCreate && nullNodeAllowedToCreate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedToCreate = null;
-            if (parseNode.GetChildNode("create_access_level") is { } nullNodeCreateAccessLevel && nullNodeCreateAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateAccessLevel = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("allowed_to_create") is null) { _explicitNullValueAllowedToCreate = default!; _explicitNullProperties?.Remove("allowed_to_create"); }
+            else if (parseNode.GetChildNode("allowed_to_create") is { } nullNodeAllowedToCreate && nullNodeAllowedToCreate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedToCreate = null;
+            if (parseNode.GetChildNode("create_access_level") is null) { _explicitNullValueCreateAccessLevel = default!; _explicitNullProperties?.Remove("create_access_level"); }
+            else if (parseNode.GetChildNode("create_access_level") is { } nullNodeCreateAccessLevel && nullNodeCreateAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateAccessLevel = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,24 +30,24 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Array of users, groups, deploy keys, or access levels allowed to create protected branches</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdProtectedTagsRequestAllowedToCreateItemProperty>? AllowedToCreate { get => _explicitNullValueAllowedToCreate; set { _explicitNullValueAllowedToCreate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_to_create"); else _explicitNullProperties?.Remove("allowed_to_create"); } }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdProtectedTagsRequestAllowedToCreateItemProperty>? AllowedToCreate { get => _explicitNullValueAllowedToCreate; set { _explicitNullValueAllowedToCreate = value; AdditionalData?.Remove("allowed_to_create"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_to_create"); else _explicitNullProperties?.Remove("allowed_to_create"); } }
         private List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdProtectedTagsRequestAllowedToCreateItemProperty>? _explicitNullValueAllowedToCreate = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdProtectedTagsRequestAllowedToCreateItemProperty> AllowedToCreate { get => _explicitNullValueAllowedToCreate; set { _explicitNullValueAllowedToCreate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_to_create"); else _explicitNullProperties?.Remove("allowed_to_create"); } }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdProtectedTagsRequestAllowedToCreateItemProperty> AllowedToCreate { get => _explicitNullValueAllowedToCreate; set { _explicitNullValueAllowedToCreate = value; AdditionalData?.Remove("allowed_to_create"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_to_create"); else _explicitNullProperties?.Remove("allowed_to_create"); } }
         private List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdProtectedTagsRequestAllowedToCreateItemProperty> _explicitNullValueAllowedToCreate = default!;
 #endif
         /// <summary>Access level allowed to create the protected tag. Defaults to `40` (Maintainer role).</summary>
-        public int? CreateAccessLevel { get => _explicitNullValueCreateAccessLevel; set { _explicitNullValueCreateAccessLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_access_level"); else _explicitNullProperties?.Remove("create_access_level"); } }
+        public int? CreateAccessLevel { get => _explicitNullValueCreateAccessLevel; set { _explicitNullValueCreateAccessLevel = value; AdditionalData?.Remove("create_access_level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_access_level"); else _explicitNullProperties?.Remove("create_access_level"); } }
         private int? _explicitNullValueCreateAccessLevel = default!;
         /// <summary>Name of the tag or wildcard.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>

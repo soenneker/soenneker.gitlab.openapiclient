@@ -17,82 +17,95 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("access_level") is { } nullNodeAccessLevel && nullNodeAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccessLevel = null;
-            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
-            if (parseNode.GetChildNode("group_id") is { } nullNodeGroupId && nullNodeGroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroupId = null;
-            if (parseNode.GetChildNode("locked") is { } nullNodeLocked && nullNodeLocked.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locked = null;
-            if (parseNode.GetChildNode("maintenance_note") is { } nullNodeMaintenanceNote && nullNodeMaintenanceNote.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaintenanceNote = null;
-            if (parseNode.GetChildNode("maximum_timeout") is { } nullNodeMaximumTimeout && nullNodeMaximumTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaximumTimeout = null;
-            if (parseNode.GetChildNode("paused") is { } nullNodePaused && nullNodePaused.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Paused = null;
-            if (parseNode.GetChildNode("project_id") is { } nullNodeProjectId && nullNodeProjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectId = null;
-            if (parseNode.GetChildNode("runner_type") is { } nullNodeRunnerType && nullNodeRunnerType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RunnerType = null;
-            if (parseNode.GetChildNode("run_untagged") is { } nullNodeRunUntagged && nullNodeRunUntagged.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RunUntagged = null;
-            if (parseNode.GetChildNode("tag_list") is { } nullNodeTagList && nullNodeTagList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TagList = null;
-            if (parseNode.GetChildNode("token_expires_at") is { } nullNodeTokenExpiresAt && nullNodeTokenExpiresAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TokenExpiresAt = null;
-            if (parseNode.GetChildNode("token_rotation_deadline") is { } nullNodeTokenRotationDeadline && nullNodeTokenRotationDeadline.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TokenRotationDeadline = null;
+            if (parseNode.GetChildNode("access_level") is null) { _explicitNullValueAccessLevel = default!; _explicitNullProperties?.Remove("access_level"); }
+            else if (parseNode.GetChildNode("access_level") is { } nullNodeAccessLevel && nullNodeAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccessLevel = null;
+            if (parseNode.GetChildNode("description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("description"); }
+            else if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("group_id") is null) { _explicitNullValueGroupId = default!; _explicitNullProperties?.Remove("group_id"); }
+            else if (parseNode.GetChildNode("group_id") is { } nullNodeGroupId && nullNodeGroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroupId = null;
+            if (parseNode.GetChildNode("locked") is null) { _explicitNullValueLocked = default!; _explicitNullProperties?.Remove("locked"); }
+            else if (parseNode.GetChildNode("locked") is { } nullNodeLocked && nullNodeLocked.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locked = null;
+            if (parseNode.GetChildNode("maintenance_note") is null) { _explicitNullValueMaintenanceNote = default!; _explicitNullProperties?.Remove("maintenance_note"); }
+            else if (parseNode.GetChildNode("maintenance_note") is { } nullNodeMaintenanceNote && nullNodeMaintenanceNote.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaintenanceNote = null;
+            if (parseNode.GetChildNode("maximum_timeout") is null) { _explicitNullValueMaximumTimeout = default!; _explicitNullProperties?.Remove("maximum_timeout"); }
+            else if (parseNode.GetChildNode("maximum_timeout") is { } nullNodeMaximumTimeout && nullNodeMaximumTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaximumTimeout = null;
+            if (parseNode.GetChildNode("paused") is null) { _explicitNullValuePaused = default!; _explicitNullProperties?.Remove("paused"); }
+            else if (parseNode.GetChildNode("paused") is { } nullNodePaused && nullNodePaused.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Paused = null;
+            if (parseNode.GetChildNode("project_id") is null) { _explicitNullValueProjectId = default!; _explicitNullProperties?.Remove("project_id"); }
+            else if (parseNode.GetChildNode("project_id") is { } nullNodeProjectId && nullNodeProjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectId = null;
+            if (parseNode.GetChildNode("runner_type") is null) { _explicitNullValueRunnerType = default!; _explicitNullProperties?.Remove("runner_type"); }
+            else if (parseNode.GetChildNode("runner_type") is { } nullNodeRunnerType && nullNodeRunnerType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RunnerType = null;
+            if (parseNode.GetChildNode("run_untagged") is null) { _explicitNullValueRunUntagged = default!; _explicitNullProperties?.Remove("run_untagged"); }
+            else if (parseNode.GetChildNode("run_untagged") is { } nullNodeRunUntagged && nullNodeRunUntagged.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RunUntagged = null;
+            if (parseNode.GetChildNode("tag_list") is null) { _explicitNullValueTagList = default!; _explicitNullProperties?.Remove("tag_list"); }
+            else if (parseNode.GetChildNode("tag_list") is { } nullNodeTagList && nullNodeTagList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TagList = null;
+            if (parseNode.GetChildNode("token_expires_at") is null) { _explicitNullValueTokenExpiresAt = default!; _explicitNullProperties?.Remove("token_expires_at"); }
+            else if (parseNode.GetChildNode("token_expires_at") is { } nullNodeTokenExpiresAt && nullNodeTokenExpiresAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TokenExpiresAt = null;
+            if (parseNode.GetChildNode("token_rotation_deadline") is null) { _explicitNullValueTokenRotationDeadline = default!; _explicitNullProperties?.Remove("token_rotation_deadline"); }
+            else if (parseNode.GetChildNode("token_rotation_deadline") is { } nullNodeTokenRotationDeadline && nullNodeTokenRotationDeadline.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TokenRotationDeadline = null;
         }
 
         /// <summary>Access level of the runner.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserRunnersRequestAccessLevel? AccessLevel { get => _explicitNullValueAccessLevel; set { _explicitNullValueAccessLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("access_level"); else _explicitNullProperties?.Remove("access_level"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserRunnersRequestAccessLevel? AccessLevel { get => _explicitNullValueAccessLevel; set { _explicitNullValueAccessLevel = value; AdditionalData?.Remove("access_level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("access_level"); else _explicitNullProperties?.Remove("access_level"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserRunnersRequestAccessLevel? _explicitNullValueAccessLevel = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Description of the runner.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>ID of the group to create the runner in. Required if `runner_type` is `group_type`.</summary>
-        public int? GroupId { get => _explicitNullValueGroupId; set { _explicitNullValueGroupId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_id"); else _explicitNullProperties?.Remove("group_id"); } }
+        public int? GroupId { get => _explicitNullValueGroupId; set { _explicitNullValueGroupId = value; AdditionalData?.Remove("group_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_id"); else _explicitNullProperties?.Remove("group_id"); } }
         private int? _explicitNullValueGroupId = default!;
         /// <summary>Specifies if the runner should be locked for the current project.</summary>
-        public bool? Locked { get => _explicitNullValueLocked; set { _explicitNullValueLocked = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locked"); else _explicitNullProperties?.Remove("locked"); } }
+        public bool? Locked { get => _explicitNullValueLocked; set { _explicitNullValueLocked = value; AdditionalData?.Remove("locked"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locked"); else _explicitNullProperties?.Remove("locked"); } }
         private bool? _explicitNullValueLocked = default!;
         /// <summary>Free-form maintenance notes for the runner. Limited to 1024 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MaintenanceNote { get => _explicitNullValueMaintenanceNote; set { _explicitNullValueMaintenanceNote = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maintenance_note"); else _explicitNullProperties?.Remove("maintenance_note"); } }
+        public string? MaintenanceNote { get => _explicitNullValueMaintenanceNote; set { _explicitNullValueMaintenanceNote = value; AdditionalData?.Remove("maintenance_note"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maintenance_note"); else _explicitNullProperties?.Remove("maintenance_note"); } }
         private string? _explicitNullValueMaintenanceNote = default!;
 #nullable restore
 #else
-        public string MaintenanceNote { get => _explicitNullValueMaintenanceNote; set { _explicitNullValueMaintenanceNote = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maintenance_note"); else _explicitNullProperties?.Remove("maintenance_note"); } }
+        public string MaintenanceNote { get => _explicitNullValueMaintenanceNote; set { _explicitNullValueMaintenanceNote = value; AdditionalData?.Remove("maintenance_note"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maintenance_note"); else _explicitNullProperties?.Remove("maintenance_note"); } }
         private string _explicitNullValueMaintenanceNote = default!;
 #endif
         /// <summary>Maximum time, in seconds, that runners can spend running a job.</summary>
-        public int? MaximumTimeout { get => _explicitNullValueMaximumTimeout; set { _explicitNullValueMaximumTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maximum_timeout"); else _explicitNullProperties?.Remove("maximum_timeout"); } }
+        public int? MaximumTimeout { get => _explicitNullValueMaximumTimeout; set { _explicitNullValueMaximumTimeout = value; AdditionalData?.Remove("maximum_timeout"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maximum_timeout"); else _explicitNullProperties?.Remove("maximum_timeout"); } }
         private int? _explicitNullValueMaximumTimeout = default!;
         /// <summary>If `true`, the runner ignores new jobs.</summary>
-        public bool? Paused { get => _explicitNullValuePaused; set { _explicitNullValuePaused = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paused"); else _explicitNullProperties?.Remove("paused"); } }
+        public bool? Paused { get => _explicitNullValuePaused; set { _explicitNullValuePaused = value; AdditionalData?.Remove("paused"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paused"); else _explicitNullProperties?.Remove("paused"); } }
         private bool? _explicitNullValuePaused = default!;
         /// <summary>ID of the project to create the runner in. Required if `runner_type` is `project_type`.</summary>
-        public int? ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_id"); else _explicitNullProperties?.Remove("project_id"); } }
+        public int? ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; AdditionalData?.Remove("project_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_id"); else _explicitNullProperties?.Remove("project_id"); } }
         private int? _explicitNullValueProjectId = default!;
         /// <summary>Scope of the runner.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserRunnersRequestRunnerType? RunnerType { get => _explicitNullValueRunnerType; set { _explicitNullValueRunnerType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runner_type"); else _explicitNullProperties?.Remove("runner_type"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserRunnersRequestRunnerType? RunnerType { get => _explicitNullValueRunnerType; set { _explicitNullValueRunnerType = value; AdditionalData?.Remove("runner_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runner_type"); else _explicitNullProperties?.Remove("runner_type"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserRunnersRequestRunnerType? _explicitNullValueRunnerType = default!;
         /// <summary>Specifies if the runner should handle untagged jobs.</summary>
-        public bool? RunUntagged { get => _explicitNullValueRunUntagged; set { _explicitNullValueRunUntagged = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("run_untagged"); else _explicitNullProperties?.Remove("run_untagged"); } }
+        public bool? RunUntagged { get => _explicitNullValueRunUntagged; set { _explicitNullValueRunUntagged = value; AdditionalData?.Remove("run_untagged"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("run_untagged"); else _explicitNullProperties?.Remove("run_untagged"); } }
         private bool? _explicitNullValueRunUntagged = default!;
         /// <summary>Comma-separated list of runner tags.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? TagList { get => _explicitNullValueTagList; set { _explicitNullValueTagList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag_list"); else _explicitNullProperties?.Remove("tag_list"); } }
+        public List<string>? TagList { get => _explicitNullValueTagList; set { _explicitNullValueTagList = value; AdditionalData?.Remove("tag_list"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag_list"); else _explicitNullProperties?.Remove("tag_list"); } }
         private List<string>? _explicitNullValueTagList = default!;
 #nullable restore
 #else
-        public List<string> TagList { get => _explicitNullValueTagList; set { _explicitNullValueTagList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag_list"); else _explicitNullProperties?.Remove("tag_list"); } }
+        public List<string> TagList { get => _explicitNullValueTagList; set { _explicitNullValueTagList = value; AdditionalData?.Remove("tag_list"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag_list"); else _explicitNullProperties?.Remove("tag_list"); } }
         private List<string> _explicitNullValueTagList = default!;
 #endif
         /// <summary>Expiration time for the runner authentication token in ISO 8601 format. Must be between 5 minutes and 21 days in the future and cannot exceed instance, group, or project-level limits. Only applies to the initial token. Rotated tokens use the computed expiry from settings. Premium and Ultimate only.</summary>
-        public DateTimeOffset? TokenExpiresAt { get => _explicitNullValueTokenExpiresAt; set { _explicitNullValueTokenExpiresAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token_expires_at"); else _explicitNullProperties?.Remove("token_expires_at"); } }
+        public DateTimeOffset? TokenExpiresAt { get => _explicitNullValueTokenExpiresAt; set { _explicitNullValueTokenExpiresAt = value; AdditionalData?.Remove("token_expires_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token_expires_at"); else _explicitNullProperties?.Remove("token_expires_at"); } }
         private DateTimeOffset? _explicitNullValueTokenExpiresAt = default!;
         /// <summary>Deadline after which token rotation requests are rejected. Requires `token_expires_at` and must be less than or equal to it. Setting both to the same value disables token rotation. Cleared on successful rotation. Premium and Ultimate only.</summary>
-        public DateTimeOffset? TokenRotationDeadline { get => _explicitNullValueTokenRotationDeadline; set { _explicitNullValueTokenRotationDeadline = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token_rotation_deadline"); else _explicitNullProperties?.Remove("token_rotation_deadline"); } }
+        public DateTimeOffset? TokenRotationDeadline { get => _explicitNullValueTokenRotationDeadline; set { _explicitNullValueTokenRotationDeadline = value; AdditionalData?.Remove("token_rotation_deadline"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token_rotation_deadline"); else _explicitNullProperties?.Remove("token_rotation_deadline"); } }
         private DateTimeOffset? _explicitNullValueTokenRotationDeadline = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserRunnersRequest"/> and sets the default values.
@@ -121,7 +134,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "access_level", n => { AccessLevel = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserRunnersRequestAccessLevel>(); } },
+                { "access_level", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserRunnersRequestAccessLevel>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAccessLevel = default; _explicitNullProperties?.Remove("access_level"); AdditionalData["access_level"] = unknown; } else { AccessLevel = parsed; AdditionalData.Remove("access_level"); } } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "group_id", n => { GroupId = n.GetIntValue(); } },
                 { "locked", n => { Locked = n.GetBoolValue(); } },
@@ -130,7 +143,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "paused", n => { Paused = n.GetBoolValue(); } },
                 { "project_id", n => { ProjectId = n.GetIntValue(); } },
                 { "run_untagged", n => { RunUntagged = n.GetBoolValue(); } },
-                { "runner_type", n => { RunnerType = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserRunnersRequestRunnerType>(); } },
+                { "runner_type", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserRunnersRequestRunnerType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRunnerType = default; _explicitNullProperties?.Remove("runner_type"); AdditionalData["runner_type"] = unknown; } else { RunnerType = parsed; AdditionalData.Remove("runner_type"); } } },
                 { "tag_list", n => { TagList = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "token_expires_at", n => { TokenExpiresAt = n.GetDateTimeOffsetValue(); } },
                 { "token_rotation_deadline", n => { TokenRotationDeadline = n.GetDateTimeOffsetValue(); } },

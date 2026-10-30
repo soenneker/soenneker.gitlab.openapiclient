@@ -17,61 +17,67 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("minimum_access_level_for_delete") is { } nullNodeMinimumAccessLevelForDelete && nullNodeMinimumAccessLevelForDelete.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumAccessLevelForDelete = null;
-            if (parseNode.GetChildNode("minimum_access_level_for_push") is { } nullNodeMinimumAccessLevelForPush && nullNodeMinimumAccessLevelForPush.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumAccessLevelForPush = null;
-            if (parseNode.GetChildNode("package_name_pattern") is { } nullNodePackageNamePattern && nullNodePackageNamePattern.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageNamePattern = null;
-            if (parseNode.GetChildNode("package_type") is { } nullNodePackageType && nullNodePackageType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageType = null;
-            if (parseNode.GetChildNode("project_id") is { } nullNodeProjectId && nullNodeProjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectId = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("minimum_access_level_for_delete") is null) { _explicitNullValueMinimumAccessLevelForDelete = default!; _explicitNullProperties?.Remove("minimum_access_level_for_delete"); }
+            else if (parseNode.GetChildNode("minimum_access_level_for_delete") is { } nullNodeMinimumAccessLevelForDelete && nullNodeMinimumAccessLevelForDelete.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumAccessLevelForDelete = null;
+            if (parseNode.GetChildNode("minimum_access_level_for_push") is null) { _explicitNullValueMinimumAccessLevelForPush = default!; _explicitNullProperties?.Remove("minimum_access_level_for_push"); }
+            else if (parseNode.GetChildNode("minimum_access_level_for_push") is { } nullNodeMinimumAccessLevelForPush && nullNodeMinimumAccessLevelForPush.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumAccessLevelForPush = null;
+            if (parseNode.GetChildNode("package_name_pattern") is null) { _explicitNullValuePackageNamePattern = default!; _explicitNullProperties?.Remove("package_name_pattern"); }
+            else if (parseNode.GetChildNode("package_name_pattern") is { } nullNodePackageNamePattern && nullNodePackageNamePattern.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageNamePattern = null;
+            if (parseNode.GetChildNode("package_type") is null) { _explicitNullValuePackageType = default!; _explicitNullProperties?.Remove("package_type"); }
+            else if (parseNode.GetChildNode("package_type") is { } nullNodePackageType && nullNodePackageType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageType = null;
+            if (parseNode.GetChildNode("project_id") is null) { _explicitNullValueProjectId = default!; _explicitNullProperties?.Remove("project_id"); }
+            else if (parseNode.GetChildNode("project_id") is { } nullNodeProjectId && nullNodeProjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The id property</summary>
-        public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private long? _explicitNullValueId = default!;
         /// <summary>The minimum_access_level_for_delete property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MinimumAccessLevelForDelete { get => _explicitNullValueMinimumAccessLevelForDelete; set { _explicitNullValueMinimumAccessLevelForDelete = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_for_delete"); else _explicitNullProperties?.Remove("minimum_access_level_for_delete"); } }
+        public string? MinimumAccessLevelForDelete { get => _explicitNullValueMinimumAccessLevelForDelete; set { _explicitNullValueMinimumAccessLevelForDelete = value; AdditionalData?.Remove("minimum_access_level_for_delete"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_for_delete"); else _explicitNullProperties?.Remove("minimum_access_level_for_delete"); } }
         private string? _explicitNullValueMinimumAccessLevelForDelete = default!;
 #nullable restore
 #else
-        public string MinimumAccessLevelForDelete { get => _explicitNullValueMinimumAccessLevelForDelete; set { _explicitNullValueMinimumAccessLevelForDelete = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_for_delete"); else _explicitNullProperties?.Remove("minimum_access_level_for_delete"); } }
+        public string MinimumAccessLevelForDelete { get => _explicitNullValueMinimumAccessLevelForDelete; set { _explicitNullValueMinimumAccessLevelForDelete = value; AdditionalData?.Remove("minimum_access_level_for_delete"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_for_delete"); else _explicitNullProperties?.Remove("minimum_access_level_for_delete"); } }
         private string _explicitNullValueMinimumAccessLevelForDelete = default!;
 #endif
         /// <summary>The minimum_access_level_for_push property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MinimumAccessLevelForPush { get => _explicitNullValueMinimumAccessLevelForPush; set { _explicitNullValueMinimumAccessLevelForPush = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_for_push"); else _explicitNullProperties?.Remove("minimum_access_level_for_push"); } }
+        public string? MinimumAccessLevelForPush { get => _explicitNullValueMinimumAccessLevelForPush; set { _explicitNullValueMinimumAccessLevelForPush = value; AdditionalData?.Remove("minimum_access_level_for_push"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_for_push"); else _explicitNullProperties?.Remove("minimum_access_level_for_push"); } }
         private string? _explicitNullValueMinimumAccessLevelForPush = default!;
 #nullable restore
 #else
-        public string MinimumAccessLevelForPush { get => _explicitNullValueMinimumAccessLevelForPush; set { _explicitNullValueMinimumAccessLevelForPush = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_for_push"); else _explicitNullProperties?.Remove("minimum_access_level_for_push"); } }
+        public string MinimumAccessLevelForPush { get => _explicitNullValueMinimumAccessLevelForPush; set { _explicitNullValueMinimumAccessLevelForPush = value; AdditionalData?.Remove("minimum_access_level_for_push"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_for_push"); else _explicitNullProperties?.Remove("minimum_access_level_for_push"); } }
         private string _explicitNullValueMinimumAccessLevelForPush = default!;
 #endif
         /// <summary>The package_name_pattern property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PackageNamePattern { get => _explicitNullValuePackageNamePattern; set { _explicitNullValuePackageNamePattern = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("package_name_pattern"); else _explicitNullProperties?.Remove("package_name_pattern"); } }
+        public string? PackageNamePattern { get => _explicitNullValuePackageNamePattern; set { _explicitNullValuePackageNamePattern = value; AdditionalData?.Remove("package_name_pattern"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("package_name_pattern"); else _explicitNullProperties?.Remove("package_name_pattern"); } }
         private string? _explicitNullValuePackageNamePattern = default!;
 #nullable restore
 #else
-        public string PackageNamePattern { get => _explicitNullValuePackageNamePattern; set { _explicitNullValuePackageNamePattern = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("package_name_pattern"); else _explicitNullProperties?.Remove("package_name_pattern"); } }
+        public string PackageNamePattern { get => _explicitNullValuePackageNamePattern; set { _explicitNullValuePackageNamePattern = value; AdditionalData?.Remove("package_name_pattern"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("package_name_pattern"); else _explicitNullProperties?.Remove("package_name_pattern"); } }
         private string _explicitNullValuePackageNamePattern = default!;
 #endif
         /// <summary>The package_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PackageType { get => _explicitNullValuePackageType; set { _explicitNullValuePackageType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("package_type"); else _explicitNullProperties?.Remove("package_type"); } }
+        public string? PackageType { get => _explicitNullValuePackageType; set { _explicitNullValuePackageType = value; AdditionalData?.Remove("package_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("package_type"); else _explicitNullProperties?.Remove("package_type"); } }
         private string? _explicitNullValuePackageType = default!;
 #nullable restore
 #else
-        public string PackageType { get => _explicitNullValuePackageType; set { _explicitNullValuePackageType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("package_type"); else _explicitNullProperties?.Remove("package_type"); } }
+        public string PackageType { get => _explicitNullValuePackageType; set { _explicitNullValuePackageType = value; AdditionalData?.Remove("package_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("package_type"); else _explicitNullProperties?.Remove("package_type"); } }
         private string _explicitNullValuePackageType = default!;
 #endif
         /// <summary>The project_id property</summary>
-        public long? ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_id"); else _explicitNullProperties?.Remove("project_id"); } }
+        public long? ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; AdditionalData?.Remove("project_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_id"); else _explicitNullProperties?.Remove("project_id"); } }
         private long? _explicitNullValueProjectId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectsPackagesProtectionRule"/> and sets the default values.

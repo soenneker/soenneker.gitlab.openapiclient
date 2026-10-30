@@ -17,10 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("experiment_ids") is { } nullNodeExperimentIds && nullNodeExperimentIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExperimentIds = null;
-            if (parseNode.GetChildNode("max_results") is { } nullNodeMaxResults && nullNodeMaxResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxResults = null;
-            if (parseNode.GetChildNode("order_by") is { } nullNodeOrderBy && nullNodeOrderBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrderBy = null;
-            if (parseNode.GetChildNode("page_token") is { } nullNodePageToken && nullNodePageToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageToken = null;
+            if (parseNode.GetChildNode("experiment_ids") is null) { _explicitNullValueExperimentIds = default!; _explicitNullProperties?.Remove("experiment_ids"); }
+            else if (parseNode.GetChildNode("experiment_ids") is { } nullNodeExperimentIds && nullNodeExperimentIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExperimentIds = null;
+            if (parseNode.GetChildNode("max_results") is null) { _explicitNullValueMaxResults = default!; _explicitNullProperties?.Remove("max_results"); }
+            else if (parseNode.GetChildNode("max_results") is { } nullNodeMaxResults && nullNodeMaxResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxResults = null;
+            if (parseNode.GetChildNode("order_by") is null) { _explicitNullValueOrderBy = default!; _explicitNullProperties?.Remove("order_by"); }
+            else if (parseNode.GetChildNode("order_by") is { } nullNodeOrderBy && nullNodeOrderBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrderBy = null;
+            if (parseNode.GetChildNode("page_token") is null) { _explicitNullValuePageToken = default!; _explicitNullProperties?.Remove("page_token"); }
+            else if (parseNode.GetChildNode("page_token") is { } nullNodePageToken && nullNodePageToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageToken = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,34 +32,34 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>IDs of the experiments to search for runs, relative to the project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ExperimentIds { get => _explicitNullValueExperimentIds; set { _explicitNullValueExperimentIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("experiment_ids"); else _explicitNullProperties?.Remove("experiment_ids"); } }
+        public UntypedNode? ExperimentIds { get => _explicitNullValueExperimentIds; set { _explicitNullValueExperimentIds = value; AdditionalData?.Remove("experiment_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("experiment_ids"); else _explicitNullProperties?.Remove("experiment_ids"); } }
         private UntypedNode? _explicitNullValueExperimentIds = default!;
 #nullable restore
 #else
-        public UntypedNode ExperimentIds { get => _explicitNullValueExperimentIds; set { _explicitNullValueExperimentIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("experiment_ids"); else _explicitNullProperties?.Remove("experiment_ids"); } }
+        public UntypedNode ExperimentIds { get => _explicitNullValueExperimentIds; set { _explicitNullValueExperimentIds = value; AdditionalData?.Remove("experiment_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("experiment_ids"); else _explicitNullProperties?.Remove("experiment_ids"); } }
         private UntypedNode _explicitNullValueExperimentIds = default!;
 #endif
         /// <summary>Maximum number of runs to fetch in a page. The maximum is 1000.</summary>
-        public int? MaxResults { get => _explicitNullValueMaxResults; set { _explicitNullValueMaxResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_results"); else _explicitNullProperties?.Remove("max_results"); } }
+        public int? MaxResults { get => _explicitNullValueMaxResults; set { _explicitNullValueMaxResults = value; AdditionalData?.Remove("max_results"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_results"); else _explicitNullProperties?.Remove("max_results"); } }
         private int? _explicitNullValueMaxResults = default!;
         /// <summary>Order criteria. Can be by a column of the run/candidate (`created_at`, `name`) or by a metric if prefixed by `metrics`. Valid examples: `created_at`, `created_at DESC`, `metrics.my_metric DESC`. Sorting by candidate parameter or metadata is not supported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OrderBy { get => _explicitNullValueOrderBy; set { _explicitNullValueOrderBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order_by"); else _explicitNullProperties?.Remove("order_by"); } }
+        public string? OrderBy { get => _explicitNullValueOrderBy; set { _explicitNullValueOrderBy = value; AdditionalData?.Remove("order_by"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order_by"); else _explicitNullProperties?.Remove("order_by"); } }
         private string? _explicitNullValueOrderBy = default!;
 #nullable restore
 #else
-        public string OrderBy { get => _explicitNullValueOrderBy; set { _explicitNullValueOrderBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order_by"); else _explicitNullProperties?.Remove("order_by"); } }
+        public string OrderBy { get => _explicitNullValueOrderBy; set { _explicitNullValueOrderBy = value; AdditionalData?.Remove("order_by"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order_by"); else _explicitNullProperties?.Remove("order_by"); } }
         private string _explicitNullValueOrderBy = default!;
 #endif
         /// <summary>Token for pagination.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PageToken { get => _explicitNullValuePageToken; set { _explicitNullValuePageToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page_token"); else _explicitNullProperties?.Remove("page_token"); } }
+        public string? PageToken { get => _explicitNullValuePageToken; set { _explicitNullValuePageToken = value; AdditionalData?.Remove("page_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page_token"); else _explicitNullProperties?.Remove("page_token"); } }
         private string? _explicitNullValuePageToken = default!;
 #nullable restore
 #else
-        public string PageToken { get => _explicitNullValuePageToken; set { _explicitNullValuePageToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page_token"); else _explicitNullProperties?.Remove("page_token"); } }
+        public string PageToken { get => _explicitNullValuePageToken; set { _explicitNullValuePageToken = value; AdditionalData?.Remove("page_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page_token"); else _explicitNullProperties?.Remove("page_token"); } }
         private string _explicitNullValuePageToken = default!;
 #endif
         /// <summary>

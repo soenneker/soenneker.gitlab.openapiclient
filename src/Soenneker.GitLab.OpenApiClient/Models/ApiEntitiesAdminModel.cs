@@ -17,11 +17,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("checksum_information") is { } nullNodeChecksumInformation && nullNodeChecksumInformation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChecksumInformation = null;
-            if (parseNode.GetChildNode("created_at") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
-            if (parseNode.GetChildNode("file_size") is { } nullNodeFileSize && nullNodeFileSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileSize = null;
-            if (parseNode.GetChildNode("model_class") is { } nullNodeModelClass && nullNodeModelClass.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ModelClass = null;
-            if (parseNode.GetChildNode("record_identifier") is { } nullNodeRecordIdentifier && nullNodeRecordIdentifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordIdentifier = null;
+            if (parseNode.GetChildNode("checksum_information") is null) { _explicitNullValueChecksumInformation = default!; _explicitNullProperties?.Remove("checksum_information"); }
+            else if (parseNode.GetChildNode("checksum_information") is { } nullNodeChecksumInformation && nullNodeChecksumInformation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChecksumInformation = null;
+            if (parseNode.GetChildNode("created_at") is null) { _explicitNullValueCreatedAt = default!; _explicitNullProperties?.Remove("created_at"); }
+            else if (parseNode.GetChildNode("created_at") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("file_size") is null) { _explicitNullValueFileSize = default!; _explicitNullProperties?.Remove("file_size"); }
+            else if (parseNode.GetChildNode("file_size") is { } nullNodeFileSize && nullNodeFileSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileSize = null;
+            if (parseNode.GetChildNode("model_class") is null) { _explicitNullValueModelClass = default!; _explicitNullProperties?.Remove("model_class"); }
+            else if (parseNode.GetChildNode("model_class") is { } nullNodeModelClass && nullNodeModelClass.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ModelClass = null;
+            if (parseNode.GetChildNode("record_identifier") is null) { _explicitNullValueRecordIdentifier = default!; _explicitNullProperties?.Remove("record_identifier"); }
+            else if (parseNode.GetChildNode("record_identifier") is { } nullNodeRecordIdentifier && nullNodeRecordIdentifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordIdentifier = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,37 +34,37 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The checksum_information property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAdminModelChecksumInformation? ChecksumInformation { get => _explicitNullValueChecksumInformation; set { _explicitNullValueChecksumInformation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checksum_information"); else _explicitNullProperties?.Remove("checksum_information"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAdminModelChecksumInformation? ChecksumInformation { get => _explicitNullValueChecksumInformation; set { _explicitNullValueChecksumInformation = value; AdditionalData?.Remove("checksum_information"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checksum_information"); else _explicitNullProperties?.Remove("checksum_information"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAdminModelChecksumInformation? _explicitNullValueChecksumInformation = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAdminModelChecksumInformation ChecksumInformation { get => _explicitNullValueChecksumInformation; set { _explicitNullValueChecksumInformation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checksum_information"); else _explicitNullProperties?.Remove("checksum_information"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAdminModelChecksumInformation ChecksumInformation { get => _explicitNullValueChecksumInformation; set { _explicitNullValueChecksumInformation = value; AdditionalData?.Remove("checksum_information"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checksum_information"); else _explicitNullProperties?.Remove("checksum_information"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAdminModelChecksumInformation _explicitNullValueChecksumInformation = default!;
 #endif
         /// <summary>The created_at property</summary>
-        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
+        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("created_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
         private DateTimeOffset? _explicitNullValueCreatedAt = default!;
         /// <summary>The file_size property</summary>
-        public int? FileSize { get => _explicitNullValueFileSize; set { _explicitNullValueFileSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_size"); else _explicitNullProperties?.Remove("file_size"); } }
+        public int? FileSize { get => _explicitNullValueFileSize; set { _explicitNullValueFileSize = value; AdditionalData?.Remove("file_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_size"); else _explicitNullProperties?.Remove("file_size"); } }
         private int? _explicitNullValueFileSize = default!;
         /// <summary>The model_class property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ModelClass { get => _explicitNullValueModelClass; set { _explicitNullValueModelClass = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("model_class"); else _explicitNullProperties?.Remove("model_class"); } }
+        public string? ModelClass { get => _explicitNullValueModelClass; set { _explicitNullValueModelClass = value; AdditionalData?.Remove("model_class"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("model_class"); else _explicitNullProperties?.Remove("model_class"); } }
         private string? _explicitNullValueModelClass = default!;
 #nullable restore
 #else
-        public string ModelClass { get => _explicitNullValueModelClass; set { _explicitNullValueModelClass = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("model_class"); else _explicitNullProperties?.Remove("model_class"); } }
+        public string ModelClass { get => _explicitNullValueModelClass; set { _explicitNullValueModelClass = value; AdditionalData?.Remove("model_class"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("model_class"); else _explicitNullProperties?.Remove("model_class"); } }
         private string _explicitNullValueModelClass = default!;
 #endif
         /// <summary>The record_identifier property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? RecordIdentifier { get => _explicitNullValueRecordIdentifier; set { _explicitNullValueRecordIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("record_identifier"); else _explicitNullProperties?.Remove("record_identifier"); } }
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? RecordIdentifier { get => _explicitNullValueRecordIdentifier; set { _explicitNullValueRecordIdentifier = value; AdditionalData?.Remove("record_identifier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("record_identifier"); else _explicitNullProperties?.Remove("record_identifier"); } }
         private global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? _explicitNullValueRecordIdentifier = default!;
 #nullable restore
 #else
-        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode RecordIdentifier { get => _explicitNullValueRecordIdentifier; set { _explicitNullValueRecordIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("record_identifier"); else _explicitNullProperties?.Remove("record_identifier"); } }
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode RecordIdentifier { get => _explicitNullValueRecordIdentifier; set { _explicitNullValueRecordIdentifier = value; AdditionalData?.Remove("record_identifier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("record_identifier"); else _explicitNullProperties?.Remove("record_identifier"); } }
         private global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode _explicitNullValueRecordIdentifier = default!;
 #endif
         /// <summary>

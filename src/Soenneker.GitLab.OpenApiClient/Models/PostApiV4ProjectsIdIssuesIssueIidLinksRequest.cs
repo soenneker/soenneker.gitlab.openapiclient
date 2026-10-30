@@ -17,34 +17,37 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("link_type") is { } nullNodeLinkType && nullNodeLinkType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkType = null;
-            if (parseNode.GetChildNode("target_issue_iid") is { } nullNodeTargetIssueIid && nullNodeTargetIssueIid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetIssueIid = null;
-            if (parseNode.GetChildNode("target_project_id") is { } nullNodeTargetProjectId && nullNodeTargetProjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetProjectId = null;
+            if (parseNode.GetChildNode("link_type") is null) { _explicitNullValueLinkType = default!; _explicitNullProperties?.Remove("link_type"); }
+            else if (parseNode.GetChildNode("link_type") is { } nullNodeLinkType && nullNodeLinkType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkType = null;
+            if (parseNode.GetChildNode("target_issue_iid") is null) { _explicitNullValueTargetIssueIid = default!; _explicitNullProperties?.Remove("target_issue_iid"); }
+            else if (parseNode.GetChildNode("target_issue_iid") is { } nullNodeTargetIssueIid && nullNodeTargetIssueIid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetIssueIid = null;
+            if (parseNode.GetChildNode("target_project_id") is null) { _explicitNullValueTargetProjectId = default!; _explicitNullProperties?.Remove("target_project_id"); }
+            else if (parseNode.GetChildNode("target_project_id") is { } nullNodeTargetProjectId && nullNodeTargetProjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetProjectId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The type of the relation.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdIssuesIssueIidLinksRequestLinkType? LinkType { get => _explicitNullValueLinkType; set { _explicitNullValueLinkType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link_type"); else _explicitNullProperties?.Remove("link_type"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdIssuesIssueIidLinksRequestLinkType? LinkType { get => _explicitNullValueLinkType; set { _explicitNullValueLinkType = value; AdditionalData?.Remove("link_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link_type"); else _explicitNullProperties?.Remove("link_type"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdIssuesIssueIidLinksRequestLinkType? _explicitNullValueLinkType = default!;
         /// <summary>Internal ID of the issue in the target project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdIssuesIssueIidLinksRequestTargetIssueIid? TargetIssueIid { get => _explicitNullValueTargetIssueIid; set { _explicitNullValueTargetIssueIid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_issue_iid"); else _explicitNullProperties?.Remove("target_issue_iid"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdIssuesIssueIidLinksRequestTargetIssueIid? TargetIssueIid { get => _explicitNullValueTargetIssueIid; set { _explicitNullValueTargetIssueIid = value; AdditionalData?.Remove("target_issue_iid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_issue_iid"); else _explicitNullProperties?.Remove("target_issue_iid"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdIssuesIssueIidLinksRequestTargetIssueIid? _explicitNullValueTargetIssueIid = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdIssuesIssueIidLinksRequestTargetIssueIid TargetIssueIid { get => _explicitNullValueTargetIssueIid; set { _explicitNullValueTargetIssueIid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_issue_iid"); else _explicitNullProperties?.Remove("target_issue_iid"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdIssuesIssueIidLinksRequestTargetIssueIid TargetIssueIid { get => _explicitNullValueTargetIssueIid; set { _explicitNullValueTargetIssueIid = value; AdditionalData?.Remove("target_issue_iid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_issue_iid"); else _explicitNullProperties?.Remove("target_issue_iid"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdIssuesIssueIidLinksRequestTargetIssueIid _explicitNullValueTargetIssueIid = default!;
 #endif
         /// <summary>ID or URL-encoded path of the target project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdIssuesIssueIidLinksRequestTargetProjectId? TargetProjectId { get => _explicitNullValueTargetProjectId; set { _explicitNullValueTargetProjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_project_id"); else _explicitNullProperties?.Remove("target_project_id"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdIssuesIssueIidLinksRequestTargetProjectId? TargetProjectId { get => _explicitNullValueTargetProjectId; set { _explicitNullValueTargetProjectId = value; AdditionalData?.Remove("target_project_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_project_id"); else _explicitNullProperties?.Remove("target_project_id"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdIssuesIssueIidLinksRequestTargetProjectId? _explicitNullValueTargetProjectId = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdIssuesIssueIidLinksRequestTargetProjectId TargetProjectId { get => _explicitNullValueTargetProjectId; set { _explicitNullValueTargetProjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_project_id"); else _explicitNullProperties?.Remove("target_project_id"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdIssuesIssueIidLinksRequestTargetProjectId TargetProjectId { get => _explicitNullValueTargetProjectId; set { _explicitNullValueTargetProjectId = value; AdditionalData?.Remove("target_project_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_project_id"); else _explicitNullProperties?.Remove("target_project_id"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdIssuesIssueIidLinksRequestTargetProjectId _explicitNullValueTargetProjectId = default!;
 #endif
         /// <summary>
@@ -72,7 +75,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "link_type", n => { LinkType = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdIssuesIssueIidLinksRequestLinkType>(); } },
+                { "link_type", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdIssuesIssueIidLinksRequestLinkType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueLinkType = default; _explicitNullProperties?.Remove("link_type"); AdditionalData["link_type"] = unknown; } else { LinkType = parsed; AdditionalData.Remove("link_type"); } } },
                 { "target_issue_iid", n => { TargetIssueIid = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdIssuesIssueIidLinksRequestTargetIssueIid>(global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdIssuesIssueIidLinksRequestTargetIssueIid.CreateFromDiscriminatorValue); } },
                 { "target_project_id", n => { TargetProjectId = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdIssuesIssueIidLinksRequestTargetProjectId>(global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdIssuesIssueIidLinksRequestTargetProjectId.CreateFromDiscriminatorValue); } },
             };

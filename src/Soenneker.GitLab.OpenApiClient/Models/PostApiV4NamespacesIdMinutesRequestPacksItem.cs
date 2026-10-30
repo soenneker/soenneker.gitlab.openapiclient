@@ -18,27 +18,30 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("expires_at") is { } nullNodeExpiresAt && nullNodeExpiresAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiresAt = null;
-            if (parseNode.GetChildNode("number_of_minutes") is { } nullNodeNumberOfMinutes && nullNodeNumberOfMinutes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberOfMinutes = null;
-            if (parseNode.GetChildNode("purchase_xid") is { } nullNodePurchaseXid && nullNodePurchaseXid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PurchaseXid = null;
+            if (parseNode.GetChildNode("expires_at") is null) { _explicitNullValueExpiresAt = default!; _explicitNullProperties?.Remove("expires_at"); }
+            else if (parseNode.GetChildNode("expires_at") is { } nullNodeExpiresAt && nullNodeExpiresAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiresAt = null;
+            if (parseNode.GetChildNode("number_of_minutes") is null) { _explicitNullValueNumberOfMinutes = default!; _explicitNullProperties?.Remove("number_of_minutes"); }
+            else if (parseNode.GetChildNode("number_of_minutes") is { } nullNodeNumberOfMinutes && nullNodeNumberOfMinutes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberOfMinutes = null;
+            if (parseNode.GetChildNode("purchase_xid") is null) { _explicitNullValuePurchaseXid = default!; _explicitNullProperties?.Remove("purchase_xid"); }
+            else if (parseNode.GetChildNode("purchase_xid") is { } nullNodePurchaseXid && nullNodePurchaseXid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PurchaseXid = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Date when the purchase expires.</summary>
-        public Date? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
+        public Date? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; AdditionalData?.Remove("expires_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
         private Date? _explicitNullValueExpiresAt = default!;
         /// <summary>Number of additional minutes purchased.</summary>
-        public int? NumberOfMinutes { get => _explicitNullValueNumberOfMinutes; set { _explicitNullValueNumberOfMinutes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("number_of_minutes"); else _explicitNullProperties?.Remove("number_of_minutes"); } }
+        public int? NumberOfMinutes { get => _explicitNullValueNumberOfMinutes; set { _explicitNullValueNumberOfMinutes = value; AdditionalData?.Remove("number_of_minutes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("number_of_minutes"); else _explicitNullProperties?.Remove("number_of_minutes"); } }
         private int? _explicitNullValueNumberOfMinutes = default!;
         /// <summary>Purchase ID for the additional minutes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PurchaseXid { get => _explicitNullValuePurchaseXid; set { _explicitNullValuePurchaseXid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_xid"); else _explicitNullProperties?.Remove("purchase_xid"); } }
+        public string? PurchaseXid { get => _explicitNullValuePurchaseXid; set { _explicitNullValuePurchaseXid = value; AdditionalData?.Remove("purchase_xid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_xid"); else _explicitNullProperties?.Remove("purchase_xid"); } }
         private string? _explicitNullValuePurchaseXid = default!;
 #nullable restore
 #else
-        public string PurchaseXid { get => _explicitNullValuePurchaseXid; set { _explicitNullValuePurchaseXid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_xid"); else _explicitNullProperties?.Remove("purchase_xid"); } }
+        public string PurchaseXid { get => _explicitNullValuePurchaseXid; set { _explicitNullValuePurchaseXid = value; AdditionalData?.Remove("purchase_xid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_xid"); else _explicitNullProperties?.Remove("purchase_xid"); } }
         private string _explicitNullValuePurchaseXid = default!;
 #endif
         /// <summary>

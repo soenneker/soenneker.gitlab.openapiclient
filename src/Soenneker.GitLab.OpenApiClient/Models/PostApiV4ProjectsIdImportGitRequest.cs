@@ -17,9 +17,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("import_url") is { } nullNodeImportUrl && nullNodeImportUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImportUrl = null;
-            if (parseNode.GetChildNode("import_url_password") is { } nullNodeImportUrlPassword && nullNodeImportUrlPassword.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImportUrlPassword = null;
-            if (parseNode.GetChildNode("import_url_user") is { } nullNodeImportUrlUser && nullNodeImportUrlUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImportUrlUser = null;
+            if (parseNode.GetChildNode("import_url") is null) { _explicitNullValueImportUrl = default!; _explicitNullProperties?.Remove("import_url"); }
+            else if (parseNode.GetChildNode("import_url") is { } nullNodeImportUrl && nullNodeImportUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImportUrl = null;
+            if (parseNode.GetChildNode("import_url_password") is null) { _explicitNullValueImportUrlPassword = default!; _explicitNullProperties?.Remove("import_url_password"); }
+            else if (parseNode.GetChildNode("import_url_password") is { } nullNodeImportUrlPassword && nullNodeImportUrlPassword.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImportUrlPassword = null;
+            if (parseNode.GetChildNode("import_url_user") is null) { _explicitNullValueImportUrlUser = default!; _explicitNullProperties?.Remove("import_url_user"); }
+            else if (parseNode.GetChildNode("import_url_user") is { } nullNodeImportUrlUser && nullNodeImportUrlUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImportUrlUser = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>URL from which the project is imported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ImportUrl { get => _explicitNullValueImportUrl; set { _explicitNullValueImportUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("import_url"); else _explicitNullProperties?.Remove("import_url"); } }
+        public string? ImportUrl { get => _explicitNullValueImportUrl; set { _explicitNullValueImportUrl = value; AdditionalData?.Remove("import_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("import_url"); else _explicitNullProperties?.Remove("import_url"); } }
         private string? _explicitNullValueImportUrl = default!;
 #nullable restore
 #else
-        public string ImportUrl { get => _explicitNullValueImportUrl; set { _explicitNullValueImportUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("import_url"); else _explicitNullProperties?.Remove("import_url"); } }
+        public string ImportUrl { get => _explicitNullValueImportUrl; set { _explicitNullValueImportUrl = value; AdditionalData?.Remove("import_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("import_url"); else _explicitNullProperties?.Remove("import_url"); } }
         private string _explicitNullValueImportUrl = default!;
 #endif
         /// <summary>Password for the import URL.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ImportUrlPassword { get => _explicitNullValueImportUrlPassword; set { _explicitNullValueImportUrlPassword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("import_url_password"); else _explicitNullProperties?.Remove("import_url_password"); } }
+        public string? ImportUrlPassword { get => _explicitNullValueImportUrlPassword; set { _explicitNullValueImportUrlPassword = value; AdditionalData?.Remove("import_url_password"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("import_url_password"); else _explicitNullProperties?.Remove("import_url_password"); } }
         private string? _explicitNullValueImportUrlPassword = default!;
 #nullable restore
 #else
-        public string ImportUrlPassword { get => _explicitNullValueImportUrlPassword; set { _explicitNullValueImportUrlPassword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("import_url_password"); else _explicitNullProperties?.Remove("import_url_password"); } }
+        public string ImportUrlPassword { get => _explicitNullValueImportUrlPassword; set { _explicitNullValueImportUrlPassword = value; AdditionalData?.Remove("import_url_password"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("import_url_password"); else _explicitNullProperties?.Remove("import_url_password"); } }
         private string _explicitNullValueImportUrlPassword = default!;
 #endif
         /// <summary>Username for the import URL.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ImportUrlUser { get => _explicitNullValueImportUrlUser; set { _explicitNullValueImportUrlUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("import_url_user"); else _explicitNullProperties?.Remove("import_url_user"); } }
+        public string? ImportUrlUser { get => _explicitNullValueImportUrlUser; set { _explicitNullValueImportUrlUser = value; AdditionalData?.Remove("import_url_user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("import_url_user"); else _explicitNullProperties?.Remove("import_url_user"); } }
         private string? _explicitNullValueImportUrlUser = default!;
 #nullable restore
 #else
-        public string ImportUrlUser { get => _explicitNullValueImportUrlUser; set { _explicitNullValueImportUrlUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("import_url_user"); else _explicitNullProperties?.Remove("import_url_user"); } }
+        public string ImportUrlUser { get => _explicitNullValueImportUrlUser; set { _explicitNullValueImportUrlUser = value; AdditionalData?.Remove("import_url_user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("import_url_user"); else _explicitNullProperties?.Remove("import_url_user"); } }
         private string _explicitNullValueImportUrlUser = default!;
 #endif
         /// <summary>

@@ -17,17 +17,19 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("move_after_id") is { } nullNodeMoveAfterId && nullNodeMoveAfterId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MoveAfterId = null;
-            if (parseNode.GetChildNode("move_before_id") is { } nullNodeMoveBeforeId && nullNodeMoveBeforeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MoveBeforeId = null;
+            if (parseNode.GetChildNode("move_after_id") is null) { _explicitNullValueMoveAfterId = default!; _explicitNullProperties?.Remove("move_after_id"); }
+            else if (parseNode.GetChildNode("move_after_id") is { } nullNodeMoveAfterId && nullNodeMoveAfterId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MoveAfterId = null;
+            if (parseNode.GetChildNode("move_before_id") is null) { _explicitNullValueMoveBeforeId = default!; _explicitNullProperties?.Remove("move_before_id"); }
+            else if (parseNode.GetChildNode("move_before_id") is { } nullNodeMoveBeforeId && nullNodeMoveBeforeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MoveBeforeId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Global ID of the project issue to place this issue after. At least one of `move_after_id`, `move_before_id` must be provided.</summary>
-        public int? MoveAfterId { get => _explicitNullValueMoveAfterId; set { _explicitNullValueMoveAfterId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("move_after_id"); else _explicitNullProperties?.Remove("move_after_id"); } }
+        public int? MoveAfterId { get => _explicitNullValueMoveAfterId; set { _explicitNullValueMoveAfterId = value; AdditionalData?.Remove("move_after_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("move_after_id"); else _explicitNullProperties?.Remove("move_after_id"); } }
         private int? _explicitNullValueMoveAfterId = default!;
         /// <summary>Global ID of the project issue to place this issue before. At least one of `move_after_id`, `move_before_id` must be provided.</summary>
-        public int? MoveBeforeId { get => _explicitNullValueMoveBeforeId; set { _explicitNullValueMoveBeforeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("move_before_id"); else _explicitNullProperties?.Remove("move_before_id"); } }
+        public int? MoveBeforeId { get => _explicitNullValueMoveBeforeId; set { _explicitNullValueMoveBeforeId = value; AdditionalData?.Remove("move_before_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("move_before_id"); else _explicitNullProperties?.Remove("move_before_id"); } }
         private int? _explicitNullValueMoveBeforeId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdIssuesIssueIidReorderRequest"/> and sets the default values.

@@ -17,9 +17,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("commit_source") is { } nullNodeCommitSource && nullNodeCommitSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommitSource = null;
-            if (parseNode.GetChildNode("signature") is { } nullNodeSignature && nullNodeSignature.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Signature = null;
-            if (parseNode.GetChildNode("signature_type") is { } nullNodeSignatureType && nullNodeSignatureType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignatureType = null;
+            if (parseNode.GetChildNode("commit_source") is null) { _explicitNullValueCommitSource = default!; _explicitNullProperties?.Remove("commit_source"); }
+            else if (parseNode.GetChildNode("commit_source") is { } nullNodeCommitSource && nullNodeCommitSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommitSource = null;
+            if (parseNode.GetChildNode("signature") is null) { _explicitNullValueSignature = default!; _explicitNullProperties?.Remove("signature"); }
+            else if (parseNode.GetChildNode("signature") is { } nullNodeSignature && nullNodeSignature.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Signature = null;
+            if (parseNode.GetChildNode("signature_type") is null) { _explicitNullValueSignatureType = default!; _explicitNullProperties?.Remove("signature_type"); }
+            else if (parseNode.GetChildNode("signature_type") is { } nullNodeSignatureType && nullNodeSignatureType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignatureType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The commit_source property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CommitSource { get => _explicitNullValueCommitSource; set { _explicitNullValueCommitSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_source"); else _explicitNullProperties?.Remove("commit_source"); } }
+        public string? CommitSource { get => _explicitNullValueCommitSource; set { _explicitNullValueCommitSource = value; AdditionalData?.Remove("commit_source"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_source"); else _explicitNullProperties?.Remove("commit_source"); } }
         private string? _explicitNullValueCommitSource = default!;
 #nullable restore
 #else
-        public string CommitSource { get => _explicitNullValueCommitSource; set { _explicitNullValueCommitSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_source"); else _explicitNullProperties?.Remove("commit_source"); } }
+        public string CommitSource { get => _explicitNullValueCommitSource; set { _explicitNullValueCommitSource = value; AdditionalData?.Remove("commit_source"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_source"); else _explicitNullProperties?.Remove("commit_source"); } }
         private string _explicitNullValueCommitSource = default!;
 #endif
         /// <summary>The signature property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitSignatureSignatureProperty? Signature { get => _explicitNullValueSignature; set { _explicitNullValueSignature = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signature"); else _explicitNullProperties?.Remove("signature"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitSignatureSignatureProperty? Signature { get => _explicitNullValueSignature; set { _explicitNullValueSignature = value; AdditionalData?.Remove("signature"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signature"); else _explicitNullProperties?.Remove("signature"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitSignatureSignatureProperty? _explicitNullValueSignature = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitSignatureSignatureProperty Signature { get => _explicitNullValueSignature; set { _explicitNullValueSignature = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signature"); else _explicitNullProperties?.Remove("signature"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitSignatureSignatureProperty Signature { get => _explicitNullValueSignature; set { _explicitNullValueSignature = value; AdditionalData?.Remove("signature"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signature"); else _explicitNullProperties?.Remove("signature"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitSignatureSignatureProperty _explicitNullValueSignature = default!;
 #endif
         /// <summary>The signature_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SignatureType { get => _explicitNullValueSignatureType; set { _explicitNullValueSignatureType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signature_type"); else _explicitNullProperties?.Remove("signature_type"); } }
+        public string? SignatureType { get => _explicitNullValueSignatureType; set { _explicitNullValueSignatureType = value; AdditionalData?.Remove("signature_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signature_type"); else _explicitNullProperties?.Remove("signature_type"); } }
         private string? _explicitNullValueSignatureType = default!;
 #nullable restore
 #else
-        public string SignatureType { get => _explicitNullValueSignatureType; set { _explicitNullValueSignatureType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signature_type"); else _explicitNullProperties?.Remove("signature_type"); } }
+        public string SignatureType { get => _explicitNullValueSignatureType; set { _explicitNullValueSignatureType = value; AdditionalData?.Remove("signature_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signature_type"); else _explicitNullProperties?.Remove("signature_type"); } }
         private string _explicitNullValueSignatureType = default!;
 #endif
         /// <summary>

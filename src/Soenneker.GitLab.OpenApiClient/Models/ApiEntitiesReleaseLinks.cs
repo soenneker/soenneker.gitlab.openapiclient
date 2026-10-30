@@ -17,13 +17,20 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("closed_issues_url") is { } nullNodeClosedIssuesUrl && nullNodeClosedIssuesUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClosedIssuesUrl = null;
-            if (parseNode.GetChildNode("closed_merge_requests_url") is { } nullNodeClosedMergeRequestsUrl && nullNodeClosedMergeRequestsUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClosedMergeRequestsUrl = null;
-            if (parseNode.GetChildNode("edit_url") is { } nullNodeEditUrl && nullNodeEditUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EditUrl = null;
-            if (parseNode.GetChildNode("merged_merge_requests_url") is { } nullNodeMergedMergeRequestsUrl && nullNodeMergedMergeRequestsUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergedMergeRequestsUrl = null;
-            if (parseNode.GetChildNode("opened_issues_url") is { } nullNodeOpenedIssuesUrl && nullNodeOpenedIssuesUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OpenedIssuesUrl = null;
-            if (parseNode.GetChildNode("opened_merge_requests_url") is { } nullNodeOpenedMergeRequestsUrl && nullNodeOpenedMergeRequestsUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OpenedMergeRequestsUrl = null;
-            if (parseNode.GetChildNode("self") is { } nullNodeSelf && nullNodeSelf.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Self = null;
+            if (parseNode.GetChildNode("closed_issues_url") is null) { _explicitNullValueClosedIssuesUrl = default!; _explicitNullProperties?.Remove("closed_issues_url"); }
+            else if (parseNode.GetChildNode("closed_issues_url") is { } nullNodeClosedIssuesUrl && nullNodeClosedIssuesUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClosedIssuesUrl = null;
+            if (parseNode.GetChildNode("closed_merge_requests_url") is null) { _explicitNullValueClosedMergeRequestsUrl = default!; _explicitNullProperties?.Remove("closed_merge_requests_url"); }
+            else if (parseNode.GetChildNode("closed_merge_requests_url") is { } nullNodeClosedMergeRequestsUrl && nullNodeClosedMergeRequestsUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClosedMergeRequestsUrl = null;
+            if (parseNode.GetChildNode("edit_url") is null) { _explicitNullValueEditUrl = default!; _explicitNullProperties?.Remove("edit_url"); }
+            else if (parseNode.GetChildNode("edit_url") is { } nullNodeEditUrl && nullNodeEditUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EditUrl = null;
+            if (parseNode.GetChildNode("merged_merge_requests_url") is null) { _explicitNullValueMergedMergeRequestsUrl = default!; _explicitNullProperties?.Remove("merged_merge_requests_url"); }
+            else if (parseNode.GetChildNode("merged_merge_requests_url") is { } nullNodeMergedMergeRequestsUrl && nullNodeMergedMergeRequestsUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergedMergeRequestsUrl = null;
+            if (parseNode.GetChildNode("opened_issues_url") is null) { _explicitNullValueOpenedIssuesUrl = default!; _explicitNullProperties?.Remove("opened_issues_url"); }
+            else if (parseNode.GetChildNode("opened_issues_url") is { } nullNodeOpenedIssuesUrl && nullNodeOpenedIssuesUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OpenedIssuesUrl = null;
+            if (parseNode.GetChildNode("opened_merge_requests_url") is null) { _explicitNullValueOpenedMergeRequestsUrl = default!; _explicitNullProperties?.Remove("opened_merge_requests_url"); }
+            else if (parseNode.GetChildNode("opened_merge_requests_url") is { } nullNodeOpenedMergeRequestsUrl && nullNodeOpenedMergeRequestsUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OpenedMergeRequestsUrl = null;
+            if (parseNode.GetChildNode("self") is null) { _explicitNullValueSelf = default!; _explicitNullProperties?.Remove("self"); }
+            else if (parseNode.GetChildNode("self") is { } nullNodeSelf && nullNodeSelf.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Self = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -31,71 +38,71 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The closed_issues_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClosedIssuesUrl { get => _explicitNullValueClosedIssuesUrl; set { _explicitNullValueClosedIssuesUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("closed_issues_url"); else _explicitNullProperties?.Remove("closed_issues_url"); } }
+        public string? ClosedIssuesUrl { get => _explicitNullValueClosedIssuesUrl; set { _explicitNullValueClosedIssuesUrl = value; AdditionalData?.Remove("closed_issues_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("closed_issues_url"); else _explicitNullProperties?.Remove("closed_issues_url"); } }
         private string? _explicitNullValueClosedIssuesUrl = default!;
 #nullable restore
 #else
-        public string ClosedIssuesUrl { get => _explicitNullValueClosedIssuesUrl; set { _explicitNullValueClosedIssuesUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("closed_issues_url"); else _explicitNullProperties?.Remove("closed_issues_url"); } }
+        public string ClosedIssuesUrl { get => _explicitNullValueClosedIssuesUrl; set { _explicitNullValueClosedIssuesUrl = value; AdditionalData?.Remove("closed_issues_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("closed_issues_url"); else _explicitNullProperties?.Remove("closed_issues_url"); } }
         private string _explicitNullValueClosedIssuesUrl = default!;
 #endif
         /// <summary>The closed_merge_requests_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClosedMergeRequestsUrl { get => _explicitNullValueClosedMergeRequestsUrl; set { _explicitNullValueClosedMergeRequestsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("closed_merge_requests_url"); else _explicitNullProperties?.Remove("closed_merge_requests_url"); } }
+        public string? ClosedMergeRequestsUrl { get => _explicitNullValueClosedMergeRequestsUrl; set { _explicitNullValueClosedMergeRequestsUrl = value; AdditionalData?.Remove("closed_merge_requests_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("closed_merge_requests_url"); else _explicitNullProperties?.Remove("closed_merge_requests_url"); } }
         private string? _explicitNullValueClosedMergeRequestsUrl = default!;
 #nullable restore
 #else
-        public string ClosedMergeRequestsUrl { get => _explicitNullValueClosedMergeRequestsUrl; set { _explicitNullValueClosedMergeRequestsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("closed_merge_requests_url"); else _explicitNullProperties?.Remove("closed_merge_requests_url"); } }
+        public string ClosedMergeRequestsUrl { get => _explicitNullValueClosedMergeRequestsUrl; set { _explicitNullValueClosedMergeRequestsUrl = value; AdditionalData?.Remove("closed_merge_requests_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("closed_merge_requests_url"); else _explicitNullProperties?.Remove("closed_merge_requests_url"); } }
         private string _explicitNullValueClosedMergeRequestsUrl = default!;
 #endif
         /// <summary>The edit_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EditUrl { get => _explicitNullValueEditUrl; set { _explicitNullValueEditUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("edit_url"); else _explicitNullProperties?.Remove("edit_url"); } }
+        public string? EditUrl { get => _explicitNullValueEditUrl; set { _explicitNullValueEditUrl = value; AdditionalData?.Remove("edit_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("edit_url"); else _explicitNullProperties?.Remove("edit_url"); } }
         private string? _explicitNullValueEditUrl = default!;
 #nullable restore
 #else
-        public string EditUrl { get => _explicitNullValueEditUrl; set { _explicitNullValueEditUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("edit_url"); else _explicitNullProperties?.Remove("edit_url"); } }
+        public string EditUrl { get => _explicitNullValueEditUrl; set { _explicitNullValueEditUrl = value; AdditionalData?.Remove("edit_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("edit_url"); else _explicitNullProperties?.Remove("edit_url"); } }
         private string _explicitNullValueEditUrl = default!;
 #endif
         /// <summary>The merged_merge_requests_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MergedMergeRequestsUrl { get => _explicitNullValueMergedMergeRequestsUrl; set { _explicitNullValueMergedMergeRequestsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merged_merge_requests_url"); else _explicitNullProperties?.Remove("merged_merge_requests_url"); } }
+        public string? MergedMergeRequestsUrl { get => _explicitNullValueMergedMergeRequestsUrl; set { _explicitNullValueMergedMergeRequestsUrl = value; AdditionalData?.Remove("merged_merge_requests_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merged_merge_requests_url"); else _explicitNullProperties?.Remove("merged_merge_requests_url"); } }
         private string? _explicitNullValueMergedMergeRequestsUrl = default!;
 #nullable restore
 #else
-        public string MergedMergeRequestsUrl { get => _explicitNullValueMergedMergeRequestsUrl; set { _explicitNullValueMergedMergeRequestsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merged_merge_requests_url"); else _explicitNullProperties?.Remove("merged_merge_requests_url"); } }
+        public string MergedMergeRequestsUrl { get => _explicitNullValueMergedMergeRequestsUrl; set { _explicitNullValueMergedMergeRequestsUrl = value; AdditionalData?.Remove("merged_merge_requests_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merged_merge_requests_url"); else _explicitNullProperties?.Remove("merged_merge_requests_url"); } }
         private string _explicitNullValueMergedMergeRequestsUrl = default!;
 #endif
         /// <summary>The opened_issues_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OpenedIssuesUrl { get => _explicitNullValueOpenedIssuesUrl; set { _explicitNullValueOpenedIssuesUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opened_issues_url"); else _explicitNullProperties?.Remove("opened_issues_url"); } }
+        public string? OpenedIssuesUrl { get => _explicitNullValueOpenedIssuesUrl; set { _explicitNullValueOpenedIssuesUrl = value; AdditionalData?.Remove("opened_issues_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opened_issues_url"); else _explicitNullProperties?.Remove("opened_issues_url"); } }
         private string? _explicitNullValueOpenedIssuesUrl = default!;
 #nullable restore
 #else
-        public string OpenedIssuesUrl { get => _explicitNullValueOpenedIssuesUrl; set { _explicitNullValueOpenedIssuesUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opened_issues_url"); else _explicitNullProperties?.Remove("opened_issues_url"); } }
+        public string OpenedIssuesUrl { get => _explicitNullValueOpenedIssuesUrl; set { _explicitNullValueOpenedIssuesUrl = value; AdditionalData?.Remove("opened_issues_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opened_issues_url"); else _explicitNullProperties?.Remove("opened_issues_url"); } }
         private string _explicitNullValueOpenedIssuesUrl = default!;
 #endif
         /// <summary>The opened_merge_requests_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OpenedMergeRequestsUrl { get => _explicitNullValueOpenedMergeRequestsUrl; set { _explicitNullValueOpenedMergeRequestsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opened_merge_requests_url"); else _explicitNullProperties?.Remove("opened_merge_requests_url"); } }
+        public string? OpenedMergeRequestsUrl { get => _explicitNullValueOpenedMergeRequestsUrl; set { _explicitNullValueOpenedMergeRequestsUrl = value; AdditionalData?.Remove("opened_merge_requests_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opened_merge_requests_url"); else _explicitNullProperties?.Remove("opened_merge_requests_url"); } }
         private string? _explicitNullValueOpenedMergeRequestsUrl = default!;
 #nullable restore
 #else
-        public string OpenedMergeRequestsUrl { get => _explicitNullValueOpenedMergeRequestsUrl; set { _explicitNullValueOpenedMergeRequestsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opened_merge_requests_url"); else _explicitNullProperties?.Remove("opened_merge_requests_url"); } }
+        public string OpenedMergeRequestsUrl { get => _explicitNullValueOpenedMergeRequestsUrl; set { _explicitNullValueOpenedMergeRequestsUrl = value; AdditionalData?.Remove("opened_merge_requests_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opened_merge_requests_url"); else _explicitNullProperties?.Remove("opened_merge_requests_url"); } }
         private string _explicitNullValueOpenedMergeRequestsUrl = default!;
 #endif
         /// <summary>The self property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Self { get => _explicitNullValueSelf; set { _explicitNullValueSelf = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("self"); else _explicitNullProperties?.Remove("self"); } }
+        public string? Self { get => _explicitNullValueSelf; set { _explicitNullValueSelf = value; AdditionalData?.Remove("self"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("self"); else _explicitNullProperties?.Remove("self"); } }
         private string? _explicitNullValueSelf = default!;
 #nullable restore
 #else
-        public string Self { get => _explicitNullValueSelf; set { _explicitNullValueSelf = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("self"); else _explicitNullProperties?.Remove("self"); } }
+        public string Self { get => _explicitNullValueSelf; set { _explicitNullValueSelf = value; AdditionalData?.Remove("self"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("self"); else _explicitNullProperties?.Remove("self"); } }
         private string _explicitNullValueSelf = default!;
 #endif
         /// <summary>

@@ -18,8 +18,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("google_json_key_string") is { } nullNodeGoogleJsonKeyString && nullNodeGoogleJsonKeyString.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GoogleJsonKeyString = null;
-            if (parseNode.GetChildNode("google_project") is { } nullNodeGoogleProject && nullNodeGoogleProject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GoogleProject = null;
+            if (parseNode.GetChildNode("google_json_key_string") is null) { _explicitNullValueGoogleJsonKeyString = default!; _explicitNullProperties?.Remove("google_json_key_string"); }
+            else if (parseNode.GetChildNode("google_json_key_string") is { } nullNodeGoogleJsonKeyString && nullNodeGoogleJsonKeyString.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GoogleJsonKeyString = null;
+            if (parseNode.GetChildNode("google_project") is null) { _explicitNullValueGoogleProject = default!; _explicitNullProperties?.Remove("google_project"); }
+            else if (parseNode.GetChildNode("google_project") is { } nullNodeGoogleProject && nullNodeGoogleProject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GoogleProject = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Google Cloud service account JSON key contents.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GoogleJsonKeyString { get => _explicitNullValueGoogleJsonKeyString; set { _explicitNullValueGoogleJsonKeyString = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("google_json_key_string"); else _explicitNullProperties?.Remove("google_json_key_string"); } }
+        public string? GoogleJsonKeyString { get => _explicitNullValueGoogleJsonKeyString; set { _explicitNullValueGoogleJsonKeyString = value; AdditionalData?.Remove("google_json_key_string"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("google_json_key_string"); else _explicitNullProperties?.Remove("google_json_key_string"); } }
         private string? _explicitNullValueGoogleJsonKeyString = default!;
 #nullable restore
 #else
-        public string GoogleJsonKeyString { get => _explicitNullValueGoogleJsonKeyString; set { _explicitNullValueGoogleJsonKeyString = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("google_json_key_string"); else _explicitNullProperties?.Remove("google_json_key_string"); } }
+        public string GoogleJsonKeyString { get => _explicitNullValueGoogleJsonKeyString; set { _explicitNullValueGoogleJsonKeyString = value; AdditionalData?.Remove("google_json_key_string"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("google_json_key_string"); else _explicitNullProperties?.Remove("google_json_key_string"); } }
         private string _explicitNullValueGoogleJsonKeyString = default!;
 #endif
         /// <summary>Google Cloud project ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GoogleProject { get => _explicitNullValueGoogleProject; set { _explicitNullValueGoogleProject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("google_project"); else _explicitNullProperties?.Remove("google_project"); } }
+        public string? GoogleProject { get => _explicitNullValueGoogleProject; set { _explicitNullValueGoogleProject = value; AdditionalData?.Remove("google_project"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("google_project"); else _explicitNullProperties?.Remove("google_project"); } }
         private string? _explicitNullValueGoogleProject = default!;
 #nullable restore
 #else
-        public string GoogleProject { get => _explicitNullValueGoogleProject; set { _explicitNullValueGoogleProject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("google_project"); else _explicitNullProperties?.Remove("google_project"); } }
+        public string GoogleProject { get => _explicitNullValueGoogleProject; set { _explicitNullValueGoogleProject = value; AdditionalData?.Remove("google_project"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("google_project"); else _explicitNullProperties?.Remove("google_project"); } }
         private string _explicitNullValueGoogleProject = default!;
 #endif
         /// <summary>

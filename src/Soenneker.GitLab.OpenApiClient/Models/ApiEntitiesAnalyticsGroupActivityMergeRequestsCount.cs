@@ -17,13 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("merge_requests_count") is { } nullNodeMergeRequestsCount && nullNodeMergeRequestsCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequestsCount = null;
+            if (parseNode.GetChildNode("merge_requests_count") is null) { _explicitNullValueMergeRequestsCount = default!; _explicitNullProperties?.Remove("merge_requests_count"); }
+            else if (parseNode.GetChildNode("merge_requests_count") is { } nullNodeMergeRequestsCount && nullNodeMergeRequestsCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequestsCount = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Number of merge requests. Limited to 1000</summary>
-        public int? MergeRequestsCount { get => _explicitNullValueMergeRequestsCount; set { _explicitNullValueMergeRequestsCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_requests_count"); else _explicitNullProperties?.Remove("merge_requests_count"); } }
+        public int? MergeRequestsCount { get => _explicitNullValueMergeRequestsCount; set { _explicitNullValueMergeRequestsCount = value; AdditionalData?.Remove("merge_requests_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_requests_count"); else _explicitNullProperties?.Remove("merge_requests_count"); } }
         private int? _explicitNullValueMergeRequestsCount = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAnalyticsGroupActivityMergeRequestsCount"/> and sets the default values.

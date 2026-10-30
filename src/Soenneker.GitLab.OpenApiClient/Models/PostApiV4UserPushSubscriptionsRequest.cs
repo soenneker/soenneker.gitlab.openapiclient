@@ -17,76 +17,84 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("apns_environment") is { } nullNodeApnsEnvironment && nullNodeApnsEnvironment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApnsEnvironment = null;
-            if (parseNode.GetChildNode("app_version") is { } nullNodeAppVersion && nullNodeAppVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppVersion = null;
-            if (parseNode.GetChildNode("bundle_id") is { } nullNodeBundleId && nullNodeBundleId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BundleId = null;
-            if (parseNode.GetChildNode("device_name") is { } nullNodeDeviceName && nullNodeDeviceName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeviceName = null;
-            if (parseNode.GetChildNode("device_token") is { } nullNodeDeviceToken && nullNodeDeviceToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeviceToken = null;
-            if (parseNode.GetChildNode("locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
-            if (parseNode.GetChildNode("payload_mode") is { } nullNodePayloadMode && nullNodePayloadMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PayloadMode = null;
-            if (parseNode.GetChildNode("platform") is { } nullNodePlatform && nullNodePlatform.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Platform = null;
+            if (parseNode.GetChildNode("apns_environment") is null) { _explicitNullValueApnsEnvironment = default!; _explicitNullProperties?.Remove("apns_environment"); }
+            else if (parseNode.GetChildNode("apns_environment") is { } nullNodeApnsEnvironment && nullNodeApnsEnvironment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApnsEnvironment = null;
+            if (parseNode.GetChildNode("app_version") is null) { _explicitNullValueAppVersion = default!; _explicitNullProperties?.Remove("app_version"); }
+            else if (parseNode.GetChildNode("app_version") is { } nullNodeAppVersion && nullNodeAppVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppVersion = null;
+            if (parseNode.GetChildNode("bundle_id") is null) { _explicitNullValueBundleId = default!; _explicitNullProperties?.Remove("bundle_id"); }
+            else if (parseNode.GetChildNode("bundle_id") is { } nullNodeBundleId && nullNodeBundleId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BundleId = null;
+            if (parseNode.GetChildNode("device_name") is null) { _explicitNullValueDeviceName = default!; _explicitNullProperties?.Remove("device_name"); }
+            else if (parseNode.GetChildNode("device_name") is { } nullNodeDeviceName && nullNodeDeviceName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeviceName = null;
+            if (parseNode.GetChildNode("device_token") is null) { _explicitNullValueDeviceToken = default!; _explicitNullProperties?.Remove("device_token"); }
+            else if (parseNode.GetChildNode("device_token") is { } nullNodeDeviceToken && nullNodeDeviceToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeviceToken = null;
+            if (parseNode.GetChildNode("locale") is null) { _explicitNullValueLocale = default!; _explicitNullProperties?.Remove("locale"); }
+            else if (parseNode.GetChildNode("locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
+            if (parseNode.GetChildNode("payload_mode") is null) { _explicitNullValuePayloadMode = default!; _explicitNullProperties?.Remove("payload_mode"); }
+            else if (parseNode.GetChildNode("payload_mode") is { } nullNodePayloadMode && nullNodePayloadMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PayloadMode = null;
+            if (parseNode.GetChildNode("platform") is null) { _explicitNullValuePlatform = default!; _explicitNullProperties?.Remove("platform"); }
+            else if (parseNode.GetChildNode("platform") is { } nullNodePlatform && nullNodePlatform.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Platform = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The APNs environment the token was issued for</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserPushSubscriptionsRequestApnsEnvironment? ApnsEnvironment { get => _explicitNullValueApnsEnvironment; set { _explicitNullValueApnsEnvironment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("apns_environment"); else _explicitNullProperties?.Remove("apns_environment"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserPushSubscriptionsRequestApnsEnvironment? ApnsEnvironment { get => _explicitNullValueApnsEnvironment; set { _explicitNullValueApnsEnvironment = value; AdditionalData?.Remove("apns_environment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("apns_environment"); else _explicitNullProperties?.Remove("apns_environment"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserPushSubscriptionsRequestApnsEnvironment? _explicitNullValueApnsEnvironment = default!;
         /// <summary>The installed application version</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AppVersion { get => _explicitNullValueAppVersion; set { _explicitNullValueAppVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_version"); else _explicitNullProperties?.Remove("app_version"); } }
+        public string? AppVersion { get => _explicitNullValueAppVersion; set { _explicitNullValueAppVersion = value; AdditionalData?.Remove("app_version"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_version"); else _explicitNullProperties?.Remove("app_version"); } }
         private string? _explicitNullValueAppVersion = default!;
 #nullable restore
 #else
-        public string AppVersion { get => _explicitNullValueAppVersion; set { _explicitNullValueAppVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_version"); else _explicitNullProperties?.Remove("app_version"); } }
+        public string AppVersion { get => _explicitNullValueAppVersion; set { _explicitNullValueAppVersion = value; AdditionalData?.Remove("app_version"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_version"); else _explicitNullProperties?.Remove("app_version"); } }
         private string _explicitNullValueAppVersion = default!;
 #endif
         /// <summary>The application bundle identifier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BundleId { get => _explicitNullValueBundleId; set { _explicitNullValueBundleId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bundle_id"); else _explicitNullProperties?.Remove("bundle_id"); } }
+        public string? BundleId { get => _explicitNullValueBundleId; set { _explicitNullValueBundleId = value; AdditionalData?.Remove("bundle_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bundle_id"); else _explicitNullProperties?.Remove("bundle_id"); } }
         private string? _explicitNullValueBundleId = default!;
 #nullable restore
 #else
-        public string BundleId { get => _explicitNullValueBundleId; set { _explicitNullValueBundleId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bundle_id"); else _explicitNullProperties?.Remove("bundle_id"); } }
+        public string BundleId { get => _explicitNullValueBundleId; set { _explicitNullValueBundleId = value; AdditionalData?.Remove("bundle_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bundle_id"); else _explicitNullProperties?.Remove("bundle_id"); } }
         private string _explicitNullValueBundleId = default!;
 #endif
         /// <summary>A human-readable device name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DeviceName { get => _explicitNullValueDeviceName; set { _explicitNullValueDeviceName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device_name"); else _explicitNullProperties?.Remove("device_name"); } }
+        public string? DeviceName { get => _explicitNullValueDeviceName; set { _explicitNullValueDeviceName = value; AdditionalData?.Remove("device_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device_name"); else _explicitNullProperties?.Remove("device_name"); } }
         private string? _explicitNullValueDeviceName = default!;
 #nullable restore
 #else
-        public string DeviceName { get => _explicitNullValueDeviceName; set { _explicitNullValueDeviceName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device_name"); else _explicitNullProperties?.Remove("device_name"); } }
+        public string DeviceName { get => _explicitNullValueDeviceName; set { _explicitNullValueDeviceName = value; AdditionalData?.Remove("device_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device_name"); else _explicitNullProperties?.Remove("device_name"); } }
         private string _explicitNullValueDeviceName = default!;
 #endif
         /// <summary>The hexadecimal APNs device token</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DeviceToken { get => _explicitNullValueDeviceToken; set { _explicitNullValueDeviceToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device_token"); else _explicitNullProperties?.Remove("device_token"); } }
+        public string? DeviceToken { get => _explicitNullValueDeviceToken; set { _explicitNullValueDeviceToken = value; AdditionalData?.Remove("device_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device_token"); else _explicitNullProperties?.Remove("device_token"); } }
         private string? _explicitNullValueDeviceToken = default!;
 #nullable restore
 #else
-        public string DeviceToken { get => _explicitNullValueDeviceToken; set { _explicitNullValueDeviceToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device_token"); else _explicitNullProperties?.Remove("device_token"); } }
+        public string DeviceToken { get => _explicitNullValueDeviceToken; set { _explicitNullValueDeviceToken = value; AdditionalData?.Remove("device_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device_token"); else _explicitNullProperties?.Remove("device_token"); } }
         private string _explicitNullValueDeviceToken = default!;
 #endif
         /// <summary>The device locale</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
+        public string? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; AdditionalData?.Remove("locale"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
         private string? _explicitNullValueLocale = default!;
 #nullable restore
 #else
-        public string Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
+        public string Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; AdditionalData?.Remove("locale"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
         private string _explicitNullValueLocale = default!;
 #endif
         /// <summary>Whether notifications carry the full content or only identifiers</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserPushSubscriptionsRequestPayloadMode? PayloadMode { get => _explicitNullValuePayloadMode; set { _explicitNullValuePayloadMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payload_mode"); else _explicitNullProperties?.Remove("payload_mode"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserPushSubscriptionsRequestPayloadMode? PayloadMode { get => _explicitNullValuePayloadMode; set { _explicitNullValuePayloadMode = value; AdditionalData?.Remove("payload_mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payload_mode"); else _explicitNullProperties?.Remove("payload_mode"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserPushSubscriptionsRequestPayloadMode? _explicitNullValuePayloadMode = default!;
         /// <summary>The device platform</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserPushSubscriptionsRequestPlatform? Platform { get => _explicitNullValuePlatform; set { _explicitNullValuePlatform = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform"); else _explicitNullProperties?.Remove("platform"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserPushSubscriptionsRequestPlatform? Platform { get => _explicitNullValuePlatform; set { _explicitNullValuePlatform = value; AdditionalData?.Remove("platform"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform"); else _explicitNullProperties?.Remove("platform"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserPushSubscriptionsRequestPlatform? _explicitNullValuePlatform = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserPushSubscriptionsRequest"/> and sets the default values.
@@ -113,14 +121,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "apns_environment", n => { ApnsEnvironment = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserPushSubscriptionsRequestApnsEnvironment>(); } },
+                { "apns_environment", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserPushSubscriptionsRequestApnsEnvironment>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueApnsEnvironment = default; _explicitNullProperties?.Remove("apns_environment"); AdditionalData["apns_environment"] = unknown; } else { ApnsEnvironment = parsed; AdditionalData.Remove("apns_environment"); } } },
                 { "app_version", n => { AppVersion = n.GetStringValue(); } },
                 { "bundle_id", n => { BundleId = n.GetStringValue(); } },
                 { "device_name", n => { DeviceName = n.GetStringValue(); } },
                 { "device_token", n => { DeviceToken = n.GetStringValue(); } },
                 { "locale", n => { Locale = n.GetStringValue(); } },
-                { "payload_mode", n => { PayloadMode = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserPushSubscriptionsRequestPayloadMode>(); } },
-                { "platform", n => { Platform = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserPushSubscriptionsRequestPlatform>(); } },
+                { "payload_mode", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserPushSubscriptionsRequestPayloadMode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePayloadMode = default; _explicitNullProperties?.Remove("payload_mode"); AdditionalData["payload_mode"] = unknown; } else { PayloadMode = parsed; AdditionalData.Remove("payload_mode"); } } },
+                { "platform", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserPushSubscriptionsRequestPlatform>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePlatform = default; _explicitNullProperties?.Remove("platform"); AdditionalData["platform"] = unknown; } else { Platform = parsed; AdditionalData.Remove("platform"); } } },
             };
         }
         /// <summary>

@@ -17,21 +17,24 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("has_hash_cache") is { } nullNodeHasHashCache && nullNodeHasHashCache.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasHashCache = null;
-            if (parseNode.GetChildNode("has_lookup_table") is { } nullNodeHasLookupTable && nullNodeHasLookupTable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasLookupTable = null;
-            if (parseNode.GetChildNode("version") is { } nullNodeVersion && nullNodeVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Version = null;
+            if (parseNode.GetChildNode("has_hash_cache") is null) { _explicitNullValueHasHashCache = default!; _explicitNullProperties?.Remove("has_hash_cache"); }
+            else if (parseNode.GetChildNode("has_hash_cache") is { } nullNodeHasHashCache && nullNodeHasHashCache.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasHashCache = null;
+            if (parseNode.GetChildNode("has_lookup_table") is null) { _explicitNullValueHasLookupTable = default!; _explicitNullProperties?.Remove("has_lookup_table"); }
+            else if (parseNode.GetChildNode("has_lookup_table") is { } nullNodeHasLookupTable && nullNodeHasLookupTable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasLookupTable = null;
+            if (parseNode.GetChildNode("version") is null) { _explicitNullValueVersion = default!; _explicitNullProperties?.Remove("version"); }
+            else if (parseNode.GetChildNode("version") is { } nullNodeVersion && nullNodeVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Version = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The has_hash_cache property</summary>
-        public bool? HasHashCache { get => _explicitNullValueHasHashCache; set { _explicitNullValueHasHashCache = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_hash_cache"); else _explicitNullProperties?.Remove("has_hash_cache"); } }
+        public bool? HasHashCache { get => _explicitNullValueHasHashCache; set { _explicitNullValueHasHashCache = value; AdditionalData?.Remove("has_hash_cache"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_hash_cache"); else _explicitNullProperties?.Remove("has_hash_cache"); } }
         private bool? _explicitNullValueHasHashCache = default!;
         /// <summary>The has_lookup_table property</summary>
-        public bool? HasLookupTable { get => _explicitNullValueHasLookupTable; set { _explicitNullValueHasLookupTable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_lookup_table"); else _explicitNullProperties?.Remove("has_lookup_table"); } }
+        public bool? HasLookupTable { get => _explicitNullValueHasLookupTable; set { _explicitNullValueHasLookupTable = value; AdditionalData?.Remove("has_lookup_table"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_lookup_table"); else _explicitNullProperties?.Remove("has_lookup_table"); } }
         private bool? _explicitNullValueHasLookupTable = default!;
         /// <summary>The version property</summary>
-        public int? Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("version"); else _explicitNullProperties?.Remove("version"); } }
+        public int? Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; AdditionalData?.Remove("version"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("version"); else _explicitNullProperties?.Remove("version"); } }
         private int? _explicitNullValueVersion = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthBitmap"/> and sets the default values.

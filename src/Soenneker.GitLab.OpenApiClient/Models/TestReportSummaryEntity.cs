@@ -17,8 +17,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("test_suites") is { } nullNodeTestSuites && nullNodeTestSuites.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TestSuites = null;
-            if (parseNode.GetChildNode("total") is { } nullNodeTotal && nullNodeTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Total = null;
+            if (parseNode.GetChildNode("test_suites") is null) { _explicitNullValueTestSuites = default!; _explicitNullProperties?.Remove("test_suites"); }
+            else if (parseNode.GetChildNode("test_suites") is { } nullNodeTestSuites && nullNodeTestSuites.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TestSuites = null;
+            if (parseNode.GetChildNode("total") is null) { _explicitNullValueTotal = default!; _explicitNullProperties?.Remove("total"); }
+            else if (parseNode.GetChildNode("total") is { } nullNodeTotal && nullNodeTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Total = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The test_suites property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.TestSuiteSummaryEntity? TestSuites { get => _explicitNullValueTestSuites; set { _explicitNullValueTestSuites = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test_suites"); else _explicitNullProperties?.Remove("test_suites"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.TestSuiteSummaryEntity? TestSuites { get => _explicitNullValueTestSuites; set { _explicitNullValueTestSuites = value; AdditionalData?.Remove("test_suites"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test_suites"); else _explicitNullProperties?.Remove("test_suites"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.TestSuiteSummaryEntity? _explicitNullValueTestSuites = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.TestSuiteSummaryEntity TestSuites { get => _explicitNullValueTestSuites; set { _explicitNullValueTestSuites = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test_suites"); else _explicitNullProperties?.Remove("test_suites"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.TestSuiteSummaryEntity TestSuites { get => _explicitNullValueTestSuites; set { _explicitNullValueTestSuites = value; AdditionalData?.Remove("test_suites"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test_suites"); else _explicitNullProperties?.Remove("test_suites"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.TestSuiteSummaryEntity _explicitNullValueTestSuites = default!;
 #endif
         /// <summary>The total property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.TestReportSummaryEntityTotalProperty? Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.TestReportSummaryEntityTotalProperty? Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; AdditionalData?.Remove("total"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.TestReportSummaryEntityTotalProperty? _explicitNullValueTotal = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.TestReportSummaryEntityTotalProperty Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.TestReportSummaryEntityTotalProperty Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; AdditionalData?.Remove("total"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.TestReportSummaryEntityTotalProperty _explicitNullValueTotal = default!;
 #endif
         /// <summary>

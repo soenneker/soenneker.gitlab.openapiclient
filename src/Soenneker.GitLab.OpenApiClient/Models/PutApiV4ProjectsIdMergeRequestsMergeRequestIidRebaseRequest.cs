@@ -17,13 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("skip_ci") is { } nullNodeSkipCi && nullNodeSkipCi.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SkipCi = null;
+            if (parseNode.GetChildNode("skip_ci") is null) { _explicitNullValueSkipCi = default!; _explicitNullProperties?.Remove("skip_ci"); }
+            else if (parseNode.GetChildNode("skip_ci") is { } nullNodeSkipCi && nullNodeSkipCi.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SkipCi = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>If `true`, skips creating a CI pipeline.</summary>
-        public bool? SkipCi { get => _explicitNullValueSkipCi; set { _explicitNullValueSkipCi = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skip_ci"); else _explicitNullProperties?.Remove("skip_ci"); } }
+        public bool? SkipCi { get => _explicitNullValueSkipCi; set { _explicitNullValueSkipCi = value; AdditionalData?.Remove("skip_ci"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skip_ci"); else _explicitNullProperties?.Remove("skip_ci"); } }
         private bool? _explicitNullValueSkipCi = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdMergeRequestsMergeRequestIidRebaseRequest"/> and sets the default values.

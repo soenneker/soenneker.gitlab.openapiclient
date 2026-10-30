@@ -17,33 +17,50 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("additional_context") is { } nullNodeAdditionalContext && nullNodeAdditionalContext.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdditionalContext = null;
-            if (parseNode.GetChildNode("agent_privileges") is { } nullNodeAgentPrivileges && nullNodeAgentPrivileges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgentPrivileges = null;
-            if (parseNode.GetChildNode("ai_catalog_item_consumer_id") is { } nullNodeAiCatalogItemConsumerId && nullNodeAiCatalogItemConsumerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AiCatalogItemConsumerId = null;
-            if (parseNode.GetChildNode("ai_catalog_item_version_id") is { } nullNodeAiCatalogItemVersionId && nullNodeAiCatalogItemVersionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AiCatalogItemVersionId = null;
-            if (parseNode.GetChildNode("allow_agent_to_request_user") is { } nullNodeAllowAgentToRequestUser && nullNodeAllowAgentToRequestUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowAgentToRequestUser = null;
-            if (parseNode.GetChildNode("environment") is { } nullNodeEnvironment && nullNodeEnvironment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Environment = null;
-            if (parseNode.GetChildNode("goal") is { } nullNodeGoal && nullNodeGoal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Goal = null;
-            if (parseNode.GetChildNode("image") is { } nullNodeImage && nullNodeImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Image = null;
-            if (parseNode.GetChildNode("issue_id") is { } nullNodeIssueId && nullNodeIssueId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueId = null;
-            if (parseNode.GetChildNode("merge_request_id") is { } nullNodeMergeRequestId && nullNodeMergeRequestId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequestId = null;
-            if (parseNode.GetChildNode("namespace_id") is { } nullNodeNamespaceId && nullNodeNamespaceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NamespaceId = null;
-            if (parseNode.GetChildNode("pre_approved_agent_privileges") is { } nullNodePreApprovedAgentPrivileges && nullNodePreApprovedAgentPrivileges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreApprovedAgentPrivileges = null;
-            if (parseNode.GetChildNode("project_id") is { } nullNodeProjectId && nullNodeProjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectId = null;
-            if (parseNode.GetChildNode("source") is { } nullNodeSource && nullNodeSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Source = null;
-            if (parseNode.GetChildNode("source_branch") is { } nullNodeSourceBranch && nullNodeSourceBranch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceBranch = null;
-            if (parseNode.GetChildNode("start_workflow") is { } nullNodeStartWorkflow && nullNodeStartWorkflow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartWorkflow = null;
-            if (parseNode.GetChildNode("workflow_definition") is { } nullNodeWorkflowDefinition && nullNodeWorkflowDefinition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowDefinition = null;
+            if (parseNode.GetChildNode("additional_context") is null) { _explicitNullValueAdditionalContext = default!; _explicitNullProperties?.Remove("additional_context"); }
+            else if (parseNode.GetChildNode("additional_context") is { } nullNodeAdditionalContext && nullNodeAdditionalContext.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdditionalContext = null;
+            if (parseNode.GetChildNode("agent_privileges") is null) { _explicitNullValueAgentPrivileges = default!; _explicitNullProperties?.Remove("agent_privileges"); }
+            else if (parseNode.GetChildNode("agent_privileges") is { } nullNodeAgentPrivileges && nullNodeAgentPrivileges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgentPrivileges = null;
+            if (parseNode.GetChildNode("ai_catalog_item_consumer_id") is null) { _explicitNullValueAiCatalogItemConsumerId = default!; _explicitNullProperties?.Remove("ai_catalog_item_consumer_id"); }
+            else if (parseNode.GetChildNode("ai_catalog_item_consumer_id") is { } nullNodeAiCatalogItemConsumerId && nullNodeAiCatalogItemConsumerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AiCatalogItemConsumerId = null;
+            if (parseNode.GetChildNode("ai_catalog_item_version_id") is null) { _explicitNullValueAiCatalogItemVersionId = default!; _explicitNullProperties?.Remove("ai_catalog_item_version_id"); }
+            else if (parseNode.GetChildNode("ai_catalog_item_version_id") is { } nullNodeAiCatalogItemVersionId && nullNodeAiCatalogItemVersionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AiCatalogItemVersionId = null;
+            if (parseNode.GetChildNode("allow_agent_to_request_user") is null) { _explicitNullValueAllowAgentToRequestUser = default!; _explicitNullProperties?.Remove("allow_agent_to_request_user"); }
+            else if (parseNode.GetChildNode("allow_agent_to_request_user") is { } nullNodeAllowAgentToRequestUser && nullNodeAllowAgentToRequestUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowAgentToRequestUser = null;
+            if (parseNode.GetChildNode("environment") is null) { _explicitNullValueEnvironment = default!; _explicitNullProperties?.Remove("environment"); }
+            else if (parseNode.GetChildNode("environment") is { } nullNodeEnvironment && nullNodeEnvironment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Environment = null;
+            if (parseNode.GetChildNode("goal") is null) { _explicitNullValueGoal = default!; _explicitNullProperties?.Remove("goal"); }
+            else if (parseNode.GetChildNode("goal") is { } nullNodeGoal && nullNodeGoal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Goal = null;
+            if (parseNode.GetChildNode("image") is null) { _explicitNullValueImage = default!; _explicitNullProperties?.Remove("image"); }
+            else if (parseNode.GetChildNode("image") is { } nullNodeImage && nullNodeImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Image = null;
+            if (parseNode.GetChildNode("issue_id") is null) { _explicitNullValueIssueId = default!; _explicitNullProperties?.Remove("issue_id"); }
+            else if (parseNode.GetChildNode("issue_id") is { } nullNodeIssueId && nullNodeIssueId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueId = null;
+            if (parseNode.GetChildNode("merge_request_id") is null) { _explicitNullValueMergeRequestId = default!; _explicitNullProperties?.Remove("merge_request_id"); }
+            else if (parseNode.GetChildNode("merge_request_id") is { } nullNodeMergeRequestId && nullNodeMergeRequestId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequestId = null;
+            if (parseNode.GetChildNode("namespace_id") is null) { _explicitNullValueNamespaceId = default!; _explicitNullProperties?.Remove("namespace_id"); }
+            else if (parseNode.GetChildNode("namespace_id") is { } nullNodeNamespaceId && nullNodeNamespaceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NamespaceId = null;
+            if (parseNode.GetChildNode("pre_approved_agent_privileges") is null) { _explicitNullValuePreApprovedAgentPrivileges = default!; _explicitNullProperties?.Remove("pre_approved_agent_privileges"); }
+            else if (parseNode.GetChildNode("pre_approved_agent_privileges") is { } nullNodePreApprovedAgentPrivileges && nullNodePreApprovedAgentPrivileges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreApprovedAgentPrivileges = null;
+            if (parseNode.GetChildNode("project_id") is null) { _explicitNullValueProjectId = default!; _explicitNullProperties?.Remove("project_id"); }
+            else if (parseNode.GetChildNode("project_id") is { } nullNodeProjectId && nullNodeProjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectId = null;
+            if (parseNode.GetChildNode("source") is null) { _explicitNullValueSource = default!; _explicitNullProperties?.Remove("source"); }
+            else if (parseNode.GetChildNode("source") is { } nullNodeSource && nullNodeSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Source = null;
+            if (parseNode.GetChildNode("source_branch") is null) { _explicitNullValueSourceBranch = default!; _explicitNullProperties?.Remove("source_branch"); }
+            else if (parseNode.GetChildNode("source_branch") is { } nullNodeSourceBranch && nullNodeSourceBranch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceBranch = null;
+            if (parseNode.GetChildNode("start_workflow") is null) { _explicitNullValueStartWorkflow = default!; _explicitNullProperties?.Remove("start_workflow"); }
+            else if (parseNode.GetChildNode("start_workflow") is { } nullNodeStartWorkflow && nullNodeStartWorkflow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartWorkflow = null;
+            if (parseNode.GetChildNode("workflow_definition") is null) { _explicitNullValueWorkflowDefinition = default!; _explicitNullProperties?.Remove("workflow_definition"); }
+            else if (parseNode.GetChildNode("workflow_definition") is { } nullNodeWorkflowDefinition && nullNodeWorkflowDefinition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowDefinition = null;
         }
 
         /// <summary>Additional context for the flow. Each element is an object with at least `Category` and `Content` keys. `Content` is a JSON-serialized string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsRequestAdditionalContextItem>? AdditionalContext { get => _explicitNullValueAdditionalContext; set { _explicitNullValueAdditionalContext = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_context"); else _explicitNullProperties?.Remove("additional_context"); } }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsRequestAdditionalContextItem>? AdditionalContext { get => _explicitNullValueAdditionalContext; set { _explicitNullValueAdditionalContext = value; AdditionalData?.Remove("additional_context"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_context"); else _explicitNullProperties?.Remove("additional_context"); } }
         private List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsRequestAdditionalContextItem>? _explicitNullValueAdditionalContext = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsRequestAdditionalContextItem> AdditionalContext { get => _explicitNullValueAdditionalContext; set { _explicitNullValueAdditionalContext = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_context"); else _explicitNullProperties?.Remove("additional_context"); } }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsRequestAdditionalContextItem> AdditionalContext { get => _explicitNullValueAdditionalContext; set { _explicitNullValueAdditionalContext = value; AdditionalData?.Remove("additional_context"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_context"); else _explicitNullProperties?.Remove("additional_context"); } }
         private List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsRequestAdditionalContextItem> _explicitNullValueAdditionalContext = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -51,105 +68,105 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The actions the agent is allowed to perform</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? AgentPrivileges { get => _explicitNullValueAgentPrivileges; set { _explicitNullValueAgentPrivileges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_privileges"); else _explicitNullProperties?.Remove("agent_privileges"); } }
+        public List<int?>? AgentPrivileges { get => _explicitNullValueAgentPrivileges; set { _explicitNullValueAgentPrivileges = value; AdditionalData?.Remove("agent_privileges"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_privileges"); else _explicitNullProperties?.Remove("agent_privileges"); } }
         private List<int?>? _explicitNullValueAgentPrivileges = default!;
 #nullable restore
 #else
-        public List<int?> AgentPrivileges { get => _explicitNullValueAgentPrivileges; set { _explicitNullValueAgentPrivileges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_privileges"); else _explicitNullProperties?.Remove("agent_privileges"); } }
+        public List<int?> AgentPrivileges { get => _explicitNullValueAgentPrivileges; set { _explicitNullValueAgentPrivileges = value; AdditionalData?.Remove("agent_privileges"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_privileges"); else _explicitNullProperties?.Remove("agent_privileges"); } }
         private List<int?> _explicitNullValueAgentPrivileges = default!;
 #endif
         /// <summary>The ID of AI Catalog ItemConsumer that configures which catalog item to execute.</summary>
-        public int? AiCatalogItemConsumerId { get => _explicitNullValueAiCatalogItemConsumerId; set { _explicitNullValueAiCatalogItemConsumerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_catalog_item_consumer_id"); else _explicitNullProperties?.Remove("ai_catalog_item_consumer_id"); } }
+        public int? AiCatalogItemConsumerId { get => _explicitNullValueAiCatalogItemConsumerId; set { _explicitNullValueAiCatalogItemConsumerId = value; AdditionalData?.Remove("ai_catalog_item_consumer_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_catalog_item_consumer_id"); else _explicitNullProperties?.Remove("ai_catalog_item_consumer_id"); } }
         private int? _explicitNullValueAiCatalogItemConsumerId = default!;
         /// <summary>ID of the AI Catalog item version that sourced the flow configuration used by the workflow.</summary>
-        public int? AiCatalogItemVersionId { get => _explicitNullValueAiCatalogItemVersionId; set { _explicitNullValueAiCatalogItemVersionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_catalog_item_version_id"); else _explicitNullProperties?.Remove("ai_catalog_item_version_id"); } }
+        public int? AiCatalogItemVersionId { get => _explicitNullValueAiCatalogItemVersionId; set { _explicitNullValueAiCatalogItemVersionId = value; AdditionalData?.Remove("ai_catalog_item_version_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_catalog_item_version_id"); else _explicitNullProperties?.Remove("ai_catalog_item_version_id"); } }
         private int? _explicitNullValueAiCatalogItemVersionId = default!;
         /// <summary>If `true`, the agent may pause to ask the user questions before proceeding. If `false`, the agent runs to completion without user input. Defaults to `true`.</summary>
-        public bool? AllowAgentToRequestUser { get => _explicitNullValueAllowAgentToRequestUser; set { _explicitNullValueAllowAgentToRequestUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_agent_to_request_user"); else _explicitNullProperties?.Remove("allow_agent_to_request_user"); } }
+        public bool? AllowAgentToRequestUser { get => _explicitNullValueAllowAgentToRequestUser; set { _explicitNullValueAllowAgentToRequestUser = value; AdditionalData?.Remove("allow_agent_to_request_user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_agent_to_request_user"); else _explicitNullProperties?.Remove("allow_agent_to_request_user"); } }
         private bool? _explicitNullValueAllowAgentToRequestUser = default!;
         /// <summary>Execution environment for the workflow.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsRequestEnvironment? Environment { get => _explicitNullValueEnvironment; set { _explicitNullValueEnvironment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("environment"); else _explicitNullProperties?.Remove("environment"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsRequestEnvironment? Environment { get => _explicitNullValueEnvironment; set { _explicitNullValueEnvironment = value; AdditionalData?.Remove("environment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("environment"); else _explicitNullProperties?.Remove("environment"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsRequestEnvironment? _explicitNullValueEnvironment = default!;
         /// <summary>Description of the task for the agent to complete, for example `Fix the failing pipeline`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Goal { get => _explicitNullValueGoal; set { _explicitNullValueGoal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("goal"); else _explicitNullProperties?.Remove("goal"); } }
+        public string? Goal { get => _explicitNullValueGoal; set { _explicitNullValueGoal = value; AdditionalData?.Remove("goal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("goal"); else _explicitNullProperties?.Remove("goal"); } }
         private string? _explicitNullValueGoal = default!;
 #nullable restore
 #else
-        public string Goal { get => _explicitNullValueGoal; set { _explicitNullValueGoal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("goal"); else _explicitNullProperties?.Remove("goal"); } }
+        public string Goal { get => _explicitNullValueGoal; set { _explicitNullValueGoal = value; AdditionalData?.Remove("goal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("goal"); else _explicitNullProperties?.Remove("goal"); } }
         private string _explicitNullValueGoal = default!;
 #endif
         /// <summary>Container image to use for the flow. Applies only when the flow runs in a CI pipeline.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Image { get => _explicitNullValueImage; set { _explicitNullValueImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image"); else _explicitNullProperties?.Remove("image"); } }
+        public string? Image { get => _explicitNullValueImage; set { _explicitNullValueImage = value; AdditionalData?.Remove("image"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image"); else _explicitNullProperties?.Remove("image"); } }
         private string? _explicitNullValueImage = default!;
 #nullable restore
 #else
-        public string Image { get => _explicitNullValueImage; set { _explicitNullValueImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image"); else _explicitNullProperties?.Remove("image"); } }
+        public string Image { get => _explicitNullValueImage; set { _explicitNullValueImage = value; AdditionalData?.Remove("image"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image"); else _explicitNullProperties?.Remove("image"); } }
         private string _explicitNullValueImage = default!;
 #endif
         /// <summary>Internal ID of the issue to associate the flow with. Requires `project_id`.</summary>
-        public int? IssueId { get => _explicitNullValueIssueId; set { _explicitNullValueIssueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issue_id"); else _explicitNullProperties?.Remove("issue_id"); } }
+        public int? IssueId { get => _explicitNullValueIssueId; set { _explicitNullValueIssueId = value; AdditionalData?.Remove("issue_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issue_id"); else _explicitNullProperties?.Remove("issue_id"); } }
         private int? _explicitNullValueIssueId = default!;
         /// <summary>Internal ID of the merge request to associate the flow with. Requires `project_id`.</summary>
-        public int? MergeRequestId { get => _explicitNullValueMergeRequestId; set { _explicitNullValueMergeRequestId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_request_id"); else _explicitNullProperties?.Remove("merge_request_id"); } }
+        public int? MergeRequestId { get => _explicitNullValueMergeRequestId; set { _explicitNullValueMergeRequestId = value; AdditionalData?.Remove("merge_request_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_request_id"); else _explicitNullProperties?.Remove("merge_request_id"); } }
         private int? _explicitNullValueMergeRequestId = default!;
         /// <summary>ID or path of the namespace to associate the flow with.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NamespaceId { get => _explicitNullValueNamespaceId; set { _explicitNullValueNamespaceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace_id"); else _explicitNullProperties?.Remove("namespace_id"); } }
+        public string? NamespaceId { get => _explicitNullValueNamespaceId; set { _explicitNullValueNamespaceId = value; AdditionalData?.Remove("namespace_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace_id"); else _explicitNullProperties?.Remove("namespace_id"); } }
         private string? _explicitNullValueNamespaceId = default!;
 #nullable restore
 #else
-        public string NamespaceId { get => _explicitNullValueNamespaceId; set { _explicitNullValueNamespaceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace_id"); else _explicitNullProperties?.Remove("namespace_id"); } }
+        public string NamespaceId { get => _explicitNullValueNamespaceId; set { _explicitNullValueNamespaceId = value; AdditionalData?.Remove("namespace_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace_id"); else _explicitNullProperties?.Remove("namespace_id"); } }
         private string _explicitNullValueNamespaceId = default!;
 #endif
         /// <summary>Privilege IDs the agent can use without asking for user approval. Must be a subset of `agent_privileges`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? PreApprovedAgentPrivileges { get => _explicitNullValuePreApprovedAgentPrivileges; set { _explicitNullValuePreApprovedAgentPrivileges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pre_approved_agent_privileges"); else _explicitNullProperties?.Remove("pre_approved_agent_privileges"); } }
+        public List<int?>? PreApprovedAgentPrivileges { get => _explicitNullValuePreApprovedAgentPrivileges; set { _explicitNullValuePreApprovedAgentPrivileges = value; AdditionalData?.Remove("pre_approved_agent_privileges"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pre_approved_agent_privileges"); else _explicitNullProperties?.Remove("pre_approved_agent_privileges"); } }
         private List<int?>? _explicitNullValuePreApprovedAgentPrivileges = default!;
 #nullable restore
 #else
-        public List<int?> PreApprovedAgentPrivileges { get => _explicitNullValuePreApprovedAgentPrivileges; set { _explicitNullValuePreApprovedAgentPrivileges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pre_approved_agent_privileges"); else _explicitNullProperties?.Remove("pre_approved_agent_privileges"); } }
+        public List<int?> PreApprovedAgentPrivileges { get => _explicitNullValuePreApprovedAgentPrivileges; set { _explicitNullValuePreApprovedAgentPrivileges = value; AdditionalData?.Remove("pre_approved_agent_privileges"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pre_approved_agent_privileges"); else _explicitNullProperties?.Remove("pre_approved_agent_privileges"); } }
         private List<int?> _explicitNullValuePreApprovedAgentPrivileges = default!;
 #endif
         /// <summary>ID or path of the project to associate the flow with.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_id"); else _explicitNullProperties?.Remove("project_id"); } }
+        public string? ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; AdditionalData?.Remove("project_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_id"); else _explicitNullProperties?.Remove("project_id"); } }
         private string? _explicitNullValueProjectId = default!;
 #nullable restore
 #else
-        public string ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_id"); else _explicitNullProperties?.Remove("project_id"); } }
+        public string ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; AdditionalData?.Remove("project_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_id"); else _explicitNullProperties?.Remove("project_id"); } }
         private string _explicitNullValueProjectId = default!;
 #endif
         /// <summary>Where the session was triggered from in the UI.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsRequestSource? Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsRequestSource? Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; AdditionalData?.Remove("source"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsRequestSource? _explicitNullValueSource = default!;
         /// <summary>Source branch for the flow. When not specified, a flow whose goal names a pipeline or merge request, such as fix_pipeline/v1, uses its branch, and other flows use the default branch. Applies only when the flow runs in a CI pipeline.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SourceBranch { get => _explicitNullValueSourceBranch; set { _explicitNullValueSourceBranch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_branch"); else _explicitNullProperties?.Remove("source_branch"); } }
+        public string? SourceBranch { get => _explicitNullValueSourceBranch; set { _explicitNullValueSourceBranch = value; AdditionalData?.Remove("source_branch"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_branch"); else _explicitNullProperties?.Remove("source_branch"); } }
         private string? _explicitNullValueSourceBranch = default!;
 #nullable restore
 #else
-        public string SourceBranch { get => _explicitNullValueSourceBranch; set { _explicitNullValueSourceBranch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_branch"); else _explicitNullProperties?.Remove("source_branch"); } }
+        public string SourceBranch { get => _explicitNullValueSourceBranch; set { _explicitNullValueSourceBranch = value; AdditionalData?.Remove("source_branch"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_branch"); else _explicitNullProperties?.Remove("source_branch"); } }
         private string _explicitNullValueSourceBranch = default!;
 #endif
         /// <summary>When true, starts the flow after creating it.</summary>
-        public bool? StartWorkflow { get => _explicitNullValueStartWorkflow; set { _explicitNullValueStartWorkflow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_workflow"); else _explicitNullProperties?.Remove("start_workflow"); } }
+        public bool? StartWorkflow { get => _explicitNullValueStartWorkflow; set { _explicitNullValueStartWorkflow = value; AdditionalData?.Remove("start_workflow"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_workflow"); else _explicitNullProperties?.Remove("start_workflow"); } }
         private bool? _explicitNullValueStartWorkflow = default!;
         /// <summary>workflow type based on its capability</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkflowDefinition { get => _explicitNullValueWorkflowDefinition; set { _explicitNullValueWorkflowDefinition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_definition"); else _explicitNullProperties?.Remove("workflow_definition"); } }
+        public string? WorkflowDefinition { get => _explicitNullValueWorkflowDefinition; set { _explicitNullValueWorkflowDefinition = value; AdditionalData?.Remove("workflow_definition"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_definition"); else _explicitNullProperties?.Remove("workflow_definition"); } }
         private string? _explicitNullValueWorkflowDefinition = default!;
 #nullable restore
 #else
-        public string WorkflowDefinition { get => _explicitNullValueWorkflowDefinition; set { _explicitNullValueWorkflowDefinition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_definition"); else _explicitNullProperties?.Remove("workflow_definition"); } }
+        public string WorkflowDefinition { get => _explicitNullValueWorkflowDefinition; set { _explicitNullValueWorkflowDefinition = value; AdditionalData?.Remove("workflow_definition"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_definition"); else _explicitNullProperties?.Remove("workflow_definition"); } }
         private string _explicitNullValueWorkflowDefinition = default!;
 #endif
         /// <summary>
@@ -182,7 +199,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "ai_catalog_item_consumer_id", n => { AiCatalogItemConsumerId = n.GetIntValue(); } },
                 { "ai_catalog_item_version_id", n => { AiCatalogItemVersionId = n.GetIntValue(); } },
                 { "allow_agent_to_request_user", n => { AllowAgentToRequestUser = n.GetBoolValue(); } },
-                { "environment", n => { Environment = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsRequestEnvironment>(); } },
+                { "environment", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsRequestEnvironment>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueEnvironment = default; _explicitNullProperties?.Remove("environment"); AdditionalData["environment"] = unknown; } else { Environment = parsed; AdditionalData.Remove("environment"); } } },
                 { "goal", n => { Goal = n.GetStringValue(); } },
                 { "image", n => { Image = n.GetStringValue(); } },
                 { "issue_id", n => { IssueId = n.GetIntValue(); } },
@@ -190,7 +207,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "namespace_id", n => { NamespaceId = n.GetStringValue(); } },
                 { "pre_approved_agent_privileges", n => { PreApprovedAgentPrivileges = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
                 { "project_id", n => { ProjectId = n.GetStringValue(); } },
-                { "source", n => { Source = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsRequestSource>(); } },
+                { "source", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsRequestSource>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSource = default; _explicitNullProperties?.Remove("source"); AdditionalData["source"] = unknown; } else { Source = parsed; AdditionalData.Remove("source"); } } },
                 { "source_branch", n => { SourceBranch = n.GetStringValue(); } },
                 { "start_workflow", n => { StartWorkflow = n.GetBoolValue(); } },
                 { "workflow_definition", n => { WorkflowDefinition = n.GetStringValue(); } },

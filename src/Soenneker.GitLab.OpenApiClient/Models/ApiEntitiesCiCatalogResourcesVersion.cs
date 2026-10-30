@@ -17,7 +17,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("catalog_url") is { } nullNodeCatalogUrl && nullNodeCatalogUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CatalogUrl = null;
+            if (parseNode.GetChildNode("catalog_url") is null) { _explicitNullValueCatalogUrl = default!; _explicitNullProperties?.Remove("catalog_url"); }
+            else if (parseNode.GetChildNode("catalog_url") is { } nullNodeCatalogUrl && nullNodeCatalogUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CatalogUrl = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The catalog_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CatalogUrl { get => _explicitNullValueCatalogUrl; set { _explicitNullValueCatalogUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("catalog_url"); else _explicitNullProperties?.Remove("catalog_url"); } }
+        public string? CatalogUrl { get => _explicitNullValueCatalogUrl; set { _explicitNullValueCatalogUrl = value; AdditionalData?.Remove("catalog_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("catalog_url"); else _explicitNullProperties?.Remove("catalog_url"); } }
         private string? _explicitNullValueCatalogUrl = default!;
 #nullable restore
 #else
-        public string CatalogUrl { get => _explicitNullValueCatalogUrl; set { _explicitNullValueCatalogUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("catalog_url"); else _explicitNullProperties?.Remove("catalog_url"); } }
+        public string CatalogUrl { get => _explicitNullValueCatalogUrl; set { _explicitNullValueCatalogUrl = value; AdditionalData?.Remove("catalog_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("catalog_url"); else _explicitNullProperties?.Remove("catalog_url"); } }
         private string _explicitNullValueCatalogUrl = default!;
 #endif
         /// <summary>

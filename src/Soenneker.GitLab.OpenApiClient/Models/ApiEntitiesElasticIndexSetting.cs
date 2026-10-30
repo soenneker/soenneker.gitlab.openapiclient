@@ -17,9 +17,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("alias_name") is { } nullNodeAliasName && nullNodeAliasName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AliasName = null;
-            if (parseNode.GetChildNode("number_of_replicas") is { } nullNodeNumberOfReplicas && nullNodeNumberOfReplicas.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberOfReplicas = null;
-            if (parseNode.GetChildNode("number_of_shards") is { } nullNodeNumberOfShards && nullNodeNumberOfShards.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberOfShards = null;
+            if (parseNode.GetChildNode("alias_name") is null) { _explicitNullValueAliasName = default!; _explicitNullProperties?.Remove("alias_name"); }
+            else if (parseNode.GetChildNode("alias_name") is { } nullNodeAliasName && nullNodeAliasName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AliasName = null;
+            if (parseNode.GetChildNode("number_of_replicas") is null) { _explicitNullValueNumberOfReplicas = default!; _explicitNullProperties?.Remove("number_of_replicas"); }
+            else if (parseNode.GetChildNode("number_of_replicas") is { } nullNodeNumberOfReplicas && nullNodeNumberOfReplicas.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberOfReplicas = null;
+            if (parseNode.GetChildNode("number_of_shards") is null) { _explicitNullValueNumberOfShards = default!; _explicitNullProperties?.Remove("number_of_shards"); }
+            else if (parseNode.GetChildNode("number_of_shards") is { } nullNodeNumberOfShards && nullNodeNumberOfShards.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberOfShards = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,18 +30,18 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Name of the Elasticsearch index alias.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AliasName { get => _explicitNullValueAliasName; set { _explicitNullValueAliasName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alias_name"); else _explicitNullProperties?.Remove("alias_name"); } }
+        public string? AliasName { get => _explicitNullValueAliasName; set { _explicitNullValueAliasName = value; AdditionalData?.Remove("alias_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alias_name"); else _explicitNullProperties?.Remove("alias_name"); } }
         private string? _explicitNullValueAliasName = default!;
 #nullable restore
 #else
-        public string AliasName { get => _explicitNullValueAliasName; set { _explicitNullValueAliasName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alias_name"); else _explicitNullProperties?.Remove("alias_name"); } }
+        public string AliasName { get => _explicitNullValueAliasName; set { _explicitNullValueAliasName = value; AdditionalData?.Remove("alias_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alias_name"); else _explicitNullProperties?.Remove("alias_name"); } }
         private string _explicitNullValueAliasName = default!;
 #endif
         /// <summary>Number of replicas for the Elasticsearch index.</summary>
-        public int? NumberOfReplicas { get => _explicitNullValueNumberOfReplicas; set { _explicitNullValueNumberOfReplicas = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("number_of_replicas"); else _explicitNullProperties?.Remove("number_of_replicas"); } }
+        public int? NumberOfReplicas { get => _explicitNullValueNumberOfReplicas; set { _explicitNullValueNumberOfReplicas = value; AdditionalData?.Remove("number_of_replicas"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("number_of_replicas"); else _explicitNullProperties?.Remove("number_of_replicas"); } }
         private int? _explicitNullValueNumberOfReplicas = default!;
         /// <summary>Number of shards for the Elasticsearch index.</summary>
-        public int? NumberOfShards { get => _explicitNullValueNumberOfShards; set { _explicitNullValueNumberOfShards = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("number_of_shards"); else _explicitNullProperties?.Remove("number_of_shards"); } }
+        public int? NumberOfShards { get => _explicitNullValueNumberOfShards; set { _explicitNullValueNumberOfShards = value; AdditionalData?.Remove("number_of_shards"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("number_of_shards"); else _explicitNullProperties?.Remove("number_of_shards"); } }
         private int? _explicitNullValueNumberOfShards = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesElasticIndexSetting"/> and sets the default values.

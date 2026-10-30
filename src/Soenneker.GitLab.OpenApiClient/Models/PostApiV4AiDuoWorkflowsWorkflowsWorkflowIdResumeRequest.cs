@@ -17,23 +17,25 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("human_approval") is { } nullNodeHumanApproval && nullNodeHumanApproval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HumanApproval = null;
-            if (parseNode.GetChildNode("human_message") is { } nullNodeHumanMessage && nullNodeHumanMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HumanMessage = null;
+            if (parseNode.GetChildNode("human_approval") is null) { _explicitNullValueHumanApproval = default!; _explicitNullProperties?.Remove("human_approval"); }
+            else if (parseNode.GetChildNode("human_approval") is { } nullNodeHumanApproval && nullNodeHumanApproval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HumanApproval = null;
+            if (parseNode.GetChildNode("human_message") is null) { _explicitNullValueHumanMessage = default!; _explicitNullProperties?.Remove("human_message"); }
+            else if (parseNode.GetChildNode("human_message") is { } nullNodeHumanMessage && nullNodeHumanMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HumanMessage = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>If `true`, the human approves resuming the workflow.</summary>
-        public bool? HumanApproval { get => _explicitNullValueHumanApproval; set { _explicitNullValueHumanApproval = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("human_approval"); else _explicitNullProperties?.Remove("human_approval"); } }
+        public bool? HumanApproval { get => _explicitNullValueHumanApproval; set { _explicitNullValueHumanApproval = value; AdditionalData?.Remove("human_approval"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("human_approval"); else _explicitNullProperties?.Remove("human_approval"); } }
         private bool? _explicitNullValueHumanApproval = default!;
         /// <summary>Message accompanying the human decision.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HumanMessage { get => _explicitNullValueHumanMessage; set { _explicitNullValueHumanMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("human_message"); else _explicitNullProperties?.Remove("human_message"); } }
+        public string? HumanMessage { get => _explicitNullValueHumanMessage; set { _explicitNullValueHumanMessage = value; AdditionalData?.Remove("human_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("human_message"); else _explicitNullProperties?.Remove("human_message"); } }
         private string? _explicitNullValueHumanMessage = default!;
 #nullable restore
 #else
-        public string HumanMessage { get => _explicitNullValueHumanMessage; set { _explicitNullValueHumanMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("human_message"); else _explicitNullProperties?.Remove("human_message"); } }
+        public string HumanMessage { get => _explicitNullValueHumanMessage; set { _explicitNullValueHumanMessage = value; AdditionalData?.Remove("human_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("human_message"); else _explicitNullProperties?.Remove("human_message"); } }
         private string _explicitNullValueHumanMessage = default!;
 #endif
         /// <summary>

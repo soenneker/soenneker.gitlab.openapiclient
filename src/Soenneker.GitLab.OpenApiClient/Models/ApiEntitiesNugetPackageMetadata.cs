@@ -17,9 +17,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("catalogEntry") is { } nullNodeCatalogEntry && nullNodeCatalogEntry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CatalogEntry = null;
-            if (parseNode.GetChildNode("@id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("packageContent") is { } nullNodePackageContent && nullNodePackageContent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageContent = null;
+            if (parseNode.GetChildNode("catalogEntry") is null) { _explicitNullValueCatalogEntry = default!; _explicitNullProperties?.Remove("catalogEntry"); }
+            else if (parseNode.GetChildNode("catalogEntry") is { } nullNodeCatalogEntry && nullNodeCatalogEntry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CatalogEntry = null;
+            if (parseNode.GetChildNode("@id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("@id"); }
+            else if (parseNode.GetChildNode("@id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("packageContent") is null) { _explicitNullValuePackageContent = default!; _explicitNullProperties?.Remove("packageContent"); }
+            else if (parseNode.GetChildNode("packageContent") is { } nullNodePackageContent && nullNodePackageContent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageContent = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The catalogEntry property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNugetPackageMetadataCatalogEntry? CatalogEntry { get => _explicitNullValueCatalogEntry; set { _explicitNullValueCatalogEntry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("catalogEntry"); else _explicitNullProperties?.Remove("catalogEntry"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNugetPackageMetadataCatalogEntry? CatalogEntry { get => _explicitNullValueCatalogEntry; set { _explicitNullValueCatalogEntry = value; AdditionalData?.Remove("catalogEntry"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("catalogEntry"); else _explicitNullProperties?.Remove("catalogEntry"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNugetPackageMetadataCatalogEntry? _explicitNullValueCatalogEntry = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNugetPackageMetadataCatalogEntry CatalogEntry { get => _explicitNullValueCatalogEntry; set { _explicitNullValueCatalogEntry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("catalogEntry"); else _explicitNullProperties?.Remove("catalogEntry"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNugetPackageMetadataCatalogEntry CatalogEntry { get => _explicitNullValueCatalogEntry; set { _explicitNullValueCatalogEntry = value; AdditionalData?.Remove("catalogEntry"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("catalogEntry"); else _explicitNullProperties?.Remove("catalogEntry"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNugetPackageMetadataCatalogEntry _explicitNullValueCatalogEntry = default!;
 #endif
         /// <summary>The Id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("@id"); else _explicitNullProperties?.Remove("@id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("@id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("@id"); else _explicitNullProperties?.Remove("@id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("@id"); else _explicitNullProperties?.Remove("@id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("@id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("@id"); else _explicitNullProperties?.Remove("@id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>The packageContent property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PackageContent { get => _explicitNullValuePackageContent; set { _explicitNullValuePackageContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packageContent"); else _explicitNullProperties?.Remove("packageContent"); } }
+        public string? PackageContent { get => _explicitNullValuePackageContent; set { _explicitNullValuePackageContent = value; AdditionalData?.Remove("packageContent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packageContent"); else _explicitNullProperties?.Remove("packageContent"); } }
         private string? _explicitNullValuePackageContent = default!;
 #nullable restore
 #else
-        public string PackageContent { get => _explicitNullValuePackageContent; set { _explicitNullValuePackageContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packageContent"); else _explicitNullProperties?.Remove("packageContent"); } }
+        public string PackageContent { get => _explicitNullValuePackageContent; set { _explicitNullValuePackageContent = value; AdditionalData?.Remove("packageContent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packageContent"); else _explicitNullProperties?.Remove("packageContent"); } }
         private string _explicitNullValuePackageContent = default!;
 #endif
         /// <summary>

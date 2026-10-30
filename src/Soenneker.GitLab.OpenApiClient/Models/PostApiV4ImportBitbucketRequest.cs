@@ -17,11 +17,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("bitbucket_api_token") is { } nullNodeBitbucketApiToken && nullNodeBitbucketApiToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BitbucketApiToken = null;
-            if (parseNode.GetChildNode("bitbucket_email") is { } nullNodeBitbucketEmail && nullNodeBitbucketEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BitbucketEmail = null;
-            if (parseNode.GetChildNode("new_name") is { } nullNodeNewName && nullNodeNewName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewName = null;
-            if (parseNode.GetChildNode("repo_path") is { } nullNodeRepoPath && nullNodeRepoPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepoPath = null;
-            if (parseNode.GetChildNode("target_namespace") is { } nullNodeTargetNamespace && nullNodeTargetNamespace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetNamespace = null;
+            if (parseNode.GetChildNode("bitbucket_api_token") is null) { _explicitNullValueBitbucketApiToken = default!; _explicitNullProperties?.Remove("bitbucket_api_token"); }
+            else if (parseNode.GetChildNode("bitbucket_api_token") is { } nullNodeBitbucketApiToken && nullNodeBitbucketApiToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BitbucketApiToken = null;
+            if (parseNode.GetChildNode("bitbucket_email") is null) { _explicitNullValueBitbucketEmail = default!; _explicitNullProperties?.Remove("bitbucket_email"); }
+            else if (parseNode.GetChildNode("bitbucket_email") is { } nullNodeBitbucketEmail && nullNodeBitbucketEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BitbucketEmail = null;
+            if (parseNode.GetChildNode("new_name") is null) { _explicitNullValueNewName = default!; _explicitNullProperties?.Remove("new_name"); }
+            else if (parseNode.GetChildNode("new_name") is { } nullNodeNewName && nullNodeNewName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewName = null;
+            if (parseNode.GetChildNode("repo_path") is null) { _explicitNullValueRepoPath = default!; _explicitNullProperties?.Remove("repo_path"); }
+            else if (parseNode.GetChildNode("repo_path") is { } nullNodeRepoPath && nullNodeRepoPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepoPath = null;
+            if (parseNode.GetChildNode("target_namespace") is null) { _explicitNullValueTargetNamespace = default!; _explicitNullProperties?.Remove("target_namespace"); }
+            else if (parseNode.GetChildNode("target_namespace") is { } nullNodeTargetNamespace && nullNodeTargetNamespace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetNamespace = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,51 +34,51 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Bitbucket Cloud API token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BitbucketApiToken { get => _explicitNullValueBitbucketApiToken; set { _explicitNullValueBitbucketApiToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bitbucket_api_token"); else _explicitNullProperties?.Remove("bitbucket_api_token"); } }
+        public string? BitbucketApiToken { get => _explicitNullValueBitbucketApiToken; set { _explicitNullValueBitbucketApiToken = value; AdditionalData?.Remove("bitbucket_api_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bitbucket_api_token"); else _explicitNullProperties?.Remove("bitbucket_api_token"); } }
         private string? _explicitNullValueBitbucketApiToken = default!;
 #nullable restore
 #else
-        public string BitbucketApiToken { get => _explicitNullValueBitbucketApiToken; set { _explicitNullValueBitbucketApiToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bitbucket_api_token"); else _explicitNullProperties?.Remove("bitbucket_api_token"); } }
+        public string BitbucketApiToken { get => _explicitNullValueBitbucketApiToken; set { _explicitNullValueBitbucketApiToken = value; AdditionalData?.Remove("bitbucket_api_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bitbucket_api_token"); else _explicitNullProperties?.Remove("bitbucket_api_token"); } }
         private string _explicitNullValueBitbucketApiToken = default!;
 #endif
         /// <summary>Bitbucket Cloud email.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BitbucketEmail { get => _explicitNullValueBitbucketEmail; set { _explicitNullValueBitbucketEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bitbucket_email"); else _explicitNullProperties?.Remove("bitbucket_email"); } }
+        public string? BitbucketEmail { get => _explicitNullValueBitbucketEmail; set { _explicitNullValueBitbucketEmail = value; AdditionalData?.Remove("bitbucket_email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bitbucket_email"); else _explicitNullProperties?.Remove("bitbucket_email"); } }
         private string? _explicitNullValueBitbucketEmail = default!;
 #nullable restore
 #else
-        public string BitbucketEmail { get => _explicitNullValueBitbucketEmail; set { _explicitNullValueBitbucketEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bitbucket_email"); else _explicitNullProperties?.Remove("bitbucket_email"); } }
+        public string BitbucketEmail { get => _explicitNullValueBitbucketEmail; set { _explicitNullValueBitbucketEmail = value; AdditionalData?.Remove("bitbucket_email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bitbucket_email"); else _explicitNullProperties?.Remove("bitbucket_email"); } }
         private string _explicitNullValueBitbucketEmail = default!;
 #endif
         /// <summary>Name of the new project. Also used as the new path, so it must not start or end with a special character and must not contain consecutive special characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NewName { get => _explicitNullValueNewName; set { _explicitNullValueNewName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_name"); else _explicitNullProperties?.Remove("new_name"); } }
+        public string? NewName { get => _explicitNullValueNewName; set { _explicitNullValueNewName = value; AdditionalData?.Remove("new_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_name"); else _explicitNullProperties?.Remove("new_name"); } }
         private string? _explicitNullValueNewName = default!;
 #nullable restore
 #else
-        public string NewName { get => _explicitNullValueNewName; set { _explicitNullValueNewName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_name"); else _explicitNullProperties?.Remove("new_name"); } }
+        public string NewName { get => _explicitNullValueNewName; set { _explicitNullValueNewName = value; AdditionalData?.Remove("new_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_name"); else _explicitNullProperties?.Remove("new_name"); } }
         private string _explicitNullValueNewName = default!;
 #endif
         /// <summary>Path to the repository.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RepoPath { get => _explicitNullValueRepoPath; set { _explicitNullValueRepoPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repo_path"); else _explicitNullProperties?.Remove("repo_path"); } }
+        public string? RepoPath { get => _explicitNullValueRepoPath; set { _explicitNullValueRepoPath = value; AdditionalData?.Remove("repo_path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repo_path"); else _explicitNullProperties?.Remove("repo_path"); } }
         private string? _explicitNullValueRepoPath = default!;
 #nullable restore
 #else
-        public string RepoPath { get => _explicitNullValueRepoPath; set { _explicitNullValueRepoPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repo_path"); else _explicitNullProperties?.Remove("repo_path"); } }
+        public string RepoPath { get => _explicitNullValueRepoPath; set { _explicitNullValueRepoPath = value; AdditionalData?.Remove("repo_path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repo_path"); else _explicitNullProperties?.Remove("repo_path"); } }
         private string _explicitNullValueRepoPath = default!;
 #endif
         /// <summary>Namespace to import the repository into. Supports subgroups, for example `/namespace/subgroup`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TargetNamespace { get => _explicitNullValueTargetNamespace; set { _explicitNullValueTargetNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_namespace"); else _explicitNullProperties?.Remove("target_namespace"); } }
+        public string? TargetNamespace { get => _explicitNullValueTargetNamespace; set { _explicitNullValueTargetNamespace = value; AdditionalData?.Remove("target_namespace"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_namespace"); else _explicitNullProperties?.Remove("target_namespace"); } }
         private string? _explicitNullValueTargetNamespace = default!;
 #nullable restore
 #else
-        public string TargetNamespace { get => _explicitNullValueTargetNamespace; set { _explicitNullValueTargetNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_namespace"); else _explicitNullProperties?.Remove("target_namespace"); } }
+        public string TargetNamespace { get => _explicitNullValueTargetNamespace; set { _explicitNullValueTargetNamespace = value; AdditionalData?.Remove("target_namespace"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_namespace"); else _explicitNullProperties?.Remove("target_namespace"); } }
         private string _explicitNullValueTargetNamespace = default!;
 #endif
         /// <summary>

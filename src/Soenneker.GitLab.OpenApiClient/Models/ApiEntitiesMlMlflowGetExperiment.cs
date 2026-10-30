@@ -17,7 +17,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("experiment") is { } nullNodeExperiment && nullNodeExperiment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Experiment = null;
+            if (parseNode.GetChildNode("experiment") is null) { _explicitNullValueExperiment = default!; _explicitNullProperties?.Remove("experiment"); }
+            else if (parseNode.GetChildNode("experiment") is { } nullNodeExperiment && nullNodeExperiment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Experiment = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The experiment property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowExperiment? Experiment { get => _explicitNullValueExperiment; set { _explicitNullValueExperiment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("experiment"); else _explicitNullProperties?.Remove("experiment"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowExperiment? Experiment { get => _explicitNullValueExperiment; set { _explicitNullValueExperiment = value; AdditionalData?.Remove("experiment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("experiment"); else _explicitNullProperties?.Remove("experiment"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowExperiment? _explicitNullValueExperiment = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowExperiment Experiment { get => _explicitNullValueExperiment; set { _explicitNullValueExperiment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("experiment"); else _explicitNullProperties?.Remove("experiment"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowExperiment Experiment { get => _explicitNullValueExperiment; set { _explicitNullValueExperiment = value; AdditionalData?.Remove("experiment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("experiment"); else _explicitNullProperties?.Remove("experiment"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowExperiment _explicitNullValueExperiment = default!;
 #endif
         /// <summary>

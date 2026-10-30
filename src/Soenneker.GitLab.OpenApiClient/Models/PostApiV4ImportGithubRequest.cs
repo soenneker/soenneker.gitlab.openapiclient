@@ -17,14 +17,22 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("github_hostname") is { } nullNodeGithubHostname && nullNodeGithubHostname.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GithubHostname = null;
-            if (parseNode.GetChildNode("new_name") is { } nullNodeNewName && nullNodeNewName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewName = null;
-            if (parseNode.GetChildNode("optional_stages") is { } nullNodeOptionalStages && nullNodeOptionalStages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptionalStages = null;
-            if (parseNode.GetChildNode("pagination_limit") is { } nullNodePaginationLimit && nullNodePaginationLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaginationLimit = null;
-            if (parseNode.GetChildNode("personal_access_token") is { } nullNodePersonalAccessToken && nullNodePersonalAccessToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PersonalAccessToken = null;
-            if (parseNode.GetChildNode("repo_id") is { } nullNodeRepoId && nullNodeRepoId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepoId = null;
-            if (parseNode.GetChildNode("target_namespace") is { } nullNodeTargetNamespace && nullNodeTargetNamespace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetNamespace = null;
-            if (parseNode.GetChildNode("timeout_strategy") is { } nullNodeTimeoutStrategy && nullNodeTimeoutStrategy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeoutStrategy = null;
+            if (parseNode.GetChildNode("github_hostname") is null) { _explicitNullValueGithubHostname = default!; _explicitNullProperties?.Remove("github_hostname"); }
+            else if (parseNode.GetChildNode("github_hostname") is { } nullNodeGithubHostname && nullNodeGithubHostname.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GithubHostname = null;
+            if (parseNode.GetChildNode("new_name") is null) { _explicitNullValueNewName = default!; _explicitNullProperties?.Remove("new_name"); }
+            else if (parseNode.GetChildNode("new_name") is { } nullNodeNewName && nullNodeNewName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewName = null;
+            if (parseNode.GetChildNode("optional_stages") is null) { _explicitNullValueOptionalStages = default!; _explicitNullProperties?.Remove("optional_stages"); }
+            else if (parseNode.GetChildNode("optional_stages") is { } nullNodeOptionalStages && nullNodeOptionalStages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptionalStages = null;
+            if (parseNode.GetChildNode("pagination_limit") is null) { _explicitNullValuePaginationLimit = default!; _explicitNullProperties?.Remove("pagination_limit"); }
+            else if (parseNode.GetChildNode("pagination_limit") is { } nullNodePaginationLimit && nullNodePaginationLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaginationLimit = null;
+            if (parseNode.GetChildNode("personal_access_token") is null) { _explicitNullValuePersonalAccessToken = default!; _explicitNullProperties?.Remove("personal_access_token"); }
+            else if (parseNode.GetChildNode("personal_access_token") is { } nullNodePersonalAccessToken && nullNodePersonalAccessToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PersonalAccessToken = null;
+            if (parseNode.GetChildNode("repo_id") is null) { _explicitNullValueRepoId = default!; _explicitNullProperties?.Remove("repo_id"); }
+            else if (parseNode.GetChildNode("repo_id") is { } nullNodeRepoId && nullNodeRepoId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepoId = null;
+            if (parseNode.GetChildNode("target_namespace") is null) { _explicitNullValueTargetNamespace = default!; _explicitNullProperties?.Remove("target_namespace"); }
+            else if (parseNode.GetChildNode("target_namespace") is { } nullNodeTargetNamespace && nullNodeTargetNamespace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetNamespace = null;
+            if (parseNode.GetChildNode("timeout_strategy") is null) { _explicitNullValueTimeoutStrategy = default!; _explicitNullProperties?.Remove("timeout_strategy"); }
+            else if (parseNode.GetChildNode("timeout_strategy") is { } nullNodeTimeoutStrategy && nullNodeTimeoutStrategy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeoutStrategy = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -32,61 +40,61 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Custom GitHub Enterprise hostname. Do not set for GitHub.com. From GitLab 16.5 to GitLab 17.1, you must include the path `/api/v3`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GithubHostname { get => _explicitNullValueGithubHostname; set { _explicitNullValueGithubHostname = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("github_hostname"); else _explicitNullProperties?.Remove("github_hostname"); } }
+        public string? GithubHostname { get => _explicitNullValueGithubHostname; set { _explicitNullValueGithubHostname = value; AdditionalData?.Remove("github_hostname"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("github_hostname"); else _explicitNullProperties?.Remove("github_hostname"); } }
         private string? _explicitNullValueGithubHostname = default!;
 #nullable restore
 #else
-        public string GithubHostname { get => _explicitNullValueGithubHostname; set { _explicitNullValueGithubHostname = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("github_hostname"); else _explicitNullProperties?.Remove("github_hostname"); } }
+        public string GithubHostname { get => _explicitNullValueGithubHostname; set { _explicitNullValueGithubHostname = value; AdditionalData?.Remove("github_hostname"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("github_hostname"); else _explicitNullProperties?.Remove("github_hostname"); } }
         private string _explicitNullValueGithubHostname = default!;
 #endif
         /// <summary>Name of the new project. Also used as the new path, so it must not start or end with a special character and must not contain consecutive special characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NewName { get => _explicitNullValueNewName; set { _explicitNullValueNewName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_name"); else _explicitNullProperties?.Remove("new_name"); } }
+        public string? NewName { get => _explicitNullValueNewName; set { _explicitNullValueNewName = value; AdditionalData?.Remove("new_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_name"); else _explicitNullProperties?.Remove("new_name"); } }
         private string? _explicitNullValueNewName = default!;
 #nullable restore
 #else
-        public string NewName { get => _explicitNullValueNewName; set { _explicitNullValueNewName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_name"); else _explicitNullProperties?.Remove("new_name"); } }
+        public string NewName { get => _explicitNullValueNewName; set { _explicitNullValueNewName = value; AdditionalData?.Remove("new_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_name"); else _explicitNullProperties?.Remove("new_name"); } }
         private string _explicitNullValueNewName = default!;
 #endif
         /// <summary>Additional items to import. For a list of items, see [select additional items to import](https://docs.gitlab.com/user/project/import/github/#select-additional-items-to-import).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ImportGithubRequestOptionalStagesProperty? OptionalStages { get => _explicitNullValueOptionalStages; set { _explicitNullValueOptionalStages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("optional_stages"); else _explicitNullProperties?.Remove("optional_stages"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ImportGithubRequestOptionalStagesProperty? OptionalStages { get => _explicitNullValueOptionalStages; set { _explicitNullValueOptionalStages = value; AdditionalData?.Remove("optional_stages"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("optional_stages"); else _explicitNullProperties?.Remove("optional_stages"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ImportGithubRequestOptionalStagesProperty? _explicitNullValueOptionalStages = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ImportGithubRequestOptionalStagesProperty OptionalStages { get => _explicitNullValueOptionalStages; set { _explicitNullValueOptionalStages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("optional_stages"); else _explicitNullProperties?.Remove("optional_stages"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ImportGithubRequestOptionalStagesProperty OptionalStages { get => _explicitNullValueOptionalStages; set { _explicitNullValueOptionalStages = value; AdditionalData?.Remove("optional_stages"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("optional_stages"); else _explicitNullProperties?.Remove("optional_stages"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ImportGithubRequestOptionalStagesProperty _explicitNullValueOptionalStages = default!;
 #endif
         /// <summary>Number of items retrieved per API request to GitHub. If omitted, defaults to `100`. Use a lower number for large repositories to reduce the risk of GitHub API errors, though this increases migration time.</summary>
-        public int? PaginationLimit { get => _explicitNullValuePaginationLimit; set { _explicitNullValuePaginationLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagination_limit"); else _explicitNullProperties?.Remove("pagination_limit"); } }
+        public int? PaginationLimit { get => _explicitNullValuePaginationLimit; set { _explicitNullValuePaginationLimit = value; AdditionalData?.Remove("pagination_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagination_limit"); else _explicitNullProperties?.Remove("pagination_limit"); } }
         private int? _explicitNullValuePaginationLimit = default!;
         /// <summary>GitHub personal access token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PersonalAccessToken { get => _explicitNullValuePersonalAccessToken; set { _explicitNullValuePersonalAccessToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("personal_access_token"); else _explicitNullProperties?.Remove("personal_access_token"); } }
+        public string? PersonalAccessToken { get => _explicitNullValuePersonalAccessToken; set { _explicitNullValuePersonalAccessToken = value; AdditionalData?.Remove("personal_access_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("personal_access_token"); else _explicitNullProperties?.Remove("personal_access_token"); } }
         private string? _explicitNullValuePersonalAccessToken = default!;
 #nullable restore
 #else
-        public string PersonalAccessToken { get => _explicitNullValuePersonalAccessToken; set { _explicitNullValuePersonalAccessToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("personal_access_token"); else _explicitNullProperties?.Remove("personal_access_token"); } }
+        public string PersonalAccessToken { get => _explicitNullValuePersonalAccessToken; set { _explicitNullValuePersonalAccessToken = value; AdditionalData?.Remove("personal_access_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("personal_access_token"); else _explicitNullProperties?.Remove("personal_access_token"); } }
         private string _explicitNullValuePersonalAccessToken = default!;
 #endif
         /// <summary>GitHub repository ID.</summary>
-        public int? RepoId { get => _explicitNullValueRepoId; set { _explicitNullValueRepoId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repo_id"); else _explicitNullProperties?.Remove("repo_id"); } }
+        public int? RepoId { get => _explicitNullValueRepoId; set { _explicitNullValueRepoId = value; AdditionalData?.Remove("repo_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repo_id"); else _explicitNullProperties?.Remove("repo_id"); } }
         private int? _explicitNullValueRepoId = default!;
         /// <summary>Namespace to import the repository into. Supports subgroups, for example `/namespace/subgroup`. Must not be blank.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TargetNamespace { get => _explicitNullValueTargetNamespace; set { _explicitNullValueTargetNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_namespace"); else _explicitNullProperties?.Remove("target_namespace"); } }
+        public string? TargetNamespace { get => _explicitNullValueTargetNamespace; set { _explicitNullValueTargetNamespace = value; AdditionalData?.Remove("target_namespace"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_namespace"); else _explicitNullProperties?.Remove("target_namespace"); } }
         private string? _explicitNullValueTargetNamespace = default!;
 #nullable restore
 #else
-        public string TargetNamespace { get => _explicitNullValueTargetNamespace; set { _explicitNullValueTargetNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_namespace"); else _explicitNullProperties?.Remove("target_namespace"); } }
+        public string TargetNamespace { get => _explicitNullValueTargetNamespace; set { _explicitNullValueTargetNamespace = value; AdditionalData?.Remove("target_namespace"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_namespace"); else _explicitNullProperties?.Remove("target_namespace"); } }
         private string _explicitNullValueTargetNamespace = default!;
 #endif
         /// <summary>Strategy for handling import timeouts. `optimistic` continues to the next stage of the import. `pessimistic` fails the import immediately. Defaults to `pessimistic`.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ImportGithubRequestTimeoutStrategy? TimeoutStrategy { get => _explicitNullValueTimeoutStrategy; set { _explicitNullValueTimeoutStrategy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeout_strategy"); else _explicitNullProperties?.Remove("timeout_strategy"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ImportGithubRequestTimeoutStrategy? TimeoutStrategy { get => _explicitNullValueTimeoutStrategy; set { _explicitNullValueTimeoutStrategy = value; AdditionalData?.Remove("timeout_strategy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeout_strategy"); else _explicitNullProperties?.Remove("timeout_strategy"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ImportGithubRequestTimeoutStrategy? _explicitNullValueTimeoutStrategy = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ImportGithubRequest"/> and sets the default values.
@@ -120,7 +128,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "personal_access_token", n => { PersonalAccessToken = n.GetStringValue(); } },
                 { "repo_id", n => { RepoId = n.GetIntValue(); } },
                 { "target_namespace", n => { TargetNamespace = n.GetStringValue(); } },
-                { "timeout_strategy", n => { TimeoutStrategy = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ImportGithubRequestTimeoutStrategy>(); } },
+                { "timeout_strategy", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ImportGithubRequestTimeoutStrategy>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTimeoutStrategy = default; _explicitNullProperties?.Remove("timeout_strategy"); AdditionalData["timeout_strategy"] = unknown; } else { TimeoutStrategy = parsed; AdditionalData.Remove("timeout_strategy"); } } },
             };
         }
         /// <summary>

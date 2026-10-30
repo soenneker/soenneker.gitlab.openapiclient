@@ -17,16 +17,26 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("assets") is { } nullNodeAssets && nullNodeAssets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Assets = null;
-            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
-            if (parseNode.GetChildNode("legacy_catalog_publish") is { } nullNodeLegacyCatalogPublish && nullNodeLegacyCatalogPublish.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LegacyCatalogPublish = null;
-            if (parseNode.GetChildNode("milestone_ids") is { } nullNodeMilestoneIds && nullNodeMilestoneIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MilestoneIds = null;
-            if (parseNode.GetChildNode("milestones") is { } nullNodeMilestones && nullNodeMilestones.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Milestones = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("ref") is { } nullNodeRef && nullNodeRef.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ref = null;
-            if (parseNode.GetChildNode("released_at") is { } nullNodeReleasedAt && nullNodeReleasedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReleasedAt = null;
-            if (parseNode.GetChildNode("tag_message") is { } nullNodeTagMessage && nullNodeTagMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TagMessage = null;
-            if (parseNode.GetChildNode("tag_name") is { } nullNodeTagName && nullNodeTagName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TagName = null;
+            if (parseNode.GetChildNode("assets") is null) { _explicitNullValueAssets = default!; _explicitNullProperties?.Remove("assets"); }
+            else if (parseNode.GetChildNode("assets") is { } nullNodeAssets && nullNodeAssets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Assets = null;
+            if (parseNode.GetChildNode("description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("description"); }
+            else if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("legacy_catalog_publish") is null) { _explicitNullValueLegacyCatalogPublish = default!; _explicitNullProperties?.Remove("legacy_catalog_publish"); }
+            else if (parseNode.GetChildNode("legacy_catalog_publish") is { } nullNodeLegacyCatalogPublish && nullNodeLegacyCatalogPublish.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LegacyCatalogPublish = null;
+            if (parseNode.GetChildNode("milestone_ids") is null) { _explicitNullValueMilestoneIds = default!; _explicitNullProperties?.Remove("milestone_ids"); }
+            else if (parseNode.GetChildNode("milestone_ids") is { } nullNodeMilestoneIds && nullNodeMilestoneIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MilestoneIds = null;
+            if (parseNode.GetChildNode("milestones") is null) { _explicitNullValueMilestones = default!; _explicitNullProperties?.Remove("milestones"); }
+            else if (parseNode.GetChildNode("milestones") is { } nullNodeMilestones && nullNodeMilestones.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Milestones = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("ref") is null) { _explicitNullValueRef = default!; _explicitNullProperties?.Remove("ref"); }
+            else if (parseNode.GetChildNode("ref") is { } nullNodeRef && nullNodeRef.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ref = null;
+            if (parseNode.GetChildNode("released_at") is null) { _explicitNullValueReleasedAt = default!; _explicitNullProperties?.Remove("released_at"); }
+            else if (parseNode.GetChildNode("released_at") is { } nullNodeReleasedAt && nullNodeReleasedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReleasedAt = null;
+            if (parseNode.GetChildNode("tag_message") is null) { _explicitNullValueTagMessage = default!; _explicitNullProperties?.Remove("tag_message"); }
+            else if (parseNode.GetChildNode("tag_message") is { } nullNodeTagMessage && nullNodeTagMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TagMessage = null;
+            if (parseNode.GetChildNode("tag_name") is null) { _explicitNullValueTagName = default!; _explicitNullProperties?.Remove("tag_name"); }
+            else if (parseNode.GetChildNode("tag_name") is { } nullNodeTagName && nullNodeTagName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TagName = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -34,87 +44,87 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Object that contains assets for the release.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdReleasesRequestAssets? Assets { get => _explicitNullValueAssets; set { _explicitNullValueAssets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assets"); else _explicitNullProperties?.Remove("assets"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdReleasesRequestAssets? Assets { get => _explicitNullValueAssets; set { _explicitNullValueAssets = value; AdditionalData?.Remove("assets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assets"); else _explicitNullProperties?.Remove("assets"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdReleasesRequestAssets? _explicitNullValueAssets = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdReleasesRequestAssets Assets { get => _explicitNullValueAssets; set { _explicitNullValueAssets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assets"); else _explicitNullProperties?.Remove("assets"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdReleasesRequestAssets Assets { get => _explicitNullValueAssets; set { _explicitNullValueAssets = value; AdditionalData?.Remove("assets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assets"); else _explicitNullProperties?.Remove("assets"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdReleasesRequestAssets _explicitNullValueAssets = default!;
 #endif
         /// <summary>Description of the release. You can use [Markdown](https://docs.gitlab.com/user/markdown/).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>If `true`, publishes the release to the CI catalog. This parameter is for internal use only and is planned for removal in a future release. If the `ci_release_cli_catalog_publish_option` feature flag is disabled, this parameter is ignored and the release publishes to the CI catalog as before.</summary>
-        public bool? LegacyCatalogPublish { get => _explicitNullValueLegacyCatalogPublish; set { _explicitNullValueLegacyCatalogPublish = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legacy_catalog_publish"); else _explicitNullProperties?.Remove("legacy_catalog_publish"); } }
+        public bool? LegacyCatalogPublish { get => _explicitNullValueLegacyCatalogPublish; set { _explicitNullValueLegacyCatalogPublish = value; AdditionalData?.Remove("legacy_catalog_publish"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legacy_catalog_publish"); else _explicitNullProperties?.Remove("legacy_catalog_publish"); } }
         private bool? _explicitNullValueLegacyCatalogPublish = default!;
         /// <summary>ID of each milestone the release is associated with. GitLab Premium customers can specify group milestones. Cannot be combined with the `milestones` parameter. Mutually exclusive with `milestones`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdReleasesRequestMilestoneIds? MilestoneIds { get => _explicitNullValueMilestoneIds; set { _explicitNullValueMilestoneIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("milestone_ids"); else _explicitNullProperties?.Remove("milestone_ids"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdReleasesRequestMilestoneIds? MilestoneIds { get => _explicitNullValueMilestoneIds; set { _explicitNullValueMilestoneIds = value; AdditionalData?.Remove("milestone_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("milestone_ids"); else _explicitNullProperties?.Remove("milestone_ids"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdReleasesRequestMilestoneIds? _explicitNullValueMilestoneIds = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdReleasesRequestMilestoneIds MilestoneIds { get => _explicitNullValueMilestoneIds; set { _explicitNullValueMilestoneIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("milestone_ids"); else _explicitNullProperties?.Remove("milestone_ids"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdReleasesRequestMilestoneIds MilestoneIds { get => _explicitNullValueMilestoneIds; set { _explicitNullValueMilestoneIds = value; AdditionalData?.Remove("milestone_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("milestone_ids"); else _explicitNullProperties?.Remove("milestone_ids"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdReleasesRequestMilestoneIds _explicitNullValueMilestoneIds = default!;
 #endif
         /// <summary>Title of each milestone the release is associated with. [GitLab Premium](https://about.gitlab.com/pricing/) customers can specify group milestones. Cannot be combined with the `milestone_ids` parameter. Mutually exclusive with `milestone_ids`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Milestones { get => _explicitNullValueMilestones; set { _explicitNullValueMilestones = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("milestones"); else _explicitNullProperties?.Remove("milestones"); } }
+        public List<string>? Milestones { get => _explicitNullValueMilestones; set { _explicitNullValueMilestones = value; AdditionalData?.Remove("milestones"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("milestones"); else _explicitNullProperties?.Remove("milestones"); } }
         private List<string>? _explicitNullValueMilestones = default!;
 #nullable restore
 #else
-        public List<string> Milestones { get => _explicitNullValueMilestones; set { _explicitNullValueMilestones = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("milestones"); else _explicitNullProperties?.Remove("milestones"); } }
+        public List<string> Milestones { get => _explicitNullValueMilestones; set { _explicitNullValueMilestones = value; AdditionalData?.Remove("milestones"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("milestones"); else _explicitNullProperties?.Remove("milestones"); } }
         private List<string> _explicitNullValueMilestones = default!;
 #endif
         /// <summary>Name of the release.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>If the tag named in `tag_name` doesn&apos;t exist, the release is created from this ref and tagged with `tag_name`. Can be a commit SHA, another tag name, or a branch name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Ref { get => _explicitNullValueRef; set { _explicitNullValueRef = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ref"); else _explicitNullProperties?.Remove("ref"); } }
+        public string? Ref { get => _explicitNullValueRef; set { _explicitNullValueRef = value; AdditionalData?.Remove("ref"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ref"); else _explicitNullProperties?.Remove("ref"); } }
         private string? _explicitNullValueRef = default!;
 #nullable restore
 #else
-        public string Ref { get => _explicitNullValueRef; set { _explicitNullValueRef = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ref"); else _explicitNullProperties?.Remove("ref"); } }
+        public string Ref { get => _explicitNullValueRef; set { _explicitNullValueRef = value; AdditionalData?.Remove("ref"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ref"); else _explicitNullProperties?.Remove("ref"); } }
         private string _explicitNullValueRef = default!;
 #endif
         /// <summary>Date and time for the release. Defaults to the current time. Only provide this field when creating an [upcoming](https://docs.gitlab.com/user/project/releases/#upcoming-releases) or [historical](https://docs.gitlab.com/user/project/releases/#historical-releases) release.</summary>
-        public DateTimeOffset? ReleasedAt { get => _explicitNullValueReleasedAt; set { _explicitNullValueReleasedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("released_at"); else _explicitNullProperties?.Remove("released_at"); } }
+        public DateTimeOffset? ReleasedAt { get => _explicitNullValueReleasedAt; set { _explicitNullValueReleasedAt = value; AdditionalData?.Remove("released_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("released_at"); else _explicitNullProperties?.Remove("released_at"); } }
         private DateTimeOffset? _explicitNullValueReleasedAt = default!;
         /// <summary>Message to use if creating a new annotated tag.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TagMessage { get => _explicitNullValueTagMessage; set { _explicitNullValueTagMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag_message"); else _explicitNullProperties?.Remove("tag_message"); } }
+        public string? TagMessage { get => _explicitNullValueTagMessage; set { _explicitNullValueTagMessage = value; AdditionalData?.Remove("tag_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag_message"); else _explicitNullProperties?.Remove("tag_message"); } }
         private string? _explicitNullValueTagMessage = default!;
 #nullable restore
 #else
-        public string TagMessage { get => _explicitNullValueTagMessage; set { _explicitNullValueTagMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag_message"); else _explicitNullProperties?.Remove("tag_message"); } }
+        public string TagMessage { get => _explicitNullValueTagMessage; set { _explicitNullValueTagMessage = value; AdditionalData?.Remove("tag_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag_message"); else _explicitNullProperties?.Remove("tag_message"); } }
         private string _explicitNullValueTagMessage = default!;
 #endif
         /// <summary>Tag the release is created from.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TagName { get => _explicitNullValueTagName; set { _explicitNullValueTagName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag_name"); else _explicitNullProperties?.Remove("tag_name"); } }
+        public string? TagName { get => _explicitNullValueTagName; set { _explicitNullValueTagName = value; AdditionalData?.Remove("tag_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag_name"); else _explicitNullProperties?.Remove("tag_name"); } }
         private string? _explicitNullValueTagName = default!;
 #nullable restore
 #else
-        public string TagName { get => _explicitNullValueTagName; set { _explicitNullValueTagName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag_name"); else _explicitNullProperties?.Remove("tag_name"); } }
+        public string TagName { get => _explicitNullValueTagName; set { _explicitNullValueTagName = value; AdditionalData?.Remove("tag_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag_name"); else _explicitNullProperties?.Remove("tag_name"); } }
         private string _explicitNullValueTagName = default!;
 #endif
         /// <summary>

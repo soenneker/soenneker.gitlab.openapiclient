@@ -17,7 +17,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("full_path") is { } nullNodeFullPath && nullNodeFullPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FullPath = null;
+            if (parseNode.GetChildNode("full_path") is null) { _explicitNullValueFullPath = default!; _explicitNullProperties?.Remove("full_path"); }
+            else if (parseNode.GetChildNode("full_path") is { } nullNodeFullPath && nullNodeFullPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FullPath = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Relative path of the entity to export.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FullPath { get => _explicitNullValueFullPath; set { _explicitNullValueFullPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("full_path"); else _explicitNullProperties?.Remove("full_path"); } }
+        public string? FullPath { get => _explicitNullValueFullPath; set { _explicitNullValueFullPath = value; AdditionalData?.Remove("full_path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("full_path"); else _explicitNullProperties?.Remove("full_path"); } }
         private string? _explicitNullValueFullPath = default!;
 #nullable restore
 #else
-        public string FullPath { get => _explicitNullValueFullPath; set { _explicitNullValueFullPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("full_path"); else _explicitNullProperties?.Remove("full_path"); } }
+        public string FullPath { get => _explicitNullValueFullPath; set { _explicitNullValueFullPath = value; AdditionalData?.Remove("full_path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("full_path"); else _explicitNullProperties?.Remove("full_path"); } }
         private string _explicitNullValueFullPath = default!;
 #endif
         /// <summary>

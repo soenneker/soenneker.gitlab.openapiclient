@@ -17,13 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("new_members_count") is { } nullNodeNewMembersCount && nullNodeNewMembersCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewMembersCount = null;
+            if (parseNode.GetChildNode("new_members_count") is null) { _explicitNullValueNewMembersCount = default!; _explicitNullProperties?.Remove("new_members_count"); }
+            else if (parseNode.GetChildNode("new_members_count") is { } nullNodeNewMembersCount && nullNodeNewMembersCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewMembersCount = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Number of new members. Limited to 1000</summary>
-        public int? NewMembersCount { get => _explicitNullValueNewMembersCount; set { _explicitNullValueNewMembersCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_members_count"); else _explicitNullProperties?.Remove("new_members_count"); } }
+        public int? NewMembersCount { get => _explicitNullValueNewMembersCount; set { _explicitNullValueNewMembersCount = value; AdditionalData?.Remove("new_members_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_members_count"); else _explicitNullProperties?.Remove("new_members_count"); } }
         private int? _explicitNullValueNewMembersCount = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAnalyticsGroupActivityNewMembersCount"/> and sets the default values.

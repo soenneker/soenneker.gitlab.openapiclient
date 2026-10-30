@@ -17,7 +17,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("artifact_uri") is { } nullNodeArtifactUri && nullNodeArtifactUri.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ArtifactUri = null;
+            if (parseNode.GetChildNode("artifact_uri") is null) { _explicitNullValueArtifactUri = default!; _explicitNullProperties?.Remove("artifact_uri"); }
+            else if (parseNode.GetChildNode("artifact_uri") is { } nullNodeArtifactUri && nullNodeArtifactUri.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ArtifactUri = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Download URI for MLflow artifact</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ArtifactUri { get => _explicitNullValueArtifactUri; set { _explicitNullValueArtifactUri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("artifact_uri"); else _explicitNullProperties?.Remove("artifact_uri"); } }
+        public string? ArtifactUri { get => _explicitNullValueArtifactUri; set { _explicitNullValueArtifactUri = value; AdditionalData?.Remove("artifact_uri"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("artifact_uri"); else _explicitNullProperties?.Remove("artifact_uri"); } }
         private string? _explicitNullValueArtifactUri = default!;
 #nullable restore
 #else
-        public string ArtifactUri { get => _explicitNullValueArtifactUri; set { _explicitNullValueArtifactUri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("artifact_uri"); else _explicitNullProperties?.Remove("artifact_uri"); } }
+        public string ArtifactUri { get => _explicitNullValueArtifactUri; set { _explicitNullValueArtifactUri = value; AdditionalData?.Remove("artifact_uri"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("artifact_uri"); else _explicitNullProperties?.Remove("artifact_uri"); } }
         private string _explicitNullValueArtifactUri = default!;
 #endif
         /// <summary>

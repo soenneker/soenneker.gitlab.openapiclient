@@ -17,9 +17,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("external_status_check") is { } nullNodeExternalStatusCheck && nullNodeExternalStatusCheck.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalStatusCheck = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("merge_request") is { } nullNodeMergeRequest && nullNodeMergeRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequest = null;
+            if (parseNode.GetChildNode("external_status_check") is null) { _explicitNullValueExternalStatusCheck = default!; _explicitNullProperties?.Remove("external_status_check"); }
+            else if (parseNode.GetChildNode("external_status_check") is { } nullNodeExternalStatusCheck && nullNodeExternalStatusCheck.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalStatusCheck = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("merge_request") is null) { _explicitNullValueMergeRequest = default!; _explicitNullProperties?.Remove("merge_request"); }
+            else if (parseNode.GetChildNode("merge_request") is { } nullNodeMergeRequest && nullNodeMergeRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequest = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,24 +30,24 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The external_status_check property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestsStatusCheckResponseExternalStatusCheck? ExternalStatusCheck { get => _explicitNullValueExternalStatusCheck; set { _explicitNullValueExternalStatusCheck = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_status_check"); else _explicitNullProperties?.Remove("external_status_check"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestsStatusCheckResponseExternalStatusCheck? ExternalStatusCheck { get => _explicitNullValueExternalStatusCheck; set { _explicitNullValueExternalStatusCheck = value; AdditionalData?.Remove("external_status_check"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_status_check"); else _explicitNullProperties?.Remove("external_status_check"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestsStatusCheckResponseExternalStatusCheck? _explicitNullValueExternalStatusCheck = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestsStatusCheckResponseExternalStatusCheck ExternalStatusCheck { get => _explicitNullValueExternalStatusCheck; set { _explicitNullValueExternalStatusCheck = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_status_check"); else _explicitNullProperties?.Remove("external_status_check"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestsStatusCheckResponseExternalStatusCheck ExternalStatusCheck { get => _explicitNullValueExternalStatusCheck; set { _explicitNullValueExternalStatusCheck = value; AdditionalData?.Remove("external_status_check"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_status_check"); else _explicitNullProperties?.Remove("external_status_check"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestsStatusCheckResponseExternalStatusCheck _explicitNullValueExternalStatusCheck = default!;
 #endif
         /// <summary>The id property</summary>
-        public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private long? _explicitNullValueId = default!;
         /// <summary>The merge_request property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequest? MergeRequest { get => _explicitNullValueMergeRequest; set { _explicitNullValueMergeRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_request"); else _explicitNullProperties?.Remove("merge_request"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequest? MergeRequest { get => _explicitNullValueMergeRequest; set { _explicitNullValueMergeRequest = value; AdditionalData?.Remove("merge_request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_request"); else _explicitNullProperties?.Remove("merge_request"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequest? _explicitNullValueMergeRequest = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequest MergeRequest { get => _explicitNullValueMergeRequest; set { _explicitNullValueMergeRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_request"); else _explicitNullProperties?.Remove("merge_request"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequest MergeRequest { get => _explicitNullValueMergeRequest; set { _explicitNullValueMergeRequest = value; AdditionalData?.Remove("merge_request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_request"); else _explicitNullProperties?.Remove("merge_request"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequest _explicitNullValueMergeRequest = default!;
 #endif
         /// <summary>

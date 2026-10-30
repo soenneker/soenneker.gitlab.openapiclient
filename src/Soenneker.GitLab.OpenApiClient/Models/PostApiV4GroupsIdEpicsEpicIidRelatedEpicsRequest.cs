@@ -17,27 +17,30 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("link_type") is { } nullNodeLinkType && nullNodeLinkType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkType = null;
-            if (parseNode.GetChildNode("target_epic_iid") is { } nullNodeTargetEpicIid && nullNodeTargetEpicIid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetEpicIid = null;
-            if (parseNode.GetChildNode("target_group_id") is { } nullNodeTargetGroupId && nullNodeTargetGroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetGroupId = null;
+            if (parseNode.GetChildNode("link_type") is null) { _explicitNullValueLinkType = default!; _explicitNullProperties?.Remove("link_type"); }
+            else if (parseNode.GetChildNode("link_type") is { } nullNodeLinkType && nullNodeLinkType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkType = null;
+            if (parseNode.GetChildNode("target_epic_iid") is null) { _explicitNullValueTargetEpicIid = default!; _explicitNullProperties?.Remove("target_epic_iid"); }
+            else if (parseNode.GetChildNode("target_epic_iid") is { } nullNodeTargetEpicIid && nullNodeTargetEpicIid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetEpicIid = null;
+            if (parseNode.GetChildNode("target_group_id") is null) { _explicitNullValueTargetGroupId = default!; _explicitNullProperties?.Remove("target_group_id"); }
+            else if (parseNode.GetChildNode("target_group_id") is { } nullNodeTargetGroupId && nullNodeTargetGroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetGroupId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Type of the relation. Defaults to `relates_to`.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GroupsIdEpicsEpicIidRelatedEpicsRequestLinkType? LinkType { get => _explicitNullValueLinkType; set { _explicitNullValueLinkType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link_type"); else _explicitNullProperties?.Remove("link_type"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GroupsIdEpicsEpicIidRelatedEpicsRequestLinkType? LinkType { get => _explicitNullValueLinkType; set { _explicitNullValueLinkType = value; AdditionalData?.Remove("link_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link_type"); else _explicitNullProperties?.Remove("link_type"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GroupsIdEpicsEpicIidRelatedEpicsRequestLinkType? _explicitNullValueLinkType = default!;
         /// <summary>Internal ID of the target group&apos;s epic.</summary>
-        public int? TargetEpicIid { get => _explicitNullValueTargetEpicIid; set { _explicitNullValueTargetEpicIid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_epic_iid"); else _explicitNullProperties?.Remove("target_epic_iid"); } }
+        public int? TargetEpicIid { get => _explicitNullValueTargetEpicIid; set { _explicitNullValueTargetEpicIid = value; AdditionalData?.Remove("target_epic_iid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_epic_iid"); else _explicitNullProperties?.Remove("target_epic_iid"); } }
         private int? _explicitNullValueTargetEpicIid = default!;
         /// <summary>ID or URL-encoded path of the target group.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TargetGroupId { get => _explicitNullValueTargetGroupId; set { _explicitNullValueTargetGroupId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_group_id"); else _explicitNullProperties?.Remove("target_group_id"); } }
+        public string? TargetGroupId { get => _explicitNullValueTargetGroupId; set { _explicitNullValueTargetGroupId = value; AdditionalData?.Remove("target_group_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_group_id"); else _explicitNullProperties?.Remove("target_group_id"); } }
         private string? _explicitNullValueTargetGroupId = default!;
 #nullable restore
 #else
-        public string TargetGroupId { get => _explicitNullValueTargetGroupId; set { _explicitNullValueTargetGroupId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_group_id"); else _explicitNullProperties?.Remove("target_group_id"); } }
+        public string TargetGroupId { get => _explicitNullValueTargetGroupId; set { _explicitNullValueTargetGroupId = value; AdditionalData?.Remove("target_group_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_group_id"); else _explicitNullProperties?.Remove("target_group_id"); } }
         private string _explicitNullValueTargetGroupId = default!;
 #endif
         /// <summary>
@@ -65,7 +68,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "link_type", n => { LinkType = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GroupsIdEpicsEpicIidRelatedEpicsRequestLinkType>(); } },
+                { "link_type", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GroupsIdEpicsEpicIidRelatedEpicsRequestLinkType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueLinkType = default; _explicitNullProperties?.Remove("link_type"); AdditionalData["link_type"] = unknown; } else { LinkType = parsed; AdditionalData.Remove("link_type"); } } },
                 { "target_epic_iid", n => { TargetEpicIid = n.GetIntValue(); } },
                 { "target_group_id", n => { TargetGroupId = n.GetStringValue(); } },
             };

@@ -17,17 +17,19 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("inbound_enabled") is { } nullNodeInboundEnabled && nullNodeInboundEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InboundEnabled = null;
-            if (parseNode.GetChildNode("outbound_enabled") is { } nullNodeOutboundEnabled && nullNodeOutboundEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutboundEnabled = null;
+            if (parseNode.GetChildNode("inbound_enabled") is null) { _explicitNullValueInboundEnabled = default!; _explicitNullProperties?.Remove("inbound_enabled"); }
+            else if (parseNode.GetChildNode("inbound_enabled") is { } nullNodeInboundEnabled && nullNodeInboundEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InboundEnabled = null;
+            if (parseNode.GetChildNode("outbound_enabled") is null) { _explicitNullValueOutboundEnabled = default!; _explicitNullProperties?.Remove("outbound_enabled"); }
+            else if (parseNode.GetChildNode("outbound_enabled") is { } nullNodeOutboundEnabled && nullNodeOutboundEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutboundEnabled = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The inbound_enabled property</summary>
-        public bool? InboundEnabled { get => _explicitNullValueInboundEnabled; set { _explicitNullValueInboundEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inbound_enabled"); else _explicitNullProperties?.Remove("inbound_enabled"); } }
+        public bool? InboundEnabled { get => _explicitNullValueInboundEnabled; set { _explicitNullValueInboundEnabled = value; AdditionalData?.Remove("inbound_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inbound_enabled"); else _explicitNullProperties?.Remove("inbound_enabled"); } }
         private bool? _explicitNullValueInboundEnabled = default!;
         /// <summary>The outbound_enabled property</summary>
-        public bool? OutboundEnabled { get => _explicitNullValueOutboundEnabled; set { _explicitNullValueOutboundEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_enabled"); else _explicitNullProperties?.Remove("outbound_enabled"); } }
+        public bool? OutboundEnabled { get => _explicitNullValueOutboundEnabled; set { _explicitNullValueOutboundEnabled = value; AdditionalData?.Remove("outbound_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_enabled"); else _explicitNullProperties?.Remove("outbound_enabled"); } }
         private bool? _explicitNullValueOutboundEnabled = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectJobTokenScope"/> and sets the default values.

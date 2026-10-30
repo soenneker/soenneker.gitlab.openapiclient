@@ -7,6 +7,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PatchApiV4ProjectsIdRegistryProtectionRepositoryRulesProtectionRuleIdRequestMinimumAccessLevelForPush
     {
+        [EnumMember(Value = "")]
+        EmptyString,
+
         [EnumMember(Value = "maintainer")]
         #pragma warning disable CS1591
         Maintainer,

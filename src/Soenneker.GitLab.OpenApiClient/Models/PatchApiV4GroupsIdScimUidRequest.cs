@@ -17,7 +17,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("extern_uid") is { } nullNodeExternUid && nullNodeExternUid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternUid = null;
+            if (parseNode.GetChildNode("extern_uid") is null) { _explicitNullValueExternUid = default!; _explicitNullProperties?.Remove("extern_uid"); }
+            else if (parseNode.GetChildNode("extern_uid") is { } nullNodeExternUid && nullNodeExternUid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternUid = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>New external UID of the user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternUid { get => _explicitNullValueExternUid; set { _explicitNullValueExternUid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extern_uid"); else _explicitNullProperties?.Remove("extern_uid"); } }
+        public string? ExternUid { get => _explicitNullValueExternUid; set { _explicitNullValueExternUid = value; AdditionalData?.Remove("extern_uid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extern_uid"); else _explicitNullProperties?.Remove("extern_uid"); } }
         private string? _explicitNullValueExternUid = default!;
 #nullable restore
 #else
-        public string ExternUid { get => _explicitNullValueExternUid; set { _explicitNullValueExternUid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extern_uid"); else _explicitNullProperties?.Remove("extern_uid"); } }
+        public string ExternUid { get => _explicitNullValueExternUid; set { _explicitNullValueExternUid = value; AdditionalData?.Remove("extern_uid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extern_uid"); else _explicitNullProperties?.Remove("extern_uid"); } }
         private string _explicitNullValueExternUid = default!;
 #endif
         /// <summary>

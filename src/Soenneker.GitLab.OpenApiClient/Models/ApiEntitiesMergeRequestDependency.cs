@@ -17,10 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("blocked_merge_request") is { } nullNodeBlockedMergeRequest && nullNodeBlockedMergeRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlockedMergeRequest = null;
-            if (parseNode.GetChildNode("blocking_merge_request") is { } nullNodeBlockingMergeRequest && nullNodeBlockingMergeRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlockingMergeRequest = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("project_id") is { } nullNodeProjectId && nullNodeProjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectId = null;
+            if (parseNode.GetChildNode("blocked_merge_request") is null) { _explicitNullValueBlockedMergeRequest = default!; _explicitNullProperties?.Remove("blocked_merge_request"); }
+            else if (parseNode.GetChildNode("blocked_merge_request") is { } nullNodeBlockedMergeRequest && nullNodeBlockedMergeRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlockedMergeRequest = null;
+            if (parseNode.GetChildNode("blocking_merge_request") is null) { _explicitNullValueBlockingMergeRequest = default!; _explicitNullProperties?.Remove("blocking_merge_request"); }
+            else if (parseNode.GetChildNode("blocking_merge_request") is { } nullNodeBlockingMergeRequest && nullNodeBlockingMergeRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlockingMergeRequest = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("project_id") is null) { _explicitNullValueProjectId = default!; _explicitNullProperties?.Remove("project_id"); }
+            else if (parseNode.GetChildNode("project_id") is { } nullNodeProjectId && nullNodeProjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,28 +32,28 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The blocked_merge_request property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestBasic? BlockedMergeRequest { get => _explicitNullValueBlockedMergeRequest; set { _explicitNullValueBlockedMergeRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blocked_merge_request"); else _explicitNullProperties?.Remove("blocked_merge_request"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestBasic? BlockedMergeRequest { get => _explicitNullValueBlockedMergeRequest; set { _explicitNullValueBlockedMergeRequest = value; AdditionalData?.Remove("blocked_merge_request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blocked_merge_request"); else _explicitNullProperties?.Remove("blocked_merge_request"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestBasic? _explicitNullValueBlockedMergeRequest = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestBasic BlockedMergeRequest { get => _explicitNullValueBlockedMergeRequest; set { _explicitNullValueBlockedMergeRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blocked_merge_request"); else _explicitNullProperties?.Remove("blocked_merge_request"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestBasic BlockedMergeRequest { get => _explicitNullValueBlockedMergeRequest; set { _explicitNullValueBlockedMergeRequest = value; AdditionalData?.Remove("blocked_merge_request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blocked_merge_request"); else _explicitNullProperties?.Remove("blocked_merge_request"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestBasic _explicitNullValueBlockedMergeRequest = default!;
 #endif
         /// <summary>The blocking_merge_request property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestBasic? BlockingMergeRequest { get => _explicitNullValueBlockingMergeRequest; set { _explicitNullValueBlockingMergeRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blocking_merge_request"); else _explicitNullProperties?.Remove("blocking_merge_request"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestBasic? BlockingMergeRequest { get => _explicitNullValueBlockingMergeRequest; set { _explicitNullValueBlockingMergeRequest = value; AdditionalData?.Remove("blocking_merge_request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blocking_merge_request"); else _explicitNullProperties?.Remove("blocking_merge_request"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestBasic? _explicitNullValueBlockingMergeRequest = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestBasic BlockingMergeRequest { get => _explicitNullValueBlockingMergeRequest; set { _explicitNullValueBlockingMergeRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blocking_merge_request"); else _explicitNullProperties?.Remove("blocking_merge_request"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestBasic BlockingMergeRequest { get => _explicitNullValueBlockingMergeRequest; set { _explicitNullValueBlockingMergeRequest = value; AdditionalData?.Remove("blocking_merge_request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blocking_merge_request"); else _explicitNullProperties?.Remove("blocking_merge_request"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestBasic _explicitNullValueBlockingMergeRequest = default!;
 #endif
         /// <summary>The id property</summary>
-        public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private long? _explicitNullValueId = default!;
         /// <summary>The project_id property</summary>
-        public long? ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_id"); else _explicitNullProperties?.Remove("project_id"); } }
+        public long? ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; AdditionalData?.Remove("project_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_id"); else _explicitNullProperties?.Remove("project_id"); } }
         private long? _explicitNullValueProjectId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestDependency"/> and sets the default values.

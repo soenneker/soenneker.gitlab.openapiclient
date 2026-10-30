@@ -17,131 +17,146 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("branch_filter_strategy") is { } nullNodeBranchFilterStrategy && nullNodeBranchFilterStrategy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BranchFilterStrategy = null;
-            if (parseNode.GetChildNode("custom_headers") is { } nullNodeCustomHeaders && nullNodeCustomHeaders.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomHeaders = null;
-            if (parseNode.GetChildNode("custom_webhook_template") is { } nullNodeCustomWebhookTemplate && nullNodeCustomWebhookTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomWebhookTemplate = null;
-            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
-            if (parseNode.GetChildNode("enable_ssl_verification") is { } nullNodeEnableSslVerification && nullNodeEnableSslVerification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableSslVerification = null;
-            if (parseNode.GetChildNode("merge_requests_events") is { } nullNodeMergeRequestsEvents && nullNodeMergeRequestsEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequestsEvents = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("push_events") is { } nullNodePushEvents && nullNodePushEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PushEvents = null;
-            if (parseNode.GetChildNode("push_events_branch_filter") is { } nullNodePushEventsBranchFilter && nullNodePushEventsBranchFilter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PushEventsBranchFilter = null;
-            if (parseNode.GetChildNode("repository_update_events") is { } nullNodeRepositoryUpdateEvents && nullNodeRepositoryUpdateEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepositoryUpdateEvents = null;
-            if (parseNode.GetChildNode("signing_token") is { } nullNodeSigningToken && nullNodeSigningToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SigningToken = null;
-            if (parseNode.GetChildNode("tag_push_events") is { } nullNodeTagPushEvents && nullNodeTagPushEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TagPushEvents = null;
-            if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
-            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
-            if (parseNode.GetChildNode("url_variables") is { } nullNodeUrlVariables && nullNodeUrlVariables.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UrlVariables = null;
+            if (parseNode.GetChildNode("branch_filter_strategy") is null) { _explicitNullValueBranchFilterStrategy = default!; _explicitNullProperties?.Remove("branch_filter_strategy"); }
+            else if (parseNode.GetChildNode("branch_filter_strategy") is { } nullNodeBranchFilterStrategy && nullNodeBranchFilterStrategy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BranchFilterStrategy = null;
+            if (parseNode.GetChildNode("custom_headers") is null) { _explicitNullValueCustomHeaders = default!; _explicitNullProperties?.Remove("custom_headers"); }
+            else if (parseNode.GetChildNode("custom_headers") is { } nullNodeCustomHeaders && nullNodeCustomHeaders.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomHeaders = null;
+            if (parseNode.GetChildNode("custom_webhook_template") is null) { _explicitNullValueCustomWebhookTemplate = default!; _explicitNullProperties?.Remove("custom_webhook_template"); }
+            else if (parseNode.GetChildNode("custom_webhook_template") is { } nullNodeCustomWebhookTemplate && nullNodeCustomWebhookTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomWebhookTemplate = null;
+            if (parseNode.GetChildNode("description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("description"); }
+            else if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("enable_ssl_verification") is null) { _explicitNullValueEnableSslVerification = default!; _explicitNullProperties?.Remove("enable_ssl_verification"); }
+            else if (parseNode.GetChildNode("enable_ssl_verification") is { } nullNodeEnableSslVerification && nullNodeEnableSslVerification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableSslVerification = null;
+            if (parseNode.GetChildNode("merge_requests_events") is null) { _explicitNullValueMergeRequestsEvents = default!; _explicitNullProperties?.Remove("merge_requests_events"); }
+            else if (parseNode.GetChildNode("merge_requests_events") is { } nullNodeMergeRequestsEvents && nullNodeMergeRequestsEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequestsEvents = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("push_events") is null) { _explicitNullValuePushEvents = default!; _explicitNullProperties?.Remove("push_events"); }
+            else if (parseNode.GetChildNode("push_events") is { } nullNodePushEvents && nullNodePushEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PushEvents = null;
+            if (parseNode.GetChildNode("push_events_branch_filter") is null) { _explicitNullValuePushEventsBranchFilter = default!; _explicitNullProperties?.Remove("push_events_branch_filter"); }
+            else if (parseNode.GetChildNode("push_events_branch_filter") is { } nullNodePushEventsBranchFilter && nullNodePushEventsBranchFilter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PushEventsBranchFilter = null;
+            if (parseNode.GetChildNode("repository_update_events") is null) { _explicitNullValueRepositoryUpdateEvents = default!; _explicitNullProperties?.Remove("repository_update_events"); }
+            else if (parseNode.GetChildNode("repository_update_events") is { } nullNodeRepositoryUpdateEvents && nullNodeRepositoryUpdateEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepositoryUpdateEvents = null;
+            if (parseNode.GetChildNode("signing_token") is null) { _explicitNullValueSigningToken = default!; _explicitNullProperties?.Remove("signing_token"); }
+            else if (parseNode.GetChildNode("signing_token") is { } nullNodeSigningToken && nullNodeSigningToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SigningToken = null;
+            if (parseNode.GetChildNode("tag_push_events") is null) { _explicitNullValueTagPushEvents = default!; _explicitNullProperties?.Remove("tag_push_events"); }
+            else if (parseNode.GetChildNode("tag_push_events") is { } nullNodeTagPushEvents && nullNodeTagPushEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TagPushEvents = null;
+            if (parseNode.GetChildNode("token") is null) { _explicitNullValueToken = default!; _explicitNullProperties?.Remove("token"); }
+            else if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
+            if (parseNode.GetChildNode("url") is null) { _explicitNullValueUrl = default!; _explicitNullProperties?.Remove("url"); }
+            else if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("url_variables") is null) { _explicitNullValueUrlVariables = default!; _explicitNullProperties?.Remove("url_variables"); }
+            else if (parseNode.GetChildNode("url_variables") is { } nullNodeUrlVariables && nullNodeUrlVariables.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UrlVariables = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Filter push events by branch. Defaults to `wildcard`.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4HooksRequestBranchFilterStrategy? BranchFilterStrategy { get => _explicitNullValueBranchFilterStrategy; set { _explicitNullValueBranchFilterStrategy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("branch_filter_strategy"); else _explicitNullProperties?.Remove("branch_filter_strategy"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4HooksRequestBranchFilterStrategy? BranchFilterStrategy { get => _explicitNullValueBranchFilterStrategy; set { _explicitNullValueBranchFilterStrategy = value; AdditionalData?.Remove("branch_filter_strategy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("branch_filter_strategy"); else _explicitNullProperties?.Remove("branch_filter_strategy"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4HooksRequestBranchFilterStrategy? _explicitNullValueBranchFilterStrategy = default!;
         /// <summary>Custom headers for the hook.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4HooksRequestCustomHeadersItem>? CustomHeaders { get => _explicitNullValueCustomHeaders; set { _explicitNullValueCustomHeaders = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_headers"); else _explicitNullProperties?.Remove("custom_headers"); } }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4HooksRequestCustomHeadersItem>? CustomHeaders { get => _explicitNullValueCustomHeaders; set { _explicitNullValueCustomHeaders = value; AdditionalData?.Remove("custom_headers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_headers"); else _explicitNullProperties?.Remove("custom_headers"); } }
         private List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4HooksRequestCustomHeadersItem>? _explicitNullValueCustomHeaders = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4HooksRequestCustomHeadersItem> CustomHeaders { get => _explicitNullValueCustomHeaders; set { _explicitNullValueCustomHeaders = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_headers"); else _explicitNullProperties?.Remove("custom_headers"); } }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4HooksRequestCustomHeadersItem> CustomHeaders { get => _explicitNullValueCustomHeaders; set { _explicitNullValueCustomHeaders = value; AdditionalData?.Remove("custom_headers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_headers"); else _explicitNullProperties?.Remove("custom_headers"); } }
         private List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4HooksRequestCustomHeadersItem> _explicitNullValueCustomHeaders = default!;
 #endif
         /// <summary>Custom template for the system hook request payload.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomWebhookTemplate { get => _explicitNullValueCustomWebhookTemplate; set { _explicitNullValueCustomWebhookTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_webhook_template"); else _explicitNullProperties?.Remove("custom_webhook_template"); } }
+        public string? CustomWebhookTemplate { get => _explicitNullValueCustomWebhookTemplate; set { _explicitNullValueCustomWebhookTemplate = value; AdditionalData?.Remove("custom_webhook_template"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_webhook_template"); else _explicitNullProperties?.Remove("custom_webhook_template"); } }
         private string? _explicitNullValueCustomWebhookTemplate = default!;
 #nullable restore
 #else
-        public string CustomWebhookTemplate { get => _explicitNullValueCustomWebhookTemplate; set { _explicitNullValueCustomWebhookTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_webhook_template"); else _explicitNullProperties?.Remove("custom_webhook_template"); } }
+        public string CustomWebhookTemplate { get => _explicitNullValueCustomWebhookTemplate; set { _explicitNullValueCustomWebhookTemplate = value; AdditionalData?.Remove("custom_webhook_template"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_webhook_template"); else _explicitNullProperties?.Remove("custom_webhook_template"); } }
         private string _explicitNullValueCustomWebhookTemplate = default!;
 #endif
         /// <summary>Description of the hook. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/460887) in GitLab 17.1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>If `true`, verifies the SSL certificate when the hook is triggered.</summary>
-        public bool? EnableSslVerification { get => _explicitNullValueEnableSslVerification; set { _explicitNullValueEnableSslVerification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enable_ssl_verification"); else _explicitNullProperties?.Remove("enable_ssl_verification"); } }
+        public bool? EnableSslVerification { get => _explicitNullValueEnableSslVerification; set { _explicitNullValueEnableSslVerification = value; AdditionalData?.Remove("enable_ssl_verification"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enable_ssl_verification"); else _explicitNullProperties?.Remove("enable_ssl_verification"); } }
         private bool? _explicitNullValueEnableSslVerification = default!;
         /// <summary>If `true`, triggers the system hook on merge request events.</summary>
-        public bool? MergeRequestsEvents { get => _explicitNullValueMergeRequestsEvents; set { _explicitNullValueMergeRequestsEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_requests_events"); else _explicitNullProperties?.Remove("merge_requests_events"); } }
+        public bool? MergeRequestsEvents { get => _explicitNullValueMergeRequestsEvents; set { _explicitNullValueMergeRequestsEvents = value; AdditionalData?.Remove("merge_requests_events"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_requests_events"); else _explicitNullProperties?.Remove("merge_requests_events"); } }
         private bool? _explicitNullValueMergeRequestsEvents = default!;
         /// <summary>Name of the hook. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/460887) in GitLab 17.1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>If `true`, triggers the system hook on push events.</summary>
-        public bool? PushEvents { get => _explicitNullValuePushEvents; set { _explicitNullValuePushEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("push_events"); else _explicitNullProperties?.Remove("push_events"); } }
+        public bool? PushEvents { get => _explicitNullValuePushEvents; set { _explicitNullValuePushEvents = value; AdditionalData?.Remove("push_events"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("push_events"); else _explicitNullProperties?.Remove("push_events"); } }
         private bool? _explicitNullValuePushEvents = default!;
         /// <summary>Filter push events by branch name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PushEventsBranchFilter { get => _explicitNullValuePushEventsBranchFilter; set { _explicitNullValuePushEventsBranchFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("push_events_branch_filter"); else _explicitNullProperties?.Remove("push_events_branch_filter"); } }
+        public string? PushEventsBranchFilter { get => _explicitNullValuePushEventsBranchFilter; set { _explicitNullValuePushEventsBranchFilter = value; AdditionalData?.Remove("push_events_branch_filter"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("push_events_branch_filter"); else _explicitNullProperties?.Remove("push_events_branch_filter"); } }
         private string? _explicitNullValuePushEventsBranchFilter = default!;
 #nullable restore
 #else
-        public string PushEventsBranchFilter { get => _explicitNullValuePushEventsBranchFilter; set { _explicitNullValuePushEventsBranchFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("push_events_branch_filter"); else _explicitNullProperties?.Remove("push_events_branch_filter"); } }
+        public string PushEventsBranchFilter { get => _explicitNullValuePushEventsBranchFilter; set { _explicitNullValuePushEventsBranchFilter = value; AdditionalData?.Remove("push_events_branch_filter"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("push_events_branch_filter"); else _explicitNullProperties?.Remove("push_events_branch_filter"); } }
         private string _explicitNullValuePushEventsBranchFilter = default!;
 #endif
         /// <summary>If `true`, triggers the system hook on repository update events.</summary>
-        public bool? RepositoryUpdateEvents { get => _explicitNullValueRepositoryUpdateEvents; set { _explicitNullValueRepositoryUpdateEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repository_update_events"); else _explicitNullProperties?.Remove("repository_update_events"); } }
+        public bool? RepositoryUpdateEvents { get => _explicitNullValueRepositoryUpdateEvents; set { _explicitNullValueRepositoryUpdateEvents = value; AdditionalData?.Remove("repository_update_events"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repository_update_events"); else _explicitNullProperties?.Remove("repository_update_events"); } }
         private bool? _explicitNullValueRepositoryUpdateEvents = default!;
         /// <summary>HMAC signing token used to compute the `webhook-signature` header. Must be in `whsec_&lt;base64&gt;` format encoding a 32-byte key, and is not returned in the response. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/231325) in GitLab 19.0.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SigningToken { get => _explicitNullValueSigningToken; set { _explicitNullValueSigningToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signing_token"); else _explicitNullProperties?.Remove("signing_token"); } }
+        public string? SigningToken { get => _explicitNullValueSigningToken; set { _explicitNullValueSigningToken = value; AdditionalData?.Remove("signing_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signing_token"); else _explicitNullProperties?.Remove("signing_token"); } }
         private string? _explicitNullValueSigningToken = default!;
 #nullable restore
 #else
-        public string SigningToken { get => _explicitNullValueSigningToken; set { _explicitNullValueSigningToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signing_token"); else _explicitNullProperties?.Remove("signing_token"); } }
+        public string SigningToken { get => _explicitNullValueSigningToken; set { _explicitNullValueSigningToken = value; AdditionalData?.Remove("signing_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signing_token"); else _explicitNullProperties?.Remove("signing_token"); } }
         private string _explicitNullValueSigningToken = default!;
 #endif
         /// <summary>If `true`, triggers the system hook on tag push events.</summary>
-        public bool? TagPushEvents { get => _explicitNullValueTagPushEvents; set { _explicitNullValueTagPushEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag_push_events"); else _explicitNullProperties?.Remove("tag_push_events"); } }
+        public bool? TagPushEvents { get => _explicitNullValueTagPushEvents; set { _explicitNullValueTagPushEvents = value; AdditionalData?.Remove("tag_push_events"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag_push_events"); else _explicitNullProperties?.Remove("tag_push_events"); } }
         private bool? _explicitNullValueTagPushEvents = default!;
         /// <summary>Secret token used to validate received payloads. Not returned in the response, and changing the hook URL resets it.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; AdditionalData?.Remove("token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
         private string? _explicitNullValueToken = default!;
 #nullable restore
 #else
-        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; AdditionalData?.Remove("token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
         private string _explicitNullValueToken = default!;
 #endif
         /// <summary>Webhook URL.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>URL variables for interpolation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4HooksRequestUrlVariablesItem>? UrlVariables { get => _explicitNullValueUrlVariables; set { _explicitNullValueUrlVariables = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url_variables"); else _explicitNullProperties?.Remove("url_variables"); } }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4HooksRequestUrlVariablesItem>? UrlVariables { get => _explicitNullValueUrlVariables; set { _explicitNullValueUrlVariables = value; AdditionalData?.Remove("url_variables"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url_variables"); else _explicitNullProperties?.Remove("url_variables"); } }
         private List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4HooksRequestUrlVariablesItem>? _explicitNullValueUrlVariables = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4HooksRequestUrlVariablesItem> UrlVariables { get => _explicitNullValueUrlVariables; set { _explicitNullValueUrlVariables = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url_variables"); else _explicitNullProperties?.Remove("url_variables"); } }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4HooksRequestUrlVariablesItem> UrlVariables { get => _explicitNullValueUrlVariables; set { _explicitNullValueUrlVariables = value; AdditionalData?.Remove("url_variables"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url_variables"); else _explicitNullProperties?.Remove("url_variables"); } }
         private List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4HooksRequestUrlVariablesItem> _explicitNullValueUrlVariables = default!;
 #endif
         /// <summary>
@@ -169,7 +184,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "branch_filter_strategy", n => { BranchFilterStrategy = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4HooksRequestBranchFilterStrategy>(); } },
+                { "branch_filter_strategy", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4HooksRequestBranchFilterStrategy>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBranchFilterStrategy = default; _explicitNullProperties?.Remove("branch_filter_strategy"); AdditionalData["branch_filter_strategy"] = unknown; } else { BranchFilterStrategy = parsed; AdditionalData.Remove("branch_filter_strategy"); } } },
                 { "custom_headers", n => { CustomHeaders = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4HooksRequestCustomHeadersItem>(global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4HooksRequestCustomHeadersItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "custom_webhook_template", n => { CustomWebhookTemplate = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },

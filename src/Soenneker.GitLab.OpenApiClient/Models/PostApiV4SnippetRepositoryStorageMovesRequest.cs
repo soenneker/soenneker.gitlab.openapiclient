@@ -17,8 +17,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("destination_storage_name") is { } nullNodeDestinationStorageName && nullNodeDestinationStorageName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DestinationStorageName = null;
-            if (parseNode.GetChildNode("source_storage_name") is { } nullNodeSourceStorageName && nullNodeSourceStorageName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceStorageName = null;
+            if (parseNode.GetChildNode("destination_storage_name") is null) { _explicitNullValueDestinationStorageName = default!; _explicitNullProperties?.Remove("destination_storage_name"); }
+            else if (parseNode.GetChildNode("destination_storage_name") is { } nullNodeDestinationStorageName && nullNodeDestinationStorageName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DestinationStorageName = null;
+            if (parseNode.GetChildNode("source_storage_name") is null) { _explicitNullValueSourceStorageName = default!; _explicitNullProperties?.Remove("source_storage_name"); }
+            else if (parseNode.GetChildNode("source_storage_name") is { } nullNodeSourceStorageName && nullNodeSourceStorageName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceStorageName = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Name of the destination storage shard. If not provided, the storage is selected [automatically based on storage weights](https://docs.gitlab.com/administration/repository_storage_paths/#configure-where-new-repositories-are-stored).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DestinationStorageName { get => _explicitNullValueDestinationStorageName; set { _explicitNullValueDestinationStorageName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destination_storage_name"); else _explicitNullProperties?.Remove("destination_storage_name"); } }
+        public string? DestinationStorageName { get => _explicitNullValueDestinationStorageName; set { _explicitNullValueDestinationStorageName = value; AdditionalData?.Remove("destination_storage_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destination_storage_name"); else _explicitNullProperties?.Remove("destination_storage_name"); } }
         private string? _explicitNullValueDestinationStorageName = default!;
 #nullable restore
 #else
-        public string DestinationStorageName { get => _explicitNullValueDestinationStorageName; set { _explicitNullValueDestinationStorageName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destination_storage_name"); else _explicitNullProperties?.Remove("destination_storage_name"); } }
+        public string DestinationStorageName { get => _explicitNullValueDestinationStorageName; set { _explicitNullValueDestinationStorageName = value; AdditionalData?.Remove("destination_storage_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destination_storage_name"); else _explicitNullProperties?.Remove("destination_storage_name"); } }
         private string _explicitNullValueDestinationStorageName = default!;
 #endif
         /// <summary>Name of the source storage shard.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SourceStorageName { get => _explicitNullValueSourceStorageName; set { _explicitNullValueSourceStorageName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_storage_name"); else _explicitNullProperties?.Remove("source_storage_name"); } }
+        public string? SourceStorageName { get => _explicitNullValueSourceStorageName; set { _explicitNullValueSourceStorageName = value; AdditionalData?.Remove("source_storage_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_storage_name"); else _explicitNullProperties?.Remove("source_storage_name"); } }
         private string? _explicitNullValueSourceStorageName = default!;
 #nullable restore
 #else
-        public string SourceStorageName { get => _explicitNullValueSourceStorageName; set { _explicitNullValueSourceStorageName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_storage_name"); else _explicitNullProperties?.Remove("source_storage_name"); } }
+        public string SourceStorageName { get => _explicitNullValueSourceStorageName; set { _explicitNullValueSourceStorageName = value; AdditionalData?.Remove("source_storage_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_storage_name"); else _explicitNullProperties?.Remove("source_storage_name"); } }
         private string _explicitNullValueSourceStorageName = default!;
 #endif
         /// <summary>

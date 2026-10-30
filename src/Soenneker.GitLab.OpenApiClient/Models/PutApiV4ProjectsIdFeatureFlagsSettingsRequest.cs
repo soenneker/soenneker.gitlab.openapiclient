@@ -17,13 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("minimum_role") is { } nullNodeMinimumRole && nullNodeMinimumRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumRole = null;
+            if (parseNode.GetChildNode("minimum_role") is null) { _explicitNullValueMinimumRole = default!; _explicitNullProperties?.Remove("minimum_role"); }
+            else if (parseNode.GetChildNode("minimum_role") is { } nullNodeMinimumRole && nullNodeMinimumRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumRole = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Minimum role required to create, update, toggle, and delete feature flags</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdFeatureFlagsSettingsRequestMinimumRole? MinimumRole { get => _explicitNullValueMinimumRole; set { _explicitNullValueMinimumRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_role"); else _explicitNullProperties?.Remove("minimum_role"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdFeatureFlagsSettingsRequestMinimumRole? MinimumRole { get => _explicitNullValueMinimumRole; set { _explicitNullValueMinimumRole = value; AdditionalData?.Remove("minimum_role"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_role"); else _explicitNullProperties?.Remove("minimum_role"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdFeatureFlagsSettingsRequestMinimumRole? _explicitNullValueMinimumRole = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdFeatureFlagsSettingsRequest"/> and sets the default values.
@@ -50,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "minimum_role", n => { MinimumRole = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdFeatureFlagsSettingsRequestMinimumRole>(); } },
+                { "minimum_role", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdFeatureFlagsSettingsRequestMinimumRole>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMinimumRole = default; _explicitNullProperties?.Remove("minimum_role"); AdditionalData["minimum_role"] = unknown; } else { MinimumRole = parsed; AdditionalData.Remove("minimum_role"); } } },
             };
         }
         /// <summary>

@@ -17,9 +17,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("feature_categories") is { } nullNodeFeatureCategories && nullNodeFeatureCategories.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FeatureCategories = null;
-            if (parseNode.GetChildNode("table_name") is { } nullNodeTableName && nullNodeTableName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TableName = null;
-            if (parseNode.GetChildNode("table_size") is { } nullNodeTableSize && nullNodeTableSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TableSize = null;
+            if (parseNode.GetChildNode("feature_categories") is null) { _explicitNullValueFeatureCategories = default!; _explicitNullProperties?.Remove("feature_categories"); }
+            else if (parseNode.GetChildNode("feature_categories") is { } nullNodeFeatureCategories && nullNodeFeatureCategories.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FeatureCategories = null;
+            if (parseNode.GetChildNode("table_name") is null) { _explicitNullValueTableName = default!; _explicitNullProperties?.Remove("table_name"); }
+            else if (parseNode.GetChildNode("table_name") is { } nullNodeTableName && nullNodeTableName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TableName = null;
+            if (parseNode.GetChildNode("table_size") is null) { _explicitNullValueTableSize = default!; _explicitNullProperties?.Remove("table_size"); }
+            else if (parseNode.GetChildNode("table_size") is { } nullNodeTableSize && nullNodeTableSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TableSize = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The feature_categories property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? FeatureCategories { get => _explicitNullValueFeatureCategories; set { _explicitNullValueFeatureCategories = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("feature_categories"); else _explicitNullProperties?.Remove("feature_categories"); } }
+        public List<string>? FeatureCategories { get => _explicitNullValueFeatureCategories; set { _explicitNullValueFeatureCategories = value; AdditionalData?.Remove("feature_categories"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("feature_categories"); else _explicitNullProperties?.Remove("feature_categories"); } }
         private List<string>? _explicitNullValueFeatureCategories = default!;
 #nullable restore
 #else
-        public List<string> FeatureCategories { get => _explicitNullValueFeatureCategories; set { _explicitNullValueFeatureCategories = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("feature_categories"); else _explicitNullProperties?.Remove("feature_categories"); } }
+        public List<string> FeatureCategories { get => _explicitNullValueFeatureCategories; set { _explicitNullValueFeatureCategories = value; AdditionalData?.Remove("feature_categories"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("feature_categories"); else _explicitNullProperties?.Remove("feature_categories"); } }
         private List<string> _explicitNullValueFeatureCategories = default!;
 #endif
         /// <summary>The table_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TableName { get => _explicitNullValueTableName; set { _explicitNullValueTableName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("table_name"); else _explicitNullProperties?.Remove("table_name"); } }
+        public string? TableName { get => _explicitNullValueTableName; set { _explicitNullValueTableName = value; AdditionalData?.Remove("table_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("table_name"); else _explicitNullProperties?.Remove("table_name"); } }
         private string? _explicitNullValueTableName = default!;
 #nullable restore
 #else
-        public string TableName { get => _explicitNullValueTableName; set { _explicitNullValueTableName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("table_name"); else _explicitNullProperties?.Remove("table_name"); } }
+        public string TableName { get => _explicitNullValueTableName; set { _explicitNullValueTableName = value; AdditionalData?.Remove("table_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("table_name"); else _explicitNullProperties?.Remove("table_name"); } }
         private string _explicitNullValueTableName = default!;
 #endif
         /// <summary>The table_size property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TableSize { get => _explicitNullValueTableSize; set { _explicitNullValueTableSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("table_size"); else _explicitNullProperties?.Remove("table_size"); } }
+        public string? TableSize { get => _explicitNullValueTableSize; set { _explicitNullValueTableSize = value; AdditionalData?.Remove("table_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("table_size"); else _explicitNullProperties?.Remove("table_size"); } }
         private string? _explicitNullValueTableSize = default!;
 #nullable restore
 #else
-        public string TableSize { get => _explicitNullValueTableSize; set { _explicitNullValueTableSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("table_size"); else _explicitNullProperties?.Remove("table_size"); } }
+        public string TableSize { get => _explicitNullValueTableSize; set { _explicitNullValueTableSize = value; AdditionalData?.Remove("table_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("table_size"); else _explicitNullProperties?.Remove("table_size"); } }
         private string _explicitNullValueTableSize = default!;
 #endif
         /// <summary>

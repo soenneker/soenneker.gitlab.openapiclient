@@ -17,13 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("process_mode") is { } nullNodeProcessMode && nullNodeProcessMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProcessMode = null;
+            if (parseNode.GetChildNode("process_mode") is null) { _explicitNullValueProcessMode = default!; _explicitNullProperties?.Remove("process_mode"); }
+            else if (parseNode.GetChildNode("process_mode") is { } nullNodeProcessMode && nullNodeProcessMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProcessMode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Process mode of the resource group. Read [process modes](https://docs.gitlab.com/ci/resource_groups/#process-modes) for more information.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdResourceGroupsKeyRequestProcessMode? ProcessMode { get => _explicitNullValueProcessMode; set { _explicitNullValueProcessMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("process_mode"); else _explicitNullProperties?.Remove("process_mode"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdResourceGroupsKeyRequestProcessMode? ProcessMode { get => _explicitNullValueProcessMode; set { _explicitNullValueProcessMode = value; AdditionalData?.Remove("process_mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("process_mode"); else _explicitNullProperties?.Remove("process_mode"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdResourceGroupsKeyRequestProcessMode? _explicitNullValueProcessMode = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdResourceGroupsKeyRequest"/> and sets the default values.
@@ -50,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "process_mode", n => { ProcessMode = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdResourceGroupsKeyRequestProcessMode>(); } },
+                { "process_mode", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdResourceGroupsKeyRequestProcessMode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueProcessMode = default; _explicitNullProperties?.Remove("process_mode"); AdditionalData["process_mode"] = unknown; } else { ProcessMode = parsed; AdditionalData.Remove("process_mode"); } } },
             };
         }
         /// <summary>

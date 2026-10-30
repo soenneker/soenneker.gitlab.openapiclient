@@ -17,22 +17,38 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("add_labels") is { } nullNodeAddLabels && nullNodeAddLabels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddLabels = null;
-            if (parseNode.GetChildNode("color") is { } nullNodeColor && nullNodeColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Color = null;
-            if (parseNode.GetChildNode("confidential") is { } nullNodeConfidential && nullNodeConfidential.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Confidential = null;
-            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
-            if (parseNode.GetChildNode("due_date_fixed") is { } nullNodeDueDateFixed && nullNodeDueDateFixed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DueDateFixed = null;
-            if (parseNode.GetChildNode("due_date_is_fixed") is { } nullNodeDueDateIsFixed && nullNodeDueDateIsFixed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DueDateIsFixed = null;
-            if (parseNode.GetChildNode("end_date") is { } nullNodeEndDate && nullNodeEndDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndDate = null;
-            if (parseNode.GetChildNode("labels") is { } nullNodeLabels && nullNodeLabels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Labels = null;
-            if (parseNode.GetChildNode("parent_id") is { } nullNodeParentId && nullNodeParentId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentId = null;
-            if (parseNode.GetChildNode("remove_labels") is { } nullNodeRemoveLabels && nullNodeRemoveLabels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RemoveLabels = null;
-            if (parseNode.GetChildNode("start_date") is { } nullNodeStartDate && nullNodeStartDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartDate = null;
-            if (parseNode.GetChildNode("start_date_fixed") is { } nullNodeStartDateFixed && nullNodeStartDateFixed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartDateFixed = null;
-            if (parseNode.GetChildNode("start_date_is_fixed") is { } nullNodeStartDateIsFixed && nullNodeStartDateIsFixed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartDateIsFixed = null;
-            if (parseNode.GetChildNode("state_event") is { } nullNodeStateEvent && nullNodeStateEvent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StateEvent = null;
-            if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
-            if (parseNode.GetChildNode("updated_at") is { } nullNodeUpdatedAt && nullNodeUpdatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedAt = null;
+            if (parseNode.GetChildNode("add_labels") is null) { _explicitNullValueAddLabels = default!; _explicitNullProperties?.Remove("add_labels"); }
+            else if (parseNode.GetChildNode("add_labels") is { } nullNodeAddLabels && nullNodeAddLabels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddLabels = null;
+            if (parseNode.GetChildNode("color") is null) { _explicitNullValueColor = default!; _explicitNullProperties?.Remove("color"); }
+            else if (parseNode.GetChildNode("color") is { } nullNodeColor && nullNodeColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Color = null;
+            if (parseNode.GetChildNode("confidential") is null) { _explicitNullValueConfidential = default!; _explicitNullProperties?.Remove("confidential"); }
+            else if (parseNode.GetChildNode("confidential") is { } nullNodeConfidential && nullNodeConfidential.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Confidential = null;
+            if (parseNode.GetChildNode("description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("description"); }
+            else if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("due_date_fixed") is null) { _explicitNullValueDueDateFixed = default!; _explicitNullProperties?.Remove("due_date_fixed"); }
+            else if (parseNode.GetChildNode("due_date_fixed") is { } nullNodeDueDateFixed && nullNodeDueDateFixed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DueDateFixed = null;
+            if (parseNode.GetChildNode("due_date_is_fixed") is null) { _explicitNullValueDueDateIsFixed = default!; _explicitNullProperties?.Remove("due_date_is_fixed"); }
+            else if (parseNode.GetChildNode("due_date_is_fixed") is { } nullNodeDueDateIsFixed && nullNodeDueDateIsFixed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DueDateIsFixed = null;
+            if (parseNode.GetChildNode("end_date") is null) { _explicitNullValueEndDate = default!; _explicitNullProperties?.Remove("end_date"); }
+            else if (parseNode.GetChildNode("end_date") is { } nullNodeEndDate && nullNodeEndDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndDate = null;
+            if (parseNode.GetChildNode("labels") is null) { _explicitNullValueLabels = default!; _explicitNullProperties?.Remove("labels"); }
+            else if (parseNode.GetChildNode("labels") is { } nullNodeLabels && nullNodeLabels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Labels = null;
+            if (parseNode.GetChildNode("parent_id") is null) { _explicitNullValueParentId = default!; _explicitNullProperties?.Remove("parent_id"); }
+            else if (parseNode.GetChildNode("parent_id") is { } nullNodeParentId && nullNodeParentId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentId = null;
+            if (parseNode.GetChildNode("remove_labels") is null) { _explicitNullValueRemoveLabels = default!; _explicitNullProperties?.Remove("remove_labels"); }
+            else if (parseNode.GetChildNode("remove_labels") is { } nullNodeRemoveLabels && nullNodeRemoveLabels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RemoveLabels = null;
+            if (parseNode.GetChildNode("start_date") is null) { _explicitNullValueStartDate = default!; _explicitNullProperties?.Remove("start_date"); }
+            else if (parseNode.GetChildNode("start_date") is { } nullNodeStartDate && nullNodeStartDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartDate = null;
+            if (parseNode.GetChildNode("start_date_fixed") is null) { _explicitNullValueStartDateFixed = default!; _explicitNullProperties?.Remove("start_date_fixed"); }
+            else if (parseNode.GetChildNode("start_date_fixed") is { } nullNodeStartDateFixed && nullNodeStartDateFixed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartDateFixed = null;
+            if (parseNode.GetChildNode("start_date_is_fixed") is null) { _explicitNullValueStartDateIsFixed = default!; _explicitNullProperties?.Remove("start_date_is_fixed"); }
+            else if (parseNode.GetChildNode("start_date_is_fixed") is { } nullNodeStartDateIsFixed && nullNodeStartDateIsFixed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartDateIsFixed = null;
+            if (parseNode.GetChildNode("state_event") is null) { _explicitNullValueStateEvent = default!; _explicitNullProperties?.Remove("state_event"); }
+            else if (parseNode.GetChildNode("state_event") is { } nullNodeStateEvent && nullNodeStateEvent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StateEvent = null;
+            if (parseNode.GetChildNode("title") is null) { _explicitNullValueTitle = default!; _explicitNullProperties?.Remove("title"); }
+            else if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
+            if (parseNode.GetChildNode("updated_at") is null) { _explicitNullValueUpdatedAt = default!; _explicitNullProperties?.Remove("updated_at"); }
+            else if (parseNode.GetChildNode("updated_at") is { } nullNodeUpdatedAt && nullNodeUpdatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedAt = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -40,120 +56,120 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Comma-separated label names to add to the epic. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AddLabels { get => _explicitNullValueAddLabels; set { _explicitNullValueAddLabels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("add_labels"); else _explicitNullProperties?.Remove("add_labels"); } }
+        public List<string>? AddLabels { get => _explicitNullValueAddLabels; set { _explicitNullValueAddLabels = value; AdditionalData?.Remove("add_labels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("add_labels"); else _explicitNullProperties?.Remove("add_labels"); } }
         private List<string>? _explicitNullValueAddLabels = default!;
 #nullable restore
 #else
-        public List<string> AddLabels { get => _explicitNullValueAddLabels; set { _explicitNullValueAddLabels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("add_labels"); else _explicitNullProperties?.Remove("add_labels"); } }
+        public List<string> AddLabels { get => _explicitNullValueAddLabels; set { _explicitNullValueAddLabels = value; AdditionalData?.Remove("add_labels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("add_labels"); else _explicitNullProperties?.Remove("add_labels"); } }
         private List<string> _explicitNullValueAddLabels = default!;
 #endif
         /// <summary>Color of the epic. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Color { get => _explicitNullValueColor; set { _explicitNullValueColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("color"); else _explicitNullProperties?.Remove("color"); } }
+        public string? Color { get => _explicitNullValueColor; set { _explicitNullValueColor = value; AdditionalData?.Remove("color"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("color"); else _explicitNullProperties?.Remove("color"); } }
         private string? _explicitNullValueColor = default!;
 #nullable restore
 #else
-        public string Color { get => _explicitNullValueColor; set { _explicitNullValueColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("color"); else _explicitNullProperties?.Remove("color"); } }
+        public string Color { get => _explicitNullValueColor; set { _explicitNullValueColor = value; AdditionalData?.Remove("color"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("color"); else _explicitNullProperties?.Remove("color"); } }
         private string _explicitNullValueColor = default!;
 #endif
         /// <summary>If `true`, the epic is confidential. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
-        public bool? Confidential { get => _explicitNullValueConfidential; set { _explicitNullValueConfidential = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confidential"); else _explicitNullProperties?.Remove("confidential"); } }
+        public bool? Confidential { get => _explicitNullValueConfidential; set { _explicitNullValueConfidential = value; AdditionalData?.Remove("confidential"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confidential"); else _explicitNullProperties?.Remove("confidential"); } }
         private bool? _explicitNullValueConfidential = default!;
         /// <summary>Description of the epic. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>Due date of the epic. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DueDateFixed { get => _explicitNullValueDueDateFixed; set { _explicitNullValueDueDateFixed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("due_date_fixed"); else _explicitNullProperties?.Remove("due_date_fixed"); } }
+        public string? DueDateFixed { get => _explicitNullValueDueDateFixed; set { _explicitNullValueDueDateFixed = value; AdditionalData?.Remove("due_date_fixed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("due_date_fixed"); else _explicitNullProperties?.Remove("due_date_fixed"); } }
         private string? _explicitNullValueDueDateFixed = default!;
 #nullable restore
 #else
-        public string DueDateFixed { get => _explicitNullValueDueDateFixed; set { _explicitNullValueDueDateFixed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("due_date_fixed"); else _explicitNullProperties?.Remove("due_date_fixed"); } }
+        public string DueDateFixed { get => _explicitNullValueDueDateFixed; set { _explicitNullValueDueDateFixed = value; AdditionalData?.Remove("due_date_fixed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("due_date_fixed"); else _explicitNullProperties?.Remove("due_date_fixed"); } }
         private string _explicitNullValueDueDateFixed = default!;
 #endif
         /// <summary>If `true`, sources the due date from the `due_date_fixed` field instead of the issue milestones. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
-        public bool? DueDateIsFixed { get => _explicitNullValueDueDateIsFixed; set { _explicitNullValueDueDateIsFixed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("due_date_is_fixed"); else _explicitNullProperties?.Remove("due_date_is_fixed"); } }
+        public bool? DueDateIsFixed { get => _explicitNullValueDueDateIsFixed; set { _explicitNullValueDueDateIsFixed = value; AdditionalData?.Remove("due_date_is_fixed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("due_date_is_fixed"); else _explicitNullProperties?.Remove("due_date_is_fixed"); } }
         private bool? _explicitNullValueDueDateIsFixed = default!;
         /// <summary>Due date of the epic. Deprecated. Use `due_date_fixed` instead. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EndDate { get => _explicitNullValueEndDate; set { _explicitNullValueEndDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_date"); else _explicitNullProperties?.Remove("end_date"); } }
+        public string? EndDate { get => _explicitNullValueEndDate; set { _explicitNullValueEndDate = value; AdditionalData?.Remove("end_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_date"); else _explicitNullProperties?.Remove("end_date"); } }
         private string? _explicitNullValueEndDate = default!;
 #nullable restore
 #else
-        public string EndDate { get => _explicitNullValueEndDate; set { _explicitNullValueEndDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_date"); else _explicitNullProperties?.Remove("end_date"); } }
+        public string EndDate { get => _explicitNullValueEndDate; set { _explicitNullValueEndDate = value; AdditionalData?.Remove("end_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_date"); else _explicitNullProperties?.Remove("end_date"); } }
         private string _explicitNullValueEndDate = default!;
 #endif
         /// <summary>Comma-separated label names for the epic. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
+        public List<string>? Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; AdditionalData?.Remove("labels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
         private List<string>? _explicitNullValueLabels = default!;
 #nullable restore
 #else
-        public List<string> Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
+        public List<string> Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; AdditionalData?.Remove("labels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
         private List<string> _explicitNullValueLabels = default!;
 #endif
         /// <summary>ID of the parent epic. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
-        public int? ParentId { get => _explicitNullValueParentId; set { _explicitNullValueParentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_id"); else _explicitNullProperties?.Remove("parent_id"); } }
+        public int? ParentId { get => _explicitNullValueParentId; set { _explicitNullValueParentId = value; AdditionalData?.Remove("parent_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_id"); else _explicitNullProperties?.Remove("parent_id"); } }
         private int? _explicitNullValueParentId = default!;
         /// <summary>Comma-separated label names to remove from the epic. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? RemoveLabels { get => _explicitNullValueRemoveLabels; set { _explicitNullValueRemoveLabels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("remove_labels"); else _explicitNullProperties?.Remove("remove_labels"); } }
+        public List<string>? RemoveLabels { get => _explicitNullValueRemoveLabels; set { _explicitNullValueRemoveLabels = value; AdditionalData?.Remove("remove_labels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("remove_labels"); else _explicitNullProperties?.Remove("remove_labels"); } }
         private List<string>? _explicitNullValueRemoveLabels = default!;
 #nullable restore
 #else
-        public List<string> RemoveLabels { get => _explicitNullValueRemoveLabels; set { _explicitNullValueRemoveLabels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("remove_labels"); else _explicitNullProperties?.Remove("remove_labels"); } }
+        public List<string> RemoveLabels { get => _explicitNullValueRemoveLabels; set { _explicitNullValueRemoveLabels = value; AdditionalData?.Remove("remove_labels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("remove_labels"); else _explicitNullProperties?.Remove("remove_labels"); } }
         private List<string> _explicitNullValueRemoveLabels = default!;
 #endif
         /// <summary>Start date of the epic. Deprecated. Use `start_date_fixed` instead. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StartDate { get => _explicitNullValueStartDate; set { _explicitNullValueStartDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_date"); else _explicitNullProperties?.Remove("start_date"); } }
+        public string? StartDate { get => _explicitNullValueStartDate; set { _explicitNullValueStartDate = value; AdditionalData?.Remove("start_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_date"); else _explicitNullProperties?.Remove("start_date"); } }
         private string? _explicitNullValueStartDate = default!;
 #nullable restore
 #else
-        public string StartDate { get => _explicitNullValueStartDate; set { _explicitNullValueStartDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_date"); else _explicitNullProperties?.Remove("start_date"); } }
+        public string StartDate { get => _explicitNullValueStartDate; set { _explicitNullValueStartDate = value; AdditionalData?.Remove("start_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_date"); else _explicitNullProperties?.Remove("start_date"); } }
         private string _explicitNullValueStartDate = default!;
 #endif
         /// <summary>Start date of the epic. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StartDateFixed { get => _explicitNullValueStartDateFixed; set { _explicitNullValueStartDateFixed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_date_fixed"); else _explicitNullProperties?.Remove("start_date_fixed"); } }
+        public string? StartDateFixed { get => _explicitNullValueStartDateFixed; set { _explicitNullValueStartDateFixed = value; AdditionalData?.Remove("start_date_fixed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_date_fixed"); else _explicitNullProperties?.Remove("start_date_fixed"); } }
         private string? _explicitNullValueStartDateFixed = default!;
 #nullable restore
 #else
-        public string StartDateFixed { get => _explicitNullValueStartDateFixed; set { _explicitNullValueStartDateFixed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_date_fixed"); else _explicitNullProperties?.Remove("start_date_fixed"); } }
+        public string StartDateFixed { get => _explicitNullValueStartDateFixed; set { _explicitNullValueStartDateFixed = value; AdditionalData?.Remove("start_date_fixed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_date_fixed"); else _explicitNullProperties?.Remove("start_date_fixed"); } }
         private string _explicitNullValueStartDateFixed = default!;
 #endif
         /// <summary>If `true`, sources the start date from the `start_date_fixed` field instead of the issue milestones. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
-        public bool? StartDateIsFixed { get => _explicitNullValueStartDateIsFixed; set { _explicitNullValueStartDateIsFixed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_date_is_fixed"); else _explicitNullProperties?.Remove("start_date_is_fixed"); } }
+        public bool? StartDateIsFixed { get => _explicitNullValueStartDateIsFixed; set { _explicitNullValueStartDateIsFixed = value; AdditionalData?.Remove("start_date_is_fixed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_date_is_fixed"); else _explicitNullProperties?.Remove("start_date_is_fixed"); } }
         private bool? _explicitNullValueStartDateIsFixed = default!;
         /// <summary>Event to change the state of the epic. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidRequestStateEvent? StateEvent { get => _explicitNullValueStateEvent; set { _explicitNullValueStateEvent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state_event"); else _explicitNullProperties?.Remove("state_event"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidRequestStateEvent? StateEvent { get => _explicitNullValueStateEvent; set { _explicitNullValueStateEvent = value; AdditionalData?.Remove("state_event"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state_event"); else _explicitNullProperties?.Remove("state_event"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidRequestStateEvent? _explicitNullValueStateEvent = default!;
         /// <summary>Title of the epic. At least one of `add_labels`, `color`, `confidential`, `description`, `due_date_fixed`, `due_date_is_fixed`, `labels`, `parent_id`, `remove_labels`, `start_date_fixed`, `start_date_is_fixed`, `state_event`, `title`, `start_date`, `end_date` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; AdditionalData?.Remove("title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
         private string? _explicitNullValueTitle = default!;
 #nullable restore
 #else
-        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; AdditionalData?.Remove("title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
         private string _explicitNullValueTitle = default!;
 #endif
         /// <summary>Date and time the epic was updated. Available only for administrators and project owners.</summary>
-        public DateTimeOffset? UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_at"); else _explicitNullProperties?.Remove("updated_at"); } }
+        public DateTimeOffset? UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; AdditionalData?.Remove("updated_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_at"); else _explicitNullProperties?.Remove("updated_at"); } }
         private DateTimeOffset? _explicitNullValueUpdatedAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidRequest"/> and sets the default values.
@@ -193,7 +209,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "start_date", n => { StartDate = n.GetStringValue(); } },
                 { "start_date_fixed", n => { StartDateFixed = n.GetStringValue(); } },
                 { "start_date_is_fixed", n => { StartDateIsFixed = n.GetBoolValue(); } },
-                { "state_event", n => { StateEvent = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidRequestStateEvent>(); } },
+                { "state_event", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidRequestStateEvent>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStateEvent = default; _explicitNullProperties?.Remove("state_event"); AdditionalData["state_event"] = unknown; } else { StateEvent = parsed; AdditionalData.Remove("state_event"); } } },
                 { "title", n => { Title = n.GetStringValue(); } },
                 { "updated_at", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
             };

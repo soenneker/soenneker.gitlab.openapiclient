@@ -17,17 +17,28 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("alternates") is { } nullNodeAlternates && nullNodeAlternates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Alternates = null;
-            if (parseNode.GetChildNode("bitmap") is { } nullNodeBitmap && nullNodeBitmap.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bitmap = null;
-            if (parseNode.GetChildNode("commit_graph") is { } nullNodeCommitGraph && nullNodeCommitGraph.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommitGraph = null;
-            if (parseNode.GetChildNode("is_object_pool") is { } nullNodeIsObjectPool && nullNodeIsObjectPool.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsObjectPool = null;
-            if (parseNode.GetChildNode("last_full_repack") is { } nullNodeLastFullRepack && nullNodeLastFullRepack.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastFullRepack = null;
-            if (parseNode.GetChildNode("multi_pack_index") is { } nullNodeMultiPackIndex && nullNodeMultiPackIndex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MultiPackIndex = null;
-            if (parseNode.GetChildNode("multi_pack_index_bitmap") is { } nullNodeMultiPackIndexBitmap && nullNodeMultiPackIndexBitmap.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MultiPackIndexBitmap = null;
-            if (parseNode.GetChildNode("objects") is { } nullNodeObjects && nullNodeObjects.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Objects = null;
-            if (parseNode.GetChildNode("references") is { } nullNodeReferences && nullNodeReferences.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) References = null;
-            if (parseNode.GetChildNode("size") is { } nullNodeSize && nullNodeSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Size = null;
-            if (parseNode.GetChildNode("updated_at") is { } nullNodeUpdatedAt && nullNodeUpdatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedAt = null;
+            if (parseNode.GetChildNode("alternates") is null) { _explicitNullValueAlternates = default!; _explicitNullProperties?.Remove("alternates"); }
+            else if (parseNode.GetChildNode("alternates") is { } nullNodeAlternates && nullNodeAlternates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Alternates = null;
+            if (parseNode.GetChildNode("bitmap") is null) { _explicitNullValueBitmap = default!; _explicitNullProperties?.Remove("bitmap"); }
+            else if (parseNode.GetChildNode("bitmap") is { } nullNodeBitmap && nullNodeBitmap.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bitmap = null;
+            if (parseNode.GetChildNode("commit_graph") is null) { _explicitNullValueCommitGraph = default!; _explicitNullProperties?.Remove("commit_graph"); }
+            else if (parseNode.GetChildNode("commit_graph") is { } nullNodeCommitGraph && nullNodeCommitGraph.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommitGraph = null;
+            if (parseNode.GetChildNode("is_object_pool") is null) { _explicitNullValueIsObjectPool = default!; _explicitNullProperties?.Remove("is_object_pool"); }
+            else if (parseNode.GetChildNode("is_object_pool") is { } nullNodeIsObjectPool && nullNodeIsObjectPool.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsObjectPool = null;
+            if (parseNode.GetChildNode("last_full_repack") is null) { _explicitNullValueLastFullRepack = default!; _explicitNullProperties?.Remove("last_full_repack"); }
+            else if (parseNode.GetChildNode("last_full_repack") is { } nullNodeLastFullRepack && nullNodeLastFullRepack.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastFullRepack = null;
+            if (parseNode.GetChildNode("multi_pack_index") is null) { _explicitNullValueMultiPackIndex = default!; _explicitNullProperties?.Remove("multi_pack_index"); }
+            else if (parseNode.GetChildNode("multi_pack_index") is { } nullNodeMultiPackIndex && nullNodeMultiPackIndex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MultiPackIndex = null;
+            if (parseNode.GetChildNode("multi_pack_index_bitmap") is null) { _explicitNullValueMultiPackIndexBitmap = default!; _explicitNullProperties?.Remove("multi_pack_index_bitmap"); }
+            else if (parseNode.GetChildNode("multi_pack_index_bitmap") is { } nullNodeMultiPackIndexBitmap && nullNodeMultiPackIndexBitmap.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MultiPackIndexBitmap = null;
+            if (parseNode.GetChildNode("objects") is null) { _explicitNullValueObjects = default!; _explicitNullProperties?.Remove("objects"); }
+            else if (parseNode.GetChildNode("objects") is { } nullNodeObjects && nullNodeObjects.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Objects = null;
+            if (parseNode.GetChildNode("references") is null) { _explicitNullValueReferences = default!; _explicitNullProperties?.Remove("references"); }
+            else if (parseNode.GetChildNode("references") is { } nullNodeReferences && nullNodeReferences.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) References = null;
+            if (parseNode.GetChildNode("size") is null) { _explicitNullValueSize = default!; _explicitNullProperties?.Remove("size"); }
+            else if (parseNode.GetChildNode("size") is { } nullNodeSize && nullNodeSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Size = null;
+            if (parseNode.GetChildNode("updated_at") is null) { _explicitNullValueUpdatedAt = default!; _explicitNullProperties?.Remove("updated_at"); }
+            else if (parseNode.GetChildNode("updated_at") is { } nullNodeUpdatedAt && nullNodeUpdatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedAt = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -35,91 +46,91 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The alternates property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthAlternatesProperty? Alternates { get => _explicitNullValueAlternates; set { _explicitNullValueAlternates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alternates"); else _explicitNullProperties?.Remove("alternates"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthAlternatesProperty? Alternates { get => _explicitNullValueAlternates; set { _explicitNullValueAlternates = value; AdditionalData?.Remove("alternates"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alternates"); else _explicitNullProperties?.Remove("alternates"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthAlternatesProperty? _explicitNullValueAlternates = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthAlternatesProperty Alternates { get => _explicitNullValueAlternates; set { _explicitNullValueAlternates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alternates"); else _explicitNullProperties?.Remove("alternates"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthAlternatesProperty Alternates { get => _explicitNullValueAlternates; set { _explicitNullValueAlternates = value; AdditionalData?.Remove("alternates"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alternates"); else _explicitNullProperties?.Remove("alternates"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthAlternatesProperty _explicitNullValueAlternates = default!;
 #endif
         /// <summary>The bitmap property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthBitmap? Bitmap { get => _explicitNullValueBitmap; set { _explicitNullValueBitmap = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bitmap"); else _explicitNullProperties?.Remove("bitmap"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthBitmap? Bitmap { get => _explicitNullValueBitmap; set { _explicitNullValueBitmap = value; AdditionalData?.Remove("bitmap"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bitmap"); else _explicitNullProperties?.Remove("bitmap"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthBitmap? _explicitNullValueBitmap = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthBitmap Bitmap { get => _explicitNullValueBitmap; set { _explicitNullValueBitmap = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bitmap"); else _explicitNullProperties?.Remove("bitmap"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthBitmap Bitmap { get => _explicitNullValueBitmap; set { _explicitNullValueBitmap = value; AdditionalData?.Remove("bitmap"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bitmap"); else _explicitNullProperties?.Remove("bitmap"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthBitmap _explicitNullValueBitmap = default!;
 #endif
         /// <summary>The commit_graph property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthCommitGraph? CommitGraph { get => _explicitNullValueCommitGraph; set { _explicitNullValueCommitGraph = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_graph"); else _explicitNullProperties?.Remove("commit_graph"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthCommitGraph? CommitGraph { get => _explicitNullValueCommitGraph; set { _explicitNullValueCommitGraph = value; AdditionalData?.Remove("commit_graph"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_graph"); else _explicitNullProperties?.Remove("commit_graph"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthCommitGraph? _explicitNullValueCommitGraph = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthCommitGraph CommitGraph { get => _explicitNullValueCommitGraph; set { _explicitNullValueCommitGraph = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_graph"); else _explicitNullProperties?.Remove("commit_graph"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthCommitGraph CommitGraph { get => _explicitNullValueCommitGraph; set { _explicitNullValueCommitGraph = value; AdditionalData?.Remove("commit_graph"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_graph"); else _explicitNullProperties?.Remove("commit_graph"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthCommitGraph _explicitNullValueCommitGraph = default!;
 #endif
         /// <summary>The is_object_pool property</summary>
-        public bool? IsObjectPool { get => _explicitNullValueIsObjectPool; set { _explicitNullValueIsObjectPool = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_object_pool"); else _explicitNullProperties?.Remove("is_object_pool"); } }
+        public bool? IsObjectPool { get => _explicitNullValueIsObjectPool; set { _explicitNullValueIsObjectPool = value; AdditionalData?.Remove("is_object_pool"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_object_pool"); else _explicitNullProperties?.Remove("is_object_pool"); } }
         private bool? _explicitNullValueIsObjectPool = default!;
         /// <summary>The last_full_repack property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthLastFullRepack? LastFullRepack { get => _explicitNullValueLastFullRepack; set { _explicitNullValueLastFullRepack = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_full_repack"); else _explicitNullProperties?.Remove("last_full_repack"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthLastFullRepack? LastFullRepack { get => _explicitNullValueLastFullRepack; set { _explicitNullValueLastFullRepack = value; AdditionalData?.Remove("last_full_repack"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_full_repack"); else _explicitNullProperties?.Remove("last_full_repack"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthLastFullRepack? _explicitNullValueLastFullRepack = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthLastFullRepack LastFullRepack { get => _explicitNullValueLastFullRepack; set { _explicitNullValueLastFullRepack = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_full_repack"); else _explicitNullProperties?.Remove("last_full_repack"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthLastFullRepack LastFullRepack { get => _explicitNullValueLastFullRepack; set { _explicitNullValueLastFullRepack = value; AdditionalData?.Remove("last_full_repack"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_full_repack"); else _explicitNullProperties?.Remove("last_full_repack"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthLastFullRepack _explicitNullValueLastFullRepack = default!;
 #endif
         /// <summary>The multi_pack_index property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthMultiPackIndex? MultiPackIndex { get => _explicitNullValueMultiPackIndex; set { _explicitNullValueMultiPackIndex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multi_pack_index"); else _explicitNullProperties?.Remove("multi_pack_index"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthMultiPackIndex? MultiPackIndex { get => _explicitNullValueMultiPackIndex; set { _explicitNullValueMultiPackIndex = value; AdditionalData?.Remove("multi_pack_index"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multi_pack_index"); else _explicitNullProperties?.Remove("multi_pack_index"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthMultiPackIndex? _explicitNullValueMultiPackIndex = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthMultiPackIndex MultiPackIndex { get => _explicitNullValueMultiPackIndex; set { _explicitNullValueMultiPackIndex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multi_pack_index"); else _explicitNullProperties?.Remove("multi_pack_index"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthMultiPackIndex MultiPackIndex { get => _explicitNullValueMultiPackIndex; set { _explicitNullValueMultiPackIndex = value; AdditionalData?.Remove("multi_pack_index"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multi_pack_index"); else _explicitNullProperties?.Remove("multi_pack_index"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthMultiPackIndex _explicitNullValueMultiPackIndex = default!;
 #endif
         /// <summary>The multi_pack_index_bitmap property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthBitmap? MultiPackIndexBitmap { get => _explicitNullValueMultiPackIndexBitmap; set { _explicitNullValueMultiPackIndexBitmap = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multi_pack_index_bitmap"); else _explicitNullProperties?.Remove("multi_pack_index_bitmap"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthBitmap? MultiPackIndexBitmap { get => _explicitNullValueMultiPackIndexBitmap; set { _explicitNullValueMultiPackIndexBitmap = value; AdditionalData?.Remove("multi_pack_index_bitmap"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multi_pack_index_bitmap"); else _explicitNullProperties?.Remove("multi_pack_index_bitmap"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthBitmap? _explicitNullValueMultiPackIndexBitmap = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthBitmap MultiPackIndexBitmap { get => _explicitNullValueMultiPackIndexBitmap; set { _explicitNullValueMultiPackIndexBitmap = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multi_pack_index_bitmap"); else _explicitNullProperties?.Remove("multi_pack_index_bitmap"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthBitmap MultiPackIndexBitmap { get => _explicitNullValueMultiPackIndexBitmap; set { _explicitNullValueMultiPackIndexBitmap = value; AdditionalData?.Remove("multi_pack_index_bitmap"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multi_pack_index_bitmap"); else _explicitNullProperties?.Remove("multi_pack_index_bitmap"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthBitmap _explicitNullValueMultiPackIndexBitmap = default!;
 #endif
         /// <summary>The objects property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthObjects? Objects { get => _explicitNullValueObjects; set { _explicitNullValueObjects = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objects"); else _explicitNullProperties?.Remove("objects"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthObjects? Objects { get => _explicitNullValueObjects; set { _explicitNullValueObjects = value; AdditionalData?.Remove("objects"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objects"); else _explicitNullProperties?.Remove("objects"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthObjects? _explicitNullValueObjects = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthObjects Objects { get => _explicitNullValueObjects; set { _explicitNullValueObjects = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objects"); else _explicitNullProperties?.Remove("objects"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthObjects Objects { get => _explicitNullValueObjects; set { _explicitNullValueObjects = value; AdditionalData?.Remove("objects"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("objects"); else _explicitNullProperties?.Remove("objects"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthObjects _explicitNullValueObjects = default!;
 #endif
         /// <summary>The references property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthReferences? References { get => _explicitNullValueReferences; set { _explicitNullValueReferences = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("references"); else _explicitNullProperties?.Remove("references"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthReferences? References { get => _explicitNullValueReferences; set { _explicitNullValueReferences = value; AdditionalData?.Remove("references"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("references"); else _explicitNullProperties?.Remove("references"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthReferences? _explicitNullValueReferences = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthReferences References { get => _explicitNullValueReferences; set { _explicitNullValueReferences = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("references"); else _explicitNullProperties?.Remove("references"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthReferences References { get => _explicitNullValueReferences; set { _explicitNullValueReferences = value; AdditionalData?.Remove("references"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("references"); else _explicitNullProperties?.Remove("references"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthReferences _explicitNullValueReferences = default!;
 #endif
         /// <summary>The size property</summary>
-        public int? Size { get => _explicitNullValueSize; set { _explicitNullValueSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("size"); else _explicitNullProperties?.Remove("size"); } }
+        public int? Size { get => _explicitNullValueSize; set { _explicitNullValueSize = value; AdditionalData?.Remove("size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("size"); else _explicitNullProperties?.Remove("size"); } }
         private int? _explicitNullValueSize = default!;
         /// <summary>The updated_at property</summary>
-        public DateTimeOffset? UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_at"); else _explicitNullProperties?.Remove("updated_at"); } }
+        public DateTimeOffset? UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; AdditionalData?.Remove("updated_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_at"); else _explicitNullProperties?.Remove("updated_at"); } }
         private DateTimeOffset? _explicitNullValueUpdatedAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealth"/> and sets the default values.

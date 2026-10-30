@@ -17,17 +17,19 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("export_type") is { } nullNodeExportType && nullNodeExportType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExportType = null;
-            if (parseNode.GetChildNode("send_email") is { } nullNodeSendEmail && nullNodeSendEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendEmail = null;
+            if (parseNode.GetChildNode("export_type") is null) { _explicitNullValueExportType = default!; _explicitNullProperties?.Remove("export_type"); }
+            else if (parseNode.GetChildNode("export_type") is { } nullNodeExportType && nullNodeExportType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExportType = null;
+            if (parseNode.GetChildNode("send_email") is null) { _explicitNullValueSendEmail = default!; _explicitNullProperties?.Remove("send_email"); }
+            else if (parseNode.GetChildNode("send_email") is { } nullNodeSendEmail && nullNodeSendEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendEmail = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Format of the export.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdDependencyListExportsRequestExportType? ExportType { get => _explicitNullValueExportType; set { _explicitNullValueExportType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("export_type"); else _explicitNullProperties?.Remove("export_type"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdDependencyListExportsRequestExportType? ExportType { get => _explicitNullValueExportType; set { _explicitNullValueExportType = value; AdditionalData?.Remove("export_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("export_type"); else _explicitNullProperties?.Remove("export_type"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdDependencyListExportsRequestExportType? _explicitNullValueExportType = default!;
         /// <summary>If `true`, sends an email notification to the requesting user when the export completes.</summary>
-        public bool? SendEmail { get => _explicitNullValueSendEmail; set { _explicitNullValueSendEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("send_email"); else _explicitNullProperties?.Remove("send_email"); } }
+        public bool? SendEmail { get => _explicitNullValueSendEmail; set { _explicitNullValueSendEmail = value; AdditionalData?.Remove("send_email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("send_email"); else _explicitNullProperties?.Remove("send_email"); } }
         private bool? _explicitNullValueSendEmail = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdDependencyListExportsRequest"/> and sets the default values.
@@ -55,7 +57,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "export_type", n => { ExportType = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdDependencyListExportsRequestExportType>(); } },
+                { "export_type", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdDependencyListExportsRequestExportType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueExportType = default; _explicitNullProperties?.Remove("export_type"); AdditionalData["export_type"] = unknown; } else { ExportType = parsed; AdditionalData.Remove("export_type"); } } },
                 { "send_email", n => { SendEmail = n.GetBoolValue(); } },
             };
         }

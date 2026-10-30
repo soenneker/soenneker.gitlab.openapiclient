@@ -18,19 +18,32 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("base_sha") is { } nullNodeBaseSha && nullNodeBaseSha.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BaseSha = null;
-            if (parseNode.GetChildNode("head_sha") is { } nullNodeHeadSha && nullNodeHeadSha.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HeadSha = null;
-            if (parseNode.GetChildNode("height") is { } nullNodeHeight && nullNodeHeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Height = null;
-            if (parseNode.GetChildNode("line_range") is { } nullNodeLineRange && nullNodeLineRange.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LineRange = null;
-            if (parseNode.GetChildNode("new_line") is { } nullNodeNewLine && nullNodeNewLine.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewLine = null;
-            if (parseNode.GetChildNode("new_path") is { } nullNodeNewPath && nullNodeNewPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewPath = null;
-            if (parseNode.GetChildNode("old_line") is { } nullNodeOldLine && nullNodeOldLine.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OldLine = null;
-            if (parseNode.GetChildNode("old_path") is { } nullNodeOldPath && nullNodeOldPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OldPath = null;
-            if (parseNode.GetChildNode("position_type") is { } nullNodePositionType && nullNodePositionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PositionType = null;
-            if (parseNode.GetChildNode("start_sha") is { } nullNodeStartSha && nullNodeStartSha.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartSha = null;
-            if (parseNode.GetChildNode("width") is { } nullNodeWidth && nullNodeWidth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Width = null;
-            if (parseNode.GetChildNode("x") is { } nullNodeX && nullNodeX.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) X = null;
-            if (parseNode.GetChildNode("y") is { } nullNodeY && nullNodeY.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Y = null;
+            if (parseNode.GetChildNode("base_sha") is null) { _explicitNullValueBaseSha = default!; _explicitNullProperties?.Remove("base_sha"); }
+            else if (parseNode.GetChildNode("base_sha") is { } nullNodeBaseSha && nullNodeBaseSha.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BaseSha = null;
+            if (parseNode.GetChildNode("head_sha") is null) { _explicitNullValueHeadSha = default!; _explicitNullProperties?.Remove("head_sha"); }
+            else if (parseNode.GetChildNode("head_sha") is { } nullNodeHeadSha && nullNodeHeadSha.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HeadSha = null;
+            if (parseNode.GetChildNode("height") is null) { _explicitNullValueHeight = default!; _explicitNullProperties?.Remove("height"); }
+            else if (parseNode.GetChildNode("height") is { } nullNodeHeight && nullNodeHeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Height = null;
+            if (parseNode.GetChildNode("line_range") is null) { _explicitNullValueLineRange = default!; _explicitNullProperties?.Remove("line_range"); }
+            else if (parseNode.GetChildNode("line_range") is { } nullNodeLineRange && nullNodeLineRange.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LineRange = null;
+            if (parseNode.GetChildNode("new_line") is null) { _explicitNullValueNewLine = default!; _explicitNullProperties?.Remove("new_line"); }
+            else if (parseNode.GetChildNode("new_line") is { } nullNodeNewLine && nullNodeNewLine.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewLine = null;
+            if (parseNode.GetChildNode("new_path") is null) { _explicitNullValueNewPath = default!; _explicitNullProperties?.Remove("new_path"); }
+            else if (parseNode.GetChildNode("new_path") is { } nullNodeNewPath && nullNodeNewPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewPath = null;
+            if (parseNode.GetChildNode("old_line") is null) { _explicitNullValueOldLine = default!; _explicitNullProperties?.Remove("old_line"); }
+            else if (parseNode.GetChildNode("old_line") is { } nullNodeOldLine && nullNodeOldLine.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OldLine = null;
+            if (parseNode.GetChildNode("old_path") is null) { _explicitNullValueOldPath = default!; _explicitNullProperties?.Remove("old_path"); }
+            else if (parseNode.GetChildNode("old_path") is { } nullNodeOldPath && nullNodeOldPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OldPath = null;
+            if (parseNode.GetChildNode("position_type") is null) { _explicitNullValuePositionType = default!; _explicitNullProperties?.Remove("position_type"); }
+            else if (parseNode.GetChildNode("position_type") is { } nullNodePositionType && nullNodePositionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PositionType = null;
+            if (parseNode.GetChildNode("start_sha") is null) { _explicitNullValueStartSha = default!; _explicitNullProperties?.Remove("start_sha"); }
+            else if (parseNode.GetChildNode("start_sha") is { } nullNodeStartSha && nullNodeStartSha.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartSha = null;
+            if (parseNode.GetChildNode("width") is null) { _explicitNullValueWidth = default!; _explicitNullProperties?.Remove("width"); }
+            else if (parseNode.GetChildNode("width") is { } nullNodeWidth && nullNodeWidth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Width = null;
+            if (parseNode.GetChildNode("x") is null) { _explicitNullValueX = default!; _explicitNullProperties?.Remove("x"); }
+            else if (parseNode.GetChildNode("x") is { } nullNodeX && nullNodeX.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) X = null;
+            if (parseNode.GetChildNode("y") is null) { _explicitNullValueY = default!; _explicitNullProperties?.Remove("y"); }
+            else if (parseNode.GetChildNode("y") is { } nullNodeY && nullNodeY.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Y = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -38,83 +51,83 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Base commit SHA in the source branch</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BaseSha { get => _explicitNullValueBaseSha; set { _explicitNullValueBaseSha = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("base_sha"); else _explicitNullProperties?.Remove("base_sha"); } }
+        public string? BaseSha { get => _explicitNullValueBaseSha; set { _explicitNullValueBaseSha = value; AdditionalData?.Remove("base_sha"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("base_sha"); else _explicitNullProperties?.Remove("base_sha"); } }
         private string? _explicitNullValueBaseSha = default!;
 #nullable restore
 #else
-        public string BaseSha { get => _explicitNullValueBaseSha; set { _explicitNullValueBaseSha = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("base_sha"); else _explicitNullProperties?.Remove("base_sha"); } }
+        public string BaseSha { get => _explicitNullValueBaseSha; set { _explicitNullValueBaseSha = value; AdditionalData?.Remove("base_sha"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("base_sha"); else _explicitNullProperties?.Remove("base_sha"); } }
         private string _explicitNullValueBaseSha = default!;
 #endif
         /// <summary>SHA referencing HEAD of this merge request</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HeadSha { get => _explicitNullValueHeadSha; set { _explicitNullValueHeadSha = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("head_sha"); else _explicitNullProperties?.Remove("head_sha"); } }
+        public string? HeadSha { get => _explicitNullValueHeadSha; set { _explicitNullValueHeadSha = value; AdditionalData?.Remove("head_sha"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("head_sha"); else _explicitNullProperties?.Remove("head_sha"); } }
         private string? _explicitNullValueHeadSha = default!;
 #nullable restore
 #else
-        public string HeadSha { get => _explicitNullValueHeadSha; set { _explicitNullValueHeadSha = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("head_sha"); else _explicitNullProperties?.Remove("head_sha"); } }
+        public string HeadSha { get => _explicitNullValueHeadSha; set { _explicitNullValueHeadSha = value; AdditionalData?.Remove("head_sha"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("head_sha"); else _explicitNullProperties?.Remove("head_sha"); } }
         private string _explicitNullValueHeadSha = default!;
 #endif
         /// <summary>Height of the image</summary>
-        public int? Height { get => _explicitNullValueHeight; set { _explicitNullValueHeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("height"); else _explicitNullProperties?.Remove("height"); } }
+        public int? Height { get => _explicitNullValueHeight; set { _explicitNullValueHeight = value; AdditionalData?.Remove("height"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("height"); else _explicitNullProperties?.Remove("height"); } }
         private int? _explicitNullValueHeight = default!;
         /// <summary>Multi-line start and end</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMergeRequestsNoteableIdDiscussionsRequestPositionLineRange? LineRange { get => _explicitNullValueLineRange; set { _explicitNullValueLineRange = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_range"); else _explicitNullProperties?.Remove("line_range"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMergeRequestsNoteableIdDiscussionsRequestPositionLineRange? LineRange { get => _explicitNullValueLineRange; set { _explicitNullValueLineRange = value; AdditionalData?.Remove("line_range"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_range"); else _explicitNullProperties?.Remove("line_range"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMergeRequestsNoteableIdDiscussionsRequestPositionLineRange? _explicitNullValueLineRange = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMergeRequestsNoteableIdDiscussionsRequestPositionLineRange LineRange { get => _explicitNullValueLineRange; set { _explicitNullValueLineRange = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_range"); else _explicitNullProperties?.Remove("line_range"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMergeRequestsNoteableIdDiscussionsRequestPositionLineRange LineRange { get => _explicitNullValueLineRange; set { _explicitNullValueLineRange = value; AdditionalData?.Remove("line_range"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_range"); else _explicitNullProperties?.Remove("line_range"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMergeRequestsNoteableIdDiscussionsRequestPositionLineRange _explicitNullValueLineRange = default!;
 #endif
         /// <summary>Line number after change</summary>
-        public int? NewLine { get => _explicitNullValueNewLine; set { _explicitNullValueNewLine = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_line"); else _explicitNullProperties?.Remove("new_line"); } }
+        public int? NewLine { get => _explicitNullValueNewLine; set { _explicitNullValueNewLine = value; AdditionalData?.Remove("new_line"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_line"); else _explicitNullProperties?.Remove("new_line"); } }
         private int? _explicitNullValueNewLine = default!;
         /// <summary>File path after change</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NewPath { get => _explicitNullValueNewPath; set { _explicitNullValueNewPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_path"); else _explicitNullProperties?.Remove("new_path"); } }
+        public string? NewPath { get => _explicitNullValueNewPath; set { _explicitNullValueNewPath = value; AdditionalData?.Remove("new_path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_path"); else _explicitNullProperties?.Remove("new_path"); } }
         private string? _explicitNullValueNewPath = default!;
 #nullable restore
 #else
-        public string NewPath { get => _explicitNullValueNewPath; set { _explicitNullValueNewPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_path"); else _explicitNullProperties?.Remove("new_path"); } }
+        public string NewPath { get => _explicitNullValueNewPath; set { _explicitNullValueNewPath = value; AdditionalData?.Remove("new_path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_path"); else _explicitNullProperties?.Remove("new_path"); } }
         private string _explicitNullValueNewPath = default!;
 #endif
         /// <summary>Line number before change</summary>
-        public int? OldLine { get => _explicitNullValueOldLine; set { _explicitNullValueOldLine = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("old_line"); else _explicitNullProperties?.Remove("old_line"); } }
+        public int? OldLine { get => _explicitNullValueOldLine; set { _explicitNullValueOldLine = value; AdditionalData?.Remove("old_line"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("old_line"); else _explicitNullProperties?.Remove("old_line"); } }
         private int? _explicitNullValueOldLine = default!;
         /// <summary>File path before change</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OldPath { get => _explicitNullValueOldPath; set { _explicitNullValueOldPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("old_path"); else _explicitNullProperties?.Remove("old_path"); } }
+        public string? OldPath { get => _explicitNullValueOldPath; set { _explicitNullValueOldPath = value; AdditionalData?.Remove("old_path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("old_path"); else _explicitNullProperties?.Remove("old_path"); } }
         private string? _explicitNullValueOldPath = default!;
 #nullable restore
 #else
-        public string OldPath { get => _explicitNullValueOldPath; set { _explicitNullValueOldPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("old_path"); else _explicitNullProperties?.Remove("old_path"); } }
+        public string OldPath { get => _explicitNullValueOldPath; set { _explicitNullValueOldPath = value; AdditionalData?.Remove("old_path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("old_path"); else _explicitNullProperties?.Remove("old_path"); } }
         private string _explicitNullValueOldPath = default!;
 #endif
         /// <summary>Type of the position reference</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMergeRequestsNoteableIdDiscussionsRequestPositionPositionType? PositionType { get => _explicitNullValuePositionType; set { _explicitNullValuePositionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("position_type"); else _explicitNullProperties?.Remove("position_type"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMergeRequestsNoteableIdDiscussionsRequestPositionPositionType? PositionType { get => _explicitNullValuePositionType; set { _explicitNullValuePositionType = value; AdditionalData?.Remove("position_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("position_type"); else _explicitNullProperties?.Remove("position_type"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMergeRequestsNoteableIdDiscussionsRequestPositionPositionType? _explicitNullValuePositionType = default!;
         /// <summary>SHA referencing commit in target branch</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StartSha { get => _explicitNullValueStartSha; set { _explicitNullValueStartSha = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_sha"); else _explicitNullProperties?.Remove("start_sha"); } }
+        public string? StartSha { get => _explicitNullValueStartSha; set { _explicitNullValueStartSha = value; AdditionalData?.Remove("start_sha"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_sha"); else _explicitNullProperties?.Remove("start_sha"); } }
         private string? _explicitNullValueStartSha = default!;
 #nullable restore
 #else
-        public string StartSha { get => _explicitNullValueStartSha; set { _explicitNullValueStartSha = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_sha"); else _explicitNullProperties?.Remove("start_sha"); } }
+        public string StartSha { get => _explicitNullValueStartSha; set { _explicitNullValueStartSha = value; AdditionalData?.Remove("start_sha"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_sha"); else _explicitNullProperties?.Remove("start_sha"); } }
         private string _explicitNullValueStartSha = default!;
 #endif
         /// <summary>Width of the image</summary>
-        public int? Width { get => _explicitNullValueWidth; set { _explicitNullValueWidth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("width"); else _explicitNullProperties?.Remove("width"); } }
+        public int? Width { get => _explicitNullValueWidth; set { _explicitNullValueWidth = value; AdditionalData?.Remove("width"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("width"); else _explicitNullProperties?.Remove("width"); } }
         private int? _explicitNullValueWidth = default!;
         /// <summary>X coordinate in the image</summary>
-        public int? X { get => _explicitNullValueX; set { _explicitNullValueX = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("x"); else _explicitNullProperties?.Remove("x"); } }
+        public int? X { get => _explicitNullValueX; set { _explicitNullValueX = value; AdditionalData?.Remove("x"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("x"); else _explicitNullProperties?.Remove("x"); } }
         private int? _explicitNullValueX = default!;
         /// <summary>Y coordinate in the image</summary>
-        public int? Y { get => _explicitNullValueY; set { _explicitNullValueY = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("y"); else _explicitNullProperties?.Remove("y"); } }
+        public int? Y { get => _explicitNullValueY; set { _explicitNullValueY = value; AdditionalData?.Remove("y"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("y"); else _explicitNullProperties?.Remove("y"); } }
         private int? _explicitNullValueY = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMergeRequestsNoteableIdDiscussionsRequestPosition"/> and sets the default values.
@@ -151,7 +164,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "new_path", n => { NewPath = n.GetStringValue(); } },
                 { "old_line", n => { OldLine = n.GetIntValue(); } },
                 { "old_path", n => { OldPath = n.GetStringValue(); } },
-                { "position_type", n => { PositionType = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMergeRequestsNoteableIdDiscussionsRequestPositionPositionType>(); } },
+                { "position_type", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMergeRequestsNoteableIdDiscussionsRequestPositionPositionType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePositionType = default; _explicitNullProperties?.Remove("position_type"); AdditionalData["position_type"] = unknown; } else { PositionType = parsed; AdditionalData.Remove("position_type"); } } },
                 { "start_sha", n => { StartSha = n.GetStringValue(); } },
                 { "width", n => { Width = n.GetIntValue(); } },
                 { "x", n => { X = n.GetIntValue(); } },

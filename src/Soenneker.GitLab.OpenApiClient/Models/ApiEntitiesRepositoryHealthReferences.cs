@@ -17,27 +17,30 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("loose_count") is { } nullNodeLooseCount && nullNodeLooseCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LooseCount = null;
-            if (parseNode.GetChildNode("packed_size") is { } nullNodePackedSize && nullNodePackedSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackedSize = null;
-            if (parseNode.GetChildNode("reference_backend") is { } nullNodeReferenceBackend && nullNodeReferenceBackend.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReferenceBackend = null;
+            if (parseNode.GetChildNode("loose_count") is null) { _explicitNullValueLooseCount = default!; _explicitNullProperties?.Remove("loose_count"); }
+            else if (parseNode.GetChildNode("loose_count") is { } nullNodeLooseCount && nullNodeLooseCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LooseCount = null;
+            if (parseNode.GetChildNode("packed_size") is null) { _explicitNullValuePackedSize = default!; _explicitNullProperties?.Remove("packed_size"); }
+            else if (parseNode.GetChildNode("packed_size") is { } nullNodePackedSize && nullNodePackedSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackedSize = null;
+            if (parseNode.GetChildNode("reference_backend") is null) { _explicitNullValueReferenceBackend = default!; _explicitNullProperties?.Remove("reference_backend"); }
+            else if (parseNode.GetChildNode("reference_backend") is { } nullNodeReferenceBackend && nullNodeReferenceBackend.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReferenceBackend = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The loose_count property</summary>
-        public int? LooseCount { get => _explicitNullValueLooseCount; set { _explicitNullValueLooseCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("loose_count"); else _explicitNullProperties?.Remove("loose_count"); } }
+        public int? LooseCount { get => _explicitNullValueLooseCount; set { _explicitNullValueLooseCount = value; AdditionalData?.Remove("loose_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("loose_count"); else _explicitNullProperties?.Remove("loose_count"); } }
         private int? _explicitNullValueLooseCount = default!;
         /// <summary>The packed_size property</summary>
-        public int? PackedSize { get => _explicitNullValuePackedSize; set { _explicitNullValuePackedSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packed_size"); else _explicitNullProperties?.Remove("packed_size"); } }
+        public int? PackedSize { get => _explicitNullValuePackedSize; set { _explicitNullValuePackedSize = value; AdditionalData?.Remove("packed_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packed_size"); else _explicitNullProperties?.Remove("packed_size"); } }
         private int? _explicitNullValuePackedSize = default!;
         /// <summary>The reference_backend property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReferenceBackend { get => _explicitNullValueReferenceBackend; set { _explicitNullValueReferenceBackend = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference_backend"); else _explicitNullProperties?.Remove("reference_backend"); } }
+        public string? ReferenceBackend { get => _explicitNullValueReferenceBackend; set { _explicitNullValueReferenceBackend = value; AdditionalData?.Remove("reference_backend"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference_backend"); else _explicitNullProperties?.Remove("reference_backend"); } }
         private string? _explicitNullValueReferenceBackend = default!;
 #nullable restore
 #else
-        public string ReferenceBackend { get => _explicitNullValueReferenceBackend; set { _explicitNullValueReferenceBackend = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference_backend"); else _explicitNullProperties?.Remove("reference_backend"); } }
+        public string ReferenceBackend { get => _explicitNullValueReferenceBackend; set { _explicitNullValueReferenceBackend = value; AdditionalData?.Remove("reference_backend"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference_backend"); else _explicitNullProperties?.Remove("reference_backend"); } }
         private string _explicitNullValueReferenceBackend = default!;
 #endif
         /// <summary>

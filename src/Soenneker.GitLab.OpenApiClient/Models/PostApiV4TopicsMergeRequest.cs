@@ -17,17 +17,19 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("source_topic_id") is { } nullNodeSourceTopicId && nullNodeSourceTopicId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceTopicId = null;
-            if (parseNode.GetChildNode("target_topic_id") is { } nullNodeTargetTopicId && nullNodeTargetTopicId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetTopicId = null;
+            if (parseNode.GetChildNode("source_topic_id") is null) { _explicitNullValueSourceTopicId = default!; _explicitNullProperties?.Remove("source_topic_id"); }
+            else if (parseNode.GetChildNode("source_topic_id") is { } nullNodeSourceTopicId && nullNodeSourceTopicId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceTopicId = null;
+            if (parseNode.GetChildNode("target_topic_id") is null) { _explicitNullValueTargetTopicId = default!; _explicitNullProperties?.Remove("target_topic_id"); }
+            else if (parseNode.GetChildNode("target_topic_id") is { } nullNodeTargetTopicId && nullNodeTargetTopicId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetTopicId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>ID of the project topic to merge from.</summary>
-        public int? SourceTopicId { get => _explicitNullValueSourceTopicId; set { _explicitNullValueSourceTopicId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_topic_id"); else _explicitNullProperties?.Remove("source_topic_id"); } }
+        public int? SourceTopicId { get => _explicitNullValueSourceTopicId; set { _explicitNullValueSourceTopicId = value; AdditionalData?.Remove("source_topic_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_topic_id"); else _explicitNullProperties?.Remove("source_topic_id"); } }
         private int? _explicitNullValueSourceTopicId = default!;
         /// <summary>ID of the project topic to merge into.</summary>
-        public int? TargetTopicId { get => _explicitNullValueTargetTopicId; set { _explicitNullValueTargetTopicId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_topic_id"); else _explicitNullProperties?.Remove("target_topic_id"); } }
+        public int? TargetTopicId { get => _explicitNullValueTargetTopicId; set { _explicitNullValueTargetTopicId = value; AdditionalData?.Remove("target_topic_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_topic_id"); else _explicitNullProperties?.Remove("target_topic_id"); } }
         private int? _explicitNullValueTargetTopicId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4TopicsMergeRequest"/> and sets the default values.

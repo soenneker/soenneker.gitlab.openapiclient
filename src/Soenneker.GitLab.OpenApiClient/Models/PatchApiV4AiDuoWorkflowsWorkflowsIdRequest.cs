@@ -17,8 +17,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("drop_reason") is { } nullNodeDropReason && nullNodeDropReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DropReason = null;
-            if (parseNode.GetChildNode("status_event") is { } nullNodeStatusEvent && nullNodeStatusEvent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusEvent = null;
+            if (parseNode.GetChildNode("drop_reason") is null) { _explicitNullValueDropReason = default!; _explicitNullProperties?.Remove("drop_reason"); }
+            else if (parseNode.GetChildNode("drop_reason") is { } nullNodeDropReason && nullNodeDropReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DropReason = null;
+            if (parseNode.GetChildNode("status_event") is null) { _explicitNullValueStatusEvent = default!; _explicitNullProperties?.Remove("status_event"); }
+            else if (parseNode.GetChildNode("status_event") is { } nullNodeStatusEvent && nullNodeStatusEvent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusEvent = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Why the service dropped the session. Ignored unless status_event is drop; a value the service may not name is recorded as api_reported</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DropReason { get => _explicitNullValueDropReason; set { _explicitNullValueDropReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("drop_reason"); else _explicitNullProperties?.Remove("drop_reason"); } }
+        public string? DropReason { get => _explicitNullValueDropReason; set { _explicitNullValueDropReason = value; AdditionalData?.Remove("drop_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("drop_reason"); else _explicitNullProperties?.Remove("drop_reason"); } }
         private string? _explicitNullValueDropReason = default!;
 #nullable restore
 #else
-        public string DropReason { get => _explicitNullValueDropReason; set { _explicitNullValueDropReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("drop_reason"); else _explicitNullProperties?.Remove("drop_reason"); } }
+        public string DropReason { get => _explicitNullValueDropReason; set { _explicitNullValueDropReason = value; AdditionalData?.Remove("drop_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("drop_reason"); else _explicitNullProperties?.Remove("drop_reason"); } }
         private string _explicitNullValueDropReason = default!;
 #endif
         /// <summary>Status event to apply to the workflow, for example `finish`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StatusEvent { get => _explicitNullValueStatusEvent; set { _explicitNullValueStatusEvent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_event"); else _explicitNullProperties?.Remove("status_event"); } }
+        public string? StatusEvent { get => _explicitNullValueStatusEvent; set { _explicitNullValueStatusEvent = value; AdditionalData?.Remove("status_event"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_event"); else _explicitNullProperties?.Remove("status_event"); } }
         private string? _explicitNullValueStatusEvent = default!;
 #nullable restore
 #else
-        public string StatusEvent { get => _explicitNullValueStatusEvent; set { _explicitNullValueStatusEvent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_event"); else _explicitNullProperties?.Remove("status_event"); } }
+        public string StatusEvent { get => _explicitNullValueStatusEvent; set { _explicitNullValueStatusEvent = value; AdditionalData?.Remove("status_event"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_event"); else _explicitNullProperties?.Remove("status_event"); } }
         private string _explicitNullValueStatusEvent = default!;
 #endif
         /// <summary>

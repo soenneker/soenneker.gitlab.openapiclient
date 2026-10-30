@@ -17,97 +17,107 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("credit_card_expiration_month") is { } nullNodeCreditCardExpirationMonth && nullNodeCreditCardExpirationMonth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreditCardExpirationMonth = null;
-            if (parseNode.GetChildNode("credit_card_expiration_year") is { } nullNodeCreditCardExpirationYear && nullNodeCreditCardExpirationYear.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreditCardExpirationYear = null;
-            if (parseNode.GetChildNode("credit_card_holder_name") is { } nullNodeCreditCardHolderName && nullNodeCreditCardHolderName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreditCardHolderName = null;
-            if (parseNode.GetChildNode("credit_card_mask_number") is { } nullNodeCreditCardMaskNumber && nullNodeCreditCardMaskNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreditCardMaskNumber = null;
-            if (parseNode.GetChildNode("credit_card_type") is { } nullNodeCreditCardType && nullNodeCreditCardType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreditCardType = null;
-            if (parseNode.GetChildNode("credit_card_validated_at") is { } nullNodeCreditCardValidatedAt && nullNodeCreditCardValidatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreditCardValidatedAt = null;
-            if (parseNode.GetChildNode("stripe_card_fingerprint") is { } nullNodeStripeCardFingerprint && nullNodeStripeCardFingerprint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StripeCardFingerprint = null;
-            if (parseNode.GetChildNode("stripe_payment_method_xid") is { } nullNodeStripePaymentMethodXid && nullNodeStripePaymentMethodXid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StripePaymentMethodXid = null;
-            if (parseNode.GetChildNode("stripe_setup_intent_xid") is { } nullNodeStripeSetupIntentXid && nullNodeStripeSetupIntentXid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StripeSetupIntentXid = null;
-            if (parseNode.GetChildNode("zuora_payment_method_xid") is { } nullNodeZuoraPaymentMethodXid && nullNodeZuoraPaymentMethodXid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ZuoraPaymentMethodXid = null;
+            if (parseNode.GetChildNode("credit_card_expiration_month") is null) { _explicitNullValueCreditCardExpirationMonth = default!; _explicitNullProperties?.Remove("credit_card_expiration_month"); }
+            else if (parseNode.GetChildNode("credit_card_expiration_month") is { } nullNodeCreditCardExpirationMonth && nullNodeCreditCardExpirationMonth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreditCardExpirationMonth = null;
+            if (parseNode.GetChildNode("credit_card_expiration_year") is null) { _explicitNullValueCreditCardExpirationYear = default!; _explicitNullProperties?.Remove("credit_card_expiration_year"); }
+            else if (parseNode.GetChildNode("credit_card_expiration_year") is { } nullNodeCreditCardExpirationYear && nullNodeCreditCardExpirationYear.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreditCardExpirationYear = null;
+            if (parseNode.GetChildNode("credit_card_holder_name") is null) { _explicitNullValueCreditCardHolderName = default!; _explicitNullProperties?.Remove("credit_card_holder_name"); }
+            else if (parseNode.GetChildNode("credit_card_holder_name") is { } nullNodeCreditCardHolderName && nullNodeCreditCardHolderName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreditCardHolderName = null;
+            if (parseNode.GetChildNode("credit_card_mask_number") is null) { _explicitNullValueCreditCardMaskNumber = default!; _explicitNullProperties?.Remove("credit_card_mask_number"); }
+            else if (parseNode.GetChildNode("credit_card_mask_number") is { } nullNodeCreditCardMaskNumber && nullNodeCreditCardMaskNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreditCardMaskNumber = null;
+            if (parseNode.GetChildNode("credit_card_type") is null) { _explicitNullValueCreditCardType = default!; _explicitNullProperties?.Remove("credit_card_type"); }
+            else if (parseNode.GetChildNode("credit_card_type") is { } nullNodeCreditCardType && nullNodeCreditCardType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreditCardType = null;
+            if (parseNode.GetChildNode("credit_card_validated_at") is null) { _explicitNullValueCreditCardValidatedAt = default!; _explicitNullProperties?.Remove("credit_card_validated_at"); }
+            else if (parseNode.GetChildNode("credit_card_validated_at") is { } nullNodeCreditCardValidatedAt && nullNodeCreditCardValidatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreditCardValidatedAt = null;
+            if (parseNode.GetChildNode("stripe_card_fingerprint") is null) { _explicitNullValueStripeCardFingerprint = default!; _explicitNullProperties?.Remove("stripe_card_fingerprint"); }
+            else if (parseNode.GetChildNode("stripe_card_fingerprint") is { } nullNodeStripeCardFingerprint && nullNodeStripeCardFingerprint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StripeCardFingerprint = null;
+            if (parseNode.GetChildNode("stripe_payment_method_xid") is null) { _explicitNullValueStripePaymentMethodXid = default!; _explicitNullProperties?.Remove("stripe_payment_method_xid"); }
+            else if (parseNode.GetChildNode("stripe_payment_method_xid") is { } nullNodeStripePaymentMethodXid && nullNodeStripePaymentMethodXid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StripePaymentMethodXid = null;
+            if (parseNode.GetChildNode("stripe_setup_intent_xid") is null) { _explicitNullValueStripeSetupIntentXid = default!; _explicitNullProperties?.Remove("stripe_setup_intent_xid"); }
+            else if (parseNode.GetChildNode("stripe_setup_intent_xid") is { } nullNodeStripeSetupIntentXid && nullNodeStripeSetupIntentXid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StripeSetupIntentXid = null;
+            if (parseNode.GetChildNode("zuora_payment_method_xid") is null) { _explicitNullValueZuoraPaymentMethodXid = default!; _explicitNullProperties?.Remove("zuora_payment_method_xid"); }
+            else if (parseNode.GetChildNode("zuora_payment_method_xid") is { } nullNodeZuoraPaymentMethodXid && nullNodeZuoraPaymentMethodXid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ZuoraPaymentMethodXid = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Month the credit card expires.</summary>
-        public int? CreditCardExpirationMonth { get => _explicitNullValueCreditCardExpirationMonth; set { _explicitNullValueCreditCardExpirationMonth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_card_expiration_month"); else _explicitNullProperties?.Remove("credit_card_expiration_month"); } }
+        public int? CreditCardExpirationMonth { get => _explicitNullValueCreditCardExpirationMonth; set { _explicitNullValueCreditCardExpirationMonth = value; AdditionalData?.Remove("credit_card_expiration_month"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_card_expiration_month"); else _explicitNullProperties?.Remove("credit_card_expiration_month"); } }
         private int? _explicitNullValueCreditCardExpirationMonth = default!;
         /// <summary>Year the credit card expires.</summary>
-        public int? CreditCardExpirationYear { get => _explicitNullValueCreditCardExpirationYear; set { _explicitNullValueCreditCardExpirationYear = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_card_expiration_year"); else _explicitNullProperties?.Remove("credit_card_expiration_year"); } }
+        public int? CreditCardExpirationYear { get => _explicitNullValueCreditCardExpirationYear; set { _explicitNullValueCreditCardExpirationYear = value; AdditionalData?.Remove("credit_card_expiration_year"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_card_expiration_year"); else _explicitNullProperties?.Remove("credit_card_expiration_year"); } }
         private int? _explicitNullValueCreditCardExpirationYear = default!;
         /// <summary>Name of the credit card holder.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreditCardHolderName { get => _explicitNullValueCreditCardHolderName; set { _explicitNullValueCreditCardHolderName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_card_holder_name"); else _explicitNullProperties?.Remove("credit_card_holder_name"); } }
+        public string? CreditCardHolderName { get => _explicitNullValueCreditCardHolderName; set { _explicitNullValueCreditCardHolderName = value; AdditionalData?.Remove("credit_card_holder_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_card_holder_name"); else _explicitNullProperties?.Remove("credit_card_holder_name"); } }
         private string? _explicitNullValueCreditCardHolderName = default!;
 #nullable restore
 #else
-        public string CreditCardHolderName { get => _explicitNullValueCreditCardHolderName; set { _explicitNullValueCreditCardHolderName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_card_holder_name"); else _explicitNullProperties?.Remove("credit_card_holder_name"); } }
+        public string CreditCardHolderName { get => _explicitNullValueCreditCardHolderName; set { _explicitNullValueCreditCardHolderName = value; AdditionalData?.Remove("credit_card_holder_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_card_holder_name"); else _explicitNullProperties?.Remove("credit_card_holder_name"); } }
         private string _explicitNullValueCreditCardHolderName = default!;
 #endif
         /// <summary>Last 4 digits of the credit card number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreditCardMaskNumber { get => _explicitNullValueCreditCardMaskNumber; set { _explicitNullValueCreditCardMaskNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_card_mask_number"); else _explicitNullProperties?.Remove("credit_card_mask_number"); } }
+        public string? CreditCardMaskNumber { get => _explicitNullValueCreditCardMaskNumber; set { _explicitNullValueCreditCardMaskNumber = value; AdditionalData?.Remove("credit_card_mask_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_card_mask_number"); else _explicitNullProperties?.Remove("credit_card_mask_number"); } }
         private string? _explicitNullValueCreditCardMaskNumber = default!;
 #nullable restore
 #else
-        public string CreditCardMaskNumber { get => _explicitNullValueCreditCardMaskNumber; set { _explicitNullValueCreditCardMaskNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_card_mask_number"); else _explicitNullProperties?.Remove("credit_card_mask_number"); } }
+        public string CreditCardMaskNumber { get => _explicitNullValueCreditCardMaskNumber; set { _explicitNullValueCreditCardMaskNumber = value; AdditionalData?.Remove("credit_card_mask_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_card_mask_number"); else _explicitNullProperties?.Remove("credit_card_mask_number"); } }
         private string _explicitNullValueCreditCardMaskNumber = default!;
 #endif
         /// <summary>Name of the credit card network.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreditCardType { get => _explicitNullValueCreditCardType; set { _explicitNullValueCreditCardType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_card_type"); else _explicitNullProperties?.Remove("credit_card_type"); } }
+        public string? CreditCardType { get => _explicitNullValueCreditCardType; set { _explicitNullValueCreditCardType = value; AdditionalData?.Remove("credit_card_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_card_type"); else _explicitNullProperties?.Remove("credit_card_type"); } }
         private string? _explicitNullValueCreditCardType = default!;
 #nullable restore
 #else
-        public string CreditCardType { get => _explicitNullValueCreditCardType; set { _explicitNullValueCreditCardType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_card_type"); else _explicitNullProperties?.Remove("credit_card_type"); } }
+        public string CreditCardType { get => _explicitNullValueCreditCardType; set { _explicitNullValueCreditCardType = value; AdditionalData?.Remove("credit_card_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_card_type"); else _explicitNullProperties?.Remove("credit_card_type"); } }
         private string _explicitNullValueCreditCardType = default!;
 #endif
         /// <summary>Time when the user&apos;s credit card was validated.</summary>
-        public DateTimeOffset? CreditCardValidatedAt { get => _explicitNullValueCreditCardValidatedAt; set { _explicitNullValueCreditCardValidatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_card_validated_at"); else _explicitNullProperties?.Remove("credit_card_validated_at"); } }
+        public DateTimeOffset? CreditCardValidatedAt { get => _explicitNullValueCreditCardValidatedAt; set { _explicitNullValueCreditCardValidatedAt = value; AdditionalData?.Remove("credit_card_validated_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_card_validated_at"); else _explicitNullProperties?.Remove("credit_card_validated_at"); } }
         private DateTimeOffset? _explicitNullValueCreditCardValidatedAt = default!;
         /// <summary>Stripe credit card fingerprint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StripeCardFingerprint { get => _explicitNullValueStripeCardFingerprint; set { _explicitNullValueStripeCardFingerprint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripe_card_fingerprint"); else _explicitNullProperties?.Remove("stripe_card_fingerprint"); } }
+        public string? StripeCardFingerprint { get => _explicitNullValueStripeCardFingerprint; set { _explicitNullValueStripeCardFingerprint = value; AdditionalData?.Remove("stripe_card_fingerprint"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripe_card_fingerprint"); else _explicitNullProperties?.Remove("stripe_card_fingerprint"); } }
         private string? _explicitNullValueStripeCardFingerprint = default!;
 #nullable restore
 #else
-        public string StripeCardFingerprint { get => _explicitNullValueStripeCardFingerprint; set { _explicitNullValueStripeCardFingerprint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripe_card_fingerprint"); else _explicitNullProperties?.Remove("stripe_card_fingerprint"); } }
+        public string StripeCardFingerprint { get => _explicitNullValueStripeCardFingerprint; set { _explicitNullValueStripeCardFingerprint = value; AdditionalData?.Remove("stripe_card_fingerprint"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripe_card_fingerprint"); else _explicitNullProperties?.Remove("stripe_card_fingerprint"); } }
         private string _explicitNullValueStripeCardFingerprint = default!;
 #endif
         /// <summary>ID of the Stripe payment method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StripePaymentMethodXid { get => _explicitNullValueStripePaymentMethodXid; set { _explicitNullValueStripePaymentMethodXid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripe_payment_method_xid"); else _explicitNullProperties?.Remove("stripe_payment_method_xid"); } }
+        public string? StripePaymentMethodXid { get => _explicitNullValueStripePaymentMethodXid; set { _explicitNullValueStripePaymentMethodXid = value; AdditionalData?.Remove("stripe_payment_method_xid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripe_payment_method_xid"); else _explicitNullProperties?.Remove("stripe_payment_method_xid"); } }
         private string? _explicitNullValueStripePaymentMethodXid = default!;
 #nullable restore
 #else
-        public string StripePaymentMethodXid { get => _explicitNullValueStripePaymentMethodXid; set { _explicitNullValueStripePaymentMethodXid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripe_payment_method_xid"); else _explicitNullProperties?.Remove("stripe_payment_method_xid"); } }
+        public string StripePaymentMethodXid { get => _explicitNullValueStripePaymentMethodXid; set { _explicitNullValueStripePaymentMethodXid = value; AdditionalData?.Remove("stripe_payment_method_xid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripe_payment_method_xid"); else _explicitNullProperties?.Remove("stripe_payment_method_xid"); } }
         private string _explicitNullValueStripePaymentMethodXid = default!;
 #endif
         /// <summary>ID of the Stripe setup intent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StripeSetupIntentXid { get => _explicitNullValueStripeSetupIntentXid; set { _explicitNullValueStripeSetupIntentXid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripe_setup_intent_xid"); else _explicitNullProperties?.Remove("stripe_setup_intent_xid"); } }
+        public string? StripeSetupIntentXid { get => _explicitNullValueStripeSetupIntentXid; set { _explicitNullValueStripeSetupIntentXid = value; AdditionalData?.Remove("stripe_setup_intent_xid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripe_setup_intent_xid"); else _explicitNullProperties?.Remove("stripe_setup_intent_xid"); } }
         private string? _explicitNullValueStripeSetupIntentXid = default!;
 #nullable restore
 #else
-        public string StripeSetupIntentXid { get => _explicitNullValueStripeSetupIntentXid; set { _explicitNullValueStripeSetupIntentXid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripe_setup_intent_xid"); else _explicitNullProperties?.Remove("stripe_setup_intent_xid"); } }
+        public string StripeSetupIntentXid { get => _explicitNullValueStripeSetupIntentXid; set { _explicitNullValueStripeSetupIntentXid = value; AdditionalData?.Remove("stripe_setup_intent_xid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripe_setup_intent_xid"); else _explicitNullProperties?.Remove("stripe_setup_intent_xid"); } }
         private string _explicitNullValueStripeSetupIntentXid = default!;
 #endif
         /// <summary>ID of the Zuora payment method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ZuoraPaymentMethodXid { get => _explicitNullValueZuoraPaymentMethodXid; set { _explicitNullValueZuoraPaymentMethodXid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("zuora_payment_method_xid"); else _explicitNullProperties?.Remove("zuora_payment_method_xid"); } }
+        public string? ZuoraPaymentMethodXid { get => _explicitNullValueZuoraPaymentMethodXid; set { _explicitNullValueZuoraPaymentMethodXid = value; AdditionalData?.Remove("zuora_payment_method_xid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("zuora_payment_method_xid"); else _explicitNullProperties?.Remove("zuora_payment_method_xid"); } }
         private string? _explicitNullValueZuoraPaymentMethodXid = default!;
 #nullable restore
 #else
-        public string ZuoraPaymentMethodXid { get => _explicitNullValueZuoraPaymentMethodXid; set { _explicitNullValueZuoraPaymentMethodXid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("zuora_payment_method_xid"); else _explicitNullProperties?.Remove("zuora_payment_method_xid"); } }
+        public string ZuoraPaymentMethodXid { get => _explicitNullValueZuoraPaymentMethodXid; set { _explicitNullValueZuoraPaymentMethodXid = value; AdditionalData?.Remove("zuora_payment_method_xid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("zuora_payment_method_xid"); else _explicitNullProperties?.Remove("zuora_payment_method_xid"); } }
         private string _explicitNullValueZuoraPaymentMethodXid = default!;
 #endif
         /// <summary>

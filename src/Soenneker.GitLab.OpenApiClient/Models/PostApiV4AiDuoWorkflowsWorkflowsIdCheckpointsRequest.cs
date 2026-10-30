@@ -17,17 +17,28 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("channel_blobs") is { } nullNodeChannelBlobs && nullNodeChannelBlobs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChannelBlobs = null;
-            if (parseNode.GetChildNode("channel_keys") is { } nullNodeChannelKeys && nullNodeChannelKeys.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChannelKeys = null;
-            if (parseNode.GetChildNode("checkpoint") is { } nullNodeCheckpoint && nullNodeCheckpoint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Checkpoint = null;
-            if (parseNode.GetChildNode("checkpoint_ns") is { } nullNodeCheckpointNs && nullNodeCheckpointNs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CheckpointNs = null;
-            if (parseNode.GetChildNode("compressed_checkpoint") is { } nullNodeCompressedCheckpoint && nullNodeCompressedCheckpoint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompressedCheckpoint = null;
-            if (parseNode.GetChildNode("current_thread") is { } nullNodeCurrentThread && nullNodeCurrentThread.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentThread = null;
-            if (parseNode.GetChildNode("flow_metadata_json") is { } nullNodeFlowMetadataJson && nullNodeFlowMetadataJson.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FlowMetadataJson = null;
-            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
-            if (parseNode.GetChildNode("model_metadata_json") is { } nullNodeModelMetadataJson && nullNodeModelMetadataJson.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ModelMetadataJson = null;
-            if (parseNode.GetChildNode("parent_ts") is { } nullNodeParentTs && nullNodeParentTs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentTs = null;
-            if (parseNode.GetChildNode("thread_ts") is { } nullNodeThreadTs && nullNodeThreadTs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThreadTs = null;
+            if (parseNode.GetChildNode("channel_blobs") is null) { _explicitNullValueChannelBlobs = default!; _explicitNullProperties?.Remove("channel_blobs"); }
+            else if (parseNode.GetChildNode("channel_blobs") is { } nullNodeChannelBlobs && nullNodeChannelBlobs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChannelBlobs = null;
+            if (parseNode.GetChildNode("channel_keys") is null) { _explicitNullValueChannelKeys = default!; _explicitNullProperties?.Remove("channel_keys"); }
+            else if (parseNode.GetChildNode("channel_keys") is { } nullNodeChannelKeys && nullNodeChannelKeys.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChannelKeys = null;
+            if (parseNode.GetChildNode("checkpoint") is null) { _explicitNullValueCheckpoint = default!; _explicitNullProperties?.Remove("checkpoint"); }
+            else if (parseNode.GetChildNode("checkpoint") is { } nullNodeCheckpoint && nullNodeCheckpoint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Checkpoint = null;
+            if (parseNode.GetChildNode("checkpoint_ns") is null) { _explicitNullValueCheckpointNs = default!; _explicitNullProperties?.Remove("checkpoint_ns"); }
+            else if (parseNode.GetChildNode("checkpoint_ns") is { } nullNodeCheckpointNs && nullNodeCheckpointNs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CheckpointNs = null;
+            if (parseNode.GetChildNode("compressed_checkpoint") is null) { _explicitNullValueCompressedCheckpoint = default!; _explicitNullProperties?.Remove("compressed_checkpoint"); }
+            else if (parseNode.GetChildNode("compressed_checkpoint") is { } nullNodeCompressedCheckpoint && nullNodeCompressedCheckpoint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompressedCheckpoint = null;
+            if (parseNode.GetChildNode("current_thread") is null) { _explicitNullValueCurrentThread = default!; _explicitNullProperties?.Remove("current_thread"); }
+            else if (parseNode.GetChildNode("current_thread") is { } nullNodeCurrentThread && nullNodeCurrentThread.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentThread = null;
+            if (parseNode.GetChildNode("flow_metadata_json") is null) { _explicitNullValueFlowMetadataJson = default!; _explicitNullProperties?.Remove("flow_metadata_json"); }
+            else if (parseNode.GetChildNode("flow_metadata_json") is { } nullNodeFlowMetadataJson && nullNodeFlowMetadataJson.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FlowMetadataJson = null;
+            if (parseNode.GetChildNode("metadata") is null) { _explicitNullValueMetadata = default!; _explicitNullProperties?.Remove("metadata"); }
+            else if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("model_metadata_json") is null) { _explicitNullValueModelMetadataJson = default!; _explicitNullProperties?.Remove("model_metadata_json"); }
+            else if (parseNode.GetChildNode("model_metadata_json") is { } nullNodeModelMetadataJson && nullNodeModelMetadataJson.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ModelMetadataJson = null;
+            if (parseNode.GetChildNode("parent_ts") is null) { _explicitNullValueParentTs = default!; _explicitNullProperties?.Remove("parent_ts"); }
+            else if (parseNode.GetChildNode("parent_ts") is { } nullNodeParentTs && nullNodeParentTs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentTs = null;
+            if (parseNode.GetChildNode("thread_ts") is null) { _explicitNullValueThreadTs = default!; _explicitNullProperties?.Remove("thread_ts"); }
+            else if (parseNode.GetChildNode("thread_ts") is { } nullNodeThreadTs && nullNodeThreadTs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThreadTs = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -35,104 +46,104 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Per-channel blobs for incremental checkpoint storage.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsIdCheckpointsRequestChannelBlobsItem>? ChannelBlobs { get => _explicitNullValueChannelBlobs; set { _explicitNullValueChannelBlobs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel_blobs"); else _explicitNullProperties?.Remove("channel_blobs"); } }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsIdCheckpointsRequestChannelBlobsItem>? ChannelBlobs { get => _explicitNullValueChannelBlobs; set { _explicitNullValueChannelBlobs = value; AdditionalData?.Remove("channel_blobs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel_blobs"); else _explicitNullProperties?.Remove("channel_blobs"); } }
         private List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsIdCheckpointsRequestChannelBlobsItem>? _explicitNullValueChannelBlobs = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsIdCheckpointsRequestChannelBlobsItem> ChannelBlobs { get => _explicitNullValueChannelBlobs; set { _explicitNullValueChannelBlobs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel_blobs"); else _explicitNullProperties?.Remove("channel_blobs"); } }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsIdCheckpointsRequestChannelBlobsItem> ChannelBlobs { get => _explicitNullValueChannelBlobs; set { _explicitNullValueChannelBlobs = value; AdditionalData?.Remove("channel_blobs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel_blobs"); else _explicitNullProperties?.Remove("channel_blobs"); } }
         private List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsIdCheckpointsRequestChannelBlobsItem> _explicitNullValueChannelBlobs = default!;
 #endif
         /// <summary>Live channel membership of the checkpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ChannelKeys { get => _explicitNullValueChannelKeys; set { _explicitNullValueChannelKeys = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel_keys"); else _explicitNullProperties?.Remove("channel_keys"); } }
+        public List<string>? ChannelKeys { get => _explicitNullValueChannelKeys; set { _explicitNullValueChannelKeys = value; AdditionalData?.Remove("channel_keys"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel_keys"); else _explicitNullProperties?.Remove("channel_keys"); } }
         private List<string>? _explicitNullValueChannelKeys = default!;
 #nullable restore
 #else
-        public List<string> ChannelKeys { get => _explicitNullValueChannelKeys; set { _explicitNullValueChannelKeys = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel_keys"); else _explicitNullProperties?.Remove("channel_keys"); } }
+        public List<string> ChannelKeys { get => _explicitNullValueChannelKeys; set { _explicitNullValueChannelKeys = value; AdditionalData?.Remove("channel_keys"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("channel_keys"); else _explicitNullProperties?.Remove("channel_keys"); } }
         private List<string> _explicitNullValueChannelKeys = default!;
 #endif
         /// <summary>Checkpoint content</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsIdCheckpointsRequestCheckpointProperty? Checkpoint { get => _explicitNullValueCheckpoint; set { _explicitNullValueCheckpoint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkpoint"); else _explicitNullProperties?.Remove("checkpoint"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsIdCheckpointsRequestCheckpointProperty? Checkpoint { get => _explicitNullValueCheckpoint; set { _explicitNullValueCheckpoint = value; AdditionalData?.Remove("checkpoint"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkpoint"); else _explicitNullProperties?.Remove("checkpoint"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsIdCheckpointsRequestCheckpointProperty? _explicitNullValueCheckpoint = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsIdCheckpointsRequestCheckpointProperty Checkpoint { get => _explicitNullValueCheckpoint; set { _explicitNullValueCheckpoint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkpoint"); else _explicitNullProperties?.Remove("checkpoint"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsIdCheckpointsRequestCheckpointProperty Checkpoint { get => _explicitNullValueCheckpoint; set { _explicitNullValueCheckpoint = value; AdditionalData?.Remove("checkpoint"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkpoint"); else _explicitNullProperties?.Remove("checkpoint"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsIdCheckpointsRequestCheckpointProperty _explicitNullValueCheckpoint = default!;
 #endif
         /// <summary>LangGraph checkpoint namespace this checkpoint belongs to. Omitted (or blank) for the flow&apos;s own top-level checkpoint lineage. Set to LangGraph&apos;s namespace string for one nested subgraph invocation, for example a delegated subagent dispatched by `DelegationNode`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CheckpointNs { get => _explicitNullValueCheckpointNs; set { _explicitNullValueCheckpointNs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkpoint_ns"); else _explicitNullProperties?.Remove("checkpoint_ns"); } }
+        public string? CheckpointNs { get => _explicitNullValueCheckpointNs; set { _explicitNullValueCheckpointNs = value; AdditionalData?.Remove("checkpoint_ns"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkpoint_ns"); else _explicitNullProperties?.Remove("checkpoint_ns"); } }
         private string? _explicitNullValueCheckpointNs = default!;
 #nullable restore
 #else
-        public string CheckpointNs { get => _explicitNullValueCheckpointNs; set { _explicitNullValueCheckpointNs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkpoint_ns"); else _explicitNullProperties?.Remove("checkpoint_ns"); } }
+        public string CheckpointNs { get => _explicitNullValueCheckpointNs; set { _explicitNullValueCheckpointNs = value; AdditionalData?.Remove("checkpoint_ns"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkpoint_ns"); else _explicitNullProperties?.Remove("checkpoint_ns"); } }
         private string _explicitNullValueCheckpointNs = default!;
 #endif
         /// <summary>Checkpoint content zlib compressed and base64 encoded</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CompressedCheckpoint { get => _explicitNullValueCompressedCheckpoint; set { _explicitNullValueCompressedCheckpoint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("compressed_checkpoint"); else _explicitNullProperties?.Remove("compressed_checkpoint"); } }
+        public string? CompressedCheckpoint { get => _explicitNullValueCompressedCheckpoint; set { _explicitNullValueCompressedCheckpoint = value; AdditionalData?.Remove("compressed_checkpoint"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("compressed_checkpoint"); else _explicitNullProperties?.Remove("compressed_checkpoint"); } }
         private string? _explicitNullValueCompressedCheckpoint = default!;
 #nullable restore
 #else
-        public string CompressedCheckpoint { get => _explicitNullValueCompressedCheckpoint; set { _explicitNullValueCompressedCheckpoint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("compressed_checkpoint"); else _explicitNullProperties?.Remove("compressed_checkpoint"); } }
+        public string CompressedCheckpoint { get => _explicitNullValueCompressedCheckpoint; set { _explicitNullValueCompressedCheckpoint = value; AdditionalData?.Remove("compressed_checkpoint"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("compressed_checkpoint"); else _explicitNullProperties?.Remove("compressed_checkpoint"); } }
         private string _explicitNullValueCompressedCheckpoint = default!;
 #endif
         /// <summary>Hint used to group blobs by thread during checkpoint reconstruction.</summary>
-        public int? CurrentThread { get => _explicitNullValueCurrentThread; set { _explicitNullValueCurrentThread = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_thread"); else _explicitNullProperties?.Remove("current_thread"); } }
+        public int? CurrentThread { get => _explicitNullValueCurrentThread; set { _explicitNullValueCurrentThread = value; AdditionalData?.Remove("current_thread"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_thread"); else _explicitNullProperties?.Remove("current_thread"); } }
         private int? _explicitNullValueCurrentThread = default!;
         /// <summary>JSON string of the flow metadata.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FlowMetadataJson { get => _explicitNullValueFlowMetadataJson; set { _explicitNullValueFlowMetadataJson = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flow_metadata_json"); else _explicitNullProperties?.Remove("flow_metadata_json"); } }
+        public string? FlowMetadataJson { get => _explicitNullValueFlowMetadataJson; set { _explicitNullValueFlowMetadataJson = value; AdditionalData?.Remove("flow_metadata_json"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flow_metadata_json"); else _explicitNullProperties?.Remove("flow_metadata_json"); } }
         private string? _explicitNullValueFlowMetadataJson = default!;
 #nullable restore
 #else
-        public string FlowMetadataJson { get => _explicitNullValueFlowMetadataJson; set { _explicitNullValueFlowMetadataJson = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flow_metadata_json"); else _explicitNullProperties?.Remove("flow_metadata_json"); } }
+        public string FlowMetadataJson { get => _explicitNullValueFlowMetadataJson; set { _explicitNullValueFlowMetadataJson = value; AdditionalData?.Remove("flow_metadata_json"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flow_metadata_json"); else _explicitNullProperties?.Remove("flow_metadata_json"); } }
         private string _explicitNullValueFlowMetadataJson = default!;
 #endif
         /// <summary>Checkpoint metadata.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsIdCheckpointsRequestMetadataProperty? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsIdCheckpointsRequestMetadataProperty? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsIdCheckpointsRequestMetadataProperty? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsIdCheckpointsRequestMetadataProperty Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsIdCheckpointsRequestMetadataProperty Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsIdCheckpointsRequestMetadataProperty _explicitNullValueMetadata = default!;
 #endif
         /// <summary>JSON string of the model metadata.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ModelMetadataJson { get => _explicitNullValueModelMetadataJson; set { _explicitNullValueModelMetadataJson = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("model_metadata_json"); else _explicitNullProperties?.Remove("model_metadata_json"); } }
+        public string? ModelMetadataJson { get => _explicitNullValueModelMetadataJson; set { _explicitNullValueModelMetadataJson = value; AdditionalData?.Remove("model_metadata_json"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("model_metadata_json"); else _explicitNullProperties?.Remove("model_metadata_json"); } }
         private string? _explicitNullValueModelMetadataJson = default!;
 #nullable restore
 #else
-        public string ModelMetadataJson { get => _explicitNullValueModelMetadataJson; set { _explicitNullValueModelMetadataJson = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("model_metadata_json"); else _explicitNullProperties?.Remove("model_metadata_json"); } }
+        public string ModelMetadataJson { get => _explicitNullValueModelMetadataJson; set { _explicitNullValueModelMetadataJson = value; AdditionalData?.Remove("model_metadata_json"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("model_metadata_json"); else _explicitNullProperties?.Remove("model_metadata_json"); } }
         private string _explicitNullValueModelMetadataJson = default!;
 #endif
         /// <summary>The parent ts</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ParentTs { get => _explicitNullValueParentTs; set { _explicitNullValueParentTs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_ts"); else _explicitNullProperties?.Remove("parent_ts"); } }
+        public string? ParentTs { get => _explicitNullValueParentTs; set { _explicitNullValueParentTs = value; AdditionalData?.Remove("parent_ts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_ts"); else _explicitNullProperties?.Remove("parent_ts"); } }
         private string? _explicitNullValueParentTs = default!;
 #nullable restore
 #else
-        public string ParentTs { get => _explicitNullValueParentTs; set { _explicitNullValueParentTs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_ts"); else _explicitNullProperties?.Remove("parent_ts"); } }
+        public string ParentTs { get => _explicitNullValueParentTs; set { _explicitNullValueParentTs = value; AdditionalData?.Remove("parent_ts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_ts"); else _explicitNullProperties?.Remove("parent_ts"); } }
         private string _explicitNullValueParentTs = default!;
 #endif
         /// <summary>LangGraph `thread_ts` of the checkpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ThreadTs { get => _explicitNullValueThreadTs; set { _explicitNullValueThreadTs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thread_ts"); else _explicitNullProperties?.Remove("thread_ts"); } }
+        public string? ThreadTs { get => _explicitNullValueThreadTs; set { _explicitNullValueThreadTs = value; AdditionalData?.Remove("thread_ts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thread_ts"); else _explicitNullProperties?.Remove("thread_ts"); } }
         private string? _explicitNullValueThreadTs = default!;
 #nullable restore
 #else
-        public string ThreadTs { get => _explicitNullValueThreadTs; set { _explicitNullValueThreadTs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thread_ts"); else _explicitNullProperties?.Remove("thread_ts"); } }
+        public string ThreadTs { get => _explicitNullValueThreadTs; set { _explicitNullValueThreadTs = value; AdditionalData?.Remove("thread_ts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thread_ts"); else _explicitNullProperties?.Remove("thread_ts"); } }
         private string _explicitNullValueThreadTs = default!;
 #endif
         /// <summary>

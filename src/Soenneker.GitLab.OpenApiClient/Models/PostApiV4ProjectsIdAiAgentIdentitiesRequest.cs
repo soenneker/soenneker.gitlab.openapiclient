@@ -17,23 +17,25 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("agent_type") is { } nullNodeAgentType && nullNodeAgentType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgentType = null;
-            if (parseNode.GetChildNode("machine_fingerprint") is { } nullNodeMachineFingerprint && nullNodeMachineFingerprint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MachineFingerprint = null;
+            if (parseNode.GetChildNode("agent_type") is null) { _explicitNullValueAgentType = default!; _explicitNullProperties?.Remove("agent_type"); }
+            else if (parseNode.GetChildNode("agent_type") is { } nullNodeAgentType && nullNodeAgentType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgentType = null;
+            if (parseNode.GetChildNode("machine_fingerprint") is null) { _explicitNullValueMachineFingerprint = default!; _explicitNullProperties?.Remove("machine_fingerprint"); }
+            else if (parseNode.GetChildNode("machine_fingerprint") is { } nullNodeMachineFingerprint && nullNodeMachineFingerprint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MachineFingerprint = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Type of agent being registered.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdAiAgentIdentitiesRequestAgentType? AgentType { get => _explicitNullValueAgentType; set { _explicitNullValueAgentType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_type"); else _explicitNullProperties?.Remove("agent_type"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdAiAgentIdentitiesRequestAgentType? AgentType { get => _explicitNullValueAgentType; set { _explicitNullValueAgentType = value; AdditionalData?.Remove("agent_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_type"); else _explicitNullProperties?.Remove("agent_type"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdAiAgentIdentitiesRequestAgentType? _explicitNullValueAgentType = default!;
         /// <summary>SHA-256 hash of the machine identifier.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MachineFingerprint { get => _explicitNullValueMachineFingerprint; set { _explicitNullValueMachineFingerprint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("machine_fingerprint"); else _explicitNullProperties?.Remove("machine_fingerprint"); } }
+        public string? MachineFingerprint { get => _explicitNullValueMachineFingerprint; set { _explicitNullValueMachineFingerprint = value; AdditionalData?.Remove("machine_fingerprint"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("machine_fingerprint"); else _explicitNullProperties?.Remove("machine_fingerprint"); } }
         private string? _explicitNullValueMachineFingerprint = default!;
 #nullable restore
 #else
-        public string MachineFingerprint { get => _explicitNullValueMachineFingerprint; set { _explicitNullValueMachineFingerprint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("machine_fingerprint"); else _explicitNullProperties?.Remove("machine_fingerprint"); } }
+        public string MachineFingerprint { get => _explicitNullValueMachineFingerprint; set { _explicitNullValueMachineFingerprint = value; AdditionalData?.Remove("machine_fingerprint"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("machine_fingerprint"); else _explicitNullProperties?.Remove("machine_fingerprint"); } }
         private string _explicitNullValueMachineFingerprint = default!;
 #endif
         /// <summary>
@@ -61,7 +63,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "agent_type", n => { AgentType = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdAiAgentIdentitiesRequestAgentType>(); } },
+                { "agent_type", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdAiAgentIdentitiesRequestAgentType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAgentType = default; _explicitNullProperties?.Remove("agent_type"); AdditionalData["agent_type"] = unknown; } else { AgentType = parsed; AdditionalData.Remove("agent_type"); } } },
                 { "machine_fingerprint", n => { MachineFingerprint = n.GetStringValue(); } },
             };
         }

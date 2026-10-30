@@ -17,8 +17,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("checkpoint_writes") is { } nullNodeCheckpointWrites && nullNodeCheckpointWrites.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CheckpointWrites = null;
-            if (parseNode.GetChildNode("thread_ts") is { } nullNodeThreadTs && nullNodeThreadTs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThreadTs = null;
+            if (parseNode.GetChildNode("checkpoint_writes") is null) { _explicitNullValueCheckpointWrites = default!; _explicitNullProperties?.Remove("checkpoint_writes"); }
+            else if (parseNode.GetChildNode("checkpoint_writes") is { } nullNodeCheckpointWrites && nullNodeCheckpointWrites.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CheckpointWrites = null;
+            if (parseNode.GetChildNode("thread_ts") is null) { _explicitNullValueThreadTs = default!; _explicitNullProperties?.Remove("thread_ts"); }
+            else if (parseNode.GetChildNode("thread_ts") is { } nullNodeThreadTs && nullNodeThreadTs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThreadTs = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>List of checkpoint writes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsIdCheckpointWritesBatchRequestCheckpointWritesItem>? CheckpointWrites { get => _explicitNullValueCheckpointWrites; set { _explicitNullValueCheckpointWrites = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkpoint_writes"); else _explicitNullProperties?.Remove("checkpoint_writes"); } }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsIdCheckpointWritesBatchRequestCheckpointWritesItem>? CheckpointWrites { get => _explicitNullValueCheckpointWrites; set { _explicitNullValueCheckpointWrites = value; AdditionalData?.Remove("checkpoint_writes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkpoint_writes"); else _explicitNullProperties?.Remove("checkpoint_writes"); } }
         private List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsIdCheckpointWritesBatchRequestCheckpointWritesItem>? _explicitNullValueCheckpointWrites = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsIdCheckpointWritesBatchRequestCheckpointWritesItem> CheckpointWrites { get => _explicitNullValueCheckpointWrites; set { _explicitNullValueCheckpointWrites = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkpoint_writes"); else _explicitNullProperties?.Remove("checkpoint_writes"); } }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsIdCheckpointWritesBatchRequestCheckpointWritesItem> CheckpointWrites { get => _explicitNullValueCheckpointWrites; set { _explicitNullValueCheckpointWrites = value; AdditionalData?.Remove("checkpoint_writes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkpoint_writes"); else _explicitNullProperties?.Remove("checkpoint_writes"); } }
         private List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsIdCheckpointWritesBatchRequestCheckpointWritesItem> _explicitNullValueCheckpointWrites = default!;
 #endif
         /// <summary>LangGraph `thread_ts` of the checkpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ThreadTs { get => _explicitNullValueThreadTs; set { _explicitNullValueThreadTs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thread_ts"); else _explicitNullProperties?.Remove("thread_ts"); } }
+        public string? ThreadTs { get => _explicitNullValueThreadTs; set { _explicitNullValueThreadTs = value; AdditionalData?.Remove("thread_ts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thread_ts"); else _explicitNullProperties?.Remove("thread_ts"); } }
         private string? _explicitNullValueThreadTs = default!;
 #nullable restore
 #else
-        public string ThreadTs { get => _explicitNullValueThreadTs; set { _explicitNullValueThreadTs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thread_ts"); else _explicitNullProperties?.Remove("thread_ts"); } }
+        public string ThreadTs { get => _explicitNullValueThreadTs; set { _explicitNullValueThreadTs = value; AdditionalData?.Remove("thread_ts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thread_ts"); else _explicitNullProperties?.Remove("thread_ts"); } }
         private string _explicitNullValueThreadTs = default!;
 #endif
         /// <summary>

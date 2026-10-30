@@ -17,7 +17,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("runtime_environment_key") is { } nullNodeRuntimeEnvironmentKey && nullNodeRuntimeEnvironmentKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuntimeEnvironmentKey = null;
+            if (parseNode.GetChildNode("runtime_environment_key") is null) { _explicitNullValueRuntimeEnvironmentKey = default!; _explicitNullProperties?.Remove("runtime_environment_key"); }
+            else if (parseNode.GetChildNode("runtime_environment_key") is { } nullNodeRuntimeEnvironmentKey && nullNodeRuntimeEnvironmentKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuntimeEnvironmentKey = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The runtime_environment_key property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RuntimeEnvironmentKey { get => _explicitNullValueRuntimeEnvironmentKey; set { _explicitNullValueRuntimeEnvironmentKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runtime_environment_key"); else _explicitNullProperties?.Remove("runtime_environment_key"); } }
+        public string? RuntimeEnvironmentKey { get => _explicitNullValueRuntimeEnvironmentKey; set { _explicitNullValueRuntimeEnvironmentKey = value; AdditionalData?.Remove("runtime_environment_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runtime_environment_key"); else _explicitNullProperties?.Remove("runtime_environment_key"); } }
         private string? _explicitNullValueRuntimeEnvironmentKey = default!;
 #nullable restore
 #else
-        public string RuntimeEnvironmentKey { get => _explicitNullValueRuntimeEnvironmentKey; set { _explicitNullValueRuntimeEnvironmentKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runtime_environment_key"); else _explicitNullProperties?.Remove("runtime_environment_key"); } }
+        public string RuntimeEnvironmentKey { get => _explicitNullValueRuntimeEnvironmentKey; set { _explicitNullValueRuntimeEnvironmentKey = value; AdditionalData?.Remove("runtime_environment_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runtime_environment_key"); else _explicitNullProperties?.Remove("runtime_environment_key"); } }
         private string _explicitNullValueRuntimeEnvironmentKey = default!;
 #endif
         /// <summary>

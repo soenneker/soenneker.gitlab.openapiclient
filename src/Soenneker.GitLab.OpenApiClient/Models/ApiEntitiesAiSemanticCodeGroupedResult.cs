@@ -17,11 +17,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("blob_id") is { } nullNodeBlobId && nullNodeBlobId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlobId = null;
-            if (parseNode.GetChildNode("file_url") is { } nullNodeFileUrl && nullNodeFileUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileUrl = null;
-            if (parseNode.GetChildNode("path") is { } nullNodePath && nullNodePath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Path = null;
-            if (parseNode.GetChildNode("score") is { } nullNodeScore && nullNodeScore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Score = null;
-            if (parseNode.GetChildNode("snippet_ranges") is { } nullNodeSnippetRanges && nullNodeSnippetRanges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SnippetRanges = null;
+            if (parseNode.GetChildNode("blob_id") is null) { _explicitNullValueBlobId = default!; _explicitNullProperties?.Remove("blob_id"); }
+            else if (parseNode.GetChildNode("blob_id") is { } nullNodeBlobId && nullNodeBlobId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlobId = null;
+            if (parseNode.GetChildNode("file_url") is null) { _explicitNullValueFileUrl = default!; _explicitNullProperties?.Remove("file_url"); }
+            else if (parseNode.GetChildNode("file_url") is { } nullNodeFileUrl && nullNodeFileUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileUrl = null;
+            if (parseNode.GetChildNode("path") is null) { _explicitNullValuePath = default!; _explicitNullProperties?.Remove("path"); }
+            else if (parseNode.GetChildNode("path") is { } nullNodePath && nullNodePath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Path = null;
+            if (parseNode.GetChildNode("score") is null) { _explicitNullValueScore = default!; _explicitNullProperties?.Remove("score"); }
+            else if (parseNode.GetChildNode("score") is { } nullNodeScore && nullNodeScore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Score = null;
+            if (parseNode.GetChildNode("snippet_ranges") is null) { _explicitNullValueSnippetRanges = default!; _explicitNullProperties?.Remove("snippet_ranges"); }
+            else if (parseNode.GetChildNode("snippet_ranges") is { } nullNodeSnippetRanges && nullNodeSnippetRanges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SnippetRanges = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,44 +34,44 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The blob_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BlobId { get => _explicitNullValueBlobId; set { _explicitNullValueBlobId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blob_id"); else _explicitNullProperties?.Remove("blob_id"); } }
+        public string? BlobId { get => _explicitNullValueBlobId; set { _explicitNullValueBlobId = value; AdditionalData?.Remove("blob_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blob_id"); else _explicitNullProperties?.Remove("blob_id"); } }
         private string? _explicitNullValueBlobId = default!;
 #nullable restore
 #else
-        public string BlobId { get => _explicitNullValueBlobId; set { _explicitNullValueBlobId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blob_id"); else _explicitNullProperties?.Remove("blob_id"); } }
+        public string BlobId { get => _explicitNullValueBlobId; set { _explicitNullValueBlobId = value; AdditionalData?.Remove("blob_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blob_id"); else _explicitNullProperties?.Remove("blob_id"); } }
         private string _explicitNullValueBlobId = default!;
 #endif
         /// <summary>The file_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FileUrl { get => _explicitNullValueFileUrl; set { _explicitNullValueFileUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_url"); else _explicitNullProperties?.Remove("file_url"); } }
+        public string? FileUrl { get => _explicitNullValueFileUrl; set { _explicitNullValueFileUrl = value; AdditionalData?.Remove("file_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_url"); else _explicitNullProperties?.Remove("file_url"); } }
         private string? _explicitNullValueFileUrl = default!;
 #nullable restore
 #else
-        public string FileUrl { get => _explicitNullValueFileUrl; set { _explicitNullValueFileUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_url"); else _explicitNullProperties?.Remove("file_url"); } }
+        public string FileUrl { get => _explicitNullValueFileUrl; set { _explicitNullValueFileUrl = value; AdditionalData?.Remove("file_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_url"); else _explicitNullProperties?.Remove("file_url"); } }
         private string _explicitNullValueFileUrl = default!;
 #endif
         /// <summary>The path property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Path { get => _explicitNullValuePath; set { _explicitNullValuePath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("path"); else _explicitNullProperties?.Remove("path"); } }
+        public string? Path { get => _explicitNullValuePath; set { _explicitNullValuePath = value; AdditionalData?.Remove("path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("path"); else _explicitNullProperties?.Remove("path"); } }
         private string? _explicitNullValuePath = default!;
 #nullable restore
 #else
-        public string Path { get => _explicitNullValuePath; set { _explicitNullValuePath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("path"); else _explicitNullProperties?.Remove("path"); } }
+        public string Path { get => _explicitNullValuePath; set { _explicitNullValuePath = value; AdditionalData?.Remove("path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("path"); else _explicitNullProperties?.Remove("path"); } }
         private string _explicitNullValuePath = default!;
 #endif
         /// <summary>The score property</summary>
-        public double? Score { get => _explicitNullValueScore; set { _explicitNullValueScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("score"); else _explicitNullProperties?.Remove("score"); } }
+        public double? Score { get => _explicitNullValueScore; set { _explicitNullValueScore = value; AdditionalData?.Remove("score"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("score"); else _explicitNullProperties?.Remove("score"); } }
         private double? _explicitNullValueScore = default!;
         /// <summary>The snippet_ranges property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSemanticCodeSnippetRange>? SnippetRanges { get => _explicitNullValueSnippetRanges; set { _explicitNullValueSnippetRanges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("snippet_ranges"); else _explicitNullProperties?.Remove("snippet_ranges"); } }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSemanticCodeSnippetRange>? SnippetRanges { get => _explicitNullValueSnippetRanges; set { _explicitNullValueSnippetRanges = value; AdditionalData?.Remove("snippet_ranges"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("snippet_ranges"); else _explicitNullProperties?.Remove("snippet_ranges"); } }
         private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSemanticCodeSnippetRange>? _explicitNullValueSnippetRanges = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSemanticCodeSnippetRange> SnippetRanges { get => _explicitNullValueSnippetRanges; set { _explicitNullValueSnippetRanges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("snippet_ranges"); else _explicitNullProperties?.Remove("snippet_ranges"); } }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSemanticCodeSnippetRange> SnippetRanges { get => _explicitNullValueSnippetRanges; set { _explicitNullValueSnippetRanges = value; AdditionalData?.Remove("snippet_ranges"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("snippet_ranges"); else _explicitNullProperties?.Remove("snippet_ranges"); } }
         private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSemanticCodeSnippetRange> _explicitNullValueSnippetRanges = default!;
 #endif
         /// <summary>

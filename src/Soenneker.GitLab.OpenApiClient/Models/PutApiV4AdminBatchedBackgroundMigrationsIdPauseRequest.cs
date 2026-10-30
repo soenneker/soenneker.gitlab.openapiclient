@@ -17,13 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("database") is { } nullNodeDatabase && nullNodeDatabase.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Database = null;
+            if (parseNode.GetChildNode("database") is null) { _explicitNullValueDatabase = default!; _explicitNullProperties?.Remove("database"); }
+            else if (parseNode.GetChildNode("database") is { } nullNodeDatabase && nullNodeDatabase.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Database = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Name of the database.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminBatchedBackgroundMigrationsIdPauseRequestDatabase? Database { get => _explicitNullValueDatabase; set { _explicitNullValueDatabase = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("database"); else _explicitNullProperties?.Remove("database"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminBatchedBackgroundMigrationsIdPauseRequestDatabase? Database { get => _explicitNullValueDatabase; set { _explicitNullValueDatabase = value; AdditionalData?.Remove("database"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("database"); else _explicitNullProperties?.Remove("database"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminBatchedBackgroundMigrationsIdPauseRequestDatabase? _explicitNullValueDatabase = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminBatchedBackgroundMigrationsIdPauseRequest"/> and sets the default values.
@@ -50,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "database", n => { Database = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminBatchedBackgroundMigrationsIdPauseRequestDatabase>(); } },
+                { "database", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminBatchedBackgroundMigrationsIdPauseRequestDatabase>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDatabase = default; _explicitNullProperties?.Remove("database"); AdditionalData["database"] = unknown; } else { Database = parsed; AdditionalData.Remove("database"); } } },
             };
         }
         /// <summary>

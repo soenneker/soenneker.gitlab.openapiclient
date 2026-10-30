@@ -17,27 +17,30 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("artifact_type") is { } nullNodeArtifactType && nullNodeArtifactType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ArtifactType = null;
-            if (parseNode.GetChildNode("filesize") is { } nullNodeFilesize && nullNodeFilesize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Filesize = null;
-            if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
+            if (parseNode.GetChildNode("artifact_type") is null) { _explicitNullValueArtifactType = default!; _explicitNullProperties?.Remove("artifact_type"); }
+            else if (parseNode.GetChildNode("artifact_type") is { } nullNodeArtifactType && nullNodeArtifactType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ArtifactType = null;
+            if (parseNode.GetChildNode("filesize") is null) { _explicitNullValueFilesize = default!; _explicitNullProperties?.Remove("filesize"); }
+            else if (parseNode.GetChildNode("filesize") is { } nullNodeFilesize && nullNodeFilesize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Filesize = null;
+            if (parseNode.GetChildNode("token") is null) { _explicitNullValueToken = default!; _explicitNullProperties?.Remove("token"); }
+            else if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Type of artifact.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4JobsIdArtifactsAuthorizeRequestArtifactType? ArtifactType { get => _explicitNullValueArtifactType; set { _explicitNullValueArtifactType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("artifact_type"); else _explicitNullProperties?.Remove("artifact_type"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4JobsIdArtifactsAuthorizeRequestArtifactType? ArtifactType { get => _explicitNullValueArtifactType; set { _explicitNullValueArtifactType = value; AdditionalData?.Remove("artifact_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("artifact_type"); else _explicitNullProperties?.Remove("artifact_type"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4JobsIdArtifactsAuthorizeRequestArtifactType? _explicitNullValueArtifactType = default!;
         /// <summary>Size of the artifact file.</summary>
-        public int? Filesize { get => _explicitNullValueFilesize; set { _explicitNullValueFilesize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filesize"); else _explicitNullProperties?.Remove("filesize"); } }
+        public int? Filesize { get => _explicitNullValueFilesize; set { _explicitNullValueFilesize = value; AdditionalData?.Remove("filesize"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filesize"); else _explicitNullProperties?.Remove("filesize"); } }
         private int? _explicitNullValueFilesize = default!;
         /// <summary>Authentication token of the job.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; AdditionalData?.Remove("token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
         private string? _explicitNullValueToken = default!;
 #nullable restore
 #else
-        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; AdditionalData?.Remove("token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
         private string _explicitNullValueToken = default!;
 #endif
         /// <summary>
@@ -65,7 +68,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "artifact_type", n => { ArtifactType = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4JobsIdArtifactsAuthorizeRequestArtifactType>(); } },
+                { "artifact_type", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4JobsIdArtifactsAuthorizeRequestArtifactType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueArtifactType = default; _explicitNullProperties?.Remove("artifact_type"); AdditionalData["artifact_type"] = unknown; } else { ArtifactType = parsed; AdditionalData.Remove("artifact_type"); } } },
                 { "filesize", n => { Filesize = n.GetIntValue(); } },
                 { "token", n => { Token = n.GetStringValue(); } },
             };

@@ -17,8 +17,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("projects_to_exclude") is { } nullNodeProjectsToExclude && nullNodeProjectsToExclude.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectsToExclude = null;
-            if (parseNode.GetChildNode("secret_push_protection_enabled") is { } nullNodeSecretPushProtectionEnabled && nullNodeSecretPushProtectionEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecretPushProtectionEnabled = null;
+            if (parseNode.GetChildNode("projects_to_exclude") is null) { _explicitNullValueProjectsToExclude = default!; _explicitNullProperties?.Remove("projects_to_exclude"); }
+            else if (parseNode.GetChildNode("projects_to_exclude") is { } nullNodeProjectsToExclude && nullNodeProjectsToExclude.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectsToExclude = null;
+            if (parseNode.GetChildNode("secret_push_protection_enabled") is null) { _explicitNullValueSecretPushProtectionEnabled = default!; _explicitNullProperties?.Remove("secret_push_protection_enabled"); }
+            else if (parseNode.GetChildNode("secret_push_protection_enabled") is { } nullNodeSecretPushProtectionEnabled && nullNodeSecretPushProtectionEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecretPushProtectionEnabled = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>IDs of projects to exclude from secret push protection.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? ProjectsToExclude { get => _explicitNullValueProjectsToExclude; set { _explicitNullValueProjectsToExclude = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projects_to_exclude"); else _explicitNullProperties?.Remove("projects_to_exclude"); } }
+        public List<int?>? ProjectsToExclude { get => _explicitNullValueProjectsToExclude; set { _explicitNullValueProjectsToExclude = value; AdditionalData?.Remove("projects_to_exclude"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projects_to_exclude"); else _explicitNullProperties?.Remove("projects_to_exclude"); } }
         private List<int?>? _explicitNullValueProjectsToExclude = default!;
 #nullable restore
 #else
-        public List<int?> ProjectsToExclude { get => _explicitNullValueProjectsToExclude; set { _explicitNullValueProjectsToExclude = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projects_to_exclude"); else _explicitNullProperties?.Remove("projects_to_exclude"); } }
+        public List<int?> ProjectsToExclude { get => _explicitNullValueProjectsToExclude; set { _explicitNullValueProjectsToExclude = value; AdditionalData?.Remove("projects_to_exclude"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projects_to_exclude"); else _explicitNullProperties?.Remove("projects_to_exclude"); } }
         private List<int?> _explicitNullValueProjectsToExclude = default!;
 #endif
         /// <summary>If `true`, enables secret push protection for projects in the group.</summary>
-        public bool? SecretPushProtectionEnabled { get => _explicitNullValueSecretPushProtectionEnabled; set { _explicitNullValueSecretPushProtectionEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secret_push_protection_enabled"); else _explicitNullProperties?.Remove("secret_push_protection_enabled"); } }
+        public bool? SecretPushProtectionEnabled { get => _explicitNullValueSecretPushProtectionEnabled; set { _explicitNullValueSecretPushProtectionEnabled = value; AdditionalData?.Remove("secret_push_protection_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secret_push_protection_enabled"); else _explicitNullProperties?.Remove("secret_push_protection_enabled"); } }
         private bool? _explicitNullValueSecretPushProtectionEnabled = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdSecuritySettingsRequest"/> and sets the default values.

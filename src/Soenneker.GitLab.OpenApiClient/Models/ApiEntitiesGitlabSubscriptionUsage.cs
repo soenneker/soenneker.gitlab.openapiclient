@@ -17,25 +17,29 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("max_seats_used") is { } nullNodeMaxSeatsUsed && nullNodeMaxSeatsUsed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxSeatsUsed = null;
-            if (parseNode.GetChildNode("seats_in_subscription") is { } nullNodeSeatsInSubscription && nullNodeSeatsInSubscription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SeatsInSubscription = null;
-            if (parseNode.GetChildNode("seats_in_use") is { } nullNodeSeatsInUse && nullNodeSeatsInUse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SeatsInUse = null;
-            if (parseNode.GetChildNode("seats_owed") is { } nullNodeSeatsOwed && nullNodeSeatsOwed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SeatsOwed = null;
+            if (parseNode.GetChildNode("max_seats_used") is null) { _explicitNullValueMaxSeatsUsed = default!; _explicitNullProperties?.Remove("max_seats_used"); }
+            else if (parseNode.GetChildNode("max_seats_used") is { } nullNodeMaxSeatsUsed && nullNodeMaxSeatsUsed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxSeatsUsed = null;
+            if (parseNode.GetChildNode("seats_in_subscription") is null) { _explicitNullValueSeatsInSubscription = default!; _explicitNullProperties?.Remove("seats_in_subscription"); }
+            else if (parseNode.GetChildNode("seats_in_subscription") is { } nullNodeSeatsInSubscription && nullNodeSeatsInSubscription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SeatsInSubscription = null;
+            if (parseNode.GetChildNode("seats_in_use") is null) { _explicitNullValueSeatsInUse = default!; _explicitNullProperties?.Remove("seats_in_use"); }
+            else if (parseNode.GetChildNode("seats_in_use") is { } nullNodeSeatsInUse && nullNodeSeatsInUse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SeatsInUse = null;
+            if (parseNode.GetChildNode("seats_owed") is null) { _explicitNullValueSeatsOwed = default!; _explicitNullProperties?.Remove("seats_owed"); }
+            else if (parseNode.GetChildNode("seats_owed") is { } nullNodeSeatsOwed && nullNodeSeatsOwed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SeatsOwed = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The max_seats_used property</summary>
-        public int? MaxSeatsUsed { get => _explicitNullValueMaxSeatsUsed; set { _explicitNullValueMaxSeatsUsed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_seats_used"); else _explicitNullProperties?.Remove("max_seats_used"); } }
+        public int? MaxSeatsUsed { get => _explicitNullValueMaxSeatsUsed; set { _explicitNullValueMaxSeatsUsed = value; AdditionalData?.Remove("max_seats_used"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_seats_used"); else _explicitNullProperties?.Remove("max_seats_used"); } }
         private int? _explicitNullValueMaxSeatsUsed = default!;
         /// <summary>The seats_in_subscription property</summary>
-        public int? SeatsInSubscription { get => _explicitNullValueSeatsInSubscription; set { _explicitNullValueSeatsInSubscription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seats_in_subscription"); else _explicitNullProperties?.Remove("seats_in_subscription"); } }
+        public int? SeatsInSubscription { get => _explicitNullValueSeatsInSubscription; set { _explicitNullValueSeatsInSubscription = value; AdditionalData?.Remove("seats_in_subscription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seats_in_subscription"); else _explicitNullProperties?.Remove("seats_in_subscription"); } }
         private int? _explicitNullValueSeatsInSubscription = default!;
         /// <summary>The seats_in_use property</summary>
-        public int? SeatsInUse { get => _explicitNullValueSeatsInUse; set { _explicitNullValueSeatsInUse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seats_in_use"); else _explicitNullProperties?.Remove("seats_in_use"); } }
+        public int? SeatsInUse { get => _explicitNullValueSeatsInUse; set { _explicitNullValueSeatsInUse = value; AdditionalData?.Remove("seats_in_use"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seats_in_use"); else _explicitNullProperties?.Remove("seats_in_use"); } }
         private int? _explicitNullValueSeatsInUse = default!;
         /// <summary>The seats_owed property</summary>
-        public int? SeatsOwed { get => _explicitNullValueSeatsOwed; set { _explicitNullValueSeatsOwed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seats_owed"); else _explicitNullProperties?.Remove("seats_owed"); } }
+        public int? SeatsOwed { get => _explicitNullValueSeatsOwed; set { _explicitNullValueSeatsOwed = value; AdditionalData?.Remove("seats_owed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seats_owed"); else _explicitNullProperties?.Remove("seats_owed"); } }
         private int? _explicitNullValueSeatsOwed = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabSubscriptionUsage"/> and sets the default values.

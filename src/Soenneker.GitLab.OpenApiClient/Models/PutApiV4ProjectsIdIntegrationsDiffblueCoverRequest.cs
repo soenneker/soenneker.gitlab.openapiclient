@@ -17,10 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("diffblue_access_token_name") is { } nullNodeDiffblueAccessTokenName && nullNodeDiffblueAccessTokenName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiffblueAccessTokenName = null;
-            if (parseNode.GetChildNode("diffblue_access_token_secret") is { } nullNodeDiffblueAccessTokenSecret && nullNodeDiffblueAccessTokenSecret.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiffblueAccessTokenSecret = null;
-            if (parseNode.GetChildNode("diffblue_license_key") is { } nullNodeDiffblueLicenseKey && nullNodeDiffblueLicenseKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiffblueLicenseKey = null;
-            if (parseNode.GetChildNode("use_inherited_settings") is { } nullNodeUseInheritedSettings && nullNodeUseInheritedSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseInheritedSettings = null;
+            if (parseNode.GetChildNode("diffblue_access_token_name") is null) { _explicitNullValueDiffblueAccessTokenName = default!; _explicitNullProperties?.Remove("diffblue_access_token_name"); }
+            else if (parseNode.GetChildNode("diffblue_access_token_name") is { } nullNodeDiffblueAccessTokenName && nullNodeDiffblueAccessTokenName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiffblueAccessTokenName = null;
+            if (parseNode.GetChildNode("diffblue_access_token_secret") is null) { _explicitNullValueDiffblueAccessTokenSecret = default!; _explicitNullProperties?.Remove("diffblue_access_token_secret"); }
+            else if (parseNode.GetChildNode("diffblue_access_token_secret") is { } nullNodeDiffblueAccessTokenSecret && nullNodeDiffblueAccessTokenSecret.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiffblueAccessTokenSecret = null;
+            if (parseNode.GetChildNode("diffblue_license_key") is null) { _explicitNullValueDiffblueLicenseKey = default!; _explicitNullProperties?.Remove("diffblue_license_key"); }
+            else if (parseNode.GetChildNode("diffblue_license_key") is { } nullNodeDiffblueLicenseKey && nullNodeDiffblueLicenseKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiffblueLicenseKey = null;
+            if (parseNode.GetChildNode("use_inherited_settings") is null) { _explicitNullValueUseInheritedSettings = default!; _explicitNullProperties?.Remove("use_inherited_settings"); }
+            else if (parseNode.GetChildNode("use_inherited_settings") is { } nullNodeUseInheritedSettings && nullNodeUseInheritedSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseInheritedSettings = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,35 +32,35 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Access token name used by Diffblue Cover in pipelines.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DiffblueAccessTokenName { get => _explicitNullValueDiffblueAccessTokenName; set { _explicitNullValueDiffblueAccessTokenName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("diffblue_access_token_name"); else _explicitNullProperties?.Remove("diffblue_access_token_name"); } }
+        public string? DiffblueAccessTokenName { get => _explicitNullValueDiffblueAccessTokenName; set { _explicitNullValueDiffblueAccessTokenName = value; AdditionalData?.Remove("diffblue_access_token_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("diffblue_access_token_name"); else _explicitNullProperties?.Remove("diffblue_access_token_name"); } }
         private string? _explicitNullValueDiffblueAccessTokenName = default!;
 #nullable restore
 #else
-        public string DiffblueAccessTokenName { get => _explicitNullValueDiffblueAccessTokenName; set { _explicitNullValueDiffblueAccessTokenName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("diffblue_access_token_name"); else _explicitNullProperties?.Remove("diffblue_access_token_name"); } }
+        public string DiffblueAccessTokenName { get => _explicitNullValueDiffblueAccessTokenName; set { _explicitNullValueDiffblueAccessTokenName = value; AdditionalData?.Remove("diffblue_access_token_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("diffblue_access_token_name"); else _explicitNullProperties?.Remove("diffblue_access_token_name"); } }
         private string _explicitNullValueDiffblueAccessTokenName = default!;
 #endif
         /// <summary>Access token secret used by Diffblue Cover in pipelines.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DiffblueAccessTokenSecret { get => _explicitNullValueDiffblueAccessTokenSecret; set { _explicitNullValueDiffblueAccessTokenSecret = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("diffblue_access_token_secret"); else _explicitNullProperties?.Remove("diffblue_access_token_secret"); } }
+        public string? DiffblueAccessTokenSecret { get => _explicitNullValueDiffblueAccessTokenSecret; set { _explicitNullValueDiffblueAccessTokenSecret = value; AdditionalData?.Remove("diffblue_access_token_secret"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("diffblue_access_token_secret"); else _explicitNullProperties?.Remove("diffblue_access_token_secret"); } }
         private string? _explicitNullValueDiffblueAccessTokenSecret = default!;
 #nullable restore
 #else
-        public string DiffblueAccessTokenSecret { get => _explicitNullValueDiffblueAccessTokenSecret; set { _explicitNullValueDiffblueAccessTokenSecret = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("diffblue_access_token_secret"); else _explicitNullProperties?.Remove("diffblue_access_token_secret"); } }
+        public string DiffblueAccessTokenSecret { get => _explicitNullValueDiffblueAccessTokenSecret; set { _explicitNullValueDiffblueAccessTokenSecret = value; AdditionalData?.Remove("diffblue_access_token_secret"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("diffblue_access_token_secret"); else _explicitNullProperties?.Remove("diffblue_access_token_secret"); } }
         private string _explicitNullValueDiffblueAccessTokenSecret = default!;
 #endif
         /// <summary>Diffblue Cover license key.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DiffblueLicenseKey { get => _explicitNullValueDiffblueLicenseKey; set { _explicitNullValueDiffblueLicenseKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("diffblue_license_key"); else _explicitNullProperties?.Remove("diffblue_license_key"); } }
+        public string? DiffblueLicenseKey { get => _explicitNullValueDiffblueLicenseKey; set { _explicitNullValueDiffblueLicenseKey = value; AdditionalData?.Remove("diffblue_license_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("diffblue_license_key"); else _explicitNullProperties?.Remove("diffblue_license_key"); } }
         private string? _explicitNullValueDiffblueLicenseKey = default!;
 #nullable restore
 #else
-        public string DiffblueLicenseKey { get => _explicitNullValueDiffblueLicenseKey; set { _explicitNullValueDiffblueLicenseKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("diffblue_license_key"); else _explicitNullProperties?.Remove("diffblue_license_key"); } }
+        public string DiffblueLicenseKey { get => _explicitNullValueDiffblueLicenseKey; set { _explicitNullValueDiffblueLicenseKey = value; AdditionalData?.Remove("diffblue_license_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("diffblue_license_key"); else _explicitNullProperties?.Remove("diffblue_license_key"); } }
         private string _explicitNullValueDiffblueLicenseKey = default!;
 #endif
         /// <summary>Indicates whether to inherit the default settings. Defaults to `false`.</summary>
-        public bool? UseInheritedSettings { get => _explicitNullValueUseInheritedSettings; set { _explicitNullValueUseInheritedSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("use_inherited_settings"); else _explicitNullProperties?.Remove("use_inherited_settings"); } }
+        public bool? UseInheritedSettings { get => _explicitNullValueUseInheritedSettings; set { _explicitNullValueUseInheritedSettings = value; AdditionalData?.Remove("use_inherited_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("use_inherited_settings"); else _explicitNullProperties?.Remove("use_inherited_settings"); } }
         private bool? _explicitNullValueUseInheritedSettings = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdIntegrationsDiffblueCoverRequest"/> and sets the default values.

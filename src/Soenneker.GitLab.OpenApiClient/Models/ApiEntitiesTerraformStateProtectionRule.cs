@@ -17,11 +17,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("allowed_from") is { } nullNodeAllowedFrom && nullNodeAllowedFrom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedFrom = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("minimum_access_level_for_write") is { } nullNodeMinimumAccessLevelForWrite && nullNodeMinimumAccessLevelForWrite.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumAccessLevelForWrite = null;
-            if (parseNode.GetChildNode("project_id") is { } nullNodeProjectId && nullNodeProjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectId = null;
-            if (parseNode.GetChildNode("state_name") is { } nullNodeStateName && nullNodeStateName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StateName = null;
+            if (parseNode.GetChildNode("allowed_from") is null) { _explicitNullValueAllowedFrom = default!; _explicitNullProperties?.Remove("allowed_from"); }
+            else if (parseNode.GetChildNode("allowed_from") is { } nullNodeAllowedFrom && nullNodeAllowedFrom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedFrom = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("minimum_access_level_for_write") is null) { _explicitNullValueMinimumAccessLevelForWrite = default!; _explicitNullProperties?.Remove("minimum_access_level_for_write"); }
+            else if (parseNode.GetChildNode("minimum_access_level_for_write") is { } nullNodeMinimumAccessLevelForWrite && nullNodeMinimumAccessLevelForWrite.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumAccessLevelForWrite = null;
+            if (parseNode.GetChildNode("project_id") is null) { _explicitNullValueProjectId = default!; _explicitNullProperties?.Remove("project_id"); }
+            else if (parseNode.GetChildNode("project_id") is { } nullNodeProjectId && nullNodeProjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectId = null;
+            if (parseNode.GetChildNode("state_name") is null) { _explicitNullValueStateName = default!; _explicitNullProperties?.Remove("state_name"); }
+            else if (parseNode.GetChildNode("state_name") is { } nullNodeStateName && nullNodeStateName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StateName = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,37 +34,37 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The allowed_from property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AllowedFrom { get => _explicitNullValueAllowedFrom; set { _explicitNullValueAllowedFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_from"); else _explicitNullProperties?.Remove("allowed_from"); } }
+        public string? AllowedFrom { get => _explicitNullValueAllowedFrom; set { _explicitNullValueAllowedFrom = value; AdditionalData?.Remove("allowed_from"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_from"); else _explicitNullProperties?.Remove("allowed_from"); } }
         private string? _explicitNullValueAllowedFrom = default!;
 #nullable restore
 #else
-        public string AllowedFrom { get => _explicitNullValueAllowedFrom; set { _explicitNullValueAllowedFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_from"); else _explicitNullProperties?.Remove("allowed_from"); } }
+        public string AllowedFrom { get => _explicitNullValueAllowedFrom; set { _explicitNullValueAllowedFrom = value; AdditionalData?.Remove("allowed_from"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_from"); else _explicitNullProperties?.Remove("allowed_from"); } }
         private string _explicitNullValueAllowedFrom = default!;
 #endif
         /// <summary>The id property</summary>
-        public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private long? _explicitNullValueId = default!;
         /// <summary>The minimum_access_level_for_write property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MinimumAccessLevelForWrite { get => _explicitNullValueMinimumAccessLevelForWrite; set { _explicitNullValueMinimumAccessLevelForWrite = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_for_write"); else _explicitNullProperties?.Remove("minimum_access_level_for_write"); } }
+        public string? MinimumAccessLevelForWrite { get => _explicitNullValueMinimumAccessLevelForWrite; set { _explicitNullValueMinimumAccessLevelForWrite = value; AdditionalData?.Remove("minimum_access_level_for_write"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_for_write"); else _explicitNullProperties?.Remove("minimum_access_level_for_write"); } }
         private string? _explicitNullValueMinimumAccessLevelForWrite = default!;
 #nullable restore
 #else
-        public string MinimumAccessLevelForWrite { get => _explicitNullValueMinimumAccessLevelForWrite; set { _explicitNullValueMinimumAccessLevelForWrite = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_for_write"); else _explicitNullProperties?.Remove("minimum_access_level_for_write"); } }
+        public string MinimumAccessLevelForWrite { get => _explicitNullValueMinimumAccessLevelForWrite; set { _explicitNullValueMinimumAccessLevelForWrite = value; AdditionalData?.Remove("minimum_access_level_for_write"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_for_write"); else _explicitNullProperties?.Remove("minimum_access_level_for_write"); } }
         private string _explicitNullValueMinimumAccessLevelForWrite = default!;
 #endif
         /// <summary>The project_id property</summary>
-        public long? ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_id"); else _explicitNullProperties?.Remove("project_id"); } }
+        public long? ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; AdditionalData?.Remove("project_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_id"); else _explicitNullProperties?.Remove("project_id"); } }
         private long? _explicitNullValueProjectId = default!;
         /// <summary>The state_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StateName { get => _explicitNullValueStateName; set { _explicitNullValueStateName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state_name"); else _explicitNullProperties?.Remove("state_name"); } }
+        public string? StateName { get => _explicitNullValueStateName; set { _explicitNullValueStateName = value; AdditionalData?.Remove("state_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state_name"); else _explicitNullProperties?.Remove("state_name"); } }
         private string? _explicitNullValueStateName = default!;
 #nullable restore
 #else
-        public string StateName { get => _explicitNullValueStateName; set { _explicitNullValueStateName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state_name"); else _explicitNullProperties?.Remove("state_name"); } }
+        public string StateName { get => _explicitNullValueStateName; set { _explicitNullValueStateName = value; AdditionalData?.Remove("state_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state_name"); else _explicitNullProperties?.Remove("state_name"); } }
         private string _explicitNullValueStateName = default!;
 #endif
         /// <summary>

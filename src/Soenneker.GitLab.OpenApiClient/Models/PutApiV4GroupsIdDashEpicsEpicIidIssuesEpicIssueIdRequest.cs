@@ -17,10 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("move_after_id") is { } nullNodeMoveAfterId && nullNodeMoveAfterId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MoveAfterId = null;
-            if (parseNode.GetChildNode("move_before_id") is { } nullNodeMoveBeforeId && nullNodeMoveBeforeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MoveBeforeId = null;
-            if (parseNode.GetChildNode("page") is { } nullNodePage && nullNodePage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Page = null;
-            if (parseNode.GetChildNode("per_page") is { } nullNodePerPage && nullNodePerPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PerPage = null;
+            if (parseNode.GetChildNode("move_after_id") is null) { _explicitNullValueMoveAfterId = default!; _explicitNullProperties?.Remove("move_after_id"); }
+            else if (parseNode.GetChildNode("move_after_id") is { } nullNodeMoveAfterId && nullNodeMoveAfterId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MoveAfterId = null;
+            if (parseNode.GetChildNode("move_before_id") is null) { _explicitNullValueMoveBeforeId = default!; _explicitNullProperties?.Remove("move_before_id"); }
+            else if (parseNode.GetChildNode("move_before_id") is { } nullNodeMoveBeforeId && nullNodeMoveBeforeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MoveBeforeId = null;
+            if (parseNode.GetChildNode("page") is null) { _explicitNullValuePage = default!; _explicitNullProperties?.Remove("page"); }
+            else if (parseNode.GetChildNode("page") is { } nullNodePage && nullNodePage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Page = null;
+            if (parseNode.GetChildNode("per_page") is null) { _explicitNullValuePerPage = default!; _explicitNullProperties?.Remove("per_page"); }
+            else if (parseNode.GetChildNode("per_page") is { } nullNodePerPage && nullNodePerPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PerPage = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,28 +32,28 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>ID of the epic-issue association to position after the issue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueIdRequestMoveAfterId? MoveAfterId { get => _explicitNullValueMoveAfterId; set { _explicitNullValueMoveAfterId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("move_after_id"); else _explicitNullProperties?.Remove("move_after_id"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueIdRequestMoveAfterId? MoveAfterId { get => _explicitNullValueMoveAfterId; set { _explicitNullValueMoveAfterId = value; AdditionalData?.Remove("move_after_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("move_after_id"); else _explicitNullProperties?.Remove("move_after_id"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueIdRequestMoveAfterId? _explicitNullValueMoveAfterId = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueIdRequestMoveAfterId MoveAfterId { get => _explicitNullValueMoveAfterId; set { _explicitNullValueMoveAfterId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("move_after_id"); else _explicitNullProperties?.Remove("move_after_id"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueIdRequestMoveAfterId MoveAfterId { get => _explicitNullValueMoveAfterId; set { _explicitNullValueMoveAfterId = value; AdditionalData?.Remove("move_after_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("move_after_id"); else _explicitNullProperties?.Remove("move_after_id"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueIdRequestMoveAfterId _explicitNullValueMoveAfterId = default!;
 #endif
         /// <summary>ID of the epic-issue association to position before the issue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueIdRequestMoveBeforeId? MoveBeforeId { get => _explicitNullValueMoveBeforeId; set { _explicitNullValueMoveBeforeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("move_before_id"); else _explicitNullProperties?.Remove("move_before_id"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueIdRequestMoveBeforeId? MoveBeforeId { get => _explicitNullValueMoveBeforeId; set { _explicitNullValueMoveBeforeId = value; AdditionalData?.Remove("move_before_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("move_before_id"); else _explicitNullProperties?.Remove("move_before_id"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueIdRequestMoveBeforeId? _explicitNullValueMoveBeforeId = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueIdRequestMoveBeforeId MoveBeforeId { get => _explicitNullValueMoveBeforeId; set { _explicitNullValueMoveBeforeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("move_before_id"); else _explicitNullProperties?.Remove("move_before_id"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueIdRequestMoveBeforeId MoveBeforeId { get => _explicitNullValueMoveBeforeId; set { _explicitNullValueMoveBeforeId = value; AdditionalData?.Remove("move_before_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("move_before_id"); else _explicitNullProperties?.Remove("move_before_id"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueIdRequestMoveBeforeId _explicitNullValueMoveBeforeId = default!;
 #endif
         /// <summary>Page number of results to retrieve.</summary>
-        public int? Page { get => _explicitNullValuePage; set { _explicitNullValuePage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page"); else _explicitNullProperties?.Remove("page"); } }
+        public int? Page { get => _explicitNullValuePage; set { _explicitNullValuePage = value; AdditionalData?.Remove("page"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page"); else _explicitNullProperties?.Remove("page"); } }
         private int? _explicitNullValuePage = default!;
         /// <summary>Number of items to list per page.</summary>
-        public int? PerPage { get => _explicitNullValuePerPage; set { _explicitNullValuePerPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("per_page"); else _explicitNullProperties?.Remove("per_page"); } }
+        public int? PerPage { get => _explicitNullValuePerPage; set { _explicitNullValuePerPage = value; AdditionalData?.Remove("per_page"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("per_page"); else _explicitNullProperties?.Remove("per_page"); } }
         private int? _explicitNullValuePerPage = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueIdRequest"/> and sets the default values.

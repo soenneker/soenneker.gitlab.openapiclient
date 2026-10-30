@@ -17,9 +17,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("custom_role") is { } nullNodeCustomRole && nullNodeCustomRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomRole = null;
-            if (parseNode.GetChildNode("integer_value") is { } nullNodeIntegerValue && nullNodeIntegerValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntegerValue = null;
-            if (parseNode.GetChildNode("string_value") is { } nullNodeStringValue && nullNodeStringValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StringValue = null;
+            if (parseNode.GetChildNode("custom_role") is null) { _explicitNullValueCustomRole = default!; _explicitNullProperties?.Remove("custom_role"); }
+            else if (parseNode.GetChildNode("custom_role") is { } nullNodeCustomRole && nullNodeCustomRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomRole = null;
+            if (parseNode.GetChildNode("integer_value") is null) { _explicitNullValueIntegerValue = default!; _explicitNullProperties?.Remove("integer_value"); }
+            else if (parseNode.GetChildNode("integer_value") is { } nullNodeIntegerValue && nullNodeIntegerValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntegerValue = null;
+            if (parseNode.GetChildNode("string_value") is null) { _explicitNullValueStringValue = default!; _explicitNullProperties?.Remove("string_value"); }
+            else if (parseNode.GetChildNode("string_value") is { } nullNodeStringValue && nullNodeStringValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StringValue = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,24 +30,24 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The custom_role property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBillableMembershipAccessLevelCustomRoleProperty? CustomRole { get => _explicitNullValueCustomRole; set { _explicitNullValueCustomRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_role"); else _explicitNullProperties?.Remove("custom_role"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBillableMembershipAccessLevelCustomRoleProperty? CustomRole { get => _explicitNullValueCustomRole; set { _explicitNullValueCustomRole = value; AdditionalData?.Remove("custom_role"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_role"); else _explicitNullProperties?.Remove("custom_role"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBillableMembershipAccessLevelCustomRoleProperty? _explicitNullValueCustomRole = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBillableMembershipAccessLevelCustomRoleProperty CustomRole { get => _explicitNullValueCustomRole; set { _explicitNullValueCustomRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_role"); else _explicitNullProperties?.Remove("custom_role"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBillableMembershipAccessLevelCustomRoleProperty CustomRole { get => _explicitNullValueCustomRole; set { _explicitNullValueCustomRole = value; AdditionalData?.Remove("custom_role"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_role"); else _explicitNullProperties?.Remove("custom_role"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBillableMembershipAccessLevelCustomRoleProperty _explicitNullValueCustomRole = default!;
 #endif
         /// <summary>The integer_value property</summary>
-        public int? IntegerValue { get => _explicitNullValueIntegerValue; set { _explicitNullValueIntegerValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("integer_value"); else _explicitNullProperties?.Remove("integer_value"); } }
+        public int? IntegerValue { get => _explicitNullValueIntegerValue; set { _explicitNullValueIntegerValue = value; AdditionalData?.Remove("integer_value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("integer_value"); else _explicitNullProperties?.Remove("integer_value"); } }
         private int? _explicitNullValueIntegerValue = default!;
         /// <summary>The string_value property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StringValue { get => _explicitNullValueStringValue; set { _explicitNullValueStringValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("string_value"); else _explicitNullProperties?.Remove("string_value"); } }
+        public string? StringValue { get => _explicitNullValueStringValue; set { _explicitNullValueStringValue = value; AdditionalData?.Remove("string_value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("string_value"); else _explicitNullProperties?.Remove("string_value"); } }
         private string? _explicitNullValueStringValue = default!;
 #nullable restore
 #else
-        public string StringValue { get => _explicitNullValueStringValue; set { _explicitNullValueStringValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("string_value"); else _explicitNullProperties?.Remove("string_value"); } }
+        public string StringValue { get => _explicitNullValueStringValue; set { _explicitNullValueStringValue = value; AdditionalData?.Remove("string_value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("string_value"); else _explicitNullProperties?.Remove("string_value"); } }
         private string _explicitNullValueStringValue = default!;
 #endif
         /// <summary>

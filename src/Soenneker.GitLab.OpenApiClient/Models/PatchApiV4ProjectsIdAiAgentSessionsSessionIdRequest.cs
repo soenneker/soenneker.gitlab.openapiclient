@@ -17,8 +17,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("jsonl_sha256") is { } nullNodeJsonlSha256 && nullNodeJsonlSha256.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JsonlSha256 = null;
-            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("jsonl_sha256") is null) { _explicitNullValueJsonlSha256 = default!; _explicitNullProperties?.Remove("jsonl_sha256"); }
+            else if (parseNode.GetChildNode("jsonl_sha256") is { } nullNodeJsonlSha256 && nullNodeJsonlSha256.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JsonlSha256 = null;
+            if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
+            else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>SHA-256 of the transcript file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? JsonlSha256 { get => _explicitNullValueJsonlSha256; set { _explicitNullValueJsonlSha256 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jsonl_sha256"); else _explicitNullProperties?.Remove("jsonl_sha256"); } }
+        public string? JsonlSha256 { get => _explicitNullValueJsonlSha256; set { _explicitNullValueJsonlSha256 = value; AdditionalData?.Remove("jsonl_sha256"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jsonl_sha256"); else _explicitNullProperties?.Remove("jsonl_sha256"); } }
         private string? _explicitNullValueJsonlSha256 = default!;
 #nullable restore
 #else
-        public string JsonlSha256 { get => _explicitNullValueJsonlSha256; set { _explicitNullValueJsonlSha256 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jsonl_sha256"); else _explicitNullProperties?.Remove("jsonl_sha256"); } }
+        public string JsonlSha256 { get => _explicitNullValueJsonlSha256; set { _explicitNullValueJsonlSha256 = value; AdditionalData?.Remove("jsonl_sha256"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jsonl_sha256"); else _explicitNullProperties?.Remove("jsonl_sha256"); } }
         private string _explicitNullValueJsonlSha256 = default!;
 #endif
         /// <summary>Terminal status.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4ProjectsIdAiAgentSessionsSessionIdRequestStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4ProjectsIdAiAgentSessionsSessionIdRequestStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4ProjectsIdAiAgentSessionsSessionIdRequestStatus? _explicitNullValueStatus = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4ProjectsIdAiAgentSessionsSessionIdRequest"/> and sets the default values.
@@ -62,7 +64,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "jsonl_sha256", n => { JsonlSha256 = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4ProjectsIdAiAgentSessionsSessionIdRequestStatus>(); } },
+                { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4ProjectsIdAiAgentSessionsSessionIdRequestStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
             };
         }
         /// <summary>

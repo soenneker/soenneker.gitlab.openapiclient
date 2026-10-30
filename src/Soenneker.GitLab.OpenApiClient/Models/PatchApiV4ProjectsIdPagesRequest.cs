@@ -17,28 +17,31 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("pages_https_only") is { } nullNodePagesHttpsOnly && nullNodePagesHttpsOnly.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PagesHttpsOnly = null;
-            if (parseNode.GetChildNode("pages_primary_domain") is { } nullNodePagesPrimaryDomain && nullNodePagesPrimaryDomain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PagesPrimaryDomain = null;
-            if (parseNode.GetChildNode("pages_unique_domain_enabled") is { } nullNodePagesUniqueDomainEnabled && nullNodePagesUniqueDomainEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PagesUniqueDomainEnabled = null;
+            if (parseNode.GetChildNode("pages_https_only") is null) { _explicitNullValuePagesHttpsOnly = default!; _explicitNullProperties?.Remove("pages_https_only"); }
+            else if (parseNode.GetChildNode("pages_https_only") is { } nullNodePagesHttpsOnly && nullNodePagesHttpsOnly.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PagesHttpsOnly = null;
+            if (parseNode.GetChildNode("pages_primary_domain") is null) { _explicitNullValuePagesPrimaryDomain = default!; _explicitNullProperties?.Remove("pages_primary_domain"); }
+            else if (parseNode.GetChildNode("pages_primary_domain") is { } nullNodePagesPrimaryDomain && nullNodePagesPrimaryDomain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PagesPrimaryDomain = null;
+            if (parseNode.GetChildNode("pages_unique_domain_enabled") is null) { _explicitNullValuePagesUniqueDomainEnabled = default!; _explicitNullProperties?.Remove("pages_unique_domain_enabled"); }
+            else if (parseNode.GetChildNode("pages_unique_domain_enabled") is { } nullNodePagesUniqueDomainEnabled && nullNodePagesUniqueDomainEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PagesUniqueDomainEnabled = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>If `true`, forces HTTPS.</summary>
-        public bool? PagesHttpsOnly { get => _explicitNullValuePagesHttpsOnly; set { _explicitNullValuePagesHttpsOnly = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pages_https_only"); else _explicitNullProperties?.Remove("pages_https_only"); } }
+        public bool? PagesHttpsOnly { get => _explicitNullValuePagesHttpsOnly; set { _explicitNullValuePagesHttpsOnly = value; AdditionalData?.Remove("pages_https_only"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pages_https_only"); else _explicitNullProperties?.Remove("pages_https_only"); } }
         private bool? _explicitNullValuePagesHttpsOnly = default!;
         /// <summary>Primary domain, from the existing assigned domains, to redirect all Pages requests to. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/481334) in GitLab 17.8.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PagesPrimaryDomain { get => _explicitNullValuePagesPrimaryDomain; set { _explicitNullValuePagesPrimaryDomain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pages_primary_domain"); else _explicitNullProperties?.Remove("pages_primary_domain"); } }
+        public string? PagesPrimaryDomain { get => _explicitNullValuePagesPrimaryDomain; set { _explicitNullValuePagesPrimaryDomain = value; AdditionalData?.Remove("pages_primary_domain"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pages_primary_domain"); else _explicitNullProperties?.Remove("pages_primary_domain"); } }
         private string? _explicitNullValuePagesPrimaryDomain = default!;
 #nullable restore
 #else
-        public string PagesPrimaryDomain { get => _explicitNullValuePagesPrimaryDomain; set { _explicitNullValuePagesPrimaryDomain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pages_primary_domain"); else _explicitNullProperties?.Remove("pages_primary_domain"); } }
+        public string PagesPrimaryDomain { get => _explicitNullValuePagesPrimaryDomain; set { _explicitNullValuePagesPrimaryDomain = value; AdditionalData?.Remove("pages_primary_domain"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pages_primary_domain"); else _explicitNullProperties?.Remove("pages_primary_domain"); } }
         private string _explicitNullValuePagesPrimaryDomain = default!;
 #endif
         /// <summary>If `true`, uses a unique domain.</summary>
-        public bool? PagesUniqueDomainEnabled { get => _explicitNullValuePagesUniqueDomainEnabled; set { _explicitNullValuePagesUniqueDomainEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pages_unique_domain_enabled"); else _explicitNullProperties?.Remove("pages_unique_domain_enabled"); } }
+        public bool? PagesUniqueDomainEnabled { get => _explicitNullValuePagesUniqueDomainEnabled; set { _explicitNullValuePagesUniqueDomainEnabled = value; AdditionalData?.Remove("pages_unique_domain_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pages_unique_domain_enabled"); else _explicitNullProperties?.Remove("pages_unique_domain_enabled"); } }
         private bool? _explicitNullValuePagesUniqueDomainEnabled = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4ProjectsIdPagesRequest"/> and sets the default values.

@@ -17,7 +17,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("minimum_role") is { } nullNodeMinimumRole && nullNodeMinimumRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumRole = null;
+            if (parseNode.GetChildNode("minimum_role") is null) { _explicitNullValueMinimumRole = default!; _explicitNullProperties?.Remove("minimum_role"); }
+            else if (parseNode.GetChildNode("minimum_role") is { } nullNodeMinimumRole && nullNodeMinimumRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumRole = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The minimum_role property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MinimumRole { get => _explicitNullValueMinimumRole; set { _explicitNullValueMinimumRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_role"); else _explicitNullProperties?.Remove("minimum_role"); } }
+        public string? MinimumRole { get => _explicitNullValueMinimumRole; set { _explicitNullValueMinimumRole = value; AdditionalData?.Remove("minimum_role"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_role"); else _explicitNullProperties?.Remove("minimum_role"); } }
         private string? _explicitNullValueMinimumRole = default!;
 #nullable restore
 #else
-        public string MinimumRole { get => _explicitNullValueMinimumRole; set { _explicitNullValueMinimumRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_role"); else _explicitNullProperties?.Remove("minimum_role"); } }
+        public string MinimumRole { get => _explicitNullValueMinimumRole; set { _explicitNullValueMinimumRole = value; AdditionalData?.Remove("minimum_role"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_role"); else _explicitNullProperties?.Remove("minimum_role"); } }
         private string _explicitNullValueMinimumRole = default!;
 #endif
         /// <summary>

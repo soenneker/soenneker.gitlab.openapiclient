@@ -17,7 +17,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("namespace_path") is { } nullNodeNamespacePath && nullNodeNamespacePath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NamespacePath = null;
+            if (parseNode.GetChildNode("namespace_path") is null) { _explicitNullValueNamespacePath = default!; _explicitNullProperties?.Remove("namespace_path"); }
+            else if (parseNode.GetChildNode("namespace_path") is { } nullNodeNamespacePath && nullNodeNamespacePath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NamespacePath = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Path of the namespace to subscribe.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NamespacePath { get => _explicitNullValueNamespacePath; set { _explicitNullValueNamespacePath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace_path"); else _explicitNullProperties?.Remove("namespace_path"); } }
+        public string? NamespacePath { get => _explicitNullValueNamespacePath; set { _explicitNullValueNamespacePath = value; AdditionalData?.Remove("namespace_path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace_path"); else _explicitNullProperties?.Remove("namespace_path"); } }
         private string? _explicitNullValueNamespacePath = default!;
 #nullable restore
 #else
-        public string NamespacePath { get => _explicitNullValueNamespacePath; set { _explicitNullValueNamespacePath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace_path"); else _explicitNullProperties?.Remove("namespace_path"); } }
+        public string NamespacePath { get => _explicitNullValueNamespacePath; set { _explicitNullValueNamespacePath = value; AdditionalData?.Remove("namespace_path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace_path"); else _explicitNullProperties?.Remove("namespace_path"); } }
         private string _explicitNullValueNamespacePath = default!;
 #endif
         /// <summary>

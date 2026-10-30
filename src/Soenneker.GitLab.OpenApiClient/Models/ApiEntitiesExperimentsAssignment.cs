@@ -17,45 +17,49 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("cached") is { } nullNodeCached && nullNodeCached.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cached = null;
-            if (parseNode.GetChildNode("context_key") is { } nullNodeContextKey && nullNodeContextKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContextKey = null;
-            if (parseNode.GetChildNode("experiment") is { } nullNodeExperiment && nullNodeExperiment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Experiment = null;
-            if (parseNode.GetChildNode("variant") is { } nullNodeVariant && nullNodeVariant.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Variant = null;
+            if (parseNode.GetChildNode("cached") is null) { _explicitNullValueCached = default!; _explicitNullProperties?.Remove("cached"); }
+            else if (parseNode.GetChildNode("cached") is { } nullNodeCached && nullNodeCached.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cached = null;
+            if (parseNode.GetChildNode("context_key") is null) { _explicitNullValueContextKey = default!; _explicitNullProperties?.Remove("context_key"); }
+            else if (parseNode.GetChildNode("context_key") is { } nullNodeContextKey && nullNodeContextKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContextKey = null;
+            if (parseNode.GetChildNode("experiment") is null) { _explicitNullValueExperiment = default!; _explicitNullProperties?.Remove("experiment"); }
+            else if (parseNode.GetChildNode("experiment") is { } nullNodeExperiment && nullNodeExperiment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Experiment = null;
+            if (parseNode.GetChildNode("variant") is null) { _explicitNullValueVariant = default!; _explicitNullProperties?.Remove("variant"); }
+            else if (parseNode.GetChildNode("variant") is { } nullNodeVariant && nullNodeVariant.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Variant = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The cached property</summary>
-        public bool? Cached { get => _explicitNullValueCached; set { _explicitNullValueCached = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cached"); else _explicitNullProperties?.Remove("cached"); } }
+        public bool? Cached { get => _explicitNullValueCached; set { _explicitNullValueCached = value; AdditionalData?.Remove("cached"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cached"); else _explicitNullProperties?.Remove("cached"); } }
         private bool? _explicitNullValueCached = default!;
         /// <summary>The context_key property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContextKey { get => _explicitNullValueContextKey; set { _explicitNullValueContextKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("context_key"); else _explicitNullProperties?.Remove("context_key"); } }
+        public string? ContextKey { get => _explicitNullValueContextKey; set { _explicitNullValueContextKey = value; AdditionalData?.Remove("context_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("context_key"); else _explicitNullProperties?.Remove("context_key"); } }
         private string? _explicitNullValueContextKey = default!;
 #nullable restore
 #else
-        public string ContextKey { get => _explicitNullValueContextKey; set { _explicitNullValueContextKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("context_key"); else _explicitNullProperties?.Remove("context_key"); } }
+        public string ContextKey { get => _explicitNullValueContextKey; set { _explicitNullValueContextKey = value; AdditionalData?.Remove("context_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("context_key"); else _explicitNullProperties?.Remove("context_key"); } }
         private string _explicitNullValueContextKey = default!;
 #endif
         /// <summary>The experiment property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Experiment { get => _explicitNullValueExperiment; set { _explicitNullValueExperiment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("experiment"); else _explicitNullProperties?.Remove("experiment"); } }
+        public string? Experiment { get => _explicitNullValueExperiment; set { _explicitNullValueExperiment = value; AdditionalData?.Remove("experiment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("experiment"); else _explicitNullProperties?.Remove("experiment"); } }
         private string? _explicitNullValueExperiment = default!;
 #nullable restore
 #else
-        public string Experiment { get => _explicitNullValueExperiment; set { _explicitNullValueExperiment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("experiment"); else _explicitNullProperties?.Remove("experiment"); } }
+        public string Experiment { get => _explicitNullValueExperiment; set { _explicitNullValueExperiment = value; AdditionalData?.Remove("experiment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("experiment"); else _explicitNullProperties?.Remove("experiment"); } }
         private string _explicitNullValueExperiment = default!;
 #endif
         /// <summary>The variant property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Variant { get => _explicitNullValueVariant; set { _explicitNullValueVariant = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variant"); else _explicitNullProperties?.Remove("variant"); } }
+        public string? Variant { get => _explicitNullValueVariant; set { _explicitNullValueVariant = value; AdditionalData?.Remove("variant"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variant"); else _explicitNullProperties?.Remove("variant"); } }
         private string? _explicitNullValueVariant = default!;
 #nullable restore
 #else
-        public string Variant { get => _explicitNullValueVariant; set { _explicitNullValueVariant = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variant"); else _explicitNullProperties?.Remove("variant"); } }
+        public string Variant { get => _explicitNullValueVariant; set { _explicitNullValueVariant = value; AdditionalData?.Remove("variant"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variant"); else _explicitNullProperties?.Remove("variant"); } }
         private string _explicitNullValueVariant = default!;
 #endif
         /// <summary>

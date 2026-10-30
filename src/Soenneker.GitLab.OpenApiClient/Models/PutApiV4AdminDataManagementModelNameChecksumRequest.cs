@@ -17,23 +17,25 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("checksum_state") is { } nullNodeChecksumState && nullNodeChecksumState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChecksumState = null;
-            if (parseNode.GetChildNode("identifiers") is { } nullNodeIdentifiers && nullNodeIdentifiers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Identifiers = null;
+            if (parseNode.GetChildNode("checksum_state") is null) { _explicitNullValueChecksumState = default!; _explicitNullProperties?.Remove("checksum_state"); }
+            else if (parseNode.GetChildNode("checksum_state") is { } nullNodeChecksumState && nullNodeChecksumState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChecksumState = null;
+            if (parseNode.GetChildNode("identifiers") is null) { _explicitNullValueIdentifiers = default!; _explicitNullProperties?.Remove("identifiers"); }
+            else if (parseNode.GetChildNode("identifiers") is { } nullNodeIdentifiers && nullNodeIdentifiers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Identifiers = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Filter by checksum status.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminDataManagementModelNameChecksumRequestChecksumState? ChecksumState { get => _explicitNullValueChecksumState; set { _explicitNullValueChecksumState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checksum_state"); else _explicitNullProperties?.Remove("checksum_state"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminDataManagementModelNameChecksumRequestChecksumState? ChecksumState { get => _explicitNullValueChecksumState; set { _explicitNullValueChecksumState = value; AdditionalData?.Remove("checksum_state"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checksum_state"); else _explicitNullProperties?.Remove("checksum_state"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminDataManagementModelNameChecksumRequestChecksumState? _explicitNullValueChecksumState = default!;
         /// <summary>Filter results with an array of unique identifiers of the requested model, which can be integers or base64 encoded strings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminDataManagementModelNameChecksumRequestIdentifiers? Identifiers { get => _explicitNullValueIdentifiers; set { _explicitNullValueIdentifiers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identifiers"); else _explicitNullProperties?.Remove("identifiers"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminDataManagementModelNameChecksumRequestIdentifiers? Identifiers { get => _explicitNullValueIdentifiers; set { _explicitNullValueIdentifiers = value; AdditionalData?.Remove("identifiers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identifiers"); else _explicitNullProperties?.Remove("identifiers"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminDataManagementModelNameChecksumRequestIdentifiers? _explicitNullValueIdentifiers = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminDataManagementModelNameChecksumRequestIdentifiers Identifiers { get => _explicitNullValueIdentifiers; set { _explicitNullValueIdentifiers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identifiers"); else _explicitNullProperties?.Remove("identifiers"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminDataManagementModelNameChecksumRequestIdentifiers Identifiers { get => _explicitNullValueIdentifiers; set { _explicitNullValueIdentifiers = value; AdditionalData?.Remove("identifiers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identifiers"); else _explicitNullProperties?.Remove("identifiers"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminDataManagementModelNameChecksumRequestIdentifiers _explicitNullValueIdentifiers = default!;
 #endif
         /// <summary>
@@ -61,7 +63,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "checksum_state", n => { ChecksumState = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminDataManagementModelNameChecksumRequestChecksumState>(); } },
+                { "checksum_state", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminDataManagementModelNameChecksumRequestChecksumState>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueChecksumState = default; _explicitNullProperties?.Remove("checksum_state"); AdditionalData["checksum_state"] = unknown; } else { ChecksumState = parsed; AdditionalData.Remove("checksum_state"); } } },
                 { "identifiers", n => { Identifiers = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminDataManagementModelNameChecksumRequestIdentifiers>(global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminDataManagementModelNameChecksumRequestIdentifiers.CreateFromDiscriminatorValue); } },
             };
         }

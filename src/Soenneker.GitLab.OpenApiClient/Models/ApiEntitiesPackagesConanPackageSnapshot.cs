@@ -17,7 +17,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("package_snapshot") is { } nullNodePackageSnapshot && nullNodePackageSnapshot.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageSnapshot = null;
+            if (parseNode.GetChildNode("package_snapshot") is null) { _explicitNullValuePackageSnapshot = default!; _explicitNullProperties?.Remove("package_snapshot"); }
+            else if (parseNode.GetChildNode("package_snapshot") is { } nullNodePackageSnapshot && nullNodePackageSnapshot.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageSnapshot = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The package_snapshot property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesConanPackageSnapshotPackageSnapshotProperty? PackageSnapshot { get => _explicitNullValuePackageSnapshot; set { _explicitNullValuePackageSnapshot = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("package_snapshot"); else _explicitNullProperties?.Remove("package_snapshot"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesConanPackageSnapshotPackageSnapshotProperty? PackageSnapshot { get => _explicitNullValuePackageSnapshot; set { _explicitNullValuePackageSnapshot = value; AdditionalData?.Remove("package_snapshot"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("package_snapshot"); else _explicitNullProperties?.Remove("package_snapshot"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesConanPackageSnapshotPackageSnapshotProperty? _explicitNullValuePackageSnapshot = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesConanPackageSnapshotPackageSnapshotProperty PackageSnapshot { get => _explicitNullValuePackageSnapshot; set { _explicitNullValuePackageSnapshot = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("package_snapshot"); else _explicitNullProperties?.Remove("package_snapshot"); } }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesConanPackageSnapshotPackageSnapshotProperty PackageSnapshot { get => _explicitNullValuePackageSnapshot; set { _explicitNullValuePackageSnapshot = value; AdditionalData?.Remove("package_snapshot"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("package_snapshot"); else _explicitNullProperties?.Remove("package_snapshot"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesConanPackageSnapshotPackageSnapshotProperty _explicitNullValuePackageSnapshot = default!;
 #endif
         /// <summary>

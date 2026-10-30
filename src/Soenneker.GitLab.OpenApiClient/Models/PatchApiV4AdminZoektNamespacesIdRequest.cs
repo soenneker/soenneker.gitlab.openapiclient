@@ -17,13 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("number_of_replicas_override") is { } nullNodeNumberOfReplicasOverride && nullNodeNumberOfReplicasOverride.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberOfReplicasOverride = null;
+            if (parseNode.GetChildNode("number_of_replicas_override") is null) { _explicitNullValueNumberOfReplicasOverride = default!; _explicitNullProperties?.Remove("number_of_replicas_override"); }
+            else if (parseNode.GetChildNode("number_of_replicas_override") is { } nullNodeNumberOfReplicasOverride && nullNodeNumberOfReplicasOverride.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberOfReplicasOverride = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Number of replicas override to set. Set to `null` to unset the override.</summary>
-        public int? NumberOfReplicasOverride { get => _explicitNullValueNumberOfReplicasOverride; set { _explicitNullValueNumberOfReplicasOverride = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("number_of_replicas_override"); else _explicitNullProperties?.Remove("number_of_replicas_override"); } }
+        public int? NumberOfReplicasOverride { get => _explicitNullValueNumberOfReplicasOverride; set { _explicitNullValueNumberOfReplicasOverride = value; AdditionalData?.Remove("number_of_replicas_override"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("number_of_replicas_override"); else _explicitNullProperties?.Remove("number_of_replicas_override"); } }
         private int? _explicitNullValueNumberOfReplicasOverride = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4AdminZoektNamespacesIdRequest"/> and sets the default values.

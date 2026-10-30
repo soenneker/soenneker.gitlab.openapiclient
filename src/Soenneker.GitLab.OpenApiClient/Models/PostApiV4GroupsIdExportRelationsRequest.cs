@@ -17,13 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("batched") is { } nullNodeBatched && nullNodeBatched.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Batched = null;
+            if (parseNode.GetChildNode("batched") is null) { _explicitNullValueBatched = default!; _explicitNullProperties?.Remove("batched"); }
+            else if (parseNode.GetChildNode("batched") is { } nullNodeBatched && nullNodeBatched.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Batched = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>If `true`, exports in batches.</summary>
-        public bool? Batched { get => _explicitNullValueBatched; set { _explicitNullValueBatched = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("batched"); else _explicitNullProperties?.Remove("batched"); } }
+        public bool? Batched { get => _explicitNullValueBatched; set { _explicitNullValueBatched = value; AdditionalData?.Remove("batched"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("batched"); else _explicitNullProperties?.Remove("batched"); } }
         private bool? _explicitNullValueBatched = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GroupsIdExportRelationsRequest"/> and sets the default values.

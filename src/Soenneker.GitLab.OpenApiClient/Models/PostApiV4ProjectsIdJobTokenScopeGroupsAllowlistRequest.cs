@@ -17,13 +17,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("target_group_id") is { } nullNodeTargetGroupId && nullNodeTargetGroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetGroupId = null;
+            if (parseNode.GetChildNode("target_group_id") is null) { _explicitNullValueTargetGroupId = default!; _explicitNullProperties?.Remove("target_group_id"); }
+            else if (parseNode.GetChildNode("target_group_id") is { } nullNodeTargetGroupId && nullNodeTargetGroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetGroupId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>ID of the group to add to the CI/CD job token groups allowlist.</summary>
-        public int? TargetGroupId { get => _explicitNullValueTargetGroupId; set { _explicitNullValueTargetGroupId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_group_id"); else _explicitNullProperties?.Remove("target_group_id"); } }
+        public int? TargetGroupId { get => _explicitNullValueTargetGroupId; set { _explicitNullValueTargetGroupId = value; AdditionalData?.Remove("target_group_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_group_id"); else _explicitNullProperties?.Remove("target_group_id"); } }
         private int? _explicitNullValueTargetGroupId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdJobTokenScopeGroupsAllowlistRequest"/> and sets the default values.

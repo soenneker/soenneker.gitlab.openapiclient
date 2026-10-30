@@ -17,7 +17,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("purl_types") is { } nullNodePurlTypes && nullNodePurlTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PurlTypes = null;
+            if (parseNode.GetChildNode("purl_types") is null) { _explicitNullValuePurlTypes = default!; _explicitNullProperties?.Remove("purl_types"); }
+            else if (parseNode.GetChildNode("purl_types") is { } nullNodePurlTypes && nullNodePurlTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PurlTypes = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>List of package URL (purl) types valid for the given SBOM digest.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? PurlTypes { get => _explicitNullValuePurlTypes; set { _explicitNullValuePurlTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purl_types"); else _explicitNullProperties?.Remove("purl_types"); } }
+        public UntypedNode? PurlTypes { get => _explicitNullValuePurlTypes; set { _explicitNullValuePurlTypes = value; AdditionalData?.Remove("purl_types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purl_types"); else _explicitNullProperties?.Remove("purl_types"); } }
         private UntypedNode? _explicitNullValuePurlTypes = default!;
 #nullable restore
 #else
-        public UntypedNode PurlTypes { get => _explicitNullValuePurlTypes; set { _explicitNullValuePurlTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purl_types"); else _explicitNullProperties?.Remove("purl_types"); } }
+        public UntypedNode PurlTypes { get => _explicitNullValuePurlTypes; set { _explicitNullValuePurlTypes = value; AdditionalData?.Remove("purl_types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purl_types"); else _explicitNullProperties?.Remove("purl_types"); } }
         private UntypedNode _explicitNullValuePurlTypes = default!;
 #endif
         /// <summary>
